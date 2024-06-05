@@ -26,12 +26,17 @@
         .bg--col--violet { background-color: var(--color-violet,#F093FB); }
         .bg--col--kelly-green { background-color: var(--color-kelly-green,#9FFF02); }
         .bg--black-70 { background-color: var(--color-gray-black,#696969); }
+        .bg--gray-70 { background-color: var(--color-gray-black,rgba(34, 34, 34, 0.7)); }
 
         /* Colors */
         .col-text-trans-bg { color: var(--color-trans-black,rgba(233, 229, 211, 0.10)); }
+        .col-text-red-white { color: var(--color-red-white, #E9E5D3); }
+
+        /* Border Colors */
+        .br--col--red-white { border-color: var(--color-iron-gray, #E9E5D3); }
 
         /* Stroke */
-        .stroke--col--light-warm-white { -webkit-text-stroke-width: 0.5px; -webkit-text-stroke-color: #E9E5D3;}
+        .stroke--col--light-warm-white { -webkit-text-stroke-width: 1.5px; -webkit-text-stroke-color: #E9E5D3;}
 
         /* Margin */
         .ma--bottom--24 { margin-bottom: 1.5rem; }
@@ -52,6 +57,10 @@
 
         /* Line Height */
         .lh--1 { line-height: 1;}
+        .lh--14 { line-height: 0.875rem; }
+
+        /* Drop Shadow */
+        .drop--sh--2 { filter: drop-shadow(0 0 0.313rem rgba(0, 0, 0, 1)); }
 
         /* Custom CSS */
         .elm_smWIta{
@@ -80,7 +89,7 @@
             <section class="splide mb4" id="splide-video" aria-labelledby="Category-carousel-heading">
                 <!-- Video Category Slider Title Section -->
                 <div class="pad--x--48 flex items-center justify-between">
-                    <h2 class="fs--20 bl b--white pl3 fw5 white ma--bottom--24">Watch Now</h2>
+                    <h2 class="fs--20 bl br--col--red-white pl3 fw5 col-text-red-white ma--bottom--24">Watch Now</h2>
                     
                     <!-- Video Category Slider carousel Slide Buttons -->
                     <div class="slider-btns flex items-center gap--8">
@@ -102,8 +111,8 @@
                         <!-- list item for Video Category Slider -->
                         <li class="splide__slide relative">
                             <img src="assets/images/cat-img/vd-img-01.png">
-                            <a href="javascript:void(0)" class="dim flex items-center justify-center gap--4 absolute top-0 left-0 pad--x--10 pad--y--4">
-                                <p class="white fs--12">video</p>
+                            <a href="javascript:void(0)" class="dim flex items-center justify-center gap--4 absolute top-0 left-0 pad--x--10 pad--y--4 drop--sh--2">
+                                <p class="white fs--12 lh--14">video</p>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                     <path d="M6.33333 5.97689C6.33333 5.6587 6.33333 5.4996 6.39983 5.41078C6.45778 5.33338 6.54648 5.28496 6.64292 5.27807C6.75359 5.27016 6.88742 5.3562 7.15507 5.52826L10.3021 7.55137C10.5344 7.70068 10.6505 7.77533 10.6906 7.87026C10.7257 7.9532 10.7257 8.0468 10.6906 8.12974C10.6505 8.22467 10.5344 8.29932 10.3021 8.44863L7.15507 10.4717C6.88742 10.6438 6.75359 10.7298 6.64292 10.7219C6.54648 10.715 6.45778 10.6666 6.39983 10.5892C6.33333 10.5004 6.33333 10.3413 6.33333 10.0231V5.97689Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                     <path d="M2 5.2C2 4.0799 2 3.51984 2.21799 3.09202C2.40973 2.71569 2.71569 2.40973 3.09202 2.21799C3.51984 2 4.0799 2 5.2 2H10.8C11.9201 2 12.4802 2 12.908 2.21799C13.2843 2.40973 13.5903 2.71569 13.782 3.09202C14 3.51984 14 4.0799 14 5.2V10.8C14 11.9201 14 12.4802 13.782 12.908C13.5903 13.2843 13.2843 13.5903 12.908 13.782C12.4802 14 11.9201 14 10.8 14H5.2C4.0799 14 3.51984 14 3.09202 13.782C2.71569 13.5903 2.40973 13.2843 2.21799 12.908C2 12.4802 2 11.9201 2 10.8V5.2Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
@@ -113,14 +122,14 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" width="8" height="10" viewBox="0 0 8 10" fill="none">
                                     <path d="M1.08301 2.14154C1.08301 1.73689 1.08301 1.53457 1.16738 1.42304C1.24088 1.32588 1.35323 1.26575 1.47484 1.25849C1.61444 1.25015 1.78278 1.36238 2.11947 1.58684L6.50096 4.50783C6.77916 4.6933 6.91826 4.78604 6.96673 4.90292C7.00911 5.00511 7.00911 5.11996 6.96673 5.22215C6.91826 5.33903 6.77916 5.43176 6.50096 5.61723L2.11947 8.53822C1.78278 8.76268 1.61444 8.87491 1.47484 8.86658C1.35323 8.85932 1.24088 8.79919 1.16738 8.70203C1.08301 8.5905 1.08301 8.38817 1.08301 7.98352V2.14154Z" fill="white" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
-                                <p class="white fs--12">Play</p>
+                                <p class="white fs--12 lh--14">Play</p>
                             </a>
                         </li>
                         <!-- list item for Video Category Slider -->
                         <li class="splide__slide">
                             <img src="assets/images/cat-img/vd-img-02.png">
-                            <a href="javascript:void(0)" class="dim flex items-center justify-center gap--4 absolute top-0 left-0 pad--x--10 pad--y--4">
-                                <p class="white fs--12">video</p>
+                            <a href="javascript:void(0)" class="dim flex items-center justify-center gap--4 absolute top-0 left-0 pad--x--10 pad--y--4 drop--sh--2">
+                                <p class="white fs--12 lh--14">video</p>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                     <path d="M6.33333 5.97689C6.33333 5.6587 6.33333 5.4996 6.39983 5.41078C6.45778 5.33338 6.54648 5.28496 6.64292 5.27807C6.75359 5.27016 6.88742 5.3562 7.15507 5.52826L10.3021 7.55137C10.5344 7.70068 10.6505 7.77533 10.6906 7.87026C10.7257 7.9532 10.7257 8.0468 10.6906 8.12974C10.6505 8.22467 10.5344 8.29932 10.3021 8.44863L7.15507 10.4717C6.88742 10.6438 6.75359 10.7298 6.64292 10.7219C6.54648 10.715 6.45778 10.6666 6.39983 10.5892C6.33333 10.5004 6.33333 10.3413 6.33333 10.0231V5.97689Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                     <path d="M2 5.2C2 4.0799 2 3.51984 2.21799 3.09202C2.40973 2.71569 2.71569 2.40973 3.09202 2.21799C3.51984 2 4.0799 2 5.2 2H10.8C11.9201 2 12.4802 2 12.908 2.21799C13.2843 2.40973 13.5903 2.71569 13.782 3.09202C14 3.51984 14 4.0799 14 5.2V10.8C14 11.9201 14 12.4802 13.782 12.908C13.5903 13.2843 13.2843 13.5903 12.908 13.782C12.4802 14 11.9201 14 10.8 14H5.2C4.0799 14 3.51984 14 3.09202 13.782C2.71569 13.5903 2.40973 13.2843 2.21799 12.908C2 12.4802 2 11.9201 2 10.8V5.2Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
@@ -130,14 +139,14 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" width="8" height="10" viewBox="0 0 8 10" fill="none">
                                     <path d="M1.08301 2.14154C1.08301 1.73689 1.08301 1.53457 1.16738 1.42304C1.24088 1.32588 1.35323 1.26575 1.47484 1.25849C1.61444 1.25015 1.78278 1.36238 2.11947 1.58684L6.50096 4.50783C6.77916 4.6933 6.91826 4.78604 6.96673 4.90292C7.00911 5.00511 7.00911 5.11996 6.96673 5.22215C6.91826 5.33903 6.77916 5.43176 6.50096 5.61723L2.11947 8.53822C1.78278 8.76268 1.61444 8.87491 1.47484 8.86658C1.35323 8.85932 1.24088 8.79919 1.16738 8.70203C1.08301 8.5905 1.08301 8.38817 1.08301 7.98352V2.14154Z" fill="white" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
-                                <p class="white fs--12">Play</p>
+                                <p class="white fs--12 lh--14">Play</p>
                             </a>
                         </li>
                         <!-- list item for Video Category Slider -->
                         <li class="splide__slide">
                             <img src="assets/images/cat-img/vd-img-03.png">
-                            <a href="javascript:void(0)" class="dim flex items-center justify-center gap--4 absolute top-0 left-0 pad--x--10 pad--y--4">
-                                <p class="white fs--12">video</p>
+                            <a href="javascript:void(0)" class="dim flex items-center justify-center gap--4 absolute top-0 left-0 pad--x--10 pad--y--4 drop--sh--2">
+                                <p class="white fs--12 lh--14">video</p>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                     <path d="M6.33333 5.97689C6.33333 5.6587 6.33333 5.4996 6.39983 5.41078C6.45778 5.33338 6.54648 5.28496 6.64292 5.27807C6.75359 5.27016 6.88742 5.3562 7.15507 5.52826L10.3021 7.55137C10.5344 7.70068 10.6505 7.77533 10.6906 7.87026C10.7257 7.9532 10.7257 8.0468 10.6906 8.12974C10.6505 8.22467 10.5344 8.29932 10.3021 8.44863L7.15507 10.4717C6.88742 10.6438 6.75359 10.7298 6.64292 10.7219C6.54648 10.715 6.45778 10.6666 6.39983 10.5892C6.33333 10.5004 6.33333 10.3413 6.33333 10.0231V5.97689Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                     <path d="M2 5.2C2 4.0799 2 3.51984 2.21799 3.09202C2.40973 2.71569 2.71569 2.40973 3.09202 2.21799C3.51984 2 4.0799 2 5.2 2H10.8C11.9201 2 12.4802 2 12.908 2.21799C13.2843 2.40973 13.5903 2.71569 13.782 3.09202C14 3.51984 14 4.0799 14 5.2V10.8C14 11.9201 14 12.4802 13.782 12.908C13.5903 13.2843 13.2843 13.5903 12.908 13.782C12.4802 14 11.9201 14 10.8 14H5.2C4.0799 14 3.51984 14 3.09202 13.782C2.71569 13.5903 2.40973 13.2843 2.21799 12.908C2 12.4802 2 11.9201 2 10.8V5.2Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
@@ -147,14 +156,14 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" width="8" height="10" viewBox="0 0 8 10" fill="none">
                                     <path d="M1.08301 2.14154C1.08301 1.73689 1.08301 1.53457 1.16738 1.42304C1.24088 1.32588 1.35323 1.26575 1.47484 1.25849C1.61444 1.25015 1.78278 1.36238 2.11947 1.58684L6.50096 4.50783C6.77916 4.6933 6.91826 4.78604 6.96673 4.90292C7.00911 5.00511 7.00911 5.11996 6.96673 5.22215C6.91826 5.33903 6.77916 5.43176 6.50096 5.61723L2.11947 8.53822C1.78278 8.76268 1.61444 8.87491 1.47484 8.86658C1.35323 8.85932 1.24088 8.79919 1.16738 8.70203C1.08301 8.5905 1.08301 8.38817 1.08301 7.98352V2.14154Z" fill="white" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
-                                <p class="white fs--12">Play</p>
+                                <p class="white fs--12 lh--14">Play</p>
                             </a>
                         </li>
                         <!-- list item for Video Category Slider -->
                         <li class="splide__slide">
                             <img src="assets/images/cat-img/vd-img-04.png">
-                            <a href="javascript:void(0)" class="dim flex items-center justify-center gap--4 absolute top-0 left-0 pad--x--10 pad--y--4">
-                                <p class="white fs--12">video</p>
+                            <a href="javascript:void(0)" class="dim flex items-center justify-center gap--4 absolute top-0 left-0 pad--x--10 pad--y--4 drop--sh--2">
+                                <p class="white fs--12 lh--14">video</p>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                     <path d="M6.33333 5.97689C6.33333 5.6587 6.33333 5.4996 6.39983 5.41078C6.45778 5.33338 6.54648 5.28496 6.64292 5.27807C6.75359 5.27016 6.88742 5.3562 7.15507 5.52826L10.3021 7.55137C10.5344 7.70068 10.6505 7.77533 10.6906 7.87026C10.7257 7.9532 10.7257 8.0468 10.6906 8.12974C10.6505 8.22467 10.5344 8.29932 10.3021 8.44863L7.15507 10.4717C6.88742 10.6438 6.75359 10.7298 6.64292 10.7219C6.54648 10.715 6.45778 10.6666 6.39983 10.5892C6.33333 10.5004 6.33333 10.3413 6.33333 10.0231V5.97689Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                     <path d="M2 5.2C2 4.0799 2 3.51984 2.21799 3.09202C2.40973 2.71569 2.71569 2.40973 3.09202 2.21799C3.51984 2 4.0799 2 5.2 2H10.8C11.9201 2 12.4802 2 12.908 2.21799C13.2843 2.40973 13.5903 2.71569 13.782 3.09202C14 3.51984 14 4.0799 14 5.2V10.8C14 11.9201 14 12.4802 13.782 12.908C13.5903 13.2843 13.2843 13.5903 12.908 13.782C12.4802 14 11.9201 14 10.8 14H5.2C4.0799 14 3.51984 14 3.09202 13.782C2.71569 13.5903 2.40973 13.2843 2.21799 12.908C2 12.4802 2 11.9201 2 10.8V5.2Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
@@ -164,7 +173,7 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" width="8" height="10" viewBox="0 0 8 10" fill="none">
                                     <path d="M1.08301 2.14154C1.08301 1.73689 1.08301 1.53457 1.16738 1.42304C1.24088 1.32588 1.35323 1.26575 1.47484 1.25849C1.61444 1.25015 1.78278 1.36238 2.11947 1.58684L6.50096 4.50783C6.77916 4.6933 6.91826 4.78604 6.96673 4.90292C7.00911 5.00511 7.00911 5.11996 6.96673 5.22215C6.91826 5.33903 6.77916 5.43176 6.50096 5.61723L2.11947 8.53822C1.78278 8.76268 1.61444 8.87491 1.47484 8.86658C1.35323 8.85932 1.24088 8.79919 1.16738 8.70203C1.08301 8.5905 1.08301 8.38817 1.08301 7.98352V2.14154Z" fill="white" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
-                                <p class="white fs--12">Play</p>
+                                <p class="white fs--12 lh--14">Play</p>
                             </a>
                         </li>
                     </ul>
@@ -175,7 +184,7 @@
             <section class="splide mb4" id="splide-latest-video" aria-labelledby="Category-carousel-heading">
                 <!-- Latest Video Upload Title Section -->
                 <div class="pad--x--48 flex items-center justify-between">
-                    <h2 class="fs--20 bl b--white pl3 fw5 white ma--bottom--24">Latest Upload</h2>
+                    <h2 class="fs--20 bl br--col--red-white pl3 fw5 col-text-red-white ma--bottom--24">Latest Upload</h2>
                     
                     <!-- Latest Video Upload carousel Slide Buttons -->
                     <div class="slider-btns flex items-center gap--8">
@@ -197,60 +206,60 @@
                         <!-- list item for Latest Video Upload Slider -->
                         <li class="splide__slide relative">
                             <img src="assets/images/cat-img/lt_vd-img-01.png">
-                            <a href="javascript:void(0)" class="dim flex items-center justify-center gap--4 absolute top-0 left-0 pad--x--10 pad--y--4">
-                                <p class="white fs--12">video</p>
+                            <a href="javascript:void(0)" class="dim flex items-center justify-center gap--4 absolute top-0 left-0 pad--x--10 pad--y--4 drop--sh--2">
+                                <p class="white fs--12 lh--14">video</p>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                     <path d="M6.33333 5.97689C6.33333 5.6587 6.33333 5.4996 6.39983 5.41078C6.45778 5.33338 6.54648 5.28496 6.64292 5.27807C6.75359 5.27016 6.88742 5.3562 7.15507 5.52826L10.3021 7.55137C10.5344 7.70068 10.6505 7.77533 10.6906 7.87026C10.7257 7.9532 10.7257 8.0468 10.6906 8.12974C10.6505 8.22467 10.5344 8.29932 10.3021 8.44863L7.15507 10.4717C6.88742 10.6438 6.75359 10.7298 6.64292 10.7219C6.54648 10.715 6.45778 10.6666 6.39983 10.5892C6.33333 10.5004 6.33333 10.3413 6.33333 10.0231V5.97689Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                     <path d="M2 5.2C2 4.0799 2 3.51984 2.21799 3.09202C2.40973 2.71569 2.71569 2.40973 3.09202 2.21799C3.51984 2 4.0799 2 5.2 2H10.8C11.9201 2 12.4802 2 12.908 2.21799C13.2843 2.40973 13.5903 2.71569 13.782 3.09202C14 3.51984 14 4.0799 14 5.2V10.8C14 11.9201 14 12.4802 13.782 12.908C13.5903 13.2843 13.2843 13.5903 12.908 13.782C12.4802 14 11.9201 14 10.8 14H5.2C4.0799 14 3.51984 14 3.09202 13.782C2.71569 13.5903 2.40973 13.2843 2.21799 12.908C2 12.4802 2 11.9201 2 10.8V5.2Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                             </a>
-                            <a href="javascript:void(0)" class="dim bg-black-50 flex items-center justify-center gap--4 absolute bottom-0 left-0 pad--x--10 pad--y--4">
-                                <p class="white fs--12">Subscribe or Buy</p>
+                            <a href="javascript:void(0)" class="dim bg--gray-70 flex items-center justify-center gap--4 absolute bottom-0 left-0 pad--x--10 pad--y--4">
+                                <p class="white fs--12 lh--14">Subscribe or Buy</p>
                             </a>
                         </li>
                         <!-- list item for Latest Video Upload Slider -->
                         <li class="splide__slide">
                             <img src="assets/images/cat-img/lt_vd-img-02.png">
-                            <a href="javascript:void(0)" class="dim flex items-center justify-center gap--4 absolute top-0 left-0 pad--x--10 pad--y--4">
-                                <p class="white fs--12">video</p>
+                            <a href="javascript:void(0)" class="dim flex items-center justify-center gap--4 absolute top-0 left-0 pad--x--10 pad--y--4 drop--sh--2">
+                                <p class="white fs--12 lh--14">video</p>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                     <path d="M6.33333 5.97689C6.33333 5.6587 6.33333 5.4996 6.39983 5.41078C6.45778 5.33338 6.54648 5.28496 6.64292 5.27807C6.75359 5.27016 6.88742 5.3562 7.15507 5.52826L10.3021 7.55137C10.5344 7.70068 10.6505 7.77533 10.6906 7.87026C10.7257 7.9532 10.7257 8.0468 10.6906 8.12974C10.6505 8.22467 10.5344 8.29932 10.3021 8.44863L7.15507 10.4717C6.88742 10.6438 6.75359 10.7298 6.64292 10.7219C6.54648 10.715 6.45778 10.6666 6.39983 10.5892C6.33333 10.5004 6.33333 10.3413 6.33333 10.0231V5.97689Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                     <path d="M2 5.2C2 4.0799 2 3.51984 2.21799 3.09202C2.40973 2.71569 2.71569 2.40973 3.09202 2.21799C3.51984 2 4.0799 2 5.2 2H10.8C11.9201 2 12.4802 2 12.908 2.21799C13.2843 2.40973 13.5903 2.71569 13.782 3.09202C14 3.51984 14 4.0799 14 5.2V10.8C14 11.9201 14 12.4802 13.782 12.908C13.5903 13.2843 13.2843 13.5903 12.908 13.782C12.4802 14 11.9201 14 10.8 14H5.2C4.0799 14 3.51984 14 3.09202 13.782C2.71569 13.5903 2.40973 13.2843 2.21799 12.908C2 12.4802 2 11.9201 2 10.8V5.2Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                             </a>
                             <div class="flex absolute bottom-0 left-0">
-                                <a href="javascript:void(0)" class="dim bg--col--light-warm-red flex items-center justify-center gap--4 pad--x--10 pad--y--4">
-                                    <p class="white fs--12">Buy Now</p>
+                                <a href="javascript:void(0)" class="dim bg--gray-70 flex items-center justify-center gap--4 pad--x--10 pad--y--4">
+                                    <p class="white fs--12 lh--14">Buy Now</p>
                                 </a>
-                                <span class="bg--col--violet black pad--x--10 pad--y--4 fs--12">10% OFF</span>
+                                <span class="bg--col--violet black pad--x--10 pad--y--4 fs--12 lh--14 fw5">10% OFF</span>
                             </div>
                         </li>
                         <!-- list item for Latest Video Upload Slider -->
                         <li class="splide__slide">
                             <img src="assets/images/cat-img/lt_vd-img-03.png">
-                            <a href="javascript:void(0)" class="dim flex items-center justify-center gap--4 absolute top-0 left-0 pad--x--10 pad--y--4">
-                                <p class="white fs--12">video</p>
+                            <a href="javascript:void(0)" class="dim flex items-center justify-center gap--4 absolute top-0 left-0 pad--x--10 pad--y--4 drop--sh--2">
+                                <p class="white fs--12 lh--14">video</p>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                     <path d="M6.33333 5.97689C6.33333 5.6587 6.33333 5.4996 6.39983 5.41078C6.45778 5.33338 6.54648 5.28496 6.64292 5.27807C6.75359 5.27016 6.88742 5.3562 7.15507 5.52826L10.3021 7.55137C10.5344 7.70068 10.6505 7.77533 10.6906 7.87026C10.7257 7.9532 10.7257 8.0468 10.6906 8.12974C10.6505 8.22467 10.5344 8.29932 10.3021 8.44863L7.15507 10.4717C6.88742 10.6438 6.75359 10.7298 6.64292 10.7219C6.54648 10.715 6.45778 10.6666 6.39983 10.5892C6.33333 10.5004 6.33333 10.3413 6.33333 10.0231V5.97689Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                     <path d="M2 5.2C2 4.0799 2 3.51984 2.21799 3.09202C2.40973 2.71569 2.71569 2.40973 3.09202 2.21799C3.51984 2 4.0799 2 5.2 2H10.8C11.9201 2 12.4802 2 12.908 2.21799C13.2843 2.40973 13.5903 2.71569 13.782 3.09202C14 3.51984 14 4.0799 14 5.2V10.8C14 11.9201 14 12.4802 13.782 12.908C13.5903 13.2843 13.2843 13.5903 12.908 13.782C12.4802 14 11.9201 14 10.8 14H5.2C4.0799 14 3.51984 14 3.09202 13.782C2.71569 13.5903 2.40973 13.2843 2.21799 12.908C2 12.4802 2 11.9201 2 10.8V5.2Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                             </a>
                             <a href="javascript:void(0)" class="dim bg--col--kelly-green flex items-center justify-center gap--4 absolute bottom-0 left-0 pad--x--10 pad--y--4">
-                                <p class="black fs--12">Subscriber Exclusive</p>
+                                <p class="black fs--12 lh--14">Subscriber Exclusive</p>
                             </a>
                         </li>
                         <!-- list item for Latest Video Upload Slider -->
                         <li class="splide__slide">
                             <img src="assets/images/cat-img/lt_vd-img-04.png">
-                            <a href="javascript:void(0)" class="dim flex items-center justify-center gap--4 absolute top-0 left-0 pad--x--10 pad--y--4">
-                                <p class="white fs--12">video</p>
+                            <a href="javascript:void(0)" class="dim flex items-center justify-center gap--4 absolute top-0 left-0 pad--x--10 pad--y--4 drop--sh--2">
+                                <p class="white fs--12 lh--14">video</p>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                     <path d="M6.33333 5.97689C6.33333 5.6587 6.33333 5.4996 6.39983 5.41078C6.45778 5.33338 6.54648 5.28496 6.64292 5.27807C6.75359 5.27016 6.88742 5.3562 7.15507 5.52826L10.3021 7.55137C10.5344 7.70068 10.6505 7.77533 10.6906 7.87026C10.7257 7.9532 10.7257 8.0468 10.6906 8.12974C10.6505 8.22467 10.5344 8.29932 10.3021 8.44863L7.15507 10.4717C6.88742 10.6438 6.75359 10.7298 6.64292 10.7219C6.54648 10.715 6.45778 10.6666 6.39983 10.5892C6.33333 10.5004 6.33333 10.3413 6.33333 10.0231V5.97689Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                     <path d="M2 5.2C2 4.0799 2 3.51984 2.21799 3.09202C2.40973 2.71569 2.71569 2.40973 3.09202 2.21799C3.51984 2 4.0799 2 5.2 2H10.8C11.9201 2 12.4802 2 12.908 2.21799C13.2843 2.40973 13.5903 2.71569 13.782 3.09202C14 3.51984 14 4.0799 14 5.2V10.8C14 11.9201 14 12.4802 13.782 12.908C13.5903 13.2843 13.2843 13.5903 12.908 13.782C12.4802 14 11.9201 14 10.8 14H5.2C4.0799 14 3.51984 14 3.09202 13.782C2.71569 13.5903 2.40973 13.2843 2.21799 12.908C2 12.4802 2 11.9201 2 10.8V5.2Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                             </a>
-                            <a href="javascript:void(0)" class="dim bg-black-50 flex items-center justify-center gap--4 absolute bottom-0 left-0 pad--x--10 pad--y--4">
-                                <p class="white fs--12">Subscribe or Buy</p>
+                            <a href="javascript:void(0)" class="dim bg--gray-70 flex items-center justify-center gap--4 absolute bottom-0 left-0 pad--x--10 pad--y--4">
+                                <p class="white fs--12 lh--14">Subscribe or Buy</p>
                             </a>
                         </li>
                     </ul>
@@ -261,7 +270,7 @@
             <section class="splide mb4" id="splide-mpopular" aria-labelledby="Category-carousel-heading">
                 <!-- Most Popular Video Slider Title Section -->
                 <div class="pad--x--48 flex items-center justify-between">
-                    <h2 class="fs--20 bl b--white pl3 fw5 white ma--bottom--24">Most Popular</h2>
+                    <h2 class="fs--20 bl br--col--red-white pl3 fw5 col-text-red-white ma--bottom--24">Most Popular</h2>
                     
                     <!-- Most Popular Video Slider carousel Slide Buttons -->
                     <div class="slider-btns flex items-center gap--8">
@@ -288,8 +297,8 @@
                             <div class="absolute right-0 bottom-0">
                                 <span class="fs--120 fw7 tracked--100 col-text-trans-bg stroke--col--light-warm-white text--sh--2 lh--1">1</span>
                             </div>
-                            <a href="javascript:void(0)" class="dim flex items-center justify-center gap--4 absolute top-0 left-0 pad--x--10 pad--y--4">
-                                <p class="white fs--12">video</p>
+                            <a href="javascript:void(0)" class="dim flex items-center justify-center gap--4 absolute top-0 left-0 pad--x--10 pad--y--4 drop--sh--2">
+                                <p class="white fs--12 lh--14">video</p>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                     <path d="M6.33333 5.97689C6.33333 5.6587 6.33333 5.4996 6.39983 5.41078C6.45778 5.33338 6.54648 5.28496 6.64292 5.27807C6.75359 5.27016 6.88742 5.3562 7.15507 5.52826L10.3021 7.55137C10.5344 7.70068 10.6505 7.77533 10.6906 7.87026C10.7257 7.9532 10.7257 8.0468 10.6906 8.12974C10.6505 8.22467 10.5344 8.29932 10.3021 8.44863L7.15507 10.4717C6.88742 10.6438 6.75359 10.7298 6.64292 10.7219C6.54648 10.715 6.45778 10.6666 6.39983 10.5892C6.33333 10.5004 6.33333 10.3413 6.33333 10.0231V5.97689Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                     <path d="M2 5.2C2 4.0799 2 3.51984 2.21799 3.09202C2.40973 2.71569 2.71569 2.40973 3.09202 2.21799C3.51984 2 4.0799 2 5.2 2H10.8C11.9201 2 12.4802 2 12.908 2.21799C13.2843 2.40973 13.5903 2.71569 13.782 3.09202C14 3.51984 14 4.0799 14 5.2V10.8C14 11.9201 14 12.4802 13.782 12.908C13.5903 13.2843 13.2843 13.5903 12.908 13.782C12.4802 14 11.9201 14 10.8 14H5.2C4.0799 14 3.51984 14 3.09202 13.782C2.71569 13.5903 2.40973 13.2843 2.21799 12.908C2 12.4802 2 11.9201 2 10.8V5.2Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
@@ -299,7 +308,7 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" width="8" height="10" viewBox="0 0 8 10" fill="none">
                                     <path d="M1.08301 2.14154C1.08301 1.73689 1.08301 1.53457 1.16738 1.42304C1.24088 1.32588 1.35323 1.26575 1.47484 1.25849C1.61444 1.25015 1.78278 1.36238 2.11947 1.58684L6.50096 4.50783C6.77916 4.6933 6.91826 4.78604 6.96673 4.90292C7.00911 5.00511 7.00911 5.11996 6.96673 5.22215C6.91826 5.33903 6.77916 5.43176 6.50096 5.61723L2.11947 8.53822C1.78278 8.76268 1.61444 8.87491 1.47484 8.86658C1.35323 8.85932 1.24088 8.79919 1.16738 8.70203C1.08301 8.5905 1.08301 8.38817 1.08301 7.98352V2.14154Z" fill="white" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
-                                <p class="white fs--12">Play</p>
+                                <p class="white fs--12 lh--14">Play</p>
                             </a>
                         </li>
                         <!-- list item for Latest Most Popular Video Slider -->
@@ -310,18 +319,18 @@
                             <div class="absolute right-0 bottom-0">
                                 <span class="fs--120 fw7 tracked--100 col-text-trans-bg stroke--col--light-warm-white text--sh--2 lh--1">2</span>
                             </div>
-                            <a href="javascript:void(0)" class="dim flex items-center justify-center gap--4 absolute top-0 left-0 pad--x--10 pad--y--4">
-                                <p class="white fs--12">video</p>
+                            <a href="javascript:void(0)" class="dim flex items-center justify-center gap--4 absolute top-0 left-0 pad--x--10 pad--y--4 drop--sh--2">
+                                <p class="white fs--12 lh--14">video</p>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                     <path d="M6.33333 5.97689C6.33333 5.6587 6.33333 5.4996 6.39983 5.41078C6.45778 5.33338 6.54648 5.28496 6.64292 5.27807C6.75359 5.27016 6.88742 5.3562 7.15507 5.52826L10.3021 7.55137C10.5344 7.70068 10.6505 7.77533 10.6906 7.87026C10.7257 7.9532 10.7257 8.0468 10.6906 8.12974C10.6505 8.22467 10.5344 8.29932 10.3021 8.44863L7.15507 10.4717C6.88742 10.6438 6.75359 10.7298 6.64292 10.7219C6.54648 10.715 6.45778 10.6666 6.39983 10.5892C6.33333 10.5004 6.33333 10.3413 6.33333 10.0231V5.97689Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                     <path d="M2 5.2C2 4.0799 2 3.51984 2.21799 3.09202C2.40973 2.71569 2.71569 2.40973 3.09202 2.21799C3.51984 2 4.0799 2 5.2 2H10.8C11.9201 2 12.4802 2 12.908 2.21799C13.2843 2.40973 13.5903 2.71569 13.782 3.09202C14 3.51984 14 4.0799 14 5.2V10.8C14 11.9201 14 12.4802 13.782 12.908C13.5903 13.2843 13.2843 13.5903 12.908 13.782C12.4802 14 11.9201 14 10.8 14H5.2C4.0799 14 3.51984 14 3.09202 13.782C2.71569 13.5903 2.40973 13.2843 2.21799 12.908C2 12.4802 2 11.9201 2 10.8V5.2Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                             </a>
                             <div class="flex absolute bottom-0 left-0">
-                                <a href="javascript:void(0)" class="dim bg--col--light-warm-red flex items-center justify-center gap--4 pad--x--10 pad--y--4">
-                                    <p class="white fs--12">Buy Now</p>
+                                <a href="javascript:void(0)" class="dim bg--gray-70 flex items-center justify-center gap--4 pad--x--10 pad--y--4">
+                                    <p class="white fs--12 lh--14">Buy Now</p>
                                 </a>
-                                <span class="bg--col--violet black pad--x--10 pad--y--4 fs--12">10% OFF</span>
+                                <span class="bg--col--violet black pad--x--10 pad--y--4 fs--12 fw5">10% OFF</span>
                             </div>
                         </li>
                         <!-- list item for Latest Most Popular Video Slider -->
@@ -332,15 +341,15 @@
                             <div class="absolute right-0 bottom-0">
                                 <span class="fs--120 fw7 tracked--100 col-text-trans-bg stroke--col--light-warm-white text--sh--2 lh--1">3</span>
                             </div>
-                            <a href="javascript:void(0)" class="dim flex items-center justify-center gap--4 absolute top-0 left-0 pad--x--10 pad--y--4">
-                                <p class="white fs--12">video</p>
+                            <a href="javascript:void(0)" class="dim flex items-center justify-center gap--4 absolute top-0 left-0 pad--x--10 pad--y--4 drop--sh--2">
+                                <p class="white fs--12 lh--14">video</p>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                     <path d="M6.33333 5.97689C6.33333 5.6587 6.33333 5.4996 6.39983 5.41078C6.45778 5.33338 6.54648 5.28496 6.64292 5.27807C6.75359 5.27016 6.88742 5.3562 7.15507 5.52826L10.3021 7.55137C10.5344 7.70068 10.6505 7.77533 10.6906 7.87026C10.7257 7.9532 10.7257 8.0468 10.6906 8.12974C10.6505 8.22467 10.5344 8.29932 10.3021 8.44863L7.15507 10.4717C6.88742 10.6438 6.75359 10.7298 6.64292 10.7219C6.54648 10.715 6.45778 10.6666 6.39983 10.5892C6.33333 10.5004 6.33333 10.3413 6.33333 10.0231V5.97689Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                     <path d="M2 5.2C2 4.0799 2 3.51984 2.21799 3.09202C2.40973 2.71569 2.71569 2.40973 3.09202 2.21799C3.51984 2 4.0799 2 5.2 2H10.8C11.9201 2 12.4802 2 12.908 2.21799C13.2843 2.40973 13.5903 2.71569 13.782 3.09202C14 3.51984 14 4.0799 14 5.2V10.8C14 11.9201 14 12.4802 13.782 12.908C13.5903 13.2843 13.2843 13.5903 12.908 13.782C12.4802 14 11.9201 14 10.8 14H5.2C4.0799 14 3.51984 14 3.09202 13.782C2.71569 13.5903 2.40973 13.2843 2.21799 12.908C2 12.4802 2 11.9201 2 10.8V5.2Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                             </a>
                             <a href="javascript:void(0)" class="dim bg--col--kelly-green flex items-center justify-center gap--4 absolute bottom-0 left-0 pad--x--10 pad--y--4">
-                                <p class="black fs--12">Subscriber Exclusive</p>
+                                <p class="black fs--12 lh--14">Subscriber Exclusive</p>
                             </a>
                         </li>
                         <!-- list item for Latest Most Popular Video Slider -->
@@ -351,15 +360,15 @@
                             <div class="absolute right-0 bottom-0">
                                 <span class="fs--120 fw7 tracked--100 col-text-trans-bg stroke--col--light-warm-white text--sh--2 lh--1">4</span>
                             </div>
-                            <a href="javascript:void(0)" class="dim flex items-center justify-center gap--4 absolute top-0 left-0 pad--x--10 pad--y--4">
-                                <p class="white fs--12">video</p>
+                            <a href="javascript:void(0)" class="dim flex items-center justify-center gap--4 absolute top-0 left-0 pad--x--10 pad--y--4 drop--sh--2">
+                                <p class="white fs--12 lh--14">video</p>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                     <path d="M6.33333 5.97689C6.33333 5.6587 6.33333 5.4996 6.39983 5.41078C6.45778 5.33338 6.54648 5.28496 6.64292 5.27807C6.75359 5.27016 6.88742 5.3562 7.15507 5.52826L10.3021 7.55137C10.5344 7.70068 10.6505 7.77533 10.6906 7.87026C10.7257 7.9532 10.7257 8.0468 10.6906 8.12974C10.6505 8.22467 10.5344 8.29932 10.3021 8.44863L7.15507 10.4717C6.88742 10.6438 6.75359 10.7298 6.64292 10.7219C6.54648 10.715 6.45778 10.6666 6.39983 10.5892C6.33333 10.5004 6.33333 10.3413 6.33333 10.0231V5.97689Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                     <path d="M2 5.2C2 4.0799 2 3.51984 2.21799 3.09202C2.40973 2.71569 2.71569 2.40973 3.09202 2.21799C3.51984 2 4.0799 2 5.2 2H10.8C11.9201 2 12.4802 2 12.908 2.21799C13.2843 2.40973 13.5903 2.71569 13.782 3.09202C14 3.51984 14 4.0799 14 5.2V10.8C14 11.9201 14 12.4802 13.782 12.908C13.5903 13.2843 13.2843 13.5903 12.908 13.782C12.4802 14 11.9201 14 10.8 14H5.2C4.0799 14 3.51984 14 3.09202 13.782C2.71569 13.5903 2.40973 13.2843 2.21799 12.908C2 12.4802 2 11.9201 2 10.8V5.2Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                             </a>
-                            <a href="javascript:void(0)" class="dim bg-black-50 flex items-center justify-center gap--4 absolute bottom-0 left-0 pad--x--10 pad--y--4">
-                                <p class="white fs--12">Subscribe or Buy</p>
+                            <a href="javascript:void(0)" class="dim bg--gray-70 flex items-center justify-center gap--4 absolute bottom-0 left-0 pad--x--10 pad--y--4">
+                                <p class="white fs--12 lh--14">Subscribe or Buy</p>
                             </a>
                         </li>
                     </ul>
@@ -370,7 +379,7 @@
             <section class="splide mb4" id="splide-featured-video" aria-labelledby="Category-carousel-heading">
                 <!-- Featured Video Slider Title Section -->
                 <div class="pad--x--48 flex items-center justify-between">
-                    <h2 class="fs--20 bl b--white pl3 fw5 white ma--bottom--24">Latest Upload</h2>
+                    <h2 class="fs--20 bl br--col--red-white pl3 fw5 col-text-red-white ma--bottom--24">Latest Upload</h2>
                     
                     <!-- Featured Video Slider carousel Slide Buttons -->
                     <div class="slider-btns flex items-center gap--8">
@@ -392,60 +401,60 @@
                         <!-- list item for Featured Video Slider -->
                         <li class="splide__slide">
                             <img src="assets/images/cat-img/lt_vd-img-02.png">
-                            <a href="javascript:void(0)" class="dim flex items-center justify-center gap--4 absolute top-0 left-0 pad--x--10 pad--y--4">
-                                <p class="white fs--12">video</p>
+                            <a href="javascript:void(0)" class="dim flex items-center justify-center gap--4 absolute top-0 left-0 pad--x--10 pad--y--4 drop--sh--2">
+                                <p class="white fs--12 lh--14">video</p>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                     <path d="M6.33333 5.97689C6.33333 5.6587 6.33333 5.4996 6.39983 5.41078C6.45778 5.33338 6.54648 5.28496 6.64292 5.27807C6.75359 5.27016 6.88742 5.3562 7.15507 5.52826L10.3021 7.55137C10.5344 7.70068 10.6505 7.77533 10.6906 7.87026C10.7257 7.9532 10.7257 8.0468 10.6906 8.12974C10.6505 8.22467 10.5344 8.29932 10.3021 8.44863L7.15507 10.4717C6.88742 10.6438 6.75359 10.7298 6.64292 10.7219C6.54648 10.715 6.45778 10.6666 6.39983 10.5892C6.33333 10.5004 6.33333 10.3413 6.33333 10.0231V5.97689Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                     <path d="M2 5.2C2 4.0799 2 3.51984 2.21799 3.09202C2.40973 2.71569 2.71569 2.40973 3.09202 2.21799C3.51984 2 4.0799 2 5.2 2H10.8C11.9201 2 12.4802 2 12.908 2.21799C13.2843 2.40973 13.5903 2.71569 13.782 3.09202C14 3.51984 14 4.0799 14 5.2V10.8C14 11.9201 14 12.4802 13.782 12.908C13.5903 13.2843 13.2843 13.5903 12.908 13.782C12.4802 14 11.9201 14 10.8 14H5.2C4.0799 14 3.51984 14 3.09202 13.782C2.71569 13.5903 2.40973 13.2843 2.21799 12.908C2 12.4802 2 11.9201 2 10.8V5.2Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                             </a>
                             <div class="flex absolute bottom-0 left-0">
-                                <a href="javascript:void(0)" class="dim bg--col--light-warm-red flex items-center justify-center gap--4 pad--x--10 pad--y--4">
-                                    <p class="white fs--12">Buy Now</p>
+                                <a href="javascript:void(0)" class="dim bg--gray-70 flex items-center justify-center gap--4 pad--x--10 pad--y--4">
+                                    <p class="white fs--12 lh--14">Buy Now</p>
                                 </a>
-                                <span class="bg--col--violet black pad--x--10 pad--y--4 fs--12">10% OFF</span>
+                                <span class="bg--col--violet black pad--x--10 pad--y--4 fs--12 lh--14 fw5">10% OFF</span>
                             </div>
                         </li>
                         <!-- list item for Featured Video Slider -->
                         <li class="splide__slide">
                             <img src="assets/images/cat-img/lt_vd-img-04.png">
-                            <a href="javascript:void(0)" class="dim flex items-center justify-center gap--4 absolute top-0 left-0 pad--x--10 pad--y--4">
-                                <p class="white fs--12">video</p>
+                            <a href="javascript:void(0)" class="dim flex items-center justify-center gap--4 absolute top-0 left-0 pad--x--10 pad--y--4 drop--sh--2">
+                                <p class="white fs--12 lh--14">video</p>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                     <path d="M6.33333 5.97689C6.33333 5.6587 6.33333 5.4996 6.39983 5.41078C6.45778 5.33338 6.54648 5.28496 6.64292 5.27807C6.75359 5.27016 6.88742 5.3562 7.15507 5.52826L10.3021 7.55137C10.5344 7.70068 10.6505 7.77533 10.6906 7.87026C10.7257 7.9532 10.7257 8.0468 10.6906 8.12974C10.6505 8.22467 10.5344 8.29932 10.3021 8.44863L7.15507 10.4717C6.88742 10.6438 6.75359 10.7298 6.64292 10.7219C6.54648 10.715 6.45778 10.6666 6.39983 10.5892C6.33333 10.5004 6.33333 10.3413 6.33333 10.0231V5.97689Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                     <path d="M2 5.2C2 4.0799 2 3.51984 2.21799 3.09202C2.40973 2.71569 2.71569 2.40973 3.09202 2.21799C3.51984 2 4.0799 2 5.2 2H10.8C11.9201 2 12.4802 2 12.908 2.21799C13.2843 2.40973 13.5903 2.71569 13.782 3.09202C14 3.51984 14 4.0799 14 5.2V10.8C14 11.9201 14 12.4802 13.782 12.908C13.5903 13.2843 13.2843 13.5903 12.908 13.782C12.4802 14 11.9201 14 10.8 14H5.2C4.0799 14 3.51984 14 3.09202 13.782C2.71569 13.5903 2.40973 13.2843 2.21799 12.908C2 12.4802 2 11.9201 2 10.8V5.2Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                             </a>
-                            <a href="javascript:void(0)" class="dim bg-black-50 flex items-center justify-center gap--4 absolute bottom-0 left-0 pad--x--10 pad--y--4">
-                                <p class="white fs--12">Subscribe or Buy</p>
+                            <a href="javascript:void(0)" class="dim bg--gray-70 flex items-center justify-center gap--4 absolute bottom-0 left-0 pad--x--10 pad--y--4">
+                                <p class="white fs--12 lh--14">Subscribe or Buy</p>
                             </a>
                         </li>
                         <!-- list item for Featured Video Slider -->
                         <li class="splide__slide">
                             <img src="assets/images/cat-img/lt_vd-img-01.png">
-                            <a href="javascript:void(0)" class="dim flex items-center justify-center gap--4 absolute top-0 left-0 pad--x--10 pad--y--4">
-                                <p class="white fs--12">video</p>
+                            <a href="javascript:void(0)" class="dim flex items-center justify-center gap--4 absolute top-0 left-0 pad--x--10 pad--y--4 drop--sh--2">
+                                <p class="white fs--12 lh--14">video</p>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                     <path d="M6.33333 5.97689C6.33333 5.6587 6.33333 5.4996 6.39983 5.41078C6.45778 5.33338 6.54648 5.28496 6.64292 5.27807C6.75359 5.27016 6.88742 5.3562 7.15507 5.52826L10.3021 7.55137C10.5344 7.70068 10.6505 7.77533 10.6906 7.87026C10.7257 7.9532 10.7257 8.0468 10.6906 8.12974C10.6505 8.22467 10.5344 8.29932 10.3021 8.44863L7.15507 10.4717C6.88742 10.6438 6.75359 10.7298 6.64292 10.7219C6.54648 10.715 6.45778 10.6666 6.39983 10.5892C6.33333 10.5004 6.33333 10.3413 6.33333 10.0231V5.97689Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                     <path d="M2 5.2C2 4.0799 2 3.51984 2.21799 3.09202C2.40973 2.71569 2.71569 2.40973 3.09202 2.21799C3.51984 2 4.0799 2 5.2 2H10.8C11.9201 2 12.4802 2 12.908 2.21799C13.2843 2.40973 13.5903 2.71569 13.782 3.09202C14 3.51984 14 4.0799 14 5.2V10.8C14 11.9201 14 12.4802 13.782 12.908C13.5903 13.2843 13.2843 13.5903 12.908 13.782C12.4802 14 11.9201 14 10.8 14H5.2C4.0799 14 3.51984 14 3.09202 13.782C2.71569 13.5903 2.40973 13.2843 2.21799 12.908C2 12.4802 2 11.9201 2 10.8V5.2Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                             </a>
                             <a href="javascript:void(0)" class="dim bg--col--kelly-green flex items-center justify-center gap--4 absolute bottom-0 left-0 pad--x--10 pad--y--4">
-                                <p class="black fs--12">Subscriber Exclusive</p>
+                                <p class="black fs--12 lh--14">Subscriber Exclusive</p>
                             </a>
                         </li>
                         <!-- list item for Featured Video Slider -->
                         <li class="splide__slide">
                             <img src="assets/images/cat-img/f-img.png">
-                            <a href="javascript:void(0)" class="dim flex items-center justify-center gap--4 absolute top-0 left-0 pad--x--10 pad--y--4">
-                                <p class="white fs--12">video</p>
+                            <a href="javascript:void(0)" class="dim flex items-center justify-center gap--4 absolute top-0 left-0 pad--x--10 pad--y--4 drop--sh--2">
+                                <p class="white fs--12 lh--14">video</p>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                     <path d="M6.33333 5.97689C6.33333 5.6587 6.33333 5.4996 6.39983 5.41078C6.45778 5.33338 6.54648 5.28496 6.64292 5.27807C6.75359 5.27016 6.88742 5.3562 7.15507 5.52826L10.3021 7.55137C10.5344 7.70068 10.6505 7.77533 10.6906 7.87026C10.7257 7.9532 10.7257 8.0468 10.6906 8.12974C10.6505 8.22467 10.5344 8.29932 10.3021 8.44863L7.15507 10.4717C6.88742 10.6438 6.75359 10.7298 6.64292 10.7219C6.54648 10.715 6.45778 10.6666 6.39983 10.5892C6.33333 10.5004 6.33333 10.3413 6.33333 10.0231V5.97689Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                     <path d="M2 5.2C2 4.0799 2 3.51984 2.21799 3.09202C2.40973 2.71569 2.71569 2.40973 3.09202 2.21799C3.51984 2 4.0799 2 5.2 2H10.8C11.9201 2 12.4802 2 12.908 2.21799C13.2843 2.40973 13.5903 2.71569 13.782 3.09202C14 3.51984 14 4.0799 14 5.2V10.8C14 11.9201 14 12.4802 13.782 12.908C13.5903 13.2843 13.2843 13.5903 12.908 13.782C12.4802 14 11.9201 14 10.8 14H5.2C4.0799 14 3.51984 14 3.09202 13.782C2.71569 13.5903 2.40973 13.2843 2.21799 12.908C2 12.4802 2 11.9201 2 10.8V5.2Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                             </a>
-                            <a href="javascript:void(0)" class="dim bg-black-50 flex items-center justify-center gap--4 absolute bottom-0 left-0 pad--x--10 pad--y--4">
-                                <p class="white fs--12">Subscribe or Buy</p>
+                            <a href="javascript:void(0)" class="dim bg--gray-70 flex items-center justify-center gap--4 absolute bottom-0 left-0 pad--x--10 pad--y--4">
+                                <p class="white fs--12 lh--14">Subscribe or Buy</p>
                             </a>
                         </li>
                     </ul>
