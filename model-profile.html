@@ -23,38 +23,23 @@
     <!-- Embed ALL styles -->
     <style type="text/css">
         /* Background Color */
-        .bg--col--iron-yellow { background-color: rgba(233, 229, 211, 0.05); }
         .bg--col--violet { background-color: var(--color-violet,#F093FB); }
         .bg--col--kelly-green { background-color: var(--color-kelly-green,#9FFF02); }
         .bg--black-70 { background-color: var(--color-gray-black,#696969); }
 
         /* Colors */
-        .col--light-warm-grey { color: var(--color-light-warm-grey, #E7E5E4); }
-        .col-text-light-grey { color: var(--col-text-light-grey, #B7B5B5);}
-        .col-text-trans-bg { color: rgba(233, 229, 211, 0.10); }
-
-        /* Border Colors */
-        .br--col--soft-athens-gray { border-color: rgba(233, 229, 211, 0.25); }
+        .col-text-trans-bg { color: var(--color-trans-black,rgba(233, 229, 211, 0.10)); }
 
         /* Stroke */
         .stroke--col--light-warm-white { -webkit-text-stroke-width: 0.5px; -webkit-text-stroke-color: #E9E5D3;}
 
         /* Margin */
-        .mb--20 { margin-bottom: 1.25rem; }
-        .mb--40 { margin-bottom: 2.5rem; }
-        .-ml--16 { margin-left: -1rem; }
         .ma--bottom--24 { margin-bottom: 1.5rem; }
         .ml--3 { margin-left: 3rem;}
 
         /* Padding */
         .pad--x--48 { padding-left: 3rem; padding-right: 3rem; }
         .pad--y--4 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
-
-        /* Gap */
-        .gap--54 { gap: 3.375rem; }
-
-        /* Height */
-        .h--screen {height: 100vh;}
 
         /* Custom Poppins Font */
         .poppins { font-family: "Poppins", sans-serif;}
@@ -63,21 +48,21 @@
         .fs--120 { font-size:7.5rem; /* font-size 120px */ }
 
         /* Text Shadow */
-        .text--sh--2 { text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.50); }
+        .text--sh--2 { text-shadow: 0px 0px 20px var(--color-silver-black,rgba(0, 0, 0, 0.50)); }
 
         /* Line Height */
         .lh--1 { line-height: 1;}
 
         /* Custom CSS */
-        .mp--img-r-tilt{
+        .elm_smWIta{
             position: relative;
         }
-        .mp--img-r-tilt:after{
+        .elm_smWIta:after{
             content: '';
             width: 60px;
             height: 100%;
-            border-bottom: solid 130px #696969;
-            border-right: solid 25px #696969;
+            border-bottom: solid 130px var(--color-gray-black,#696969);
+            border-right: solid 25px var(--color-gray-black,#696969);
             border-left: solid 50px transparent;
             border-top: solid 60px transparent;
             position: absolute;
@@ -297,7 +282,7 @@
                     <ul class="splide__list">
                         <!-- list item for Latest Most Popular Video Slider -->
                         <li class="splide__slide relative">
-                            <div class="mp--img-r-tilt">
+                            <div class="elm_smWIta">
                                 <img src="assets/images/cat-img/vd-img-01.png">
                             </div>
                             <div class="absolute right-0 bottom-0">
@@ -319,7 +304,7 @@
                         </li>
                         <!-- list item for Latest Most Popular Video Slider -->
                         <li class="splide__slide">
-                            <div class="mp--img-r-tilt">
+                            <div class="elm_smWIta">
                                 <img src="assets/images/cat-img/vd-img-02.png">
                             </div>
                             <div class="absolute right-0 bottom-0">
@@ -341,7 +326,7 @@
                         </li>
                         <!-- list item for Latest Most Popular Video Slider -->
                         <li class="splide__slide">
-                            <div class="mp--img-r-tilt">
+                            <div class="elm_smWIta">
                                 <img src="assets/images/cat-img/vd-img-03.png">
                             </div>
                             <div class="absolute right-0 bottom-0">
@@ -360,7 +345,7 @@
                         </li>
                         <!-- list item for Latest Most Popular Video Slider -->
                         <li class="splide__slide relative">
-                            <div class="mp--img-r-tilt">
+                            <div class="elm_smWIta">
                                 <img src="assets/images/cat-img/vd-img-04.png">
                             </div>
                             <div class="absolute right-0 bottom-0">
