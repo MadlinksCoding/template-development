@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Meta Tags -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE-edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Subscribe Popup</title>
+
+  <!-- Poppins Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Tachyons Styles -->
+  <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/main.css" />
+  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" />
+  <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/theme.css" />
+  <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/customTachyons.css" />
+  
+  <!-- Splide CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+  
+  <!-- Custom Style -->
+  <style>
+    /* Custom Tachyons */
+    /* Font */
+    .ff-poppins { font-family: 'Poppins'; }
+    .f--3 { font-size: 3rem; }
+
+    /* Width */
+    .w--1 { width: 1rem; }
+    .w--4 { width: 4rem; }
+    .w--11-75 { width: 11.75rem; }
+    .w--1-5625 { width: 1.5625rem; }
+    .w--22 { width: 22rem; }
+    .w--2-25 { width: 2.25rem; }
+    .w--78-35 { width: 78.35rem; }
+    .w--90 { width: 90rem; }
+
+    /* Height */
+    .max-height--6 { max-height: 6rem; }
+    .h--1 { height: 1rem; }
+    .h--1-375 { height: 1.375rem; }
+    .h--1-5 { height: 1.5rem; }
+    .h--2-25 { height: 2.25rem; }
+    .h--4 { height: 4rem; }
+    .h--6 { height: 6rem; }
+    .h--50-625 { height: 50.625rem; }
+
+    /* Border Radius */
+    .br--12-5 { border-radius: 12.5rem; }
+
+    /* Background */
+    .bg-img--1 { background-image: url('../assets/images/cat-img/subscribe-popup-bg.png'); background-repeat: no-repeat; background-size: cover; background-position: 100% 0; }
+    .bg-col--black-0-40 { background: rgba(0, 0, 0, 0.40); }
+
+    /* Color */
+    .col--green { color: #9FFF02; }
+    .col--gray-warm { color: var(--Gray-warm-100, #F5F5F4); }
+
+    /* Gap */
+    .gap--0-25 { gap: 0.25rem; }
+    .gap--0-375 { gap: 0.375rem; }
+    .gap--0-5 { gap: 0.5rem; }
+    .gap--1 { gap: 1rem; }
+    .gap--0-1875 { gap: 0.1875rem; }
+    .gap--0-625 { gap: 0.625rem; }
+
+    /* Margin */
+    .mh--auto { margin-left: auto; margin-right: auto; }
+
+    /* Blur */
+    .bg-blur--0-625 { backdrop-filter: blur(0.625rem); }
+    .bg-blur--12-5 { backdrop-filter: blur(12.5rem); }
+
+    /* Line Spacing */
+    .ls--0-01 { letter-spacing: 0.01rem; }
+    .ls---0-045 { letter-spacing: -0.045rem; }
+    .ls---0-06 { letter-spacing: -0.06rem; }
+
+    /* Line Height */
+    .lh--1-125 { line-height: 1.125rem; }
+    .lh--1-875 { line-height: 1.875rem; }
+    .lh--2 { line-height: 2rem; }
+    .lh--2-75 { line-height: 2.75rem; }
+    .lh--3-75 { line-height: 3.75rem; }
+
+    /* Display */
+    .d--webkit-box { display: -webkit-box; }
+    .d--webkit-box-orient { -webkit-box-orient: vertical; }
+    .d--webkit-line-clamp { -webkit-line-clamp: 1; }
+
+    /* Sizing */
+    .t--scale-y { transform: scale(80%, 80%); margin-left: -3rem; margin-right: -3rem; }
+
+    /* Transition */
+    .tr--transform-0-2 { transition: transform .2s; }
+    .tr--opacity-0-8 { transition: opacity .8s; }
+
+    /* Layout */
+    .g--col-2-2 { grid-column: 2/2; }
+    .g--row-2-2 { grid-row: 2/2; }
+    .z---2 { z-index: -2; }
+    .flex--1-0-0 { flex: 1 0 0; }
+
+    /* Position */
+    .t--3 { top: 3rem; }
+    .r--3 { right: 3rem; }
+
+    /* Slider */
+    .splide__slide.is-active { background: rgba(0, 0, 0, 0.10); backdrop-filter: blur(1.406rem); }
+    .splide__slide.is-active .common_elm_JcADkP { background: #FF45E1; }
+    .splide__slide.is-active .common_elm_TWPiUU { color: #9FFF02; }
+    .splide__slide.is-active { border: 0.063rem solid #9FFF02 !important; background: rgba(0, 0, 0, 0.10); backdrop-filter: blur(1.563rem); }
+    .splide__slide.is-active .common_elm_dkSNEg { fill: #9FFF02; }
+    .splide__slide.is-active .common_elm_cXAIoP { background: #9FFF02; }
+    .splide__slide.is-active .common_elm_eqnlFt { border: 0.063rem solid #9FFF02 !important; }
+    .splide__slide:not(.is-active) { opacity: 0.7; filter: blur(1.8947358131408691px); backdrop-filter: blur(23.684200286865234px); border: 0.063rem solid #79716B !important; }
+    .splide__slide:not(.is-active) .common_elm_JcADkP { background: #79716B; }
+    .splide__slide:not(.is-active) .common_elm_TWPiUU { color: #fff; }
+    .splide__slide:not(.is-active) .common_elm_dkSNEg { fill: #79716B; }
+    .splide__slide:not(.is-active) .common_elm_cXAIoP { background: #79716B; }
+    .splide__slide:not(.is-active) .common_elm_eqnlFt { border: 0.063rem solid #79716B !important; }
+    #slider .splide__slide.is-prev,
+    #slider .splide__slide.is-next { position: relative; transform: scale(90%, 90%) !important; z-index: -1; margin-left: -4.1rem; margin-right: -4.1rem; }
+    #slider .splide__slide.is-active { opacity: 1; transform: scale(100%, 100%) !important; border: 0.063rem solid #fff; border-radius: 0.25rem; z-index: 1; }
+    #slider .splide__pagination { bottom: -1.45rem; gap: 0.625rem; display: flex !important; }
+    #slider .splide__pagination__page { width: 0.688rem; height: 0.688rem; opacity: 0.50; background: #E9E5D3; border-radius: 624.938rem; } 
+    #slider .splide__pagination__page.is-active { width: 1.8rem; height: 0.688rem; opacity: 1; background: #9FFF02; border-radius: 1.25rem; }
+  </style>
+</head>
+
+<body>
+  <!-- bg container -->
+  <div class="w--90 h--50-625 bg-img--1">
+    <!-- main container -->
+    <div class="flex flex-column w-100 h-100 ba bg-col--black-0-40 items-center bg-blur--12-5 relative pa4">
+      <!-- header section -->
+      <div class="inline-flex flex-column items-center gap--1">
+        <div class="flex flex-column justify-center items-center gap--0-5 o-8">
+          <img class="flex w--4 h--4 justify-center items-center br--12-5" src="../assets/images/cat-img/Avatar.png">
+          
+          <div class="flex w--11-75 h--1-5 justify-center items-center gap--0-5">
+            <div class="ff-poppins d--webkit-box d--webkit-box-orient d--webkit-line-clamp truncate white f5 fs-normal fw6 lh-copy">
+              @jenny_098767
+            </div>
+            
+            <div class="w--1 h--1 flex-shrink">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <g clip-path="url(#clip0_7802_1482)">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M6.74788 13.8983C6.57382 13.7642 6.3531 13.7049 6.1346 13.7338L5.13172 13.8664C4.80064 13.9101 4.48067 13.7257 4.35327 13.4168L3.95256 12.4479C3.87775 12.2665 3.73406 12.1228 3.55259 12.048L2.58379 11.6472C2.27492 11.5191 2.09049 11.1998 2.13419 10.8687L2.27122 9.82728C2.29714 9.63321 2.24456 9.43692 2.12531 9.28136L1.4861 8.44879C1.28241 8.18436 1.28241 7.81548 1.4861 7.5503L2.12531 6.71773C2.24382 6.56292 2.2964 6.36663 2.27122 6.17256L2.13419 5.13111C2.09049 4.80001 2.27492 4.48076 2.58379 4.35261L3.55259 3.95262C3.73332 3.87707 3.87701 3.73337 3.95256 3.55263L4.35253 2.58377C4.48067 2.27489 4.7999 2.09045 5.13098 2.13416L6.17238 2.27119C6.36643 2.29637 6.56272 2.24378 6.71826 2.12527L7.55078 1.48603C7.8152 1.28233 8.18406 1.28233 8.44922 1.48603L9.28175 2.12527C9.43655 2.24378 9.63283 2.29637 9.82689 2.26971L10.8683 2.13267C11.1994 2.08897 11.5193 2.27341 11.6467 2.58229L12.0474 3.55115C12.1223 3.73263 12.2659 3.87633 12.4474 3.95114L13.4162 4.35187C13.7251 4.48002 13.9095 4.79927 13.8658 5.13037L13.7288 6.17182C13.7029 6.36589 13.7554 6.56218 13.8747 6.71773L14.5139 7.5503C14.7176 7.81474 14.7176 8.18362 14.5139 8.44879L13.8984 9.25099C13.7643 9.42506 13.7051 9.6458 13.734 9.86431L13.8658 10.868C13.9095 11.1991 13.7251 11.5191 13.4162 11.6465L12.4474 12.0472C12.2659 12.122 12.1223 12.2657 12.0474 12.4472L11.6467 13.4161C11.5186 13.7249 11.1994 13.9094 10.8683 13.8657L9.82689 13.7286C9.63283 13.7027 9.43655 13.7553 9.28101 13.8746L8.44848 14.5138C8.18406 14.7175 7.8152 14.7175 7.55004 14.5138L6.74788 13.8983ZM10.8047 6.80466C11.0651 6.54431 11.0651 6.1222 10.8047 5.86185C10.5444 5.6015 10.1223 5.6015 9.86193 5.86185L7.33334 8.39044L6.47141 7.52851C6.21106 7.26817 5.78895 7.26817 5.5286 7.52851C5.26825 7.78886 5.26825 8.21097 5.5286 8.47132L6.86193 9.80466C7.12228 10.065 7.54439 10.065 7.80474 9.80466L10.8047 6.80466Z" fill="#9FFF02"/>
+                  <path d="M6.1346 13.7338C6.3531 13.7049 6.57382 13.7642 6.74788 13.8983L7.55004 14.5138C7.8152 14.7175 8.18406 14.7175 8.44848 14.5138L9.28101 13.8746C9.43655 13.7553 9.63283 13.7027 9.82689 13.7286L10.8683 13.8657C11.1994 13.9094 11.5186 13.7249 11.6467 13.4161L12.0474 12.4472C12.1223 12.2657 12.2659 12.122 12.4474 12.0472L13.4162 11.6465C13.7251 11.5191 13.9095 11.1991 13.8658 10.868L13.734 9.86431C13.7051 9.6458 13.7643 9.42506 13.8984 9.25099L14.5139 8.44879C14.7176 8.18362 14.7176 7.81474 14.5139 7.5503L13.8747 6.71773C13.7554 6.56218 13.7029 6.36589 13.7288 6.17182L13.8658 5.13037C13.9095 4.79927 13.7251 4.48002 13.4162 4.35187L12.4474 3.95114C12.2659 3.87633 12.1223 3.73263 12.0474 3.55115L11.6467 2.58229C11.5193 2.27341 11.1994 2.08897 10.8683 2.13267L9.82689 2.26971C9.63283 2.29637 9.43655 2.24378 9.28175 2.12527L8.44922 1.48603C8.18406 1.28233 7.8152 1.28233 7.55078 1.48603L6.71826 2.12527C6.56272 2.24378 6.36643 2.29637 6.17238 2.27119L5.13098 2.13416C4.7999 2.09045 4.48067 2.27489 4.35253 2.58377L3.95256 3.55263C3.87701 3.73337 3.73332 3.87707 3.5526 3.95262L2.58379 4.35261C2.27492 4.48076 2.09049 4.80001 2.13419 5.13111L2.27122 6.17256C2.2964 6.36663 2.24382 6.56292 2.12531 6.71773L1.4861 7.5503C1.28241 7.81548 1.28241 8.18436 1.4861 8.44879L2.12531 9.28136C2.24456 9.43692 2.29714 9.63321 2.27122 9.82728L2.13419 10.8687C2.09049 11.1998 2.27492 11.5191 2.58379 11.6472L3.5526 12.048C3.73406 12.1228 3.87775 12.2665 3.95256 12.4479L4.35327 13.4168C4.48067 13.7257 4.80064 13.9101 5.13172 13.8664L6.1346 13.7338Z" stroke="#9FFF02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                <defs>
+                  <clipPath id="clip0_7802_1482">
+                    <rect width="16" height="16" fill="white"/>
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="col--green tc ff-poppins f2 fs-normal fw5 lh--2-75 ls---0-045">
+          Subscribe & Unlock Exclusive Content
+        </div>
+
+        <a class="w--2 h--2 flex-shrink t--3 r--3 absolute">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <path d="M24 8L8 24M8 8L24 24" stroke="#9FFF02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- slider section -->
+      <div id="slider" class="w--78-35 h--50-625 mt3 tr--opacity-0-8 g--col-2-2 g--row-2-2 splide">
+        <!-- slider track -->
+        <div class="w-100 mh--auto splide__track">
+          <!-- slider list -->
+          <ul class="splide__list">
+            <!-- slider item 1 -->
+            <li class="flex flex-column items-start pa3 t--scale-y tr--transform-0-2 z---2 gap--1 relative splide__slide">
+              <div class="flex items-center gap--0-5 self-stretch">
+                <div class="col--gray-warm ff-poppins f3 fs-normal fw6 lh--2">
+                  MANGO TIER
+                </div>
+
+                <div class="flex h--1-375 pv2 ph3 justify-center items-center gap--0-375 bg-blur--0-625 common_elm_JcADkP">
+                  <div class="ff-poppins f7 fs-normal fw5 lh--1-125">
+                    ON SALE
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex items-end gap--0-25 self-stretch">
+                <div class="tc">
+                  <span class="tc ff-poppins f3 fs-normal fw6 lh--2 common_elm_TWPiUU">
+                    USD$
+                  </span>
+
+                  <span class="ff-poppins f--3 fs-normal fw6 lh--3-75 ls---0-06 common_elm_TWPiUU">
+                    0.99
+                  </span>
+                </div>
+
+                <div class="tc ff-poppins f6 fs-normal fw4 lh-copy strike common_elm_TWPiUU">
+                  $12.99
+                </div>
+                
+                <div class="col--gray-warm tc ff-poppins f5 fs-normal fw4 lh-copy">
+                  /month
+                </div>
+              </div>
+
+              <div class="flex items-end self-stretch">
+                <div class="w--1-5625 h--4">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="64" viewBox="0 0 25 64" fill="none">
+                    <g filter="url(#filter0_b_9823_21360)">
+                      <path class="common_elm_dkSNEg" d="M25.001 0H0.000976562L25.001 64V0Z"/>
+                    </g>
+                    <defs>
+                      <filter id="filter0_b_9823_21360" x="-9.99902" y="-10" width="45" height="84" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feGaussianBlur in="BackgroundImageFix" stdDeviation="5"/>
+                        <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_9823_21360"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_9823_21360" result="shape"/>
+                      </filter>
+                    </defs>
+                  </svg>
+                </div>
+
+                <div class="flex pv0 ph3 justify-between items-center flex--1-0-0 self-stretch common_elm_cXAIoP">
+                  <div class="flex flex-column items-center">
+                    <div class="black tc ff-poppins f4 fs-normal fw6 lh--1-875 ttu">
+                      Subscribe
+                    </div>
+                  </div>
+
+                  <div class="w--2-25 h--2-25">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                      <path d="M7.50098 18H28.501M28.501 18L18.001 7.5M28.501 18L18.001 28.5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                </div>
+
+                <div class="w--1-5625 h--4">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="64" viewBox="0 0 25 64" fill="none">
+                    <g filter="url(#filter0_b_9823_21368)">
+                      <path class="common_elm_dkSNEg" d="M0.000976562 64L25.001 64L0.000987753 0L0.000976562 64Z"/>
+                    </g>
+                    <defs>
+                      <filter id="filter0_b_9823_21368" x="-9.99902" y="-10" width="45" height="84" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feGaussianBlur in="BackgroundImageFix" stdDeviation="5"/>
+                        <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_9823_21368"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_9823_21368" result="shape"/>
+                      </filter>
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+
+              <div class="flex h--6 max-height--6 flex-column items-start gap--0-1875 self-stretch">
+                <div class="w--22 flex--1-0-0 truncate col--gray-warm ff-poppins f5 fs-normal fw4 lh-copy ls--0-01">
+                  Watch all of my mango eating content!
+                  <br/>
+                  content update weekly!
+                  <br/>
+                  100% real content
+                  <br/>
+                  no editing
+                </div>
+
+                <div class="ff-poppins f6 fs-normal fw6 lh-title common_elm_TWPiUU">
+                  Read more
+                </div>
+              </div>
+              
+              <div class="flex flex-column items-start self-stretch">
+                <div class="flex pv2 ph3 justify-center items-center gap--0-625 common_elm_cXAIoP">
+                  <div class="black ff-poppins f6 fs-normal fw5 lh-title">
+                    MEMBER BENEFITS
+                  </div>
+                </div>
+
+                <div class="flex w--22 pv3 ph0 flex-column items-start gap--1 common_elm_eqnlFt">
+                  <div class="flex items-center gap--0-5 self-stretch">
+                    <div class="w--2 h--2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path class="common_elm_dkSNEg" fill-rule="evenodd" clip-rule="evenodd" d="M20.3691 24.2204L13.4287 24.9864C12.053 25.1388 11.0315 23.7426 11.5875 22.4783L12.9303 19.4183C13.3463 18.4711 12.8479 17.3838 12.053 16.7208C10.982 15.8312 10.2406 14.538 10.0759 13.043C9.73812 9.9707 11.95 7.21137 15.0186 6.87366C18.0872 6.53595 20.851 8.74753 21.1888 11.8157C21.3576 13.3437 20.8922 14.7934 20.0066 15.9053C19.3558 16.729 19.0881 17.9233 19.7101 18.7676L21.6212 21.3704C22.4409 22.4865 21.7448 24.0721 20.3691 24.2204Z"/>
+                      </svg>
+                    </div>
+
+                    <div class="flex--1-0-0">
+                      <span class="col--gray-warm ff-poppins f5 fs-normal fw6 lh-copy">10% off</span>
+                      <span class="col--gray-warm ff-poppins f5 fs-normal fw4 lh-copy"> on all Merchandise</span>
+                    </div>
+                  </div>
+
+                  <div class="flex items-center gap--0-5 self-stretch">
+                    <div class="w--2 h--2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path class="common_elm_dkSNEg" fill-rule="evenodd" clip-rule="evenodd" d="M20.3691 24.2204L13.4287 24.9864C12.053 25.1388 11.0315 23.7426 11.5875 22.4783L12.9303 19.4183C13.3463 18.4711 12.8479 17.3838 12.053 16.7208C10.982 15.8312 10.2406 14.538 10.0759 13.043C9.73812 9.9707 11.95 7.21137 15.0186 6.87366C18.0872 6.53595 20.851 8.74753 21.1888 11.8157C21.3576 13.3437 20.8922 14.7934 20.0066 15.9053C19.3558 16.729 19.0881 17.9233 19.7101 18.7676L21.6212 21.3704C22.4409 22.4865 21.7448 24.0721 20.3691 24.2204Z"/>
+                      </svg>
+                    </div>
+
+                    <div class="flex--1-0-0">
+                      <span class="col--gray-warm ff-poppins f5 fs-normal fw6 lh-copy">10% off</span>
+                      <span class="col--gray-warm ff-poppins f5 fs-normal fw4 lh-copy"> on custom request</span>
+                    </div>
+                  </div>
+
+                  <div class="flex items-center gap--0-5 self-stretch">
+                    <div class="w--2 h--2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path class="common_elm_dkSNEg" fill-rule="evenodd" clip-rule="evenodd" d="M20.3691 24.2204L13.4287 24.9864C12.053 25.1388 11.0315 23.7426 11.5875 22.4783L12.9303 19.4183C13.3463 18.4711 12.8479 17.3838 12.053 16.7208C10.982 15.8312 10.2406 14.538 10.0759 13.043C9.73812 9.9707 11.95 7.21137 15.0186 6.87366C18.0872 6.53595 20.851 8.74753 21.1888 11.8157C21.3576 13.3437 20.8922 14.7934 20.0066 15.9053C19.3558 16.729 19.0881 17.9233 19.7101 18.7676L21.6212 21.3704C22.4409 22.4865 21.7448 24.0721 20.3691 24.2204Z"/>
+                      </svg>
+                    </div>
+
+                    <div class="flex--1-0-0">
+                      <span class="col--gray-warm ff-poppins f5 fs-normal fw6 lh-copy">10% off</span>
+                      <span class="col--gray-warm ff-poppins f5 fs-normal fw4 lh-copy"> on pay per view videos</span>
+                    </div>
+                  </div>
+
+                  <div class="flex items-center gap--0-5 self-stretch">
+                    <div class="w--2 h--2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path class="common_elm_dkSNEg" fill-rule="evenodd" clip-rule="evenodd" d="M20.3691 24.2204L13.4287 24.9864C12.053 25.1388 11.0315 23.7426 11.5875 22.4783L12.9303 19.4183C13.3463 18.4711 12.8479 17.3838 12.053 16.7208C10.982 15.8312 10.2406 14.538 10.0759 13.043C9.73812 9.9707 11.95 7.21137 15.0186 6.87366C18.0872 6.53595 20.851 8.74753 21.1888 11.8157C21.3576 13.3437 20.8922 14.7934 20.0066 15.9053C19.3558 16.729 19.0881 17.9233 19.7101 18.7676L21.6212 21.3704C22.4409 22.4865 21.7448 24.0721 20.3691 24.2204Z"/>
+                      </svg>
+                    </div>
+
+                    <div class="flex--1-0-0">
+                      <span class="col--gray-warm ff-poppins f5 fs-normal fw4 lh-copy">Receive</span>
+                      <span class="col--gray-warm ff-poppins f5 fs-normal fw6 lh-copy"> 100 Free tokens each month</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- slider item 2 -->
+            <li class="flex flex-column items-start pa3 t--scale-y tr--transform-0-2 z---2 gap--1 relative splide__slide">
+              <div class="flex items-center gap--0-5 self-stretch">
+                <div class="col--gray-warm ff-poppins f3 fs-normal fw6 lh--2">
+                  MANGO TIER
+                </div>
+
+                <div class="flex h--1-375 pv2 ph3 justify-center items-center gap--0-375 bg-blur--0-625 common_elm_JcADkP">
+                  <div class="ff-poppins f7 fs-normal fw5 lh--1-125">
+                    ON SALE
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex items-end gap--0-25 self-stretch">
+                <div class="tc">
+                  <span class="tc ff-poppins f3 fs-normal fw6 lh--2 common_elm_TWPiUU">
+                    USD$
+                  </span>
+
+                  <span class="ff-poppins f--3 fs-normal fw6 lh--3-75 ls---0-06 common_elm_TWPiUU">
+                    6.99
+                  </span>
+                </div>
+
+                <div class="tc ff-poppins f6 fs-normal fw4 lh-copy strike common_elm_TWPiUU">
+                  $1.99
+                </div>
+                
+                <div class="col--gray-warm tc ff-poppins f5 fs-normal fw4 lh-copy">
+                  /month
+                </div>
+              </div>
+
+              <div class="flex items-end self-stretch">
+                <div class="w--1-5625 h--4">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="64" viewBox="0 0 25 64" fill="none">
+                    <g filter="url(#filter0_b_9823_21360)">
+                      <path class="common_elm_dkSNEg" d="M25.001 0H0.000976562L25.001 64V0Z"/>
+                    </g>
+                    <defs>
+                      <filter id="filter0_b_9823_21360" x="-9.99902" y="-10" width="45" height="84" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feGaussianBlur in="BackgroundImageFix" stdDeviation="5"/>
+                        <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_9823_21360"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_9823_21360" result="shape"/>
+                      </filter>
+                    </defs>
+                  </svg>
+                </div>
+
+                <div class="flex pv0 ph3 justify-between items-center flex--1-0-0 self-stretch common_elm_cXAIoP">
+                  <div class="flex flex-column items-center">
+                    <div class="black tc ff-poppins f4 fs-normal fw6 lh--1-875 ttu">
+                      Subscribe
+                    </div>
+                  </div>
+
+                  <div class="w--2-25 h--2-25">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                      <path d="M7.50098 18H28.501M28.501 18L18.001 7.5M28.501 18L18.001 28.5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                </div>
+
+                <div class="w--1-5625 h--4">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="64" viewBox="0 0 25 64" fill="none">
+                    <g filter="url(#filter0_b_9823_21368)">
+                      <path class="common_elm_dkSNEg" d="M0.000976562 64L25.001 64L0.000987753 0L0.000976562 64Z"/>
+                    </g>
+                    <defs>
+                      <filter id="filter0_b_9823_21368" x="-9.99902" y="-10" width="45" height="84" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feGaussianBlur in="BackgroundImageFix" stdDeviation="5"/>
+                        <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_9823_21368"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_9823_21368" result="shape"/>
+                      </filter>
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+
+              <div class="flex h--6 max-height--6 flex-column items-start gap--0-1875 self-stretch">
+                <div class="w--22 flex--1-0-0 truncate col--gray-warm ff-poppins f5 fs-normal fw4 lh-copy ls--0-01">
+                  Watch all of my mango eating content!
+                  <br/>
+                  content update weekly!
+                  <br/>
+                  100% real content
+                  <br/>
+                  no editing
+                </div>
+
+                <div class="ff-poppins f6 fs-normal fw6 lh-title common_elm_TWPiUU">
+                  Read more
+                </div>
+              </div>
+
+              <div class="flex flex-column items-start self-stretch">
+                <div class="flex pv2 ph3 justify-center items-center gap--0-625 common_elm_cXAIoP">
+                  <div class="black ff-poppins f6 fs-normal fw5 lh-title">
+                    MEMBER BENEFITS
+                  </div>
+                </div>
+
+                <div class="flex w--22 pv3 ph0 flex-column items-start gap--1 common_elm_eqnlFt">
+                  <div class="flex items-center gap--0-5 self-stretch">
+                    <div class="w--2 h--2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path class="common_elm_dkSNEg" fill-rule="evenodd" clip-rule="evenodd" d="M20.3691 24.2204L13.4287 24.9864C12.053 25.1388 11.0315 23.7426 11.5875 22.4783L12.9303 19.4183C13.3463 18.4711 12.8479 17.3838 12.053 16.7208C10.982 15.8312 10.2406 14.538 10.0759 13.043C9.73812 9.9707 11.95 7.21137 15.0186 6.87366C18.0872 6.53595 20.851 8.74753 21.1888 11.8157C21.3576 13.3437 20.8922 14.7934 20.0066 15.9053C19.3558 16.729 19.0881 17.9233 19.7101 18.7676L21.6212 21.3704C22.4409 22.4865 21.7448 24.0721 20.3691 24.2204Z"/>
+                      </svg>
+                    </div>
+
+                    <div class="flex--1-0-0">
+                      <span class="col--gray-warm ff-poppins f5 fs-normal fw6 lh-copy">10% off</span>
+                      <span class="col--gray-warm ff-poppins f5 fs-normal fw4 lh-copy"> on all Merchandise</span>
+                    </div>
+                  </div>
+
+                  <div class="flex items-center gap--0-5 self-stretch">
+                    <div class="w--2 h--2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path class="common_elm_dkSNEg" fill-rule="evenodd" clip-rule="evenodd" d="M20.3691 24.2204L13.4287 24.9864C12.053 25.1388 11.0315 23.7426 11.5875 22.4783L12.9303 19.4183C13.3463 18.4711 12.8479 17.3838 12.053 16.7208C10.982 15.8312 10.2406 14.538 10.0759 13.043C9.73812 9.9707 11.95 7.21137 15.0186 6.87366C18.0872 6.53595 20.851 8.74753 21.1888 11.8157C21.3576 13.3437 20.8922 14.7934 20.0066 15.9053C19.3558 16.729 19.0881 17.9233 19.7101 18.7676L21.6212 21.3704C22.4409 22.4865 21.7448 24.0721 20.3691 24.2204Z"/>
+                      </svg>
+                    </div>
+
+                    <div class="flex--1-0-0">
+                      <span class="col--gray-warm ff-poppins f5 fs-normal fw6 lh-copy">10% off</span>
+                      <span class="col--gray-warm ff-poppins f5 fs-normal fw4 lh-copy"> on custom request</span>
+                    </div>
+                  </div>
+
+                  <div class="flex items-center gap--0-5 self-stretch">
+                    <div class="w--2 h--2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path class="common_elm_dkSNEg" fill-rule="evenodd" clip-rule="evenodd" d="M20.3691 24.2204L13.4287 24.9864C12.053 25.1388 11.0315 23.7426 11.5875 22.4783L12.9303 19.4183C13.3463 18.4711 12.8479 17.3838 12.053 16.7208C10.982 15.8312 10.2406 14.538 10.0759 13.043C9.73812 9.9707 11.95 7.21137 15.0186 6.87366C18.0872 6.53595 20.851 8.74753 21.1888 11.8157C21.3576 13.3437 20.8922 14.7934 20.0066 15.9053C19.3558 16.729 19.0881 17.9233 19.7101 18.7676L21.6212 21.3704C22.4409 22.4865 21.7448 24.0721 20.3691 24.2204Z"/>
+                      </svg>
+                    </div>
+
+                    <div class="flex--1-0-0">
+                      <span class="col--gray-warm ff-poppins f5 fs-normal fw6 lh-copy">10% off</span>
+                      <span class="col--gray-warm ff-poppins f5 fs-normal fw4 lh-copy"> on pay per view videos</span>
+                    </div>
+                  </div>
+
+                  <div class="flex items-center gap--0-5 self-stretch">
+                    <div class="w--2 h--2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path class="common_elm_dkSNEg" fill-rule="evenodd" clip-rule="evenodd" d="M20.3691 24.2204L13.4287 24.9864C12.053 25.1388 11.0315 23.7426 11.5875 22.4783L12.9303 19.4183C13.3463 18.4711 12.8479 17.3838 12.053 16.7208C10.982 15.8312 10.2406 14.538 10.0759 13.043C9.73812 9.9707 11.95 7.21137 15.0186 6.87366C18.0872 6.53595 20.851 8.74753 21.1888 11.8157C21.3576 13.3437 20.8922 14.7934 20.0066 15.9053C19.3558 16.729 19.0881 17.9233 19.7101 18.7676L21.6212 21.3704C22.4409 22.4865 21.7448 24.0721 20.3691 24.2204Z"/>
+                      </svg>
+                    </div>
+
+                    <div class="flex--1-0-0">
+                      <span class="col--gray-warm ff-poppins f5 fs-normal fw4 lh-copy">Receive</span>
+                      <span class="col--gray-warm ff-poppins f5 fs-normal fw6 lh-copy"> 100 Free tokens each month</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Splide JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  
+  <script>
+    new Splide('#slider', {
+      type: 'loop',
+      fixedWidth: '24rem',
+      fixedHeight: '35.5rem',
+      perPage: 1,
+      focus: 'center',
+      arrows: false,
+      pagination: true,
+      drag: true,
+      cover: true,
+      isNavigation: true,
+      updateOnMove: true,
+      clones: 0,
+    }).mount();
+  </script>
+</body>
+
+</html>
