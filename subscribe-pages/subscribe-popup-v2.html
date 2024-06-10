@@ -507,7 +507,7 @@
   <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
   
   <script>
-    new Splide('#slider', {
+    let splide = new Splide('#slider', {
       type: 'loop',
       fixedWidth: '24rem',
       perPage: 1,
@@ -520,6 +520,8 @@
       updateOnMove: true,
       clones: 0,
     }).mount();
+    
+    splide.go(0);
   </script>
 </body>
 
