@@ -112,41 +112,53 @@
 
         .elm_ceyzSI{
             height: 13.54rem;
+            box-shadow: 0px 0px 10px -34px rgba(0, 0, 0, 0.10);
+            overflow: hidden;
+        }
+        .elm_ceyzSI:hover{
+            overflow: visible;
         }
         .elm_ceyzSI a{
             display: block;
-            transition: all 0.5s ease-in-out;
+            transition: all 0.3s ease-in-out;
             position: absolute;
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
+            overflow: hidden;
         }
-
-        .elm_ilaylv{
-            background: rgba(0, 0, 0, 0.01);
+        .elm_ceyzSI a:after
+        {
+            content: '';
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.80) 100%);
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
         }
-
-        .elm_ceyzSI:hover a,
         .elm_ceyzSI:hover a
         {
             width: 26.25rem;
-            height: 21rem;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            height: 21.875rem;
             z-index: 9;
+        }
+        .elm_ceyzSI:hover a:after{
+            opacity: 1;
         }
 
         .elm_ceyzSI:hover .elm_rGOoKu,
         .elm_ceyzSI:hover .elm_YDDdhy,
         .elm_ceyzSI:hover .elm_ilaylv{
-            transition-delay: 0.2s;
+            transition-delay: 0.05s;
         }
 
         .elm_ceyzSI a > .elm_JwVEDK,
         .elm_ceyzSI a > .elm_TkTLAD,
         .elm_ceyzSI a > .elm_smWIta:after{
-            transition: all 0.5s ease-in-out;
+            transition: all 0.3s ease-in-out;
         }
         
         .elm_ceyzSI a:hover > .elm_JwVEDK,
@@ -167,12 +179,6 @@
             .elm_ceyzSI{
                 height: 12.94rem;
             }
-            .elm_ceyzSI:hover a,
-            .elm_ceyzSI:hover a
-            {
-                width: 118%;
-                height: 160%;
-            }
         }
         /* Responsive for 2048 screen */
         @media screen and (min-width: 128em){
@@ -185,11 +191,6 @@
         @media screen and (min-width: 160em){
             .elm_ceyzSI{
                 height: 20.885rem;
-            }
-            .elm_ceyzSI:hover a,
-            .elm_ceyzSI:hover a
-            {
-                height: 140%;
             }
         }
 
@@ -223,10 +224,10 @@
                 <div class="splide__track ml--3 of--visible">
                     <ul class="splide__list">
                         <!-- list item for Video Category Slider -->
-                        <li class="splide__slide elm_ceyzSI relative hide-child">
-                            <a href="#" class="w-100 h-100 top-0 left-0 relative">
+                        <li class="splide__slide elm_ceyzSI relative sh--3 hide-child">
+                            <a href="#" class="w-100 h-100 top-0 left-0 relative sh--3 br--5">
                                 <div class="elm_aCyFvm w-100 h-100 db" style="background:url('assets/images/cat-img/vd-img-01.png') no-repeat center center / cover"></div>
-                                <div class="elm_ilaylv w-100 h-100 bg--blur--50 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 sh--3 br--5 child o--hidden">
+                                <div class="elm_ilaylv z--2 w-100 h-100 bg--blur--50 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 child o--hidden">
                                     <span class="w-100 h-100 flex justify-center items-start absolute top--3 left-0">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="132" height="130" viewBox="0 0 132 130" fill="none">
                                             <g opacity="0.5">
@@ -279,10 +280,10 @@
                             </a>
                         </li>
                         <!-- list item for Video Category Slider -->
-                        <li class="splide__slide elm_ceyzSI relative hide-child">
-                            <a href="#" class="w-100 h-100 top-0 left-0 relative">
+                        <li class="splide__slide elm_ceyzSI sh--3 relative hide-child">
+                            <a href="#" class="w-100 h-100 top-0 left-0 relative sh--3 br--5">
                                 <div class="elm_aCyFvm w-100 h-100 db" style="background:url('assets/images/cat-img/vd-img-02.png') no-repeat center center / cover"></div>
-                                <div class="elm_ilaylv w-100 h-100 bg--blur--50 w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 sh--3 br--5 child o--hidden">
+                                <div class="elm_ilaylv z--2 w-100 h-100 bg--blur--50 w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 child o--hidden">
                                     <span class="w-100 h-100 flex justify-center items-start absolute top--3 left-0">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="132" height="130" viewBox="0 0 132 130" fill="none">
                                             <g opacity="0.5">
@@ -335,10 +336,10 @@
                             </a>
                         </li>
                         <!-- list item for Video Category Slider -->
-                        <li class="splide__slide elm_ceyzSI relative hide-child">
-                            <a href="#" class="w-100 h-100 top-0 left-0 relative">
+                        <li class="splide__slide elm_ceyzSI sh--3 relative hide-child">
+                            <a href="#" class="w-100 h-100 top-0 left-0 relative sh--3 br--5">
                                 <div class="elm_aCyFvm w-100 h-100 db" style="background:url('assets/images/cat-img/vd-img-03.png') no-repeat center center / cover"></div>
-                                <div class="elm_ilaylv bg--blur--50 w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 sh--3 br--5 child o--hidden">
+                                <div class="elm_ilaylv z--2 bg--blur--50 w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 child o--hidden">
                                     <span class="w-100 h-100 flex justify-center items-start absolute top--3 left-0">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="132" height="130" viewBox="0 0 132 130" fill="none">
                                             <g opacity="0.5">
@@ -391,10 +392,10 @@
                             </a>
                         </li>
                         <!-- list item for Video Category Slider -->
-                        <li class="splide__slide elm_ceyzSI relative hide-child">
-                            <a href="#" class="w-100 h-100 top-0 left-0 relative">
+                        <li class="splide__slide elm_ceyzSI sh--3 relative hide-child">
+                            <a href="#" class="w-100 h-100 top-0 left-0 relative sh--3 br--5">
                                 <div class="elm_aCyFvm w-100 h-100 db" style="background:url('assets/images/cat-img/vd-img-04.png') no-repeat center center / cover"></div>
-                                <div class="elm_ilaylv bg--blur--50 w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 sh--3 br--5 child o--hidden">
+                                <div class="elm_ilaylv z--2 bg--blur--50 w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 child o--hidden">
                                     <span class="w-100 h-100 flex justify-center items-start absolute top--3 left-0">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="132" height="130" viewBox="0 0 132 130" fill="none">
                                             <g opacity="0.5">
@@ -447,10 +448,10 @@
                             </a>
                         </li>
                         <!-- list item for Video Category Slider -->
-                        <li class="splide__slide elm_ceyzSI relative hide-child">
-                            <a href="#" class="w-100 h-100 top-0 left-0 relative">
+                        <li class="splide__slide elm_ceyzSI sh--3 relative hide-child">
+                            <a href="#" class="w-100 h-100 top-0 left-0 relative sh--3 br--5">
                                 <div class="elm_aCyFvm w-100 h-100 db" style="background:url('assets/images/cat-img/vd-img-02.png') no-repeat center center / cover"></div>
-                                <div class="elm_ilaylv w-100 h-100 bg--blur--50 w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 sh--3 br--5 child o--hidden">
+                                <div class="elm_ilaylv z--2 w-100 h-100 bg--blur--50 w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 sh--3 br--5 child o--hidden">
                                     <span class="w-100 h-100 flex justify-center items-start absolute top--3 left-0">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="132" height="130" viewBox="0 0 132 130" fill="none">
                                             <g opacity="0.5">
@@ -502,10 +503,10 @@
                                 </span>
                             </a>
                         </li>
-                        <li class="splide__slide elm_ceyzSI relative hide-child">
-                            <a href="#" class="w-100 h-100 top-0 left-0 relative">
+                        <li class="splide__slide elm_ceyzSI sh--3 relative hide-child">
+                            <a href="#" class="w-100 h-100 top-0 left-0 relative sh--3 br--5">
                                 <div class="elm_aCyFvm w-100 h-100 db" style="background:url('assets/images/cat-img/vd-img-01.png') no-repeat center center / cover"></div>
-                                <div class="elm_ilaylv w-100 h-100 bg--blur--50 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 sh--3 br--5 child o--hidden">
+                                <div class="elm_ilaylv z--2 w-100 h-100 bg--blur--50 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 child o--hidden">
                                     <span class="w-100 h-100 flex justify-center items-start absolute top--3 left-0">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="132" height="130" viewBox="0 0 132 130" fill="none">
                                             <g opacity="0.5">
@@ -558,10 +559,10 @@
                             </a>
                         </li>
                         <!-- list item for Video Category Slider -->
-                        <li class="splide__slide elm_ceyzSI relative hide-child">
-                            <a href="#" class="w-100 h-100 top-0 left-0 relative">
+                        <li class="splide__slide elm_ceyzSI sh--3 relative hide-child">
+                            <a href="#" class="w-100 h-100 top-0 left-0 relative sh--3 br--5">
                                 <div class="elm_aCyFvm w-100 h-100 db" style="background:url('assets/images/cat-img/vd-img-02.png') no-repeat center center / cover"></div>
-                                <div class="elm_ilaylv w-100 h-100 bg--blur--50 w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 sh--3 br--5 child o--hidden">
+                                <div class="elm_ilaylv z--2 w-100 h-100 bg--blur--50 w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 child o--hidden">
                                     <span class="w-100 h-100 flex justify-center items-start absolute top--3 left-0">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="132" height="130" viewBox="0 0 132 130" fill="none">
                                             <g opacity="0.5">
@@ -614,10 +615,10 @@
                             </a>
                         </li>
                         <!-- list item for Video Category Slider -->
-                        <li class="splide__slide elm_ceyzSI relative hide-child">
-                            <a href="#" class="w-100 h-100 top-0 left-0 relative">
+                        <li class="splide__slide elm_ceyzSI sh--3 relative hide-child">
+                            <a href="#" class="w-100 h-100 top-0 left-0 relative sh--3 br--5">
                                 <div class="elm_aCyFvm w-100 h-100 db" style="background:url('assets/images/cat-img/vd-img-03.png') no-repeat center center / cover"></div>
-                                <div class="elm_ilaylv bg--blur--50 w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 sh--3 br--5 child o--hidden">
+                                <div class="elm_ilaylv z--2 bg--blur--50 w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 child o--hidden">
                                     <span class="w-100 h-100 flex justify-center items-start absolute top--3 left-0">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="132" height="130" viewBox="0 0 132 130" fill="none">
                                             <g opacity="0.5">
@@ -670,10 +671,10 @@
                             </a>
                         </li>
                         <!-- list item for Video Category Slider -->
-                        <li class="splide__slide elm_ceyzSI relative hide-child">
-                            <a href="#" class="w-100 h-100 top-0 left-0 relative">
+                        <li class="splide__slide elm_ceyzSI sh--3 relative hide-child">
+                            <a href="#" class="w-100 h-100 top-0 left-0 relative sh--3 br--5">
                                 <div class="elm_aCyFvm w-100 h-100 db" style="background:url('assets/images/cat-img/vd-img-04.png') no-repeat center center / cover"></div>
-                                <div class="elm_ilaylv bg--blur--50 w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 sh--3 br--5 child o--hidden">
+                                <div class="elm_ilaylv z--2 bg--blur--50 w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 child o--hidden">
                                     <span class="w-100 h-100 flex justify-center items-start absolute top--3 left-0">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="132" height="130" viewBox="0 0 132 130" fill="none">
                                             <g opacity="0.5">
@@ -726,10 +727,10 @@
                             </a>
                         </li>
                         <!-- list item for Video Category Slider -->
-                        <li class="splide__slide elm_ceyzSI relative hide-child">
-                            <a href="#" class="w-100 h-100 top-0 left-0 relative">
+                        <li class="splide__slide elm_ceyzSI sh--3 relative hide-child">
+                            <a href="#" class="w-100 h-100 top-0 left-0 relative sh--3 br--5">
                                 <div class="elm_aCyFvm w-100 h-100 db" style="background:url('assets/images/cat-img/vd-img-02.png') no-repeat center center / cover"></div>
-                                <div class="elm_ilaylv w-100 h-100 bg--blur--50 w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 sh--3 br--5 child o--hidden">
+                                <div class="elm_ilaylv z--2 w-100 h-100 bg--blur--50 w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 sh--3 br--5 child o--hidden">
                                     <span class="w-100 h-100 flex justify-center items-start absolute top--3 left-0">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="132" height="130" viewBox="0 0 132 130" fill="none">
                                             <g opacity="0.5">
@@ -809,10 +810,10 @@
                 <div class="splide__track ml--3 of--visible">
                     <ul class="splide__list">
                         <!-- list item for Latest Video Upload Slider -->
-                        <li class="splide__slide elm_ceyzSI relative hide-child">
-                            <a href="#" class="w-100 h-100 top-0 left-0 relative">
+                        <li class="splide__slide elm_ceyzSI sh--3 relative hide-child">
+                            <a href="#" class="w-100 h-100 top-0 left-0 relative sh--3 br--5">
                                 <div class="elm_aCyFvm w-100 h-100 db" style="background:url('assets/images/cat-img/lt_vd-img-01.png') no-repeat center center / cover"></div>
-                                <div class="elm_rGOoKu w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 sh--3 br--5 child o--hidden">
+                                <div class="elm_rGOoKu w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 z--2 child o--hidden">
                                     <div class="flex items-center justify-between">
                                         <div class="flex">
                                             <span class="bg--gray-70 flex items-center justify-center gap--4 pad--x--10 pad--y--4">
@@ -853,10 +854,10 @@
                             </a>
                         </li>
                         <!-- list item for Latest Video Upload Slider -->
-                        <li class="splide__slide elm_ceyzSI relative hide-child">
-                            <a href="#" class="w-100 h-100 top-0 left-0 relative">
+                        <li class="splide__slide elm_ceyzSI sh--3 relative hide-child">
+                            <a href="#" class="w-100 h-100 top-0 left-0 relative sh--3 br--5">
                                 <div class="elm_aCyFvm w-100 h-100 db" style="background:url('assets/images/cat-img/lt_vd-img-02.png') no-repeat center center / cover"></div>
-                                <div class="elm_rGOoKu w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 sh--3 br--5 child o--hidden">
+                                <div class="elm_rGOoKu w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 z--2 child o--hidden">
                                     <div class="flex items-center justify-between">
                                         <div class="flex">
                                             <span class="bg--gray-70 flex items-center justify-center gap--4 pad--x--10 pad--y--4">
@@ -899,10 +900,10 @@
                             </a>
                         </li>
                         <!-- list item for Latest Video Upload Slider -->
-                        <li class="splide__slide elm_ceyzSI relative hide-child">
-                            <a href="#" class="w-100 h-100 top-0 left-0 relative">
+                        <li class="splide__slide elm_ceyzSI relative sh--3 hide-child">
+                            <a href="#" class="w-100 h-100 top-0 left-0 relative sh--3 br--5">
                                 <div class="elm_aCyFvm w-100 h-100 db" style="background:url('assets/images/cat-img/lt_vd-img-03.png') no-repeat center center / cover"></div>
-                                <div class="elm_rGOoKu w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 sh--3 br--5 child o--hidden">
+                                <div class="elm_rGOoKu w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 z--2 child o--hidden">
                                     <div class="flex items-center justify-between">
                                         <div class="flex">
                                             <span class="bg--col--kelly-green flex items-center justify-center gap--4 pad--x--10 pad--y--4">
@@ -943,10 +944,10 @@
                             </a>
                         </li>
                         <!-- list item for Latest Video Upload Slider -->
-                        <li class="splide__slide elm_ceyzSI relative hide-child">
-                            <a href="#" class="w-100 h-100 top-0 left-0 relative">
+                        <li class="splide__slide elm_ceyzSI sh--3 relative hide-child">
+                            <a href="#" class="w-100 h-100 top-0 left-0 relative sh--3 br--5">
                                 <div class="elm_aCyFvm w-100 h-100 db" style="background:url('assets/images/cat-img/lt_vd-img-04.png') no-repeat center center / cover"></div>
-                                <div class="elm_rGOoKu w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 sh--3 br--5 child o--hidden">
+                                <div class="elm_rGOoKu w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 z--2 child o--hidden">
                                     <div class="flex items-center justify-between">
                                         <div class="flex">
                                             <span class="bg--gray-70 flex items-center justify-center gap--4 pad--x--10 pad--y--4">
@@ -987,10 +988,10 @@
                             </a>
                         </li>
                         <!-- list item for Latest Video Upload Slider -->
-                        <li class="splide__slide elm_ceyzSI relative hide-child">
-                            <a href="#" class="w-100 h-100 top-0 left-0 relative">
+                        <li class="splide__slide elm_ceyzSI sh--3 relative hide-child">
+                            <a href="#" class="w-100 h-100 top-0 left-0 relative sh--3 br--5">
                                 <div class="elm_aCyFvm w-100 h-100 db" style="background:url('assets/images/cat-img/lt_vd-img-02.png') no-repeat center center / cover"></div>
-                                <div class="elm_rGOoKu w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 sh--3 br--5 child o--hidden">
+                                <div class="elm_rGOoKu w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 z--3 child o--hidden">
                                     <div class="flex items-center justify-between">
                                         <div class="flex">
                                             <span class="bg--gray-70 flex items-center justify-center gap--4 pad--x--10 pad--y--4">
@@ -1033,10 +1034,10 @@
                             </a>
                         </li>
                         <!-- list item for Latest Video Upload Slider -->
-                        <li class="splide__slide elm_ceyzSI relative hide-child">
-                            <a href="#" class="w-100 h-100 top-0 left-0 relative">
+                        <li class="splide__slide elm_ceyzSI sh--3 relative hide-child">
+                            <a href="#" class="w-100 h-100 top-0 left-0 relative sh--3 br--5">
                                 <div class="elm_aCyFvm w-100 h-100 db" style="background:url('assets/images/cat-img/lt_vd-img-01.png') no-repeat center center / cover"></div>
-                                <div class="elm_rGOoKu w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 sh--3 br--5 child o--hidden">
+                                <div class="elm_rGOoKu w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 z--2 child o--hidden">
                                     <div class="flex items-center justify-between">
                                         <div class="flex">
                                             <span class="bg--gray-70 flex items-center justify-center gap--4 pad--x--10 pad--y--4">
@@ -1077,10 +1078,10 @@
                             </a>
                         </li>
                         <!-- list item for Latest Video Upload Slider -->
-                        <li class="splide__slide elm_ceyzSI relative hide-child">
-                            <a href="#" class="w-100 h-100 top-0 left-0 relative">
+                        <li class="splide__slide elm_ceyzSI sh--3 relative hide-child">
+                            <a href="#" class="w-100 h-100 top-0 left-0 relative sh--3 br--5">
                                 <div class="elm_aCyFvm w-100 h-100 db" style="background:url('assets/images/cat-img/lt_vd-img-02.png') no-repeat center center / cover"></div>
-                                <div class="elm_rGOoKu w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 sh--3 br--5 child o--hidden">
+                                <div class="elm_rGOoKu w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 z--2 child o--hidden">
                                     <div class="flex items-center justify-between">
                                         <div class="flex">
                                             <span class="bg--gray-70 flex items-center justify-center gap--4 pad--x--10 pad--y--4">
@@ -1123,10 +1124,10 @@
                             </a>
                         </li>
                         <!-- list item for Latest Video Upload Slider -->
-                        <li class="splide__slide elm_ceyzSI relative hide-child">
-                            <a href="#" class="w-100 h-100 top-0 left-0 relative">
+                        <li class="splide__slide elm_ceyzSI relative sh--3 hide-child">
+                            <a href="#" class="w-100 h-100 top-0 left-0 relative sh--3 br--5">
                                 <div class="elm_aCyFvm w-100 h-100 db" style="background:url('assets/images/cat-img/lt_vd-img-03.png') no-repeat center center / cover"></div>
-                                <div class="elm_rGOoKu w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 sh--3 br--5 child o--hidden">
+                                <div class="elm_rGOoKu w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 z--2 child o--hidden">
                                     <div class="flex items-center justify-between">
                                         <div class="flex">
                                             <span class="bg--col--kelly-green flex items-center justify-center gap--4 pad--x--10 pad--y--4">
@@ -1167,10 +1168,10 @@
                             </a>
                         </li>
                         <!-- list item for Latest Video Upload Slider -->
-                        <li class="splide__slide elm_ceyzSI relative hide-child">
-                            <a href="#" class="w-100 h-100 top-0 left-0 relative">
+                        <li class="splide__slide elm_ceyzSI sh--3 relative hide-child">
+                            <a href="#" class="w-100 h-100 top-0 left-0 relative sh--3 br--5">
                                 <div class="elm_aCyFvm w-100 h-100 db" style="background:url('assets/images/cat-img/lt_vd-img-04.png') no-repeat center center / cover"></div>
-                                <div class="elm_rGOoKu w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 sh--3 br--5 child o--hidden">
+                                <div class="elm_rGOoKu w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 z--2 child o--hidden">
                                     <div class="flex items-center justify-between">
                                         <div class="flex">
                                             <span class="bg--gray-70 flex items-center justify-center gap--4 pad--x--10 pad--y--4">
@@ -1211,10 +1212,10 @@
                             </a>
                         </li>
                         <!-- list item for Latest Video Upload Slider -->
-                        <li class="splide__slide elm_ceyzSI relative hide-child">
-                            <a href="#" class="w-100 h-100 top-0 left-0 relative">
+                        <li class="splide__slide elm_ceyzSI sh--3 relative hide-child">
+                            <a href="#" class="w-100 h-100 top-0 left-0 relative sh--3 br--5">
                                 <div class="elm_aCyFvm w-100 h-100 db" style="background:url('assets/images/cat-img/lt_vd-img-02.png') no-repeat center center / cover"></div>
-                                <div class="elm_rGOoKu w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 sh--3 br--5 child o--hidden">
+                                <div class="elm_rGOoKu w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 z--3 child o--hidden">
                                     <div class="flex items-center justify-between">
                                         <div class="flex">
                                             <span class="bg--gray-70 flex items-center justify-center gap--4 pad--x--10 pad--y--4">
@@ -1284,11 +1285,11 @@
                 <div class="splide__track ml--3 of--visible">
                     <ul class="splide__list">
                         <!-- list item for Latest Most Popular Video Slider -->
-                        <li class="splide__slide elm_ceyzSI relative hide-child">
-                            <a href="#" class="w-100 h-100 top-0 left-0 relative">
+                        <li class="splide__slide elm_ceyzSI sh--3 relative hide-child">
+                            <a href="#" class="w-100 h-100 top-0 left-0 relative sh--3 br--5">
                                 <div class="elm_smWIta w-100 h-100 db" style="background:url('assets/images/cat-img/vd-img-01.png') no-repeat center center / cover"></div>
                                 
-                                <div class="elm_YDDdhy w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 sh--3 br--5 child o--hidden">
+                                <div class="elm_YDDdhy w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 z--2 child o--hidden">
                                     <div class="elm_TkTLAD absolute left-0 top-0">
                                         <span class="fs--48 fw7 tracked--100 col-text-trans-bg stroke--col--light-warm-white text--sh--2 lh--1">
                                             <svg width="55" height="110">
@@ -1366,10 +1367,10 @@
                             </a>
                         </li>
                         <!-- list item for Latest Most Popular Video Slider -->
-                        <li class="splide__slide elm_ceyzSI relative hide-child">
-                            <a href="#" class="w-100 h-100 top-0 left-0 relative">
+                        <li class="splide__slide elm_ceyzSI sh--3 relative hide-child">
+                            <a href="#" class="w-100 h-100 top-0 left-0 relative sh--3 br--5">
                                 <div class="elm_smWIta w-100 h-100 db" style="background:url('assets/images/cat-img/vd-img-02.png') no-repeat center center / cover"></div>
-                                <div class="elm_YDDdhy w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 sh--3 br--5 child o--hidden">
+                                <div class="elm_YDDdhy w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 z--2 child o--hidden">
                                     <div class="elm_TkTLAD absolute left-0 top-0">
                                         <span class="fs--48 fw7 tracked--100 col-text-trans-bg stroke--col--light-warm-white text--sh--2 lh--1">
                                             <svg width="55" height="110">
@@ -1445,10 +1446,10 @@
                             </a>
                         </li>
                         <!-- list item for Latest Most Popular Video Slider -->
-                        <li class="splide__slide elm_ceyzSI relative hide-child">
-                            <a href="#" class="w-100 h-100 top-0 left-0 relative">
+                        <li class="splide__slide elm_ceyzSI sh--3 relative hide-child">
+                            <a href="#" class="w-100 h-100 top-0 left-0 relative sh--3 br--5">
                                 <div class="elm_smWIta w-100 h-100 db" style="background:url('assets/images/cat-img/vd-img-03.png') no-repeat center center / cover"></div>
-                                <div class="elm_YDDdhy w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 sh--3 br--5 child o--hidden">
+                                <div class="elm_YDDdhy w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 z--2 child o--hidden">
                                     <div class="elm_TkTLAD absolute left-0 top-0">
                                         <span class="fs--48 fw7 tracked--100 col-text-trans-bg stroke--col--light-warm-white text--sh--2 lh--1">
                                             <svg width="55" height="110">
@@ -1523,10 +1524,10 @@
                             </a>
                         </li>
                         <!-- list item for Latest Most Popular Video Slider --> 
-                        <li class="splide__slide elm_ceyzSI relative hide-child">
-                            <a href="#" class="w-100 h-100 top-0 left-0 relative">
+                        <li class="splide__slide elm_ceyzSI sh--3 relative hide-child">
+                            <a href="#" class="w-100 h-100 top-0 left-0 relative sh--3 br--5">
                                 <div class="elm_smWIta w-100 h-100 db" style="background:url('assets/images/cat-img/vd-img-04.png') no-repeat center center / cover"></div>
-                                <div class="elm_YDDdhy w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 sh--3 br--5 child o--hidden">
+                                <div class="elm_YDDdhy w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 z--2 child o--hidden">
                                     <div class="elm_TkTLAD absolute left-0 top-0">
                                         <span class="fs--48 fw7 tracked--100 col-text-trans-bg stroke--col--light-warm-white text--sh--2 lh--1">
                                             <svg width="55" height="110">
@@ -1601,10 +1602,10 @@
                             </a>
                         </li>
                         <!-- list item for Latest Most Popular Video Slider -->
-                        <li class="splide__slide elm_ceyzSI relative hide-child">
-                            <a href="#" class="w-100 h-100 top-0 left-0 relative">
+                        <li class="splide__slide elm_ceyzSI sh--3 relative hide-child">
+                            <a href="#" class="w-100 h-100 top-0 left-0 relative sh--3 br--5">
                                 <div class="elm_smWIta w-100 h-100 db" style="background:url('assets/images/cat-img/vd-img-02.png') no-repeat center center / cover"></div>
-                                <div class="elm_YDDdhy w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 sh--3 br--5 child o--hidden">
+                                <div class="elm_YDDdhy w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 z--2 child o--hidden">
                                     <div class="elm_TkTLAD absolute left-0 top-0">
                                         <span class="fs--48 fw7 tracked--100 col-text-trans-bg stroke--col--light-warm-white text--sh--2 lh--1">
                                             <svg width="55" height="110">
@@ -1680,11 +1681,11 @@
                             </a>
                         </li>
                         <!-- list item for Latest Most Popular Video Slider -->
-                        <li class="splide__slide elm_ceyzSI relative hide-child">
-                            <a href="#" class="w-100 h-100 top-0 left-0 relative">
+                        <li class="splide__slide elm_ceyzSI sh--3 relative hide-child">
+                            <a href="#" class="w-100 h-100 top-0 left-0 relative sh--3 br--5">
                                 <div class="elm_smWIta w-100 h-100 db" style="background:url('assets/images/cat-img/vd-img-01.png') no-repeat center center / cover"></div>
                                 
-                                <div class="elm_YDDdhy w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 sh--3 br--5 child o--hidden">
+                                <div class="elm_YDDdhy w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 z--2 child o--hidden">
                                     <div class="elm_TkTLAD absolute left-0 top-0">
                                         <span class="fs--48 fw7 tracked--100 col-text-trans-bg stroke--col--light-warm-white text--sh--2 lh--1">
                                             <svg width="55" height="110">
@@ -1762,10 +1763,10 @@
                             </a>
                         </li>
                         <!-- list item for Latest Most Popular Video Slider -->
-                        <li class="splide__slide elm_ceyzSI relative hide-child">
-                            <a href="#" class="w-100 h-100 top-0 left-0 relative">
+                        <li class="splide__slide elm_ceyzSI sh--3 relative hide-child">
+                            <a href="#" class="w-100 h-100 top-0 left-0 relative sh--3 br--5">
                                 <div class="elm_smWIta w-100 h-100 db" style="background:url('assets/images/cat-img/vd-img-02.png') no-repeat center center / cover"></div>
-                                <div class="elm_YDDdhy w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 sh--3 br--5 child o--hidden">
+                                <div class="elm_YDDdhy w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 z--2 child o--hidden">
                                     <div class="elm_TkTLAD absolute left-0 top-0">
                                         <span class="fs--48 fw7 tracked--100 col-text-trans-bg stroke--col--light-warm-white text--sh--2 lh--1">
                                             <svg width="55" height="110">
@@ -1868,10 +1869,10 @@
                 <div class="splide__track ml--3 of--visible">
                     <ul class="splide__list">
                         <!-- list item for Featured Video Slider -->
-                        <li class="splide__slide elm_ceyzSI relative hide-child">
-                            <a href="#" class="w-100 h-100 top-0 left-0 relative">
+                        <li class="splide__slide elm_ceyzSI sh--3 relative hide-child">
+                            <a href="#" class="w-100 h-100 top-0 left-0 relative sh--3 br--5">
                                 <div class="elm_aCyFvm w-100 h-100 db" style="background:url('assets/images/cat-img/lt_vd-img-02.png') no-repeat center center / cover"></div>
-                                <div class="elm_rGOoKu w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 sh--3 br--5 child o--hidden">
+                                <div class="elm_rGOoKu w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 z--2 child o--hidden">
                                     <div class="flex items-center justify-between">
                                         <div class="flex">
                                             <span class="bg--gray-70 flex items-center justify-center gap--4 pad--x--10 pad--y--4">
@@ -1914,10 +1915,10 @@
                             </a>
                         </li>
                         <!-- list item for Featured Video Slider -->
-                        <li class="splide__slide elm_ceyzSI relative hide-child">
-                            <a href="#" class="w-100 h-100 top-0 left-0 relative">
+                        <li class="splide__slide elm_ceyzSI sh--3 relative hide-child">
+                            <a href="#" class="w-100 h-100 top-0 left-0 relative sh--3 br--5">
                                 <div class="elm_aCyFvm w-100 h-100 db" style="background:url('assets/images/cat-img/lt_vd-img-04.png') no-repeat center center / cover"></div>
-                                <div class="elm_rGOoKu w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 sh--3 br--5 child o--hidden">
+                                <div class="elm_rGOoKu w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 z--2 child o--hidden">
                                     <div class="flex items-center justify-between">
                                         <div class="flex">
                                             <span class="bg--gray-70 flex items-center justify-center gap--4 pad--x--10 pad--y--4">
@@ -1958,10 +1959,10 @@
                             </a>
                         </li>
                         <!-- list item for Featured Video Slider -->
-                        <li class="splide__slide elm_ceyzSI relative hide-child"> 
-                            <a href="#" class="w-100 h-100 top-0 left-0 relative">
+                        <li class="splide__slide elm_ceyzSI sh--3 relative hide-child"> 
+                            <a href="#" class="w-100 h-100 top-0 left-0 relative sh--3 br--5">
                                 <div class="elm_aCyFvm w-100 h-100 db" style="background:url('assets/images/cat-img/lt_vd-img-01.png') no-repeat center center / cover"></div>
-                                <div class="elm_rGOoKu w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 sh--3 br--5 child o--hidden">
+                                <div class="elm_rGOoKu w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 z--2 child o--hidden">
                                     <div class="flex items-center justify-between">
                                         <div class="flex">
                                             <span class="bg--gray-70 flex items-center justify-center gap--4 pad--x--10 pad--y--4">
@@ -2002,10 +2003,10 @@
                             </a>
                         </li>
                         <!-- list item for Featured Video Slider -->
-                        <li class="splide__slide elm_ceyzSI relative hide-child">
-                            <a href="#" class="w-100 h-100 top-0 left-0 relative">
+                        <li class="splide__slide elm_ceyzSI sh--3 relative hide-child">
+                            <a href="#" class="w-100 h-100 top-0 left-0 relative sh--3 br--5">
                                 <div class="elm_aCyFvm w-100 h-100 db" style="background:url('assets/images/cat-img/f-img.png') no-repeat center center / cover"></div>
-                                <div class="elm_rGOoKu w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 sh--3 br--5 child o--hidden">
+                                <div class="elm_rGOoKu w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 z--2 child o--hidden">
                                     <div class="flex items-center justify-between">
                                         <div class="flex">
                                             <span class="bg--gray-70 flex items-center justify-center gap--4 pad--x--10 pad--y--4">
@@ -2046,10 +2047,10 @@
                             </a>
                         </li>
                         <!-- list item for Featured Video Slider -->
-                        <li class="splide__slide elm_ceyzSI relative hide-child">
-                            <a href="#" class="w-100 h-100 top-0 left-0 relative">
+                        <li class="splide__slide elm_ceyzSI relative sh--3 hide-child">
+                            <a href="#" class="w-100 h-100 top-0 left-0 relative sh--3 br--5">
                                 <div class="elm_aCyFvm w-100 h-100 db" style="background:url('assets/images/cat-img/lt_vd-img-04.png') no-repeat center center / cover"></div>
-                                <div class="elm_rGOoKu w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 sh--3 br--5 child o--hidden">
+                                <div class="elm_rGOoKu w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 z--2 child o--hidden">
                                     <div class="flex items-center justify-between">
                                         <div class="flex">
                                             <span class="bg--gray-70 flex items-center justify-center gap--4 pad--x--10 pad--y--4">
@@ -2090,10 +2091,10 @@
                             </a>
                         </li>
                         <!-- list item for Featured Video Slider -->
-                        <li class="splide__slide elm_ceyzSI relative hide-child">
-                            <a href="#" class="w-100 h-100 top-0 left-0 relative">
+                        <li class="splide__slide elm_ceyzSI sh--3 relative hide-child">
+                            <a href="#" class="w-100 h-100 top-0 left-0 relative sh--3 br--5">
                                 <div class="elm_aCyFvm w-100 h-100 db" style="background:url('assets/images/cat-img/lt_vd-img-02.png') no-repeat center center / cover"></div>
-                                <div class="elm_rGOoKu w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 sh--3 br--5 child o--hidden">
+                                <div class="elm_rGOoKu w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 z--2 child o--hidden">
                                     <div class="flex items-center justify-between">
                                         <div class="flex">
                                             <span class="bg--gray-70 flex items-center justify-center gap--4 pad--x--10 pad--y--4">
@@ -2136,10 +2137,10 @@
                             </a>
                         </li>
                         <!-- list item for Featured Video Slider -->
-                        <li class="splide__slide elm_ceyzSI relative hide-child">
-                            <a href="#" class="w-100 h-100 top-0 left-0 relative">
+                        <li class="splide__slide elm_ceyzSI sh--3 relative hide-child">
+                            <a href="#" class="w-100 h-100 top-0 left-0 relative sh--3 br--5">
                                 <div class="elm_aCyFvm w-100 h-100 db" style="background:url('assets/images/cat-img/lt_vd-img-04.png') no-repeat center center / cover"></div>
-                                <div class="elm_rGOoKu w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 sh--3 br--5 child o--hidden">
+                                <div class="elm_rGOoKu w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 z--2 child o--hidden">
                                     <div class="flex items-center justify-between">
                                         <div class="flex">
                                             <span class="bg--gray-70 flex items-center justify-center gap--4 pad--x--10 pad--y--4">
@@ -2180,10 +2181,10 @@
                             </a>
                         </li>
                         <!-- list item for Featured Video Slider -->
-                        <li class="splide__slide elm_ceyzSI relative hide-child"> 
-                            <a href="#" class="w-100 h-100 top-0 left-0 relative">
+                        <li class="splide__slide elm_ceyzSI sh--3 relative hide-child"> 
+                            <a href="#" class="w-100 h-100 top-0 left-0 relative sh--3 br--5">
                                 <div class="elm_aCyFvm w-100 h-100 db" style="background:url('assets/images/cat-img/lt_vd-img-01.png') no-repeat center center / cover"></div>
-                                <div class="elm_rGOoKu w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 sh--3 br--5 child o--hidden">
+                                <div class="elm_rGOoKu w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 z--2 child o--hidden">
                                     <div class="flex items-center justify-between">
                                         <div class="flex">
                                             <span class="bg--gray-70 flex items-center justify-center gap--4 pad--x--10 pad--y--4">
@@ -2224,10 +2225,10 @@
                             </a>
                         </li>
                         <!-- list item for Featured Video Slider -->
-                        <li class="splide__slide elm_ceyzSI relative hide-child">
-                            <a href="#" class="w-100 h-100 top-0 left-0 relative">
+                        <li class="splide__slide elm_ceyzSI sh--3 relative hide-child">
+                            <a href="#" class="w-100 h-100 top-0 left-0 relative sh--3 br--5">
                                 <div class="elm_aCyFvm w-100 h-100 db" style="background:url('assets/images/cat-img/f-img.png') no-repeat center center / cover"></div>
-                                <div class="elm_rGOoKu w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 sh--3 br--5 child o--hidden">
+                                <div class="elm_rGOoKu w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 z--2 child o--hidden">
                                     <div class="flex items-center justify-between">
                                         <div class="flex">
                                             <span class="bg--gray-70 flex items-center justify-center gap--4 pad--x--10 pad--y--4">
@@ -2268,10 +2269,10 @@
                             </a>
                         </li>
                         <!-- list item for Featured Video Slider -->
-                        <li class="splide__slide elm_ceyzSI relative hide-child">
-                            <a href="#" class="w-100 h-100 top-0 left-0 relative">
+                        <li class="splide__slide elm_ceyzSI relative sh--3 hide-child">
+                            <a href="#" class="w-100 h-100 top-0 left-0 relative sh--3 br--5">
                                 <div class="elm_aCyFvm w-100 h-100 db" style="background:url('assets/images/cat-img/lt_vd-img-04.png') no-repeat center center / cover"></div>
-                                <div class="elm_rGOoKu w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 sh--3 br--5 child o--hidden">
+                                <div class="elm_rGOoKu w-100 h-100 flex flex-column justify-end pad--8 gap--14 absolute left-0 top-0 z--2 child o--hidden">
                                     <div class="flex items-center justify-between">
                                         <div class="flex">
                                             <span class="bg--gray-70 flex items-center justify-center gap--4 pad--x--10 pad--y--4">
@@ -2341,13 +2342,7 @@
                 768: { perPage: 2 },
                 1366: { perPage: 4.5, fixedWidth: 304, },
                 1400: { perPage: 4.5, fixedWidth: 309, },
-                1440: { perPage: 4.5, fixedWidth: 319, },
-                1600: { perPage: 4.5, fixedWidth: 359, },
-                1680: { perPage: 4.5, fixedWidth: 379, },
-                2040: { perPage: 4.5, fixedWidth: 439, },
-                2048: { perPage: 4.5, fixedWidth: 471, },
-                2560: { perPage: 4.5, fixedWidth: 597, },
-                3000: { perPage: 4.5, fixedWidth: 712, },
+                1440: { perPage: 4.5, fixedWidth: 320, },
             }
         }).mount();
 
@@ -2379,13 +2374,7 @@
                 768: { perPage: 2 },
                 1366: { perPage: 4.5, fixedWidth: 304, },
                 1400: { perPage: 4.5, fixedWidth: 309, },
-                1440: { perPage: 4.5, fixedWidth: 319, },
-                1600: { perPage: 4.5, fixedWidth: 359, },
-                1680: { perPage: 4.5, fixedWidth: 379, },
-                2040: { perPage: 4.5, fixedWidth: 439, },
-                2048: { perPage: 4.5, fixedWidth: 471, },
-                2560: { perPage: 4.5, fixedWidth: 597, },
-                3000: { perPage: 4.5, fixedWidth: 712, },
+                1440: { perPage: 4.5, fixedWidth: 320, },
             }
         }).mount();
 
@@ -2417,13 +2406,7 @@
                 768: { perPage: 2 },
                 1366: { perPage: 4.5, fixedWidth: 304, },
                 1400: { perPage: 4.5, fixedWidth: 309, },
-                1440: { perPage: 4.5, fixedWidth: 319, },
-                1600: { perPage: 4.5, fixedWidth: 359, },
-                1680: { perPage: 4.5, fixedWidth: 379, },
-                2040: { perPage: 4.5, fixedWidth: 439, },
-                2048: { perPage: 4.5, fixedWidth: 471, },
-                2560: { perPage: 4.5, fixedWidth: 597, },
-                3000: { perPage: 4.5, fixedWidth: 712, },
+                1440: { perPage: 4.5, fixedWidth: 320, },
             }
         }).mount();
 
@@ -2455,13 +2438,7 @@
                 768: { perPage: 2 },
                 1366: { perPage: 4.5, fixedWidth: 304, },
                 1400: { perPage: 4.5, fixedWidth: 309, },
-                1440: { perPage: 4.5, fixedWidth: 319, },
-                1600: { perPage: 4.5, fixedWidth: 359, },
-                1680: { perPage: 4.5, fixedWidth: 379, },
-                2040: { perPage: 4.5, fixedWidth: 439, },
-                2048: { perPage: 4.5, fixedWidth: 471, },
-                2560: { perPage: 4.5, fixedWidth: 597, },
-                3000: { perPage: 4.5, fixedWidth: 712, },
+                1440: { perPage: 4.5, fixedWidth: 320, },
             }
         }).mount();
 
