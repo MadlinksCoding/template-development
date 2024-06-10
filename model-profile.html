@@ -157,15 +157,10 @@
         .elm_ceyzSI:hover a:after{
             opacity: 1;
         }
-        /* First thumbnail of the carousel on hover left edge */
-        .elm_ceyzSI.is-active:hover a{
-            top: 51%;
-            left: 55%;
-        }
         /* Last thumbnail of the carousel on hover right edge */
         .elm_ceyzSI:last-child:hover a{
             left: auto;
-            right: -60%;
+            right: -50%;
             top: 51%;
         }
         /* Last thumbnail of the carousel for first time on hover right edge */
@@ -196,11 +191,304 @@
             display: none;
         }
 
+        /* Responsive for 1400 screen */
+        @media screen and (min-width: 87.5em){
+            /* First thumbnail of the carousel on hover left edge */
+            .elm_ceyzSI.is-active:nth-child(1) a{
+                left: 53%;
+            }
+            /* Last thumbnail of the carousel on hover right edge */
+            .elm_ceyzSI:last-child:hover a{
+                right: -61%;
+            }
+            /* Last thumbnail of the carousel for first time on hover right edge */
+            :nth-last-child(1 of .is-visible) + .elm_ceyzSI:hover a {
+                right: -59%;
+            }
+            
+        }
+
+        /* Responsive for 1600 screen */
+        @media screen and (min-width: 100em){
+            /* Last thumbnail of the carousel for first time on hover right edge */
+            :nth-last-child(1 of .is-visible) + .elm_ceyzSI:hover a {
+                right: 0;
+                left: -2.6rem;
+            }
+        }
+
+        /* Responsive for 1680 screen */
+        @media screen and (min-width: 105em){
+            /* Last thumbnail of the carousel for first time on hover right edge */
+            :nth-last-child(1 of .is-visible) + .elm_ceyzSI:hover a {
+                right: 0;
+                left: 2.2rem;
+            }
+        }
+
+        /* Responsive for 1920 screen */
+        @media screen and (min-width: 120em){
+            /* Last thumbnail of the carousel for first time on hover right edge */
+            :nth-last-child(1 of .is-visible) + .elm_ceyzSI:hover a {
+                right: 0;
+                left: -4rem;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+        .container {
+            max-width: 90%;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .splide__track {
+            overflow: visible;
+        }
+
+        .splide__slide .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(270deg, rgba(0, 0, 0, 0) 40%, black 100%);
+            color: white;
+            height: 100%;
+        }
+
+        .splide__arrow {
+            background: transparent;
+            border: none;
+            color: var(--col--light-warm-green);
+            border: 1px solid var(--col--light-warm-green);
+            border-radius: 0;
+            height: 3rem;
+            width: 3rem;
+        }
+
+        .elm_GqloCG {
+            color: #9FFF02;
+            border: 1px solid #9FFF02;
+            border-radius: 0;
+            height: 3rem;
+            width: 3rem;
+            transform: translate(0, -50%);
+            top: 50%;
+        }
+
+        .splide__pagination {
+            flex-wrap: nowrap;
+            bottom: 1.5rem;
+            right: 6.25rem;
+            gap: 0.625rem;
+            left: 75rem;
+        }
+
+        .splide__pagination__page {
+            background: rgba(255, 255, 255, 0.5);
+            width: 0.625rem;
+            height: 0.625rem;
+            border-radius: 50%;
+            transition: background 0.3s, width 0.3s;
+        }
+
+        .splide__pagination__page.is-active {
+            background: limegreen;
+            width: 1.25rem;
+            border-radius: 0.625rem;
+        }
+
+        .splide__arrow:hover {
+            background: limegreen;
+            color: black;
+        }
+
+        .pa__40 {
+            padding: 2.5rem;
+        }
+
+        .pt__24 {
+            padding-top: 1.5rem;
+        }
+
+        .splide__arrow--prev {
+            left: -1.563rem;
+        }
+
+        .splide__arrow--prev svg {
+            transform: scaleX(1) !important;
+        }
+
+        .splide__arrow--next {
+            right: -1.563rem;
+        }
+
+        .tracking-1 {
+            letter-spacing: 0.01rem;
+        }
+
+        .dark-10 {
+            color: #101828;
+        }
+
+        .col--iron-grey {
+            color: #F5F5F4
+        }
+
+        .yellow-e9 {
+            color: #E9E5D3
+        }
+
+        .bl-yellow-e9 {
+            border-color: #E9E5D3
+        }
+
+        .bg--dark-70 {
+            background-color: rgba(34, 34, 34, 70%);
+        }
+
+        .bg--purple-f0 {
+            background-color: #F093FB;
+        }
+        
+        .btn-play{
+            padding: 0.375rem 0.625rem;
+        }
+        
+        .splide__slide img{
+            vertical-align: bottom;
+            object-fit: cover;
+            width: 100%;
+        }
+
     </style>
 </head>
 
 <body>
     <div class="bg--black-70 poppins">
+
+        <div class="container center">
+            <div id="event_slider" class="splide">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide relative">
+                            <img src="assets/images/banner-img-02.png" alt="Slide 2" class="ma--auto">
+                            <div class="overlay absolute">
+                                <div class="flex flex-column justify-between h-100">
+                                    <p
+                                        class="self-start bg--light-warm-green flex items-center justify-center ph2 pv1 lh-auto tracking-1 dark-10 f5 fw6 ttu line-height-18 gap--6 col--very-dark-ebony">
+                                        COMING MAY 1
+                                    </p>
+                                    <div class="flex flex-column justify-end items-start pa__40 w-50">
+                                        <p class="f3 fw6 tracking-1 lh-auto col--iron-grey mb3">Detective Jenny: Who ate
+                                            my cake? Part II : I
+                                            found out who did</p>
+                                        <p class="f5 fw5 lh_24 tracking-1 col--iron-grey mb3">In part II of detective
+                                            Jenny series Jenny will
+                                            find out who eat her cake without asking.</p>
+                                        <button
+                                            class="col--light-warm-green fw6 f5 pr3 flex items-center gap--4 ba b--light-warm-green pa2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none">
+                                                <path
+                                                    d="M14.9997 19C14.9997 20.6569 13.6566 22 11.9997 22C10.3429 22 8.99972 20.6569 8.99972 19M13.7962 6.23856C14.2317 5.78864 14.4997 5.17562 14.4997 4.5C14.4997 3.11929 13.3804 2 11.9997 2C10.619 2 9.49972 3.11929 9.49972 4.5C9.49972 5.17562 9.76772 5.78864 10.2032 6.23856M17.9997 11.2C17.9997 9.82087 17.3676 8.49823 16.2424 7.52304C15.1171 6.54786 13.591 6 11.9997 6C10.4084 6 8.8823 6.54786 7.75708 7.52304C6.63186 8.49823 5.99972 9.82087 5.99972 11.2C5.99972 13.4818 5.43385 15.1506 4.72778 16.3447C3.92306 17.7056 3.5207 18.3861 3.53659 18.5486C3.55476 18.7346 3.58824 18.7933 3.73906 18.9036C3.87089 19 4.53323 19 5.85791 19H18.1415C19.4662 19 20.1286 19 20.2604 18.9036C20.4112 18.7933 20.4447 18.7346 20.4629 18.5486C20.4787 18.3861 20.0764 17.7056 19.2717 16.3447C18.5656 15.1506 17.9997 13.4818 17.9997 11.2Z"
+                                                    stroke="#9FFF02" stroke-width="1.25" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>Remind me</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide relative">
+                            <img src="assets/images/banner-img-02.png" alt="Slide 2" class="ma--auto">
+                            <div class="overlay ">
+                                <div class="flex flex-column justify-between h-100">
+                                    <p
+                                        class="self-start bg--light-warm-green flex items-center justify-center ph2 pv1 lh-auto tracking-1 dark-10 f5 fw6 ttu line-height-18 gap--6 col--very-dark-ebony">
+                                        COMING MAY 1
+                                    </p>
+                                    <div class="flex flex-column justify-end items-start pa__40 w-50">
+                                        <p class="f3 fw6 tracking-1 lh-auto col--iron-grey mb3">Detective Jenny: Who ate
+                                            my cake? Part II : I
+                                            found out who did</p>
+                                        <p class="f5 fw5 lh_24 tracking-1 col--iron-grey mb3">In part II of detective
+                                            Jenny series Jenny will
+                                            find out who eat her cake without asking.</p>
+                                        <button
+                                            class="col--light-warm-green fw6 f5 pr3 flex items-center gap--4 ba b--light-warm-green m--157 pa2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none">
+                                                <path
+                                                    d="M14.9997 19C14.9997 20.6569 13.6566 22 11.9997 22C10.3429 22 8.99972 20.6569 8.99972 19M13.7962 6.23856C14.2317 5.78864 14.4997 5.17562 14.4997 4.5C14.4997 3.11929 13.3804 2 11.9997 2C10.619 2 9.49972 3.11929 9.49972 4.5C9.49972 5.17562 9.76772 5.78864 10.2032 6.23856M17.9997 11.2C17.9997 9.82087 17.3676 8.49823 16.2424 7.52304C15.1171 6.54786 13.591 6 11.9997 6C10.4084 6 8.8823 6.54786 7.75708 7.52304C6.63186 8.49823 5.99972 9.82087 5.99972 11.2C5.99972 13.4818 5.43385 15.1506 4.72778 16.3447C3.92306 17.7056 3.5207 18.3861 3.53659 18.5486C3.55476 18.7346 3.58824 18.7933 3.73906 18.9036C3.87089 19 4.53323 19 5.85791 19H18.1415C19.4662 19 20.1286 19 20.2604 18.9036C20.4112 18.7933 20.4447 18.7346 20.4629 18.5486C20.4787 18.3861 20.0764 17.7056 19.2717 16.3447C18.5656 15.1506 17.9997 13.4818 17.9997 11.2Z"
+                                                    stroke="#9FFF02" stroke-width="1.25" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>Remind me</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide relative">
+                            <img src="assets/images/banner-img-02.png" alt="Slide 2" class="ma--auto">
+                            <div class="overlay ">
+                                <div class="flex flex-column justify-between h-100">
+                                    <p
+                                        class="self-start bg--light-warm-green flex items-center justify-center ph2 pv1 lh-auto tracking-1 dark-10 f5 fw6 ttu line-height-18 gap--6 col--very-dark-ebony">
+                                        COMING MAY 1
+                                    </p>
+                                    <div class="flex flex-column justify-end items-start pa__40 w-50">
+                                        <p class="f3 fw6 tracking-1 lh-auto col--iron-grey mb3">Detective Jenny: Who ate
+                                            my cake? Part II : I
+                                            found out who did</p>
+                                        <p class="f5 fw5 lh_24 tracking-1 col--iron-grey mb3">In part II of detective
+                                            Jenny series Jenny will
+                                            find out who eat her cake without asking.</p>
+                                        <button
+                                            class="col--light-warm-green fw6 f5 pr3 flex items-center gap--4 ba b--light-warm-green m--157 pa2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none">
+                                                <path
+                                                    d="M14.9997 19C14.9997 20.6569 13.6566 22 11.9997 22C10.3429 22 8.99972 20.6569 8.99972 19M13.7962 6.23856C14.2317 5.78864 14.4997 5.17562 14.4997 4.5C14.4997 3.11929 13.3804 2 11.9997 2C10.619 2 9.49972 3.11929 9.49972 4.5C9.49972 5.17562 9.76772 5.78864 10.2032 6.23856M17.9997 11.2C17.9997 9.82087 17.3676 8.49823 16.2424 7.52304C15.1171 6.54786 13.591 6 11.9997 6C10.4084 6 8.8823 6.54786 7.75708 7.52304C6.63186 8.49823 5.99972 9.82087 5.99972 11.2C5.99972 13.4818 5.43385 15.1506 4.72778 16.3447C3.92306 17.7056 3.5207 18.3861 3.53659 18.5486C3.55476 18.7346 3.58824 18.7933 3.73906 18.9036C3.87089 19 4.53323 19 5.85791 19H18.1415C19.4662 19 20.1286 19 20.2604 18.9036C20.4112 18.7933 20.4447 18.7346 20.4629 18.5486C20.4787 18.3861 20.0764 17.7056 19.2717 16.3447C18.5656 15.1506 17.9997 13.4818 17.9997 11.2Z"
+                                                    stroke="#9FFF02" stroke-width="1.25" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>Remind me</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="splide__arrows splide__arrows--ltr">
+                        <button id="prevButton"
+                            class="elm_GqloCG bg-transparent green_9f flex items-center justify-center absolute splide__arrow--prev"
+                            type="button" aria-label="Previous slide" aria-controls="splide01-track">
+                            <svg width="32" height="33" viewBox="0 0 32 33" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 24.5L12 16.5L20 8.5" stroke="#9FFF02" stroke-width="2.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            </svg>
+                        </button>
+                        <button id="nextButton"
+                            class="elm_GqloCG bg-transparent green_9f flex items-center justify-center absolute splide__arrow--next"
+                            type="button" aria-label="Next slide" aria-controls="splide01-track">
+                            <svg width="32" height="33" viewBox="0 0 32 33" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 24.5L20 16.5L12 8.5" stroke="#9FFF02" stroke-width="2.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="pv4">
             <!-- Video Category Slider -->
             <section class="splide mb4 z--4" id="splide-video" aria-labelledby="Category-carousel-heading">
@@ -2404,6 +2692,24 @@
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.6/dist/js/splide.min.js"></script>
 
     <script type="text/javascript">
+
+        var splideMain = new Splide('#event_slider', {
+                type: 'loop',
+                perPage: 1,
+                focus: 'center',
+                padding: '0',
+                arrows: false,
+                pagination: true,
+                gap: '16px'
+            }).mount();
+
+            document.getElementById('prevButton').addEventListener('click', function () {
+                splideMain.go('-1');
+            });
+
+            document.getElementById('nextButton').addEventListener('click', function () {
+                splideMain.go('+1');
+            });
 
         // Video Carousel Script
         var SplideVideo = new Splide('#splide-video', {
