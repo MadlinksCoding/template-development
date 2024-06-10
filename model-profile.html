@@ -110,14 +110,17 @@
             top: 0;
         }
 
+        /* Carousel thumbnail parent element height for all screen */
         .elm_ceyzSI{
             height: 11.625rem;
-            box-shadow: 0px 0px 10px -34px rgba(0, 0, 0, 0.10);
             overflow: hidden;
         }
+        /* Carousel thumbnail parent element overflow visiable after hover */
         .elm_ceyzSI:hover{
             overflow: visible;
         }
+
+        /* Carousel thumbnail normal view */
         .elm_ceyzSI a{
             display: block;
             transition: all 0.3s ease-in-out;
@@ -127,6 +130,8 @@
             transform: translate(-50%, -50%);
             overflow: hidden;
         }
+
+        /* Carousel thumbnail hide before hover */
         .elm_ceyzSI a:after
         {
             content: '';
@@ -139,33 +144,47 @@
             top: 0;
             opacity: 0;
         }
+
+        /* Carousel thumbnail width and height after hover */
         .elm_ceyzSI:hover a
         {
             width: 26.25rem;
             height: 21.875rem;
             z-index: 9;
         }
+
+        /* Carousel thumbnail show after hover */
         .elm_ceyzSI:hover a:after{
             opacity: 1;
         }
-
-        .elm_ceyzSI .is-active:hover a{
-            top: 60%;
-            left: 60%;
+        /* First thumbnail of the carousel on hover left edge */
+        .elm_ceyzSI.is-active:hover a{
+            top: 51%;
+            left: 55%;
+        }
+        /* Last thumbnail of the carousel on hover right edge */
+        :nth-last-child(1 of .is-visible) + .elm_ceyzSI:hover a {
+            background-color: red;
+            left: auto;
+            right: -40%;
+            top: 51%;
         }
 
+        /* Overlay contet delay on hover */
         .elm_ceyzSI:hover .elm_rGOoKu,
         .elm_ceyzSI:hover .elm_YDDdhy,
         .elm_ceyzSI:hover .elm_ilaylv{
             transition-delay: 0.05s;
         }
 
+        /* first showing element transition */
         .elm_ceyzSI a > .elm_JwVEDK,
         .elm_ceyzSI a > .elm_TkTLAD,
         .elm_ceyzSI a > .elm_smWIta:after{
             transition: all 0.3s ease-in-out;
         }
-        
+
+        /* first showing element hide after hover */
         .elm_ceyzSI a:hover > .elm_JwVEDK,
         .elm_ceyzSI a:hover > .elm_TkTLAD,
         .elm_ceyzSI a:hover > .elm_smWIta:after{
