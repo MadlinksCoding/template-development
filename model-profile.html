@@ -157,16 +157,48 @@
         .elm_ceyzSI:hover a:after{
             opacity: 1;
         }
-        /* Last thumbnail of the carousel on hover right edge */
-        .elm_ceyzSI:last-child:hover a{
+        .elm_ceyzSI:hover a{
+            left: 83%;
+        }
+        .elm_ceyzSI.is-visible:hover a{
+            left: 50%;
+        }
+        .elm_ceyzSI.is-visible.is-active{
+            overflow: visible;
+        }
+        .splide__track:before{
+            content: '';
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            position: absolute;
             left: auto;
-            right: -50%;
+            right: 100%;
+            top: 0;
+            z-index: 4;
+        }
+        .splide__track:after{
+            content: '';
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            position: absolute;
+            right: auto;
+            left: 100%;
+            top: 0;
+            z-index: 4;
+        }
+        .elm_ceyzSI.is-visible.is-active:before:hover a{
+            display: none;
+        }
+        /* Last thumbnail of the carousel on hover right edge */
+        .elm_ceyzSI:nth-last-child(1):hover a{
+            left: 49%;
             top: 51%;
         }
         /* Last thumbnail of the carousel for first time on hover right edge */
         :nth-last-child(1 of .is-visible) + .elm_ceyzSI:hover a {
-            left: auto;
-            right: -40%;
+            left: 9%;
             top: 51%;
         }
 
@@ -318,67 +350,115 @@
         }
         /* Top coming soon slider end */
 
-        /* Responsive for 1200 screen */
-        @media screen and (min-width: 75em){
-            /* First thumbnail of the carousel on hover left edge */
-            .elm_ceyzSI.is-active.is-visible:hover a{
-                left: 0%;
-                transform: translate(0%, -50%);
+        /* Responsive for 1360 screen */
+        @media screen and (min-width: 85em){
+            /* Last thumbnail of the carousel on hover right edge */
+            .elm_ceyzSI:nth-last-child(1):hover a{
+                left: 48.8%;
             }
             /* Last thumbnail of the carousel for first time on hover right edge */
             :nth-last-child(1 of .is-visible) + .elm_ceyzSI:hover a {
-                right: -59.8%;
+                left: 33%;
             }
-            /* Last thumbnail of the carousel on hover right edge */
-            .elm_ceyzSI:nth-last-child(1):hover a{
-                left: auto !important;
-                right: -60.9% !important;
+            /* Left last slde when slide end on Right */
+            .elm_ceyzSI:hover a{
+                left: 58%;
             }
-            
         }
 
         /* Responsive for 1400 screen */
         @media screen and (min-width: 87.5em){
+            /* Last thumbnail of the carousel on hover right edge */
+            .elm_ceyzSI:nth-last-child(1):hover a{
+                left: 37%;
+            }
             /* First thumbnail of the carousel on hover left edge */
             .elm_ceyzSI.is-active.is-visible:hover a{
                 left: 53%;
             }
             /* Last thumbnail of the carousel for first time on hover right edge */
             :nth-last-child(1 of .is-visible) + .elm_ceyzSI:hover a {
-                right: -59.8%;
+                left: 30.8%;
             }
+            /* Left last slde when slide end on Right */
+            .elm_ceyzSI:hover a{
+                left: 58%;
+            }
+        }
+
+        /* Responsive for 1440 screen */
+        @media screen and (min-width: 90em){
             /* Last thumbnail of the carousel on hover right edge */
             .elm_ceyzSI:nth-last-child(1):hover a{
-                left: auto !important;
-                right: -60.9% !important;
+                left: 37%;
             }
-            
+            /* First thumbnail of the carousel on hover left edge */
+            .elm_ceyzSI.is-active.is-visible:hover a{
+                left: 53%;
+            }
+            /* Last thumbnail of the carousel for first time on hover right edge */
+            :nth-last-child(1 of .is-visible):hover a {
+                left: 43%;
+            }
         }
 
         /* Responsive for 1600 screen */
         @media screen and (min-width: 100em){
+            /* First thumbnail of the carousel on hover left edge */
+            .elm_ceyzSI:hover a{
+                left: 102.8%;
+            }
+            /* Last thumbnail of the carousel on hover right edge */
+            .elm_ceyzSI:nth-last-child(1):hover a{
+                left: 37%;
+            }
             /* Last thumbnail of the carousel for first time on hover right edge */
             :nth-last-child(1 of .is-visible) + .elm_ceyzSI:hover a {
-                right: 0;
                 left: -2.6rem;
             }
         }
 
         /* Responsive for 1680 screen */
         @media screen and (min-width: 105em){
+            /* First thumbnail of the carousel on hover left edge */
+            .elm_ceyzSI:hover a{
+                left: 77.8%;
+            }
             /* Last thumbnail of the carousel for first time on hover right edge */
             :nth-last-child(1 of .is-visible) + .elm_ceyzSI:hover a {
-                right: 0;
-                left: 2.2rem;
+                left: 2.4rem;
+            }
+        }
+
+        /* Responsive for 1728 screen */
+        @media screen and (min-width: 108em){
+            /* Last thumbnail of the carousel on hover right edge */
+            .splide__list .elm_ceyzSI:nth-last-child(1):hover a{
+                left: 32%;
+            }
+            /* First thumbnail of the carousel on hover left edge */
+            .elm_ceyzSI:hover a{
+                left: 57.8%;
+            }
+            /* Last thumbnail of the carousel for first time on hover right edge */
+            :nth-last-child(1 of .is-visible) + .elm_ceyzSI:hover a {
+                left: 32%;
             }
         }
 
         /* Responsive for 1920 screen */
         @media screen and (min-width: 120em){
+            /* Last thumbnail of the carousel on hover right edge */
+            .splide__list .elm_ceyzSI:nth-last-child(1):hover a{
+                left: 36.4%;
+            }
+            /* First thumbnail of the carousel on hover left edge */
+            .elm_ceyzSI:hover a{
+                left: 108.8%;
+            }
             /* Last thumbnail of the carousel for first time on hover right edge */
             :nth-last-child(1 of .is-visible) + .elm_ceyzSI:hover a {
-                right: 0;
-                left: -4rem;
+                left: -3.8rem;
             }
         }
 
@@ -386,7 +466,6 @@
         @media screen and (min-width: 128em){
             /* Last thumbnail of the carousel for first time on hover right edge */
             :nth-last-child(1 of .is-visible) + .elm_ceyzSI:hover a {
-                right: 0;
                 left: 4rem;
             }
         }
@@ -395,7 +474,6 @@
         @media screen and (min-width: 160em){
             /* Last thumbnail of the carousel for first time on hover right edge */
             :nth-last-child(1 of .is-visible) + .elm_ceyzSI:hover a {
-                right: 0;
                 left: -6rem;
             }
         }
@@ -825,6 +903,7 @@
                                 </span>
                             </a>
                         </li>
+                        <!-- list item for Video Category Slider -->
                         <li class="splide__slide elm_ceyzSI sh--3 relative hide-child">
                             <a href="#" class="w-100 h-100 top-0 left-0 relative sh--3 br--5">
                                 <div class="elm_aCyFvm w-100 h-100 db" style="background:url('assets/images/cat-img/vd-img-01.png') no-repeat center center / cover"></div>
