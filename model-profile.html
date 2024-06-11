@@ -442,6 +442,22 @@
             }
             /* Last thumbnail of the carousel for first time on hover right edge */
             :nth-last-child(1 of .is-visible) + .elm_ceyzSI:hover a {
+                left: 26%;
+            }
+        }
+
+        /* Responsive for 1728 screen */
+        @media screen and (min-width: 108em){
+            /* Last thumbnail of the carousel on hover right edge */
+            .splide__list .elm_ceyzSI:nth-last-child(1):hover a{
+                left: 32%;
+            }
+            /* First thumbnail of the carousel on hover left edge */
+            .elm_ceyzSI:hover a{
+                left: 57.8%;
+            }
+            /* Last thumbnail of the carousel for first time on hover right edge */
+            :nth-last-child(1 of .is-visible) + .elm_ceyzSI:hover a {
                 left: 32%;
             }
         }
