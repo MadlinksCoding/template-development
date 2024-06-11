@@ -654,12 +654,20 @@
                                         Record breaking fried chicken eating! Watch me break world’s record! Watch now!
                                     </span>
                                     <div class="w-100">
-                                        <ul class="flex gap--8">
-                                            <li class="pad--x--8 pad--y--4 bg--blur--5 br--2 bg--light-white-15 fs--12 lh--14 fw4 white tracked--3 h--22 nowrap">Fried Chicken</li>
-                                            <li class="pad--x--8 pad--y--4 bg--blur--5 br--2 bg--light-white-15 fs--12 lh--14 fw4 white tracked--3 h--22 nowrap">Mostly Eating</li>
-                                            <li class="pad--x--8 pad--y--4 bg--blur--5 br--2 bg--light-white-15 fs--12 lh--14 fw4 white tracked--3 h--22 nowrap">Seasonal Fruits</li>
-                                            <li class="pad--x--8 pad--y--4 bg--blur--5 br--2 bg--light-white-15 fs--12 lh--14 fw4 white tracked--3 h--22 nowrap">Mostly Eating</li>
-                                        </ul>
+                                        <section class="splide tag_splide" aria-label="Tag Category">
+                                            <div class="splide__track">
+                                              <ul class="splide__list">
+                                                <li class="splide__slide pad--x--8 pad--y--4 bg--blur--5 br--2 bg--light-white-15 fs--12 lh--14 fw4 white tracked--3 h--22 nowrap">Fried Chicken</li>
+                                                <li class="splide__slide pad--x--8 pad--y--4 bg--blur--5 br--2 bg--light-white-15 fs--12 lh--14 fw4 white tracked--3 h--22 nowrap">Mostly Eating</li>
+                                                <li class="splide__slide pad--x--8 pad--y--4 bg--blur--5 br--2 bg--light-white-15 fs--12 lh--14 fw4 white tracked--3 h--22 nowrap">Seasonal Fruits</li>
+                                                <li class="splide__slide pad--x--8 pad--y--4 bg--blur--5 br--2 bg--light-white-15 fs--12 lh--14 fw4 white tracked--3 h--22 nowrap">Mostly Eating</li>
+                                                <li class="splide__slide pad--x--8 pad--y--4 bg--blur--5 br--2 bg--light-white-15 fs--12 lh--14 fw4 white tracked--3 h--22 nowrap">Fried Chicken</li>
+                                                <li class="splide__slide pad--x--8 pad--y--4 bg--blur--5 br--2 bg--light-white-15 fs--12 lh--14 fw4 white tracked--3 h--22 nowrap">Mostly Eating</li>
+                                                <li class="splide__slide pad--x--8 pad--y--4 bg--blur--5 br--2 bg--light-white-15 fs--12 lh--14 fw4 white tracked--3 h--22 nowrap">Seasonal Fruits</li>
+                                                <li class="splide__slide pad--x--8 pad--y--4 bg--blur--5 br--2 bg--light-white-15 fs--12 lh--14 fw4 white tracked--3 h--22 nowrap">Mostly Eating</li>
+                                              </ul>
+                                            </div>
+                                          </section>
                                     </div>
                                 </div>
                                 <div class="flex absolute bottom-0 left-0 elm_JwVEDK">
@@ -2820,6 +2828,30 @@
             document.getElementById('nextButton').addEventListener('click', function () {
                 splideMain.go('+1');
             });
+
+
+        //Tag Splide Script
+        var SplideVideo = new Splide('.tag_splide', {
+            type: 'slide',
+            focus    : 'left',
+            trimSpace: 'move',
+            rewind    : false,
+            Speed: 4000,
+            perPage: 3.5, // Adjust the number of slides per page as needed
+            arrows: false,
+            pagination: false,
+            interval: 3000,
+            perMove: 1,
+            autoWidth: true,
+            noDrag: '#splide-video',
+		    gap       : 8,
+            lazyLoad: true,
+            breakpoints: {
+                640: { perPage: 1 },
+                768: { perPage: 2 },
+                
+            }
+        }).mount();
 
         // Video Carousel Script
         var SplideVideo = new Splide('#splide-video', {
