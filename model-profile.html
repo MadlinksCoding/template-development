@@ -318,6 +318,25 @@
         }
         /* Top coming soon slider end */
 
+        /* Responsive for 1200 screen */
+        @media screen and (min-width: 75em){
+            /* First thumbnail of the carousel on hover left edge */
+            .elm_ceyzSI.is-active.is-visible:hover a{
+                left: 0%;
+                transform: translate(0%, -50%);
+            }
+            /* Last thumbnail of the carousel for first time on hover right edge */
+            :nth-last-child(1 of .is-visible) + .elm_ceyzSI:hover a {
+                right: -59.8%;
+            }
+            /* Last thumbnail of the carousel on hover right edge */
+            .elm_ceyzSI:nth-last-child(1):hover a{
+                left: auto !important;
+                right: -60.9% !important;
+            }
+            
+        }
+
         /* Responsive for 1400 screen */
         @media screen and (min-width: 87.5em){
             /* First thumbnail of the carousel on hover left edge */
@@ -524,7 +543,7 @@
                     
                 </div>
                 <!-- Video Category Slider Slide Items -->
-                <div class="splide__track ml--3 of--visible">
+                <div class="splide__track ml--3 mr3 of--visible">
                     <ul class="splide__list">
                         <!-- list item for Video Category Slider -->
                         <li class="splide__slide elm_ceyzSI relative sh--3 hide-child">
@@ -1110,7 +1129,7 @@
                     </div>
                 </div>
                 <!-- Latest Video Upload Slider Slide Items -->
-                <div class="splide__track ml--3 of--visible">
+                <div class="splide__track ml--3 mr3 of--visible">
                     <ul class="splide__list">
                         <!-- list item for Latest Video Upload Slider -->
                         <li class="splide__slide elm_ceyzSI sh--3 relative hide-child">
@@ -1585,7 +1604,7 @@
                     </div>
                 </div>
                 <!-- Most Popular Video Slider Slide Items -->
-                <div class="splide__track ml--3 of--visible">
+                <div class="splide__track ml--3 mr3 of--visible">
                     <ul class="splide__list">
                         <!-- list item for Latest Most Popular Video Slider -->
                         <li class="splide__slide elm_ceyzSI sh--3 relative hide-child">
@@ -2248,7 +2267,7 @@
                     </div>
                 </div>
                 <!-- Featured Video Slider Slide Items -->
-                <div class="splide__track ml--3 of--visible">
+                <div class="splide__track ml--3 mr3 of--visible">
                     <ul class="splide__list">
                         <!-- list item for Featured Video Slider -->
                         <li class="splide__slide elm_ceyzSI sh--3 relative hide-child">
@@ -2697,12 +2716,6 @@
                     </ul>
                 </div>
             </section>
-
-            <div>
-                <div>
-                    <div style="background: url(assets/images/vm-img-01.jpg) no-repeat center center cover;"></div>
-                </div>
-            </div>
         </div>
     </div>
     
