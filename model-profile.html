@@ -321,16 +321,17 @@
         /* Responsive for 1400 screen */
         @media screen and (min-width: 87.5em){
             /* First thumbnail of the carousel on hover left edge */
-            .elm_ceyzSI.is-active:nth-child(1) a{
+            .elm_ceyzSI.is-active.is-visible:hover a{
                 left: 53%;
-            }
-            /* Last thumbnail of the carousel on hover right edge */
-            .elm_ceyzSI:last-child:hover a{
-                right: -61%;
             }
             /* Last thumbnail of the carousel for first time on hover right edge */
             :nth-last-child(1 of .is-visible) + .elm_ceyzSI:hover a {
-                right: -59%;
+                right: -59.8%;
+            }
+            /* Last thumbnail of the carousel on hover right edge */
+            .elm_ceyzSI:nth-last-child(1):hover a{
+                left: auto !important;
+                right: -60.9% !important;
             }
             
         }
@@ -500,7 +501,7 @@
             </div>
         </div>
 
-        <div class="pv3">
+        <div class="pv4">
             <!-- Video Category Slider -->
             <section class="splide mb4 z--4" id="splide-video" aria-labelledby="Category-carousel-heading">
                 <!-- Video Category Slider Title Section -->
@@ -2717,7 +2718,7 @@
                 padding: '0',
                 arrows: false,
                 pagination: true,
-                gap: '16px'
+                gap: 16,
             }).mount();
 
             document.getElementById('prevButton').addEventListener('click', function () {
