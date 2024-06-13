@@ -105,6 +105,8 @@
     .right---1-5 { right: -1.5rem; }
     .bottom--1-5 { bottom: 1.5rem; }
     .right--4-375 { right: 4.375rem; }
+    .bottom--1-2 {bottom: 1.2rem;}
+    .right--110 { right: 2.875rem;}
 
     /* Line Spacing */
     .ls--0-03125 { letter-spacing: 0.03125rem; }
@@ -135,13 +137,7 @@
     /* Custom Style */
     .elm_jcrWGz{ width: 24.188rem; height: 4.2rem; position: relative; background: url('subscribe-btn-bg.svg') no-repeat; transition: all 0.3s ease-in-out;}
     .elm_jcrWGz:hover{background: url('subscribe-btn-bg-hover.svg') no-repeat}
-    .elm_mCElOk{
-        width: 6.25rem;
-        height: 6.25rem;
-        background: url('subscribe.svg') no-repeat;
-        position: absolute;
-        left: 0;
-        bottom: 0;
+    .elm_mCElOk{width: 6.25rem; height: 6.25rem; background: url('subscribe.svg') no-repeat; position: absolute; left: 0;bottom: 0;
         transition: all 0.1s ease-in-out;
         animation-duration: 2s;
         animation-iteration-count: infinite;
@@ -157,34 +153,18 @@
         50%  { transform: translateY(-px); }
         100% { transform: translateY(0); }
     }
-    .elm_vkwOOJ{
-        filter: drop-shadow(4px 4px 0px #0018EF);
-        backdrop-filter: blur(10px);
-        transition: all 0.5s ease-in-out;
-    }
-    .elm_vkwOOJ:hover{filter: drop-shadow(4px 4px 0px #FF46AA);}
+    /* Watch Live Button */
+    .elm_vkwOOJ{filter: drop-shadow(4px 3px 0px #0018EF);transition: all 0.5s ease-in-out;}
+    .elm_vkwOOJ:hover{filter: drop-shadow(4px 3px 0px #FF46AA);}
     .elm_aPWRwG{fill: rgba(0, 0, 0, 0.5); transition: all 0.1s ease-in-out; animation-duration: 1.5s;}
-    .elm_vkwOOJ:hover .elm_aPWRwG{fill: #0018EF; animation-name: colorchange; animation-timing-function: ease;}
-    @keyframes colorchange {
-        0%   { fill: #666; }
-        100% { fill: #0018EF; }
-    }
-    .elm_cBIyqA,
-    .elm_phRlZa{
-        position: absolute;
-        top: -2.1rem;
-        left: 0.5rem;
-        transition: all 0.5s ease-in-out;
-        opacity: 1;
-        animation-duration: 1s;
-    }
+    .elm_vkwOOJ:hover .elm_aPWRwG,
+    .elm_FjmXMZ:hover .elm_aPWRwG{fill: #0018EF; animation-name: colorchange; animation-timing-function: ease;}
+    @keyframes colorchange { 0%   { fill: #666; } 100% { fill: #0018EF; }}
+    .elm_cBIyqA, .elm_phRlZa{position: absolute;top: -2.1rem;left: 0.5rem;transition: all 0.5s ease-in-out;opacity: 1;animation-duration: 1s;}
     .elm_phRlZa{opacity: 0; transition: all 0.5s ease-in-out; animation-duration: 1s;}
     .elm_tErDzt:hover .elm_phRlZa{opacity: 1; animation-name: hideshow; animation-timing-function: ease;}
     .elm_tErDzt:hover .elm_cBIyqA{opacity: 0;}
-    @keyframes hideshow {
-        0%   { opacity: 0; }
-        100% { opacity: 1; }
-    }
+    @keyframes hideshow {0%   { opacity: 0; } 100% { opacity: 1; }}
   </style>
 </head>
 
@@ -11209,25 +11189,29 @@
           </div>
   
           <div class="flex mt4">
-            <div>
+            <div class="relative">
               <a href="#" class="relative dib elm_dEfrtu w-100">
                 <span class="db elm_jcrWGz w-100">   
                     <span class="elm_mCElOk db"></span>
-                    <span class="w-100 tc flex flex-column justify-center pad--left--68 pad--top--6-4">
+                    <span class="w-100 h-100 tc flex flex-column justify-center pad--left--68 pad--top--6-4">
                         <h2 class="white fs--20 lh--normal fw6 ttu">Become a subscriber</h2>
                         <span class="white">Starting USD$ 0.99/month</span>
                     </span>
                 </span>
             </a>
             </div>
-  
-            <div class="ml---0-5">
+            <!--Watch Live Button-->
+            <div class="ml---0-5 relative">
               <a href="#" class="db relative elm_tErDzt">
                 <span class="db">
                     <svg xmlns="http://www.w3.org/2000/svg" class="elm_vkwOOJ" width="326" height="64" viewBox="0 0 326 64" fill="none">
                         <g filter="url(#filter0_b_10499_8929)">
                           <path d="M304.868 0.000244141H0.819092L21.8275 64.0002H325.876L304.868 0.000244141Z" fill="black" fill-opacity="0.5"/>
                           <path class="elm_aPWRwG" d="M324.495 63.0002L304.143 1.00024H2.19986L22.5518 63.0002H324.495Z" stroke="#0018EF" stroke-width="2"/>
+                        </g>
+                        <g>
+                          <text x="114" y="40" class="fs--20 lh--normal fw6 ttu ff-poppins" fill="white">Watch Live</text>
+                          <circle cx="258.635" cy="34.0002" r="6.5" fill="#FF4848"/>
                         </g>
                         <defs>
                           <filter id="filter0_b_10499_8929" x="-9.18091" y="-9.99976" width="345.057" height="84" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
@@ -11237,7 +11221,7 @@
                             <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_10499_8929" result="shape"/>
                           </filter>
                         </defs>
-                      </svg>
+                    </svg>
                 </span>
                 <span class="elm_cBIyqA">
                     <svg width="101" height="101" viewBox="0 0 101 101" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -14889,11 +14873,7 @@
                         </defs>
                     </svg>  
                 </span>
-                <span class="absolute bottom--1-2 right--110 tc flex items-center gap--16">
-                    <h2 class="white fs--20 lh--normal fw6 ttu">Watch Live</h2>
-                    <span class="db h--8 w--8 bg-red br-100"></span>
-                </span>
-            </a>
+              </a>
             </div>
           </div>
         </div>
