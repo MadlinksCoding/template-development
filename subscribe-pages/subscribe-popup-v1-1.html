@@ -19,9 +19,6 @@
   <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/theme.css" />
   <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/customTachyons.css" />
   
-  <!-- Splide CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
-  
   <!-- Custom Style -->
   <style>
     /* Custom Tachyons */
@@ -79,6 +76,8 @@
 
     /* Padding */
     .pa--1-4 { padding: 1.4rem; }
+    .pad--right--40 { padding-right: 2.5rem; }
+    .pad--left--40 { padding-left: 2.5rem; }
 
     /* Blur */
     .bg-blur--0-625 { backdrop-filter: blur(0.625rem); }
@@ -102,7 +101,7 @@
     .d--webkit-line-clamp { -webkit-line-clamp: 1; }
 
     /* Sizing */
-    .t--scale-y { transform: scale(80%, 80%); margin-left: -3rem; margin-right: -3rem; }
+    /* .t--scale-y { transform: scale(80%, 80%); margin-left: -3rem; margin-right: -3rem; } */
 
     /* Transition */
     .tr--transform-0-2 { transition: transform .2s; }
@@ -118,32 +117,36 @@
     .t--3 { top: 3rem; }
     .r--5 { right: 5rem; }
 
-    /* Slider */
-    .elm_AbKCXQ{position: relative; max-width: 78.375rem; margin: 0 auto;}
-    /* .splide__slide.splide__slide--clone {opacity: 0; visibility: hidden; }
-    .splide__slide.is-visible {opacity: 1; visibility: visible; }
-    :nth-last-child(1 of .is-visible).is-next + .splide__slide,
-    :nth-last-child(1 of .is-visible) + .splide__slide {opacity: 0; visibility: hidden; } */
-    .splide__slide:first-child { border-radius: 0 !important; margin-left: 15rem; }
-    .splide__slide:last-child { border-radius: 0 !important; margin-right: 15rem; }
-    .splide__slide.is-active { background: rgba(0, 0, 0, 0.10); backdrop-filter: blur(1.406rem); }
-    .splide__slide.is-active .common_elm_JcADkP { background: #FF45E1; }
-    .splide__slide.is-active .common_elm_TWPiUU { color: #9FFF02; }
-    .splide__slide.is-active { border: 0.063rem solid #9FFF02 !important; background: rgba(0, 0, 0, 0.10); backdrop-filter: blur(1.563rem); }
-    .splide__slide.is-active .common_elm_dkSNEg { fill: #9FFF02; }
-    .splide__slide.is-active .common_elm_cXAIoP { background: #9FFF02; }
-    .splide__slide.is-active .common_elm_eqnlFt { border: 0.063rem solid #9FFF02 !important; }
-    .splide__slide:not(.is-active) { opacity: 0.7; filter: blur(1.8947358131408691px); backdrop-filter: blur(23.684200286865234px); border: 0.063rem solid #79716B !important; }
-    .splide__slide:not(.is-active) .common_elm_JcADkP { background: #79716B; }
-    .splide__slide:not(.is-active) .common_elm_TWPiUU { color: #fff; }
-    .splide__slide:not(.is-active) .common_elm_dkSNEg { fill: #79716B; }
-    .splide__slide:not(.is-active) .common_elm_cXAIoP { background: #79716B; }
-    .splide__slide:not(.is-active) .common_elm_eqnlFt { border: 0.063rem solid #79716B !important; }
-    #slider .splide__slide.is-prev { margin-left: -7rem; }
-    #slider .splide__slide.is-next { margin-right: -7rem; }
-    #slider .splide__slide.is-prev,
+    /* clip path */
+    .cp-6{clip-path: polygon(0 0, 93% 0, 100% 100%, 7% 100%);}
+
+    /* Slider Inner Componenet Style */
+    .subscription__item { opacity: 0.7; filter: blur(1.8947358131408691px); backdrop-filter: blur(23.684200286865234px); border: 0.063rem solid #79716B !important; }
+    .subscription__item .common_elm_JcADkP { background: #79716B; }
+    .subscription__item .common_elm_TWPiUU { color: #fff; }
+    .subscription__item .common_elm_dkSNEg { fill: #79716B; }
+    .subscription__item .common_elm_cXAIoP { background: #79716B; }
+    .subscription__item .common_elm_eqnlFt { border: 0.063rem solid #79716B !important; }
+    .subscription__item[data-pos="0"] .common_elm_JcADkP { background: #FF45E1; }
+    .subscription__item[data-pos="0"] .common_elm_TWPiUU { color: #9FFF02; }
+    .subscription__item[data-pos="0"] { border: 0.063rem solid #9FFF02 !important; background: rgba(0, 0, 0, 0.10); backdrop-filter: blur(1.563rem); opacity: 1; filter: blur(0);}
+    .subscription__item[data-pos="0"] .common_elm_dkSNEg { fill: #9FFF02; }
+    .subscription__item[data-pos="0"] .common_elm_cXAIoP { background: #9FFF02; }
+    .subscription__item[data-pos="0"] .common_elm_eqnlFt { border: 0.063rem solid #9FFF02 !important; }
+
+    /* Slider Animate and Slide with data-pos attribute */
+    .subscription__item { width: 24rem; position: absolute; transition: all 0.3s ease-in; }
+    .subscription__item:after { content: ''; width: 100%; height: 100%; position: absolute; left: 0; top: 0; cursor: pointer; }
+    .subscription__item[data-pos="0"] { z-index: 5; }
+    .subscription__item[data-pos="-1"] { transform: translateX(-64%) scale(0.9); z-index: 4; }
+    .subscription__item[data-pos="1"] { transform: translateX(64%) scale(0.9); z-index: 4; }
+    .subscription__item[data-pos="-2"] { transform: translateX(-120%) scale(0.8); z-index: 3; }
+    .subscription__item[data-pos="2"] { transform: translateX(120%) scale(0.8); z-index: 3; }
+
+
+    /* #slider .splide__slide.is-prev,
     #slider .splide__slide.is-next { position: relative; transform: scale(90%, 90%) !important; z-index: -1; }
-    #slider .splide__slide.is-active { opacity: 1; transform: scale(100%, 100%) !important; border: 0.063rem solid #fff; border-radius: 0.25rem; z-index: 1;  }
+    #slider .splide__slide.is-active { opacity: 1; transform: scale(100%, 100%) !important; border: 0.063rem solid #fff; border-radius: 0.25rem; z-index: 1; margin-left: -5.30rem; margin-right: -5.30rem; }
     #slider .splide__pagination { bottom: -0.65rem; gap: 0.325rem; display: flex !important; }
     #slider .splide__pagination__page { width: 0.588rem; height: 0.588rem; opacity: 0.50; background: #E9E5D3; border-radius: 624.938rem; } 
     #slider .splide__pagination__page.is-active { width: 1.7rem; height: 0.588rem; opacity: 1; background: #9FFF02; border-radius: 1.25rem; margin-left: 0.4rem; margin-right: 0.4rem; }
@@ -154,7 +157,7 @@
 
     @media screen and (min-width: 87.5rem) {
       #slider .splide__pagination { bottom: -0.65rem; gap: 0.325rem; display: flex !important; }
-    }
+    } */
   </style>
 </head>
 
@@ -201,13 +204,13 @@
       </div>
 
       <!-- slider section -->
-      <div id="slider" class="w-100 h--50-625 mt3 ml--0-8 tr--opacity-0-8 g--col-2-2 g--row-2-2 splide elm_AbKCXQ">
-        <!-- slider track -->
-        <div class="w-100 mh--auto splide__track ">
+      <div class="w-100 h--50-625 mt3 ml--0-8 tr--opacity-0-8 g--col-2-2 g--row-2-2 elm_AbKCXQ">
+        <!-- slider container -->
+        <div class="w-100 mh--auto subscription">
           <!-- slider list -->
-          <ul class="splide__list">
+          <ul class="relative flex w-100 justify-center subscription__list">
             <!-- slider item 1 -->
-            <li class="flex flex-column items-start pa3 t--scale-y tr--transform-0-2 z---2 gap--1 relative splide__slide">
+            <li class="flex flex-column items-start pa3 gap--1 subscription__item" data-pos="-2">
               <div class="flex items-center gap--0-5 self-stretch">
                 <div class="col--gray-warm ff-poppins f3 fs-normal fw6 lh--2">
                   MANGO TIER
@@ -237,50 +240,18 @@
               </div>
 
               <div class="flex items-end self-stretch">
-                <div class="w--1-5625 h--4">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 25 64" fill="none">
-                    <g filter="url(#filter0_b_9823_21360)">
-                      <path class="common_elm_dkSNEg" d="M25.001 0H0.000976562L25.001 64V0Z"/>
-                    </g>
-                    <defs>
-                      <filter id="filter0_b_9823_21360" x="-9.99902" y="-10" width="45" height="84" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                        <feGaussianBlur in="BackgroundImageFix" stdDeviation="5"/>
-                        <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_9823_21360"/>
-                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_9823_21360" result="shape"/>
-                      </filter>
-                    </defs>
-                  </svg>
-                </div>
-
-                <div class="flex pv0 ph3 justify-between items-center flex--1-0-0 self-stretch common_elm_cXAIoP">
+                <div class="flex pv0 pad--left--40 pad--right--40 h--4 cp-6 justify-between items-center flex--1-0-0 self-stretch common_elm_cXAIoP">
                   <div class="flex flex-column items-center">
                     <div class="black tc ff-poppins f4 fs-normal fw6 lh--1-875 ttu">
                       Subscribe
                     </div>
                   </div>
-
+  
                   <div class="flex items-center justify-center w--2-25 h--2-25">
                     <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
-                      <path d="M7.50098 18H28.501M28.501 18L18.001 7.5M28.501 18L18.001 28.5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M7.50098 18H28.501M28.501 18L18.001 7.5M28.501 18L18.001 28.5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                     </svg>
                   </div>
-                </div>
-
-                <div class="w--1-5625 h--4">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 25 64" fill="none">
-                    <g filter="url(#filter0_b_9823_21368)">
-                      <path class="common_elm_dkSNEg" d="M0.000976562 64L25.001 64L0.000987753 0L0.000976562 64Z"/>
-                    </g>
-                    <defs>
-                      <filter id="filter0_b_9823_21368" x="-9.99902" y="-10" width="45" height="84" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                        <feGaussianBlur in="BackgroundImageFix" stdDeviation="5"/>
-                        <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_9823_21368"/>
-                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_9823_21368" result="shape"/>
-                      </filter>
-                    </defs>
-                  </svg>
                 </div>
               </div>
               
@@ -362,7 +333,7 @@
             </li>
 
             <!-- slider item 2 -->
-            <li class="flex flex-column items-start pa3 t--scale-y tr--transform-0-2 z---2 gap--1 relative splide__slide">
+            <li class="flex flex-column items-start pa3 gap--1 subscription__item" data-pos="-1">
               <div class="flex items-center gap--0-5 self-stretch">
                 <div class="col--gray-warm ff-poppins f3 fs-normal fw6 lh--2">
                   MANGO TIER
@@ -392,50 +363,18 @@
               </div>
 
               <div class="flex items-end self-stretch">
-                <div class="w--1-5625 h--4">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 25 64" fill="none">
-                    <g filter="url(#filter0_b_9823_21360)">
-                      <path class="common_elm_dkSNEg" d="M25.001 0H0.000976562L25.001 64V0Z"/>
-                    </g>
-                    <defs>
-                      <filter id="filter0_b_9823_21360" x="-9.99902" y="-10" width="45" height="84" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                        <feGaussianBlur in="BackgroundImageFix" stdDeviation="5"/>
-                        <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_9823_21360"/>
-                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_9823_21360" result="shape"/>
-                      </filter>
-                    </defs>
-                  </svg>
-                </div>
-
-                <div class="flex pv0 ph3 justify-between items-center flex--1-0-0 self-stretch common_elm_cXAIoP">
+                <div class="flex pv0 pad--left--40 pad--right--40 h--4 cp-6 justify-between items-center flex--1-0-0 self-stretch common_elm_cXAIoP">
                   <div class="flex flex-column items-center">
                     <div class="black tc ff-poppins f4 fs-normal fw6 lh--1-875 ttu">
                       Subscribe
                     </div>
                   </div>
-
+  
                   <div class="flex items-center justify-center w--2-25 h--2-25">
                     <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
-                      <path d="M7.50098 18H28.501M28.501 18L18.001 7.5M28.501 18L18.001 28.5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M7.50098 18H28.501M28.501 18L18.001 7.5M28.501 18L18.001 28.5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                     </svg>
                   </div>
-                </div>
-
-                <div class="w--1-5625 h--4">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 25 64" fill="none">
-                    <g filter="url(#filter0_b_9823_21368)">
-                      <path class="common_elm_dkSNEg" d="M0.000976562 64L25.001 64L0.000987753 0L0.000976562 64Z"/>
-                    </g>
-                    <defs>
-                      <filter id="filter0_b_9823_21368" x="-9.99902" y="-10" width="45" height="84" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                        <feGaussianBlur in="BackgroundImageFix" stdDeviation="5"/>
-                        <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_9823_21368"/>
-                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_9823_21368" result="shape"/>
-                      </filter>
-                    </defs>
-                  </svg>
                 </div>
               </div>
 
@@ -517,7 +456,7 @@
             </li>
 
             <!-- slider item 3 -->
-            <li class="flex flex-column items-start pa3 t--scale-y tr--transform-0-2 z---2 gap--1 relative splide__slide">
+            <li class="flex flex-column items-start pa3 gap--1 subscription__item" data-pos="0">
               <div class="flex items-center gap--0-5 self-stretch">
                 <div class="col--gray-warm ff-poppins f3 fs-normal fw6 lh--2">
                   MANGO TIER
@@ -547,50 +486,18 @@
               </div>
 
               <div class="flex items-end self-stretch">
-                <div class="w--1-5625 h--4">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 25 64" fill="none">
-                    <g filter="url(#filter0_b_9823_21360)">
-                      <path class="common_elm_dkSNEg" d="M25.001 0H0.000976562L25.001 64V0Z"/>
-                    </g>
-                    <defs>
-                      <filter id="filter0_b_9823_21360" x="-9.99902" y="-10" width="45" height="84" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                        <feGaussianBlur in="BackgroundImageFix" stdDeviation="5"/>
-                        <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_9823_21360"/>
-                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_9823_21360" result="shape"/>
-                      </filter>
-                    </defs>
-                  </svg>
-                </div>
-
-                <div class="flex pv0 ph3 justify-between items-center flex--1-0-0 self-stretch common_elm_cXAIoP">
+                <div class="flex pv0 pad--left--40 pad--right--40 h--4 cp-6 justify-between items-center flex--1-0-0 self-stretch common_elm_cXAIoP">
                   <div class="flex flex-column items-center">
                     <div class="black tc ff-poppins f4 fs-normal fw6 lh--1-875 ttu">
                       Subscribe
                     </div>
                   </div>
-
+  
                   <div class="flex items-center justify-center w--2-25 h--2-25">
                     <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
-                      <path d="M7.50098 18H28.501M28.501 18L18.001 7.5M28.501 18L18.001 28.5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M7.50098 18H28.501M28.501 18L18.001 7.5M28.501 18L18.001 28.5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                     </svg>
                   </div>
-                </div>
-
-                <div class="w--1-5625 h--4">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 25 64" fill="none">
-                    <g filter="url(#filter0_b_9823_21368)">
-                      <path class="common_elm_dkSNEg" d="M0.000976562 64L25.001 64L0.000987753 0L0.000976562 64Z"/>
-                    </g>
-                    <defs>
-                      <filter id="filter0_b_9823_21368" x="-9.99902" y="-10" width="45" height="84" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                        <feGaussianBlur in="BackgroundImageFix" stdDeviation="5"/>
-                        <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_9823_21368"/>
-                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_9823_21368" result="shape"/>
-                      </filter>
-                    </defs>
-                  </svg>
                 </div>
               </div>
 
@@ -672,7 +579,7 @@
             </li>
 
             <!-- slider item 4 -->
-            <li class="flex flex-column items-start pa3 t--scale-y tr--transform-0-2 z---2 gap--1 relative splide__slide">
+            <li class="flex flex-column items-start pa3 gap--1 subscription__item" data-pos="1">
               <div class="flex items-center gap--0-5 self-stretch">
                 <div class="col--gray-warm ff-poppins f3 fs-normal fw6 lh--2">
                   MANGO TIER
@@ -702,50 +609,18 @@
               </div>
 
               <div class="flex items-end self-stretch">
-                <div class="w--1-5625 h--4">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 25 64" fill="none">
-                    <g filter="url(#filter0_b_9823_21360)">
-                      <path class="common_elm_dkSNEg" d="M25.001 0H0.000976562L25.001 64V0Z"/>
-                    </g>
-                    <defs>
-                      <filter id="filter0_b_9823_21360" x="-9.99902" y="-10" width="45" height="84" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                        <feGaussianBlur in="BackgroundImageFix" stdDeviation="5"/>
-                        <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_9823_21360"/>
-                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_9823_21360" result="shape"/>
-                      </filter>
-                    </defs>
-                  </svg>
-                </div>
-
-                <div class="flex pv0 ph3 justify-between items-center flex--1-0-0 self-stretch common_elm_cXAIoP">
+                <div class="flex pv0 pad--left--40 pad--right--40 h--4 cp-6 justify-between items-center flex--1-0-0 self-stretch common_elm_cXAIoP">
                   <div class="flex flex-column items-center">
                     <div class="black tc ff-poppins f4 fs-normal fw6 lh--1-875 ttu">
                       Subscribe
                     </div>
                   </div>
-
+  
                   <div class="flex items-center justify-center w--2-25 h--2-25">
                     <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
-                      <path d="M7.50098 18H28.501M28.501 18L18.001 7.5M28.501 18L18.001 28.5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M7.50098 18H28.501M28.501 18L18.001 7.5M28.501 18L18.001 28.5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                     </svg>
                   </div>
-                </div>
-
-                <div class="w--1-5625 h--4">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 25 64" fill="none">
-                    <g filter="url(#filter0_b_9823_21368)">
-                      <path class="common_elm_dkSNEg" d="M0.000976562 64L25.001 64L0.000987753 0L0.000976562 64Z"/>
-                    </g>
-                    <defs>
-                      <filter id="filter0_b_9823_21368" x="-9.99902" y="-10" width="45" height="84" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                        <feGaussianBlur in="BackgroundImageFix" stdDeviation="5"/>
-                        <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_9823_21368"/>
-                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_9823_21368" result="shape"/>
-                      </filter>
-                    </defs>
-                  </svg>
                 </div>
               </div>
 
@@ -827,7 +702,7 @@
             </li>
 
             <!-- slider item 5 -->
-            <li class="flex flex-column items-start pa3 t--scale-y tr--transform-0-2 z---2 gap--1 relative splide__slide">
+            <li class="flex flex-column items-start pa3 gap--1 subscription__item" data-pos="2">
               <div class="flex items-center gap--0-5 self-stretch">
                 <div class="col--gray-warm ff-poppins f3 fs-normal fw6 lh--2">
                   MANGO TIER
@@ -857,50 +732,18 @@
               </div>
 
               <div class="flex items-end self-stretch">
-                <div class="w--1-5625 h--4">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 25 64" fill="none">
-                    <g filter="url(#filter0_b_9823_21360)">
-                      <path class="common_elm_dkSNEg" d="M25.001 0H0.000976562L25.001 64V0Z"/>
-                    </g>
-                    <defs>
-                      <filter id="filter0_b_9823_21360" x="-9.99902" y="-10" width="45" height="84" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                        <feGaussianBlur in="BackgroundImageFix" stdDeviation="5"/>
-                        <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_9823_21360"/>
-                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_9823_21360" result="shape"/>
-                      </filter>
-                    </defs>
-                  </svg>
-                </div>
-
-                <div class="flex pv0 ph3 justify-between items-center flex--1-0-0 self-stretch common_elm_cXAIoP">
+                <div class="flex pv0 pad--left--40 pad--right--40 h--4 cp-6 justify-between items-center flex--1-0-0 self-stretch common_elm_cXAIoP">
                   <div class="flex flex-column items-center">
                     <div class="black tc ff-poppins f4 fs-normal fw6 lh--1-875 ttu">
                       Subscribe
                     </div>
                   </div>
-
+  
                   <div class="flex items-center justify-center w--2-25 h--2-25">
                     <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
-                      <path d="M7.50098 18H28.501M28.501 18L18.001 7.5M28.501 18L18.001 28.5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M7.50098 18H28.501M28.501 18L18.001 7.5M28.501 18L18.001 28.5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                     </svg>
                   </div>
-                </div>
-
-                <div class="w--1-5625 h--4">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 25 64" fill="none">
-                    <g filter="url(#filter0_b_9823_21368)">
-                      <path class="common_elm_dkSNEg" d="M0.000976562 64L25.001 64L0.000987753 0L0.000976562 64Z"/>
-                    </g>
-                    <defs>
-                      <filter id="filter0_b_9823_21368" x="-9.99902" y="-10" width="45" height="84" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                        <feGaussianBlur in="BackgroundImageFix" stdDeviation="5"/>
-                        <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_9823_21368"/>
-                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_9823_21368" result="shape"/>
-                      </filter>
-                    </defs>
-                  </svg>
                 </div>
               </div>
 
@@ -986,26 +829,60 @@
     </div>
   </div>
 
-  <!-- Splide JS -->
-  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-  
+  <!-- custom script -->
   <script>
-    let slider = new Splide('#slider', {
-      type: 'loop',
-      fixedWidth: '24rem',
-      perPage: 5,
-      focus: 'center',
-      trimSpace: false,
-      arrows: false,
-      pagination: true,
-      drag: true,
-      cover: true,
-      isNavigation: true,
-      updateOnMove: true,
-    }).mount();
 
-    slider.go(2);
+    /**
+		 * This following script attached data pos listeners to each of the subscription slides
+		 * Upon clicking the slides, the script will get active on elements datapos
+		 * Then clicked subscription box will come on front of the slider.
+		 */
+    const state = {};
+    const subscriptionList = document.querySelector('.subscription__list');
+    const subscriptionItems = document.querySelectorAll('.subscription__item');
+    const elems = Array.from(subscriptionItems);
+
+    // Click event on Suscription list
+    subscriptionList.addEventListener('click', function (event) {
+      var newActive = event.target;
+      var isItem = newActive.closest('.subscription__item');
+
+      if (!isItem || newActive.classList.contains('subscription__item_active')) {
+        return;
+      };
+      
+      update(newActive);
+    });
+
+    // Foreach loop for showing subscription slides.
+    const update = function(newActive) {
+      const newActivePos = newActive.dataset.pos;
+
+      const current = elems.find((elem) => elem.dataset.pos == 0);
+      const prev = elems.find((elem) => elem.dataset.pos == -1);
+      const next = elems.find((elem) => elem.dataset.pos == 1);
+      const first = elems.find((elem) => elem.dataset.pos == -2);
+      const last = elems.find((elem) => elem.dataset.pos == 2);
+      
+      current.classList.remove('subscription__item_active');
+      
+      [current, prev, next, first, last].forEach(item => {
+        var itemPos = item.dataset.pos;
+
+        item.dataset.pos = getPos(itemPos, newActivePos)
+      });
+    };
+
+    // Show current slide of datapos
+    const getPos = function (current, active) {
+      const diff = current - active;
+
+      if (Math.abs(current - active) > 2) {
+        return -current
+      }
+
+      return diff;
+    }
   </script>
 </body>
-
 </html>
