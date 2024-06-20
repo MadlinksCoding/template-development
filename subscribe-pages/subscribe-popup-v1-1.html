@@ -130,25 +130,25 @@
     .common_elm_UyGvCZ .common_elm_dkSNEg { fill: #79716B; }
     .common_elm_UyGvCZ .common_elm_cXAIoP { background: #79716B; }
     .common_elm_UyGvCZ .common_elm_eqnlFt { border: 0.063rem solid #79716B; }
-    .common_elm_UyGvCZ.pos3 .common_elm_JcADkP { background: #FF45E1; }
-    .common_elm_UyGvCZ.pos3 .common_elm_TWPiUU { color: #9FFF02; }
-    .common_elm_UyGvCZ.pos3 { border: 0.063rem solid #9FFF02; background: rgba(0, 0, 0, 0.10); backdrop-filter: blur(1.563rem); opacity: 1; filter: blur(0);}
-    .common_elm_UyGvCZ.pos3 .common_elm_dkSNEg { fill: #9FFF02; }
-    .common_elm_UyGvCZ.pos3 .common_elm_cXAIoP { background: #9FFF02; }
-    .common_elm_UyGvCZ.pos3 .common_elm_eqnlFt { border: 0.063rem solid #9FFF02; }
+    .common_elm_UyGvCZ.is-current .common_elm_JcADkP { background: #FF45E1; }
+    .common_elm_UyGvCZ.is-current .common_elm_TWPiUU { color: #9FFF02; }
+    .common_elm_UyGvCZ.is-current { border: 0.063rem solid #9FFF02; background: rgba(0, 0, 0, 0.10); backdrop-filter: blur(1.563rem); opacity: 1; filter: blur(0);}
+    .common_elm_UyGvCZ.is-current .common_elm_dkSNEg { fill: #9FFF02; }
+    .common_elm_UyGvCZ.is-current .common_elm_cXAIoP { background: #9FFF02; }
+    .common_elm_UyGvCZ.is-current .common_elm_eqnlFt { border: 0.063rem solid #9FFF02; }
 
     /* Slider Animate and Slide with .pos class attribute */
     .common_elm_UyGvCZ { width: 24rem; position: absolute; transition: all 0.3s ease-in; }
-    .common_elm_UyGvCZ.pos3 { z-index: 5; }
-    .common_elm_UyGvCZ.pos2 { transform: translateX(-67%) scale(0.9); z-index: 4; }
-    .common_elm_UyGvCZ.pos4 { transform: translateX(66%) scale(0.9); z-index: 4; }
-    .common_elm_UyGvCZ.pos1 { transform: translateX(-125%) scale(0.8); z-index: 3; }
-    .common_elm_UyGvCZ.pos5 { transform: translateX(122%) scale(0.8); z-index: 3; }
+    .common_elm_UyGvCZ[data-order="3"] { z-index: 5; transform: translateX(0%) scale(1); }
+    .common_elm_UyGvCZ[data-order="2"] { transform: translateX(-67%) scale(0.9); z-index: 4; }
+    .common_elm_UyGvCZ[data-order="4"] { transform: translateX(66%) scale(0.9); z-index: 4; }
+    .common_elm_UyGvCZ[data-order="1"] { transform: translateX(-125%) scale(0.8); z-index: 3; }
+    .common_elm_UyGvCZ[data-order="5"] { transform: translateX(122%) scale(0.8); z-index: 3; }
 
     /* Pagination style */
     .elm_THtudv { left: 50%; transform: translateX(-50%); gap: 0.625rem; z-index: 1; }
-    .common_elm_TJLPQT { background: #E9E5D3; border-radius: 624.938rem; } 
-    .common_elm_TJLPQT.is-active { width: 2rem; height: 0.688rem; opacity: 1; background: #9FFF02; border-radius: 1.25rem; }
+    .common_elm_TJLPQT { background: #E9E5D3; border-radius: 624.938rem; cursor: pointer; } 
+    .common_elm_TJLPQT.is-current { width: 2rem; height: 0.688rem; opacity: 1; background: #9FFF02; border-radius: 1.25rem; }
   </style>
 </head>
 
@@ -197,11 +197,11 @@
       <!-- slider section -->
       <div class="w-100 h--50-625 mt3 ml--0-8 tr--opacity-0-8 g--col-2-2 g--row-2-2 relative elm_AbKCXQ">
         <!-- slider container -->
-        <div class="w-100 mh--auto">
+        <div class="w-100 mh--auto elm_eNlBFq">
           <!-- slider list -->
           <ul class="relative flex w-100 justify-center elm_TFgiRw">
             <!-- slider item 1 -->
-            <li class="flex flex-column items-start pa3 gap--1 common_elm_UyGvCZ pos1" data-order="1" onclick="moveToCenter(this)">
+            <li class="flex flex-column items-start pa3 gap--1 common_elm_UyGvCZ" data-order="1" data-card-no="1"">
               <div class="flex items-center gap--0-5 self-stretch">
                 <div class="col--gray-warm ff-poppins f3 fs-normal fw6 lh--2">
                   MANGO TIER
@@ -218,7 +218,7 @@
                 <div class="tc">
                   <span class="tc ff-poppins f3 fs-normal fw6 lh--2 common_elm_TWPiUU">USD$</span>
 
-                  <span class="ff-poppins f--3 fs-normal fw6 ml---0-2 lh--3-75 ls---0-06 common_elm_TWPiUU">8.99</span>
+                  <span class="ff-poppins f--3 fs-normal fw6 ml---0-2 lh--3-75 ls---0-06 common_elm_TWPiUU">12.99</span>
                 </div>
 
                 <div class="tc ff-poppins f6 fs-normal fw4 lh-copy strike common_elm_TWPiUU">
@@ -324,130 +324,7 @@
             </li>
 
             <!-- slider item 2 -->
-            <li class="flex flex-column items-start pa3 gap--1 common_elm_UyGvCZ pos2" data-order="2" onclick="moveToCenter(this)">
-              <div class="flex items-center gap--0-5 self-stretch">
-                <div class="col--gray-warm ff-poppins f3 fs-normal fw6 lh--2">
-                  MANGO TIER
-                </div>
-
-                <div class="flex h--1-375 pv1 ph2 justify-center items-center gap--0-375 bg-blur--0-625 common_elm_JcADkP">
-                  <div class="ff-poppins f7 fs-normal fw5 lh--1-125">
-                    ON SALE
-                  </div>
-                </div>
-              </div>
-
-              <div class="flex items-end gap--0-25 self-stretch">
-                <div class="tc">
-                  <span class="tc ff-poppins f3 fs-normal fw6 lh--2 common_elm_TWPiUU">USD$</span>
-
-                  <span class="ff-poppins f--3 fs-normal fw6 ml---0-2 lh--3-75 ls---0-06 common_elm_TWPiUU">12.99</span>
-                </div>
-
-                <div class="tc ff-poppins f6 fs-normal fw4 lh-copy strike common_elm_TWPiUU">
-                  $12.99
-                </div>
-                
-                <div class="col--gray-warm tc ff-poppins f5 fs-normal fw4 lh-copy">
-                  /month
-                </div>
-              </div>
-
-              <div class="flex items-end self-stretch">
-                <div class="flex pv0 pad--left--40 pad--right--40 h--4 cp-6 justify-between items-center flex--1-0-0 self-stretch common_elm_cXAIoP">
-                  <div class="flex flex-column items-center">
-                    <div class="black tc ff-poppins f4 fs-normal fw6 lh--1-875 ttu">
-                      Subscribe
-                    </div>
-                  </div>
-  
-                  <div class="flex items-center justify-center w--2-25 h--2-25">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
-                      <path d="M7.50098 18H28.501M28.501 18L18.001 7.5M28.501 18L18.001 28.5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-
-              <div class="flex h--6 max-height--6 flex-column items-start gap--0-1875 self-stretch">
-                <div class="w--22 h--4-5625 flex--1-0-0 col--gray-warm ff-poppins f5 fs-normal fw4 lh-copy ls--0-01">
-                  Watch all of my mango eating content!
-                  <br/>
-                  content update weekly!
-                  <br/>
-                  • 100% real content...
-                </div>
-
-                <div class="ff-poppins f6 fs-normal fw6 lh-title common_elm_TWPiUU">
-                  Read more
-                </div>
-              </div>
-              
-              <div class="flex flex-column items-start self-stretch mt--0-25">
-                <div class="flex pv1 ph2 justify-center items-center gap--0-625 common_elm_cXAIoP">
-                  <div class="black ff-poppins fs--15 fs-normal fw5 lh--20">
-                    MEMBER BENEFITS
-                  </div>
-                </div>
-
-                <div class="flex w--22 pv2 ph0 flex-column items-start gap--0-65 common_elm_eqnlFt">
-                  <div class="flex items-center gap--0-5 self-stretch">
-                    <div class="w--2 h--2">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                        <path class="common_elm_dkSNEg" fill-rule="evenodd" clip-rule="evenodd" d="M20.3691 24.2204L13.4287 24.9864C12.053 25.1388 11.0315 23.7426 11.5875 22.4783L12.9303 19.4183C13.3463 18.4711 12.8479 17.3838 12.053 16.7208C10.982 15.8312 10.2406 14.538 10.0759 13.043C9.73812 9.9707 11.95 7.21137 15.0186 6.87366C18.0872 6.53595 20.851 8.74753 21.1888 11.8157C21.3576 13.3437 20.8922 14.7934 20.0066 15.9053C19.3558 16.729 19.0881 17.9233 19.7101 18.7676L21.6212 21.3704C22.4409 22.4865 21.7448 24.0721 20.3691 24.2204Z"/>
-                      </svg>
-                    </div>
-
-                    <div class="flex--1-0-0 mt---0-25">
-                      <span class="col--gray-warm ff-poppins f5 fs-normal fw6 lh-copy">10% off</span>
-                      <span class="col--gray-warm ff-poppins f5 fs-normal fw4 lh-copy"> on all Merchandise</span>
-                    </div>
-                  </div>
-
-                  <div class="flex items-center gap--0-5 self-stretch">
-                    <div class="w--2 h--2">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                        <path class="common_elm_dkSNEg" fill-rule="evenodd" clip-rule="evenodd" d="M20.3691 24.2204L13.4287 24.9864C12.053 25.1388 11.0315 23.7426 11.5875 22.4783L12.9303 19.4183C13.3463 18.4711 12.8479 17.3838 12.053 16.7208C10.982 15.8312 10.2406 14.538 10.0759 13.043C9.73812 9.9707 11.95 7.21137 15.0186 6.87366C18.0872 6.53595 20.851 8.74753 21.1888 11.8157C21.3576 13.3437 20.8922 14.7934 20.0066 15.9053C19.3558 16.729 19.0881 17.9233 19.7101 18.7676L21.6212 21.3704C22.4409 22.4865 21.7448 24.0721 20.3691 24.2204Z"/>
-                      </svg>
-                    </div>
-
-                    <div class="flex--1-0-0 mt---0-25">
-                      <span class="col--gray-warm ff-poppins f5 fs-normal fw6 lh-copy">10% off</span>
-                      <span class="col--gray-warm ff-poppins f5 fs-normal fw4 lh-copy"> on custom request</span>
-                    </div>
-                  </div>
-
-                  <div class="flex items-center gap--0-5 self-stretch">
-                    <div class="w--2 h--2">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                        <path class="common_elm_dkSNEg" fill-rule="evenodd" clip-rule="evenodd" d="M20.3691 24.2204L13.4287 24.9864C12.053 25.1388 11.0315 23.7426 11.5875 22.4783L12.9303 19.4183C13.3463 18.4711 12.8479 17.3838 12.053 16.7208C10.982 15.8312 10.2406 14.538 10.0759 13.043C9.73812 9.9707 11.95 7.21137 15.0186 6.87366C18.0872 6.53595 20.851 8.74753 21.1888 11.8157C21.3576 13.3437 20.8922 14.7934 20.0066 15.9053C19.3558 16.729 19.0881 17.9233 19.7101 18.7676L21.6212 21.3704C22.4409 22.4865 21.7448 24.0721 20.3691 24.2204Z"/>
-                      </svg>
-                    </div>
-
-                    <div class="flex--1-0-0">
-                      <span class="col--gray-warm ff-poppins f5 fs-normal fw6 lh-copy">10% off</span>
-                      <span class="col--gray-warm ff-poppins f5 fs-normal fw4 lh-copy"> on pay per view videos</span>
-                    </div>
-                  </div>
-
-                  <div class="flex items-center gap--0-5 self-stretch">
-                    <div class="w--2 h--2">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                        <path class="common_elm_dkSNEg" fill-rule="evenodd" clip-rule="evenodd" d="M20.3691 24.2204L13.4287 24.9864C12.053 25.1388 11.0315 23.7426 11.5875 22.4783L12.9303 19.4183C13.3463 18.4711 12.8479 17.3838 12.053 16.7208C10.982 15.8312 10.2406 14.538 10.0759 13.043C9.73812 9.9707 11.95 7.21137 15.0186 6.87366C18.0872 6.53595 20.851 8.74753 21.1888 11.8157C21.3576 13.3437 20.8922 14.7934 20.0066 15.9053C19.3558 16.729 19.0881 17.9233 19.7101 18.7676L21.6212 21.3704C22.4409 22.4865 21.7448 24.0721 20.3691 24.2204Z"/>
-                      </svg>
-                    </div>
-
-                    <div class="flex--1-0-0">
-                      <span class="col--gray-warm ff-poppins f5 fs-normal fw4 lh-copy">Receive</span>
-                      <span class="col--gray-warm ff-poppins f5 fs-normal fw6 lh-copy"> 100 Free tokens each month</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <!-- slider item 3 -->
-            <li class="flex flex-column items-start pa3 gap--1 common_elm_UyGvCZ pos3" data-order="3" onclick="moveToCenter(this)">
+            <li class="flex flex-column items-start pa3 gap--1 common_elm_UyGvCZ" data-order="2" data-card-no="2">
               <div class="flex items-center gap--0-5 self-stretch">
                 <div class="col--gray-warm ff-poppins f3 fs-normal fw6 lh--2">
                   MANGO TIER
@@ -569,8 +446,131 @@
               </div>
             </li>
 
+            <!-- slider item 3 -->
+            <li class="flex flex-column items-start pa3 gap--1 common_elm_UyGvCZ is-current" data-order="3" data-card-no="3">
+              <div class="flex items-center gap--0-5 self-stretch">
+                <div class="col--gray-warm ff-poppins f3 fs-normal fw6 lh--2">
+                  MANGO TIER
+                </div>
+
+                <div class="flex h--1-375 pv1 ph2 justify-center items-center gap--0-375 bg-blur--0-625 common_elm_JcADkP">
+                  <div class="ff-poppins f7 fs-normal fw5 lh--1-125">
+                    ON SALE
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex items-end gap--0-25 self-stretch">
+                <div class="tc">
+                  <span class="tc ff-poppins f3 fs-normal fw6 lh--2 common_elm_TWPiUU">USD$</span>
+
+                  <span class="ff-poppins f--3 fs-normal fw6 ml---0-2 lh--3-75 ls---0-06 common_elm_TWPiUU">6.99</span>
+                </div>
+
+                <div class="tc ff-poppins f6 fs-normal fw4 lh-copy strike common_elm_TWPiUU">
+                  $12.99
+                </div>
+                
+                <div class="col--gray-warm tc ff-poppins f5 fs-normal fw4 lh-copy">
+                  /month
+                </div>
+              </div>
+
+              <div class="flex items-end self-stretch">
+                <div class="flex pv0 pad--left--40 pad--right--40 h--4 cp-6 justify-between items-center flex--1-0-0 self-stretch common_elm_cXAIoP">
+                  <div class="flex flex-column items-center">
+                    <div class="black tc ff-poppins f4 fs-normal fw6 lh--1-875 ttu">
+                      Subscribe
+                    </div>
+                  </div>
+  
+                  <div class="flex items-center justify-center w--2-25 h--2-25">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                      <path d="M7.50098 18H28.501M28.501 18L18.001 7.5M28.501 18L18.001 28.5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex h--6 max-height--6 flex-column items-start gap--0-1875 self-stretch">
+                <div class="w--22 h--4-5625 flex--1-0-0 col--gray-warm ff-poppins f5 fs-normal fw4 lh-copy ls--0-01">
+                  Watch all of my mango eating content!
+                  <br/>
+                  content update weekly!
+                  <br/>
+                  • 100% real content...
+                </div>
+
+                <div class="ff-poppins f6 fs-normal fw6 lh-title common_elm_TWPiUU">
+                  Read more
+                </div>
+              </div>
+              
+              <div class="flex flex-column items-start self-stretch mt--0-25">
+                <div class="flex pv1 ph2 justify-center items-center gap--0-625 common_elm_cXAIoP">
+                  <div class="black ff-poppins fs--15 fs-normal fw5 lh--20">
+                    MEMBER BENEFITS
+                  </div>
+                </div>
+
+                <div class="flex w--22 pv2 ph0 flex-column items-start gap--0-65 common_elm_eqnlFt">
+                  <div class="flex items-center gap--0-5 self-stretch">
+                    <div class="w--2 h--2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path class="common_elm_dkSNEg" fill-rule="evenodd" clip-rule="evenodd" d="M20.3691 24.2204L13.4287 24.9864C12.053 25.1388 11.0315 23.7426 11.5875 22.4783L12.9303 19.4183C13.3463 18.4711 12.8479 17.3838 12.053 16.7208C10.982 15.8312 10.2406 14.538 10.0759 13.043C9.73812 9.9707 11.95 7.21137 15.0186 6.87366C18.0872 6.53595 20.851 8.74753 21.1888 11.8157C21.3576 13.3437 20.8922 14.7934 20.0066 15.9053C19.3558 16.729 19.0881 17.9233 19.7101 18.7676L21.6212 21.3704C22.4409 22.4865 21.7448 24.0721 20.3691 24.2204Z"/>
+                      </svg>
+                    </div>
+
+                    <div class="flex--1-0-0 mt---0-25">
+                      <span class="col--gray-warm ff-poppins f5 fs-normal fw6 lh-copy">10% off</span>
+                      <span class="col--gray-warm ff-poppins f5 fs-normal fw4 lh-copy"> on all Merchandise</span>
+                    </div>
+                  </div>
+
+                  <div class="flex items-center gap--0-5 self-stretch">
+                    <div class="w--2 h--2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path class="common_elm_dkSNEg" fill-rule="evenodd" clip-rule="evenodd" d="M20.3691 24.2204L13.4287 24.9864C12.053 25.1388 11.0315 23.7426 11.5875 22.4783L12.9303 19.4183C13.3463 18.4711 12.8479 17.3838 12.053 16.7208C10.982 15.8312 10.2406 14.538 10.0759 13.043C9.73812 9.9707 11.95 7.21137 15.0186 6.87366C18.0872 6.53595 20.851 8.74753 21.1888 11.8157C21.3576 13.3437 20.8922 14.7934 20.0066 15.9053C19.3558 16.729 19.0881 17.9233 19.7101 18.7676L21.6212 21.3704C22.4409 22.4865 21.7448 24.0721 20.3691 24.2204Z"/>
+                      </svg>
+                    </div>
+
+                    <div class="flex--1-0-0 mt---0-25">
+                      <span class="col--gray-warm ff-poppins f5 fs-normal fw6 lh-copy">10% off</span>
+                      <span class="col--gray-warm ff-poppins f5 fs-normal fw4 lh-copy"> on custom request</span>
+                    </div>
+                  </div>
+
+                  <div class="flex items-center gap--0-5 self-stretch">
+                    <div class="w--2 h--2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path class="common_elm_dkSNEg" fill-rule="evenodd" clip-rule="evenodd" d="M20.3691 24.2204L13.4287 24.9864C12.053 25.1388 11.0315 23.7426 11.5875 22.4783L12.9303 19.4183C13.3463 18.4711 12.8479 17.3838 12.053 16.7208C10.982 15.8312 10.2406 14.538 10.0759 13.043C9.73812 9.9707 11.95 7.21137 15.0186 6.87366C18.0872 6.53595 20.851 8.74753 21.1888 11.8157C21.3576 13.3437 20.8922 14.7934 20.0066 15.9053C19.3558 16.729 19.0881 17.9233 19.7101 18.7676L21.6212 21.3704C22.4409 22.4865 21.7448 24.0721 20.3691 24.2204Z"/>
+                      </svg>
+                    </div>
+
+                    <div class="flex--1-0-0">
+                      <span class="col--gray-warm ff-poppins f5 fs-normal fw6 lh-copy">10% off</span>
+                      <span class="col--gray-warm ff-poppins f5 fs-normal fw4 lh-copy"> on pay per view videos</span>
+                    </div>
+                  </div>
+
+                  <div class="flex items-center gap--0-5 self-stretch">
+                    <div class="w--2 h--2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path class="common_elm_dkSNEg" fill-rule="evenodd" clip-rule="evenodd" d="M20.3691 24.2204L13.4287 24.9864C12.053 25.1388 11.0315 23.7426 11.5875 22.4783L12.9303 19.4183C13.3463 18.4711 12.8479 17.3838 12.053 16.7208C10.982 15.8312 10.2406 14.538 10.0759 13.043C9.73812 9.9707 11.95 7.21137 15.0186 6.87366C18.0872 6.53595 20.851 8.74753 21.1888 11.8157C21.3576 13.3437 20.8922 14.7934 20.0066 15.9053C19.3558 16.729 19.0881 17.9233 19.7101 18.7676L21.6212 21.3704C22.4409 22.4865 21.7448 24.0721 20.3691 24.2204Z"/>
+                      </svg>
+                    </div>
+
+                    <div class="flex--1-0-0">
+                      <span class="col--gray-warm ff-poppins f5 fs-normal fw4 lh-copy">Receive</span>
+                      <span class="col--gray-warm ff-poppins f5 fs-normal fw6 lh-copy"> 100 Free tokens each month</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
             <!-- slider item 4 -->
-            <li class="flex flex-column items-start pa3 gap--1 common_elm_UyGvCZ pos4" data-order="4" onclick="moveToCenter(this)">
+            <li class="flex flex-column items-start pa3 gap--1 common_elm_UyGvCZ" data-order="4" data-card-no="4">
               <div class="flex items-center gap--0-5 self-stretch">
                 <div class="col--gray-warm ff-poppins f3 fs-normal fw6 lh--2">
                   MANGO TIER
@@ -693,7 +693,7 @@
             </li>
 
             <!-- slider item 5 -->
-            <li class="flex flex-column items-start pa3 gap--1 common_elm_UyGvCZ pos5" data-order="5" onclick="moveToCenter(this)">
+            <li class="flex flex-column items-start pa3 gap--1 common_elm_UyGvCZ" data-order="5" data-card-no="5">
               <div class="flex items-center gap--0-5 self-stretch">
                 <div class="col--gray-warm ff-poppins f3 fs-normal fw6 lh--2">
                   MANGO TIER
@@ -710,7 +710,7 @@
                 <div class="tc">
                   <span class="tc ff-poppins f3 fs-normal fw6 lh--2 common_elm_TWPiUU">USD$</span>
 
-                  <span class="ff-poppins f--3 fs-normal fw6 ml---0-2 lh--3-75 ls---0-06 common_elm_TWPiUU">6.99</span>
+                  <span class="ff-poppins f--3 fs-normal fw6 ml---0-2 lh--3-75 ls---0-06 common_elm_TWPiUU">8.99</span>
                 </div>
 
                 <div class="tc ff-poppins f6 fs-normal fw4 lh-copy strike common_elm_TWPiUU">
@@ -815,58 +815,70 @@
               </div>
             </li>
           </ul>
+          <!-- Pagination -->
+          <div class="absolute bottom-0 flex elm_THtudv">
+            <!-- Pagination item 1 -->
+            <span class="w--11 h--11 db o-50 common_elm_TJLPQT" data-card-no="1"></span>
+            <!-- Pagination item 2 -->
+            <span class="w--11 h--11 db o-50 common_elm_TJLPQT" data-card-no="2"></span>
+            <!-- Pagination item 3 -->
+            <span class="w--11 h--11 db o-50 common_elm_TJLPQT is-current" data-card-no="3"></span>
+            <!-- Pagination item 4 -->
+            <span class="w--11 h--11 db o-50 common_elm_TJLPQT" data-card-no="4"></span>
+            <!-- Pagination item 5 -->
+            <span class="w--11 h--11 db o-50 common_elm_TJLPQT" data-card-no="5"></span>
+          </div>
         </div>
-
-        <!-- Pagination -->
-        <ul class="absolute bottom-0 flex elm_THtudv">
-          <!-- Pagination item 1 -->
-          <li>
-            <button class="w--11 h--11 o-50 common_elm_TJLPQT" type="button"></button>
-          </li>
-          <!-- Pagination item 2 -->
-          <li>
-            <button class="w--11 h--11 o-50 common_elm_TJLPQT is-active" type="button"></button>
-          </li>
-          <!-- Pagination item 3 -->
-          <li> 
-            <button class="w--11 h--11 o-50 common_elm_TJLPQT"></button>
-          </li>
-          <!-- Pagination item 4 -->
-          <li>
-            <button class="w--11 h--11 o-50 common_elm_TJLPQT"></button>
-          </li>
-          <!-- Pagination item 5 -->
-          <li>
-            <button class="w--11 h--11 o-50 common_elm_TJLPQT" type="button"></button>
-          </li>
-        </ul>
       </div>
     </div>
   </div>
 
   <!-- custom script -->
   <script>
-
     /**
-		 * This following script attached data pos listeners to each of the subscription slides
-		 * Upon clicking the slides, the script will get active on elements datapos
+		 * This following script attached data order listeners to each of the subscription slides
+		 * Upon clicking the slides, the script will get active on elements dataorder
 		 * Then clicked subscription box will come on front of the slider.
 		 */
-     function moveToCenter(selectedDiv) {
-      const container = document.querySelector('.elm_TFgiRw');
-      const divs = Array.from(container.getElementsByClassName('common_elm_UyGvCZ'));
+    const cardSlider = document.querySelector('.elm_eNlBFq');
+    const cardSliderContainer = cardSlider.querySelector('.elm_TFgiRw');
+    const cards = cardSliderContainer.querySelectorAll('.common_elm_UyGvCZ');
+    const pagers = cardSlider.querySelectorAll('.common_elm_TJLPQT');
+
+    // attach click event to cards
+    cards.forEach( function (div, index) {
+      div.addEventListener('click', function(e) {
+        moveToCenter(this);
+      });
+    });
+
+    // attach click events to pagers
+    pagers.forEach( function (pager, index) {
+      pager.addEventListener('click', function(e) {
+        moveToCenter(cardSliderContainer.querySelector(`.common_elm_UyGvCZ[data-card-no="${this.dataset.cardNo}"]`));
+      });
+    });
+
+    function moveToCenter(selectedDiv) {
       const selectedOrder = parseInt(selectedDiv.getAttribute('data-order'));
 
-      divs.forEach(div => {
+      cards.forEach(div => {
         let currentOrder = parseInt(div.getAttribute('data-order'));
         let newOrder = ((currentOrder - selectedOrder + 3) % 5); // Adjust the indexing to wrap around correctly
         if (newOrder <= 0) newOrder += 5; // Handle negative indexes
         div.setAttribute('data-order', newOrder);
-        
-        // Update classes based on new order
-        div.className = 'flex flex-column items-start pa3 gap--1 common_elm_UyGvCZ pos' + newOrder;
       });
+
+      // remove active class from previous card & pager
+      cardSliderContainer.querySelector('.common_elm_UyGvCZ.is-current').classList.remove('is-current');
+      cardSlider.querySelector('.common_elm_TJLPQT.is-current').classList.remove('is-current');
+
+      // add active class to current card and pager
+      selectedDiv.classList.add('is-current');
+      cardSlider.querySelector(`.common_elm_TJLPQT[data-card-no="${selectedDiv.dataset.cardNo}"]`).classList.add('is-current');
     }
+
+    
   </script>
 </body>
 </html>
