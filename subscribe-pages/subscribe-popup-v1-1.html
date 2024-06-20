@@ -35,6 +35,7 @@
     .w--22 { width: 22rem; }
     .w--2-25 { width: 2.25rem; }
     .w--78-35 { width: 78.35rem; }
+    .w--11 { width: 0.688rem; /* width 11px */ }
 
     /* Height */
     .max-height--6 { max-height: 6rem; }
@@ -46,6 +47,7 @@
     .h--4-5625 { height: 4.5625rem; }
     .h--6 { height: 6rem; }
     .h--50-625 { height: 50.625rem; }
+    .h--11 { height: 0.688rem; /* height 11px */ }
 
     /* Border Radius */
     .br--12-5 { border-radius: 12.5rem; }
@@ -122,26 +124,31 @@
     .elm_gcikNN:before { content: ''; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.40); backdrop-filter: blur(12.5rem); position: absolute; left: 0; top: 0; z-index: 1; }
 
     /* Slider Inner Componenet Style */
-    .card { opacity: 0.7; filter: blur(1.8947358131408691px); backdrop-filter: blur(23.684200286865234px); border: 0.063rem solid #79716B; }
-    .card .common_elm_JcADkP { background: #79716B; }
-    .card .common_elm_TWPiUU { color: #fff; }
-    .card .common_elm_dkSNEg { fill: #79716B; }
-    .card .common_elm_cXAIoP { background: #79716B; }
-    .card .common_elm_eqnlFt { border: 0.063rem solid #79716B; }
-    .card.pos3 .common_elm_JcADkP { background: #FF45E1; }
-    .card.pos3 .common_elm_TWPiUU { color: #9FFF02; }
-    .card.pos3 { border: 0.063rem solid #9FFF02; background: rgba(0, 0, 0, 0.10); backdrop-filter: blur(1.563rem); opacity: 1; filter: blur(0);}
-    .card.pos3 .common_elm_dkSNEg { fill: #9FFF02; }
-    .card.pos3 .common_elm_cXAIoP { background: #9FFF02; }
-    .card.pos3 .common_elm_eqnlFt { border: 0.063rem solid #9FFF02; }
+    .common_elm_UyGvCZ { opacity: 0.7; filter: blur(1.8947358131408691px); backdrop-filter: blur(23.684200286865234px); border: 0.063rem solid #79716B; }
+    .common_elm_UyGvCZ .common_elm_JcADkP { background: #79716B; }
+    .common_elm_UyGvCZ .common_elm_TWPiUU { color: #fff; }
+    .common_elm_UyGvCZ .common_elm_dkSNEg { fill: #79716B; }
+    .common_elm_UyGvCZ .common_elm_cXAIoP { background: #79716B; }
+    .common_elm_UyGvCZ .common_elm_eqnlFt { border: 0.063rem solid #79716B; }
+    .common_elm_UyGvCZ.pos3 .common_elm_JcADkP { background: #FF45E1; }
+    .common_elm_UyGvCZ.pos3 .common_elm_TWPiUU { color: #9FFF02; }
+    .common_elm_UyGvCZ.pos3 { border: 0.063rem solid #9FFF02; background: rgba(0, 0, 0, 0.10); backdrop-filter: blur(1.563rem); opacity: 1; filter: blur(0);}
+    .common_elm_UyGvCZ.pos3 .common_elm_dkSNEg { fill: #9FFF02; }
+    .common_elm_UyGvCZ.pos3 .common_elm_cXAIoP { background: #9FFF02; }
+    .common_elm_UyGvCZ.pos3 .common_elm_eqnlFt { border: 0.063rem solid #9FFF02; }
 
-    /* Slider Animate and Slide with data-pos attribute */
-    .card { width: 24rem; position: absolute; transition: all 0.3s ease-in; }
-    .card.pos3 { z-index: 5; }
-    .card.pos2 { transform: translateX(-67%) scale(0.9); z-index: 4; }
-    .card.pos4 { transform: translateX(66%) scale(0.9); z-index: 4; }
-    .card.pos1 { transform: translateX(-125%) scale(0.8); z-index: 3; }
-    .card.pos5 { transform: translateX(122%) scale(0.8); z-index: 3; }
+    /* Slider Animate and Slide with .pos class attribute */
+    .common_elm_UyGvCZ { width: 24rem; position: absolute; transition: all 0.3s ease-in; }
+    .common_elm_UyGvCZ.pos3 { z-index: 5; }
+    .common_elm_UyGvCZ.pos2 { transform: translateX(-67%) scale(0.9); z-index: 4; }
+    .common_elm_UyGvCZ.pos4 { transform: translateX(66%) scale(0.9); z-index: 4; }
+    .common_elm_UyGvCZ.pos1 { transform: translateX(-125%) scale(0.8); z-index: 3; }
+    .common_elm_UyGvCZ.pos5 { transform: translateX(122%) scale(0.8); z-index: 3; }
+
+    /* Pagination style */
+    .elm_THtudv { left: 50%; transform: translateX(-50%); gap: 0.625rem; z-index: 1; }
+    .common_elm_TJLPQT { background: #E9E5D3; border-radius: 624.938rem; } 
+    .common_elm_TJLPQT.is-active { width: 2rem; height: 0.688rem; opacity: 1; background: #9FFF02; border-radius: 1.25rem; }
   </style>
 </head>
 
@@ -188,13 +195,13 @@
       </div>
 
       <!-- slider section -->
-      <div class="w-100 h--50-625 mt3 ml--0-8 tr--opacity-0-8 g--col-2-2 g--row-2-2 elm_AbKCXQ">
+      <div class="w-100 h--50-625 mt3 ml--0-8 tr--opacity-0-8 g--col-2-2 g--row-2-2 relative elm_AbKCXQ">
         <!-- slider container -->
-        <div class="w-100 mh--auto subscription">
+        <div class="w-100 mh--auto">
           <!-- slider list -->
-          <ul class="relative flex w-100 justify-center subscription__list">
+          <ul class="relative flex w-100 justify-center elm_TFgiRw">
             <!-- slider item 1 -->
-            <li class="flex flex-column items-start pa3 gap--1 card pos1" data-order="1" onclick="moveToCenter(this)">
+            <li class="flex flex-column items-start pa3 gap--1 common_elm_UyGvCZ pos1" data-order="1" onclick="moveToCenter(this)">
               <div class="flex items-center gap--0-5 self-stretch">
                 <div class="col--gray-warm ff-poppins f3 fs-normal fw6 lh--2">
                   MANGO TIER
@@ -317,7 +324,7 @@
             </li>
 
             <!-- slider item 2 -->
-            <li class="flex flex-column items-start pa3 gap--1 card pos2" data-order="2" onclick="moveToCenter(this)">
+            <li class="flex flex-column items-start pa3 gap--1 common_elm_UyGvCZ pos2" data-order="2" onclick="moveToCenter(this)">
               <div class="flex items-center gap--0-5 self-stretch">
                 <div class="col--gray-warm ff-poppins f3 fs-normal fw6 lh--2">
                   MANGO TIER
@@ -440,7 +447,7 @@
             </li>
 
             <!-- slider item 3 -->
-            <li class="flex flex-column items-start pa3 gap--1 card pos3" data-order="3" onclick="moveToCenter(this)">
+            <li class="flex flex-column items-start pa3 gap--1 common_elm_UyGvCZ pos3" data-order="3" onclick="moveToCenter(this)">
               <div class="flex items-center gap--0-5 self-stretch">
                 <div class="col--gray-warm ff-poppins f3 fs-normal fw6 lh--2">
                   MANGO TIER
@@ -563,7 +570,7 @@
             </li>
 
             <!-- slider item 4 -->
-            <li class="flex flex-column items-start pa3 gap--1 card pos4" data-order="4" onclick="moveToCenter(this)">
+            <li class="flex flex-column items-start pa3 gap--1 common_elm_UyGvCZ pos4" data-order="4" onclick="moveToCenter(this)">
               <div class="flex items-center gap--0-5 self-stretch">
                 <div class="col--gray-warm ff-poppins f3 fs-normal fw6 lh--2">
                   MANGO TIER
@@ -686,7 +693,7 @@
             </li>
 
             <!-- slider item 5 -->
-            <li class="flex flex-column items-start pa3 gap--1 card pos5" data-order="5" onclick="moveToCenter(this)">
+            <li class="flex flex-column items-start pa3 gap--1 common_elm_UyGvCZ pos5" data-order="5" onclick="moveToCenter(this)">
               <div class="flex items-center gap--0-5 self-stretch">
                 <div class="col--gray-warm ff-poppins f3 fs-normal fw6 lh--2">
                   MANGO TIER
@@ -809,6 +816,30 @@
             </li>
           </ul>
         </div>
+
+        <!-- Pagination -->
+        <ul class="absolute bottom-0 flex elm_THtudv">
+          <!-- Pagination item 1 -->
+          <li>
+            <button class="w--11 h--11 o-50 common_elm_TJLPQT" type="button"></button>
+          </li>
+          <!-- Pagination item 2 -->
+          <li>
+            <button class="w--11 h--11 o-50 common_elm_TJLPQT is-active" type="button"></button>
+          </li>
+          <!-- Pagination item 3 -->
+          <li> 
+            <button class="w--11 h--11 o-50 common_elm_TJLPQT"></button>
+          </li>
+          <!-- Pagination item 4 -->
+          <li>
+            <button class="w--11 h--11 o-50 common_elm_TJLPQT"></button>
+          </li>
+          <!-- Pagination item 5 -->
+          <li>
+            <button class="w--11 h--11 o-50 common_elm_TJLPQT" type="button"></button>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
@@ -822,8 +853,8 @@
 		 * Then clicked subscription box will come on front of the slider.
 		 */
      function moveToCenter(selectedDiv) {
-      const container = document.querySelector('.subscription__list');
-      const divs = Array.from(container.getElementsByClassName('card'));
+      const container = document.querySelector('.elm_TFgiRw');
+      const divs = Array.from(container.getElementsByClassName('common_elm_UyGvCZ'));
       const selectedOrder = parseInt(selectedDiv.getAttribute('data-order'));
 
       divs.forEach(div => {
@@ -833,7 +864,7 @@
         div.setAttribute('data-order', newOrder);
         
         // Update classes based on new order
-        div.className = 'flex flex-column items-start pa3 gap--1 card pos' + newOrder;
+        div.className = 'flex flex-column items-start pa3 gap--1 common_elm_UyGvCZ pos' + newOrder;
       });
     }
   </script>
