@@ -148,10 +148,19 @@
     .common_elm_UyGvCZ[data-order="1"] { transform: translateX(-125%) scale(0.8); z-index: 3; }
     .common_elm_UyGvCZ[data-order="5"] { transform: translateX(122%) scale(0.8); z-index: 3; }
 
-    /* Pagination style */
+    /* Pagination */
     .elm_THtudv { left: 50%; transform: translateX(-50%); gap: 0.625rem; z-index: 1; }
     .common_elm_TJLPQT { background: #E9E5D3; border-radius: 624.938rem; cursor: pointer; } 
     .common_elm_TJLPQT.is-current { width: 2rem; height: 0.688rem; opacity: 1; background: #9FFF02; border-radius: 1.25rem; }
+
+    /* Data Attribute "Featured" */
+    .common_elm_UyGvCZ[data-attribute="featured"].is-current,
+    .common_elm_UyGvCZ[data-attribute="featured"].is-current .common_elm_eqnlFt { border: 0.063rem solid #00FFD1;}
+    .common_elm_UyGvCZ[data-attribute="featured"].is-current .common_elm_cXAIoP { background: #00FFD1; }
+    .common_elm_UyGvCZ[data-attribute="featured"].is-current .common_elm_dkSNEg { fill: #00FFD1; }
+    .common_elm_UyGvCZ[data-attribute="featured"].is-current .common_elm_TWPiUU,
+    .common_elm_UyGvCZ[data-attribute="featured"].is-current .common_elm_XxvpRL { color: #00FFD1; }
+    .common_elm_UyGvCZ[data-attribute="featured"].is-current:before { content: 'FEATURED '; background: #00FFD1; font-size: 0.875rem; line-height: 1.25rem; font-weight: 500; color: #000; padding: 0.25rem 0.5rem; position: absolute; right: 0; top: 0; }
 
     /* Responsive screen  0 to 1366px */
     @media screen and (max-width: 85.375rem) {
@@ -702,7 +711,7 @@
             </li>
 
             <!-- slider item 5 -->
-            <li class="flex flex-column items-start pa3 gap--1 common_elm_UyGvCZ" data-order="5" data-card-no="5">
+            <li class="flex flex-column items-start pa3 gap--1 common_elm_UyGvCZ" data-attribute="featured" data-order="5" data-card-no="5">
               <div class="flex items-center gap--0-5 self-stretch">
                 <div class="col--gray-warm ff-poppins f3 fs-normal fw6 lh--2">
                   MANGO TIER
