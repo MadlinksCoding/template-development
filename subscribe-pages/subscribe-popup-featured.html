@@ -47,6 +47,19 @@
     .min-h--4-5625 { min-height: 4.5625rem; }
     .h--6 { height: 6rem; }
     .h--11 { height: 0.688rem; /* height 11px */ }
+    .h--53-5 { height: 53.5rem; }
+    .h--38 { height: 38rem; }
+    /* Responsive screen  0 to 1366px */
+    @media screen and (max-width: 85.375rem) {
+      .lg--h--54-5 { height: 54.5rem; }
+      .lg--h--40 { height: 2.5rem; /* height 40px */}
+    }
+
+    /* Border */
+    .bw--0-63 { border-width: 0.063rem; }
+
+    /* Border Colors */
+    .br--col--light-soft-gray { border-color: var(--color-light-soft-gray, #79716B); } /* new class, below is the old class */
 
     /* Border Radius */
     .br--12-5 { border-radius: 12.5rem; }
@@ -54,6 +67,8 @@
     /* Background */
     .bg-img--1 { background-image: url('../assets/images/cat-img/subscribe-popup-bg.png'); background-repeat: no-repeat; background-size: cover; background-position: 100% 0; }
     .bg-col--black-0-40 { background: rgba(0, 0, 0, 0.40); }
+    .bg--col--light-soft-gray { background-color: var(--color-light-soft-gray,#79716B); }
+    .bg--col--soft-orange { background-color: var(--color-soft-orange,#E9E5D3); }
 
     /* Color */
     .col--green { color: #9FFF02; }
@@ -85,6 +100,10 @@
     /* Blur */
     .bg-blur--0-625 { backdrop-filter: blur(0.625rem); }
     .bg-blur--12-5 { backdrop-filter: blur(12.5rem); }
+    .bg--blur--1-48 { backdrop-filter: blur(1.48rem); }
+
+    /* Filter */
+    .ft-blur--1-8 { filter: blur(0.118rem); }
 
     /* Line Spacing */
     .ls--0-01 { letter-spacing: 0.01rem; }
@@ -117,62 +136,58 @@
     .t--3 { top: 3rem; }
     .r--5 { right: 5rem; }
 
+     /* Position  */
+     .left--50 { left: 50%; }
+
+     /* Sizing */
+    .t--translate-x--50 {transform: translateX(-50%); }
+
     /* clip path */
     .cp-6{clip-path: polygon(0 0, 93% 0, 100% 100%, 7% 100%);}
 
+    /* Cursor */
+    .c--pointer { cursor: pointer; }
+
+    /* Transition */
+    .tse--all{transition: all 0.3s ease-in-out;}
+
     /* Background bg blur effect an :before presudo element */
-    .elm_gcikNN { height: 53.5rem; }
     .elm_gcikNN:before { content: ''; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.40); backdrop-filter: blur(12.5rem); position: absolute; left: 0; top: 0; z-index: 1; }
 
     /* Slider Inner Componenet Style */
-    .elm_TFgiRw { height: 38rem; }
-    .common_elm_UyGvCZ { opacity: 0.7; filter: blur(1.8947358131408691px); backdrop-filter: blur(23.684200286865234px); border: 0.063rem solid #79716B; cursor: pointer; }
-    .common_elm_UyGvCZ .common_elm_JcADkP { background: #79716B; }
-    .common_elm_UyGvCZ .common_elm_TWPiUU { color: #fff; }
-    .common_elm_UyGvCZ .common_elm_dkSNEg { fill: #79716B; }
-    .common_elm_UyGvCZ .common_elm_cXAIoP { background: #79716B; }
-    .common_elm_UyGvCZ .common_elm_eqnlFt { border: 0.063rem solid #79716B; }
-    .common_elm_UyGvCZ.is-current .common_elm_JcADkP { background: #FF45E1; }
+    .common_elm_UyGvCZ.is-current .common_elm_JcADkP { background-color: var(--color-soft-pink,#FF45E1); }
     .common_elm_UyGvCZ.is-current .common_elm_TWPiUU,
-    .common_elm_UyGvCZ.is-current .common_elm_XxvpRL { color: #9FFF02; }
-    .common_elm_UyGvCZ.is-current { border: 0.063rem solid #9FFF02; background: rgba(0, 0, 0, 0.10); backdrop-filter: blur(1.563rem); opacity: 1; filter: blur(0);}
-    .common_elm_UyGvCZ.is-current .common_elm_dkSNEg { fill: #9FFF02; }
-    .common_elm_UyGvCZ.is-current .common_elm_cXAIoP { background: #9FFF02; }
-    .common_elm_UyGvCZ.is-current .common_elm_eqnlFt { border: 0.063rem solid #9FFF02; }
+    .common_elm_UyGvCZ.is-current .common_elm_XxvpRL { color: var(--color-soft-pink,#9FFF02); }
+    .common_elm_UyGvCZ.is-current { border-color: var(--color-soft-pink,#9FFF02); background: rgba(0, 0, 0, 0.10); backdrop-filter: blur(1.563rem); opacity: 1; filter: blur(0);}
+    .common_elm_UyGvCZ.is-current .common_elm_dkSNEg { fill: var(--color-soft-pink,#9FFF02); }
+    .common_elm_UyGvCZ.is-current .common_elm_cXAIoP { background-color: var(--color-soft-pink,#9FFF02); }
+    .common_elm_UyGvCZ.is-current .common_elm_eqnlFt { border-color: var(--color-soft-pink,#9FFF02); }
 
     /* Slider Animate and Slide with .pos class attribute */
-    .common_elm_UyGvCZ { width: 24rem; position: absolute; transition: all 0.3s ease-in; }
-    .common_elm_UyGvCZ[data-order="3"] { z-index: 5; transform: translateX(0%) scale(1); cursor: default; }
+    .common_elm_UyGvCZ[data-order="3"] { transform: translateX(0%) scale(1); z-index: 5;  cursor: default; }
     .common_elm_UyGvCZ[data-order="2"] { transform: translateX(-67%) scale(0.9); z-index: 4; }
     .common_elm_UyGvCZ[data-order="4"] { transform: translateX(66%) scale(0.9); z-index: 4; }
     .common_elm_UyGvCZ[data-order="1"] { transform: translateX(-125%) scale(0.8); z-index: 3; }
     .common_elm_UyGvCZ[data-order="5"] { transform: translateX(122%) scale(0.8); z-index: 3; }
 
     /* Pagination */
-    .elm_THtudv { left: 50%; transform: translateX(-50%); gap: 0.625rem; z-index: 1; }
-    .common_elm_TJLPQT { background: #E9E5D3; border-radius: 624.938rem; cursor: pointer; } 
-    .common_elm_TJLPQT.is-current { width: 2rem; height: 0.688rem; opacity: 1; background: #9FFF02; border-radius: 1.25rem; }
+    .common_elm_TJLPQT.is-current { width: 2rem; height: 0.688rem; opacity: 1; background: var(--color-soft-pink,#9FFF02); border-radius: 1.25rem; }
 
     /* Data Attribute "Featured" */
-    .common_elm_UyGvCZ[data-attribute="featured"].is-current,
-    .common_elm_UyGvCZ[data-attribute="featured"].is-current .common_elm_eqnlFt { border: 0.063rem solid #00FFD1;}
-    .common_elm_UyGvCZ[data-attribute="featured"].is-current .common_elm_cXAIoP { background: #00FFD1; }
-    .common_elm_UyGvCZ[data-attribute="featured"].is-current .common_elm_dkSNEg { fill: #00FFD1; }
-    .common_elm_UyGvCZ[data-attribute="featured"].is-current .common_elm_TWPiUU,
-    .common_elm_UyGvCZ[data-attribute="featured"].is-current .common_elm_XxvpRL { color: #00FFD1; }
-    .common_elm_UyGvCZ[data-attribute="featured"].is-current:before { content: 'FEATURED '; background: #00FFD1; font-size: 0.875rem; line-height: 1.25rem; font-weight: 500; color: #000; padding: 0.25rem 0.5rem; position: absolute; right: 0; top: 0; }
+    [data-attribute="featured"].is-current,
+    [data-attribute="featured"].is-current .common_elm_eqnlFt { border-color: var(--color-soft-pink,#00FFD1);}
+    [data-attribute="featured"].is-current .common_elm_cXAIoP { background: var(--color-soft-pink,#00FFD1); }
+    [data-attribute="featured"].is-current .common_elm_dkSNEg { fill: var(--color-soft-pink,#00FFD1); }
+    [data-attribute="featured"].is-current .common_elm_TWPiUU,
+    [data-attribute="featured"].is-current .common_elm_XxvpRL { color: var(--color-soft-pink,#00FFD1); }
+    [data-attribute="featured"].is-current:before { content: 'FEATURED '; background: var(--color-soft-pink,#00FFD1); font-size: 0.875rem; line-height: 1.25rem; font-weight: 500; color: var(--color-soft-pink,#000); padding: 0.25rem 0.5rem; position: absolute; right: 0; top: 0; }
 
-    /* Responsive screen  0 to 1366px */
-    @media screen and (max-width: 85.375rem) {
-      .elm_gcikNN { height: 54.5rem; }
-      .elm_TFgiRw { height: 40rem; }
-    }
   </style>
 </head>
 
 <body>
   <!-- bg container -->
-  <div class="w-100 bg-img--1 relative elm_gcikNN">
+  <div class="w-100 bg-img--1 relative h--53-5 lg--h--54-5 elm_gcikNN">
     <!-- main container -->
     <div class="flex flex-column w-100 h-100 ba pa--1-4 items-center relative pa4">
       <!-- header section -->
@@ -217,15 +232,15 @@
         <!-- slider container -->
         <div class="w-100 mh--auto elm_eNlBFq">
           <!-- slider list -->
-          <ul class="relative flex w-100 justify-center elm_TFgiRw">
+          <ul class="relative flex w-100 justify-center h--38 lg--h--40 elm_TFgiRw">
             <!-- slider item 1 -->
-            <li class="flex flex-column items-start pa3 gap--1 common_elm_UyGvCZ" data-order="1" data-card-no="1"">
+            <li class="w--384 absolute flex flex-column items-start pa3 gap--1 o-70 ft-blur--1-8 bg--blur--1-48 ba bw--0-63 br--col--light-soft-gray c--pointer tse--all common_elm_UyGvCZ" data-order="1" data-card-no="1">
               <div class="flex items-center gap--0-5 self-stretch">
                 <div class="col--gray-warm ff-poppins f3 fs-normal fw6 lh--2">
                   MANGO TIER
                 </div>
 
-                <div class="flex h--1-375 pv1 ph2 justify-center items-center gap--0-375 bg-blur--0-625 common_elm_JcADkP">
+                <div class="flex h--1-375 pv1 ph2 justify-center items-center gap--0-375 bg-blur--0-625 bg--col--light-soft-gray common_elm_JcADkP">
                   <div class="ff-poppins f7 fs-normal fw5 lh--1-125">
                     ON SALE
                   </div>
@@ -234,12 +249,12 @@
 
               <div class="flex items-baseline gap--0-25 self-stretch">
                 <div class="tc">
-                  <span class="tc ff-poppins f3 fs-normal fw6 lh--2 common_elm_TWPiUU">USD$</span>
+                  <span class="tc ff-poppins f3 fs-normal fw6 lh--2 white common_elm_TWPiUU">USD$</span>
 
-                  <span class="ff-poppins f--3 fs-normal fw6 ml---0-2 lh--3-75 ls---0-06 common_elm_TWPiUU">12.99</span>
+                  <span class="ff-poppins f--3 fs-normal fw6 ml---0-2 lh--3-75 ls---0-06 white common_elm_TWPiUU">12.99</span>
                 </div>
 
-                <div class="tc ff-poppins f6 fs-normal fw4 lh-copy strike common_elm_TWPiUU">
+                <div class="tc ff-poppins f6 fs-normal fw4 lh-copy strike white common_elm_TWPiUU">
                   $12.99
                 </div>
                 
@@ -249,7 +264,7 @@
               </div>
 
               <div class="flex items-end self-stretch">
-                <a href="#" class="flex pv0 pad--left--40 pad--right--40 h--4 cp-6 justify-between items-center flex--1-0-0 self-stretch common_elm_cXAIoP">
+                <a href="#" class="flex pv0 pad--left--40 pad--right--40 h--4 cp-6 justify-between items-center flex--1-0-0 self-stretch bg--col--light-soft-gray common_elm_cXAIoP">
                   <div class="flex flex-column items-center">
                     <div class="black tc ff-poppins f4 fs-normal fw6 lh--1-875 ttu">
                       Subscribe
@@ -273,23 +288,23 @@
                   • 100% real content...
                 </div>
                 
-                <a href="#" class="ff-poppins f6 fs-normal fw6 lh-title common_elm_TWPiUU">
+                <a href="#" class="ff-poppins f6 fs-normal fw6 lh-title white common_elm_TWPiUU">
                   Read more
                 </a>
               </div>
 
               <div class="flex flex-column items-start self-stretch mt--0-25">
-                <div class="flex pv1 ph2 justify-center items-center gap--0-625 common_elm_cXAIoP">
+                <div class="flex pv1 ph2 justify-center items-center gap--0-625 bg--col--light-soft-gray common_elm_cXAIoP">
                   <div class="black ff-poppins fs--15 fs-normal fw5 lh--20">
                     MEMBER BENEFITS
                   </div>
                 </div>
 
-                <div class="flex w--22 pv2 ph0 flex-column items-start gap--0-65 common_elm_eqnlFt">
+                <div class="flex w--22 pv2 ph0 flex-column items-start gap--0-65 ba bw--0-63 br--col--light-soft-gray common_elm_eqnlFt">
                   <div class="flex items-center gap--0-5 self-stretch">
                     <div class="w--2 h--2">
                       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                        <path class="common_elm_dkSNEg" fill-rule="evenodd" clip-rule="evenodd" d="M20.3691 24.2204L13.4287 24.9864C12.053 25.1388 11.0315 23.7426 11.5875 22.4783L12.9303 19.4183C13.3463 18.4711 12.8479 17.3838 12.053 16.7208C10.982 15.8312 10.2406 14.538 10.0759 13.043C9.73812 9.9707 11.95 7.21137 15.0186 6.87366C18.0872 6.53595 20.851 8.74753 21.1888 11.8157C21.3576 13.3437 20.8922 14.7934 20.0066 15.9053C19.3558 16.729 19.0881 17.9233 19.7101 18.7676L21.6212 21.3704C22.4409 22.4865 21.7448 24.0721 20.3691 24.2204Z"/>
+                        <path class="common_elm_dkSNEg" fill="#79716B" fill-rule="evenodd" clip-rule="evenodd" d="M20.3691 24.2204L13.4287 24.9864C12.053 25.1388 11.0315 23.7426 11.5875 22.4783L12.9303 19.4183C13.3463 18.4711 12.8479 17.3838 12.053 16.7208C10.982 15.8312 10.2406 14.538 10.0759 13.043C9.73812 9.9707 11.95 7.21137 15.0186 6.87366C18.0872 6.53595 20.851 8.74753 21.1888 11.8157C21.3576 13.3437 20.8922 14.7934 20.0066 15.9053C19.3558 16.729 19.0881 17.9233 19.7101 18.7676L21.6212 21.3704C22.4409 22.4865 21.7448 24.0721 20.3691 24.2204Z"/>
                       </svg>
                     </div>
 
@@ -302,7 +317,7 @@
                   <div class="flex items-center gap--0-5 self-stretch">
                     <div class="w--2 h--2">
                       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                        <path class="common_elm_dkSNEg" fill-rule="evenodd" clip-rule="evenodd" d="M20.3691 24.2204L13.4287 24.9864C12.053 25.1388 11.0315 23.7426 11.5875 22.4783L12.9303 19.4183C13.3463 18.4711 12.8479 17.3838 12.053 16.7208C10.982 15.8312 10.2406 14.538 10.0759 13.043C9.73812 9.9707 11.95 7.21137 15.0186 6.87366C18.0872 6.53595 20.851 8.74753 21.1888 11.8157C21.3576 13.3437 20.8922 14.7934 20.0066 15.9053C19.3558 16.729 19.0881 17.9233 19.7101 18.7676L21.6212 21.3704C22.4409 22.4865 21.7448 24.0721 20.3691 24.2204Z"/>
+                        <path class="common_elm_dkSNEg" fill="#79716B" fill-rule="evenodd" clip-rule="evenodd" d="M20.3691 24.2204L13.4287 24.9864C12.053 25.1388 11.0315 23.7426 11.5875 22.4783L12.9303 19.4183C13.3463 18.4711 12.8479 17.3838 12.053 16.7208C10.982 15.8312 10.2406 14.538 10.0759 13.043C9.73812 9.9707 11.95 7.21137 15.0186 6.87366C18.0872 6.53595 20.851 8.74753 21.1888 11.8157C21.3576 13.3437 20.8922 14.7934 20.0066 15.9053C19.3558 16.729 19.0881 17.9233 19.7101 18.7676L21.6212 21.3704C22.4409 22.4865 21.7448 24.0721 20.3691 24.2204Z"/>
                       </svg>
                     </div>
 
@@ -315,7 +330,7 @@
                   <div class="flex items-center gap--0-5 self-stretch">
                     <div class="w--2 h--2">
                       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                        <path class="common_elm_dkSNEg" fill-rule="evenodd" clip-rule="evenodd" d="M20.3691 24.2204L13.4287 24.9864C12.053 25.1388 11.0315 23.7426 11.5875 22.4783L12.9303 19.4183C13.3463 18.4711 12.8479 17.3838 12.053 16.7208C10.982 15.8312 10.2406 14.538 10.0759 13.043C9.73812 9.9707 11.95 7.21137 15.0186 6.87366C18.0872 6.53595 20.851 8.74753 21.1888 11.8157C21.3576 13.3437 20.8922 14.7934 20.0066 15.9053C19.3558 16.729 19.0881 17.9233 19.7101 18.7676L21.6212 21.3704C22.4409 22.4865 21.7448 24.0721 20.3691 24.2204Z"/>
+                        <path class="common_elm_dkSNEg" fill="#79716B" fill-rule="evenodd" clip-rule="evenodd" d="M20.3691 24.2204L13.4287 24.9864C12.053 25.1388 11.0315 23.7426 11.5875 22.4783L12.9303 19.4183C13.3463 18.4711 12.8479 17.3838 12.053 16.7208C10.982 15.8312 10.2406 14.538 10.0759 13.043C9.73812 9.9707 11.95 7.21137 15.0186 6.87366C18.0872 6.53595 20.851 8.74753 21.1888 11.8157C21.3576 13.3437 20.8922 14.7934 20.0066 15.9053C19.3558 16.729 19.0881 17.9233 19.7101 18.7676L21.6212 21.3704C22.4409 22.4865 21.7448 24.0721 20.3691 24.2204Z"/>
                       </svg>
                     </div>
 
@@ -328,7 +343,7 @@
                   <div class="flex items-center gap--0-5 self-stretch">
                     <div class="w--2 h--2">
                       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                        <path class="common_elm_dkSNEg" fill-rule="evenodd" clip-rule="evenodd" d="M20.3691 24.2204L13.4287 24.9864C12.053 25.1388 11.0315 23.7426 11.5875 22.4783L12.9303 19.4183C13.3463 18.4711 12.8479 17.3838 12.053 16.7208C10.982 15.8312 10.2406 14.538 10.0759 13.043C9.73812 9.9707 11.95 7.21137 15.0186 6.87366C18.0872 6.53595 20.851 8.74753 21.1888 11.8157C21.3576 13.3437 20.8922 14.7934 20.0066 15.9053C19.3558 16.729 19.0881 17.9233 19.7101 18.7676L21.6212 21.3704C22.4409 22.4865 21.7448 24.0721 20.3691 24.2204Z"/>
+                        <path class="common_elm_dkSNEg" fill="#79716B" fill-rule="evenodd" clip-rule="evenodd" d="M20.3691 24.2204L13.4287 24.9864C12.053 25.1388 11.0315 23.7426 11.5875 22.4783L12.9303 19.4183C13.3463 18.4711 12.8479 17.3838 12.053 16.7208C10.982 15.8312 10.2406 14.538 10.0759 13.043C9.73812 9.9707 11.95 7.21137 15.0186 6.87366C18.0872 6.53595 20.851 8.74753 21.1888 11.8157C21.3576 13.3437 20.8922 14.7934 20.0066 15.9053C19.3558 16.729 19.0881 17.9233 19.7101 18.7676L21.6212 21.3704C22.4409 22.4865 21.7448 24.0721 20.3691 24.2204Z"/>
                       </svg>
                     </div>
 
@@ -342,13 +357,13 @@
             </li>
 
             <!-- slider item 2 -->
-            <li class="flex flex-column items-start pa3 gap--1 common_elm_UyGvCZ" data-order="2" data-card-no="2">
+            <li class="w--384 absolute flex flex-column items-start pa3 gap--1 o-70 ft-blur--1-8 bg--blur--1-48 ba bw--0-63 br--col--light-soft-gray c--pointer tse--all common_elm_UyGvCZ" data-order="2" data-card-no="2">
               <div class="flex items-center gap--0-5 self-stretch">
                 <div class="col--gray-warm ff-poppins f3 fs-normal fw6 lh--2">
                   MANGO TIER
                 </div>
 
-                <div class="flex h--1-375 pv1 ph2 justify-center items-center gap--0-375 bg-blur--0-625 common_elm_JcADkP">
+                <div class="flex h--1-375 pv1 ph2 justify-center items-center gap--0-375 bg-blur--0-625 bg--col--light-soft-gray common_elm_JcADkP">
                   <div class="ff-poppins f7 fs-normal fw5 lh--1-125">
                     ON SALE
                   </div>
@@ -357,12 +372,12 @@
 
               <div class="flex items-baseline gap--0-25 self-stretch">
                 <div class="tc">
-                  <span class="tc ff-poppins f3 fs-normal fw6 lh--2 common_elm_TWPiUU">USD$</span>
+                  <span class="tc ff-poppins f3 fs-normal fw6 lh--2 white common_elm_TWPiUU">USD$</span>
 
-                  <span class="ff-poppins f--3 fs-normal fw6 ml---0-2 lh--3-75 ls---0-06 common_elm_TWPiUU">0.99</span>
+                  <span class="ff-poppins f--3 fs-normal fw6 ml---0-2 lh--3-75 ls---0-06 white common_elm_TWPiUU">0.99</span>
                 </div>
 
-                <div class="tc ff-poppins f6 fs-normal fw4 lh-copy strike common_elm_TWPiUU">
+                <div class="tc ff-poppins f6 fs-normal fw4 lh-copy strike white common_elm_TWPiUU">
                   $1.99
                 </div>
                 
@@ -372,7 +387,7 @@
               </div>
 
               <div class="flex items-end self-stretch">
-                <a href="#" class="flex pv0 pad--left--40 pad--right--40 h--4 cp-6 justify-between items-center flex--1-0-0 self-stretch common_elm_cXAIoP">
+                <a href="#" class="flex pv0 pad--left--40 pad--right--40 h--4 cp-6 justify-between items-center flex--1-0-0 self-stretch bg--col--light-soft-gray common_elm_cXAIoP">
                   <div class="flex flex-column items-center">
                     <div class="black tc ff-poppins f4 fs-normal fw6 lh--1-875 ttu">
                       Subscribe
@@ -396,23 +411,23 @@
                   • 100% real content...
                 </div>
 
-                <a href="#" class="ff-poppins f6 fs-normal fw6 lh-title common_elm_TWPiUU">
+                <a href="#" class="ff-poppins f6 fs-normal fw6 lh-title white common_elm_TWPiUU">
                   Read more
                 </a>
               </div>
 
               <div class="flex flex-column items-start self-stretch mt--0-25">
-                <div class="flex pv1 ph2 justify-center items-center gap--0-625 common_elm_cXAIoP">
+                <div class="flex pv1 ph2 justify-center items-center gap--0-625 bg--col--light-soft-gray common_elm_cXAIoP">
                   <div class="black ff-poppins fs--15 fs-normal fw5 lh--20">
                     MEMBER BENEFITS
                   </div>
                 </div>
 
-                <div class="flex w--22 pv2 ph0 flex-column items-start gap--0-65 common_elm_eqnlFt">
+                <div class="flex w--22 pv2 ph0 flex-column items-start gap--0-65 ba bw--0-63 br--col--light-soft-gray common_elm_eqnlFt">
                   <div class="flex items-center gap--0-5 self-stretch">
                     <div class="w--2 h--2">
                       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                        <path class="common_elm_dkSNEg" fill-rule="evenodd" clip-rule="evenodd" d="M20.3691 24.2204L13.4287 24.9864C12.053 25.1388 11.0315 23.7426 11.5875 22.4783L12.9303 19.4183C13.3463 18.4711 12.8479 17.3838 12.053 16.7208C10.982 15.8312 10.2406 14.538 10.0759 13.043C9.73812 9.9707 11.95 7.21137 15.0186 6.87366C18.0872 6.53595 20.851 8.74753 21.1888 11.8157C21.3576 13.3437 20.8922 14.7934 20.0066 15.9053C19.3558 16.729 19.0881 17.9233 19.7101 18.7676L21.6212 21.3704C22.4409 22.4865 21.7448 24.0721 20.3691 24.2204Z"/>
+                        <path class="common_elm_dkSNEg" fill="#79716B" fill-rule="evenodd" clip-rule="evenodd" d="M20.3691 24.2204L13.4287 24.9864C12.053 25.1388 11.0315 23.7426 11.5875 22.4783L12.9303 19.4183C13.3463 18.4711 12.8479 17.3838 12.053 16.7208C10.982 15.8312 10.2406 14.538 10.0759 13.043C9.73812 9.9707 11.95 7.21137 15.0186 6.87366C18.0872 6.53595 20.851 8.74753 21.1888 11.8157C21.3576 13.3437 20.8922 14.7934 20.0066 15.9053C19.3558 16.729 19.0881 17.9233 19.7101 18.7676L21.6212 21.3704C22.4409 22.4865 21.7448 24.0721 20.3691 24.2204Z"/>
                       </svg>
                     </div>
 
@@ -425,7 +440,7 @@
                   <div class="flex items-center gap--0-5 self-stretch">
                     <div class="w--2 h--2">
                       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                        <path class="common_elm_dkSNEg" fill-rule="evenodd" clip-rule="evenodd" d="M20.3691 24.2204L13.4287 24.9864C12.053 25.1388 11.0315 23.7426 11.5875 22.4783L12.9303 19.4183C13.3463 18.4711 12.8479 17.3838 12.053 16.7208C10.982 15.8312 10.2406 14.538 10.0759 13.043C9.73812 9.9707 11.95 7.21137 15.0186 6.87366C18.0872 6.53595 20.851 8.74753 21.1888 11.8157C21.3576 13.3437 20.8922 14.7934 20.0066 15.9053C19.3558 16.729 19.0881 17.9233 19.7101 18.7676L21.6212 21.3704C22.4409 22.4865 21.7448 24.0721 20.3691 24.2204Z"/>
+                        <path class="common_elm_dkSNEg" fill="#79716B" fill-rule="evenodd" clip-rule="evenodd" d="M20.3691 24.2204L13.4287 24.9864C12.053 25.1388 11.0315 23.7426 11.5875 22.4783L12.9303 19.4183C13.3463 18.4711 12.8479 17.3838 12.053 16.7208C10.982 15.8312 10.2406 14.538 10.0759 13.043C9.73812 9.9707 11.95 7.21137 15.0186 6.87366C18.0872 6.53595 20.851 8.74753 21.1888 11.8157C21.3576 13.3437 20.8922 14.7934 20.0066 15.9053C19.3558 16.729 19.0881 17.9233 19.7101 18.7676L21.6212 21.3704C22.4409 22.4865 21.7448 24.0721 20.3691 24.2204Z"/>
                       </svg>
                     </div>
 
@@ -438,7 +453,7 @@
                   <div class="flex items-center gap--0-5 self-stretch">
                     <div class="w--2 h--2">
                       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                        <path class="common_elm_dkSNEg" fill-rule="evenodd" clip-rule="evenodd" d="M20.3691 24.2204L13.4287 24.9864C12.053 25.1388 11.0315 23.7426 11.5875 22.4783L12.9303 19.4183C13.3463 18.4711 12.8479 17.3838 12.053 16.7208C10.982 15.8312 10.2406 14.538 10.0759 13.043C9.73812 9.9707 11.95 7.21137 15.0186 6.87366C18.0872 6.53595 20.851 8.74753 21.1888 11.8157C21.3576 13.3437 20.8922 14.7934 20.0066 15.9053C19.3558 16.729 19.0881 17.9233 19.7101 18.7676L21.6212 21.3704C22.4409 22.4865 21.7448 24.0721 20.3691 24.2204Z"/>
+                        <path class="common_elm_dkSNEg" fill="#79716B" fill-rule="evenodd" clip-rule="evenodd" d="M20.3691 24.2204L13.4287 24.9864C12.053 25.1388 11.0315 23.7426 11.5875 22.4783L12.9303 19.4183C13.3463 18.4711 12.8479 17.3838 12.053 16.7208C10.982 15.8312 10.2406 14.538 10.0759 13.043C9.73812 9.9707 11.95 7.21137 15.0186 6.87366C18.0872 6.53595 20.851 8.74753 21.1888 11.8157C21.3576 13.3437 20.8922 14.7934 20.0066 15.9053C19.3558 16.729 19.0881 17.9233 19.7101 18.7676L21.6212 21.3704C22.4409 22.4865 21.7448 24.0721 20.3691 24.2204Z"/>
                       </svg>
                     </div>
 
@@ -451,7 +466,7 @@
                   <div class="flex items-center gap--0-5 self-stretch">
                     <div class="w--2 h--2">
                       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                        <path class="common_elm_dkSNEg" fill-rule="evenodd" clip-rule="evenodd" d="M20.3691 24.2204L13.4287 24.9864C12.053 25.1388 11.0315 23.7426 11.5875 22.4783L12.9303 19.4183C13.3463 18.4711 12.8479 17.3838 12.053 16.7208C10.982 15.8312 10.2406 14.538 10.0759 13.043C9.73812 9.9707 11.95 7.21137 15.0186 6.87366C18.0872 6.53595 20.851 8.74753 21.1888 11.8157C21.3576 13.3437 20.8922 14.7934 20.0066 15.9053C19.3558 16.729 19.0881 17.9233 19.7101 18.7676L21.6212 21.3704C22.4409 22.4865 21.7448 24.0721 20.3691 24.2204Z"/>
+                        <path class="common_elm_dkSNEg" fill="#79716B" fill-rule="evenodd" clip-rule="evenodd" d="M20.3691 24.2204L13.4287 24.9864C12.053 25.1388 11.0315 23.7426 11.5875 22.4783L12.9303 19.4183C13.3463 18.4711 12.8479 17.3838 12.053 16.7208C10.982 15.8312 10.2406 14.538 10.0759 13.043C9.73812 9.9707 11.95 7.21137 15.0186 6.87366C18.0872 6.53595 20.851 8.74753 21.1888 11.8157C21.3576 13.3437 20.8922 14.7934 20.0066 15.9053C19.3558 16.729 19.0881 17.9233 19.7101 18.7676L21.6212 21.3704C22.4409 22.4865 21.7448 24.0721 20.3691 24.2204Z"/>
                       </svg>
                     </div>
 
@@ -465,13 +480,13 @@
             </li>
 
             <!-- slider item 3 -->
-            <li class="flex flex-column items-start pa3 gap--1 common_elm_UyGvCZ is-current" data-attribute="featured" data-order="3" data-card-no="3">
+            <li class="w--384 absolute flex flex-column items-start pa3 gap--1 o-70 ft-blur--1-8 bg--blur--1-48 ba bw--0-63 br--col--light-soft-gray c--pointer tse--all common_elm_UyGvCZ is-current" data-attribute="featured" data-order="3" data-card-no="3">
               <div class="flex items-center gap--0-5 self-stretch">
                 <div class="col--gray-warm ff-poppins f3 fs-normal fw6 lh--2">
                   MANGO TIER
                 </div>
 
-                <div class="flex h--1-375 pv1 ph2 justify-center items-center gap--0-375 bg-blur--0-625 common_elm_JcADkP">
+                <div class="flex h--1-375 pv1 ph2 justify-center items-center gap--0-375 bg-blur--0-625 bg--col--light-soft-gray common_elm_JcADkP">
                   <div class="ff-poppins f7 fs-normal fw5 lh--1-125">
                     ON SALE
                   </div>
@@ -480,12 +495,12 @@
 
               <div class="flex items-baseline gap--0-25 self-stretch">
                 <div class="tc">
-                  <span class="tc ff-poppins f3 fs-normal fw6 lh--2 common_elm_TWPiUU">USD$</span>
+                  <span class="tc ff-poppins f3 fs-normal fw6 lh--2 white common_elm_TWPiUU">USD$</span>
 
-                  <span class="ff-poppins f--3 fs-normal fw6 ml---0-2 lh--3-75 ls---0-06 common_elm_TWPiUU">6.99</span>
+                  <span class="ff-poppins f--3 fs-normal fw6 ml---0-2 lh--3-75 ls---0-06 white common_elm_TWPiUU">6.99</span>
                 </div>
 
-                <div class="tc ff-poppins f6 fs-normal fw4 lh-copy strike common_elm_TWPiUU">
+                <div class="tc ff-poppins f6 fs-normal fw4 lh-copy strike white common_elm_TWPiUU">
                   $12.99
                 </div>
                 
@@ -495,7 +510,7 @@
               </div>
 
               <div class="flex items-end self-stretch">
-                <a href="#" class="flex pv0 pad--left--40 pad--right--40 h--4 cp-6 justify-between items-center flex--1-0-0 self-stretch common_elm_cXAIoP">
+                <a href="#" class="flex pv0 pad--left--40 pad--right--40 h--4 cp-6 justify-between items-center flex--1-0-0 self-stretch bg--col--light-soft-gray common_elm_cXAIoP">
                   <div class="flex flex-column items-center">
                     <div class="black tc ff-poppins f4 fs-normal fw6 lh--1-875 ttu">
                       Subscribe
@@ -519,23 +534,23 @@
                   • 100% real content...
                 </div>
 
-                <a href="#" class="ff-poppins f6 fs-normal fw6 lh-title common_elm_TWPiUU">
+                <a href="#" class="ff-poppins f6 fs-normal fw6 lh-title white common_elm_TWPiUU">
                   Read more
                 </a>
               </div>
               
               <div class="flex flex-column items-start self-stretch mt--0-25">
-                <div class="flex pv1 ph2 justify-center items-center gap--0-625 common_elm_cXAIoP">
+                <div class="flex pv1 ph2 justify-center items-center gap--0-625 bg--col--light-soft-gray common_elm_cXAIoP">
                   <div class="black ff-poppins fs--15 fs-normal fw5 lh--20">
                     MEMBER BENEFITS
                   </div>
                 </div>
 
-                <div class="flex w--22 pv2 ph0 flex-column items-start gap--0-65 common_elm_eqnlFt">
+                <div class="flex w--22 pv2 ph0 flex-column items-start gap--0-65 ba bw--0-63 br--col--light-soft-gray common_elm_eqnlFt">
                   <div class="flex items-center gap--0-5 self-stretch">
                     <div class="w--2 h--2">
                       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                        <path class="common_elm_dkSNEg" fill-rule="evenodd" clip-rule="evenodd" d="M20.3691 24.2204L13.4287 24.9864C12.053 25.1388 11.0315 23.7426 11.5875 22.4783L12.9303 19.4183C13.3463 18.4711 12.8479 17.3838 12.053 16.7208C10.982 15.8312 10.2406 14.538 10.0759 13.043C9.73812 9.9707 11.95 7.21137 15.0186 6.87366C18.0872 6.53595 20.851 8.74753 21.1888 11.8157C21.3576 13.3437 20.8922 14.7934 20.0066 15.9053C19.3558 16.729 19.0881 17.9233 19.7101 18.7676L21.6212 21.3704C22.4409 22.4865 21.7448 24.0721 20.3691 24.2204Z"/>
+                        <path class="common_elm_dkSNEg" fill="#79716B" fill-rule="evenodd" clip-rule="evenodd" d="M20.3691 24.2204L13.4287 24.9864C12.053 25.1388 11.0315 23.7426 11.5875 22.4783L12.9303 19.4183C13.3463 18.4711 12.8479 17.3838 12.053 16.7208C10.982 15.8312 10.2406 14.538 10.0759 13.043C9.73812 9.9707 11.95 7.21137 15.0186 6.87366C18.0872 6.53595 20.851 8.74753 21.1888 11.8157C21.3576 13.3437 20.8922 14.7934 20.0066 15.9053C19.3558 16.729 19.0881 17.9233 19.7101 18.7676L21.6212 21.3704C22.4409 22.4865 21.7448 24.0721 20.3691 24.2204Z"/>
                       </svg>
                     </div>
 
@@ -548,7 +563,7 @@
                   <div class="flex items-center gap--0-5 self-stretch">
                     <div class="w--2 h--2">
                       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                        <path class="common_elm_dkSNEg" fill-rule="evenodd" clip-rule="evenodd" d="M20.3691 24.2204L13.4287 24.9864C12.053 25.1388 11.0315 23.7426 11.5875 22.4783L12.9303 19.4183C13.3463 18.4711 12.8479 17.3838 12.053 16.7208C10.982 15.8312 10.2406 14.538 10.0759 13.043C9.73812 9.9707 11.95 7.21137 15.0186 6.87366C18.0872 6.53595 20.851 8.74753 21.1888 11.8157C21.3576 13.3437 20.8922 14.7934 20.0066 15.9053C19.3558 16.729 19.0881 17.9233 19.7101 18.7676L21.6212 21.3704C22.4409 22.4865 21.7448 24.0721 20.3691 24.2204Z"/>
+                        <path class="common_elm_dkSNEg" fill="#79716B" fill-rule="evenodd" clip-rule="evenodd" d="M20.3691 24.2204L13.4287 24.9864C12.053 25.1388 11.0315 23.7426 11.5875 22.4783L12.9303 19.4183C13.3463 18.4711 12.8479 17.3838 12.053 16.7208C10.982 15.8312 10.2406 14.538 10.0759 13.043C9.73812 9.9707 11.95 7.21137 15.0186 6.87366C18.0872 6.53595 20.851 8.74753 21.1888 11.8157C21.3576 13.3437 20.8922 14.7934 20.0066 15.9053C19.3558 16.729 19.0881 17.9233 19.7101 18.7676L21.6212 21.3704C22.4409 22.4865 21.7448 24.0721 20.3691 24.2204Z"/>
                       </svg>
                     </div>
 
@@ -561,7 +576,7 @@
                   <div class="flex items-center gap--0-5 self-stretch">
                     <div class="w--2 h--2">
                       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                        <path class="common_elm_dkSNEg" fill-rule="evenodd" clip-rule="evenodd" d="M20.3691 24.2204L13.4287 24.9864C12.053 25.1388 11.0315 23.7426 11.5875 22.4783L12.9303 19.4183C13.3463 18.4711 12.8479 17.3838 12.053 16.7208C10.982 15.8312 10.2406 14.538 10.0759 13.043C9.73812 9.9707 11.95 7.21137 15.0186 6.87366C18.0872 6.53595 20.851 8.74753 21.1888 11.8157C21.3576 13.3437 20.8922 14.7934 20.0066 15.9053C19.3558 16.729 19.0881 17.9233 19.7101 18.7676L21.6212 21.3704C22.4409 22.4865 21.7448 24.0721 20.3691 24.2204Z"/>
+                        <path class="common_elm_dkSNEg" fill="#79716B" fill-rule="evenodd" clip-rule="evenodd" d="M20.3691 24.2204L13.4287 24.9864C12.053 25.1388 11.0315 23.7426 11.5875 22.4783L12.9303 19.4183C13.3463 18.4711 12.8479 17.3838 12.053 16.7208C10.982 15.8312 10.2406 14.538 10.0759 13.043C9.73812 9.9707 11.95 7.21137 15.0186 6.87366C18.0872 6.53595 20.851 8.74753 21.1888 11.8157C21.3576 13.3437 20.8922 14.7934 20.0066 15.9053C19.3558 16.729 19.0881 17.9233 19.7101 18.7676L21.6212 21.3704C22.4409 22.4865 21.7448 24.0721 20.3691 24.2204Z"/>
                       </svg>
                     </div>
 
@@ -574,7 +589,7 @@
                   <div class="flex items-center gap--0-5 self-stretch">
                     <div class="w--2 h--2">
                       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                        <path class="common_elm_dkSNEg" fill-rule="evenodd" clip-rule="evenodd" d="M20.3691 24.2204L13.4287 24.9864C12.053 25.1388 11.0315 23.7426 11.5875 22.4783L12.9303 19.4183C13.3463 18.4711 12.8479 17.3838 12.053 16.7208C10.982 15.8312 10.2406 14.538 10.0759 13.043C9.73812 9.9707 11.95 7.21137 15.0186 6.87366C18.0872 6.53595 20.851 8.74753 21.1888 11.8157C21.3576 13.3437 20.8922 14.7934 20.0066 15.9053C19.3558 16.729 19.0881 17.9233 19.7101 18.7676L21.6212 21.3704C22.4409 22.4865 21.7448 24.0721 20.3691 24.2204Z"/>
+                        <path class="common_elm_dkSNEg" fill="#79716B" fill-rule="evenodd" clip-rule="evenodd" d="M20.3691 24.2204L13.4287 24.9864C12.053 25.1388 11.0315 23.7426 11.5875 22.4783L12.9303 19.4183C13.3463 18.4711 12.8479 17.3838 12.053 16.7208C10.982 15.8312 10.2406 14.538 10.0759 13.043C9.73812 9.9707 11.95 7.21137 15.0186 6.87366C18.0872 6.53595 20.851 8.74753 21.1888 11.8157C21.3576 13.3437 20.8922 14.7934 20.0066 15.9053C19.3558 16.729 19.0881 17.9233 19.7101 18.7676L21.6212 21.3704C22.4409 22.4865 21.7448 24.0721 20.3691 24.2204Z"/>
                       </svg>
                     </div>
 
@@ -588,13 +603,13 @@
             </li>
 
             <!-- slider item 4 -->
-            <li class="flex flex-column items-start pa3 gap--1 common_elm_UyGvCZ" data-order="4" data-card-no="4">
+            <li class="w--384 absolute flex flex-column items-start pa3 gap--1 o-70 ft-blur--1-8 bg--blur--1-48 ba bw--0-63 br--col--light-soft-gray c--pointer tse--all common_elm_UyGvCZ" data-order="4" data-card-no="4">
               <div class="flex items-center gap--0-5 self-stretch">
                 <div class="col--gray-warm ff-poppins f3 fs-normal fw6 lh--2">
                   MANGO TIER
                 </div>
 
-                <div class="flex h--1-375 pv1 ph2 justify-center items-center gap--0-375 bg-blur--0-625 common_elm_JcADkP">
+                <div class="flex h--1-375 pv1 ph2 justify-center items-center gap--0-375 bg-blur--0-625 bg--col--light-soft-gray common_elm_JcADkP">
                   <div class="ff-poppins f7 fs-normal fw5 lh--1-125">
                     ON SALE
                   </div>
@@ -603,12 +618,12 @@
 
               <div class="flex items-baseline gap--0-25 self-stretch">
                 <div class="tc">
-                  <span class="tc ff-poppins f3 fs-normal fw6 lh--2 common_elm_TWPiUU">USD$</span>
+                  <span class="tc ff-poppins f3 fs-normal fw6 lh--2 white common_elm_TWPiUU">USD$</span>
 
-                  <span class="ff-poppins f--3 fs-normal fw6 ml---0-2 lh--3-75 ls---0-06 common_elm_TWPiUU">6.99</span>
+                  <span class="ff-poppins f--3 fs-normal fw6 ml---0-2 lh--3-75 ls---0-06 white common_elm_TWPiUU">6.99</span>
                 </div>
 
-                <div class="tc ff-poppins f6 fs-normal fw4 lh-copy strike common_elm_TWPiUU">
+                <div class="tc ff-poppins f6 fs-normal fw4 lh-copy strike white common_elm_TWPiUU">
                   $12.99
                 </div>
                 
@@ -618,7 +633,7 @@
               </div>
 
               <div class="flex items-end self-stretch">
-                <a href="#" class="flex pv0 pad--left--40 pad--right--40 h--4 cp-6 justify-between items-center flex--1-0-0 self-stretch common_elm_cXAIoP">
+                <a href="#" class="flex pv0 pad--left--40 pad--right--40 h--4 cp-6 justify-between items-center flex--1-0-0 self-stretch bg--col--light-soft-gray common_elm_cXAIoP">
                   <div class="flex flex-column items-center">
                     <div class="black tc ff-poppins f4 fs-normal fw6 lh--1-875 ttu">
                       Subscribe
@@ -642,23 +657,23 @@
                   • 100% real content...
                 </div>
 
-                <a href="#" class="ff-poppins f6 fs-normal fw6 lh-title common_elm_TWPiUU">
+                <a href="#" class="ff-poppins f6 fs-normal fw6 lh-title white common_elm_TWPiUU">
                   Read more
                 </a>
               </div>
 
               <div class="flex flex-column items-start self-stretch mt--0-25">
-                <div class="flex pv1 ph2 justify-center items-center gap--0-625 common_elm_cXAIoP">
+                <div class="flex pv1 ph2 justify-center items-center gap--0-625 bg--col--light-soft-gray common_elm_cXAIoP">
                   <div class="black ff-poppins fs--15 fs-normal fw5 lh--20">
                     MEMBER BENEFITS
                   </div>
                 </div>
 
-                <div class="flex w--22 pv2 ph0 flex-column items-start gap--0-65 common_elm_eqnlFt">
+                <div class="flex w--22 pv2 ph0 flex-column items-start gap--0-65 ba bw--0-63 br--col--light-soft-gray common_elm_eqnlFt">
                   <div class="flex items-center gap--0-5 self-stretch">
                     <div class="w--2 h--2">
                       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                        <path class="common_elm_dkSNEg" fill-rule="evenodd" clip-rule="evenodd" d="M20.3691 24.2204L13.4287 24.9864C12.053 25.1388 11.0315 23.7426 11.5875 22.4783L12.9303 19.4183C13.3463 18.4711 12.8479 17.3838 12.053 16.7208C10.982 15.8312 10.2406 14.538 10.0759 13.043C9.73812 9.9707 11.95 7.21137 15.0186 6.87366C18.0872 6.53595 20.851 8.74753 21.1888 11.8157C21.3576 13.3437 20.8922 14.7934 20.0066 15.9053C19.3558 16.729 19.0881 17.9233 19.7101 18.7676L21.6212 21.3704C22.4409 22.4865 21.7448 24.0721 20.3691 24.2204Z"/>
+                        <path class="common_elm_dkSNEg" fill="#79716B" fill-rule="evenodd" clip-rule="evenodd" d="M20.3691 24.2204L13.4287 24.9864C12.053 25.1388 11.0315 23.7426 11.5875 22.4783L12.9303 19.4183C13.3463 18.4711 12.8479 17.3838 12.053 16.7208C10.982 15.8312 10.2406 14.538 10.0759 13.043C9.73812 9.9707 11.95 7.21137 15.0186 6.87366C18.0872 6.53595 20.851 8.74753 21.1888 11.8157C21.3576 13.3437 20.8922 14.7934 20.0066 15.9053C19.3558 16.729 19.0881 17.9233 19.7101 18.7676L21.6212 21.3704C22.4409 22.4865 21.7448 24.0721 20.3691 24.2204Z"/>
                       </svg>
                     </div>
 
@@ -671,7 +686,7 @@
                   <div class="flex items-center gap--0-5 self-stretch">
                     <div class="w--2 h--2">
                       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                        <path class="common_elm_dkSNEg" fill-rule="evenodd" clip-rule="evenodd" d="M20.3691 24.2204L13.4287 24.9864C12.053 25.1388 11.0315 23.7426 11.5875 22.4783L12.9303 19.4183C13.3463 18.4711 12.8479 17.3838 12.053 16.7208C10.982 15.8312 10.2406 14.538 10.0759 13.043C9.73812 9.9707 11.95 7.21137 15.0186 6.87366C18.0872 6.53595 20.851 8.74753 21.1888 11.8157C21.3576 13.3437 20.8922 14.7934 20.0066 15.9053C19.3558 16.729 19.0881 17.9233 19.7101 18.7676L21.6212 21.3704C22.4409 22.4865 21.7448 24.0721 20.3691 24.2204Z"/>
+                        <path class="common_elm_dkSNEg" fill="#79716B" fill-rule="evenodd" clip-rule="evenodd" d="M20.3691 24.2204L13.4287 24.9864C12.053 25.1388 11.0315 23.7426 11.5875 22.4783L12.9303 19.4183C13.3463 18.4711 12.8479 17.3838 12.053 16.7208C10.982 15.8312 10.2406 14.538 10.0759 13.043C9.73812 9.9707 11.95 7.21137 15.0186 6.87366C18.0872 6.53595 20.851 8.74753 21.1888 11.8157C21.3576 13.3437 20.8922 14.7934 20.0066 15.9053C19.3558 16.729 19.0881 17.9233 19.7101 18.7676L21.6212 21.3704C22.4409 22.4865 21.7448 24.0721 20.3691 24.2204Z"/>
                       </svg>
                     </div>
 
@@ -684,7 +699,7 @@
                   <div class="flex items-center gap--0-5 self-stretch">
                     <div class="w--2 h--2">
                       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                        <path class="common_elm_dkSNEg" fill-rule="evenodd" clip-rule="evenodd" d="M20.3691 24.2204L13.4287 24.9864C12.053 25.1388 11.0315 23.7426 11.5875 22.4783L12.9303 19.4183C13.3463 18.4711 12.8479 17.3838 12.053 16.7208C10.982 15.8312 10.2406 14.538 10.0759 13.043C9.73812 9.9707 11.95 7.21137 15.0186 6.87366C18.0872 6.53595 20.851 8.74753 21.1888 11.8157C21.3576 13.3437 20.8922 14.7934 20.0066 15.9053C19.3558 16.729 19.0881 17.9233 19.7101 18.7676L21.6212 21.3704C22.4409 22.4865 21.7448 24.0721 20.3691 24.2204Z"/>
+                        <path class="common_elm_dkSNEg" fill="#79716B" fill-rule="evenodd" clip-rule="evenodd" d="M20.3691 24.2204L13.4287 24.9864C12.053 25.1388 11.0315 23.7426 11.5875 22.4783L12.9303 19.4183C13.3463 18.4711 12.8479 17.3838 12.053 16.7208C10.982 15.8312 10.2406 14.538 10.0759 13.043C9.73812 9.9707 11.95 7.21137 15.0186 6.87366C18.0872 6.53595 20.851 8.74753 21.1888 11.8157C21.3576 13.3437 20.8922 14.7934 20.0066 15.9053C19.3558 16.729 19.0881 17.9233 19.7101 18.7676L21.6212 21.3704C22.4409 22.4865 21.7448 24.0721 20.3691 24.2204Z"/>
                       </svg>
                     </div>
 
@@ -697,7 +712,7 @@
                   <div class="flex items-center gap--0-5 self-stretch">
                     <div class="w--2 h--2">
                       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                        <path class="common_elm_dkSNEg" fill-rule="evenodd" clip-rule="evenodd" d="M20.3691 24.2204L13.4287 24.9864C12.053 25.1388 11.0315 23.7426 11.5875 22.4783L12.9303 19.4183C13.3463 18.4711 12.8479 17.3838 12.053 16.7208C10.982 15.8312 10.2406 14.538 10.0759 13.043C9.73812 9.9707 11.95 7.21137 15.0186 6.87366C18.0872 6.53595 20.851 8.74753 21.1888 11.8157C21.3576 13.3437 20.8922 14.7934 20.0066 15.9053C19.3558 16.729 19.0881 17.9233 19.7101 18.7676L21.6212 21.3704C22.4409 22.4865 21.7448 24.0721 20.3691 24.2204Z"/>
+                        <path class="common_elm_dkSNEg" fill="#79716B" fill-rule="evenodd" clip-rule="evenodd" d="M20.3691 24.2204L13.4287 24.9864C12.053 25.1388 11.0315 23.7426 11.5875 22.4783L12.9303 19.4183C13.3463 18.4711 12.8479 17.3838 12.053 16.7208C10.982 15.8312 10.2406 14.538 10.0759 13.043C9.73812 9.9707 11.95 7.21137 15.0186 6.87366C18.0872 6.53595 20.851 8.74753 21.1888 11.8157C21.3576 13.3437 20.8922 14.7934 20.0066 15.9053C19.3558 16.729 19.0881 17.9233 19.7101 18.7676L21.6212 21.3704C22.4409 22.4865 21.7448 24.0721 20.3691 24.2204Z"/>
                       </svg>
                     </div>
 
@@ -711,13 +726,13 @@
             </li>
 
             <!-- slider item 5 -->
-            <li class="flex flex-column items-start pa3 gap--1 common_elm_UyGvCZ" data-order="5" data-card-no="5">
+            <li class="w--384 absolute flex flex-column items-start pa3 gap--1 o-70 ft-blur--1-8 bg--blur--1-48 ba bw--0-63 br--col--light-soft-gray c--pointer tse--all common_elm_UyGvCZ" data-order="5" data-card-no="5">
               <div class="flex items-center gap--0-5 self-stretch">
                 <div class="col--gray-warm ff-poppins f3 fs-normal fw6 lh--2">
                   MANGO TIER
                 </div>
 
-                <div class="flex h--1-375 pv1 ph2 justify-center items-center gap--0-375 bg-blur--0-625 common_elm_JcADkP">
+                <div class="flex h--1-375 pv1 ph2 justify-center items-center gap--0-375 bg-blur--0-625 bg--col--light-soft-gray common_elm_JcADkP">
                   <div class="ff-poppins f7 fs-normal fw5 lh--1-125">
                     ON SALE
                   </div>
@@ -726,12 +741,12 @@
 
               <div class="flex items-baseline gap--0-25 self-stretch">
                 <div class="tc">
-                  <span class="tc ff-poppins f3 fs-normal fw6 lh--2 common_elm_TWPiUU">USD$</span>
+                  <span class="tc ff-poppins f3 fs-normal fw6 lh--2 white common_elm_TWPiUU">USD$</span>
 
-                  <span class="ff-poppins f--3 fs-normal fw6 ml---0-2 lh--3-75 ls---0-06 common_elm_TWPiUU">8.99</span>
+                  <span class="ff-poppins f--3 fs-normal fw6 ml---0-2 lh--3-75 ls---0-06 white common_elm_TWPiUU">8.99</span>
                 </div>
 
-                <div class="tc ff-poppins f6 fs-normal fw4 lh-copy strike common_elm_TWPiUU">
+                <div class="tc ff-poppins f6 fs-normal fw4 lh-copy strike white common_elm_TWPiUU">
                   $12.99
                 </div>
                 
@@ -741,7 +756,7 @@
               </div>
 
               <div class="flex items-end self-stretch">
-                <a href="#" class="flex pv0 pad--left--40 pad--right--40 h--4 cp-6 justify-between items-center flex--1-0-0 self-stretch common_elm_cXAIoP">
+                <a href="#" class="flex pv0 pad--left--40 pad--right--40 h--4 cp-6 justify-between items-center flex--1-0-0 self-stretch bg--col--light-soft-gray common_elm_cXAIoP">
                   <div class="flex flex-column items-center">
                     <div class="black tc ff-poppins f4 fs-normal fw6 lh--1-875 ttu">
                       Subscribe
@@ -765,23 +780,23 @@
                   • 100% real content...
                 </div>
 
-                <div class="ff-poppins f6 fs-normal fw6 lh-title common_elm_TWPiUU">
+                <div class="ff-poppins f6 fs-normal fw6 lh-title white common_elm_TWPiUU">
                   Read more
                 </div>
               </div>
 
               <div class="flex flex-column items-start self-stretch mt--0-25">
-                <div class="flex pv1 ph2 justify-center items-center gap--0-625 common_elm_cXAIoP">
+                <div class="flex pv1 ph2 justify-center items-center gap--0-625 bg--col--light-soft-gray common_elm_cXAIoP">
                   <div class="black ff-poppins fs--15 fs-normal fw5 lh--20">
                     MEMBER BENEFITS
                   </div>
                 </div>
                 
-                <div class="flex w--22 pv2 ph0 flex-column items-start gap--0-65 common_elm_eqnlFt">
+                <div class="flex w--22 pv2 ph0 flex-column items-start gap--0-65 ba bw--0-63 br--col--light-soft-gray common_elm_eqnlFt">
                   <div class="flex items-center gap--0-5 self-stretch">
                     <div class="w--2 h--2">
                       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                        <path class="common_elm_dkSNEg" fill-rule="evenodd" clip-rule="evenodd" d="M20.3691 24.2204L13.4287 24.9864C12.053 25.1388 11.0315 23.7426 11.5875 22.4783L12.9303 19.4183C13.3463 18.4711 12.8479 17.3838 12.053 16.7208C10.982 15.8312 10.2406 14.538 10.0759 13.043C9.73812 9.9707 11.95 7.21137 15.0186 6.87366C18.0872 6.53595 20.851 8.74753 21.1888 11.8157C21.3576 13.3437 20.8922 14.7934 20.0066 15.9053C19.3558 16.729 19.0881 17.9233 19.7101 18.7676L21.6212 21.3704C22.4409 22.4865 21.7448 24.0721 20.3691 24.2204Z"/>
+                        <path class="common_elm_dkSNEg" fill="#79716B" fill-rule="evenodd" clip-rule="evenodd" d="M20.3691 24.2204L13.4287 24.9864C12.053 25.1388 11.0315 23.7426 11.5875 22.4783L12.9303 19.4183C13.3463 18.4711 12.8479 17.3838 12.053 16.7208C10.982 15.8312 10.2406 14.538 10.0759 13.043C9.73812 9.9707 11.95 7.21137 15.0186 6.87366C18.0872 6.53595 20.851 8.74753 21.1888 11.8157C21.3576 13.3437 20.8922 14.7934 20.0066 15.9053C19.3558 16.729 19.0881 17.9233 19.7101 18.7676L21.6212 21.3704C22.4409 22.4865 21.7448 24.0721 20.3691 24.2204Z"/>
                       </svg>
                     </div>
 
@@ -794,7 +809,7 @@
                   <div class="flex items-center gap--0-5 self-stretch">
                     <div class="w--2 h--2">
                       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                        <path class="common_elm_dkSNEg" fill-rule="evenodd" clip-rule="evenodd" d="M20.3691 24.2204L13.4287 24.9864C12.053 25.1388 11.0315 23.7426 11.5875 22.4783L12.9303 19.4183C13.3463 18.4711 12.8479 17.3838 12.053 16.7208C10.982 15.8312 10.2406 14.538 10.0759 13.043C9.73812 9.9707 11.95 7.21137 15.0186 6.87366C18.0872 6.53595 20.851 8.74753 21.1888 11.8157C21.3576 13.3437 20.8922 14.7934 20.0066 15.9053C19.3558 16.729 19.0881 17.9233 19.7101 18.7676L21.6212 21.3704C22.4409 22.4865 21.7448 24.0721 20.3691 24.2204Z"/>
+                        <path class="common_elm_dkSNEg" fill="#79716B" fill-rule="evenodd" clip-rule="evenodd" d="M20.3691 24.2204L13.4287 24.9864C12.053 25.1388 11.0315 23.7426 11.5875 22.4783L12.9303 19.4183C13.3463 18.4711 12.8479 17.3838 12.053 16.7208C10.982 15.8312 10.2406 14.538 10.0759 13.043C9.73812 9.9707 11.95 7.21137 15.0186 6.87366C18.0872 6.53595 20.851 8.74753 21.1888 11.8157C21.3576 13.3437 20.8922 14.7934 20.0066 15.9053C19.3558 16.729 19.0881 17.9233 19.7101 18.7676L21.6212 21.3704C22.4409 22.4865 21.7448 24.0721 20.3691 24.2204Z"/>
                       </svg>
                     </div>
 
@@ -807,7 +822,7 @@
                   <div class="flex items-center gap--0-5 self-stretch">
                     <div class="w--2 h--2">
                       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                        <path class="common_elm_dkSNEg" fill-rule="evenodd" clip-rule="evenodd" d="M20.3691 24.2204L13.4287 24.9864C12.053 25.1388 11.0315 23.7426 11.5875 22.4783L12.9303 19.4183C13.3463 18.4711 12.8479 17.3838 12.053 16.7208C10.982 15.8312 10.2406 14.538 10.0759 13.043C9.73812 9.9707 11.95 7.21137 15.0186 6.87366C18.0872 6.53595 20.851 8.74753 21.1888 11.8157C21.3576 13.3437 20.8922 14.7934 20.0066 15.9053C19.3558 16.729 19.0881 17.9233 19.7101 18.7676L21.6212 21.3704C22.4409 22.4865 21.7448 24.0721 20.3691 24.2204Z"/>
+                        <path class="common_elm_dkSNEg" fill="#79716B" fill-rule="evenodd" clip-rule="evenodd" d="M20.3691 24.2204L13.4287 24.9864C12.053 25.1388 11.0315 23.7426 11.5875 22.4783L12.9303 19.4183C13.3463 18.4711 12.8479 17.3838 12.053 16.7208C10.982 15.8312 10.2406 14.538 10.0759 13.043C9.73812 9.9707 11.95 7.21137 15.0186 6.87366C18.0872 6.53595 20.851 8.74753 21.1888 11.8157C21.3576 13.3437 20.8922 14.7934 20.0066 15.9053C19.3558 16.729 19.0881 17.9233 19.7101 18.7676L21.6212 21.3704C22.4409 22.4865 21.7448 24.0721 20.3691 24.2204Z"/>
                       </svg>
                     </div>
 
@@ -820,7 +835,7 @@
                   <div class="flex items-center gap--0-5 self-stretch">
                     <div class="w--2 h--2">
                       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                        <path class="common_elm_dkSNEg" fill-rule="evenodd" clip-rule="evenodd" d="M20.3691 24.2204L13.4287 24.9864C12.053 25.1388 11.0315 23.7426 11.5875 22.4783L12.9303 19.4183C13.3463 18.4711 12.8479 17.3838 12.053 16.7208C10.982 15.8312 10.2406 14.538 10.0759 13.043C9.73812 9.9707 11.95 7.21137 15.0186 6.87366C18.0872 6.53595 20.851 8.74753 21.1888 11.8157C21.3576 13.3437 20.8922 14.7934 20.0066 15.9053C19.3558 16.729 19.0881 17.9233 19.7101 18.7676L21.6212 21.3704C22.4409 22.4865 21.7448 24.0721 20.3691 24.2204Z"/>
+                        <path class="common_elm_dkSNEg" fill="#79716B" fill-rule="evenodd" clip-rule="evenodd" d="M20.3691 24.2204L13.4287 24.9864C12.053 25.1388 11.0315 23.7426 11.5875 22.4783L12.9303 19.4183C13.3463 18.4711 12.8479 17.3838 12.053 16.7208C10.982 15.8312 10.2406 14.538 10.0759 13.043C9.73812 9.9707 11.95 7.21137 15.0186 6.87366C18.0872 6.53595 20.851 8.74753 21.1888 11.8157C21.3576 13.3437 20.8922 14.7934 20.0066 15.9053C19.3558 16.729 19.0881 17.9233 19.7101 18.7676L21.6212 21.3704C22.4409 22.4865 21.7448 24.0721 20.3691 24.2204Z"/>
                       </svg>
                     </div>
 
@@ -834,17 +849,17 @@
             </li>
           </ul>
           <!-- Pagination -->
-          <div class="absolute bottom-0 flex justify-center elm_THtudv">
+          <div class="absolute left--50 bottom-0 t--translate-x--50 z--10000 flex justify-center gap--10 elm_THtudv">
             <!-- Pagination item 1 -->
-            <span class="w--11 h--11 db o-50 common_elm_TJLPQT" data-card-no="1"></span>
+            <span class="w--11 h--11 db o-50 c--pointer br--80 bg--col--soft-orange common_elm_TJLPQT" data-card-no="1"></span>
             <!-- Pagination item 2 -->
-            <span class="w--11 h--11 db o-50 common_elm_TJLPQT" data-card-no="2"></span>
+            <span class="w--11 h--11 db o-50 c--pointer br--80 bg--col--soft-orange common_elm_TJLPQT" data-card-no="2"></span>
             <!-- Pagination item 3 -->
-            <span class="w--11 h--11 db o-50 common_elm_TJLPQT is-current" data-card-no="3"></span>
+            <span class="w--11 h--11 db o-50 c--pointer br--80 bg--col--soft-orange common_elm_TJLPQT is-current" data-card-no="3"></span>
             <!-- Pagination item 4 -->
-            <span class="w--11 h--11 db o-50 common_elm_TJLPQT" data-card-no="4"></span>
+            <span class="w--11 h--11 db o-50 c--pointer br--80 bg--col--soft-orange common_elm_TJLPQT" data-card-no="4"></span>
             <!-- Pagination item 5 -->
-            <span class="w--11 h--11 db o-50 common_elm_TJLPQT" data-card-no="5"></span>
+            <span class="w--11 h--11 db o-50 c--pointer br--80 bg--col--soft-orange common_elm_TJLPQT" data-card-no="5"></span>
           </div>
         </div>
       </div>
