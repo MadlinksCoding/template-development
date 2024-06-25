@@ -1004,10 +1004,13 @@
 		 * Upon clicking the slides, the script will get active on elements dataorder
 		 * Then clicked subscription box will come on front of the slider.
 		 */
+    const cardSliderMainSection = document.querySelector('.elm_gcikNN');
     const cardSlider = document.querySelector('.elm_eNlBFq');
     const cardSliderContainer = cardSlider.querySelector('.elm_TFgiRw');
     const cards = cardSliderContainer.querySelectorAll('.common_elm_UyGvCZ');
     const pagers = cardSlider.querySelectorAll('.common_elm_TJLPQT');
+    let dragStartX = 0;
+    let dragEndX = 0;
 
     // attach click event to cards
     cards.forEach( function (card, index) {
@@ -1015,22 +1018,76 @@
         moveToCenter(this);
       });
 
-      new SwipeContent(card);
+      //new SwipeContent(card);
 
       // disabling drag events now, because it will require further calculations, but keeping the listener for future reference
       /*card.addEventListener('dragStart', function(event){
         console.log(event.detail.x, event.detail.y); // if need to add threshold calculation use x,y property
-        console.log('dragStart: TRUE', this.nextElementSibling);
-        moveToCenter(this.nextElementSibling);
+        dragStartX = event.detail.x;
       });*/
 
-      card.addEventListener('swipeLeft', function(event){
+      // disabling drag events now, because it will require further calculations, but keeping the listener for future reference
+      /*card.addEventListener('dragEnd', function(event){
+        console.log(event.detail.x, event.detail.y); // if need to add threshold calculation use x,y property
+        dragEndX = event.detail.x;
+
+        // if right drag
+        if ( ( dragStartX < dragEndX ) && ( dragEndX - dragStartX > 100 ) ) {
+          moveToCenter(this.previousElementSibling);
+        }
+
+        // if left drag
+        if ( ( dragStartX > dragEndX ) && ( dragStartX - dragEndX > 100 ) ) {
+          moveToCenter(this.nextElementSibling);
+        }
+      });*/
+
+      /*card.addEventListener('swipeLeft', function(event){
         moveToCenter(this.nextElementSibling);
       });
 
       card.addEventListener('swipeRight', function(event){
         moveToCenter(this.previousElementSibling);
-      });
+      });*/
+    });
+
+    new SwipeContent(cardSliderMainSection);
+
+    // listening to drag/swipe event on the cards container main section
+    cardSliderMainSection.addEventListener('swipeLeft', function(event){
+      //console.log('Swipe L');
+      // get current active card
+      const currentSlide = cardSliderContainer.querySelector('.common_elm_UyGvCZ[data-current-slide="1"]');
+      let nextSlide = '';
+
+      if ( parseInt(currentSlide.dataset.cardNo) == 5 ) {
+        nextSlide = cardSliderContainer.querySelector('.common_elm_UyGvCZ[data-card-no="1"]')
+      }
+      else {
+        nextSlide = currentSlide.nextElementSibling;
+      }
+
+      setTimeout(function(){
+        moveToCenter(nextSlide);
+      }, 500);
+    });
+
+    cardSliderMainSection.addEventListener('swipeRight', function(event){
+      //console.log('Swipe R');
+      // get current active card
+      const currentSlide = cardSliderContainer.querySelector('.common_elm_UyGvCZ[data-current-slide="1"]');
+      let prevSlide = '';
+
+      if ( parseInt(currentSlide.dataset.cardNo) == 1 ) {
+        prevSlide = cardSliderContainer.querySelector('.common_elm_UyGvCZ[data-card-no="5"]')
+      }
+      else {
+        prevSlide = currentSlide.previousElementSibling
+      }
+
+      setTimeout(function(){
+        moveToCenter(prevSlide);
+      }, 500);
     });
 
     // attach click events to pagers
