@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Video Call</title>
+
+    <!-- Poppins Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Tachyons Style -->
+    <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/main.css" />
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" />
+    <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/theme.css" />
+    <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/customTachyons.css" />
+
+    <!-- /* Custom Tachyons */ -->
+    <style type="text/css">
+    /* Font */
+    .ff-poppins { font-family: 'Poppins'; }
+
+    /* Background */
+    .bg--col--rock-blue { background-color: var(--color-rock-blue, #0018EF); }
+    .bg--col--soft-pink { background-color: var(--color-soft-pink,#FF8DDF); }
+
+    /* Hover Background */
+    .hover--bg--col--rock-blue:hover { background-color: var(--color-rock-blue, #0018EF); }
+    .hover--bg--col--warm-green:hover { background-color: var(--color-warm-green,#9FFF02); }
+
+    /* Colors */
+    .col-text-red-white { color: var(--color-red-white, #E9E5D3); }
+    .col--gray-warm-25 { color: var(--color-gray-warm-25, #FDFDFC); }
+    .col--soft-pink { color: var(--color-soft-pink, #FF8DDF); }
+
+    /* Hover Colors */
+    .hover--col-white:hover { color: var(--white); }
+    .hover--col-black:hover { color: var(--black); }
+
+    /* Group Hover Colors */
+    .group:hover .hover--col-black { color: var(--black); }
+
+    /* Width */
+    .w--42 { width: 2.625rem; }
+
+    /* height */
+    .h--screen { height: 100vh; }
+    .h--31 { height: 1.938rem; }
+    .h--42 { height: 2.625rem; }
+    .h--56 { height: 3.5rem; }
+
+    /* Padding */
+    .pad--right--6 { padding-right: 0.375rem; }
+    .pad--right--18 { padding-right: 1.125rem; }
+    .pad--left--20 { padding-left: 1.25rem; }
+    .pad--y--4 { padding-top: 0.25rem; padding-bottom: 0.5rem; }
+    .pad--y--6 { padding-top: 0.375rem; padding-bottom: 0.375rem; }
+    .pad--y--24 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+
+    /* Border width */
+    .bw--2 { border-width: 0.125rem; }
+    .bw--3 { border-width: 0.188rem; }
+
+    /* Border Colors */
+    .br--col--rock-blue { border-color: var(--color-rock-blue, #0018EF); }
+    .br--col--gray-warm-500 { border-color: var(--gray-warm-500, #79716B); }
+    .br--col--pale-sky { border-color: var(--color-pale-sky, #667085); }
+
+    /* Border None */
+    .bl--0 { border-left-width: 0; }
+    .br--0 { border-right-width: 0; }
+    .bt--0 { border-top-width: 0; }
+    .bb--0 { border-bottom-width: 0; }
+
+    /* Backdrop Filter */
+    .bg--blur--7-5 { backdrop-filter: blur(7.5px); }
+
+    /* Left */
+    .left---1-242 { left: -1.242rem; }
+    .left---1-3 { left: -1.323rem; }
+
+    /* Right */
+    .right--3 { right: 3rem; }
+
+    /* Top */
+    .top---3 { top: -0.188rem; }
+    .top---4-38 { top: -0.269rem; }
+    .top--50 { top: 50%; }
+
+    /* Sizing */
+    .t--translate-y--50 {transform: translateY(-50%); }
+
+    /* Box Shadow */
+    .sh--4 { box-shadow: 4px 4px 0px 0px var(--color-rock-blue, #0018EF); }
+    .hover--pink--sh--4:hover { box-shadow: 4px 4px 0px 0px var(--color-soft-pink,#FF8DDF); }
+    .sh--5 { box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.50); }
+
+    /* Letter Spacing */ 
+    .tracked--0-12 { letter-spacing: 0.12rem; }
+
+    /* Overflow */
+    .of--hidden { overflow: hidden; }
+
+    /* clip path */
+    .cp--6 { clip-path: polygon(0% 0%, 100% 0, 105% 105%, 16% 105%); }
+    .cp--7 { clip-path: polygon(0% 0%, 80% 0%, 100% 105%, 0% 100%); }
+
+    /* Skew Style */
+    .skew--25 { transform: skewX(25deg); }
+    .-skew--25 { transform: skewX(-25deg); }
+
+    /* Transition */
+    .tse--all{transition: all 0.3s ease-in-out;}
+
+    /* Cursor */
+    .c--pointer { cursor: pointer; }
+
+    /* Custom input style for Hover, active and focus */
+    .elm_zAzNWEr:hover, .elm_zAzNWEr:focus, .elm_zAzNWEr:active { border-bottom-color: var(--color-chartreuse); }
+
+    </style>
+</head>
+
+<body>
+    <div class="ff-poppins h--screen relative flex items-center justify-center bg-black">
+        <div class="relative w--720 bg-black-70 bg--blur--25">
+            <div class="pad--24 flex items-start flex-column">
+                <!-- Modal Header section -->
+                <div class="w-100 flex justify-between items-center">
+                    <div class="flex justify-start items-center gap--8">
+                        <div class="flex w--32 h--32 justify-center items-center of--hidden">
+                            <img class="w-100 h-100 ofit--cover" src="assets/images/avatar.png">
+                        </div>
+                        
+                        <div class="flex w--11-75 h--1-5 justify-center items-center gap--8">
+                            <div class="fs--12 fw6 lh--18 col-text-red-white"> @jenny_098767 </div>
+                            <div class="w--16 h--16 flex-shrink">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <g clip-path="url(#clip0_7802_1482)">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.74788 13.8983C6.57382 13.7642 6.3531 13.7049 6.1346 13.7338L5.13172 13.8664C4.80064 13.9101 4.48067 13.7257 4.35327 13.4168L3.95256 12.4479C3.87775 12.2665 3.73406 12.1228 3.55259 12.048L2.58379 11.6472C2.27492 11.5191 2.09049 11.1998 2.13419 10.8687L2.27122 9.82728C2.29714 9.63321 2.24456 9.43692 2.12531 9.28136L1.4861 8.44879C1.28241 8.18436 1.28241 7.81548 1.4861 7.5503L2.12531 6.71773C2.24382 6.56292 2.2964 6.36663 2.27122 6.17256L2.13419 5.13111C2.09049 4.80001 2.27492 4.48076 2.58379 4.35261L3.55259 3.95262C3.73332 3.87707 3.87701 3.73337 3.95256 3.55263L4.35253 2.58377C4.48067 2.27489 4.7999 2.09045 5.13098 2.13416L6.17238 2.27119C6.36643 2.29637 6.56272 2.24378 6.71826 2.12527L7.55078 1.48603C7.8152 1.28233 8.18406 1.28233 8.44922 1.48603L9.28175 2.12527C9.43655 2.24378 9.63283 2.29637 9.82689 2.26971L10.8683 2.13267C11.1994 2.08897 11.5193 2.27341 11.6467 2.58229L12.0474 3.55115C12.1223 3.73263 12.2659 3.87633 12.4474 3.95114L13.4162 4.35187C13.7251 4.48002 13.9095 4.79927 13.8658 5.13037L13.7288 6.17182C13.7029 6.36589 13.7554 6.56218 13.8747 6.71773L14.5139 7.5503C14.7176 7.81474 14.7176 8.18362 14.5139 8.44879L13.8984 9.25099C13.7643 9.42506 13.7051 9.6458 13.734 9.86431L13.8658 10.868C13.9095 11.1991 13.7251 11.5191 13.4162 11.6465L12.4474 12.0472C12.2659 12.122 12.1223 12.2657 12.0474 12.4472L11.6467 13.4161C11.5186 13.7249 11.1994 13.9094 10.8683 13.8657L9.82689 13.7286C9.63283 13.7027 9.43655 13.7553 9.28101 13.8746L8.44848 14.5138C8.18406 14.7175 7.8152 14.7175 7.55004 14.5138L6.74788 13.8983ZM10.8047 6.80466C11.0651 6.54431 11.0651 6.1222 10.8047 5.86185C10.5444 5.6015 10.1223 5.6015 9.86193 5.86185L7.33334 8.39044L6.47141 7.52851C6.21106 7.26817 5.78895 7.26817 5.5286 7.52851C5.26825 7.78886 5.26825 8.21097 5.5286 8.47132L6.86193 9.80466C7.12228 10.065 7.54439 10.065 7.80474 9.80466L10.8047 6.80466Z" fill="#9FFF02"/>
+                                    <path d="M6.1346 13.7338C6.3531 13.7049 6.57382 13.7642 6.74788 13.8983L7.55004 14.5138C7.8152 14.7175 8.18406 14.7175 8.44848 14.5138L9.28101 13.8746C9.43655 13.7553 9.63283 13.7027 9.82689 13.7286L10.8683 13.8657C11.1994 13.9094 11.5186 13.7249 11.6467 13.4161L12.0474 12.4472C12.1223 12.2657 12.2659 12.122 12.4474 12.0472L13.4162 11.6465C13.7251 11.5191 13.9095 11.1991 13.8658 10.868L13.734 9.86431C13.7051 9.6458 13.7643 9.42506 13.8984 9.25099L14.5139 8.44879C14.7176 8.18362 14.7176 7.81474 14.5139 7.5503L13.8747 6.71773C13.7554 6.56218 13.7029 6.36589 13.7288 6.17182L13.8658 5.13037C13.9095 4.79927 13.7251 4.48002 13.4162 4.35187L12.4474 3.95114C12.2659 3.87633 12.1223 3.73263 12.0474 3.55115L11.6467 2.58229C11.5193 2.27341 11.1994 2.08897 10.8683 2.13267L9.82689 2.26971C9.63283 2.29637 9.43655 2.24378 9.28175 2.12527L8.44922 1.48603C8.18406 1.28233 7.8152 1.28233 7.55078 1.48603L6.71826 2.12527C6.56272 2.24378 6.36643 2.29637 6.17238 2.27119L5.13098 2.13416C4.7999 2.09045 4.48067 2.27489 4.35253 2.58377L3.95256 3.55263C3.87701 3.73337 3.73332 3.87707 3.5526 3.95262L2.58379 4.35261C2.27492 4.48076 2.09049 4.80001 2.13419 5.13111L2.27122 6.17256C2.2964 6.36663 2.24382 6.56292 2.12531 6.71773L1.4861 7.5503C1.28241 7.81548 1.28241 8.18436 1.4861 8.44879L2.12531 9.28136C2.24456 9.43692 2.29714 9.63321 2.27122 9.82728L2.13419 10.8687C2.09049 11.1998 2.27492 11.5191 2.58379 11.6472L3.5526 12.048C3.73406 12.1228 3.87775 12.2665 3.95256 12.4479L4.35327 13.4168C4.48067 13.7257 4.80064 13.9101 5.13172 13.8664L6.1346 13.7338Z" stroke="#9FFF02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_7802_1482">
+                                    <rect width="16" height="16" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="ml-auto flex items-center gap--10">
+                        <div class="h--36 flex items-center ba br--col--rock-blue bg--blur--7-5 relative">
+                            <div class="w--40 h--40 absolute left---1-3 top---3">
+                                <img src="assets/images/tips-icon.svg" alt="">
+                            </div>
+                            <div class="pad--left--24 pad--right--8 flex items-center gap--4">
+                                <span class="db fs--14 lh--20 fw6 white pv2">50</span>
+                                <span class="db fs--14 lh--20 fw4 white pv2">Balance</span>
+                            </div>
+                            <a href="#" class="bg--col--rock-blue pad--right--8 pad--left--15 cp--6">
+                                <span class="db fs--16 lh--24 fw6 white pv2 pad--y--6">TOP UP</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Modal body section -->
+                <div class="pt3 w-100 flex flex-column gap--16 items-start">
+                    <h4 class="fs--16 lh--20 fw5 white">Choose your preferred video and audio setting:</h4>
+                    <div class="flex flex-column gap--16 w-100">
+                        <!-- Select box Camera field item -->
+                        <div class="flex flex-column items-start w-100 relative">
+                            <label for="" class="fs--12 lh--24 tracked--0-12 white">Camera</label>
+                            <div class="flex items-center w-100">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="db w--24 h--24 absolute left-1">
+                                    <path d="M22 8.93137C22 8.32555 22 8.02265 21.8802 7.88238C21.7763 7.76068 21.6203 7.69609 21.4608 7.70865C21.2769 7.72312 21.0627 7.93731 20.6343 8.36569L17 12L20.6343 15.6343C21.0627 16.0627 21.2769 16.2769 21.4608 16.2914C21.6203 16.3039 21.7763 16.2393 21.8802 16.1176C22 15.9774 22 15.6744 22 15.0686V8.93137Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M2 9.8C2 8.11984 2 7.27976 2.32698 6.63803C2.6146 6.07354 3.07354 5.6146 3.63803 5.32698C4.27976 5 5.11984 5 6.8 5H12.2C13.8802 5 14.7202 5 15.362 5.32698C15.9265 5.6146 16.3854 6.07354 16.673 6.63803C17 7.27976 17 8.11984 17 9.8V14.2C17 15.8802 17 16.7202 16.673 17.362C16.3854 17.9265 15.9265 18.3854 15.362 18.673C14.7202 19 13.8802 19 12.2 19H6.8C5.11984 19 4.27976 19 3.63803 18.673C3.07354 18.3854 2.6146 17.9265 2.32698 17.362C2 16.7202 2 15.8802 2 14.2V9.8Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <select class="db w-100 h--56 overflow-hidden fs--16 fs-normal fw6 lh--24 col--desert-storm pad--y--8 pad--right--15 pad--left--48 br2 br--top bl--0 br--0 bt--0 bb br--col--pale-sky bg-black-50 c--pointer elm_zAzNWEr">
+                                    <option>FaceTime HD Camera</option>
+                                    <option selected="">FaceTime HD Camera</option>
+                                </select>   
+        
+                                <!-- dummy arrow marker (should be removed after backend team implements the custom select) -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="db w--24 h--24 absolute right-1">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 9.29289C5.68342 8.90237 6.31658 8.90237 6.70711 9.29289L12 14.5858L17.2929 9.29289C17.6834 8.90237 18.3166 8.90237 18.7071 9.29289C19.0976 9.68342 19.0976 10.3166 18.7071 10.7071L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L5.29289 10.7071C4.90237 10.3166 4.90237 9.68342 5.29289 9.29289Z" fill="#9FFF02"></path>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <!-- Select box Microphone field item -->
+                        <div class="flex flex-column items-start w-100 relative">
+                            <label for="" class="fs--12 lh--24 tracked--0-12 white">Microphone</label>
+                            <div class="flex items-center w-100">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="db w--24 h--24 absolute left-1">
+                                    <path d="M19 10V12C19 15.866 15.866 19 12 19M5 10V12C5 15.866 8.13401 19 12 19M12 19V22M8 22H16M12 15C10.3431 15 9 13.6569 9 12V5C9 3.34315 10.3431 2 12 2C13.6569 2 15 3.34315 15 5V12C15 13.6569 13.6569 15 12 15Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <select class="db w-100 h--56 overflow-hidden fs--16 fs-normal fw6 lh--24 col--desert-storm pad--y--8 pad--right--15 pad--left--48 br2 br--top bl--0 br--0 bt--0 bb br--col--pale-sky bg-black-50 c--pointer elm_zAzNWEr">
+                                    <option>MacBook Pro Microphone (Built-in)</option>
+                                    <option selected="">MacBook Pro Microphone (Built-in)</option>
+                                </select>   
+        
+                                <!-- dummy arrow marker (should be removed after backend team implements the custom select) -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="db w--24 h--24 absolute right-1">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 9.29289C5.68342 8.90237 6.31658 8.90237 6.70711 9.29289L12 14.5858L17.2929 9.29289C17.6834 8.90237 18.3166 8.90237 18.7071 9.29289C19.0976 9.68342 19.0976 10.3166 18.7071 10.7071L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L5.29289 10.7071C4.90237 10.3166 4.90237 9.68342 5.29289 9.29289Z" fill="#9FFF02"></path>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <!-- Select box Speaker field item -->
+                        <div class="flex flex-column items-start w-100 relative">
+                            <label for="" class="fs--12 lh--24 tracked--0-12 white">Speaker</label>
+                            <div class="flex items-center w-100">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="db w--24 h--24 absolute left-1">
+                                    <path d="M19.7479 4.99999C21.1652 6.97023 22 9.38762 22 12C22 14.6124 21.1652 17.0298 19.7479 19M15.7453 7.99999C16.5362 9.13382 17 10.5127 17 12C17 13.4872 16.5362 14.8662 15.7453 16M9.63432 5.36567L6.46863 8.53136C6.29568 8.70431 6.2092 8.79079 6.10828 8.85263C6.01881 8.90746 5.92127 8.94786 5.81923 8.97236C5.70414 8.99999 5.58185 8.99999 5.33726 8.99999H3.6C3.03995 8.99999 2.75992 8.99999 2.54601 9.10898C2.35785 9.20485 2.20487 9.35784 2.10899 9.546C2 9.75991 2 10.0399 2 10.6V13.4C2 13.96 2 14.2401 2.10899 14.454C2.20487 14.6421 2.35785 14.7951 2.54601 14.891C2.75992 15 3.03995 15 3.6 15H5.33726C5.58185 15 5.70414 15 5.81923 15.0276C5.92127 15.0521 6.01881 15.0925 6.10828 15.1473C6.2092 15.2092 6.29568 15.2957 6.46863 15.4686L9.63431 18.6343C10.0627 19.0627 10.2769 19.2769 10.4608 19.2913C10.6203 19.3039 10.7763 19.2393 10.8802 19.1176C11 18.9773 11 18.6744 11 18.0686V5.93136C11 5.32554 11 5.02264 10.8802 4.88237C10.7763 4.76067 10.6203 4.69608 10.4608 4.70864C10.2769 4.72311 10.0627 4.9373 9.63432 5.36567Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <select class="db w-100 h--56 overflow-hidden fs--16 fs-normal fw6 lh--24 col--desert-storm pad--y--8 pad--right--15 pad--left--48 br2 br--top bl--0 br--0 bt--0 bb br--col--pale-sky bg-black-50 c--pointer elm_zAzNWEr">
+                                    <option>MackBook Pro Speakers (Built-in)</option>
+                                    <option selected="">MackBook Pro Speakers (Built-in)</option>
+                                </select>   
+        
+                                <!-- dummy arrow marker (should be removed after backend team implements the custom select) -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="db w--24 h--24 absolute right-1">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 9.29289C5.68342 8.90237 6.31658 8.90237 6.70711 9.29289L12 14.5858L17.2929 9.29289C17.6834 8.90237 18.3166 8.90237 18.7071 9.29289C19.0976 9.68342 19.0976 10.3166 18.7071 10.7071L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L5.29289 10.7071C4.90237 10.3166 4.90237 9.68342 5.29289 9.29289Z" fill="#9FFF02"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Modal Footer Section  -->
+                <div class="pv4 w-100">
+                    <div class="relative ph3">
+                        <a href="#" class="flex items-center justify-center bg--col--soft-pink hover--bg--col--rock-blue skew--25 sh--4 hover--pink--sh--4 tse--all">
+                            <span class="absolute right--3 top--50 t--translate-y--50 z--10000">
+                                <img src="assets/images/small-video-call-icon.svg" alt="" class="-skew--25">
+                            </span>
+                            <span class="db w-100 pv3 fs--20 lh--30 fw6 tc ttu -skew--25 black hover--col-white tse--all">Start Video call</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="w-100 flex justify-center">
+                    <a href="#" class="flex items-center justify-center gap--8 pad--y--8 pad--right--24 pad--left--8 hover--bg--col--warm-green group">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                            <path d="M19.5 12H5.5M5.5 12L12.5 19M5.5 12L12.5 5" stroke="#FF8DDF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="fs--16 lh--24 fw5 col--soft-pink hover--col-black">back</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
