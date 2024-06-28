@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Video Call</title>
+
+    <!-- Poppins Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Tachyons Style -->
+    <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/main.css" />
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" />
+    <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/theme.css" />
+    <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/customTachyons.css" />
+
+    <!-- /* Custom Tachyons */ -->
+    <style type="text/css">
+    /* Font */
+    .ff-poppins { font-family: 'Poppins'; }
+
+    /* Background */
+    .bg--gd--col-orange { background: var(--gradient-red-orange, linear-gradient(180deg, #F00 0%, #FF7201 100%)); }
+
+    /* Colors */
+    .col--light-warm-green { color: var(--color-light-warm-green,#9FFF02); }
+    .col-light-white { color: var(--color-light-white, #FAFAF9); }
+
+    /* Width */
+    .w--128 { width: 8rem; }
+    .w--676 { width: 42.25rem; }
+
+    /* height */
+    .h--screen { height: 100vh; }
+    .h--128 { height: 8rem; }
+
+    /* Padding */
+    .pad--y--24 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+
+    /* Margin */
+    .-mt---3 { margin-top: -3rem; }
+    .-mr---6 { margin-right: -6rem; }
+
+    </style>
+</head>
+
+<body>
+    <div class="ff-poppins h--screen relative flex items-center justify-center">
+        <div class="relative w--676 bg-black-70 bg--blur--25">
+            <div class="pad--24 flex items-start flex-column gap--24">
+                <!-- Modal Header section -->
+                <div class="w-100 flex justify-between items-center">
+                    <div class="flex justify-start items-center gap--10">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M16 21.3334V16M16 10.6667H16.0133M4 10.5886V21.4114C4 21.8683 4 22.0967 4.06731 22.3005C4.12686 22.4807 4.22421 22.6461 4.35284 22.7857C4.49825 22.9435 4.69793 23.0544 5.0973 23.2763L14.964 28.7578C15.3421 28.9679 15.5312 29.0729 15.7314 29.1141C15.9086 29.1505 16.0914 29.1505 16.2686 29.1141C16.4688 29.0729 16.6579 28.9679 17.036 28.7578L26.9027 23.2763C27.3021 23.0544 27.5018 22.9435 27.6472 22.7857C27.7758 22.6461 27.8731 22.4807 27.9327 22.3005C28 22.0967 28 21.8683 28 21.4114V10.5886C28 10.1318 28 9.90334 27.9327 9.69961C27.8731 9.51937 27.7758 9.35393 27.6472 9.21434C27.5018 9.05656 27.3021 8.94562 26.9027 8.72376L17.036 3.24227C16.6579 3.0322 16.4688 2.92716 16.2686 2.88598C16.0914 2.84953 15.9086 2.84953 15.7314 2.88598C15.5312 2.92716 15.3421 3.0322 14.964 3.24227L5.0973 8.72376C4.69793 8.94563 4.49825 9.05656 4.35284 9.21434C4.22421 9.35393 4.12686 9.51937 4.06731 9.69961C4 9.90334 4 10.1318 4 10.5886Z" stroke="#9FFF02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="col--light-warm-green fs--16 lh--24 text--sh--1">Jenny has ended the call.</span>
+                    </div>
+                    
+                    <!-- Close Button -->
+                    <div class="flex items-center justify-end">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33" fill="none">
+                            <path d="M24 8.5L8 24.5M8 8.5L24 24.5" stroke="#D7D3D0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+    
+                <!-- Modal body section -->
+                <div class="pt3 w-100 flex flex-wrap gap--24">
+                    <div class=" w-100 flex flex-column justify-center items-center relative">
+                        <div class="flex w--128 h--128 justify-center items-center of--hidden">
+                            <img class="w-100 h-100 ofit--cover" src="assets/images/avatar-r.png">
+                        </div>
+                        <div class="relative -mt---3 -mr---6">
+                            <a href="#" class="w--128 h--128 pad--12 br--80 bg--gd--col-orange flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72" fill="none">
+                                    <path d="M65.4965 37.492L65.4964 37.4899C65.4721 34.6355 63.7035 32.0117 60.709 29.9524L60.7076 29.9514C58.9349 28.7308 57.2513 27.8109 55.6568 27.1646L65.4965 37.492ZM65.4965 37.492C65.5157 39.5718 64.8587 42.5201 64.0157 44.4441L64.014 44.4482M65.4965 37.492L64.014 44.4482M64.014 44.4482C63.3455 45.9799 62.2566 46.9238 60.4618 47.3824L60.4599 47.3829M64.014 44.4482L60.4599 47.3829M60.4599 47.3829C59.8436 47.5409 58.7757 47.622 57.1103 47.4647L57.1015 47.4639M60.4599 47.3829L57.1015 47.4639M57.1015 47.4639C55.3951 47.3079 53.7612 47.1235 52.1993 46.9112L52.1933 46.9104M57.1015 47.4639L52.1933 46.9104M52.1933 46.9104C50.954 46.7445 50.0875 46.3595 49.4602 45.863M52.1933 46.9104L49.4602 45.863M41.7279 33.4495L41.7331 33.4504L41.7345 33.4507C42.3222 33.5606 43.4272 33.7671 44.4104 34.4131C45.6094 35.201 46.3148 36.3975 46.5594 37.8153L41.7279 33.4495ZM41.7279 33.4495C38.5766 32.8662 35.071 32.8653 31.2546 33.372C30.6038 33.4575 29.5386 33.6376 28.5219 34.0881C27.555 34.5165 25.9756 35.4956 25.5316 37.5054L25.5315 37.506M41.7279 33.4495L25.5315 37.506M25.5315 37.506C25.4278 37.9756 25.33 38.4321 25.2346 38.8769C24.8579 40.634 24.52 42.2102 24.0177 43.7016L24.0159 43.707L25.5315 37.506ZM7.92454 45.0231L7.92479 45.0236C8.51394 46.3109 9.3091 47.0144 10.2171 47.4214C11.1924 47.8585 12.506 48.0409 14.1756 47.8757L7.92454 45.0231ZM7.92454 45.0231C6.93771 42.868 6.31875 39.5902 6.55155 37.3886C6.76454 35.4138 7.77624 33.5378 9.3904 32.0894L9.39195 32.088M7.92454 45.0231L9.39195 32.088M9.39195 32.088C13.68 28.235 19.0619 26.1149 25.1879 25.0137L25.1896 25.0134M9.39195 32.088L25.1896 25.0134M25.1896 25.0134C29.9173 24.1606 35.2081 23.8754 41.0797 24.1855L41.0804 24.1856M25.1896 25.0134L41.0804 24.1856M41.0804 24.1856C46.6853 24.4803 51.5288 25.492 55.6564 27.1644L41.0804 24.1856ZM49.4602 45.863C48.8365 45.3693 48.2888 44.6387 47.8815 43.5257M49.4602 45.863L47.8815 43.5257M47.8815 43.5257C47.4912 42.4578 47.0401 40.6004 46.5595 37.8156L47.8815 43.5257ZM68.4963 37.4643C68.5199 40.011 67.7583 43.3775 66.7635 45.648L68.4963 37.4643Z" stroke="white" stroke-width="6"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Modal Footer Section  -->
+                <div class="w-100 tc">
+                    <span class="fs--20 lh--30 col-light-white">Your Call with @creator_profile_name has ended</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

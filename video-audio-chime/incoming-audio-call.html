@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Video Call</title>
+
+    <!-- Poppins Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Tachyons Style -->
+    <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/main.css" />
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" />
+    <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/theme.css" />
+    <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/customTachyons.css" />
+
+    <!-- /* Custom Tachyons */ -->
+    <style type="text/css">
+    /* Font */
+    .ff-poppins { font-family: 'Poppins'; }
+
+    /* Background */
+    .bg--col--rock-green { background-color: var(--color-rock-blue, #9FFF02); }
+    .bg--gd--col-orange { background: var(--gradient-red-orange, linear-gradient(180deg, #F00 0%, #FF7201 100%)); }
+    .bg--gd--col-green { background: var(--gradient-green, linear-gradient(180deg, #04DB00 30%, #9FFF02 100%)); }
+
+    /* Colors */
+    .col--gray-warm-25 { color: var(--color-gray-warm-25, #FDFDFC); }
+    .col--gray-warm-300 { color: var(--gray-warm-300, #D7D3D0); }
+
+    /* Width */
+    .w--42 { width: 2.625rem; }
+    .w--72 { width: 4.5rem; }
+    .w--485 { width: 30.313rem; }
+
+    /* height */
+    .h--screen { height: 100vh; }
+    .h--42 { height: 2.625rem; }
+    .h--72 { height: 4.5rem; }
+
+    /* Padding */
+    .pad--left--64 { padding-left: 4rem; }
+    .pad--14 { padding: 0.875rem; }
+
+    /* Border Colors */
+    .br--col--light-warm-green { border-color: var(--color-light-warm-green,#9FFF02); }
+
+    /* Right */
+    .right--1-5 { right: 1.5rem; }
+
+    /* Top */
+    .top--1-5 { top: 1.5rem; }
+
+    /* Box Shadow */
+    .sh--4--green { box-shadow: 4px 4px 0px 0px var(--color-rock-blue, #9FFF02); }
+
+    /* clip path */
+    .cp--8 { clip-path: polygon(0% 0%, 100% 0%, 92% 100%, 0% 100%); }
+
+    /* Cursor */
+    .c--pointer { cursor: pointer; }
+    </style>
+</head>
+
+<body>
+    <div class="ff-poppins h--screen relative bg-black">
+        <!-- Video call Minimise Screen -->
+        <div class="w--485 ba br--col--light-warm-green bg-black-70 bg--blur--50 sh--4--green absolute right--1-5 top--1-5">
+            <div class="w-100 relative flex flex-column">
+                <div class="flex justify-start">
+                    <div class="flex items-center relative">
+                        <div class="absolute left-0 top---2 z--10000">
+                            <img src="assets/images/mini-audio-call-icon.svg" alt="">
+                        </div>
+                        <div class="pad--left--64 pad--right--24 pad--y--8 flex items-center gap--4 bg--col--rock-green cp--8">
+                            <span class="db fs--20 lh--28 fw6 black">Incoming Call</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Call Settings and Option -->
+                <div class="w-100 pa3 flex flex-wrap items-center justify-between gap--8">
+                    <div class="flex gap--24 items-center pad--top--10 pad--bottom--10">
+                        <div class="flex w--48 h--48 justify-center items-center of--hidden">
+                            <img class="w-100 h-100 ofit--cover" src="assets/images/avatar-2.png">
+                        </div>
+                        <div class="flex flex-column gap--4">
+                            <span class="fs--16 lh--24 col--gray-warm-25">Mangoes</span>
+                            <span class="fs--12 lh--24 tracked--50 col--gray-warm-300">@fanofmangoes</span>
+                        </div>
+                    </div>
+                    <!-- Mute speaker, Camera Off and End Call Section -->
+                    <div class="flex justify-center items-center">
+                        <div class="flex gap--16 items-center justify-center">
+                            <!-- End call button -->
+                            <a href="#" class="dim w--72 h--72 br--80 bg--gd--col-green flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                    <path d="M13.9671 14.7553C15.1271 17.1714 16.7084 19.4358 18.7111 21.4384C20.7137 23.441 22.9781 25.0224 25.3941 26.1823C25.602 26.2821 25.7059 26.332 25.8373 26.3703C26.3046 26.5066 26.8784 26.4087 27.2741 26.1254C27.3854 26.0456 27.4807 25.9504 27.6712 25.7598C28.2539 25.1772 28.5452 24.8858 28.8382 24.6954C29.943 23.977 31.3673 23.977 32.4721 24.6954C32.7651 24.8858 33.0564 25.1772 33.6391 25.7598L33.9639 26.0846C34.8496 26.9704 35.2925 27.4132 35.5331 27.8889C36.0115 28.8348 36.0115 29.9519 35.5331 30.8979C35.2925 31.3735 34.8496 31.8164 33.9639 32.7021L33.7012 32.9648C32.8185 33.8475 32.3771 34.2889 31.7771 34.626C31.1112 35 30.0771 35.2689 29.3134 35.2667C28.6251 35.2646 28.1547 35.1311 27.214 34.8641C22.1583 33.4291 17.3877 30.7217 13.4078 26.7417C9.4278 22.7617 6.72034 17.9911 5.28539 12.9355C5.01838 11.9947 4.88487 11.5244 4.88283 10.8361C4.88055 10.0724 5.14949 9.03826 5.52352 8.37242C5.8606 7.77237 6.30196 7.33102 7.18466 6.44831L7.44739 6.18559C8.33312 5.29985 8.77599 4.85698 9.25163 4.61641C10.1976 4.13796 11.3147 4.13796 12.2606 4.61641C12.7362 4.85698 13.1791 5.29985 14.0648 6.18559L14.3896 6.51037C14.9723 7.09305 15.2636 7.38438 15.4541 7.67735C16.1724 8.78216 16.1724 10.2065 15.4541 11.3113C15.2636 11.6042 14.9723 11.8956 14.3896 12.4783C14.1991 12.6688 14.1038 12.764 14.0241 12.8754C13.7408 13.2711 13.6429 13.8449 13.7791 14.3121C13.8175 14.4436 13.8673 14.5475 13.9671 14.7553Z" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                            <!-- End call button -->
+                            <a href="#" class="dim w--72 h--72 br--80 bg--gd--col-orange flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 36 37" fill="none">
+                                    <path d="M24.4641 19.5969C22.4412 18.8864 20.2657 18.5 18 18.5C15.7343 18.5 13.5588 18.8864 11.5359 19.5969C11.4686 19.6206 11.435 19.6324 11.382 19.6557C10.9011 19.8676 10.5318 20.3887 10.4913 20.9126C10.4868 20.9704 10.4868 21.0216 10.4868 21.1241C10.4868 21.4732 10.4868 21.6478 10.4723 21.7948C10.3317 23.2185 9.20533 24.3449 7.78159 24.4855C7.63455 24.5 7.45999 24.5 7.11085 24.5H6.7434C6.05256 24.5 5.70714 24.5 5.41981 24.4434C4.22563 24.208 3.29203 23.2744 3.05664 22.0802C3 21.7929 3 21.4474 3 20.7566V20.4594C3 19.7464 3 19.39 3.07611 18.9814C3.24632 18.0678 3.91012 16.9374 4.62509 16.3437C4.94481 16.0781 5.16165 15.9572 5.59531 15.7153C9.26695 13.6671 13.4972 12.5 18 12.5C22.5028 12.5 26.733 13.6671 30.4047 15.7153C30.8384 15.9572 31.0552 16.0781 31.3749 16.3437C32.0899 16.9374 32.7537 18.0678 32.9239 18.9814C33 19.39 33 19.7464 33 20.4594V20.7566C33 21.4474 33 21.7929 32.9434 22.0802C32.708 23.2744 31.7744 24.208 30.5802 24.4434C30.2929 24.5 29.9474 24.5 29.2566 24.5H28.8891C28.54 24.5 28.3654 24.5 28.2184 24.4855C26.7947 24.3449 25.6683 23.2185 25.5277 21.7948C25.5132 21.6478 25.5132 21.4732 25.5132 21.1241C25.5132 21.0216 25.5132 20.9704 25.5087 20.9126C25.4682 20.3887 25.0989 19.8676 24.618 19.6557C24.565 19.6324 24.5313 19.6206 24.4641 19.5969Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

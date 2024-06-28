@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Video Call</title>
+
+    <!-- Poppins Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Tachyons Style -->
+    <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/main.css" />
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" />
+    <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/theme.css" />
+    <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/customTachyons.css" />
+
+    <!-- /* Custom Tachyons */ -->
+    <style type="text/css">
+    /* Font */
+    .ff-poppins { font-family: 'Poppins'; }
+
+    /* Background */
+    .bg--col--rock-blue { background-color: var(--color-rock-blue, #0018EF); }
+    .bg--col--soft-pink { background-color: var(--color-soft-pink,#FF8DDF); }
+    .bg--col--light-pink { background-color: var(--color--light-pink, #FF00E5); }
+    .bg--col--warm-soft-green { background-color: var(--color--warm-soft-pink, rgba(159, 255, 2, 0.90)); }
+    .bg--gd--col-orange { background: var(--gradient-red-orange, linear-gradient(180deg, #F00 0%, #FF7201 100%)); }
+    .bg--gd--col-light-black { background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.30) 16.17%); }
+
+    /* Hover Background */
+    .hover--bg--col--rock-blue:hover { background-color: var(--color-rock-blue, #0018EF); }
+
+    /* Colors */
+    .col-text-red-white { color: var(--color-red-white, #E9E5D3); }
+    .col--gray-warm-25 { color: var(--color-gray-warm-25, #FDFDFC); } /* confirmed in use */ /* should be .col--mercury */
+
+    /* Hover Colors */
+    .hover--col-white:hover { color: #fff; }
+
+    /* Width */
+    .w--30 { width: 1.875rem; }
+    .w--42 { width: 2.625rem; }
+    .w--200 { width: 12.5rem; }
+    .w--60 { width: 3.75rem; }
+    .w--374 { width: 23.375rem; }
+    .w--480 { width: 30rem; }
+
+    /* height */
+    .h--screen { height: 100vh; }
+    .h--30 { height: 1.875rem; }
+    .h--31 { height: 1.938rem; }
+    .h--42 { height: 2.625rem; }
+    .h--28 { height: 1.75rem; } 
+    .h--60 { height: 3.75rem; }
+    .h--270 { height: 16.875rem;}
+    .h--550 { height: 34.375rem;}
+
+    /* Gap */
+    .gap--18 { gap: 1.125rem; }
+    .gap--36 { gap: 2.25rem; }
+
+    /* Padding */
+    .pad--top--22 { padding-top: 1.375rem; }
+    .pad--right--6 { padding-right: 0.375rem; }
+    .pad--right--18 { padding-right: 1.125rem; }
+    .pad--12 { padding:0.75rem; }
+    .pad--y--4 { padding-top: 0.25rem; padding-bottom: 0.5rem; }
+    .pad--y--6 { padding-top: 0.375rem; padding-bottom: 0.375rem; }
+    .pad--y--24 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+
+    /* Border width */
+    .bw--3 { border-width: 0.188rem; }
+
+    /* Border Colors */
+    .br--col--rock-blue { border-color: var(--color-rock-blue, #0018EF); }
+    .br--col--gray-warm-500 { border-color: var(--gray-warm-500, #79716B); }
+    .br--col--light-white { border-color: var(--col-light-white, #A9A29D); }
+
+    /* Border Radius */
+    .br--2 { border-radius: 0.125rem; }
+    .br--bottom-20 { border-bottom-left-radius: 1.25rem; border-bottom-right-radius: 1.25rem; }
+    .br--top-right-20 { border-top-right-radius: 1.25rem; }
+    .br--top-right-4 { border-top-right-radius: 0.25rem;  }
+    .br--top-left-4 { border-top-left-radius: 0.25rem;  }
+    .br--top-left-20 { border-top-left-radius: 1.25rem; }
+
+    /* Backdrop Filter */
+    .bg--blur--7-5 { backdrop-filter: blur(7.5px); }
+
+    /* Left */
+    .left---1-242 { left: -1.242rem; }
+    .left---1-3 { left: -1.323rem; }
+
+    /* Right */
+    .right--1-5 { right: 1.5rem; }
+    .right--3 { right: 3rem; }
+
+    /* Top */
+    .top---3 { top: -0.188rem; }
+    .top---4-38 { top: -0.269rem; }
+    .top--50 { top: 50%; }
+
+    /* Bottom */
+    .bottom--8 { bottom: 0.5rem; }
+
+    /* Sizing */
+    .t--translate-y--50 {transform: translateY(-50%); }
+
+    /* Box Shadow */
+    .sh--4 { box-shadow: 4px 4px 0px 0px var(--color-rock-blue, #0018EF); }
+    .sh--5 { box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.50); }
+    .hover--pink--sh--4:hover { box-shadow: 4px 4px 0px 0px var(--color-soft-pink,#FF8DDF); }
+
+    /* Line Height */
+    .lh--11 { line-height: 0.688rem; }
+
+    /* Letter Spacing */
+    .tracked--0-002 { letter-spacing: 0.002rem; }
+
+    /* Overflow */
+    .of--hidden { overflow: hidden; }
+    .of--y--auto { overflow-y: auto; }
+
+    /* clip path */
+    .cp--6 { clip-path: polygon(0% 0%, 100% 0, 105% 105%, 16% 105%); }
+    .cp--7 { clip-path: polygon(0% 0%, 80% 0%, 100% 105%, 0% 100%); }
+
+    /* Skew Style */
+    .skew--25 { transform: skewX(25deg); }
+    .-skew--25 { transform: skewX(-25deg); }
+
+    /* Transition */
+    .tse--all{transition: all 0.3s ease-in-out;}
+
+    /* Cursor */
+    .c--pointer { cursor: pointer; }
+
+    /* Background Image */
+    .vcall--bg-img { background: url(assets/images/page-bg-img.png) no-repeat; }
+    .vcall--bg-img-mini { background: url(assets/images/video-call-bg.png) no-repeat; }
+    .bg--cover { background-size: cover; }
+
+    /* chat text Input custom style  */
+    .elm_loEFyP { color: var(--color-wild-sand-gray) !important; }
+    </style>
+</head>
+
+<body>
+    <div class="ff-poppins h--screen vcall--bg-img bg--cover relative">
+        <!-- Video call Minimise Screen -->
+        <div class="w--480 h--270 pad--8 bg-black-70 bg--blur--50 absolute right--1-5 bottom-0">
+            <div class="w-100 h-100 vcall--bg-img-mini bg--cover relative">
+                <!-- Page Header section -->
+                <div class="w-100 pad--8 flex justify-between items-center">
+                    <div class="flex w--32 h--32 justify-center items-center of--hidden">
+                        <img class="w-100 h-100 ofit--cover" src="assets/images/avatar.png">
+                    </div>
+
+                    <!-- Header Right Section -->
+                    <div class="ml-auto flex items-center gap--36">
+                        <div class="h--28 flex items-center ba br--col--rock-blue bg-black bg--blur--7-5 relative">
+                            <div class="w--30 h--30 absolute left---1-3 top---2">
+                                <img src="assets/images/tips-icon.svg" alt="">
+                            </div>
+                            <div class="pad--left--15 pad--right--8 flex items-center gap--4">
+                                <span class="db fs--14 lh--20 fw6 white pv2">50</span>
+                            </div>
+                            <a href="#" class="bg--col--rock-blue pad--right--6 pad--left--8 cp--6">
+                                <span class="db h--28 flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                        <path d="M9.99996 4.16667V15.8333M4.16663 10H15.8333" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Call Settings and Option -->
+                 <div class="w-100 flex items-center justify-between ph3 absolute left-0 bottom--8">
+                    <span class="fs--14 lh--normal tracked--0-7 white">00:03:50</span>
+                    <!-- Mute speaker, Camera Off and End Call Section -->
+                    <div class="w-100 flex justify-center items-center">
+                        <div class="flex gap--14 items-center justify-center pad--x--10 pad--y--8 bg-black-70 br--50 bg--blur--5">
+                            <!-- Video mute and show button -->
+                            <a href="#" class="dim pad--8 br--50 lh--11">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 25 24" fill="none">
+                                    <path d="M5.5 5C3.84315 5 2.5 6.34315 2.5 8V16C2.5 17.6569 3.84315 19 5.5 19H14.5C15.8527 19 16.9962 18.1048 17.3705 16.8745M17.5 12L21.1343 8.36569C21.5627 7.93731 21.7769 7.72312 21.9608 7.70865C22.1203 7.69609 22.2763 7.76068 22.3802 7.88238C22.5 8.02265 22.5 8.32556 22.5 8.93137V15.0686C22.5 15.6744 22.5 15.9774 22.3802 16.1176C22.2763 16.2393 22.1203 16.3039 21.9608 16.2914C21.7769 16.2769 21.5627 16.0627 21.1343 15.6343L17.5 12ZM17.5 12V9.8C17.5 8.11984 17.5 7.27976 17.173 6.63803C16.8854 6.07354 16.4265 5.6146 15.862 5.32698C15.2202 5 14.3802 5 12.7 5H10M2.5 2L22.5 22" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                            <!-- Audio mute and show button -->
+                            <a href="#" class="dim pad--8 br--50 lh--11">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 25 24" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 1C10.0147 1 8 3.01472 8 5.5V6.08579L4.20711 2.29289C3.81658 1.90237 3.18342 1.90237 2.79289 2.29289C2.40237 2.68342 2.40237 3.31658 2.79289 3.70711L8 8.91421V12C8 14.4853 10.0147 16.5 12.5 16.5C13.3805 16.5 14.202 16.2471 14.8957 15.81L20.7929 21.7071C21.1834 22.0976 21.8166 22.0976 22.2071 21.7071C22.5976 21.3166 22.5976 20.6834 22.2071 20.2929L16.31 14.3957C16.7471 13.702 17 12.8805 17 12V5.5C17 3.01472 14.9853 1 12.5 1ZM14.8278 12.9136C14.939 12.6306 15 12.3224 15 12V5.5C15 4.11929 13.8807 3 12.5 3C11.1193 3 10 4.11929 10 5.5V8.08579L14.8278 12.9136ZM10 10.9142V12C10 13.3807 11.1193 14.5 12.5 14.5C12.8224 14.5 13.1306 14.439 13.4136 14.3278L10 10.9142Z" fill="white"/>
+                                    <path d="M6 11.5C6 10.9477 5.55228 10.5 5 10.5C4.44772 10.5 4 10.9477 4 11.5C4 15.8561 7.27682 19.4469 11.5 19.9418V22C11.5 22.5523 11.9477 23 12.5 23C13.0523 23 13.5 22.5523 13.5 22V19.9417C14.1345 19.8672 14.7483 19.7228 15.3332 19.5161C15.8539 19.3321 16.1269 18.7608 15.9429 18.24C15.7588 17.7193 15.1875 17.4464 14.6668 17.6304C13.9903 17.8695 13.2615 18 12.5 18C8.91013 18 6 15.0899 6 11.5Z" fill="white"/>
+                                    <path d="M21 11.5C21 10.9477 20.5523 10.5 20 10.5C19.4477 10.5 19 10.9477 19 11.5C19 12.4263 18.8069 13.3048 18.4596 14.0996C18.2385 14.6057 18.4695 15.1952 18.9756 15.4164C19.4817 15.6375 20.0712 15.4065 20.2923 14.9004C20.7478 13.8578 21 12.707 21 11.5Z" fill="white"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="dim pad--8 br--80 bg--gd--col-orange flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 25 24" fill="none">
+                                    <path d="M23.3322 12.4881C23.34 13.337 23.0862 14.4592 22.7546 15.216C22.4031 16.0215 21.7854 16.5372 20.9016 16.763C20.5368 16.8565 20.0506 16.8745 19.4428 16.8171C18.8606 16.7639 18.3014 16.7008 17.7652 16.628C16.6478 16.4784 15.8998 15.8863 15.5214 14.8519C15.3591 14.4079 15.1968 13.7157 15.0345 12.7752C14.9534 12.3055 14.6377 12.2098 14.2274 12.1331C13.305 11.9624 12.2456 11.9565 11.0492 12.1154C10.6744 12.1646 10.0801 12.2964 9.98707 12.7175C9.8263 13.446 9.68606 14.1964 9.45367 14.8864C8.8245 16.7661 6.97052 16.7898 5.3243 16.9537C3.98629 17.0862 2.81956 16.707 2.23238 15.424C1.83975 14.5666 1.59022 13.2938 1.68959 12.3567C1.7897 11.4258 2.26155 10.581 2.96236 9.95217C4.57305 8.50487 6.56103 7.74159 8.71912 7.35367C10.384 7.05337 12.2263 6.95655 14.2461 7.06323C16.2026 7.1661 17.9299 7.52104 19.4279 8.12805C20.0377 8.37522 20.6627 8.71925 21.3031 9.16016C22.454 9.95167 23.3203 11.0912 23.3322 12.4881Z" fill="white"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Video call and chat setting option -->
+                    <div class="flex items-center gap--20 justify-end">
+                        <!-- Chat button icon -->
+                        <div class="dim flex items-center justify-center c--pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                <path d="M12.3478 0.933804C16.1557 1.38906 19.3807 4.18114 20.6253 7.85458C22.2647 12.6919 19.8763 17.9689 15.3237 20.1487C12.5294 21.4853 9.62519 21.4771 6.61109 20.124C6.40776 20.0328 6.20368 20.0194 5.99885 20.0837C4.88501 20.4275 3.73454 20.755 2.54743 21.0659C1.42387 21.3597 0.623253 20.4896 0.926009 19.3907C1.22802 18.2933 1.52778 17.2131 1.82531 16.1501C1.93744 15.7487 1.87464 15.3741 1.71093 14.9862C-1.4153 7.62807 4.47834 -0.00586081 12.3478 0.933804ZM19.4278 9.2495C17.9386 2.10671 8.79542 -0.0507097 4.24062 5.61195C2.3299 7.9869 1.85895 11.149 2.8771 13.9344C3.05203 14.4143 3.25387 14.9024 3.48261 15.3988C3.52747 15.4945 3.53569 15.5932 3.50728 15.6948L2.52052 19.2561C2.48614 19.3847 2.53398 19.4348 2.66405 19.4064C3.76294 19.1612 4.8409 18.8719 5.89793 18.5385C6.18275 18.4488 6.54381 18.4264 6.81517 18.5609C9.74181 20.0074 12.951 19.9895 15.6826 18.2111C18.6585 16.2757 20.1566 12.7525 19.4278 9.2495Z" fill="white"/>
+                                <path d="M8.42768 10.9921C8.42768 11.2573 8.3223 11.5117 8.13472 11.6993C7.94715 11.8869 7.69274 11.9923 7.42746 11.9923C7.16219 11.9923 6.90778 11.8869 6.7202 11.6993C6.53263 11.5117 6.42725 11.2573 6.42725 10.9921C6.42725 10.7268 6.53263 10.4724 6.7202 10.2848C6.90778 10.0972 7.16219 9.99185 7.42746 9.99185C7.69274 9.99185 7.94715 10.0972 8.13472 10.2848C8.3223 10.4724 8.42768 10.7268 8.42768 10.9921Z" fill="white"/>
+                                <path d="M10.9057 11.9941C10.6494 11.9757 10.4112 11.8525 10.2435 11.6516C10.0757 11.4507 9.99216 11.1885 10.0112 10.9227C10.0303 10.6569 10.1503 10.4093 10.345 10.2344C10.5397 10.0595 10.7931 9.9715 11.0494 9.98986C11.3057 10.0082 11.5439 10.1314 11.7116 10.3324C11.8794 10.5333 11.9629 10.7955 11.9439 11.0613C11.9248 11.327 11.8047 11.5746 11.61 11.7496C11.4154 11.9245 11.162 12.0125 10.9057 11.9941Z" fill="white"/>
+                                <path d="M15.5256 10.992C15.5256 11.1216 15.5001 11.2499 15.4505 11.3697C15.4009 11.4894 15.3283 11.5982 15.2366 11.6898C15.145 11.7814 15.0362 11.8541 14.9165 11.9037C14.7968 11.9533 14.6685 11.9788 14.5389 11.9788C14.4093 11.9788 14.281 11.9533 14.1613 11.9037C14.0415 11.8541 13.9328 11.7814 13.8411 11.6898C13.7495 11.5982 13.6768 11.4894 13.6272 11.3697C13.5776 11.2499 13.5521 11.1216 13.5521 10.992C13.5521 10.7303 13.6561 10.4793 13.8411 10.2943C14.0262 10.1092 14.2772 10.0053 14.5389 10.0053C14.8006 10.0053 15.0516 10.1092 15.2366 10.2943C15.4217 10.4793 15.5256 10.7303 15.5256 10.992Z" fill="white"/>
+                            </svg>
+                        </div>
+                        <!-- Full screen button icon -->
+                        <div class="dim flex items-center justify-center c--pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M8 3H7.8C6.11984 3 5.27976 3 4.63803 3.32698C4.07354 3.6146 3.6146 4.07354 3.32698 4.63803C3 5.27976 3 6.11984 3 7.8V8M8 21H7.8C6.11984 21 5.27976 21 4.63803 20.673C4.07354 20.3854 3.6146 19.9265 3.32698 19.362C3 18.7202 3 17.8802 3 16.2V16M21 8V7.8C21 6.11984 21 5.27976 20.673 4.63803C20.3854 4.07354 19.9265 3.6146 19.362 3.32698C18.7202 3 17.8802 3 16.2 3H16M21 16V16.2C21 17.8802 21 18.7202 20.673 19.362C20.3854 19.9265 19.9265 20.3854 19.362 20.673C18.7202 21 17.8802 21 16.2 21H16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
