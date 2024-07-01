@@ -16,7 +16,8 @@
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" />
     <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/theme.css" />
     <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/customTachyons.css" />
-
+    <!-- Simplebar Style -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css">
     <!-- /* Custom Tachyons */ -->
     <style type="text/css">
     /* Font */
@@ -133,6 +134,7 @@
 
     /* chat text Input custom style  */
     .elm_loEFyP { color: var(--color-wild-sand-gray) !important; }
+    .simplebar-scrollbar:before { background-color: var(--color--warm-soft-pink, rgba(159, 255, 2, 0.90)); }
     </style>
 </head>
 
@@ -224,42 +226,44 @@
             <!-- Chat section -->
             <div class="w--374 br--2 bg--gd--col-light-black bg--blur--25">
                 <div class="pb3">
-                    <div class="w-100 h--550 pad--top--22 ph3 flex flex-column gap--8 of--y--auto">
-                        <div class="flex justify-start o-40">
-                            <span class="dib black fs--14 lh--normal tracked--0-002 pad--8 br--bottom-20 br--top-right-20 br--top-left-4 bg--col--warm-soft-green">Please support me more in the future </span>
-                        </div>
-                        <div class="flex justify-end">
-                            <span class="dib white fs--14 lh--normal tracked--0-002 pad--8 br--bottom-20 br--top-right-4 br--top-left-20 bg-white-10">You are very welcome </span>
-                        </div>
-                        <div class="flex justify-start o-80">
-                            <span class="dib black fs--14 lh--normal tracked--0-002 pad--8 br--bottom-20 br--top-right-20 br--top-left-4 bg--col--warm-soft-green">Thank you for your tip! </span>
-                        </div>
-                        <div class="flex justify-start o-80">
-                            <span class="dib black fs--14 lh--normal tracked--0-002 pad--8 br--bottom-20 br--top-right-20 br--top-left-4 bg--col--warm-soft-green">Please support me more in the future </span>
-                        </div>
-                        <div class="flex justify-end">
-                            <span class="dib white fs--14 lh--normal tracked--0-002 pad--8 br--bottom-20 br--top-right-4 br--top-left-20 bg-white-10">You are very welcome </span>
-                        </div>
-                        <div class="flex justify-end">
-                            <span class="dib white fs--14 lh--normal tracked--0-002 pad--8 br--bottom-20 br--top-right-4 br--top-left-20 bg-white-10">Hi </span>
-                        </div>
-                        <div class="flex justify-end">
-                            <span class="dib white fs--14 lh--normal tracked--0-002 pad--8 br--bottom-20 br--top-right-4 br--top-left-20 bg-white-10">I enjoy your video very much, I will give you my tokens </span>
-                        </div>
-                        <div class="flex justify-start">
-                            <span class="dib black fs--14 lh--normal tracked--0-002 pad--8 br--bottom-20 br--top-right-20 br--top-left-4 bg--col--warm-soft-green">Thank you for your tip! </span>
-                        </div>
-                        <div class="flex justify-start">
-                            <span class="dib black fs--14 lh--normal tracked--0-002 pad--8 br--bottom-20 br--top-right-20 br--top-left-4 bg--col--warm-soft-green">Please support me more in the future </span>
-                        </div>
-                        <div class="flex justify-end">
-                            <span class="dib white fs--14 lh--normal tracked--0-002 pad--8 br--bottom-20 br--top-right-4 br--top-left-20 bg-white-10">You are very welcome </span>
-                        </div>
-                        <div class="flex justify-start">
-                            <span class="dib black fs--14 lh--normal tracked--0-002 pad--8 br--bottom-20 br--top-right-20 br--top-left-4 bg--col--warm-soft-green">Jenny is back! Tonight I will eat mostly fruits.-> 8pm EST time👅! </span>
-                        </div>
-                        <div class="flex justify-end">
-                            <span class="dib white fs--14 lh--normal tracked--0-002 pad--8 br--bottom-20 br--top-right-4 br--top-left-20 bg-white-10">Cool! CU soon </span>
+                    <div class="w-100 h--550 pad--top--22 ph3" data-id="chatBox">
+                        <div class="flex flex-column gap--8">
+                            <div class="flex justify-start o-40">
+                                <span class="dib black fs--14 lh--normal tracked--0-002 pad--8 br--bottom-20 br--top-right-20 br--top-left-4 bg--col--warm-soft-green">Please support me more in the future </span>
+                            </div>
+                            <div class="flex justify-end">
+                                <span class="dib white fs--14 lh--normal tracked--0-002 pad--8 br--bottom-20 br--top-right-4 br--top-left-20 bg-white-10">You are very welcome </span>
+                            </div>
+                            <div class="flex justify-start o-80">
+                                <span class="dib black fs--14 lh--normal tracked--0-002 pad--8 br--bottom-20 br--top-right-20 br--top-left-4 bg--col--warm-soft-green">Thank you for your tip! </span>
+                            </div>
+                            <div class="flex justify-start o-80">
+                                <span class="dib black fs--14 lh--normal tracked--0-002 pad--8 br--bottom-20 br--top-right-20 br--top-left-4 bg--col--warm-soft-green">Please support me more in the future </span>
+                            </div>
+                            <div class="flex justify-end">
+                                <span class="dib white fs--14 lh--normal tracked--0-002 pad--8 br--bottom-20 br--top-right-4 br--top-left-20 bg-white-10">You are very welcome </span>
+                            </div>
+                            <div class="flex justify-end">
+                                <span class="dib white fs--14 lh--normal tracked--0-002 pad--8 br--bottom-20 br--top-right-4 br--top-left-20 bg-white-10">Hi </span>
+                            </div>
+                            <div class="flex justify-end">
+                                <span class="dib white fs--14 lh--normal tracked--0-002 pad--8 br--bottom-20 br--top-right-4 br--top-left-20 bg-white-10">I enjoy your video very much, I will give you my tokens </span>
+                            </div>
+                            <div class="flex justify-start">
+                                <span class="dib black fs--14 lh--normal tracked--0-002 pad--8 br--bottom-20 br--top-right-20 br--top-left-4 bg--col--warm-soft-green">Thank you for your tip! </span>
+                            </div>
+                            <div class="flex justify-start">
+                                <span class="dib black fs--14 lh--normal tracked--0-002 pad--8 br--bottom-20 br--top-right-20 br--top-left-4 bg--col--warm-soft-green">Please support me more in the future </span>
+                            </div>
+                            <div class="flex justify-end">
+                                <span class="dib white fs--14 lh--normal tracked--0-002 pad--8 br--bottom-20 br--top-right-4 br--top-left-20 bg-white-10">You are very welcome </span>
+                            </div>
+                            <div class="flex justify-start">
+                                <span class="dib black fs--14 lh--normal tracked--0-002 pad--8 br--bottom-20 br--top-right-20 br--top-left-4 bg--col--warm-soft-green">Jenny is back! Tonight I will eat mostly fruits.-> 8pm EST time👅! </span>
+                            </div>
+                            <div class="flex justify-end">
+                                <span class="dib white fs--14 lh--normal tracked--0-002 pad--8 br--bottom-20 br--top-right-4 br--top-left-20 bg-white-10">Cool! CU soon </span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -303,6 +307,13 @@
             </div>
         </div>
     </div>
+
+    <!-- Simplebar Script -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.js"></script>
+    <script type="text/javascript">
+       const chatBox = document.querySelector('[data-id="chatBox"]');
+       new SimpleBar(chatBox, { autoHide: true });
+    </script>
 </body>
 
 </html>
