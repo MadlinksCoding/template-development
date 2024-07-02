@@ -40,6 +40,8 @@
     /* Padding */
     .pad--y--24 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
     .pad--bottom--80 { padding-bottom: 5rem; }
+    .pad--right--56 { padding-right: 3.5rem; }
+    .pad--left--56 { padding-left: 3.5rem; }
 
     /* Margin */
     .-mt---3 { margin-top: -3rem; }
@@ -51,7 +53,7 @@
 <body>
     <div class="ff-poppins h--screen relative flex items-center justify-center">
         <div class="relative w--384 bg-black-70 bg--blur--25">
-            <div class="pad--24 flex items-start flex-column gap--24">
+            <div class="pad--24 flex items-start flex-column gap--16">
                 <!-- Modal Header section -->
                 <div class="w-100 flex justify-end items-center">
                     <!-- Close Button -->
@@ -65,22 +67,34 @@
                 <!-- Modal body section -->
                 <div class="flex flex-column gap--48">
                     <div class="pt3 w-100 flex flex-wrap gap--24">
-                        <div class=" w-100 flex flex-column justify-center items-center relative">
-                            <div class="flex w--128 h--128 justify-center items-center of--hidden">
-                                <img class="w-100 h-100 ofit--cover" src="assets/images/avatar-r.png">
-                            </div>
-                            <div class="relative -mt---3 -mr---6">
-                                <a href="#" class="w--128 h--128 pad--12 br--80 bg--gd--col-orange flex items-center justify-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72" fill="none">
-                                        <path d="M65.4965 37.492L65.4964 37.4899C65.4721 34.6355 63.7035 32.0117 60.709 29.9524L60.7076 29.9514C58.9349 28.7308 57.2513 27.8109 55.6568 27.1646L65.4965 37.492ZM65.4965 37.492C65.5157 39.5718 64.8587 42.5201 64.0157 44.4441L64.014 44.4482M65.4965 37.492L64.014 44.4482M64.014 44.4482C63.3455 45.9799 62.2566 46.9238 60.4618 47.3824L60.4599 47.3829M64.014 44.4482L60.4599 47.3829M60.4599 47.3829C59.8436 47.5409 58.7757 47.622 57.1103 47.4647L57.1015 47.4639M60.4599 47.3829L57.1015 47.4639M57.1015 47.4639C55.3951 47.3079 53.7612 47.1235 52.1993 46.9112L52.1933 46.9104M57.1015 47.4639L52.1933 46.9104M52.1933 46.9104C50.954 46.7445 50.0875 46.3595 49.4602 45.863M52.1933 46.9104L49.4602 45.863M41.7279 33.4495L41.7331 33.4504L41.7345 33.4507C42.3222 33.5606 43.4272 33.7671 44.4104 34.4131C45.6094 35.201 46.3148 36.3975 46.5594 37.8153L41.7279 33.4495ZM41.7279 33.4495C38.5766 32.8662 35.071 32.8653 31.2546 33.372C30.6038 33.4575 29.5386 33.6376 28.5219 34.0881C27.555 34.5165 25.9756 35.4956 25.5316 37.5054L25.5315 37.506M41.7279 33.4495L25.5315 37.506M25.5315 37.506C25.4278 37.9756 25.33 38.4321 25.2346 38.8769C24.8579 40.634 24.52 42.2102 24.0177 43.7016L24.0159 43.707L25.5315 37.506ZM7.92454 45.0231L7.92479 45.0236C8.51394 46.3109 9.3091 47.0144 10.2171 47.4214C11.1924 47.8585 12.506 48.0409 14.1756 47.8757L7.92454 45.0231ZM7.92454 45.0231C6.93771 42.868 6.31875 39.5902 6.55155 37.3886C6.76454 35.4138 7.77624 33.5378 9.3904 32.0894L9.39195 32.088M7.92454 45.0231L9.39195 32.088M9.39195 32.088C13.68 28.235 19.0619 26.1149 25.1879 25.0137L25.1896 25.0134M9.39195 32.088L25.1896 25.0134M25.1896 25.0134C29.9173 24.1606 35.2081 23.8754 41.0797 24.1855L41.0804 24.1856M25.1896 25.0134L41.0804 24.1856M41.0804 24.1856C46.6853 24.4803 51.5288 25.492 55.6564 27.1644L41.0804 24.1856ZM49.4602 45.863C48.8365 45.3693 48.2888 44.6387 47.8815 43.5257M49.4602 45.863L47.8815 43.5257M47.8815 43.5257C47.4912 42.4578 47.0401 40.6004 46.5595 37.8156L47.8815 43.5257ZM68.4963 37.4643C68.5199 40.011 67.7583 43.3775 66.7635 45.648L68.4963 37.4643Z" stroke="white" stroke-width="6"/>
-                                    </svg>
-                                </a>
+                        <div class=" w-100 flex justify-center items-center relative">
+                            <div class="relative">
+                                <!-- Profile Avatar -->
+                                <div class="pad--right--56">
+                                    <div class="flex w--128 h--128 justify-center items-center of--hidden">
+                                        <img class="w-100 h-100 ofit--cover" src="assets/images/avatar-r.png">
+                                    </div>
+                                </div>
+                                
+                                <!-- End Call Button -->
+                                <div class="pad--left--56">
+                                    <div class="relative -mt---3">
+                                        <a href="#" class="w--128 h--128 pad--12 br--80 bg--gd--col-orange flex items-center justify-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="54" height="55" viewBox="0 0 54 55" fill="none">
+                                                <path d="M16.2879 3.82788C17.3444 3.82788 18.3177 4.40079 18.8305 5.32445L22.3876 11.732C22.8534 12.571 22.8753 13.5858 22.4461 14.4441L19.0192 21.2979C19.0192 21.2979 20.0123 26.4036 24.1685 30.5597C28.3247 34.7159 33.4133 35.6919 33.4133 35.6919L40.266 32.2656C41.1249 31.8361 42.1404 31.8583 42.9796 32.3249L49.4054 35.8975C50.3281 36.4106 50.9004 37.3833 50.9004 38.4391V45.8161C50.9004 49.5728 47.4109 52.2862 43.8513 51.085C36.5406 48.6182 25.1924 43.9215 17.9997 36.7286C10.8068 29.5358 6.11002 18.1876 3.64321 10.8769C2.44216 7.31734 5.1555 3.82788 8.9122 3.82788H16.2879Z" stroke="white" stroke-width="5.83881" stroke-linejoin="round"/>
+                                                <path opacity="0.01" d="M52.6445 1.3772H33.7422V20.2795H52.6445V1.3772Z" fill="white"/>
+                                                <path d="M49.7366 4.28525L36.6504 17.3714" stroke="white" stroke-width="5.83881" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M36.6504 4.2851L49.7366 17.3713" stroke="white" stroke-width="5.83881" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
         
                     <div class="w-100 tc pad--bottom--80">
-                        <span class="fs--24 lh--normal col-warm-white-25">Jenny is in another call right now, please try again later 😘 😘 </span>
+                        <span class="fs--24 lh--normal fw6 col-warm-white-25">Jenny is in another call right now, please try again later 😘 😘 </span>
                     </div>
                 </div>
             </div>
