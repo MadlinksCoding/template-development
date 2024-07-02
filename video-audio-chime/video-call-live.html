@@ -64,7 +64,7 @@
     .pad--right--6 { padding-right: 0.375rem; }
     .pad--right--18 { padding-right: 1.125rem; }
     .pad--12 { padding:0.75rem; }
-    .pad--y--4 { padding-top: 0.25rem; padding-bottom: 0.5rem; }
+    .pad--y--4 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
     .pad--y--6 { padding-top: 0.375rem; padding-bottom: 0.375rem; }
     .pad--y--24 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
 
@@ -79,6 +79,7 @@
     /* Border Radius */
     .br--2 { border-radius: 0.125rem; }
     .br--5 { border-radius: 0.3125rem; }
+    .br--100 { border-radius: 6.25rem; }
     .br--bottom-20 { border-bottom-left-radius: 1.25rem; border-bottom-right-radius: 1.25rem; }
     .br--top-right-20 { border-top-right-radius: 1.25rem; }
     .br--top-right-4 { border-top-right-radius: 0.25rem;  }
@@ -170,18 +171,18 @@
             </div>
 
             <!-- Header Right Section -->
-            <div class="ml-auto flex items-center gap--36">
+            <div class="ml-auto flex items-center gap--32">
                 <span class="fs--14 lh--normal tracked--0-7 white">00:03:50</span>
                 <div class="h--36 flex items-center ba br--col--rock-blue bg-black bg--blur--7-5 relative">
                     <div class="w--40 h--40 absolute left---1-3 top---3">
                         <img src="assets/images/tips-icon.svg" alt="">
                     </div>
                     <div class="pad--left--24 pad--right--8 flex items-center gap--4">
-                        <span class="db fs--14 lh--20 fw6 white pv2">50</span>
-                        <span class="db fs--14 lh--20 fw4 white pv2">Balance</span>
+                        <span class="db fs--14 lh--20 fw6 white">50</span>
+                        <span class="db fs--14 lh--20 fw4 white">Balance</span>
                     </div>
-                    <a href="#" class="bg--col--rock-blue pad--right--8 pad--left--15 cp--6">
-                        <span class="db fs--16 lh--24 fw6 white pv2 pad--y--6">TOP UP</span>
+                    <a href="#" class="bg--col--rock-blue pad--right--8 pad--left--15 pad--y--4 cp--6 flex items-center justify-center gap--10">
+                        <span class="db fs--16 lh--28 fw6 white">TOP UP</span>
                     </a>
                 </div>
                 <div class="h--36 flex items-center ba br--col--rock-blue bg-black bg--blur--7-5 relative">
@@ -202,7 +203,7 @@
 
         <!-- Mute speaker, Camera Off and End Call Section -->
         <div class="w-100 flex justify-center items-center absolute bottom-1">
-            <div class="flex gap--24 items-center justify-center pad--8 bg-black-70 br--50 bg--blur--5">
+            <div class="flex gap--24 items-center justify-center pad--8 bg-black-70 br--100 bg--blur--5">
                 <!-- Video mute and show button -->
                 <a href="#" class="dim pad--12 br--50">
                     <svg xmlns="http://www.w3.org/2000/svg" width="36" height="37" viewBox="0 0 36 37" fill="none">
@@ -269,9 +270,9 @@
                     </div>
                 </div>
                 <div class="flex items-center bt br--col--light-white gap--10">
-                    <div class="flex items-center flex-auto">
-                        <div class="w-100">
-                            <input type="text" value="hi" placeholder="Write your own" class="elm_loEFyP fs--16 lh--24 tracked--0-002 pr1 pl2">
+                    <div class="h-100 flex items-center flex-auto">
+                        <div class="w-100 h-100 pv3 pl3 pad--right--10">
+                            <input type="text" value="hi" placeholder="Write your own" class="elm_loEFyP fs--16 lh--24 tracked--0-002">
                         </div>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
                             <path d="M8 14.5C8 14.5 9.5 16.5 12 16.5C14.5 16.5 16 14.5 16 14.5M15 9.5H15.01M9 9.5H9.01M22 12.5C22 18.0228 17.5228 22.5 12 22.5C6.47715 22.5 2 18.0228 2 12.5C2 6.97715 6.47715 2.5 12 2.5C17.5228 2.5 22 6.97715 22 12.5ZM15.5 9.5C15.5 9.77614 15.2761 10 15 10C14.7239 10 14.5 9.77614 14.5 9.5C14.5 9.22386 14.7239 9 15 9C15.2761 9 15.5 9.22386 15.5 9.5ZM9.5 9.5C9.5 9.77614 9.27614 10 9 10C8.72386 10 8.5 9.77614 8.5 9.5C8.5 9.22386 8.72386 9 9 9C9.27614 9 9.5 9.22386 9.5 9.5Z" stroke="#9FFF02" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
