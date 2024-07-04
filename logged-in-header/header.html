@@ -62,6 +62,7 @@
     .pad--x--48 { padding-left: 3rem; padding-right: 3rem; }
     .pad--top--4 { padding-top: 0.25rem; }
     .pad--bottom--8 { padding-bottom: 0.5rem; }
+    .pad--top--8 { padding-top: 0.5rem; }
     .pad--x--12 { padding-left: 0.75rem; padding-right: 0.75rem; }
 
     /* Border Width */
@@ -231,9 +232,9 @@
             </div>
         </div>
 
-        <div class="flex justify-end pad--40 gap--24">
+        <div class="pad--40">
             <!-- Chats Dropdown -->
-            <div class="w--344 bg-black-70 br--10 sh--7 bg--blur--25 pad--y--12 flex flex-column gap--16">
+            <div class="fl mr3 w--344 bg-black-70 br--10 sh--7 bg--blur--25 pad--y--12 flex flex-column gap--16">
                 <!-- Chat Dropdown Header -->
                 <div class="ph3 flex gap--10">
                     <h2 class="fs--18 fw6 lh--28 col--gray-wram-300 flex-auto">Chats</h2>
@@ -620,7 +621,7 @@
                     </div>
                 </div>
                 <!-- Menu Section 1 -->
-                <div class="pad--y--8 bb br--col--black-green flex flex-column gap--8">
+                <div class="pad--top--8 flex flex-column gap--8">
                     <!-- Menu item 1-1 -->
                     <div class="pad--y--8 ph3 flex items-center justify-between gap--10">
                         <div class="flex items-center gap--10">
@@ -672,23 +673,23 @@
                             <a href="#" class="fs--15 fw5 lh--24 tracked--neg-0-15 col--green-bottle-green hover-col--green-bottle-green">Fansocial Discord</a>
                         </div>
                     </div>
-                </div>
-                <!-- Bottom Button Group -->
-                <div class="pa3 flex flex-column gap--8">
-                    <!-- Translate Button -->
-                    <button class="pad--y--8 pad--right--24 pad--left--8 bg--col--ebony ba bw--1-5 br--col--chartreuse flex items-center justify-center gap--8 group">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M2 12H22M2 12C2 17.5228 6.47715 22 12 22M2 12C2 6.47715 6.47715 2 12 2M22 12C22 17.5228 17.5228 22 12 22M22 12C22 6.47715 17.5228 2 12 2M12 2C14.5013 4.73835 15.9228 8.29203 16 12C15.9228 15.708 14.5013 19.2616 12 22M12 2C9.49872 4.73835 8.07725 8.29203 8 12C8.07725 15.708 9.49872 19.2616 12 22" stroke="#9FFF02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        <span class="fs--16 fw5 lh--24 col--chartreuse">Translate</span>
-                    </button>
-                    <!-- Logout Button -->
-                    <button class="pad--y--8 pad--right--24 pad--left--8 bg--col--ebony ba bw--1-5 br--col--chartreuse flex items-center justify-center gap--8 group">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M16 16.9999L21 11.9999M21 11.9999L16 6.99994M21 11.9999H9M12 16.9999C12 17.2955 12 17.4433 11.989 17.5713C11.8748 18.9019 10.8949 19.9968 9.58503 20.2572C9.45903 20.2823 9.31202 20.2986 9.01835 20.3312L7.99694 20.4447C6.46248 20.6152 5.69521 20.7005 5.08566 20.5054C4.27293 20.2453 3.60942 19.6515 3.26118 18.8724C3 18.2881 3 17.5162 3 15.9722V8.02764C3 6.4837 3 5.71174 3.26118 5.12746C3.60942 4.34842 4.27293 3.75454 5.08566 3.49447C5.69521 3.29941 6.46246 3.38466 7.99694 3.55516L9.01835 3.66865C9.31212 3.70129 9.45901 3.71761 9.58503 3.74267C10.8949 4.0031 11.8748 5.09798 11.989 6.42855C12 6.55657 12 6.70436 12 6.99994" stroke="#9FFF02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        <span class="fs--16 fw5 lh--24 col--chartreuse">Log Out</span>
-                    </button>
+                    <!-- Bottom Button Group -->
+                    <div class="pa3 flex flex-column gap--8">
+                        <!-- Translate Button -->
+                        <button class="pad--y--8 pad--right--24 pad--left--8 bg--col--ebony ba bw--1-5 br--col--chartreuse flex items-center justify-center gap--8 group">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M2 12H22M2 12C2 17.5228 6.47715 22 12 22M2 12C2 6.47715 6.47715 2 12 2M22 12C22 17.5228 17.5228 22 12 22M22 12C22 6.47715 17.5228 2 12 2M12 2C14.5013 4.73835 15.9228 8.29203 16 12C15.9228 15.708 14.5013 19.2616 12 22M12 2C9.49872 4.73835 8.07725 8.29203 8 12C8.07725 15.708 9.49872 19.2616 12 22" stroke="#9FFF02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span class="fs--16 fw5 lh--24 col--chartreuse">Translate</span>
+                        </button>
+                        <!-- Logout Button -->
+                        <button class="pad--y--8 pad--right--24 pad--left--8 bg--col--ebony ba bw--1-5 br--col--chartreuse flex items-center justify-center gap--8 group">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M16 16.9999L21 11.9999M21 11.9999L16 6.99994M21 11.9999H9M12 16.9999C12 17.2955 12 17.4433 11.989 17.5713C11.8748 18.9019 10.8949 19.9968 9.58503 20.2572C9.45903 20.2823 9.31202 20.2986 9.01835 20.3312L7.99694 20.4447C6.46248 20.6152 5.69521 20.7005 5.08566 20.5054C4.27293 20.2453 3.60942 19.6515 3.26118 18.8724C3 18.2881 3 17.5162 3 15.9722V8.02764C3 6.4837 3 5.71174 3.26118 5.12746C3.60942 4.34842 4.27293 3.75454 5.08566 3.49447C5.69521 3.29941 6.46246 3.38466 7.99694 3.55516L9.01835 3.66865C9.31212 3.70129 9.45901 3.71761 9.58503 3.74267C10.8949 4.0031 11.8748 5.09798 11.989 6.42855C12 6.55657 12 6.70436 12 6.99994" stroke="#9FFF02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span class="fs--16 fw5 lh--24 col--chartreuse">Log Out</span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
