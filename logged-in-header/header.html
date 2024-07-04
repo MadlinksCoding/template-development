@@ -46,15 +46,21 @@
     .w--10 { width: 0.625rem; }
     .w--12 { width: 0.75rem; }
     .w--344 { width: 21.5rem; }
+    .w--358 { width: 22.375rem; }
 
     /* height */
     .h--6 { height: 0.375rem; }
     .h--10 { height: 0.625rem; }
     .h--12 { height: 0.75rem; }
 
+    /* Max height */
+    .max--h--42 { max-height: 2.625rem; }
+
     /* Padding */
     .pad--y--2 { padding-top: 0.125rem; padding-bottom: 0.125rem; }
     .pad--x--48 { padding-left: 3rem; padding-right: 3rem; }
+    .pad--top--4 { padding-top: 0.25rem; }
+    .pad--bottom--8 { padding-top: 0.5rem; }
 
     /* Border */
     .bw--1-5 { border-width: 0.094rem; }
@@ -62,6 +68,7 @@
     /* Border Radius */
     .br--2 { border-radius:0.125rem; }
     .br--7 { border-radius:0.438rem; }
+    .br--8 { border-radius:0.5rem; }
     .br--200 { border-radius:12.5rem; }
 
     /* Border Colors */
@@ -71,6 +78,7 @@
 
     /* Gap */
     .gap--54 { gap: 3.375rem; }
+    .gap--12 { gap: 0.75rem; }
 
     /* Line Height */
     .lh--0 { line-height: 0; }
@@ -81,10 +89,13 @@
     .tracked--neg-0-15 { letter-spacing: 0.009rem; }
     .tracked--0-04 { letter-spacing: 0.025rem; }
     .tracked--0-06 { letter-spacing: 0.004rem; }
+    .tracked--0-03 { letter-spacing: 0.003rem; }
 
     /* Box Shadow */
     .sh--6 { box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.25); }
     .sh--7 { box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25); }
+    .sh--8 { box-shadow: 0px 0px 0.094px 0px rgba(0, 0, 0, 0.25); }
+    .sh--9 { box-shadow: 4px 4px 0px 0px #0018EF; }
 
     /* Drop Shadow */
     .drop--sh--2 { filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.25)); }
@@ -94,7 +105,6 @@
 
     /* clip path */
     .cp--6 { clip-path: polygon(0% 0%, 100% 0, 105% 105%, 16% 105%); }
-    .cp--7 { clip-path: polygon(0% 0%, 80% 0%, 100% 105%, 0% 100%); }
 
     /* Overflow */
     .of--hidden { overflow: hidden; }
@@ -107,6 +117,10 @@
 
     /* Transition */
     .tse--all{transition: all 0.3s ease-in-out;}
+
+     /* Skew Style */
+     .skew--25 { transform: skewX(25deg); }
+    .-skew--25 { transform: skewX(-25deg); }
 
     /* Hover Text decoration */
     .hover-underline:hover { text-decoration: underline; }
@@ -205,7 +219,7 @@
 
         <div class="flex justify-end pad--40 gap--24">
             <!-- Chats Dropdown -->
-            <div class="w--344 bg-black-70 br--2 sh--7 bg--blur--25 pad--y--8 flex flex-column gap--16">
+            <div class="w--344 bg-black-70 br--10 sh--7 bg--blur--25 pad--y--8 flex flex-column gap--16">
                 <!-- Chat Dropdown Header -->
                 <div class="ph3 flex gap--10">
                     <h2 class="fs--18 fw6 lh--28 col--gray-wram-300 flex-auto">Chats</h2>
@@ -364,8 +378,8 @@
                     </div>
                 </div>
             </div>
-            <!-- Avatar Dropdown -->
-            <div class="w--344 bg-black-70 br--2 sh--6 flex flex-column">
+            <!-- Fan Dropdown -->
+            <div class="w--344 bg-black-70 br--10 sh--6 flex flex-column">
                 <!-- Button Section -->
                 <div class="pa3 bb br--col--black-green">
                     <a href="#" class="w-100 h--40 pad--y--8 pad--left--24 pad--right--8 db bg--col--light-warm-green flex justify-center items-center gap--8">
@@ -436,6 +450,205 @@
                         </div>
                     </div>
                     <!-- Menu item 2-4 -->
+                    <div class="pad--y--8 ph3 flex items-center justify-between gap--10">
+                        <div class="flex items-center gap--10">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="18" viewBox="0 0 22 18" fill="none">
+                                <path d="M18.6361 1.91126C17.212 1.24496 15.6893 0.760716 14.0973 0.484985C13.9018 0.838462 13.6734 1.3139 13.5159 1.6921C11.8236 1.4376 10.1469 1.4376 8.48573 1.6921C8.32828 1.3139 8.09468 0.838462 7.89741 0.484985C6.30374 0.760716 4.77928 1.24673 3.35518 1.91478C0.482756 6.25539 -0.29591 10.4882 0.0934236 14.6609C1.99856 16.0836 3.84487 16.9478 5.66003 17.5134C6.1082 16.8966 6.50791 16.2409 6.85224 15.5499C6.19644 15.3007 5.56832 14.9931 4.97482 14.6361C5.13227 14.5195 5.28628 14.3975 5.43508 14.272C9.05501 15.9652 12.9882 15.9652 16.5648 14.272C16.7154 14.3975 16.8694 14.5195 17.0251 14.6361C16.4299 14.9949 15.8 15.3024 15.1442 15.5516C15.4885 16.2409 15.8865 16.8983 16.3364 17.5151C18.1533 16.9496 20.0014 16.0854 21.9065 14.6609C22.3633 9.82366 21.1261 5.62974 18.6361 1.91126ZM7.34541 12.0947C6.25874 12.0947 5.36759 11.0802 5.36759 9.84486C5.36759 8.60949 6.23972 7.59327 7.34541 7.59327C8.45114 7.59327 9.34226 8.60771 9.32323 9.84486C9.32495 11.0802 8.45114 12.0947 7.34541 12.0947ZM14.6545 12.0947C13.5678 12.0947 12.6767 11.0802 12.6767 9.84486C12.6767 8.60949 13.5488 7.59327 14.6545 7.59327C15.7602 7.59327 16.6514 8.60771 16.6323 9.84486C16.6323 11.0802 15.7602 12.0947 14.6545 12.0947Z" fill="#AFFFD9"/>
+                            </svg>
+                            <a href="#" class="fs--15 fw5 lh--24 tracked--neg-0-15 col--green-bottle-green hover-col--green-bottle-green">Fansocial Discord</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Bottom Button Group -->
+                <div class="pa3 flex flex-column gap--8">
+                    <!-- Translate Button -->
+                    <button class="pad--y--8 pad--right--24 pad--left--8 bg--col--ebony ba bw--1-5 br--col--light-warm-green flex items-center justify-center gap--8 group">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M2 12H22M2 12C2 17.5228 6.47715 22 12 22M2 12C2 6.47715 6.47715 2 12 2M22 12C22 17.5228 17.5228 22 12 22M22 12C22 6.47715 17.5228 2 12 2M12 2C14.5013 4.73835 15.9228 8.29203 16 12C15.9228 15.708 14.5013 19.2616 12 22M12 2C9.49872 4.73835 8.07725 8.29203 8 12C8.07725 15.708 9.49872 19.2616 12 22" stroke="#9FFF02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="fs--16 fw5 lh--24 col--light-warm-green">Translate</span>
+                    </button>
+                    <!-- Logout Button -->
+                    <button class="pad--y--8 pad--right--24 pad--left--8 bg--col--ebony ba bw--1-5 br--col--light-warm-green flex items-center justify-center gap--8 group">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M16 16.9999L21 11.9999M21 11.9999L16 6.99994M21 11.9999H9M12 16.9999C12 17.2955 12 17.4433 11.989 17.5713C11.8748 18.9019 10.8949 19.9968 9.58503 20.2572C9.45903 20.2823 9.31202 20.2986 9.01835 20.3312L7.99694 20.4447C6.46248 20.6152 5.69521 20.7005 5.08566 20.5054C4.27293 20.2453 3.60942 19.6515 3.26118 18.8724C3 18.2881 3 17.5162 3 15.9722V8.02764C3 6.4837 3 5.71174 3.26118 5.12746C3.60942 4.34842 4.27293 3.75454 5.08566 3.49447C5.69521 3.29941 6.46246 3.38466 7.99694 3.55516L9.01835 3.66865C9.31212 3.70129 9.45901 3.71761 9.58503 3.74267C10.8949 4.0031 11.8748 5.09798 11.989 6.42855C12 6.55657 12 6.70436 12 6.99994" stroke="#9FFF02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="fs--16 fw5 lh--24 col--light-warm-green">Log Out</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="pad--40">
+            <!-- Cart Dropdown -->
+            <div class="fl mr4 w--358 bg-black-70 br--10 pad--top--4 pad--bottom--8 flex flex-column gap--24">
+                <!-- Cart Dropdown Header -->
+                <div class="ph3 pad--y--8 flex gap--8">
+                    <h2 class="fs--16 fw6 lh--24 white tracked--0-04 ttc">Shopping cart</h2>
+                </div>
+                <!-- Cart Dropdown Body -->
+                <div class="flex flex-column ph3 gap--16">
+                    <!-- Cart Item 1 -->
+                    <div class="flex items-start justify-between gap--12">
+                        <!-- Product Image -->
+                        <div class="w--40 h--40 bg-white br--8 sh--8 of--hidden">
+                            <img src="avatar-2.png" alt="">
+                        </div>
+                        <!-- Product Details -->
+                        <div class="flex-auto flex flex-column">
+                            <span class="fs--14 fw5 lh--normal white tracked--neg-0-15">Orange (Philippines)</span>
+                            <span class="fs--10 tracked--0-03 white o-50">Jenny’s playhouse</span>
+                            <span class="fs--10 fw6 white tracked--50">QTY 3</span>
+                        </div>
+                        <!-- Prosuct Price -->
+                        <div class="flex flex-column">
+                            <span class="db fs--16 fw6 lh--normal col--light-warm-green tr">$809.1</span>
+                            <span class="db tr fs--12 fw5 lh--normal tracked--neg-0-12 white strike">$999.9</span>
+                        </div>
+                    </div>
+                    <!-- Cart Item 2 -->
+                    <div class="flex items-start justify-between gap--12">
+                        <!-- Product Image -->
+                        <div class="w--40 h--40 bg-white br--8 sh--8 of--hidden">
+                            <img src="avatar-2.png" alt="">
+                        </div>
+                        <!-- Product Details -->
+                        <div class="flex-auto flex flex-column">
+                            <span class="fs--14 fw5 lh--normal white tracked--neg-0-15">Mangoes (Philippines)</span>
+                            <span class="fs--10 tracked--0-03 white o-50">Jenny’s playhouse</span>
+                            <span class="fs--10 fw6 white tracked--50">QTY 3</span>
+                        </div>
+                        <!-- Prosuct Price -->
+                        <div class="flex flex-column">
+                            <span class="db fs--16 fw6 lh--normal white tr">$809.1</span>
+                        </div>
+                    </div>
+                    <!-- Cart Item 3 -->
+                    <div class="flex items-start justify-between gap--12">
+                        <!-- Product Image -->
+                        <div class="w--40 h--40 bg-white br--8 sh--8 of--hidden">
+                            <img src="avatar-2.png" alt="">
+                        </div>
+                        <!-- Product Details -->
+                        <div class="w--161 flex-auto flex flex-column">
+                            <span class="fs--14 fw5 lh--normal white tracked--neg-0-15 max--h--42 of--hidden">[Gallery] I hate the color orange so much I have se...</span>
+                            <span class="fs--10 tracked--0-03 white o-50">Jenny’s playhouse</span>
+                            <a href="#" class="fs--10 fw6 white tracked--50 hover--col--gray-wram-25">Pay to View</a>
+                        </div>
+                        <!-- Prosuct Price -->
+                        <div class="flex flex-column">
+                            <span class="db fs--16 fw6 lh--normal col--light-warm-green tr">$809.1</span>
+                            <span class="db tr fs--12 fw5 lh--normal tracked--neg-0-12 white strike">$999.9</span>
+                        </div>
+                    </div>
+                    <!-- Cart Item 4 -->
+                    <div class="flex items-start justify-between gap--12">
+                        <!-- Product Image -->
+                        <div class="w--40 h--40 bg-white br--8 sh--8 of--hidden">
+                            <img src="avatar-2.png" alt="">
+                        </div>
+                        <!-- Product Details -->
+                        <div class="w--161 flex-auto flex flex-column">
+                            <span class="fs--14 fw5 lh--normal white tracked--neg-0-15 max--h--42 of--hidden">[Video] I hate the color orange so much I have se m...</span>
+                            <span class="fs--10 tracked--0-03 white o-50">Jenny’s playhouse</span>
+                            <a href="#" class="fs--10 fw6 white tracked--50 hover--col--gray-wram-25">Pay to View</a>
+                        </div>
+                        <!-- Prosuct Price -->
+                        <div class="flex flex-column">
+                            <span class="db fs--16 fw6 lh--normal col--light-warm-green tr">$809.1</span>
+                            <span class="db tr fs--12 fw5 lh--normal tracked--neg-0-12 white strike">$999.9</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Cart Dropdown Price and Buy Button -->
+                <div class="pa3 flex gap--10 items-start bt br--col--black-green">
+                    <!-- Total price -->
+                    <div class="flex-auto flex flex-column items-start">
+                        <span class="fs--12 fw5 lh--normal white tracked--150">Subtotal (7 item)</span>
+                        <span class="fs--20 fw6 lh--normal tracked--0-04 col--light-warm-green">$2,427.3</span>
+                    </div>
+                    <div class="flex-auto ph3">
+                        <div class="flex h--48 sh--9 skew--25">
+                            <button class="w-100 pad--8 flex items-center justify-center bg--col--light-warm-green">
+                                <span class="-skew--25 fs--14 fw6 lh--30 tc black">Checkout</span>
+                            </button>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+
+            <!-- Creator Dropdown -->
+            <div class="fl w--344 bg-black-70 br--10 sh--6 flex flex-column">
+                <!-- Button Section -->
+                <div class="pa3 bb br--col--black-green">
+                    <div class="flex flex-column gap--8">
+                        <!-- Start Streaming Button -->
+                        <a href="#" class="w-100 h--40 pad--y--8 pr3 pad--left--8 db bg--col--light-warm-green flex justify-center items-center gap--10">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.16666 7.08337C7.16666 5.24242 8.65904 3.75004 10.5 3.75004C12.3409 3.75004 13.8333 5.24242 13.8333 7.08337C13.8333 8.92432 12.3409 10.4167 10.5 10.4167C8.65904 10.4167 7.16666 8.92432 7.16666 7.08337ZM10.5 5.41671C9.57952 5.41671 8.83332 6.1629 8.83332 7.08337C8.83332 8.00385 9.57952 8.75004 10.5 8.75004C11.4205 8.75004 12.1667 8.00385 12.1667 7.08337C12.1667 6.1629 11.4205 5.41671 10.5 5.41671Z" fill="#303437"/>
+                                <path d="M11.3333 12.0834C11.3333 12.5436 10.9602 12.9167 10.5 12.9167C10.0398 12.9167 9.66666 12.5436 9.66666 12.0834C9.66666 11.6231 10.0398 11.25 10.5 11.25C10.9602 11.25 11.3333 11.6231 11.3333 12.0834Z" fill="#303437"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.3333 10C16.3333 12.9388 14.1602 15.3699 11.3333 15.7743V17.5H13.8333C14.2936 17.5 14.6667 17.8731 14.6667 18.3334C14.6667 18.7936 14.2936 19.1667 13.8333 19.1667H7.16666C6.70642 19.1667 6.33332 18.7936 6.33332 18.3334C6.33332 17.8731 6.70642 17.5 7.16666 17.5H9.66666V15.7743C6.83974 15.3699 4.66666 12.9388 4.66666 10V6.66671C4.66666 3.44505 7.27833 0.833374 10.5 0.833374C13.7217 0.833374 16.3333 3.44505 16.3333 6.66671V10ZM10.5 2.50004C8.1988 2.50004 6.33332 4.36552 6.33332 6.66671V10C6.33332 12.3012 8.1988 14.1667 10.5 14.1667C12.8012 14.1667 14.6667 12.3012 14.6667 10V6.66671C14.6667 4.36552 12.8012 2.50004 10.5 2.50004Z" fill="#303437"/>
+                            </svg>
+                            <span class="fs--16 fw5 lh--24 col--gray-950">Start Streaming</span>
+                        </a>
+                        <!-- Upload Media Button -->
+                        <button class="pad--y--8 pad--right--24 pad--left--8 bg--col--ebony ba bw--1-5 br--col--light-warm-green flex items-center justify-center gap--8 group">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
+                                <path d="M10.4983 1.66663C10.7121 1.66619 10.9261 1.74755 11.0892 1.9107L14.8392 5.6607C15.1647 5.98614 15.1647 6.51378 14.8392 6.83922C14.5138 7.16465 13.9862 7.16465 13.6607 6.83922L11.3299 4.50835V13.3333C11.3299 13.7935 10.9568 14.1666 10.4965 14.1666C10.0363 14.1666 9.6632 13.7935 9.6632 13.3333V4.51526L7.33925 6.83922C7.01381 7.16465 6.48617 7.16465 6.16073 6.83922C5.8353 6.51378 5.8353 5.98614 6.16073 5.6607L9.86375 1.95769C10.0166 1.77951 10.2434 1.66663 10.4965 1.66663L10.4983 1.66663Z" fill="#9FFF02"/>
+                                <path d="M18 9.16663C18.4602 9.16663 18.8333 9.53972 18.8333 9.99996V17.5C18.8333 17.9602 18.4602 18.3333 18 18.3333H2.99999C2.53975 18.3333 2.16666 17.9602 2.16666 17.5V10.0034C2.16666 9.54318 2.53975 9.17008 2.99999 9.17008C3.46023 9.17008 3.83332 9.54318 3.83332 10.0034V16.6666H17.1667V9.99996C17.1667 9.53972 17.5398 9.16663 18 9.16663Z" fill="#9FFF02"/>
+                            </svg>
+                            <span class="fs--16 fw5 lh--24 col--light-warm-green">Upload media</span>
+                        </button>
+                        <!-- View profile Button -->
+                        <button class="pad--y--8 pad--right--24 pad--left--8 bg--col--ebony ba bw--1-5 br--col--light-warm-green flex items-center justify-center gap--8 group">
+                            <span class="fs--16 fw5 lh--24 col--light-warm-green">View profile</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- Menu Section 1 -->
+                <div class="pad--y--8 bb br--col--black-green flex flex-column gap--16">
+                    <!-- Menu item 1-1 -->
+                    <div class="pad--y--8 ph3 flex items-center justify-between gap--10">
+                        <div class="flex items-center gap--10">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M17 2C16.4477 2 16 2.44772 16 3V20H14.5V9C14.5 8.44772 14.0523 8 13.5 8H10.5C9.94771 8 9.5 8.44772 9.5 9V20H8V14C8 13.4477 7.55228 13 7 13H4C3.44772 13 3 13.4477 3 14V20H2C1.44772 20 1 20.4477 1 21C1 21.5523 1.44772 22 2 22H22C22.5523 22 23 21.5523 23 21C23 20.4477 22.5523 20 22 20H21V3C21 2.44772 20.5523 2 20 2H17Z" fill="white"/>
+                            </svg>
+                            <a href="#" class="fs--16 fw5 lh--24 tracked--150 col--gray-wram-25 hover--col--gray-wram-25">Overview & analytics</a>
+                        </div>
+                    </div>
+                    <!-- Menu item 1-2 -->
+                    <div class="pad--y--8 ph3 flex items-center justify-between gap--10">
+                        <div class="flex items-center gap--10">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M5.00014 14H18.1359C19.1487 14 19.6551 14 20.0582 13.8112C20.4134 13.6448 20.7118 13.3777 20.9163 13.0432C21.1485 12.6633 21.2044 12.16 21.3163 11.1534L21.9013 5.88835C21.9355 5.58088 21.9525 5.42715 21.9031 5.30816C21.8597 5.20366 21.7821 5.11697 21.683 5.06228C21.5702 5 21.4155 5 21.1062 5H4.50014M2 2H3.24844C3.51306 2 3.64537 2 3.74889 2.05032C3.84002 2.09463 3.91554 2.16557 3.96544 2.25376C4.02212 2.35394 4.03037 2.48599 4.04688 2.7501L4.95312 17.2499C4.96963 17.514 4.97788 17.6461 5.03456 17.7462C5.08446 17.8344 5.15998 17.9054 5.25111 17.9497C5.35463 18 5.48694 18 5.75156 18H19M7.5 21.5H7.51M16.5 21.5H16.51M8 21.5C8 21.7761 7.77614 22 7.5 22C7.22386 22 7 21.7761 7 21.5C7 21.2239 7.22386 21 7.5 21C7.77614 21 8 21.2239 8 21.5ZM17 21.5C17 21.7761 16.7761 22 16.5 22C16.2239 22 16 21.7761 16 21.5C16 21.2239 16.2239 21 16.5 21C16.7761 21 17 21.2239 17 21.5Z" stroke="#FDFDFC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <a href="#" class="fs--15 fw5 lh--24 tracked--neg-0-15 col--gray-wram-25 hover--col--gray-wram-25">Your Order</a>
+                        </div>
+                        <div class="min--w--20 h--18 pad--x--4 bg--col--light-warm-green br--7 flex items-center justify-center gap--10">
+                            <span class="fs--12 lh--24 fw6 black tracked--0-06">99+</span>
+                        </div>
+                    </div>
+                    <!-- Menu item 1-3 -->
+                    <div class="pad--y--8 ph3 flex items-center justify-between gap--10">
+                        <div class="flex items-center gap--10">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M12.7812 6.81787C13.2525 6.67096 13.6474 6.4186 13.966 6.06078C14.3478 5.63315 14.8518 5.5328 15.4016 5.5328C17.4001 5.52989 19.3063 5.92044 21.1201 6.70444C21.1541 6.71871 21.1843 6.74046 21.2085 6.76806C21.2327 6.79567 21.2503 6.82839 21.2598 6.8637C21.331 7.12698 21.3514 7.39752 21.3209 7.67533C21.1958 8.79533 21.019 9.93498 20.7907 11.0943C20.7427 11.3386 20.5943 11.463 20.3456 11.4673L18.5783 11.5001C18.4823 11.5015 18.4343 11.5502 18.4343 11.6462L18.43 20.0084C18.4301 20.0759 18.4071 20.1415 18.3647 20.1945C18.3224 20.2476 18.2631 20.285 18.1965 20.3008C17.9972 20.3473 17.7834 20.3706 17.555 20.3706C13.7194 20.3662 9.85759 20.3619 5.96959 20.3575C5.80086 20.3575 5.69322 20.2761 5.64668 20.1131C5.61468 20.0011 5.59795 19.8899 5.5965 19.7793C5.58486 17.0055 5.58413 14.9735 5.59431 11.6833C5.59431 11.5684 5.53686 11.5095 5.42195 11.5066L3.34268 11.452C3.2525 11.4491 3.20086 11.4026 3.18777 11.3124C3.02195 10.1546 2.86268 9.0666 2.70995 8.04842C2.65904 7.71096 2.65177 7.36551 2.68813 7.01205C2.72304 6.65205 2.93904 6.6586 3.20086 6.55169C4.82704 5.88842 6.61322 5.55388 8.55941 5.54806C9.13759 5.54588 9.7354 5.6528 10.1303 6.12843C10.398 6.45134 10.723 6.67752 11.1056 6.80698C11.1288 6.81482 11.1536 6.81653 11.1776 6.81196C11.2016 6.80738 11.2241 6.79666 11.2427 6.78085C11.2614 6.76504 11.2757 6.74467 11.2841 6.72172C11.2926 6.69877 11.295 6.67404 11.291 6.64989C11.0947 5.3648 11.747 4.67316 12.3885 3.70007C12.4238 3.64726 12.4442 3.58593 12.4476 3.5225C12.451 3.45908 12.4372 3.3959 12.4077 3.33964C12.3783 3.28337 12.3342 3.2361 12.2801 3.20277C12.226 3.16944 12.164 3.1513 12.1005 3.15025C12.035 3.14879 11.9667 3.15825 11.8954 3.17861C11.7965 3.2077 11.7209 3.26587 11.6685 3.35314L11.2125 4.11678C11.1652 4.19633 11.0954 4.26013 11.012 4.30012C10.9285 4.34011 10.835 4.35451 10.7434 4.34151C10.019 4.23678 9.9885 3.35969 10.2176 2.83605C10.822 1.44841 12.6198 1.21497 13.558 2.35824C14.0772 2.98879 14.1078 4.0666 13.5383 4.71896C13.0321 5.30151 12.6656 5.92552 12.6481 6.7197C12.6481 6.7358 12.6518 6.75171 12.6591 6.76609C12.6663 6.78048 12.6768 6.79294 12.6898 6.8025C12.7028 6.81206 12.7178 6.81845 12.7337 6.82112C12.7496 6.82379 12.7658 6.82267 12.7812 6.81787ZM17.1427 10.1321C17.7739 9.99097 18.4409 9.94734 19.1434 10.0012C19.3907 10.0186 19.5376 9.90588 19.5841 9.66297C19.699 9.05206 19.7514 8.4506 19.7412 7.8586C19.7407 7.82166 19.7287 7.7858 19.7068 7.75606C19.6849 7.72632 19.6542 7.70418 19.619 7.69278C18.2561 7.24769 16.8765 7.03097 15.4801 7.0426C14.8409 7.04915 14.3958 7.80407 13.8263 8.06589C12.1485 8.84043 10.6016 8.56114 9.24886 7.3895C8.31941 6.58441 5.40013 7.35243 4.36377 7.70807C4.31897 7.72344 4.28064 7.75372 4.25493 7.79407C4.22922 7.83441 4.21761 7.8825 4.22195 7.93062L4.38122 9.59098C4.40886 9.88189 4.56886 10.0186 4.86122 10.0012C5.56231 9.95752 6.19213 9.98297 6.75068 10.0775C6.82777 10.0906 6.88086 10.1328 6.90995 10.2041C6.99868 10.4281 7.04377 10.6666 7.04522 10.9197C7.05686 13.935 7.06122 15.8855 7.05831 18.7713C7.05831 18.8339 7.08886 18.8652 7.14995 18.8652H16.798C16.8344 18.8652 16.8694 18.8507 16.8951 18.8249C16.9209 18.7991 16.9354 18.7642 16.9354 18.7277C16.934 16.0586 16.9332 14.4717 16.9332 11.967C16.9347 11.4055 16.9616 10.8426 17.014 10.2783C17.0212 10.1983 17.0641 10.1495 17.1427 10.1321ZM5.97927 20.2279C6.00656 20.2166 6.02641 20.1905 6.03448 20.1553C6.04254 20.1201 6.03815 20.0787 6.02228 20.0402C6.01442 20.0211 6.00397 20.0034 5.99154 19.9879C5.97911 19.9724 5.96493 19.9595 5.94982 19.9499C5.93471 19.9404 5.91896 19.9344 5.90346 19.9322C5.88797 19.93 5.87305 19.9318 5.85954 19.9374C5.83225 19.9486 5.8124 19.9747 5.80433 20.0099C5.79627 20.0451 5.80066 20.0865 5.81653 20.125C5.82439 20.1441 5.83484 20.1619 5.84727 20.1774C5.8597 20.1929 5.87388 20.2057 5.88899 20.2153C5.9041 20.2248 5.91986 20.2309 5.93535 20.233C5.95084 20.2352 5.96576 20.2334 5.97927 20.2279ZM18.2838 19.9975C18.1616 19.887 18.0605 19.9161 17.9805 20.0848C17.9724 20.1026 17.97 20.1224 17.9737 20.1416C17.9774 20.1608 17.9871 20.1784 18.0012 20.1918C18.0154 20.2053 18.0334 20.214 18.0528 20.2167C18.0722 20.2194 18.0919 20.216 18.1092 20.207L18.2663 20.1241C18.2776 20.1181 18.2873 20.1096 18.2947 20.0992C18.302 20.0889 18.3068 20.0769 18.3085 20.0644C18.3102 20.052 18.3089 20.0394 18.3046 20.0277C18.3002 20.0161 18.2931 20.0057 18.2838 19.9975Z" fill="#FDFDFC"/>
+                            </svg>
+                            <a href="#" class="fs--15 fw5 lh--24 tracked--neg-0-15 col--gray-wram-25 hover--col--gray-wram-25">Custom product request</a>
+                        </div>
+                        <div class="min--w--20 h--18 pad--x--4 bg--col--light-warm-green br--7 flex items-center justify-center gap--10">
+                            <span class="fs--12 lh--24 fw6 black tracked--0-06">3</span>
+                        </div>
+                    </div>
+                    <!-- Menu item 2-4 -->
+                    <div class="pad--y--8 ph3 flex items-center justify-between gap--10">
+                        <div class="flex items-center gap--10">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M9.08997 8.99995C9.32507 8.33162 9.78912 7.76806 10.3999 7.40908C11.0107 7.05011 11.7289 6.91889 12.4271 7.03866C13.1254 7.15844 13.7588 7.52148 14.215 8.06348C14.6713 8.60548 14.921 9.29147 14.92 9.99995C14.92 12 11.92 13 11.92 13M12 17H12.01M3 7.94141V16.0585C3 16.4012 3 16.5725 3.05048 16.7253C3.09515 16.8605 3.16816 16.9845 3.26463 17.0892C3.37369 17.2076 3.52345 17.2908 3.82297 17.4572L11.223 21.5683C11.5066 21.7258 11.6484 21.8046 11.7985 21.8355C11.9315 21.8628 12.0685 21.8628 12.2015 21.8355C12.3516 21.8046 12.4934 21.7258 12.777 21.5683L20.177 17.4572C20.4766 17.2908 20.6263 17.2076 20.7354 17.0892C20.8318 16.9845 20.9049 16.8605 20.9495 16.7253C21 16.5725 21 16.4012 21 16.0585V7.94141C21 7.59876 21 7.42744 20.9495 7.27464C20.9049 7.13947 20.8318 7.01539 20.7354 6.9107C20.6263 6.79236 20.4766 6.70916 20.177 6.54276L12.777 2.43164C12.4934 2.27409 12.3516 2.19531 12.2015 2.16442C12.0685 2.13709 11.9315 2.13709 11.7985 2.16442C11.6484 2.19531 11.5066 2.27409 11.223 2.43164L3.82297 6.54276C3.52345 6.70916 3.37369 6.79236 3.26463 6.9107C3.16816 7.01539 3.09515 7.13947 3.05048 7.27464C3 7.42744 3 7.59876 3 7.94141Z" stroke="#FDFDFC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <a href="#" class="fs--15 fw5 lh--24 tracked--neg-0-15 col--gray-wram-25 hover--col--gray-wram-25">Support</a>
+                        </div>
+                    </div>
+                    <!-- Menu item 2-5 -->
                     <div class="pad--y--8 ph3 flex items-center justify-between gap--10">
                         <div class="flex items-center gap--10">
                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="18" viewBox="0 0 22 18" fill="none">
