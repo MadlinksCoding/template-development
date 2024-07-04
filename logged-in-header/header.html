@@ -57,13 +57,15 @@
     .max--h--42 { max-height: 2.625rem; }
 
     /* Padding */
+    .pad--5 { padding: 0.313rem; }
     .pad--y--2 { padding-top: 0.125rem; padding-bottom: 0.125rem; }
     .pad--x--48 { padding-left: 3rem; padding-right: 3rem; }
     .pad--top--4 { padding-top: 0.25rem; }
-    .pad--bottom--8 { padding-top: 0.5rem; }
+    .pad--bottom--8 { padding-bottom: 0.5rem; }
 
-    /* Border */
+    /* Border Width */
     .bw--1-5 { border-width: 0.094rem; }
+    .bw--2 { border-width: 0.125rem; }
 
     /* Border Radius */
     .br--2 { border-radius:0.125rem; }
@@ -75,10 +77,12 @@
     .br--col--green-00f { border-color: var(--color-green-00f, #00FF1A); }
     .br--col--black-green { border-color: var(--color-black-green, #79716B); }
     .br--col--base-black { border-color: var(--Base-Black, #000); }
+    .br--transparent { border-color: transparent; }
 
     /* Gap */
     .gap--54 { gap: 3.375rem; }
     .gap--12 { gap: 0.75rem; }
+    .gap--23 { gap: 1.438rem; }
 
     /* Line Height */
     .lh--0 { line-height: 0; }
@@ -90,6 +94,7 @@
     .tracked--0-04 { letter-spacing: 0.025rem; }
     .tracked--0-06 { letter-spacing: 0.004rem; }
     .tracked--0-03 { letter-spacing: 0.003rem; }
+    .tracked--0-35 { letter-spacing: 0.022rem; }
 
     /* Box Shadow */
     .sh--6 { box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.25); }
@@ -132,6 +137,14 @@
     .group:hover .col--gray-wram-25 { color: var(--black); }
     .group:hover .col--gray-wram-300 { color: var(--black); }
     .group:hover .col--light-warm-green { color: var(--color-light-warm-green); }
+    .group:hover .hover--col-black { color: var(--black); }
+    .group:hover .hover-fill-warm-black { fill: var(--color-outer-space); }
+    .group:hover .hover-stroke-warm-black { stroke: var(--color-outer-space); }
+
+    /* Tab Custom .active class style */
+    .elm_WeDkmC.active svg path { fill: var(--color-chartreuse,#9FFF02); }
+    .elm_WeDkmC.active .active-bg--col--light-warm-green { background-color: var(--color-light-warm-green,#9FFF02); }
+    .elm_WeDkmC.active.active-br--col--light-warm-green { border-color: var(--color-light-warm-green,#9FFF02); }
 
 
     </style>
@@ -478,106 +491,107 @@
                 </div>
             </div>
         </div>
-        <div class="pad--40">
-            <!-- Cart Dropdown -->
-            <div class="fl mr4 w--358 bg-black-70 br--10 pad--top--4 pad--bottom--8 flex flex-column gap--24">
-                <!-- Cart Dropdown Header -->
-                <div class="ph3 pad--y--8 flex gap--8">
-                    <h2 class="fs--16 fw6 lh--24 white tracked--0-04 ttc">Shopping cart</h2>
-                </div>
-                <!-- Cart Dropdown Body -->
-                <div class="flex flex-column ph3 gap--16">
-                    <!-- Cart Item 1 -->
-                    <div class="flex items-start justify-between gap--12">
-                        <!-- Product Image -->
-                        <div class="w--40 h--40 bg-white br--8 sh--8 of--hidden">
-                            <img src="avatar-2.png" alt="">
+        <div class="pad--40 cf">
+            <div class="fl mr4">
+                <!-- Cart Dropdown -->
+                <div class="w--358 bg-black-70 br--10 pad--top--4 pad--bottom--8 flex flex-column gap--24">
+                    <!-- Cart Dropdown Header -->
+                    <div class="ph3 pad--y--8 flex gap--8">
+                        <h2 class="fs--16 fw6 lh--24 white tracked--0-04 ttc">Shopping cart</h2>
+                    </div>
+                    <!-- Cart Dropdown Body -->
+                    <div class="flex flex-column ph3 gap--16">
+                        <!-- Cart Item 1 -->
+                        <div class="flex items-start justify-between gap--12">
+                            <!-- Product Image -->
+                            <div class="w--40 h--40 bg-white br--8 sh--8 of--hidden">
+                                <img src="avatar-2.png" alt="">
+                            </div>
+                            <!-- Product Details -->
+                            <div class="flex-auto flex flex-column">
+                                <span class="fs--14 fw5 lh--normal white tracked--neg-0-15">Orange (Philippines)</span>
+                                <span class="fs--10 tracked--0-03 white o-50">Jenny’s playhouse</span>
+                                <span class="fs--10 fw6 white tracked--50">QTY 3</span>
+                            </div>
+                            <!-- Prosuct Price -->
+                            <div class="flex flex-column">
+                                <span class="db fs--16 fw6 lh--normal col--light-warm-green tr">$809.1</span>
+                                <span class="db tr fs--12 fw5 lh--normal tracked--neg-0-12 white strike">$999.9</span>
+                            </div>
                         </div>
-                        <!-- Product Details -->
-                        <div class="flex-auto flex flex-column">
-                            <span class="fs--14 fw5 lh--normal white tracked--neg-0-15">Orange (Philippines)</span>
-                            <span class="fs--10 tracked--0-03 white o-50">Jenny’s playhouse</span>
-                            <span class="fs--10 fw6 white tracked--50">QTY 3</span>
+                        <!-- Cart Item 2 -->
+                        <div class="flex items-start justify-between gap--12">
+                            <!-- Product Image -->
+                            <div class="w--40 h--40 bg-white br--8 sh--8 of--hidden">
+                                <img src="avatar-2.png" alt="">
+                            </div>
+                            <!-- Product Details -->
+                            <div class="flex-auto flex flex-column">
+                                <span class="fs--14 fw5 lh--normal white tracked--neg-0-15">Mangoes (Philippines)</span>
+                                <span class="fs--10 tracked--0-03 white o-50">Jenny’s playhouse</span>
+                                <span class="fs--10 fw6 white tracked--50">QTY 3</span>
+                            </div>
+                            <!-- Prosuct Price -->
+                            <div class="flex flex-column">
+                                <span class="db fs--16 fw6 lh--normal white tr">$809.1</span>
+                            </div>
                         </div>
-                        <!-- Prosuct Price -->
-                        <div class="flex flex-column">
-                            <span class="db fs--16 fw6 lh--normal col--light-warm-green tr">$809.1</span>
-                            <span class="db tr fs--12 fw5 lh--normal tracked--neg-0-12 white strike">$999.9</span>
+                        <!-- Cart Item 3 -->
+                        <div class="flex items-start justify-between gap--12">
+                            <!-- Product Image -->
+                            <div class="w--40 h--40 bg-white br--8 sh--8 of--hidden">
+                                <img src="avatar-2.png" alt="">
+                            </div>
+                            <!-- Product Details -->
+                            <div class="w--161 flex-auto flex flex-column">
+                                <span class="fs--14 fw5 lh--normal white tracked--neg-0-15 max--h--42 of--hidden">[Gallery] I hate the color orange so much I have se...</span>
+                                <span class="fs--10 tracked--0-03 white o-50">Jenny’s playhouse</span>
+                                <a href="#" class="fs--10 fw6 white tracked--50 hover--col--gray-wram-25">Pay to View</a>
+                            </div>
+                            <!-- Prosuct Price -->
+                            <div class="flex flex-column">
+                                <span class="db fs--16 fw6 lh--normal col--light-warm-green tr">$809.1</span>
+                                <span class="db tr fs--12 fw5 lh--normal tracked--neg-0-12 white strike">$999.9</span>
+                            </div>
+                        </div>
+                        <!-- Cart Item 4 -->
+                        <div class="flex items-start justify-between gap--12">
+                            <!-- Product Image -->
+                            <div class="w--40 h--40 bg-white br--8 sh--8 of--hidden">
+                                <img src="avatar-2.png" alt="">
+                            </div>
+                            <!-- Product Details -->
+                            <div class="w--161 flex-auto flex flex-column">
+                                <span class="fs--14 fw5 lh--normal white tracked--neg-0-15 max--h--42 of--hidden">[Video] I hate the color orange so much I have se m...</span>
+                                <span class="fs--10 tracked--0-03 white o-50">Jenny’s playhouse</span>
+                                <a href="#" class="fs--10 fw6 white tracked--50 hover--col--gray-wram-25">Pay to View</a>
+                            </div>
+                            <!-- Prosuct Price -->
+                            <div class="flex flex-column">
+                                <span class="db fs--16 fw6 lh--normal col--light-warm-green tr">$809.1</span>
+                                <span class="db tr fs--12 fw5 lh--normal tracked--neg-0-12 white strike">$999.9</span>
+                            </div>
                         </div>
                     </div>
-                    <!-- Cart Item 2 -->
-                    <div class="flex items-start justify-between gap--12">
-                        <!-- Product Image -->
-                        <div class="w--40 h--40 bg-white br--8 sh--8 of--hidden">
-                            <img src="avatar-2.png" alt="">
+                    <!-- Cart Dropdown Price and Buy Button -->
+                    <div class="pa3 flex gap--10 items-start bt br--col--black-green">
+                        <!-- Total price -->
+                        <div class="flex-auto flex flex-column items-start">
+                            <span class="fs--12 fw5 lh--normal white tracked--150">Subtotal (7 item)</span>
+                            <span class="fs--20 fw6 lh--normal tracked--0-04 col--light-warm-green">$2,427.3</span>
                         </div>
-                        <!-- Product Details -->
-                        <div class="flex-auto flex flex-column">
-                            <span class="fs--14 fw5 lh--normal white tracked--neg-0-15">Mangoes (Philippines)</span>
-                            <span class="fs--10 tracked--0-03 white o-50">Jenny’s playhouse</span>
-                            <span class="fs--10 fw6 white tracked--50">QTY 3</span>
-                        </div>
-                        <!-- Prosuct Price -->
-                        <div class="flex flex-column">
-                            <span class="db fs--16 fw6 lh--normal white tr">$809.1</span>
-                        </div>
+                        <div class="flex-auto ph3">
+                            <div class="flex h--48 sh--9 skew--25">
+                                <button class="w-100 pad--8 flex items-center justify-center bg--col--light-warm-green">
+                                    <span class="-skew--25 fs--14 fw6 lh--30 tc black">Checkout</span>
+                                </button>
+                            </div>
+                        </div>  
                     </div>
-                    <!-- Cart Item 3 -->
-                    <div class="flex items-start justify-between gap--12">
-                        <!-- Product Image -->
-                        <div class="w--40 h--40 bg-white br--8 sh--8 of--hidden">
-                            <img src="avatar-2.png" alt="">
-                        </div>
-                        <!-- Product Details -->
-                        <div class="w--161 flex-auto flex flex-column">
-                            <span class="fs--14 fw5 lh--normal white tracked--neg-0-15 max--h--42 of--hidden">[Gallery] I hate the color orange so much I have se...</span>
-                            <span class="fs--10 tracked--0-03 white o-50">Jenny’s playhouse</span>
-                            <a href="#" class="fs--10 fw6 white tracked--50 hover--col--gray-wram-25">Pay to View</a>
-                        </div>
-                        <!-- Prosuct Price -->
-                        <div class="flex flex-column">
-                            <span class="db fs--16 fw6 lh--normal col--light-warm-green tr">$809.1</span>
-                            <span class="db tr fs--12 fw5 lh--normal tracked--neg-0-12 white strike">$999.9</span>
-                        </div>
-                    </div>
-                    <!-- Cart Item 4 -->
-                    <div class="flex items-start justify-between gap--12">
-                        <!-- Product Image -->
-                        <div class="w--40 h--40 bg-white br--8 sh--8 of--hidden">
-                            <img src="avatar-2.png" alt="">
-                        </div>
-                        <!-- Product Details -->
-                        <div class="w--161 flex-auto flex flex-column">
-                            <span class="fs--14 fw5 lh--normal white tracked--neg-0-15 max--h--42 of--hidden">[Video] I hate the color orange so much I have se m...</span>
-                            <span class="fs--10 tracked--0-03 white o-50">Jenny’s playhouse</span>
-                            <a href="#" class="fs--10 fw6 white tracked--50 hover--col--gray-wram-25">Pay to View</a>
-                        </div>
-                        <!-- Prosuct Price -->
-                        <div class="flex flex-column">
-                            <span class="db fs--16 fw6 lh--normal col--light-warm-green tr">$809.1</span>
-                            <span class="db tr fs--12 fw5 lh--normal tracked--neg-0-12 white strike">$999.9</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Cart Dropdown Price and Buy Button -->
-                <div class="pa3 flex gap--10 items-start bt br--col--black-green">
-                    <!-- Total price -->
-                    <div class="flex-auto flex flex-column items-start">
-                        <span class="fs--12 fw5 lh--normal white tracked--150">Subtotal (7 item)</span>
-                        <span class="fs--20 fw6 lh--normal tracked--0-04 col--light-warm-green">$2,427.3</span>
-                    </div>
-                    <div class="flex-auto ph3">
-                        <div class="flex h--48 sh--9 skew--25">
-                            <button class="w-100 pad--8 flex items-center justify-center bg--col--light-warm-green">
-                                <span class="-skew--25 fs--14 fw6 lh--30 tc black">Checkout</span>
-                            </button>
-                        </div>
-                    </div>  
                 </div>
             </div>
-
             <!-- Creator Dropdown -->
-            <div class="fl w--344 bg-black-70 br--10 sh--6 flex flex-column">
+            <div class="w--344 bg-black-70 br--10 sh--6 flex flex-column">
                 <!-- Button Section -->
                 <div class="pa3 bb br--col--black-green">
                     <div class="flex flex-column gap--8">
@@ -674,6 +688,391 @@
                         </svg>
                         <span class="fs--16 fw5 lh--24 col--light-warm-green">Log Out</span>
                     </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Notification Dropdown  -->
+        <div class="pad--40">
+            <div class="fl mr4">
+                <!-- Account Notification -->
+                <div class="w--344 bg-black-70 br--10 sh--7 bg--blur--25 pad--y--8 flex flex-column gap--8">
+                    <!-- Header -->
+                    <div class="pad--x--8 gap--23 flex flex-start"> 
+                        <!-- Tab 1 -->
+                        <div class="flex-auto flex flex-column gap--4 elm_WeDkmC">
+                            <div class="flex justify-center items-center gap--10 pad--5">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <g opacity="0.7">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1.66672 4.32609C1.66593 4.25488 1.67515 4.1833 1.69468 4.11362C1.72575 4.0026 1.78148 3.90188 1.85559 3.81773C1.99441 3.66011 2.19774 3.56067 2.42429 3.56067H17.5751C17.7064 3.56067 17.8304 3.59405 17.9381 3.65278C18.0141 3.69409 18.0839 3.74903 18.1438 3.81703C18.2136 3.89602 18.2671 3.98967 18.2992 4.09277C18.3029 4.10469 18.3063 4.11674 18.3094 4.12891C18.3261 4.19366 18.334 4.25988 18.3333 4.32579V15.6818C18.3333 16.1002 17.9941 16.4394 17.5757 16.4394H2.42429C2.00589 16.4394 1.66672 16.1002 1.66672 15.6818V4.32609ZM3.18186 5.83343V14.9242H16.8182V5.83343L10.4545 10.6061C10.1852 10.8081 9.81482 10.8081 9.54546 10.6061L3.18186 5.83343ZM15.3031 5.07581H4.69694L10 9.05311L15.3031 5.07581Z" fill="white"/>
+                                    </g>
+                                </svg>
+                                <div class="min--w--20 h--18 pad--x--4 gap--10 br--4 bg-white flex justify-center items-center">
+                                    <span class="db fs--12 fw6 lh--24 tracked--0-06 col--outer-space">2</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tab 2 -->
+                        <div class="flex-auto flex flex-column gap--4 elm_WeDkmC">
+                            <div class="flex justify-center items-center gap--10 pad--5">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <g opacity="0.7">
+                                        <path d="M10.651 6.09826C11.0437 5.97584 11.3728 5.76554 11.6383 5.46736C11.9565 5.111 12.3765 5.02738 12.8346 5.02738C14.5001 5.02495 16.0886 5.3504 17.6001 6.00374C17.6284 6.01563 17.6536 6.03376 17.6738 6.05676C17.6939 6.07976 17.7085 6.10703 17.7165 6.13646C17.7759 6.35586 17.7928 6.5813 17.7674 6.81282C17.6631 7.74615 17.5159 8.69586 17.3256 9.66192C17.2856 9.86556 17.1619 9.96918 16.9546 9.97282L15.4819 10.0001C15.4019 10.0013 15.3619 10.0419 15.3619 10.1219L15.3583 17.9237C15.3584 17.9799 15.3393 18.0346 15.3039 18.0788C15.2686 18.1231 15.2192 18.1542 15.1637 18.1674C14.9977 18.2061 14.8195 18.2256 14.6292 18.2256C11.4328 18.2219 8.21465 18.2183 4.97465 18.2146C4.83404 18.2146 4.74434 18.1468 4.70556 18.011C4.67889 17.9177 4.66495 17.8249 4.66374 17.7328C4.65404 15.4213 4.65343 12.8946 4.66192 10.1528C4.66192 10.0571 4.61404 10.008 4.51828 10.0055L2.78555 9.96008C2.7104 9.95766 2.66737 9.91889 2.65646 9.84374C2.51828 8.87889 2.38555 7.97221 2.25828 7.12372C2.21586 6.84251 2.2098 6.55463 2.2401 6.26009C2.26919 5.96009 2.44919 5.96554 2.66737 5.87645C4.02252 5.32372 5.51101 5.04494 7.13283 5.04009C7.61465 5.03827 8.11283 5.12737 8.44192 5.52374C8.66495 5.79283 8.93586 5.98131 9.25465 6.08919C9.27395 6.09572 9.29463 6.09715 9.31465 6.09334C9.33468 6.08952 9.35337 6.08059 9.36893 6.06741C9.38448 6.05424 9.39637 6.03727 9.40342 6.01814C9.41048 5.99902 9.41246 5.9784 9.40919 5.95828C9.24555 4.88737 9.78919 4.31101 10.3237 3.5001C10.3531 3.45609 10.3702 3.40498 10.373 3.35213C10.3758 3.29927 10.3643 3.24662 10.3398 3.19974C10.3152 3.15285 10.2785 3.11345 10.2334 3.08568C10.1884 3.05791 10.1367 3.04279 10.0837 3.04191C10.0292 3.0407 9.97222 3.04858 9.91283 3.06555C9.8304 3.08979 9.76737 3.13826 9.72374 3.21099L9.34374 3.84735C9.30432 3.91365 9.24618 3.96682 9.17662 4.00014C9.10706 4.03347 9.02919 4.04546 8.95283 4.03463C8.34919 3.94736 8.32374 3.21645 8.51465 2.78008C9.01828 1.62372 10.5165 1.42918 11.2983 2.38191C11.731 2.90737 11.7565 3.80554 11.2819 4.34917C10.8601 4.83463 10.5546 5.35464 10.5401 6.01646C10.5401 6.02988 10.5432 6.04313 10.5492 6.05512C10.5553 6.06711 10.564 6.07749 10.5748 6.08546C10.5856 6.09343 10.5982 6.09875 10.6114 6.10097C10.6246 6.1032 10.6382 6.10226 10.651 6.09826ZM14.2856 8.86009C14.8116 8.74252 15.3674 8.70616 15.9528 8.75101C16.1589 8.76555 16.2813 8.67161 16.3201 8.46918C16.4159 7.96009 16.4595 7.45887 16.451 6.96554C16.4506 6.93476 16.4406 6.90488 16.4223 6.88009C16.404 6.85531 16.3785 6.83686 16.3492 6.82736C15.2134 6.45645 14.0637 6.27585 12.9001 6.28554C12.3674 6.291 11.9965 6.9201 11.5219 7.13828C10.1237 7.78374 8.83465 7.55099 7.70737 6.57463C6.93283 5.90372 4.5001 6.54373 3.63646 6.8401C3.59913 6.85291 3.56719 6.87814 3.54577 6.91176C3.52434 6.94538 3.51466 6.98546 3.51828 7.02556L3.65101 8.40919C3.67404 8.65161 3.80737 8.76555 4.05101 8.75101C4.63525 8.71464 5.1601 8.73585 5.62555 8.81464C5.6898 8.82555 5.73404 8.86069 5.75828 8.92009C5.83222 9.10675 5.8698 9.30555 5.87101 9.51646C5.88071 12.0292 5.88434 14.488 5.88192 16.8928C5.88192 16.9449 5.90737 16.971 5.95828 16.971H13.9983C14.0287 16.971 14.0578 16.9589 14.0793 16.9374C14.1008 16.916 14.1128 16.8868 14.1128 16.8565C14.1116 14.6322 14.111 12.4765 14.111 10.3892C14.1122 9.92131 14.1346 9.45222 14.1783 8.98192C14.1843 8.91525 14.2201 8.87464 14.2856 8.86009ZM4.98272 18.1066C5.00545 18.0972 5.022 18.0755 5.02872 18.0462C5.03544 18.0168 5.03178 17.9823 5.01855 17.9502C5.012 17.9343 5.0033 17.9195 4.99294 17.9066C4.98258 17.8937 4.97077 17.8829 4.95817 17.875C4.94558 17.867 4.93245 17.862 4.91954 17.8602C4.90663 17.8584 4.8942 17.8599 4.88294 17.8645C4.8602 17.8739 4.84366 17.8956 4.83693 17.9249C4.83021 17.9543 4.83387 17.9888 4.8471 18.0209C4.85365 18.0368 4.86235 18.0516 4.87272 18.0645C4.88308 18.0774 4.89489 18.0882 4.90748 18.0961C4.92008 18.1041 4.9332 18.1091 4.94611 18.1109C4.95902 18.1127 4.97146 18.1112 4.98272 18.1066ZM15.2365 17.9146C15.1346 17.8225 15.0504 17.8468 14.9837 17.9874C14.977 18.0022 14.975 18.0187 14.9781 18.0347C14.9812 18.0507 14.9892 18.0654 15.001 18.0766C15.0128 18.0878 15.0279 18.095 15.044 18.0973C15.0601 18.0995 15.0766 18.0967 15.091 18.0892L15.2219 18.0201C15.2313 18.0152 15.2394 18.0081 15.2456 17.9994C15.2517 17.9908 15.2556 17.9808 15.2571 17.9704C15.2585 17.96 15.2574 17.9495 15.2538 17.9398C15.2502 17.9301 15.2442 17.9214 15.2365 17.9146Z" fill="white"/>
+                                    </g>
+                                </svg>
+                                <div class="min--w--20 h--18 pad--x--4 gap--10 br--4 bg-white flex justify-center items-center">
+                                    <span class="db fs--12 fw6 lh--24 tracked--0-06 col--outer-space">1</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tab 3 -->
+                        <div class="flex-auto flex flex-column gap--4 elm_WeDkmC active">
+                            <div class="flex justify-center items-center gap--10 pad--5">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.00052 10.6204C8.08917 10.6732 7.18598 10.8293 6.30837 11.0859L6.19612 11.1188C4.2428 11.6901 2.90042 13.4814 2.90042 15.5165V15.8983C2.90042 16.7817 3.61656 17.4978 4.49996 17.4978H15.5C16.3834 17.4978 17.0996 16.7817 17.0996 15.8983V15.5019C17.0996 13.4737 15.745 11.6805 13.8007 11.1032C12.8095 10.8088 11.7765 10.6406 10.7423 10.6066C10.6119 10.6023 10.4815 10.6002 10.3512 10.6002H9.69953C9.46619 10.6002 9.23309 10.6069 9.00052 10.6204ZM9.09251 9.36491C9.29098 9.40906 9.49406 9.43567 9.69953 9.44381C9.74459 9.4456 9.78976 9.4465 9.83502 9.4465C10.0089 9.4465 10.1814 9.43326 10.3512 9.40733C10.4434 9.39325 10.5348 9.37542 10.6252 9.35395C11.2435 9.20711 11.8148 8.88952 12.2712 8.42953C12.9173 7.77837 13.2803 6.89522 13.2803 5.97435C13.2803 5.05348 12.9173 4.17032 12.2712 3.51917C11.6251 2.86801 10.7488 2.5022 9.83502 2.5022C8.92128 2.5022 8.04497 2.86801 7.39886 3.51917C6.75274 4.17032 6.38976 5.05348 6.38976 5.97435C6.38976 6.89522 6.75274 7.77837 7.39886 8.42953C7.867 8.90132 8.45599 9.22332 9.09251 9.36491ZM6.65902 12.2848L6.54677 12.3176C5.12595 12.7332 4.14951 14.0362 4.14951 15.5165V15.8983C4.14951 16.0918 4.30641 16.2487 4.49996 16.2487H15.5C15.6936 16.2487 15.8505 16.0918 15.8505 15.8983V15.5019C15.8505 14.0337 14.8662 12.7226 13.4451 12.3006C12.4432 12.0031 11.3939 11.8493 10.3512 11.8493H9.69953C8.67049 11.8493 7.64669 11.9959 6.65902 12.2848ZM9.83502 3.75129C9.25571 3.75129 8.69814 3.98312 8.28552 4.39897C7.87257 4.81514 7.63885 5.38164 7.63885 5.97435C7.63885 6.56706 7.87257 7.13355 8.28552 7.54973C8.69814 7.96557 9.25571 8.19741 9.83502 8.19741C10.4143 8.19741 10.9719 7.96557 11.3845 7.54973C11.7975 7.13356 12.0312 6.56706 12.0312 5.97435C12.0312 5.38164 11.7975 4.81514 11.3845 4.39897C10.9719 3.98312 10.4143 3.75129 9.83502 3.75129Z" fill="white"/>
+                                </svg>
+                                <div class="min--w--20 h--18 pad--x--4 gap--10 br--4 bg-white active-bg--col--light-warm-green flex justify-center items-center">
+                                    <span class="db fs--12 fw6 lh--24 tracked--0-06 col--outer-space">1</span>
+                                </div>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="2" viewBox="0 0 96 2" fill="none">
+                                <path d="M1 1H95" stroke="#9FFF02" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <!-- Body Content -->
+                    <div class="pad--8 bb br--col--black-green">
+                        <!-- Notify Item 1 -->
+                        <div class="pad--left--8 pr3 pv3 flex items-center gap--10 hover--bg--col--light-warm-green group cs--pointer tse--all"> 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="none">
+                                <circle cx="4" cy="4.5" r="4" fill="#9FFF02" class="hover-fill-warm-black tse--all"/>
+                            </svg>
+                            <!-- Notify Image -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                                <path class="hover-fill-warm-black tse--all" fill-rule="evenodd" clip-rule="evenodd" d="M9.0005 11.1204C8.08915 11.1732 7.18596 11.3293 6.30835 11.5859L6.1961 11.6188C4.24279 12.1901 2.90041 13.9814 2.90041 16.0165V16.3983C2.90041 17.2817 3.61654 17.9978 4.49994 17.9978H15.5C16.3834 17.9978 17.0996 17.2817 17.0996 16.3983V16.0019C17.0996 13.9737 15.7449 12.1805 13.8006 11.6032C12.8095 11.3088 11.7765 11.1406 10.7422 11.1066C10.6119 11.1023 10.4815 11.1002 10.3512 11.1002H9.69952C9.46618 11.1002 9.23307 11.1069 9.0005 11.1204ZM9.0925 9.86491C9.29096 9.90906 9.49404 9.93567 9.69952 9.94381C9.74458 9.9456 9.78975 9.9465 9.83501 9.9465C10.0089 9.9465 10.1813 9.93326 10.3512 9.90733C10.4434 9.89325 10.5348 9.87542 10.6252 9.85395C11.2434 9.70711 11.8148 9.38952 12.2712 8.92953C12.9173 8.27837 13.2803 7.39522 13.2803 6.47435C13.2803 5.55348 12.9173 4.67032 12.2712 4.01917C11.6251 3.36801 10.7488 3.0022 9.83501 3.0022C8.92127 3.0022 8.04495 3.36801 7.39884 4.01917C6.75273 4.67032 6.38974 5.55348 6.38974 6.47435C6.38974 7.39522 6.75273 8.27837 7.39884 8.92953C7.86698 9.40132 8.45598 9.72332 9.0925 9.86491ZM6.659 12.7848L6.54675 12.8176C5.12593 13.2332 4.1495 14.5362 4.1495 16.0165V16.3983C4.1495 16.5918 4.3064 16.7487 4.49994 16.7487H15.5C15.6936 16.7487 15.8505 16.5918 15.8505 16.3983V16.0019C15.8505 14.5337 14.8662 13.2226 13.4451 12.8006C12.4432 12.5031 11.3939 12.3493 10.3512 12.3493H9.69952C8.67047 12.3493 7.64667 12.4959 6.659 12.7848ZM9.83501 4.25129C9.2557 4.25129 8.69813 4.48312 8.28551 4.89897C7.87256 5.31514 7.63884 5.88164 7.63884 6.47435C7.63884 7.06706 7.87256 7.63355 8.28551 8.04973C8.69813 8.46557 9.2557 8.69741 9.83501 8.69741C10.4143 8.69741 10.9719 8.46557 11.3845 8.04973C11.7975 7.63356 12.0312 7.06706 12.0312 6.47435C12.0312 5.88164 11.7975 5.31514 11.3845 4.89897C10.9719 4.48312 10.4143 4.25129 9.83501 4.25129Z" fill="white"/>
+                            </svg>
+                            <!-- Notify Details -->
+                            <div class="w--20 flex flex-column gap--4 flex-auto">
+                                <!-- Notify Info -->
+                                <div class="flex items-center gap--4">
+                                    <!-- Notify Text -->
+                                    <p class="fs--14 fw5 lh--normal tracked--0-06 white hover--col-black tse--all">Email Validation is not finished yet.</p> 
+                                </div>
+                                <!-- Notify Date -->
+                                <p class="fs--12 fw5 lh--normal white tracked--0-06 hover--col-black tse--all">Nov 29, 2023 5:44pm</p>
+                            </div>
+                        </div>
+                        <!-- Notify Item 2 -->
+                        <div class="pad--left--8 pr3 pv3 flex items-center gap--10 hover--bg--col--light-warm-green group cs--pointer tse--all"> 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="none">
+                                <circle cx="4" cy="4.5" r="3.5" stroke="white" class="hover-fill-warm-black hover-stroke-warm-black tse--all"/>
+                            </svg>
+                            <!-- Notify Image -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                                <g opacity="0.7">
+                                <path class="hover-fill-warm-black tse--all" fill-rule="evenodd" clip-rule="evenodd" d="M9.0005 11.1204C8.08915 11.1732 7.18596 11.3293 6.30835 11.5859L6.1961 11.6188C4.24279 12.1901 2.90041 13.9814 2.90041 16.0165V16.3983C2.90041 17.2817 3.61654 17.9978 4.49994 17.9978H15.5C16.3834 17.9978 17.0996 17.2817 17.0996 16.3983V16.0019C17.0996 13.9737 15.7449 12.1805 13.8006 11.6032C12.8095 11.3088 11.7765 11.1406 10.7422 11.1066C10.6119 11.1023 10.4815 11.1002 10.3512 11.1002H9.69952C9.46618 11.1002 9.23307 11.1069 9.0005 11.1204ZM9.0925 9.86491C9.29096 9.90906 9.49404 9.93567 9.69952 9.94381C9.74458 9.9456 9.78975 9.9465 9.83501 9.9465C10.0089 9.9465 10.1813 9.93326 10.3512 9.90733C10.4434 9.89325 10.5348 9.87542 10.6252 9.85395C11.2434 9.70711 11.8148 9.38952 12.2712 8.92953C12.9173 8.27837 13.2803 7.39522 13.2803 6.47435C13.2803 5.55348 12.9173 4.67032 12.2712 4.01917C11.6251 3.36801 10.7488 3.0022 9.83501 3.0022C8.92127 3.0022 8.04495 3.36801 7.39884 4.01917C6.75273 4.67032 6.38974 5.55348 6.38974 6.47435C6.38974 7.39522 6.75273 8.27837 7.39884 8.92953C7.86698 9.40132 8.45598 9.72332 9.0925 9.86491ZM6.659 12.7848L6.54675 12.8176C5.12593 13.2332 4.1495 14.5362 4.1495 16.0165V16.3983C4.1495 16.5918 4.3064 16.7487 4.49994 16.7487H15.5C15.6936 16.7487 15.8505 16.5918 15.8505 16.3983V16.0019C15.8505 14.5337 14.8662 13.2226 13.4451 12.8006C12.4432 12.5031 11.3939 12.3493 10.3512 12.3493H9.69952C8.67047 12.3493 7.64667 12.4959 6.659 12.7848ZM9.83501 4.25129C9.2557 4.25129 8.69813 4.48312 8.28551 4.89897C7.87256 5.31514 7.63884 5.88164 7.63884 6.47435C7.63884 7.06706 7.87256 7.63355 8.28551 8.04973C8.69813 8.46557 9.2557 8.69741 9.83501 8.69741C10.4143 8.69741 10.9719 8.46557 11.3845 8.04973C11.7975 7.63356 12.0312 7.06706 12.0312 6.47435C12.0312 5.88164 11.7975 5.31514 11.3845 4.89897C10.9719 4.48312 10.4143 4.25129 9.83501 4.25129Z" fill="white"/>
+                                </g>
+                                </svg>
+                            <!-- Notify Details -->
+                            <div class="w--20 flex flex-column gap--4 flex-auto">
+                                <!-- Notify Info -->
+                                <div class="flex items-center gap--4">
+                                    <!-- Notify Text -->
+                                    <p class="fs--14 fw4 lh--normal tracked--0-06 white hover--col-black tse--all o-70">Email Validation is not finished yet.</p> 
+                                </div>
+                                <!-- Notify Date -->
+                                <p class="fs--12 fw4 lh--normal white tracked--0-06 hover--col-black tse--all o-70">Nov 29, 2023 5:44pm</p>
+                            </div>
+                        </div>
+                        <!-- Notify Item 3 -->
+                        <div class="pad--left--8 pr3 pv3 flex items-center gap--10 hover--bg--col--light-warm-green group cs--pointer tse--all"> 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="none">
+                                <circle cx="4" cy="4.5" r="3.5" stroke="white" class="hover-fill-warm-black hover-stroke-warm-black tse--all"/>
+                            </svg>
+                            <!-- Notify Image -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                                <g opacity="0.7">
+                                <path class="hover-fill-warm-black tse--all" fill-rule="evenodd" clip-rule="evenodd" d="M9.0005 11.1204C8.08915 11.1732 7.18596 11.3293 6.30835 11.5859L6.1961 11.6188C4.24279 12.1901 2.90041 13.9814 2.90041 16.0165V16.3983C2.90041 17.2817 3.61654 17.9978 4.49994 17.9978H15.5C16.3834 17.9978 17.0996 17.2817 17.0996 16.3983V16.0019C17.0996 13.9737 15.7449 12.1805 13.8006 11.6032C12.8095 11.3088 11.7765 11.1406 10.7422 11.1066C10.6119 11.1023 10.4815 11.1002 10.3512 11.1002H9.69952C9.46618 11.1002 9.23307 11.1069 9.0005 11.1204ZM9.0925 9.86491C9.29096 9.90906 9.49404 9.93567 9.69952 9.94381C9.74458 9.9456 9.78975 9.9465 9.83501 9.9465C10.0089 9.9465 10.1813 9.93326 10.3512 9.90733C10.4434 9.89325 10.5348 9.87542 10.6252 9.85395C11.2434 9.70711 11.8148 9.38952 12.2712 8.92953C12.9173 8.27837 13.2803 7.39522 13.2803 6.47435C13.2803 5.55348 12.9173 4.67032 12.2712 4.01917C11.6251 3.36801 10.7488 3.0022 9.83501 3.0022C8.92127 3.0022 8.04495 3.36801 7.39884 4.01917C6.75273 4.67032 6.38974 5.55348 6.38974 6.47435C6.38974 7.39522 6.75273 8.27837 7.39884 8.92953C7.86698 9.40132 8.45598 9.72332 9.0925 9.86491ZM6.659 12.7848L6.54675 12.8176C5.12593 13.2332 4.1495 14.5362 4.1495 16.0165V16.3983C4.1495 16.5918 4.3064 16.7487 4.49994 16.7487H15.5C15.6936 16.7487 15.8505 16.5918 15.8505 16.3983V16.0019C15.8505 14.5337 14.8662 13.2226 13.4451 12.8006C12.4432 12.5031 11.3939 12.3493 10.3512 12.3493H9.69952C8.67047 12.3493 7.64667 12.4959 6.659 12.7848ZM9.83501 4.25129C9.2557 4.25129 8.69813 4.48312 8.28551 4.89897C7.87256 5.31514 7.63884 5.88164 7.63884 6.47435C7.63884 7.06706 7.87256 7.63355 8.28551 8.04973C8.69813 8.46557 9.2557 8.69741 9.83501 8.69741C10.4143 8.69741 10.9719 8.46557 11.3845 8.04973C11.7975 7.63356 12.0312 7.06706 12.0312 6.47435C12.0312 5.88164 11.7975 5.31514 11.3845 4.89897C10.9719 4.48312 10.4143 4.25129 9.83501 4.25129Z" fill="white"/>
+                                </g>
+                                </svg>
+                            <!-- Notify Details -->
+                            <div class="w--20 flex flex-column gap--4 flex-auto">
+                                <!-- Notify Info -->
+                                <div class="flex items-center gap--4">
+                                    <!-- Notify Text -->
+                                    <p class="fs--14 fw4 lh--normal tracked--0-06 white hover--col-black tse--all o-70">You need to update your stream settings.</p> 
+                                </div>
+                                <!-- Notify Date -->
+                                <p class="fs--12 fw4 lh--normal white tracked--0-06 hover--col-black tse--all o-70">Nov 29, 2023 5:44pm</p>
+                            </div>
+                        </div>
+                        <!-- Notify Item 4 -->
+                        <div class="pad--left--8 pr3 pv3 flex items-center gap--10 hover--bg--col--light-warm-green group cs--pointer tse--all"> 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="none">
+                                <circle cx="4" cy="4.5" r="4" fill="#9FFF02" class="hover-fill-warm-black hover-stroke-warm-black tse--all"/>
+                            </svg>
+                            <!-- Notify Image -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                                <g opacity="0.7">
+                                <path class="hover-fill-warm-black tse--all" fill-rule="evenodd" clip-rule="evenodd" d="M9.0005 11.1204C8.08915 11.1732 7.18596 11.3293 6.30835 11.5859L6.1961 11.6188C4.24279 12.1901 2.90041 13.9814 2.90041 16.0165V16.3983C2.90041 17.2817 3.61654 17.9978 4.49994 17.9978H15.5C16.3834 17.9978 17.0996 17.2817 17.0996 16.3983V16.0019C17.0996 13.9737 15.7449 12.1805 13.8006 11.6032C12.8095 11.3088 11.7765 11.1406 10.7422 11.1066C10.6119 11.1023 10.4815 11.1002 10.3512 11.1002H9.69952C9.46618 11.1002 9.23307 11.1069 9.0005 11.1204ZM9.0925 9.86491C9.29096 9.90906 9.49404 9.93567 9.69952 9.94381C9.74458 9.9456 9.78975 9.9465 9.83501 9.9465C10.0089 9.9465 10.1813 9.93326 10.3512 9.90733C10.4434 9.89325 10.5348 9.87542 10.6252 9.85395C11.2434 9.70711 11.8148 9.38952 12.2712 8.92953C12.9173 8.27837 13.2803 7.39522 13.2803 6.47435C13.2803 5.55348 12.9173 4.67032 12.2712 4.01917C11.6251 3.36801 10.7488 3.0022 9.83501 3.0022C8.92127 3.0022 8.04495 3.36801 7.39884 4.01917C6.75273 4.67032 6.38974 5.55348 6.38974 6.47435C6.38974 7.39522 6.75273 8.27837 7.39884 8.92953C7.86698 9.40132 8.45598 9.72332 9.0925 9.86491ZM6.659 12.7848L6.54675 12.8176C5.12593 13.2332 4.1495 14.5362 4.1495 16.0165V16.3983C4.1495 16.5918 4.3064 16.7487 4.49994 16.7487H15.5C15.6936 16.7487 15.8505 16.5918 15.8505 16.3983V16.0019C15.8505 14.5337 14.8662 13.2226 13.4451 12.8006C12.4432 12.5031 11.3939 12.3493 10.3512 12.3493H9.69952C8.67047 12.3493 7.64667 12.4959 6.659 12.7848ZM9.83501 4.25129C9.2557 4.25129 8.69813 4.48312 8.28551 4.89897C7.87256 5.31514 7.63884 5.88164 7.63884 6.47435C7.63884 7.06706 7.87256 7.63355 8.28551 8.04973C8.69813 8.46557 9.2557 8.69741 9.83501 8.69741C10.4143 8.69741 10.9719 8.46557 11.3845 8.04973C11.7975 7.63356 12.0312 7.06706 12.0312 6.47435C12.0312 5.88164 11.7975 5.31514 11.3845 4.89897C10.9719 4.48312 10.4143 4.25129 9.83501 4.25129Z" fill="white"/>
+                                </g>
+                                </svg>
+                            <!-- Notify Details -->
+                            <div class="w--20 flex flex-column gap--4 flex-auto">
+                                <!-- Notify Info -->
+                                <div class="flex items-center gap--4">
+                                    <!-- Notify Text -->
+                                    <p class="fs--14 fw4 lh--normal tracked--0-06 white hover--col-black tse--all o-70">This notification is important, please pay attention.</p> 
+                                </div>
+                                <!-- Notify Date -->
+                                <p class="fs--12 fw4 lh--normal white tracked--0-06 hover--col-black tse--all o-70">Nov 29, 2023 5:44pm</p>
+                            </div>
+                        </div>
+                        <!-- Notify Item 5 -->
+                        <div class="pad--left--8 pr3 pv3 flex items-center gap--10 hover--bg--col--light-warm-green group cs--pointer tse--all"> 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="none">
+                                <circle cx="4" cy="4.5" r="3.5" stroke="white" class="hover-fill-warm-black hover-stroke-warm-black tse--all"/>
+                            </svg>
+                            <!-- Notify Image -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                                <g opacity="0.7">
+                                <path class="hover-fill-warm-black tse--all" fill-rule="evenodd" clip-rule="evenodd" d="M9.0005 11.1204C8.08915 11.1732 7.18596 11.3293 6.30835 11.5859L6.1961 11.6188C4.24279 12.1901 2.90041 13.9814 2.90041 16.0165V16.3983C2.90041 17.2817 3.61654 17.9978 4.49994 17.9978H15.5C16.3834 17.9978 17.0996 17.2817 17.0996 16.3983V16.0019C17.0996 13.9737 15.7449 12.1805 13.8006 11.6032C12.8095 11.3088 11.7765 11.1406 10.7422 11.1066C10.6119 11.1023 10.4815 11.1002 10.3512 11.1002H9.69952C9.46618 11.1002 9.23307 11.1069 9.0005 11.1204ZM9.0925 9.86491C9.29096 9.90906 9.49404 9.93567 9.69952 9.94381C9.74458 9.9456 9.78975 9.9465 9.83501 9.9465C10.0089 9.9465 10.1813 9.93326 10.3512 9.90733C10.4434 9.89325 10.5348 9.87542 10.6252 9.85395C11.2434 9.70711 11.8148 9.38952 12.2712 8.92953C12.9173 8.27837 13.2803 7.39522 13.2803 6.47435C13.2803 5.55348 12.9173 4.67032 12.2712 4.01917C11.6251 3.36801 10.7488 3.0022 9.83501 3.0022C8.92127 3.0022 8.04495 3.36801 7.39884 4.01917C6.75273 4.67032 6.38974 5.55348 6.38974 6.47435C6.38974 7.39522 6.75273 8.27837 7.39884 8.92953C7.86698 9.40132 8.45598 9.72332 9.0925 9.86491ZM6.659 12.7848L6.54675 12.8176C5.12593 13.2332 4.1495 14.5362 4.1495 16.0165V16.3983C4.1495 16.5918 4.3064 16.7487 4.49994 16.7487H15.5C15.6936 16.7487 15.8505 16.5918 15.8505 16.3983V16.0019C15.8505 14.5337 14.8662 13.2226 13.4451 12.8006C12.4432 12.5031 11.3939 12.3493 10.3512 12.3493H9.69952C8.67047 12.3493 7.64667 12.4959 6.659 12.7848ZM9.83501 4.25129C9.2557 4.25129 8.69813 4.48312 8.28551 4.89897C7.87256 5.31514 7.63884 5.88164 7.63884 6.47435C7.63884 7.06706 7.87256 7.63355 8.28551 8.04973C8.69813 8.46557 9.2557 8.69741 9.83501 8.69741C10.4143 8.69741 10.9719 8.46557 11.3845 8.04973C11.7975 7.63356 12.0312 7.06706 12.0312 6.47435C12.0312 5.88164 11.7975 5.31514 11.3845 4.89897C10.9719 4.48312 10.4143 4.25129 9.83501 4.25129Z" fill="white"/>
+                                </g>
+                                </svg>
+                            <!-- Notify Details -->
+                            <div class="w--20 flex flex-column gap--4 flex-auto">
+                                <!-- Notify Info -->
+                                <div class="flex items-center gap--4">
+                                    <!-- Notify Text -->
+                                    <p class="fs--14 fw4 lh--normal tracked--0-06 white hover--col-black tse--all o-70">Please add your billing information.</p> 
+                                </div>
+                                <!-- Notify Date -->
+                                <p class="fs--12 fw4 lh--normal white tracked--0-06 hover--col-black tse--all o-70">Nov 29, 2023 5:44pm</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Footer -->
+                    <div class="pad--x--8 flex gap--10 flex-column">
+                        <a href="#" class="pad--8 tc">
+                            <span class="db fs--14 fw5 lh--24 col--light-warm-green ttc tracked--0-35 hover-underline">All notifications</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="fl mr4">
+                <!-- Custom Request Notification -->
+                <div class="w--344 bg-black-70 br--10 sh--7 bg--blur--25 pad--y--8 flex flex-column gap--8">
+                    <!-- Header -->
+                    <div class="pad--x--8 gap--23 flex flex-start"> 
+                        <!-- Tab 1 -->
+                        <div class="flex-auto flex flex-column gap--4 elm_WeDkmC">
+                            <div class="flex justify-center items-center gap--10 pad--5">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <g opacity="0.7">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1.66672 4.32609C1.66593 4.25488 1.67515 4.1833 1.69468 4.11362C1.72575 4.0026 1.78148 3.90188 1.85559 3.81773C1.99441 3.66011 2.19774 3.56067 2.42429 3.56067H17.5751C17.7064 3.56067 17.8304 3.59405 17.9381 3.65278C18.0141 3.69409 18.0839 3.74903 18.1438 3.81703C18.2136 3.89602 18.2671 3.98967 18.2992 4.09277C18.3029 4.10469 18.3063 4.11674 18.3094 4.12891C18.3261 4.19366 18.334 4.25988 18.3333 4.32579V15.6818C18.3333 16.1002 17.9941 16.4394 17.5757 16.4394H2.42429C2.00589 16.4394 1.66672 16.1002 1.66672 15.6818V4.32609ZM3.18186 5.83343V14.9242H16.8182V5.83343L10.4545 10.6061C10.1852 10.8081 9.81482 10.8081 9.54546 10.6061L3.18186 5.83343ZM15.3031 5.07581H4.69694L10 9.05311L15.3031 5.07581Z" fill="white"/>
+                                    </g>
+                                </svg>
+                                <div class="min--w--20 h--18 pad--x--4 gap--10 br--4 bg--col--light-warm-green flex justify-center items-center">
+                                    <span class="db fs--12 fw6 lh--24 tracked--0-06 col--outer-space">2</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tab 2 -->
+                        <div class="flex-auto flex flex-column gap--4 elm_WeDkmC active">
+                            <div class="flex justify-center items-center gap--10 pad--5">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <g opacity="0.7">
+                                        <path d="M10.651 6.09826C11.0437 5.97584 11.3728 5.76554 11.6383 5.46736C11.9565 5.111 12.3765 5.02738 12.8346 5.02738C14.5001 5.02495 16.0886 5.3504 17.6001 6.00374C17.6284 6.01563 17.6536 6.03376 17.6738 6.05676C17.6939 6.07976 17.7085 6.10703 17.7165 6.13646C17.7759 6.35586 17.7928 6.5813 17.7674 6.81282C17.6631 7.74615 17.5159 8.69586 17.3256 9.66192C17.2856 9.86556 17.1619 9.96918 16.9546 9.97282L15.4819 10.0001C15.4019 10.0013 15.3619 10.0419 15.3619 10.1219L15.3583 17.9237C15.3584 17.9799 15.3393 18.0346 15.3039 18.0788C15.2686 18.1231 15.2192 18.1542 15.1637 18.1674C14.9977 18.2061 14.8195 18.2256 14.6292 18.2256C11.4328 18.2219 8.21465 18.2183 4.97465 18.2146C4.83404 18.2146 4.74434 18.1468 4.70556 18.011C4.67889 17.9177 4.66495 17.8249 4.66374 17.7328C4.65404 15.4213 4.65343 12.8946 4.66192 10.1528C4.66192 10.0571 4.61404 10.008 4.51828 10.0055L2.78555 9.96008C2.7104 9.95766 2.66737 9.91889 2.65646 9.84374C2.51828 8.87889 2.38555 7.97221 2.25828 7.12372C2.21586 6.84251 2.2098 6.55463 2.2401 6.26009C2.26919 5.96009 2.44919 5.96554 2.66737 5.87645C4.02252 5.32372 5.51101 5.04494 7.13283 5.04009C7.61465 5.03827 8.11283 5.12737 8.44192 5.52374C8.66495 5.79283 8.93586 5.98131 9.25465 6.08919C9.27395 6.09572 9.29463 6.09715 9.31465 6.09334C9.33468 6.08952 9.35337 6.08059 9.36893 6.06741C9.38448 6.05424 9.39637 6.03727 9.40342 6.01814C9.41048 5.99902 9.41246 5.9784 9.40919 5.95828C9.24555 4.88737 9.78919 4.31101 10.3237 3.5001C10.3531 3.45609 10.3702 3.40498 10.373 3.35213C10.3758 3.29927 10.3643 3.24662 10.3398 3.19974C10.3152 3.15285 10.2785 3.11345 10.2334 3.08568C10.1884 3.05791 10.1367 3.04279 10.0837 3.04191C10.0292 3.0407 9.97222 3.04858 9.91283 3.06555C9.8304 3.08979 9.76737 3.13826 9.72374 3.21099L9.34374 3.84735C9.30432 3.91365 9.24618 3.96682 9.17662 4.00014C9.10706 4.03347 9.02919 4.04546 8.95283 4.03463C8.34919 3.94736 8.32374 3.21645 8.51465 2.78008C9.01828 1.62372 10.5165 1.42918 11.2983 2.38191C11.731 2.90737 11.7565 3.80554 11.2819 4.34917C10.8601 4.83463 10.5546 5.35464 10.5401 6.01646C10.5401 6.02988 10.5432 6.04313 10.5492 6.05512C10.5553 6.06711 10.564 6.07749 10.5748 6.08546C10.5856 6.09343 10.5982 6.09875 10.6114 6.10097C10.6246 6.1032 10.6382 6.10226 10.651 6.09826ZM14.2856 8.86009C14.8116 8.74252 15.3674 8.70616 15.9528 8.75101C16.1589 8.76555 16.2813 8.67161 16.3201 8.46918C16.4159 7.96009 16.4595 7.45887 16.451 6.96554C16.4506 6.93476 16.4406 6.90488 16.4223 6.88009C16.404 6.85531 16.3785 6.83686 16.3492 6.82736C15.2134 6.45645 14.0637 6.27585 12.9001 6.28554C12.3674 6.291 11.9965 6.9201 11.5219 7.13828C10.1237 7.78374 8.83465 7.55099 7.70737 6.57463C6.93283 5.90372 4.5001 6.54373 3.63646 6.8401C3.59913 6.85291 3.56719 6.87814 3.54577 6.91176C3.52434 6.94538 3.51466 6.98546 3.51828 7.02556L3.65101 8.40919C3.67404 8.65161 3.80737 8.76555 4.05101 8.75101C4.63525 8.71464 5.1601 8.73585 5.62555 8.81464C5.6898 8.82555 5.73404 8.86069 5.75828 8.92009C5.83222 9.10675 5.8698 9.30555 5.87101 9.51646C5.88071 12.0292 5.88434 14.488 5.88192 16.8928C5.88192 16.9449 5.90737 16.971 5.95828 16.971H13.9983C14.0287 16.971 14.0578 16.9589 14.0793 16.9374C14.1008 16.916 14.1128 16.8868 14.1128 16.8565C14.1116 14.6322 14.111 12.4765 14.111 10.3892C14.1122 9.92131 14.1346 9.45222 14.1783 8.98192C14.1843 8.91525 14.2201 8.87464 14.2856 8.86009ZM4.98272 18.1066C5.00545 18.0972 5.022 18.0755 5.02872 18.0462C5.03544 18.0168 5.03178 17.9823 5.01855 17.9502C5.012 17.9343 5.0033 17.9195 4.99294 17.9066C4.98258 17.8937 4.97077 17.8829 4.95817 17.875C4.94558 17.867 4.93245 17.862 4.91954 17.8602C4.90663 17.8584 4.8942 17.8599 4.88294 17.8645C4.8602 17.8739 4.84366 17.8956 4.83693 17.9249C4.83021 17.9543 4.83387 17.9888 4.8471 18.0209C4.85365 18.0368 4.86235 18.0516 4.87272 18.0645C4.88308 18.0774 4.89489 18.0882 4.90748 18.0961C4.92008 18.1041 4.9332 18.1091 4.94611 18.1109C4.95902 18.1127 4.97146 18.1112 4.98272 18.1066ZM15.2365 17.9146C15.1346 17.8225 15.0504 17.8468 14.9837 17.9874C14.977 18.0022 14.975 18.0187 14.9781 18.0347C14.9812 18.0507 14.9892 18.0654 15.001 18.0766C15.0128 18.0878 15.0279 18.095 15.044 18.0973C15.0601 18.0995 15.0766 18.0967 15.091 18.0892L15.2219 18.0201C15.2313 18.0152 15.2394 18.0081 15.2456 17.9994C15.2517 17.9908 15.2556 17.9808 15.2571 17.9704C15.2585 17.96 15.2574 17.9495 15.2538 17.9398C15.2502 17.9301 15.2442 17.9214 15.2365 17.9146Z" fill="white"/>
+                                    </g>
+                                </svg>
+                                <div class="min--w--20 h--18 pad--x--4 gap--10 br--4 bg-white active-bg--col--light-warm-green flex justify-center items-center">
+                                    <span class="db fs--12 fw6 lh--24 tracked--0-06 col--outer-space">1</span>
+                                </div>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="2" viewBox="0 0 96 2" fill="none">
+                                <path d="M1 1H95" stroke="#9FFF02" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <!-- Tab 3 -->
+                        <div class="flex-auto flex flex-column gap--4 elm_WeDkmC">
+                            <div class="flex justify-center items-center gap--10 pad--5">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.00052 10.6204C8.08917 10.6732 7.18598 10.8293 6.30837 11.0859L6.19612 11.1188C4.2428 11.6901 2.90042 13.4814 2.90042 15.5165V15.8983C2.90042 16.7817 3.61656 17.4978 4.49996 17.4978H15.5C16.3834 17.4978 17.0996 16.7817 17.0996 15.8983V15.5019C17.0996 13.4737 15.745 11.6805 13.8007 11.1032C12.8095 10.8088 11.7765 10.6406 10.7423 10.6066C10.6119 10.6023 10.4815 10.6002 10.3512 10.6002H9.69953C9.46619 10.6002 9.23309 10.6069 9.00052 10.6204ZM9.09251 9.36491C9.29098 9.40906 9.49406 9.43567 9.69953 9.44381C9.74459 9.4456 9.78976 9.4465 9.83502 9.4465C10.0089 9.4465 10.1814 9.43326 10.3512 9.40733C10.4434 9.39325 10.5348 9.37542 10.6252 9.35395C11.2435 9.20711 11.8148 8.88952 12.2712 8.42953C12.9173 7.77837 13.2803 6.89522 13.2803 5.97435C13.2803 5.05348 12.9173 4.17032 12.2712 3.51917C11.6251 2.86801 10.7488 2.5022 9.83502 2.5022C8.92128 2.5022 8.04497 2.86801 7.39886 3.51917C6.75274 4.17032 6.38976 5.05348 6.38976 5.97435C6.38976 6.89522 6.75274 7.77837 7.39886 8.42953C7.867 8.90132 8.45599 9.22332 9.09251 9.36491ZM6.65902 12.2848L6.54677 12.3176C5.12595 12.7332 4.14951 14.0362 4.14951 15.5165V15.8983C4.14951 16.0918 4.30641 16.2487 4.49996 16.2487H15.5C15.6936 16.2487 15.8505 16.0918 15.8505 15.8983V15.5019C15.8505 14.0337 14.8662 12.7226 13.4451 12.3006C12.4432 12.0031 11.3939 11.8493 10.3512 11.8493H9.69953C8.67049 11.8493 7.64669 11.9959 6.65902 12.2848ZM9.83502 3.75129C9.25571 3.75129 8.69814 3.98312 8.28552 4.39897C7.87257 4.81514 7.63885 5.38164 7.63885 5.97435C7.63885 6.56706 7.87257 7.13355 8.28552 7.54973C8.69814 7.96557 9.25571 8.19741 9.83502 8.19741C10.4143 8.19741 10.9719 7.96557 11.3845 7.54973C11.7975 7.13356 12.0312 6.56706 12.0312 5.97435C12.0312 5.38164 11.7975 4.81514 11.3845 4.39897C10.9719 3.98312 10.4143 3.75129 9.83502 3.75129Z" fill="white"/>
+                                </svg>
+                                <div class="min--w--20 h--18 pad--x--4 gap--10 br--4 bg-white active-bg--col--light-warm-green flex justify-center items-center">
+                                    <span class="db fs--12 fw6 lh--24 tracked--0-06 col--outer-space">1</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Body Content -->
+                    <div class="pad--8 bb br--col--black-green">
+                        <!-- Notify Item 1 -->
+                        <div class="pad--left--8 pr3 pv3 flex items-center gap--10 hover--bg--col--light-warm-green group cs--pointer tse--all"> 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="none">
+                                <circle cx="4" cy="4.5" r="4" fill="#9FFF02" class="hover-fill-warm-black tse--all"/>
+                            </svg>
+                            <!-- Notify Image -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                                <path class="hover-fill-warm-black tse--all" fill-rule="evenodd" clip-rule="evenodd" d="M9.0005 11.1204C8.08915 11.1732 7.18596 11.3293 6.30835 11.5859L6.1961 11.6188C4.24279 12.1901 2.90041 13.9814 2.90041 16.0165V16.3983C2.90041 17.2817 3.61654 17.9978 4.49994 17.9978H15.5C16.3834 17.9978 17.0996 17.2817 17.0996 16.3983V16.0019C17.0996 13.9737 15.7449 12.1805 13.8006 11.6032C12.8095 11.3088 11.7765 11.1406 10.7422 11.1066C10.6119 11.1023 10.4815 11.1002 10.3512 11.1002H9.69952C9.46618 11.1002 9.23307 11.1069 9.0005 11.1204ZM9.0925 9.86491C9.29096 9.90906 9.49404 9.93567 9.69952 9.94381C9.74458 9.9456 9.78975 9.9465 9.83501 9.9465C10.0089 9.9465 10.1813 9.93326 10.3512 9.90733C10.4434 9.89325 10.5348 9.87542 10.6252 9.85395C11.2434 9.70711 11.8148 9.38952 12.2712 8.92953C12.9173 8.27837 13.2803 7.39522 13.2803 6.47435C13.2803 5.55348 12.9173 4.67032 12.2712 4.01917C11.6251 3.36801 10.7488 3.0022 9.83501 3.0022C8.92127 3.0022 8.04495 3.36801 7.39884 4.01917C6.75273 4.67032 6.38974 5.55348 6.38974 6.47435C6.38974 7.39522 6.75273 8.27837 7.39884 8.92953C7.86698 9.40132 8.45598 9.72332 9.0925 9.86491ZM6.659 12.7848L6.54675 12.8176C5.12593 13.2332 4.1495 14.5362 4.1495 16.0165V16.3983C4.1495 16.5918 4.3064 16.7487 4.49994 16.7487H15.5C15.6936 16.7487 15.8505 16.5918 15.8505 16.3983V16.0019C15.8505 14.5337 14.8662 13.2226 13.4451 12.8006C12.4432 12.5031 11.3939 12.3493 10.3512 12.3493H9.69952C8.67047 12.3493 7.64667 12.4959 6.659 12.7848ZM9.83501 4.25129C9.2557 4.25129 8.69813 4.48312 8.28551 4.89897C7.87256 5.31514 7.63884 5.88164 7.63884 6.47435C7.63884 7.06706 7.87256 7.63355 8.28551 8.04973C8.69813 8.46557 9.2557 8.69741 9.83501 8.69741C10.4143 8.69741 10.9719 8.46557 11.3845 8.04973C11.7975 7.63356 12.0312 7.06706 12.0312 6.47435C12.0312 5.88164 11.7975 5.31514 11.3845 4.89897C10.9719 4.48312 10.4143 4.25129 9.83501 4.25129Z" fill="white"/>
+                            </svg>
+                            <!-- Notify Details -->
+                            <div class="w--20 flex flex-column gap--4 flex-auto">
+                                <!-- Notify Info -->
+                                <div class="flex items-center gap--4">
+                                    <!-- Notify Text -->
+                                    <p class="fs--14 fw5 lh--normal tracked--0-06 white hover--col-black tse--all">You received a new order. Order ID is 3633.</p> 
+                                </div>
+                                <!-- Notify Date -->
+                                <p class="fs--12 fw5 lh--normal white tracked--0-06 hover--col-black tse--all">Nov 29, 2023 5:44pm</p>
+                            </div>
+                        </div>
+                        <!-- Notify Item 2 -->
+                        <div class="pad--left--8 pr3 pv3 flex items-center gap--10 hover--bg--col--light-warm-green group cs--pointer tse--all"> 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="none">
+                                <circle cx="4" cy="4.5" r="4" fill="#9FFF02" class="hover-fill-warm-black tse--all"/>
+                            </svg>
+                            <!-- Notify Image -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                                <g opacity="0.7">
+                                <path class="hover-fill-warm-black tse--all" fill-rule="evenodd" clip-rule="evenodd" d="M9.0005 11.1204C8.08915 11.1732 7.18596 11.3293 6.30835 11.5859L6.1961 11.6188C4.24279 12.1901 2.90041 13.9814 2.90041 16.0165V16.3983C2.90041 17.2817 3.61654 17.9978 4.49994 17.9978H15.5C16.3834 17.9978 17.0996 17.2817 17.0996 16.3983V16.0019C17.0996 13.9737 15.7449 12.1805 13.8006 11.6032C12.8095 11.3088 11.7765 11.1406 10.7422 11.1066C10.6119 11.1023 10.4815 11.1002 10.3512 11.1002H9.69952C9.46618 11.1002 9.23307 11.1069 9.0005 11.1204ZM9.0925 9.86491C9.29096 9.90906 9.49404 9.93567 9.69952 9.94381C9.74458 9.9456 9.78975 9.9465 9.83501 9.9465C10.0089 9.9465 10.1813 9.93326 10.3512 9.90733C10.4434 9.89325 10.5348 9.87542 10.6252 9.85395C11.2434 9.70711 11.8148 9.38952 12.2712 8.92953C12.9173 8.27837 13.2803 7.39522 13.2803 6.47435C13.2803 5.55348 12.9173 4.67032 12.2712 4.01917C11.6251 3.36801 10.7488 3.0022 9.83501 3.0022C8.92127 3.0022 8.04495 3.36801 7.39884 4.01917C6.75273 4.67032 6.38974 5.55348 6.38974 6.47435C6.38974 7.39522 6.75273 8.27837 7.39884 8.92953C7.86698 9.40132 8.45598 9.72332 9.0925 9.86491ZM6.659 12.7848L6.54675 12.8176C5.12593 13.2332 4.1495 14.5362 4.1495 16.0165V16.3983C4.1495 16.5918 4.3064 16.7487 4.49994 16.7487H15.5C15.6936 16.7487 15.8505 16.5918 15.8505 16.3983V16.0019C15.8505 14.5337 14.8662 13.2226 13.4451 12.8006C12.4432 12.5031 11.3939 12.3493 10.3512 12.3493H9.69952C8.67047 12.3493 7.64667 12.4959 6.659 12.7848ZM9.83501 4.25129C9.2557 4.25129 8.69813 4.48312 8.28551 4.89897C7.87256 5.31514 7.63884 5.88164 7.63884 6.47435C7.63884 7.06706 7.87256 7.63355 8.28551 8.04973C8.69813 8.46557 9.2557 8.69741 9.83501 8.69741C10.4143 8.69741 10.9719 8.46557 11.3845 8.04973C11.7975 7.63356 12.0312 7.06706 12.0312 6.47435C12.0312 5.88164 11.7975 5.31514 11.3845 4.89897C10.9719 4.48312 10.4143 4.25129 9.83501 4.25129Z" fill="white"/>
+                                </g>
+                                </svg>
+                            <!-- Notify Details -->
+                            <div class="w--20 flex flex-column gap--4 flex-auto">
+                                <!-- Notify Info -->
+                                <div class="flex items-center gap--4">
+                                    <!-- Notify Text -->
+                                    <p class="fs--14 fw4 lh--normal tracked--0-06 white hover--col-black tse--all o-70">You received a new order. Order ID is 3633.</p> 
+                                </div>
+                                <!-- Notify Date -->
+                                <p class="fs--12 fw4 lh--normal white tracked--0-06 hover--col-black tse--all o-70">Nov 29, 2023 5:44pm</p>
+                            </div>
+                        </div>
+                        <!-- Notify Item 3 -->
+                        <div class="pad--left--8 pr3 pv3 flex items-center gap--10 hover--bg--col--light-warm-green group cs--pointer tse--all"> 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="none">
+                                <circle cx="4" cy="4.5" r="4" fill="#9FFF02" class="hover-fill-warm-black tse--all"/>
+                            </svg>
+                            <!-- Notify Image -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                                <g opacity="0.7">
+                                <path class="hover-fill-warm-black tse--all" fill-rule="evenodd" clip-rule="evenodd" d="M9.0005 11.1204C8.08915 11.1732 7.18596 11.3293 6.30835 11.5859L6.1961 11.6188C4.24279 12.1901 2.90041 13.9814 2.90041 16.0165V16.3983C2.90041 17.2817 3.61654 17.9978 4.49994 17.9978H15.5C16.3834 17.9978 17.0996 17.2817 17.0996 16.3983V16.0019C17.0996 13.9737 15.7449 12.1805 13.8006 11.6032C12.8095 11.3088 11.7765 11.1406 10.7422 11.1066C10.6119 11.1023 10.4815 11.1002 10.3512 11.1002H9.69952C9.46618 11.1002 9.23307 11.1069 9.0005 11.1204ZM9.0925 9.86491C9.29096 9.90906 9.49404 9.93567 9.69952 9.94381C9.74458 9.9456 9.78975 9.9465 9.83501 9.9465C10.0089 9.9465 10.1813 9.93326 10.3512 9.90733C10.4434 9.89325 10.5348 9.87542 10.6252 9.85395C11.2434 9.70711 11.8148 9.38952 12.2712 8.92953C12.9173 8.27837 13.2803 7.39522 13.2803 6.47435C13.2803 5.55348 12.9173 4.67032 12.2712 4.01917C11.6251 3.36801 10.7488 3.0022 9.83501 3.0022C8.92127 3.0022 8.04495 3.36801 7.39884 4.01917C6.75273 4.67032 6.38974 5.55348 6.38974 6.47435C6.38974 7.39522 6.75273 8.27837 7.39884 8.92953C7.86698 9.40132 8.45598 9.72332 9.0925 9.86491ZM6.659 12.7848L6.54675 12.8176C5.12593 13.2332 4.1495 14.5362 4.1495 16.0165V16.3983C4.1495 16.5918 4.3064 16.7487 4.49994 16.7487H15.5C15.6936 16.7487 15.8505 16.5918 15.8505 16.3983V16.0019C15.8505 14.5337 14.8662 13.2226 13.4451 12.8006C12.4432 12.5031 11.3939 12.3493 10.3512 12.3493H9.69952C8.67047 12.3493 7.64667 12.4959 6.659 12.7848ZM9.83501 4.25129C9.2557 4.25129 8.69813 4.48312 8.28551 4.89897C7.87256 5.31514 7.63884 5.88164 7.63884 6.47435C7.63884 7.06706 7.87256 7.63355 8.28551 8.04973C8.69813 8.46557 9.2557 8.69741 9.83501 8.69741C10.4143 8.69741 10.9719 8.46557 11.3845 8.04973C11.7975 7.63356 12.0312 7.06706 12.0312 6.47435C12.0312 5.88164 11.7975 5.31514 11.3845 4.89897C10.9719 4.48312 10.4143 4.25129 9.83501 4.25129Z" fill="white"/>
+                                </g>
+                                </svg>
+                            <!-- Notify Details -->
+                            <div class="w--20 flex flex-column gap--4 flex-auto">
+                                <!-- Notify Info -->
+                                <div class="flex items-center gap--4">
+                                    <!-- Notify Text -->
+                                    <p class="fs--14 fw4 lh--normal tracked--0-06 white hover--col-black tse--all o-70">You received a new order. Order ID is 3633.</p> 
+                                </div>
+                                <!-- Notify Date -->
+                                <p class="fs--12 fw4 lh--normal white tracked--0-06 hover--col-black tse--all o-70">Nov 29, 2023 5:44pm</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Footer -->
+                    <div class="pad--x--8 flex gap--10 flex-column">
+                        <a href="#" class="pad--8 tc">
+                            <span class="db fs--14 fw5 lh--24 col--light-warm-green ttc tracked--0-35 hover-underline">All notifications</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Unread Notification -->
+            <div class="w--344 bg-black-70 br--10 sh--7 bg--blur--25 pad--y--8 flex flex-column gap--8">
+                <!-- Header -->
+                <div class="pad--x--8 gap--23 flex flex-start"> 
+                    <!-- Tab 1 -->
+                    <div class="flex-auto flex flex-column gap--4 elm_WeDkmC active">
+                        <div class="flex justify-center items-center gap--10 pad--5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <g opacity="0.7">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.66672 4.32609C1.66593 4.25488 1.67515 4.1833 1.69468 4.11362C1.72575 4.0026 1.78148 3.90188 1.85559 3.81773C1.99441 3.66011 2.19774 3.56067 2.42429 3.56067H17.5751C17.7064 3.56067 17.8304 3.59405 17.9381 3.65278C18.0141 3.69409 18.0839 3.74903 18.1438 3.81703C18.2136 3.89602 18.2671 3.98967 18.2992 4.09277C18.3029 4.10469 18.3063 4.11674 18.3094 4.12891C18.3261 4.19366 18.334 4.25988 18.3333 4.32579V15.6818C18.3333 16.1002 17.9941 16.4394 17.5757 16.4394H2.42429C2.00589 16.4394 1.66672 16.1002 1.66672 15.6818V4.32609ZM3.18186 5.83343V14.9242H16.8182V5.83343L10.4545 10.6061C10.1852 10.8081 9.81482 10.8081 9.54546 10.6061L3.18186 5.83343ZM15.3031 5.07581H4.69694L10 9.05311L15.3031 5.07581Z" fill="white"/>
+                                </g>
+                            </svg>
+                            <div class="min--w--20 h--18 pad--x--4 gap--10 br--4 bg--col--light-warm-green flex justify-center items-center">
+                                <span class="db fs--12 fw6 lh--24 tracked--0-06 col--outer-space">2</span>
+                            </div>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="2" viewBox="0 0 96 2" fill="none">
+                            <path d="M1 1H95" stroke="#9FFF02" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <!-- Tab 2 -->
+                    <div class="flex-auto flex flex-column gap--4 elm_WeDkmC">
+                        <div class="flex justify-center items-center gap--10 pad--5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <g opacity="0.7">
+                                    <path d="M10.651 6.09826C11.0437 5.97584 11.3728 5.76554 11.6383 5.46736C11.9565 5.111 12.3765 5.02738 12.8346 5.02738C14.5001 5.02495 16.0886 5.3504 17.6001 6.00374C17.6284 6.01563 17.6536 6.03376 17.6738 6.05676C17.6939 6.07976 17.7085 6.10703 17.7165 6.13646C17.7759 6.35586 17.7928 6.5813 17.7674 6.81282C17.6631 7.74615 17.5159 8.69586 17.3256 9.66192C17.2856 9.86556 17.1619 9.96918 16.9546 9.97282L15.4819 10.0001C15.4019 10.0013 15.3619 10.0419 15.3619 10.1219L15.3583 17.9237C15.3584 17.9799 15.3393 18.0346 15.3039 18.0788C15.2686 18.1231 15.2192 18.1542 15.1637 18.1674C14.9977 18.2061 14.8195 18.2256 14.6292 18.2256C11.4328 18.2219 8.21465 18.2183 4.97465 18.2146C4.83404 18.2146 4.74434 18.1468 4.70556 18.011C4.67889 17.9177 4.66495 17.8249 4.66374 17.7328C4.65404 15.4213 4.65343 12.8946 4.66192 10.1528C4.66192 10.0571 4.61404 10.008 4.51828 10.0055L2.78555 9.96008C2.7104 9.95766 2.66737 9.91889 2.65646 9.84374C2.51828 8.87889 2.38555 7.97221 2.25828 7.12372C2.21586 6.84251 2.2098 6.55463 2.2401 6.26009C2.26919 5.96009 2.44919 5.96554 2.66737 5.87645C4.02252 5.32372 5.51101 5.04494 7.13283 5.04009C7.61465 5.03827 8.11283 5.12737 8.44192 5.52374C8.66495 5.79283 8.93586 5.98131 9.25465 6.08919C9.27395 6.09572 9.29463 6.09715 9.31465 6.09334C9.33468 6.08952 9.35337 6.08059 9.36893 6.06741C9.38448 6.05424 9.39637 6.03727 9.40342 6.01814C9.41048 5.99902 9.41246 5.9784 9.40919 5.95828C9.24555 4.88737 9.78919 4.31101 10.3237 3.5001C10.3531 3.45609 10.3702 3.40498 10.373 3.35213C10.3758 3.29927 10.3643 3.24662 10.3398 3.19974C10.3152 3.15285 10.2785 3.11345 10.2334 3.08568C10.1884 3.05791 10.1367 3.04279 10.0837 3.04191C10.0292 3.0407 9.97222 3.04858 9.91283 3.06555C9.8304 3.08979 9.76737 3.13826 9.72374 3.21099L9.34374 3.84735C9.30432 3.91365 9.24618 3.96682 9.17662 4.00014C9.10706 4.03347 9.02919 4.04546 8.95283 4.03463C8.34919 3.94736 8.32374 3.21645 8.51465 2.78008C9.01828 1.62372 10.5165 1.42918 11.2983 2.38191C11.731 2.90737 11.7565 3.80554 11.2819 4.34917C10.8601 4.83463 10.5546 5.35464 10.5401 6.01646C10.5401 6.02988 10.5432 6.04313 10.5492 6.05512C10.5553 6.06711 10.564 6.07749 10.5748 6.08546C10.5856 6.09343 10.5982 6.09875 10.6114 6.10097C10.6246 6.1032 10.6382 6.10226 10.651 6.09826ZM14.2856 8.86009C14.8116 8.74252 15.3674 8.70616 15.9528 8.75101C16.1589 8.76555 16.2813 8.67161 16.3201 8.46918C16.4159 7.96009 16.4595 7.45887 16.451 6.96554C16.4506 6.93476 16.4406 6.90488 16.4223 6.88009C16.404 6.85531 16.3785 6.83686 16.3492 6.82736C15.2134 6.45645 14.0637 6.27585 12.9001 6.28554C12.3674 6.291 11.9965 6.9201 11.5219 7.13828C10.1237 7.78374 8.83465 7.55099 7.70737 6.57463C6.93283 5.90372 4.5001 6.54373 3.63646 6.8401C3.59913 6.85291 3.56719 6.87814 3.54577 6.91176C3.52434 6.94538 3.51466 6.98546 3.51828 7.02556L3.65101 8.40919C3.67404 8.65161 3.80737 8.76555 4.05101 8.75101C4.63525 8.71464 5.1601 8.73585 5.62555 8.81464C5.6898 8.82555 5.73404 8.86069 5.75828 8.92009C5.83222 9.10675 5.8698 9.30555 5.87101 9.51646C5.88071 12.0292 5.88434 14.488 5.88192 16.8928C5.88192 16.9449 5.90737 16.971 5.95828 16.971H13.9983C14.0287 16.971 14.0578 16.9589 14.0793 16.9374C14.1008 16.916 14.1128 16.8868 14.1128 16.8565C14.1116 14.6322 14.111 12.4765 14.111 10.3892C14.1122 9.92131 14.1346 9.45222 14.1783 8.98192C14.1843 8.91525 14.2201 8.87464 14.2856 8.86009ZM4.98272 18.1066C5.00545 18.0972 5.022 18.0755 5.02872 18.0462C5.03544 18.0168 5.03178 17.9823 5.01855 17.9502C5.012 17.9343 5.0033 17.9195 4.99294 17.9066C4.98258 17.8937 4.97077 17.8829 4.95817 17.875C4.94558 17.867 4.93245 17.862 4.91954 17.8602C4.90663 17.8584 4.8942 17.8599 4.88294 17.8645C4.8602 17.8739 4.84366 17.8956 4.83693 17.9249C4.83021 17.9543 4.83387 17.9888 4.8471 18.0209C4.85365 18.0368 4.86235 18.0516 4.87272 18.0645C4.88308 18.0774 4.89489 18.0882 4.90748 18.0961C4.92008 18.1041 4.9332 18.1091 4.94611 18.1109C4.95902 18.1127 4.97146 18.1112 4.98272 18.1066ZM15.2365 17.9146C15.1346 17.8225 15.0504 17.8468 14.9837 17.9874C14.977 18.0022 14.975 18.0187 14.9781 18.0347C14.9812 18.0507 14.9892 18.0654 15.001 18.0766C15.0128 18.0878 15.0279 18.095 15.044 18.0973C15.0601 18.0995 15.0766 18.0967 15.091 18.0892L15.2219 18.0201C15.2313 18.0152 15.2394 18.0081 15.2456 17.9994C15.2517 17.9908 15.2556 17.9808 15.2571 17.9704C15.2585 17.96 15.2574 17.9495 15.2538 17.9398C15.2502 17.9301 15.2442 17.9214 15.2365 17.9146Z" fill="white"/>
+                                </g>
+                            </svg>
+                            <div class="min--w--20 h--18 pad--x--4 gap--10 br--4 bg-white active-bg--col--light-warm-green flex justify-center items-center">
+                                <span class="db fs--12 fw6 lh--24 tracked--0-06 col--outer-space">1</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tab 3 -->
+                    <div class="flex-auto flex flex-column gap--4 elm_WeDkmC">
+                        <div class="flex justify-center items-center gap--10 pad--5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.00052 10.6204C8.08917 10.6732 7.18598 10.8293 6.30837 11.0859L6.19612 11.1188C4.2428 11.6901 2.90042 13.4814 2.90042 15.5165V15.8983C2.90042 16.7817 3.61656 17.4978 4.49996 17.4978H15.5C16.3834 17.4978 17.0996 16.7817 17.0996 15.8983V15.5019C17.0996 13.4737 15.745 11.6805 13.8007 11.1032C12.8095 10.8088 11.7765 10.6406 10.7423 10.6066C10.6119 10.6023 10.4815 10.6002 10.3512 10.6002H9.69953C9.46619 10.6002 9.23309 10.6069 9.00052 10.6204ZM9.09251 9.36491C9.29098 9.40906 9.49406 9.43567 9.69953 9.44381C9.74459 9.4456 9.78976 9.4465 9.83502 9.4465C10.0089 9.4465 10.1814 9.43326 10.3512 9.40733C10.4434 9.39325 10.5348 9.37542 10.6252 9.35395C11.2435 9.20711 11.8148 8.88952 12.2712 8.42953C12.9173 7.77837 13.2803 6.89522 13.2803 5.97435C13.2803 5.05348 12.9173 4.17032 12.2712 3.51917C11.6251 2.86801 10.7488 2.5022 9.83502 2.5022C8.92128 2.5022 8.04497 2.86801 7.39886 3.51917C6.75274 4.17032 6.38976 5.05348 6.38976 5.97435C6.38976 6.89522 6.75274 7.77837 7.39886 8.42953C7.867 8.90132 8.45599 9.22332 9.09251 9.36491ZM6.65902 12.2848L6.54677 12.3176C5.12595 12.7332 4.14951 14.0362 4.14951 15.5165V15.8983C4.14951 16.0918 4.30641 16.2487 4.49996 16.2487H15.5C15.6936 16.2487 15.8505 16.0918 15.8505 15.8983V15.5019C15.8505 14.0337 14.8662 12.7226 13.4451 12.3006C12.4432 12.0031 11.3939 11.8493 10.3512 11.8493H9.69953C8.67049 11.8493 7.64669 11.9959 6.65902 12.2848ZM9.83502 3.75129C9.25571 3.75129 8.69814 3.98312 8.28552 4.39897C7.87257 4.81514 7.63885 5.38164 7.63885 5.97435C7.63885 6.56706 7.87257 7.13355 8.28552 7.54973C8.69814 7.96557 9.25571 8.19741 9.83502 8.19741C10.4143 8.19741 10.9719 7.96557 11.3845 7.54973C11.7975 7.13356 12.0312 6.56706 12.0312 5.97435C12.0312 5.38164 11.7975 4.81514 11.3845 4.39897C10.9719 3.98312 10.4143 3.75129 9.83502 3.75129Z" fill="white"/>
+                            </svg>
+                            <div class="min--w--20 h--18 pad--x--4 gap--10 br--4 bg-white active-bg--col--light-warm-green flex justify-center items-center">
+                                <span class="db fs--12 fw6 lh--24 tracked--0-06 col--outer-space">1</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Body Content -->
+                <div class="pad--8 bb br--col--black-green">
+                    <!-- Notify Item 1 -->
+                    <div class="pad--left--8 pr3 pv3 flex items-center gap--10 hover--bg--col--light-warm-green group cs--pointer tse--all"> 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="none">
+                            <circle cx="4" cy="4.5" r="4" fill="#9FFF02" class="hover-fill-warm-black tse--all"/>
+                        </svg>
+                        <!-- Notify Image -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                            <path class="hover-fill-warm-black tse--all" fill-rule="evenodd" clip-rule="evenodd" d="M9.0005 11.1204C8.08915 11.1732 7.18596 11.3293 6.30835 11.5859L6.1961 11.6188C4.24279 12.1901 2.90041 13.9814 2.90041 16.0165V16.3983C2.90041 17.2817 3.61654 17.9978 4.49994 17.9978H15.5C16.3834 17.9978 17.0996 17.2817 17.0996 16.3983V16.0019C17.0996 13.9737 15.7449 12.1805 13.8006 11.6032C12.8095 11.3088 11.7765 11.1406 10.7422 11.1066C10.6119 11.1023 10.4815 11.1002 10.3512 11.1002H9.69952C9.46618 11.1002 9.23307 11.1069 9.0005 11.1204ZM9.0925 9.86491C9.29096 9.90906 9.49404 9.93567 9.69952 9.94381C9.74458 9.9456 9.78975 9.9465 9.83501 9.9465C10.0089 9.9465 10.1813 9.93326 10.3512 9.90733C10.4434 9.89325 10.5348 9.87542 10.6252 9.85395C11.2434 9.70711 11.8148 9.38952 12.2712 8.92953C12.9173 8.27837 13.2803 7.39522 13.2803 6.47435C13.2803 5.55348 12.9173 4.67032 12.2712 4.01917C11.6251 3.36801 10.7488 3.0022 9.83501 3.0022C8.92127 3.0022 8.04495 3.36801 7.39884 4.01917C6.75273 4.67032 6.38974 5.55348 6.38974 6.47435C6.38974 7.39522 6.75273 8.27837 7.39884 8.92953C7.86698 9.40132 8.45598 9.72332 9.0925 9.86491ZM6.659 12.7848L6.54675 12.8176C5.12593 13.2332 4.1495 14.5362 4.1495 16.0165V16.3983C4.1495 16.5918 4.3064 16.7487 4.49994 16.7487H15.5C15.6936 16.7487 15.8505 16.5918 15.8505 16.3983V16.0019C15.8505 14.5337 14.8662 13.2226 13.4451 12.8006C12.4432 12.5031 11.3939 12.3493 10.3512 12.3493H9.69952C8.67047 12.3493 7.64667 12.4959 6.659 12.7848ZM9.83501 4.25129C9.2557 4.25129 8.69813 4.48312 8.28551 4.89897C7.87256 5.31514 7.63884 5.88164 7.63884 6.47435C7.63884 7.06706 7.87256 7.63355 8.28551 8.04973C8.69813 8.46557 9.2557 8.69741 9.83501 8.69741C10.4143 8.69741 10.9719 8.46557 11.3845 8.04973C11.7975 7.63356 12.0312 7.06706 12.0312 6.47435C12.0312 5.88164 11.7975 5.31514 11.3845 4.89897C10.9719 4.48312 10.4143 4.25129 9.83501 4.25129Z" fill="white"/>
+                        </svg>
+                        <!-- Notify Details -->
+                        <div class="w--20 flex flex-column gap--4 flex-auto">
+                            <!-- Notify Info -->
+                            <div class="flex items-center gap--4">
+                                <!-- Notify Text -->
+                                <p class="fs--14 fw5 lh--normal tracked--0-06 white hover--col-black tse--all">You received a new order. Order ID is 3633.</p> 
+                            </div>
+                            <!-- Notify Date -->
+                            <p class="fs--12 fw5 lh--normal white tracked--0-06 hover--col-black tse--all">Nov 29, 2023 5:44pm</p>
+                        </div>
+                    </div>
+                    <!-- Notify Item 2 -->
+                    <div class="pad--left--8 pr3 pv3 flex items-center gap--10 hover--bg--col--light-warm-green group cs--pointer tse--all"> 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="none">
+                            <circle cx="4" cy="4.5" r="4" fill="#9FFF02" class="hover-fill-warm-black tse--all"/>
+                        </svg>
+                        <!-- Notify Image -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                            <path class="hover-fill-warm-black tse--all" fill-rule="evenodd" clip-rule="evenodd" d="M9.0005 11.1204C8.08915 11.1732 7.18596 11.3293 6.30835 11.5859L6.1961 11.6188C4.24279 12.1901 2.90041 13.9814 2.90041 16.0165V16.3983C2.90041 17.2817 3.61654 17.9978 4.49994 17.9978H15.5C16.3834 17.9978 17.0996 17.2817 17.0996 16.3983V16.0019C17.0996 13.9737 15.7449 12.1805 13.8006 11.6032C12.8095 11.3088 11.7765 11.1406 10.7422 11.1066C10.6119 11.1023 10.4815 11.1002 10.3512 11.1002H9.69952C9.46618 11.1002 9.23307 11.1069 9.0005 11.1204ZM9.0925 9.86491C9.29096 9.90906 9.49404 9.93567 9.69952 9.94381C9.74458 9.9456 9.78975 9.9465 9.83501 9.9465C10.0089 9.9465 10.1813 9.93326 10.3512 9.90733C10.4434 9.89325 10.5348 9.87542 10.6252 9.85395C11.2434 9.70711 11.8148 9.38952 12.2712 8.92953C12.9173 8.27837 13.2803 7.39522 13.2803 6.47435C13.2803 5.55348 12.9173 4.67032 12.2712 4.01917C11.6251 3.36801 10.7488 3.0022 9.83501 3.0022C8.92127 3.0022 8.04495 3.36801 7.39884 4.01917C6.75273 4.67032 6.38974 5.55348 6.38974 6.47435C6.38974 7.39522 6.75273 8.27837 7.39884 8.92953C7.86698 9.40132 8.45598 9.72332 9.0925 9.86491ZM6.659 12.7848L6.54675 12.8176C5.12593 13.2332 4.1495 14.5362 4.1495 16.0165V16.3983C4.1495 16.5918 4.3064 16.7487 4.49994 16.7487H15.5C15.6936 16.7487 15.8505 16.5918 15.8505 16.3983V16.0019C15.8505 14.5337 14.8662 13.2226 13.4451 12.8006C12.4432 12.5031 11.3939 12.3493 10.3512 12.3493H9.69952C8.67047 12.3493 7.64667 12.4959 6.659 12.7848ZM9.83501 4.25129C9.2557 4.25129 8.69813 4.48312 8.28551 4.89897C7.87256 5.31514 7.63884 5.88164 7.63884 6.47435C7.63884 7.06706 7.87256 7.63355 8.28551 8.04973C8.69813 8.46557 9.2557 8.69741 9.83501 8.69741C10.4143 8.69741 10.9719 8.46557 11.3845 8.04973C11.7975 7.63356 12.0312 7.06706 12.0312 6.47435C12.0312 5.88164 11.7975 5.31514 11.3845 4.89897C10.9719 4.48312 10.4143 4.25129 9.83501 4.25129Z" fill="white"/>
+                        </svg>
+                        <!-- Notify Details -->
+                        <div class="w--20 flex flex-column gap--4 flex-auto">
+                            <!-- Notify Info -->
+                            <div class="flex items-center gap--4">
+                                <!-- Notify Text -->
+                                <p class="fs--14 fw5 lh--normal tracked--0-06 white hover--col-black tse--all">You received a new order. Order ID is 3633.</p> 
+                            </div>
+                            <!-- Notify Date -->
+                            <p class="fs--12 fw5 lh--normal white tracked--0-06 hover--col-black tse--all">Nov 29, 2023 5:44pm</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Footer -->
+                <div class="pad--x--8 flex gap--10 flex-column">
+                    <a href="#" class="pad--8 tc">
+                        <span class="db fs--14 fw5 lh--24 col--light-warm-green ttc tracked--0-35 hover-underline">All notifications</span>
+                    </a>
                 </div>
             </div>
         </div>
