@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Verification Popup</title>
+
+    <!-- Poppins Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- /* Custom Tachyons */ -->
+    <style type="text/css">
+    /* Custom Reset Browser style */
+    * { margin: 0; padding: 0; }
+    body { margin: 0; padding: 0; }
+
+    /* Font */
+    .ff-poppins { font-family: 'Poppins'; }
+
+    /* Colors */
+    .col--white { color: var(--color-white, #fff); }
+    .col--brand-pink { color: var(--brand-pink-2, #F06); }
+
+    /* Background color */
+    .bg--col-brand-pink { background: var(--brand-pink-2, #F06); }
+    .bg--gray { background: rgba(255, 255, 255, 0.70); }
+
+    /* Hover Background color */
+    .hover--bg--col-brand-pink:hover { background: rgba(255, 0, 102, 0.90);; }
+    .hover--bg--gray:hover { background: rgba(255, 255, 255, 1); }
+
+    /* Background image */
+    .bg--popup { background-image: url(assets/images/popup-bg.jpg); }
+
+    /* Background */
+    .bg--cover { background-size: cover; }
+
+    /* Width */
+    .w--100 { width: 100%; }
+    .w--586 { width: 36.625rem; /* width 586px */ }
+
+    /* hegiht */
+    .h--100 { height: 100%; }
+    .h--48 { height: 3rem; }
+    .h--508 { height: 31.75rem; /* height 508px */ }
+    .h--screen { height: 100vh; }
+    .h--calc--64 { height: calc(100% - 4rem);  }
+
+    /* Padding */
+    .pad--right--293 { padding-right: 18.313rem; }
+    .pad--32 { padding: 2rem; }
+    .pad--y--8 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+    .pad--x--24 { padding-left: 1.5rem; padding-right: 1.5rem; }
+
+    /* Margin */
+    .mt--auto { margin-top: auto; }
+
+    /* Flexbox Style */
+    .flex { display: flex; }
+    .justify-center { justify-content: center; }
+    .items-center { align-items: center; }
+    .flex-column { flex-direction: column; }
+
+    /* Gap */
+    .gap--8 { gap: 0.5rem; }
+    .gap--16 { gap: 1rem; }
+    .gap--24 { gap: 1.5rem; }
+
+    /* Position */
+    .relative { position: relative; }
+
+    /* Font Size */
+    .fs--16 { font-size: 1rem; }
+    .fs--18 { font-size: 1.125rem; }
+    .fs--24 { font-size: 1.438rem; }
+
+    /* Font Weight */
+    .fw--500 { font-weight: 500; }
+
+    /* Line Height */
+    .lh--normal { line-height: normal; }
+    .lh--24 { line-height: 1.5rem; }
+
+    /* Letter Spacing */
+    .tracked--0-46 { letter-spacing: 0.029rem; }
+    .tracked--0-32 { letter-spacing: 0.02rem; }
+
+    /* Border width */
+    .bw--0 { border-width: 0; }
+
+    /* Border radius */
+    .br--10 { border-radius: 0.625rem; }
+
+    /* Cursor */
+    .cr--pointer { cursor: pointer; }
+    
+
+    </style>
+</head>
+
+<body>
+    <div class="h--screen flex items-center justify-center">
+        <div class="ff-poppins w--586 h--508 bg--popup bg--cover">
+            <!-- Popup Wrapper -->
+            <div class="h--100 pad--right--293">
+                <!-- Left Cotent Area -->
+                <div class="h--calc--64 pad--32 flex flex-column gap--24">
+                    <!-- Logo -->
+                    <div class="relative">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+                            <g opacity="0.5">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M44.8575 2.6665H19.1375C10.0381 2.6665 2.66797 10.0433 2.66797 19.1415V44.8582C2.66797 53.9564 10.0381 61.3332 19.1375 61.3332H44.8575C53.9569 61.3332 61.3346 53.9564 61.3346 44.8582V19.1415C61.3346 10.0433 53.9569 2.6665 44.8575 2.6665ZM40.0095 47.0705L27.2855 48.4748C24.7633 48.7542 22.8906 46.1946 23.91 43.8766L26.3717 38.2667C27.1344 36.5301 26.2207 34.5368 24.7633 33.3212C22.7999 31.6903 21.4407 29.3194 21.1386 26.5786C20.5194 20.946 24.5745 15.8873 30.2003 15.2681C35.8261 14.649 40.893 18.7036 41.5123 24.3286C41.8219 27.1298 40.9686 29.7876 39.345 31.8262C38.1519 33.3363 37.6611 35.5259 38.8013 37.0737L42.3052 41.8456C43.8079 43.8917 42.5317 46.7986 40.0095 47.0705Z" fill="white"/>
+                            </g>
+                        </svg>
+                    </div> <!-- End Logo -->
+
+                    <!-- Body Content -->
+                    <div class="flex flex-column gap--8 ">
+                        <h2 class="col--white fs--24 fw--500 lh--normal tracked--0-46">Age Verification</h2>
+                        <p class="col--white fs--16 lh--normal tracked--0-32">You must be over 18 to visit Fansocial website.</p>
+                    </div> <!-- End Body Content -->
+
+                    <!-- Button content -->
+                    <div class="flex flex-column gap--16 mt--auto">
+                        <button type="submit" class="w--100 h--48 pad--x--24 pad--y--8 flex justify-center items-center br--10 bg--col-brand-pink col--white fs--18 lh--24 bw--0 cr--pointer hover--bg--col-brand-pink">I’m over 18</button>
+                        <button type="submit" class="w--100 h--48 pad--x--24 pad--y--8 flex justify-center items-center br--10 bg--gray col--brand-pink fs--18 lh--24 bw--0 cr--pointer hover--bg--gray">I’m under 18</button>
+                    </div>
+                    <!-- End Button content -->
+                </div> <!-- End Left Cotent Area -->
+            </div> <!-- End Popup Wrapper -->
+        </div>
+    </div>
+</body>
+
+</html>
