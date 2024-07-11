@@ -16,108 +16,105 @@
     /* Custom Reset Browser style */
     * { margin: 0; padding: 0; }
     body { margin: 0; padding: 0; }
-
-    /* Font */
-    .ff-poppins { font-family: 'Poppins'; }
-
-    /* Colors */
-    .col--white { color: var(--color-white, #fff); }
-    .col--brand-pink { color: var(--brand-pink-2, #F06); }
-
-    /* Background color */
-    .bg--col-brand-pink { background: var(--brand-pink-2, #F06); }
-    .bg--gray { background: rgba(255, 255, 255, 0.70); }
-    .bg--transparant-white { background: rgba(255, 255, 255, 0.25); }
-
-    /* Hover Background color */
-    .hover--bg--col-brand-pink:hover { background: rgba(255, 0, 102, 0.90);; }
-    .hover--bg--gray:hover { background: rgba(255, 255, 255, 1); }
-
-    /* Background image */
-    .bg--popup { background-image: url(assets/images/popup-bg.jpg); }
-
-    /* Background */
-    .bg--cover { background-size: cover; }
-
-    /* Width */
-    .w--100 { width: 100%; }
-    .w--586 { width: 36.625rem; /* width 586px */ }
-
-    /* hegiht */
-    .h--100 { height: 100%; }
-    .h--48 { height: 3rem; }
-    .h--508 { height: 31.75rem; /* height 508px */ }
-    .h--screen { height: 100vh; }
-    .h--calc--64 { height: calc(100% - 4rem);  }
-
-    /* Padding */
-    .pad--right--293 { padding-right: 18.313rem; }
-    .pad--32 { padding: 2rem; }
-    .pad--y--8 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
-    .pad--x--24 { padding-left: 1.5rem; padding-right: 1.5rem; }
-
-    /* Margin */
-    .mt--auto { margin-top: auto; }
-
-    /* Flexbox Style */
-    .flex { display: flex; }
-    .justify-center { justify-content: center; }
-    .items-center { align-items: center; }
-    .flex-column { flex-direction: column; }
-
-    /* Gap */
-    .gap--8 { gap: 0.5rem; }
-    .gap--16 { gap: 1rem; }
-    .gap--24 { gap: 1.5rem; }
-
-    /* Position */
-    .relative { position: relative; }
-
-    /* Font Size */
-    .fs--16 { font-size: 1rem; }
-    .fs--18 { font-size: 1.125rem; }
-    .fs--24 { font-size: 1.438rem; }
-
-    /* Font Weight */
-    .fw--500 { font-weight: 500; }
-
-    /* Line Height */
-    .lh--normal { line-height: normal; }
-    .lh--24 { line-height: 1.5rem; }
-
-    /* Letter Spacing */
-    .tracked--0-46 { letter-spacing: 0.029rem; }
-    .tracked--0-32 { letter-spacing: 0.02rem; }
-
-    /* Border width */
-    .bw--0 { border-width: 0; }
-
-    /* Border radius */
-    .br--10 { border-radius: 0.625rem; }
-    .br--15 { border-radius: 0.938rem; }
-
-    /* overflow */
-    .of--hidden { overflow: hidden; }
-
-    /* Cursor */
-    .cr--pointer { cursor: pointer; }
-
-    /* Backdrop Filter */
-    .bg--blur--5 { -webkit-backdrop-filter: blur(5px); backdrop-filter: blur(5px); }
     
+    .c-age-popup {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .c-age-popup-container {
+        width: 36.625rem;
+        height: 31.75rem;
+        font-family: 'Poppins';
+        background-image: url(assets/images/popup-bg.jpg);
+        background-size: cover;
+        border-radius: 0.938rem;
+        overflow: hidden;
+    }
+    .c-age-popup-wrapper {
+        height: 100%;
+        padding-right: 18.313rem;
+
+    }
+    .c-age-popup-left {
+        height: calc(100% - 4rem);
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        background: rgba(255, 255, 255, 0.25);
+        -webkit-backdrop-filter: blur(5px); 
+        backdrop-filter: blur(5px);
+    }
+    .c-age-popup-logo {
+        position: relative;
+    }
+    .c-age-popup-body {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .c-age-popup-title {
+        color: var(--color-white, #fff);
+        font-size: 1.438rem;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: 0.029rem;
+    }
+    .c-age-popup-text {
+        color: var(--color-white, #fff);
+        font-size: 1rem;
+        line-height: normal;
+        letter-spacing: 0.02rem;
+    }
+    .c-age-popup-buttonGroup {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: auto;
+    }
+    .c-age-popup-button {
+        width: 100%;
+        height: 3rem;
+        padding-top: 0.5rem; padding-bottom: 0.5rem;
+        padding-left: 1.5rem; padding-right: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0.625rem;
+        font-size: 1.125rem;
+        line-height: 1.5rem;
+        border: 0;
+        cursor: pointer;
+    }
+    .pink-button {
+        background: #F06;
+        color: #fff;
+    }
+    .pink-button:hover {
+        background: rgba(255, 0, 102, 0.90);
+    }
+    .white-button {
+        background: rgba(255, 255, 255, 0.70);
+        color: #F06;
+    }
+    .white-button:hover {
+        background: rgba(255, 255, 255, 1);
+    }
 
     </style>
 </head>
 
 <body>
-    <div class="h--screen flex items-center justify-center">
-        <div class="ff-poppins w--586 h--508 bg--popup bg--cover br--15 of--hidden">
+    <div class="c-age-popup">
+        <div class="c-age-popup-container">
             <!-- Popup Wrapper -->
-            <div class="h--100 pad--right--293">
+            <div class="c-age-popup-wrapper">
                 <!-- Left Cotent Area -->
-                <div class="h--calc--64 pad--32 flex flex-column gap--24 bg--transparant-white bg--blur--5">
+                <div class="c-age-popup-left">
                     <!-- Logo -->
-                    <div class="relative">
+                    <div class="c-age-popup-logo">
                         <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
                             <g opacity="0.5">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M44.8575 2.6665H19.1375C10.0381 2.6665 2.66797 10.0433 2.66797 19.1415V44.8582C2.66797 53.9564 10.0381 61.3332 19.1375 61.3332H44.8575C53.9569 61.3332 61.3346 53.9564 61.3346 44.8582V19.1415C61.3346 10.0433 53.9569 2.6665 44.8575 2.6665ZM40.0095 47.0705L27.2855 48.4748C24.7633 48.7542 22.8906 46.1946 23.91 43.8766L26.3717 38.2667C27.1344 36.5301 26.2207 34.5368 24.7633 33.3212C22.7999 31.6903 21.4407 29.3194 21.1386 26.5786C20.5194 20.946 24.5745 15.8873 30.2003 15.2681C35.8261 14.649 40.893 18.7036 41.5123 24.3286C41.8219 27.1298 40.9686 29.7876 39.345 31.8262C38.1519 33.3363 37.6611 35.5259 38.8013 37.0737L42.3052 41.8456C43.8079 43.8917 42.5317 46.7986 40.0095 47.0705Z" fill="white"/>
@@ -126,15 +123,15 @@
                     </div> <!-- End Logo -->
 
                     <!-- Body Content -->
-                    <div class="flex flex-column gap--8 ">
-                        <h2 class="col--white fs--24 fw--500 lh--normal tracked--0-46">Age Verification</h2>
-                        <p class="col--white fs--16 lh--normal tracked--0-32">You must be over 18 to visit Fansocial website.</p>
+                    <div class="c-age-popup-body">
+                        <h2 class="c-age-popup-title">Age Verification</h2>
+                        <p class="c-age-popup-text">You must be over 18 to visit Fansocial website.</p>
                     </div> <!-- End Body Content -->
 
                     <!-- Button content -->
-                    <div class="flex flex-column gap--16 mt--auto">
-                        <button type="submit" class="w--100 h--48 pad--x--24 pad--y--8 flex justify-center items-center br--10 bg--col-brand-pink col--white fs--18 lh--24 bw--0 cr--pointer hover--bg--col-brand-pink">I’m over 18</button>
-                        <button type="submit" class="w--100 h--48 pad--x--24 pad--y--8 flex justify-center items-center br--10 bg--gray col--brand-pink fs--18 lh--24 bw--0 cr--pointer hover--bg--gray">I’m under 18</button>
+                    <div class="c-age-popup-buttonGroup">
+                        <button type="submit" class="c-age-popup-button pink-button">I’m over 18</button>
+                        <button type="submit" class="c-age-popup-button white-button">I’m under 18</button>
                     </div>
                     <!-- End Button content -->
                 </div> <!-- End Left Cotent Area -->
