@@ -80,22 +80,21 @@
             /* List */
             .list-disc { list-style-type: disc; } /* confirmed in use */
 
-            /* Clip Path */
-            .cp-6 { clip-path: polygon(0 0, 93% 0, 100% 100%, 7% 100%); }
-            .cp-7 { clip-path: polygon(0 0, 100% 0, 100% 100%, 7% 100%); }
-
             /* Overflow */
             .of--hidden { overflow:hidden; }
 
             /* Flex */
             .flex--1 { flex: 1; }
 
+            /* Send CTA Buttons Custom Styles */
+            .elm_zhllIf { transform: skewX(20deg); transition: color 0.3s, background 0.3s ease-in, border-color 0.3s; }
+            .elm_ONLNyd { transform: skewX(-20deg); max-block-size: none; }
+
             /* Hover */
             .hover--bg--black-20:hover { background-color: rgba(0,0,0,.2); }
             .hover--group:hover .hover--col--spring-green { color: var(--color-spring-green); }
             .hover--group:hover .hover--col-filter-green { filter: invert(67%) sepia(97%) saturate(490%) hue-rotate(82deg) brightness(93%) contrast(106%); }
-            .hover--bt:hover { border-top-style:solid; border-top-width:1px; }
-            .hover--bb:hover { border-bottom-style:solid; border-bottom-width:1px; }
+            .hover--ba:hover { border-style:solid; border-width:1px; }
 
             [data-form-input-type="select"] select, input:not([type="submit"]):not([type="radio"]):not([type="checkbox"]):not( [type="file"] ):not([type="color"]), input[type="text"], input[type="email"], input[type="tel"], input[type="url"], input[type="number"], input[type="password"], textarea {
                 color: var(--color-white); border-radius: 0; font-size: 1rem; font-weight: 400; line-height: 1.5rem; /* 150% */ letter-spacing: 0.01rem;
@@ -340,10 +339,10 @@
                     </div>
                     <!-- end third section -->
                     <!-- fifth section --> 
-                    <div class="flex items-end self-stretch">
-                        <a href="#" class="flex pv0 pad--left--40 pad--right--40 w--352 h--4 cp-6 justify-center items-center flex--1-0-0 self-stretch bg--col--spring-green hover--bg--black-20 hover--group br--col--spring-green hover--bt hover--bb">
+                    <div class="flex items-end self-stretch pad--x--10 pad--left--15">
+                        <a href="#" class="flex pv0 pad--left--40 pad--right--40 w--352 h--4 justify-center items-center flex--1-0-0 self-stretch bg--col--spring-green hover--bg--black-20 hover--group br--col--spring-green hover--ba elm_zhllIf">
                           <div class="flex flex-column items-center">
-                            <div class="black tc ff-poppins fs--20 fw6 lh--30 ttu hover--col--spring-green">
+                            <div class="black tc ff-poppins fs--20 fw6 lh--30 ttu hover--col--spring-green elm_ONLNyd">
                               Fansocial Home
                             </div>
                           </div>
