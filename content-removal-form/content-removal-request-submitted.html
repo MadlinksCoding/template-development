@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Content Removal Request</title>
+
+        <!-- Poppins Font Family -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet">
+
+        <!-- Tachyons Style -->
+        <link rel="stylesheet"
+            href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/main.css" />
+        <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" />
+        <link rel="stylesheet"
+            href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/theme.css" />
+        <link rel="stylesheet"
+            href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/customTachyons.css" />
+
+        <!-- /* Custom Tachyons */ -->
+        <style type="text/css">
+            /* Font */
+            .ff-poppins { font-family: 'Poppins'; }
+
+            /* Colors */
+            .col--gray-warm-500 { color: var(--Gray-warm-500, #79716B); } /* confirmed in use */
+
+            /* Background Colors*/
+            .bg--col--spring-green { background-color: var(--color-spring-green); } /* confirmed in use */
+
+            /* Background Gradients*/
+            .bg--gradient--col--red-orange { background: var(--gradient-red-orange, linear-gradient(180deg, #F00 0%, #FF7201 100%)); }
+            .bg--gradient--col--green-warm { background: var(--gradient-success, linear-gradient(180deg, #04DB00 30%, #9FFF02 100%)); }
+
+            /* Background */
+            .bg--clip--text { background-clip: text; }
+
+            /* Text */
+            .col--text--fill { -webkit-text-fill-color: transparent; }
+
+            /* Width */
+            .w--436 { width: 27.25rem; /* width 436px */ } /* confirmed in use */
+            .w--142 { width: 8.875rem; /* width 142px */ } /* confirmed in use */
+            .w--200 { width: 12.5rem; /* width 200px */ } /* confirmed in use */
+
+            /* Height */
+            .h--4 { height: 4rem; }
+            .h--80 { height: 5rem; }
+            .h--112 { height: 7rem; /* height 112px */ }
+
+            /* Font Size */
+            .fs--30 { font-size: 1.875rem; /* font-size 30px */ }
+
+            /* Line Height */
+            .lh--38 { line-height:2.375rem; /* line height 38px */ }
+
+            /* Padding */
+            .pad--left--40 {  padding-left: 2.5rem; }
+            .pad--right--40 { padding-right: 2.5rem; }
+
+            /* Gap */
+            .gap--283 { gap: 17.688rem; /* gap 283px */ }
+            .gap--11 { gap: 0.688rem; /* gap 10px */ }
+
+            /* Border Colors */
+            .br--col--spring-green { border-color: var(--color-spring-green); } /* confirmed in use */
+            .br--col--gray-warm-500 { border-color: var(--Gray-warm-500, #79716B); } /* confirmed in use */
+            .br--col--red-warning { border-color: var(--gradient-error, #F00); }
+
+            /* Border Radius */
+            .br--200 { border-radius: 12.5rem; /* border-radius 200px */ }
+            .br--6 { border-radius: 0.375rem; /* border-radius 6px */ } 
+
+            /* List */
+            .list-disc { list-style-type: disc; } /* confirmed in use */
+
+            /* Clip Path */
+            .cp-6 { clip-path: polygon(0 0, 93% 0, 100% 100%, 7% 100%); }
+            .cp-7 { clip-path: polygon(0 0, 100% 0, 100% 100%, 7% 100%); }
+
+            /* Overflow */
+            .of--hidden { overflow:hidden; }
+
+            /* Flex */
+            .flex--1 { flex: 1; }
+
+            [data-form-input-type="select"] select, input:not([type="submit"]):not([type="radio"]):not([type="checkbox"]):not( [type="file"] ):not([type="color"]), input[type="text"], input[type="email"], input[type="tel"], input[type="url"], input[type="number"], input[type="password"], textarea {
+                color: var(--color-white); border-radius: 0; font-size: 1rem; font-weight: 400; line-height: 1.5rem; /* 150% */ letter-spacing: 0.01rem;
+            }
+            input[type="checkbox"],
+            input[type="radio"] { width: 1.25rem; height: 1.25rem; transform: scale(var(--input-check-size, 1)); border-radius: 0.375rem; appearance: none; border: 1px solid var(--Gray-300, #D0D5DD);
+            }
+            input[type="radio"] { border-radius: 50%; }
+            input[type="checkbox"]:checked,
+            input[type="radio"]:checked { border: 1px solid var(--Brand-green, #07F468); background: var(--Brand-green, #07F468);
+            }
+            input[type="checkbox"]:checked::after { left: 0.35rem; top: 0.08rem; width: 0.35rem; height: 0.7rem; border-color: var(--color-black);
+            }
+            input[type="radio"]:checked::after { content: ''; width: 0.5rem; height: 0.5rem; border-radius: 50%; background: var(--color-black); }
+
+        </style>
+    </head>
+
+    <body>
+        <div class="ff-poppins h-100 relative bg-black-30 bg--blur--200 gap--40 flex flex-column items-center">
+            <!-- form content area -->
+            <div class="w-100 flex flex-column gap--32">
+                <div class="pad--y--24 pad--left--48 pad--right--48 flex items-center gap--16 bg--gradient--col--green-warm">
+                    <span>
+                        <img src="assets/images/submitted-icon.svg">
+                    </span>
+                    <p class="fs--30 fw6 lh--38">We have received your content removal request.</p>
+                </div>
+                <div class="flex flex-column gap--40 pad--left--48 pad--right--48">
+                    <!-- first section --> 
+                    <div class="flex flex-column gap--16">
+                        <div class="flex flex-column gap--10">
+                            <p class="white fs--14 lh--20">Our team will review the below content(s) as soon as possible. You will received an email notification once the content(s) are remove from our site.</p>
+                        </div>
+                    </div>
+                    <!-- end first section --> 
+                    <!-- Second section --> 
+                    <div class="flex flex-column gap--16">
+                        <h2 class="fs--20 lh--30 fw6 col--spring-green ttu">Your information</h2>
+                        <div class="flex flex-wrap gap--24">
+                            <!-- email text -->
+                            <div class="w-50 flex flex-column flex-none">
+                                <label class="fs--12 lh--24 white tracked--0-12">Email</label>
+                                <span class="fs--16 fw6 lh--24 white">Mangoes456@gmail.com</span>
+                            </div>
+                            <!-- end email text -->
+
+                            <!-- username text -->
+                            <div class="flex flex-column flex-auto">
+                                <label class="fs--12 lh--24 white tracked--0-12">Legal Name</label>
+                                <span class="fs--16 fw6 lh--24 white">Man Go Lee</span>
+                            </div>
+                            <!-- end username text -->
+                        </div>
+                    </div>
+                    <!-- end second section -->
+                    <!-- thrid section --> 
+                    <div class="flex flex-column gap--16">
+                        <h2 class="fs--20 lh--30 fw6 col--spring-green ttu">Reported content</h2>
+                        <div class="flex flex-wrap gap--24">
+                            <!-- submit value section -->
+                            <div class="w-100 flex flex-column flex-auto relative gap--16">
+                                <!-- submit value -->
+                                <div class="relative flex flex-column gap--16">
+                                    <!-- Report media 1 -->
+                                    <div class="w-100 bg-black-70 bg--blur--50 ba br--col--red-warning pa3 flex flex-column gap--32">
+                                        <div class="flex items-center justify-between">
+                                            <div class="flex items-center gap--16">
+                                                <span>
+                                                    <img src="assets/images/red-report-icon.svg">
+                                                </span>
+                                                <h2 class="fs--24 fw5 lh--32 bg--gradient--col--red-orange bg--clip--text col--text--fill">REPORT MEDIA 1</h2>
+                                            </div>
+                                        </div>
+                                        <div class="flex gap--20 bg--black">
+                                            <div class="w--200 h--112 of--hidden">
+                                                <img src="assets/images/media-thumb.png" class="w-100 h-100 fit--cover">
+                                            </div>
+                                            <div class="flex-auto gap--16 flex flex-column">
+                                                <p class="fs--18 fw6 lh--28 white">Record breaking Hot Dog eating ! See my attempt to break world’s record! Watch now!</p>
+                                                <div class="flex gap--11 items-center">
+                                                    <div class="w--40 h--40 of--hidden br--200">
+                                                        <img src="assets/images/media-thumb.png" class="w-100 h-100 fit--cover">
+                                                    </div>
+                                                    <div class="flex flex-column">
+                                                        <h3 class="fs--16 fw6 lh--24 white">Pen Ni</h3>
+                                                        <a href="#" class="fs--12 lh--18 white">
+                                                            <span class="fs--12 lh--18 white">@Pennyyy6580</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-column gap--16">
+                                            <div class="flex items-center gap--16">
+                                                <h3 class="fs--20 fw6 lh--30 bg--gradient--col--red-orange bg--clip--text col--text--fill">Reason(s) for reporting  :</h3>
+                                                <span class="fs--16 fw4 lh--24 col--gray-warm-500">Select at least 1</span>
+                                            </div>
+                                            <div class="flex flex-wrap gap--16">
+                                                <div class="flex items-start gap--16 flex-auto w-50">
+                                                    <div class="w--20 h--20 bg--col--spring-green ba br--col--spring-green br--6 flex items-center justify-center">
+                                                        <img src="assets/images/black-right-tick.svg">
+                                                    </div>
+                                                    <span class="fs--16 fw5 lh--24 white">Copyright infringement</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-column gap--16">
+                                            <div class="flex items-center gap--16">
+                                                <h3 class="fs--20 fw6 lh--30 bg--gradient--col--red-orange bg--clip--text col--text--fill ws-normal">Do you appear in this content or have first-hand knowledge that the content violates our Non-consensual Content Policy or CSAM Policy?</h3>
+                                            </div>
+                                            <div class="flex flex-column gap--16">
+                                                <div class="flex items-start gap--16">
+                                                    <div class="w--20 h--20 bg--col--spring-green ba br--col--spring-green br-100 flex items-center justify-center">
+                                                        <span class="db w--8 h--8 bg-black br-100"></span>
+                                                    </div>
+                                                    <span class="fs--16 fw5 lh--24 white">No</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Report media 2 -->
+                                    <div class="w-100 bg-black-70 bg--blur--50 ba br--col--red-warning pa3 flex flex-column gap--32">
+                                        <div class="flex items-center justify-between">
+                                            <div class="flex items-center gap--16">
+                                                <span>
+                                                    <img src="assets/images/red-report-icon.svg">
+                                                </span>
+                                                <h2 class="fs--24 fw5 lh--32 bg--gradient--col--red-orange bg--clip--text col--text--fill">REPORT MEDIA 2</h2>
+                                            </div>
+                                        </div>
+                                        <div class="flex gap--20 bg--black">
+                                            <div class="w--200 h--112 of--hidden">
+                                                <img src="assets/images/media-thumb.png" class="w-100 h-100 fit--cover">
+                                            </div>
+                                            <div class="flex-auto gap--16 flex flex-column">
+                                                <p class="fs--18 fw6 lh--28 white">Record breaking Hot Dog eating ! See my attempt to break world’s record! Watch now!</p>
+                                                <div class="flex gap--11 items-center">
+                                                    <div class="w--40 h--40 of--hidden br--200">
+                                                        <img src="assets/images/media-thumb.png" class="w-100 h-100 fit--cover">
+                                                    </div>
+                                                    <div class="flex flex-column">
+                                                        <h3 class="fs--16 fw6 lh--24 white">Pen Ni</h3>
+                                                        <a href="#" class="fs--12 lh--18 white">
+                                                            <span class="fs--12 lh--18 white">@Pennyyy6580</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-column gap--16">
+                                            <div class="flex items-center gap--16">
+                                                <h3 class="fs--20 fw6 lh--30 bg--gradient--col--red-orange bg--clip--text col--text--fill">Reason(s) for reporting  :</h3>
+                                                <span class="fs--16 fw4 lh--24 col--gray-warm-500">Select at least 1</span>
+                                            </div>
+                                            <div class="flex flex-wrap gap--16">
+                                                <div class="flex items-start gap--16 flex-auto w-50">
+                                                    <div class="w--20 h--20 bg--col--spring-green ba br--col--spring-green br--6 flex items-center justify-center">
+                                                        <img src="assets/images/black-right-tick.svg">
+                                                    </div>
+                                                    <span class="fs--16 fw5 lh--24 white">Copyright infringement</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-column gap--16">
+                                            <div class="flex items-center gap--16">
+                                                <h3 class="fs--20 fw6 lh--30 bg--gradient--col--red-orange bg--clip--text col--text--fill ws-normal">Do you appear in this content or have first-hand knowledge that the content violates our Non-consensual Content Policy or CSAM Policy?</h3>
+                                            </div>
+                                            <div class="flex flex-column gap--16">
+                                                <div class="flex items-start gap--16">
+                                                    <div class="w--20 h--20 bg--col--spring-green ba br--col--spring-green br-100 flex items-center justify-center">
+                                                        <span class="db w--8 h--8 bg-black br-100"></span>
+                                                    </div>
+                                                    <span class="fs--16 fw5 lh--24 white">No</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Report media 3 -->
+                                    <div class="w-100 bg-black-70 bg--blur--50 ba br--col--red-warning pa3 flex flex-column gap--32">
+                                        <div class="flex items-center justify-between">
+                                            <div class="flex items-center gap--16">
+                                                <span>
+                                                    <img src="assets/images/red-report-icon.svg">
+                                                </span>
+                                                <h2 class="fs--24 fw5 lh--32 bg--gradient--col--red-orange bg--clip--text col--text--fill">REPORT MEDIA 3</h2>
+                                            </div>
+                                        </div>
+                                        <div class="flex gap--20 bg--black">
+                                            <div class="w--200 h--112 of--hidden">
+                                                <img src="assets/images/media-thumb.png" class="w-100 h-100 fit--cover">
+                                            </div>
+                                            <div class="flex-auto gap--16 flex flex-column">
+                                                <p class="fs--18 fw6 lh--28 white">Record breaking Hot Dog eating ! See my attempt to break world’s record! Watch now!</p>
+                                                <div class="flex gap--11 items-center">
+                                                    <div class="w--40 h--40 of--hidden br--200">
+                                                        <img src="assets/images/media-thumb.png" class="w-100 h-100 fit--cover">
+                                                    </div>
+                                                    <div class="flex flex-column">
+                                                        <h3 class="fs--16 fw6 lh--24 white">Pen Ni</h3>
+                                                        <a href="#" class="fs--12 lh--18 white">
+                                                            <span class="fs--12 lh--18 white">@Pennyyy6580</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-column gap--16">
+                                            <div class="flex items-center gap--16">
+                                                <h3 class="fs--20 fw6 lh--30 bg--gradient--col--red-orange bg--clip--text col--text--fill">Reason(s) for reporting  :</h3>
+                                                <span class="fs--16 fw4 lh--24 col--gray-warm-500">Select at least 1</span>
+                                            </div>
+                                            <div class="flex flex-wrap gap--16">
+                                                <div class="flex items-start gap--16 flex-auto w-50">
+                                                    <div class="w--20 h--20 bg--col--spring-green ba br--col--spring-green br--6 flex items-center justify-center">
+                                                        <img src="assets/images/black-right-tick.svg">
+                                                    </div>
+                                                    <span class="fs--16 fw5 lh--24 white">Copyright infringement</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-column gap--16">
+                                            <div class="flex items-center gap--16">
+                                                <h3 class="fs--20 fw6 lh--30 bg--gradient--col--red-orange bg--clip--text col--text--fill ws-normal">Do you appear in this content or have first-hand knowledge that the content violates our Non-consensual Content Policy or CSAM Policy?</h3>
+                                            </div>
+                                            <div class="flex flex-column gap--16">
+                                                <div class="flex items-start gap--16">
+                                                    <div class="w--20 h--20 bg--col--spring-green ba br--col--spring-green br-100 flex items-center justify-center">
+                                                        <span class="db w--8 h--8 bg-black br-100"></span>
+                                                    </div>
+                                                    <span class="fs--16 fw5 lh--24 white">No</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- end submit value -->
+                            </div>
+                            <!-- submit value section -->
+                        </div>
+                    </div>
+                    <!-- end third section -->
+                    <!-- fifth section --> 
+                    <div class="flex items-end self-stretch">
+                        <a href="#" class="flex pv0 pad--left--40 pad--right--40 w--352 h--4 cp-6 justify-center items-center flex--1-0-0 self-stretch bg--col--spring-green">
+                          <div class="flex flex-column items-center">
+                            <div class="black tc ff-poppins fs--20 fw6 lh--30 ttu">
+                              Fansocial Home
+                            </div>
+                          </div>
+                        </a>
+                    </div>
+                    <!-- end fifth section --> 
+                </div> <!-- end form content area -->
+            </div>
+
+            <!-- footer section -->
+            <div class="w-100 bg-black-30 pad--y--24 pad--right--48 pad--left--48 flex flex-column gap--16">
+                <!-- top section -->
+                <div class="flex gap--24">
+                    <!-- left section -->
+                    <div class="flex flex-column gap--16 flex-auto w-50">
+                        <div class="flex items-center gap--16">
+                            <span>
+                                <img src="assets/images/email-box.svg">
+                            </span>
+                            <a href="#" class="link">
+                                <span class="fs--14 font-medium white lh--normal tracked--0-07">support@fansocial.app</span>
+                            </a>
+                        </div>
+                        <div class="flex items-center gap--16">
+                            <span>
+                                <img src="assets/images/help-icon.svg">
+                            </span>
+                            <a href="#">
+                                <span class="fs--14 font-medium white lh--normal tracked--0-07">Help</span>
+                            </a>
+                        </div>
+                        <div>
+                            <ul class="flex items-center gap--16">
+                                <li>
+                                    <a href="#">
+                                        <img src="assets/images/discord-icon.svg">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="assets/images/social-x-icon.svg">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="assets/images/instagram-icon.svg">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div><!-- end left section -->
+                    <!-- right section -->
+                    <div class="flex-auto w-50">
+                        <ul class="flex flex-column gap--8">
+                            <li class="fs--12 lh--normal">
+                                <a href="#" class="fs--12 lh--normal white tracked--0-07">
+                                    <span class="fs--12 lh--normal white tracked--0-07">DMCA</span>
+                                </a>
+                            </li>
+                            <li class="fs--12 lh--normal">
+                                <a href="#" class="fs--12 lh--normal white tracked--0-07">
+                                    <span class="fs--12 lh--normal white tracked--0-07">Anti Sexual Exploitation Policies (USC 2257, Anti-Slavery and Anti-Sex Trafficking, CSAM)</span>
+                                </a>
+                            </li>
+                            <li class="fs--12 lh--normal">
+                                <a href="#" class="fs--12 lh--normal white tracked--0-07">
+                                    <span class="fs--12 lh--normal white tracked--0-07">Terms & Conditions</span>
+                                </a>
+                            </li>
+                            <li class="fs--12 lh--normal">
+                                <a href="#" class="fs--12 lh--normal white tracked--0-07">
+                                    <span class="fs--12 lh--normal white tracked--0-07">Privacy Policies</span>
+                                </a>
+                            </li>
+                            <li class="fs--12 lh--normal">
+                                <a href="#" class="fs--12 lh--normal white tracked--0-07">
+                                    <span class="fs--12 lh--normal white tracked--0-07">Report</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div><!-- end right section -->
+                </div><!-- end top section -->
+                <!-- middle section -->
+                <div class="flex gap--8 items-start">
+                    <div>
+                        <img src="assets/images/visa-card.svg" />
+                    </div>
+                    <div>
+                        <img src="assets/images/master-card.svg" />
+                    </div>
+                </div><!-- end middle section -->
+                <!-- copyright text -->
+                <div>
+                    <p class="fs--14 lh--24 white tracked--0-07">© 2024 Fansocial</p>
+                </div><!-- end copyright text -->
+            </div><!-- end footer section -->
+        </div>
+    </body>
+
+</html>
