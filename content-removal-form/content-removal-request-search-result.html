@@ -38,8 +38,11 @@
             .col--gray-warm-500 { color: var(--Gray-warm-500, #79716B); } /* confirmed in use */
             .col--gray-warm-300 { color: var(--Gray-warm-500, #D7D3D0); } /* confirmed in use */
 
+            /* Hover Color */
+            .hover--group:hover .white { color: var(--color-black); }
+
             /* Background Colors*/
-            .bg--col--spring-green { background-color: var(--color-spring-green); } /* confirmed in use */
+            .hover--bg--col--spring-green:hover { background-color: var(--color-spring-green); } /* confirmed in use */
 
             /* Background Gradients*/
             .bg--gradient--col--red-orange { background: var(--gradient-red-orange, linear-gradient(180deg, #F00 0%, #FF7201 100%)); }
@@ -159,31 +162,31 @@
                             <div class="relative">
                                 <div class="w-100 absolute bg-black-70 bg--blur--50">
                                     <div class="flex flex-column">
-                                        <div class="flex gap--20 pa3 bg--col--spring-green">
+                                        <div class="flex gap--20 pa3 bg--black pointer hover--bg--col--spring-green hover--group">
                                             <div class="w--142 h--80 of--hidden">
                                                 <img src="assets/images/media-thumb-2.png" class="w-100 h-100 fit--cover">
                                             </div>
                                             <div class="flex-auto gap--16 flex flex-column">
-                                                <p class="fs--18 fw6 lh--28 black ff-poppins">Record breaking Hot Dog eating ! See my attempt to break world’s record! Watch now!</p>
+                                                <p class="fs--18 fw6 lh--22 white ff-poppins">Record breaking Hot Dog eating ! See my attempt to break world’s record! Watch now!</p>
                                                 <div class="flex gap--11 items-center">
                                                     <div class="w--40 h--40 of--hidden br--200">
                                                         <img src="assets/images/media-thumb-2.png" class="w-100 h-100 fit--cover">
                                                     </div>
                                                     <div class="flex flex-column">
-                                                        <h3 class="ff-poppins fs--16 fw6 lh--24 black">Pen Ni</h3>
-                                                        <a href="#" class="fs--12 lh--18 black">
-                                                            <span class="fs--12 lh--18 black ff-poppins">@Pennyyy6580</span>
+                                                        <h3 class="ff-poppins fs--16 fw6 lh--24 white">Pen Ni</h3>
+                                                        <a href="#" class="fs--12 lh--18 white">
+                                                            <span class="fs--12 lh--18 white ff-poppins">@Pennyyy6580</span>
                                                         </a>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="flex gap--20 pa3 bg--black">
+                                        <div class="flex gap--20 pa3 bg--black pointer hover--bg--col--spring-green">
                                             <div class="w--142 h--80 of--hidden">
                                                 <img src="assets/images/media-thumb.png" class="w-100 h-100 fit--cover">
                                             </div>
                                             <div class="flex-auto gap--16 flex flex-column">
-                                                <p class="fs--18 fw6 lh--28 white ff-poppins">Record breaking Hot Dog eating ! See my attempt to break world’s record! Watch now!</p>
+                                                <p class="fs--18 fw6 lh--22 white ff-poppins">Record breaking Hot Dog eating ! See my attempt to break world’s record! Watch now!</p>
                                                 <div class="flex gap--11 items-center">
                                                     <div class="w--40 h--40 of--hidden br--200">
                                                         <img src="assets/images/media-thumb.png" class="w-100 h-100 fit--cover">
