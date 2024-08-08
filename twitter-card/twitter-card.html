@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Content Removal Request</title>
+
+        <!-- Poppins Font Family -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet">
+
+        <!-- Tachyons Style -->
+        <link rel="stylesheet"
+            href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/main.css" />
+        <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" />
+        <link rel="stylesheet"
+            href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/theme.css" />
+        <link rel="stylesheet"
+            href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/customTachyons.css" />
+
+        <!-- /* Custom Tachyons */ -->
+        <style type="text/css">
+            /* Font */
+            .ff-poppins { font-family: 'Poppins'; }
+
+            /* Background Colors*/
+            .bg--col--dark-green { background-color: var(--color-dark-green, #143019); } 
+
+            /* Padding */
+            .pad--top--56 { padding-top: 3.5rem; }
+
+            /* White Box Top Curve STyle */
+            .elm_WgsJrh:before { content: ''; width: 110%; height:4rem; background-color: var(--color-dark-green, #143019); position: absolute; top: -1.75rem; left: -0.625rem; border-radius:65%; }
+
+        </style>
+    </head>
+
+    <body>
+        <div class="ff-poppins flex flex-column items-center w-100 pt5">
+            <!-- Main Container -->
+            <div class="bg-white w--519 flex flex-column gap--16">
+                <!-- Top Info Section -->
+                <div class="flex items-start gap--8">
+                    <!-- Spotify logo -->
+                    <div class="w--40 h--40 br--7 bg-black flex-none">
+                        
+                    </div><!-- End Spotify logo -->
+                    <!-- Text Content -->
+                    <div class="flex flex-column flex-auto">
+                        <div class="flex gap--4 items-center">
+                            <h3 class="ff-poppins fs--16 fw8 lh--24 black">Spotify</h3>
+                            <span class="ff-poppins fs--16 fw6 lh--24 col--gray-chateau">@Spotify - Jul 31</span>
+                        </div>
+                        <div class="flex flex-column">
+                            <p class="pb0 ff-poppins fs--16 fw5 lh--20 col--outer-space">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sapien massa.</p>
+                            <div class="ff-poppins fs--16 fw5 lh--20 col--outer-space"> Listen Now: <a href="#" class="link ff-poppins fs--16 fw5 lh--20 col--blue">spotify.link/TrackIDsCfghy</a></div>
+                        </div>
+                    </div><!-- End Text Content -->
+                    <div class="pt2 pointer">
+                        <img src="three-dots.svg">
+                    </div>
+                </div><!-- End Top Info Section -->
+
+                <!-- Drop Box Section -->
+                <div class="pad--left--48">
+                    <div class="bg--col--dark-green br--12 pad--left--48 pad--right--48 pad--top--32 pad--bottom--32 flex flex-column">
+                        <div class="w-100 flex justify-center">
+                            <h2 class="ttu fs--48 lh--44 tracked--0-208 white tc">Just <br /> Dropped</h2>
+                        </div>
+                        <div class="relative bg-white br--4 pad--left--48 pad--right--48 pad--top--56 pb3 flex justify-center elm_WgsJrh of--hidden">
+                            <img src="media-thumb.png">
+                        </div>
+                    </div>
+                </div><!-- End Drop Box Section -->
+            </div><!-- End Main Container -->
+            
+        </div>
+    </body>
+
+</html>
