@@ -30,6 +30,10 @@
 
             /* Width */
             .w--480 { width: 30rem; }
+            .w--160 { width: 10rem; }
+
+            /* Height */
+            .h--90 { height: 5.625rem; /* height 116px */ }
 
             /* Background Colors*/
             .bg--col--dark-green { background-color: var(--color-dark-green, #143019); } 
@@ -76,7 +80,9 @@
                             <h2 class="ttu fs--48 lh--44 tracked--0-208 white tc">Just <br /> Dropped</h2>
                         </div>
                         <div class="relative bg-white br--4 pad--left--48 pad--right--48 pad--top--56 pb3 flex justify-center elm_WgsJrh of--hidden">
-                            <img src="media-thumb.png">
+                            <div class="w--160 h--90 of--hidden">
+                                <img src="media-thumb.png" class="w-100 h-100 fit--cover">
+                            </div>
                         </div>
                     </div>
                 </div><!-- End Drop Box Section -->
