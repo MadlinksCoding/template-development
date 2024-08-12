@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Meta Tags -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE-edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Custom Product Request Popup</title>
+
+  <!-- Poppins Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Tachyons Styles -->
+  <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/main.css" />
+  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" />
+  <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/theme.css" />
+  <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/customTachyons.css" />
+  
+  <!-- Custom Style -->
+  <style>
+  	/* Custom Tachyons */
+  	/* Colors */
+  	.col--cloudy { color: var(--color-cloudy); }
+
+  	/* Background */
+    .bg--col--black-90 { background: rgba(0, 0, 0, 0.90); }
+
+    /* Width */
+		.w--0 { width: 0rem; /* width 0px */ }
+		.w--36 { width: 2.25rem; /* width 36px */ }
+
+  	/* Max Width */
+		.max--w--480 { max-width: 30rem; /* max-width 480px */ }
+
+		/* Height */
+		.h--0 { height: 0rem; /* height 0px */ }
+		.h--36 { height: 2.25rem; /* height 36px */ }
+		.h--56 { height: 3.5rem; /* height 56px */ }
+		.h--120 { height: 7.5rem; /* height 120px */ }
+
+		/* Min height */
+		.mh--i { min-height: initial !important; }
+
+		/* Gap */
+		.gap--15 { gap: 0.9375rem; /* gap 15px */ }
+
+		/* Padding */
+		.pad--left--20 { padding-left: 1.25rem; /* padding-left 20px */ }
+
+		/* Margin */
+		.mt--16-n { margin-top: -1rem; /* margin-top -16px */ }
+
+		/* Box Shadow */
+		.sh--0-0-8-0--black-50 { box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.50); }
+
+		/* Border Colors */
+		.br--col--cloudy { border-color: var(--color-cloudy); }
+		.br--col--pale-sky { border-color: var(--color-pale-sky, #667085); }
+
+		/* Border Widths */
+		.bw--2 { border-width: 0.125rem; /* border width 2px */ }
+
+		/* Radio Buttons Custom Styles */
+		.elm_vDYieK input:checked ~ .elm_nqyQNV { background: var(--color-chartreuse,#9FFF02); transition: background 0.25s ease-out; }
+		.elm_vDYieK input:checked ~ .elm_nqyQNV .elm_ruUjPD { display: none; }
+		.elm_vDYieK input:checked ~ .elm_nqyQNV .elm_wLBQCY { display: block }
+		.elm_vDYieK input:checked ~ .elm_nqyQNV .elm_gDmPhk { color: black; transition: color 0.25s ease; }
+		.elm_vDYieK:hover input:checked ~ .elm_nqyQNV .elm_gDmPhk { color: black; transition: color 0.25s ease; }
+		.elm_vDYieK:hover .elm_nqyQNV .elm_gDmPhk { color: var(--color-chartreuse); transition: color 0.25s ease; }
+
+		/* Form Inputs Custom Style */
+		.elm_WRCkSV { border: none; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: var(--color-pale-sky, #667085); transition: all 0.25s ease-out; }
+		.elm_WRCkSV:hover, .elm_WRCkSV:focus, .elm_WRCkSV:active { border-bottom-color: var(--color-chartreuse); }
+
+		/* Send Request Button Custom Styles */
+		.elm_iKcXNC { transform: skewX(15deg); transition: color 0.2s, background 0.2s ease-in, box-shadow 0.3s ease-in; }
+		.elm_iKcXNC:hover { color: white; background-color: var(--color-blue); box-shadow: 5px 5px 0px var(--color-chartreuse); }
+		.elm_iKcXNC:hover .elm_nQsIyy { color: white; transition: color 0.2s; }
+		.elm_iKcXNC:hover .elm_nQsIyy path { stroke: white; transition: stroke 0.2s }
+		.elm_nQsIyy { transform: skewX(-15deg); max-block-size: none; }
+
+		/* Temporary Dropdown Icon Custom Style */
+		.elm_WpVdwH { top: 1rem; right: 0.938rem; pointer-events: none; }
+  </style>
+</head>
+<body style="background: url('assets/images/body-bg.png') 50% 0% no-repeat; background-size: cover;">
+	<!-- product request popup main content block -->
+	<div class="flex flex-column items-start w-100 max--w--480 bg--col--black-90 bg--blur--25 sh--0-0-8-0--black-50 pa3 center relative overflow-hidden">
+		<form class="flex flex-column items-start gap--16" action="#" method="post">
+			<!-- popup head -->
+			<div class="flex justify-between items-center w-100">
+				<!-- popup heading -->
+				<div class="flex items-center">
+					<h2 class="fs--24 fs-normal fw5 lh--32 col--desert-storm">
+						Custom Product Request
+					</h2>
+				</div>
+
+				<!-- popup close -->
+				<div class="flex items-center">
+					<!-- popup close button -->
+					<a class="db w2 h2">
+			      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" class="db w2 h2">
+			        <path d="M24 8L8 24M8 8L24 24" stroke="#9FFF02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+			      </svg>
+			    </a>
+				</div>
+			</div>
+
+			<!-- avatar and message block -->
+			<div class="flex flex-column items-start w-100">
+				<!-- avatar -->
+				<div class="flex pl3 relative z-2">
+					<div>
+						<a href="#" class="db w--48 h--48">
+							<img src="assets/images/avatar.png" alt="" class="db w--48 h--48">
+						</a>
+					</div>
+				</div>
+
+				<!-- message -->
+				<div class="flex flex-column gap--4 pa3 pb2 mt--16-n ba bw--0-50 br--col--chartreuse bg--blur--10 relative z-1">
+					<!-- username -->
+					<p class="db">
+						<a href="#" class="fs--12 fs-normal fw5 lh--18 col--light-warm-green hover-green">
+							@jenny_098767
+						</a>
+					</p>
+
+					<!-- instruction -->
+					<p class="db fs--14 fs-normal fw4 lh--20 col--mercury">
+						Can’t find what you like? Request clips or physical items prepare just for you! Fill in the form below and I will get back to you soon!
+					</p>
+				</div>
+			</div>
+
+			<!-- request choice -->
+			<div class="flex flex-column items-start gap--16 w-100 mb3">
+				<div class="flex items-center w-100">
+					<h3 class="fs--18 fs-normal fw6 lh--28 col--desert-storm">
+						What item would you like to request?
+					</h3>
+				</div>
+
+				<!-- radio buttons -->
+				<div class="flex items-center gap--8 w-100">
+					<!-- radio -->
+					<label class="elm_vDYieK flex w-50 h--56 pointer" data-radio-value="digital">
+						<input class="o-0 pointer absolute w--0 h--0" type="radio" name="choice" data-radio-name="choice" data-radio-value="digital">
+
+						<div class="elm_nqyQNV flex items-center w-100 gap--10 pa3">
+							<span class="w--24 h--24">
+								<img class="elm_ruUjPD db" src="assets/images/radio-uncheck.svg" alt="">
+								<img class="elm_wLBQCY dn" src="assets/images/radio-check.svg" alt="">
+							</span>
+
+							<span class="elm_gDmPhk fs--16 fs-normal fw6 lh--24 col--cloudy">
+								Custom clip
+							</span>
+						</div>
+					</label>
+
+					<!-- radio -->
+					<label class="elm_vDYieK flex w-50 h--56 pointer" data-radio-value="physical">
+						<input class="o-0 pointer absolute w--0 h--0" type="radio" name="choice" data-radio-name="choice" data-radio-value="physical">
+
+						<div class="elm_nqyQNV flex items-center w-100 gap--10 pa3">
+							<span class="w--24 h--24">
+								<img class="elm_ruUjPD db" src="assets/images/radio-uncheck.svg" alt="">
+								<img class="elm_wLBQCY dn" src="assets/images/radio-check.svg" alt="">
+							</span>
+
+							<span class="elm_gDmPhk fs--16 fs-normal fw6 lh--24 col--cloudy">
+								Physical Products
+							</span>
+						</div>
+					</label>
+				</div>
+			</div>
+
+			<!-- tab body: digital -->
+			<div class="dn w-100 mb3" data-tab-name="digital">
+				<div class="flex flex-column items-start gap--32">
+					<!-- user input : what you want -->
+					<div class="flex flex-column items-start gap--15 w-100">
+						<div class="flex items-center w-100">
+							<h3 class="fs--18 fs-normal fw6 lh--28 col--desert-storm">
+								Tell me about what you want in the clip:
+							</h3>
+						</div>
+
+						<!-- user inputs -->
+						<div class="flex items-center w-100">
+							<textarea class="elm_WRCkSV db w-100 mh--i h--120 overflow-hidden fs--16 fs-normal fw4 lh--24 tracked--100 col--desert-storm pad--y--12 pad--x--10 br2 br--top bb br--col--pale-sky bg-black-50">I want you to eat these 3 types of mangoes for me and tell me which one taste better :
+ • Alphonso mango
+ • Ataulfo...</textarea>
+						</div>
+					</div>
+
+					<!-- user input : How long do you want the clip to be? -->
+					<div class="flex flex-column items-start gap--15 w-100">
+						<div class="flex items-center w-100">
+							<h3 class="fs--18 fs-normal fw6 lh--28 col--desert-storm">
+								How long do you want the clip to be?
+							</h3>
+						</div>
+
+						<!-- user inputs -->
+						<div class="flex items-center w-100 relative">
+							<select class="elm_WRCkSV db w-100 h--56 overflow-hidden fs--16 fs-normal fw6 lh--24 tracked--100 col--desert-storm pad--y--8 pad--right--15 pad--left--20 br2 br--top bn bb br--col--pale-sky bg-black-50 pointer">
+								<option>5 minutes $5.99</option>
+								<option>10 minutes $15.99</option>
+								<option>15 minutes $25.99</option>
+								<option>20 minutes $35.99</option>
+								<option>30 minutes $45.99</option>
+							</select>
+
+							<!-- dummy arrow marker (should be removed after backend team implements the custom select) -->
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="elm_WpVdwH db w--24 h--24 absolute">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 9.29289C5.68342 8.90237 6.31658 8.90237 6.70711 9.29289L12 14.5858L17.2929 9.29289C17.6834 8.90237 18.3166 8.90237 18.7071 9.29289C19.0976 9.68342 19.0976 10.3166 18.7071 10.7071L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L5.29289 10.7071C4.90237 10.3166 4.90237 9.68342 5.29289 9.29289Z" fill="#9FFF02"/>
+							</svg>
+						</div>
+					</div>
+
+					<!-- user input : Select delivery options: -->
+					<div class="flex flex-column items-start gap--15 w-100">
+						<div class="flex items-center w-100">
+							<h3 class="fs--18 fs-normal fw6 lh--28 col--desert-storm">
+								Select delivery options:
+							</h3>
+						</div>
+
+						<!-- user inputs -->
+						<div class="flex items-center w-100 relative">
+							<select class="elm_WRCkSV db w-100 h--56 overflow-hidden fs--16 fs-normal fw6 lh--24 tracked--100 col--desert-storm pad--y--8 pad--right--15 pad--left--20 br2 br--top bn bb br--col--pale-sky bg-black-50 pointer">
+								<option>1 week $20.99</option>
+								<option>2 weeks $10.99</option>
+								<option>3 weeks $5.99</option>
+								<option selected>4 weeks Free</option>
+								<option>5 weeks Free</option>
+							</select>
+
+							<!-- dummy arrow marker (should be removed after backend team implements the custom select) -->
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="elm_WpVdwH db w--24 h--24 absolute">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 9.29289C5.68342 8.90237 6.31658 8.90237 6.70711 9.29289L12 14.5858L17.2929 9.29289C17.6834 8.90237 18.3166 8.90237 18.7071 9.29289C19.0976 9.68342 19.0976 10.3166 18.7071 10.7071L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L5.29289 10.7071C4.90237 10.3166 4.90237 9.68342 5.29289 9.29289Z" fill="#9FFF02"/>
+							</svg>
+						</div>
+					</div>
+
+					<!-- user input : Special request -->
+					<div class="flex flex-column items-start gap--10 w-100">
+						<div class="flex items-center w-100">
+							<h3 class="fs--18 fs-normal fw6 lh--28 col--desert-storm">
+								Special request
+							</h3>
+						</div>
+
+						<!-- user inputs -->
+						<div class="flex items-center w-100 relative">
+							<select class="elm_WRCkSV db w-100 h--56 overflow-hidden fs--16 fs-normal fw6 lh--24 tracked--100 col--desert-storm pad--y--8 pad--right--15 pad--left--20 br2 br--top bn bb br--col--pale-sky bg-black-50 pointer">
+								<option>Eat with long gloves (+ $3.99)</option>
+								<option>Eat with Short gloves (+ $2.99)</option>
+								<option>Eat with fork (+ $4.99)</option>
+							</select>
+
+							<!-- dummy arrow marker (should be removed after backend team implements the custom select) -->
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="elm_WpVdwH db w--24 h--24 absolute">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 9.29289C5.68342 8.90237 6.31658 8.90237 6.70711 9.29289L12 14.5858L17.2929 9.29289C17.6834 8.90237 18.3166 8.90237 18.7071 9.29289C19.0976 9.68342 19.0976 10.3166 18.7071 10.7071L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L5.29289 10.7071C4.90237 10.3166 4.90237 9.68342 5.29289 9.29289Z" fill="#9FFF02"/>
+							</svg>
+						</div>
+					</div>
+
+					<!-- additional options heading: -->
+					<div class="flex flex-column items-start gap--15 w-100">
+						<div class="flex items-center w-100">
+							<h3 class="fs--18 fs-normal fw6 lh--28 col--desert-storm">
+								Additional Options
+							</h3>
+						</div>
+					</div>
+
+					<!-- user input : Do you want the clothes I wore in the clip mail to you ? -->
+					<div class="flex flex-column items-start gap--10 w-100">
+						<div class="flex items-center w-100">
+							<h3 class="fs--16 fs-normal fw4 lh--24 col--desert-storm">
+								Do you want the clothes I wore in the clip mail to you ?
+							</h3>
+						</div>
+
+						<!-- user inputs -->
+						<div class="flex items-center w-100 relative">
+							<select class="elm_WRCkSV db w-100 h--56 overflow-hidden fs--16 fs-normal fw6 lh--24 tracked--100 col--desert-storm pad--y--8 pad--right--15 pad--left--20 br2 br--top bn bb br--col--pale-sky bg-black-50 pointer">
+								<option>No thank you</option>
+								<option>Yes please $200</option>
+							</select>
+
+							<!-- dummy arrow marker (should be removed after backend team implements the custom select) -->
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="elm_WpVdwH db w--24 h--24 absolute">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 9.29289C5.68342 8.90237 6.31658 8.90237 6.70711 9.29289L12 14.5858L17.2929 9.29289C17.6834 8.90237 18.3166 8.90237 18.7071 9.29289C19.0976 9.68342 19.0976 10.3166 18.7071 10.7071L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L5.29289 10.7071C4.90237 10.3166 4.90237 9.68342 5.29289 9.29289Z" fill="#9FFF02"/>
+							</svg>
+						</div>
+					</div>
+
+					<!-- user input : Do you want the napkins I used in the clip mail to you ? -->
+					<div class="flex flex-column items-start gap--10 w-100">
+						<div class="flex items-center w-100">
+							<h3 class="fs--16 fs-normal fw4 lh--24 col--desert-storm">
+								Do you want the napkins I used in the clip mail to you ?
+							</h3>
+						</div>
+
+						<!-- user inputs -->
+						<div class="flex items-center w-100 relative">
+							<select class="elm_WRCkSV db w-100 h--56 overflow-hidden fs--16 fs-normal fw6 lh--24 tracked--100 col--desert-storm pad--y--8 pad--right--15 pad--left--20 br2 br--top bn bb br--col--pale-sky bg-black-50 pointer">
+								<option>No thank you</option>
+								<option selected>Yes please $200</option>
+							</select>
+
+							<!-- dummy arrow marker (should be removed after backend team implements the custom select) -->
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="elm_WpVdwH db w--24 h--24 absolute">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 9.29289C5.68342 8.90237 6.31658 8.90237 6.70711 9.29289L12 14.5858L17.2929 9.29289C17.6834 8.90237 18.3166 8.90237 18.7071 9.29289C19.0976 9.68342 19.0976 10.3166 18.7071 10.7071L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L5.29289 10.7071C4.90237 10.3166 4.90237 9.68342 5.29289 9.29289Z" fill="#9FFF02"/>
+							</svg>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- tab body: physical -->
+			<div class="dn w-100 mb3" data-tab-name="physical">
+				<div class="flex flex-column items-start gap--32">
+					<!-- heading -->
+					<div class="flex flex-column items-start gap--15 w-100">
+						<div class="flex items-center w-100">
+							<h3 class="fs--18 fs-normal fw6 lh--28 col--desert-storm">
+								Place content of physical item here
+							</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Submit Button -->
+	    <div class="elm_wCCxcs dn items-center w-100 pad--x--10">
+	    	<button class="elm_iKcXNC flex items-center justify-between w-100 pl4 pr4 bg--col--chartreuse ba br--col--chartreuse black relative">
+	    		<span class="elm_nQsIyy flex pv3 fs--20 fs-normal fw6 lh--30 color-inherit">
+	    			SEND REQUEST
+	    		</span>
+
+	    		<span class="elm_nQsIyy">
+	    			<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none" class="db w--36 h--36">
+							<path d="M7.5 18H28.5M28.5 18L18 7.5M28.5 18L18 28.5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+	    		</span>
+	    	</button>
+	    </div>
+		</form>
+	</div>
+
+	<!-- custom script -->
+	<script>
+		/**
+		 * Custom JavaScript to handle radio button selection and showing/hiding relevant tabs
+		 */
+		var radioBtns = document.querySelectorAll('.elm_vDYieK');
+
+		radioBtns.forEach( function (button, index) {
+	    button.addEventListener('click', function (e) {
+        if ( this.dataset.radioValue === 'digital' ) {
+          document.querySelector('div[data-tab-name="digital"]').classList.remove('dn');
+          document.querySelector('div[data-tab-name="physical"]').classList.add('dn');
+          document.querySelector('.elm_wCCxcs').classList.remove('dn');
+          document.querySelector('.elm_wCCxcs').classList.add('flex');
+        }
+
+        if ( this.dataset.radioValue === 'physical' ) {
+          document.querySelector('div[data-tab-name="digital"]').classList.add('dn');
+          document.querySelector('div[data-tab-name="physical"]').classList.remove('dn');
+          document.querySelector('.elm_wCCxcs').classList.remove('dn');
+          document.querySelector('.elm_wCCxcs').classList.add('flex');
+        }
+	    });
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Meta Tags -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE-edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Can't Find What You Want - Floating Button</title>
+
+  <!-- Poppins Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Tachyons Styles -->
+  <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/main.css" />
+  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" />
+  <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/theme.css" />
+  <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/customTachyons.css" />
+  
+  <!-- Custom Style -->
+  <style>
+  	/* Custom Tachyons */
+  	/* Width */
+		.w--93 { width: 5.813rem; /* width 93px */ }
+		.w--102 { width: 6.375rem; /* width 102px */ }
+		.w--35 { width: 2.188rem; /* width 35px */ }
+
+  	/* Height */
+		.h--150 { height: 9.375rem; /* height 150px */ }
+		.h--93 { height: 5.813rem; /* height 93px */ }
+
+		/* Position */
+		.t--30 { top: 1.875rem; /* top 30px */ }
+    .t--50-p { top: 50%; /* top 50% */ }
+    .l--50-p { left: 50%; /* left 50% */ }
+
+		/* transform */
+    .t--tranlate-n-50-p { transform: translate(-50%, -50%); /* translate(-50%, -50%) */ }
+
+		/* Box Shadow */
+		.sh--1--1 { box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.50); }
+
+		/* Text Shadow */
+		.text--sh--2-3-0 { text-shadow: 2px 3px 0px #0018EF; }
+
+		/* Hover Animation Custom Styles */
+		@keyframes flash__elm_sjzkue { 0% { opacity: 1; } 25% { opacity: 0; } 50% { opacity: 1; } 75% { opacity: 0; } 100% { opacity: 1; } }
+		@keyframes bounce__elm_sjzkue { 0% { transform: translate(-50%, -50%); } 25% { transform: translate(-50%, -60%); } 50% { transform: translate(-50%, -50%); } 75% { transform: translate(-50%, -40%); } 100% { transform: translate(-50%, -50%); } }
+		.elm_FiLApc:hover .elm_wXURTr { animation: bounce__elm_sjzkue 5s linear infinite; }
+		.elm_FiLApc:hover .elm_CDJeLC { animation: flash__elm_sjzkue 2s ease-in infinite; }
+		.elm_iKtMfy { transform-origin: 30% 100%; transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; }
+		.elm_wKgyhn { transform-origin: 30% 100%; transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; }
+		.elm_TngiRW { transform-origin: 30% 100%; transition: transform 0.3s ease-in-out; }
+		.elm_UYEUpe { transform-origin: -40% 100%; transition: transform 0.3s ease-in-out; }
+		.elm_TgygZi { transform-origin: 80% -40%; transition: transform 0.3s ease-in-out; }
+		.elm_FiLApc:hover .elm_iKtMfy { transform: translate(-50%, -50%) rotate(30deg); opacity: 0; visibility: hidden; }
+		.elm_FiLApc:hover .elm_wKgyhn { transform: translate(-50%, -50%) rotate(30deg); opacity: 0; visibility: hidden; }
+		.elm_FiLApc:hover .elm_TngiRW { transform: translate(-50%, -50%) rotate(30deg); }
+		.elm_FiLApc:hover .elm_UYEUpe { transform: translate(-80%, -40%) rotate(-21deg); }
+		.elm_FiLApc:hover .elm_TgygZi { transform: translate(0%, -70%) rotate(30deg); }
+  </style>
+</head>
+<body style="background: url('assets/images/body-bg.png') 50% 0% no-repeat; background-size: cover;">
+	<!-- start html here -->
+	<div class="elm_FiLApc flex items-center justify-center w--150 h--150 br-100 bg-black sh--1--1 pointer fixed right-2 bottom-2 z-999">
+		<!-- merch -->
+		<div class="elm_TgygZi db w--150 h--150 br-100 absolute t--50-p l--50-p t--tranlate-n-50-p z-1">
+			<img src="assets/images/merch-1.svg" alt="" class="elm_wXURTr db w--102 absolute t--50-p l--50-p t--tranlate-n-50-p">
+		</div>
+
+		<!-- camera -->
+		<div class="elm_UYEUpe db w--150 h--150 br-100 absolute t--50-p l--50-p t--tranlate-n-50-p z-2">
+			<img src="assets/images/merch-2.svg" alt="" class="elm_wXURTr db w--93 absolute t--50-p l--50-p t--tranlate-n-50-p">
+			<img src="assets/images/flash.svg" alt="" class="elm_CDJeLC db w--35 absolute t--30 left-1">
+		</div>
+
+		<!-- custom request text -->
+		<div class="elm_TngiRW flex items-center justify-center w--150 h--150 br-100 bg-black absolute t--50-p l--50-p t--tranlate-n-50-p z-3 bg-center cover" style="background-image: url('assets/images/base-bg.svg');">
+			<div class="tc fs-normal fw6 white fs--24 text--sh--2-3-0">
+				Custom request
+			</div>
+		</div>
+
+		<!-- can't find what you want text -->
+		<div class="elm_wKgyhn db w--150 h--150 br-100 bg-black absolute t--50-p l--50-p t--tranlate-n-50-p z-4 bg-center cover" style="background-image: url('assets/images/base-text-1.svg');"></div>
+
+		<!-- avatar image -->
+		<div class="elm_iKtMfy db w--150 h--150 br-100 absolute t--50-p l--50-p t--tranlate-n-50-p z-5">
+			<img src="assets/images/avatar.png" alt="" class="db w--93 h--93 absolute t--50-p l--50-p t--tranlate-n-50-p">
+		</div>
+	</div>
+</body>
+</html>
