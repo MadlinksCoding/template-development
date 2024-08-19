@@ -30,18 +30,28 @@
     	fill: green;
     }*/
 
+    /* Spinning Animation for the SVG Loader (copied from theme's style.css) */
+.elm_BwJGKO{
+    transform-origin:center; animation: elm_SbUAkr 1.8s infinite linear
+}
+@keyframes elm_SbUAkr{
+    100%{
+        transform:rotate(360deg)
+    }
+}
+
     </style>
 </head>
 
 <body>
 	<!-- Spinner -->
 	<div data-loader="" class="flex justify-center items-start pt4 pb6-ns">
-		<div class="w-100 tc pb4 pt4">
+		<!-- <div class="w-100 tc pb4 pt4">
 			<svg data-icon="loaders/default-spinner" width="50" height="50" fill="#FF8BFE" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm0,19a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z" opacity=".25" stroke-width="1"></path>
                 <path d="M10.14,1.16a11,11,0,0,0-9,8.92A1.59,1.59,0,0,0,2.46,12,1.52,1.52,0,0,0,4.11,10.7a8,8,0,0,1,6.66-6.61A1.42,1.42,0,0,0,12,2.69h0A1.57,1.57,0,0,0,10.14,1.16Z" class="elm_BwJGKO" stroke-width="1"></path>
             </svg>
-		</div>
+		</div> -->
         <div class="w-100 tc pb4 pt4">
             <svg width="239" height="238" viewBox="0 0 239 238" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g opacity="0.7" filter="url(#filter0_d_1093_138942)">
