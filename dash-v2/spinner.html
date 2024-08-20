@@ -18,6 +18,20 @@
     /* Spinning Animation duration for the SVG Loader */
     .animation--duration--1 { animation-duration: 1.4s; }
 
+    .spinner-shadow {
+        width: 50px;
+        height: 50px;
+        background: transparent;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        border-radius: 50%;
+        box-shadow: 0 0 20px #81c786, 0 0 20px #81c786 inset;
+        filter: blur(10px);
+    }
+
     </style>
 </head>
 
@@ -25,9 +39,24 @@
 	<!-- Spinner -->
 	<div data-loader="" class="flex justify-center items-start pt4 pb6-ns">
         <div class="w-100 tc pb4 pt4">
-            <svg width="80" height="80" viewBox="0 0 239 238" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                <div class="relative inline-flex">
+                    <div class="db spinner-shadow"></div>
+                    <svg data-icon="loaders/default-spinner" width="50" height="50" fill="#fff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm0,19a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z" opacity=".25" stroke-width="1"></path>
+                        <path d="M10.14,1.16a11,11,0,0,0-9,8.92A1.59,1.59,0,0,0,2.46,12,1.52,1.52,0,0,0,4.11,10.7a8,8,0,0,1,6.66-6.61A1.42,1.42,0,0,0,12,2.69h0A1.57,1.57,0,0,0,10.14,1.16Z" class="elm_BwJGKO" fill="#79E892" stroke-width="1"></path>
+                    </svg>
+                </div>
+
+
+
+
+
+
+
+            <!-- <svg width="80" height="80" viewBox="0 0 239 238" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g opacity="0.7" filter="url(#filter0_d_1093_138942)">
-                    <path d="M 173 88 C 166 72 146.508 59.1185 131.986 56.2298 C 117.464 53.3412 102.389 55.5773 89.3306 62.5571 C 76.2722 69.537 66.038 80.8287 60.3717 94.5083 C 54.7054 108.188 53.9577 123.409 58.2558 137.578 C 62.554 151.747 71.6322 163.988 83.9435 172.214 C 96.2549 180.44 111.038 184.143 125.773 182.692 C 140.509 181.241 154.285 174.725 164.755 164.255" stroke="white" stroke-width="10" class="elm_BwJGKO animation--duration--1"/>
+                    <path d="M 124 55 C 113 55 102.389 55.5773 89.3306 62.5571 C 76.2722 69.537 66.038 80.8287 60.3717 94.5083 C 54.7054 108.188 53.9577 123.409 58.2558 137.578 C 62.554 151.747 71.6322 163.988 83.9435 172.214 C 96.2549 180.44 111.038 184.143 125.773 182.692" stroke="white" stroke-width="10" class="elm_BwJGKO"/>
                 </g>
                 <defs>
                     <filter id="filter0_d_1093_138942" x="0.5" y="0" width="238" height="238" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
@@ -41,7 +70,12 @@
                         <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1093_138942" result="shape"/>
                     </filter>
                 </defs>
-            </svg>
+            </svg> -->
+
+            <!-- <svg data-icon="loaders/default-spinner" width="50" height="50" fill="#fff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm0,19a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z" opacity=".25" stroke-width="1"></path>
+                <path d="M10.14,1.16a11,11,0,0,0-9,8.92A1.59,1.59,0,0,0,2.46,12,1.52,1.52,0,0,0,4.11,10.7a8,8,0,0,1,6.66-6.61A1.42,1.42,0,0,0,12,2.69h0A1.57,1.57,0,0,0,10.14,1.16Z" class="elm_BwJGKO" fill="#79E892" stroke-width="1"></path>
+            </svg> -->
         </div>
 	</div>
 </body>
