@@ -32,6 +32,20 @@
 
         /* Background Colors */
         .bg--white--25 { background: rgba(255, 255, 255, 0.25); }
+
+        /* Colors */
+        .col--gray-500 { color: var(--color-gray-500, #667085); } /* confirmed in use */
+
+        /* Loader Animation */
+        .elm_cWpNRq {
+            transform-origin: center;
+            animation: elm_jVsoBw .75s infinite linear;
+        }
+        @keyframes elm_jVsoBw{
+            100%{
+                transform:rotate(360deg)
+            }
+        }
     </style>
 </head>
 
@@ -41,10 +55,13 @@
         <!-- Loader Wrapper -->
         <div class="w-100 h-100 bg--white--25 bg--blur--10 absolute left-0 top-0"> <!-- yes just need to add/remove "dn" class for hide/show  -->
             <div class="w-100 h-100 flex items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="151" height="150" viewBox="0 0 151 150" fill="none">
-                    <path opacity="0.7" d="M 121 120 C 133 104 137 95 139 79 C 138 53 133 46 125.16 34.3989 C 115.767 22.9532 102.696 15.1185 88.1733 12.2298 C 73.6511 9.3412 58.5765 11.5773 45.5181 18.5571 C 32.4597 25.537 22.2255 36.8287 16.5592 50.5083 C 10.8929 64.188 10.1452 79.4091 14.4433 93.5783 C 18.7415 107.747 27.8197 119.988 40.131 128.214 C 52.4424 136.44 67.2252 140.143 81.9606 138.692 C 96.696 137.241 110.472 130.725 121 120" stroke="white" stroke-width="10"/>
-                    <path opacity="0.7" d="M105.753 131.691C118.812 124.711 129.046 113.419 134.712 99.7397C140.379 86.0601 141.126 70.8389 136.828 56.6698" stroke="#07F468" class="elm_BwJGKO" stroke-width="10"/>
-                </svg>
+                <div class="flex flex-column gap--32 items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="151" height="150" viewBox="0 0 151 150" fill="none">
+                        <path opacity="0.7" d="M 121 120 C 133 104 137 95 139 79 C 138 53 133 46 125.16 34.3989 C 115.767 22.9532 102.696 15.1185 88.1733 12.2298 C 73.6511 9.3412 58.5765 11.5773 45.5181 18.5571 C 32.4597 25.537 22.2255 36.8287 16.5592 50.5083 C 10.8929 64.188 10.1452 79.4091 14.4433 93.5783 C 18.7415 107.747 27.8197 119.988 40.131 128.214 C 52.4424 136.44 67.2252 140.143 81.9606 138.692 C 96.696 137.241 110.472 130.725 121 120" stroke="white" stroke-width="10"/>
+                        <path opacity="0.7" d="M105.753 131.691C118.812 124.711 129.046 113.419 134.712 99.7397C140.379 86.0601 141.126 70.8389 136.828 56.6698" stroke="#07F468" class="elm_cWpNRq" stroke-width="10"/>
+                    </svg>
+                    <span class="fs--14 lh--20 col--gray-500">Loading...</span>
+                </div>
             </div>
         </div>
     </div> <!-- End Loader -->
