@@ -199,6 +199,7 @@ class DashMenu {
 	/** 
 	 * 
 	 * @method handleSubMenuClick 
+	 * @param {HTMLElement} element - clicked submenu item.
 	 * @description Helper function to handle sub menu click (of current active submenu container)
 	 * 
 	 */
@@ -236,6 +237,7 @@ class DashMenu {
 	/** 
 	 * 
 	 * @method handleMainMenuClick 
+	 * @param {HTMLElement} element - main menu items (which one is clicked).
 	 * @description Helper function to handle active main menu
 	 * 
 	 */
@@ -288,6 +290,7 @@ class DashMenu {
 	/** 
 	 * 
 	 * @method handleDashNavElClick 
+	 * @param {HTMLElement} element - main dashboard <nav> element.
 	 * @description Attached and listens to click event on dashNavEl element
 	 * 
 	 */
