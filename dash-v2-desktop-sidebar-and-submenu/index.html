@@ -1,0 +1,1550 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Meta Tags -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>Template - Dashboard Sidebar & Submenu</title>
+
+        <!-- Poppins Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+        <!-- Tachyons Styles -->
+        <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/main.css" />
+        <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" />
+        <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/theme.css" />
+        <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/customTachyons.css" />
+
+        <!-- Dashboard Sidebar Custom Style -->
+        <link rel="stylesheet" href="assets/css/dashboard-sidebar.css" />
+    </head>
+    <body>
+        <!-- main wrapper -->
+        <div data-section="wrapper" class="flex">
+
+            <!-- page sidebar -->
+            <section data-section="sidebar" class="flex vh-100 sticky top-0 z-2 bg--col--athens-gray--70 sh--sidebar">
+                <!-- sidebar main wrapper (to contain all sidebar UI elements, except submenu containers) -->
+                <div class="flex flex-column justify-center items-center gap--6 w--90 vh-100 pa0 pad--y--12">
+                    <!-- site logo -->
+                    <a href="/" title="" class="flex items-center gap--10 bg--col--lemon br--12 o-80 hov--o--100 transition--opacity transition--200 transition--ease-in-out">
+                        <!-- render_svg_icon( 'logo_bg-1' ) -->
+                        <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/logo_bg-1.svg" alt="" class="flex w--36 h--36">
+                    </a>
+                    <!-- /site logo -->
+
+                    <!-- profile & controls (profile, notifications and logout) -->
+                    <div class="flex flex-column items-center self-stretch gap--8 pv2 ph1 bb br--col--mischka">
+                        <!-- avatar -->
+                        <div class="flex w--40 h--40 br--20">
+                            <a href="javascript: void(0)" title="" class="flex w--40 h--40 br--20 relative">
+                                <img src="assets/images/avatar-2.jpeg" alt="" class="w-100 h-100 fit--cover br--20">
+
+                                <!-- status indicator -->
+                                <span class="flex w--10 h--10 bg--col--spring-green ba bw1 b--white br--7 absolute bottom-0 right-0">&nbsp;</span>
+                                <!-- /status indicator -->
+                            </a>
+                        </div>
+                        <!-- /avatar -->
+
+                        <!-- cta controls -->
+                        <div class="flex justify-center items-center self-stretch gap--8 pv0 ph1">
+                            <!-- log out -->
+                            <a href="javascript: void(0)" title="" class="flex justify-center items-center gap--12 w--32 h--32 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
+                                <!-- render_svg_icon( 'logout-1' ) -->
+                                <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/logout-1.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                            </a>
+                            <!-- /log out -->
+
+                            <!-- notification -->
+                            <a href="javascript: void(0)" title="" class="flex justify-center items-center gap--2 w--32 h--32 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out relative">
+                                <!-- render_svg_icon( 'bell-03' ) -->
+                                <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/bell-03.svg" alt="" class="w--24 h--24 filter--col--pale-sky">
+
+                                <!-- status indicator -->
+                                <span class="flex w--7 h--7 bg--col--hollywood-cerise br--10 absolute top--03 right--03">&nbsp;</span>
+                                <!-- /status indicator -->
+                            </a>
+                            <!-- /notification -->
+                        </div>
+                        <!-- /cta controls -->
+                    </div>
+                    <!-- /profile & controls -->
+
+                    <!-- main navigation -->
+                    <div class="flex flex-column flex--max items-center self-stretch gap--4 pv1 ph2">
+                        <nav class="flex flex-column items-center self-stretch gap--4" data-dashboard-main-nav>
+                            <!-- menu item (Push Menu Demo) (this item is added only to show a demo of multi level push menu system in corresponding submenu, not part of actual sidebar menu) -->
+                             <div data-sidebar-menu-item data-page="dashboard/dummy-page" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
+                                <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
+                                <a href="javascript: void(0)" data-main-menu-item="true" data-main-menu-name="Multi Level Push Menu" data-is-active="false" data-has-submenu="true" data-target-submenu-container="dashboard-submenu-multi-level-push-menu-demo" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
+                                    <!-- render_svg_icon( 'likes' ) -->
+                                    <img data-sidebar-menu-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/likes.svg" alt="" class="w--24 h--24 filter--col--pale-sky">
+                                    <span data-sidebar-menu-item-text class="fs--10 fw5 lh--18 col--fiord">
+                                        Push Menu
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- /menu item -->
+
+                            <!-- menu item (Analytics) [if active page item, then "current-page" class should be added to the div] -->
+                             <div data-sidebar-menu-item data-page="dashboard/analytics" class="flex flex-column justify-center items-center self-stretch br--6 current-page transition--all transition--200 transition--ease-in-out">
+                                <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
+                                <a href="javascript: void(0)" data-main-menu-item="true" data-main-menu-name="Analytics" data-is-active="false" data-has-submenu="false" data-target-submenu-container="" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
+                                    <!-- render_svg_icon( 'dashboard_bar_chart' ) -->
+                                    <img data-sidebar-menu-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/dashboard_bar_chart.svg" alt="" class="w--24 h--24 filter--col--pale-sky">
+                                    <span data-sidebar-menu-item-text class="fs--10 fw5 lh--18 col--fiord">
+                                        Analytics
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- /menu item -->
+
+                            <!-- menu item (Earnings) [if active page item, then "current-page" class should be added to the div] -->
+                            <div data-sidebar-menu-item data-page="dashboard/earnings" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
+                                <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
+                                <a href="javascript: void(0)" data-main-menu-item="true" data-main-menu-name="Earnings" data-is-active="false" data-has-submenu="false"  data-target-submenu-container="" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
+                                    <!-- render_svg_icon( 'money-1' ) -->
+                                    <img data-sidebar-menu-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/money-1.svg" alt="" class="w--24 h--24 filter--col--pale-sky">
+                                    <span data-sidebar-menu-item-text class="fs--10 fw5 lh--18 col--fiord">
+                                        Earnings
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- /menu item -->
+
+                            <!-- menu item (Orders) [if active page item, then "current-page" class should be added to the div] -->
+                            <div data-sidebar-menu-item data-page="dashboard/orders" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
+                                <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
+                                <a href="javascript: void(0)" data-main-menu-item="true" data-main-menu-name="Your orders" data-is-active="false" data-has-submenu="true"  data-target-submenu-container="dashboard-submenu-your-orders" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
+                                    <!-- render_svg_icon( 'order-1' ) -->
+                                    <img data-sidebar-menu-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/order-1.svg" alt="" class="w--24 h--24 filter--col--pale-sky">
+                                    <span data-sidebar-menu-item-text class="fs--10 fw5 lh--18 col--fiord">
+                                        Orders
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- /menu item -->
+
+                            <!-- menu item (Media) [if active page item, then "current-page" class should be added to the div] -->
+                            <div data-sidebar-menu-item data-page="dashboard/media" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
+                                <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
+                                <a href="javascript: void(0)" data-main-menu-item="true" data-main-menu-name="Media" data-is-active="false" data-has-submenu="false"  data-target-submenu-container="" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
+                                    <!-- render_svg_icon( 'image-03' ) -->
+                                    <img data-sidebar-menu-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/image-03.svg" alt="" class="w--24 h--24 filter--col--pale-sky">
+                                    <span data-sidebar-menu-item-text class="fs--10 fw5 lh--18 col--fiord">
+                                        Media
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- /menu item -->
+
+                            <!-- menu item (Chats) [if active page item, then "current-page" class should be added to the div] -->
+                            <div data-sidebar-menu-item data-page="dashboard/chats" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
+                                <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
+                                <a href="javascript: void(0)" data-main-menu-item="true" data-main-menu-name="Chats" data-is-active="false" data-has-submenu="true"  data-target-submenu-container="dashboard-submenu-chats" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
+                                    <!-- render_svg_icon( 'private_chat1' ) -->
+                                    <img data-sidebar-menu-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/private_chat1.svg" alt="" class="w--24 h--24 filter--col--pale-sky">
+                                    <span data-sidebar-menu-item-text class="fs--10 fw5 lh--18 col--fiord">
+                                        Chats
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- /menu item -->
+
+                            <!-- menu item (Subscriptions) [if active page item, then "current-page" class should be added to the div] -->
+                            <div data-sidebar-menu-item data-page="dashboard/subscriptions" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
+                                <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
+                                <a href="javascript: void(0)" data-main-menu-item="true" data-main-menu-name="Subscriptions" data-is-active="false" data-has-submenu="false"  data-target-submenu-container="" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
+                                    <!-- render_svg_icon( 'logo_bg' ) -->
+                                    <img data-sidebar-menu-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/logo_bg.svg" alt="" class="w--24 h--24 filter--col--pale-sky">
+                                    <span data-sidebar-menu-item-text class="fs--10 fw5 lh--18 col--fiord">
+                                        Subscriptions
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- /menu item -->
+
+                            <!-- container to show additional menu items (only desktop version and when viewport height is less than 850px, any future addition to the menu shall go here) -->
+                            <div data-floating-panel-wrapper data-is-floating="false" class="flex flex-column self-stretch relative z-5">
+                                <div data-floating-panel data-is-active="false" data-normal-classes="flex flex-column items-center self-stretch gap--4" data-floating-classes="flex justify-center items-center flex-wrap gap--16 pad--12 w--160 bg-white-50 bg--blur--25 bb br--col--mystic br--6 sh--sidebar-2 absolute top-0 right--176-neg z-2 transition--all transition--150 transition--ease-in-out" class="flex flex-column items-center self-stretch gap--4">
+                                    <!-- menu item (Shops) [if active page item, then "current-page" class should be added to the div] -->
+                                    <div data-sidebar-menu-item data-page="dashboard/shops" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
+                                        <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
+                                        <a href="javascript: void(0)" data-main-menu-item="true" data-main-menu-name="Shops" data-is-active="false" data-has-submenu="true"  data-target-submenu-container="dashboard-submenu-shops" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
+                                            <!-- render_svg_icon( 'merch' ) -->
+                                            <img data-sidebar-menu-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/merch.svg" alt="" class="w--24 h--24 filter--col--pale-sky">
+                                            <span data-sidebar-menu-item-text class="fs--10 fw5 lh--18 col--fiord">
+                                                Shops
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <!-- /menu item -->
+
+                                    <!-- menu item (Profile) [if active page item, then "current-page" class should be added to the div] -->
+                                    <div data-sidebar-menu-item data-page="dashboard/profile" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
+                                        <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
+                                        <a href="javascript: void(0)" data-main-menu-item="true" data-main-menu-name="Profile" data-is-active="false" data-has-submenu="true"  data-target-submenu-container="dashboard-submenu-profile" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
+                                            <!-- render_svg_icon( 'user-edit' ) -->
+                                            <img data-sidebar-menu-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/user-edit.svg" alt="" class="w--24 h--24 filter--col--pale-sky">
+                                            <span data-sidebar-menu-item-text class="fs--10 fw5 lh--18 col--fiord">
+                                                Profile
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <!-- /menu item -->
+
+                                    <!-- menu item (Blog) [if active page item, then "current-page" class should be added to the div] -->
+                                    <div data-sidebar-menu-item data-page="dashboard/blog" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
+                                        <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
+                                        <a href="javascript: void(0)" data-main-menu-item="true" data-main-menu-name="Blog" data-is-active="false" data-has-submenu="false"  data-target-submenu-container="" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
+                                            <!-- render_svg_icon( 'blog-01' ) -->
+                                            <img data-sidebar-menu-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/blog-01.svg" alt="" class="w--24 h--24 filter--col--pale-sky">
+                                            <span data-sidebar-menu-item-text class="fs--10 fw5 lh--18 col--fiord">
+                                                Blog
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <!-- /menu item -->
+
+                                    <!-- menu item (Settings) [if active page item, then "current-page" class should be added to the div] -->
+                                    <div data-sidebar-menu-item data-page="dashboard/settings" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
+                                        <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
+                                        <a href="javascript: void(0)" data-main-menu-item="true" data-main-menu-name="Settings" data-is-active="false" data-has-submenu="true"  data-target-submenu-container="dashboard-submenu-settings" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
+                                            <!-- render_svg_icon( 'setting' ) -->
+                                            <img data-sidebar-menu-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/setting.svg" alt="" class="w--24 h--24 filter--col--pale-sky">
+                                            <span data-sidebar-menu-item-text class="fs--10 fw5 lh--18 col--fiord">
+                                                Settings
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <!-- /menu item -->
+                                </div>
+                            </div>
+                            <!-- container to show additional menu items -->
+
+                            <!-- menu item (More) -->
+                            <div data-sidebar-menu-item data-page="dashboard/more" data-floating-panel-trigger class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out" hidden>
+                                <!-- this is part of main menu, but is not actually a menu item, rather it is a trigger element -->
+                                <a href="javascript: void(0)" data-floating-panel-trigger-btn data-is-active="false" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
+                                    <!-- render_svg_icon( 'dots-grid' ) -->
+                                    <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/dots-grid.svg" alt="" class="w--24 h--24 filter--col--pale-sky">
+                                    <span data-sidebar-menu-item-text class="fs--10 fw5 lh--18 col--fiord">
+                                        More
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- /menu item -->
+                        </nav>
+                    </div>
+                    <!-- /main navigation -->
+
+                    <!-- sidebar bottom controls (language choice & help) -->
+                    <div class="flex flex-column items-center self-stretch gap--8 pv2">
+                        <!-- cta controls -->
+                        <div class="flex justify-center items-center self-stretch gap--8 pv0 ph1">
+                            <!-- log out -->
+                            <a href="javascript: void(0)" title="" class="flex justify-center items-center gap--12 w--32 h--32 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
+                                <!-- render_svg_icon( 'globe' ) -->
+                                <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/globe.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                            </a>
+                            <!-- /log out -->
+
+                            <!-- notification -->
+                            <a href="javascript: void(0)" title="" class="flex justify-center items-center gap--2 w--32 h--32 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out relative">
+                                <!-- render_svg_icon( 'question_circle_1' ) -->
+                                <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/question_circle_1.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                            </a>
+                            <!-- /notification -->
+                        </div>
+                        <!-- /cta controls -->
+                    </div>
+                    <!-- /sidebar bottom controls -->
+                </div>
+                <!-- /sidebar main wrapper -->
+
+                <!-- submenu Container (keep all submenu containers inside this div) -->
+                <div>
+                    <!-- submenu container (Multi Level Push Menu) ("data-submenu-container-id" should be same as "data-target-submenu-container" value in the main menu item) -->
+                    <div data-submenu-container data-submenu-container-id="dashboard-submenu-multi-level-push-menu-demo" class="flex flex-column items-start gap--16 w--480 vh-100 overflow-hidden pv4 ph3 bg--col--athens-gray--70 bg--blur--25 bl br--col--mischka sh--sidebar fixed top-0 left--90 z-1 transition--all transition--150 transition--ease-in-out" hidden>
+                        <!-- submenu header -->
+                        <div class="flex items-center self-stretch gap--8">
+                            <!-- title -->
+                            <div class="flex flex--max items-center gap--8">
+                                <span class="flex justify-start items-center"> 
+                                    <!-- render_svg_icon( 'likes' ) -->
+                                    <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/likes.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                </span>
+                                <span data-submenu-title class="flex flex--max justify-start items-center fs--14 fw6 lh--20 col--oxford-blue"> 
+                                    Multi Level Push Menu
+                                </span>
+                            </div>
+                            
+                            <!-- back button -->
+                            <div class="flex">
+                                <a data-back-button class="flex justify-center items-center pad--8 br--6 hover--bg--col--ebony--10 pointer transition--background transition--200 transition--ease-in-out">
+                                    <!-- render_svg_icon( 'align-left-01' ) -->
+                                    <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/align-left-01.svg" alt="" class="w--24 h--24 filter--col--pale-sky">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- /submenu header -->
+
+                        <!-- submenu body -->
+                        <div class="flex flex-column flex--max self-stretch gap--8 relative overflow-hidden">
+                            <ul data-submenu class="flex flex-column self-stretch gap--8 w-100 transition--all transition--200 transition--ease-in-out" hidden>
+                                <!-- submenu item -->
+                                <li data-sidebar-menu-item data-page="dashboard/some-page" class="flex flex-column self-stretch">
+                                    <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
+                                    <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Sub Level Menu One" data-has-submenu="true" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                        <!-- submenu title -->
+                                        <span class="flex flex--max justify-start gap--12">
+                                            <span class="fs--16 fw5 lh--24 col--pale-sky hover--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                Sub Level Menu One
+                                            </span>
+                                            <span data-count-badge class="flex flex-column items-center self-stretch gap--10">
+                                                <span data-count-text data-attribute-type="total-order-received-count" data-actual-stat-count class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal col--pale-sky">
+                                                    10
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <!-- has submenu notification arrow, should be present in every item -->
+                                        <span data-arrow class="flex transition--all transition--200 transition--ease-in-out">
+                                            <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/short_arrow_right.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                        </span>
+                                    </a>
+                                    
+                                    <!-- submenu -->
+                                    <ul data-submenu class="flex flex-column self-stretch gap--8 w-100 absolute top-0 left--100-p transition--all transition--200 transition--ease-in-out" hidden>
+                                        <!-- submenu item -->
+                                        <li data-sidebar-menu-item data-page="dashboard/some-page" class="flex flex-column self-stretch">
+                                            <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
+                                            <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Leticia Doyle" data-has-submenu="true" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                <!-- submenu title -->
+                                                <span class="flex flex--max justify-start gap--12">
+                                                    <span class="fs--16 fw5 lh--24 col--pale-sky hover--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                        Leticia Doyle
+                                                    </span>
+                                                    <span data-count-badge class="flex flex-column items-center self-stretch gap--10" hidden>
+                                                        <span data-count-text data-attribute-type="total-order-received-count" data-actual-stat-count class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal col--pale-sky">
+                                                            10
+                                                        </span>
+                                                    </span>
+                                                </span>
+                                                <!-- has submenu notification arrow, should be present in every item -->
+                                                <span data-arrow class="flex transition--all transition--200 transition--ease-in-out">
+                                                    <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/short_arrow_right.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                                </span>
+                                            </a>
+
+                                            <!-- submenu -->
+                                            <ul data-submenu class="flex flex-column self-stretch gap--8 w-100 absolute top-0 left--100-p transition--all transition--200 transition--ease-in-out" hidden>
+                                                <!-- submenu item -->
+                                                <li data-sidebar-menu-item data-page="dashboard/some-page" class="flex flex-column self-stretch">
+                                                    <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
+                                                    <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Rory Ward" data-has-submenu="true" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                        <!-- submenu title -->
+                                                        <span class="flex flex--max justify-start gap--12">
+                                                            <span class="fs--16 fw5 lh--24 col--pale-sky hover--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                                Rory Ward
+                                                            </span>
+                                                            <span data-count-badge class="flex flex-column items-center self-stretch gap--10" hidden>
+                                                                <span data-count-text data-attribute-type="total-order-received-count" data-actual-stat-count class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal col--pale-sky">
+                                                                    10
+                                                                </span>
+                                                            </span>
+                                                        </span>
+                                                        <!-- has submenu notification arrow, should be present in every item -->
+                                                        <span data-arrow class="flex transition--all transition--200 transition--ease-in-out">
+                                                            <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/short_arrow_right.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                                        </span>
+                                                    </a>
+
+                                                    <!-- submenu -->
+                                                    <ul data-submenu class="flex flex-column self-stretch gap--8 w-100 absolute top-0 left--100-p transition--all transition--200 transition--ease-in-out" hidden>
+                                                        <!-- submenu item -->
+                                                        <li data-sidebar-menu-item data-page="dashboard/some-page" class="flex flex-column self-stretch">
+                                                            <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
+                                                            <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Santos Fischer" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                                <!-- submenu title -->
+                                                                <span class="flex flex--max justify-start gap--12">
+                                                                    <span class="fs--16 fw5 lh--24 col--pale-sky hover--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                                        Santos Fischer
+                                                                    </span>
+                                                                    <span data-count-badge class="flex flex-column items-center self-stretch gap--10">
+                                                                        <span data-count-text data-attribute-type="total-order-received-count" data-actual-stat-count class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal col--pale-sky">
+                                                                            10
+                                                                        </span>
+                                                                    </span>
+                                                                </span>
+                                                                <!-- has submenu notification arrow, should be present in every item -->
+                                                                <span data-arrow class="flex transition--all transition--200 transition--ease-in-out">
+                                                                    <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/short_arrow_right.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                                                </span>
+                                                            </a>
+                                                        </li>
+
+                                                        <!-- submenu item -->
+                                                        <li data-sidebar-menu-item data-page="dashboard/some-page" class="flex flex-column self-stretch">
+                                                            <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
+                                                            <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Fredrick Long" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                                <!-- submenu title -->
+                                                                <span class="flex flex--max justify-start gap--12">
+                                                                    <span class="fs--16 fw5 lh--24 col--pale-sky hover--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                                        Fredrick Long
+                                                                    </span>
+                                                                    <span data-count-badge class="flex flex-column items-center self-stretch gap--10" hidden>
+                                                                        <span data-count-text data-attribute-type="total-order-received-count" data-actual-stat-count class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal col--pale-sky">
+                                                                            10
+                                                                        </span>
+                                                                    </span>
+                                                                </span>
+                                                                <!-- has submenu notification arrow, should be present in every item -->
+                                                                <span data-arrow class="flex transition--all transition--200 transition--ease-in-out">
+                                                                    <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/short_arrow_right.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                                                </span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+
+                                                <!-- submenu item -->
+                                                <li data-sidebar-menu-item data-page="dashboard/some-page" class="flex flex-column self-stretch">
+                                                    <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
+                                                    <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Millie Blackburn" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                        <!-- submenu title -->
+                                                        <span class="flex flex--max justify-start gap--12">
+                                                            <span class="fs--16 fw5 lh--24 col--pale-sky hover--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                                Millie Blackburn
+                                                            </span>
+                                                            <span data-count-badge class="flex flex-column items-center self-stretch gap--10" hidden>
+                                                                <span data-count-text data-attribute-type="total-order-received-count" data-actual-stat-count class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal col--pale-sky">
+                                                                    10
+                                                                </span>
+                                                            </span>
+                                                        </span>
+                                                        <!-- has submenu notification arrow, should be present in every item -->
+                                                        <span data-arrow class="flex transition--all transition--200 transition--ease-in-out">
+                                                            <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/short_arrow_right.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+        
+                                        <!-- submenu item -->
+                                        <li data-sidebar-menu-item data-page="dashboard/some-page" class="flex flex-column self-stretch">
+                                            <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
+                                            <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Miriam Frye" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                <!-- submenu title -->
+                                                <span class="flex flex--max justify-start gap--12">
+                                                    <span class="fs--16 fw5 lh--24 col--pale-sky hover--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                        Miriam Frye
+                                                    </span>
+                                                    <span data-count-badge class="flex flex-column items-center self-stretch gap--10" hidden>
+                                                        <span data-count-text data-attribute-type="total-order-received-count" data-actual-stat-count class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal col--pale-sky">
+                                                            10
+                                                        </span>
+                                                    </span>
+                                                </span>
+                                                <!-- has submenu notification arrow, should be present in every item -->
+                                                <span data-arrow class="flex transition--all transition--200 transition--ease-in-out">
+                                                    <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/short_arrow_right.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                                </span>
+                                            </a>
+                                        </li>
+        
+                                        <!-- submenu item -->
+                                        <li data-sidebar-menu-item data-page="dashboard/some-page" class="flex flex-column self-stretch">
+                                            <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
+                                            <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Joshua Shelton" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                <!-- submenu title -->
+                                                <span class="flex flex--max justify-start gap--12">
+                                                    <span class="fs--16 fw5 lh--24 col--pale-sky hover--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                        Joshua Shelton
+                                                    </span>
+                                                    <span data-count-badge class="flex flex-column items-center self-stretch gap--10" hidden>
+                                                        <span data-count-text data-attribute-type="total-order-received-count" data-actual-stat-count class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal col--pale-sky">
+                                                            10
+                                                        </span>
+                                                    </span>
+                                                </span>
+                                                <!-- has submenu notification arrow, should be present in every item -->
+                                                <span data-arrow class="flex transition--all transition--200 transition--ease-in-out">
+                                                    <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/short_arrow_right.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                                </span>
+                                            </a>
+                                        </li>
+        
+                                        <!-- submenu item -->
+                                        <li data-sidebar-menu-item data-page="dashboard/some-page" class="flex flex-column self-stretch">
+                                            <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
+                                            <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Jonas Wise" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                <!-- submenu title -->
+                                                <span class="flex flex--max justify-start gap--12">
+                                                    <span class="fs--16 fw5 lh--24 col--pale-sky hover--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                        Jonas Wise
+                                                    </span>
+                                                    <span data-count-badge class="flex flex-column items-center self-stretch gap--10" hidden>
+                                                        <span data-count-text data-attribute-type="total-order-received-count" data-actual-stat-count class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal col--pale-sky">
+                                                            10
+                                                        </span>
+                                                    </span>
+                                                </span>
+                                                <!-- has submenu notification arrow, should be present in every item -->
+                                                <span data-arrow class="flex transition--all transition--200 transition--ease-in-out">
+                                                    <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/short_arrow_right.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <!-- submenu item -->
+                                <li data-sidebar-menu-item data-page="dashboard/some-page" class="flex flex-column self-stretch">
+                                    <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
+                                    <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Sub Level Menu Two" data-has-submenu="true" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                        <!-- submenu title -->
+                                        <span class="flex flex--max justify-start gap--12">
+                                            <span class="fs--16 fw5 lh--24 col--pale-sky hover--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                Sub Level Menu Two
+                                            </span>
+                                            <span data-count-badge class="flex flex-column items-center self-stretch gap--10" hidden>
+                                                <span data-count-text data-attribute-type="total-order-received-count" data-actual-stat-count class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal col--pale-sky">
+                                                    10
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <!-- has submenu notification arrow, should be present in every item -->
+                                        <span data-arrow class="flex transition--all transition--200 transition--ease-in-out">
+                                            <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/short_arrow_right.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                        </span>
+                                    </a>
+
+                                    <!-- submenu -->
+                                    <ul data-submenu class="flex flex-column self-stretch gap--8 w-100 absolute top-0 left--100-p transition--all transition--200 transition--ease-in-out" hidden>
+                                        <!-- submenu item -->
+                                        <li data-sidebar-menu-item data-page="dashboard/some-page" class="flex flex-column self-stretch">
+                                            <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
+                                            <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Leticia Doyle" data-has-submenu="true" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                <!-- submenu title -->
+                                                <span class="flex flex--max justify-start gap--12">
+                                                    <span class="fs--16 fw5 lh--24 col--pale-sky hover--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                        Leticia Doyle
+                                                    </span>
+                                                    <span data-count-badge class="flex flex-column items-center self-stretch gap--10" hidden>
+                                                        <span data-count-text data-attribute-type="total-order-received-count" data-actual-stat-count class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal col--pale-sky">
+                                                            10
+                                                        </span>
+                                                    </span>
+                                                </span>
+                                                <!-- has submenu notification arrow, should be present in every item -->
+                                                <span data-arrow class="flex transition--all transition--200 transition--ease-in-out">
+                                                    <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/short_arrow_right.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                                </span>
+                                            </a>
+
+                                            <!-- submenu -->
+                                            <ul data-submenu class="flex flex-column self-stretch gap--8 w-100 absolute top-0 left--100-p transition--all transition--200 transition--ease-in-out" hidden>
+                                                <!-- submenu item -->
+                                                <li data-sidebar-menu-item data-page="dashboard/some-page" class="flex flex-column self-stretch">
+                                                    <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
+                                                    <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Rory Ward" data-has-submenu="true" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                        <!-- submenu title -->
+                                                        <span class="flex flex--max justify-start gap--12">
+                                                            <span class="fs--16 fw5 lh--24 col--pale-sky hover--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                                Rory Ward
+                                                            </span>
+                                                            <span data-count-badge class="flex flex-column items-center self-stretch gap--10" hidden>
+                                                                <span data-count-text data-attribute-type="total-order-received-count" data-actual-stat-count class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal col--pale-sky">
+                                                                    10
+                                                                </span>
+                                                            </span>
+                                                        </span>
+                                                        <!-- has submenu notification arrow, should be present in every item -->
+                                                        <span data-arrow class="flex transition--all transition--200 transition--ease-in-out">
+                                                            <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/short_arrow_right.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                                        </span>
+                                                    </a>
+
+                                                    <!-- submenu -->
+                                                    <ul data-submenu class="flex flex-column self-stretch gap--8 w-100 absolute top-0 left--100-p transition--all transition--200 transition--ease-in-out" hidden>
+                                                        <!-- submenu item -->
+                                                        <li data-sidebar-menu-item data-page="dashboard/some-page" class="flex flex-column self-stretch">
+                                                            <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
+                                                            <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Santos Fischer" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                                <!-- submenu title -->
+                                                                <span class="flex flex--max justify-start gap--12">
+                                                                    <span class="fs--16 fw5 lh--24 col--pale-sky hover--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                                        Santos Fischer
+                                                                    </span>
+                                                                    <span data-count-badge class="flex flex-column items-center self-stretch gap--10">
+                                                                        <span data-count-text data-attribute-type="total-order-received-count" data-actual-stat-count class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal col--pale-sky">
+                                                                            10
+                                                                        </span>
+                                                                    </span>
+                                                                </span>
+                                                                <!-- has submenu notification arrow, should be present in every item -->
+                                                                <span data-arrow class="flex transition--all transition--200 transition--ease-in-out">
+                                                                    <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/short_arrow_right.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                                                </span>
+                                                            </a>
+                                                        </li>
+
+                                                        <!-- submenu item -->
+                                                        <li data-sidebar-menu-item data-page="dashboard/some-page" class="flex flex-column self-stretch">
+                                                            <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
+                                                            <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Fredrick Long" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                                <!-- submenu title -->
+                                                                <span class="flex flex--max justify-start gap--12">
+                                                                    <span class="fs--16 fw5 lh--24 col--pale-sky hover--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                                        Fredrick Long
+                                                                    </span>
+                                                                    <span data-count-badge class="flex flex-column items-center self-stretch gap--10" hidden>
+                                                                        <span data-count-text data-attribute-type="total-order-received-count" data-actual-stat-count class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal col--pale-sky">
+                                                                            10
+                                                                        </span>
+                                                                    </span>
+                                                                </span>
+                                                                <!-- has submenu notification arrow, should be present in every item -->
+                                                                <span data-arrow class="flex transition--all transition--200 transition--ease-in-out">
+                                                                    <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/short_arrow_right.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                                                </span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+
+                                                <!-- submenu item -->
+                                                <li data-sidebar-menu-item data-page="dashboard/some-page" class="flex flex-column self-stretch">
+                                                    <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
+                                                    <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Millie Blackburn" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                        <!-- submenu title -->
+                                                        <span class="flex flex--max justify-start gap--12">
+                                                            <span class="fs--16 fw5 lh--24 col--pale-sky hover--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                                Millie Blackburn
+                                                            </span>
+                                                            <span data-count-badge class="flex flex-column items-center self-stretch gap--10" hidden>
+                                                                <span data-count-text data-attribute-type="total-order-received-count" data-actual-stat-count class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal col--pale-sky">
+                                                                    10
+                                                                </span>
+                                                            </span>
+                                                        </span>
+                                                        <!-- has submenu notification arrow, should be present in every item -->
+                                                        <span data-arrow class="flex transition--all transition--200 transition--ease-in-out">
+                                                            <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/short_arrow_right.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+        
+                                        <!-- submenu item -->
+                                        <li data-sidebar-menu-item data-page="dashboard/some-page" class="flex flex-column self-stretch">
+                                            <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
+                                            <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Miriam Frye" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                <!-- submenu title -->
+                                                <span class="flex flex--max justify-start gap--12">
+                                                    <span class="fs--16 fw5 lh--24 col--pale-sky hover--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                        Miriam Frye
+                                                    </span>
+                                                    <span data-count-badge class="flex flex-column items-center self-stretch gap--10" hidden>
+                                                        <span data-count-text data-attribute-type="total-order-received-count" data-actual-stat-count class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal col--pale-sky">
+                                                            10
+                                                        </span>
+                                                    </span>
+                                                </span>
+                                                <!-- has submenu notification arrow, should be present in every item -->
+                                                <span data-arrow class="flex transition--all transition--200 transition--ease-in-out">
+                                                    <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/short_arrow_right.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                                </span>
+                                            </a>
+                                        </li>
+        
+                                        <!-- submenu item -->
+                                        <li data-sidebar-menu-item data-page="dashboard/some-page" class="flex flex-column self-stretch">
+                                            <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
+                                            <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Joshua Shelton" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                <!-- submenu title -->
+                                                <span class="flex flex--max justify-start gap--12">
+                                                    <span class="fs--16 fw5 lh--24 col--pale-sky hover--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                        Joshua Shelton
+                                                    </span>
+                                                    <span data-count-badge class="flex flex-column items-center self-stretch gap--10" hidden>
+                                                        <span data-count-text data-attribute-type="total-order-received-count" data-actual-stat-count class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal col--pale-sky">
+                                                            10
+                                                        </span>
+                                                    </span>
+                                                </span>
+                                                <!-- has submenu notification arrow, should be present in every item -->
+                                                <span data-arrow class="flex transition--all transition--200 transition--ease-in-out">
+                                                    <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/short_arrow_right.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                                </span>
+                                            </a>
+                                        </li>
+        
+                                        <!-- submenu item -->
+                                        <li data-sidebar-menu-item data-page="dashboard/some-page" class="flex flex-column self-stretch">
+                                            <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
+                                            <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Jonas Wise" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                <!-- submenu title -->
+                                                <span class="flex flex--max justify-start gap--12">
+                                                    <span class="fs--16 fw5 lh--24 col--pale-sky hover--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                        Jonas Wise
+                                                    </span>
+                                                    <span data-count-badge class="flex flex-column items-center self-stretch gap--10" hidden>
+                                                        <span data-count-text data-attribute-type="total-order-received-count" data-actual-stat-count class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal col--pale-sky">
+                                                            10
+                                                        </span>
+                                                    </span>
+                                                </span>
+                                                <!-- has submenu notification arrow, should be present in every item -->
+                                                <span data-arrow class="flex transition--all transition--200 transition--ease-in-out">
+                                                    <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/short_arrow_right.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <!-- submenu item -->
+                                <li data-sidebar-menu-item data-page="dashboard/some-page" class="flex flex-column self-stretch">
+                                    <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
+                                    <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Sub Level Menu Three" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                        <!-- submenu title -->
+                                        <span class="flex flex--max justify-start gap--12">
+                                            <span class="fs--16 fw5 lh--24 col--pale-sky hover--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                Sub Level Menu Three
+                                            </span>
+                                            <span data-count-badge class="flex flex-column items-center self-stretch gap--10">
+                                                <span data-count-text data-attribute-type="total-order-received-count" data-actual-stat-count class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal col--pale-sky">
+                                                    25
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <!-- has submenu notification arrow, should be present in every item -->
+                                        <span data-arrow class="flex transition--all transition--200 transition--ease-in-out">
+                                            <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/short_arrow_right.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <!-- submenu item -->
+                                <li data-sidebar-menu-item data-page="dashboard/some-page" class="flex flex-column self-stretch">
+                                    <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
+                                    <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Sub Level Menu Four" data-has-submenu="true" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                        <!-- submenu title -->
+                                        <span class="flex flex--max justify-start gap--12">
+                                            <span class="fs--16 fw5 lh--24 col--pale-sky hover--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                Sub Level Menu Four
+                                            </span>
+                                            <span data-count-badge class="flex flex-column items-center self-stretch gap--10">
+                                                <span data-count-text data-attribute-type="total-order-received-count" data-actual-stat-count class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal col--pale-sky">
+                                                    6
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <!-- has submenu notification arrow, should be present in every item -->
+                                        <span data-arrow class="flex transition--all transition--200 transition--ease-in-out">
+                                            <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/short_arrow_right.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                        </span>
+                                    </a>
+                                    
+                                    <!-- submenu -->
+                                    <ul data-submenu class="flex flex-column self-stretch gap--8 w-100 absolute top-0 left--100-p transition--all transition--200 transition--ease-in-out" hidden>
+                                        <!-- submenu item -->
+                                        <li data-sidebar-menu-item data-page="dashboard/some-page" class="flex flex-column self-stretch">
+                                            <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
+                                            <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Leticia Doyle" data-has-submenu="true" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                <!-- submenu title -->
+                                                <span class="flex flex--max justify-start gap--12">
+                                                    <span class="fs--16 fw5 lh--24 col--pale-sky hover--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                        Leticia Doyle
+                                                    </span>
+                                                    <span data-count-badge class="flex flex-column items-center self-stretch gap--10" hidden>
+                                                        <span data-count-text data-attribute-type="total-order-received-count" data-actual-stat-count class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal col--pale-sky">
+                                                            10
+                                                        </span>
+                                                    </span>
+                                                </span>
+                                                <!-- has submenu notification arrow, should be present in every item -->
+                                                <span data-arrow class="flex transition--all transition--200 transition--ease-in-out">
+                                                    <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/short_arrow_right.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                                </span>
+                                            </a>
+
+                                            <!-- submenu -->
+                                            <ul data-submenu class="flex flex-column self-stretch gap--8 w-100 absolute top-0 left--100-p transition--all transition--200 transition--ease-in-out" hidden>
+                                                <!-- submenu item -->
+                                                <li data-sidebar-menu-item data-page="dashboard/some-page" class="flex flex-column self-stretch">
+                                                    <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
+                                                    <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Rory Ward" data-has-submenu="true" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                        <!-- submenu title -->
+                                                        <span class="flex flex--max justify-start gap--12">
+                                                            <span class="fs--16 fw5 lh--24 col--pale-sky hover--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                                Rory Ward
+                                                            </span>
+                                                            <span data-count-badge class="flex flex-column items-center self-stretch gap--10" hidden>
+                                                                <span data-count-text data-attribute-type="total-order-received-count" data-actual-stat-count class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal col--pale-sky">
+                                                                    10
+                                                                </span>
+                                                            </span>
+                                                        </span>
+                                                        <!-- has submenu notification arrow, should be present in every item -->
+                                                        <span data-arrow class="flex transition--all transition--200 transition--ease-in-out">
+                                                            <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/short_arrow_right.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                                        </span>
+                                                    </a>
+
+                                                    <!-- submenu -->
+                                                    <ul data-submenu class="flex flex-column self-stretch gap--8 w-100 absolute top-0 left--100-p transition--all transition--200 transition--ease-in-out" hidden>
+                                                        <!-- submenu item -->
+                                                        <li data-sidebar-menu-item data-page="dashboard/some-page" class="flex flex-column self-stretch">
+                                                            <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
+                                                            <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Santos Fischer" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                                <!-- submenu title -->
+                                                                <span class="flex flex--max justify-start gap--12">
+                                                                    <span class="fs--16 fw5 lh--24 col--pale-sky hover--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                                        Santos Fischer
+                                                                    </span>
+                                                                    <span data-count-badge class="flex flex-column items-center self-stretch gap--10">
+                                                                        <span data-count-text data-attribute-type="total-order-received-count" data-actual-stat-count class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal col--pale-sky">
+                                                                            10
+                                                                        </span>
+                                                                    </span>
+                                                                </span>
+                                                                <!-- has submenu notification arrow, should be present in every item -->
+                                                                <span data-arrow class="flex transition--all transition--200 transition--ease-in-out">
+                                                                    <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/short_arrow_right.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                                                </span>
+                                                            </a>
+                                                        </li>
+
+                                                        <!-- submenu item -->
+                                                        <li data-sidebar-menu-item data-page="dashboard/some-page" class="flex flex-column self-stretch">
+                                                            <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
+                                                            <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Fredrick Long" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                                <!-- submenu title -->
+                                                                <span class="flex flex--max justify-start gap--12">
+                                                                    <span class="fs--16 fw5 lh--24 col--pale-sky hover--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                                        Fredrick Long
+                                                                    </span>
+                                                                    <span data-count-badge class="flex flex-column items-center self-stretch gap--10" hidden>
+                                                                        <span data-count-text data-attribute-type="total-order-received-count" data-actual-stat-count class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal col--pale-sky">
+                                                                            10
+                                                                        </span>
+                                                                    </span>
+                                                                </span>
+                                                                <!-- has submenu notification arrow, should be present in every item -->
+                                                                <span data-arrow class="flex transition--all transition--200 transition--ease-in-out">
+                                                                    <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/short_arrow_right.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                                                </span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+
+                                                <!-- submenu item -->
+                                                <li data-sidebar-menu-item data-page="dashboard/some-page" class="flex flex-column self-stretch">
+                                                    <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
+                                                    <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Millie Blackburn" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                        <!-- submenu title -->
+                                                        <span class="flex flex--max justify-start gap--12">
+                                                            <span class="fs--16 fw5 lh--24 col--pale-sky hover--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                                Millie Blackburn
+                                                            </span>
+                                                            <span data-count-badge class="flex flex-column items-center self-stretch gap--10" hidden>
+                                                                <span data-count-text data-attribute-type="total-order-received-count" data-actual-stat-count class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal col--pale-sky">
+                                                                    10
+                                                                </span>
+                                                            </span>
+                                                        </span>
+                                                        <!-- has submenu notification arrow, should be present in every item -->
+                                                        <span data-arrow class="flex transition--all transition--200 transition--ease-in-out">
+                                                            <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/short_arrow_right.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+        
+                                        <!-- submenu item -->
+                                        <li data-sidebar-menu-item data-page="dashboard/some-page" class="flex flex-column self-stretch">
+                                            <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
+                                            <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Miriam Frye" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                <!-- submenu title -->
+                                                <span class="flex flex--max justify-start gap--12">
+                                                    <span class="fs--16 fw5 lh--24 col--pale-sky hover--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                        Miriam Frye
+                                                    </span>
+                                                    <span data-count-badge class="flex flex-column items-center self-stretch gap--10" hidden>
+                                                        <span data-count-text data-attribute-type="total-order-received-count" data-actual-stat-count class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal col--pale-sky">
+                                                            10
+                                                        </span>
+                                                    </span>
+                                                </span>
+                                                <!-- has submenu notification arrow, should be present in every item -->
+                                                <span data-arrow class="flex transition--all transition--200 transition--ease-in-out">
+                                                    <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/short_arrow_right.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                                </span>
+                                            </a>
+                                        </li>
+        
+                                        <!-- submenu item -->
+                                        <li data-sidebar-menu-item data-page="dashboard/some-page" class="flex flex-column self-stretch">
+                                            <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
+                                            <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Joshua Shelton" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                <!-- submenu title -->
+                                                <span class="flex flex--max justify-start gap--12">
+                                                    <span class="fs--16 fw5 lh--24 col--pale-sky hover--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                        Joshua Shelton
+                                                    </span>
+                                                    <span data-count-badge class="flex flex-column items-center self-stretch gap--10" hidden>
+                                                        <span data-count-text data-attribute-type="total-order-received-count" data-actual-stat-count class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal col--pale-sky">
+                                                            10
+                                                        </span>
+                                                    </span>
+                                                </span>
+                                                <!-- has submenu notification arrow, should be present in every item -->
+                                                <span data-arrow class="flex transition--all transition--200 transition--ease-in-out">
+                                                    <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/short_arrow_right.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                                </span>
+                                            </a>
+                                        </li>
+        
+                                        <!-- submenu item -->
+                                        <li data-sidebar-menu-item data-page="dashboard/some-page" class="flex flex-column self-stretch">
+                                            <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
+                                            <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Jonas Wise" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                <!-- submenu title -->
+                                                <span class="flex flex--max justify-start gap--12">
+                                                    <span class="fs--16 fw5 lh--24 col--pale-sky hover--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                        Jonas Wise
+                                                    </span>
+                                                    <span data-count-badge class="flex flex-column items-center self-stretch gap--10" hidden>
+                                                        <span data-count-text data-attribute-type="total-order-received-count" data-actual-stat-count class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal col--pale-sky">
+                                                            10
+                                                        </span>
+                                                    </span>
+                                                </span>
+                                                <!-- has submenu notification arrow, should be present in every item -->
+                                                <span data-arrow class="flex transition--all transition--200 transition--ease-in-out">
+                                                    <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/short_arrow_right.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <!-- submenu item -->
+                                <li data-sidebar-menu-item data-page="dashboard/some-page" class="flex flex-column self-stretch">
+                                    <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
+                                    <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Sub Level Menu Five" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                        <!-- submenu title -->
+                                        <span class="flex flex--max justify-start gap--12">
+                                            <span class="fs--16 fw5 lh--24 col--pale-sky hover--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                Sub Level Menu Five
+                                            </span>
+                                            <span data-count-badge class="flex flex-column items-center self-stretch gap--10" hidden>
+                                                <span data-count-text data-attribute-type="total-order-received-count" data-actual-stat-count class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal col--pale-sky">
+                                                    6
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <!-- has submenu notification arrow, should be present in every item -->
+                                        <span data-arrow class="flex transition--all transition--200 transition--ease-in-out">
+                                            <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/short_arrow_right.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /submenu body -->
+
+                        <!-- submenu footer -->
+                        <div class="flex"></div>
+                        <!-- /submenu footer -->
+                    </div>
+                    <!-- /submenu container -->
+                     
+                    <!-- submenu container (Orders) ("data-submenu-container-id" should be same as "data-target-submenu-container" value in the main menu item) -->
+                    <div data-submenu-container data-submenu-container-id="dashboard-submenu-your-orders" class="flex flex-column items-start gap--16 w--480 vh-100 overflow-hidden pv4 ph3 bg--col--athens-gray--70 bg--blur--25 bl br--col--mischka sh--sidebar fixed top-0 left--90 z-1 transition--all transition--150 transition--ease-in-out" hidden>
+                        <!-- submenu header -->
+                        <div class="flex items-center self-stretch gap--8">
+                            <!-- title -->
+                            <div class="flex flex--max items-center gap--8">
+                                <span class="flex justify-start items-center"> 
+                                    <!-- render_svg_icon( 'order-1' ) -->
+                                    <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/order-1.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                </span>
+                                <span data-submenu-title class="flex flex--max justify-start items-center fs--14 fw6 lh--20 col--oxford-blue"> 
+                                    Your orders
+                                </span>
+                            </div>
+                            
+                            <!-- back button -->
+                            <div class="flex">
+                                <a data-back-button class="flex justify-center items-center pad--8 br--6 hover--bg--col--ebony--10 pointer transition--background transition--200 transition--ease-in-out">
+                                    <!-- render_svg_icon( 'align-left-01' ) -->
+                                    <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/align-left-01.svg" alt="" class="w--24 h--24 filter--col--pale-sky">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- /submenu header -->
+
+                        <!-- submenu body -->
+                        <div class="flex flex-column flex--max self-stretch gap--8 relative overflow-hidden">
+                            <ul data-submenu class="flex flex-column self-stretch gap--8 transition--all transition--200 transition--ease-in-out" hidden>
+                                <!-- submenu item -->
+                                <li data-sidebar-menu-item data-page="dashboard/your-orders" class="flex flex-column self-stretch">
+                                    <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
+                                    <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Order recieved" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                        <!-- submenu title -->
+                                        <span class="flex flex--max justify-start gap--12">
+                                            <span class="fs--16 fw5 lh--24 col--pale-sky hover--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                Order recieved
+                                            </span>
+                                            <span data-count-badge class="flex flex-column items-center self-stretch gap--10">
+                                                <span data-count-text data-attribute-type="total-order-received-count" data-actual-stat-count class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal col--pale-sky">
+                                                    5
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <!-- has submenu notification arrow, should be present in every item -->
+                                        <span data-arrow class="flex transition--all transition--200 transition--ease-in-out">
+                                            <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/short_arrow_right.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <!-- submenu item -->
+                                <li data-sidebar-menu-item data-page="dashboard/custom-product-requests" class="flex flex-column self-stretch">
+                                    <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
+                                    <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Custom product request" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                        <!-- submenu title -->
+                                        <span class="flex flex--max justify-start gap--12">
+                                            <span class="fs--16 fw5 lh--24 col--pale-sky hover--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                Custom product request
+                                            </span>
+                                            <span data-count-badge class="flex flex-column items-center self-stretch gap--10">
+                                                <span data-count-text data-attribute-type="total-cpr-count" data-actual-stat-count class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal col--pale-sky">
+                                                    5
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <!-- has submenu notification arrow, should be present in every item -->
+                                        <span data-arrow class="flex transition--all transition--200 transition--ease-in-out">
+                                            <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/short_arrow_right.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <!-- submenu item -->
+                                <li data-sidebar-menu-item data-page="dashboard/purchases" class="flex flex-column self-stretch">
+                                    <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
+                                    <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Item purchased" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                        <!-- submenu title -->
+                                        <span class="flex flex--max justify-start gap--12">
+                                            <span class="fs--16 fw5 lh--24 col--pale-sky hover--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                Item purchased
+                                            </span>
+                                            <span data-count-badge class="flex flex-column items-center self-stretch gap--10">
+                                                <span data-count-text data-attribute-type="total-item-purchased-count" data-actual-stat-count class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal col--pale-sky">
+                                                    0
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <!-- has submenu notification arrow, should be present in every item -->
+                                        <span data-arrow class="flex transition--all transition--200 transition--ease-in-out">
+                                            <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/short_arrow_right.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /submenu body -->
+
+                        <!-- submenu footer -->
+                        <div class="flex"></div>
+                        <!-- /submenu footer -->
+                    </div>
+                    <!-- /submenu container -->
+
+                    <!-- submenu container (Chats) ("data-submenu-container-id" should be same as "data-target-submenu-container" value in the main menu item) -->
+                    <div data-submenu-container data-submenu-container-id="dashboard-submenu-chats" class="flex flex-column items-start gap--16 w--480 vh-100 overflow-hidden pv4 ph3 bg--col--athens-gray--70 bg--blur--25 bl br--col--mischka sh--sidebar fixed top-0 left--90 z-1 transition--all transition--150 transition--ease-in-out" hidden>
+                        <!-- submenu header -->
+                        <div class="flex items-center self-stretch gap--8">
+                            <!-- title -->
+                            <div class="flex flex--max items-center gap--8">
+                                <span class="flex justify-start items-center"> 
+                                    <!-- render_svg_icon( 'private_chat1' ) -->
+                                    <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/private_chat1.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                </span>
+                                <span data-submenu-title class="flex flex--max justify-start items-center fs--14 fw6 lh--20 col--oxford-blue"> 
+                                    Chats
+                                </span>
+                            </div>
+                            
+                            <!-- back button -->
+                            <div class="flex">
+                                <a data-back-button class="flex justify-center items-center pad--8 br--6 hover--bg--col--ebony--10 pointer transition--background transition--200 transition--ease-in-out">
+                                    <!-- render_svg_icon( 'align-left-01' ) -->
+                                    <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/align-left-01.svg" alt="" class="w--24 h--24 filter--col--pale-sky">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- /submenu header -->
+
+                        <!-- submenu body -->
+                        <div class="flex flex-column flex--max self-stretch gap--8 relative overflow-hidden">
+                            <ul data-submenu class="flex flex-column self-stretch gap--8 transition--all transition--200 transition--ease-in-out" hidden>
+                                <!-- submenu item -->
+                                <li data-sidebar-menu-item data-page="dashboard/private-chats" class="flex flex-column self-stretch">
+                                    <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
+                                    <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Private Chats" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                        <!-- submenu title -->
+                                        <span class="flex flex--max justify-start gap--12">
+                                            <span class="fs--16 fw5 lh--24 col--pale-sky hover--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                Private Chats
+                                            </span>
+                                            <span data-count-badge class="flex flex-column items-center self-stretch gap--10">
+                                                <span data-count-text data-attribute-type="total-order-received-count" data-actual-stat-count class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal col--pale-sky">
+                                                    15
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <!-- has submenu notification arrow, should be present in every item -->
+                                        <span data-arrow class="flex transition--all transition--200 transition--ease-in-out">
+                                            <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/short_arrow_right.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <!-- submenu item -->
+                                <li data-sidebar-menu-item data-page="dashboard/call-and-chat-settings" class="flex flex-column self-stretch">
+                                    <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
+                                    <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Chat Settings" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                        <!-- submenu title -->
+                                        <span class="flex flex--max justify-start gap--12">
+                                            <span class="fs--16 fw5 lh--24 col--pale-sky hover--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                Chat Settings
+                                            </span>
+                                            <span data-count-badge class="flex flex-column items-center self-stretch gap--10" hidden>
+                                                <span data-count-text data-attribute-type="total-cpr-count" data-actual-stat-count class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal col--pale-sky">
+                                                    5
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <!-- has submenu notification arrow, should be present in every item -->
+                                        <span data-arrow class="flex transition--all transition--200 transition--ease-in-out">
+                                            <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/short_arrow_right.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /submenu body -->
+
+                        <!-- submenu footer -->
+                        <div class="flex"></div>
+                        <!-- /submenu footer -->
+                    </div>
+                    <!-- /submenu container -->
+
+                    <!-- submenu container (Shops) ("data-submenu-container-id" should be same as "data-target-submenu-container" value in the main menu item) -->
+                    <div data-submenu-container data-submenu-container-id="dashboard-submenu-shops" class="flex flex-column items-start gap--16 w--480 vh-100 overflow-hidden pv4 ph3 bg--col--athens-gray--70 bg--blur--25 bl br--col--mischka sh--sidebar fixed top-0 left--90 z-1 transition--all transition--150 transition--ease-in-out" hidden>
+                        <!-- submenu header -->
+                        <div class="flex items-center self-stretch gap--8">
+                            <!-- title -->
+                            <div class="flex flex--max items-center gap--8">
+                                <span class="flex justify-start items-center"> 
+                                    <!-- render_svg_icon( 'merch' ) -->
+                                    <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/merch.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                </span>
+                                <span data-submenu-title class="flex flex--max justify-start items-center fs--14 fw6 lh--20 col--oxford-blue"> 
+                                    Shops
+                                </span>
+                            </div>
+                            
+                            <!-- back button -->
+                            <div class="flex">
+                                <a data-back-button class="flex justify-center items-center pad--8 br--6 hover--bg--col--ebony--10 pointer transition--background transition--200 transition--ease-in-out">
+                                    <!-- render_svg_icon( 'align-left-01' ) -->
+                                    <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/align-left-01.svg" alt="" class="w--24 h--24 filter--col--pale-sky">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- /submenu header -->
+
+                        <!-- submenu body -->
+                        <div class="flex flex-column flex--max self-stretch gap--8 relative overflow-hidden">
+                            <ul data-submenu class="flex flex-column self-stretch gap--8 transition--all transition--200 transition--ease-in-out" hidden>
+                                <!-- submenu item -->
+                                <li data-sidebar-menu-item data-page="dashboard/merch-listing" class="flex flex-column self-stretch">
+                                    <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
+                                    <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Physical Product Listings" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                        <!-- submenu title -->
+                                        <span class="flex flex--max justify-start gap--12">
+                                            <span class="fs--16 fw5 lh--24 col--pale-sky hover--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                Physical Product Listings
+                                            </span>
+                                            <span data-count-badge class="flex flex-column items-center self-stretch gap--10" hidden>
+                                                <span data-count-text data-attribute-type="total-order-received-count" data-actual-stat-count class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal col--pale-sky">
+                                                    15
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <!-- has submenu notification arrow, should be present in every item -->
+                                        <span data-arrow class="flex transition--all transition--200 transition--ease-in-out">
+                                            <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/short_arrow_right.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <!-- submenu item -->
+                                <li data-sidebar-menu-item data-page="dashboard/custom-products-settings" class="flex flex-column self-stretch">
+                                    <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
+                                    <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Custom Product Settings" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                        <!-- submenu title -->
+                                        <span class="flex flex--max justify-start gap--12">
+                                            <span class="fs--16 fw5 lh--24 col--pale-sky hover--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                Custom Product Settings
+                                            </span>
+                                            <span data-count-badge class="flex flex-column items-center self-stretch gap--10" hidden>
+                                                <span data-count-text data-attribute-type="total-cpr-count" data-actual-stat-count class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal col--pale-sky">
+                                                    5
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <!-- has submenu notification arrow, should be present in every item -->
+                                        <span data-arrow class="flex transition--all transition--200 transition--ease-in-out">
+                                            <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/short_arrow_right.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <!-- submenu item -->
+                                <li data-sidebar-menu-item data-page="dashboard/coupons" class="flex flex-column self-stretch">
+                                    <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
+                                    <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Your Coupons" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                        <!-- submenu title -->
+                                        <span class="flex flex--max justify-start gap--12">
+                                            <span class="fs--16 fw5 lh--24 col--pale-sky hover--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                Your Coupons
+                                            </span>
+                                            <span data-count-badge class="flex flex-column items-center self-stretch gap--10" hidden>
+                                                <span data-count-text data-attribute-type="total-cpr-count" data-actual-stat-count class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal col--pale-sky">
+                                                    5
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <!-- has submenu notification arrow, should be present in every item -->
+                                        <span data-arrow class="flex transition--all transition--200 transition--ease-in-out">
+                                            <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/short_arrow_right.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /submenu body -->
+
+                        <!-- submenu footer -->
+                        <div class="flex"></div>
+                        <!-- /submenu footer -->
+                    </div>
+                    <!-- /submenu container -->
+
+                    <!-- submenu container (Profile) ("data-submenu-container-id" should be same as "data-target-submenu-container" value in the main menu item) -->
+                    <div data-submenu-container data-submenu-container-id="dashboard-submenu-profile" class="flex flex-column items-start gap--16 w--480 vh-100 overflow-hidden pv4 ph3 bg--col--athens-gray--70 bg--blur--25 bl br--col--mischka sh--sidebar fixed top-0 left--90 z-1 transition--all transition--150 transition--ease-in-out" hidden>
+                        <!-- submenu header -->
+                        <div class="flex items-center self-stretch gap--8">
+                            <!-- title -->
+                            <div class="flex flex--max items-center gap--8">
+                                <span class="flex justify-start items-center"> 
+                                    <!-- render_svg_icon( 'user-edit' ) -->
+                                    <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/user-edit.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                </span>
+                                <span data-submenu-title class="flex flex--max justify-start items-center fs--14 fw6 lh--20 col--oxford-blue"> 
+                                    Profile
+                                </span>
+                            </div>
+                            
+                            <!-- back button -->
+                            <div class="flex">
+                                <a data-back-button class="flex justify-center items-center pad--8 br--6 hover--bg--col--ebony--10 pointer transition--background transition--200 transition--ease-in-out">
+                                    <!-- render_svg_icon( 'align-left-01' ) -->
+                                    <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/align-left-01.svg" alt="" class="w--24 h--24 filter--col--pale-sky">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- /submenu header -->
+
+                        <!-- submenu body -->
+                        <div class="flex flex-column flex--max self-stretch gap--8 relative overflow-hidden">
+                            <ul data-submenu class="flex flex-column self-stretch gap--8 transition--all transition--200 transition--ease-in-out" hidden>
+                                <!-- submenu item -->
+                                <li data-sidebar-menu-item data-page="dashboard/edit-profile" class="flex flex-column self-stretch">
+                                    <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
+                                    <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Edit Profile" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                        <!-- submenu title -->
+                                        <span class="flex flex--max justify-start gap--12">
+                                            <span class="fs--16 fw5 lh--24 col--pale-sky hover--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                Edit Profile
+                                            </span>
+                                            <span data-count-badge class="flex flex-column items-center self-stretch gap--10" hidden>
+                                                <span data-count-text data-attribute-type="total-order-received-count" data-actual-stat-count class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal col--pale-sky">
+                                                    15
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <!-- has submenu notification arrow, should be present in every item -->
+                                        <span data-arrow class="flex transition--all transition--200 transition--ease-in-out">
+                                            <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/short_arrow_right.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <!-- submenu item -->
+                                <li data-sidebar-menu-item data-page="dashboard/subscribers-followers" class="flex flex-column self-stretch">
+                                    <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
+                                    <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Subscribers & Followers" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                        <!-- submenu title -->
+                                        <span class="flex flex--max justify-start gap--12">
+                                            <span class="fs--16 fw5 lh--24 col--pale-sky hover--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                Subscribers & Followers
+                                            </span>
+                                            <span data-count-badge class="flex flex-column items-center self-stretch gap--10" hidden>
+                                                <span data-count-text data-attribute-type="total-cpr-count" data-actual-stat-count class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal col--pale-sky">
+                                                    5
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <!-- has submenu notification arrow, should be present in every item -->
+                                        <span data-arrow class="flex transition--all transition--200 transition--ease-in-out">
+                                            <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/short_arrow_right.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <!-- submenu item -->
+                                <li data-sidebar-menu-item data-page="dashboard/your-posts" class="flex flex-column self-stretch">
+                                    <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
+                                    <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Your Posts" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                        <!-- submenu title -->
+                                        <span class="flex flex--max justify-start gap--12">
+                                            <span class="fs--16 fw5 lh--24 col--pale-sky hover--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                Your Posts
+                                            </span>
+                                            <span data-count-badge class="flex flex-column items-center self-stretch gap--10" hidden>
+                                                <span data-count-text data-attribute-type="total-cpr-count" data-actual-stat-count class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal col--pale-sky">
+                                                    5
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <!-- has submenu notification arrow, should be present in every item -->
+                                        <span data-arrow class="flex transition--all transition--200 transition--ease-in-out">
+                                            <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/short_arrow_right.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <!-- submenu item -->
+                                <li data-sidebar-menu-item data-page="dashboard/referrals" class="flex flex-column self-stretch">
+                                    <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
+                                    <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Referrals" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                        <!-- submenu title -->
+                                        <span class="flex flex--max justify-start gap--12">
+                                            <span class="fs--16 fw5 lh--24 col--pale-sky hover--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                Referrals
+                                            </span>
+                                            <span data-count-badge class="flex flex-column items-center self-stretch gap--10" hidden>
+                                                <span data-count-text data-attribute-type="total-cpr-count" data-actual-stat-count class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal col--pale-sky">
+                                                    5
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <!-- has submenu notification arrow, should be present in every item -->
+                                        <span data-arrow class="flex transition--all transition--200 transition--ease-in-out">
+                                            <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/short_arrow_right.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /submenu body -->
+
+                        <!-- submenu footer -->
+                        <div class="flex"></div>
+                        <!-- /submenu footer -->
+                    </div>
+                    <!-- /submenu container -->
+
+                    <!-- submenu container (Settings) ("data-submenu-container-id" should be same as "data-target-submenu-container" value in the main menu item) -->
+                    <div data-submenu-container data-submenu-container-id="dashboard-submenu-settings" class="flex flex-column items-start gap--16 w--480 vh-100 overflow-hidden pv4 ph3 bg--col--athens-gray--70 bg--blur--25 bl br--col--mischka sh--sidebar fixed top-0 left--90 z-1 transition--all transition--150 transition--ease-in-out" hidden>
+                        <!-- submenu header -->
+                        <div class="flex items-center self-stretch gap--8">
+                            <!-- title -->
+                            <div class="flex flex--max items-center gap--8">
+                                <span class="flex justify-start items-center"> 
+                                    <!-- render_svg_icon( 'setting' ) -->
+                                    <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/setting.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                </span>
+                                <span data-submenu-title class="flex flex--max justify-start items-center fs--14 fw6 lh--20 col--oxford-blue"> 
+                                    Profile
+                                </span>
+                            </div>
+                            
+                            <!-- back button -->
+                            <div class="flex">
+                                <a data-back-button class="flex justify-center items-center pad--8 br--6 hover--bg--col--ebony--10 pointer transition--background transition--200 transition--ease-in-out">
+                                    <!-- render_svg_icon( 'align-left-01' ) -->
+                                    <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/align-left-01.svg" alt="" class="w--24 h--24 filter--col--pale-sky">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- /submenu header -->
+
+                        <!-- submenu body -->
+                        <div class="flex flex-column flex--max self-stretch gap--8 relative overflow-hidden">
+                            <ul data-submenu class="flex flex-column self-stretch gap--8 transition--all transition--200 transition--ease-in-out" hidden>
+                                <!-- submenu item -->
+                                <li data-sidebar-menu-item data-page="dashboard/account" class="flex flex-column self-stretch">
+                                    <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
+                                    <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Account Settings" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                        <!-- submenu title -->
+                                        <span class="flex flex--max justify-start gap--12">
+                                            <span class="fs--16 fw5 lh--24 col--pale-sky hover--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                Account Settings
+                                            </span>
+                                            <span data-count-badge class="flex flex-column items-center self-stretch gap--10" hidden>
+                                                <span data-count-text data-attribute-type="total-order-received-count" data-actual-stat-count class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal col--pale-sky">
+                                                    15
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <!-- has submenu notification arrow, should be present in every item -->
+                                        <span data-arrow class="flex transition--all transition--200 transition--ease-in-out">
+                                            <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/short_arrow_right.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <!-- submenu item -->
+                                <li data-sidebar-menu-item data-page="dashboard/shipping" class="flex flex-column self-stretch">
+                                    <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
+                                    <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Shipping & Billing" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                        <!-- submenu title -->
+                                        <span class="flex flex--max justify-start gap--12">
+                                            <span class="fs--16 fw5 lh--24 col--pale-sky hover--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                Shipping & Billing
+                                            </span>
+                                            <span data-count-badge class="flex flex-column items-center self-stretch gap--10" hidden>
+                                                <span data-count-text data-attribute-type="total-cpr-count" data-actual-stat-count class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal col--pale-sky">
+                                                    5
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <!-- has submenu notification arrow, should be present in every item -->
+                                        <span data-arrow class="flex transition--all transition--200 transition--ease-in-out">
+                                            <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/short_arrow_right.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <!-- submenu item -->
+                                <li data-sidebar-menu-item data-page="dashboard/payout-settings" class="flex flex-column self-stretch">
+                                    <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
+                                    <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Payout Settings" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                        <!-- submenu title -->
+                                        <span class="flex flex--max justify-start gap--12">
+                                            <span class="fs--16 fw5 lh--24 col--pale-sky hover--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                Payout Settings
+                                            </span>
+                                            <span data-count-badge class="flex flex-column items-center self-stretch gap--10" hidden>
+                                                <span data-count-text data-attribute-type="total-cpr-count" data-actual-stat-count class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal col--pale-sky">
+                                                    5
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <!-- has submenu notification arrow, should be present in every item -->
+                                        <span data-arrow class="flex transition--all transition--200 transition--ease-in-out">
+                                            <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/short_arrow_right.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <!-- submenu item -->
+                                <li data-sidebar-menu-item data-page="dashboard/newsletter" class="flex flex-column self-stretch">
+                                    <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
+                                    <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Newsletter Settings" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                        <!-- submenu title -->
+                                        <span class="flex flex--max justify-start gap--12">
+                                            <span class="fs--16 fw5 lh--24 col--pale-sky hover--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                Newsletter Settings
+                                            </span>
+                                            <span data-count-badge class="flex flex-column items-center self-stretch gap--10" hidden>
+                                                <span data-count-text data-attribute-type="total-cpr-count" data-actual-stat-count class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal col--pale-sky">
+                                                    5
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <!-- has submenu notification arrow, should be present in every item -->
+                                        <span data-arrow class="flex transition--all transition--200 transition--ease-in-out">
+                                            <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/short_arrow_right.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <!-- submenu item -->
+                                <li data-sidebar-menu-item data-page="dashboard/live-stream-settings" class="flex flex-column self-stretch">
+                                    <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
+                                    <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Live stream Settings" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                        <!-- submenu title -->
+                                        <span class="flex flex--max justify-start gap--12">
+                                            <span class="fs--16 fw5 lh--24 col--pale-sky hover--col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                Live stream Settings
+                                            </span>
+                                            <span data-count-badge class="flex flex-column items-center self-stretch gap--10" hidden>
+                                                <span data-count-text data-attribute-type="total-cpr-count" data-actual-stat-count class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal col--pale-sky">
+                                                    5
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <!-- has submenu notification arrow, should be present in every item -->
+                                        <span data-arrow class="flex transition--all transition--200 transition--ease-in-out">
+                                            <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/short_arrow_right.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /submenu body -->
+
+                        <!-- submenu footer -->
+                        <div class="flex"></div>
+                        <!-- /submenu footer -->
+                    </div>
+                    <!-- /submenu container -->
+                </div>
+                <!-- /submenu Container -->
+			</section>
+            <!-- /page sidebar -->
+
+            <!-- main section -->
+            <section data-section="main" class="flex flex--max relative z-1">
+                <div class="flex justify-center items-center w-100 h-100">
+                    Main Content Will Go here
+                </div>
+            </section>
+            <!-- /main section -->
+
+        </div>
+        <!-- /main wrapper -->
+
+        <!-- Dashboard Sidebar Custom Script -->
+        <script src="assets/js/dashboard-sidebar-menu.js"></script>
+    </body>
+</html>
