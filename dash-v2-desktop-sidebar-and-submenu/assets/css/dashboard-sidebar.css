@@ -1,0 +1,259 @@
+/**
+ * Template name: <Desktop Sidebar & Sub Menu>
+ * Custom Tachyons Stylesheet: Enhances Tachyons functionality for rapid, consistent, and performant UI development.
+ * Tachyons: A functional CSS framework for creating scalable, responsive interfaces with minimal code.
+ * Tachyons Guidelines: https://knowledge.madlinkscoding.com/guide-customtachyons/
+ */
+
+html {
+  font-size: 16px !important;
+}
+
+/* Colors */
+.col--fiord { color: var(--color-fiord, #475467); }
+.col--oxford-blue { color: var(--color-oxford-blue, #344054); }
+
+
+/* Background Colors*/
+.bg--col--hollywood-cerise { background-color: var(--color-hollywood-cerise, #F40793); }
+.bg--col--brilliant-rose--20 { background: rgba(251, 91, 162, 0.2); }
+.bg--col--spring-green { background-color: var(--color-spring-green); }
+.bg--col--athens-gray { background-color: var(--color-athens-gray, #F9FAFB); }
+.bg--col--athens-gray--70 { background-color: rgba(249, 250, 251, 0.70); }
+
+
+/* Background Gradients*/
+
+
+/* Border Colors */
+.br--col--mischka { border-color: var(--color-mischka, #D0D5DD); }
+
+
+/* Fill Colors */
+
+
+/* Stroke Colors */
+
+
+/* Filter Colors */
+.filter--col--pale-sky { filter: brightness(0) saturate(100%) invert(45%) sepia(13%) saturate(594%) hue-rotate(183deg) brightness(92%) contrast(92%); }
+
+
+/* Hover Filter Colors */
+
+
+/* Caret Colors */
+
+
+/* Hover Background Colors */
+.hover--bg--col--brilliant-rose--10:hover { background: rgba(251, 91, 162, 0.1); }
+.hover--bg--col--ebony--10:hover { background: rgba(12, 17, 29, 0.10); }
+
+
+/* Hover Colors */
+.hover--col--oxford-blue:hover { color: var(--color-oxford-blue, #344054); }
+.hover--parent--child--col--oxford-blue:hover .hover--col--oxford-blue { color: var(--color-oxford-blue, #344054); }
+
+
+/* Font Size */
+
+
+/* Line Height */
+
+
+/* Letter Spacing */ 
+
+
+/* Word Break */
+
+
+/* Width */
+.w--7 { width: 0.438rem; /* width 7px */ }
+.w--10 { width: 0.625rem; /* width 10px */ }
+.w--36 { width: 2.25rem; /* width 36px */ }
+.w--90 { width: 5.625rem; /* width 90px */ }
+.w--160 { width: 10rem; /* width 160px */ }
+.w--480 { width: 30rem; /* width 480px */ }
+
+
+/* Min Width */
+
+
+/* Max Width */
+
+
+/* Width Percent */
+
+
+/* Height */
+.h--7 { height: 0.438rem; /* height 7px */ }
+.h--10 { height: 0.625rem; /* height 10px */ }
+.h--36 { height: 2.25rem; /* height 36px */ }
+
+
+/* Min Height */
+
+
+/* Max Height */
+
+
+/* Padding */
+.pad--6 { padding: 0.375rem; /* padding 6px */ }
+.pad--12 { padding: 0.75rem; /* padding 12px */ }
+
+
+/* Margin */
+
+
+/* Gap */
+.gap--12 { gap: 0.75rem; /* gap 12px */ }
+
+
+/* Position */
+
+
+/* Top */
+.top--03 { top: 0.188rem;  /* top 3px */ }
+
+
+/* Right */
+.right--03 { right: 0.188rem;  /* right 3px */ }
+.right--176-neg { right: -11rem;  /* right -168px */ }
+
+
+/* Bottom */
+
+
+/* Left */
+.left--90 { left: 5.625rem; /* left 90px */}
+.left--100-p { left: 100%; /* left 100% */}
+
+
+/* Z-Index */
+
+
+/* Flexbox */
+
+
+/* Opacity */
+
+
+/* Hover Opacity */
+.hov--o--100:hover { opacity: 1; }
+
+
+/* Object Fit */
+
+
+/* Backdrop Filter */
+
+
+/* Box Shadow */
+.sh--sidebar { box-shadow: 4px 0px 10px 0px rgba(0, 0, 0, 0.08); }
+.sh--sidebar-2 { box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.15); }
+
+
+/* Drop Shadow */
+
+
+/* Text Shadow */
+
+
+/* Overflow */
+
+
+/* Cursor Style */ 
+
+
+/* Border */
+
+
+/* Border Width */
+
+
+/* Border Radius */
+.br--6 { border-radius: 0.375rem; /* border-radius 6px */ }
+
+/* Transition Property */
+.transition--all { transition-property: all; }
+.transition--opacity { transition-property: opacity; }
+.transition--background { transition-property: background; }
+.transition--transform { transition-property: transform; }
+
+/* Transition Duration */
+.transition--50 { transition-duration: 0.05s; }
+.transition--100 { transition-duration: 0.1s; }
+.transition--150 { transition-duration: 0.15s; }
+.transition--200 { transition-duration: 0.2s; }
+.transition--250 { transition-duration: 0.25s; }
+.transition--300 { transition-duration: 0.3s; }
+.transition--350 { transition-duration: 0.35s; }
+
+/* Transition Timing */
+.transition--linear {transition-timing-function: linear; }
+.transition--ease {transition-timing-function: ease; }
+.transition--ease-in {transition-timing-function: ease-in; }
+.transition--ease-out {transition-timing-function: ease-out; }
+.transition--ease-in-out {transition-timing-function: ease-in-out; }
+
+
+/* Dashboard Sidebar Menu & Submenu : Custom Styles */
+[data-floating-panel-wrapper][data-is-floating="true"] [data-floating-panel][data-is-active="false"] { opacity: 0; visibility: hidden; pointer-events: none; transform: scale(0) translateY(-30%); }
+[data-floating-panel-wrapper][data-is-floating="true"] [data-floating-panel][data-is-active="true"] { opacity: 1; visibility: visible; pointer-events: all; transform: scale(1) translateY(-30%); }
+[data-floating-panel-wrapper][data-is-floating="true"] [data-floating-panel] [data-sidebar-menu-item] { width: 3.5rem; height: 3.5rem; }
+
+[data-dashboard-main-nav] .current-page[data-sidebar-menu-item] > [data-main-menu-item] { background: rgba(251, 91, 162, 0.2); }
+[data-dashboard-main-nav] .current-page[data-sidebar-menu-item] > [data-main-menu-item] [data-sidebar-menu-icon] { filter: brightness(0) saturate(100%) invert(29%) sepia(98%) saturate(5809%) hue-rotate(325deg) brightness(92%) contrast(121%); }
+[data-dashboard-main-nav] .current-page[data-sidebar-menu-item] > [data-main-menu-item] [data-sidebar-menu-item-text] { color: var(--color-rose); }
+
+[data-main-menu-item][data-is-active="true"] { background: rgba(251, 91, 162, 0.1); }
+
+[data-submenu-container][hidden] { display: flex; opacity: 0; visibility: hidden; pointer-events: none; transform: translateX(2rem); }
+[data-submenu-container] { opacity: 1; visibility: visible; pointer-events: all; transform: translateX(0rem); }
+[data-submenu] [data-submenu-item] [data-arrow] { transform: translateX(-1rem); opacity: 0; pointer-events: none; }
+[data-submenu] [data-submenu-item][data-has-submenu="true"]:hover [data-arrow] { transform: translateX(0rem); opacity: 1; pointer-events: none; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
