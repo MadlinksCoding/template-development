@@ -268,6 +268,33 @@
 
                 <!-- profile, notifications and submenu panels container (keep profile/model panel, notification panel and  all submenu containers inside this div) -->
                 <div>
+                    <!-- notification panel container (same template shall be used in mobile also) -->
+                    <div data-notifications-container class="flex flex-column items-start gap--16 w--480 vh-100 overflow-hidden bg--col--athens-gray--70 bg--blur--25 bl br--col--mischka sh--sidebar fixed top-0 left--90 z-1 transition--all transition--150 transition--ease-in-out">
+                        <!-- notifications header -->
+                        <div class="flex items-center self-stretch gap--8 pa2">
+                            <!-- title -->
+                            <div class="flex flex--max items-center gap--8">
+                                <span class="flex justify-start items-center"> 
+                                    <!-- render_svg_icon( 'bell-03' ) -->
+                                    <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/bell-03.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                </span>
+                                <span data-submenu-title class="flex flex--max justify-start items-center fs--14 fw6 lh--20 col--pale-sky"> 
+                                    Notifications
+                                </span>
+                            </div>
+                            
+                            <!-- back button -->
+                            <div class="flex">
+                                <a data-back-button class="flex justify-center items-center pad--8 br--6 hover--bg--col--ebony--10 pointer transition--background transition--200 transition--ease-in-out">
+                                    <!-- render_svg_icon( 'align-left-01' ) -->
+                                    <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/align-left-01.svg" alt="" class="w--24 h--24 filter--col--pale-sky">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- /notifications header -->
+                    </div>
+                    <!-- /notification panel container -->
+
                     <!-- submenu container (Multi Level Push Menu) ("data-submenu-container-id" should be same as "data-target-submenu-container" value in the main menu item) -->
                     <div data-submenu-container data-submenu-container-id="dashboard-submenu-multi-level-push-menu-demo" class="flex flex-column items-start gap--16 w--480 vh-100 overflow-hidden pv4 ph3 bg--col--athens-gray--70 bg--blur--25 bl br--col--mischka sh--sidebar fixed top-0 left--90 z-1 transition--all transition--150 transition--ease-in-out" hidden>
                         <!-- submenu header -->
