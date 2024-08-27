@@ -1,6 +1,12 @@
 /* Adaptive font size */
 html { font-size: 16px; }
 
+/* Font Size */
+.fs--18-responsive-mobile-portrait { font-size: 1.125rem; /* font-size 18px */  } /* confirmed in use */ /* pixel conversion correct */
+
+/* Line Height */
+.lh--28-responsive-mobile-portrait { line-height: 1.75rem; /* line-height 28px */ } /* confirmed in use */ /* pixel conversion correct */
+
 /* Width */
 .w--100-responsive-mobile-portrait { width: 100%; }
 
@@ -15,7 +21,6 @@ html { font-size: 16px; }
 
 /* Padding */
 .pad--0-responsive-mobile-portrait { padding: 0rem; /* padding top bottom left right 0px */ }
-.pad--bottom--0-responsive-mobile-portrait { padding-bottom: 0rem; /* padding bottom 0px */ }
 .pad--top--64-responsive-mobile-portrait { padding-top: 4rem; /* padding top 64px */ }
 .pad--bottom--24-responsive-mobile-portrait { padding-bottom: 1.5rem; /* padding top 24px */ }
 .pad--x--0-responsive-mobile-portrait { padding-left: 0rem; padding-right: 0rem; /* padding left right 0px */ }
@@ -28,5 +33,10 @@ html { font-size: 16px; }
 .grid--col-span-2-responsive-mobile-portrait { grid-column: span 2 / span 2; }
 
 /* Order */
-.order--1-responsive-mobile { order: 1; }
-.order--2-responsive-mobile { order: 2; }
+.order--1-responsive-mobile-portrait { order: 1; }
+.order--2-responsive-mobile-portrait { order: 2; }
+
+/* Position */
+.absolute-responsive-mobile-portrait { position: absolute; }
+.top--neg-8-responsive-mobile-portrait { top: -0.5rem; }
+.right--16-responsive-mobile-portrait { right: 1rem; }
