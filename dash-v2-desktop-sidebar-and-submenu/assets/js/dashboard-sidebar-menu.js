@@ -12,8 +12,8 @@
 /**
  * 
  * @class dashMenu
- * @classdesc This is the main app class, which should be called after DOM is rendered.
- * Once invoked and initialized using {@link init}, it will create an instance of Prakya 360 App and call all additional constructors and methods.
+ * @classdesc Fansocial Dashboard Sidebar Menu - Logics for behavior of multi level push menu (desktop & mobile) and floating menu panel for small screens
+ * Once invoked and initialized using {@link init}, it will create an instance of Fansocial Dash Menu and call all additional constructors and methods.
  * 
  */
 class DashMenu {
@@ -199,6 +199,7 @@ class DashMenu {
 	/** 
 	 * 
 	 * @method handleSubMenuClick 
+	 * @param {HTMLElement} element - clicked submenu item.
 	 * @description Helper function to handle sub menu click (of current active submenu container)
 	 * 
 	 */
@@ -236,6 +237,7 @@ class DashMenu {
 	/** 
 	 * 
 	 * @method handleMainMenuClick 
+	 * @param {HTMLElement} element - main menu items (which one is clicked).
 	 * @description Helper function to handle active main menu
 	 * 
 	 */
@@ -288,6 +290,7 @@ class DashMenu {
 	/** 
 	 * 
 	 * @method handleDashNavElClick 
+	 * @param {HTMLElement} element - main dashboard <nav> element.
 	 * @description Attached and listens to click event on dashNavEl element
 	 * 
 	 */
