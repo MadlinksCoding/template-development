@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription Empty State</title>
+
+    <!-- Poppins Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Tachyons Style -->
+    <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/main.css" />
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" />
+    <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/theme.css" />
+    <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/customTachyons.css" />
+
+    <!-- Nice Select CSS -->
+    <link rel="stylesheet" type="text/css" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/FINAL/css/nice-select.css">
+
+    <!-- /* Custom Tachyons */ -->
+    <style>
+        /* Font */
+        .ff-poppins { font-family: 'Poppins'; }
+
+        /* Letter Spacing */ 
+        .tracked--neg--0-72 { letter-spacing: --0.045rem; /* letter-spacing -0.72px */ } /* confirmed in use */ /* pixel conversion correct */
+
+        /* Width */
+        .w--14 { width: 0.875rem; /* width 14px */ } /* confirmed in use */ /* pixel conversion correct */
+        .w--952 { width: 59.5rem; /* width 952px */ } /* confirmed in use */ /* pixel conversion correct */
+
+        /* Hright */
+        .h--14 { height: 0.875rem; /* height 14px */ } /* confirmed in use */ /* pixel conversion correct */
+
+        /* Colors */
+        .col--gray-500 { color: var(--color-gray-500,#667085); }
+        .col--gray-600 { color: var(--color-gray-600,#475467); }
+        .col--gray-700 { color: var(--color-gray-700,#344054); }
+        .col--gray-800 { color: var(--color-gray-800,#182230); }
+        .col--gray-900 { color: var(--color-gray-900,#101828); }
+        .col--gray-950 { color: var(--color-gray-950,#0C111D); }
+        .col--blue-dark-700 { color: var(--color-blue-dark-700, #004EEB); }
+
+        /* Background Gradients */
+        .bg--gradient-white { background: linear-gradient(180deg, rgba(255, 255, 255, 0.30) 0%, rgba(255, 255, 255, 0.00) 8%); }
+
+        /* Border Colors */
+        .br--col--gray-300 { border-color: var(--color-gray-300, #D0D5DD); } /* confirmed in use */
+
+        /* Border Radius */
+        .br--2 { border-radius: 0.125rem; /* border-radius 2px */ } /* confirmed in use */ /* pixel conversion correct */
+
+        /* Box Shadow */
+        .sh--6 { box-shadow: 0px 4px 6px -2px rgba(16, 24, 40, 0.08); } /* confirmed in use */
+        .sh--7 { box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05); } /* confirmed in use */
+        .sh--sm { box-shadow: 0px 1px 3px 0px rgba(16, 24, 40, 0.10), 0px 1px 2px 0px rgba(16, 24, 40, 0.06); }
+
+        /* clip path */
+        .cp--6 { clip-path: polygon(0% 0%, 100% 0, 105% 105%, 16% 105%); }
+
+        /* Filter Colors */
+        .filter--col--blue--dark--700 { filter: invert(17%) sepia(100%) saturate(5382%) hue-rotate(218deg) brightness(96%) contrast(105%); } /* confirmed in use */
+        .filter--col--gray--500 { filter: invert(44%) sepia(39%) saturate(203%) hue-rotate(181deg) brightness(91%) contrast(91%); } /* confirmed in use */
+
+        /* Filter Blur */
+        .filter--blur--60 { filter: blur(60px); }
+
+        /* Grid */
+        .grid--cols-2 { grid-template-columns: repeat(2, 1fr); }
+
+        /* Grid Column */
+        .grid--col-span-2 { grid-column: span 2 / span 2; }
+
+        /* Padding */
+        .pad--10 { padding: 0.625rem; /* padding 10px */ } /* confirmed in use */ /* pixel conversion correct */
+        .pad--x--14 { padding-left: 0.875rem; padding-right: 0.875rem; /* padding left right 14px */ } /* confirmed in use */ /* pixel conversion correct */
+    </style>
+
+    <!-- Tablet Stylesheet -->
+    <link rel="stylesheet" href="assets/css/tablet.css" media="screen and (min-width: 768px) and (max-width: 1024px)">
+     
+    <!-- Mobile Stylesheet -->
+    <link rel="stylesheet" href="assets/css/mobile.css" media="screen and (min-width: 490px) and (max-width: 767px)">
+
+    <!-- Mobile Portrait Stylesheet -->
+    <link rel="stylesheet" href="assets/css/mobile-portrait.css" media="screen and (max-width: 489px)">
+</head>
+
+<body class="ff-poppins">
+    <div class="flex justify-center">
+        <div class="w--952 bg-white-90 pad--24 pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait flex flex-column gap--16">
+            <!-- Modal Header -->
+            <div class="relative flex items-center justify-between gap--8 pad--x--16-responsive-mobile pad--x--16-responsive-mobile-portrait flex--column-responsive-mobile-portrait items--start-responsive-mobile-portrait">
+                <!-- Title -->
+                <div class="flex items-center gap--8">
+                    <div class="w--24 h--24">
+                        <img src="assets/icons/logo_bg.svg" alt="" class="w--24 h--24">
+                    </div>
+                    <h3 class="ff-poppins fs--24 fs--18-responsive-mobile fs--18-responsive-mobile-portrait fw6 lh--32 lh--28-responsive-mobile lh--28-responsive-mobile-portrait col--gray-950">Subscriptions Insight</h3>
+                </div>
+                <!-- End Title -->
+                <!-- Select Dropdown and Close Button -->
+                <div class="flex items-center gap--16 w--100-responsive-mobile-portrait">
+
+                    <!-- Select Dropdown -->
+                    <div class="relative z--10000 pad--x--14 bg-white-50 pad--top--10 pad--bottom--10 br--8 bg--blur--10 flex items-center gap--4 justify-center w--100-responsive-mobile-portrait">
+                        <select data-nice-select>
+                            <option>Daily</option>
+                            <option>Weekly</option>
+                            <option>Mothly</option>
+                        </select>
+                        <!-- <div class="pointer">
+                            <img src="assets/icons/arrow-down.svg" alt="" />
+                        </div> -->
+                    </div>
+                    
+                    <!-- Close Button -->
+                    <div class="bg-white br-100 sh--sm pad--10 flex items-center justify-center absolute-responsive-mobile-portrait top--neg-8-responsive-mobile-portrait right--16-responsive-mobile-portrait ">
+                        <img src="assets/icons/close-btn.svg">
+                    </div>
+                    <!-- End Close Button -->
+                </div>
+                <!-- End Select Dropdown and Close Button -->
+            </div>
+            <!-- End Modal Header -->
+            <!-- All Analytics Data -->
+            <div class="pa3 pt0 grid grid--cols-2 gap--16 grid--cols-2-responsive-tablet grid--cols-2-responsive-mobile grid--cols-1-responsive-mobile-portrait pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait">
+                <!-- Left Column -->
+                <div class="flex flex-column gap--16 w-100 grid--col-span-2-responsive-mobile-portrait">
+                    <!-- Top Contributors -->
+                    <div class="pa3 flex flex-column gap--16 flex-auto bg-white-70 bg--blur--25 br--2">
+                        <!-- Title -->
+                        <div class="flex items-center gap--8">
+                            <h3 class="ma0 ff-poppins fs--16 fw5 lh--24 col--gray-950">Subscriptions Insight</h3>
+                        </div>
+                        <!-- Data Content -->
+                        <div class="flex flex-column justify-center items-start gap--16 flex-auto">
+                            <div class="w-100 pad--y--24 flex flex-column justify-center gap--8 flex-auto h--340">
+                                <div class="pa3 flex items-center justify-center">
+                                    <div class="w--161 h--161 flex items-center justify-center relative">
+                                        <div class="db w-100 h-100 absolute left-0 top-0 flex items-center justify-center">
+                                            <div class="db bg--col--lemon w--32 h--32 filter--blur--60"></div>
+                                        </div>
+                                        <img src="assets/img/pie-chart-03.svg" class="w--128 h--128" alt="">
+                                    </div>
+                                </div>
+                                <div class="flex flex-column gap--8 items-center">
+                                    <span class="fs--16 lh--24 col--gray-700">No trend to show at the moment</span>
+                                    <a href="#" class="fs--16 lh--24"><span class="fs--16 lh--24 col--gray-700 underline">Learn ways to earn</span> </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Ens Data Content -->
+                    </div>
+                    <!-- End Top Contributors -->
+                </div>
+                <!-- End Left Column -->
+                <!-- Right Column -->
+                <div class="flex flex-column gap--16 w-100 grid--col-span-2-responsive-mobile-portrait">
+                    <!-- Top Contributors -->
+                    <div class="pa3 flex flex-column gap--16 flex-auto bg-white-70 bg--blur--25 br--2">
+                        <!-- Title -->
+                        <div class="flex items-center gap--8">
+                            <h3 class="ma0 ff-poppins fs--16 fw5 lh--24 col--gray-950">Tiers Breakdown</h3>
+                        </div>
+                        <!-- Data Content -->
+                        <div class="flex flex-column justify-center items-start gap--16 flex-auto">
+                            <div class="w-100 pad--y--24 flex flex-column justify-center gap--8 flex-auto h--340">
+                                <div class="pa3 flex items-center justify-center">
+                                    <div class="w--161 h--161 flex items-center justify-center relative">
+                                        <div class="db w-100 h-100 absolute left-0 top-0 flex items-center justify-center">
+                                            <div class="db bg--col--lemon w--32 h--32 filter--blur--60"></div>
+                                        </div>
+                                        <img src="assets/img/pie-chart-03.svg" class="w--128 h--128" alt="">
+                                    </div>
+                                </div>
+                                <div class="flex flex-column gap--8 items-center">
+                                    <span class="fs--16 lh--24 col--gray-700">No trend to show at the moment</span>
+                                    <a href="#" class="fs--16 lh--24"><span class="fs--16 lh--24 col--gray-700 underline">Learn ways to earn</span> </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Ens Data Content -->
+                    </div>
+                    <!-- End Top Contributors -->
+                </div>
+                <!-- End Right Column -->
+            </div>
+            <!-- Ens All Analytics Data -->
+        </div>
+    </div>
+    <!-- Nice Select JS -->
+    <script type="text/javascript" src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/FINAL/js/nice-select.js"></script>
+</body>
+
+</html>

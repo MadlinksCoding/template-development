@@ -41,6 +41,7 @@
 
         /* Padding */
         .pad--6 { padding: 0.375rem; /* padding 6px */ } /* confirmed in use */ /* pixel conversion correct */
+        .pad--y--4 { padding-top: 0.25rem; padding-bottom: 0.25rem; /* padding top bottom 4px */ }
 
         /* Gap */
         .gap--12 { gap: 0.75rem; /* gap 12px */ } /* confirmed in use */ /* pixel conversion correct */
@@ -60,12 +61,24 @@
 
         /* Filter Colors */
         .filter--col--gray-500 { filter: invert(46%) sepia(13%) saturate(631%) hue-rotate(182deg) brightness(91%) contrast(89%); } /* confirmed in use */
+
+        /* Hover State Background Colors*/
+        .hover--bg--col--light-grey-10:hover { background: rgba(12, 17, 29, 0.10); }
+
+        /* Active State Background Colors*/
+        .active--bg--col--grey-800:active { background: var(--Gray-800, #182230); }
+
+        /* Active State Filter Colors */
+        .active--filter--col--white:active { filter: brightness(0) invert(1); }
+
+         /* Active State Border Colors */
+         .active--br--col-grey-14:active { border-color: rgba(152, 162, 179, 0.14); }
     </style>
 </head>
 
 <body>
 	<!-- Responsive Header -->
-    <div class="pad--y--8 ph3 flex-column gap--16 br--24 bg--blur--25 dn dn-responsive-mobile">
+    <div class="pad--y--8 pad--x--16 flex-column gap--16 br--24 bg--blur--25 dn dn-responsive-mobile">
         <div class="flex justify-between items-center">
             <!-- Site Logo -->
             <div class="relative">
@@ -79,9 +92,9 @@
                 <!-- Header Navigation Item -->
                 <div class="flex justify-end items-center gap--8">
                     <!-- Menu item 1 -->
-                    <div class="pad--6 flex justify-center items-center gap--12 br--6 pointer">
+                    <div class="pad--6 flex justify-center items-center gap--12 br--6 pointer hover--bg--col--light-grey-10 active--bg--col--grey-800">
                         <div class="w--20 h--20">
-                            <img src="assets/icons/globe.svg" alt="" class="w--20 h--20 filter--col--gray-500">
+                            <img src="assets/icons/globe.svg" alt="" class="w--20 h--20 filter--col--gray-500 active--filter--col--white">
                         </div>
                     </div>
                     <!-- Notification Item -->
@@ -89,27 +102,32 @@
                         <!-- Notification Dot -->
                         <span class="db w--7 h--7 br-100 bg--col--persian-rose absolute top--2 right--3"></span>
                         <!-- Menu item 2 -->
-                        <div class="pad--6 flex justify-center items-center gap--12 br--6 pointer">
+                        <div class="pad--6 flex justify-center items-center gap--12 br--6 pointer hover--bg--col--light-grey-10 active--bg--col--grey-800">
                             <div class="w--20 h--20">
-                                <img src="assets/icons/bell-03.svg" alt="" class="w--20 h--20 filter--col--gray-500">
+                                <img src="assets/icons/bell-03.svg" alt="" class="w--20 h--20 filter--col--gray-500 active--filter--col--white">
                             </div>
                         </div>
                     </div>
                     <!-- User Profile Item -->
                     <div class="relative flex justify-end items-center">
                         <!-- Menu item 2 -->
-                        <div class="pad--x--8 pv1 flex flex-column justify-center items-center gap--2 br--6">
-                            <div class="w--24 h--24 br-100 pointer">
-                                <img src="assets/img/avatar.png" alt="" class="w-100 h-100 fit--cover">
+                        <div class="flex flex-column justify-center items-center gap--2 br--6">
+                            <div class="br-100 w--32 h--32 flex items-center justify-center ba b--white-0125 bw2 active--br--col-grey-14">
+                                <div class="relative w--24 h--24">
+                                    <div class="w--24 h--24 br-100 pointer">
+                                        <img src="assets/img/avatar.png" alt="" class="w-100 h-100 fit--cover">
+                                    </div>
+                                    <!-- User Online Dot -->
+                                    <span class="db w--6 h--6 br-100 bg--col--spring-green absolute bottom-0 right-0"></span>
+                                </div>
                             </div>
                         </div>
-                        <!-- User Online Dot -->
-                        <span class="db w--6 h--6 br-100 bg--col--spring-green absolute bottom--4 right--9"></span>
+                        
                     </div>
                 </div><!-- End Header Navigation Item -->
 
                 <!-- Humberger Menu -->
-                    <div class="pad--x--8 pv1 flex flex-column items-center justify-center gap--2 br--6">
+                    <div class="pad--x--8 pad--y--4 flex flex-column items-center justify-center gap--2 br--6">
                         <div class="pointer w--24 h--24">
                             <img src="assets/icons/menu-01.svg" alt="" class="w--24 h--24" />
                         </div>
