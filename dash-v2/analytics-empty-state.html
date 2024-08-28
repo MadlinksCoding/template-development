@@ -68,6 +68,14 @@
 
         /* Grid Column */
         .grid--col-span-2 { grid-column: span 2 / span 2; }
+
+        /* Padding */
+        .pad--16 { padding: 1rem; /* padding 16px */ }
+        .pad--bottom--0 { padding-bottom: 0rem; /* padding bottom 0px */ }
+        .pad--top--0 { padding-top: 0rem; /* padding top 0px */ }
+
+        /* Margin */
+        .m--0 { margin: 0rem; }
     </style>
 
     <!-- Tablet Stylesheet -->
@@ -81,258 +89,157 @@
 </head>
 
 <body class="bg--col--athens-gray2">
-    <div class="bg--blur--25">
-        <div class="pad--40 flex flex-column gap--24 bg--gradient-white pad--y--24-responsive-tablet pad--x--0-responsive-tablet pad--top--64-responsive-mobile pad--top--64-responsive-mobile-portrait pad--bottom--24-responsive-mobile pad--bottom--24-responsive-mobile-portrait pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait pad--x--0-responsive-mobile-portrait ">
-            <!-- Top Page Title Section -->
-            <div class="w-100 flex gap--24 items-start justify-between gap--16--responsive-tablet gap--16--responsive-mobile gap--16--responsive-mobile-portrait flex--column-responsive-tablet pad--x--16-responsive-tablet pad--x--16-responsive-mobile pad--x--16-responsive-mobile-portrait flex--column-responsive-mobile flex--column-responsive-mobile-portrait">
-                <h1 class="ff-poppins fs--36 lh--44 fw6 tracked--neg--0-72 col--gray-950 ma0">Welcome back, Jenny!</h1>
-                <div class="pa3 flex flex-column justify-center items-end gap--10 flex-auto br--10 pad--0-responsive-tablet items--start-responsive-tablet pad--0-responsive-mobile pad--0-responsive-mobile-portrait items--start-responsive-mobile items--start-responsive-mobile-portrait">
-                    <p>“Those who flow as life flows know they need no other force.” ~ Lao Tzu</p>
-                    <button class="flex items-center gap--2">
-                        <span><img src="assets/icons/refresh-ccw-04.svg" alt="" /></span>
-                        <span class="fs--12 fw5 lh--18 col--gray-700">New Quote</span>
-                    </button>
-                </div>
-            </div>
-            <!-- End Top Page Title Section -->
-
-            <!-- Overview / Insight Section -->
-            <div class="flex flex-column gap--24 bg-white-40 bg--blur--25 sh--6">
-                <!-- Section Header -->
-                <div class="pa3 pb0 flex justify-between items-center flex--column-responsive-mobile-portrait items--start-responsive-mobile-portrait">
-                    <!-- Title -->
-                    <div class="flex items-center gap--8 flex-auto">
-                        <span>
-                            <img src="assets/icons/dashboard_bar_chart.svg" alt="">
-                        </span>
-                        <h2 class="ff-poppins ma0 fs--20 fw5 lh--30 col--gray-500">Overview/Insight</h2>
-                    </div>
-                    <!-- End Title -->
-                    <!-- Last Date / Refresh -->
-                    <div class="flex justify-end gap--16 justify--between-responsive-mobile-portrait w--100-responsive-mobile-portrait">
-                        <span class="fs--14 lh--20 col--gray-500">Last updated at 11:24am</span>
-                        <button class="bg-white cp--6 pad--4 pad--right--8 pad--left--15 flex gap--4 items-center justify-center">
-                            <span><img src="assets/icons/refresh-ccw-04.svg" alt="" class="w--14 h--14 filter--col--blue--dark--700" /></span>
-                            <p class="fs--12 fw5 lh--18 col--gray-700 col--blue-dark-700">Refresh</p>
+    <div class="" style="background-image: url(assets/img/gradient-bg.svg);">
+        <div class="bg--blur--25">
+            <div class="pad--40 flex flex-column gap--24 bg--gradient-white pad--y--24-responsive-tablet pad--x--0-responsive-tablet pad--top--64-responsive-mobile pad--top--64-responsive-mobile-portrait pad--bottom--24-responsive-mobile pad--bottom--24-responsive-mobile-portrait pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait pad--x--0-responsive-mobile-portrait ">
+                <!-- Top Page Title Section -->
+                <div class="w-100 flex gap--24 items-start justify-between gap--16--responsive-tablet gap--16--responsive-mobile gap--16--responsive-mobile-portrait flex--column-responsive-tablet pad--x--16-responsive-tablet pad--x--16-responsive-mobile pad--x--16-responsive-mobile-portrait flex--column-responsive-mobile flex--column-responsive-mobile-portrait">
+                    <h1 class="ff-poppins fs--36 lh--44 fw6 tracked--neg--0-72 col--gray-950 m--0">Welcome back, Jenny!</h1>
+                    <div class="pad--16 flex flex-column justify-center items-end gap--10 flex-auto br--10 pad--0-responsive-tablet items--start-responsive-tablet pad--0-responsive-mobile pad--0-responsive-mobile-portrait items--start-responsive-mobile items--start-responsive-mobile-portrait">
+                        <p>“Those who flow as life flows know they need no other force.” ~ Lao Tzu</p>
+                        <button class="flex items-center gap--2">
+                            <span><img src="assets/icons/refresh-ccw-04.svg" alt="" /></span>
+                            <span class="fs--12 fw5 lh--18 col--gray-700">New Quote</span>
                         </button>
                     </div>
-                    <!-- End Last Date / Refresh -->
                 </div>
-                <!-- End Section Header -->
-                <!-- All Analytics Data -->
-                <div class="pa3 pt0 grid grid--cols-3 gap--16 grid--cols-2-responsive-tablet grid--cols-2-responsive-mobile grid--cols-1-responsive-mobile-portrait pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait">
-                    <!-- Left Column -->
-                    <div class="flex flex-column gap--16 w-100 grid--col-span-2-responsive-mobile-portrait">
-                        <!-- Subscribers -->
-                        <div class="pa3 flex flex-column gap--16 flex-auto bg-white-70 bg--blur--25 br--2">
-                            <!-- Title -->
-                            <div class="flex items-center gap--8">
-                                <h3 class="ma0 ff-poppins fs--16 fw5 lh--24 col--gray-700">Subscribers</h3>
-                            </div>
-                            <!-- Data Content -->
-                            <div class="flex flex-column justify-center items-start gap--16 flex-auto">
-                                <div class="flex items-center gap--24 flex- w-100">
-                                    <div class="flex flex-column items-start gap--8">
-                                        <span class="fs--36 fw6 lh--44 tracked--neg--0-72 col--gray-900">--</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Ens Data Content -->
-                        </div>
-                        <!-- End Subscribers -->
-                        <!-- Fans -->
-                        <div class="pa3 flex flex-column gap--16 flex-auto bg-white-70 bg--blur--25 br--2">
-                            <!-- Title -->
-                            <div class="flex items-center gap--8">
-                                <h3 class="ma0 ff-poppins fs--16 fw5 lh--24 col--gray-700">Fans</h3>
-                            </div>
-                            <!-- Data Content -->
-                            <div class="flex flex-column justify-center items-start gap--16 flex-auto">
-                                <div class="flex items-center gap--24 flex-auto w-100">
-                                    <div class="flex flex-column items-start gap--8 flex-auto">
-                                        <span class="fs--12 fw5 lh--18 col--gray-600">NEW FOLLOWERS</span>
-                                        <span class="fs--36 fw6 lh--38 tracked--neg--0-72 col--gray-900">--</span>
-                                    </div>
-                                    <div class="flex flex-column items-start gap--8 flex-auto">
-                                        <span class="fs--12 fw5 lh--18 col--gray-600">PROFILE VISIT</span>
-                                        <span class="fs--36 fw6 lh--38 tracked--neg--0-72 col--gray-900">--</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Ens Data Content -->
-                        </div>
-                        <!-- End Fans -->
-                    </div>
-                    <!-- End Left Column -->
+                <!-- End Top Page Title Section -->
 
-                    <!-- Middle Column -->
-                    <div class="flex flex-column gap--16 w-100 grid--col-span-2-responsive-mobile-portrait">
-                        <!-- Earnings -->
-                        <div class="pa3 flex flex-column gap--16 flex-auto bg-white-70 bg--blur--25 br--2">
-                            <!-- Title -->
-                            <div class="flex items-center gap--8">
-                                <h3 class="ma0 ff-poppins fs--16 fw5 lh--24 col--gray-700">Earnings</h3>
-                            </div>
-                            <!-- Data Content -->
-                            <div class="flex flex-column justify-center items-start gap--16 flex-auto">
-                                <div class="flex items-center gap--24 flex-auto w-100">
-                                    <div class="flex flex-column items-start gap--8">
-                                        <span class="fs--36 fw6 lh--44 tracked--neg--0-72 col--gray-900">--</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Ens Data Content -->
+                <!-- Overview / Insight Section -->
+                <div class="flex flex-column gap--24 bg-white-40 bg--blur--25 sh--6">
+                    <!-- Section Header -->
+                    <div class="pad--16 pad--bottom--0 flex justify-between items-center flex--column-responsive-mobile-portrait items--start-responsive-mobile-portrait">
+                        <!-- Title -->
+                        <div class="flex items-center gap--8 flex-auto">
+                            <span>
+                                <img src="assets/icons/dashboard_bar_chart.svg" alt="">
+                            </span>
+                            <h2 class="ff-poppins m--0 fs--20 fw5 lh--30 col--gray-500">Overview/Insight</h2>
                         </div>
-                        <!-- End Earnings -->
-                        <!-- Likes -->
-                        <div class="pa3 flex flex-column gap--16 flex-auto bg-white-70 bg--blur--25 br--2">
-                            <!-- Title -->
-                            <div class="flex items-center gap--8">
-                                <h3 class="ma0 ff-poppins fs--16 fw5 lh--24 col--gray-700">Likes</h3>
-                            </div>
-                            <!-- Data Content -->
-                            <div class="flex flex-column justify-center items-start gap--16 flex-auto">
-                                <div class="flex items-center gap--24 flex-auto w-100">
-                                    <div class="flex flex-column items-start gap--8 flex-auto">
-                                        <span class="fs--12 fw5 lh--18 col--gray-600">MEDIA</span>
-                                        <span class="fs--36 fw6 lh--38 tracked--neg--0-72 col--gray-900">--</span>
-                                    </div>
-                                    <div class="flex flex-column items-start gap--8 flex-auto">
-                                        <span class="fs--12 fw5 lh--18 col--gray-600">MERCH</span>
-                                        <span class="fs--36 fw6 lh--38 tracked--neg--0-72 col--gray-900">--</span>
-                                    </div>
-                                </div>
-                                <div class="flex items-center gap--24 flex-auto w-100">
-                                    <div class="flex flex-column items-start gap--8 flex-auto">
-                                        <span class="fs--12 fw5 lh--18 col--gray-600">PROFILE</span>
-                                        <span class="fs--36 fw6 lh--38 tracked--neg--0-72 col--gray-900">--</span>
-                                    </div>
-                                    <div class="flex flex-column items-start gap--8 flex-auto">
-                                        <span class="fs--12 fw5 lh--18 col--gray-600">FEED</span>
-                                        <span class="fs--36 fw6 lh--38 tracked--neg--0-72 col--gray-900">--</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Ens Data Content -->
+                        <!-- End Title -->
+                        <!-- Last Date / Refresh -->
+                        <div class="flex justify-end gap--16 justify--between-responsive-mobile-portrait w--100-responsive-mobile-portrait">
+                            <span class="fs--14 lh--20 col--gray-500">Last updated at 11:24am</span>
+                            <button class="bg-white cp--6 pad--4 pad--right--8 pad--left--15 flex gap--4 items-center justify-center">
+                                <span><img src="assets/icons/refresh-ccw-04.svg" alt="" class="w--14 h--14 filter--col--blue--dark--700" /></span>
+                                <p class="fs--12 fw5 lh--18 col--gray-700 col--blue-dark-700">Refresh</p>
+                            </button>
                         </div>
-                        <!-- End Likes -->
+                        <!-- End Last Date / Refresh -->
                     </div>
-                    <!-- End Middle Column -->
-
-                    <!-- Right Column -->
-                    <div class="flex flex-column gap--16 w-100 grid--col-span-2-responsive-tablet grid--col-span-2-responsive-mobile grid--col-span-2-responsive-mobile-portrait">
-                        <!-- Top Contributors -->
-                        <div class="pa3 flex flex-column gap--16 flex-auto bg-white-70 bg--blur--25 br--2">
-                            <!-- Title -->
-                            <div class="flex items-center gap--8">
-                                <h3 class="ma0 ff-poppins fs--16 fw5 lh--24 col--gray-700">Top Contributors</h3>
-                            </div>
-                            <!-- Data Content -->
-                            <div class="flex flex-column justify-center items-start gap--16 flex-auto">
-                                <div class="w-100 pad--y--24 flex flex-column justify-center gap--8 flex-auto h--340">
-                                    <div class="pa3 flex items-center justify-center">
-                                        <div class="w--161 h--161 flex items-center justify-center relative">
-                                            <div class="db w-100 h-100 absolute left-0 top-0 flex items-center justify-center">
-                                                <div class="db bg--col--lemon w--32 h--32 filter--blur--60"></div>
-                                            </div>
-                                            <img src="assets/img/dot-option-placeholder.svg" class="w--128 h--128" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="flex flex-column gap--8 items-center">
-                                        <span class="fs--16 lh--24 col--gray-700">Empty State message</span>
-                                        <a href="#" class="fs--16 lh--24"><span class="fs--16 lh--24 col--gray-700 underline">Learn ways to earn</span> </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Ens Data Content -->
-                        </div>
-                        <!-- End Top Contributors -->
-                    </div>
-                    <!-- End Right Column -->
-                </div>
-                <!-- Ens All Analytics Data -->
-            </div>
-            <!-- End Overview / Insight Section -->
-
-            <!-- Order Received Section -->
-            <div class="flex flex-column gap--24 bg-white-40 bg--blur--25 sh--6">
-                <!-- Section Header -->
-                <div class="pa3 pb0 flex justify-between items-center">
-                    <!-- Title -->
-                    <div class="flex items-center gap--8 flex-auto">
-                        <span>
-                            <img src="assets/icons/order-1.svg" class="filter--col--gray--500" alt="">
-                        </span>
-                        <h2 class="ff-poppins ma0 fs--20 fw5 lh--30 col--gray-500">Order Received</h2>
-                    </div>
-                    <!-- End Title -->
-                </div>
-                <!-- End Section Header -->
-                <!-- All Analytics Data -->
-                <div class="pa3 pt0 flex flex-wrap gap--16 pad--x--0-responsive-tablet pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait ">
-                    <!-- Order Data Section -->
-                    <div class="flex flex-column gap--16 flex-auto w-100">
-                        <!-- Top Contributors -->
-                        <div class="pa3 flex flex-column gap--16 flex-auto">
-                            <!-- Data Content -->
-                            <div class="flex flex-column justify-center items-start gap--16 flex-auto">
-                                <div class="w-100 pad--y--24 flex flex-column gap--8 flex-auto">
-                                    <div class="pa3 flex items-center justify-center">
-                                        <div class="w--161 h--161 flex items-center justify-center relative">
-                                            <div class="db w-100 h-100 absolute left-0 top-0 flex items-center justify-center">
-                                                <div class="db bg--col--lemon w--32 h--32 filter--blur--60"></div>
-                                            </div>
-                                            <img src="assets/img/shopping-cart-03.svg" class="w--128 h--128" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="flex flex-column gap--8 items-center">
-                                        <span class="fs--16 lh--24 col--gray-700">You don’t have any orders at the moment</span>
-                                        <a href="#" class="fs--16 lh--24"><span class="fs--16 lh--24 col--gray-700 underline">Learn how you can earn </span> </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Ens Data Content -->
-                        </div>
-                        <!-- End Top Contributors -->
-                    </div>
-                    <!-- End Order Data Section -->
-                </div>
-                <!-- Ens All Analytics Data -->
-            </div>
-            <!-- End Order Received Section -->
-
-            <!-- Trends Section -->
-            <div class="flex flex-column gap--24 bg-white-40 bg--blur--25 sh--6">
-                <!-- Section Header -->
-                <div class="pa3 pb0 flex justify-between items-center">
-                    <!-- Title -->
-                    <div class="flex items-center gap--8 flex-auto">
-                        <span>
-                            <img src="assets/icons/line-chart-up.svg" class="filter--col--gray--500" alt="">
-                        </span>
-                        <h2 class="ff-poppins ma0 fs--20 fw5 lh--30 col--gray-500">Trends</h2>
-                    </div>
-                    <!-- End Title -->
-                </div>
-                <!-- End Section Header -->
-                <!-- All Analytics Data -->
-                <div class="pa3 pt0 flex flex-column gap--16 pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait pad--bottom--0-responsive-mobile pad--bottom--0-responsive-mobile-portrait">
-                    <div class="w-full grid grid--cols-3 grid--cols-2-responsive-tablet grid--cols-2-responsive-mobile grid--cols-1-responsive-mobile-portrait gap--16">
-                        <!-- Top Media Column -->
-                        <div class="flex flex-column gap--16 w-100 order-0 grid--col-span-2">
-                            <div class="pa3 flex flex-column gap--16 flex-auto bg-white-70 bg--blur--25 br--2">
+                    <!-- End Section Header -->
+                    <!-- All Analytics Data -->
+                    <div class="pad--16 pad--top--0 grid grid--cols-3 gap--16 grid--cols-2-responsive-tablet grid--cols-2-responsive-mobile grid--cols-1-responsive-mobile-portrait pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait">
+                        <!-- Left Column -->
+                        <div class="flex flex-column gap--16 w-100 grid--col-span-2-responsive-mobile-portrait">
+                            <!-- Subscribers -->
+                            <div class="pad--16 flex flex-column gap--16 flex-auto bg-white-70 bg--blur--25 br--2">
                                 <!-- Title -->
-                                <div class="flex items-center justify-between gap--8">
-                                    <h3 class="ma0 ff-poppins fs--16 fw5 lh--24 col--gray-700">Top Media</h3>
-                                    <div class="flex items-start br--8 ba br--col--gray-300 bg-white-30 sh--7 overflow-hidden">
-                                         <button class="bg-white pad--y--8 ph3 flex justify-center items-center gap--8 fs--14 fw5 lh--20 col--gray-800">Views</button>
-                                         <button class="pad--y--8 ph3 flex justify-center items-center gap--8 bl br--col--gray-300 fs--14 fw5 lh--20 col--gray-500">P2V Sales</button>
-                                    </div>
+                                <div class="flex items-center gap--8">
+                                    <h3 class="m--0 ff-poppins fs--16 fw5 lh--24 col--gray-700">Subscribers</h3>
                                 </div>
                                 <!-- Data Content -->
                                 <div class="flex flex-column justify-center items-start gap--16 flex-auto">
-                                    <div class="w-100 pad--y--24 flex flex-column gap--8 flex-auto">
-                                        <div class="pa3 flex items-center justify-center">
+                                    <div class="flex items-center gap--24 flex- w-100">
+                                        <div class="flex flex-column items-start gap--8">
+                                            <span class="fs--36 fw6 lh--44 tracked--neg--0-72 col--gray-900">--</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Ens Data Content -->
+                            </div>
+                            <!-- End Subscribers -->
+                            <!-- Fans -->
+                            <div class="pad--16 flex flex-column gap--16 flex-auto bg-white-70 bg--blur--25 br--2">
+                                <!-- Title -->
+                                <div class="flex items-center gap--8">
+                                    <h3 class="m--0 ff-poppins fs--16 fw5 lh--24 col--gray-700">Fans</h3>
+                                </div>
+                                <!-- Data Content -->
+                                <div class="flex flex-column justify-center items-start gap--16 flex-auto">
+                                    <div class="flex items-center gap--24 flex-auto w-100">
+                                        <div class="flex flex-column items-start gap--8 flex-auto">
+                                            <span class="fs--12 fw5 lh--18 col--gray-600">NEW FOLLOWERS</span>
+                                            <span class="fs--36 fw6 lh--38 tracked--neg--0-72 col--gray-900">--</span>
+                                        </div>
+                                        <div class="flex flex-column items-start gap--8 flex-auto">
+                                            <span class="fs--12 fw5 lh--18 col--gray-600">PROFILE VISIT</span>
+                                            <span class="fs--36 fw6 lh--38 tracked--neg--0-72 col--gray-900">--</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Ens Data Content -->
+                            </div>
+                            <!-- End Fans -->
+                        </div>
+                        <!-- End Left Column -->
+
+                        <!-- Middle Column -->
+                        <div class="flex flex-column gap--16 w-100 grid--col-span-2-responsive-mobile-portrait">
+                            <!-- Earnings -->
+                            <div class="pad--16 flex flex-column gap--16 flex-auto bg-white-70 bg--blur--25 br--2">
+                                <!-- Title -->
+                                <div class="flex items-center gap--8">
+                                    <h3 class="m--0 ff-poppins fs--16 fw5 lh--24 col--gray-700">Earnings</h3>
+                                </div>
+                                <!-- Data Content -->
+                                <div class="flex flex-column justify-center items-start gap--16 flex-auto">
+                                    <div class="flex items-center gap--24 flex-auto w-100">
+                                        <div class="flex flex-column items-start gap--8">
+                                            <span class="fs--36 fw6 lh--44 tracked--neg--0-72 col--gray-900">--</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Ens Data Content -->
+                            </div>
+                            <!-- End Earnings -->
+                            <!-- Likes -->
+                            <div class="pad--16 flex flex-column gap--16 flex-auto bg-white-70 bg--blur--25 br--2">
+                                <!-- Title -->
+                                <div class="flex items-center gap--8">
+                                    <h3 class="m--0 ff-poppins fs--16 fw5 lh--24 col--gray-700">Likes</h3>
+                                </div>
+                                <!-- Data Content -->
+                                <div class="flex flex-column justify-center items-start gap--16 flex-auto">
+                                    <div class="flex items-center gap--24 flex-auto w-100">
+                                        <div class="flex flex-column items-start gap--8 flex-auto">
+                                            <span class="fs--12 fw5 lh--18 col--gray-600">MEDIA</span>
+                                            <span class="fs--36 fw6 lh--38 tracked--neg--0-72 col--gray-900">--</span>
+                                        </div>
+                                        <div class="flex flex-column items-start gap--8 flex-auto">
+                                            <span class="fs--12 fw5 lh--18 col--gray-600">MERCH</span>
+                                            <span class="fs--36 fw6 lh--38 tracked--neg--0-72 col--gray-900">--</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap--24 flex-auto w-100">
+                                        <div class="flex flex-column items-start gap--8 flex-auto">
+                                            <span class="fs--12 fw5 lh--18 col--gray-600">PROFILE</span>
+                                            <span class="fs--36 fw6 lh--38 tracked--neg--0-72 col--gray-900">--</span>
+                                        </div>
+                                        <div class="flex flex-column items-start gap--8 flex-auto">
+                                            <span class="fs--12 fw5 lh--18 col--gray-600">FEED</span>
+                                            <span class="fs--36 fw6 lh--38 tracked--neg--0-72 col--gray-900">--</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Ens Data Content -->
+                            </div>
+                            <!-- End Likes -->
+                        </div>
+                        <!-- End Middle Column -->
+
+                        <!-- Right Column -->
+                        <div class="flex flex-column gap--16 w-100 grid--col-span-2-responsive-tablet grid--col-span-2-responsive-mobile grid--col-span-2-responsive-mobile-portrait">
+                            <!-- Top Contributors -->
+                            <div class="pad--16 flex flex-column gap--16 flex-auto bg-white-70 bg--blur--25 br--2">
+                                <!-- Title -->
+                                <div class="flex items-center gap--8">
+                                    <h3 class="m--0 ff-poppins fs--16 fw5 lh--24 col--gray-700">Top Contributors</h3>
+                                </div>
+                                <!-- Data Content -->
+                                <div class="flex flex-column justify-center items-start gap--16 flex-auto">
+                                    <div class="w-100 pad--y--24 flex flex-column justify-center gap--8 flex-auto h--340">
+                                        <div class="pad--16 flex items-center justify-center">
                                             <div class="w--161 h--161 flex items-center justify-center relative">
                                                 <div class="db w-100 h-100 absolute left-0 top-0 flex items-center justify-center">
                                                     <div class="db bg--col--lemon w--32 h--32 filter--blur--60"></div>
@@ -341,107 +248,210 @@
                                             </div>
                                         </div>
                                         <div class="flex flex-column gap--8 items-center">
-                                            <span class="fs--16 lh--24 col--gray-700">No trend to show at the moment</span>
+                                            <span class="fs--16 lh--24 col--gray-700">Empty State message</span>
                                             <a href="#" class="fs--16 lh--24"><span class="fs--16 lh--24 col--gray-700 underline">Learn ways to earn</span> </a>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Ens Data Content -->
                             </div>
+                            <!-- End Top Contributors -->
                         </div>
-                        <!-- End Top Media Column -->
-
-                        <!-- Top tags Column -->
-                        <div class="flex flex-column gap--16 w-100 order-1 order--2-responsive-tablet order--2-responsive-mobile grid--col-span-2-responsive-mobile-portrait">
-                            <div class="pa3 flex flex-column gap--16 flex-auto bg-white-70 bg--blur--25 br--2">
-                                <!-- Title -->
-                                <div class="flex items-center gap--8">
-                                    <h3 class="ma0 ff-poppins fs--16 fw5 lh--24 col--gray-700">Top tags</h3>
-                                </div>
-                                <!-- Data Content -->
-                                <div class="flex flex-column justify-center items-start gap--16 flex-auto">
-                                    <div class="w-100 pad--y--24 flex flex-column gap--8 flex-auto">
-                                        <div class="pa3 flex items-center justify-center">
-                                            <div class="w--161 h--161 flex items-center justify-center relative">
-                                                <div class="db w-100 h-100 absolute left-0 top-0 flex items-center justify-center">
-                                                    <div class="db bg--col--lemon w--32 h--32 filter--blur--60"></div>
-                                                </div>
-                                                <img src="assets/img/dot-option-placeholder.svg" class="w--128 h--128" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-column gap--8 items-center">
-                                            <span class="fs--16 lh--24 col--gray-700">No trend to show at the moment</span>
-                                            <a href="#" class="fs--16 lh--24"><span class="fs--16 lh--24 col--gray-700 underline">Learn ways to earn</span> </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Ens Data Content -->
-                            </div>
-                        </div>
-                        <!-- End Top tags Column -->
-
-                        <!-- Top Merch Column -->
-                        <div class="flex flex-column gap--16 w-100 order-2 grid--col-span-2 order--1-responsive-tablet order--1-responsive-mobile">
-                            <div class="pa3 flex flex-column gap--16 flex-auto bg-white-70 bg--blur--25 br--2">
-                                <!-- Title -->
-                                <div class="flex items-center gap--8">
-                                    <h3 class="ma0 ff-poppins fs--16 fw5 lh--24 col--gray-700">Top Merch</h3>
-                                </div>
-                                <!-- Data Content -->
-                                <div class="flex flex-column justify-center items-start gap--16 flex-auto">
-                                    <div class="w-100 pad--y--24 flex flex-column gap--8 flex-auto">
-                                        <div class="pa3 flex items-center justify-center">
-                                            <div class="w--161 h--161 flex items-center justify-center relative">
-                                                <div class="db w-100 h-100 absolute left-0 top-0 flex items-center justify-center">
-                                                    <div class="db bg--col--lemon w--32 h--32 filter--blur--60"></div>
-                                                </div>
-                                                <img src="assets/img/dot-option-placeholder.svg" class="w--128 h--128" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-column gap--8 items-center">
-                                            <span class="fs--16 lh--24 col--gray-700">No trend to show at the moment</span>
-                                            <a href="#" class="fs--16 lh--24"><span class="fs--16 lh--24 col--gray-700 underline">Learn ways to earn</span> </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Ens Data Content -->
-                            </div>
-                        </div>
-                        <!-- End Top Merch Column -->
-
-                        <!-- Top Countries Column -->
-                        <div class="flex flex-column gap--16 w-100 order-3 grid--col-span-2-responsive-mobile-portrait">
-                            <div class="pa3 flex flex-column gap--16 flex-auto bg-white-70 bg--blur--25 br--2">
-                                <!-- Title -->
-                                <div class="flex items-center gap--8">
-                                    <h3 class="ma0 ff-poppins fs--16 fw5 lh--24 col--gray-700">Top Countries</h3>
-                                </div>
-                                <!-- Data Content -->
-                                <div class="flex flex-column justify-center items-start gap--16 flex-auto">
-                                    <div class="w-100 pad--y--24 flex flex-column gap--8 flex-auto">
-                                        <div class="pa3 flex items-center justify-center">
-                                            <div class="w--161 h--161 flex items-center justify-center relative">
-                                                <div class="db w-100 h-100 absolute left-0 top-0 flex items-center justify-center">
-                                                    <div class="db bg--col--lemon w--32 h--32 filter--blur--60"></div>
-                                                </div>
-                                                <img src="assets/img/dot-option-placeholder.svg" class="w--128 h--128" alt="">
-                                            </div>
-                                        </div>                                        <div class="flex flex-column gap--8 items-center">
-                                            <span class="fs--16 lh--24 col--gray-700">No trend to show at the moment</span>
-                                            <a href="#" class="fs--16 lh--24"><span class="fs--16 lh--24 col--gray-700 underline">Learn ways to earn</span> </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Ens Data Content -->
-                            </div>
-                        </div>
-                        <!-- End Top Countries Column -->
+                        <!-- End Right Column -->
                     </div>
+                    <!-- Ens All Analytics Data -->
                 </div>
-                <!-- Ens All Analytics Data -->
-            </div>
-            <!-- End Trends Section -->
+                <!-- End Overview / Insight Section -->
 
+                <!-- Order Received Section -->
+                <div class="flex flex-column gap--24 bg-white-40 bg--blur--25 sh--6">
+                    <!-- Section Header -->
+                    <div class="pad--16 pad--bottom--0 flex justify-between items-center">
+                        <!-- Title -->
+                        <div class="flex items-center gap--8 flex-auto">
+                            <span>
+                                <img src="assets/icons/order-1.svg" class="filter--col--gray--500" alt="">
+                            </span>
+                            <h2 class="ff-poppins m--0 fs--20 fw5 lh--30 col--gray-500">Order Received</h2>
+                        </div>
+                        <!-- End Title -->
+                    </div>
+                    <!-- End Section Header -->
+                    <!-- All Analytics Data -->
+                    <div class="pad--16 pad--top--0 flex flex-wrap gap--16 pad--x--0-responsive-tablet pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait ">
+                        <!-- Order Data Section -->
+                        <div class="flex flex-column gap--16 flex-auto w-100">
+                            <!-- Top Contributors -->
+                            <div class="pad--16 flex flex-column gap--16 flex-auto">
+                                <!-- Data Content -->
+                                <div class="flex flex-column justify-center items-start gap--16 flex-auto">
+                                    <div class="w-100 pad--y--24 flex flex-column gap--8 flex-auto">
+                                        <div class="pad--16 flex items-center justify-center">
+                                            <div class="w--161 h--161 flex items-center justify-center relative">
+                                                <div class="db w-100 h-100 absolute left-0 top-0 flex items-center justify-center">
+                                                    <div class="db bg--col--lemon w--32 h--32 filter--blur--60"></div>
+                                                </div>
+                                                <img src="assets/img/shopping-cart-03.svg" class="w--128 h--128" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-column gap--8 items-center">
+                                            <span class="fs--16 lh--24 col--gray-700">You don’t have any orders at the moment</span>
+                                            <a href="#" class="fs--16 lh--24"><span class="fs--16 lh--24 col--gray-700 underline">Learn how you can earn </span> </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Ens Data Content -->
+                            </div>
+                            <!-- End Top Contributors -->
+                        </div>
+                        <!-- End Order Data Section -->
+                    </div>
+                    <!-- Ens All Analytics Data -->
+                </div>
+                <!-- End Order Received Section -->
+
+                <!-- Trends Section -->
+                <div class="flex flex-column gap--24 bg-white-40 bg--blur--25 sh--6">
+                    <!-- Section Header -->
+                    <div class="pad--16 pad--bottom--0 flex justify-between items-center">
+                        <!-- Title -->
+                        <div class="flex items-center gap--8 flex-auto">
+                            <span>
+                                <img src="assets/icons/line-chart-up.svg" class="filter--col--gray--500" alt="">
+                            </span>
+                            <h2 class="ff-poppins m--0 fs--20 fw5 lh--30 col--gray-500">Trends</h2>
+                        </div>
+                        <!-- End Title -->
+                    </div>
+                    <!-- End Section Header -->
+                    <!-- All Analytics Data -->
+                    <div class="pad--16 pad--top--0 flex flex-column gap--16 pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait pad--bottom--0-responsive-mobile pad--bottom--0-responsive-mobile-portrait">
+                        <div class="w-full grid grid--cols-3 grid--cols-2-responsive-tablet grid--cols-2-responsive-mobile grid--cols-1-responsive-mobile-portrait gap--16">
+                            <!-- Top Media Column -->
+                            <div class="flex flex-column gap--16 w-100 order-0 grid--col-span-2">
+                                <div class="pad--16 flex flex-column gap--16 flex-auto bg-white-70 bg--blur--25 br--2">
+                                    <!-- Title -->
+                                    <div class="flex items-center justify-between gap--8">
+                                        <h3 class="m--0 ff-poppins fs--16 fw5 lh--24 col--gray-700">Top Media</h3>
+                                        <div class="flex items-start br--8 ba br--col--gray-300 bg-white-30 sh--7 overflow-hidden">
+                                             <button class="bg-white pad--y--8 ph3 flex justify-center items-center gap--8 fs--14 fw5 lh--20 col--gray-800">Views</button>
+                                             <button class="pad--y--8 ph3 flex justify-center items-center gap--8 bl br--col--gray-300 fs--14 fw5 lh--20 col--gray-500">P2V Sales</button>
+                                        </div>
+                                    </div>
+                                    <!-- Data Content -->
+                                    <div class="flex flex-column justify-center items-start gap--16 flex-auto">
+                                        <div class="w-100 pad--y--24 flex flex-column gap--8 flex-auto">
+                                            <div class="pad--16 flex items-center justify-center">
+                                                <div class="w--161 h--161 flex items-center justify-center relative">
+                                                    <div class="db w-100 h-100 absolute left-0 top-0 flex items-center justify-center">
+                                                        <div class="db bg--col--lemon w--32 h--32 filter--blur--60"></div>
+                                                    </div>
+                                                    <img src="assets/img/dot-option-placeholder.svg" class="w--128 h--128" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="flex flex-column gap--8 items-center">
+                                                <span class="fs--16 lh--24 col--gray-700">No trend to show at the moment</span>
+                                                <a href="#" class="fs--16 lh--24"><span class="fs--16 lh--24 col--gray-700 underline">Learn ways to earn</span> </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Ens Data Content -->
+                                </div>
+                            </div>
+                            <!-- End Top Media Column -->
+
+                            <!-- Top tags Column -->
+                            <div class="flex flex-column gap--16 w-100 order-1 order--2-responsive-tablet order--2-responsive-mobile grid--col-span-2-responsive-mobile-portrait">
+                                <div class="pad--16 flex flex-column gap--16 flex-auto bg-white-70 bg--blur--25 br--2">
+                                    <!-- Title -->
+                                    <div class="flex items-center gap--8">
+                                        <h3 class="m--0 ff-poppins fs--16 fw5 lh--24 col--gray-700">Top tags</h3>
+                                    </div>
+                                    <!-- Data Content -->
+                                    <div class="flex flex-column justify-center items-start gap--16 flex-auto">
+                                        <div class="w-100 pad--y--24 flex flex-column gap--8 flex-auto">
+                                            <div class="pad--16 flex items-center justify-center">
+                                                <div class="w--161 h--161 flex items-center justify-center relative">
+                                                    <div class="db w-100 h-100 absolute left-0 top-0 flex items-center justify-center">
+                                                        <div class="db bg--col--lemon w--32 h--32 filter--blur--60"></div>
+                                                    </div>
+                                                    <img src="assets/img/dot-option-placeholder.svg" class="w--128 h--128" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="flex flex-column gap--8 items-center">
+                                                <span class="fs--16 lh--24 col--gray-700">No trend to show at the moment</span>
+                                                <a href="#" class="fs--16 lh--24"><span class="fs--16 lh--24 col--gray-700 underline">Learn ways to earn</span> </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Ens Data Content -->
+                                </div>
+                            </div>
+                            <!-- End Top tags Column -->
+
+                            <!-- Top Merch Column -->
+                            <div class="flex flex-column gap--16 w-100 order-2 grid--col-span-2 order--1-responsive-tablet order--1-responsive-mobile">
+                                <div class="pad--16 flex flex-column gap--16 flex-auto bg-white-70 bg--blur--25 br--2">
+                                    <!-- Title -->
+                                    <div class="flex items-center gap--8">
+                                        <h3 class="m--0 ff-poppins fs--16 fw5 lh--24 col--gray-700">Top Merch</h3>
+                                    </div>
+                                    <!-- Data Content -->
+                                    <div class="flex flex-column justify-center items-start gap--16 flex-auto">
+                                        <div class="w-100 pad--y--24 flex flex-column gap--8 flex-auto">
+                                            <div class="pad--16 flex items-center justify-center">
+                                                <div class="w--161 h--161 flex items-center justify-center relative">
+                                                    <div class="db w-100 h-100 absolute left-0 top-0 flex items-center justify-center">
+                                                        <div class="db bg--col--lemon w--32 h--32 filter--blur--60"></div>
+                                                    </div>
+                                                    <img src="assets/img/dot-option-placeholder.svg" class="w--128 h--128" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="flex flex-column gap--8 items-center">
+                                                <span class="fs--16 lh--24 col--gray-700">No trend to show at the moment</span>
+                                                <a href="#" class="fs--16 lh--24"><span class="fs--16 lh--24 col--gray-700 underline">Learn ways to earn</span> </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Ens Data Content -->
+                                </div>
+                            </div>
+                            <!-- End Top Merch Column -->
+
+                            <!-- Top Countries Column -->
+                            <div class="flex flex-column gap--16 w-100 order-3 grid--col-span-2-responsive-mobile-portrait">
+                                <div class="pad--16 flex flex-column gap--16 flex-auto bg-white-70 bg--blur--25 br--2">
+                                    <!-- Title -->
+                                    <div class="flex items-center gap--8">
+                                        <h3 class="m--0 ff-poppins fs--16 fw5 lh--24 col--gray-700">Top Countries</h3>
+                                    </div>
+                                    <!-- Data Content -->
+                                    <div class="flex flex-column justify-center items-start gap--16 flex-auto">
+                                        <div class="w-100 pad--y--24 flex flex-column gap--8 flex-auto">
+                                            <div class="pad--16 flex items-center justify-center">
+                                                <div class="w--161 h--161 flex items-center justify-center relative">
+                                                    <div class="db w-100 h-100 absolute left-0 top-0 flex items-center justify-center">
+                                                        <div class="db bg--col--lemon w--32 h--32 filter--blur--60"></div>
+                                                    </div>
+                                                    <img src="assets/img/dot-option-placeholder.svg" class="w--128 h--128" alt="">
+                                                </div>
+                                            </div>                                        <div class="flex flex-column gap--8 items-center">
+                                                <span class="fs--16 lh--24 col--gray-700">No trend to show at the moment</span>
+                                                <a href="#" class="fs--16 lh--24"><span class="fs--16 lh--24 col--gray-700 underline">Learn ways to earn</span> </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Ens Data Content -->
+                                </div>
+                            </div>
+                            <!-- End Top Countries Column -->
+                        </div>
+                    </div>
+                    <!-- Ens All Analytics Data -->
+                </div>
+                <!-- End Trends Section -->
+
+            </div>
         </div>
     </div>
 </body>
