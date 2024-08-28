@@ -28,7 +28,7 @@
             <!-- page sidebar -->
             <section data-section="sidebar" class="flex vh-100 sticky top-0 z-2 bg--col--athens-gray--70 sh--sidebar">
                 <!-- sidebar main wrapper (to contain all sidebar UI elements, except submenu containers) -->
-                <div class="flex flex-column justify-center items-center gap--6 w--90 vh-100 pa0 pad--y--12">
+                <div class="flex flex-column justify-center items-center gap--6 w--90 w--90--px vh-100 pa0 pad--y--12">
                     <!-- site logo -->
                     <a href="/" title="" class="flex items-center gap--10 bg--col--lemon br--12 o-80 hov--o--100 transition--opacity transition--200 transition--ease-in-out">
                         <!-- render_svg_icon( 'logo_bg-1' ) -->
@@ -268,8 +268,130 @@
 
                 <!-- profile, notifications and submenu panels container (keep profile/model panel, notification panel and  all submenu containers inside this div) -->
                 <div>
+                    <!-- notification panel container (same template shall be used in mobile also) -->
+                    <div data-notifications-container class="flex flex-column items-start gap--0 w--480 vh-100 overflow-hidden bg--col--athens-gray--70 bg--blur--25 bl br--col--mischka sh--sidebar fixed top-0 left--90 left--90--px z-1 transition--all transition--150 transition--ease-in-out">
+                        <!-- notifications header -->
+                        <div class="flex items-center self-stretch gap--8 pa2 pb0">
+                            <!-- title -->
+                            <div class="flex flex--max items-center gap--8">
+                                <span class="flex justify-start items-center"> 
+                                    <!-- render_svg_icon( 'bell-03' ) -->
+                                    <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/bell-03.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                </span>
+                                <span data-submenu-title class="flex flex--max justify-start items-center fs--14 fw6 lh--20 col--pale-sky"> 
+                                    Notifications
+                                </span>
+                            </div>
+                            
+                            <!-- back button -->
+                            <div class="flex">
+                                <a data-back-button class="flex justify-center items-center pad--8 br--6 hover--bg--col--ebony--10 pointer transition--background transition--200 transition--ease-in-out">
+                                    <!-- render_svg_icon( 'align-left-01' ) -->
+                                    <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/align-left-01.svg" alt="" class="w--24 h--24 filter--col--pale-sky">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- /notifications header -->
+
+                        <!-- notifications body -->
+                        <div class="flex flex-column self-stretch flex--max">
+                            <!-- tab main wrapper -->
+                            <div data-tab-main-wrapper class="flex flex-column self-stretch flex--max">
+                                <!-- tab header list -->
+                                <div data-tab-header-main class="flex flex-column items-start self-stretch gap--8 pa2 pb0 relative">
+                                    <ul data-tab-head-list class="flex items-center self-stretch gap--4 overflow-x-auto">
+                                        <!-- tab head list item -->
+                                        <li data-tab-head-list-item data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-first-tab" data-attribute-run-once="1" data-target="first-tab" data-flag="all" data-offset="5" data-per_page="5" class="flex">
+                                            <a href="javascript: void(0)" data-tab-trigger data-is-active="true" class="flex flex-column items-center gap--10 pv2 ph3 mw--80 o-70 nowrap transition--all transition--200 transition--ease-in-out">
+                                                <span class="flex flex--max items-center gap--2 h--32">
+                                                    <span data-tab-label class="fs--14 fw5 lh--20 ttu nowrap col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                        All
+                                                    </span>
+                                                    <span data-count-badge="" class="flex flex-column items-center self-stretch gap--10">
+                                                        <span data-count-text="" data-attribute-type="total-order-received-count" data-actual-stat-count="" class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal tracked--0-25 col--pale-sky">
+                                                            120
+                                                        </span>
+                                                    </span>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <!-- /tab head list item -->
+
+                                        <!-- tab head list item -->
+                                        <li data-tab-head-list-item data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-first-tab" data-attribute-run-once="1" data-target="first-tab" data-flag="unread" data-offset="5" data-per_page="5" class="flex">
+                                            <a href="javascript: void(0)" data-tab-trigger data-is-active="false" class="flex flex-column items-center gap--10 pv2 ph3 mw--80 o-70 nowrap transition--all transition--200 transition--ease-in-out">
+                                                <span class="flex flex--max items-center gap--2 h--32">
+                                                    <span data-tab-label class="fs--14 fw5 lh--20 ttu nowrap col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                        Unread
+                                                    </span>
+                                                    <span data-count-badge="" class="flex flex-column items-center self-stretch gap--10">
+                                                        <span data-count-text="" data-attribute-type="total-order-received-count" data-actual-stat-count="" class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal tracked--0-25 col--pale-sky">
+                                                            5
+                                                        </span>
+                                                    </span>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <!-- /tab head list item -->
+
+                                        <!-- tab head list item -->
+                                        <li data-tab-head-list-item data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-first-tab" data-attribute-run-once="1" data-target="first-tab" data-flag="custom_request" data-offset="5" data-per_page="5" class="flex">
+                                            <a href="javascript: void(0)" data-tab-trigger data-is-active="false" class="flex flex-column items-center gap--10 pv2 ph3 mw--80 o-70 nowrap transition--all transition--200 transition--ease-in-out">
+                                                <span class="flex flex--max items-center gap--2 h--32">
+                                                    <span data-tab-label class="fs--14 fw5 lh--20 ttu nowrap col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                        Custom Request
+                                                    </span>
+                                                    <span data-count-badge="" class="flex flex-column items-center self-stretch gap--10">
+                                                        <span data-count-text="" data-attribute-type="total-order-received-count" data-actual-stat-count="" class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal tracked--0-25 col--pale-sky">
+                                                            2
+                                                        </span>
+                                                    </span>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <!-- /tab head list item -->
+
+                                        <!-- tab head list item -->
+                                        <li data-tab-head-list-item data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-first-tab" data-attribute-run-once="1" data-target="first-tab" data-flag="account" data-offset="5" data-per_page="5" class="flex">
+                                            <a href="javascript: void(0)" data-tab-trigger data-is-active="false" class="flex flex-column items-center gap--10 pv2 ph3 mw--80 o-70 nowrap transition--all transition--200 transition--ease-in-out">
+                                                <span class="flex flex--max items-center gap--2 h--32">
+                                                    <span data-tab-label class="fs--14 fw5 lh--20 ttu nowrap col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                        Account
+                                                    </span>
+                                                    <span data-count-badge="" class="flex flex-column items-center self-stretch gap--10" hidden>
+                                                        <span data-count-text="" data-attribute-type="total-order-received-count" data-actual-stat-count="" class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal tracked--0-25 col--pale-sky">
+                                                            5
+                                                        </span>
+                                                    </span>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <!-- /tab head list item -->
+                                    </ul>
+                                </div>
+                                <!-- /tab header list -->
+                            </div>
+                            <!-- /tab main wrapper -->
+                        </div>
+                        <!-- /notifications body -->
+
+                        <!-- notifications footer -->
+                        <div class="flex flex-column self-stretch items-start gap--10 w-100 pa2 bg--col--athens-gray--70--variation-2 bg--blur--25 absolute left-0 bottom-0 z-1">
+                            <!-- mark all notifactions as read button -->
+                             <a href="javascript: void(0)" data-button-behavior="mark-all-notification-read" class="inline-flex items-center gap--2 pa2 br--6 hover--bg--col--ebony--10 transition--all transition--200 transition--ease-in-out">
+                                <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/check-done-01.svg" alt="" class="w--16 h--16 filter--col--oxford-blue">
+                                <span class="fs--12 fw5 lh--18 col--oxford-blue">
+                                    Mark all as read
+                                </span>
+                             </a>
+                            <!-- /mark all notifactions as read button -->
+                        </div>
+                        <!-- /notifications footer -->
+                    </div>
+                    <!-- /notification panel container -->
+
                     <!-- submenu container (Multi Level Push Menu) ("data-submenu-container-id" should be same as "data-target-submenu-container" value in the main menu item) -->
-                    <div data-submenu-container data-submenu-container-id="dashboard-submenu-multi-level-push-menu-demo" class="flex flex-column items-start gap--16 w--480 vh-100 overflow-hidden pv4 ph3 bg--col--athens-gray--70 bg--blur--25 bl br--col--mischka sh--sidebar fixed top-0 left--90 z-1 transition--all transition--150 transition--ease-in-out" hidden>
+                    <div data-submenu-container data-submenu-container-id="dashboard-submenu-multi-level-push-menu-demo" class="flex flex-column items-start gap--16 w--480 vh-100 overflow-hidden pv4 ph3 bg--col--athens-gray--70 bg--blur--25 bl br--col--mischka sh--sidebar fixed top-0 left--90 left--90--px z-1 transition--all transition--150 transition--ease-in-out" hidden>
                         <!-- submenu header -->
                         <div class="flex items-center self-stretch gap--8">
                             <!-- title -->
@@ -971,7 +1093,7 @@
                     <!-- /submenu container -->
                      
                     <!-- submenu container (Orders) ("data-submenu-container-id" should be same as "data-target-submenu-container" value in the main menu item) -->
-                    <div data-submenu-container data-submenu-container-id="dashboard-submenu-your-orders" class="flex flex-column items-start gap--16 w--480 vh-100 overflow-hidden pv4 ph3 bg--col--athens-gray--70 bg--blur--25 bl br--col--mischka sh--sidebar fixed top-0 left--90 z-1 transition--all transition--150 transition--ease-in-out" hidden>
+                    <div data-submenu-container data-submenu-container-id="dashboard-submenu-your-orders" class="flex flex-column items-start gap--16 w--480 vh-100 overflow-hidden pv4 ph3 bg--col--athens-gray--70 bg--blur--25 bl br--col--mischka sh--sidebar fixed top-0 left--90 left--90--px z-1 transition--all transition--150 transition--ease-in-out" hidden>
                         <!-- submenu header -->
                         <div class="flex items-center self-stretch gap--8">
                             <!-- title -->
@@ -1074,7 +1196,7 @@
                     <!-- /submenu container -->
 
                     <!-- submenu container (Chats) ("data-submenu-container-id" should be same as "data-target-submenu-container" value in the main menu item) -->
-                    <div data-submenu-container data-submenu-container-id="dashboard-submenu-chats" class="flex flex-column items-start gap--16 w--480 vh-100 overflow-hidden pv4 ph3 bg--col--athens-gray--70 bg--blur--25 bl br--col--mischka sh--sidebar fixed top-0 left--90 z-1 transition--all transition--150 transition--ease-in-out" hidden>
+                    <div data-submenu-container data-submenu-container-id="dashboard-submenu-chats" class="flex flex-column items-start gap--16 w--480 vh-100 overflow-hidden pv4 ph3 bg--col--athens-gray--70 bg--blur--25 bl br--col--mischka sh--sidebar fixed top-0 left--90 left--90--px z-1 transition--all transition--150 transition--ease-in-out" hidden>
                         <!-- submenu header -->
                         <div class="flex items-center self-stretch gap--8">
                             <!-- title -->
@@ -1155,7 +1277,7 @@
                     <!-- /submenu container -->
 
                     <!-- submenu container (Shops) ("data-submenu-container-id" should be same as "data-target-submenu-container" value in the main menu item) -->
-                    <div data-submenu-container data-submenu-container-id="dashboard-submenu-shops" class="flex flex-column items-start gap--16 w--480 vh-100 overflow-hidden pv4 ph3 bg--col--athens-gray--70 bg--blur--25 bl br--col--mischka sh--sidebar fixed top-0 left--90 z-1 transition--all transition--150 transition--ease-in-out" hidden>
+                    <div data-submenu-container data-submenu-container-id="dashboard-submenu-shops" class="flex flex-column items-start gap--16 w--480 vh-100 overflow-hidden pv4 ph3 bg--col--athens-gray--70 bg--blur--25 bl br--col--mischka sh--sidebar fixed top-0 left--90 left--90--px z-1 transition--all transition--150 transition--ease-in-out" hidden>
                         <!-- submenu header -->
                         <div class="flex items-center self-stretch gap--8">
                             <!-- title -->
@@ -1258,7 +1380,7 @@
                     <!-- /submenu container -->
 
                     <!-- submenu container (Profile) ("data-submenu-container-id" should be same as "data-target-submenu-container" value in the main menu item) -->
-                    <div data-submenu-container data-submenu-container-id="dashboard-submenu-profile" class="flex flex-column items-start gap--16 w--480 vh-100 overflow-hidden pv4 ph3 bg--col--athens-gray--70 bg--blur--25 bl br--col--mischka sh--sidebar fixed top-0 left--90 z-1 transition--all transition--150 transition--ease-in-out" hidden>
+                    <div data-submenu-container data-submenu-container-id="dashboard-submenu-profile" class="flex flex-column items-start gap--16 w--480 vh-100 overflow-hidden pv4 ph3 bg--col--athens-gray--70 bg--blur--25 bl br--col--mischka sh--sidebar fixed top-0 left--90 left--90--px z-1 transition--all transition--150 transition--ease-in-out" hidden>
                         <!-- submenu header -->
                         <div class="flex items-center self-stretch gap--8">
                             <!-- title -->
@@ -1383,7 +1505,7 @@
                     <!-- /submenu container -->
 
                     <!-- submenu container (Settings) ("data-submenu-container-id" should be same as "data-target-submenu-container" value in the main menu item) -->
-                    <div data-submenu-container data-submenu-container-id="dashboard-submenu-settings" class="flex flex-column items-start gap--16 w--480 vh-100 overflow-hidden pv4 ph3 bg--col--athens-gray--70 bg--blur--25 bl br--col--mischka sh--sidebar fixed top-0 left--90 z-1 transition--all transition--150 transition--ease-in-out" hidden>
+                    <div data-submenu-container data-submenu-container-id="dashboard-submenu-settings" class="flex flex-column items-start gap--16 w--480 vh-100 overflow-hidden pv4 ph3 bg--col--athens-gray--70 bg--blur--25 bl br--col--mischka sh--sidebar fixed top-0 left--90 left--90--px z-1 transition--all transition--150 transition--ease-in-out" hidden>
                         <!-- submenu header -->
                         <div class="flex items-center self-stretch gap--8">
                             <!-- title -->
