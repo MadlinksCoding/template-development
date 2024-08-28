@@ -296,14 +296,14 @@
                         <!-- notifications body -->
                         <div class="flex flex-column self-stretch flex--max">
                             <!-- tab main wrapper -->
-                            <div data-tab-main-wrapper class="flex flex-column self-stretch flex--max">
+                            <div data-tab-main-wrapper data-tabs-section="1" class="flex flex-column self-stretch flex--max">
                                 <!-- tab header list -->
-                                <div data-tab-header-main class="flex flex-column items-start self-stretch gap--8 pa2 pb0 relative">
-                                    <ul data-tab-head-list class="flex items-center self-stretch gap--4 overflow-x-auto">
+                                <div data-tab-header-main data-tabs-container="1" class="flex flex-column items-start self-stretch gap--8 pa2 pb0 relative">
+                                    <ul data-tab-head-list data-tabs-menu="notifications-tabs-menu" data-show-default-page-load="all" class="flex items-center self-stretch gap--4 overflow-x-auto">
                                         <!-- tab head list item -->
                                         <li data-tab-head-list-item data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-first-tab" data-attribute-run-once="1" data-target="first-tab" data-flag="all" data-offset="5" data-per_page="5" class="flex">
                                             <a href="javascript: void(0)" data-tab-trigger data-is-active="true" class="flex flex-column items-center gap--10 pv2 ph3 mw--80 o-70 nowrap transition--all transition--200 transition--ease-in-out">
-                                                <span class="flex flex--max items-center gap--2 h--32">
+                                                <span class="flex items-center gap--2 h--32">
                                                     <span data-tab-label class="fs--14 fw5 lh--20 ttu nowrap col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                                         All
                                                     </span>
@@ -318,9 +318,9 @@
                                         <!-- /tab head list item -->
 
                                         <!-- tab head list item -->
-                                        <li data-tab-head-list-item data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-first-tab" data-attribute-run-once="1" data-target="first-tab" data-flag="unread" data-offset="5" data-per_page="5" class="flex">
+                                        <li data-tab-head-list-item data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-first-tab" data-attribute-run-once="1" data-target="second-tab" data-flag="unread" data-offset="5" data-per_page="5" class="flex">
                                             <a href="javascript: void(0)" data-tab-trigger data-is-active="false" class="flex flex-column items-center gap--10 pv2 ph3 mw--80 o-70 nowrap transition--all transition--200 transition--ease-in-out">
-                                                <span class="flex flex--max items-center gap--2 h--32">
+                                                <span class="flex items-center gap--2 h--32">
                                                     <span data-tab-label class="fs--14 fw5 lh--20 ttu nowrap col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                                         Unread
                                                     </span>
@@ -335,9 +335,9 @@
                                         <!-- /tab head list item -->
 
                                         <!-- tab head list item -->
-                                        <li data-tab-head-list-item data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-first-tab" data-attribute-run-once="1" data-target="first-tab" data-flag="custom_request" data-offset="5" data-per_page="5" class="flex">
+                                        <li data-tab-head-list-item data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-first-tab" data-attribute-run-once="1" data-target="third-tab" data-flag="custom_request" data-offset="5" data-per_page="5" class="flex">
                                             <a href="javascript: void(0)" data-tab-trigger data-is-active="false" class="flex flex-column items-center gap--10 pv2 ph3 mw--80 o-70 nowrap transition--all transition--200 transition--ease-in-out">
-                                                <span class="flex flex--max items-center gap--2 h--32">
+                                                <span class="flex items-center gap--2 h--32">
                                                     <span data-tab-label class="fs--14 fw5 lh--20 ttu nowrap col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                                         Custom Request
                                                     </span>
@@ -352,9 +352,9 @@
                                         <!-- /tab head list item -->
 
                                         <!-- tab head list item -->
-                                        <li data-tab-head-list-item data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-first-tab" data-attribute-run-once="1" data-target="first-tab" data-flag="account" data-offset="5" data-per_page="5" class="flex">
+                                        <li data-tab-head-list-item data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-first-tab" data-attribute-run-once="1" data-target="fourth-tab" data-flag="account" data-offset="5" data-per_page="5" class="flex">
                                             <a href="javascript: void(0)" data-tab-trigger data-is-active="false" class="flex flex-column items-center gap--10 pv2 ph3 mw--80 o-70 nowrap transition--all transition--200 transition--ease-in-out">
-                                                <span class="flex flex--max items-center gap--2 h--32">
+                                                <span class="flex items-center gap--2 h--32">
                                                     <span data-tab-label class="fs--14 fw5 lh--20 ttu nowrap col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                                         Account
                                                     </span>
@@ -370,6 +370,49 @@
                                     </ul>
                                 </div>
                                 <!-- /tab header list -->
+
+                                <!-- tab content containers wrapper -->
+                                <div data-tab-contents-containers-main data-tabs-content="1" class="flex flex-column self-stretch">
+                                    <!-- tab content container -->
+                                    <div data-tabbed-content="tabbed-content-first-tab" data-target="first-tab" class="flex flex-column self-stretch">
+                                        <!-- scrollable notifications container panel -->
+                                        <div data-scrollable-notification-panel class="flex flex-column self-stretch bg--col--white--50 bg--blur--50 overflow-y-auto">
+                                            <div data-notifications-container class="flex flex-column self-stretch items-start gap--2 pb5">
+                                                <div class="flex flex-column self-stretch pa3 bg--col--sunset-orange">item</div>
+                                                <div class="flex flex-column self-stretch pa3 bg--col--sunset-orange">item</div>
+                                                <div class="flex flex-column self-stretch pa3 bg--col--sunset-orange">item</div>
+                                                <div class="flex flex-column self-stretch pa3 bg--col--sunset-orange">item</div>
+                                                <div class="flex flex-column self-stretch pa3 bg--col--sunset-orange">item</div>
+                                                <div class="flex flex-column self-stretch pa3 bg--col--sunset-orange">item</div>
+                                                <div class="flex flex-column self-stretch pa3 bg--col--sunset-orange">item</div>
+                                                <div class="flex flex-column self-stretch pa3 bg--col--sunset-orange">item</div>
+                                                <div class="flex flex-column self-stretch pa3 bg--col--sunset-orange">item</div>
+                                                <div class="flex flex-column self-stretch pa3 bg--col--sunset-orange">item</div>
+                                                <div class="flex flex-column self-stretch pa3 bg--col--sunset-orange">item</div>
+                                                <div class="flex flex-column self-stretch pa3 bg--col--sunset-orange">item</div>
+                                                <div class="flex flex-column self-stretch pa3 bg--col--sunset-orange">item</div>
+                                                <div class="flex flex-column self-stretch pa3 bg--col--sunset-orange">item</div>
+                                                <div class="flex flex-column self-stretch pa3 bg--col--sunset-orange">item</div>
+                                                <div class="flex flex-column self-stretch pa3 bg--col--sunset-orange">item</div>
+                                                <div class="flex flex-column self-stretch pa3 bg--col--sunset-orange">item</div>
+                                                <div class="flex flex-column self-stretch pa3 bg--col--sunset-orange">item</div>
+                                                <div class="flex flex-column self-stretch pa3 bg--col--sunset-orange">item</div>
+                                                <div class="flex flex-column self-stretch pa3 bg--col--sunset-orange">item</div>
+                                                <div class="flex flex-column self-stretch pa3 bg--col--sunset-orange">item</div>
+                                                <div class="flex flex-column self-stretch pa3 bg--col--sunset-orange">item</div>
+                                                <div class="flex flex-column self-stretch pa3 bg--col--sunset-orange">item</div>
+                                                <div class="flex flex-column self-stretch pa3 bg--col--sunset-orange">item</div>
+                                                <div class="flex flex-column self-stretch pa3 bg--col--sunset-orange">item</div>
+                                                <div class="flex flex-column self-stretch pa3 bg--col--sunset-orange">item</div>
+                                                <div class="flex flex-column self-stretch pa3 bg--col--sunset-orange">item</div>
+                                                <div class="flex flex-column self-stretch pa3 bg--col--sunset-orange">item</div>
+                                            </div>
+                                        </div>
+                                        <!-- /scrollable notifications container panel -->
+                                    </div>
+                                    <!-- /tab content container -->
+                                </div>
+                                <!-- /tab content containers wrapper -->
                             </div>
                             <!-- /tab main wrapper -->
                         </div>
