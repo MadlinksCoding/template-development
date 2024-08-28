@@ -38,7 +38,11 @@
         .col--gray-800 { color: var(--color-gray-800,#182230); }
         .col--gray-900 { color: var(--color-gray-900,#101828); }
         .col--gray-950 { color: var(--color-gray-950,#0C111D); }
+        .col--blue-dark-600 { color: var(--color-blue-dark-600, #155EEF); }
         .col--blue-dark-700 { color: var(--color-blue-dark-700, #004EEB); }
+
+        /* Group Hover Colors */
+        .group:hover .hover--col--blue-dark-600 { color: var(--color-blue-dark-600, #155EEF); }
 
         /* Background Gradients */
         .bg--gradient-white { background: linear-gradient(180deg, rgba(255, 255, 255, 0.30) 0%, rgba(255, 255, 255, 0.00) 8%); }
@@ -82,6 +86,18 @@
 
         /* Margin */
         .m--0 { margin: 0rem; }
+
+        /* Group Hover State Colors */
+        .group:hover .hover--col--blue-dark-600 { color: var(--color-blue-dark-600, #155EEF); }
+        .hover--bg--col--blue-dark-700:hover { background-color: var(--color-blue-dark-700, #004EEB); }
+        .group:hover .hover--col--base-white { color: var(--Base-White, #FFF); }
+        .group:hover .hover--filter--col--white { filter: brightness(0) invert(1); }
+        .group:hover .hover--filter--col--blue--dark--600 { filter: invert(47%) sepia(94%) saturate(7493%) hue-rotate(220deg) brightness(103%) contrast(87%); }
+
+        /* Group Active States Colors */
+        .group:active .active--bg--col--gray-700 { background-color: var(--color-gray-700, #344054); }
+        .group:active .active--col--base-white { color: var(--Base-White, #FFF); }
+
     </style>
 
     <!-- Tablet Stylesheet -->
@@ -103,10 +119,10 @@
             <div class="w-100 flex gap--24 items-start justify-between gap--16--responsive-tablet gap--16--responsive-mobile gap--16--responsive-mobile-portrait flex--column-responsive-tablet pad--x--16-responsive-tablet pad--x--16-responsive-mobile pad--x--16-responsive-mobile-portrait flex--column-responsive-mobile flex--column-responsive-mobile-portrait">
                 <h1 class="ff-poppins fs--36 lh--44 fw6 tracked--neg--0-72 col--gray-950 m--0">Welcome back, Jenny!</h1>
                 <div class="pad--16 flex flex-column justify-center items-end gap--10 flex-auto br--10 pad--0-responsive-tablet items--start-responsive-tablet pad--0-responsive-mobile pad--0-responsive-mobile-portrait items--start-responsive-mobile items--start-responsive-mobile-portrait">
-                    <p>“Those who flow as life flows know they need no other force.” ~ Lao Tzu</p>
-                    <button class="flex items-center gap--2">
-                        <span><img src="assets/icons/refresh-ccw-04.svg" alt="" /></span>
-                        <span class="fs--12 fw5 lh--18 col--gray-700">New Quote</span>
+                    <p class="fs--14 lh--20 tr col--gray-700">“Those who flow as life flows know they need no other force.” ~ Lao Tzu</p>
+                    <button class="flex items-center gap--2 group">
+                        <span><img src="assets/icons/refresh-ccw-04.svg" alt="" class="hover--filter--col--blue--dark--600" /></span>
+                        <span class="w-100 h-100 fs--12 fw5 lh--18 col--gray-700 hover--col--blue-dark-600">New Quote</span>
                     </button>
                 </div>
             </div>
@@ -127,9 +143,9 @@
                     <!-- Last Date / Refresh -->
                     <div class="flex justify-end gap--16 justify--between-responsive-mobile-portrait w--100-responsive-mobile-portrait">
                         <span class="fs--14 lh--20 col--gray-500">Last updated at 11:24am</span>
-                        <button class="bg-white cp--6 pad--4 pad--right--8 pad--left--15 flex gap--4 items-center justify-center">
-                            <span><img src="assets/icons/refresh-ccw-04.svg" alt="" class="w--14 h--14 filter--col--blue--dark--700" /></span>
-                            <p class="fs--12 fw5 lh--18 col--gray-700 col--blue-dark-700">Refresh</p>
+                        <button class="group bg-white cp--6 pad--4 pad--right--8 pad--left--15 flex gap--4 items-center justify-center hover--bg--col--blue-dark-700 active--bg--col--gray-700 active--col--base-white">
+                            <span><img src="assets/icons/refresh-ccw-04.svg" alt="" class="w--14 h--14 filter--col--blue--dark--700 hover--filter--col--white" /></span>
+                            <p class="fs--12 fw5 lh--18 col--gray-700 col--blue-dark-700 hover--col--base-white">Refresh</p>
                         </button>
                     </div>
                     <!-- End Last Date / Refresh -->
