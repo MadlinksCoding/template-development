@@ -10,6 +10,7 @@ html {
 }
 
 /* Colors */
+.col--ebony--variation-2 { color: var(--color-ebony-2, #0C111D); }
 .col--fiord { color: var(--color-fiord, #475467); }
 .col--pale-sky { color: var(--color-pale-sky, #667085); }
 .col--oxford-blue { color: var(--color-oxford-blue, #344054); }
@@ -65,6 +66,7 @@ html {
 
 
 /* Letter Spacing */ 
+.tracked--0-25 { letter-spacing: 0.016rem; /* letter spacing 0.25px */ }
 
 
 /* Word Break */
@@ -84,6 +86,7 @@ html {
 
 
 /* Min Width */
+.mw--80 { min-width: 5rem; /* min width 80px */ }
 
 
 /* Max Width */
@@ -223,6 +226,12 @@ html {
 [data-submenu-container] { opacity: 1; visibility: visible; pointer-events: all; transform: translateX(0rem); }
 [data-submenu] [data-submenu-item] [data-arrow] { transform: translateX(-1rem); opacity: 0; pointer-events: none; }
 [data-submenu] [data-submenu-item][data-has-submenu="true"]:hover [data-arrow] { transform: translateX(0rem); opacity: 1; pointer-events: none; }
+
+/* Dashboard Submenu (Notifications) : Custom Styles */
+[data-tab-head-list] { box-shadow: 0px -1px 0px 0px var(--color-mischka, #D0D5DD) inset; }
+[data-tab-trigger]:hover { box-shadow: 0px -1px 0px 0px var(--color-pale-sky, #667085) inset; }
+[data-tab-trigger][data-is-active="true"] { box-shadow: 0px -1px 0px 0px var(--color-ebony-2, #0C111D) inset; opacity: 1; }
+[data-tab-trigger][data-is-active="true"] [data-tab-label] { color: var(--color-ebony-2, #0C111D); font-weight: 600; }
 
 
 
