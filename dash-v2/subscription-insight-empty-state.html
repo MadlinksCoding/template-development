@@ -17,6 +17,9 @@
     <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/theme.css" />
     <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/customTachyons.css" />
 
+    <!-- Nice Select CSS -->
+    <link rel="stylesheet" type="text/css" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/FINAL/css/nice-select.css">
+
     <!-- /* Custom Tachyons */ -->
     <style>
         /* Font */
@@ -103,15 +106,15 @@
                 <div class="flex items-center gap--16 w--100-responsive-mobile-portrait">
 
                     <!-- Select Dropdown -->
-                    <div class="pad--x--14 bg-white-50 pad--top--10 pad--bottom--10 br--8 bg--blur--10 flex items-center gap--4 justify-center w--100-responsive-mobile-portrait">
-                        <select class="br--none">
+                    <div class="relative z--10000 pad--x--14 bg-white-50 pad--top--10 pad--bottom--10 br--8 bg--blur--10 flex items-center gap--4 justify-center w--100-responsive-mobile-portrait">
+                        <select data-nice-select>
                             <option>Daily</option>
                             <option>Weekly</option>
                             <option>Mothly</option>
                         </select>
-                        <div class="pointer">
+                        <!-- <div class="pointer">
                             <img src="assets/icons/arrow-down.svg" alt="" />
-                        </div>
+                        </div> -->
                     </div>
                     
                     <!-- Close Button -->
@@ -189,6 +192,8 @@
             <!-- Ens All Analytics Data -->
         </div>
     </div>
+    <!-- Nice Select JS -->
+    <script type="text/javascript" src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/FINAL/js/nice-select.js"></script>
 </body>
 
 </html>
