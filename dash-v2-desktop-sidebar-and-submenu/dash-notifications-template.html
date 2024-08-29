@@ -1,0 +1,1483 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Meta Tags -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>Template - Dashboard Sidebar & Submenu</title>
+
+        <!-- Poppins Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+        <!-- Tachyons Styles -->
+        <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/main.css" />
+        <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" />
+        <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/theme.css" />
+        <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/customTachyons.css" />
+
+        <!-- Dashboard Sidebar Custom Style -->
+        <link rel="stylesheet" href="assets/css/dash-customTachyons.css" />
+        <link rel="stylesheet" href="assets/css/dash-tabs.css" />
+        <link rel="stylesheet" href="assets/css/dash-notification-panel.css" />
+    </head>
+    <body>
+        <!-- notification panel container (same template shall be used in mobile also) -->
+        <div data-notifications-container class="flex flex-column items-start gap--0 w--480 vh-100 overflow-hidden bg--col--athens-gray--70 bg--blur--25 bl br--col--mischka sh--sidebar fixed top-0 left--90 left--90--px z-1 transition--all transition--150 transition--ease-in-out">
+            <!-- notifications header -->
+            <div class="flex items-center self-stretch gap--8 pa2 pb0">
+                <!-- title -->
+                <div class="flex flex--max items-center gap--8">
+                    <span class="flex justify-start items-center"> 
+                        <!-- render_svg_icon( 'bell-03' ) -->
+                        <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/bell-03.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                    </span>
+                    <span data-submenu-title class="flex flex--max justify-start items-center fs--14 fw6 lh--20 col--pale-sky"> 
+                        Notifications
+                    </span>
+                </div>
+                
+                <!-- back button -->
+                <div class="flex">
+                    <a data-back-button class="flex justify-center items-center pad--8 br--6 hover--bg--col--ebony--10 pointer transition--background transition--200 transition--ease-in-out">
+                        <!-- render_svg_icon( 'align-left-01' ) -->
+                        <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/align-left-01.svg" alt="" class="w--24 h--24 filter--col--pale-sky">
+                    </a>
+                </div>
+            </div>
+            <!-- /notifications header -->
+
+            <!-- notifications body -->
+            <div class="flex flex-column self-stretch flex--max">
+                <!-- tab main wrapper -->
+                <div data-tab-main-wrapper data-tabs-section="1" class="flex flex-column self-stretch flex--max">
+                    <!-- tab header list -->
+                    <div data-tab-header-main data-tabs-container="1" class="flex flex-column items-start self-stretch gap--8 pa2 pb0 relative">
+                        <ul data-tab-head-list data-tabs-menu="notifications-tabs-menu" data-show-default-page-load="all" class="flex items-center self-stretch gap--4 overflow-x-auto">
+                            <!-- tab head list item -->
+                            <li data-tab-head-list-item data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-first-tab" data-attribute-run-once="1" data-target="first-tab" data-flag="all" data-offset="5" data-per_page="5" class="flex">
+                                <a href="javascript: void(0)" data-tab-trigger data-is-active="true" class="flex flex-column items-center gap--10 pv2 ph3 mw--80 o-70 nowrap transition--all transition--200 transition--ease-in-out">
+                                    <span class="flex items-center gap--2 h--32">
+                                        <span data-tab-label class="fs--14 fw5 lh--20 ttu nowrap col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                            All
+                                        </span>
+                                        <span data-count-badge="" class="flex flex-column items-center self-stretch gap--10">
+                                            <span data-count-text="" data-attribute-type="total-order-received-count" data-actual-stat-count="" class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal tracked--0-25 col--pale-sky">
+                                                120
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <!-- /tab head list item -->
+
+                            <!-- tab head list item -->
+                            <li data-tab-head-list-item data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-first-tab" data-attribute-run-once="1" data-target="second-tab" data-flag="unread" data-offset="5" data-per_page="5" class="flex">
+                                <a href="javascript: void(0)" data-tab-trigger data-is-active="false" class="flex flex-column items-center gap--10 pv2 ph3 mw--80 o-70 nowrap transition--all transition--200 transition--ease-in-out">
+                                    <span class="flex items-center gap--2 h--32">
+                                        <span data-tab-label class="fs--14 fw5 lh--20 ttu nowrap col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                            Unread
+                                        </span>
+                                        <span data-count-badge="" class="flex flex-column items-center self-stretch gap--10">
+                                            <span data-count-text="" data-attribute-type="total-order-received-count" data-actual-stat-count="" class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal tracked--0-25 col--pale-sky">
+                                                5
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <!-- /tab head list item -->
+
+                            <!-- tab head list item -->
+                            <li data-tab-head-list-item data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-first-tab" data-attribute-run-once="1" data-target="third-tab" data-flag="custom_request" data-offset="5" data-per_page="5" class="flex">
+                                <a href="javascript: void(0)" data-tab-trigger data-is-active="false" class="flex flex-column items-center gap--10 pv2 ph3 mw--80 o-70 nowrap transition--all transition--200 transition--ease-in-out">
+                                    <span class="flex items-center gap--2 h--32">
+                                        <span data-tab-label class="fs--14 fw5 lh--20 ttu nowrap col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                            Custom Request
+                                        </span>
+                                        <span data-count-badge="" class="flex flex-column items-center self-stretch gap--10">
+                                            <span data-count-text="" data-attribute-type="total-order-received-count" data-actual-stat-count="" class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal tracked--0-25 col--pale-sky">
+                                                2
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <!-- /tab head list item -->
+
+                            <!-- tab head list item -->
+                            <li data-tab-head-list-item data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-first-tab" data-attribute-run-once="1" data-target="fourth-tab" data-flag="account" data-offset="5" data-per_page="5" class="flex">
+                                <a href="javascript: void(0)" data-tab-trigger data-is-active="false" class="flex flex-column items-center gap--10 pv2 ph3 mw--80 o-70 nowrap transition--all transition--200 transition--ease-in-out">
+                                    <span class="flex items-center gap--2 h--32">
+                                        <span data-tab-label class="fs--14 fw5 lh--20 ttu nowrap col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                            Account
+                                        </span>
+                                        <span data-count-badge="" class="flex flex-column items-center self-stretch gap--10" hidden>
+                                            <span data-count-text="" data-attribute-type="total-order-received-count" data-actual-stat-count="" class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal tracked--0-25 col--pale-sky">
+                                                5
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <!-- /tab head list item -->
+                        </ul>
+                    </div>
+                    <!-- /tab header list -->
+
+                    <!-- tab content containers wrapper -->
+                    <div data-tab-contents-containers-main data-tabs-content="1" class="flex flex-column self-stretch">
+                        <!-- tab content container -->
+                        <div data-tabbed-content="tabbed-content-first-tab" data-target="first-tab" class="flex flex-column self-stretch">
+                            <!-- scrollable notifications container panel -->
+                            <div data-scrollable-notification-panel class="flex flex-column self-stretch bg--col--white--50 bg--blur--50 overflow-y-auto">
+                                <div data-notifications-container class="flex flex-column self-stretch items-start gap--0 pb5">
+                                    <!-- notification card - info (based on the data attribute values some UI element will be hidden) -->
+                                    <div data-notification-card data-is-read="false" data-notification-type="info" data-single-icon-only="false" data-small-icon-bg-off="false" data-has-title="true" data-has-close-btn="true" data-has-cta="true" data-has-link="true" data-theme="light" class="flex justify-center items-center self-stretch bb br--col--athens-gray2">
+                                        <div data-notification-card-body class="flex flex-column items-start self-stretch flex--max gap--16 pad--y--12 pad--x--8">
+                                            <div class="flex justify-start items-start self-stretch gap--20 relative">
+                                                <!-- notification close -->
+                                                <a data-close-notification-card class="flex justify-center items-center w--24 h--24 pointer absolute top-0 right-0">
+                                                    <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/close.svg" alt="" class="w--16 h--16 filter--col--mischka">
+                                                </a>
+                                                <!-- /notification close -->
+
+                                                <!-- notification icons -->
+                                                <div data-notification-icon-container class="flex justify-center items-center w--40 h--40 br--8 relative">
+                                                    <img data-big-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/order-1.svg" alt="" class="w--24 h--24">
+
+                                                    <!-- small icon -->
+                                                    <div data-small-icon-container class="flex justify-center items-center w--22 h--22 br--8 absolute">
+                                                        <img data-small-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/info-square.svg" alt="" class="w--16 h--16">
+                                                    </div>
+                                                    <!-- /small icon -->
+                                                </div>
+                                                <!-- /notification icons -->
+
+                                                <!-- notification content -->
+                                                <div class="flex flex-column items-start self-stretch flex--max">
+                                                    <!-- title -->
+                                                    <div data-notification-title-wrapper class="flex flex-column items-start self-stretch gap--8 pad--right--24 pb2">
+                                                        <h4 data-notification-title class="fs--14 fw6 lh--20">
+                                                            Expiring custom request from @Mango
+                                                        </h4>
+                                                    </div>
+                                                    <!-- /title -->
+
+                                                    <!-- text contents -->
+                                                    <div class="flex flex-column items-start self-stretch">
+                                                        <!-- notification text -->
+                                                        <div class="flex justify-start items-start self-stretch pad--right--24">
+                                                            <p data-notification-text class="fs--14 fw4 lh--20 black">
+                                                                Item ‘xyz’ is removed due to lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus mi
+                                                            </p>
+                                                        </div>
+                                                        <!-- /notification text -->
+
+                                                        <!-- bottom contents -->
+                                                        <div class="flex justify-between items-end self-stretch gap--8 pt2">
+                                                            <!-- notification time -->
+                                                            <div class="flex justify-start items-end">
+                                                                <span data-notification-time class="fs--12 fw4 lh--18 col--pale-sky">
+                                                                    Just now
+                                                                </span>
+                                                            </div>
+                                                            <!-- /notification time -->
+
+                                                            <!-- notification actions -->
+                                                            <div class="flex items-end gap--8">
+                                                                <!-- cta -->
+                                                                <a href="javascript: void(0)" data-cta class="flex items-center gap--2 pointer transition--all transition--200 transition--ease-in-out">
+                                                                    <span data-text class="fs--12 fw5 lh--18 transition--all transition--200 transition--ease-in-out">
+                                                                        Dismiss
+                                                                    </span>
+                                                                    <span>
+                                                                        <img data-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/arrow-up-right.svg" alt="" class="w--16 h--16 transition--all transition--200 transition--ease-in-out">
+                                                                    </span>
+                                                                </a>
+                                                                <!-- /cta -->
+
+                                                                <!-- link -->
+                                                                <a href="javascript: void(0)" data-link class="flex items-center gap--2 pointer transition--all transition--200 transition--ease-in-out">
+                                                                    <span data-text class="fs--12 fw5 lh--18 transition--all transition--200 transition--ease-in-out">
+                                                                        Detail
+                                                                    </span>
+                                                                    <span>
+                                                                        <img data-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/arrow-up-right.svg" alt="" class="w--16 h--16 transition--all transition--200 transition--ease-in-out">
+                                                                    </span>
+                                                                </a>
+                                                                <!-- /link -->
+                                                            </div>
+                                                            <!-- /notification actions -->
+                                                        </div>
+                                                        <!-- /bottom contents -->
+                                                    </div>
+                                                    <!-- /text contents -->
+                                                </div>
+                                                <!-- /notification content -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /notification card -->
+
+                                    <!-- notification card - warning (based on the data attribute values some UI element will be hidden) -->
+                                    <div data-notification-card data-is-read="false" data-notification-type="warning" data-single-icon-only="false" data-small-icon-bg-off="false" data-has-title="true" data-has-close-btn="true" data-has-cta="true" data-has-link="true" data-theme="light" class="flex justify-center items-center self-stretch bb br--col--athens-gray2">
+                                        <div data-notification-card-body class="flex flex-column items-start self-stretch flex--max gap--16 pad--y--12 pad--x--8">
+                                            <div class="flex justify-start items-start self-stretch gap--20 relative">
+                                                <!-- notification close -->
+                                                <a data-close-notification-card class="flex justify-center items-center w--24 h--24 pointer absolute top-0 right-0">
+                                                    <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/close.svg" alt="" class="w--16 h--16 filter--col--mischka">
+                                                </a>
+                                                <!-- /notification close -->
+
+                                                <!-- notification icons -->
+                                                <div data-notification-icon-container class="flex justify-center items-center w--40 h--40 br--8 relative">
+                                                    <img data-big-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/order-1.svg" alt="" class="w--24 h--24">
+
+                                                    <!-- small icon -->
+                                                    <div data-small-icon-container class="flex justify-center items-center w--22 h--22 br--8 absolute">
+                                                        <img data-small-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/info-square.svg" alt="" class="w--16 h--16">
+                                                    </div>
+                                                    <!-- /small icon -->
+                                                </div>
+                                                <!-- /notification icons -->
+
+                                                <!-- notification content -->
+                                                <div class="flex flex-column items-start self-stretch flex--max">
+                                                    <!-- title -->
+                                                    <div data-notification-title-wrapper class="flex flex-column items-start self-stretch gap--8 pad--right--24 pb2">
+                                                        <h4 data-notification-title class="fs--14 fw6 lh--20">
+                                                            Expiring custom request from @Mango
+                                                        </h4>
+                                                    </div>
+                                                    <!-- /title -->
+
+                                                    <!-- text contents -->
+                                                    <div class="flex flex-column items-start self-stretch">
+                                                        <!-- notification text -->
+                                                        <div class="flex justify-start items-start self-stretch pad--right--24">
+                                                            <p data-notification-text class="fs--14 fw4 lh--20 black">
+                                                                Item ‘xyz’ is removed due to lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus mi
+                                                            </p>
+                                                        </div>
+                                                        <!-- /notification text -->
+
+                                                        <!-- bottom contents -->
+                                                        <div class="flex justify-between items-end self-stretch gap--8 pt2">
+                                                            <!-- notification time -->
+                                                            <div class="flex justify-start items-end">
+                                                                <span data-notification-time class="fs--12 fw4 lh--18 col--pale-sky">
+                                                                    Just now
+                                                                </span>
+                                                            </div>
+                                                            <!-- /notification time -->
+
+                                                            <!-- notification actions -->
+                                                            <div class="flex items-end gap--8">
+                                                                <!-- cta -->
+                                                                <a href="javascript: void(0)" data-cta class="flex items-center gap--2 pointer transition--all transition--200 transition--ease-in-out">
+                                                                    <span data-text class="fs--12 fw5 lh--18 transition--all transition--200 transition--ease-in-out">
+                                                                        Dismiss
+                                                                    </span>
+                                                                    <span>
+                                                                        <img data-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/arrow-up-right.svg" alt="" class="w--16 h--16 transition--all transition--200 transition--ease-in-out">
+                                                                    </span>
+                                                                </a>
+                                                                <!-- /cta -->
+
+                                                                <!-- link -->
+                                                                <a href="javascript: void(0)" data-link class="flex items-center gap--2 pointer transition--all transition--200 transition--ease-in-out">
+                                                                    <span data-text class="fs--12 fw5 lh--18 transition--all transition--200 transition--ease-in-out">
+                                                                        Detail
+                                                                    </span>
+                                                                    <span>
+                                                                        <img data-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/arrow-up-right.svg" alt="" class="w--16 h--16 transition--all transition--200 transition--ease-in-out">
+                                                                    </span>
+                                                                </a>
+                                                                <!-- /link -->
+                                                            </div>
+                                                            <!-- /notification actions -->
+                                                        </div>
+                                                        <!-- /bottom contents -->
+                                                    </div>
+                                                    <!-- /text contents -->
+                                                </div>
+                                                <!-- /notification content -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /notification card -->
+
+                                    <!-- notification card - destructive (based on the data attribute values some UI element will be hidden) -->
+                                    <div data-notification-card data-is-read="false" data-notification-type="destructive" data-single-icon-only="false" data-small-icon-bg-off="false" data-has-title="true" data-has-close-btn="true" data-has-cta="true" data-has-link="true" data-theme="light" class="flex justify-center items-center self-stretch bb br--col--athens-gray2">
+                                        <div data-notification-card-body class="flex flex-column items-start self-stretch flex--max gap--16 pad--y--12 pad--x--8">
+                                            <div class="flex justify-start items-start self-stretch gap--20 relative">
+                                                <!-- notification close -->
+                                                <a data-close-notification-card class="flex justify-center items-center w--24 h--24 pointer absolute top-0 right-0">
+                                                    <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/close.svg" alt="" class="w--16 h--16 filter--col--mischka">
+                                                </a>
+                                                <!-- /notification close -->
+
+                                                <!-- notification icons -->
+                                                <div data-notification-icon-container class="flex justify-center items-center w--40 h--40 br--8 relative">
+                                                    <img data-big-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/order-1.svg" alt="" class="w--24 h--24">
+
+                                                    <!-- small icon -->
+                                                    <div data-small-icon-container class="flex justify-center items-center w--22 h--22 br--8 absolute">
+                                                        <img data-small-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/info-square.svg" alt="" class="w--16 h--16">
+                                                    </div>
+                                                    <!-- /small icon -->
+                                                </div>
+                                                <!-- /notification icons -->
+
+                                                <!-- notification content -->
+                                                <div class="flex flex-column items-start self-stretch flex--max">
+                                                    <!-- title -->
+                                                    <div data-notification-title-wrapper class="flex flex-column items-start self-stretch gap--8 pad--right--24 pb2">
+                                                        <h4 data-notification-title class="fs--14 fw6 lh--20">
+                                                            Expiring custom request from @Mango
+                                                        </h4>
+                                                    </div>
+                                                    <!-- /title -->
+
+                                                    <!-- text contents -->
+                                                    <div class="flex flex-column items-start self-stretch">
+                                                        <!-- notification text -->
+                                                        <div class="flex justify-start items-start self-stretch pad--right--24">
+                                                            <p data-notification-text class="fs--14 fw4 lh--20 black">
+                                                                Item ‘xyz’ is removed due to lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus mi
+                                                            </p>
+                                                        </div>
+                                                        <!-- /notification text -->
+
+                                                        <!-- bottom contents -->
+                                                        <div class="flex justify-between items-end self-stretch gap--8 pt2">
+                                                            <!-- notification time -->
+                                                            <div class="flex justify-start items-end">
+                                                                <span data-notification-time class="fs--12 fw4 lh--18 col--pale-sky">
+                                                                    Just now
+                                                                </span>
+                                                            </div>
+                                                            <!-- /notification time -->
+
+                                                            <!-- notification actions -->
+                                                            <div class="flex items-end gap--8">
+                                                                <!-- cta -->
+                                                                <a href="javascript: void(0)" data-cta class="flex items-center gap--2 pointer transition--all transition--200 transition--ease-in-out">
+                                                                    <span data-text class="fs--12 fw5 lh--18 transition--all transition--200 transition--ease-in-out">
+                                                                        Dismiss
+                                                                    </span>
+                                                                    <span>
+                                                                        <img data-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/arrow-up-right.svg" alt="" class="w--16 h--16 transition--all transition--200 transition--ease-in-out">
+                                                                    </span>
+                                                                </a>
+                                                                <!-- /cta -->
+
+                                                                <!-- link -->
+                                                                <a href="javascript: void(0)" data-link class="flex items-center gap--2 pointer transition--all transition--200 transition--ease-in-out">
+                                                                    <span data-text class="fs--12 fw5 lh--18 transition--all transition--200 transition--ease-in-out">
+                                                                        Detail
+                                                                    </span>
+                                                                    <span>
+                                                                        <img data-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/arrow-up-right.svg" alt="" class="w--16 h--16 transition--all transition--200 transition--ease-in-out">
+                                                                    </span>
+                                                                </a>
+                                                                <!-- /link -->
+                                                            </div>
+                                                            <!-- /notification actions -->
+                                                        </div>
+                                                        <!-- /bottom contents -->
+                                                    </div>
+                                                    <!-- /text contents -->
+                                                </div>
+                                                <!-- /notification content -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /notification card -->
+
+                                    <!-- notification card - success (based on the data attribute values some UI element will be hidden) -->
+                                    <div data-notification-card data-is-read="false" data-notification-type="success" data-single-icon-only="false" data-small-icon-bg-off="false" data-has-title="true" data-has-close-btn="true" data-has-cta="true" data-has-link="true" data-theme="light" class="flex justify-center items-center self-stretch bb br--col--athens-gray2">
+                                        <div data-notification-card-body class="flex flex-column items-start self-stretch flex--max gap--16 pad--y--12 pad--x--8">
+                                            <div class="flex justify-start items-start self-stretch gap--20 relative">
+                                                <!-- notification close -->
+                                                <a data-close-notification-card class="flex justify-center items-center w--24 h--24 pointer absolute top-0 right-0">
+                                                    <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/close.svg" alt="" class="w--16 h--16 filter--col--mischka">
+                                                </a>
+                                                <!-- /notification close -->
+
+                                                <!-- notification icons -->
+                                                <div data-notification-icon-container class="flex justify-center items-center w--40 h--40 br--8 relative">
+                                                    <img data-big-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/order-1.svg" alt="" class="w--24 h--24">
+
+                                                    <!-- small icon -->
+                                                    <div data-small-icon-container class="flex justify-center items-center w--22 h--22 br--8 absolute">
+                                                        <img data-small-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/info-square.svg" alt="" class="w--16 h--16">
+                                                    </div>
+                                                    <!-- /small icon -->
+                                                </div>
+                                                <!-- /notification icons -->
+
+                                                <!-- notification content -->
+                                                <div class="flex flex-column items-start self-stretch flex--max">
+                                                    <!-- title -->
+                                                    <div data-notification-title-wrapper class="flex flex-column items-start self-stretch gap--8 pad--right--24 pb2">
+                                                        <h4 data-notification-title class="fs--14 fw6 lh--20">
+                                                            Expiring custom request from @Mango
+                                                        </h4>
+                                                    </div>
+                                                    <!-- /title -->
+
+                                                    <!-- text contents -->
+                                                    <div class="flex flex-column items-start self-stretch">
+                                                        <!-- notification text -->
+                                                        <div class="flex justify-start items-start self-stretch pad--right--24">
+                                                            <p data-notification-text class="fs--14 fw4 lh--20 black">
+                                                                Item ‘xyz’ is removed due to lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus mi
+                                                            </p>
+                                                        </div>
+                                                        <!-- /notification text -->
+
+                                                        <!-- bottom contents -->
+                                                        <div class="flex justify-between items-end self-stretch gap--8 pt2">
+                                                            <!-- notification time -->
+                                                            <div class="flex justify-start items-end">
+                                                                <span data-notification-time class="fs--12 fw4 lh--18 col--pale-sky">
+                                                                    Just now
+                                                                </span>
+                                                            </div>
+                                                            <!-- /notification time -->
+
+                                                            <!-- notification actions -->
+                                                            <div class="flex items-end gap--8">
+                                                                <!-- cta -->
+                                                                <a href="javascript: void(0)" data-cta class="flex items-center gap--2 pointer transition--all transition--200 transition--ease-in-out">
+                                                                    <span data-text class="fs--12 fw5 lh--18 transition--all transition--200 transition--ease-in-out">
+                                                                        Dismiss
+                                                                    </span>
+                                                                    <span>
+                                                                        <img data-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/arrow-up-right.svg" alt="" class="w--16 h--16 transition--all transition--200 transition--ease-in-out">
+                                                                    </span>
+                                                                </a>
+                                                                <!-- /cta -->
+
+                                                                <!-- link -->
+                                                                <a href="javascript: void(0)" data-link class="flex items-center gap--2 pointer transition--all transition--200 transition--ease-in-out">
+                                                                    <span data-text class="fs--12 fw5 lh--18 transition--all transition--200 transition--ease-in-out">
+                                                                        Detail
+                                                                    </span>
+                                                                    <span>
+                                                                        <img data-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/arrow-up-right.svg" alt="" class="w--16 h--16 transition--all transition--200 transition--ease-in-out">
+                                                                    </span>
+                                                                </a>
+                                                                <!-- /link -->
+                                                            </div>
+                                                            <!-- /notification actions -->
+                                                        </div>
+                                                        <!-- /bottom contents -->
+                                                    </div>
+                                                    <!-- /text contents -->
+                                                </div>
+                                                <!-- /notification content -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /notification card -->
+
+                                    <!-- notification card - default (based on the data attribute values some UI element will be hidden) -->
+                                    <div data-notification-card data-is-read="false" data-notification-type="default" data-single-icon-only="false" data-small-icon-bg-off="false" data-has-title="true" data-has-close-btn="true" data-has-cta="true" data-has-link="true" data-theme="light" class="flex justify-center items-center self-stretch bb br--col--athens-gray2">
+                                        <div data-notification-card-body class="flex flex-column items-start self-stretch flex--max gap--16 pad--y--12 pad--x--8">
+                                            <div class="flex justify-start items-start self-stretch gap--20 relative">
+                                                <!-- notification close -->
+                                                <a data-close-notification-card class="flex justify-center items-center w--24 h--24 pointer absolute top-0 right-0">
+                                                    <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/close.svg" alt="" class="w--16 h--16 filter--col--mischka">
+                                                </a>
+                                                <!-- /notification close -->
+
+                                                <!-- notification icons -->
+                                                <div data-notification-icon-container class="flex justify-center items-center w--40 h--40 br--8 relative">
+                                                    <img data-big-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/order-1.svg" alt="" class="w--24 h--24">
+
+                                                    <!-- small icon -->
+                                                    <div data-small-icon-container class="flex justify-center items-center w--22 h--22 br--8 absolute">
+                                                        <img data-small-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/info-square.svg" alt="" class="w--16 h--16">
+                                                    </div>
+                                                    <!-- /small icon -->
+                                                </div>
+                                                <!-- /notification icons -->
+
+                                                <!-- notification content -->
+                                                <div class="flex flex-column items-start self-stretch flex--max">
+                                                    <!-- title -->
+                                                    <div data-notification-title-wrapper class="flex flex-column items-start self-stretch gap--8 pad--right--24 pb2">
+                                                        <h4 data-notification-title class="fs--14 fw6 lh--20">
+                                                            Expiring custom request from @Mango
+                                                        </h4>
+                                                    </div>
+                                                    <!-- /title -->
+
+                                                    <!-- text contents -->
+                                                    <div class="flex flex-column items-start self-stretch">
+                                                        <!-- notification text -->
+                                                        <div class="flex justify-start items-start self-stretch pad--right--24">
+                                                            <p data-notification-text class="fs--14 fw4 lh--20 black">
+                                                                Item ‘xyz’ is removed due to lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus mi
+                                                            </p>
+                                                        </div>
+                                                        <!-- /notification text -->
+
+                                                        <!-- bottom contents -->
+                                                        <div class="flex justify-between items-end self-stretch gap--8 pt2">
+                                                            <!-- notification time -->
+                                                            <div class="flex justify-start items-end">
+                                                                <span data-notification-time class="fs--12 fw4 lh--18 col--pale-sky">
+                                                                    Just now
+                                                                </span>
+                                                            </div>
+                                                            <!-- /notification time -->
+
+                                                            <!-- notification actions -->
+                                                            <div class="flex items-end gap--8">
+                                                                <!-- cta -->
+                                                                <a href="javascript: void(0)" data-cta class="flex items-center gap--2 pointer transition--all transition--200 transition--ease-in-out">
+                                                                    <span data-text class="fs--12 fw5 lh--18 transition--all transition--200 transition--ease-in-out">
+                                                                        Dismiss
+                                                                    </span>
+                                                                    <span>
+                                                                        <img data-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/arrow-up-right.svg" alt="" class="w--16 h--16 transition--all transition--200 transition--ease-in-out">
+                                                                    </span>
+                                                                </a>
+                                                                <!-- /cta -->
+
+                                                                <!-- link -->
+                                                                <a href="javascript: void(0)" data-link class="flex items-center gap--2 pointer transition--all transition--200 transition--ease-in-out">
+                                                                    <span data-text class="fs--12 fw5 lh--18 transition--all transition--200 transition--ease-in-out">
+                                                                        Detail
+                                                                    </span>
+                                                                    <span>
+                                                                        <img data-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/arrow-up-right.svg" alt="" class="w--16 h--16 transition--all transition--200 transition--ease-in-out">
+                                                                    </span>
+                                                                </a>
+                                                                <!-- /link -->
+                                                            </div>
+                                                            <!-- /notification actions -->
+                                                        </div>
+                                                        <!-- /bottom contents -->
+                                                    </div>
+                                                    <!-- /text contents -->
+                                                </div>
+                                                <!-- /notification content -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /notification card -->
+
+                                    <!-- notification card - info (data-is-read="true") -->
+                                    <div data-notification-card data-is-read="true" data-notification-type="info" data-single-icon-only="false" data-small-icon-bg-off="false" data-has-title="true" data-has-close-btn="true" data-has-cta="true" data-has-link="true" data-theme="light" class="flex justify-center items-center self-stretch bb br--col--athens-gray2">
+                                        <div data-notification-card-body class="flex flex-column items-start self-stretch flex--max gap--16 pad--y--12 pad--x--8">
+                                            <div class="flex justify-start items-start self-stretch gap--20 relative">
+                                                <!-- notification close -->
+                                                <a data-close-notification-card class="flex justify-center items-center w--24 h--24 pointer absolute top-0 right-0">
+                                                    <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/close.svg" alt="" class="w--16 h--16 filter--col--mischka">
+                                                </a>
+                                                <!-- /notification close -->
+
+                                                <!-- notification icons -->
+                                                <div data-notification-icon-container class="flex justify-center items-center w--40 h--40 br--8 relative">
+                                                    <img data-big-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/order-1.svg" alt="" class="w--24 h--24">
+
+                                                    <!-- small icon -->
+                                                    <div data-small-icon-container class="flex justify-center items-center w--22 h--22 br--8 absolute">
+                                                        <img data-small-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/info-square.svg" alt="" class="w--16 h--16">
+                                                    </div>
+                                                    <!-- /small icon -->
+                                                </div>
+                                                <!-- /notification icons -->
+
+                                                <!-- notification content -->
+                                                <div class="flex flex-column items-start self-stretch flex--max">
+                                                    <!-- title -->
+                                                    <div data-notification-title-wrapper class="flex flex-column items-start self-stretch gap--8 pad--right--24 pb2">
+                                                        <h4 data-notification-title class="fs--14 fw6 lh--20">
+                                                            Expiring custom request from @Mango
+                                                        </h4>
+                                                    </div>
+                                                    <!-- /title -->
+
+                                                    <!-- text contents -->
+                                                    <div class="flex flex-column items-start self-stretch">
+                                                        <!-- notification text -->
+                                                        <div class="flex justify-start items-start self-stretch pad--right--24">
+                                                            <p data-notification-text class="fs--14 fw4 lh--20 black">
+                                                                Item ‘xyz’ is removed due to lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus mi
+                                                            </p>
+                                                        </div>
+                                                        <!-- /notification text -->
+
+                                                        <!-- bottom contents -->
+                                                        <div class="flex justify-between items-end self-stretch gap--8 pt2">
+                                                            <!-- notification time -->
+                                                            <div class="flex justify-start items-end">
+                                                                <span data-notification-time class="fs--12 fw4 lh--18 col--pale-sky">
+                                                                    Just now
+                                                                </span>
+                                                            </div>
+                                                            <!-- /notification time -->
+
+                                                            <!-- notification actions -->
+                                                            <div class="flex items-end gap--8">
+                                                                <!-- cta -->
+                                                                <a href="javascript: void(0)" data-cta class="flex items-center gap--2 pointer transition--all transition--200 transition--ease-in-out">
+                                                                    <span data-text class="fs--12 fw5 lh--18 transition--all transition--200 transition--ease-in-out">
+                                                                        Dismiss
+                                                                    </span>
+                                                                    <span>
+                                                                        <img data-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/arrow-up-right.svg" alt="" class="w--16 h--16 transition--all transition--200 transition--ease-in-out">
+                                                                    </span>
+                                                                </a>
+                                                                <!-- /cta -->
+
+                                                                <!-- link -->
+                                                                <a href="javascript: void(0)" data-link class="flex items-center gap--2 pointer transition--all transition--200 transition--ease-in-out">
+                                                                    <span data-text class="fs--12 fw5 lh--18 transition--all transition--200 transition--ease-in-out">
+                                                                        Detail
+                                                                    </span>
+                                                                    <span>
+                                                                        <img data-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/arrow-up-right.svg" alt="" class="w--16 h--16 transition--all transition--200 transition--ease-in-out">
+                                                                    </span>
+                                                                </a>
+                                                                <!-- /link -->
+                                                            </div>
+                                                            <!-- /notification actions -->
+                                                        </div>
+                                                        <!-- /bottom contents -->
+                                                    </div>
+                                                    <!-- /text contents -->
+                                                </div>
+                                                <!-- /notification content -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /notification card -->
+
+                                    <!-- notification card - warning (data-is-read="true") -->
+                                    <div data-notification-card data-is-read="true" data-notification-type="warning" data-single-icon-only="false" data-small-icon-bg-off="false" data-has-title="true" data-has-close-btn="true" data-has-cta="true" data-has-link="true" data-theme="light" class="flex justify-center items-center self-stretch bb br--col--athens-gray2">
+                                        <div data-notification-card-body class="flex flex-column items-start self-stretch flex--max gap--16 pad--y--12 pad--x--8">
+                                            <div class="flex justify-start items-start self-stretch gap--20 relative">
+                                                <!-- notification close -->
+                                                <a data-close-notification-card class="flex justify-center items-center w--24 h--24 pointer absolute top-0 right-0">
+                                                    <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/close.svg" alt="" class="w--16 h--16 filter--col--mischka">
+                                                </a>
+                                                <!-- /notification close -->
+
+                                                <!-- notification icons -->
+                                                <div data-notification-icon-container class="flex justify-center items-center w--40 h--40 br--8 relative">
+                                                    <img data-big-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/order-1.svg" alt="" class="w--24 h--24">
+
+                                                    <!-- small icon -->
+                                                    <div data-small-icon-container class="flex justify-center items-center w--22 h--22 br--8 absolute">
+                                                        <img data-small-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/info-square.svg" alt="" class="w--16 h--16">
+                                                    </div>
+                                                    <!-- /small icon -->
+                                                </div>
+                                                <!-- /notification icons -->
+
+                                                <!-- notification content -->
+                                                <div class="flex flex-column items-start self-stretch flex--max">
+                                                    <!-- title -->
+                                                    <div data-notification-title-wrapper class="flex flex-column items-start self-stretch gap--8 pad--right--24 pb2">
+                                                        <h4 data-notification-title class="fs--14 fw6 lh--20">
+                                                            Expiring custom request from @Mango
+                                                        </h4>
+                                                    </div>
+                                                    <!-- /title -->
+
+                                                    <!-- text contents -->
+                                                    <div class="flex flex-column items-start self-stretch">
+                                                        <!-- notification text -->
+                                                        <div class="flex justify-start items-start self-stretch pad--right--24">
+                                                            <p data-notification-text class="fs--14 fw4 lh--20 black">
+                                                                Item ‘xyz’ is removed due to lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus mi
+                                                            </p>
+                                                        </div>
+                                                        <!-- /notification text -->
+
+                                                        <!-- bottom contents -->
+                                                        <div class="flex justify-between items-end self-stretch gap--8 pt2">
+                                                            <!-- notification time -->
+                                                            <div class="flex justify-start items-end">
+                                                                <span data-notification-time class="fs--12 fw4 lh--18 col--pale-sky">
+                                                                    Just now
+                                                                </span>
+                                                            </div>
+                                                            <!-- /notification time -->
+
+                                                            <!-- notification actions -->
+                                                            <div class="flex items-end gap--8">
+                                                                <!-- cta -->
+                                                                <a href="javascript: void(0)" data-cta class="flex items-center gap--2 pointer transition--all transition--200 transition--ease-in-out">
+                                                                    <span data-text class="fs--12 fw5 lh--18 transition--all transition--200 transition--ease-in-out">
+                                                                        Dismiss
+                                                                    </span>
+                                                                    <span>
+                                                                        <img data-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/arrow-up-right.svg" alt="" class="w--16 h--16 transition--all transition--200 transition--ease-in-out">
+                                                                    </span>
+                                                                </a>
+                                                                <!-- /cta -->
+
+                                                                <!-- link -->
+                                                                <a href="javascript: void(0)" data-link class="flex items-center gap--2 pointer transition--all transition--200 transition--ease-in-out">
+                                                                    <span data-text class="fs--12 fw5 lh--18 transition--all transition--200 transition--ease-in-out">
+                                                                        Detail
+                                                                    </span>
+                                                                    <span>
+                                                                        <img data-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/arrow-up-right.svg" alt="" class="w--16 h--16 transition--all transition--200 transition--ease-in-out">
+                                                                    </span>
+                                                                </a>
+                                                                <!-- /link -->
+                                                            </div>
+                                                            <!-- /notification actions -->
+                                                        </div>
+                                                        <!-- /bottom contents -->
+                                                    </div>
+                                                    <!-- /text contents -->
+                                                </div>
+                                                <!-- /notification content -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /notification card -->
+
+                                    <!-- notification card - destructive (data-is-read="true") -->
+                                    <div data-notification-card data-is-read="true" data-notification-type="destructive" data-single-icon-only="false" data-small-icon-bg-off="false" data-has-title="true" data-has-close-btn="true" data-has-cta="true" data-has-link="true" data-theme="light" class="flex justify-center items-center self-stretch bb br--col--athens-gray2">
+                                        <div data-notification-card-body class="flex flex-column items-start self-stretch flex--max gap--16 pad--y--12 pad--x--8">
+                                            <div class="flex justify-start items-start self-stretch gap--20 relative">
+                                                <!-- notification close -->
+                                                <a data-close-notification-card class="flex justify-center items-center w--24 h--24 pointer absolute top-0 right-0">
+                                                    <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/close.svg" alt="" class="w--16 h--16 filter--col--mischka">
+                                                </a>
+                                                <!-- /notification close -->
+
+                                                <!-- notification icons -->
+                                                <div data-notification-icon-container class="flex justify-center items-center w--40 h--40 br--8 relative">
+                                                    <img data-big-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/order-1.svg" alt="" class="w--24 h--24">
+
+                                                    <!-- small icon -->
+                                                    <div data-small-icon-container class="flex justify-center items-center w--22 h--22 br--8 absolute">
+                                                        <img data-small-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/info-square.svg" alt="" class="w--16 h--16">
+                                                    </div>
+                                                    <!-- /small icon -->
+                                                </div>
+                                                <!-- /notification icons -->
+
+                                                <!-- notification content -->
+                                                <div class="flex flex-column items-start self-stretch flex--max">
+                                                    <!-- title -->
+                                                    <div data-notification-title-wrapper class="flex flex-column items-start self-stretch gap--8 pad--right--24 pb2">
+                                                        <h4 data-notification-title class="fs--14 fw6 lh--20">
+                                                            Expiring custom request from @Mango
+                                                        </h4>
+                                                    </div>
+                                                    <!-- /title -->
+
+                                                    <!-- text contents -->
+                                                    <div class="flex flex-column items-start self-stretch">
+                                                        <!-- notification text -->
+                                                        <div class="flex justify-start items-start self-stretch pad--right--24">
+                                                            <p data-notification-text class="fs--14 fw4 lh--20 black">
+                                                                Item ‘xyz’ is removed due to lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus mi
+                                                            </p>
+                                                        </div>
+                                                        <!-- /notification text -->
+
+                                                        <!-- bottom contents -->
+                                                        <div class="flex justify-between items-end self-stretch gap--8 pt2">
+                                                            <!-- notification time -->
+                                                            <div class="flex justify-start items-end">
+                                                                <span data-notification-time class="fs--12 fw4 lh--18 col--pale-sky">
+                                                                    Just now
+                                                                </span>
+                                                            </div>
+                                                            <!-- /notification time -->
+
+                                                            <!-- notification actions -->
+                                                            <div class="flex items-end gap--8">
+                                                                <!-- cta -->
+                                                                <a href="javascript: void(0)" data-cta class="flex items-center gap--2 pointer transition--all transition--200 transition--ease-in-out">
+                                                                    <span data-text class="fs--12 fw5 lh--18 transition--all transition--200 transition--ease-in-out">
+                                                                        Dismiss
+                                                                    </span>
+                                                                    <span>
+                                                                        <img data-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/arrow-up-right.svg" alt="" class="w--16 h--16 transition--all transition--200 transition--ease-in-out">
+                                                                    </span>
+                                                                </a>
+                                                                <!-- /cta -->
+
+                                                                <!-- link -->
+                                                                <a href="javascript: void(0)" data-link class="flex items-center gap--2 pointer transition--all transition--200 transition--ease-in-out">
+                                                                    <span data-text class="fs--12 fw5 lh--18 transition--all transition--200 transition--ease-in-out">
+                                                                        Detail
+                                                                    </span>
+                                                                    <span>
+                                                                        <img data-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/arrow-up-right.svg" alt="" class="w--16 h--16 transition--all transition--200 transition--ease-in-out">
+                                                                    </span>
+                                                                </a>
+                                                                <!-- /link -->
+                                                            </div>
+                                                            <!-- /notification actions -->
+                                                        </div>
+                                                        <!-- /bottom contents -->
+                                                    </div>
+                                                    <!-- /text contents -->
+                                                </div>
+                                                <!-- /notification content -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /notification card -->
+
+                                    <!-- notification card - success (data-is-read="true") -->
+                                    <div data-notification-card data-is-read="true" data-notification-type="success" data-single-icon-only="false" data-small-icon-bg-off="false" data-has-title="true" data-has-close-btn="true" data-has-cta="true" data-has-link="true" data-theme="light" class="flex justify-center items-center self-stretch bb br--col--athens-gray2">
+                                        <div data-notification-card-body class="flex flex-column items-start self-stretch flex--max gap--16 pad--y--12 pad--x--8">
+                                            <div class="flex justify-start items-start self-stretch gap--20 relative">
+                                                <!-- notification close -->
+                                                <a data-close-notification-card class="flex justify-center items-center w--24 h--24 pointer absolute top-0 right-0">
+                                                    <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/close.svg" alt="" class="w--16 h--16 filter--col--mischka">
+                                                </a>
+                                                <!-- /notification close -->
+
+                                                <!-- notification icons -->
+                                                <div data-notification-icon-container class="flex justify-center items-center w--40 h--40 br--8 relative">
+                                                    <img data-big-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/order-1.svg" alt="" class="w--24 h--24">
+
+                                                    <!-- small icon -->
+                                                    <div data-small-icon-container class="flex justify-center items-center w--22 h--22 br--8 absolute">
+                                                        <img data-small-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/info-square.svg" alt="" class="w--16 h--16">
+                                                    </div>
+                                                    <!-- /small icon -->
+                                                </div>
+                                                <!-- /notification icons -->
+
+                                                <!-- notification content -->
+                                                <div class="flex flex-column items-start self-stretch flex--max">
+                                                    <!-- title -->
+                                                    <div data-notification-title-wrapper class="flex flex-column items-start self-stretch gap--8 pad--right--24 pb2">
+                                                        <h4 data-notification-title class="fs--14 fw6 lh--20">
+                                                            Expiring custom request from @Mango
+                                                        </h4>
+                                                    </div>
+                                                    <!-- /title -->
+
+                                                    <!-- text contents -->
+                                                    <div class="flex flex-column items-start self-stretch">
+                                                        <!-- notification text -->
+                                                        <div class="flex justify-start items-start self-stretch pad--right--24">
+                                                            <p data-notification-text class="fs--14 fw4 lh--20 black">
+                                                                Item ‘xyz’ is removed due to lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus mi
+                                                            </p>
+                                                        </div>
+                                                        <!-- /notification text -->
+
+                                                        <!-- bottom contents -->
+                                                        <div class="flex justify-between items-end self-stretch gap--8 pt2">
+                                                            <!-- notification time -->
+                                                            <div class="flex justify-start items-end">
+                                                                <span data-notification-time class="fs--12 fw4 lh--18 col--pale-sky">
+                                                                    Just now
+                                                                </span>
+                                                            </div>
+                                                            <!-- /notification time -->
+
+                                                            <!-- notification actions -->
+                                                            <div class="flex items-end gap--8">
+                                                                <!-- cta -->
+                                                                <a href="javascript: void(0)" data-cta class="flex items-center gap--2 pointer transition--all transition--200 transition--ease-in-out">
+                                                                    <span data-text class="fs--12 fw5 lh--18 transition--all transition--200 transition--ease-in-out">
+                                                                        Dismiss
+                                                                    </span>
+                                                                    <span>
+                                                                        <img data-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/arrow-up-right.svg" alt="" class="w--16 h--16 transition--all transition--200 transition--ease-in-out">
+                                                                    </span>
+                                                                </a>
+                                                                <!-- /cta -->
+
+                                                                <!-- link -->
+                                                                <a href="javascript: void(0)" data-link class="flex items-center gap--2 pointer transition--all transition--200 transition--ease-in-out">
+                                                                    <span data-text class="fs--12 fw5 lh--18 transition--all transition--200 transition--ease-in-out">
+                                                                        Detail
+                                                                    </span>
+                                                                    <span>
+                                                                        <img data-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/arrow-up-right.svg" alt="" class="w--16 h--16 transition--all transition--200 transition--ease-in-out">
+                                                                    </span>
+                                                                </a>
+                                                                <!-- /link -->
+                                                            </div>
+                                                            <!-- /notification actions -->
+                                                        </div>
+                                                        <!-- /bottom contents -->
+                                                    </div>
+                                                    <!-- /text contents -->
+                                                </div>
+                                                <!-- /notification content -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /notification card -->
+
+                                    <!-- notification card - default (data-is-read="true") -->
+                                    <div data-notification-card data-is-read="true" data-notification-type="default" data-single-icon-only="false" data-small-icon-bg-off="false" data-has-title="true" data-has-close-btn="true" data-has-cta="true" data-has-link="true" data-theme="light" class="flex justify-center items-center self-stretch bb br--col--athens-gray2">
+                                        <div data-notification-card-body class="flex flex-column items-start self-stretch flex--max gap--16 pad--y--12 pad--x--8">
+                                            <div class="flex justify-start items-start self-stretch gap--20 relative">
+                                                <!-- notification close -->
+                                                <a data-close-notification-card class="flex justify-center items-center w--24 h--24 pointer absolute top-0 right-0">
+                                                    <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/close.svg" alt="" class="w--16 h--16 filter--col--mischka">
+                                                </a>
+                                                <!-- /notification close -->
+
+                                                <!-- notification icons -->
+                                                <div data-notification-icon-container class="flex justify-center items-center w--40 h--40 br--8 relative">
+                                                    <img data-big-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/order-1.svg" alt="" class="w--24 h--24">
+
+                                                    <!-- small icon -->
+                                                    <div data-small-icon-container class="flex justify-center items-center w--22 h--22 br--8 absolute">
+                                                        <img data-small-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/info-square.svg" alt="" class="w--16 h--16">
+                                                    </div>
+                                                    <!-- /small icon -->
+                                                </div>
+                                                <!-- /notification icons -->
+
+                                                <!-- notification content -->
+                                                <div class="flex flex-column items-start self-stretch flex--max">
+                                                    <!-- title -->
+                                                    <div data-notification-title-wrapper class="flex flex-column items-start self-stretch gap--8 pad--right--24 pb2">
+                                                        <h4 data-notification-title class="fs--14 fw6 lh--20">
+                                                            Expiring custom request from @Mango
+                                                        </h4>
+                                                    </div>
+                                                    <!-- /title -->
+
+                                                    <!-- text contents -->
+                                                    <div class="flex flex-column items-start self-stretch">
+                                                        <!-- notification text -->
+                                                        <div class="flex justify-start items-start self-stretch pad--right--24">
+                                                            <p data-notification-text class="fs--14 fw4 lh--20 black">
+                                                                Item ‘xyz’ is removed due to lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus mi
+                                                            </p>
+                                                        </div>
+                                                        <!-- /notification text -->
+
+                                                        <!-- bottom contents -->
+                                                        <div class="flex justify-between items-end self-stretch gap--8 pt2">
+                                                            <!-- notification time -->
+                                                            <div class="flex justify-start items-end">
+                                                                <span data-notification-time class="fs--12 fw4 lh--18 col--pale-sky">
+                                                                    Just now
+                                                                </span>
+                                                            </div>
+                                                            <!-- /notification time -->
+
+                                                            <!-- notification actions -->
+                                                            <div class="flex items-end gap--8">
+                                                                <!-- cta -->
+                                                                <a href="javascript: void(0)" data-cta class="flex items-center gap--2 pointer transition--all transition--200 transition--ease-in-out">
+                                                                    <span data-text class="fs--12 fw5 lh--18 transition--all transition--200 transition--ease-in-out">
+                                                                        Dismiss
+                                                                    </span>
+                                                                    <span>
+                                                                        <img data-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/arrow-up-right.svg" alt="" class="w--16 h--16 transition--all transition--200 transition--ease-in-out">
+                                                                    </span>
+                                                                </a>
+                                                                <!-- /cta -->
+
+                                                                <!-- link -->
+                                                                <a href="javascript: void(0)" data-link class="flex items-center gap--2 pointer transition--all transition--200 transition--ease-in-out">
+                                                                    <span data-text class="fs--12 fw5 lh--18 transition--all transition--200 transition--ease-in-out">
+                                                                        Detail
+                                                                    </span>
+                                                                    <span>
+                                                                        <img data-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/arrow-up-right.svg" alt="" class="w--16 h--16 transition--all transition--200 transition--ease-in-out">
+                                                                    </span>
+                                                                </a>
+                                                                <!-- /link -->
+                                                            </div>
+                                                            <!-- /notification actions -->
+                                                        </div>
+                                                        <!-- /bottom contents -->
+                                                    </div>
+                                                    <!-- /text contents -->
+                                                </div>
+                                                <!-- /notification content -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /notification card -->
+                                    
+                                    <!-- notification card - default (data-is-read="true", data-single-icon-only="true") -->
+                                    <div data-notification-card data-is-read="true" data-notification-type="default" data-single-icon-only="true" data-small-icon-bg-off="false" data-has-title="true" data-has-close-btn="true" data-has-cta="true" data-has-link="true" data-theme="light" class="flex justify-center items-center self-stretch bb br--col--athens-gray2">
+                                        <div data-notification-card-body class="flex flex-column items-start self-stretch flex--max gap--16 pad--y--12 pad--x--8">
+                                            <div class="flex justify-start items-start self-stretch gap--20 relative">
+                                                <!-- notification close -->
+                                                <a data-close-notification-card class="flex justify-center items-center w--24 h--24 pointer absolute top-0 right-0">
+                                                    <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/close.svg" alt="" class="w--16 h--16 filter--col--mischka">
+                                                </a>
+                                                <!-- /notification close -->
+
+                                                <!-- notification icons -->
+                                                <div data-notification-icon-container class="flex justify-center items-center w--40 h--40 br--8 relative">
+                                                    <img data-big-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/order-1.svg" alt="" class="w--24 h--24">
+
+                                                    <!-- small icon -->
+                                                    <div data-small-icon-container class="flex justify-center items-center w--22 h--22 br--8 absolute">
+                                                        <img data-small-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/info-square.svg" alt="" class="w--16 h--16">
+                                                    </div>
+                                                    <!-- /small icon -->
+                                                </div>
+                                                <!-- /notification icons -->
+
+                                                <!-- notification content -->
+                                                <div class="flex flex-column items-start self-stretch flex--max">
+                                                    <!-- title -->
+                                                    <div data-notification-title-wrapper class="flex flex-column items-start self-stretch gap--8 pad--right--24 pb2">
+                                                        <h4 data-notification-title class="fs--14 fw6 lh--20">
+                                                            Expiring custom request from @Mango
+                                                        </h4>
+                                                    </div>
+                                                    <!-- /title -->
+
+                                                    <!-- text contents -->
+                                                    <div class="flex flex-column items-start self-stretch">
+                                                        <!-- notification text -->
+                                                        <div class="flex justify-start items-start self-stretch pad--right--24">
+                                                            <p data-notification-text class="fs--14 fw4 lh--20 black">
+                                                                Item ‘xyz’ is removed due to lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus mi
+                                                            </p>
+                                                        </div>
+                                                        <!-- /notification text -->
+
+                                                        <!-- bottom contents -->
+                                                        <div class="flex justify-between items-end self-stretch gap--8 pt2">
+                                                            <!-- notification time -->
+                                                            <div class="flex justify-start items-end">
+                                                                <span data-notification-time class="fs--12 fw4 lh--18 col--pale-sky">
+                                                                    Just now
+                                                                </span>
+                                                            </div>
+                                                            <!-- /notification time -->
+
+                                                            <!-- notification actions -->
+                                                            <div class="flex items-end gap--8">
+                                                                <!-- cta -->
+                                                                <a href="javascript: void(0)" data-cta class="flex items-center gap--2 pointer transition--all transition--200 transition--ease-in-out">
+                                                                    <span data-text class="fs--12 fw5 lh--18 transition--all transition--200 transition--ease-in-out">
+                                                                        Dismiss
+                                                                    </span>
+                                                                    <span>
+                                                                        <img data-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/arrow-up-right.svg" alt="" class="w--16 h--16 transition--all transition--200 transition--ease-in-out">
+                                                                    </span>
+                                                                </a>
+                                                                <!-- /cta -->
+
+                                                                <!-- link -->
+                                                                <a href="javascript: void(0)" data-link class="flex items-center gap--2 pointer transition--all transition--200 transition--ease-in-out">
+                                                                    <span data-text class="fs--12 fw5 lh--18 transition--all transition--200 transition--ease-in-out">
+                                                                        Detail
+                                                                    </span>
+                                                                    <span>
+                                                                        <img data-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/arrow-up-right.svg" alt="" class="w--16 h--16 transition--all transition--200 transition--ease-in-out">
+                                                                    </span>
+                                                                </a>
+                                                                <!-- /link -->
+                                                            </div>
+                                                            <!-- /notification actions -->
+                                                        </div>
+                                                        <!-- /bottom contents -->
+                                                    </div>
+                                                    <!-- /text contents -->
+                                                </div>
+                                                <!-- /notification content -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /notification card -->
+                                    
+                                    <!-- notification card - default (data-is-read="true", data-has-title="false") -->
+                                    <div data-notification-card data-is-read="true" data-notification-type="default" data-single-icon-only="false" data-small-icon-bg-off="false" data-has-title="false" data-has-close-btn="true" data-has-cta="true" data-has-link="true" data-theme="light" class="flex justify-center items-center self-stretch bb br--col--athens-gray2">
+                                        <div data-notification-card-body class="flex flex-column items-start self-stretch flex--max gap--16 pad--y--12 pad--x--8">
+                                            <div class="flex justify-start items-start self-stretch gap--20 relative">
+                                                <!-- notification close -->
+                                                <a data-close-notification-card class="flex justify-center items-center w--24 h--24 pointer absolute top-0 right-0">
+                                                    <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/close.svg" alt="" class="w--16 h--16 filter--col--mischka">
+                                                </a>
+                                                <!-- /notification close -->
+
+                                                <!-- notification icons -->
+                                                <div data-notification-icon-container class="flex justify-center items-center w--40 h--40 br--8 relative">
+                                                    <img data-big-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/order-1.svg" alt="" class="w--24 h--24">
+
+                                                    <!-- small icon -->
+                                                    <div data-small-icon-container class="flex justify-center items-center w--22 h--22 br--8 absolute">
+                                                        <img data-small-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/info-square.svg" alt="" class="w--16 h--16">
+                                                    </div>
+                                                    <!-- /small icon -->
+                                                </div>
+                                                <!-- /notification icons -->
+
+                                                <!-- notification content -->
+                                                <div class="flex flex-column items-start self-stretch flex--max">
+                                                    <!-- title -->
+                                                    <div data-notification-title-wrapper class="flex flex-column items-start self-stretch gap--8 pad--right--24 pb2">
+                                                        <h4 data-notification-title class="fs--14 fw6 lh--20">
+                                                            Expiring custom request from @Mango
+                                                        </h4>
+                                                    </div>
+                                                    <!-- /title -->
+
+                                                    <!-- text contents -->
+                                                    <div class="flex flex-column items-start self-stretch">
+                                                        <!-- notification text -->
+                                                        <div class="flex justify-start items-start self-stretch pad--right--24">
+                                                            <p data-notification-text class="fs--14 fw4 lh--20 black">
+                                                                Item ‘xyz’ is removed due to lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus mi
+                                                            </p>
+                                                        </div>
+                                                        <!-- /notification text -->
+
+                                                        <!-- bottom contents -->
+                                                        <div class="flex justify-between items-end self-stretch gap--8 pt2">
+                                                            <!-- notification time -->
+                                                            <div class="flex justify-start items-end">
+                                                                <span data-notification-time class="fs--12 fw4 lh--18 col--pale-sky">
+                                                                    Just now
+                                                                </span>
+                                                            </div>
+                                                            <!-- /notification time -->
+
+                                                            <!-- notification actions -->
+                                                            <div class="flex items-end gap--8">
+                                                                <!-- cta -->
+                                                                <a href="javascript: void(0)" data-cta class="flex items-center gap--2 pointer transition--all transition--200 transition--ease-in-out">
+                                                                    <span data-text class="fs--12 fw5 lh--18 transition--all transition--200 transition--ease-in-out">
+                                                                        Dismiss
+                                                                    </span>
+                                                                    <span>
+                                                                        <img data-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/arrow-up-right.svg" alt="" class="w--16 h--16 transition--all transition--200 transition--ease-in-out">
+                                                                    </span>
+                                                                </a>
+                                                                <!-- /cta -->
+
+                                                                <!-- link -->
+                                                                <a href="javascript: void(0)" data-link class="flex items-center gap--2 pointer transition--all transition--200 transition--ease-in-out">
+                                                                    <span data-text class="fs--12 fw5 lh--18 transition--all transition--200 transition--ease-in-out">
+                                                                        Detail
+                                                                    </span>
+                                                                    <span>
+                                                                        <img data-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/arrow-up-right.svg" alt="" class="w--16 h--16 transition--all transition--200 transition--ease-in-out">
+                                                                    </span>
+                                                                </a>
+                                                                <!-- /link -->
+                                                            </div>
+                                                            <!-- /notification actions -->
+                                                        </div>
+                                                        <!-- /bottom contents -->
+                                                    </div>
+                                                    <!-- /text contents -->
+                                                </div>
+                                                <!-- /notification content -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /notification card -->
+                                    
+                                    <!-- notification card - default (data-is-read="true", data-has-close-btn="false") -->
+                                    <div data-notification-card data-is-read="true" data-notification-type="default" data-single-icon-only="false" data-small-icon-bg-off="false" data-has-title="true" data-has-close-btn="false" data-has-cta="true" data-has-link="true" data-theme="light" class="flex justify-center items-center self-stretch bb br--col--athens-gray2">
+                                        <div data-notification-card-body class="flex flex-column items-start self-stretch flex--max gap--16 pad--y--12 pad--x--8">
+                                            <div class="flex justify-start items-start self-stretch gap--20 relative">
+                                                <!-- notification close -->
+                                                <a data-close-notification-card class="flex justify-center items-center w--24 h--24 pointer absolute top-0 right-0">
+                                                    <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/close.svg" alt="" class="w--16 h--16 filter--col--mischka">
+                                                </a>
+                                                <!-- /notification close -->
+
+                                                <!-- notification icons -->
+                                                <div data-notification-icon-container class="flex justify-center items-center w--40 h--40 br--8 relative">
+                                                    <img data-big-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/order-1.svg" alt="" class="w--24 h--24">
+
+                                                    <!-- small icon -->
+                                                    <div data-small-icon-container class="flex justify-center items-center w--22 h--22 br--8 absolute">
+                                                        <img data-small-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/info-square.svg" alt="" class="w--16 h--16">
+                                                    </div>
+                                                    <!-- /small icon -->
+                                                </div>
+                                                <!-- /notification icons -->
+
+                                                <!-- notification content -->
+                                                <div class="flex flex-column items-start self-stretch flex--max">
+                                                    <!-- title -->
+                                                    <div data-notification-title-wrapper class="flex flex-column items-start self-stretch gap--8 pad--right--24 pb2">
+                                                        <h4 data-notification-title class="fs--14 fw6 lh--20">
+                                                            Expiring custom request from @Mango
+                                                        </h4>
+                                                    </div>
+                                                    <!-- /title -->
+
+                                                    <!-- text contents -->
+                                                    <div class="flex flex-column items-start self-stretch">
+                                                        <!-- notification text -->
+                                                        <div class="flex justify-start items-start self-stretch pad--right--24">
+                                                            <p data-notification-text class="fs--14 fw4 lh--20 black">
+                                                                Item ‘xyz’ is removed due to lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus mi
+                                                            </p>
+                                                        </div>
+                                                        <!-- /notification text -->
+
+                                                        <!-- bottom contents -->
+                                                        <div class="flex justify-between items-end self-stretch gap--8 pt2">
+                                                            <!-- notification time -->
+                                                            <div class="flex justify-start items-end">
+                                                                <span data-notification-time class="fs--12 fw4 lh--18 col--pale-sky">
+                                                                    Just now
+                                                                </span>
+                                                            </div>
+                                                            <!-- /notification time -->
+
+                                                            <!-- notification actions -->
+                                                            <div class="flex items-end gap--8">
+                                                                <!-- cta -->
+                                                                <a href="javascript: void(0)" data-cta class="flex items-center gap--2 pointer transition--all transition--200 transition--ease-in-out">
+                                                                    <span data-text class="fs--12 fw5 lh--18 transition--all transition--200 transition--ease-in-out">
+                                                                        Dismiss
+                                                                    </span>
+                                                                    <span>
+                                                                        <img data-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/arrow-up-right.svg" alt="" class="w--16 h--16 transition--all transition--200 transition--ease-in-out">
+                                                                    </span>
+                                                                </a>
+                                                                <!-- /cta -->
+
+                                                                <!-- link -->
+                                                                <a href="javascript: void(0)" data-link class="flex items-center gap--2 pointer transition--all transition--200 transition--ease-in-out">
+                                                                    <span data-text class="fs--12 fw5 lh--18 transition--all transition--200 transition--ease-in-out">
+                                                                        Detail
+                                                                    </span>
+                                                                    <span>
+                                                                        <img data-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/arrow-up-right.svg" alt="" class="w--16 h--16 transition--all transition--200 transition--ease-in-out">
+                                                                    </span>
+                                                                </a>
+                                                                <!-- /link -->
+                                                            </div>
+                                                            <!-- /notification actions -->
+                                                        </div>
+                                                        <!-- /bottom contents -->
+                                                    </div>
+                                                    <!-- /text contents -->
+                                                </div>
+                                                <!-- /notification content -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /notification card -->
+                                    
+                                    <!-- notification card - default (data-is-read="true", data-has-cta="false") -->
+                                    <div data-notification-card data-is-read="true" data-notification-type="default" data-single-icon-only="false" data-small-icon-bg-off="false" data-has-title="true" data-has-close-btn="true" data-has-cta="false" data-has-link="true" data-theme="light" class="flex justify-center items-center self-stretch bb br--col--athens-gray2">
+                                        <div data-notification-card-body class="flex flex-column items-start self-stretch flex--max gap--16 pad--y--12 pad--x--8">
+                                            <div class="flex justify-start items-start self-stretch gap--20 relative">
+                                                <!-- notification close -->
+                                                <a data-close-notification-card class="flex justify-center items-center w--24 h--24 pointer absolute top-0 right-0">
+                                                    <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/close.svg" alt="" class="w--16 h--16 filter--col--mischka">
+                                                </a>
+                                                <!-- /notification close -->
+
+                                                <!-- notification icons -->
+                                                <div data-notification-icon-container class="flex justify-center items-center w--40 h--40 br--8 relative">
+                                                    <img data-big-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/order-1.svg" alt="" class="w--24 h--24">
+
+                                                    <!-- small icon -->
+                                                    <div data-small-icon-container class="flex justify-center items-center w--22 h--22 br--8 absolute">
+                                                        <img data-small-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/info-square.svg" alt="" class="w--16 h--16">
+                                                    </div>
+                                                    <!-- /small icon -->
+                                                </div>
+                                                <!-- /notification icons -->
+
+                                                <!-- notification content -->
+                                                <div class="flex flex-column items-start self-stretch flex--max">
+                                                    <!-- title -->
+                                                    <div data-notification-title-wrapper class="flex flex-column items-start self-stretch gap--8 pad--right--24 pb2">
+                                                        <h4 data-notification-title class="fs--14 fw6 lh--20">
+                                                            Expiring custom request from @Mango
+                                                        </h4>
+                                                    </div>
+                                                    <!-- /title -->
+
+                                                    <!-- text contents -->
+                                                    <div class="flex flex-column items-start self-stretch">
+                                                        <!-- notification text -->
+                                                        <div class="flex justify-start items-start self-stretch pad--right--24">
+                                                            <p data-notification-text class="fs--14 fw4 lh--20 black">
+                                                                Item ‘xyz’ is removed due to lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus mi
+                                                            </p>
+                                                        </div>
+                                                        <!-- /notification text -->
+
+                                                        <!-- bottom contents -->
+                                                        <div class="flex justify-between items-end self-stretch gap--8 pt2">
+                                                            <!-- notification time -->
+                                                            <div class="flex justify-start items-end">
+                                                                <span data-notification-time class="fs--12 fw4 lh--18 col--pale-sky">
+                                                                    Just now
+                                                                </span>
+                                                            </div>
+                                                            <!-- /notification time -->
+
+                                                            <!-- notification actions -->
+                                                            <div class="flex items-end gap--8">
+                                                                <!-- cta -->
+                                                                <a href="javascript: void(0)" data-cta class="flex items-center gap--2 pointer transition--all transition--200 transition--ease-in-out">
+                                                                    <span data-text class="fs--12 fw5 lh--18 transition--all transition--200 transition--ease-in-out">
+                                                                        Dismiss
+                                                                    </span>
+                                                                    <span>
+                                                                        <img data-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/arrow-up-right.svg" alt="" class="w--16 h--16 transition--all transition--200 transition--ease-in-out">
+                                                                    </span>
+                                                                </a>
+                                                                <!-- /cta -->
+
+                                                                <!-- link -->
+                                                                <a href="javascript: void(0)" data-link class="flex items-center gap--2 pointer transition--all transition--200 transition--ease-in-out">
+                                                                    <span data-text class="fs--12 fw5 lh--18 transition--all transition--200 transition--ease-in-out">
+                                                                        Detail
+                                                                    </span>
+                                                                    <span>
+                                                                        <img data-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/arrow-up-right.svg" alt="" class="w--16 h--16 transition--all transition--200 transition--ease-in-out">
+                                                                    </span>
+                                                                </a>
+                                                                <!-- /link -->
+                                                            </div>
+                                                            <!-- /notification actions -->
+                                                        </div>
+                                                        <!-- /bottom contents -->
+                                                    </div>
+                                                    <!-- /text contents -->
+                                                </div>
+                                                <!-- /notification content -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /notification card -->
+                                    
+                                    <!-- notification card - default (data-is-read="true", data-has-link="false") -->
+                                    <div data-notification-card data-is-read="true" data-notification-type="default" data-single-icon-only="false" data-small-icon-bg-off="false" data-has-title="true" data-has-close-btn="true" data-has-cta="true" data-has-link="false" data-theme="light" class="flex justify-center items-center self-stretch bb br--col--athens-gray2">
+                                        <div data-notification-card-body class="flex flex-column items-start self-stretch flex--max gap--16 pad--y--12 pad--x--8">
+                                            <div class="flex justify-start items-start self-stretch gap--20 relative">
+                                                <!-- notification close -->
+                                                <a data-close-notification-card class="flex justify-center items-center w--24 h--24 pointer absolute top-0 right-0">
+                                                    <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/close.svg" alt="" class="w--16 h--16 filter--col--mischka">
+                                                </a>
+                                                <!-- /notification close -->
+
+                                                <!-- notification icons -->
+                                                <div data-notification-icon-container class="flex justify-center items-center w--40 h--40 br--8 relative">
+                                                    <img data-big-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/order-1.svg" alt="" class="w--24 h--24">
+
+                                                    <!-- small icon -->
+                                                    <div data-small-icon-container class="flex justify-center items-center w--22 h--22 br--8 absolute">
+                                                        <img data-small-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/info-square.svg" alt="" class="w--16 h--16">
+                                                    </div>
+                                                    <!-- /small icon -->
+                                                </div>
+                                                <!-- /notification icons -->
+
+                                                <!-- notification content -->
+                                                <div class="flex flex-column items-start self-stretch flex--max">
+                                                    <!-- title -->
+                                                    <div data-notification-title-wrapper class="flex flex-column items-start self-stretch gap--8 pad--right--24 pb2">
+                                                        <h4 data-notification-title class="fs--14 fw6 lh--20">
+                                                            Expiring custom request from @Mango
+                                                        </h4>
+                                                    </div>
+                                                    <!-- /title -->
+
+                                                    <!-- text contents -->
+                                                    <div class="flex flex-column items-start self-stretch">
+                                                        <!-- notification text -->
+                                                        <div class="flex justify-start items-start self-stretch pad--right--24">
+                                                            <p data-notification-text class="fs--14 fw4 lh--20 black">
+                                                                Item ‘xyz’ is removed due to lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus mi
+                                                            </p>
+                                                        </div>
+                                                        <!-- /notification text -->
+
+                                                        <!-- bottom contents -->
+                                                        <div class="flex justify-between items-end self-stretch gap--8 pt2">
+                                                            <!-- notification time -->
+                                                            <div class="flex justify-start items-end">
+                                                                <span data-notification-time class="fs--12 fw4 lh--18 col--pale-sky">
+                                                                    Just now
+                                                                </span>
+                                                            </div>
+                                                            <!-- /notification time -->
+
+                                                            <!-- notification actions -->
+                                                            <div class="flex items-end gap--8">
+                                                                <!-- cta -->
+                                                                <a href="javascript: void(0)" data-cta class="flex items-center gap--2 pointer transition--all transition--200 transition--ease-in-out">
+                                                                    <span data-text class="fs--12 fw5 lh--18 transition--all transition--200 transition--ease-in-out">
+                                                                        Dismiss
+                                                                    </span>
+                                                                    <span>
+                                                                        <img data-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/arrow-up-right.svg" alt="" class="w--16 h--16 transition--all transition--200 transition--ease-in-out">
+                                                                    </span>
+                                                                </a>
+                                                                <!-- /cta -->
+
+                                                                <!-- link -->
+                                                                <a href="javascript: void(0)" data-link class="flex items-center gap--2 pointer transition--all transition--200 transition--ease-in-out">
+                                                                    <span data-text class="fs--12 fw5 lh--18 transition--all transition--200 transition--ease-in-out">
+                                                                        Detail
+                                                                    </span>
+                                                                    <span>
+                                                                        <img data-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/arrow-up-right.svg" alt="" class="w--16 h--16 transition--all transition--200 transition--ease-in-out">
+                                                                    </span>
+                                                                </a>
+                                                                <!-- /link -->
+                                                            </div>
+                                                            <!-- /notification actions -->
+                                                        </div>
+                                                        <!-- /bottom contents -->
+                                                    </div>
+                                                    <!-- /text contents -->
+                                                </div>
+                                                <!-- /notification content -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /notification card -->
+                                </div>
+                            </div>
+                            <!-- /scrollable notifications container panel -->
+                        </div>
+                        <!-- /tab content container -->
+                    </div>
+                    <!-- /tab content containers wrapper -->
+                </div>
+                <!-- /tab main wrapper -->
+            </div>
+            <!-- /notifications body -->
+
+            <!-- notifications footer -->
+            <div class="flex flex-column self-stretch items-start gap--10 w-100 pa2 bg--col--athens-gray--70--variation-2 bg--blur--25 absolute left-0 bottom-0 z-1">
+                <!-- mark all notifactions as read button -->
+                 <a href="javascript: void(0)" data-button-behavior="mark-all-notification-read" class="inline-flex items-center gap--2 pa2 br--6 hover--bg--col--ebony--10 transition--all transition--200 transition--ease-in-out">
+                    <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/check-done-01.svg" alt="" class="w--16 h--16 filter--col--oxford-blue">
+                    <span class="fs--12 fw5 lh--18 col--oxford-blue">
+                        Mark all as read
+                    </span>
+                 </a>
+                <!-- /mark all notifactions as read button -->
+            </div>
+            <!-- /notifications footer -->
+        </div>
+        <!-- /notification panel container -->
+    </body>
+</html>
