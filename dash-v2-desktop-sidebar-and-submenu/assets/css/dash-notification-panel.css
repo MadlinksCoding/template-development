@@ -5,6 +5,14 @@
 /* Dashboard Submenu (Notifications Container & Cards) : Custom Styles */
 [data-scrollable-notification-panel] { height: calc(100vh - 6.5rem); }
 
+/* Notifications - Show/Hide Elements based on data attribute values */
+[data-notification-card][data-single-icon-only="true"] [data-small-icon-container] { display: none; }
+[data-notification-card][data-has-title="false"] [data-notification-title-wrapper] { display: none; }
+[data-notification-card][data-has-close-btn="false"] [data-close-notification-card] { display: none; }
+[data-notification-card][data-has-cta="false"] [data-cta] { display: none; }
+[data-notification-card][data-has-link="false"] [data-link] { display: none; }
+
+/* Notification Style - Default */
 [data-notification-card] { border-left-width: 3px; border-left-style: solid; border-left-color: var(--color-gull-gray, #98A2B3); }
 [data-notification-card] [data-notification-card-body] { background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.90) 100%), linear-gradient(0deg, rgba(152, 162, 179, 0.15) 0%, rgba(152, 162, 179, 0.15) 100%), rgba(255, 255, 255, 0.90); }
 [data-notification-card] [data-notification-icon-container] { background: rgba(152, 162, 179, 0.10); }
@@ -12,3 +20,58 @@
 [data-notification-card] [data-small-icon-container] { background-color: var(--color-gull-gray, #98A2B3); bottom: -0.563rem; right: -0.563rem; }
 [data-notification-card] [data-notification-icon-container] [data-small-icon] { filter: brightness(0) saturate(100%) invert(99%) sepia(99%) saturate(0%) hue-rotate(176deg) brightness(107%) contrast(100%); opacity: 0.9; }
 [data-notification-card] [data-notification-title] { color: var(--color-oxford-blue, #344054); }
+[data-notification-card] [data-cta] [data-text] { color: var(--color-oxford-blue, #344054); }
+[data-notification-card] [data-cta] [data-icon] { filter: brightness(0) saturate(100%) invert(22%) sepia(31%) saturate(534%) hue-rotate(179deg) brightness(93%) contrast(90%); }
+[data-notification-card] [data-cta]:hover [data-text] { color: var(--color-blue-ribbon, #155EEF); }
+[data-notification-card] [data-cta]:hover [data-icon] { filter: brightness(0) saturate(100%) invert(37%) sepia(57%) saturate(6169%) hue-rotate(214deg) brightness(91%) contrast(106%); }
+[data-notification-card] [data-link] [data-text] { color: var(--color-gull-gray, #98A2B3); }
+[data-notification-card] [data-link] [data-icon] { filter: brightness(0) saturate(100%) invert(72%) sepia(6%) saturate(782%) hue-rotate(179deg) brightness(91%) contrast(83%); }
+[data-notification-card] [data-link]:hover [data-text] { color: var(--color-blue-ribbon, #155EEF); }
+[data-notification-card] [data-link]:hover [data-icon] { filter: brightness(0) saturate(100%) invert(37%) sepia(57%) saturate(6169%) hue-rotate(214deg) brightness(91%) contrast(106%); }
+
+/* Notification Style - Info */
+[data-notification-type="info"] { border-left-color: var(--color-bright-turquoise, #22CCEE); }
+[data-notification-type="info"] [data-notification-card-body] { background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.90) 100%), linear-gradient(0deg, rgba(34, 204, 238, 0.15) 0%, rgba(34, 204, 238, 0.15) 100%), rgba(255, 255, 255, 0.90); }
+[data-notification-type="info"] [data-notification-icon-container] { background: rgba(34, 204, 238, 0.10); }
+[data-notification-type="info"] [data-notification-icon-container] [data-big-icon] { filter: brightness(0) saturate(100%) invert(67%) sepia(37%) saturate(913%) hue-rotate(145deg) brightness(95%) contrast(97%); }
+[data-notification-type="info"] [data-small-icon-container] { background-color: var(--color-bright-turquoise, #22CCEE); }
+[data-notification-type="info"] [data-notification-title] { color: var(--color-bondi-blue, #088AB2); }
+[data-notification-type="info"] [data-link] [data-text] { color: var(--color-bondi-blue, #088AB2); }
+[data-notification-type="info"] [data-link] [data-icon] { filter: brightness(0) saturate(100%) invert(39%) sepia(96%) saturate(762%) hue-rotate(157deg) brightness(88%) contrast(94%); }
+
+/* Notification Style - Warning */
+[data-notification-type="warning"] { border-left-color: var(--color-my-sin, #FDB022); }
+[data-notification-type="warning"] [data-notification-card-body] { background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.90) 100%), linear-gradient(0deg, rgba(253, 176, 34, 0.15) 0%, rgba(253, 176, 34, 0.15) 100%), rgba(255, 255, 255, 0.90); }
+[data-notification-type="warning"] [data-notification-icon-container] { background: rgba(253, 176, 34, 0.10); }
+[data-notification-type="warning"] [data-notification-icon-container] [data-big-icon] { filter: brightness(0) saturate(100%) invert(81%) sepia(13%) saturate(5746%) hue-rotate(341deg) brightness(102%) contrast(98%); }
+[data-notification-type="warning"] [data-small-icon-container] { background-color: var(--color-my-sin, #FDB022); }
+[data-notification-type="warning"] [data-notification-title] { color: var(--color-vesuvius, #B54708); }
+[data-notification-type="warning"] [data-link] [data-text] { color: var(--color-vesuvius, #B54708); }
+[data-notification-type="warning"] [data-link] [data-icon] { filter: brightness(0) saturate(100%) invert(24%) sepia(100%) saturate(1622%) hue-rotate(10deg) brightness(98%) contrast(94%); }
+
+/* Notification Style - Destructive */
+[data-notification-type="destructive"] { border-left-color: var(--color-vermilion, #FF4405); }
+[data-notification-type="destructive"] [data-notification-card-body] { background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.90) 100%), linear-gradient(0deg, rgba(255, 68, 5, 0.10) 0%, rgba(255, 68, 5, 0.10) 100%), rgba(255, 255, 255, 0.90); }
+[data-notification-type="destructive"] [data-notification-icon-container] { background: rgba(255, 68, 5, 0.10); }
+[data-notification-type="destructive"] [data-notification-icon-container] [data-big-icon] { filter: brightness(0) saturate(100%) invert(42%) sepia(53%) saturate(6174%) hue-rotate(356deg) brightness(98%) contrast(105%); }
+[data-notification-type="destructive"] [data-small-icon-container] { background-color: var(--color-vermilion, #FF4405); }
+[data-notification-type="destructive"] [data-notification-title] { color: var(--color-totem-pole, #97180C); }
+[data-notification-type="destructive"] [data-link] [data-text] { color: var(--color-totem-pole, #97180C); }
+[data-notification-type="destructive"] [data-link] [data-icon] { filter: brightness(0) saturate(100%) invert(12%) sepia(50%) saturate(4284%) hue-rotate(351deg) brightness(115%) contrast(102%); }
+
+/* Notification Style - Success */
+[data-notification-type="success"] { border-left-color: var(--color-turquoise, #2ED3B7); }
+[data-notification-type="success"] [data-notification-card-body] { background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.90) 100%), linear-gradient(0deg, rgba(46, 211, 183, 0.15) 0%, rgba(46, 211, 183, 0.15) 100%), rgba(255, 255, 255, 0.90); }
+[data-notification-type="success"] [data-notification-icon-container] { background: rgba(46, 211, 183, 0.10); }
+[data-notification-type="success"] [data-notification-icon-container] [data-big-icon] { filter: brightness(0) saturate(100%) invert(71%) sepia(99%) saturate(349%) hue-rotate(109deg) brightness(87%) contrast(88%); }
+[data-notification-type="success"] [data-small-icon-container] { background-color: var(--color-turquoise, #2ED3B7); }
+[data-notification-type="success"] [data-notification-title] { color: var(--color-genoa, #107569); }
+[data-notification-type="success"] [data-link] [data-text] { color: var(--color-genoa, #107569); }
+[data-notification-type="success"] [data-link] [data-icon] { filter: brightness(0) saturate(100%) invert(34%) sepia(63%) saturate(508%) hue-rotate(123deg) brightness(94%) contrast(97%); }
+
+/* Notification Style - Read Messages */
+[data-notification-card][data-is-read="true"] [data-notification-card-body],
+[data-notification-card][data-notification-type="info"][data-is-read="true"] [data-notification-card-body],
+[data-notification-card][data-notification-type="warning"][data-is-read="true"] [data-notification-card-body],
+[data-notification-card][data-notification-type="destructive"][data-is-read="true"] [data-notification-card-body],
+[data-notification-card][data-notification-type="success"][data-is-read="true"] [data-notification-card-body] { background: none; }

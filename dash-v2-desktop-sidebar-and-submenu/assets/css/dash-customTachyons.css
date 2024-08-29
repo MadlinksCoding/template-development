@@ -5,6 +5,7 @@
  * Tachyons Guidelines: https://knowledge.madlinkscoding.com/guide-customtachyons/
  */
 
+/* Some Overrides for Development Purpose (Not to be added) */
  html {
   font-size: 16px !important;
 }
@@ -18,13 +19,23 @@
   width: 0;
   height: 0;
 }
+/* .Some Overrides for Development Purpose (Not to be added) */
 
 /* Colors */
+.col--blue-ribbon { color: var(--color-blue-ribbon, #155EEF); }
 .col--ebony--variation-2 { color: var(--color-ebony-2, #0C111D); }
 .col--fiord { color: var(--color-fiord, #475467); }
 .col--pale-sky { color: var(--color-pale-sky, #667085); }
 .col--oxford-blue { color: var(--color-oxford-blue, #344054); }
 .col--gull-gray { color: var(--color-gull-gray, #98A2B3); }
+.col--bright-turquoise { color: var(--color-bright-turquoise, #22CCEE); }
+.col--bondi-blue { color: var(--color-bondi-blue, #088AB2); }
+.col--my-sin { color: var(--color-my-sin, #FDB022); }
+.col--vesuvius { color: var(--color-vesuvius, #B54708); }
+.col--vermilion { color: var(--color-vermilion, #FF4405); }
+.col--totem-pole { color: var(--color-totem-pole, #97180C); }
+.col--turquoise { color: var(--color-turquoise, #2ED3B7); }
+.col--genoa { color: var(--color-genoa, #107569); }
 
 
 /* Background Colors*/
@@ -36,6 +47,7 @@
 .bg--col--athens-gray--70 { background-color: rgba(249, 250, 251, 0.70); }
 .bg--col--athens-gray--70--variation-2 { background-color: rgba(234, 236, 240, 0.70); }
 .bg--col--gull-gray { background-color: var(--color-gull-gray, #98A2B3); }
+.bg--col--bright-turquoise { background-color: var(--color-bright-turquoise, #22CCEE); }
 
 
 /* Background Gradients*/
@@ -45,6 +57,7 @@
 .br--col--mischka { border-color: var(--color-mischka, #D0D5DD); }
 .br--col--athens-gray2 { border-color: var(--color-athens-gray2); }
 .br--col--gull-gray { border-color: var(--color-gull-gray, #98A2B3); }
+.br--col--bright-turquoise { border-color: var(--color-bright-turquoise, #22CCEE); }
 
 
 /* Fill Colors */
@@ -54,13 +67,18 @@
 
 
 /* Filter Colors */
+.filter--col--blue-ribbon { filter: brightness(0) saturate(100%) invert(37%) sepia(57%) saturate(6169%) hue-rotate(214deg) brightness(91%) contrast(106%); }
 .filter--col--mischka { filter: brightness(0) saturate(100%) invert(87%) sepia(8%) saturate(203%) hue-rotate(178deg) brightness(99%) contrast(87%); }
 .filter--col--pale-sky { filter: brightness(0) saturate(100%) invert(45%) sepia(13%) saturate(594%) hue-rotate(183deg) brightness(92%) contrast(92%); }
 .filter--col--oxford-blue { filter: brightness(0) saturate(100%) invert(22%) sepia(31%) saturate(534%) hue-rotate(179deg) brightness(93%) contrast(90%); }
 .filter--col--gull-gray { filter: brightness(0) saturate(100%) invert(72%) sepia(6%) saturate(782%) hue-rotate(179deg) brightness(91%) contrast(83%); }
+.filter--col--bright-turquoise { filter: brightness(0) saturate(100%) invert(67%) sepia(37%) saturate(913%) hue-rotate(145deg) brightness(95%) contrast(97%); }
+.filter--col--bondi-blue { filter: brightness(0) saturate(100%) invert(39%) sepia(96%) saturate(762%) hue-rotate(157deg) brightness(88%) contrast(94%); }
 
 
 /* Hover Filter Colors */
+.hov--filter--col--blue-ribbon:hover { filter: brightness(0) saturate(100%) invert(37%) sepia(57%) saturate(6169%) hue-rotate(214deg) brightness(91%) contrast(106%); }
+.hover--parent--child--col--blue-ribbon:hover .hov--filter--col--blue-ribbon { filter: brightness(0) saturate(100%) invert(37%) sepia(57%) saturate(6169%) hue-rotate(214deg) brightness(91%) contrast(106%); }
 
 
 /* Caret Colors */
@@ -74,6 +92,8 @@
 /* Hover Colors */
 .hover--col--oxford-blue:hover { color: var(--color-oxford-blue, #344054); }
 .hover--parent--child--col--oxford-blue:hover .hover--col--oxford-blue { color: var(--color-oxford-blue, #344054); }
+.hover--col--blue-ribbon:hover { color: var(--color-blue-ribbon, #155EEF); }
+.hover--parent--child--col--blue-ribbon:hover .hover--col--blue-ribbon { color: var(--color-blue-ribbon, #155EEF); }
 
 
 /* Font Size */
