@@ -19,7 +19,7 @@
         <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/customTachyons.css" />
 
         <!-- Dashboard Sidebar Custom Style -->
-        <link rel="stylesheet" href="assets/css/dashboard-sidebar.css" />
+        <link rel="stylesheet" href="assets/css/dashboard-styles.css" />
     </head>
     <body>
         <!-- main wrapper -->
@@ -379,8 +379,46 @@
                                         <div data-scrollable-notification-panel class="flex flex-column self-stretch bg--col--white--50 bg--blur--50 overflow-y-auto">
                                             <div data-notifications-container class="flex flex-column self-stretch items-start gap--2 pb5">
                                                 <!-- notification card -->
-                                                <div data-notification-card class="flex justify-center items-center self-stretch bb br--col--athens-gray2">
-                                                    a
+                                                <div data-notification-card data-status="default" data-is-read="false" data-has-title="true" data-has-close-btn="true" data-has-cta="true" data-has-link="true" data-theme="light" class="flex justify-center items-center self-stretch bb br--col--athens-gray2">
+                                                    <div data-notification-card-body class="flex flex-column items-start self-stretch flex--max gap--16 pad--y--12 pad--x--8">
+                                                        <div class="flex justify-start items-start self-stretch gap--20">
+                                                            <!-- notification icons -->
+                                                            <div data-notification-icon-container class="flex justify-center items-center w--40 h--40 br--8 relative">
+                                                                <img data-big-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/blog-01.svg" alt="" class="w--24 h--24">
+
+                                                                <!-- small icon -->
+                                                                <div data-small-icon-container class="flex justify-center items-center w--22 h--22 br--8 absolute">
+                                                                    <img data-small-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/setting.svg" alt="" class="w--16 h--16">
+                                                                </div>
+                                                                <!-- /small icon -->
+                                                            </div>
+                                                            <!-- /notification icons -->
+
+                                                            <!-- notification content -->
+                                                            <div class="flex flex-column items-start self-stretch flex--max">
+                                                                <!-- title -->
+                                                                <div data-notification-title-wrapper class="flex flex-column items-start self-stretch gap--8 pad--right--24 pb2">
+                                                                    <h4 data-notification-title class="fs--14 fw6 lh--20">
+                                                                        Bank details required
+                                                                    </h4>
+                                                                </div>
+                                                                <!-- /title -->
+
+                                                                <!-- text contents -->
+                                                                <div class="flex flex-column items-start self-stretch">
+                                                                    <!-- notification text -->
+                                                                    <div class="flex justify-start items-start self-stretch pad--right--24">
+                                                                        <p data-notification-text class="fs--14 fw4 lh--20 black">
+                                                                            To ensure seamless transactions, please complete your bank information.
+                                                                        </p>
+                                                                    </div>
+                                                                    <!-- /notification text -->
+                                                                </div>
+                                                                <!-- /text contents -->
+                                                            </div>
+                                                            <!-- /notification content -->
+                                                        </div>
+                                                    </div>
                                                 </div>
                                                 <!-- /notification card -->
                                             </div>
