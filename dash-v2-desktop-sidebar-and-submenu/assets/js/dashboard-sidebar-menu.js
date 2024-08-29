@@ -24,9 +24,15 @@ class DashMenu {
 				screenSizeMobile: false, // if device screensize is mobile
 
 				dashNavElSelector: '[data-dashboard-main-nav]', // dash menu main selector
+
 				floatingPanelWrapperSelector: '[data-floating-panel-wrapper]', // floating panel wrapper selector
 				floatingPanelSelector: '[data-floating-panel]', // floating panel wrapper selector
 				floatingPanelTriggerSelector: '[data-floating-panel-trigger]', // floating panel trigger selector
+
+				notificationsPanelTriggerSelector: '[data-notifications-panel-trigger]', // notifications panel trigger selector
+				newNotificationsStatusSelector: '[data-new-notifications-status]', // new notifications status selector
+				notificationsPanelSelector: '[data-notifications-container]', // notifications panel selector
+
 				mainMenuSelector: '[data-main-menu-item]', // dash main menu items selector
 				subMenuSelector: '[data-submenu-item]', // dash sub menu items selector
 
@@ -35,6 +41,10 @@ class DashMenu {
 				floatingPanelWrapperEl: '', // floating panel wrapper element
 				floatingPanelEl: '', // floating panel element
 				floatingPanelTriggerEl: '', // floating panel trigger element
+
+				notificationsPanelTriggerEl: '[data-notifications-panel-trigger]', // notifications panel trigger element
+				newNotificationsStatusEl: '[data-new-notifications-status]', // new notifications status element
+				notificationsPanelEl: '[data-notifications-container]', // notifications panel element
 
 				currentMainMenu: '', // current main menu element
 				currentMainMenuTitle: '', // current main menu title
@@ -107,6 +117,12 @@ class DashMenu {
 		_self.options.floatingPanelWrapperEl !== '' ? (
 			_self.options.floatingPanelTriggerEl.querySelector('a[data-floating-panel-trigger-btn]').dataset.isActive = 'false',
 			_self.options.floatingPanelEl.dataset.isActive = 'false'
+		) : '';
+
+		// hide notification panel (if applicable)
+		_self.options.notificationsPanelEl !== '' ? (
+			_self.options.notificationsPanelTriggerEl.dataset.isActive = 'false',
+			_self.options.notificationsPanelEl.setAttribute('hidden', true)
 		) : '';
 	}
 
@@ -373,6 +389,54 @@ class DashMenu {
 
 	/** 
 	 * 
+	 * @method handleNotificationPanel 
+	 * @description method to handle notification panel behavior
+	 * 
+	 */
+	handleNotificationPanel() {
+		let _self = this;
+
+		// handle click on trigger (attach event only once)
+		if ( _self.options.notificationsPanelTriggerEl.classList.contains('js-event-handler-attached') ) {
+			return;
+		}
+		else {
+			_self.options.notificationsPanelTriggerEl.addEventListener('click', (event) => {
+				//console.log('Navigation Panel trigger click');
+
+				if ( _self.options.notificationsPanelTriggerEl.dataset.isActive !== 'true' ) {
+					_self.resetMenu();
+
+					_self.options.notificationsPanelTriggerEl.dataset.isActive = 'true';
+					_self.options.notificationsPanelEl.removeAttribute('hidden');
+					_self.options.newNotificationsStatusEl.setAttribute('hidden', true);
+				}
+				else {
+					_self.resetMenu();
+				}
+			});
+
+			_self.options.notificationsPanelTriggerEl.classList.add('js-event-handler-attached');
+		}
+
+		// handle click on back button (attach event only once)
+		if ( _self.options.notificationsPanelEl.querySelector('[data-back-button]').classList.contains('js-event-handler-attached') ) {
+			return;
+		}
+		else {
+			_self.options.notificationsPanelEl.querySelector('[data-back-button]').addEventListener('click', (event) => {
+				//console.log('Floating trigger click');
+
+				_self.resetMenu();
+			});
+
+			_self.options.notificationsPanelEl.querySelector('[data-back-button]').classList.add('js-event-handler-attached');
+		}
+	}
+
+
+	/** 
+	 * 
 	 * @method init
 	 * @description Initializes the main DashMenu App by calling additional UI methods as well as core methods.
 	 * 
@@ -386,7 +450,7 @@ class DashMenu {
 
 		//console.log(this.options);
 
-		// check if dah nav is present in the DOM, otherwise exit
+		// check if dash nav is present in the DOM, otherwise exit
 		if ( document.querySelector(this.options.dashNavElSelector) !== null && document.querySelector(this.options.dashNavElSelector) !== 'undefined') {
 			console.log('%c Valid "Dashboard Main Nav Found", Start Application.', 'background: #fb5ba2; color: white; padding: 8px; border-radius: 4px;');
 
@@ -409,6 +473,15 @@ class DashMenu {
 
 				// call floating menu method
 				this.handleFloatingMenu();
+			}
+
+			// handle notification panel (if the panel exists in DOM)
+			if ( document.querySelector(this.options.notificationsPanelSelector) !== null && document.querySelector(this.options.notificationsPanelSelector) !== 'undefined') {
+				this.options.notificationsPanelTriggerEl = document.querySelector(this.options.notificationsPanelTriggerSelector);
+				this.options.newNotificationsStatusEl = document.querySelector(this.options.newNotificationsStatusSelector);
+				this.options.notificationsPanelEl = document.querySelector(this.options.notificationsPanelSelector);
+
+				this.handleNotificationPanel();
 			}
 			
 			//console.log(this.options);
