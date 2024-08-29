@@ -53,19 +53,19 @@
                         <!-- cta controls -->
                         <div class="flex justify-center items-center self-stretch gap--8 pv0 ph1">
                             <!-- log out -->
-                            <a href="javascript: void(0)" title="" class="flex justify-center items-center gap--12 w--32 h--32 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
+                            <a href="javascript: void(0)" title="" class="flex justify-center items-center gap--12 w--32 h--32 br--6 hover--bg--col--brilliant-rose--10 pointer transition--all transition--200 transition--ease-in-out">
                                 <!-- render_svg_icon( 'logout-1' ) -->
                                 <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/logout-1.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
                             </a>
                             <!-- /log out -->
 
                             <!-- notification -->
-                            <a href="javascript: void(0)" title="" class="flex justify-center items-center gap--2 w--32 h--32 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out relative">
+                            <a data-notifications-panel-trigger data-is-active="false" title="" class="flex justify-center items-center gap--2 w--32 h--32 br--6 hover--bg--col--brilliant-rose--10 pointer transition--all transition--200 transition--ease-in-out relative">
                                 <!-- render_svg_icon( 'bell-03' ) -->
-                                <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/bell-03.svg" alt="" class="w--24 h--24 filter--col--pale-sky">
+                                <img data-notifications-panel-trigger-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/bell-03.svg" alt="" class="w--24 h--24 filter--col--pale-sky">
 
                                 <!-- status indicator -->
-                                <span class="flex w--7 h--7 bg--col--hollywood-cerise br--10 absolute top--03 right--03">&nbsp;</span>
+                                <span data-new-notifications-status class="flex w--7 h--7 bg--col--hollywood-cerise br--10 absolute top--03 right--03">&nbsp;</span>
                                 <!-- /status indicator -->
                             </a>
                             <!-- /notification -->
@@ -269,7 +269,7 @@
                 <!-- profile, notifications and submenu panels container (keep profile/model panel, notification panel and  all submenu containers inside this div) -->
                 <div>
                     <!-- notification panel container (same template shall be used in mobile also) -->
-                    <div data-notifications-container class="flex flex-column items-start gap--0 w--480 vh-100 overflow-hidden bg--col--athens-gray--70 bg--blur--25 bl br--col--mischka sh--sidebar fixed top-0 left--90 left--90--px z-1 transition--all transition--150 transition--ease-in-out">
+                    <div data-notifications-container class="flex flex-column items-start gap--0 w--480 vh-100 overflow-hidden bg--col--athens-gray--70 bg--blur--25 bl br--col--mischka sh--sidebar fixed top-0 left--90 left--90--px z-1 transition--all transition--150 transition--ease-in-out" hidden>
                         <!-- notifications header -->
                         <div class="flex items-center self-stretch gap--8 pa2 pb0">
                             <!-- title -->
