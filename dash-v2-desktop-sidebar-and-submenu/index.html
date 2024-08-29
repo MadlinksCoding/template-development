@@ -381,7 +381,13 @@
                                                 <!-- notification card -->
                                                 <div data-notification-card data-status="default" data-is-read="false" data-has-title="true" data-has-close-btn="true" data-has-cta="true" data-has-link="true" data-theme="light" class="flex justify-center items-center self-stretch bb br--col--athens-gray2">
                                                     <div data-notification-card-body class="flex flex-column items-start self-stretch flex--max gap--16 pad--y--12 pad--x--8">
-                                                        <div class="flex justify-start items-start self-stretch gap--20">
+                                                        <div class="flex justify-start items-start self-stretch gap--20 relative">
+                                                            <!-- notification close -->
+                                                            <a data-close-notification-card class="flex justify-center items-center w--24 h--24 pointer absolute top-0 right-0">
+                                                                <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/close.svg" alt="" class="w--16 h--16 filter--col--mischka">
+                                                            </a>
+                                                            <!-- /notification close -->
+
                                                             <!-- notification icons -->
                                                             <div data-notification-icon-container class="flex justify-center items-center w--40 h--40 br--8 relative">
                                                                 <img data-big-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/blog-01.svg" alt="" class="w--24 h--24">
@@ -413,6 +419,44 @@
                                                                         </p>
                                                                     </div>
                                                                     <!-- /notification text -->
+
+                                                                    <!-- bottom contents -->
+                                                                    <div class="flex justify-between items-end self-stretch gap--8 pt2">
+                                                                        <!-- notification time -->
+                                                                        <div class="flex justify-start items-end">
+                                                                            <span data-notification-time class="fs--12 fw4 lh--18 col--pale-sky">
+                                                                                Just now
+                                                                            </span>
+                                                                        </div>
+                                                                        <!-- /notification time -->
+
+                                                                        <!-- notification actions -->
+                                                                        <div class="flex items-end gap--8">
+                                                                            <!-- cta -->
+                                                                            <a href="javascript: void(0)" data-cta class="flex items-center gap--2 pointer transition--all transition--200 transition--ease-in-out">
+                                                                                <span class="fs--12 fw5 lh--18 col--oxford-blue">
+                                                                                    Dismiss
+                                                                                </span>
+                                                                                <span>
+                                                                                    <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/arrow-up-right.svg" alt="" class="w--16 h--16 filter--col--oxford-blue">
+                                                                                </span>
+                                                                            </a>
+                                                                            <!-- /cta -->
+
+                                                                            <!-- cta -->
+                                                                            <a href="javascript: void(0)" data-link class="flex items-center gap--2 pointer transition--all transition--200 transition--ease-in-out">
+                                                                                <span class="fs--12 fw5 lh--18 col--gull-gray">
+                                                                                    Detail
+                                                                                </span>
+                                                                                <span>
+                                                                                    <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/arrow-up-right.svg" alt="" class="w--16 h--16 filter--col--gull-gray">
+                                                                                </span>
+                                                                            </a>
+                                                                            <!-- /cta -->
+                                                                        </div>
+                                                                        <!-- /notification actions -->
+                                                                    </div>
+                                                                    <!-- /bottom contents -->
                                                                 </div>
                                                                 <!-- /text contents -->
                                                             </div>
