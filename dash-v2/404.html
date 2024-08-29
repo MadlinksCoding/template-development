@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Template</title>
+
+    <!-- Poppins Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Tachyons Style -->
+    <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/main.css" />
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" />
+    <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/theme.css" />
+    <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/customTachyons.css" />
+
+    <!-- /* Custom Tachyons */ -->
+    <style>
+        /* Font */
+        .ff-poppins { font-family: 'Poppins'; }
+
+        /* Background Gradients */
+        .bg--gradient-black { background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0.10) -0.17%, rgba(0, 0, 0, 0.50) 100%); }
+
+        /* background Color */
+        .bg--col--gray-900 { background-color: var(--color-gray-900,#101828); }
+
+        /* Colors */
+        .col--gray-warm-100 { color: var(--gray-warm-100, #F5F5F4); }
+        .col--gray-warm-300 { color: var(--gray-warm-300, #D7D3D0); }
+        .col--gray-950 { color: var(--color-gray-950,#0C111D); }
+
+        /* Max Width */
+        .max--w--1280 { max-width: 80rem; /* max width 1280px */ } /* confirmed in use */ /* pixel conversion correct */
+        .max--w--768 { max-width: 48rem; /* max width 768px */ } /* confirmed in use */ /* pixel conversion correct */
+
+        /* Height */
+        .h--screen { height: 100vh; }
+        .h--60 { height: 3.75rem; }
+
+        /* Padding */
+        .pad--x--32 { padding-left: 2rem; padding-right: 2rem; /* padding left right 32px */ } /* confirmed in use */ /* pixel conversion correct */
+
+        /* Margin */
+        .m--0 { margin: 0rem; }
+
+        /* Gap */
+        .gap--12 { gap: 0.75rem; /* gap 12px */ } /* confirmed in use */ /* pixel conversion correct */
+
+        /* Top */
+        .top--15 { top: 0.938rem; }
+
+        /* Bottom */ 
+        .bottom--90 { bottom: 5.625rem; }
+
+        /* Right */
+        .right--63 { right: 3.938rem; }
+
+        /* Left */
+        .left--61 { left: 3.813rem; } 
+
+        /* Black Button style with data attribute */
+        button[data-button-color="black"] { border-color: var(--color-spring-green); background-color: var(--color-gray-900,#101828); }
+        button[data-button-color="black"]:hover { background-color: var(--color-spring-green); }
+        button[data-button-color="black"]:hover [data-button-text-wrap] span { color: var(--color-gray-900,#101828); }
+
+        /* Green Button style with data attribute */
+        button[data-button-color="green"] { background-color: var(--color-spring-green); border-color: var(--color-spring-green); }
+        button[data-button-color="green"]:hover { background-color: var(--color-gray-900,#101828); }
+        button[data-button-color="green"]:hover [data-button-text-wrap] span { color: var(--color-spring-green); }
+    </style>
+
+    <!-- Tablet Stylesheet -->
+    <link rel="stylesheet" href="assets/css/tablet.css" media="screen and (min-width: 768px) and (max-width: 1024px)">
+     
+    <!-- Mobile Stylesheet -->
+    <link rel="stylesheet" href="assets/css/mobile.css" media="screen and (min-width: 490px) and (max-width: 767px)">
+
+    <!-- Mobile Portrait Stylesheet -->
+    <link rel="stylesheet" href="assets/css/mobile-portrait.css" media="screen and (max-width: 489px)">
+</head>
+
+<body class="ff-poppins">
+    <div class="db absolute top-0 left-0 w-100" style="background: url(assets/img/model-profile-bg.png) no-repeat; background-size: cover; height: 100vh;"></div>
+    <div class="w-100 bg--gradient-black bg--blur--50 w-100 h--screen flex justify-center">
+        <div class="w-100 max--w--1280 pad--x--32 flex justify-center items-center gap--32 h-100 relative">
+            <div class="flex flex-column gap--48 justify-center items-center">
+                <!-- Heading -->
+                <div class="max--w--768 flex flex-column gap--24 items-center">
+                    <h1 class="ff-poppins fs--48 lh--60 fw6 tracked--neg--0-96 tc col--gray-warm-100 m--0">Page not found</h1>
+                    <p class="ff-poppins fs--20 fw4 lh--30 tc col--gray-warm-300 m--0">Sorry, the page you are looking for doesn't exist.<br />Here are some helpful links:</p>
+                </div>
+                <!-- End Heading -->
+
+                <!-- Action -->
+                <div class="flex gap--12">
+                    <button class="h--60 ba" data-button-color="black">
+                        <div data-button-text-wrap class="pad--x--24 pad--y--8 flex justify-center items-center gap--10">
+                            <span class="ff-poppins fs--16 fw5 lh--24 col--spring-green">Go back</span>
+                        </div>
+                    </button>
+                    <button class="h--60 ba" data-button-color="green">
+                        <div data-button-text-wrap class="pad--x--24 pad--y--8 flex justify-center items-center gap--10">
+                            <span class="ff-poppins fs--16 fw5 lh--24 col--gray-950">Take Me Home</span>
+                        </div>
+                    </button>
+                </div>
+                <!-- End Action -->
+            </div>
+
+            <!-- Right Top Image -->
+            <div class="absolute top--15 right--63">
+                <img src="assets/img/404-top-img.png" alt="" />
+            </div>
+
+            <!-- Left Bottom Image -->
+            <div class="absolute bottom--90 left--61">
+                <img src="assets/img/404-bottom-img.png" alt="" />
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
