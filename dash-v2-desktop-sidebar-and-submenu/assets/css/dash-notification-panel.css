@@ -6,7 +6,7 @@
 [data-notifications-panel-trigger][data-is-active="true"] { background: rgba(251, 91, 162, 0.1); }
 [data-notifications-panel-trigger][data-is-active="true"] [data-notifications-panel-trigger-icon] { filter: brightness(0) saturate(100%) invert(29%) sepia(98%) saturate(5809%) hue-rotate(325deg) brightness(92%) contrast(121%); }
 
-[data-notifications-container][hidden] { display: flex; opacity: 0; visibility: hidden; pointer-events: none; transform: translateX(2rem); }
+[data-notifications-container][hidden] { display: flex; opacity: 0; visibility: hidden; pointer-events: none; transform: translateX(-2rem); }
 [data-notifications-container] { opacity: 1; visibility: visible; pointer-events: all; transform: translateX(0rem); }
 
 [data-scrollable-notification-panel] { height: calc(100vh - 6.5rem); }
