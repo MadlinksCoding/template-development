@@ -3,7 +3,7 @@
  */
 
 /* Dashboard Submenu : Custom Styles */
-[data-submenu-container][hidden] { display: flex; opacity: 0; visibility: hidden; pointer-events: none; transform: translateX(2rem); }
+[data-submenu-container][hidden] { display: flex; opacity: 0; visibility: hidden; pointer-events: none; transform: translateX(-2rem); }
 [data-submenu-container] { opacity: 1; visibility: visible; pointer-events: all; transform: translateX(0rem); }
 [data-submenu] [data-submenu-item] [data-arrow] { transform: translateX(-1rem); opacity: 0; pointer-events: none; }
 [data-submenu] [data-submenu-item][data-has-submenu="true"]:hover [data-arrow] { transform: translateX(0rem); opacity: 1; pointer-events: none; }
