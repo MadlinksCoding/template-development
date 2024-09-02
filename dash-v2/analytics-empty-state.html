@@ -50,7 +50,11 @@
         /* Background Style */
         .bg--no-repeat { background-repeat: no-repeat; }
         .bg--right-top { background-position: right top; }
-        .bg--size-contain { background-size:contain; }
+        .bg--size-auto { background-size: auto; }
+        .bg--fixed { background-attachment: fixed; }
+
+        /* Backdrop Filter */
+        .bg--blur--600 { -webkit-backdrop-filter: blur(600px); backdrop-filter: blur(600px); } /* confirmed in use */
 
         /* Border Colors */
         .br--col--gray-300 { border-color: var(--color-gray-300, #D0D5DD); } /* confirmed in use */
@@ -71,7 +75,7 @@
 
         /* Filter Blur */
         .filter--blur--60 { filter: blur(60px); -webkit-filter: blur(60px); }
-        .filter--blur--345 { filter: blur(345px); -webkit-filter: blur(345px); }
+        .filter--blur--500 { filter: blur(500px); -webkit-filter: blur(600px); }
 
         /* Grid */
         .grid--cols-3 { grid-template-columns: repeat(3, 1fr); }
@@ -111,9 +115,9 @@
 </head>
 
 <body class="bg--col--athens-gray2 relative">
-    <div class="w-100 h-100 absolute top-0 right-0 filter--blur--345 bg--no-repeat bg--right-top bg--center-top-responsive-tablet bg--center-top-responsive-mobile bg--center-top-responsive-mobile-portrait bg--size-contain bg--size-auto-responsive-tablet bg--size-auto-responsive-mobile bg--size-auto-responsive-mobile-portrait" style="background-image: url(assets/img/gradient-bg.svg);">
+    <div class="w-100 h-100 absolute top-0 right-0 filter--blur--500 bg--no-repeat bg--right-top bg--center-top-responsive-tablet bg--center-top-responsive-mobile bg--center-top-responsive-mobile-portrait bg--size-auto bg--fixed" style="background-image: url(assets/img/gradient-bg.svg);">
     </div>
-    <div class="bg--blur--25">
+    <div class="bg--blur--600">
         <div class="pad--40 flex flex-column gap--24 bg--gradient-white pad--y--24-responsive-tablet pad--x--0-responsive-tablet pad--top--64-responsive-mobile pad--top--64-responsive-mobile-portrait pad--bottom--24-responsive-mobile pad--bottom--24-responsive-mobile-portrait pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait pad--x--0-responsive-mobile-portrait ">
             <!-- Top Page Title Section -->
             <div class="w-100 flex gap--24 items-start justify-between gap--16--responsive-tablet gap--16--responsive-mobile gap--16--responsive-mobile-portrait flex--column-responsive-tablet pad--x--16-responsive-tablet pad--x--16-responsive-mobile pad--x--16-responsive-mobile-portrait flex--column-responsive-mobile flex--column-responsive-mobile-portrait">
@@ -129,7 +133,7 @@
             <!-- End Top Page Title Section -->
 
             <!-- Overview / Insight Section -->
-            <div class="flex flex-column gap--24 bg-white-40 bg--blur--25 sh--6">
+            <div data-section="overview" class="flex flex-column gap--24 bg-white-40 bg--blur--25 sh--6">
                 <!-- Section Header -->
                 <div class="pad--16 pad--bottom--0 flex justify-between items-center flex--column-responsive-mobile-portrait items--start-responsive-mobile-portrait">
                     <!-- Title -->
