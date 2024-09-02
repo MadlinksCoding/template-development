@@ -107,7 +107,7 @@
 
 
         /* Mozila Firefox Specific CSS */
-        [data-container-bg-fixed]:-moz-read-only { opacity: 0.4; }
+        [data-container-bg-fixed]:-moz-read-only { opacity: 0.3; }
 
     </style>
 
@@ -122,20 +122,25 @@
 </head>
 
 <body class="bg--col--athens-gray2 relative">
+    <!-- Background fixed container -->
     <div data-container-bg-fixed class="w-100 h-100 absolute top-0 right-0 filter--blur--500 bg--no-repeat bg--right-top bg--center-top-responsive-tablet bg--center-top-responsive-mobile bg--center-top-responsive-mobile-portrait bg--size-auto fixed transform--3d" style="background-image: url(assets/img/gradient-bg.svg);">
-    </div>
-    <div class="bg--blur--25">
-        <div class="pad--40 flex flex-column gap--24 bg--gradient-white pad--y--24-responsive-tablet pad--x--0-responsive-tablet pad--top--64-responsive-mobile pad--top--64-responsive-mobile-portrait pad--bottom--24-responsive-mobile pad--bottom--24-responsive-mobile-portrait pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait pad--x--0-responsive-mobile-portrait ">
+    </div> <!-- End Background fixed container -->
+
+    <!-- Main Container -->
+    <div data-section="main-container" class="bg--blur--25">
+        <!-- Inner Container -->
+        <div data-section="inner-container" class="pad--40 flex flex-column gap--24 bg--gradient-white pad--y--24-responsive-tablet pad--x--0-responsive-tablet pad--top--64-responsive-mobile pad--top--64-responsive-mobile-portrait pad--bottom--24-responsive-mobile pad--bottom--24-responsive-mobile-portrait pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait pad--x--0-responsive-mobile-portrait ">
             <!-- Top Page Title Section -->
-            <div class="w-100 flex gap--24 items-start justify-between gap--16--responsive-tablet gap--16--responsive-mobile gap--16--responsive-mobile-portrait flex--column-responsive-tablet pad--x--16-responsive-tablet pad--x--16-responsive-mobile pad--x--16-responsive-mobile-portrait flex--column-responsive-mobile flex--column-responsive-mobile-portrait">
+            <div data-section="page-title" class="w-100 flex gap--24 items-start justify-between gap--16--responsive-tablet gap--16--responsive-mobile gap--16--responsive-mobile-portrait flex--column-responsive-tablet pad--x--16-responsive-tablet pad--x--16-responsive-mobile pad--x--16-responsive-mobile-portrait flex--column-responsive-mobile flex--column-responsive-mobile-portrait">
                 <h1 class="ff-poppins fs--36 lh--44 fw6 tracked--neg--0-72 col--gray-950 m--0">Welcome back, Jenny!</h1>
-                <div class="pad--16 flex flex-column justify-center items-end gap--10 flex-auto br--10 pad--0-responsive-tablet items--start-responsive-tablet pad--0-responsive-mobile pad--0-responsive-mobile-portrait items--start-responsive-mobile items--start-responsive-mobile-portrait">
+                <!-- New Quote Section -->
+                <div data-new-quote-section class="pad--16 flex flex-column justify-center items-end gap--10 flex-auto br--10 pad--0-responsive-tablet items--start-responsive-tablet pad--0-responsive-mobile pad--0-responsive-mobile-portrait items--start-responsive-mobile items--start-responsive-mobile-portrait">
                     <p class="fs--14 lh--20 tr col--gray-700 tl--responsive-mobile-portrait">“Those who flow as life flows know they need no other force.” ~ Lao Tzu</p>
                     <button class="flex items-center gap--2 group">
                         <span><img src="assets/icons/refresh-ccw-04.svg" alt="" class="hover--filter--col--blue--dark--600" /></span>
                         <span class="w-100 h-100 fs--12 fw5 lh--18 col--gray-700 hover--col--blue-dark-600">New Quote</span>
                     </button>
-                </div>
+                </div> <!-- End New Quote Section -->
             </div>
             <!-- End Top Page Title Section -->
 
@@ -485,8 +490,8 @@
             </div>
             <!-- End Trends Section -->
 
-        </div>
-    </div>
+        </div> <!-- End Inner Container -->
+    </div> <!-- End Main Container -->
 </body>
 
 </html>
