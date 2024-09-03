@@ -30,7 +30,9 @@
 
         /* Width */
         .w--14 { width: 0.875rem; /* width 14px */ } /* confirmed in use */ /* pixel conversion correct */
-        .w--952 { width: 59.5rem; /* width 952px */ } /* confirmed in use */ /* pixel conversion correct */
+
+        /* Max Width */
+        .max--w--952 { max-width: 59.5rem; /* width 952px */ } /* confirmed in use */ /* pixel conversion correct */
 
         /* Height */
         .h--screen { height: 100vh; }
@@ -134,9 +136,9 @@
         <!-- Popup Overlay Container -->
         <div data-section="popup-overlay" class="w-100 h-100 bg--white--25 bg--blur--10 fixed left-0 top-0 overflow-auto">
             <!-- Popup Container -->
-            <div data-section="popup-container" class="absolute left--50 transform--center overflow-auto pad--y--96">
+            <div data-section="popup-container" class="absolute left--50 transform--center overflow-auto pad--y--96 pad--y-0-responsive-tablet pad--y-0-responsive-mobile pad--y-0-responsive-mobile-portrait flex justify-center w-100">
                 <!-- Popup Inner -->
-                <div data-section="Popup-inner" class="w--952 bg-white-90 pad--24 pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait flex flex-column gap--16">
+                <div data-section="Popup-inner" class="w-100 max--w--952 bg-white-90 pad--24 pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait flex flex-column gap--16">
                     <!-- Popup Header -->
                     <div data-section="Popup-header" class="relative flex items-center justify-between gap--8 pad--x--16-responsive-mobile pad--x--16-responsive-mobile-portrait flex--column-responsive-mobile-portrait items--start-responsive-mobile-portrait">
                         <!-- Title -->
