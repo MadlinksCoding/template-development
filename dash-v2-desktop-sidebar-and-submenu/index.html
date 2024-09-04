@@ -268,6 +268,115 @@
 
                 <!-- profile, notifications and submenu panels container (keep profile/model panel, notification panel and  all submenu containers inside this div) -->
                 <div>
+                    <!-- profile panel container (same template shall be used in mobile also) -->
+                    <div data-profile-panel-container class="flex flex-column items-start gap--0 w--480 vh-100 overflow-hidden bg--col--athens-gray--70--variation-2  bg--blur--25 bl br--col--mischka sh--sidebar fixed top-0 left--90 left--90--px z-1 transition--all transition--150 transition--ease-in-out">
+                        <!-- back/close button -->
+                        <a data-back-button="" class="flex justify-center items-center pad--6 br--6 hover--bg--col--ebony--10 pointer absolute top--08 right--08 z-2 transition--background transition--200 transition--ease-in-out js-event-handler-attached">
+                            <!-- render_svg_icon( 'align-left-01' ) -->
+                            <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/align-left-01.svg" alt="" class="w--20 h--20 filter--col--athens-gray2">
+                        </a>
+                        <!-- back/close button -->
+
+                        <!-- profile top section -->
+                        <div data-profile-cover class="flex flex-column items-start self-stretch gap--16 bg-black-50 bg-center cover relative" style="background-image: url('assets/images/profile-bg.png');">
+                            <!-- profile info section -->
+                            <div data-profile-main class="flex flex-column items-start self-stretch gap--16 pa3 bg-black-50">
+                                <!-- profile pic, name, handles etc. -->
+                                <div data-profile-info class="flex items-start self-stretch gap--16 pad--right--24">
+                                    <!-- profile pic & status dot -->
+                                    <a href="javascript: void(0)" title="" class="flex w--56 h--56 br--30 relative">
+                                        <img src="assets/images/avatar.png" alt="" class="w--56 h--56 fit--cover br--30">
+        
+                                        <!-- status indicator -->
+                                        <span class="flex w--14 h--14 bg--col--spring-green br--7 absolute bottom-0 right-0">&nbsp;</span>
+                                        <!-- /status indicator -->
+                                    </a>
+                                    <!-- /profile pic & status dot -->
+
+                                    <!-- profile name & status -->
+                                    <div class="flex flex-column items-start flex--max gap--4">
+                                        <!-- top -->
+                                        <div class="flex items-center content-center self-stretch flex-wrap gap--8">
+                                            <!-- name & verified icon -->
+                                            <div class="flex items-center gap--8">
+                                                <div class="flex items-center gap--4">
+                                                    <!-- name -->
+                                                    <span data-profile-name class="flex fs--18 fw6 lh--28 white">
+                                                        Jelly FISH
+                                                    </span>
+                                                    <!-- /name -->
+
+                                                    <!-- verified tick -->
+                                                    <img src="assets/images/verified-tick.svg" alt="" class="w--16 h--16">
+                                                    <!-- /verified tick -->
+                                                </div>
+                                            </div>
+                                            <!-- /name & verified icon -->
+
+                                            <!-- profile handle -->
+                                            <div class="flex items-center">
+                                                <span data-profile-handle class="flex fs--12 fw4 lh--18 col--mischka">
+                                                    @jellyskitchen
+                                                </span>
+                                            </div>
+                                            <!-- /profile handle -->
+                                        </div>
+                                        <!-- /top -->
+
+                                        <!-- bottom -->
+                                        <div class="flex"><span class="white">Dropdown</span></div>
+                                        <!-- /bottom -->
+                                    </div>
+                                    <!-- /profile name & status -->
+                                </div>
+                                <!-- /profile pic, name, handles etc. -->
+
+                                <!-- profile status message -->
+                                <div class="flex flex-column items-start self-stretch gap--16">
+                                    <!-- repost to 'X' toggle wrapper -->
+                                    <div class="flex items-center gap--8">
+                                        <!-- toggle container -->
+                                        <div class="flex">
+                                            <!-- toggle switch (switch size = ['default', 'small'] / switch theme = ['default', 'light', 'dark']) -->
+                                            <label data-switch data-switch-size="small" data-switch-theme="dark" data-switch-for="" data-switch-dispatch-event="">
+                                                <input type="checkbox" value="switch_slide" name="switch_slide" class="dn">
+                                                <span data-switch-slide class="db"></span>
+                                            </label>
+                                            <!-- /toggle switch -->
+                                        </div>
+                                        <!-- /toggle container -->
+
+                                        <!-- toggle text -->
+                                        <div class="flex items-center gap--4">
+                                            <div class="flex items-center">
+                                                <span class="fs--12 fw4 lh--18 white">
+                                                    Repost status message to X Automatically
+                                                </span>
+                                            </div>
+
+                                            <div class="flex items-center">
+                                                <!-- tooltip -->
+                                                <div class="">
+                                                    <img src="assets/images/help-circle.svg" alt="" class="w--16 h--16 filter--col--pale-sky">
+                                                </div>
+                                                <!-- /tooltip -->
+                                            </div>
+                                        </div>
+                                        <!-- /toggle text -->
+                                    </div>
+                                    <!-- /repost to 'X' toggle wrapper -->
+
+                                    <!-- editable status message container -->
+                                    <!-- /editable status message container -->
+                                </div>
+                                <!-- /profile status message -->
+                            </div>
+                            <!-- /profile info section -->
+                        </div>
+                        <!-- /profile top section -->
+                    </div>
+                    <!-- /profile panel container -->
+
                     <!-- notification panel container (same template shall be used in mobile also) -->
                     <div data-notifications-container class="flex flex-column items-start gap--0 w--480 vh-100 overflow-hidden bg--col--athens-gray--70--variation-2  bg--blur--25 bl br--col--mischka sh--sidebar fixed top-0 left--90 left--90--px z-1 transition--all transition--150 transition--ease-in-out" hidden>
                         <!-- notifications header -->
