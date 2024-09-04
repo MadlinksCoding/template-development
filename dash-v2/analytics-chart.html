@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Empty State</title>
+
+    <!-- Poppins Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Tachyons Style -->
+    <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/main.css" />
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" />
+    <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/theme.css" />
+    <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/customTachyons.css" />
+
+    <!-- /* Custom Tachyons */ -->
+    <style>
+        /* Font */
+        .ff-poppins { font-family: 'Poppins'; }
+
+        /* Letter Spacing */ 
+        .tracked--neg--0-72 { letter-spacing: -0.045rem; /* letter-spacing -0.72px */ } /* confirmed in use */ /* pixel conversion correct */
+
+        /* Width */
+        .w--14 { width: 0.875rem; /* width 14px */ } /* confirmed in use */ /* pixel conversion correct */
+
+        /* Hright */
+        .h--14 { height: 0.875rem; /* height 14px */ } /* confirmed in use */ /* pixel conversion correct */
+
+        /* Colors */
+        .col--gray-500 { color: var(--color-gray-500,#667085); }
+        .col--gray-600 { color: var(--color-gray-600,#475467); }
+        .col--gray-700 { color: var(--color-gray-700,#344054); }
+        .col--gray-800 { color: var(--color-gray-800,#182230); }
+        .col--gray-900 { color: var(--color-gray-900,#101828); }
+        .col--gray-950 { color: var(--color-gray-950,#0C111D); }
+        .col--blue-dark-600 { color: var(--color-blue-dark-600, #155EEF); }
+        .col--blue-dark-700 { color: var(--color-blue-dark-700, #004EEB); }
+        .col--teal-700 { color: var(--Teal-700, #107569); }
+
+        /* Group Hover Colors */
+        .group:hover .hover--col--blue-dark-600 { color: var(--color-blue-dark-600, #155EEF); }
+
+        /* Background Gradients */
+        .bg--gradient-white { background: linear-gradient(180deg, rgba(255, 255, 255, 0.30) 0%, rgba(255, 255, 255, 0.00) 8%); }
+
+        /* Background Style */
+        .bg--no-repeat { background-repeat: no-repeat; }
+        .bg--right-top { background-position: right top; }
+        .bg--size-auto { background-size: auto; }
+        .bg--fixed { background-attachment: fixed; }
+
+        /* Backdrop Filter */
+        .bg--blur--600 { -webkit-backdrop-filter: blur(600px); backdrop-filter: blur(600px); } /* confirmed in use */
+
+        /* Border Colors */
+        .br--col--gray-300 { border-color: var(--color-gray-300, #D0D5DD); } /* confirmed in use */
+
+        /* Border Radius */
+        .br--2 { border-radius: 0.125rem; /* border-radius 2px */ } /* confirmed in use */ /* pixel conversion correct */
+
+        /* Box Shadow */
+        .sh--6 { box-shadow: 0px 4px 6px -2px rgba(16, 24, 40, 0.08); } /* confirmed in use */
+        .sh--7 { box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05); } /* confirmed in use */
+
+        /* clip path */
+        .cp--6 { clip-path: polygon(0% 0%, 100% 0, 105% 105%, 16% 105%); }
+
+        /* Filter Colors */
+        .filter--col--blue--dark--700 { filter: invert(17%) sepia(100%) saturate(5382%) hue-rotate(218deg) brightness(96%) contrast(105%); } /* confirmed in use */
+        .filter--col--gray--500 { filter: invert(44%) sepia(39%) saturate(203%) hue-rotate(181deg) brightness(91%) contrast(91%); } /* confirmed in use */
+
+        /* Filter Blur */
+        .filter--blur--60 { filter: blur(60px); -webkit-filter: blur(60px); }
+        .filter--blur--500 { filter: blur(345px); -webkit-filter: blur(345px); -moz-filter: blur(600px); }
+
+        /* Transform */
+        .transform--3d { transform: translate3d(0, 0, 0); -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); }
+
+        /* Grid */
+        .grid--cols-3 { grid-template-columns: repeat(3, 1fr); }
+
+        /* Grid Column */
+        .grid--col-span-2 { grid-column: span 2 / span 2; }
+
+        /* Padding */
+        .pad--16 { padding: 1rem; /* padding 16px */ }
+        .pad--bottom--0 { padding-bottom: 0rem; /* padding bottom 0px */ }
+        .pad--top--0 { padding-top: 0rem; /* padding top 0px */ }
+
+        /* Margin */
+        .m--0 { margin: 0rem; }
+
+        /* Group Hover State Colors */
+        .group:hover .hover--col--blue-dark-600 { color: var(--color-blue-dark-600, #155EEF); }
+        .hover--bg--col--blue-dark-700:hover { background-color: var(--color-blue-dark-700, #004EEB); }
+        .group:hover .hover--col--base-white { color: var(--Base-White, #FFF); }
+        .group:hover .hover--filter--col--white { filter: brightness(0) invert(1); }
+        .group:hover .hover--filter--col--blue--dark--600 { filter: invert(47%) sepia(94%) saturate(7493%) hue-rotate(220deg) brightness(103%) contrast(87%); }
+
+        /* Group Active States Colors */
+        .group:active .active--bg--col--gray-700 { background-color: var(--color-gray-700, #344054); }
+        .group:active .active--col--base-white { color: var(--Base-White, #FFF); }
+
+
+        /* Mozila Firefox Specific CSS */
+        [data-container-bg-fixed]:-moz-read-only { filter: blur(0px); -webkit-filter: blur(0px); -moz-filter: blur(0px); background-image: url(assets/img/gradient-bg-firefox.svg) !important; }
+
+    </style>
+
+    <!-- Tablet Stylesheet -->
+    <link rel="stylesheet" href="assets/css/tablet.css" media="screen and (min-width: 768px) and (max-width: 1024px)">
+     
+    <!-- Mobile Stylesheet -->
+    <link rel="stylesheet" href="assets/css/mobile.css" media="screen and (min-width: 490px) and (max-width: 767px)">
+
+    <!-- Mobile Portrait Stylesheet -->
+    <link rel="stylesheet" href="assets/css/mobile-portrait.css" media="screen and (max-width: 489px)">
+</head>
+
+<body class="bg--col--athens-gray2 relative">
+    <!-- Background fixed container -->
+    <div data-container-bg-fixed class="w-100 h-100 absolute top-0 right-0 filter--blur--500 bg--no-repeat bg--right-top bg--center-top-responsive-tablet bg--center-top-responsive-mobile bg--center-top-responsive-mobile-portrait bg--size-auto fixed transform--3d" style="background-image: url(assets/img/gradient-bg.svg);">
+    </div> <!-- End Background fixed container -->
+
+    <!-- Main Container -->
+    <div data-section="main-container" class="bg--blur--25">
+        <!-- Inner Container -->
+        <div data-section="inner-container" class="pad--40 flex flex-column gap--24 bg--gradient-white pad--y--24-responsive-tablet pad--x--0-responsive-tablet pad--top--64-responsive-mobile pad--top--64-responsive-mobile-portrait pad--bottom--24-responsive-mobile pad--bottom--24-responsive-mobile-portrait pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait pad--x--0-responsive-mobile-portrait ">
+            <!-- Top Page Title Section -->
+            <div data-section="page-title" class="w-100 flex gap--24 items-start justify-between gap--16--responsive-tablet gap--16--responsive-mobile gap--16--responsive-mobile-portrait flex--column-responsive-tablet pad--x--16-responsive-tablet pad--x--16-responsive-mobile pad--x--16-responsive-mobile-portrait flex--column-responsive-mobile flex--column-responsive-mobile-portrait">
+                <h1 class="ff-poppins fs--36 lh--44 fw6 tracked--neg--0-72 col--gray-950 m--0">Welcome back, Jenny!</h1>
+                <!-- New Quote Section -->
+                <div data-new-quote-section class="pad--16 flex flex-column justify-center items-end gap--10 flex-auto br--10 pad--0-responsive-tablet items--start-responsive-tablet pad--0-responsive-mobile pad--0-responsive-mobile-portrait items--start-responsive-mobile items--start-responsive-mobile-portrait">
+                    <p class="fs--14 lh--20 tr col--gray-700 tl--responsive-mobile-portrait">“Those who flow as life flows know they need no other force.” ~ Lao Tzu</p>
+                    <button class="flex items-center gap--2 group">
+                        <span><img src="assets/icons/refresh-ccw-04.svg" alt="" class="hover--filter--col--blue--dark--600" /></span>
+                        <span class="w-100 h-100 fs--12 fw5 lh--18 col--gray-700 hover--col--blue-dark-600">New Quote</span>
+                    </button>
+                </div> <!-- End New Quote Section -->
+            </div>
+            <!-- End Top Page Title Section -->
+
+            <!-- Overview / Insight Section -->
+            <div data-section="transparent-box" class="flex flex-column gap--24 bg-white-40 bg--blur--25 sh--6">
+                <!-- Section Header -->
+                <div data-section="transparent-section-header" class="pad--16 pad--bottom--0 flex justify-between items-center flex--column-responsive-mobile-portrait items--start-responsive-mobile-portrait">
+                    <!-- Title -->
+                    <div data-section="title" class="flex items-center gap--8 flex-auto">
+                        <span>
+                            <img src="assets/icons/dashboard_bar_chart.svg" alt="">
+                        </span>
+                        <h2 class="ff-poppins m--0 fs--20 fw5 lh--30 col--gray-500">Overview/Insight</h2>
+                    </div>
+                    <!-- End Title -->
+                    <!-- Last Date / Refresh -->
+                    <div class="flex justify-end gap--16 justify--between-responsive-mobile-portrait w--100-responsive-mobile-portrait">
+                        <span class="fs--14 lh--20 col--gray-500">Last updated at 11:24am</span>
+                        <button class="group bg-white cp--6 pad--4 pad--right--8 pad--left--15 flex gap--4 items-center justify-center hover--bg--col--blue-dark-700 active--bg--col--gray-700 active--col--base-white">
+                            <span><img src="assets/icons/refresh-ccw-04.svg" alt="" class="w--14 h--14 filter--col--blue--dark--700 hover--filter--col--white" /></span>
+                            <p class="fs--12 fw5 lh--18 col--gray-700 col--blue-dark-700 hover--col--base-white">Refresh</p>
+                        </button>
+                    </div>
+                    <!-- End Last Date / Refresh -->
+                </div>
+                <!-- End Section Header -->
+                <!-- Data Row -->
+                <div data-section="data-row" class="pad--16 pad--top--0 grid grid--cols-3 gap--16 grid--cols-2-responsive-tablet grid--cols-2-responsive-mobile grid--cols-1-responsive-mobile-portrait pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait">
+                    <!-- Left Column -->
+                    <div class="flex flex-column gap--16 w-100 grid--col-span-2-responsive-mobile-portrait">
+                        <!-- Start white-card -->
+                        <div data-secton="white-card" class="pad--16 flex flex-column gap--16 flex-auto bg-white-70 bg--blur--25 br--2">
+                            <!-- Title -->
+                            <div class="flex items-center gap--8">
+                                <h3 class="m--0 ff-poppins fs--16 fw5 lh--24 col--gray-700">Subscribers</h3>
+                            </div>
+                            <!-- Data Content -->
+                            <div class="flex flex-column justify-center items-start gap--16 flex-auto">
+                                <div class="flex items-center gap--24 flex-auto w-100">
+                                    <div class="flex flex-column items-start gap--8 w-100">
+                                        <div class="relative">
+                                            <span class="fs--12 fw5 lh--18 col--gray-600">New</span>
+                                        </div>
+                                        <div class="w-100 flex gap--4 items-end justify-between">
+                                            <span class="fs--36 fw6 lh--4 col--gray-600 tracked--neg--0-72">50</span>
+                                            <div class="flex gap--4 items-center">
+                                                <span>
+                                                    <img src="assets/icons/trend-up-01.svg" alt="" class="w--20 h--20">
+                                                </span>
+                                                <span class="fs--14 fw5 lh--20 col--teal-700">20%</span>
+                                            </div>
+                                        </div>
+                                        <div id="chartdiv" class="w-100 h--48"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Ens Data Content -->
+                            <!-- Data Content -->
+                            <div class="flex flex-column justify-center items-start gap--16 flex-auto">
+                                <div class="flex items-center gap--24 flex-auto w-100">
+                                    <div class="flex flex-column items-start gap--8 w-100">
+                                        <div class="relative">
+                                            <span class="fs--12 fw5 lh--18 col--gray-600">RECURRING</span>
+                                        </div>
+                                        <div class="w-100 flex gap--4 items-end justify-between">
+                                            <span class="fs--36 fw6 lh--4 col--gray-600 tracked--neg--0-72">5</span>
+                                            <div class="flex gap--4 items-center">
+                                                <span>
+                                                    <img src="assets/icons/trend-up-01.svg" alt="" class="w--20 h--20">
+                                                </span>
+                                                <span class="fs--14 fw5 lh--20 col--teal-700">20%</span>
+                                            </div>
+                                        </div>
+                                        <div id="chartdiv2" class="w-100 h--48"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Ens Data Content -->
+                        </div>
+                        <!-- End white-card -->
+                        <!-- Start white-card -->
+                        <div data-secton="white-card" class="pad--16 flex flex-column gap--16 flex-auto bg-white-70 bg--blur--25 br--2">
+                            <!-- Title -->
+                            <div class="flex items-center gap--8">
+                                <h3 class="m--0 ff-poppins fs--16 fw5 lh--24 col--gray-700">Fans</h3>
+                            </div>
+                            <!-- Data Content -->
+                            <div class="flex flex-column justify-center items-start gap--16 flex-auto">
+                                <div class="flex items-center gap--24 flex-auto w-100">
+                                    <div class="flex flex-column items-start gap--8 flex-auto">
+                                        <span class="fs--12 fw5 lh--18 col--gray-600">NEW FOLLOWERS</span>
+                                        <span class="fs--36 fw6 lh--38 tracked--neg--0-72 col--gray-900">--</span>
+                                    </div>
+                                    <div class="flex flex-column items-start gap--8 flex-auto">
+                                        <span class="fs--12 fw5 lh--18 col--gray-600">PROFILE VISIT</span>
+                                        <span class="fs--36 fw6 lh--38 tracked--neg--0-72 col--gray-900">--</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Ens Data Content -->
+                        </div>
+                        <!-- End white-card -->
+                    </div>
+                    <!-- End Left Column -->
+
+                    <!-- Middle Column -->
+                    <div class="flex flex-column gap--16 w-100 grid--col-span-2-responsive-mobile-portrait">
+                        <!-- Start white-card -->
+                        <div data-secton="white-card" class="pad--16 flex flex-column gap--16 flex-auto bg-white-70 bg--blur--25 br--2">
+                            <!-- Title -->
+                            <div class="flex items-center gap--8">
+                                <h3 class="m--0 ff-poppins fs--16 fw5 lh--24 col--gray-700">Earnings</h3>
+                            </div>
+                            <!-- Data Content -->
+                            <div class="flex flex-column justify-center items-start gap--16 flex-auto">
+                                <div class="flex items-center gap--24 flex-auto w-100">
+                                    <div class="flex flex-column items-start gap--8">
+                                        <span class="fs--36 fw6 lh--44 tracked--neg--0-72 col--gray-900">--</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Ens Data Content -->
+                        </div>
+                        <!-- End white-card -->
+                        <!-- Start white-card -->
+                        <div data-secton="white-card" class="pad--16 flex flex-column gap--16 flex-auto bg-white-70 bg--blur--25 br--2">
+                            <!-- Title -->
+                            <div class="flex items-center gap--8">
+                                <h3 class="m--0 ff-poppins fs--16 fw5 lh--24 col--gray-700">Likes</h3>
+                            </div>
+                            <!-- Data Content -->
+                            <div class="flex flex-column justify-center items-start gap--16 flex-auto">
+                                <div class="flex items-center gap--24 flex-auto w-100">
+                                    <div class="flex flex-column items-start gap--8 flex-auto">
+                                        <span class="fs--12 fw5 lh--18 col--gray-600">MEDIA</span>
+                                        <span class="fs--36 fw6 lh--38 tracked--neg--0-72 col--gray-900">--</span>
+                                    </div>
+                                    <div class="flex flex-column items-start gap--8 flex-auto">
+                                        <span class="fs--12 fw5 lh--18 col--gray-600">MERCH</span>
+                                        <span class="fs--36 fw6 lh--38 tracked--neg--0-72 col--gray-900">--</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap--24 flex-auto w-100">
+                                    <div class="flex flex-column items-start gap--8 flex-auto">
+                                        <span class="fs--12 fw5 lh--18 col--gray-600">PROFILE</span>
+                                        <span class="fs--36 fw6 lh--38 tracked--neg--0-72 col--gray-900">--</span>
+                                    </div>
+                                    <div class="flex flex-column items-start gap--8 flex-auto">
+                                        <span class="fs--12 fw5 lh--18 col--gray-600">FEED</span>
+                                        <span class="fs--36 fw6 lh--38 tracked--neg--0-72 col--gray-900">--</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Ens Data Content -->
+                        </div>
+                        <!-- End white-card -->
+                    </div>
+                    <!-- End Middle Column -->
+
+                    <!-- Right Column -->
+                    <div class="flex flex-column gap--16 w-100 grid--col-span-2-responsive-tablet grid--col-span-2-responsive-mobile grid--col-span-2-responsive-mobile-portrait">
+                        <!-- Start white-card -->
+                        <div data-secton="white-card" class="pad--16 flex flex-column gap--16 flex-auto bg-white-70 bg--blur--25 br--2">
+                            <!-- Title -->
+                            <div class="flex items-center gap--8">
+                                <h3 class="m--0 ff-poppins fs--16 fw5 lh--24 col--gray-700">Top Contributors</h3>
+                            </div>
+                            <!-- Data Content -->
+                            <div class="flex flex-column justify-center items-start gap--16 flex-auto">
+                                <div class="w-100 pad--y--24 flex flex-column justify-center gap--8 flex-auto h--340">
+                                    <div class="pad--16 flex items-center justify-center">
+                                        <div class="w--161 h--161 flex items-center justify-center relative">
+                                            <div class="db w-100 h-100 absolute left-0 top-0 flex items-center justify-center">
+                                                <div class="db bg--col--lemon w--32 h--32 filter--blur--60"></div>
+                                            </div>
+                                            <img src="assets/img/dot-option-placeholder.svg" class="w--128 h--128" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-column gap--8 items-center">
+                                        <span class="fs--16 lh--24 col--gray-700">Empty State message</span>
+                                        <a href="#" class="fs--16 lh--24"><span class="fs--16 lh--24 col--gray-700 underline">Learn ways to earn</span> </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Ens Data Content -->
+                        </div>
+                        <!-- End white-card -->
+                    </div>
+                    <!-- End Right Column -->
+                </div>
+                <!-- Ens Data Row -->
+            </div>
+            <!-- End Overview / Insight Section -->
+
+            <!-- Order Received Section -->
+            <div data-section="transparent-box" class="flex flex-column gap--24 bg-white-40 bg--blur--25 sh--6">
+                <!-- Section Header -->
+                <div data-section="transparent-section-header" class="pad--16 pad--bottom--0 flex justify-between items-center">
+                    <!-- Title -->
+                    <div class="flex items-center gap--8 flex-auto">
+                        <span>
+                            <img src="assets/icons/order-1.svg" class="filter--col--gray--500" alt="">
+                        </span>
+                        <h2 class="ff-poppins m--0 fs--20 fw5 lh--30 col--gray-500">Order Received</h2>
+                    </div>
+                    <!-- End Title -->
+                </div>
+                <!-- End Section Header -->
+                <!-- All Analytics Data -->
+                <div class="pad--16 pad--top--0 flex flex-wrap gap--16 pad--x--0-responsive-tablet pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait ">
+                    <!-- Order Data Section -->
+                    <div class="flex flex-column gap--16 flex-auto w-100">
+                        <!-- Top Contributors -->
+                        <div class="pad--16 flex flex-column gap--16 flex-auto">
+                            <!-- Data Content -->
+                            <div class="flex flex-column justify-center items-start gap--16 flex-auto">
+                                <div class="w-100 pad--y--24 flex flex-column gap--8 flex-auto">
+                                    <div class="pad--16 flex items-center justify-center">
+                                        <div class="w--161 h--161 flex items-center justify-center relative">
+                                            <div class="db w-100 h-100 absolute left-0 top-0 flex items-center justify-center">
+                                                <div class="db bg--col--lemon w--32 h--32 filter--blur--60"></div>
+                                            </div>
+                                            <img src="assets/img/shopping-cart-03.svg" class="w--128 h--128" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-column gap--8 items-center">
+                                        <span class="fs--16 lh--24 col--gray-700">You don’t have any orders at the moment</span>
+                                        <a href="#" class="fs--16 lh--24"><span class="fs--16 lh--24 col--gray-700 underline">Learn how you can earn </span> </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Ens Data Content -->
+                        </div>
+                        <!-- End Top Contributors -->
+                    </div>
+                    <!-- End Order Data Section -->
+                </div>
+                <!-- Ens All Analytics Data -->
+            </div>
+            <!-- End Order Received Section -->
+
+            <!-- Trends Section -->
+            <div data-section="transparent-box" class="flex flex-column gap--24 bg-white-40 bg--blur--25 sh--6">
+                <!-- Section Header -->
+                <div data-section="transparent-section-header" class="pad--16 pad--bottom--0 flex justify-between items-center">
+                    <!-- Title -->
+                    <div class="flex items-center gap--8 flex-auto">
+                        <span>
+                            <img src="assets/icons/line-chart-up.svg" class="filter--col--gray--500" alt="">
+                        </span>
+                        <h2 class="ff-poppins m--0 fs--20 fw5 lh--30 col--gray-500">Trends</h2>
+                    </div>
+                    <!-- End Title -->
+                </div>
+                <!-- End Section Header -->
+                <!-- All Analytics Data -->
+                <div class="pad--16 pad--top--0 flex flex-column gap--16 pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait pad--bottom--0-responsive-mobile pad--bottom--0-responsive-mobile-portrait">
+                    <!-- Data Row -->
+                    <div data-section="data-row" class="w-full grid grid--cols-3 grid--cols-2-responsive-tablet grid--cols-2-responsive-mobile grid--cols-1-responsive-mobile-portrait gap--16">
+                        <!-- White Card Column Container -->
+                        <div  class="flex flex-column gap--16 w-100 order-0 grid--col-span-2">
+                            <!-- Start White Card -->
+                            <div data-secton="white-card" class="pad--16 flex flex-column gap--16 flex-auto bg-white-70 bg--blur--25 br--2">
+                                <!-- Title -->
+                                <div class="flex items-center justify-between gap--8">
+                                    <h3 class="m--0 ff-poppins fs--16 fw5 lh--24 col--gray-700">Top Media</h3>
+                                    <div class="flex items-start br--8 ba br--col--gray-300 bg-white-30 sh--7 overflow-hidden">
+                                         <button class="bg-white pad--y--8 ph3 flex justify-center items-center gap--8 fs--14 fw5 lh--20 col--gray-800">Views</button>
+                                         <button class="pad--y--8 ph3 flex justify-center items-center gap--8 bl br--col--gray-300 fs--14 fw5 lh--20 col--gray-500">P2V Sales</button>
+                                    </div>
+                                </div>
+                                <!-- Data Content -->
+                                <div class="flex flex-column justify-center items-start gap--16 flex-auto">
+                                    <div class="w-100 pad--y--24 flex flex-column gap--8 flex-auto">
+                                        <div class="pad--16 flex items-center justify-center">
+                                            <div class="w--161 h--161 flex items-center justify-center relative">
+                                                <div class="db w-100 h-100 absolute left-0 top-0 flex items-center justify-center">
+                                                    <div class="db bg--col--lemon w--32 h--32 filter--blur--60"></div>
+                                                </div>
+                                                <img src="assets/img/dot-option-placeholder.svg" class="w--128 h--128" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-column gap--8 items-center">
+                                            <span class="fs--16 lh--24 col--gray-700">No trend to show at the moment</span>
+                                            <a href="#" class="fs--16 lh--24"><span class="fs--16 lh--24 col--gray-700 underline">Learn ways to earn</span> </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Ens Data Content -->
+                            </div>
+                            <!-- End White Card -->
+                        </div>
+                        <!-- End White Card Column Container -->
+
+                        <!-- White Card Column Container -->
+                        <div data-secton="white-card-column-container" class="flex flex-column gap--16 w-100 order-1 order--2-responsive-tablet order--2-responsive-mobile grid--col-span-2-responsive-mobile-portrait">
+                            <!-- White Card -->
+                            <div data-secton="white-card" class="pad--16 flex flex-column gap--16 flex-auto bg-white-70 bg--blur--25 br--2">
+                                <!-- Title -->
+                                <div class="flex items-center gap--8">
+                                    <h3 class="m--0 ff-poppins fs--16 fw5 lh--24 col--gray-700">Top tags</h3>
+                                </div>
+                                <!-- Data Content -->
+                                <div class="flex flex-column justify-center items-start gap--16 flex-auto">
+                                    <div class="w-100 pad--y--24 flex flex-column gap--8 flex-auto">
+                                        <div class="pad--16 flex items-center justify-center">
+                                            <div class="w--161 h--161 flex items-center justify-center relative">
+                                                <div class="db w-100 h-100 absolute left-0 top-0 flex items-center justify-center">
+                                                    <div class="db bg--col--lemon w--32 h--32 filter--blur--60"></div>
+                                                </div>
+                                                <img src="assets/img/dot-option-placeholder.svg" class="w--128 h--128" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-column gap--8 items-center">
+                                            <span class="fs--16 lh--24 col--gray-700">No trend to show at the moment</span>
+                                            <a href="#" class="fs--16 lh--24"><span class="fs--16 lh--24 col--gray-700 underline">Learn ways to earn</span> </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Ens Data Content -->
+                            </div>
+                            <!-- End White Card -->
+                        </div>
+                        <!-- End White Card Column Container -->
+
+                        <!-- White Card Column Container -->
+                        <div data-secton="white-card-column-container" class="flex flex-column gap--16 w-100 order-2 grid--col-span-2 order--1-responsive-tablet order--1-responsive-mobile">
+                            <!-- Start White Card -->
+                            <div data-secton="white-card" class="pad--16 flex flex-column gap--16 flex-auto bg-white-70 bg--blur--25 br--2">
+                                <!-- Title -->
+                                <div class="flex items-center gap--8">
+                                    <h3 class="m--0 ff-poppins fs--16 fw5 lh--24 col--gray-700">Top Merch</h3>
+                                </div>
+                                <!-- Data Content -->
+                                <div class="flex flex-column justify-center items-start gap--16 flex-auto">
+                                    <div class="w-100 pad--y--24 flex flex-column gap--8 flex-auto">
+                                        <div class="pad--16 flex items-center justify-center">
+                                            <div class="w--161 h--161 flex items-center justify-center relative">
+                                                <div class="db w-100 h-100 absolute left-0 top-0 flex items-center justify-center">
+                                                    <div class="db bg--col--lemon w--32 h--32 filter--blur--60"></div>
+                                                </div>
+                                                <img src="assets/img/dot-option-placeholder.svg" class="w--128 h--128" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-column gap--8 items-center">
+                                            <span class="fs--16 lh--24 col--gray-700">No trend to show at the moment</span>
+                                            <a href="#" class="fs--16 lh--24"><span class="fs--16 lh--24 col--gray-700 underline">Learn ways to earn</span> </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Ens Data Content -->
+                            </div>
+                            <!-- End White Card -->
+                        </div>
+                        <!-- End White Card Column Container -->
+
+                        <!-- White Card Column Container -->
+                        <div data-secton="white-card-column-container" class="flex flex-column gap--16 w-100 order-3 grid--col-span-2-responsive-mobile-portrait">
+                            <!-- Start White Card -->
+                            <div data-secton="white-card" class="pad--16 flex flex-column gap--16 flex-auto bg-white-70 bg--blur--25 br--2">
+                                <!-- Title -->
+                                <div class="flex items-center gap--8">
+                                    <h3 class="m--0 ff-poppins fs--16 fw5 lh--24 col--gray-700">Top Countries</h3>
+                                </div>
+                                <!-- Data Content -->
+                                <div class="flex flex-column justify-center items-start gap--16 flex-auto">
+                                    <div class="w-100 pad--y--24 flex flex-column gap--8 flex-auto">
+                                        <div class="pad--16 flex items-center justify-center">
+                                            <div class="w--161 h--161 flex items-center justify-center relative">
+                                                <div class="db w-100 h-100 absolute left-0 top-0 flex items-center justify-center">
+                                                    <div class="db bg--col--lemon w--32 h--32 filter--blur--60"></div>
+                                                </div>
+                                                <img src="assets/img/dot-option-placeholder.svg" class="w--128 h--128" alt="">
+                                            </div>
+                                        </div>                                        <div class="flex flex-column gap--8 items-center">
+                                            <span class="fs--16 lh--24 col--gray-700">No trend to show at the moment</span>
+                                            <a href="#" class="fs--16 lh--24"><span class="fs--16 lh--24 col--gray-700 underline">Learn ways to earn</span> </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Ens Data Content -->
+                            </div>
+                            <!-- End White Card -->
+                        </div>
+                        <!-- End White Card Column Container -->
+                    </div>
+                    <!-- End Data Row -->
+                </div>
+                <!-- Ens All Analytics Data -->
+            </div>
+            <!-- End Trends Section -->
+
+        </div> <!-- End Inner Container -->
+    </div> <!-- End Main Container -->
+
+    <!-- Chart JS -->
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+
+    <script type="text/javascript">
+    /**
+     * ---------------------------------------
+     * This demo was created using amCharts 5.
+     * 
+     * For more information visit:
+     * https://www.amcharts.com/
+     * 
+     * Documentation is available at:
+     * https://www.amcharts.com/docs/v5/
+     * ---------------------------------------
+     */
+
+
+    // Create root element
+    // https://www.amcharts.com/docs/v5/getting-started/#Root_element
+    var root = am5.Root.new("chartdiv");
+
+
+    // Set themes
+    // https://www.amcharts.com/docs/v5/concepts/themes/
+    root.setThemes([
+      am5themes_Animated.new(root)
+    ]);
+
+
+    // Create chart
+    // https://www.amcharts.com/docs/v5/charts/xy-chart/
+    var chart = root.container.children.push(am5xy.XYChart.new(root, {
+      panX: true,
+      panY: true,
+      wheelX: "panX",
+      wheelY: "zoomX",
+      pinchZoomX: true,
+      paddingLeft: 0,
+      paddingRight: 0,
+      paddingBottom: 0,
+      paddingTop: 0,
+    }));
+
+
+    // Add cursor
+    // https://www.amcharts.com/docs/v5/charts/xy-chart/cursor/
+    var cursor = chart.set("cursor", am5xy.XYCursor.new(root, {
+      behavior: "none"
+    }));
+    cursor.lineY.set("visible", false);
+
+
+    // Generate random data
+    var date = new Date();
+    date.setHours(0, 0, 0, 0);
+    var value = 4;
+
+    function generateData() {
+      value = Math.round((Math.random() * 10 - 5) + value);
+      am5.time.add(date, "day", 1);
+      return {
+        date: date.getTime(),
+        value: value
+      };
+    }
+
+    function generateDatas(count) {
+      var data = [];
+      for (var i = 0; i < count; ++i) {
+        data.push(generateData());
+      }
+      return data;
+    }
+
+
+    // Create axes
+    // https://www.amcharts.com/docs/v5/charts/xy-chart/axes/
+    var xAxis = chart.xAxes.push(am5xy.DateAxis.new(root, {
+      maxDeviation: 0.5,
+      baseInterval: {
+        timeUnit: "day",
+        count: 1
+      },
+      renderer: am5xy.AxisRendererX.new(root, {
+        minGridDistance: 80,
+        minorGridEnabled: false,
+        pan: "zoom",
+      }),
+      tooltip: am5.Tooltip.new(root, {})
+    }));
+
+    var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
+      maxDeviation: 1,
+      renderer: am5xy.AxisRendererY.new(root, {
+        pan: "zoom",
+        visible:false,
+      })
+    }));
+
+
+    // Add series
+    // https://www.amcharts.com/docs/v5/charts/xy-chart/series/
+    var series = chart.series.push(am5xy.SmoothedXLineSeries.new(root, {
+      name: "Series",
+      xAxis: xAxis,
+      yAxis: yAxis,
+      valueYField: "value",
+      valueXField: "date",
+      stroke: am5.color(0x2ED3B7)
+    }));
+
+
+    //Y-Axis Label Removed
+    yAxis.get("renderer").labels.template.setAll({
+      visible:false,
+      paddingLeft: 0,
+    });
+
+    //X-Axis Label Removed
+    xAxis.get("renderer").labels.template.setAll({
+      visible:false,
+      paddingBottom: 0,
+    });
+
+    //Y-Axis Grid Removed
+    yAxis.get("renderer").grid.template.setAll({
+      visible:false,
+      paddingLeft: 0,
+    });
+
+    //X-Axis Grid Removed
+    xAxis.get("renderer").grid.template.setAll({
+      visible:false,
+      paddingBottom: 0,
+    });
+
+    series.fills.template.set("fillGradient", am5.LinearGradient.new(root, {
+       stops: [
+        { color: am5.color(0x2ED3B7), opacity: 0.2 },
+        { color: am5.color(0x2ED3B7), opacity: 0.2},
+        { color: am5.color(0xffffff), opacity: 0 },
+      ],
+      rotation: 90
+    }));
+
+    series.fills.template.setAll({
+      visible: true,
+      fillOpacity: 1
+    });
+
+    series.strokes.template.setAll({
+      strokeWidth: 2
+    });
+    series.bullets.push(function () {
+      return am5.Bullet.new(root, {
+        locationY: 0,
+        sprite: am5.Circle.new(root, {
+          radius: 0,
+          stroke: root.interfaceColors.get("background"),
+          strokeWidth: 2,
+          fill: series.get("fill")
+        })
+      });
+    });
+
+
+    // Add scrollbar
+    // https://www.amcharts.com/docs/v5/charts/xy-chart/scrollbars/
+    chart.set("scrollbarX", am5.Scrollbar.new(root, {
+      orientation: "none",
+      visible: false,
+    }));
+
+
+    var data = generateDatas(50);
+    series.data.setAll(data);
+
+
+    // Make stuff animate on load
+    // https://www.amcharts.com/docs/v5/concepts/animations/
+    series.appear(1000);
+    chart.appear(1000, 100);
+
+    cursor.lineY.set("forceHidden", true);
+    cursor.lineX.set("forceHidden", true);
+    </script>
+</body>
+
+</html>
