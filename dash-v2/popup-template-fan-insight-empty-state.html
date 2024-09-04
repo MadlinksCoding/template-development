@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contributors Insight Empty State</title>
+    <title>Popup Template</title>
 
     <!-- Poppins Font Family -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,7 +34,8 @@
         /* Max Width */
         .max--w--952 { max-width: 59.5rem; /* width 952px */ } /* confirmed in use */ /* pixel conversion correct */
 
-        /* Hright */
+        /* Height */
+        .h--screen { height: 100vh; }
         .h--14 { height: 0.875rem; /* height 14px */ } /* confirmed in use */ /* pixel conversion correct */
 
         /* Colors */
@@ -48,6 +49,10 @@
 
         /* Background Gradients */
         .bg--gradient-white { background: linear-gradient(180deg, rgba(255, 255, 255, 0.30) 0%, rgba(255, 255, 255, 0.00) 8%); }
+
+        /* Background */
+        .bg--no-repeat { background-repeat: no-repeat; }
+        .bg--cover { background-size: cover; }
 
         /* Border Colors */
         .br--col--gray-300 { border-color: var(--color-gray-300, #D0D5DD); } /* confirmed in use */
@@ -83,9 +88,19 @@
         .pad--16 { padding: 1rem; /* padding 16px */ }
         .pad--bottom--0 { padding-bottom: 0rem; /* padding bottom 0px */ }
         .pad--top--0 { padding-top: 0rem; /* padding top 0px */ }
+        .pad--y--96 { padding-top: 6rem; padding-bottom: 6rem; /* padding top 96px padding bottom 96px */ }
 
         /* Margin */
         .m--0 { margin: 0rem; }
+
+        /* Top */
+        .top--50 { top: 50%; }
+
+        /* Left */
+        .left--50 { left: 50%; }
+
+        /* Translate */
+        .transform--center { transform: translateX(-50%); }
 
         /* Nice Select Box New Design Style */
         .nice-select.v1 { border: none; border-radius: 0.5rem; background: rgba(255, 255, 255, 0.50);}
@@ -100,6 +115,9 @@
         .nice-select.v1:not(.has-tags) .option:not(.disabled):hover, .nice-select.v1:not(.has-tags) .option.selected { background-color:transparent; }
         .nice-select.v1:not(.has-tags) .option:not(.disabled):hover .elm_aQVICr { border-radius: 6px; background: var(--Gray-50, #F9FAFB); }
         .nice-select.v1:not(.has-tags) .option.selected [data-option-label] {color: var(--Gray-700, #344054);}
+
+        /* Overflow auto scrollbar width none; */
+        [data-section="popup-overlay"] { scrollbar-width: none; }
     </style>
 
     <!-- Tablet Stylesheet -->
@@ -112,140 +130,161 @@
     <link rel="stylesheet" href="assets/css/mobile-portrait.css" media="screen and (max-width: 489px)">
 </head>
 
-<body class="ff-poppins">
-    <!-- Popup Container -->
-    <div data-section="popup-container" class="flex justify-center">
-        <!-- Popup Inner -->
-        <div data-section="popup-inner" class="w-100 max--w--952 bg-white-90 pad--24 pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait flex flex-column gap--16">
-            <!-- Popup Header -->
-            <div data-section="popup-header" class="relative flex items-center justify-between gap--8 pad--x--16-responsive-mobile pad--x--16-responsive-mobile-portrait flex--column-responsive-mobile-portrait items--start-responsive-mobile-portrait">
-                <!-- Title -->
-                <div class="flex items-center gap--8">
-                    <div class="w--24 h--24">
-                        <img src="assets/icons/money-1.svg" alt="" class="w--24 h--24 filter--col--black">
-                    </div>
-                    <h3 class="ff-poppins fs--24 fs--18-responsive-mobile fs--18-responsive-mobile-portrait fw6 lh--32 lh--28-responsive-mobile lh--28-responsive-mobile-portrait col--gray-950">Contributors Insight</h3>
-                </div>
-                <!-- End Title -->
-                <!-- Select Dropdown and Close Button -->
-                <div class="flex items-center gap--16 w--100-responsive-mobile-portrait">
+<body class="ff-poppins overflow-hidden">
+	<!-- Loader -->
+    <div class="h--screen bg--no-repeat bg--cover" style="background-image: url(assets/img/dashboard-ui-bg.png);">
+        <!-- Popup Overlay Container -->
+        <div data-section="popup-overlay" class="w-100 h-100 bg--white--25 bg--blur--10 fixed left-0 top-0 overflow-auto">
+            <!-- Popup Container -->
+            <div data-section="popup-container" class="absolute left--50 transform--center overflow-auto pad--y--96 pad--y-0-responsive-tablet pad--y-0-responsive-mobile pad--y-0-responsive-mobile-portrait flex justify-center w-100">
+                <!-- Popup Inner -->
+                <div data-section="popup-inner" class="w-100 max--w--952 bg-white-90 pad--24 pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait flex flex-column gap--16">
+                    <!-- Popup Header -->
+                    <div data-section="popup-header" class="relative flex items-center justify-between gap--8 pad--x--16-responsive-mobile pad--x--16-responsive-mobile-portrait flex--column-responsive-mobile-portrait items--start-responsive-mobile-portrait">
+                        <!-- Title -->
+                        <div data-section="popup-title" class="flex items-center gap--8">
+                            <div class="w--24 h--24">
+                                <img src="assets/icons/profile.svg" alt="" class="w--24 h--24 filter--col--black">
+                            </div>
+                            <h3 class="ff-poppins fs--24 fs--18-responsive-mobile fs--18-responsive-mobile-portrait fw6 lh--32 lh--28-responsive-mobile lh--28-responsive-mobile-portrait col--gray-950">Fans Insight</h3>
+                        </div>
+                        <!-- End Title -->
+                        <!-- Select Dropdown and Close Button -->
+                        <div class="flex items-center gap--16 w--100-responsive-mobile-portrait">
 
-                    <!-- Select Dropdown -->
-                    <div class="relative z--10000 w--100-responsive-mobile-portrait">
-                        <select data-nice-select>
-                            <option value="daily">Daily</option>
-                            <option value="weekly">Weekly</option>
-                            <option value="monthly">Mothly</option>
-                            <option value="yearly">Yearly</option>
-                            <option value="alltime">All time</option>
-                        </select>
-                        <!-- <div class="pointer">
-                            <img src="assets/icons/arrow-down.svg" alt="" />
-                        </div> -->
+                            <!-- Select Dropdown -->
+                            <div class="relative z--10000 w--100-responsive-mobile-portrait">
+                                <select data-nice-select>
+                                    <option value="daily">Daily</option>
+                                    <option value="weekly">Weekly</option>
+                                    <option value="monthly">Mothly</option>
+                                    <option value="yearly">Yearly</option>
+                                    <option value="alltime">All time</option>
+                                </select>
+                                <!-- <div class="pointer">
+                                    <img src="assets/icons/arrow-down.svg" alt="" />
+                                </div> -->
+                            </div>
+                            
+                            <!-- Close Button -->
+                            <div class="bg-white br-100 sh--sm pad--10 flex items-center justify-center pointer absolute-responsive-mobile-portrait top--neg-8-responsive-mobile-portrait right--16-responsive-mobile-portrait ">
+                                <img src="assets/icons/close-btn.svg">
+                            </div>
+                            <!-- End Close Button -->
+                        </div>
+                        <!-- End Select Dropdown and Close Button -->
                     </div>
-                    
-                    <!-- Close Button -->
-                    <div class="bg-white br-100 sh--sm pad--10 flex items-center justify-center pointer absolute-responsive-mobile-portrait top--neg-8-responsive-mobile-portrait right--16-responsive-mobile-portrait ">
-                        <img src="assets/icons/close-btn.svg">
+                    <!-- End Popup Header -->
+
+                    <!-- Data Row -->
+                    <div data-section="data-row" class="grid grid--cols-2 gap--16 grid--cols-2-responsive-tablet grid--cols-2-responsive-mobile grid--cols-1-responsive-mobile-portrait">
+                        <!-- Chart Card -->
+                        <div data-secton="chart-card" class="pad--16 flex flex-column gap--16 flex-auto w-100 grid--col-span-2-responsive-mobile-portrait br br--col--gray-300">
+                            <!-- Title -->
+                            <div class="flex items-center justify-center gap--8">
+                                <h3 class="m--0 ff-poppins fs--18 fw6 lh--28 col--gray-950">New Followers</h3>
+                            </div>
+                            <!-- Data Content -->
+                            <div class="flex flex-column justify-center items-center gap--16 flex-auto">
+                                <div class="flex items-center gap--24">
+                                    <div class="flex flex-column items-start gap--8">
+                                        <span class="fs--36 fw6 lh--44 tracked--neg--0-72 col--gray-900">--</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Ens Data Content -->
+                        </div>
+                        <!-- End Chart Card -->
+                        <!-- Chart Card -->
+                        <div data-secton="chart-card" class="pad--16 flex flex-column gap--16 flex-auto w-100 grid--col-span-2-responsive-mobile-portrait">
+                            <!-- Title -->
+                            <div class="flex items-center justify-center gap--8">
+                                <h3 class="m--0 ff-poppins fs--18 fw6 lh--28 col--gray-950">Total Profile Visit</h3>
+                            </div>
+                            <!-- Data Content -->
+                            <div class="flex flex-column justify-center items-center gap--16 flex-auto">
+                                <div class="flex items-center gap--24">
+                                    <div class="flex flex-column items-start gap--8">
+                                        <span class="fs--36 fw6 lh--44 tracked--neg--0-72 col--gray-900">--</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Ens Data Content -->
+                        </div>
+                        <!-- End Chart Card -->
                     </div>
-                    <!-- End Close Button -->
+                    <!-- End Data Row -->
+
+                    <!-- Data Row -->
+                    <div data-section="data-row" class="grid grid--cols-2 gap--16 grid--cols-2-responsive-tablet grid--cols-2-responsive-mobile grid--cols-1-responsive-mobile-portrait">
+                        <!-- Left Column -->
+                        <div class="flex flex-column gap--16 w-100 grid--col-span-2-responsive-mobile-portrait">
+                            <!-- Chart Card -->
+                            <div data-secton="chart-card" class="pad--16 flex flex-column gap--16 flex-auto">
+                                <!-- Title -->
+                                <div class="flex items-center gap--8">
+                                    <h3 class="m--0 ff-poppins fs--18 fw6 lh--28 col--gray-950">Traffic Source</h3>
+                                </div>
+                                <!-- Data Content -->
+                                <div class="flex flex-column justify-center items-start gap--16 flex-auto">
+                                    <div class="w-100 pad--y--24 flex flex-column justify-center gap--8 flex-auto h--340">
+                                        <div class="pad--16 flex items-center justify-center">
+                                            <div class="w--161 h--161 flex items-center justify-center relative">
+                                                <div class="db w-100 h-100 absolute left-0 top-0 flex items-center justify-center">
+                                                    <div class="db bg--col--lemon w--32 h--32 filter--blur--60"></div>
+                                                </div>
+                                                <img src="assets/img/pie-chart-03.svg" class="w--128 h--128" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-column gap--8 items-center">
+                                            <span class="fs--16 lh--24 col--gray-700">No trend to show at the moment</span>
+                                            <a href="#" class="fs--16 lh--24"><span class="fs--16 lh--24 col--gray-700 underline">Learn ways to earn</span> </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Ens Data Content -->
+                            </div>
+                            <!-- End Chart Card -->
+                        </div>
+                        <!-- End Left Column -->
+                        <!-- Right Column -->
+                        <div class="flex flex-column gap--16 w-100 grid--col-span-2-responsive-mobile-portrait">
+                            <!-- Chart Card -->
+                            <div data-secton="chart-card" class="pad--16 flex flex-column gap--16 flex-auto">
+                                <!-- Title -->
+                                <div class="flex items-center gap--8">
+                                    <h3 class="m--0 ff-poppins fs--18 fw6 lh--28 col--gray-950">Top Countries</h3>
+                                </div>
+                                <!-- Data Content -->
+                                <div class="flex flex-column justify-center items-start gap--16 flex-auto">
+                                    <div class="w-100 pad--y--24 flex flex-column justify-center gap--8 flex-auto h--340">
+                                        <div class="pad--16 flex items-center justify-center">
+                                            <div class="w--161 h--161 flex items-center justify-center relative">
+                                                <div class="db w-100 h-100 absolute left-0 top-0 flex items-center justify-center">
+                                                    <div class="db bg--col--lemon w--32 h--32 filter--blur--60"></div>
+                                                </div>
+                                                <img src="assets/img/dot-option-placeholder.svg" class="w--128 h--128" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-column gap--8 items-center">
+                                            <span class="fs--16 lh--24 col--gray-700">No trend to show at the moment</span>
+                                            <a href="#" class="fs--16 lh--24"><span class="fs--16 lh--24 col--gray-700 underline">Learn ways to earn</span> </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Ens Data Content -->
+                            </div>
+                            <!-- End Chart Card -->
+                        </div>
+                        <!-- End Right Column -->
+                    </div>
+                    <!-- End Data Row -->
                 </div>
-                <!-- End Select Dropdown and Close Button -->
+                <!-- Popup Inner -->
             </div>
-            <!-- End Popup Header -->
-
-            <!-- Popup Body -->
-            <div data-secton="popup-body" class="grid grid--cols-1 gap--16 grid--cols-1-responsive-mobile-portrait pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait">
-                <!-- Data Row -->
-                <div data-section="data-row" class="flex flex-column gap--16 w-100 grid--col-span-2-responsive-mobile-portrait">
-                    <!-- White card -->
-                    <div data-secton="white-card" class="pad--16 flex flex-column gap--16 flex-auto bg-white-70 bg--blur--25 br--2">
-                        <!-- Title -->
-                        <div class="flex items-center gap--8">
-                            <h3 class="m--0 ff-poppins fs--18 fw6 lh--28 col--gray-950">Top Contributors</h3>
-                        </div>
-                        <!-- Data Content -->
-                        <div class="flex flex-column justify-center items-start gap--16 flex-auto">
-                            <div class="w-100 pad--y--24 flex flex-column justify-center gap--8 flex-auto h--340">
-                                <div class="pad--16 flex items-center justify-center">
-                                    <div class="w--161 h--161 flex items-center justify-center relative">
-                                        <div class="db w-100 h-100 absolute left-0 top-0 flex items-center justify-center">
-                                            <div class="db bg--col--lemon w--32 h--32 filter--blur--60"></div>
-                                        </div>
-                                        <img src="assets/img/bar-chart-empty-state.svg" class="w--128 h--128" alt="">
-                                    </div>
-                                </div>
-                                <div class="flex flex-column gap--8 items-center">
-                                    <span class="fs--16 lh--24 col--gray-700">No trend to show at the moment</span>
-                                    <a href="#" class="fs--16 lh--24"><span class="fs--16 lh--24 col--gray-700 underline">Learn ways to earn</span> </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Ens Data Content -->
-                    </div>
-                    <!-- End White Card -->
-
-                    <!-- White card -->
-                    <div data-secton="white-card" class="pad--16 flex flex-column gap--16 flex-auto bg-white-70 bg--blur--25 br--2">
-                        <!-- Title -->
-                        <div class="flex items-center gap--8">
-                            <h3 class="m--0 ff-poppins fs--18 fw6 lh--28 col--gray-950">Top Fans</h3>
-                        </div>
-                        <!-- Data Content -->
-                        <div class="flex flex-column justify-center items-start gap--16 flex-auto">
-                            <div class="w-100 pad--y--24 flex flex-column justify-center gap--8 flex-auto h--340">
-                                <div class="pad--16 flex items-center justify-center">
-                                    <div class="w--161 h--161 flex items-center justify-center relative">
-                                        <div class="db w-100 h-100 absolute left-0 top-0 flex items-center justify-center">
-                                            <div class="db bg--col--lemon w--32 h--32 filter--blur--60"></div>
-                                        </div>
-                                        <img src="assets/img/bar-chart-empty-state.svg" class="w--128 h--128" alt="">
-                                    </div>
-                                </div>
-                                <div class="flex flex-column gap--8 items-center">
-                                    <span class="fs--16 lh--24 col--gray-700">No trend to show at the moment</span>
-                                    <a href="#" class="fs--16 lh--24"><span class="fs--16 lh--24 col--gray-700 underline">Learn ways to earn</span> </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Ens Data Content -->
-                    </div>
-                    <!-- End White card -->
-
-                    <!-- White card -->
-                    <div data-secton="white-card" class="pad--16 flex flex-column gap--16 flex-auto bg-white-70 bg--blur--25 br--2">
-                        <!-- Title -->
-                        <div class="flex items-center gap--8">
-                            <h3 class="m--0 ff-poppins fs--18 fw6 lh--28 col--gray-950">Top Order Spenders</h3>
-                        </div>
-                        <!-- Data Content -->
-                        <div class="flex flex-column justify-center items-start gap--16 flex-auto">
-                            <div class="w-100 pad--y--24 flex flex-column justify-center gap--8 flex-auto h--340">
-                                <div class="pad--16 flex items-center justify-center">
-                                    <div class="w--161 h--161 flex items-center justify-center relative">
-                                        <div class="db w-100 h-100 absolute left-0 top-0 flex items-center justify-center">
-                                            <div class="db bg--col--lemon w--32 h--32 filter--blur--60"></div>
-                                        </div>
-                                        <img src="assets/img/bar-chart-empty-state.svg" class="w--128 h--128" alt="">
-                                    </div>
-                                </div>
-                                <div class="flex flex-column gap--8 items-center">
-                                    <span class="fs--16 lh--24 col--gray-700">No trend to show at the moment</span>
-                                    <a href="#" class="fs--16 lh--24"><span class="fs--16 lh--24 col--gray-700 underline">Learn ways to earn</span> </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Ens Data Content -->
-                    </div>
-                    <!-- End White card -->
-                </div>
-                <!-- End Data Row -->
-            </div>
-            <!-- End Popup Body -->
-        </div>
-        <!-- End Popup Inner -->
-    </div>
-    <!-- End Popup Container -->
+            <!-- End Popup Container -->
+        </div><!-- End Popup Overlay Container -->
+    </div> <!-- End Loader -->
 
     <!-- SVG Image Render -->
     <script type="text/javascript">
