@@ -594,11 +594,11 @@
     // Generate random data
     var date = new Date();
     date.setHours(0, 0, 0, 0);
-    var value = 4;
+    var value = 200;
 
     function generateData() {
       value = Math.round((Math.random() * 10 - 5) + value);
-      am5.time.add(date, "day", 1);
+      am5.time.add(date, "day", 100);
       return {
         date: date.getTime(),
         value: value
