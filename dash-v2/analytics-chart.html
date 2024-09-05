@@ -19,8 +19,8 @@
 
     <!-- /* Custom Tachyons */ -->
     <style>
-        /* Font */
-        .ff-poppins { font-family: 'Poppins'; }
+        /* Font Size */
+        .fs--30 { font-size: 1.875rem; /* font-size 30px */  } /* confirmed in use */ /* pixel conversion correct */
 
         /* Letter Spacing */ 
         .tracked--neg--0-72 { letter-spacing: -0.045rem; /* letter-spacing -0.72px */ } /* confirmed in use */ /* pixel conversion correct */
@@ -40,6 +40,7 @@
         .col--gray-950 { color: var(--color-gray-950,#0C111D); }
         .col--blue-dark-600 { color: var(--color-blue-dark-600, #155EEF); }
         .col--blue-dark-700 { color: var(--color-blue-dark-700, #004EEB); }
+        .col--orange-dark-700 { color: var(--Orange-dark-700, #BC1B06); }
         .col--teal-700 { color: var(--Teal-700, #107569); }
 
         /* Group Hover Colors */
@@ -133,7 +134,7 @@
         <div data-section="inner-container" class="pad--40 flex flex-column gap--24 bg--gradient-white pad--y--24-responsive-tablet pad--x--0-responsive-tablet pad--top--64-responsive-mobile pad--top--64-responsive-mobile-portrait pad--bottom--24-responsive-mobile pad--bottom--24-responsive-mobile-portrait pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait pad--x--0-responsive-mobile-portrait ">
             <!-- Top Page Title Section -->
             <div data-section="page-title" class="w-100 flex gap--24 items-start justify-between gap--16--responsive-tablet gap--16--responsive-mobile gap--16--responsive-mobile-portrait flex--column-responsive-tablet pad--x--16-responsive-tablet pad--x--16-responsive-mobile pad--x--16-responsive-mobile-portrait flex--column-responsive-mobile flex--column-responsive-mobile-portrait">
-                <h1 class="ff-poppins fs--36 lh--44 fw6 tracked--neg--0-72 col--gray-950 m--0">Welcome back, Jenny!</h1>
+                <h1 class="poppins fs--36 lh--44 fw6 tracked--neg--0-72 col--gray-950 m--0">Welcome back, Jenny!</h1>
                 <!-- New Quote Section -->
                 <div data-new-quote-section class="pad--16 flex flex-column justify-center items-end gap--10 flex-auto br--10 pad--0-responsive-tablet items--start-responsive-tablet pad--0-responsive-mobile pad--0-responsive-mobile-portrait items--start-responsive-mobile items--start-responsive-mobile-portrait">
                     <p class="fs--14 lh--20 tr col--gray-700 tl--responsive-mobile-portrait">“Those who flow as life flows know they need no other force.” ~ Lao Tzu</p>
@@ -154,7 +155,7 @@
                         <span>
                             <img src="assets/icons/dashboard_bar_chart.svg" alt="">
                         </span>
-                        <h2 class="ff-poppins m--0 fs--20 fw5 lh--30 col--gray-500">Overview/Insight</h2>
+                        <h2 class="poppins m--0 fs--20 fw5 lh--30 col--gray-500">Overview/Insight</h2>
                     </div>
                     <!-- End Title -->
                     <!-- Last Date / Refresh -->
@@ -176,7 +177,7 @@
                         <div data-secton="white-card" class="pad--16 flex flex-column gap--16 flex-auto bg-white-70 bg--blur--25 br--2">
                             <!-- Title -->
                             <div class="flex items-center gap--8">
-                                <h3 class="m--0 ff-poppins fs--16 fw5 lh--24 col--gray-700">Subscribers</h3>
+                                <h3 class="m--0 poppins fs--16 fw5 lh--24 col--gray-700">Subscribers</h3>
                             </div>
                             <!-- Data Content -->
                             <div class="flex flex-column justify-center items-start gap--16 flex-auto">
@@ -186,7 +187,7 @@
                                             <span class="fs--12 fw5 lh--18 col--gray-600">New</span>
                                         </div>
                                         <div class="w-100 flex gap--4 items-end justify-between">
-                                            <span class="fs--36 fw6 lh--4 col--gray-600 tracked--neg--0-72">50</span>
+                                            <span class="fs--36 fw6 lh--44 col--gray-900 tracked--neg--0-72">50</span>
                                             <div class="flex gap--4 items-center">
                                                 <span>
                                                     <img src="assets/icons/trend-up-01.svg" alt="" class="w--20 h--20">
@@ -194,7 +195,7 @@
                                                 <span class="fs--14 fw5 lh--20 col--teal-700">20%</span>
                                             </div>
                                         </div>
-                                        <div id="chartdiv" class="w-100 h--48"></div>
+                                        <div data-id="subscribers" class="w-100 h--48"></div>
                                     </div>
                                 </div>
                             </div>
@@ -207,7 +208,7 @@
                                             <span class="fs--12 fw5 lh--18 col--gray-600">RECURRING</span>
                                         </div>
                                         <div class="w-100 flex gap--4 items-end justify-between">
-                                            <span class="fs--36 fw6 lh--4 col--gray-600 tracked--neg--0-72">5</span>
+                                            <span class="fs--36 fw6 lh--44 col--gray-900 tracked--neg--0-72">5</span>
                                             <div class="flex gap--4 items-center">
                                                 <span>
                                                     <img src="assets/icons/trend-up-01.svg" alt="" class="w--20 h--20">
@@ -215,7 +216,7 @@
                                                 <span class="fs--14 fw5 lh--20 col--teal-700">20%</span>
                                             </div>
                                         </div>
-                                        <div id="chartdiv2" class="w-100 h--48"></div>
+                                        <div data-id="recurring" class="w-100 h--48"></div>
                                     </div>
                                 </div>
                             </div>
@@ -226,18 +227,36 @@
                         <div data-secton="white-card" class="pad--16 flex flex-column gap--16 flex-auto bg-white-70 bg--blur--25 br--2">
                             <!-- Title -->
                             <div class="flex items-center gap--8">
-                                <h3 class="m--0 ff-poppins fs--16 fw5 lh--24 col--gray-700">Fans</h3>
+                                <h3 class="m--0 poppins fs--16 fw5 lh--24 col--gray-700">Fans</h3>
                             </div>
                             <!-- Data Content -->
                             <div class="flex flex-column justify-center items-start gap--16 flex-auto">
                                 <div class="flex items-center gap--24 flex-auto w-100">
                                     <div class="flex flex-column items-start gap--8 flex-auto">
                                         <span class="fs--12 fw5 lh--18 col--gray-600">NEW FOLLOWERS</span>
-                                        <span class="fs--36 fw6 lh--38 tracked--neg--0-72 col--gray-900">--</span>
+                                        <div class="w-100 flex gap--4 items-end justify-between">
+                                            <span class="fs--30 fw6 lh--38 col--gray-900">4</span>
+                                            <div class="flex gap--4 items-center">
+                                                <span>
+                                                    <img src="assets/icons/trend-down-01.svg" alt="" class="w--20 h--20">
+                                                </span>
+                                                <span class="fs--14 fw5 lh--20 col--orange-dark-700">20%</span>
+                                            </div>
+                                        </div>
+                                        <div data-id="newFollowers" class="w-100 h--48"></div>
                                     </div>
                                     <div class="flex flex-column items-start gap--8 flex-auto">
-                                        <span class="fs--12 fw5 lh--18 col--gray-600">PROFILE VISIT</span>
-                                        <span class="fs--36 fw6 lh--38 tracked--neg--0-72 col--gray-900">--</span>
+                                        <span class="fs--12 fw5 lh--18 col--gray-900">PROFILE VISIT</span>
+                                        <div class="w-100 flex gap--4 items-end justify-between">
+                                            <span class="fs--30 fw6 lh--38 col--gray-900">4</span>
+                                            <div class="flex gap--4 items-center">
+                                                <span>
+                                                    <img src="assets/icons/trend-up-01.svg" alt="" class="w--20 h--20">
+                                                </span>
+                                                <span class="fs--14 fw5 lh--20 col--teal-700">20%</span>
+                                            </div>
+                                        </div>
+                                        <div data-id="profileVisit" class="w-100 h--48"></div>
                                     </div>
                                 </div>
                             </div>
@@ -250,19 +269,22 @@
                     <!-- Middle Column -->
                     <div class="flex flex-column gap--16 w-100 grid--col-span-2-responsive-mobile-portrait">
                         <!-- Start white-card -->
-                        <div data-secton="white-card" class="pad--16 flex flex-column gap--16 flex-auto bg-white-70 bg--blur--25 br--2">
+                        <div data-secton="white-card" class="pad--16 flex flex-column justify-between gap--16 flex-auto bg-white-70 bg--blur--25 br--2">
                             <!-- Title -->
                             <div class="flex items-center gap--8">
-                                <h3 class="m--0 ff-poppins fs--16 fw5 lh--24 col--gray-700">Earnings</h3>
+                                <h3 class="m--0 poppins fs--16 fw5 lh--24 col--gray-700">Earnings</h3>
                             </div>
                             <!-- Data Content -->
-                            <div class="flex flex-column justify-center items-start gap--16 flex-auto">
-                                <div class="flex items-center gap--24 flex-auto w-100">
-                                    <div class="flex flex-column items-start gap--8">
-                                        <span class="fs--36 fw6 lh--44 tracked--neg--0-72 col--gray-900">--</span>
-                                    </div>
+                            <div class="w-100 flex gap--4 items-end justify-between">
+                                <span class="fs--36 fw6 lh--44 col--gray-900 tracked--neg--0-72">2,000 <small class="fs--20 lh--30 fw7">USD</small></span>
+                                <div class="flex gap--4 items-center">
+                                    <span>
+                                        <img src="assets/icons/trend-up-01.svg" alt="" class="w--20 h--20">
+                                    </span>
+                                    <span class="fs--14 fw5 lh--20 col--teal-700">10%</span>
                                 </div>
                             </div>
+                            <div data-id="earnings" class="w-100 h--48"></div>
                             <!-- Ens Data Content -->
                         </div>
                         <!-- End white-card -->
@@ -270,28 +292,64 @@
                         <div data-secton="white-card" class="pad--16 flex flex-column gap--16 flex-auto bg-white-70 bg--blur--25 br--2">
                             <!-- Title -->
                             <div class="flex items-center gap--8">
-                                <h3 class="m--0 ff-poppins fs--16 fw5 lh--24 col--gray-700">Likes</h3>
+                                <h3 class="m--0 poppins fs--16 fw5 lh--24 col--gray-700">Likes</h3>
                             </div>
                             <!-- Data Content -->
                             <div class="flex flex-column justify-center items-start gap--16 flex-auto">
                                 <div class="flex items-center gap--24 flex-auto w-100">
                                     <div class="flex flex-column items-start gap--8 flex-auto">
                                         <span class="fs--12 fw5 lh--18 col--gray-600">MEDIA</span>
-                                        <span class="fs--36 fw6 lh--38 tracked--neg--0-72 col--gray-900">--</span>
+                                        <div class="w-100 flex gap--4 items-end justify-between">
+                                            <span class="fs--30 fw6 lh--38 col--gray-900">76</span>
+                                            <div class="flex gap--4 items-center">
+                                                <span>
+                                                    <img src="assets/icons/trend-down-01.svg" alt="" class="w--20 h--20">
+                                                </span>
+                                                <span class="fs--14 fw5 lh--20 col--orange-dark-700">20%</span>
+                                            </div>
+                                        </div>
+                                        <div data-id="mediaChart" class="w-100 h--48"></div>
                                     </div>
                                     <div class="flex flex-column items-start gap--8 flex-auto">
                                         <span class="fs--12 fw5 lh--18 col--gray-600">MERCH</span>
-                                        <span class="fs--36 fw6 lh--38 tracked--neg--0-72 col--gray-900">--</span>
+                                        <div class="w-100 flex gap--4 items-end justify-between">
+                                            <span class="fs--30 fw6 lh--38 col--gray-900">2</span>
+                                            <div class="flex gap--4 items-center">
+                                                <span>
+                                                    <img src="assets/icons/trend-down-01.svg" alt="" class="w--20 h--20">
+                                                </span>
+                                                <span class="fs--14 fw5 lh--20 col--orange-dark-700">20%</span>
+                                            </div>
+                                        </div>
+                                        <div data-id="merchChart" class="w-100 h--48"></div>
                                     </div>
                                 </div>
                                 <div class="flex items-center gap--24 flex-auto w-100">
-                                    <div class="flex flex-column items-start gap--8 flex-auto">
+                                    <div class="flex flex-column justify-between items-start gap--8 flex-auto">
                                         <span class="fs--12 fw5 lh--18 col--gray-600">PROFILE</span>
-                                        <span class="fs--36 fw6 lh--38 tracked--neg--0-72 col--gray-900">--</span>
+                                        <div class="w-100 flex gap--4 items-end justify-between">
+                                            <span class="fs--30 fw6 lh--38 col--gray-900">12000</span>
+                                            <div class="flex gap--4 items-center">
+                                                <span>
+                                                    <img src="assets/icons/trend-up-01.svg" alt="" class="w--20 h--20">
+                                                </span>
+                                                <span class="fs--14 fw5 lh--20 col--teal-700">20%</span>
+                                            </div>
+                                        </div>
+                                        <div data-id="profileChart" class="w-100 h--48"></div>
                                     </div>
-                                    <div class="flex flex-column items-start gap--8 flex-auto">
+                                    <div class="flex flex-column justify-between items-start gap--8 flex-auto">
                                         <span class="fs--12 fw5 lh--18 col--gray-600">FEED</span>
-                                        <span class="fs--36 fw6 lh--38 tracked--neg--0-72 col--gray-900">--</span>
+                                        <div class="w-100 flex gap--4 items-end justify-between">
+                                            <span class="fs--30 fw6 lh--38 col--gray-900">4500</span>
+                                            <div class="flex gap--4 items-center">
+                                                <span>
+                                                    <img src="assets/icons/trend-up-01.svg" alt="" class="w--20 h--20">
+                                                </span>
+                                                <span class="fs--14 fw5 lh--20 col--teal-700">20%</span>
+                                            </div>
+                                        </div>
+                                        <div data-id="feedChart" class="w-100 h--48"></div>
                                     </div>
                                 </div>
                             </div>
@@ -307,7 +365,7 @@
                         <div data-secton="white-card" class="pad--16 flex flex-column gap--16 flex-auto bg-white-70 bg--blur--25 br--2">
                             <!-- Title -->
                             <div class="flex items-center gap--8">
-                                <h3 class="m--0 ff-poppins fs--16 fw5 lh--24 col--gray-700">Top Contributors</h3>
+                                <h3 class="m--0 poppins fs--16 fw5 lh--24 col--gray-700">Top Contributors</h3>
                             </div>
                             <!-- Data Content -->
                             <div class="flex flex-column justify-center items-start gap--16 flex-auto">
@@ -345,7 +403,7 @@
                         <span>
                             <img src="assets/icons/order-1.svg" class="filter--col--gray--500" alt="">
                         </span>
-                        <h2 class="ff-poppins m--0 fs--20 fw5 lh--30 col--gray-500">Order Received</h2>
+                        <h2 class="poppins m--0 fs--20 fw5 lh--30 col--gray-500">Order Received</h2>
                     </div>
                     <!-- End Title -->
                 </div>
@@ -392,7 +450,7 @@
                         <span>
                             <img src="assets/icons/line-chart-up.svg" class="filter--col--gray--500" alt="">
                         </span>
-                        <h2 class="ff-poppins m--0 fs--20 fw5 lh--30 col--gray-500">Trends</h2>
+                        <h2 class="poppins m--0 fs--20 fw5 lh--30 col--gray-500">Trends</h2>
                     </div>
                     <!-- End Title -->
                 </div>
@@ -407,7 +465,7 @@
                             <div data-secton="white-card" class="pad--16 flex flex-column gap--16 flex-auto bg-white-70 bg--blur--25 br--2">
                                 <!-- Title -->
                                 <div class="flex items-center justify-between gap--8">
-                                    <h3 class="m--0 ff-poppins fs--16 fw5 lh--24 col--gray-700">Top Media</h3>
+                                    <h3 class="m--0 poppins fs--16 fw5 lh--24 col--gray-700">Top Media</h3>
                                     <div class="flex items-start br--8 ba br--col--gray-300 bg-white-30 sh--7 overflow-hidden">
                                          <button class="bg-white pad--y--8 ph3 flex justify-center items-center gap--8 fs--14 fw5 lh--20 col--gray-800">Views</button>
                                          <button class="pad--y--8 ph3 flex justify-center items-center gap--8 bl br--col--gray-300 fs--14 fw5 lh--20 col--gray-500">P2V Sales</button>
@@ -442,7 +500,7 @@
                             <div data-secton="white-card" class="pad--16 flex flex-column gap--16 flex-auto bg-white-70 bg--blur--25 br--2">
                                 <!-- Title -->
                                 <div class="flex items-center gap--8">
-                                    <h3 class="m--0 ff-poppins fs--16 fw5 lh--24 col--gray-700">Top tags</h3>
+                                    <h3 class="m--0 poppins fs--16 fw5 lh--24 col--gray-700">Top tags</h3>
                                 </div>
                                 <!-- Data Content -->
                                 <div class="flex flex-column justify-center items-start gap--16 flex-auto">
@@ -473,7 +531,7 @@
                             <div data-secton="white-card" class="pad--16 flex flex-column gap--16 flex-auto bg-white-70 bg--blur--25 br--2">
                                 <!-- Title -->
                                 <div class="flex items-center gap--8">
-                                    <h3 class="m--0 ff-poppins fs--16 fw5 lh--24 col--gray-700">Top Merch</h3>
+                                    <h3 class="m--0 poppins fs--16 fw5 lh--24 col--gray-700">Top Merch</h3>
                                 </div>
                                 <!-- Data Content -->
                                 <div class="flex flex-column justify-center items-start gap--16 flex-auto">
@@ -504,7 +562,7 @@
                             <div data-secton="white-card" class="pad--16 flex flex-column gap--16 flex-auto bg-white-70 bg--blur--25 br--2">
                                 <!-- Title -->
                                 <div class="flex items-center gap--8">
-                                    <h3 class="m--0 ff-poppins fs--16 fw5 lh--24 col--gray-700">Top Countries</h3>
+                                    <h3 class="m--0 poppins fs--16 fw5 lh--24 col--gray-700">Top Countries</h3>
                                 </div>
                                 <!-- Data Content -->
                                 <div class="flex flex-column justify-center items-start gap--16 flex-auto">
@@ -556,172 +614,212 @@
      */
 
 
+    // Data Chart Main Function
+    function chartCreator (chartRenderEl, hexCode) {
+        var root = am5.Root.new(chartRenderEl);
+
+        // Set themes
+        // https://www.amcharts.com/docs/v5/concepts/themes/
+        root.setThemes([
+          am5themes_Animated.new(root)
+        ]);
+
+
+        // Create chart
+        // https://www.amcharts.com/docs/v5/charts/xy-chart/
+        var chart = root.container.children.push(am5xy.XYChart.new(root, {
+          panX: false,
+          panY: false,
+          wheelX: "none",
+          wheelY: "none",
+          paddingLeft: 0,
+          paddingRight: 0,
+          paddingBottom: 0,
+          paddingTop: 0,
+        }));
+
+
+        // Add cursor
+        // https://www.amcharts.com/docs/v5/charts/xy-chart/cursor/
+        var cursor = chart.set("cursor", am5xy.XYCursor.new(root, {
+          behavior: "none"
+        }));
+        cursor.lineY.set("visible", false);
+
+
+        // Generate random data
+        var date = new Date();
+        date.setHours(0, 0, 0, 0);
+        var value = 30;
+
+        function generateData() {
+          value = Math.round((Math.random() * 10 - 5) + value);
+          am5.time.add(date, "day", 10);
+          return {
+            date: date.getTime(),
+            value: value
+          };
+        }
+
+        function generateDatas(count) {
+          var data = [];
+          for (var i = 0; i < count; ++i) {
+            data.push(generateData());
+          }
+          return data;
+        }
+
+
+        // Create axes
+        // https://www.amcharts.com/docs/v5/charts/xy-chart/axes/
+        var xAxis = chart.xAxes.push(am5xy.DateAxis.new(root, {
+          maxDeviation: 0,
+          baseInterval: {
+            timeUnit: "day",
+            count: 1
+          },
+          renderer: am5xy.AxisRendererX.new(root, {
+            minGridDistance: 80,
+            minorGridEnabled: false,
+            visible:false,
+          }),
+          //tooltip: am5.Tooltip.new(root, {})
+        }));
+
+        var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
+          maxDeviation: 0,
+          renderer: am5xy.AxisRendererY.new(root, {
+            visible:false,
+          })
+        }));
+
+
+        // Add series
+        // https://www.amcharts.com/docs/v5/charts/xy-chart/series/
+        var series = chart.series.push(am5xy.SmoothedXLineSeries.new(root, {
+          name: "Series",
+          xAxis: xAxis,
+          yAxis: yAxis,
+          valueYField: "value",
+          valueXField: "date",
+          stroke: am5.color(hexCode)
+        }));
+
+
+        //Y-Axis Label Removed
+        yAxis.get("renderer").labels.template.setAll({
+          visible:false,
+          paddingLeft: 0,
+        });
+
+        //X-Axis Label Removed
+        xAxis.get("renderer").labels.template.setAll({
+          visible:false,
+          paddingBottom: 0,
+        });
+
+        //Y-Axis Grid Removed
+        yAxis.get("renderer").grid.template.setAll({
+          visible:false,
+          paddingLeft: 0,
+        });
+
+        //X-Axis Grid Removed
+        xAxis.get("renderer").grid.template.setAll({
+          visible:false,
+          paddingBottom: 0,
+        });
+
+        series.fills.template.set("fillGradient", am5.LinearGradient.new(root, {
+           stops: [
+            { color: am5.color(hexCode), opacity: 0.2 },
+            { color: am5.color(hexCode), opacity: 0.2},
+            { color: am5.color(0xffffff), opacity: 0 },
+          ],
+          rotation: 90
+        }));
+
+        series.fills.template.setAll({
+          visible: true,
+          fillOpacity: 1
+        });
+
+        series.strokes.template.setAll({
+          strokeWidth: 2
+        });
+        series.bullets.push(function () {
+          return am5.Bullet.new(root, {
+            locationY: 0,
+            sprite: am5.Circle.new(root, {
+              radius: 0,
+              stroke: root.interfaceColors.get("background"),
+              strokeWidth: 2,
+              fill: series.get("fill")
+            })
+          });
+        });
+
+
+        // Add scrollbar
+        // https://www.amcharts.com/docs/v5/charts/xy-chart/scrollbars/
+        chart.set("scrollbarX", am5.Scrollbar.new(root, {
+          orientation: "none",
+          visible: false,
+        }));
+
+
+        var data = generateDatas(50);
+        series.data.setAll(data);
+
+
+        // Make stuff animate on load
+        // https://www.amcharts.com/docs/v5/concepts/animations/
+        series.appear(1000);
+        chart.appear(1000, 100);
+
+        cursor.lineY.set("forceHidden", true);
+        cursor.lineX.set("forceHidden", true);
+    }
+
     // Create root element
     // https://www.amcharts.com/docs/v5/getting-started/#Root_element
-    var root = am5.Root.new("chartdiv");
+    var subscriberEl = document.querySelector('[data-id="subscribers"]');
+    var recurring = document.querySelector('[data-id="recurring"]');
+    var newFollowers = document.querySelector('[data-id="newFollowers"]');
+    var profileVisit = document.querySelector('[data-id="profileVisit"]');
+    var earnings = document.querySelector('[data-id="earnings"]');
+    var mediaChart = document.querySelector('[data-id="mediaChart"]');
+    var merchChart = document.querySelector('[data-id="merchChart"]');
+    var feedChart = document.querySelector('[data-id="feedChart"]');
+    var profileChart = document.querySelector('[data-id="profileChart"]');
 
+    // For Suscriber Chart
+    chartCreator(subscriberEl, '#2ED3B7');
 
-    // Set themes
-    // https://www.amcharts.com/docs/v5/concepts/themes/
-    root.setThemes([
-      am5themes_Animated.new(root)
-    ]);
+    // For Recurring Chart
+    chartCreator(recurring, '#2ED3B7');
 
+    // For New Followers Chart
+    chartCreator(newFollowers, '#FF4405');
 
-    // Create chart
-    // https://www.amcharts.com/docs/v5/charts/xy-chart/
-    var chart = root.container.children.push(am5xy.XYChart.new(root, {
-      panX: false,
-      panY: false,
-      wheelX: "none",
-      wheelY: "none",
-      paddingLeft: 0,
-      paddingRight: 0,
-      paddingBottom: 0,
-      paddingTop: 0,
-    }));
+    // For Profile Visit Chart
+    chartCreator(profileVisit, '#2ED3B7');
 
+    // For Earnings Chart
+    chartCreator(earnings, '#2ED3B7');
 
-    // Add cursor
-    // https://www.amcharts.com/docs/v5/charts/xy-chart/cursor/
-    var cursor = chart.set("cursor", am5xy.XYCursor.new(root, {
-      behavior: "none"
-    }));
-    cursor.lineY.set("visible", false);
+    // For Media Chart
+    chartCreator(mediaChart, '#FF4405');
 
+    // For Merch Chart
+    chartCreator(merchChart, '#FF4405');
 
-    // Generate random data
-    var date = new Date();
-    date.setHours(0, 0, 0, 0);
-    var value = 30;
+    // For Feed Chart
+    chartCreator(feedChart, '#2ED3B7');
 
-    function generateData() {
-      value = Math.round((Math.random() * 10 - 5) + value);
-      am5.time.add(date, "day", 10);
-      return {
-        date: date.getTime(),
-        value: value
-      };
-    }
-
-    function generateDatas(count) {
-      var data = [];
-      for (var i = 0; i < count; ++i) {
-        data.push(generateData());
-      }
-      return data;
-    }
-
-
-    // Create axes
-    // https://www.amcharts.com/docs/v5/charts/xy-chart/axes/
-    var xAxis = chart.xAxes.push(am5xy.DateAxis.new(root, {
-      maxDeviation: 0,
-      baseInterval: {
-        timeUnit: "day",
-        count: 1
-      },
-      renderer: am5xy.AxisRendererX.new(root, {
-        minGridDistance: 80,
-        minorGridEnabled: false,
-        visible:false,
-      }),
-      //tooltip: am5.Tooltip.new(root, {})
-    }));
-
-    var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
-      maxDeviation: 0,
-      renderer: am5xy.AxisRendererY.new(root, {
-        visible:false,
-      })
-    }));
-
-
-    // Add series
-    // https://www.amcharts.com/docs/v5/charts/xy-chart/series/
-    var series = chart.series.push(am5xy.SmoothedXLineSeries.new(root, {
-      name: "Series",
-      xAxis: xAxis,
-      yAxis: yAxis,
-      valueYField: "value",
-      valueXField: "date",
-      stroke: am5.color(0x2ED3B7)
-    }));
-
-
-    //Y-Axis Label Removed
-    yAxis.get("renderer").labels.template.setAll({
-      visible:false,
-      paddingLeft: 0,
-    });
-
-    //X-Axis Label Removed
-    xAxis.get("renderer").labels.template.setAll({
-      visible:false,
-      paddingBottom: 0,
-    });
-
-    //Y-Axis Grid Removed
-    yAxis.get("renderer").grid.template.setAll({
-      visible:false,
-      paddingLeft: 0,
-    });
-
-    //X-Axis Grid Removed
-    xAxis.get("renderer").grid.template.setAll({
-      visible:false,
-      paddingBottom: 0,
-    });
-
-    series.fills.template.set("fillGradient", am5.LinearGradient.new(root, {
-       stops: [
-        { color: am5.color(0x2ED3B7), opacity: 0.2 },
-        { color: am5.color(0x2ED3B7), opacity: 0.2},
-        { color: am5.color(0xffffff), opacity: 0 },
-      ],
-      rotation: 90
-    }));
-
-    series.fills.template.setAll({
-      visible: true,
-      fillOpacity: 1
-    });
-
-    series.strokes.template.setAll({
-      strokeWidth: 2
-    });
-    series.bullets.push(function () {
-      return am5.Bullet.new(root, {
-        locationY: 0,
-        sprite: am5.Circle.new(root, {
-          radius: 0,
-          stroke: root.interfaceColors.get("background"),
-          strokeWidth: 2,
-          fill: series.get("fill")
-        })
-      });
-    });
-
-
-    // Add scrollbar
-    // https://www.amcharts.com/docs/v5/charts/xy-chart/scrollbars/
-    chart.set("scrollbarX", am5.Scrollbar.new(root, {
-      orientation: "none",
-      visible: false,
-    }));
-
-
-    var data = generateDatas(50);
-    series.data.setAll(data);
-
-
-    // Make stuff animate on load
-    // https://www.amcharts.com/docs/v5/concepts/animations/
-    series.appear(1000);
-    chart.appear(1000, 100);
-
-    cursor.lineY.set("forceHidden", true);
-    cursor.lineX.set("forceHidden", true);
+    // For Profile Chart
+    chartCreator(profileChart, '#2ED3B7');
+    
     </script>
 </body>
 
