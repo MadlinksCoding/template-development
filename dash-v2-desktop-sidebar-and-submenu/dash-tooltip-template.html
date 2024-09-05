@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Meta Tags -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>Template - Dashboard Tooltips</title>
+
+        <!-- Poppins Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+        <!-- Tachyons Styles -->
+        <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/main.css" />
+        <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" />
+        <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/theme.css" />
+        <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/customTachyons.css" />
+
+        <!-- Dashboard Sidebar Custom Style -->
+        <link rel="stylesheet" href="assets/css/dash-customTachyons.css" />
+        <link rel="stylesheet" href="assets/css/dash-tooltips.css" />
+    </head>
+    <body>
+        <div class="flex flex-column pa6 bg--col--mercury">
+            <div class="flex flex-column self-stretch flex--max gap--20">
+                <!-- tooltip text -->
+                <div class="flex items-center gap--4">
+                    <div class="flex items-center">
+                        <span class="fs--12 fw4 lh--18 black">
+                            Tooltip - no arrow
+                        </span>
+                    </div>
+    
+                    <div class="flex items-center">
+                        <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
+                        <div data-tooltip data-tooltip-arrow="false" data-tooltip-position="top left" data-tooltip-size="default" data-tooltip-theme="dark" class="relative z-5 pointer">
+                            <img src="assets/images/help-circle.svg" alt="" class="w--16 h--16 filter--col--pale-sky">
+
+                            <div data-tooltip-text data-tooltip-content>
+                                <span class="fs--12 fw4 lh--18 color-inherit">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                </span>
+                            </div>
+                        </div>
+                        <!-- /tooltip -->
+                    </div>
+                </div>
+                <!-- /tooltip text -->
+
+                <!-- tooltip text -->
+                <div class="flex items-center gap--4">
+                    <div class="flex items-center">
+                        <span class="fs--12 fw4 lh--18 black">
+                            Tooltip - light theme
+                        </span>
+                    </div>
+    
+                    <div class="flex items-center">
+                        <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
+                        <div data-tooltip data-tooltip-arrow="true" data-tooltip-position="top left" data-tooltip-size="default" data-tooltip-theme="light" class="relative z-5 pointer">
+                            <img src="assets/images/help-circle.svg" alt="" class="w--16 h--16 filter--col--pale-sky">
+
+                            <div data-tooltip-text data-tooltip-content>
+                                <span class="fs--12 fw4 lh--18 color-inherit">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                </span>
+                            </div>
+                        </div>
+                        <!-- /tooltip -->
+                    </div>
+                </div>
+                <!-- /tooltip text -->
+
+                <!-- tooltip text -->
+                <div class="flex items-center gap--4">
+                    <div class="flex items-center">
+                        <span class="fs--12 fw4 lh--18 black">
+                            Tooltip - top left
+                        </span>
+                    </div>
+    
+                    <div class="flex items-center">
+                        <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
+                        <div data-tooltip data-tooltip-arrow="true" data-tooltip-position="top left" data-tooltip-size="default" data-tooltip-theme="dark" class="relative z-5 pointer">
+                            <img src="assets/images/help-circle.svg" alt="" class="w--16 h--16 filter--col--pale-sky">
+
+                            <div data-tooltip-text data-tooltip-content>
+                                <span class="fs--12 fw4 lh--18 color-inherit">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                </span>
+                            </div>
+                        </div>
+                        <!-- /tooltip -->
+                    </div>
+                </div>
+                <!-- /tooltip text -->
+
+                <!-- tooltip text -->
+                <div class="flex items-center gap--4">
+                    <div class="flex items-center">
+                        <span class="fs--12 fw4 lh--18 black">
+                            Tooltip - top center
+                        </span>
+                    </div>
+    
+                    <div class="flex items-center">
+                        <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
+                        <div data-tooltip data-tooltip-arrow="true" data-tooltip-position="top center" data-tooltip-size="default" data-tooltip-theme="dark" class="relative z-5 pointer">
+                            <img src="assets/images/help-circle.svg" alt="" class="w--16 h--16 filter--col--pale-sky">
+
+                            <div data-tooltip-text data-tooltip-content>
+                                <span class="fs--12 fw4 lh--18 color-inherit">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                </span>
+                            </div>
+                        </div>
+                        <!-- /tooltip -->
+                    </div>
+                </div>
+                <!-- /tooltip text -->
+
+                <!-- tooltip text -->
+                <div class="flex items-center gap--4">
+                    <div class="flex items-center">
+                        <span class="fs--12 fw4 lh--18 black">
+                            Tooltip - top right
+                        </span>
+                    </div>
+    
+                    <div class="flex items-center">
+                        <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
+                        <div data-tooltip data-tooltip-arrow="true" data-tooltip-position="top right" data-tooltip-size="default" data-tooltip-theme="dark" class="relative z-5 pointer">
+                            <img src="assets/images/help-circle.svg" alt="" class="w--16 h--16 filter--col--pale-sky">
+
+                            <div data-tooltip-text data-tooltip-content>
+                                <span class="fs--12 fw4 lh--18 color-inherit">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                </span>
+                            </div>
+                        </div>
+                        <!-- /tooltip -->
+                    </div>
+                </div>
+                <!-- /tooltip text -->
+
+                <!-- tooltip text -->
+                <div class="flex items-center gap--4">
+                    <div class="flex items-center">
+                        <span class="fs--12 fw4 lh--18 black">
+                            Tooltip - bottom left
+                        </span>
+                    </div>
+    
+                    <div class="flex items-center">
+                        <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
+                        <div data-tooltip data-tooltip-arrow="true" data-tooltip-position="bottom left" data-tooltip-size="default" data-tooltip-theme="dark" class="relative z-5 pointer">
+                            <img src="assets/images/help-circle.svg" alt="" class="w--16 h--16 filter--col--pale-sky">
+
+                            <div data-tooltip-text data-tooltip-content>
+                                <span class="fs--12 fw4 lh--18 color-inherit">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                </span>
+                            </div>
+                        </div>
+                        <!-- /tooltip -->
+                    </div>
+                </div>
+                <!-- /tooltip text -->
+
+                <!-- tooltip text -->
+                <div class="flex items-center gap--4">
+                    <div class="flex items-center">
+                        <span class="fs--12 fw4 lh--18 black">
+                            Tooltip - bottom center
+                        </span>
+                    </div>
+    
+                    <div class="flex items-center">
+                        <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
+                        <div data-tooltip data-tooltip-arrow="true" data-tooltip-position="bottom center" data-tooltip-size="default" data-tooltip-theme="dark" class="relative z-5 pointer">
+                            <img src="assets/images/help-circle.svg" alt="" class="w--16 h--16 filter--col--pale-sky">
+
+                            <div data-tooltip-text data-tooltip-content>
+                                <span class="fs--12 fw4 lh--18 color-inherit">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                </span>
+                            </div>
+                        </div>
+                        <!-- /tooltip -->
+                    </div>
+                </div>
+                <!-- /tooltip text -->
+
+                <!-- tooltip text -->
+                <div class="flex items-center gap--4">
+                    <div class="flex items-center">
+                        <span class="fs--12 fw4 lh--18 black">
+                            Tooltip - bottom right
+                        </span>
+                    </div>
+    
+                    <div class="flex items-center">
+                        <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
+                        <div data-tooltip data-tooltip-arrow="true" data-tooltip-position="bottom right" data-tooltip-size="default" data-tooltip-theme="dark" class="relative z-5 pointer">
+                            <img src="assets/images/help-circle.svg" alt="" class="w--16 h--16 filter--col--pale-sky">
+
+                            <div data-tooltip-text data-tooltip-content>
+                                <span class="fs--12 fw4 lh--18 color-inherit">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                </span>
+                            </div>
+                        </div>
+                        <!-- /tooltip -->
+                    </div>
+                </div>
+                <!-- /tooltip text -->
+
+                <!-- tooltip text -->
+                <div class="flex items-center gap--4">
+                    <div class="flex items-center">
+                        <span class="fs--12 fw4 lh--18 black">
+                            Tooltip - center left
+                        </span>
+                    </div>
+    
+                    <div class="flex items-center">
+                        <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
+                        <div data-tooltip data-tooltip-arrow="true" data-tooltip-position="center left" data-tooltip-size="default" data-tooltip-theme="dark" class="relative z-5 pointer">
+                            <img src="assets/images/help-circle.svg" alt="" class="w--16 h--16 filter--col--pale-sky">
+
+                            <div data-tooltip-text data-tooltip-content>
+                                <span class="fs--12 fw4 lh--18 color-inherit">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                </span>
+                            </div>
+                        </div>
+                        <!-- /tooltip -->
+                    </div>
+                </div>
+                <!-- /tooltip text -->
+
+                <!-- tooltip text -->
+                <div class="flex items-center gap--4">
+                    <div class="flex items-center">
+                        <span class="fs--12 fw4 lh--18 black">
+                            Tooltip - center right
+                        </span>
+                    </div>
+    
+                    <div class="flex items-center">
+                        <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
+                        <div data-tooltip data-tooltip-arrow="true" data-tooltip-position="center right" data-tooltip-size="default" data-tooltip-theme="dark" class="relative z-5 pointer">
+                            <img src="assets/images/help-circle.svg" alt="" class="w--16 h--16 filter--col--pale-sky">
+
+                            <div data-tooltip-text data-tooltip-content>
+                                <span class="fs--12 fw4 lh--18 color-inherit">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                </span>
+                            </div>
+                        </div>
+                        <!-- /tooltip -->
+                    </div>
+                </div>
+                <!-- /tooltip text -->
+
+                <!-- tooltip text -->
+                <div class="flex items-center gap--4">
+                    <div class="flex items-center">
+                        <span class="fs--12 fw4 lh--18 black">
+                            Tooltip - size default
+                        </span>
+                    </div>
+    
+                    <div class="flex items-center">
+                        <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
+                        <div data-tooltip data-tooltip-arrow="true" data-tooltip-position="top center" data-tooltip-size="default" data-tooltip-theme="dark" class="relative z-5 pointer">
+                            <img src="assets/images/help-circle.svg" alt="" class="w--16 h--16 filter--col--pale-sky">
+
+                            <div data-tooltip-text data-tooltip-content>
+                                <span class="fs--12 fw4 lh--18 color-inherit">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                </span>
+                            </div>
+                        </div>
+                        <!-- /tooltip -->
+                    </div>
+                </div>
+                <!-- /tooltip text -->
+
+                <!-- tooltip text -->
+                <div class="flex items-center gap--4">
+                    <div class="flex items-center">
+                        <span class="fs--12 fw4 lh--18 black">
+                            Tooltip - size small
+                        </span>
+                    </div>
+    
+                    <div class="flex items-center">
+                        <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
+                        <div data-tooltip data-tooltip-arrow="true" data-tooltip-position="top center" data-tooltip-size="small" data-tooltip-theme="dark" class="relative z-5 pointer">
+                            <img src="assets/images/help-circle.svg" alt="" class="w--16 h--16 filter--col--pale-sky">
+
+                            <div data-tooltip-text data-tooltip-content>
+                                <span class="fs--12 fw4 lh--18 color-inherit">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                </span>
+                            </div>
+                        </div>
+                        <!-- /tooltip -->
+                    </div>
+                </div>
+                <!-- /tooltip text -->
+
+                <!-- tooltip text -->
+                <div class="flex items-center gap--4">
+                    <div class="flex items-center">
+                        <span class="fs--12 fw4 lh--18 black">
+                            Tooltip - size medium
+                        </span>
+                    </div>
+    
+                    <div class="flex items-center">
+                        <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
+                        <div data-tooltip data-tooltip-arrow="true" data-tooltip-position="top center" data-tooltip-size="medium" data-tooltip-theme="dark" class="relative z-5 pointer">
+                            <img src="assets/images/help-circle.svg" alt="" class="w--16 h--16 filter--col--pale-sky">
+
+                            <div data-tooltip-text data-tooltip-content>
+                                <span class="fs--12 fw4 lh--18 color-inherit">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                </span>
+                            </div>
+                        </div>
+                        <!-- /tooltip -->
+                    </div>
+                </div>
+                <!-- /tooltip text -->
+
+                <!-- tooltip text -->
+                <div class="flex items-center gap--4">
+                    <div class="flex items-center">
+                        <span class="fs--12 fw4 lh--18 black">
+                            Tooltip - size large
+                        </span>
+                    </div>
+    
+                    <div class="flex items-center">
+                        <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
+                        <div data-tooltip data-tooltip-arrow="true" data-tooltip-position="top center" data-tooltip-size="large" data-tooltip-theme="dark" class="relative z-5 pointer">
+                            <img src="assets/images/help-circle.svg" alt="" class="w--16 h--16 filter--col--pale-sky">
+
+                            <div data-tooltip-text data-tooltip-content>
+                                <span class="fs--12 fw4 lh--18 color-inherit">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                </span>
+                            </div>
+                        </div>
+                        <!-- /tooltip -->
+                    </div>
+                </div>
+                <!-- /tooltip text -->
+            </div>
+        </div>
+    </body>
+</html>
