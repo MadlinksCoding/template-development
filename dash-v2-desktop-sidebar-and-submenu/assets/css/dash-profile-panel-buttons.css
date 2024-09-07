@@ -9,10 +9,12 @@
   transition: all 0.15s ease-in-out;
 }
 
+[data-profile-dotted-button][data-is-active="true"],
 [data-profile-dotted-button]:hover {
   background-color: var(--color-brilliant-rose);
 }
 
+[data-profile-dotted-button][data-is-active="true"] [data-icon] ,
 [data-profile-dotted-button]:hover [data-icon] {
   filter: brightness(0) saturate(100%) invert(99%) sepia(99%) saturate(0%) hue-rotate(176deg) brightness(107%) contrast(100%); /* #FFFFFF */
 }
@@ -25,15 +27,13 @@
   transform: translateY(-0.5rem);
   pointer-events: none;
   transition: all 0.15s ease-in-out;
-  transition-delay: 0.1s;
 }
 
-[data-profile-dotted-button]:hover [data-dropdown-wrapper] {
+[data-profile-dotted-button][data-is-active="true"] [data-dropdown-wrapper] {
   opacity: 1;
   visibility: visible;
   transform: translateY(0rem);
   pointer-events: all;
-  transition-delay: 0.3s;
 }
 
 /* Dashboard Profile View Button : Custom Styles */
@@ -51,7 +51,7 @@
   position: relative;
   background-color: var(--color-black, #000000);
   box-shadow: 4px 4px 0px 0px var(--color-brilliant-rose);
-  transform: skew(-20deg, 0) translateX(-7px);
+  transform: skew(-20deg, 0) translateX(-0.438rem);
   transition: all 0.15s ease-in-out;
 }
 
@@ -86,7 +86,7 @@
 [data-go-live-button] [data-skew] {
   background-color: var(--color-white, #FFFFFF);
   box-shadow: 4px 4px 0px 0px var(--color-brilliant-rose);
-  transform: skew(-20deg, 0) translateX(9px);
+  transform: skew(-20deg, 0) translateX(0.563rem);
   transition: all 0.15s ease-in-out;
 }
 
