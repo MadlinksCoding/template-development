@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Meta Tags -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>Template - Dashboard Profile Submenu Buttons</title>
+
+        <!-- Poppins Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+        <!-- Tachyons Styles -->
+        <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/main.css" />
+        <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" />
+        <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/theme.css" />
+        <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/customTachyons.css" />
+
+        <!-- Dashboard Sidebar Custom Style -->
+        <link rel="stylesheet" href="assets/css/dash-customTachyons.css" />
+        <link rel="stylesheet" href="assets/css/dash-profile-panel-buttons.css" />
+    </head>
+    <body>
+        <div class="flex flex-column self-stretch items-center justify-center gap--16 pa5">
+            <div class="flex flex-column items-start self-stretch gap--16 mw6" style="background: url('assets/images/profile-bg.png') center center no-repeat; background-size: cover;">
+                <div class="flex flex-column items-start self-stretch gap--16 pa3 mw6 bg-black-50">
+                    <div class="flex items-start self-stretch gap--16 pv3">
+                        <span class="white">
+                            TOP SECTION
+                        </span>
+                    </div>
+
+                    <div class="flex items-start self-stretch gap--16 pv4">
+                        <span class="white">
+                            Mid SECTION
+                        </span>
+                    </div>
+
+                    <!-- profile panel button controls -->
+                    <div class="flex items-center self-stretch">
+                        <!-- left buttons wrapper -->
+                        <div class="flex items-center self-stretch flex--max">
+                            <!-- dot button -->
+                            <div data-profile-dotted-button class="flex justify-center items-center w--40 h--40 relative pointer">
+                                <img data-icon src="assets/images/dots-vertical.svg" alt="" class="w--24 h--24 transition--all transition--150 transition--ease-in-out">
+
+                                <!-- dropdown -->
+                                <div data-dropdown-wrapper class="flex flex-column items-start gap--10 pt0 w--128 absolute top-2 left-0">
+                                    <ul data-dropdown class="flex flex-column items-start self-stretch br--2 bg--col--white--70 bg--blur--50 overflow-hidden">
+                                        <li data-dropdown-list class="flex flex-column items-center self-stretch">
+                                            <a data-dropdown-item class="flex flex-column items-start self-stretch pv2 pad--x--12 bg--col--white--70 hover--parent--child--col--blue-ribbon transition--all transition--150 transition--ease-in-out">
+                                                <span data-dropdown-item-text class="fs--12 fw5 lh--18 col--ebony hover--col--blue-ribbon transition--all transition--150 transition--ease-in-out">
+                                                    Edit profile
+                                                </span>
+                                            </a>
+                                        </li>
+
+                                        <li data-dropdown-list class="flex flex-column items-center self-stretch">
+                                            <a data-dropdown-item class="flex flex-column items-start self-stretch pv2 pad--x--12 bg--col--white--70 hover--parent--child--col--blue-ribbon transition--all transition--150 transition--ease-in-out">
+                                                <span data-dropdown-item-text class="fs--12 fw5 lh--18 col--ebony hover--col--blue-ribbon transition--all transition--150 transition--ease-in-out">
+                                                    Share to X
+                                                </span>
+                                            </a>
+                                        </li>
+
+                                        <li data-dropdown-list class="flex flex-column items-center self-stretch">
+                                            <a data-dropdown-item class="flex flex-column items-start self-stretch pv2 pad--x--12 bg--col--white--70 hover--parent--child--col--blue-ribbon transition--all transition--150 transition--ease-in-out">
+                                                <span data-dropdown-item-text class="fs--12 fw5 lh--18 col--ebony hover--col--blue-ribbon transition--all transition--150 transition--ease-in-out">
+                                                    Copy profile link
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- /dropdown -->
+                            </div>
+                            <!-- /dot button -->
+
+                            <!-- view profile button -->
+                            <a data-profile-view-button class="flex justify-center items-center flex--max self-stretch h--40 relative pointer">
+                                <div data-main class="flex justify-center items-center flex--max self-stretch gap--10 h--40 pv1 ph2 pointer">
+                                    <span data-text class="fs--18 fw5 lh--28 white transition--all transition--150 transition--ease-in-out">
+                                        View Profile
+                                    </span>
+                                </div>
+
+                                <div data-skew class="flex justify-center items-center w1 h--40 pv1 ph2 pointer">&nbsp;</div>
+                            </a>
+                            <!-- /view profile button -->
+                        </div>
+                        <!-- /left buttons wrapper -->
+
+                        <!-- right buttons wrapper -->
+                        <div class="flex items-center self-stretch flex--max">
+                            <!-- view profile button -->
+                            <a data-go-live-button class="flex justify-center items-center flex--max self-stretch h--40 relative pointer">
+                                <div data-skew class="flex justify-center items-center w1 h--40 pv1 ph2 pointer">&nbsp;</div>
+
+                                <div data-main class="flex justify-center items-center flex--max self-stretch gap--10 h--40 pv1 ph2 pointer">
+                                    <span data-text class="fs--18 fw5 lh--28 black transition--all transition--150 transition--ease-in-out">
+                                        Go Live
+                                    </span>
+
+                                    <img data-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/arrow_right%20up.svg" alt="" class="w--24 h--24 transition--all transition--150 transition--ease-in-out">
+                                </div>
+                            </a>
+                            <!-- /view profile button -->
+                        </div>
+                        <!-- /right buttons wrapper -->
+                    </div>
+                    <!-- /profile panel button controls -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

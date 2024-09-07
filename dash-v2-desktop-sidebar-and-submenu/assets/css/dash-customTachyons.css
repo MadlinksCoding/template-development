@@ -73,20 +73,21 @@
 
 
 /* Filter Colors */
-.filter--col--ebony--variation-2 { filter: brightness(0) saturate(100%) invert(3%) sepia(38%) saturate(3328%) hue-rotate(209deg) brightness(93%) contrast(93%); }
-.filter--col--blue-ribbon { filter: brightness(0) saturate(100%) invert(37%) sepia(57%) saturate(6169%) hue-rotate(214deg) brightness(91%) contrast(106%); }
-.filter--col--mischka { filter: brightness(0) saturate(100%) invert(87%) sepia(8%) saturate(203%) hue-rotate(178deg) brightness(99%) contrast(87%); }
-.filter--col--pale-sky { filter: brightness(0) saturate(100%) invert(45%) sepia(13%) saturate(594%) hue-rotate(183deg) brightness(92%) contrast(92%); }
-.filter--col--oxford-blue { filter: brightness(0) saturate(100%) invert(22%) sepia(31%) saturate(534%) hue-rotate(179deg) brightness(93%) contrast(90%); }
-.filter--col--athens-gray2 { filter: brightness(0) saturate(100%) invert(90%) sepia(9%) saturate(72%) hue-rotate(183deg) brightness(105%) contrast(91%); }
-.filter--col--gull-gray { filter: brightness(0) saturate(100%) invert(72%) sepia(6%) saturate(782%) hue-rotate(179deg) brightness(91%) contrast(83%); }
-.filter--col--bright-turquoise { filter: brightness(0) saturate(100%) invert(67%) sepia(37%) saturate(913%) hue-rotate(145deg) brightness(95%) contrast(97%); }
-.filter--col--bondi-blue { filter: brightness(0) saturate(100%) invert(39%) sepia(96%) saturate(762%) hue-rotate(157deg) brightness(88%) contrast(94%); }
+.filter--col--ebony--variation-2 { filter: brightness(0) saturate(100%) invert(3%) sepia(38%) saturate(3328%) hue-rotate(209deg) brightness(93%) contrast(93%); } /* #0C111D */
+.filter--col--blue-ribbon { filter: brightness(0) saturate(100%) invert(37%) sepia(57%) saturate(6169%) hue-rotate(214deg) brightness(91%) contrast(106%); } /* #155EEF */
+.filter--col--blue-ribbon-2 { filter: brightness(0) saturate(100%) invert(24%) sepia(88%) saturate(7497%) hue-rotate(220deg) brightness(96%) contrast(101%); } /* #004EEB */
+.filter--col--mischka { filter: brightness(0) saturate(100%) invert(87%) sepia(8%) saturate(203%) hue-rotate(178deg) brightness(99%) contrast(87%); } /* #D0D5DD */
+.filter--col--pale-sky { filter: brightness(0) saturate(100%) invert(45%) sepia(13%) saturate(594%) hue-rotate(183deg) brightness(92%) contrast(92%); } /* #667085 */
+.filter--col--oxford-blue { filter: brightness(0) saturate(100%) invert(22%) sepia(31%) saturate(534%) hue-rotate(179deg) brightness(93%) contrast(90%); } /* #344054 */
+.filter--col--athens-gray2 { filter: brightness(0) saturate(100%) invert(90%) sepia(9%) saturate(72%) hue-rotate(183deg) brightness(105%) contrast(91%); } /* #EAECF0 */
+.filter--col--gull-gray { filter: brightness(0) saturate(100%) invert(72%) sepia(6%) saturate(782%) hue-rotate(179deg) brightness(91%) contrast(83%); } /* #98A2B3 */
+.filter--col--bright-turquoise { filter: brightness(0) saturate(100%) invert(67%) sepia(37%) saturate(913%) hue-rotate(145deg) brightness(95%) contrast(97%); } /* #22CCEE */
+.filter--col--bondi-blue { filter: brightness(0) saturate(100%) invert(39%) sepia(96%) saturate(762%) hue-rotate(157deg) brightness(88%) contrast(94%); } /* #088AB2 */
 
 
 /* Hover Filter Colors */
-.hov--filter--col--blue-ribbon:hover { filter: brightness(0) saturate(100%) invert(37%) sepia(57%) saturate(6169%) hue-rotate(214deg) brightness(91%) contrast(106%); }
-.hover--parent--child--col--blue-ribbon:hover .hov--filter--col--blue-ribbon { filter: brightness(0) saturate(100%) invert(37%) sepia(57%) saturate(6169%) hue-rotate(214deg) brightness(91%) contrast(106%); }
+.hov--filter--col--blue-ribbon:hover { filter: brightness(0) saturate(100%) invert(37%) sepia(57%) saturate(6169%) hue-rotate(214deg) brightness(91%) contrast(106%); } /* #155EEF */
+.hover--parent--child--col--blue-ribbon:hover .hov--filter--col--blue-ribbon { filter: brightness(0) saturate(100%) invert(37%) sepia(57%) saturate(6169%) hue-rotate(214deg) brightness(91%) contrast(106%); } /* #155EEF */
 
 
 /* Caret Colors */
@@ -167,6 +168,7 @@
 /* Padding */
 .pad--6 { padding: 0.375rem; /* padding 6px */ }
 .pad--12 { padding: 0.75rem; /* padding 12px */ }
+.pad--x--12 { padding-left: 0.75rem; padding-right: 0.75rem; /* padding-left 12px padding-right 12px */ }
 
 
 /* Margin */
