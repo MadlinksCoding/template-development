@@ -311,20 +311,123 @@
         root.setThemes([
           am5themes_Animated.new(root)
         ]);
-         
+
         // Create chart
         var chart = root.container.children.push(am5xy.XYChart.new(root, {
           panX: false,
           panY: false,
           wheelX: "none",
           wheelY: "none",
-          maxTooltipDistance: -1,
+          pinchZoomX: false,
           paddingLeft: 0,
           paddingRight: 0,
           paddingBottom: 0,
           paddingTop: 0,
+          maxTooltipDistance: 0
         }));
-         
+
+        // Add cursor
+        var cursor = chart.set("cursor", am5xy.XYCursor.new(root, {
+          behavior: "none"  // Enable zoom and pan behavior
+        }));
+        cursor.lineY.set("visible", false);
+        cursor.lineX.set("visible", false);
+
+        // Static data to ensure overlap
+        var date = new Date();
+        date.setHours(0, 0, 0, 0);
+
+        var staticValues = [
+          { month: "Jan", year: 2023, subscription: 155, paytoview: 120, merch: 90, wishtender: 120, customrequest: 90 },
+          { month: "Feb", year: 2023, subscription: 105, paytoview: 95, merch: 145, wishtender: 120, customrequest: 90 },
+          { month: "Mar", year: 2023, subscription: 110, paytoview: 130, merch: 125, wishtender: 120, customrequest: 90 },
+          { month: "Apr", year: 2023, subscription: 115, paytoview: 165, merch: 105, wishtender: 120, customrequest: 90 },
+          { month: "May", year: 2023, subscription: 120, paytoview: 160, merch: 140, wishtender: 120, customrequest: 90 },
+          { month: "Jun", year: 2023, subscription: 125, paytoview: 145, merch: 165, wishtender: 120, customrequest: 90 },
+          { month: "Jul", year: 2023, subscription: 150, paytoview: 130, merch: 170, wishtender: 120, customrequest: 90 },
+          { month: "Aug", year: 2023, subscription: 140, paytoview: 150, merch: 135, wishtender: 120, customrequest: 90 },
+          { month: "Sep", year: 2023, subscription: 130, paytoview: 110, merch: 120, wishtender: 120, customrequest: 90 },
+          { month: "Oct", year: 2023, subscription: 160, paytoview: 170, merch: 150, wishtender: 120, customrequest: 90 },
+          { month: "Nov", year: 2023, subscription: 170, paytoview: 180, merch: 155, wishtender: 120, customrequest: 90 },
+          { month: "Dec", year: 2023, subscription: 180, paytoview: 190, merch: 160, wishtender: 120, customrequest: 90 }
+        ];
+
+        // Create axes
+        var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
+          categoryField: "month",
+          renderer: am5xy.AxisRendererX.new(root, {
+            minGridDistance: 30
+          }),
+          //tooltip: am5.Tooltip.new(root, {})
+        }));
+
+        xAxis.data.setAll(staticValues); // Set the X-axis categories as the months
+
+        xAxis.get("renderer").labels.template.setAll({
+          fontSize: "0.75rem", // Set the font size for X-axis labels
+          fill: am5.color(0x475467), // Text color (black)
+        });
+
+        var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
+          renderer: am5xy.AxisRendererY.new(root, {
+            //pan: "zoom"
+          })
+        }));
+
+        // Create Y-axis (left axis)
+        yAxis.get("renderer").labels.template.setAll({
+          visible: false,
+          paddingLeft: 0,
+        });
+
+        // Add series
+       function addSeries(name, fieldName, color) {
+          var series = chart.series.push(am5xy.SmoothedXLineSeries.new(root, {
+            name: name,
+            xAxis: xAxis,
+            yAxis: yAxis,
+            valueYField: fieldName,
+            categoryXField: "month", // Use category for X-axis
+            tooltip: am5.Tooltip.new(root, {
+              labelText: "{valueY}",
+              visible: false
+            })
+          }));
+
+          series.strokes.template.setAll({
+            strokeWidth: 3 // Set line thickness
+          });
+
+          series.data.setAll(staticValues);
+          series.appear(1000);
+        }
+
+        // Generate series
+        addSeries("Subscription", "subscription", am5.color(0xF72485));
+        addSeries("Pay to view", "paytoview", am5.color(0x4361EE));
+        addSeries("Merch", "merch", am5.color(0x3A0BA3));
+        addSeries("Wishtender", "wishtender", am5.color(0xAE4AEF));
+        addSeries("Custom request", "customrequest", am5.color(0xF72485));
+
+        // Remove Y-Axis Grid
+        yAxis.get("renderer").grid.template.setAll({
+          stroke: am5.color(0xf2f4f7)
+        });
+
+        // Remove X-Axis Grid
+        xAxis.get("renderer").grid.template.setAll({
+          stroke: am5.color(0xf2f4f7)
+        });
+
+        // Add scrollbar
+        chart.set("scrollbarX", am5.Scrollbar.new(root, {
+          orientation: "horizontal",
+          visible: false,
+        }));
+
+        // Make stuff animate on load
+        chart.appear(1000, 100);
+
         // Create tooltip
         var tooltip = am5.Tooltip.new(root, {
           background: am5.RoundedRectangle.new(root, {
@@ -406,196 +509,8 @@
          
           // Add x-axis label with year at the top
           text = "[font color='#667085'][bold]" + fullMonthName + " " + year + "[/]\n\n" + text;
-         
-          // Add total value with a line above it
-          text += "\n[font color='#D0D5DD']───────────────────────[/font]\n[fontWeight:normal width:130px][font color='#667085']Total Earnings:[/font][/] [bold width:0px] USD " + total + "[/]";
           return text;
         });
-         
-        // Add cursor
-        var cursor = chart.set("cursor", am5xy.XYCursor.new(root, {
-          behavior: "none"
-        }));
-        cursor.lineY.set("visible", false);
-        cursor.lineX.set("visible", false);
-         
-        // Updated data with months
-        var data = [{
-          "month": "Jan",
-          "year": 2023,
-          "subscription": 150,
-          "paytoview": 90,
-          "merch": 50,
-          "wishtender": 70,
-          "customrequest": 20
-        }, {
-          "month": "Feb",
-          "year": 2023,
-          "subscription": 130,
-          "paytoview": 100,
-          "merch": 60,
-          "wishtender": 80,
-          "customrequest": 50
-        }, {
-          "month": "Mar",
-          "year": 2023,
-          "subscription": 150,
-          "paytoview": 100,
-          "merch": 150,
-          "wishtender": 70,
-          "customrequest": 20
-        }, {
-          "month": "Apr",
-          "year": 2023,
-          "subscription": 150,
-          "paytoview": 160,
-          "merch": 100,
-          "wishtender": 100,
-          "customrequest": 50
-        }, {
-          "month": "May",
-          "year": 2023,
-          "subscription": 180,
-          "paytoview": 180,
-          "merch": 100,
-          "wishtender": 100,
-          "customrequest": 50
-        }, {
-          "month": "Jun",
-          "year": 2023,
-          "subscription": 200,
-          "paytoview": 200,
-          "merch": 100,
-          "wishtender": 100,
-          "customrequest": 50
-        }, {
-          "month": "Jul",
-          "year": 2023,
-          "subscription": 250,
-          "paytoview": 200,
-          "merch": 100,
-          "wishtender": 100,
-          "customrequest": 50
-        }, {
-          "month": "Aug",
-          "year": 2023,
-          "subscription": 300,
-          "paytoview": 200,
-          "merch": 100,
-          "wishtender": 100,
-          "customrequest": 50
-        }, {
-          "month": "Sep",
-          "year": 2023,
-          "subscription": 350,
-          "paytoview": 200,
-          "merch": 100,
-          "wishtender": 100,
-          "customrequest": 50
-        }, {
-          "month": "Oct",
-          "year": 2023,
-          "subscription": 380,
-          "paytoview": 200,
-          "merch": 100,
-          "wishtender": 100,
-          "customrequest": 50
-        }, {
-          "month": "Nov",
-          "year": 2023,
-          "subscription": 400,
-          "paytoview": 200,
-          "merch": 100,
-          "wishtender": 100,
-          "customrequest": 50
-        }, {
-          "month": "Dec",
-          "year": 2023,
-          "subscription": 500,
-          "paytoview": 200,
-          "merch": 100,
-          "wishtender": 100,
-          "customrequest": 50
-        }];
-         
-        // Create axes
-        var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
-          categoryField: "month",
-          renderer: am5xy.AxisRendererX.new(root, {
-            minGridDistance: 30
-          }),
-          // Disable the tooltip on the category axis
-          //tooltip: am5.Tooltip.new(root, {
-            //visible: false
-          //})
-        }));
-         
-        xAxis.data.setAll(data);
-         
-        xAxis.get("renderer").labels.template.setAll({
-          fontSize: "0.75rem", // Set the font size for X-axis labels
-          fill: am5.color(0x475467), // Text color (black)
-        });
-         
-        var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
-          renderer: am5xy.AxisRendererY.new(root, {}),
-          min: 0,      // Minimum value on the Y-axis
-            max: 1000,   // Maximum value on the Y-axis
-            strictMinMax: true // Enforce min and max values
-        }));
-         
-        // Create Y-axis (left axis)
-        yAxis.get("renderer").labels.template.setAll({
-          fontSize: "0.75rem", // Set the font size for Y-axis labels
-          fill: am5.color(0x475467), // Text color (black)
-        });
-         
-         
-        // Add series
-        function makeSeries(name, fieldName, color) {
-          var series = chart.series.push(am5xy.ColumnSeries.new(root, {
-            name: name,
-            stacked: true,
-            xAxis: xAxis,
-            yAxis: yAxis,
-            valueYField: fieldName,
-            categoryXField: "month"
-          }));
-         
-          series.columns.template.setAll({
-            width: am5.percent(25), // Adjust the width of the bars (narrower than before)
-            fill: am5.color(color),
-            stroke: am5.color(color)
-          });
-         
-          series.data.setAll(data);
-          series.appear();
-        }
-         
-        //Y-Axis Grid Removed
-        yAxis.get("renderer").grid.template.setAll({
-            stroke: am5.color(0xf2f4f7)
-        });
-         
-        //X-Axis Grid Removed
-        xAxis.get("renderer").grid.template.setAll({    
-          stroke: am5.color(0xf2f4f7)
-        });
-         
-        makeSeries("Subscription", "subscription", 0x4CC9F0);
-        makeSeries("Pay to view", "paytoview", 0x4361EE);
-        makeSeries("Merch", "merch", 0x3A0BA3);
-        makeSeries("Wishtender", "wishtender", 0xAE4AEF);
-        makeSeries("Custom request", "customrequest", 0xF72485);
-         
-        // Add scrollbar
-        chart.set("scrollbarX", am5.Scrollbar.new(root, {
-          orientation: "horizontal",
-          visible: false,
-        }));
-         
-        // Make stuff animate on load
-        chart.appear(1000, 100);
 
     </script>
 </body>
