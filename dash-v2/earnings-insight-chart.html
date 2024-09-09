@@ -329,7 +329,7 @@
         var tooltip = am5.Tooltip.new(root, {
           background: am5.RoundedRectangle.new(root, {
             fill: am5.color(0xFFFFFF), // White background
-            cornerRadius: 2,
+            cornerRadius: 1,
             shadowColor: am5.color(0xE2E2E2), // Shadow color (black)
             shadowBlur: 8, // Blur effect of the shadow
             shadowOffsetX: 0, // Horizontal offset of the shadow
@@ -338,10 +338,10 @@
         });
         // Set label properties after tooltip creation
           tooltip.label.setAll({
-          paddingLeft: 8,
-          paddingRight: 8,
-          paddingTop: 8,
-          paddingBottom: 8,
+          paddingLeft: 0,
+          paddingRight: 0,
+          paddingTop: 0,
+          paddingBottom: 0,
           textAlign: "left", // Align text to the left
           fill: am5.color(0x344054), // Text color (black)
           fontSize: "12px" // Font size
@@ -389,7 +389,7 @@
               if (i != 0) {
                 text += "\n\n";
               }
-              text += '[' + series.get("fill").toString() + ' width:8px height:8px]●[/] [fontWeight:normal width:120px]' + series.get("name") + ':[/] [bold width:0px]' + tooltipDataItem.get("valueY") + '[/]';
+              text += '[' + series.get("fill").toString() + ' width:8px height:8px]●[/] [fontWeight:normal width:120px]' + series.get("name") + ':[/] [bold width:0px] USD ' + tooltipDataItem.get("valueY") + '[/]';
             }
             i++;
           });
@@ -401,7 +401,7 @@
           text = "[bold]" + fullMonthName + " " + year + "[/]\n\n" + text;
          
           // Add total value with a line above it
-          text += "\n[font color='#D0D5DD']────────────────────[/font]\n[fontWeight:normal width:130px][font color='#667085']Total Earnings:[/font][/] [bold width:0px]" + total + "[/]";
+          text += "\n[font color='#D0D5DD']───────────────────────[/font]\n[fontWeight:normal width:130px][font color='#667085']Total Earnings:[/font][/] [bold width:0px] USD " + total + "[/]";
           return text;
         });
          
@@ -416,99 +416,99 @@
         var data = [{
           "month": "Jan",
           "year": 2023,
-          "subscription": 2.8,
-          "paytoview": 2.9,
-          "merch": 2.4,
-          "wishtender": 2.2,
-          "customrequest": 2.0
+          "subscription": 150,
+          "paytoview": 90,
+          "merch": 50,
+          "wishtender": 70,
+          "customrequest": 20
         }, {
           "month": "Feb",
           "year": 2023,
-          "subscription": 2.8,
-          "paytoview": 2.9,
-          "merch": 2.4,
-          "wishtender": 2.2,
-          "customrequest": 2.0
+          "subscription": 130,
+          "paytoview": 100,
+          "merch": 60,
+          "wishtender": 80,
+          "customrequest": 50
         }, {
           "month": "Mar",
           "year": 2023,
-          "subscription": 3.8,
-          "paytoview": 3.9,
-          "merch": 3.4,
-          "wishtender": 3.2,
-          "customrequest": 3.0
+          "subscription": 150,
+          "paytoview": 100,
+          "merch": 150,
+          "wishtender": 70,
+          "customrequest": 20
         }, {
           "month": "Apr",
           "year": 2023,
-          "subscription": 4.8,
-          "paytoview": 4.9,
-          "merch": 4.4,
-          "wishtender": 4.2,
-          "customrequest": 4.0
+          "subscription": 150,
+          "paytoview": 160,
+          "merch": 100,
+          "wishtender": 100,
+          "customrequest": 50
         }, {
           "month": "May",
           "year": 2023,
-          "subscription": 2.8,
-          "paytoview": 2.9,
-          "merch": 2.4,
-          "wishtender": 2.2,
-          "customrequest": 2.0
+          "subscription": 180,
+          "paytoview": 180,
+          "merch": 100,
+          "wishtender": 100,
+          "customrequest": 50
         }, {
           "month": "Jun",
           "year": 2023,
-          "subscription": 3.8,
-          "paytoview": 3.9,
-          "merch": 3.4,
-          "wishtender": 3.2,
-          "customrequest": 3.0
+          "subscription": 200,
+          "paytoview": 200,
+          "merch": 100,
+          "wishtender": 100,
+          "customrequest": 50
         }, {
           "month": "Jul",
           "year": 2023,
-          "subscription": 2.8,
-          "paytoview": 2.9,
-          "merch": 2.4,
-          "wishtender": 2.2,
-          "customrequest": 2.0
+          "subscription": 250,
+          "paytoview": 200,
+          "merch": 100,
+          "wishtender": 100,
+          "customrequest": 50
         }, {
           "month": "Aug",
           "year": 2023,
-          "subscription": 5.8,
-          "paytoview": 5.9,
-          "merch": 5.4,
-          "wishtender": 5.2,
-          "customrequest": 5.0
+          "subscription": 300,
+          "paytoview": 200,
+          "merch": 100,
+          "wishtender": 100,
+          "customrequest": 50
         }, {
           "month": "Sep",
           "year": 2023,
-          "subscription": 6.8,
-          "paytoview": 6.9,
-          "merch": 6.4,
-          "wishtender": 6.2,
-          "customrequest": 6.0
+          "subscription": 350,
+          "paytoview": 200,
+          "merch": 100,
+          "wishtender": 100,
+          "customrequest": 50
         }, {
           "month": "Oct",
           "year": 2023,
-          "subscription": 7.8,
-          "paytoview": 7.9,
-          "merch": 7.4,
-          "wishtender": 7.2,
-          "customrequest": 7.0
+          "subscription": 380,
+          "paytoview": 200,
+          "merch": 100,
+          "wishtender": 100,
+          "customrequest": 50
         }, {
           "month": "Nov",
           "year": 2023,
-          "subscription": 9.8,
-          "paytoview": 8.9,
-          "merch": 8.4,
-          "wishtender": 8.2,
-          "customrequest": 8.0
+          "subscription": 400,
+          "paytoview": 200,
+          "merch": 100,
+          "wishtender": 100,
+          "customrequest": 50
         }, {
           "month": "Dec",
           "year": 2023,
-          "subscription": 8.8,
-          "paytoview": 8.9,
-          "merch": 8.4,
-          "wishtender": 8.2,
-          "customrequest": 8.0
+          "subscription": 500,
+          "paytoview": 200,
+          "merch": 100,
+          "wishtender": 100,
+          "customrequest": 50
         }];
          
         // Create axes
@@ -531,7 +531,10 @@
         });
          
         var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
-          renderer: am5xy.AxisRendererY.new(root, {})
+          renderer: am5xy.AxisRendererY.new(root, {}),
+          min: 0,      // Minimum value on the Y-axis
+            max: 1000,   // Maximum value on the Y-axis
+            strictMinMax: true // Enforce min and max values
         }));
          
         // Create Y-axis (left axis)
