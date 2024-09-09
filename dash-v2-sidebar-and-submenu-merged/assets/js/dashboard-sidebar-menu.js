@@ -29,8 +29,10 @@ class DashMenu {
 				floatingPanelSelector: '[data-floating-panel]', // floating panel wrapper selector
 				floatingPanelTriggerSelector: '[data-floating-panel-trigger]', // floating panel trigger selector
 
+				profilePanelTriggerSelector: '[data-profile-panel-trigger]', // profile panel trigger selector
+				profilePanelSelector: '[data-profile-panel-container]', // profile panel selector
+
 				notificationsPanelTriggerSelector: '[data-notifications-panel-trigger]', // notifications panel trigger selector
-				newNotificationsStatusSelector: '[data-new-notifications-status]', // new notifications status selector
 				notificationsPanelSelector: '[data-notifications-container]', // notifications panel selector
 
 				mainMenuSelector: '[data-main-menu-item]', // dash main menu items selector
@@ -42,9 +44,12 @@ class DashMenu {
 				floatingPanelEl: '', // floating panel element
 				floatingPanelTriggerEl: '', // floating panel trigger element
 
-				notificationsPanelTriggerEl: '[data-notifications-panel-trigger]', // notifications panel trigger element
-				newNotificationsStatusEl: '[data-new-notifications-status]', // new notifications status element
-				notificationsPanelEl: '[data-notifications-container]', // notifications panel element
+				profilePanelTriggerEl: '', // profile panel trigger element
+				profilePanelEl: '', // profile panel element
+
+				notificationsPanelTriggerEl: '', // notifications panel trigger element
+				newNotificationsStatusEl: '', // new notifications status element
+				notificationsPanelEl: '', // notifications panel element
 
 				currentMainMenu: '', // current main menu element
 				currentMainMenuTitle: '', // current main menu title
@@ -121,8 +126,18 @@ class DashMenu {
 
 		// hide notification panel (if applicable)
 		_self.options.notificationsPanelEl !== '' ? (
-			_self.options.notificationsPanelTriggerEl.dataset.isActive = 'false',
+			_self.options.notificationsPanelTriggerEl.forEach(element => {
+				element.dataset.isActive = 'false';
+			}),
 			_self.options.notificationsPanelEl.setAttribute('hidden', true)
+		) : '';
+
+		// hide profile panel (if applicable)
+		_self.options.profilePanelEl !== '' ? (
+			_self.options.profilePanelTriggerEl.forEach(element => {
+				element.dataset.isActive = 'false';
+			}),
+			_self.options.profilePanelEl.setAttribute('hidden', true)
 		) : '';
 	}
 
@@ -396,28 +411,30 @@ class DashMenu {
 	handleNotificationPanel() {
 		let _self = this;
 
-		// handle click on trigger (attach event only once)
-		if ( _self.options.notificationsPanelTriggerEl.classList.contains('js-event-handler-attached') ) {
-			return;
-		}
-		else {
-			_self.options.notificationsPanelTriggerEl.addEventListener('click', (event) => {
-				//console.log('Navigation Panel trigger click');
+		// loop through the triggers
+		_self.options.notificationsPanelTriggerEl.forEach( (trigger) => {
+			// handle click on trigger (attach event only once)
+			if ( trigger.classList.contains('js-event-handler-attached') ) {
+				return;
+			}
+			else {
+				trigger.addEventListener('click', (event) => {
+					//console.log('Navigation Panel trigger click');
 
-				if ( _self.options.notificationsPanelTriggerEl.dataset.isActive !== 'true' ) {
-					_self.resetMenu();
+					if ( trigger.dataset.isActive !== 'true' ) {
+						_self.resetMenu();
 
-					_self.options.notificationsPanelTriggerEl.dataset.isActive = 'true';
-					_self.options.notificationsPanelEl.removeAttribute('hidden');
-					_self.options.newNotificationsStatusEl.setAttribute('hidden', true);
-				}
-				else {
-					_self.resetMenu();
-				}
-			});
+						trigger.dataset.isActive = 'true';
+						_self.options.notificationsPanelEl.removeAttribute('hidden');
+					}
+					else {
+						_self.resetMenu();
+					}
+				});
 
-			_self.options.notificationsPanelTriggerEl.classList.add('js-event-handler-attached');
-		}
+				trigger.classList.add('js-event-handler-attached');
+			}
+		});
 
 		// handle click on back button (attach event only once)
 		if ( _self.options.notificationsPanelEl.querySelector('[data-back-button]').classList.contains('js-event-handler-attached') ) {
@@ -431,6 +448,56 @@ class DashMenu {
 			});
 
 			_self.options.notificationsPanelEl.querySelector('[data-back-button]').classList.add('js-event-handler-attached');
+		}
+	}
+
+
+	/** 
+	 * 
+	 * @method handleProfilePanel 
+	 * @description method to handle profile panel behavior
+	 * 
+	 */
+	handleProfilePanel() {
+		let _self = this;
+
+		// loop through the triggers
+		_self.options.profilePanelTriggerEl.forEach( (trigger) => {
+			// handle click on trigger (attach event only once)
+			if ( trigger.classList.contains('js-event-handler-attached') ) {
+				return;
+			}
+			else {
+				trigger.addEventListener('click', (event) => {
+					//console.log('Navigation Panel trigger click');
+
+					if ( trigger.dataset.isActive !== 'true' ) {
+						_self.resetMenu();
+
+						trigger.dataset.isActive = 'true';
+						_self.options.profilePanelEl.removeAttribute('hidden');
+					}
+					else {
+						_self.resetMenu();
+					}
+				});
+
+				trigger.classList.add('js-event-handler-attached');
+			}
+		});
+
+		// handle click on back button (attach event only once)
+		if ( _self.options.profilePanelEl.querySelector('[data-back-button]').classList.contains('js-event-handler-attached') ) {
+			return;
+		}
+		else {
+			_self.options.profilePanelEl.querySelector('[data-back-button]').addEventListener('click', (event) => {
+				//console.log('Floating trigger click');
+
+				_self.resetMenu();
+			});
+
+			_self.options.profilePanelEl.querySelector('[data-back-button]').classList.add('js-event-handler-attached');
 		}
 	}
 
@@ -476,12 +543,19 @@ class DashMenu {
 			}
 
 			// handle notification panel (if the panel exists in DOM)
-			if ( document.querySelector(this.options.notificationsPanelSelector) !== null && document.querySelector(this.options.notificationsPanelSelector) !== 'undefined') {
-				this.options.notificationsPanelTriggerEl = document.querySelector(this.options.notificationsPanelTriggerSelector);
-				this.options.newNotificationsStatusEl = document.querySelector(this.options.newNotificationsStatusSelector);
+			if ( document.querySelector(this.options.notificationsPanelSelector) !== null && document.querySelector(this.options.notificationsPanelSelector) !== 'undefined' ) {
+				this.options.notificationsPanelTriggerEl = document.querySelectorAll(this.options.notificationsPanelTriggerSelector);
 				this.options.notificationsPanelEl = document.querySelector(this.options.notificationsPanelSelector);
 
 				this.handleNotificationPanel();
+			}
+
+			// handle profile panel (if the panel exists in DOM)
+			if ( document.querySelector(this.options.profilePanelSelector) !== null && document.querySelector(this.options.profilePanelSelector) !== 'undefined' ) {
+				this.options.profilePanelTriggerEl = document.querySelectorAll(this.options.profilePanelTriggerSelector);
+				this.options.profilePanelEl = document.querySelector(this.options.profilePanelSelector);
+
+				this.handleProfilePanel();
 			}
 			
 			//console.log(this.options);
