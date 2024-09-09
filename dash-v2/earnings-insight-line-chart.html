@@ -338,18 +338,18 @@
         date.setHours(0, 0, 0, 0);
 
         var staticValues = [
-          { month: "Jan", year: 2023, value1: 155, value2: 120, value3: 90 },
-          { month: "Feb", year: 2023, value1: 105, value2: 95, value3: 145 },
-          { month: "Mar", year: 2023, value1: 110, value2: 130, value3: 125 },
-          { month: "Apr", year: 2023, value1: 115, value2: 165, value3: 105 },
-          { month: "May", year: 2023, value1: 120, value2: 160, value3: 140 },
-          { month: "Jun", year: 2023, value1: 125, value2: 145, value3: 165 },
-          { month: "Jul", year: 2023, value1: 150, value2: 130, value3: 170 },
-          { month: "Aug", year: 2023, value1: 140, value2: 150, value3: 135 },
-          { month: "Sep", year: 2023, value1: 130, value2: 110, value3: 120 },
-          { month: "Oct", year: 2023, value1: 160, value2: 170, value3: 150 },
-          { month: "Nov", year: 2023, value1: 170, value2: 180, value3: 155 },
-          { month: "Dec", year: 2023, value1: 180, value2: 190, value3: 160 }
+          { month: "Jan", year: 2023, subscription: 155, paytoview: 120, merch: 90, wishtender: 120, customrequest: 90 },
+          { month: "Feb", year: 2023, subscription: 105, paytoview: 95, merch: 145, wishtender: 120, customrequest: 90 },
+          { month: "Mar", year: 2023, subscription: 110, paytoview: 130, merch: 125, wishtender: 120, customrequest: 90 },
+          { month: "Apr", year: 2023, subscription: 115, paytoview: 165, merch: 105, wishtender: 120, customrequest: 90 },
+          { month: "May", year: 2023, subscription: 120, paytoview: 160, merch: 140, wishtender: 120, customrequest: 90 },
+          { month: "Jun", year: 2023, subscription: 125, paytoview: 145, merch: 165, wishtender: 120, customrequest: 90 },
+          { month: "Jul", year: 2023, subscription: 150, paytoview: 130, merch: 170, wishtender: 120, customrequest: 90 },
+          { month: "Aug", year: 2023, subscription: 140, paytoview: 150, merch: 135, wishtender: 120, customrequest: 90 },
+          { month: "Sep", year: 2023, subscription: 130, paytoview: 110, merch: 120, wishtender: 120, customrequest: 90 },
+          { month: "Oct", year: 2023, subscription: 160, paytoview: 170, merch: 150, wishtender: 120, customrequest: 90 },
+          { month: "Nov", year: 2023, subscription: 170, paytoview: 180, merch: 155, wishtender: 120, customrequest: 90 },
+          { month: "Dec", year: 2023, subscription: 180, paytoview: 190, merch: 160, wishtender: 120, customrequest: 90 }
         ];
 
         // Create axes
@@ -403,9 +403,11 @@
         }
 
         // Generate series
-        addSeries("Series 1", "value1", am5.color(0xff0000)); // Red line
-        addSeries("Series 2", "value2", am5.color(0x00ff00)); // Green line
-        addSeries("Series 3", "value3", am5.color(0x0000ff)); // Blue line
+        addSeries("Subscription", "subscription", am5.color(0xF72485));
+        addSeries("Pay to view", "paytoview", am5.color(0x4361EE));
+        addSeries("Merch", "merch", am5.color(0x3A0BA3));
+        addSeries("Wishtender", "wishtender", am5.color(0xAE4AEF));
+        addSeries("Custom request", "customrequest", am5.color(0xF72485));
 
         // Remove Y-Axis Grid
         yAxis.get("renderer").grid.template.setAll({
@@ -507,9 +509,6 @@
          
           // Add x-axis label with year at the top
           text = "[font color='#667085'][bold]" + fullMonthName + " " + year + "[/]\n\n" + text;
-         
-          // Add total value with a line above it
-          text += "\n[font color='#D0D5DD']───────────────────────[/font]\n[fontWeight:normal width:130px][font color='#667085']Total Earnings:[/font][/] [bold width:0px] USD " + total + "[/]";
           return text;
         });
 
