@@ -32,12 +32,12 @@
     </head>
     <body>
         <!-- main wrapper -->
-        <div data-section="wrapper" class="flex">
+        <div data-section="wrapper" class="flex flex--column-responsive-mobile flex--column-responsive-mobile-portrait">
 
             <!-- page sidebar -->
-            <section data-sidebar data-section="sidebar" class="flex vh-100 sticky top-0 z-2 bg--col--athens-gray--70 sh--sidebar">
+            <section data-sidebar data-section="sidebar" class="flex vh-100 sticky top-0 z-2 bg--col--athens-gray--70 sh--sidebar vw--100--responsive-mobile vw--100--responsive-mobile-portrait h--48-responsive-mobile h--48-responsive-mobile-portrait">
                 <!-- mobile header -->
-                <div data-mobile-header data-mobile-only class="pad--y--8 pad--x--16 flex-column gap--16 br--24 bg--blur--25 dn dn-responsive-mobile">
+                <div data-mobile-header data-mobile-only class="pad--y--8 pad--x--16 flex-column flex--max gap--16 br--24 bg--blur--25 dn dn-responsive-mobile">
                     <div class="flex justify-between items-center">
                         <!-- Site Logo -->
                         <div class="relative">
@@ -102,7 +102,7 @@
                 <!-- /mobile header -->
 
                 <!-- sidebar main wrapper (to contain all sidebar UI elements, except submenu containers) -->
-                <div data-sidebar-main-wrapper class="flex flex-column justify-center items-center gap--6 w--90 w--90--px vh-100 pa0 pad--y--12">
+                <div data-sidebar-main-wrapper class="flex flex-column justify-center items-center gap--6 w--90 w--90--px vh-100 pa0 pad--y--12 vw--100--responsive-mobile vw--100--responsive-mobile-portrait fixed--responsive-mobile fixed--responsive-mobile-portrait top--0--responsive-mobile top--0--responsive-mobile-portrait left--0--responsive-mobile left--0--responsive-mobile-portrait">
                     <!-- site logo -->
                     <a data-site-logo data-desktop-only href="/" title="" class="flex items-center gap--10 bg--col--lemon br--12 o-80 hov--o--100 transition--opacity transition--200 transition--ease-in-out">
                         <!-- render_svg_icon( 'logo_bg-1' ) -->
@@ -4129,9 +4129,25 @@
             <!-- /page sidebar -->
 
             <!-- main section -->
-            <main data-dashboard-page="" data-section="main" class="flex flex--max relative z-1">
-                <div class="flex justify-center items-center w-100 h-100">
-                    Main Content Will Go here
+            <main data-dashboard-page="" data-section="main" class="flex flex-column flex--max relative z-1">
+                <div class="flex justify-center items-center w-100 vh-100">
+                    Main Content Will Go here (Block 1 - to show scroll behavior)
+                </div>
+
+                <div class="flex justify-center items-center w-100 vh-100 bg--col--mercury">
+                    Main Content Will Go here (Block 2 - to show scroll behavior)
+                </div>
+
+                <div class="flex justify-center items-center w-100 vh-100">
+                    Main Content Will Go here (Block 3 - to show scroll behavior)
+                </div>
+
+                <div class="flex justify-center items-center w-100 vh-100 bg--col--mercury">
+                    Main Content Will Go here (Block 4 - to show scroll behavior)
+                </div>
+
+                <div class="flex justify-center items-center w-100 vh-100">
+                    Main Content Will Go here (Block 5 - to show scroll behavior)
                 </div>
             </main>
             <!-- /main section -->
