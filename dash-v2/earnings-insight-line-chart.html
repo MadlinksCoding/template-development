@@ -363,6 +363,11 @@
 
         xAxis.data.setAll(staticValues); // Set the X-axis categories as the months
 
+        xAxis.get("renderer").labels.template.setAll({
+          fontSize: "0.75rem", // Set the font size for X-axis labels
+          fill: am5.color(0x475467), // Text color (black)
+        });
+
         var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
           renderer: am5xy.AxisRendererY.new(root, {
             //pan: "zoom"
