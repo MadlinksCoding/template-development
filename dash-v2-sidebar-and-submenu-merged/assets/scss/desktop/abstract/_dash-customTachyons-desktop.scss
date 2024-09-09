@@ -269,11 +269,13 @@
 .br--2 { border-radius: 0.125rem; /* border-radius 2px */ }
 .br--6 { border-radius: 0.375rem; /* border-radius 6px */ }
 
+
 /* Transition Property */
 .transition--all { transition-property: all; }
 .transition--opacity { transition-property: opacity; }
 .transition--background { transition-property: background; }
 .transition--transform { transition-property: transform; }
+
 
 /* Transition Duration */
 .transition--50 { transition-duration: 0.05s; }
@@ -284,9 +286,15 @@
 .transition--300 { transition-duration: 0.3s; }
 .transition--350 { transition-duration: 0.35s; }
 
+
 /* Transition Timing */
-.transition--linear {transition-timing-function: linear; }
-.transition--ease {transition-timing-function: ease; }
-.transition--ease-in {transition-timing-function: ease-in; }
-.transition--ease-out {transition-timing-function: ease-out; }
-.transition--ease-in-out {transition-timing-function: ease-in-out; }
+.transition--linear { transition-timing-function: linear; }
+.transition--ease { transition-timing-function: ease; }
+.transition--ease-in { transition-timing-function: ease-in; }
+.transition--ease-out { transition-timing-function: ease-out; }
+.transition--ease-in-out { transition-timing-function: ease-in-out; }
+
+
+/* Pointer Events */
+.pointer-events-all { pointer-events: all; }
+.pointer-events-none { pointer-events: none; }

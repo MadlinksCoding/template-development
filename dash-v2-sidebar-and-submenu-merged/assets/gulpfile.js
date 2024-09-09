@@ -12,7 +12,7 @@ import sourcemaps from "gulp-sourcemaps";
 
 const sassCompiler = gulpSass(nodeSass); // Pass the node-sass compiler to gulp-sass
 
-export const scss = async () => {
+export const compileScssDev = async () => {
   return gulp
     .src("scss/**/*.scss")
     .pipe(sourcemaps.init())
@@ -26,8 +26,8 @@ export const scss = async () => {
 };
 
 export const watch = async () => {
-  gulp.watch("scss/**/*.scss", gulp.series(scss));
+  gulp.watch("scss/**/*.scss", gulp.series(compileScssDev));
 };
 
-export default gulp.series(scss, watch);
+export default gulp.series(compileScssDev, watch);
 

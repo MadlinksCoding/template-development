@@ -35,18 +35,83 @@
         <div data-section="wrapper" class="flex">
 
             <!-- page sidebar -->
-            <section data-section="sidebar" class="flex vh-100 sticky top-0 z-2 bg--col--athens-gray--70 sh--sidebar">
+            <section data-sidebar data-section="sidebar" class="flex vh-100 sticky top-0 z-2 bg--col--athens-gray--70 sh--sidebar">
+                <!-- mobile header -->
+                <div data-mobile-header data-mobile-only class="pad--y--8 pad--x--16 flex-column gap--16 br--24 bg--blur--25 dn dn-responsive-mobile">
+                    <div class="flex justify-between items-center">
+                        <!-- Site Logo -->
+                        <div class="relative">
+                            <a class="db w--24 h--24" href="#">
+                                <img src="assets/img/site-logo.svg" alt="" class="w--24 h--24 o-80">
+                            </a>
+                        </div>
+                        <!-- /Site Logo -->
+            
+                        <!-- Header Right Item -->
+                        <div class="flex items-center gap--8">
+                            <!-- Header Navigation Item -->
+                            <div class="flex justify-end items-center gap--8">
+                                <!-- Menu item 1 -->
+                                <div class="pad--6 flex justify-center items-center gap--12 br--6 pointer hover--bg--col--light-grey-10 active--bg--col--grey-800">
+                                    <div class="w--20 h--20">
+                                        <img src="assets/icons/globe.svg" alt="" class="w--20 h--20 filter--col--gray-500 active--filter--col--white">
+                                    </div>
+                                </div>
+
+                                <!-- Notification Item -->
+                                <div class="w--32 h--32 relative">
+                                    <!-- Notification Dot -->
+                                    <span class="db w--7 h--7 br-100 bg--col--persian-rose absolute top--2 right--3"></span>
+                                    <!-- Menu item 2 -->
+                                    <div class="pad--6 flex justify-center items-center gap--12 br--6 pointer hover--bg--col--light-grey-10 active--bg--col--grey-800">
+                                        <div class="w--20 h--20">
+                                            <img src="assets/icons/bell-03.svg" alt="" class="w--20 h--20 filter--col--gray-500 active--filter--col--white">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- User Profile Item -->
+                                <div class="relative flex justify-end items-center">
+                                    <!-- Menu item 2 -->
+                                    <div class="flex flex-column justify-center items-center gap--2 br--6">
+                                        <div class="br-100 w--32 h--32 flex items-center justify-center ba b--white-0125 bw2 active--br--col-grey-14">
+                                            <div class="relative w--24 h--24">
+                                                <div class="w--24 h--24 br-100 pointer">
+                                                    <img src="assets/img/avatar.png" alt="" class="w-100 h-100 fit--cover">
+                                                </div>
+                                                <!-- User Online Dot -->
+                                                <span class="db w--6 h--6 br-100 bg--col--spring-green absolute bottom-0 right-0"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /Header Navigation Item -->
+            
+                            <!-- Humberger Menu -->
+                            <div class="pad--x--8 pad--y--4 flex flex-column items-center justify-center gap--2 br--6">
+                                <div class="pointer w--24 h--24">
+                                    <img src="assets/icons/menu-01.svg" alt="" class="w--24 h--24" />
+                                </div>
+                            </div>
+                            <!-- /Humberger Menu -->
+                        </div>
+                        <!-- /Header Right Item -->
+                    </div>
+                </div>
+                <!-- /mobile header -->
+
                 <!-- sidebar main wrapper (to contain all sidebar UI elements, except submenu containers) -->
-                <div class="flex flex-column justify-center items-center gap--6 w--90 w--90--px vh-100 pa0 pad--y--12">
+                <div data-sidebar-main-wrapper class="flex flex-column justify-center items-center gap--6 w--90 w--90--px vh-100 pa0 pad--y--12">
                     <!-- site logo -->
-                    <a href="/" title="" class="flex items-center gap--10 bg--col--lemon br--12 o-80 hov--o--100 transition--opacity transition--200 transition--ease-in-out">
+                    <a data-site-logo data-desktop-only href="/" title="" class="flex items-center gap--10 bg--col--lemon br--12 o-80 hov--o--100 transition--opacity transition--200 transition--ease-in-out">
                         <!-- render_svg_icon( 'logo_bg-1' ) -->
                         <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/logo_bg-1.svg" alt="" class="flex w--36 h--36">
                     </a>
                     <!-- /site logo -->
 
                     <!-- profile & controls (profile, notifications and logout) -->
-                    <div class="flex flex-column items-center self-stretch gap--8 pv2 ph1 bb br--col--mischka">
+                    <div data-sidebar-top-controls data-desktop-only class="flex flex-column items-center self-stretch gap--8 pv2 ph1 bb br--col--mischka">
                         <!-- avatar -->
                         <div class="flex w--40 h--40 br--20">
                             <a href="javascript: void(0)" title="" class="flex w--40 h--40 br--20 relative">
@@ -84,8 +149,8 @@
                     <!-- /profile & controls -->
 
                     <!-- main navigation -->
-                    <div class="flex flex-column flex--max items-center self-stretch gap--4 pv1 ph2">
-                        <nav class="flex flex-column items-center self-stretch gap--4" data-dashboard-main-nav>
+                    <div data-sidebar-nav-wrapper class="flex flex-column flex--max items-center self-stretch gap--4 pv1 ph2">
+                        <nav data-dashboard-main-nav class="flex flex-column items-center self-stretch gap--4">
                             <!-- menu item (Push Menu Demo) (this item is added only to show a demo of multi level push menu system in corresponding submenu, not part of actual sidebar menu) -->
                              <div data-sidebar-menu-item data-page="dashboard/dummy-page" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
                                 <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
@@ -177,60 +242,62 @@
                             </div>
                             <!-- /menu item -->
 
+                            <!-- menu item (Shops) [if active page item, then "current-page" class should be added to the div] -->
+                            <div data-sidebar-menu-item data-page="dashboard/shops" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
+                                <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
+                                <a href="javascript: void(0)" data-main-menu-item="true" data-main-menu-name="Shops" data-is-active="false" data-has-submenu="true"  data-target-submenu-container="dashboard-submenu-shops" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
+                                    <!-- render_svg_icon( 'merch' ) -->
+                                    <img data-sidebar-menu-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/merch.svg" alt="" class="w--24 h--24 filter--col--pale-sky">
+                                    <span data-sidebar-menu-item-text class="fs--10 fw5 lh--18 col--fiord">
+                                        Shops
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- /menu item -->
+
+                            <!-- menu item (Profile) [if active page item, then "current-page" class should be added to the div] -->
+                            <div data-sidebar-menu-item data-page="dashboard/profile" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
+                                <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
+                                <a href="javascript: void(0)" data-main-menu-item="true" data-main-menu-name="Profile" data-is-active="false" data-has-submenu="true"  data-target-submenu-container="dashboard-submenu-profile" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
+                                    <!-- render_svg_icon( 'user-edit' ) -->
+                                    <img data-sidebar-menu-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/user-edit.svg" alt="" class="w--24 h--24 filter--col--pale-sky">
+                                    <span data-sidebar-menu-item-text class="fs--10 fw5 lh--18 col--fiord">
+                                        Profile
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- /menu item -->
+
+                            <!-- menu item (Blog) [if active page item, then "current-page" class should be added to the div] -->
+                            <div data-sidebar-menu-item data-page="dashboard/blog" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
+                                <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
+                                <a href="javascript: void(0)" data-main-menu-item="true" data-main-menu-name="Blog" data-is-active="false" data-has-submenu="false"  data-target-submenu-container="" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
+                                    <!-- render_svg_icon( 'blog-01' ) -->
+                                    <img data-sidebar-menu-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/blog-01.svg" alt="" class="w--24 h--24 filter--col--pale-sky">
+                                    <span data-sidebar-menu-item-text class="fs--10 fw5 lh--18 col--fiord">
+                                        Blog
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- /menu item -->
+
+                            <!-- menu item (Settings) [if active page item, then "current-page" class should be added to the div] -->
+                            <div data-sidebar-menu-item data-page="dashboard/settings" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
+                                <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
+                                <a href="javascript: void(0)" data-main-menu-item="true" data-main-menu-name="Settings" data-is-active="false" data-has-submenu="true"  data-target-submenu-container="dashboard-submenu-settings" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
+                                    <!-- render_svg_icon( 'setting' ) -->
+                                    <img data-sidebar-menu-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/setting.svg" alt="" class="w--24 h--24 filter--col--pale-sky">
+                                    <span data-sidebar-menu-item-text class="fs--10 fw5 lh--18 col--fiord">
+                                        Settings
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- /menu item -->
+
                             <!-- container to show additional menu items (only desktop version and when viewport height is less than 850px, any future addition to the menu shall go here) -->
                             <div data-floating-panel-wrapper data-is-floating="false" class="flex flex-column self-stretch relative z-5">
                                 <div data-floating-panel data-is-active="false" data-normal-classes="flex flex-column items-center self-stretch gap--4" data-floating-classes="flex justify-center items-center flex-wrap gap--16 pad--12 w--160 bg-white-50 bg--blur--25 bb br--col--mystic br--6 sh--sidebar-2 absolute top-0 right--176-neg z-2 transition--all transition--150 transition--ease-in-out" class="flex flex-column items-center self-stretch gap--4">
-                                    <!-- menu item (Shops) [if active page item, then "current-page" class should be added to the div] -->
-                                    <div data-sidebar-menu-item data-page="dashboard/shops" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
-                                        <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
-                                        <a href="javascript: void(0)" data-main-menu-item="true" data-main-menu-name="Shops" data-is-active="false" data-has-submenu="true"  data-target-submenu-container="dashboard-submenu-shops" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
-                                            <!-- render_svg_icon( 'merch' ) -->
-                                            <img data-sidebar-menu-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/merch.svg" alt="" class="w--24 h--24 filter--col--pale-sky">
-                                            <span data-sidebar-menu-item-text class="fs--10 fw5 lh--18 col--fiord">
-                                                Shops
-                                            </span>
-                                        </a>
-                                    </div>
-                                    <!-- /menu item -->
-
-                                    <!-- menu item (Profile) [if active page item, then "current-page" class should be added to the div] -->
-                                    <div data-sidebar-menu-item data-page="dashboard/profile" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
-                                        <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
-                                        <a href="javascript: void(0)" data-main-menu-item="true" data-main-menu-name="Profile" data-is-active="false" data-has-submenu="true"  data-target-submenu-container="dashboard-submenu-profile" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
-                                            <!-- render_svg_icon( 'user-edit' ) -->
-                                            <img data-sidebar-menu-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/user-edit.svg" alt="" class="w--24 h--24 filter--col--pale-sky">
-                                            <span data-sidebar-menu-item-text class="fs--10 fw5 lh--18 col--fiord">
-                                                Profile
-                                            </span>
-                                        </a>
-                                    </div>
-                                    <!-- /menu item -->
-
-                                    <!-- menu item (Blog) [if active page item, then "current-page" class should be added to the div] -->
-                                    <div data-sidebar-menu-item data-page="dashboard/blog" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
-                                        <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
-                                        <a href="javascript: void(0)" data-main-menu-item="true" data-main-menu-name="Blog" data-is-active="false" data-has-submenu="false"  data-target-submenu-container="" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
-                                            <!-- render_svg_icon( 'blog-01' ) -->
-                                            <img data-sidebar-menu-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/blog-01.svg" alt="" class="w--24 h--24 filter--col--pale-sky">
-                                            <span data-sidebar-menu-item-text class="fs--10 fw5 lh--18 col--fiord">
-                                                Blog
-                                            </span>
-                                        </a>
-                                    </div>
-                                    <!-- /menu item -->
-
-                                    <!-- menu item (Settings) [if active page item, then "current-page" class should be added to the div] -->
-                                    <div data-sidebar-menu-item data-page="dashboard/settings" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
-                                        <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
-                                        <a href="javascript: void(0)" data-main-menu-item="true" data-main-menu-name="Settings" data-is-active="false" data-has-submenu="true"  data-target-submenu-container="dashboard-submenu-settings" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
-                                            <!-- render_svg_icon( 'setting' ) -->
-                                            <img data-sidebar-menu-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/setting.svg" alt="" class="w--24 h--24 filter--col--pale-sky">
-                                            <span data-sidebar-menu-item-text class="fs--10 fw5 lh--18 col--fiord">
-                                                Settings
-                                            </span>
-                                        </a>
-                                    </div>
-                                    <!-- /menu item -->
+                                    
                                 </div>
                             </div>
                             <!-- container to show additional menu items -->
@@ -252,7 +319,7 @@
                     <!-- /main navigation -->
 
                     <!-- sidebar bottom controls (language choice & help) -->
-                    <div class="flex flex-column items-center self-stretch gap--8 pv2">
+                    <div data-sidebar-bottom-controls class="flex flex-column items-center self-stretch gap--8 pv2">
                         <!-- cta controls -->
                         <div class="flex justify-center items-center self-stretch gap--8 pv0 ph1">
                             <!-- log out -->
@@ -275,73 +342,8 @@
                 </div>
                 <!-- /sidebar main wrapper -->
 
-                <!-- mobile header -->
-                <div class="pad--y--8 pad--x--16 flex-column gap--16 br--24 bg--blur--25 dn dn-responsive-mobile">
-                    <div class="flex justify-between items-center">
-                        <!-- Site Logo -->
-                        <div class="relative">
-                            <a class="db w--24 h--24" href="#">
-                                <img src="assets/img/site-logo.svg" alt="" class="w--24 h--24 o-80">
-                            </a>
-                        </div>
-                        <!-- /Site Logo -->
-            
-                        <!-- Header Right Item -->
-                        <div class="flex items-center gap--8">
-                            <!-- Header Navigation Item -->
-                            <div class="flex justify-end items-center gap--8">
-                                <!-- Menu item 1 -->
-                                <div class="pad--6 flex justify-center items-center gap--12 br--6 pointer hover--bg--col--light-grey-10 active--bg--col--grey-800">
-                                    <div class="w--20 h--20">
-                                        <img src="assets/icons/globe.svg" alt="" class="w--20 h--20 filter--col--gray-500 active--filter--col--white">
-                                    </div>
-                                </div>
-
-                                <!-- Notification Item -->
-                                <div class="w--32 h--32 relative">
-                                    <!-- Notification Dot -->
-                                    <span class="db w--7 h--7 br-100 bg--col--persian-rose absolute top--2 right--3"></span>
-                                    <!-- Menu item 2 -->
-                                    <div class="pad--6 flex justify-center items-center gap--12 br--6 pointer hover--bg--col--light-grey-10 active--bg--col--grey-800">
-                                        <div class="w--20 h--20">
-                                            <img src="assets/icons/bell-03.svg" alt="" class="w--20 h--20 filter--col--gray-500 active--filter--col--white">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- User Profile Item -->
-                                <div class="relative flex justify-end items-center">
-                                    <!-- Menu item 2 -->
-                                    <div class="flex flex-column justify-center items-center gap--2 br--6">
-                                        <div class="br-100 w--32 h--32 flex items-center justify-center ba b--white-0125 bw2 active--br--col-grey-14">
-                                            <div class="relative w--24 h--24">
-                                                <div class="w--24 h--24 br-100 pointer">
-                                                    <img src="assets/img/avatar.png" alt="" class="w-100 h-100 fit--cover">
-                                                </div>
-                                                <!-- User Online Dot -->
-                                                <span class="db w--6 h--6 br-100 bg--col--spring-green absolute bottom-0 right-0"></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /Header Navigation Item -->
-            
-                            <!-- Humberger Menu -->
-                            <div class="pad--x--8 pad--y--4 flex flex-column items-center justify-center gap--2 br--6">
-                                <div class="pointer w--24 h--24">
-                                    <img src="assets/icons/menu-01.svg" alt="" class="w--24 h--24" />
-                                </div>
-                            </div>
-                            <!-- /Humberger Menu -->
-                        </div>
-                        <!-- /Header Right Item -->
-                    </div>
-                </div>
-                <!-- /mobile header -->
-
                 <!-- profile, notifications and submenu panels container (keep profile/model panel, notification panel and  all submenu containers inside this div) -->
-                <div>
+                <div data-submenus-wrapper>
                     <!-- profile panel container (same template shall be used in mobile also) -->
                     <div data-profile-panel-container class="flex flex-column items-start gap--0 w--480 vh-100 overflow-hidden bg--col--athens-gray--70--variation-2  bg--blur--25 bl br--col--mischka sh--sidebar fixed top-0 left--90 left--90--px z-1 transition--all transition--150 transition--ease-in-out" hidden>
                         <div data-scrollable-profile-panel class="flex flex-column items-start self-stretch gap--0 w-100 vh-100 overflow-y-auto">
