@@ -151,150 +151,156 @@
                     <!-- main navigation -->
                     <div data-sidebar-nav-wrapper class="flex flex-column flex--max items-center self-stretch gap--4 pv1 ph2">
                         <nav data-dashboard-main-nav class="flex flex-column items-center self-stretch gap--4">
-                            <!-- menu item (Push Menu Demo) (this item is added only to show a demo of multi level push menu system in corresponding submenu, not part of actual sidebar menu) -->
-                             <div data-sidebar-menu-item data-page="dashboard/dummy-page" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
-                                <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
-                                <a href="javascript: void(0)" data-main-menu-item="true" data-main-menu-name="Multi Level Push Menu" data-is-active="false" data-has-submenu="true" data-target-submenu-container="dashboard-submenu-multi-level-push-menu-demo" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
-                                    <!-- render_svg_icon( 'likes' ) -->
-                                    <img data-sidebar-menu-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/likes.svg" alt="" class="w--24 h--24 filter--col--pale-sky">
-                                    <span data-sidebar-menu-item-text class="fs--10 fw5 lh--18 col--fiord">
-                                        Push Menu
-                                    </span>
-                                </a>
-                            </div>
-                            <!-- /menu item -->
+                            <!-- container to show normal menu items (only desktop version, when viewport height is fine to show items, keep appending elements) -->
+                            <div data-menu-panel-wrapper class="flex flex-column self-stretch relative z-5">
+                                <div data-menu-panel class="flex flex-column items-center self-stretch gap--4">
+                                    <!-- menu item (Push Menu Demo) (this item is added only to show a demo of multi level push menu system in corresponding submenu, not part of actual sidebar menu) -->
+                                    <div data-sidebar-menu-item data-page="dashboard/dummy-page" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
+                                        <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
+                                        <a href="javascript: void(0)" data-main-menu-item="true" data-main-menu-name="Multi Level Push Menu" data-is-active="false" data-has-submenu="true" data-target-submenu-container="dashboard-submenu-multi-level-push-menu-demo" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
+                                            <!-- render_svg_icon( 'likes' ) -->
+                                            <img data-sidebar-menu-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/likes.svg" alt="" class="w--24 h--24 filter--col--pale-sky">
+                                            <span data-sidebar-menu-item-text class="fs--10 fw5 lh--18 col--fiord">
+                                                Push Menu
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <!-- /menu item -->
 
-                            <!-- menu item (Analytics) [if active page item, then "current-page" class should be added to the div] -->
-                             <div data-sidebar-menu-item data-page="dashboard/analytics" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
-                                <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
-                                <a href="javascript: void(0)" data-main-menu-item="true" data-main-menu-name="Analytics" data-is-active="false" data-has-submenu="false" data-target-submenu-container="" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
-                                    <!-- render_svg_icon( 'dashboard_bar_chart' ) -->
-                                    <img data-sidebar-menu-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/dashboard_bar_chart.svg" alt="" class="w--24 h--24 filter--col--pale-sky">
-                                    <span data-sidebar-menu-item-text class="fs--10 fw5 lh--18 col--fiord">
-                                        Analytics
-                                    </span>
-                                </a>
-                            </div>
-                            <!-- /menu item -->
+                                    <!-- menu item (Analytics) [if active page item, then "current-page" class should be added to the div] -->
+                                    <div data-sidebar-menu-item data-page="dashboard/analytics" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
+                                        <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
+                                        <a href="javascript: void(0)" data-main-menu-item="true" data-main-menu-name="Analytics" data-is-active="false" data-has-submenu="false" data-target-submenu-container="" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
+                                            <!-- render_svg_icon( 'dashboard_bar_chart' ) -->
+                                            <img data-sidebar-menu-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/dashboard_bar_chart.svg" alt="" class="w--24 h--24 filter--col--pale-sky">
+                                            <span data-sidebar-menu-item-text class="fs--10 fw5 lh--18 col--fiord">
+                                                Analytics
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <!-- /menu item -->
 
-                            <!-- menu item (Earnings) [if active page item, then "current-page" class should be added to the div] -->
-                            <div data-sidebar-menu-item data-page="dashboard/earnings" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
-                                <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
-                                <a href="javascript: void(0)" data-main-menu-item="true" data-main-menu-name="Earnings" data-is-active="false" data-has-submenu="false"  data-target-submenu-container="" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
-                                    <!-- render_svg_icon( 'money-1' ) -->
-                                    <img data-sidebar-menu-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/money-1.svg" alt="" class="w--24 h--24 filter--col--pale-sky">
-                                    <span data-sidebar-menu-item-text class="fs--10 fw5 lh--18 col--fiord">
-                                        Earnings
-                                    </span>
-                                </a>
-                            </div>
-                            <!-- /menu item -->
+                                    <!-- menu item (Earnings) [if active page item, then "current-page" class should be added to the div] -->
+                                    <div data-sidebar-menu-item data-page="dashboard/earnings" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
+                                        <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
+                                        <a href="javascript: void(0)" data-main-menu-item="true" data-main-menu-name="Earnings" data-is-active="false" data-has-submenu="false"  data-target-submenu-container="" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
+                                            <!-- render_svg_icon( 'money-1' ) -->
+                                            <img data-sidebar-menu-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/money-1.svg" alt="" class="w--24 h--24 filter--col--pale-sky">
+                                            <span data-sidebar-menu-item-text class="fs--10 fw5 lh--18 col--fiord">
+                                                Earnings
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <!-- /menu item -->
 
-                            <!-- menu item (Orders) [if active page item, then "current-page" class should be added to the div] -->
-                            <div data-sidebar-menu-item data-page="dashboard/orders" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
-                                <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
-                                <a href="javascript: void(0)" data-main-menu-item="true" data-main-menu-name="Your orders" data-is-active="false" data-has-submenu="true"  data-target-submenu-container="dashboard-submenu-your-orders" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
-                                    <!-- render_svg_icon( 'order-1' ) -->
-                                    <img data-sidebar-menu-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/order-1.svg" alt="" class="w--24 h--24 filter--col--pale-sky">
-                                    <span data-sidebar-menu-item-text class="fs--10 fw5 lh--18 col--fiord">
-                                        Orders
-                                    </span>
-                                </a>
-                            </div>
-                            <!-- /menu item -->
+                                    <!-- menu item (Orders) [if active page item, then "current-page" class should be added to the div] -->
+                                    <div data-sidebar-menu-item data-page="dashboard/orders" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
+                                        <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
+                                        <a href="javascript: void(0)" data-main-menu-item="true" data-main-menu-name="Your orders" data-is-active="false" data-has-submenu="true"  data-target-submenu-container="dashboard-submenu-your-orders" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
+                                            <!-- render_svg_icon( 'order-1' ) -->
+                                            <img data-sidebar-menu-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/order-1.svg" alt="" class="w--24 h--24 filter--col--pale-sky">
+                                            <span data-sidebar-menu-item-text class="fs--10 fw5 lh--18 col--fiord">
+                                                Orders
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <!-- /menu item -->
 
-                            <!-- menu item (Media) [if active page item, then "current-page" class should be added to the div] -->
-                            <div data-sidebar-menu-item data-page="dashboard/media" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
-                                <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
-                                <a href="javascript: void(0)" data-main-menu-item="true" data-main-menu-name="Media" data-is-active="false" data-has-submenu="false"  data-target-submenu-container="" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
-                                    <!-- render_svg_icon( 'image-03' ) -->
-                                    <img data-sidebar-menu-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/image-03.svg" alt="" class="w--24 h--24 filter--col--pale-sky">
-                                    <span data-sidebar-menu-item-text class="fs--10 fw5 lh--18 col--fiord">
-                                        Media
-                                    </span>
-                                </a>
-                            </div>
-                            <!-- /menu item -->
+                                    <!-- menu item (Media) [if active page item, then "current-page" class should be added to the div] -->
+                                    <div data-sidebar-menu-item data-page="dashboard/media" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
+                                        <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
+                                        <a href="javascript: void(0)" data-main-menu-item="true" data-main-menu-name="Media" data-is-active="false" data-has-submenu="false"  data-target-submenu-container="" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
+                                            <!-- render_svg_icon( 'image-03' ) -->
+                                            <img data-sidebar-menu-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/image-03.svg" alt="" class="w--24 h--24 filter--col--pale-sky">
+                                            <span data-sidebar-menu-item-text class="fs--10 fw5 lh--18 col--fiord">
+                                                Media
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <!-- /menu item -->
 
-                            <!-- menu item (Chats) [if active page item, then "current-page" class should be added to the div] -->
-                            <div data-sidebar-menu-item data-page="dashboard/chats" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
-                                <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
-                                <a href="javascript: void(0)" data-main-menu-item="true" data-main-menu-name="Chats" data-is-active="false" data-has-submenu="true"  data-target-submenu-container="dashboard-submenu-chats" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
-                                    <!-- render_svg_icon( 'private_chat1' ) -->
-                                    <img data-sidebar-menu-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/private_chat1.svg" alt="" class="w--24 h--24 filter--col--pale-sky">
-                                    <span data-sidebar-menu-item-text class="fs--10 fw5 lh--18 col--fiord">
-                                        Chats
-                                    </span>
-                                </a>
-                            </div>
-                            <!-- /menu item -->
+                                    <!-- menu item (Chats) [if active page item, then "current-page" class should be added to the div] -->
+                                    <div data-sidebar-menu-item data-page="dashboard/chats" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
+                                        <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
+                                        <a href="javascript: void(0)" data-main-menu-item="true" data-main-menu-name="Chats" data-is-active="false" data-has-submenu="true"  data-target-submenu-container="dashboard-submenu-chats" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
+                                            <!-- render_svg_icon( 'private_chat1' ) -->
+                                            <img data-sidebar-menu-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/private_chat1.svg" alt="" class="w--24 h--24 filter--col--pale-sky">
+                                            <span data-sidebar-menu-item-text class="fs--10 fw5 lh--18 col--fiord">
+                                                Chats
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <!-- /menu item -->
 
-                            <!-- menu item (Subscriptions) [if active page item, then "current-page" class should be added to the div] -->
-                            <div data-sidebar-menu-item data-page="dashboard/subscriptions" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
-                                <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
-                                <a href="javascript: void(0)" data-main-menu-item="true" data-main-menu-name="Subscriptions" data-is-active="false" data-has-submenu="false"  data-target-submenu-container="" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
-                                    <!-- render_svg_icon( 'logo_bg' ) -->
-                                    <img data-sidebar-menu-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/logo_bg.svg" alt="" class="w--24 h--24 filter--col--pale-sky">
-                                    <span data-sidebar-menu-item-text class="fs--10 fw5 lh--18 col--fiord">
-                                        Subscriptions
-                                    </span>
-                                </a>
-                            </div>
-                            <!-- /menu item -->
+                                    <!-- menu item (Subscriptions) [if active page item, then "current-page" class should be added to the div] -->
+                                    <div data-sidebar-menu-item data-page="dashboard/subscriptions" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
+                                        <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
+                                        <a href="javascript: void(0)" data-main-menu-item="true" data-main-menu-name="Subscriptions" data-is-active="false" data-has-submenu="false"  data-target-submenu-container="" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
+                                            <!-- render_svg_icon( 'logo_bg' ) -->
+                                            <img data-sidebar-menu-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/logo_bg.svg" alt="" class="w--24 h--24 filter--col--pale-sky">
+                                            <span data-sidebar-menu-item-text class="fs--10 fw5 lh--18 col--fiord">
+                                                Subscriptions
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <!-- /menu item -->
 
-                            <!-- menu item (Shops) [if active page item, then "current-page" class should be added to the div] -->
-                            <div data-sidebar-menu-item data-page="dashboard/shops" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
-                                <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
-                                <a href="javascript: void(0)" data-main-menu-item="true" data-main-menu-name="Shops" data-is-active="false" data-has-submenu="true"  data-target-submenu-container="dashboard-submenu-shops" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
-                                    <!-- render_svg_icon( 'merch' ) -->
-                                    <img data-sidebar-menu-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/merch.svg" alt="" class="w--24 h--24 filter--col--pale-sky">
-                                    <span data-sidebar-menu-item-text class="fs--10 fw5 lh--18 col--fiord">
-                                        Shops
-                                    </span>
-                                </a>
-                            </div>
-                            <!-- /menu item -->
+                                    <!-- menu item (Shops) [if active page item, then "current-page" class should be added to the div] -->
+                                    <div data-sidebar-menu-item data-page="dashboard/shops" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
+                                        <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
+                                        <a href="javascript: void(0)" data-main-menu-item="true" data-main-menu-name="Shops" data-is-active="false" data-has-submenu="true"  data-target-submenu-container="dashboard-submenu-shops" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
+                                            <!-- render_svg_icon( 'merch' ) -->
+                                            <img data-sidebar-menu-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/merch.svg" alt="" class="w--24 h--24 filter--col--pale-sky">
+                                            <span data-sidebar-menu-item-text class="fs--10 fw5 lh--18 col--fiord">
+                                                Shops
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <!-- /menu item -->
 
-                            <!-- menu item (Profile) [if active page item, then "current-page" class should be added to the div] -->
-                            <div data-sidebar-menu-item data-page="dashboard/profile" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
-                                <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
-                                <a href="javascript: void(0)" data-main-menu-item="true" data-main-menu-name="Profile" data-is-active="false" data-has-submenu="true"  data-target-submenu-container="dashboard-submenu-profile" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
-                                    <!-- render_svg_icon( 'user-edit' ) -->
-                                    <img data-sidebar-menu-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/user-edit.svg" alt="" class="w--24 h--24 filter--col--pale-sky">
-                                    <span data-sidebar-menu-item-text class="fs--10 fw5 lh--18 col--fiord">
-                                        Profile
-                                    </span>
-                                </a>
-                            </div>
-                            <!-- /menu item -->
+                                    <!-- menu item (Profile) [if active page item, then "current-page" class should be added to the div] -->
+                                    <div data-sidebar-menu-item data-page="dashboard/profile" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
+                                        <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
+                                        <a href="javascript: void(0)" data-main-menu-item="true" data-main-menu-name="Profile" data-is-active="false" data-has-submenu="true"  data-target-submenu-container="dashboard-submenu-profile" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
+                                            <!-- render_svg_icon( 'user-edit' ) -->
+                                            <img data-sidebar-menu-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/user-edit.svg" alt="" class="w--24 h--24 filter--col--pale-sky">
+                                            <span data-sidebar-menu-item-text class="fs--10 fw5 lh--18 col--fiord">
+                                                Profile
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <!-- /menu item -->
 
-                            <!-- menu item (Blog) [if active page item, then "current-page" class should be added to the div] -->
-                            <div data-sidebar-menu-item data-page="dashboard/blog" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
-                                <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
-                                <a href="javascript: void(0)" data-main-menu-item="true" data-main-menu-name="Blog" data-is-active="false" data-has-submenu="false"  data-target-submenu-container="" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
-                                    <!-- render_svg_icon( 'blog-01' ) -->
-                                    <img data-sidebar-menu-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/blog-01.svg" alt="" class="w--24 h--24 filter--col--pale-sky">
-                                    <span data-sidebar-menu-item-text class="fs--10 fw5 lh--18 col--fiord">
-                                        Blog
-                                    </span>
-                                </a>
-                            </div>
-                            <!-- /menu item -->
+                                    <!-- menu item (Blog) [if active page item, then "current-page" class should be added to the div] -->
+                                    <div data-sidebar-menu-item data-page="dashboard/blog" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
+                                        <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
+                                        <a href="javascript: void(0)" data-main-menu-item="true" data-main-menu-name="Blog" data-is-active="false" data-has-submenu="false"  data-target-submenu-container="" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
+                                            <!-- render_svg_icon( 'blog-01' ) -->
+                                            <img data-sidebar-menu-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/blog-01.svg" alt="" class="w--24 h--24 filter--col--pale-sky">
+                                            <span data-sidebar-menu-item-text class="fs--10 fw5 lh--18 col--fiord">
+                                                Blog
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <!-- /menu item -->
 
-                            <!-- menu item (Settings) [if active page item, then "current-page" class should be added to the div] -->
-                            <div data-sidebar-menu-item data-page="dashboard/settings" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
-                                <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
-                                <a href="javascript: void(0)" data-main-menu-item="true" data-main-menu-name="Settings" data-is-active="false" data-has-submenu="true"  data-target-submenu-container="dashboard-submenu-settings" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
-                                    <!-- render_svg_icon( 'setting' ) -->
-                                    <img data-sidebar-menu-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/setting.svg" alt="" class="w--24 h--24 filter--col--pale-sky">
-                                    <span data-sidebar-menu-item-text class="fs--10 fw5 lh--18 col--fiord">
-                                        Settings
-                                    </span>
-                                </a>
+                                    <!-- menu item (Settings) [if active page item, then "current-page" class should be added to the div] -->
+                                    <div data-sidebar-menu-item data-page="dashboard/settings" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
+                                        <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
+                                        <a href="javascript: void(0)" data-main-menu-item="true" data-main-menu-name="Settings" data-is-active="false" data-has-submenu="true"  data-target-submenu-container="dashboard-submenu-settings" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
+                                            <!-- render_svg_icon( 'setting' ) -->
+                                            <img data-sidebar-menu-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/setting.svg" alt="" class="w--24 h--24 filter--col--pale-sky">
+                                            <span data-sidebar-menu-item-text class="fs--10 fw5 lh--18 col--fiord">
+                                                Settings
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <!-- /menu item -->
+                                </div>
                             </div>
-                            <!-- /menu item -->
+                            <!-- container to show normal menu items -->
 
-                            <!-- container to show additional menu items (only desktop version and when viewport height is less than 850px, any future addition to the menu shall go here) -->
+                            <!-- container to show additional menu items (only desktop version, when viewport height is less, keep prepending elements) -->
                             <div data-floating-panel-wrapper data-is-floating="false" class="flex flex-column self-stretch relative z-5">
                                 <div data-floating-panel data-is-active="false" data-normal-classes="flex flex-column items-center self-stretch gap--4" data-floating-classes="flex justify-center items-center flex-wrap gap--16 pad--12 w--160 bg-white-50 bg--blur--25 bb br--col--mystic br--6 sh--sidebar-2 absolute top-0 right--176-neg z-2 transition--all transition--150 transition--ease-in-out" class="flex flex-column items-center self-stretch gap--4">
                                     
