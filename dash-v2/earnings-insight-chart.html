@@ -303,12 +303,11 @@
     <script type="text/javascript">
         // Create root element
         var root = am5.Root.new("chartdiv");
-
         // Set themes
         root.setThemes([
           am5themes_Animated.new(root)
         ]);
-
+         
         // Create chart
         var chart = root.container.children.push(am5xy.XYChart.new(root, {
           panX: false,
@@ -317,7 +316,7 @@
           wheelY: "none",
           maxTooltipDistance: -1
         }));
-
+         
         // Create tooltip
         var tooltip = am5.Tooltip.new(root, {
           background: am5.RoundedRectangle.new(root, {
@@ -329,7 +328,6 @@
             shadowOffsetY: 0  // Vertical offset of the shadow
           })
         });
-         
         // Set label properties after tooltip creation
           tooltip.label.setAll({
           paddingLeft: 8,
@@ -340,24 +338,46 @@
           fill: am5.color(0x344054), // Text color (black)
           fontSize: "12px" // Font size
         });
-
+         
         // Assign CSS class to the tooltip
         tooltip.get("background").set("cssClass", "custom-tooltip");
-
+         
         chart.plotContainer.set("tooltipPosition", "pointer");
         chart.plotContainer.set("tooltipText", "a");
         chart.plotContainer.set("tooltip", tooltip);
-
+         
+        // Mapping of abbreviated month names to full month names
+        var monthMapping = {
+          "Jan": "January",
+          "Feb": "February",
+          "Mar": "March",
+          "Apr": "April",
+          "May": "May",
+          "Jun": "June",
+          "Jul": "July",
+          "Aug": "August",
+          "Sep": "September",
+          "Oct": "October",
+          "Nov": "November",
+          "Dec": "December"
+        };
+         
         // Calculate total values for each month and format tooltip text
         tooltip.label.adapters.add("text", function(text, target) {
           text = "";
           var total = 0;
           var i = 0;
-          
+          var xAxisLabel = "";
+          var year = "";
+         
           chart.series.each(function(series) {
             var tooltipDataItem = series.get("tooltipDataItem");
             if (tooltipDataItem) {
               total += tooltipDataItem.get("valueY");
+              if (i == 0) {
+                xAxisLabel = tooltipDataItem.get("categoryX");
+                year = tooltipDataItem.dataContext ? tooltipDataItem.dataContext.year : ""; // Get the year from the data context
+              }
               if (i != 0) {
                 text += "\n\n";
               }
@@ -365,22 +385,29 @@
             }
             i++;
           });
-
+         
+          // Replace abbreviated month name with full month name
+          var fullMonthName = monthMapping[xAxisLabel] || xAxisLabel;
+         
+          // Add x-axis label with year at the top
+          text = "[bold]" + fullMonthName + " " + year + "[/]\n\n" + text;
+         
           // Add total value with a line above it
-          text += "\n\n[bold width:135px]Total:[/] [bold width:0px]" + total;
+          text += "\n[font color='#D0D5DD']────────────────────[/font]\n[fontWeight:normal width:130px][font color='#667085']Total Earnings:[/font][/] [bold width:0px]" + total + "[/]";
           return text;
         });
-
+         
         // Add cursor
         var cursor = chart.set("cursor", am5xy.XYCursor.new(root, {
           behavior: "none"
         }));
         cursor.lineY.set("visible", false);
         cursor.lineX.set("visible", false);
-
+         
         // Updated data with months
         var data = [{
           "month": "Jan",
+          "year": 2023,
           "subscription": 2.8,
           "paytoview": 2.9,
           "merch": 2.4,
@@ -388,6 +415,7 @@
           "customrequest": 2.0
         }, {
           "month": "Feb",
+          "year": 2023,
           "subscription": 2.8,
           "paytoview": 2.9,
           "merch": 2.4,
@@ -395,6 +423,7 @@
           "customrequest": 2.0
         }, {
           "month": "Mar",
+          "year": 2023,
           "subscription": 3.8,
           "paytoview": 3.9,
           "merch": 3.4,
@@ -402,6 +431,7 @@
           "customrequest": 3.0
         }, {
           "month": "Apr",
+          "year": 2023,
           "subscription": 4.8,
           "paytoview": 4.9,
           "merch": 4.4,
@@ -409,6 +439,7 @@
           "customrequest": 4.0
         }, {
           "month": "May",
+          "year": 2023,
           "subscription": 2.8,
           "paytoview": 2.9,
           "merch": 2.4,
@@ -416,6 +447,7 @@
           "customrequest": 2.0
         }, {
           "month": "Jun",
+          "year": 2023,
           "subscription": 3.8,
           "paytoview": 3.9,
           "merch": 3.4,
@@ -423,6 +455,7 @@
           "customrequest": 3.0
         }, {
           "month": "Jul",
+          "year": 2023,
           "subscription": 2.8,
           "paytoview": 2.9,
           "merch": 2.4,
@@ -430,6 +463,7 @@
           "customrequest": 2.0
         }, {
           "month": "Aug",
+          "year": 2023,
           "subscription": 5.8,
           "paytoview": 5.9,
           "merch": 5.4,
@@ -437,6 +471,7 @@
           "customrequest": 5.0
         }, {
           "month": "Sep",
+          "year": 2023,
           "subscription": 6.8,
           "paytoview": 6.9,
           "merch": 6.4,
@@ -444,6 +479,7 @@
           "customrequest": 6.0
         }, {
           "month": "Oct",
+          "year": 2023,
           "subscription": 7.8,
           "paytoview": 7.9,
           "merch": 7.4,
@@ -451,6 +487,7 @@
           "customrequest": 7.0
         }, {
           "month": "Nov",
+          "year": 2023,
           "subscription": 9.8,
           "paytoview": 8.9,
           "merch": 8.4,
@@ -458,13 +495,14 @@
           "customrequest": 8.0
         }, {
           "month": "Dec",
+          "year": 2023,
           "subscription": 8.8,
           "paytoview": 8.9,
           "merch": 8.4,
           "wishtender": 8.2,
           "customrequest": 8.0
         }];
-
+         
         // Create axes
         var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
           categoryField: "month",
@@ -476,25 +514,25 @@
             //visible: false
           //})
         }));
-
+         
         xAxis.data.setAll(data);
-
+         
         xAxis.get("renderer").labels.template.setAll({
           fontSize: "12px", // Set the font size for X-axis labels
           fill: am5.color(0x475467), // Text color (black)
         });
-
+         
         var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
           renderer: am5xy.AxisRendererY.new(root, {})
         }));
-
+         
         // Create Y-axis (left axis)
         yAxis.get("renderer").labels.template.setAll({
           fontSize: "12px", // Set the font size for Y-axis labels
           fill: am5.color(0x475467), // Text color (black)
         });
-
-
+         
+         
         // Add series
         function makeSeries(name, fieldName, color) {
           var series = chart.series.push(am5xy.ColumnSeries.new(root, {
@@ -505,39 +543,39 @@
             valueYField: fieldName,
             categoryXField: "month"
           }));
-
+         
           series.columns.template.setAll({
             width: am5.percent(25), // Adjust the width of the bars (narrower than before)
             fill: am5.color(color),
             stroke: am5.color(color)
           });
-
+         
           series.data.setAll(data);
           series.appear();
         }
-
+         
         //Y-Axis Grid Removed
         yAxis.get("renderer").grid.template.setAll({
             stroke: am5.color(0xf2f4f7)
         });
-
+         
         //X-Axis Grid Removed
         xAxis.get("renderer").grid.template.setAll({    
           stroke: am5.color(0xf2f4f7)
         });
-
+         
         makeSeries("Subscription", "subscription", 0x4CC9F0);
         makeSeries("Pay to view", "paytoview", 0x4361EE);
         makeSeries("Merch", "merch", 0x3A0BA3);
         makeSeries("Wishtender", "wishtender", 0xAE4AEF);
         makeSeries("Custom request", "customrequest", 0xF72485);
-
+         
         // Add scrollbar
         chart.set("scrollbarX", am5.Scrollbar.new(root, {
           orientation: "horizontal",
           visible: false,
         }));
-
+         
         // Make stuff animate on load
         chart.appear(1000, 100);
 
