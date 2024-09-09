@@ -305,6 +305,8 @@
         // Create root element
         var root = am5.Root.new("chartdiv");
 
+        root._logo.dispose();
+
         // Set themes
         root.setThemes([
           am5themes_Animated.new(root)
@@ -312,18 +314,21 @@
 
         // Create chart
         var chart = root.container.children.push(am5xy.XYChart.new(root, {
-          panX: true,
-          panY: true,
-          wheelX: "panX",
-          wheelY: "zoomX",
-          pinchZoomX: true,
+          panX: false,
+          panY: false,
+          wheelX: "none",
+          wheelY: "none",
+          pinchZoomX: false,
           paddingLeft: 0,
+          paddingRight: 0,
+          paddingBottom: 0,
+          paddingTop: 0,
           maxTooltipDistance: 0
         }));
 
         // Add cursor
         var cursor = chart.set("cursor", am5xy.XYCursor.new(root, {
-          behavior: "zoomXY"  // Enable zoom and pan behavior
+          behavior: "none"  // Enable zoom and pan behavior
         }));
         cursor.lineY.set("visible", false);
         cursor.lineX.set("visible", false);
@@ -333,123 +338,175 @@
         date.setHours(0, 0, 0, 0);
 
         var staticValues = [
-          { date: 0, value1: 155, value2: 120, value3: 90 },
-          { date: 1, value1: 105, value2: 95, value3: 145 },
-          { date: 2, value1: 110, value2: 130, value3: 125 },
-          { date: 3, value1: 115, value2: 165, value3: 105 },
-          { date: 4, value1: 120, value2: 160, value3: 140 },
-          { date: 5, value1: 125, value2: 145, value3: 165 },
-          { date: 6, value1: 150, value2: 130, value3: 170 }
+          { month: "Jan", year: 2023, value1: 155, value2: 120, value3: 90 },
+          { month: "Feb", year: 2023, value1: 105, value2: 95, value3: 145 },
+          { month: "Mar", year: 2023, value1: 110, value2: 130, value3: 125 },
+          { month: "Apr", year: 2023, value1: 115, value2: 165, value3: 105 },
+          { month: "May", year: 2023, value1: 120, value2: 160, value3: 140 },
+          { month: "Jun", year: 2023, value1: 125, value2: 145, value3: 165 },
+          { month: "Jul", year: 2023, value1: 150, value2: 130, value3: 170 },
+          { month: "Aug", year: 2023, value1: 140, value2: 150, value3: 135 },
+          { month: "Sep", year: 2023, value1: 130, value2: 110, value3: 120 },
+          { month: "Oct", year: 2023, value1: 160, value2: 170, value3: 150 },
+          { month: "Nov", year: 2023, value1: 170, value2: 180, value3: 155 },
+          { month: "Dec", year: 2023, value1: 180, value2: 190, value3: 160 }
         ];
 
-        function generateData() {
-          var data = [];
-          for (var i = 0; i < staticValues.length; ++i) {
-            var point = staticValues[i];
-            am5.time.add(date, "day", 1);
-            data.push({
-              date: date.getTime() + point.date * 86400000, // Adding days in milliseconds
-              value1: point.value1,
-              value2: point.value2,
-              value3: point.value3
-            });
-          }
-          return data;
-        }
-
         // Create axes
-        var xAxis = chart.xAxes.push(am5xy.DateAxis.new(root, {
-          maxDeviation: 0.5,
-          baseInterval: {
-            timeUnit: "day",
-            count: 1
-          },
+        var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
+          categoryField: "month",
           renderer: am5xy.AxisRendererX.new(root, {
-            minGridDistance: 80,
-            minorGridEnabled: true,
-            pan: "zoom"
+            minGridDistance: 30
           }),
-          tooltip: am5.Tooltip.new(root, {})
+          //tooltip: am5.Tooltip.new(root, {})
         }));
 
+        xAxis.data.setAll(staticValues); // Set the X-axis categories as the months
+
         var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
-          maxDeviation: 1,
           renderer: am5xy.AxisRendererY.new(root, {
-            pan: "zoom"
+            //pan: "zoom"
           })
         }));
 
-        // Function to update axis range to show only 5 values
-        function updateXAxisRange() {
-          var firstDate = data[0].date;
-          var lastDate = data[data.length - 1].date;
-          var interval = (lastDate - firstDate) / (data.length - 1);
-          var range = interval * 5; // 5 points, 4 intervals
-          xAxis.set("min", firstDate);
-          xAxis.set("max", firstDate + range);
-        }
+        // Create Y-axis (left axis)
+        yAxis.get("renderer").labels.template.setAll({
+          visible: false,
+          paddingLeft: 0,
+        });
 
         // Add series
-        function addSeries(name, fieldName, color) {
+       function addSeries(name, fieldName, color) {
           var series = chart.series.push(am5xy.SmoothedXLineSeries.new(root, {
             name: name,
             xAxis: xAxis,
             yAxis: yAxis,
             valueYField: fieldName,
-            valueXField: "date",
+            categoryXField: "month", // Use category for X-axis
             tooltip: am5.Tooltip.new(root, {
-              labelText: "{valueY}"
+              labelText: "{valueY}",
+              visible: false
             })
           }));
 
-          series.fills.template.setAll({
-            visible: false,
-            fillOpacity: 0.2
-          });
-
-          // Set line thickness
           series.strokes.template.setAll({
-            strokeWidth: 7 // Adjust this value to make the line thicker or thinner
+            strokeWidth: 3 // Set line thickness
           });
 
-          series.bullets.push(function () {
-            return am5.Bullet.new(root, {
-              locationY: 0,
-              sprite: am5.Circle.new(root, {
-                radius: 0,
-                stroke: root.interfaceColors.get("background"),
-                strokeWidth: 2,
-                fill: series.get("fill")
-              })
-            });
-          });
-
-          // Set series tooltip to appear only on hover
-          series.set("tooltip", am5.Tooltip.new(root, {
-            labelText: "{name}: {valueY}",
-            getFillFromSprite: true
-          }));
-
-          series.data.setAll(data);
+          series.data.setAll(staticValues);
           series.appear(1000);
         }
 
-        // Generate data and create series
-        var data = generateData();
+        // Generate series
         addSeries("Series 1", "value1", am5.color(0xff0000)); // Red line
         addSeries("Series 2", "value2", am5.color(0x00ff00)); // Green line
         addSeries("Series 3", "value3", am5.color(0x0000ff)); // Blue line
 
-        // Update X-axis range to show only 5 values
-        updateXAxisRange();
+        // Remove Y-Axis Grid
+        yAxis.get("renderer").grid.template.setAll({
+          stroke: am5.color(0xf2f4f7)
+        });
+
+        // Remove X-Axis Grid
+        xAxis.get("renderer").grid.template.setAll({
+          stroke: am5.color(0xf2f4f7)
+        });
 
         // Add scrollbar
         chart.set("scrollbarX", am5.Scrollbar.new(root, {
-          orientation: "horizontal"
+          orientation: "horizontal",
+          visible: false,
         }));
 
         // Make stuff animate on load
         chart.appear(1000, 100);
+
+        // Create tooltip
+        var tooltip = am5.Tooltip.new(root, {
+          background: am5.RoundedRectangle.new(root, {
+            fill: am5.color(0xFFFFFF), // White background
+            shadowColor: am5.color(0xE2E2E2), // Shadow color (black)
+            shadowBlur: 8, // Blur effect of the shadow
+            shadowOffsetX: 0, // Horizontal offset of the shadow
+            shadowOffsetY: 0  // Vertical offset of the shadow
+          })
+        });
+
+        // Apply corner radius to the tooltip background
+        tooltip.get("background").set("cornerRadiusTL", 2);
+        tooltip.get("background").set("cornerRadiusTR", 2);
+        tooltip.get("background").set("cornerRadiusBL", 2);
+        tooltip.get("background").set("cornerRadiusBR", 2);
+
+        // Set label properties after tooltip creation
+          tooltip.label.setAll({
+          paddingLeft: 0,
+          paddingRight: 0,
+          paddingTop: 0,
+          paddingBottom: 0,
+          textAlign: "left", // Align text to the left
+          fill: am5.color(0x344054), // Text color (black)
+          fontSize: "0.75rem", // Font size
+          fontFamily: "'Poppins', sans-serif" // Font family
+        });
+         
+        // Assign CSS class to the tooltip
+        tooltip.get("background").set("cssClass", "custom-tooltip");
+         
+        chart.plotContainer.set("tooltipPosition", "pointer");
+        chart.plotContainer.set("tooltipText", "a");
+        chart.plotContainer.set("tooltip", tooltip);
+         
+        // Mapping of abbreviated month names to full month names
+        var monthMapping = {
+          "Jan": "JANUARY",
+          "Feb": "FEBRUARY",
+          "Mar": "MARCH",
+          "Apr": "APRIL",
+          "May": "MAY",
+          "Jun": "JUNE",
+          "Jul": "JULY",
+          "Aug": "AUGUST",
+          "Sep": "SEPTEMBER",
+          "Oct": "OCTOBER",
+          "Nov": "NOVEMBER",
+          "Dec": "DECEMBER"
+        };
+         
+        // Calculate total values for each month and format tooltip text
+        tooltip.label.adapters.add("text", function(text, target) {
+          text = "";
+          var total = 0;
+          var i = 0;
+          var xAxisLabel = "";
+          var year = "";
+         
+          chart.series.each(function(series) {
+            var tooltipDataItem = series.get("tooltipDataItem");
+            if (tooltipDataItem) {
+              total += tooltipDataItem.get("valueY");
+              if (i == 0) {
+                xAxisLabel = tooltipDataItem.get("categoryX");
+                year = tooltipDataItem.dataContext ? tooltipDataItem.dataContext.year : ""; // Get the year from the data context
+              }
+              if (i != 0) {
+                text += "\n\n";
+              }
+              text += '[' + series.get("fill").toString() + ' width:8px height:8px]●[/] [fontWeight:normal width:120px]' + series.get("name") + ':[/] [bold width:0px] USD ' + tooltipDataItem.get("valueY") + '[/]';
+            }
+            i++;
+          });
+         
+          // Replace abbreviated month name with full month name
+          var fullMonthName = monthMapping[xAxisLabel] || xAxisLabel;
+         
+          // Add x-axis label with year at the top
+          text = "[font color='#667085'][bold]" + fullMonthName + " " + year + "[/]\n\n" + text;
+         
+          // Add total value with a line above it
+          text += "\n[font color='#D0D5DD']───────────────────────[/font]\n[fontWeight:normal width:130px][font color='#667085']Total Earnings:[/font][/] [bold width:0px] USD " + total + "[/]";
+          return text;
+        });
 
     </script>
 </body>
