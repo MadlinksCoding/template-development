@@ -46,6 +46,13 @@
         .col--gray-950 { color: var(--color-gray-950,#0C111D); }
         .col--blue-dark-700 { color: var(--color-blue-dark-700, #004EEB); }
 
+        /* Background */
+        .bg--col--chart-1 { background-color: var(--Chart-1, #4CC9F0); }
+        .bg--col--chart-2 { background-color: var(--Chart-2, #4361EE); }
+        .bg--col--chart-3 { background-color: var(--Chart-3, #3A0BA3); }
+        .bg--col--chart-4 { background-color: var(--Chart-4, #AE4AEF); }
+        .bg--col--chart-5 { background-color: var(--Chart-5, #F72485); }
+
         /* Background Gradients */
         .bg--gradient-white { background: linear-gradient(180deg, rgba(255, 255, 255, 0.30) 0%, rgba(255, 255, 255, 0.00) 8%); }
 
@@ -205,7 +212,33 @@
                         </div>
                         <!-- Data Content -->
                         <div class="flex flex-column justify-center items-start gap--16 flex-auto">
-                            <div id="chartdiv" class="w-100 h--490"></div>
+                            <div class="flex flex-column gap--24 w-100">
+                                <div id="chartdiv" class="w-100 h--490"></div>
+
+                                <!-- Chart Category List -->
+                                <div class="pad--x--8 flex gap--8 justify-center items-center">
+                                    <div class="flex gap--8 items-center">
+                                        <span class="db w--8 h--8 bg--col--chart-1 br-100"></span>
+                                        <span class="fs--12 lh--18 col--gray-500">Subscription</span>
+                                    </div>
+                                    <div class="flex gap--8 items-center">
+                                        <span class="db w--8 h--8 bg--col--chart-2 br-100"></span>
+                                        <span class="fs--12 lh--18 col--gray-500">Pay to view</span>
+                                    </div>
+                                    <div class="flex gap--8 items-center">
+                                        <span class="db w--8 h--8 bg--col--chart-3 br-100"></span>
+                                        <span class="fs--12 lh--18 col--gray-500">Merch</span>
+                                    </div>
+                                    <div class="flex gap--8 items-center">
+                                        <span class="db w--8 h--8 bg--col--chart-4 br-100"></span>
+                                        <span class="fs--12 lh--18 col--gray-500">Wishtender</span>
+                                    </div>
+                                    <div class="flex gap--8 items-center">
+                                        <span class="db w--8 h--8 bg--col--chart-5 br-100"></span>
+                                        <span class="fs--12 lh--18 col--gray-500">Custom request</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <!-- Ens Data Content -->
                     </div>
@@ -289,23 +322,23 @@
         var tooltip = am5.Tooltip.new(root, {
           background: am5.RoundedRectangle.new(root, {
             fill: am5.color(0xFFFFFF), // White background
-            //stroke: am5.color(0xCCCCCC), // Light gray border
-            //strokeWidth: 1,
             cornerRadius: 2,
             shadowColor: am5.color(0xE2E2E2), // Shadow color (black)
             shadowBlur: 8, // Blur effect of the shadow
             shadowOffsetX: 0, // Horizontal offset of the shadow
             shadowOffsetY: 0  // Vertical offset of the shadow
-          }),
-          label: {
-            paddingLeft: 8,
-            paddingRight: 8,
-            paddingTop: 8,
-            paddingBottom: 38,
-            textAlign: "left", // Align text to the left
-            fill: am5.color(0x344054), // Text color (black)
-            fontSize: "12px" // Font size
-          }
+          })
+        });
+         
+        // Set label properties after tooltip creation
+          tooltip.label.setAll({
+          paddingLeft: 8,
+          paddingRight: 8,
+          paddingTop: 8,
+          paddingBottom: 8,
+          textAlign: "left", // Align text to the left
+          fill: am5.color(0x344054), // Text color (black)
+          fontSize: "12px" // Font size
         });
 
         // Assign CSS class to the tooltip
@@ -446,9 +479,21 @@
 
         xAxis.data.setAll(data);
 
+        xAxis.get("renderer").labels.template.setAll({
+          fontSize: "12px", // Set the font size for X-axis labels
+          fill: am5.color(0x475467), // Text color (black)
+        });
+
         var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
           renderer: am5xy.AxisRendererY.new(root, {})
         }));
+
+        // Create Y-axis (left axis)
+        yAxis.get("renderer").labels.template.setAll({
+          fontSize: "12px", // Set the font size for Y-axis labels
+          fill: am5.color(0x475467), // Text color (black)
+        });
+
 
         // Add series
         function makeSeries(name, fieldName, color) {
