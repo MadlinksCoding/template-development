@@ -363,18 +363,18 @@
          
         // Mapping of abbreviated month names to full month names
         var monthMapping = {
-          "Jan": "January",
-          "Feb": "February",
-          "Mar": "March",
-          "Apr": "April",
-          "May": "May",
-          "Jun": "June",
-          "Jul": "July",
-          "Aug": "August",
-          "Sep": "September",
-          "Oct": "October",
-          "Nov": "November",
-          "Dec": "December"
+          "Jan": "JANUARY",
+          "Feb": "FEBRUARY",
+          "Mar": "MARCH",
+          "Apr": "APRIL",
+          "May": "MAY",
+          "Jun": "JUNE",
+          "Jul": "JULY",
+          "Aug": "AUGUST",
+          "Sep": "SEPTEMBER",
+          "Oct": "OCTOBER",
+          "Nov": "NOVEMBER",
+          "Dec": "DECEMBER"
         };
          
         // Calculate total values for each month and format tooltip text
@@ -405,7 +405,7 @@
           var fullMonthName = monthMapping[xAxisLabel] || xAxisLabel;
          
           // Add x-axis label with year at the top
-          text = "[bold]" + fullMonthName + " " + year + "[/]\n\n" + text;
+          text = "[font color='#667085'][bold]" + fullMonthName + " " + year + "[/]\n\n" + text;
          
           // Add total value with a line above it
           text += "\n[font color='#D0D5DD']───────────────────────[/font]\n[fontWeight:normal width:130px][font color='#667085']Total Earnings:[/font][/] [bold width:0px] USD " + total + "[/]";
