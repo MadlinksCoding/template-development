@@ -335,7 +335,7 @@
             shadowOffsetY: 0  // Vertical offset of the shadow
           })
         });
-
+        
         // Apply corner radius to the tooltip background
         tooltip.get("background").set("cornerRadiusTL", 2);
         tooltip.get("background").set("cornerRadiusTR", 2);
@@ -350,8 +350,7 @@
           paddingBottom: 0,
           textAlign: "left", // Align text to the left
           fill: am5.color(0x344054), // Text color (black)
-          fontSize: "0.75rem", // Font size
-          fontFamily: "'Poppins', sans-serif" // Font family
+          fontSize: "12px" // Font size
         });
          
         // Assign CSS class to the tooltip
@@ -533,7 +532,7 @@
         xAxis.data.setAll(data);
          
         xAxis.get("renderer").labels.template.setAll({
-          fontSize: "0.75rem", // Set the font size for X-axis labels
+          fontSize: "12px", // Set the font size for X-axis labels
           fill: am5.color(0x475467), // Text color (black)
         });
          
@@ -546,7 +545,7 @@
          
         // Create Y-axis (left axis)
         yAxis.get("renderer").labels.template.setAll({
-          fontSize: "0.75rem", // Set the font size for Y-axis labels
+          fontSize: "12px", // Set the font size for Y-axis labels
           fill: am5.color(0x475467), // Text color (black)
         });
          
