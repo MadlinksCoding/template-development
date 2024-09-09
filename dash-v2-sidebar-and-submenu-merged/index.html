@@ -102,16 +102,16 @@
                 <!-- /mobile header -->
 
                 <!-- sidebar main wrapper (to contain all sidebar UI elements, except submenu containers) -->
-                <div data-sidebar-main-wrapper class="flex flex-column justify-center items-center gap--6 w--90 w--90--px vh-100 pa0 pad--y--12 vw--100--responsive-mobile vw--100--responsive-mobile-portrait fixed--responsive-mobile fixed--responsive-mobile-portrait top--0--responsive-mobile top--0--responsive-mobile-portrait left--0--responsive-mobile left--0--responsive-mobile-portrait">
+                <div data-sidebar-main-wrapper class="flex flex-column justify-center items-center gap--6 w--90 w--90--px vh-100 pa0 pad--y--12 vw--100--responsive-mobile vw--100--responsive-mobile-portrait fixed--responsive-mobile fixed--responsive-mobile-portrait top--0--responsive-mobile top--0--responsive-mobile-portrait left--0--responsive-mobile left--0--responsive-mobile-portrait bg--col--white--70--responsive-mobile bg--col--white--70--responsive-mobile-portrait bg--blur--25--responsive-mobile bg--blur--25--responsive-mobile-portrait gap--16--responsive-mobile gap--16--responsive-mobile-portrait pad--y--8--responsive-mobile pad--y--8--responsive-mobile-portrait pad--x--16-responsive-mobile pad--x--16-responsive-mobile-portrait">
                     <!-- site logo -->
-                    <a data-site-logo data-desktop-only href="/" title="" class="flex items-center gap--10 bg--col--lemon br--12 o-80 hov--o--100 transition--opacity transition--200 transition--ease-in-out">
+                    <a data-site-logo data-desktop-only href="/" title="" class="flex items-center gap--10 bg--col--lemon br--12 o-80 hov--o--100 display-none--responsive-mobile display-none--responsive-mobile-portrait transition--opacity transition--200 transition--ease-in-out">
                         <!-- render_svg_icon( 'logo_bg-1' ) -->
                         <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/logo_bg-1.svg" alt="" class="flex w--36 h--36 pointer-events-none">
                     </a>
                     <!-- /site logo -->
 
                     <!-- profile & controls (profile, notifications and logout) -->
-                    <div data-sidebar-top-controls data-desktop-only class="flex flex-column items-center self-stretch gap--8 pv2 ph1 bb br--col--mischka">
+                    <div data-sidebar-top-controls data-desktop-only class="flex flex-column items-center self-stretch gap--8 pv2 ph1 bb br--col--mischka display-none--responsive-mobile display-none--responsive-mobile-portrait">
                         <!-- avatar -->
                         <div class="flex w--40 h--40 br--20">
                             <a data-profile-panel-trigger data-is-active="false" href="javascript: void(0)" title="" class="flex w--40 h--40 br--20 relative">
@@ -148,12 +148,20 @@
                     </div>
                     <!-- /profile & controls -->
 
+                    <!-- mobile nav close button -->
+                    <div class="dn flex-column items-end self-stretch display-flex--responsive-mobile display-flex--responsive-mobile-portrait">
+                        <a class="flex justify-center items-center w--32 h--32 pointer">
+                            <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/close.svg" alt="" class="w--24 h--24 filter--col--pale-sky pointer-events-none">
+                        </a>
+                    </div>
+                    <!-- /mobile nav close button -->
+
                     <!-- main navigation -->
                     <div data-sidebar-nav-wrapper class="flex flex-column flex--max items-center self-stretch gap--4 pv1 ph2">
                         <nav data-dashboard-main-nav class="flex flex-column items-center self-stretch gap--4">
                             <!-- container to show normal menu items (only desktop version, when viewport height is fine to show items, keep appending elements) -->
                             <div data-menu-panel-wrapper class="flex flex-column self-stretch relative z-5">
-                                <div data-menu-panel class="flex flex-column items-center self-stretch gap--4">
+                                <div data-menu-panel class="flex flex-column items-center self-stretch gap--4 display-grid--responsive-mobile display-grid--responsive-mobile-portrait grid--cols-4--responsive-mobile grid--cols-4--responsive-mobile-portrait gap--16--responsive-mobile gap--16--responsive-mobile-portrait">
                                     <!-- menu item (Push Menu Demo) (this item is added only to show a demo of multi level push menu system in corresponding submenu, not part of actual sidebar menu) -->
                                     <div data-sidebar-menu-item data-page="dashboard/dummy-page" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
                                         <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
@@ -161,7 +169,7 @@
                                             <!-- render_svg_icon( 'likes' ) -->
                                             <img data-sidebar-menu-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/likes.svg" alt="" class="w--24 h--24 filter--col--pale-sky pointer-events-none">
                                             <span data-sidebar-menu-item-text class="fs--10 fw5 lh--18 col--fiord pointer-events-none">
-                                                Push Menu
+                                                PushMenu
                                             </span>
                                         </a>
                                     </div>
@@ -311,10 +319,8 @@
                             <!-- container to show normal menu items -->
 
                             <!-- container to show additional menu items (only desktop version, when viewport height is less, keep prepending elements) -->
-                            <div data-floating-panel-wrapper data-is-floating="false" class="flex flex-column self-stretch relative z-5">
-                                <div data-floating-panel data-is-active="false" data-normal-classes="flex flex-column items-center self-stretch gap--4" data-floating-classes="flex justify-center items-center flex-wrap gap--16 pad--12 w--160 bg-white-50 bg--blur--25 bb br--col--mystic br--6 sh--sidebar-2 absolute top-0 right--176-neg z-2 transition--all transition--150 transition--ease-in-out" class="flex flex-column items-center self-stretch gap--4">
-                                    
-                                </div>
+                            <div data-floating-panel-wrapper data-is-floating="true" class="flex flex-column self-stretch relative z-5">
+                                <div data-floating-panel data-is-active="true" class="flex justify-center items-center flex-wrap gap--16 pad--12 w--160 bg-white-50 bg--blur--25 bb br--col--mystic br--6 sh--sidebar-2 absolute top-0 right--176-neg z-2 transition--all transition--150 transition--ease-in-out"></div>
                             </div>
                             <!-- container to show additional menu items -->
 
