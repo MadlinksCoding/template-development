@@ -329,13 +329,19 @@
         var tooltip = am5.Tooltip.new(root, {
           background: am5.RoundedRectangle.new(root, {
             fill: am5.color(0xFFFFFF), // White background
-            cornerRadius: 1,
             shadowColor: am5.color(0xE2E2E2), // Shadow color (black)
             shadowBlur: 8, // Blur effect of the shadow
             shadowOffsetX: 0, // Horizontal offset of the shadow
             shadowOffsetY: 0  // Vertical offset of the shadow
           })
         });
+        
+        // Apply corner radius to the tooltip background
+        tooltip.get("background").set("cornerRadiusTL", 2);
+        tooltip.get("background").set("cornerRadiusTR", 2);
+        tooltip.get("background").set("cornerRadiusBL", 2);
+        tooltip.get("background").set("cornerRadiusBR", 2);
+
         // Set label properties after tooltip creation
           tooltip.label.setAll({
           paddingLeft: 0,
