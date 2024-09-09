@@ -34,8 +34,9 @@
         /* Max Width */
         .max--w--952 { width: 59.5rem; /* width 952px */ } /* confirmed in use */ /* pixel conversion correct */
 
-        /* Hright */
+        /* Height */
         .h--14 { height: 0.875rem; /* height 14px */ } /* confirmed in use */ /* pixel conversion correct */
+        .h--300 { height: 18.75rem; /* height 14px */ } /* confirmed in use */ /* pixel conversion correct */  
 
         /* Colors */
         .col--gray-500 { color: var(--color-gray-500,#667085); }
@@ -213,7 +214,7 @@
                         <!-- Data Content -->
                         <div class="flex flex-column justify-center items-start gap--16 flex-auto">
                             <div class="flex flex-column gap--24 w-100">
-                                <div id="chartdiv" class="w-100 h--490"></div>
+                                <div id="chartdiv" class="w-100 h--300"></div>
 
                                 <!-- Chart Category List -->
                                 <div class="pad--x--8 flex gap--8 justify-center items-center">
@@ -303,6 +304,9 @@
     <script type="text/javascript">
         // Create root element
         var root = am5.Root.new("chartdiv");
+
+        root._logo.dispose();
+
         // Set themes
         root.setThemes([
           am5themes_Animated.new(root)
