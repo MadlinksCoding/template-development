@@ -35,7 +35,7 @@
         <div data-section="wrapper" class="flex flex--column-responsive-mobile flex--column-responsive-mobile-portrait">
 
             <!-- page sidebar -->
-            <section data-sidebar data-section="sidebar" class="flex vh-100 sticky top-0 z-2 bg--col--athens-gray--70 sh--sidebar vw--100--responsive-mobile vw--100--responsive-mobile-portrait h--48-responsive-mobile h--48-responsive-mobile-portrait">
+            <section data-sidebar data-section="sidebar" class="flex vh-100 sticky top-0 z-2 bg--col--athens-gray--70 sh--sidebar vw--100--responsive-mobile vw--100--responsive-mobile-portrait h--48-responsive-mobile h--48-responsive-mobile-portrait bg--col--white--70--responsive-mobile bg--col--white--70--responsive-mobile-portrait sh--none--responsive-mobile sh--none--responsive-mobile-portrait">
                 <!-- mobile header -->
                 <div data-mobile-header data-mobile-only class="pad--y--8 pad--x--16 flex-column flex--max gap--16 br--24 bg--blur--25 dn dn-responsive-mobile">
                     <div class="flex justify-between items-center">
@@ -52,38 +52,38 @@
                             <!-- Header Navigation Item -->
                             <div class="flex justify-end items-center gap--8">
                                 <!-- Choose Language -->
-                                <div class="pad--6 flex justify-center items-center gap--12 br--6 pointer hover--bg--col--light-grey-10 active--bg--col--grey-800">
+                                <a class="pad--6 flex justify-center items-center gap--12 br--6 pointer hover--bg--col--light-grey-10 active--bg--col--grey-800">
                                     <div class="w--20 h--20 pointer-events-none">
                                         <img src="assets/icons/globe.svg" alt="" class="w--20 h--20 filter--col--gray-500 active--filter--col--white pointer-events-none">
                                     </div>
-                                </div>
+                                </a>
 
                                 <!-- Notification Item -->
                                 <div class="w--32 h--32 relative">
                                     <!-- Notification Dot -->
                                     <span class="db w--7 h--7 br-100 bg--col--persian-rose absolute top--2 right--3"></span>
                                     <!-- Menu item 2 -->
-                                    <div class="pad--6 flex justify-center items-center gap--12 br--6 pointer hover--bg--col--light-grey-10 active--bg--col--grey-800">
+                                    <a data-notifications-panel-trigger data-is-active="false" class="pad--6 flex justify-center items-center gap--12 br--6 pointer hover--bg--col--light-grey-10 active--bg--col--grey-800">
                                         <div class="w--20 h--20 pointer-events-none">
                                             <img src="assets/icons/bell-03.svg" alt="" class="w--20 h--20 filter--col--gray-500 active--filter--col--white pointer-events-none">
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
 
                                 <!-- User Profile Item -->
                                 <div class="relative flex justify-end items-center">
                                     <!-- Menu item 2 -->
-                                    <div class="flex flex-column justify-center items-center gap--2 br--6">
-                                        <div class="br-100 w--32 h--32 flex items-center justify-center ba b--white-0125 bw2 active--br--col-grey-14">
+                                    <a data-profile-panel-trigger data-is-active="false" class="flex flex-column justify-center items-center gap--2 br--6">
+                                        <div class="br-100 w--32 h--32 flex items-center justify-center ba b--white-0125 bw2 active--br--col-grey-14 pointer-events-none">
                                             <div class="relative w--24 h--24">
                                                 <div class="w--24 h--24 br-100 pointer">
-                                                    <img src="assets/img/avatar.png" alt="" class="w-100 h-100 fit--cover pointer-events-none">
+                                                    <img src="assets/img/avatar.png" alt="" class="w-100 h-100 fit--cover">
                                                 </div>
                                                 <!-- User Online Dot -->
                                                 <span class="db w--6 h--6 br-100 bg--col--spring-green absolute bottom-0 right-0"></span>
                                             </div>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
                             </div>
                             <!-- /Header Navigation Item -->
@@ -114,7 +114,7 @@
                     <div data-sidebar-top-controls data-desktop-only class="flex flex-column items-center self-stretch gap--8 pv2 ph1 bb br--col--mischka">
                         <!-- avatar -->
                         <div class="flex w--40 h--40 br--20">
-                            <a href="javascript: void(0)" title="" class="flex w--40 h--40 br--20 relative">
+                            <a data-profile-panel-trigger data-is-active="false" href="javascript: void(0)" title="" class="flex w--40 h--40 br--20 relative">
                                 <img src="assets/images/avatar-2.jpeg" alt="" class="w-100 h-100 fit--cover br--20 pointer-events-none">
 
                                 <!-- status indicator -->
@@ -365,7 +365,7 @@
                     <div data-profile-panel-container class="flex flex-column items-start gap--0 w--480 vh-100 overflow-hidden bg--col--athens-gray--70--variation-2  bg--blur--25 bl br--col--mischka sh--sidebar fixed top-0 left--90 left--90--px z-1 transition--all transition--150 transition--ease-in-out" hidden>
                         <div data-scrollable-profile-panel class="flex flex-column items-start self-stretch gap--0 w-100 vh-100 overflow-y-auto">
                             <!-- back/close button -->
-                            <a data-back-button="" class="flex justify-center items-center pad--6 br--6 hover--bg--col--ebony--10 pointer absolute top--08 right--08 z-2 transition--background transition--200 transition--ease-in-out js-event-handler-attached">
+                            <a data-back-button="" class="flex justify-center items-center pad--6 br--6 hover--bg--col--ebony--10 pointer absolute top--08 right--08 z-2 transition--background transition--200 transition--ease-in-out">
                                 <!-- render_svg_icon( 'align-left-01' ) -->
                                 <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/align-left-01.svg" alt="" class="w--20 h--20 filter--col--athens-gray2 pointer-events-none">
                             </a>
