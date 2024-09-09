@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Meta Tags -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>Template - Dashboard Profile Panel</title>
+
+        <!-- Poppins Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+        <!-- Tachyons Styles -->
+        <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/main.css" />
+        <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" />
+        <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/theme.css" />
+        <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/customTachyons.css" />
+
+        <!-- Dashboard Sidebar Custom Style -->
+        <link rel="stylesheet" href="assets/css/dash-customTachyons.css" />
+        <link rel="stylesheet" href="assets/css/dash-toggle-switch.css" />
+        <link rel="stylesheet" href="assets/css/dash-tooltips.css" />
+        <link rel="stylesheet" href="assets/css/dash-status-messages.css" />
+        <link rel="stylesheet" href="assets/css/dash-status-dropdown.css" />
+        <link rel="stylesheet" href="assets/css/dash-profile-panel-buttons.css" />
+        <link rel="stylesheet" href="assets/css/dash-profile-panel.css" />
+    </head>
+    <body>
+        <!-- profile panel container (same template shall be used in mobile also) -->
+        <div data-profile-panel-container class="flex flex-column items-start gap--0 w--480 vh-100 overflow-hidden bg--col--athens-gray--70--variation-2  bg--blur--25 bl br--col--mischka sh--sidebar fixed top-0 left--90 left--90--px z-1 transition--all transition--150 transition--ease-in-out">
+            <div data-scrollable-profile-panel class="flex flex-column items-start self-stretch gap--0 w-100 vh-100 overflow-y-auto">
+                <!-- back/close button -->
+                <a data-back-button="" class="flex justify-center items-center pad--6 br--6 hover--bg--col--ebony--10 pointer absolute top--08 right--08 z-2 transition--background transition--200 transition--ease-in-out js-event-handler-attached">
+                    <!-- render_svg_icon( 'align-left-01' ) -->
+                    <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/align-left-01.svg" alt="" class="w--20 h--20 filter--col--athens-gray2">
+                </a>
+                <!-- back/close button -->
+
+                <!-- profile top section -->
+                <div data-profile-cover class="flex flex-column items-start self-stretch gap--16 bg-black-50 bg-center cover relative" style="background-image: url('assets/images/profile-bg.png');">
+                    <!-- profile info section -->
+                    <div data-profile-main class="flex flex-column items-start self-stretch gap--16 pa3 bg-black-50">
+                        <!-- profile pic, name, handles etc. -->
+                        <div data-profile-info class="flex items-start self-stretch gap--16 pad--right--24">
+                            <!-- profile pic & status dot -->
+                            <a href="javascript: void(0)" title="" class="flex w--56 h--56 br--30 relative">
+                                <img src="assets/images/avatar.png" alt="" class="w--56 h--56 fit--cover br--30">
+
+                                <!-- status indicator -->
+                                <span class="flex w--14 h--14 bg--col--spring-green br--7 absolute bottom-0 right-0">&nbsp;</span>
+                                <!-- /status indicator -->
+                            </a>
+                            <!-- /profile pic & status dot -->
+
+                            <!-- profile name & status -->
+                            <div class="flex flex-column items-start flex--max gap--4">
+                                <!-- top -->
+                                <div class="flex items-center content-center self-stretch flex-wrap gap--8">
+                                    <!-- name & verified icon -->
+                                    <div class="flex items-center gap--8">
+                                        <div class="flex items-center gap--4">
+                                            <!-- name -->
+                                            <span data-profile-name class="flex fs--18 fw6 lh--28 white">
+                                                Jelly FISH
+                                            </span>
+                                            <!-- /name -->
+
+                                            <!-- verified tick -->
+                                            <img src="assets/images/verified-tick.svg" alt="" class="w--16 h--16">
+                                            <!-- /verified tick -->
+                                        </div>
+                                    </div>
+                                    <!-- /name & verified icon -->
+
+                                    <!-- profile handle -->
+                                    <div class="flex items-center">
+                                        <span data-profile-handle class="flex fs--12 fw4 lh--18 col--mischka">
+                                            @jellyskitchen
+                                        </span>
+                                    </div>
+                                    <!-- /profile handle -->
+                                </div>
+                                <!-- /top -->
+
+                                <!-- bottom -->
+                                <div class="flex">
+                                    <!-- status dropdown (dropdown-type = ['default', 'small']) / throw-event = fs-evt-custom-event-name -->
+                                    <div data-status-dropdown-main data-is-open="false" data-dropdown-type="small" data-throw-event="fs-evt-eventname" class="inline-flex relative z-5">
+                                        <!-- hidden input to hold the current/selected status value -->
+                                        <input data-current-status-value type="hidden" value="offline">
+
+                                        <!-- drop down trigger -->
+                                        <a data-status-dropdown-trigger data-current-status="online" class="inline-flex items-center gap--8 pv1 ph2 br--15 pointer transition--all transition--150 transition--ease-in-out">
+                                            <span data-current-status-text class="fs--14 fw5 lh--20 ttu">online</span>
+
+                                            <img data-status-dropdown-arrow src="assets/images/status-dropdown.svg" alt="" class="w--12 h--12 filter--col--ebony--variation-2 transition--transform transition--150 transition--ease-in-out">
+                                        </a>
+                                        <!-- /drop down trigger -->
+
+                                        <!-- drop down -->
+                                        <div data-status-dropdown class="flex flex-column items-start gap--10 absolute top-2 right-0 transition--all transition--150 transition--ease-in-out">
+                                            <div class="flex flex-column self-stretch br--2 bg--col--white--70 bg--blur--25 overflow-hidden">
+                                                <!-- status type (online) -->
+                                                <a data-status-type="online" class="flex flex-column items-start self-stretch gap--8 pad--12 bb br--col--athens-gray2 hover-bg-white transition--background transition--150 transition--ease-in-out">
+                                                    <!-- status -->
+                                                    <div data-status-label class="flex items-center gap--8">
+                                                        <span class="flex w--6 h--6 br--4 ba br--col--spring-green bg--col--spring-green">&nbsp;</span>
+
+                                                        <span class="flex fs--14 fw5 lh--20 ttu col--ebony--variation-2">Online</span>
+                                                    </div>
+                                                    <!-- /status -->
+                                                </a>
+                                                <!-- /status type -->
+
+                                                <!-- status type (away) -->
+                                                <a data-status-type="away" class="flex flex-column items-start self-stretch gap--8 pad--12 bb br--col--athens-gray2 hover-bg-white transition--background transition--150 transition--ease-in-out">
+                                                    <!-- status -->
+                                                    <div data-status-label class="flex items-center gap--8">
+                                                        <span class="flex w--6 h--6 br--4 ba br--col--my-sin bg--col--my-sin">&nbsp;</span>
+
+                                                        <span class="flex fs--14 fw5 lh--20 ttu col--ebony--variation-2">Away</span>
+                                                    </div>
+                                                    <!-- /status -->
+                                                </a>
+                                                <!-- /status type -->
+
+                                                <!-- status type (invisible) -->
+                                                <a data-status-type="invisible" class="flex flex-column items-start self-stretch gap--8 pad--12 bb br--col--athens-gray2 bn hover-bg-white transition--background transition--150 transition--ease-in-out">
+                                                    <!-- status -->
+                                                    <div data-status-label class="flex items-center gap--8">
+                                                        <span class="flex w--6 h--6 br--4 ba b--dotted br--col--gull-gray bg-white">&nbsp;</span>
+
+                                                        <span class="flex fs--14 fw5 lh--20 ttu col--ebony--variation-2">Invisible</span>
+                                                    </div>
+                                                    <!-- /status -->
+                                                </a>
+                                                <!-- /status type -->
+                                            </div>
+                                        </div>
+                                        <!-- /drop down -->
+                                    </div>
+                                    <!-- /status dropdown -->
+                                </div>
+                                <!-- /bottom -->
+                            </div>
+                            <!-- /profile name & status -->
+                        </div>
+                        <!-- /profile pic, name, handles etc. -->
+
+                        <!-- profile status message -->
+                        <div class="flex flex-column items-start self-stretch gap--16">
+                            <!-- repost to 'X' toggle wrapper -->
+                            <div class="flex items-center gap--8">
+                                <!-- toggle container -->
+                                <div class="flex">
+                                    <!-- toggle switch (switch size = ['default', 'small'] / switch theme = ['default', 'light', 'dark']) -->
+                                    <label data-switch data-switch-size="small" data-switch-theme="light" data-switch-for="" data-switch-dispatch-event="">
+                                        <input type="checkbox" value="switch_slide" name="switch_slide" class="dn">
+                                        <span data-switch-slide class="db"></span>
+                                    </label>
+                                    <!-- /toggle switch -->
+                                </div>
+                                <!-- /toggle container -->
+
+                                <!-- toggle text -->
+                                <div class="flex items-center gap--4">
+                                    <div class="flex items-center">
+                                        <span class="fs--12 fw4 lh--18 white">
+                                            Repost status message to X Automatically
+                                        </span>
+                                    </div>
+
+                                    <div class="flex items-center">
+                                        <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
+                                        <div data-tooltip data-tooltip-arrow="true" data-tooltip-position="bottom center" data-tooltip-size="default" data-tooltip-theme="dark" class="relative z-5 pointer">
+                                            <img src="assets/images/help-circle.svg" alt="" class="w--16 h--16 filter--col--pale-sky">
+
+                                            <div data-tooltip-text data-tooltip-content>
+                                                <span class="fs--12 fw4 lh--18 color-inherit">
+                                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <!-- /tooltip -->
+                                    </div>
+                                </div>
+                                <!-- /toggle text -->
+                            </div>
+                            <!-- /repost to 'X' toggle wrapper -->
+
+                            <!-- editable status message container (theme = ['default', 'dark', 'light']) -->
+                            <div data-online-status-message-container data-theme="light" data-is-editing="false" class="flex justify-start items-center self-stretch gap--8 pv1 ph2 br--10 relative">
+                                <!-- editable textbox -->
+                                <input data-online-status-message-text type="text" placeholder="Write status here..." value="Online Message..." class="flex flex--max fs--12 fw5 lh--18" readonly>
+                                <!-- /editable textbox -->
+
+                                <!-- enable editing button -->
+                                <a data-online-status-message-edit class="flex w--16 h--16 pointer">
+                                    <img src="assets/images/edit-04.svg" alt="" class="w--16 h--16">
+                                </a>
+                                <!-- enable editing button -->
+
+                                <!-- editing controls -->
+                                <div data-online-status-message-edit-controls class="flex items-center gap--2 absolute z-5">
+                                    <!-- word count -->
+                                    <span data-online-status-message-edit-word-count class="fs--10 fw4 lh--16">
+                                        1/100
+                                    </span>
+                                    <!-- /word count -->
+                                    
+                                    <!-- cancel -->
+                                    <a data-online-status-message-edit-cancel class="flex justify-center items-center w--24 h--24 br--6 o-50 pointer">
+                                        <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/close_circle.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                    </a>
+                                    <!-- cancel -->
+                                    
+                                    <!-- cancel -->
+                                    <a data-online-status-message-edit-save class="flex justify-center items-center w--24 h--24 br--6 o-50 pointer">
+                                        <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/check_circles.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                    </a>
+                                    <!-- cancel -->
+                                </div>
+                                <!-- /editing controls -->
+                            </div>
+                            <!-- /editable status message container -->
+                        </div>
+                        <!-- /profile status message -->
+
+                        <!-- profile panel button controls -->
+                        <div class="flex items-center self-stretch">
+                            <!-- left buttons wrapper -->
+                            <div class="flex items-center self-stretch flex--max">
+                                <!-- dot button -->
+                                <div data-profile-dotted-button data-is-active="false" class="flex justify-center items-center w--40 h--40 relative pointer">
+                                    <img data-icon src="assets/images/dots-vertical.svg" alt="" class="w--24 h--24 transition--all transition--150 transition--ease-in-out">
+
+                                    <!-- dropdown -->
+                                    <div data-dropdown-wrapper class="flex flex-column items-start gap--10 pt0 w--128 absolute top-2 left-0">
+                                        <ul data-dropdown class="flex flex-column items-start self-stretch br--2 bg--col--white--70 bg--blur--50 overflow-hidden">
+                                            <li data-dropdown-list class="flex flex-column items-center self-stretch">
+                                                <a data-dropdown-item class="flex flex-column items-start self-stretch pv2 pad--x--12 bg--col--white--70 hover--parent--child--col--blue-ribbon transition--all transition--150 transition--ease-in-out">
+                                                    <span data-dropdown-item-text class="fs--12 fw5 lh--18 col--ebony hover--col--blue-ribbon transition--all transition--150 transition--ease-in-out">
+                                                        Edit profile
+                                                    </span>
+                                                </a>
+                                            </li>
+
+                                            <li data-dropdown-list class="flex flex-column items-center self-stretch">
+                                                <a data-dropdown-item class="flex flex-column items-start self-stretch pv2 pad--x--12 bg--col--white--70 hover--parent--child--col--blue-ribbon transition--all transition--150 transition--ease-in-out">
+                                                    <span data-dropdown-item-text class="fs--12 fw5 lh--18 col--ebony hover--col--blue-ribbon transition--all transition--150 transition--ease-in-out">
+                                                        Share to X
+                                                    </span>
+                                                </a>
+                                            </li>
+
+                                            <li data-dropdown-list class="flex flex-column items-center self-stretch">
+                                                <a data-dropdown-item class="flex flex-column items-start self-stretch pv2 pad--x--12 bg--col--white--70 hover--parent--child--col--blue-ribbon transition--all transition--150 transition--ease-in-out">
+                                                    <span data-dropdown-item-text class="fs--12 fw5 lh--18 col--ebony hover--col--blue-ribbon transition--all transition--150 transition--ease-in-out">
+                                                        Copy profile link
+                                                    </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- /dropdown -->
+                                </div>
+                                <!-- /dot button -->
+
+                                <!-- view profile button -->
+                                <a data-profile-view-button class="flex justify-center items-center flex--max self-stretch h--40 relative pointer">
+                                    <div data-main class="flex justify-center items-center flex--max self-stretch gap--10 h--40 pv1 ph2 pointer">
+                                        <span data-text class="fs--18 fw5 lh--28 white transition--all transition--150 transition--ease-in-out">
+                                            View Profile
+                                        </span>
+                                    </div>
+
+                                    <div data-skew class="flex justify-center items-center w1 h--40 pv1 ph2 pointer">&nbsp;</div>
+                                </a>
+                                <!-- /view profile button -->
+                            </div>
+                            <!-- /left buttons wrapper -->
+
+                            <!-- right buttons wrapper -->
+                            <div class="flex items-center self-stretch flex--max">
+                                <!-- view profile button -->
+                                <a data-go-live-button class="flex justify-center items-center flex--max self-stretch h--40 relative pointer">
+                                    <div data-skew class="flex justify-center items-center w1 h--40 pv1 ph2 pointer">&nbsp;</div>
+
+                                    <div data-main class="flex justify-center items-center flex--max self-stretch gap--10 h--40 pv1 ph2 pointer">
+                                        <span data-text class="fs--18 fw5 lh--28 black transition--all transition--150 transition--ease-in-out">
+                                            Go Live
+                                        </span>
+
+                                        <img data-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/arrow_right%20up.svg" alt="" class="w--24 h--24 transition--all transition--150 transition--ease-in-out">
+                                    </div>
+                                </a>
+                                <!-- /view profile button -->
+                            </div>
+                            <!-- /right buttons wrapper -->
+                        </div>
+                        <!-- /profile panel button controls -->
+                    </div>
+                    <!-- /profile info section -->
+                </div>
+                <!-- /profile top section -->
+
+                <!-- quick video, audio, chat settings -->
+                <div class="flex flex-column items-start self-stretch bg--col--white-0-20">
+                    <!-- controls block -->
+                    <div class="flex flex-column items-start self-stretch gap--16 pa3 bb br--col--mischka">
+                        <!-- block header -->
+                        <div class="flex justify-between items-center self-stretch">
+                            <!-- block icon, heading, tooltip -->
+                            <div class="flex items-center gap--4">
+                                <span class="flex justify-center items-center w--42 h--42">
+                                    <img src="assets/images/video-call.png" alt="" class="w--42 h--42">
+                                </span>
+
+                                <span class="flex justify-start items-center fs--14 fw5 lh--20 ttu col--oxford-blue">
+                                    VIDEO CALL STATUS
+                                </span>
+
+                                <span class="flex justify-center items-center">
+                                    <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
+                                    <div data-tooltip data-tooltip-arrow="true" data-tooltip-position="top center" data-tooltip-size="small" data-tooltip-theme="dark" class="relative z-5 pointer">
+                                        <img src="assets/images/help-circle.svg" alt="" class="w--16 h--16 filter--col--pale-sky">
+
+                                        <div data-tooltip-text data-tooltip-content>
+                                            <span class="fs--12 fw4 lh--18 color-inherit">
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <!-- /tooltip -->
+                                </span>
+                            </div>
+                            <!-- /block icon, heading, tooltip -->
+
+                            <!-- block status -->
+                            <div class="flex justify-end items-center gap--6">
+                                <!-- status dropdown (dropdown-type = ['default', 'small']) / throw-event = fs-evt-custom-event-name -->
+                                <div data-status-dropdown-main data-is-open="false" data-dropdown-type="default" data-throw-event="fs-evt-eventname" class="inline-flex relative z-5">
+                                    <!-- hidden input to hold the current/selected status value -->
+                                    <input data-current-status-value type="hidden" value="offline">
+
+                                    <!-- drop down trigger -->
+                                    <a data-status-dropdown-trigger data-current-status="online" class="inline-flex items-center gap--8 pv1 ph2 br--15 pointer transition--all transition--150 transition--ease-in-out">
+                                        <span data-current-status-text class="fs--14 fw5 lh--20 ttu">online</span>
+
+                                        <img data-status-dropdown-arrow src="assets/images/status-dropdown.svg" alt="" class="w--12 h--12 filter--col--ebony--variation-2 transition--transform transition--150 transition--ease-in-out">
+                                    </a>
+                                    <!-- /drop down trigger -->
+
+                                    <!-- drop down -->
+                                    <div data-status-dropdown class="flex flex-column items-start gap--10 absolute top-2 right-0 transition--all transition--150 transition--ease-in-out">
+                                        <div class="flex flex-column self-stretch br--2 bg--col--white--70 bg--blur--25 overflow-hidden">
+                                            <!-- status type (online) -->
+                                            <a data-status-type="online" class="flex flex-column items-start self-stretch gap--8 pad--12 bb br--col--athens-gray2 hover-bg-white transition--background transition--150 transition--ease-in-out">
+                                                <!-- status -->
+                                                <div data-status-label class="flex items-center gap--8">
+                                                    <span class="flex w--6 h--6 br--4 ba br--col--spring-green bg--col--spring-green">&nbsp;</span>
+
+                                                    <span class="flex fs--14 fw5 lh--20 ttu col--ebony--variation-2">Online</span>
+                                                </div>
+                                                <!-- /status -->
+
+                                                <!-- description -->
+                                                <div data-status-desc class="flex flex-column items-start self-stretch">
+                                                    <span class="fs--12 fw4 lh--18 col--oxford-blue">
+                                                        Your fans will be able to call you 
+                                                    </span>
+                                                </div>
+                                                <!-- /description -->
+                                            </a>
+                                            <!-- /status type -->
+
+                                            <!-- status type (away) -->
+                                            <a data-status-type="away" class="flex flex-column items-start self-stretch gap--8 pad--12 bb br--col--athens-gray2 hover-bg-white transition--background transition--150 transition--ease-in-out">
+                                                <!-- status -->
+                                                <div data-status-label class="flex items-center gap--8">
+                                                    <span class="flex w--6 h--6 br--4 ba br--col--my-sin bg--col--my-sin">&nbsp;</span>
+
+                                                    <span class="flex fs--14 fw5 lh--20 ttu col--ebony--variation-2">Away</span>
+                                                </div>
+                                                <!-- /status -->
+
+                                                <!-- description -->
+                                                <div data-status-desc class="flex flex-column items-start self-stretch">
+                                                    <span class="fs--12 fw4 lh--18 col--oxford-blue">
+                                                        You will still be able to receive video calls, but your fans will be notified that you are away
+                                                    </span>
+                                                </div>
+                                                <!-- /description -->
+                                            </a>
+                                            <!-- /status type -->
+
+                                            <!-- status type (offline) -->
+                                            <a data-status-type="offline" class="flex flex-column items-start self-stretch gap--8 pad--12 bb br--col--athens-gray2 hover-bg-white transition--background transition--150 transition--ease-in-out">
+                                                <!-- status -->
+                                                <div data-status-label class="flex items-center gap--8">
+                                                    <span class="flex w--6 h--6 br--4 ba br--col--gull-gray bg-white">&nbsp;</span>
+
+                                                    <span class="flex fs--14 fw5 lh--20 ttu col--ebony--variation-2">Offline</span>
+                                                </div>
+                                                <!-- /status -->
+
+                                                <!-- description -->
+                                                <div data-status-desc class="flex flex-column items-start self-stretch">
+                                                    <span class="fs--12 fw4 lh--18 col--oxford-blue">
+                                                        Fans won’t be able to send you video call requests
+                                                    </span>
+                                                </div>
+                                                <!-- /description -->
+                                            </a>
+                                            <!-- /status type -->
+                                        </div>
+                                    </div>
+                                    <!-- /drop down -->
+                                </div>
+                                <!-- /status dropdown -->
+                            </div>
+                            <!-- /block status -->
+                        </div>
+                        <!-- /block header -->
+
+                        <!-- status text input -->
+                        <div class="flex flex-column justify-start items-center self-stretch">
+                            <!-- editable status message container (theme = ['default', 'dark', 'light']) -->
+                            <div data-online-status-message-container data-theme="dark" data-is-editing="false" class="flex justify-start items-center self-stretch gap--8 pv1 ph2 br--10 relative">
+                                <!-- editable textbox -->
+                                <input data-online-status-message-text type="text" placeholder="Write status here..." value="I am all dressed up ready to eat some chicken 💋" class="flex flex--max fs--12 fw5 lh--18" readonly>
+                                <!-- /editable textbox -->
+
+                                <!-- enable editing button -->
+                                <a data-online-status-message-edit class="flex w--16 h--16 pointer">
+                                    <img src="assets/images/edit-04.svg" alt="" class="w--16 h--16">
+                                </a>
+                                <!-- enable editing button -->
+
+                                <!-- editing controls -->
+                                <div data-online-status-message-edit-controls class="flex items-center gap--2 absolute z-5">
+                                    <!-- word count -->
+                                    <span data-online-status-message-edit-word-count class="fs--10 fw4 lh--16">
+                                        1/100
+                                    </span>
+                                    <!-- /word count -->
+                                    
+                                    <!-- cancel -->
+                                    <a data-online-status-message-edit-cancel class="flex justify-center items-center w--24 h--24 br--6 o-50 pointer">
+                                        <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/close_circle.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                    </a>
+                                    <!-- cancel -->
+                                    
+                                    <!-- cancel -->
+                                    <a data-online-status-message-edit-save class="flex justify-center items-center w--24 h--24 br--6 o-50 pointer">
+                                        <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/check_circles.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                    </a>
+                                    <!-- cancel -->
+                                </div>
+                                <!-- /editing controls -->
+                            </div>
+                            <!-- /editable status message container -->
+                        </div>
+                        <!-- /status text input -->
+
+                        <!-- repost to 'X' automatically -->
+                        <div class="flex flex-column justify-center items-start self-stretch">
+                            <div class="flex items-center gap--8">
+                                <!-- toggle container -->
+                                <div class="flex">
+                                    <!-- toggle switch (switch size = ['default', 'small'] / switch theme = ['default', 'light', 'dark']) -->
+                                    <label data-switch="" data-switch-size="small" data-switch-theme="dark" data-switch-for="" data-switch-dispatch-event="">
+                                        <input type="checkbox" value="switch_slide" name="switch_slide" class="dn">
+                                        <span data-switch-slide="" class="db"></span>
+                                    </label>
+                                    <!-- /toggle switch -->
+                                </div>
+                                <!-- /toggle container -->
+
+                                <!-- toggle text -->
+                                <div class="flex items-center gap--4">
+                                    <div class="flex items-center">
+                                        <span class="fs--12 fw4 lh--18 col--pale-sky">
+                                            Repost status message to X Automatically
+                                        </span>
+                                    </div>
+
+                                    <div class="flex items-center">
+                                        <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
+                                        <div data-tooltip="" data-tooltip-arrow="true" data-tooltip-position="bottom center" data-tooltip-size="default" data-tooltip-theme="dark" class="relative z-5 pointer">
+                                            <img src="assets/images/help-circle.svg" alt="" class="w--16 h--16 filter--col--pale-sky">
+
+                                            <div data-tooltip-text="" data-tooltip-content="">
+                                                <span class="fs--12 fw4 lh--18 color-inherit">
+                                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <!-- /tooltip -->
+                                    </div>
+                                </div>
+                                <!-- /toggle text -->
+                            </div>
+                        </div>
+                        <!-- /repost to 'X' automatically -->
+                    </div>
+                    <!-- /controls block -->
+
+                    <!-- controls block -->
+                    <div class="flex flex-column items-start self-stretch gap--16 pa3 bb br--col--mischka">
+                        <!-- block header -->
+                        <div class="flex justify-between items-center self-stretch">
+                            <!-- block icon, heading, tooltip -->
+                            <div class="flex items-center gap--4">
+                                <span class="flex justify-center items-center w--42 h--42">
+                                    <img src="assets/images/phone.png" alt="" class="w--42 h--42">
+                                </span>
+
+                                <span class="flex justify-start items-center fs--14 fw5 lh--20 ttu col--oxford-blue">
+                                    AUDIO CALL STATUS
+                                </span>
+
+                                <span class="flex justify-center items-center">
+                                    <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
+                                    <div data-tooltip data-tooltip-arrow="true" data-tooltip-position="top center" data-tooltip-size="small" data-tooltip-theme="dark" class="relative z-5 pointer">
+                                        <img src="assets/images/help-circle.svg" alt="" class="w--16 h--16 filter--col--pale-sky">
+
+                                        <div data-tooltip-text data-tooltip-content>
+                                            <span class="fs--12 fw4 lh--18 color-inherit">
+                                                Away Message...
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <!-- /tooltip -->
+                                </span>
+                            </div>
+                            <!-- /block icon, heading, tooltip -->
+
+                            <!-- block status -->
+                            <div class="flex justify-end items-center gap--6">
+                                <!-- status dropdown (dropdown-type = ['default', 'small']) / throw-event = fs-evt-custom-event-name -->
+                                <div data-status-dropdown-main data-is-open="false" data-dropdown-type="default" data-throw-event="fs-evt-eventname" class="inline-flex relative z-5">
+                                    <!-- hidden input to hold the current/selected status value -->
+                                    <input data-current-status-value type="hidden" value="offline">
+
+                                    <!-- drop down trigger -->
+                                    <a data-status-dropdown-trigger data-current-status="away" class="inline-flex items-center gap--8 pv1 ph2 br--15 pointer transition--all transition--150 transition--ease-in-out">
+                                        <span data-current-status-text class="fs--14 fw5 lh--20 ttu">away</span>
+
+                                        <img data-status-dropdown-arrow src="assets/images/status-dropdown.svg" alt="" class="w--12 h--12 filter--col--ebony--variation-2 transition--transform transition--150 transition--ease-in-out">
+                                    </a>
+                                    <!-- /drop down trigger -->
+
+                                    <!-- drop down -->
+                                    <div data-status-dropdown class="flex flex-column items-start gap--10 absolute top-2 right-0 transition--all transition--150 transition--ease-in-out">
+                                        <div class="flex flex-column self-stretch br--2 bg--col--white--70 bg--blur--25 overflow-hidden">
+                                            <!-- status type (online) -->
+                                            <a data-status-type="online" class="flex flex-column items-start self-stretch gap--8 pad--12 bb br--col--athens-gray2 hover-bg-white transition--background transition--150 transition--ease-in-out">
+                                                <!-- status -->
+                                                <div data-status-label class="flex items-center gap--8">
+                                                    <span class="flex w--6 h--6 br--4 ba br--col--spring-green bg--col--spring-green">&nbsp;</span>
+
+                                                    <span class="flex fs--14 fw5 lh--20 ttu col--ebony--variation-2">Online</span>
+                                                </div>
+                                                <!-- /status -->
+
+                                                <!-- description -->
+                                                <div data-status-desc class="flex flex-column items-start self-stretch">
+                                                    <span class="fs--12 fw4 lh--18 col--oxford-blue">
+                                                        Your fans will be able to call you 
+                                                    </span>
+                                                </div>
+                                                <!-- /description -->
+                                            </a>
+                                            <!-- /status type -->
+
+                                            <!-- status type (away) -->
+                                            <a data-status-type="away" class="flex flex-column items-start self-stretch gap--8 pad--12 bb br--col--athens-gray2 hover-bg-white transition--background transition--150 transition--ease-in-out">
+                                                <!-- status -->
+                                                <div data-status-label class="flex items-center gap--8">
+                                                    <span class="flex w--6 h--6 br--4 ba br--col--my-sin bg--col--my-sin">&nbsp;</span>
+
+                                                    <span class="flex fs--14 fw5 lh--20 ttu col--ebony--variation-2">Away</span>
+                                                </div>
+                                                <!-- /status -->
+
+                                                <!-- description -->
+                                                <div data-status-desc class="flex flex-column items-start self-stretch">
+                                                    <span class="fs--12 fw4 lh--18 col--oxford-blue">
+                                                        You will still be able to receive audio calls, but your fans will be notified that you are away
+                                                    </span>
+                                                </div>
+                                                <!-- /description -->
+                                            </a>
+                                            <!-- /status type -->
+
+                                            <!-- status type (offline) -->
+                                            <a data-status-type="offline" class="flex flex-column items-start self-stretch gap--8 pad--12 bb br--col--athens-gray2 hover-bg-white transition--background transition--150 transition--ease-in-out">
+                                                <!-- status -->
+                                                <div data-status-label class="flex items-center gap--8">
+                                                    <span class="flex w--6 h--6 br--4 ba br--col--gull-gray bg-white">&nbsp;</span>
+
+                                                    <span class="flex fs--14 fw5 lh--20 ttu col--ebony--variation-2">Offline</span>
+                                                </div>
+                                                <!-- /status -->
+
+                                                <!-- description -->
+                                                <div data-status-desc class="flex flex-column items-start self-stretch">
+                                                    <span class="fs--12 fw4 lh--18 col--oxford-blue">
+                                                        Fans won’t be able to send you audio call requests
+                                                    </span>
+                                                </div>
+                                                <!-- /description -->
+                                            </a>
+                                            <!-- /status type -->
+                                        </div>
+                                    </div>
+                                    <!-- /drop down -->
+                                </div>
+                                <!-- /status dropdown -->
+                            </div>
+                            <!-- /block status -->
+                        </div>
+                        <!-- /block header -->
+
+                        <!-- status text input -->
+                        <div class="flex flex-column justify-start items-center self-stretch">
+                            <!-- editable status message container (theme = ['default', 'dark', 'light']) -->
+                            <div data-online-status-message-container data-theme="dark" data-is-editing="false" class="flex justify-start items-center self-stretch gap--8 pv1 ph2 br--10 relative">
+                                <!-- editable textbox -->
+                                <input data-online-status-message-text type="text" placeholder="Write status here..." value="Away Message..." class="flex flex--max fs--12 fw5 lh--18" readonly>
+                                <!-- /editable textbox -->
+
+                                <!-- enable editing button -->
+                                <a data-online-status-message-edit class="flex w--16 h--16 pointer">
+                                    <img src="assets/images/edit-04.svg" alt="" class="w--16 h--16">
+                                </a>
+                                <!-- enable editing button -->
+
+                                <!-- editing controls -->
+                                <div data-online-status-message-edit-controls class="flex items-center gap--2 absolute z-5">
+                                    <!-- word count -->
+                                    <span data-online-status-message-edit-word-count class="fs--10 fw4 lh--16">
+                                        1/100
+                                    </span>
+                                    <!-- /word count -->
+                                    
+                                    <!-- cancel -->
+                                    <a data-online-status-message-edit-cancel class="flex justify-center items-center w--24 h--24 br--6 o-50 pointer">
+                                        <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/close_circle.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                    </a>
+                                    <!-- cancel -->
+                                    
+                                    <!-- cancel -->
+                                    <a data-online-status-message-edit-save class="flex justify-center items-center w--24 h--24 br--6 o-50 pointer">
+                                        <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/check_circles.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                    </a>
+                                    <!-- cancel -->
+                                </div>
+                                <!-- /editing controls -->
+                            </div>
+                            <!-- /editable status message container -->
+                        </div>
+                        <!-- /status text input -->
+
+                        <!-- repost to 'X' automatically -->
+                        <div class="flex flex-column justify-center items-start self-stretch">
+                            <div class="flex items-center gap--8">
+                                <!-- toggle container -->
+                                <div class="flex">
+                                    <!-- toggle switch (switch size = ['default', 'small'] / switch theme = ['default', 'light', 'dark']) -->
+                                    <label data-switch="" data-switch-size="small" data-switch-theme="dark" data-switch-for="" data-switch-dispatch-event="">
+                                        <input type="checkbox" value="switch_slide" name="switch_slide" class="dn">
+                                        <span data-switch-slide="" class="db"></span>
+                                    </label>
+                                    <!-- /toggle switch -->
+                                </div>
+                                <!-- /toggle container -->
+
+                                <!-- toggle text -->
+                                <div class="flex items-center gap--4">
+                                    <div class="flex items-center">
+                                        <span class="fs--12 fw4 lh--18 col--pale-sky">
+                                            Repost status message to X Automatically
+                                        </span>
+                                    </div>
+
+                                    <div class="flex items-center">
+                                        <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
+                                        <div data-tooltip="" data-tooltip-arrow="true" data-tooltip-position="bottom center" data-tooltip-size="default" data-tooltip-theme="dark" class="relative z-5 pointer">
+                                            <img src="assets/images/help-circle.svg" alt="" class="w--16 h--16 filter--col--pale-sky">
+
+                                            <div data-tooltip-text="" data-tooltip-content="">
+                                                <span class="fs--12 fw4 lh--18 color-inherit">
+                                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <!-- /tooltip -->
+                                    </div>
+                                </div>
+                                <!-- /toggle text -->
+                            </div>
+                        </div>
+                        <!-- /repost to 'X' automatically -->
+                    </div>
+                    <!-- /controls block -->
+
+                    <!-- controls block -->
+                    <div class="flex flex-column items-start self-stretch gap--16 pa3 bb br--col--mischka">
+                        <!-- block header -->
+                        <div class="flex justify-between items-center self-stretch">
+                            <!-- block icon, heading, tooltip -->
+                            <div class="flex items-center gap--4">
+                                <span class="flex justify-center items-center w--42 h--42">
+                                    <img src="assets/images/chat.png" alt="" class="w--42 h--42">
+                                </span>
+
+                                <span class="flex justify-start items-center fs--14 fw5 lh--20 ttu col--oxford-blue">
+                                    CHAT STATUS
+                                </span>
+
+                                <span class="flex justify-center items-center">
+                                    <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
+                                    <div data-tooltip data-tooltip-arrow="true" data-tooltip-position="top center" data-tooltip-size="small" data-tooltip-theme="dark" class="relative z-5 pointer">
+                                        <img src="assets/images/help-circle.svg" alt="" class="w--16 h--16 filter--col--pale-sky">
+
+                                        <div data-tooltip-text data-tooltip-content>
+                                            <span class="fs--12 fw4 lh--18 color-inherit">
+                                                Away Message...
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <!-- /tooltip -->
+                                </span>
+                            </div>
+                            <!-- /block icon, heading, tooltip -->
+
+                            <!-- block status -->
+                            <div class="flex justify-end items-center gap--6">
+                                <!-- status dropdown (dropdown-type = ['default', 'small']) / throw-event = fs-evt-custom-event-name -->
+                                <div data-status-dropdown-main data-is-open="false" data-dropdown-type="default" data-throw-event="fs-evt-eventname" class="inline-flex relative z-5">
+                                    <!-- hidden input to hold the current/selected status value -->
+                                    <input data-current-status-value type="hidden" value="offline">
+
+                                    <!-- drop down trigger -->
+                                    <a data-status-dropdown-trigger data-current-status="offline" class="inline-flex items-center gap--8 pv1 ph2 br--15 pointer transition--all transition--150 transition--ease-in-out">
+                                        <span data-current-status-text class="fs--14 fw5 lh--20 ttu">offline</span>
+
+                                        <img data-status-dropdown-arrow src="assets/images/status-dropdown.svg" alt="" class="w--12 h--12 filter--col--ebony--variation-2 transition--transform transition--150 transition--ease-in-out">
+                                    </a>
+                                    <!-- /drop down trigger -->
+
+                                    <!-- drop down -->
+                                    <div data-status-dropdown class="flex flex-column items-start gap--10 absolute top-2 right-0 transition--all transition--150 transition--ease-in-out">
+                                        <div class="flex flex-column self-stretch br--2 bg--col--white--70 bg--blur--25 overflow-hidden">
+                                            <!-- status type (online) -->
+                                            <a data-status-type="online" class="flex flex-column items-start self-stretch gap--8 pad--12 bb br--col--athens-gray2 hover-bg-white transition--background transition--150 transition--ease-in-out">
+                                                <!-- status -->
+                                                <div data-status-label class="flex items-center gap--8">
+                                                    <span class="flex w--6 h--6 br--4 ba br--col--spring-green bg--col--spring-green">&nbsp;</span>
+
+                                                    <span class="flex fs--14 fw5 lh--20 ttu col--ebony--variation-2">Online</span>
+                                                </div>
+                                                <!-- /status -->
+
+                                                <!-- description -->
+                                                <div data-status-desc class="flex flex-column items-start self-stretch">
+                                                    <span class="fs--12 fw4 lh--18 col--oxford-blue">
+                                                        Your fans will be able to chat with you 
+                                                    </span>
+                                                </div>
+                                                <!-- /description -->
+                                            </a>
+                                            <!-- /status type -->
+
+                                            <!-- status type (away) -->
+                                            <a data-status-type="away" class="flex flex-column items-start self-stretch gap--8 pad--12 bb br--col--athens-gray2 hover-bg-white transition--background transition--150 transition--ease-in-out">
+                                                <!-- status -->
+                                                <div data-status-label class="flex items-center gap--8">
+                                                    <span class="flex w--6 h--6 br--4 ba br--col--my-sin bg--col--my-sin">&nbsp;</span>
+
+                                                    <span class="flex fs--14 fw5 lh--20 ttu col--ebony--variation-2">Away</span>
+                                                </div>
+                                                <!-- /status -->
+
+                                                <!-- description -->
+                                                <div data-status-desc class="flex flex-column items-start self-stretch">
+                                                    <span class="fs--12 fw4 lh--18 col--oxford-blue">
+                                                        You will still be able to receive private messages, but your fans will be notified that you are away
+                                                    </span>
+                                                </div>
+                                                <!-- /description -->
+                                            </a>
+                                            <!-- /status type -->
+
+                                            <!-- status type (offline) -->
+                                            <a data-status-type="offline" class="flex flex-column items-start self-stretch gap--8 pad--12 bb br--col--athens-gray2 hover-bg-white transition--background transition--150 transition--ease-in-out">
+                                                <!-- status -->
+                                                <div data-status-label class="flex items-center gap--8">
+                                                    <span class="flex w--6 h--6 br--4 ba br--col--gull-gray bg-white">&nbsp;</span>
+
+                                                    <span class="flex fs--14 fw5 lh--20 ttu col--ebony--variation-2">Offline</span>
+                                                </div>
+                                                <!-- /status -->
+
+                                                <!-- description -->
+                                                <div data-status-desc class="flex flex-column items-start self-stretch">
+                                                    <span class="fs--12 fw4 lh--18 col--oxford-blue">
+                                                        Fans won’t be able to send you private messages
+                                                    </span>
+                                                </div>
+                                                <!-- /description -->
+                                            </a>
+                                            <!-- /status type -->
+                                        </div>
+                                    </div>
+                                    <!-- /drop down -->
+                                </div>
+                                <!-- /status dropdown -->
+                            </div>
+                            <!-- /block status -->
+                        </div>
+                        <!-- /block header -->
+
+                        <!-- status text input -->
+                        <div class="flex flex-column justify-start items-center self-stretch">
+                            <!-- editable status message container (theme = ['default', 'dark', 'light']) -->
+                            <div data-online-status-message-container data-theme="dark" data-is-editing="false" class="flex justify-start items-center self-stretch gap--8 pv1 ph2 br--10 relative">
+                                <!-- editable textbox -->
+                                <input data-online-status-message-text type="text" placeholder="Write status here..." value="Can’t type with my greasy fingers, call me instead💋" class="flex flex--max fs--12 fw5 lh--18" readonly>
+                                <!-- /editable textbox -->
+
+                                <!-- enable editing button -->
+                                <a data-online-status-message-edit class="flex w--16 h--16 pointer">
+                                    <img src="assets/images/edit-04.svg" alt="" class="w--16 h--16">
+                                </a>
+                                <!-- enable editing button -->
+
+                                <!-- editing controls -->
+                                <div data-online-status-message-edit-controls class="flex items-center gap--2 absolute z-5">
+                                    <!-- word count -->
+                                    <span data-online-status-message-edit-word-count class="fs--10 fw4 lh--16">
+                                        1/100
+                                    </span>
+                                    <!-- /word count -->
+                                    
+                                    <!-- cancel -->
+                                    <a data-online-status-message-edit-cancel class="flex justify-center items-center w--24 h--24 br--6 o-50 pointer">
+                                        <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/close_circle.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                    </a>
+                                    <!-- cancel -->
+                                    
+                                    <!-- cancel -->
+                                    <a data-online-status-message-edit-save class="flex justify-center items-center w--24 h--24 br--6 o-50 pointer">
+                                        <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/check_circles.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                    </a>
+                                    <!-- cancel -->
+                                </div>
+                                <!-- /editing controls -->
+                            </div>
+                            <!-- /editable status message container -->
+                        </div>
+                        <!-- /status text input -->
+
+                        <!-- repost to 'X' automatically -->
+                        <div class="flex flex-column justify-center items-start self-stretch">
+                            <div class="flex items-center gap--8">
+                                <!-- toggle container -->
+                                <div class="flex">
+                                    <!-- toggle switch (switch size = ['default', 'small'] / switch theme = ['default', 'light', 'dark']) -->
+                                    <label data-switch="" data-switch-size="small" data-switch-theme="dark" data-switch-for="" data-switch-dispatch-event="">
+                                        <input type="checkbox" value="switch_slide" name="switch_slide" class="dn">
+                                        <span data-switch-slide="" class="db"></span>
+                                    </label>
+                                    <!-- /toggle switch -->
+                                </div>
+                                <!-- /toggle container -->
+
+                                <!-- toggle text -->
+                                <div class="flex items-center gap--4">
+                                    <div class="flex items-center">
+                                        <span class="fs--12 fw4 lh--18 col--pale-sky">
+                                            Repost status message to X Automatically
+                                        </span>
+                                    </div>
+
+                                    <div class="flex items-center">
+                                        <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
+                                        <div data-tooltip="" data-tooltip-arrow="true" data-tooltip-position="bottom center" data-tooltip-size="default" data-tooltip-theme="dark" class="relative z-5 pointer">
+                                            <img src="assets/images/help-circle.svg" alt="" class="w--16 h--16 filter--col--pale-sky">
+
+                                            <div data-tooltip-text="" data-tooltip-content="">
+                                                <span class="fs--12 fw4 lh--18 color-inherit">
+                                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <!-- /tooltip -->
+                                    </div>
+                                </div>
+                                <!-- /toggle text -->
+                            </div>
+                        </div>
+                        <!-- /repost to 'X' automatically -->
+                    </div>
+                    <!-- /controls block -->
+                </div>
+                <!-- /quick video, audio, chat settings -->
+
+                <!-- auto repost settings -->
+                <div class="flex flex-column items-start self-stretch gap--16 pa3 bg--col--white--50">
+                    <!-- heading -->
+                    <div data-auto-repost-setting-toggle data-is-active="false" class="flex items-center gap--2 pointer transition--all transition--150 transition--ease-in-out">
+                        <span class="flex items-center fs--12 fw5 lh--18 col--oxford-blue">
+                            Auto Repost Setting
+                        </span>
+                        
+                        <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/setting.svg" alt="" class="w--16 h--16 filter--col--oxford-blue">
+                    </div>
+                    <!-- /heading -->
+
+                    <!-- settings block -->
+                    <div data-auto-repost-setting data-is-active="false" class="flex flex-column items-start self-stretch gap--16">
+                        <p class="flex self-stretch fs--12 fw4 lh--18 col--ebony--variation-2">
+                            Repost your status and custom message automatically when you:
+                        </p>
+
+                        <!-- toggle -->
+                        <div class="flex flex-column justify-center items-start self-stretch">
+                            <div class="flex items-center gap--8">
+                                <!-- toggle container -->
+                                <div class="flex">
+                                    <!-- toggle switch (switch size = ['default', 'small'] / switch theme = ['default', 'light', 'dark']) -->
+                                    <label data-switch="" data-switch-size="small" data-switch-theme="dark" data-switch-for="" data-switch-dispatch-event="">
+                                        <input type="checkbox" value="switch_slide" name="switch_slide" class="dn">
+                                        <span data-switch-slide="" class="db"></span>
+                                    </label>
+                                    <!-- /toggle switch -->
+                                </div>
+                                <!-- /toggle container -->
+
+                                <!-- toggle text -->
+                                <div class="flex items-center gap--4">
+                                    <div class="flex items-center">
+                                        <span class="fs--12 fw4 lh--18 col--pale-sky">
+                                            Sign in
+                                        </span>
+                                    </div>
+                                </div>
+                                <!-- /toggle text -->
+                            </div>
+                        </div>
+                        <!-- /toggle -->
+
+                        <!-- toggle -->
+                        <div class="flex flex-column justify-center items-start self-stretch">
+                            <div class="flex items-center gap--8">
+                                <!-- toggle container -->
+                                <div class="flex">
+                                    <!-- toggle switch (switch size = ['default', 'small'] / switch theme = ['default', 'light', 'dark']) -->
+                                    <label data-switch="" data-switch-size="small" data-switch-theme="dark" data-switch-for="" data-switch-dispatch-event="">
+                                        <input type="checkbox" value="switch_slide" name="switch_slide" class="dn">
+                                        <span data-switch-slide="" class="db"></span>
+                                    </label>
+                                    <!-- /toggle switch -->
+                                </div>
+                                <!-- /toggle container -->
+
+                                <!-- toggle text -->
+                                <div class="flex items-center gap--4">
+                                    <div class="flex items-center">
+                                        <span class="fs--12 fw4 lh--18 col--pale-sky">
+                                            Log out
+                                        </span>
+                                    </div>
+                                </div>
+                                <!-- /toggle text -->
+                            </div>
+                        </div>
+                        <!-- /toggle -->
+
+                        <!-- toggle -->
+                        <div class="flex flex-column justify-center items-start self-stretch">
+                            <div class="flex items-center gap--8">
+                                <!-- toggle container -->
+                                <div class="flex">
+                                    <!-- toggle switch (switch size = ['default', 'small'] / switch theme = ['default', 'light', 'dark']) -->
+                                    <label data-switch="" data-switch-size="small" data-switch-theme="dark" data-switch-for="" data-switch-dispatch-event="">
+                                        <input type="checkbox" value="switch_slide" name="switch_slide" class="dn">
+                                        <span data-switch-slide="" class="db"></span>
+                                    </label>
+                                    <!-- /toggle switch -->
+                                </div>
+                                <!-- /toggle container -->
+
+                                <!-- toggle text -->
+                                <div class="flex items-center gap--4">
+                                    <div class="flex items-center">
+                                        <span class="fs--12 fw4 lh--18 col--pale-sky">
+                                            Change statuses
+                                        </span>
+                                    </div>
+                                </div>
+                                <!-- /toggle text -->
+                            </div>
+                        </div>
+                        <!-- /toggle -->
+
+                        <!-- toggle -->
+                        <div class="flex flex-column justify-center items-start self-stretch">
+                            <div class="flex items-center gap--8">
+                                <!-- toggle container -->
+                                <div class="flex">
+                                    <!-- toggle switch (switch size = ['default', 'small'] / switch theme = ['default', 'light', 'dark']) -->
+                                    <label data-switch="" data-switch-size="small" data-switch-theme="dark" data-switch-for="" data-switch-dispatch-event="">
+                                        <input type="checkbox" value="switch_slide" name="switch_slide" class="dn">
+                                        <span data-switch-slide="" class="db"></span>
+                                    </label>
+                                    <!-- /toggle switch -->
+                                </div>
+                                <!-- /toggle container -->
+
+                                <!-- toggle text -->
+                                <div class="flex items-center gap--4">
+                                    <div class="flex items-center">
+                                        <span class="fs--12 fw4 lh--18 col--pale-sky">
+                                            Change custom messages
+                                        </span>
+                                    </div>
+                                </div>
+                                <!-- /toggle text -->
+                            </div>
+                        </div>
+                        <!-- /toggle -->
+                    </div>
+                    <!-- /settings block -->
+                </div>
+                <!-- /auto repost settings -->
+            </div>
+        </div>
+        <!-- /profile panel container -->
+    </body>
+</html>

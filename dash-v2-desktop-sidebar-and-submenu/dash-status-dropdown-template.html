@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Meta Tags -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>Template - Dashboard Status Dropdown</title>
+
+        <!-- Poppins Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+        <!-- Tachyons Styles -->
+        <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/main.css" />
+        <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" />
+        <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/theme.css" />
+        <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/customTachyons.css" />
+
+        <!-- Dashboard Sidebar Custom Style -->
+        <link rel="stylesheet" href="assets/css/dash-customTachyons.css" />
+        <link rel="stylesheet" href="assets/css/dash-status-dropdown.css" />
+    </head>
+    <body>
+        <!-- offline -->
+        <div class="flex flex-column items-center flex--max gap--16 pa5" style="background-color: #bbb;">
+            <div class="flex flex-column items-start flex--max gap--16">
+                <div class="flex">
+                    <span class="black">Status Dropdown (Offline)</span>
+                </div>
+            </div>
+
+            <div class="flex">
+                <!-- status dropdown (dropdown-type = ['default', 'small']) / throw-event = fs-evt-custom-event-name -->
+                <div data-status-dropdown-main data-is-open="false" data-dropdown-type="default" data-throw-event="fs-evt-eventname" class="inline-flex relative z-5">
+                    <!-- hidden input to hold the current/selected status value -->
+                    <input data-current-status-value type="hidden" value="offline">
+
+                    <!-- drop down trigger -->
+                    <a data-status-dropdown-trigger data-current-status="offline" class="inline-flex items-center gap--8 pv1 ph2 br--15 pointer transition--all transition--150 transition--ease-in-out">
+                        <span data-current-status-text class="fs--14 fw5 lh--20 ttu">offline</span>
+
+                        <img data-status-dropdown-arrow src="assets/images/status-dropdown.svg" alt="" class="w--12 h--12 filter--col--ebony--variation-2 transition--transform transition--150 transition--ease-in-out">
+                    </a>
+                    <!-- /drop down trigger -->
+
+                    <!-- drop down -->
+                    <div data-status-dropdown class="flex flex-column items-start gap--10 absolute top-2 right-0 transition--all transition--150 transition--ease-in-out">
+                        <div class="flex flex-column self-stretch br--2 bg--col--white--70 bg--blur--25 overflow-hidden">
+                            <!-- status type (online) -->
+                            <a data-status-type="online" class="flex flex-column items-start self-stretch gap--8 pad--12 bb br--col--athens-gray2 hover-bg-white transition--background transition--150 transition--ease-in-out">
+                                <!-- status -->
+                                <div data-status-label class="flex items-center gap--8">
+                                    <span class="flex w--6 h--6 br--4 ba br--col--spring-green bg--col--spring-green">&nbsp;</span>
+
+                                    <span class="flex fs--14 fw5 lh--20 ttu col--ebony--variation-2">Online</span>
+                                </div>
+                                <!-- /status -->
+
+                                <!-- description -->
+                                <div data-status-desc class="flex flex-column items-start self-stretch">
+                                    <span class="fs--12 fw4 lh--18 col--oxford-blue">
+                                        Some status description text will go here...
+                                    </span>
+                                </div>
+                                <!-- /description -->
+                            </a>
+                            <!-- /status type -->
+
+                            <!-- status type (away) -->
+                            <a data-status-type="away" class="flex flex-column items-start self-stretch gap--8 pad--12 bb br--col--athens-gray2 hover-bg-white transition--background transition--150 transition--ease-in-out">
+                                <!-- status -->
+                                <div data-status-label class="flex items-center gap--8">
+                                    <span class="flex w--6 h--6 br--4 ba br--col--my-sin bg--col--my-sin">&nbsp;</span>
+
+                                    <span class="flex fs--14 fw5 lh--20 ttu col--ebony--variation-2">Away</span>
+                                </div>
+                                <!-- /status -->
+
+                                <!-- description -->
+                                <div data-status-desc class="flex flex-column items-start self-stretch">
+                                    <span class="fs--12 fw4 lh--18 col--oxford-blue">
+                                        Some status description text will go here...
+                                    </span>
+                                </div>
+                                <!-- /description -->
+                            </a>
+                            <!-- /status type -->
+
+                            <!-- status type (offline) -->
+                            <a data-status-type="offline" class="flex flex-column items-start self-stretch gap--8 pad--12 bb br--col--athens-gray2 hover-bg-white transition--background transition--150 transition--ease-in-out">
+                                <!-- status -->
+                                <div data-status-label class="flex items-center gap--8">
+                                    <span class="flex w--6 h--6 br--4 ba br--col--gull-gray bg-white">&nbsp;</span>
+
+                                    <span class="flex fs--14 fw5 lh--20 ttu col--ebony--variation-2">Offline</span>
+                                </div>
+                                <!-- /status -->
+
+                                <!-- description -->
+                                <div data-status-desc class="flex flex-column items-start self-stretch">
+                                    <span class="fs--12 fw4 lh--18 col--oxford-blue">
+                                        Some status description text will go here...
+                                    </span>
+                                </div>
+                                <!-- /description -->
+                            </a>
+                            <!-- /status type -->
+
+                            <!-- status type (invisible) -->
+                            <a data-status-type="invisible" class="flex flex-column items-start self-stretch gap--8 pad--12 bb br--col--athens-gray2 bn hover-bg-white transition--background transition--150 transition--ease-in-out">
+                                <!-- status -->
+                                <div data-status-label class="flex items-center gap--8">
+                                    <span class="flex w--6 h--6 br--4 ba b--dotted br--col--gull-gray bg-white">&nbsp;</span>
+
+                                    <span class="flex fs--14 fw5 lh--20 ttu col--ebony--variation-2">Invisible</span>
+                                </div>
+                                <!-- /status -->
+
+                                <!-- description -->
+                                <div data-status-desc class="flex flex-column items-start self-stretch">
+                                    <span class="fs--12 fw4 lh--18 col--oxford-blue">
+                                        Some status description text will go here...
+                                    </span>
+                                </div>
+                                <!-- /description -->
+                            </a>
+                            <!-- /status type -->
+                        </div>
+                    </div>
+                    <!-- /drop down -->
+                </div>
+                <!-- /status dropdown -->
+            </div>
+        </div>
+
+        <!-- online -->
+        <div class="flex flex-column items-center flex--max gap--16 pa5" style="background-color: #f1f1f1;">
+            <div class="flex flex-column items-start flex--max gap--16">
+                <div class="flex">
+                    <span class="black">Status Dropdown (Online)</span>
+                </div>
+            </div>
+
+            <div class="flex">
+                <!-- status dropdown (dropdown-type = ['default', 'small']) / throw-event = fs-evt-custom-event-name -->
+                <div data-status-dropdown-main data-is-open="false" data-dropdown-type="default" data-throw-event="fs-evt-eventname" class="inline-flex relative z-5">
+                    <!-- hidden input to hold the current/selected status value -->
+                    <input data-current-status-value type="hidden" value="online">
+
+                    <!-- drop down trigger -->
+                    <a data-status-dropdown-trigger data-current-status="online" class="inline-flex items-center gap--8 pv1 ph2 br--15 pointer transition--all transition--150 transition--ease-in-out">
+                        <span data-current-status-text class="fs--14 fw5 lh--20 ttu">online</span>
+
+                        <img data-status-dropdown-arrow src="assets/images/status-dropdown.svg" alt="" class="w--12 h--12 filter--col--ebony--variation-2 transition--transform transition--150 transition--ease-in-out">
+                    </a>
+                    <!-- /drop down trigger -->
+
+                    <!-- drop down -->
+                    <div data-status-dropdown class="flex flex-column items-start gap--10 absolute top-2 right-0 transition--all transition--150 transition--ease-in-out">
+                        <div class="flex flex-column self-stretch br--2 bg--col--white--70 bg--blur--25 overflow-hidden">
+                            <!-- status type (online) -->
+                            <a data-status-type="online" class="flex flex-column items-start self-stretch gap--8 pad--12 bb br--col--athens-gray2 hover-bg-white transition--background transition--150 transition--ease-in-out">
+                                <!-- status -->
+                                <div data-status-label class="flex items-center gap--8">
+                                    <span class="flex w--6 h--6 br--4 ba br--col--spring-green bg--col--spring-green">&nbsp;</span>
+
+                                    <span class="flex fs--14 fw5 lh--20 ttu col--ebony--variation-2">Online</span>
+                                </div>
+                                <!-- /status -->
+
+                                <!-- description -->
+                                <div data-status-desc class="flex flex-column items-start self-stretch">
+                                    <span class="fs--12 fw4 lh--18 col--oxford-blue">
+                                        Some status description text will go here...
+                                    </span>
+                                </div>
+                                <!-- /description -->
+                            </a>
+                            <!-- /status type -->
+
+                            <!-- status type (away) -->
+                            <a data-status-type="away" class="flex flex-column items-start self-stretch gap--8 pad--12 bb br--col--athens-gray2 hover-bg-white transition--background transition--150 transition--ease-in-out">
+                                <!-- status -->
+                                <div data-status-label class="flex items-center gap--8">
+                                    <span class="flex w--6 h--6 br--4 ba br--col--my-sin bg--col--my-sin">&nbsp;</span>
+
+                                    <span class="flex fs--14 fw5 lh--20 ttu col--ebony--variation-2">Away</span>
+                                </div>
+                                <!-- /status -->
+
+                                <!-- description -->
+                                <div data-status-desc class="flex flex-column items-start self-stretch">
+                                    <span class="fs--12 fw4 lh--18 col--oxford-blue">
+                                        Some status description text will go here...
+                                    </span>
+                                </div>
+                                <!-- /description -->
+                            </a>
+                            <!-- /status type -->
+
+                            <!-- status type (offline) -->
+                            <a data-status-type="offline" class="flex flex-column items-start self-stretch gap--8 pad--12 bb br--col--athens-gray2 hover-bg-white transition--background transition--150 transition--ease-in-out">
+                                <!-- status -->
+                                <div data-status-label class="flex items-center gap--8">
+                                    <span class="flex w--6 h--6 br--4 ba br--col--gull-gray bg-white">&nbsp;</span>
+
+                                    <span class="flex fs--14 fw5 lh--20 ttu col--ebony--variation-2">Offline</span>
+                                </div>
+                                <!-- /status -->
+
+                                <!-- description -->
+                                <div data-status-desc class="flex flex-column items-start self-stretch">
+                                    <span class="fs--12 fw4 lh--18 col--oxford-blue">
+                                        Some status description text will go here...
+                                    </span>
+                                </div>
+                                <!-- /description -->
+                            </a>
+                            <!-- /status type -->
+
+                            <!-- status type (invisible) -->
+                            <a data-status-type="invisible" class="flex flex-column items-start self-stretch gap--8 pad--12 bb br--col--athens-gray2 bn hover-bg-white transition--background transition--150 transition--ease-in-out">
+                                <!-- status -->
+                                <div data-status-label class="flex items-center gap--8">
+                                    <span class="flex w--6 h--6 br--4 ba b--dotted br--col--gull-gray bg-white">&nbsp;</span>
+
+                                    <span class="flex fs--14 fw5 lh--20 ttu col--ebony--variation-2">Invisible</span>
+                                </div>
+                                <!-- /status -->
+
+                                <!-- description -->
+                                <div data-status-desc class="flex flex-column items-start self-stretch">
+                                    <span class="fs--12 fw4 lh--18 col--oxford-blue">
+                                        Some status description text will go here...
+                                    </span>
+                                </div>
+                                <!-- /description -->
+                            </a>
+                            <!-- /status type -->
+                        </div>
+                    </div>
+                    <!-- /drop down -->
+                </div>
+                <!-- /status dropdown -->
+            </div>
+        </div>
+
+        <!-- away -->
+        <div class="flex flex-column items-center flex--max gap--16 pa5" style="background-color: #e9e9e9;">
+            <div class="flex flex-column items-start flex--max gap--16">
+                <div class="flex">
+                    <span class="black">Status Dropdown (Away)</span>
+                </div>
+            </div>
+
+            <div class="flex">
+                <!-- status dropdown (dropdown-type = ['default', 'small']) / throw-event = fs-evt-custom-event-name -->
+                <div data-status-dropdown-main data-is-open="false" data-dropdown-type="default" data-throw-event="fs-evt-eventname" class="inline-flex relative z-5">
+                    <!-- hidden input to hold the current/selected status value -->
+                    <input data-current-status-value type="hidden" value="online">
+
+                    <!-- drop down trigger -->
+                    <a data-status-dropdown-trigger data-current-status="away" class="inline-flex items-center gap--8 pv1 ph2 br--15 pointer transition--all transition--150 transition--ease-in-out">
+                        <span data-current-status-text class="fs--14 fw5 lh--20 ttu">away</span>
+
+                        <img data-status-dropdown-arrow src="assets/images/status-dropdown.svg" alt="" class="w--12 h--12 filter--col--ebony--variation-2 transition--transform transition--150 transition--ease-in-out">
+                    </a>
+                    <!-- /drop down trigger -->
+
+                    <!-- drop down -->
+                    <div data-status-dropdown class="flex flex-column items-start gap--10 absolute top-2 right-0 transition--all transition--150 transition--ease-in-out">
+                        <div class="flex flex-column self-stretch br--2 bg--col--white--70 bg--blur--25 overflow-hidden">
+                            <!-- status type (online) -->
+                            <a data-status-type="online" class="flex flex-column items-start self-stretch gap--8 pad--12 bb br--col--athens-gray2 hover-bg-white transition--background transition--150 transition--ease-in-out">
+                                <!-- status -->
+                                <div data-status-label class="flex items-center gap--8">
+                                    <span class="flex w--6 h--6 br--4 ba br--col--spring-green bg--col--spring-green">&nbsp;</span>
+
+                                    <span class="flex fs--14 fw5 lh--20 ttu col--ebony--variation-2">Online</span>
+                                </div>
+                                <!-- /status -->
+
+                                <!-- description -->
+                                <div data-status-desc class="flex flex-column items-start self-stretch">
+                                    <span class="fs--12 fw4 lh--18 col--oxford-blue">
+                                        Some status description text will go here...
+                                    </span>
+                                </div>
+                                <!-- /description -->
+                            </a>
+                            <!-- /status type -->
+
+                            <!-- status type (away) -->
+                            <a data-status-type="away" class="flex flex-column items-start self-stretch gap--8 pad--12 bb br--col--athens-gray2 hover-bg-white transition--background transition--150 transition--ease-in-out">
+                                <!-- status -->
+                                <div data-status-label class="flex items-center gap--8">
+                                    <span class="flex w--6 h--6 br--4 ba br--col--my-sin bg--col--my-sin">&nbsp;</span>
+
+                                    <span class="flex fs--14 fw5 lh--20 ttu col--ebony--variation-2">Away</span>
+                                </div>
+                                <!-- /status -->
+
+                                <!-- description -->
+                                <div data-status-desc class="flex flex-column items-start self-stretch">
+                                    <span class="fs--12 fw4 lh--18 col--oxford-blue">
+                                        Some status description text will go here...
+                                    </span>
+                                </div>
+                                <!-- /description -->
+                            </a>
+                            <!-- /status type -->
+
+                            <!-- status type (offline) -->
+                            <a data-status-type="offline" class="flex flex-column items-start self-stretch gap--8 pad--12 bb br--col--athens-gray2 hover-bg-white transition--background transition--150 transition--ease-in-out">
+                                <!-- status -->
+                                <div data-status-label class="flex items-center gap--8">
+                                    <span class="flex w--6 h--6 br--4 ba br--col--gull-gray bg-white">&nbsp;</span>
+
+                                    <span class="flex fs--14 fw5 lh--20 ttu col--ebony--variation-2">Offline</span>
+                                </div>
+                                <!-- /status -->
+
+                                <!-- description -->
+                                <div data-status-desc class="flex flex-column items-start self-stretch">
+                                    <span class="fs--12 fw4 lh--18 col--oxford-blue">
+                                        Some status description text will go here...
+                                    </span>
+                                </div>
+                                <!-- /description -->
+                            </a>
+                            <!-- /status type -->
+
+                            <!-- status type (invisible) -->
+                            <a data-status-type="invisible" class="flex flex-column items-start self-stretch gap--8 pad--12 bb br--col--athens-gray2 bn hover-bg-white transition--background transition--150 transition--ease-in-out">
+                                <!-- status -->
+                                <div data-status-label class="flex items-center gap--8">
+                                    <span class="flex w--6 h--6 br--4 ba b--dotted br--col--gull-gray bg-white">&nbsp;</span>
+
+                                    <span class="flex fs--14 fw5 lh--20 ttu col--ebony--variation-2">Invisible</span>
+                                </div>
+                                <!-- /status -->
+
+                                <!-- description -->
+                                <div data-status-desc class="flex flex-column items-start self-stretch">
+                                    <span class="fs--12 fw4 lh--18 col--oxford-blue">
+                                        Some status description text will go here...
+                                    </span>
+                                </div>
+                                <!-- /description -->
+                            </a>
+                            <!-- /status type -->
+                        </div>
+                    </div>
+                    <!-- /drop down -->
+                </div>
+                <!-- /status dropdown -->
+            </div>
+        </div>
+
+        <!-- invisible -->
+        <div class="flex flex-column items-center flex--max gap--16 pa5" style="background-color: #f9f9f9;">
+            <div class="flex flex-column items-start flex--max gap--16">
+                <div class="flex">
+                    <span class="black">Status Dropdown (Invisible)</span>
+                </div>
+            </div>
+
+            <div class="flex">
+                <!-- status dropdown (dropdown-type = ['default', 'small']) / throw-event = fs-evt-custom-event-name -->
+                <div data-status-dropdown-main data-is-open="false" data-dropdown-type="default" data-throw-event="fs-evt-eventname" class="inline-flex relative z-5">
+                    <!-- hidden input to hold the current/selected status value -->
+                    <input data-current-status-value type="hidden" value="online">
+
+                    <!-- drop down trigger -->
+                    <a data-status-dropdown-trigger data-current-status="invisible" class="inline-flex items-center gap--8 pv1 ph2 br--15 pointer transition--all transition--150 transition--ease-in-out">
+                        <span data-current-status-text class="fs--14 fw5 lh--20 ttu">invisible</span>
+
+                        <img data-status-dropdown-arrow src="assets/images/status-dropdown.svg" alt="" class="w--12 h--12 filter--col--ebony--variation-2 transition--transform transition--150 transition--ease-in-out">
+                    </a>
+                    <!-- /drop down trigger -->
+
+                    <!-- drop down -->
+                    <div data-status-dropdown class="flex flex-column items-start gap--10 absolute top-2 right-0 transition--all transition--150 transition--ease-in-out">
+                        <div class="flex flex-column self-stretch br--2 bg--col--white--70 bg--blur--25 overflow-hidden">
+                            <!-- status type (online) -->
+                            <a data-status-type="online" class="flex flex-column items-start self-stretch gap--8 pad--12 bb br--col--athens-gray2 hover-bg-white transition--background transition--150 transition--ease-in-out">
+                                <!-- status -->
+                                <div data-status-label class="flex items-center gap--8">
+                                    <span class="flex w--6 h--6 br--4 ba br--col--spring-green bg--col--spring-green">&nbsp;</span>
+
+                                    <span class="flex fs--14 fw5 lh--20 ttu col--ebony--variation-2">Online</span>
+                                </div>
+                                <!-- /status -->
+
+                                <!-- description -->
+                                <div data-status-desc class="flex flex-column items-start self-stretch">
+                                    <span class="fs--12 fw4 lh--18 col--oxford-blue">
+                                        Some status description text will go here...
+                                    </span>
+                                </div>
+                                <!-- /description -->
+                            </a>
+                            <!-- /status type -->
+
+                            <!-- status type (away) -->
+                            <a data-status-type="away" class="flex flex-column items-start self-stretch gap--8 pad--12 bb br--col--athens-gray2 hover-bg-white transition--background transition--150 transition--ease-in-out">
+                                <!-- status -->
+                                <div data-status-label class="flex items-center gap--8">
+                                    <span class="flex w--6 h--6 br--4 ba br--col--my-sin bg--col--my-sin">&nbsp;</span>
+
+                                    <span class="flex fs--14 fw5 lh--20 ttu col--ebony--variation-2">Away</span>
+                                </div>
+                                <!-- /status -->
+
+                                <!-- description -->
+                                <div data-status-desc class="flex flex-column items-start self-stretch">
+                                    <span class="fs--12 fw4 lh--18 col--oxford-blue">
+                                        Some status description text will go here...
+                                    </span>
+                                </div>
+                                <!-- /description -->
+                            </a>
+                            <!-- /status type -->
+
+                            <!-- status type (offline) -->
+                            <a data-status-type="offline" class="flex flex-column items-start self-stretch gap--8 pad--12 bb br--col--athens-gray2 hover-bg-white transition--background transition--150 transition--ease-in-out">
+                                <!-- status -->
+                                <div data-status-label class="flex items-center gap--8">
+                                    <span class="flex w--6 h--6 br--4 ba br--col--gull-gray bg-white">&nbsp;</span>
+
+                                    <span class="flex fs--14 fw5 lh--20 ttu col--ebony--variation-2">Offline</span>
+                                </div>
+                                <!-- /status -->
+
+                                <!-- description -->
+                                <div data-status-desc class="flex flex-column items-start self-stretch">
+                                    <span class="fs--12 fw4 lh--18 col--oxford-blue">
+                                        Some status description text will go here...
+                                    </span>
+                                </div>
+                                <!-- /description -->
+                            </a>
+                            <!-- /status type -->
+
+                            <!-- status type (invisible) -->
+                            <a data-status-type="invisible" class="flex flex-column items-start self-stretch gap--8 pad--12 bb br--col--athens-gray2 bn hover-bg-white transition--background transition--150 transition--ease-in-out">
+                                <!-- status -->
+                                <div data-status-label class="flex items-center gap--8">
+                                    <span class="flex w--6 h--6 br--4 ba b--dotted br--col--gull-gray bg-white">&nbsp;</span>
+
+                                    <span class="flex fs--14 fw5 lh--20 ttu col--ebony--variation-2">Invisible</span>
+                                </div>
+                                <!-- /status -->
+
+                                <!-- description -->
+                                <div data-status-desc class="flex flex-column items-start self-stretch">
+                                    <span class="fs--12 fw4 lh--18 col--oxford-blue">
+                                        Some status description text will go here...
+                                    </span>
+                                </div>
+                                <!-- /description -->
+                            </a>
+                            <!-- /status type -->
+                        </div>
+                    </div>
+                    <!-- /drop down -->
+                </div>
+                <!-- /status dropdown -->
+            </div>
+        </div>
+    </body>
+</html>
