@@ -89,11 +89,11 @@
                             <!-- /Header Navigation Item -->
             
                             <!-- Humberger Menu -->
-                            <div class="pad--x--8 pad--y--4 flex flex-column items-center justify-center gap--2 br--6">
+                            <a data-mobile-nav-open class="pad--x--8 pad--y--4 flex flex-column items-center justify-center gap--2 br--6">
                                 <div class="pointer w--24 h--24 pointer-events-none">
                                     <img src="assets/icons/menu-01.svg" alt="" class="w--24 h--24 pointer-events-none">
                                 </div>
-                            </div>
+                            </a>
                             <!-- /Humberger Menu -->
                         </div>
                         <!-- /Header Right Item -->
@@ -102,7 +102,7 @@
                 <!-- /mobile header -->
 
                 <!-- sidebar main wrapper (to contain all sidebar UI elements, except submenu containers) -->
-                <div data-sidebar-main-wrapper class="flex flex-column justify-center items-center gap--6 w--90 w--90--px vh-100 pa0 pad--y--12 vw--100--responsive-mobile vw--100--responsive-mobile-portrait fixed--responsive-mobile fixed--responsive-mobile-portrait top--0--responsive-mobile top--0--responsive-mobile-portrait left--0--responsive-mobile left--0--responsive-mobile-portrait bg--col--white--70--responsive-mobile bg--col--white--70--responsive-mobile-portrait bg--blur--25--responsive-mobile bg--blur--25--responsive-mobile-portrait gap--16--responsive-mobile gap--16--responsive-mobile-portrait pad--y--8--responsive-mobile pad--y--8--responsive-mobile-portrait pad--x--16-responsive-mobile pad--x--16-responsive-mobile-portrait">
+                <div data-sidebar-main-wrapper data-mobile-nav-main-wrapper data-is-active="false" class="flex flex-column justify-center items-center gap--6 w--90 w--90--px vh-100 pa0 pad--y--12 transition--all transition--150 transition--ease-in-out vw--100--responsive-mobile vw--100--responsive-mobile-portrait fixed--responsive-mobile fixed--responsive-mobile-portrait top--0--responsive-mobile top--0--responsive-mobile-portrait left--0--responsive-mobile left--0--responsive-mobile-portrait bg--col--white--70--responsive-mobile bg--col--white--70--responsive-mobile-portrait bg--blur--25--responsive-mobile bg--blur--25--responsive-mobile-portrait gap--16--responsive-mobile gap--16--responsive-mobile-portrait pad--y--8--responsive-mobile pad--y--8--responsive-mobile-portrait pad--x--16-responsive-mobile pad--x--16-responsive-mobile-portrait">
                     <!-- site logo -->
                     <a data-site-logo data-desktop-only href="/" title="" class="flex items-center gap--10 bg--col--lemon br--12 o-80 hov--o--100 display-none--responsive-mobile display-none--responsive-mobile-portrait transition--opacity transition--200 transition--ease-in-out">
                         <!-- render_svg_icon( 'logo_bg-1' ) -->
@@ -150,7 +150,7 @@
 
                     <!-- mobile nav close button -->
                     <div class="dn flex-column items-end self-stretch display-flex--responsive-mobile display-flex--responsive-mobile-portrait">
-                        <a class="flex justify-center items-center w--32 h--32 pointer">
+                        <a data-mobile-nav-close class="flex justify-center items-center w--32 h--32 pointer">
                             <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/close.svg" alt="" class="w--24 h--24 filter--col--pale-sky pointer-events-none">
                         </a>
                     </div>
@@ -345,19 +345,19 @@
                     <div data-sidebar-bottom-controls class="flex flex-column items-center self-stretch gap--8 pv2 display-none--responsive-mobile display-none--responsive-mobile-portrait">
                         <!-- cta controls -->
                         <div class="flex justify-center items-center self-stretch gap--8 pv0 ph1">
-                            <!-- log out -->
+                            <!-- language -->
                             <a href="javascript: void(0)" title="" class="flex justify-center items-center gap--12 w--32 h--32 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
                                 <!-- render_svg_icon( 'globe' ) -->
                                 <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/globe.svg" alt="" class="w--20 h--20 filter--col--pale-sky pointer-events-none">
                             </a>
-                            <!-- /log out -->
+                            <!-- /language -->
 
-                            <!-- notification -->
+                            <!-- help -->
                             <a href="javascript: void(0)" title="" class="flex justify-center items-center gap--2 w--32 h--32 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out relative">
                                 <!-- render_svg_icon( 'question_circle_1' ) -->
                                 <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/question_circle_1.svg" alt="" class="w--20 h--20 filter--col--pale-sky pointer-events-none">
                             </a>
-                            <!-- /notification -->
+                            <!-- /help -->
                         </div>
                         <!-- /cta controls -->
                     </div>
@@ -366,20 +366,26 @@
                     <!-- sidebar bottom controls (help & logout - mobile only) -->
                     <div data-sidebar-bottom-controls class="dn flex-column items-center self-stretch gap--8 pv2 display-flex--responsive-mobile display-flex--responsive-mobile-portrait">
                         <!-- cta controls -->
-                        <div class="flex justify-center items-center self-stretch gap--8 pv0 ph1">
-                            <!-- log out -->
-                            <a href="javascript: void(0)" title="" class="flex justify-center items-center gap--12 w--32 h--32 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
-                                <!-- render_svg_icon( 'globe' ) -->
-                                <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/globe.svg" alt="" class="w--20 h--20 filter--col--pale-sky pointer-events-none">
-                            </a>
-                            <!-- /log out -->
-
-                            <!-- notification -->
-                            <a href="javascript: void(0)" title="" class="flex justify-center items-center gap--2 w--32 h--32 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out relative">
-                                <!-- render_svg_icon( 'question_circle_1' ) -->
+                        <div class="flex justify-between items-center self-stretch gap--8 pv0 ph2">
+                            <!-- help -->
+                            <a href="javascript: void(0)" data-button-behavior="mark-all-notification-read" class="inline-flex items-center gap--6 pv1 pad--x--6 br--6 hover--bg--col--ebony--10 transition--all transition--200 transition--ease-in-out">
                                 <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/question_circle_1.svg" alt="" class="w--20 h--20 filter--col--pale-sky pointer-events-none">
-                            </a>
-                            <!-- /notification -->
+
+                                <span class="fs--12 fw5 lh--18 col--pale-sky pointer-events-none">
+                                    Help
+                                </span>
+                             </a>
+                            <!-- /help -->
+
+                            <!-- log out -->
+                            <a href="javascript: void(0)" data-button-behavior="mark-all-notification-read" class="inline-flex items-center gap--6 pv1 pad--x--6 br--6 bg--col--dodger-blue--10 hover--bg--col--ebony--10 transition--all transition--200 transition--ease-in-out">
+                                <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/logout-1.svg" alt="" class="w--20 h--20 filter--col--dodger-blue pointer-events-none">
+
+                                <span class="fs--12 fw5 lh--18 col--dodger-blue pointer-events-none">
+                                    Logout
+                                </span>
+                             </a>
+                            <!-- /log out -->
                         </div>
                         <!-- /cta controls -->
                     </div>

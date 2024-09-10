@@ -72,6 +72,10 @@ html {
   color: var(--color-genoa, #107569)
 }
 
+.col--dodger-blue {
+  color: var(--color-dodger-blue, #2970ff)
+}
+
 .bg--col--white--50 {
   background: rgba(255, 255, 255, .5)
 }
@@ -122,6 +126,14 @@ html {
 
 .bg--col--persian-rose {
   background-color: var(--color-persian-rose, #f40793)
+}
+
+.bg--col--dodger-blue {
+  background-color: var(--color-dodger-blue, #2970ff)
+}
+
+.bg--col--dodger-blue--10 {
+  background-color: rgba(41, 112, 255, .1)
 }
 
 .br--col--mischka {
@@ -196,6 +208,11 @@ html {
 .filter--col--bondi-blue {
   -webkit-filter: brightness(0) saturate(100%) invert(39%) sepia(96%) saturate(762%) hue-rotate(157deg) brightness(88%) contrast(94%);
   filter: brightness(0) saturate(100%) invert(39%) sepia(96%) saturate(762%) hue-rotate(157deg) brightness(88%) contrast(94%)
+}
+
+.filter--col--dodger-blue {
+  -webkit-filter: brightness(0) saturate(100%) invert(38%) sepia(57%) saturate(4201%) hue-rotate(211deg) brightness(99%) contrast(106%);
+  filter: brightness(0) saturate(100%) invert(38%) sepia(57%) saturate(4201%) hue-rotate(211deg) brightness(99%) contrast(106%)
 }
 
 .filter--col--gray-500 {
@@ -365,6 +382,11 @@ html {
 .pad--y--4 {
   padding-top: .25rem;
   padding-bottom: .25rem
+}
+
+.pad--x--6 {
+  padding-left: .375rem;
+  padding-right: .375rem
 }
 
 .pad--x--12 {

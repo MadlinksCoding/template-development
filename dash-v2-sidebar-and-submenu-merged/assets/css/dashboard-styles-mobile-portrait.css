@@ -212,4 +212,29 @@ html {
   -webkit-box-shadow: none;
   box-shadow: none
 }
+
+[data-floating-panel-wrapper] {
+  display: none !important
+}
+
+[data-sidebar-main-wrapper][data-is-active=false] {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  -webkit-transform: scale(0);
+  transform: scale(0)
+}
+
+[data-sidebar-main-wrapper][data-is-active=true] {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  -webkit-transform: scale(1);
+  transform: scale(1)
+}
+
+[data-main-menu-item] {
+  min-width: 4.5rem;
+  min-height: 4.5rem
+}
 /*# sourceMappingURL=../css/map/dashboard-styles-mobile-portrait.css.map */
