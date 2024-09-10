@@ -292,4 +292,14 @@ html {
   -webkit-transform: translateX(0);
   transform: translateX(0)
 }
+
+[data-notifications-container][hidden] {
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%)
+}
+
+[data-notifications-container] {
+  -webkit-transform: translateX(0);
+  transform: translateX(0)
+}
 /*# sourceMappingURL=../css/map/dashboard-styles-mobile-portrait.css.map */
