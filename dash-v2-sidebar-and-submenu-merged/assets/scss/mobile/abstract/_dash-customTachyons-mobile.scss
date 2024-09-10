@@ -6,6 +6,7 @@ html { font-size: 16px; }
 /* Background Colors*/
 .bg--col--white--responsive-mobile { background: rgba(255, 255, 255, 1.0); }
 .bg--col--white--70--responsive-mobile { background: rgba(255, 255, 255, 0.70); }
+.bg--col--athens-gray--70--responsive-mobile { background-color: rgba(249, 250, 251, 0.70); }
 
 /* Background Gradients*/
 
@@ -45,9 +46,10 @@ html { font-size: 16px; }
 .bg--center-top-responsive-mobile { background-position: center top; }
 
 /* Width */
-.vw--100--responsive-mobile { width: 100vw; /* width 100vw */ }
+.w--32--responsive-mobile { width: 2rem; /* width 32px */ }
 .w--423-responsive-mobile { width: 26.438rem; }
 .w--390-responsive-mobile { width: 24.375rem; }
+.vw--100--responsive-mobile { width: 100vw; /* width 100vw */ }
 
 /* Width Percent */
 
@@ -58,6 +60,7 @@ html { font-size: 16px; }
 /* Max Width */
 
 /* Height */
+.h--32--responsive-mobile { height: 2rem; /* height 32px */ }
 .h--48-responsive-mobile { height: 3rem; /* height 48px*/ }
 .h--327-responsive-mobile { height: 20.45925rem; }
 .h--274-responsive-mobile { height: 17.125rem; }
@@ -104,6 +107,7 @@ html { font-size: 16px; }
 .grid--col-span-2-responsive-mobile { grid-column: span 2 / span 2; }
 
 /* Order */
+.flex-column-reverse--responsive-mobile { flex-direction:column-reverse; }
 .order--1-responsive-mobile { order: 1; }
 .order--2-responsive-mobile { order: 2; }
 

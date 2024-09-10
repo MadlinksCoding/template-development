@@ -1,0 +1,11 @@
+/**
+ * Template name: <Dashboard Submenu>
+ */
+
+/* Dashboard Submenu : Custom Styles */
+[data-submenu] [data-submenu-item] { padding: 0.375rem 0.5rem; /* 6px 8px*/ }
+[data-submenu] [data-submenu-item] > span.gap--12 { gap: 0.375rem; /* 6px*/ }
+[data-submenu] [data-submenu-item] > span > .fs--16 { font-size: 0.875rem; /* 14px */}
+[data-submenu] [data-submenu-item] > span > .lh--24 { line-height: 1.25rem; /* 20px */}
+
+[data-submenu] [data-submenu-item][data-has-submenu="true"] > [data-arrow] { opacity: 1; transform: translateX(0); }

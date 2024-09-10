@@ -10,6 +10,10 @@ html {
   background: rgba(255, 255, 255, .7)
 }
 
+.bg--col--athens-gray--70--responsive-mobile-portrait {
+  background-color: rgba(249, 250, 251, .7)
+}
+
 .fs--18-responsive-mobile-portrait {
   font-size: 1.125rem
 }
@@ -30,8 +34,8 @@ html {
   background-position: center top
 }
 
-.vw--100--responsive-mobile-portrait {
-  width: 100vw
+.w--32--responsive-mobile-portrait {
+  width: 2rem
 }
 
 .w--100-responsive-mobile-portrait {
@@ -44,6 +48,14 @@ html {
 
 .w--300-responsive-mobile-portrait {
   width: 18.75rem
+}
+
+.vw--100--responsive-mobile-portrait {
+  width: 100vw
+}
+
+.h--32--responsive-mobile-portrait {
+  height: 2rem
 }
 
 .h--48-responsive-mobile-portrait {
@@ -147,6 +159,13 @@ html {
   grid-column: span 2/span 2
 }
 
+.flex-column-reverse--responsive-mobile-portrait {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse
+}
+
 .order--1-responsive-mobile-portrait {
   -webkit-box-ordinal-group: 2;
   -ms-flex-order: 1;
@@ -222,7 +241,9 @@ html {
   visibility: hidden;
   pointer-events: none;
   -webkit-transform: scale(0);
-  transform: scale(0)
+  transform: scale(0);
+  -webkit-transform-origin: 100% 0;
+  transform-origin: 100% 0
 }
 
 [data-sidebar-main-wrapper][data-is-active=true] {
@@ -230,11 +251,35 @@ html {
   visibility: visible;
   pointer-events: all;
   -webkit-transform: scale(1);
-  transform: scale(1)
+  transform: scale(1);
+  -webkit-transform-origin: 100% 0;
+  transform-origin: 100% 0
 }
 
 [data-main-menu-item] {
   min-width: 4.5rem;
   min-height: 4.5rem
+}
+
+[data-submenu] [data-submenu-item] {
+  padding: .375rem .5rem
+}
+
+[data-submenu] [data-submenu-item]>span.gap--12 {
+  gap: .375rem
+}
+
+[data-submenu] [data-submenu-item]>span>.fs--16 {
+  font-size: .875rem
+}
+
+[data-submenu] [data-submenu-item]>span>.lh--24 {
+  line-height: 1.25rem
+}
+
+[data-submenu] [data-submenu-item][data-has-submenu=true]>[data-arrow] {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+  transform: translateX(0)
 }
 /*# sourceMappingURL=../css/map/dashboard-styles-mobile-portrait.css.map */
