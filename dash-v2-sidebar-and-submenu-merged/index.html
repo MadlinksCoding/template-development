@@ -341,8 +341,30 @@
                     </div>
                     <!-- /main navigation -->
 
-                    <!-- sidebar bottom controls (language choice & help) -->
-                    <div data-sidebar-bottom-controls class="flex flex-column items-center self-stretch gap--8 pv2">
+                    <!-- sidebar bottom controls (language choice & help - desktop only) -->
+                    <div data-sidebar-bottom-controls class="flex flex-column items-center self-stretch gap--8 pv2 display-none--responsive-mobile display-none--responsive-mobile-portrait">
+                        <!-- cta controls -->
+                        <div class="flex justify-center items-center self-stretch gap--8 pv0 ph1">
+                            <!-- log out -->
+                            <a href="javascript: void(0)" title="" class="flex justify-center items-center gap--12 w--32 h--32 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
+                                <!-- render_svg_icon( 'globe' ) -->
+                                <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/globe.svg" alt="" class="w--20 h--20 filter--col--pale-sky pointer-events-none">
+                            </a>
+                            <!-- /log out -->
+
+                            <!-- notification -->
+                            <a href="javascript: void(0)" title="" class="flex justify-center items-center gap--2 w--32 h--32 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out relative">
+                                <!-- render_svg_icon( 'question_circle_1' ) -->
+                                <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/question_circle_1.svg" alt="" class="w--20 h--20 filter--col--pale-sky pointer-events-none">
+                            </a>
+                            <!-- /notification -->
+                        </div>
+                        <!-- /cta controls -->
+                    </div>
+                    <!-- /sidebar bottom controls -->
+
+                    <!-- sidebar bottom controls (help & logout - mobile only) -->
+                    <div data-sidebar-bottom-controls class="dn flex-column items-center self-stretch gap--8 pv2 display-flex--responsive-mobile display-flex--responsive-mobile-portrait">
                         <!-- cta controls -->
                         <div class="flex justify-center items-center self-stretch gap--8 pv0 ph1">
                             <!-- log out -->
