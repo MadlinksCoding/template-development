@@ -4,7 +4,9 @@ html { font-size: 16px; }
 /* Colors */
 
 /* Background Colors*/
+.bg--col--white--responsive-mobile-portrait { background: rgba(255, 255, 255, 1.0); }
 .bg--col--white--70--responsive-mobile-portrait { background: rgba(255, 255, 255, 0.70); }
+.bg--col--athens-gray--70--responsive-mobile-portrait { background-color: rgba(249, 250, 251, 0.70); }
 
 /* Background Gradients*/
 
@@ -46,10 +48,11 @@ html { font-size: 16px; }
 .bg--center-top-responsive-mobile-portrait { background-position: center top; }
 
 /* Width */
-.vw--100--responsive-mobile-portrait { width: 100vw; /* width 100vw */ }
+.w--32--responsive-mobile-portrait { width: 2rem; /* width 32px */ }
 .w--100-responsive-mobile-portrait { width: 100%; }
 .w--274-responsive-mobile-portrait { width: 17.1525rem; }
 .w--300-responsive-mobile-portrait { width: 18.75rem; }
+.vw--100--responsive-mobile-portrait { width: 100vw; /* width 100vw */ }
 
 /* Width Percent */
 
@@ -60,6 +63,7 @@ html { font-size: 16px; }
 /* Max Width */
 
 /* Height */
+.h--32--responsive-mobile-portrait { height: 2rem; /* height 32px */ }
 .h--48-responsive-mobile-portrait { height: 3rem; /* height 48px*/ }
 .h--211-responsive-mobile-portrait { height: 13.1875rem; }
 
@@ -78,8 +82,14 @@ html { font-size: 16px; }
 .pad--x--0-responsive-mobile-portrait { padding-left: 0rem; padding-right: 0rem; /* padding left right 0px */ }
 .pad--x--16-responsive-mobile-portrait { padding-left: 1rem; padding-right: 1rem; /* padding left right 16px */ }
 .pad--y-0-responsive-mobile-portrait{ padding-top: 0rem; padding-bottom: 0rem; /* padding top 96px padding bottom 96px */ }
+.pad--y--8--responsive-mobile-portrait { padding-top: 0.5rem; padding-bottom: 0.5rem; /* padding top 8px padding bottom 8px */ }
 
 /* Margin */
+
+/* Display */
+.display-none--responsive-mobile-portrait { display: none; }
+.display-flex--responsive-mobile-portrait { display: flex; }
+.display-grid--responsive-mobile-portrait { display: grid; }
 
 /* Gap */
 .gap--16--responsive-mobile-portrait { gap: 1rem; }
@@ -93,11 +103,13 @@ html { font-size: 16px; }
 
 /* Grid */
 .grid--cols-1-responsive-mobile-portrait { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+.grid--cols-4--responsive-mobile-portrait { grid-template-columns: repeat(4, 1fr); }
 
 /* Grid Column */
 .grid--col-span-2-responsive-mobile-portrait { grid-column: span 2 / span 2; }
 
 /* Order */
+.flex-column-reverse--responsive-mobile-portrait { flex-direction:column-reverse; }
 .order--1-responsive-mobile-portrait { order: 1; }
 .order--2-responsive-mobile-portrait { order: 2; }
 
@@ -133,6 +145,7 @@ html { font-size: 16px; }
 /* Object Fit */
 
 /* Backdrop Filter */
+.bg--blur--25--responsive-mobile-portrait { backdrop-filter: blur(25px); }
 
 /* Box Shadow */
 .sh--none--responsive-mobile-portrait { box-shadow: none; }

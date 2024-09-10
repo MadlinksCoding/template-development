@@ -25,31 +25,38 @@ class DashMenu {
 
 				dashNavElSelector: '[data-dashboard-main-nav]', // dash menu main selector
 
+				dashNavEl: '', // dash menu main container
+
 				floatingPanelWrapperSelector: '[data-floating-panel-wrapper]', // floating panel wrapper selector
 				floatingPanelSelector: '[data-floating-panel]', // floating panel wrapper selector
 				floatingPanelTriggerSelector: '[data-floating-panel-trigger]', // floating panel trigger selector
-
-				profilePanelTriggerSelector: '[data-profile-panel-trigger]', // profile panel trigger selector
-				profilePanelSelector: '[data-profile-panel-container]', // profile panel selector
-
-				notificationsPanelTriggerSelector: '[data-notifications-panel-trigger]', // notifications panel trigger selector
-				notificationsPanelSelector: '[data-notifications-container]', // notifications panel selector
-
-				mainMenuSelector: '[data-main-menu-item]', // dash main menu items selector
-				subMenuSelector: '[data-submenu-item]', // dash sub menu items selector
-
-				dashNavEl: '', // dash menu main container
 
 				floatingPanelWrapperEl: '', // floating panel wrapper element
 				floatingPanelEl: '', // floating panel element
 				floatingPanelTriggerEl: '', // floating panel trigger element
 
+				profilePanelTriggerSelector: '[data-profile-panel-trigger]', // profile panel trigger selector
+				profilePanelSelector: '[data-profile-panel-container]', // profile panel selector
+
 				profilePanelTriggerEl: '', // profile panel trigger element
 				profilePanelEl: '', // profile panel element
 
+				notificationsPanelTriggerSelector: '[data-notifications-panel-trigger]', // notifications panel trigger selector
+				notificationsPanelSelector: '[data-notifications-container]', // notifications panel selector
+
 				notificationsPanelTriggerEl: '', // notifications panel trigger element
-				newNotificationsStatusEl: '', // new notifications status element
 				notificationsPanelEl: '', // notifications panel element
+
+				mobileNavOpenTriggerSelector: '[data-mobile-nav-open]', // mobile nav open trigger selector
+				mobileNavCloseTriggerSelector: '[data-mobile-nav-close]', // mobile nav close trigger selector
+				mobileNavSelector: '[data-mobile-nav-main-wrapper]', // mobile nav selector
+
+				mobileNavOpenTriggerEl: '', // mobile nav open trigger element
+				mobileNavCloseTriggerEl: '', // mobile nav close trigger element
+				mobileNavEl: '', // mobile nav element
+
+				mainMenuSelector: '[data-main-menu-item]', // dash main menu items selector
+				subMenuSelector: '[data-submenu-item]', // dash sub menu items selector
 
 				currentMainMenu: '', // current main menu element
 				currentMainMenuTitle: '', // current main menu title
@@ -504,6 +511,27 @@ class DashMenu {
 
 	/** 
 	 * 
+	 * @method handleMobileNav 
+	 * @description method to handle mobile nav open close
+	 * 
+	 */
+	handleMobileNav() {
+		let _self = this;
+
+		// open mobile nav
+		_self.options.mobileNavOpenTriggerEl.addEventListener('click', (evt) => {
+			_self.options.mobileNavEl.dataset.isActive = true;
+		});
+
+		// close mobile nav
+		_self.options.mobileNavCloseTriggerEl.addEventListener('click', (evt) => {
+			_self.options.mobileNavEl.dataset.isActive = false;
+		});
+	}
+
+
+	/** 
+	 * 
 	 * @method init
 	 * @description Initializes the main DashMenu App by calling additional UI methods as well as core methods.
 	 * 
@@ -556,6 +584,15 @@ class DashMenu {
 				this.options.profilePanelEl = document.querySelector(this.options.profilePanelSelector);
 
 				this.handleProfilePanel();
+			}
+
+			// handle mobile nav (if the panel exists in DOM)
+			if ( document.querySelector(this.options.mobileNavSelector) !== null && document.querySelector(this.options.mobileNavSelector) !== 'undefined' ) {
+				this.options.mobileNavOpenTriggerEl = document.querySelector(this.options.mobileNavOpenTriggerSelector);
+				this.options.mobileNavCloseTriggerEl = document.querySelector(this.options.mobileNavCloseTriggerSelector);
+				this.options.mobileNavEl = document.querySelector(this.options.mobileNavSelector);
+
+				this.handleMobileNav();
 			}
 			
 			//console.log(this.options);
