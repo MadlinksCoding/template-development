@@ -261,6 +261,16 @@ html {
   min-height: 4.5rem
 }
 
+[data-submenu-container][hidden] {
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%)
+}
+
+[data-submenu-container] {
+  -webkit-transform: translateX(0);
+  transform: translateX(0)
+}
+
 [data-submenu] [data-submenu-item] {
   padding: .375rem .5rem
 }
