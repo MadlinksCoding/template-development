@@ -11,12 +11,12 @@
 
 /**
  * 
- * @class fsDashSideBarHandler
+ * @class DashSideBarHandler
  * @classdesc Fansocial Dashboard Sidebar UI & Behavior handler - Logics for behavior of multi level push menu (desktop & mobile) and floating menu panel for small screens, profile panel, notifications panel
  * Once invoked and initialized using {@link init}, it will create an instance of Fansocial Dash Menu and call all additional constructors and methods.
  * 
  */
-class fsDashSideBarHandler {
+class DashSideBarHandler {
 	constructor(options) {
 		this.options = Object.assign({
 				screenSizeDesktop: false, // if device screensize is desktop
@@ -617,6 +617,87 @@ class fsDashSideBarHandler {
 
 /**
  * 
+ * @class DashProfileStatusDropdown
+ * @classdesc Fansocial Dashboard Profile Submenu Status Dropdowns UI behavoir and handlers
+ * Once clicked any dropdown trigger, the dropdown will open and accept "click" on the dropdown options as user interaction and change dropdown trigger values and will throw a custom event
+ * 
+ */
+class DashProfileStatusDropdown {
+  constructor(element) {
+    this.element = element; // main dropdown wrapper [data-status-dropdown-main]
+    this.trigger = element.querySelector('[data-status-dropdown-trigger]'); // dropdown trigger element [data-status-dropdown-trigger]
+    this.dropdown = element.querySelector('[data-status-dropdown]'); // the dropdown list wrapper [data-status-dropdown]
+    this.statusTypes = element.querySelectorAll('[data-status-type]'); // status types list items, holds the status values [data-status-type]
+    this.currentStatusText = element.querySelector('[data-current-status-text]'); // dropdown trigger text content, shows current selected status [data-current-status-text]
+    this.currentStatusValue = element.querySelector('[data-current-status-value]'); // hidden input field to hold currently selected status value [data-current-status-value]
+    this.isOpen = false; // flag
+
+		// bind user "click" event listener to open/close the status dropdown list
+    this.trigger.addEventListener('click', this.toggleDropdown.bind(this));
+
+		// bind user "click" event listener to each of the status types list items to detect which one has been selected
+    this.statusTypes.forEach((statusType) => {
+      statusType.addEventListener('click', this.updateStatus.bind(this));
+    });
+  }
+
+
+	/** 
+	 * 
+	 * @method toggleDropdown 
+	 * @description Open/Close the current dropdown list
+	 * 
+	 */
+  toggleDropdown() {
+    this.isOpen = !this.isOpen;
+    this.element.setAttribute('data-is-open', this.isOpen);
+  }
+
+
+	/** 
+	 * 
+	 * @method updateStatus 
+	 * @description Updates dropdown with user selected status
+	 * 
+	 */
+  updateStatus(event) {
+		// get selected status value
+    const statusType = event.target.getAttribute('data-status-type');
+
+		// update with selected value
+		this.trigger.dataset.currentStatus = statusType;
+    this.currentStatusText.textContent = statusType.charAt(0).toUpperCase() + statusType.slice(1);
+    this.currentStatusValue.value = statusType;
+    this.element.setAttribute('data-current-status', statusType);
+
+		// throw custom event
+    this.throwEvent();
+
+		// toggle the dropdown
+    this.toggleDropdown();
+  }
+
+  throwEvent() {
+		// get the event name to throw
+    const eventName = this.element.getAttribute('data-throw-event');
+
+		// create payload to be sent with event
+		let payload = {
+			statusChange: true,
+			statusValue: this.currentStatusValue.value
+		}
+
+		// create custom event
+    const event = new CustomEvent(eventName, { detail: {payload} });
+
+		// throw the event ( usage: document.addEventListener('custom_eventName', (evt) => { console.log('status changed', evt.detail); }); )
+    document.dispatchEvent(event);
+  }
+}
+
+
+/**
+ * 
  * Initiates JS executions after DOM contents are loaded (equivalant to jQuery $document.on(ready){...})
  * 
  */
@@ -624,8 +705,14 @@ document.addEventListener("DOMContentLoaded", (event) => {
 	//console.log("DOM fully loaded and parsed");
 
 	// Creates and initializes a new fsDashSideBarHandler
-	const fansocialDashSideBarHandler = new fsDashSideBarHandler({
+	const fansocialDashSideBarHandler = new DashSideBarHandler({
 		dashNavElSelector: '[data-dashboard-main-nav]', // dash menu main selector (desktop)
 	});
 	fansocialDashSideBarHandler.init();
+
+
+	// Initialize the status dropdown class for all elements with data-status-dropdown-main
+	document.querySelectorAll('[data-status-dropdown-main]').forEach((element) => {
+		new DashProfileStatusDropdown(element);
+	});
 });
