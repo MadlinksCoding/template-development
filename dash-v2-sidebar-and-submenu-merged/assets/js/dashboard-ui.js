@@ -25,26 +25,38 @@ class fsDashSideBarHandler {
 
 				dashNavElSelector: '[data-dashboard-main-nav]', // dash menu main selector
 
+				dashNavEl: '', // dash menu main container
+
 				floatingPanelWrapperSelector: '[data-floating-panel-wrapper]', // floating panel wrapper selector
 				floatingPanelSelector: '[data-floating-panel]', // floating panel wrapper selector
 				floatingPanelTriggerSelector: '[data-floating-panel-trigger]', // floating panel trigger selector
-
-				notificationsPanelTriggerSelector: '[data-notifications-panel-trigger]', // notifications panel trigger selector
-				newNotificationsStatusSelector: '[data-new-notifications-status]', // new notifications status selector
-				notificationsPanelSelector: '[data-notifications-container]', // notifications panel selector
-
-				mainMenuSelector: '[data-main-menu-item]', // dash main menu items selector
-				subMenuSelector: '[data-submenu-item]', // dash sub menu items selector
-
-				dashNavEl: '', // dash menu main container
 
 				floatingPanelWrapperEl: '', // floating panel wrapper element
 				floatingPanelEl: '', // floating panel element
 				floatingPanelTriggerEl: '', // floating panel trigger element
 
-				notificationsPanelTriggerEl: '[data-notifications-panel-trigger]', // notifications panel trigger element
-				newNotificationsStatusEl: '[data-new-notifications-status]', // new notifications status element
-				notificationsPanelEl: '[data-notifications-container]', // notifications panel element
+				profilePanelTriggerSelector: '[data-profile-panel-trigger]', // profile panel trigger selector
+				profilePanelSelector: '[data-profile-panel-container]', // profile panel selector
+
+				profilePanelTriggerEl: '', // profile panel trigger element
+				profilePanelEl: '', // profile panel element
+
+				notificationsPanelTriggerSelector: '[data-notifications-panel-trigger]', // notifications panel trigger selector
+				notificationsPanelSelector: '[data-notifications-container]', // notifications panel selector
+
+				notificationsPanelTriggerEl: '', // notifications panel trigger element
+				notificationsPanelEl: '', // notifications panel element
+
+				mobileNavOpenTriggerSelector: '[data-mobile-nav-open]', // mobile nav open trigger selector
+				mobileNavCloseTriggerSelector: '[data-mobile-nav-close]', // mobile nav close trigger selector
+				mobileNavSelector: '[data-mobile-nav-main-wrapper]', // mobile nav selector
+
+				mobileNavOpenTriggerEl: '', // mobile nav open trigger element
+				mobileNavCloseTriggerEl: '', // mobile nav close trigger element
+				mobileNavEl: '', // mobile nav element
+
+				mainMenuSelector: '[data-main-menu-item]', // dash main menu items selector
+				subMenuSelector: '[data-submenu-item]', // dash sub menu items selector
 
 				currentMainMenu: '', // current main menu element
 				currentMainMenuTitle: '', // current main menu title
@@ -121,8 +133,18 @@ class fsDashSideBarHandler {
 
 		// hide notification panel (if applicable)
 		_self.options.notificationsPanelEl !== '' ? (
-			_self.options.notificationsPanelTriggerEl.dataset.isActive = 'false',
+			_self.options.notificationsPanelTriggerEl.forEach(element => {
+				element.dataset.isActive = 'false';
+			}),
 			_self.options.notificationsPanelEl.setAttribute('hidden', true)
+		) : '';
+
+		// hide profile panel (if applicable)
+		_self.options.profilePanelEl !== '' ? (
+			_self.options.profilePanelTriggerEl.forEach(element => {
+				element.dataset.isActive = 'false';
+			}),
+			_self.options.profilePanelEl.setAttribute('hidden', true)
 		) : '';
 	}
 
@@ -396,28 +418,30 @@ class fsDashSideBarHandler {
 	handleNotificationPanel() {
 		let _self = this;
 
-		// handle click on trigger (attach event only once)
-		if ( _self.options.notificationsPanelTriggerEl.classList.contains('js-event-handler-attached') ) {
-			return;
-		}
-		else {
-			_self.options.notificationsPanelTriggerEl.addEventListener('click', (event) => {
-				//console.log('Navigation Panel trigger click');
+		// loop through the triggers
+		_self.options.notificationsPanelTriggerEl.forEach( (trigger) => {
+			// handle click on trigger (attach event only once)
+			if ( trigger.classList.contains('js-event-handler-attached') ) {
+				return;
+			}
+			else {
+				trigger.addEventListener('click', (event) => {
+					//console.log('Navigation Panel trigger click');
 
-				if ( _self.options.notificationsPanelTriggerEl.dataset.isActive !== 'true' ) {
-					_self.resetMenu();
+					if ( trigger.dataset.isActive !== 'true' ) {
+						_self.resetMenu();
 
-					_self.options.notificationsPanelTriggerEl.dataset.isActive = 'true';
-					_self.options.notificationsPanelEl.removeAttribute('hidden');
-					_self.options.newNotificationsStatusEl.setAttribute('hidden', true);
-				}
-				else {
-					_self.resetMenu();
-				}
-			});
+						trigger.dataset.isActive = 'true';
+						_self.options.notificationsPanelEl.removeAttribute('hidden');
+					}
+					else {
+						_self.resetMenu();
+					}
+				});
 
-			_self.options.notificationsPanelTriggerEl.classList.add('js-event-handler-attached');
-		}
+				trigger.classList.add('js-event-handler-attached');
+			}
+		});
 
 		// handle click on back button (attach event only once)
 		if ( _self.options.notificationsPanelEl.querySelector('[data-back-button]').classList.contains('js-event-handler-attached') ) {
@@ -432,6 +456,77 @@ class fsDashSideBarHandler {
 
 			_self.options.notificationsPanelEl.querySelector('[data-back-button]').classList.add('js-event-handler-attached');
 		}
+	}
+
+
+	/** 
+	 * 
+	 * @method handleProfilePanel 
+	 * @description method to handle profile panel behavior
+	 * 
+	 */
+	handleProfilePanel() {
+		let _self = this;
+
+		// loop through the triggers
+		_self.options.profilePanelTriggerEl.forEach( (trigger) => {
+			// handle click on trigger (attach event only once)
+			if ( trigger.classList.contains('js-event-handler-attached') ) {
+				return;
+			}
+			else {
+				trigger.addEventListener('click', (event) => {
+					//console.log('Navigation Panel trigger click');
+
+					if ( trigger.dataset.isActive !== 'true' ) {
+						_self.resetMenu();
+
+						trigger.dataset.isActive = 'true';
+						_self.options.profilePanelEl.removeAttribute('hidden');
+					}
+					else {
+						_self.resetMenu();
+					}
+				});
+
+				trigger.classList.add('js-event-handler-attached');
+			}
+		});
+
+		// handle click on back button (attach event only once)
+		if ( _self.options.profilePanelEl.querySelector('[data-back-button]').classList.contains('js-event-handler-attached') ) {
+			return;
+		}
+		else {
+			_self.options.profilePanelEl.querySelector('[data-back-button]').addEventListener('click', (event) => {
+				//console.log('Floating trigger click');
+
+				_self.resetMenu();
+			});
+
+			_self.options.profilePanelEl.querySelector('[data-back-button]').classList.add('js-event-handler-attached');
+		}
+	}
+
+
+	/** 
+	 * 
+	 * @method handleMobileNav 
+	 * @description method to handle mobile nav open close
+	 * 
+	 */
+	handleMobileNav() {
+		let _self = this;
+
+		// open mobile nav
+		_self.options.mobileNavOpenTriggerEl.addEventListener('click', (evt) => {
+			_self.options.mobileNavEl.dataset.isActive = true;
+		});
+
+		// close mobile nav
+		_self.options.mobileNavCloseTriggerEl.addEventListener('click', (evt) => {
+			_self.options.mobileNavEl.dataset.isActive = false;
+		});
 	}
 
 
@@ -476,12 +571,28 @@ class fsDashSideBarHandler {
 			}
 
 			// handle notification panel (if the panel exists in DOM)
-			if ( document.querySelector(this.options.notificationsPanelSelector) !== null && document.querySelector(this.options.notificationsPanelSelector) !== 'undefined') {
-				this.options.notificationsPanelTriggerEl = document.querySelector(this.options.notificationsPanelTriggerSelector);
-				this.options.newNotificationsStatusEl = document.querySelector(this.options.newNotificationsStatusSelector);
+			if ( document.querySelector(this.options.notificationsPanelSelector) !== null && document.querySelector(this.options.notificationsPanelSelector) !== 'undefined' ) {
+				this.options.notificationsPanelTriggerEl = document.querySelectorAll(this.options.notificationsPanelTriggerSelector);
 				this.options.notificationsPanelEl = document.querySelector(this.options.notificationsPanelSelector);
 
 				this.handleNotificationPanel();
+			}
+
+			// handle profile panel (if the panel exists in DOM)
+			if ( document.querySelector(this.options.profilePanelSelector) !== null && document.querySelector(this.options.profilePanelSelector) !== 'undefined' ) {
+				this.options.profilePanelTriggerEl = document.querySelectorAll(this.options.profilePanelTriggerSelector);
+				this.options.profilePanelEl = document.querySelector(this.options.profilePanelSelector);
+
+				this.handleProfilePanel();
+			}
+
+			// handle mobile nav (if the panel exists in DOM)
+			if ( document.querySelector(this.options.mobileNavSelector) !== null && document.querySelector(this.options.mobileNavSelector) !== 'undefined' ) {
+				this.options.mobileNavOpenTriggerEl = document.querySelector(this.options.mobileNavOpenTriggerSelector);
+				this.options.mobileNavCloseTriggerEl = document.querySelector(this.options.mobileNavCloseTriggerSelector);
+				this.options.mobileNavEl = document.querySelector(this.options.mobileNavSelector);
+
+				this.handleMobileNav();
 			}
 			
 			//console.log(this.options);
@@ -510,11 +621,11 @@ class fsDashSideBarHandler {
  * 
  */
 document.addEventListener("DOMContentLoaded", (event) => {
-    //console.log("DOM fully loaded and parsed");
+	//console.log("DOM fully loaded and parsed");
 
-		// Creates and initializes a new fsDashSideBarHandler
-		const fansocialDashSideBarHandler = new fsDashSideBarHandler({
-			dashNavElSelector: '[data-dashboard-main-nav]', // dash menu main selector (desktop)
-		});
-		fansocialDashSideBarHandler.init();
+	// Creates and initializes a new fsDashSideBarHandler
+	const fansocialDashSideBarHandler = new fsDashSideBarHandler({
+		dashNavElSelector: '[data-dashboard-main-nav]', // dash menu main selector (desktop)
+	});
+	fansocialDashSideBarHandler.init();
 });
