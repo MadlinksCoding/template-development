@@ -352,12 +352,13 @@
              
             // Create tooltip
             var tooltip = am5.Tooltip.new(root, {
+              pointerOrientation: "horizontal", // Ensure the tooltip is positioned horizontally
               background: am5.RoundedRectangle.new(root, {
                 fill: am5.color(0xFFFFFF), // White background
                 shadowColor: am5.color(0xE2E2E2), // Shadow color (black)
                 shadowBlur: 8, // Blur effect of the shadow
                 shadowOffsetX: 0, // Horizontal offset of the shadow
-                shadowOffsetY: 0  // Vertical offset of the shadow
+                shadowOffsetY: 0,  // Vertical offset of the shadow
               })
             });
 
@@ -376,7 +377,8 @@
               textAlign: "left", // Align text to the left
               fill: am5.color(0x344054), // Text color (black)
               fontSize: "0.75rem", // Font size
-              fontFamily: "'Poppins', sans-serif" // Font family
+              fontFamily: "'Poppins', sans-serif", // Font family
+              lineHeight: 1.4,
             });
              
             // Assign CSS class to the tooltip
@@ -401,41 +403,6 @@
               "Nov": "NOVEMBER",
               "Dec": "DECEMBER"
             };
-             
-            // Calculate total values for each month and format tooltip text
-            tooltip.label.adapters.add("text", function(text, target) {
-              text = "";
-              var total = 0;
-              var i = 0;
-              var xAxisLabel = "";
-              var year = "";
-             
-              chart.series.each(function(series) {
-                var tooltipDataItem = series.get("tooltipDataItem");
-                if (tooltipDataItem) {
-                  total += tooltipDataItem.get("valueY");
-                  if (i == 0) {
-                    xAxisLabel = tooltipDataItem.get("categoryX");
-                    year = tooltipDataItem.dataContext ? tooltipDataItem.dataContext.year : ""; // Get the year from the data context
-                  }
-                  if (i != 0) {
-                    text += "\n\n";
-                  }
-                  text += '[' + series.get("fill").toString() + ' width:8px height:8px]●[/] [fontWeight:normal width:120px]' + series.get("name") + ':[/] [bold width:0px] USD ' + tooltipDataItem.get("valueY") + '[/]';
-                }
-                i++;
-              });
-             
-              // Replace abbreviated month name with full month name
-              var fullMonthName = monthMapping[xAxisLabel] || xAxisLabel;
-             
-              // Add x-axis label with year at the top
-              text = "[font color='#667085'][bold]" + fullMonthName + " " + year + "[/]\n\n" + text;
-             
-              // Add total value with a line above it
-              text += "\n[font color='#D0D5DD']───────────────────────[/font]\n[fontWeight:normal width:130px][font color='#667085']Total Earnings:[/font][/] [bold width:0px] USD " + total + "[/]";
-              return text;
-            });
              
             // Add cursor
             var cursor = chart.set("cursor", am5xy.XYCursor.new(root, {
@@ -584,7 +551,9 @@
                 xAxis: xAxis,
                 yAxis: yAxis,
                 valueYField: fieldName,
-                categoryXField: "month"
+                categoryXField: "month",
+                fill: am5.color(color),
+                stroke: am5.color(color)
               }));
              
               series.columns.template.setAll({
@@ -612,6 +581,41 @@
             makeSeries("Merch", "merch", 0x3A0BA3);
             makeSeries("Wishtender", "wishtender", 0xAE4AEF);
             makeSeries("Custom request", "customrequest", 0xF72485);
+
+            // Calculate total values for each month and format tooltip text
+            tooltip.label.adapters.add("text", function(text, target) {
+              text = "";
+              var total = 0;
+              var i = 0;
+              var xAxisLabel = "";
+              var year = "";
+             
+              chart.series.each(function(series) {
+                var tooltipDataItem = series.get("tooltipDataItem");
+                if (tooltipDataItem) {
+                  total += tooltipDataItem.get("valueY");
+                  if (i == 0) {
+                    xAxisLabel = tooltipDataItem.get("categoryX");
+                    year = tooltipDataItem.dataContext ? tooltipDataItem.dataContext.year : ""; // Get the year from the data context
+                  }
+                  if (i != 0) {
+                    text += "\n";
+                  }
+                  text += '[' + series.get("fill").toString() + ' width:12px height:12px fontSize: 16px]●[/] [fontWeight:normal width:120px]' + series.get("name") + '[/] [font color="#101828"][fontWeight:600 width:0px] USD ' + tooltipDataItem.get("valueY") + '[/]';
+                }
+                i++;
+              });
+             
+              // Replace abbreviated month name with full month name
+              var fullMonthName = monthMapping[xAxisLabel] || xAxisLabel;
+             
+              // Add x-axis label with year at the top
+              text = "[font color='#667085'][bold]" + fullMonthName + " " + year + "[/]\n" + text;
+             
+              // Add total value with a line above it
+              text += "\n[font color='#D0D5DD']───────────────────────[/font]\n[fontWeight:normal width:135px height: 0px][font color='#667085'] Total Earnings:[/font][/] [bold width:0px] USD " + total + "[/]";
+              return text;
+            });
              
             // Add scrollbar
             chart.set("scrollbarX", am5.Scrollbar.new(root, {
