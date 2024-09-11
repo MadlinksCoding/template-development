@@ -631,7 +631,8 @@
              
             //Y-Axis Grid Removed
             yAxis.get("renderer").grid.template.setAll({
-                stroke: am5.color(0xf2f4f7)
+                stroke: am5.color(0xF2F4F7),
+                strokeWidth: 5
             });
              
             //X-Axis Grid Removed
@@ -1316,6 +1317,118 @@
         // For Line Chart
         LineChart(salesInsightLine);
         TokenLineChart(TokenInsightLine);
+
+
+
+        // Map chart Function
+        // Data
+        var groupData = [
+          {
+            "name": "Sweden",
+            "data": [
+              { "id": "SE", "sales": "123"},
+          ]
+          }, {
+            "name": "Russia",
+            "data": [
+              { "id": "RU", "sales": "234" },
+            ]
+          }, {
+            "name": "China",
+            "data": [
+              { "id": "CN", "sales": "114" },
+            ]
+          }, {
+            "name": "Philippines",
+            "data": [
+              { "id": "PH", "sales": "242" }
+            ]
+          }, {
+            "name": "United States of America",
+            "data": [
+              { "id": "US", "sales": "112" }
+            ]
+          }
+        ];
+
+        // Create root and chart
+        var root = am5.Root.new("chartdiv");
+
+        // Set themes
+        root.setThemes([
+          am5themes_Animated.new(root)
+        ]);
+
+        // Create chart
+        var chart = root.container.children.push(am5map.MapChart.new(root, {
+          homeZoomLevel: 1,
+          homeGeoPoint: { longitude: 0, latitude: 40 }
+        }));
+
+        // Create world polygon series
+        var worldSeries = chart.series.push(am5map.MapPolygonSeries.new(root, {
+          geoJSON: am5geodata_worldLow,
+          exclude: ["AQ"]
+        }));
+
+        worldSeries.mapPolygons.template.setAll({
+          fill: am5.color(0xaaaaaa)
+        });
+
+        worldSeries.events.on("datavalidated", () => {
+          chart.goHome();
+        });
+
+        // Create series for each group
+        var colors = am5.ColorSet.new(root, {
+          step: 2
+        });
+        colors.next();
+
+        am5.array.each(groupData, function(group) {
+          var countries = [];
+          var color = colors.next();
+
+          am5.array.each(group.data, function(country) {
+            countries.push(country.id)
+          });
+
+          var polygonSeries = chart.series.push(am5map.MapPolygonSeries.new(root, {
+            geoJSON: am5geodata_worldLow,
+            include: countries,
+            name: group.name,
+            fill: color
+          }));
+
+          polygonSeries.mapPolygons.template.setAll({
+            tooltipText: "{name}[/]\t [bold]USD {sales}",
+            interactive: true,
+            fill: color,
+            strokeWidth: 2
+          });
+
+          polygonSeries.mapPolygons.template.states.create("hover", {
+            fill: am5.Color.brighten(color, -0.3)
+          });
+
+          polygonSeries.mapPolygons.template.events.on("pointerover", function(ev) {
+            ev.target.series.mapPolygons.each(function(polygon) {
+              polygon.states.applyAnimate("hover");
+            });
+          });
+
+          polygonSeries.mapPolygons.template.events.on("pointerout", function(ev) {
+            ev.target.series.mapPolygons.each(function(polygon) {
+              polygon.states.applyAnimate("default");
+            });
+          });
+
+          polygonSeries.data.setAll(group.data);
+
+          // Do not add the legend if you want to hide it
+          // legend.data.push(polygonSeries);
+        });
+
 
 
 
