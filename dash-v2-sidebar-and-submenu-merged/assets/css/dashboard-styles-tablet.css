@@ -94,4 +94,10 @@ html {
 .right--8-responsive-tablet {
   right: .5rem
 }
+
+[data-submenu] [data-submenu-item][data-has-submenu=true]>[data-arrow] {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+  transform: translateX(0)
+}
 /*# sourceMappingURL=../css/map/dashboard-styles-tablet.css.map */

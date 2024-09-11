@@ -230,6 +230,10 @@ html {
   filter: brightness(0) saturate(100%) invert(37%) sepia(57%) saturate(6169%) hue-rotate(214deg) brightness(91%) contrast(106%)
 }
 
+.hover--bg--col--white--10:hover {
+  background: rgba(255, 255, 255, .1)
+}
+
 .hover--bg--col--brilliant-rose--10:hover {
   background: rgba(251, 91, 162, .1)
 }
@@ -558,20 +562,25 @@ html {
   pointer-events: none
 }
 
+[data-floating-panel-wrapper] [data-floating-panel] {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr)
+}
+
 [data-floating-panel-wrapper][data-is-floating=true] [data-floating-panel][data-is-active=false] {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  -webkit-transform: scale(0) translateY(-30%);
-  transform: scale(0) translateY(-30%)
+  -webkit-transform: scale(0) translateY(4rem);
+  transform: scale(0) translateY(4rem)
 }
 
 [data-floating-panel-wrapper][data-is-floating=true] [data-floating-panel][data-is-active=true] {
   opacity: 1;
   visibility: visible;
   pointer-events: all;
-  -webkit-transform: scale(1) translateY(-30%);
-  transform: scale(1) translateY(-30%)
+  -webkit-transform: scale(1) translateY(4rem);
+  transform: scale(1) translateY(4rem)
 }
 
 [data-floating-panel-wrapper][data-is-floating=true] [data-floating-panel] [data-sidebar-menu-item] {
@@ -902,7 +911,8 @@ html {
 }
 
 [data-profile-panel-trigger][data-is-active=true] {
-  background: rgba(251, 91, 162, .1)
+  background: rgba(251, 91, 162, .1);
+  outline: .25rem solid rgba(251, 91, 162, .2)
 }
 
 [data-profile-panel-trigger][data-is-active=true] [data-notifications-panel-trigger-icon] {
