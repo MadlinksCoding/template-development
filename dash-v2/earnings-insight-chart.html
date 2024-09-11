@@ -206,7 +206,7 @@
             </div>
             <!-- End Data Row -->
 
-            <!-- Data Row -->
+            <!-- Data Row Sales -->
             <div data-section="data-row" class="grid grid--cols-1 gap--16 grid--cols-2-responsive-tablet grid--cols-2-responsive-mobile grid--cols-1-responsive-mobile-portrait">
                 <!-- One Column -->
                 <div class="flex flex-column gap--16 w-100 grid--col-span-2-responsive-mobile-portrait">
@@ -220,12 +220,12 @@
                             <div class="flex items-start bg-white-30 sh--7 br--7 ba br--col--gray-300 overflow-hidden">
                                 <!-- Bar Chart Button -->
                                 <div data-id="sales-insight-bar-btn" data-button="sales-insight" class="flex items-center justify-center gap--7-12 pad--x--10-68 pad--y--7-12 br br--col--gray-300 pointer bg-white">
-                                    <img src="assets/icons/bar-chart-07.svg" class="w--18 h--18 filter--col--black" data-img alt="" />
+                                    <img src="assets/icons/bar-chart-07.svg" class="w--18 h--18 filter--col--black" data-img="sales-bar-img" alt="" />
                                 </div>
                                 <!-- End Bar Chart Button -->
                                 <!-- Line Chart Button -->
                                 <div data-id="sales-insight-line-btn" data-button="sales-insight" class="flex items-center justify-center gap--7-12 pad--x--10-68 pad--y--7-12 pointer">
-                                    <img src="assets/icons/line-chart-up-01.svg" class="w--18 h--18" data-img alt="" />
+                                    <img src="assets/icons/line-chart-up-01.svg" class="w--18 h--18" data-img="sales-line-img" alt="" />
                                 </div>
                                 <!-- End Line Chart Button -->
                             </div><!-- End Button Group -->
@@ -270,7 +270,69 @@
                 </div>
                 <!-- End one Column -->
             </div>
-            <!-- End Data Row -->
+            <!-- End Data Row Sales -->
+
+            <!-- Data Row Token -->
+            <div data-section="data-row" class="grid grid--cols-1 gap--16 grid--cols-2-responsive-tablet grid--cols-2-responsive-mobile grid--cols-1-responsive-mobile-portrait">
+              <!-- One Column -->
+              <div class="flex flex-column gap--16 w-100 grid--col-span-2-responsive-mobile-portrait">
+                  <!-- White Card -->
+                  <div data-secton="white-card" class="pad--16 flex flex-column gap--16 flex-auto bg-white-70 bg--blur--25 br--2">
+                      <!-- Title -->
+                      <div class="flex items-center justify-between gap--8">
+                          <h3 data-title="token-insight" class="m--0 ff-poppins fs--18 fw6 lh--28 col--gray-950">Token Insights</h3>
+                          <h3 data-title="token-trend"class="m--0 ff-poppins fs--18 fw6 lh--28 col--gray-950 dn">Token Trend</h3>
+                          <!-- Button Group -->
+                          <div class="flex items-start bg-white-30 sh--7 br--7 ba br--col--gray-300 overflow-hidden">
+                              <!-- Bar Chart Button -->
+                              <div data-id="token-insight-bar-btn" data-button="token-insight" class="flex items-center justify-center gap--7-12 pad--x--10-68 pad--y--7-12 br br--col--gray-300 pointer bg-white">
+                                  <img src="assets/icons/bar-chart-07.svg" class="w--18 h--18 filter--col--black" data-img="token-bar-img" alt="" />
+                              </div>
+                              <!-- End Bar Chart Button -->
+                              <!-- Line Chart Button -->
+                              <div data-id="token-insight-line-btn" data-button="token-insight" class="flex items-center justify-center gap--7-12 pad--x--10-68 pad--y--7-12 pointer">
+                                  <img src="assets/icons/line-chart-up-01.svg" class="w--18 h--18" data-img="token-line-img" alt="" />
+                              </div>
+                              <!-- End Line Chart Button -->
+                          </div><!-- End Button Group -->
+                      </div>
+                      <!-- Data Content -->
+                      <div class="flex flex-column justify-center items-start gap--16 flex-auto">
+                          <div class="flex flex-column gap--24 w-100">
+                              <!-- Sales Insight Bar Chart -->
+                              <div data-id="token-insight-bar" class="w-100 h--300"></div>
+
+                              <!-- Sales Insight Line Chart -->
+                              <div data-id="token-insight-line" class="w-100 h--300 dn"></div>
+
+                              <!-- Chart Category List -->
+                              <div class="pad--x--8 flex gap--8 justify-center items-center">
+                                  <div class="flex gap--8 items-center">
+                                      <span class="db w--8 h--8 bg--col--chart-1 br-100"></span>
+                                      <span class="fs--12 lh--18 col--gray-500">Tip</span>
+                                  </div>
+                                  <div class="flex gap--8 items-center">
+                                      <span class="db w--8 h--8 bg--col--chart-2 br-100"></span>
+                                      <span class="fs--12 lh--18 col--gray-500">Call</span>
+                                  </div>
+                                  <div class="flex gap--8 items-center">
+                                      <span class="db w--8 h--8 bg--col--chart-3 br-100"></span>
+                                      <span class="fs--12 lh--18 col--gray-500">Chat</span>
+                                  </div>
+                                  <div class="flex gap--8 items-center">
+                                      <span class="db w--8 h--8 bg--col--chart-4 br-100"></span>
+                                      <span class="fs--12 lh--18 col--gray-500">Live streaming</span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- Ens Data Content -->
+                  </div>
+                  <!-- End White Card -->
+              </div>
+              <!-- End one Column -->
+          </div>
+          <!-- End Data Row Token -->
 
             <!-- Data Row -->
             <div data-section="data-row" class="grid grid--cols-1 gap--16 grid--cols-1-responsive-mobile-portrait pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait">
@@ -326,7 +388,7 @@
 
     <script type="text/javascript">
 
-        // Bar Chart Main Function
+        // Bar Chart Main Function for Sales Insight
         function BarChart (chartRenderEl) {
             // Create root element
             var root = am5.Root.new(chartRenderEl);
@@ -628,7 +690,7 @@
             chart.appear(1000, 100);
         }
 
-        // Bar Chart Main Function
+        // Bar Chart Main Function for Sales Trend
         function LineChart (chartRenderLine) {
           // Create root element
           var root = am5.Root.new(chartRenderLine);
@@ -790,20 +852,474 @@
 
         }
 
+        // Bar Chart Main Function for Token Insight
+        function TokenBarChart (tokenChartRenderEl) {
+            // Create root element
+            var root = am5.Root.new(tokenChartRenderEl);
+
+            root._logo.dispose();
+
+            // Set themes
+            root.setThemes([
+              am5themes_Animated.new(root)
+            ]);
+             
+            // Create chart
+            var chart = root.container.children.push(am5xy.XYChart.new(root, {
+              panX: false,
+              panY: false,
+              wheelX: "none",
+              wheelY: "none",
+              maxTooltipDistance: 1,
+              paddingLeft: 0,
+              paddingRight: 0,
+              paddingBottom: 0,
+              paddingTop: 0,
+            }));
+             
+            // Create tooltip
+            var tooltip = am5.Tooltip.new(root, {
+              pointerOrientation: "horizontal", // Ensure the tooltip is positioned horizontally
+              background: am5.RoundedRectangle.new(root, {
+                fill: am5.color(0xFFFFFF), // White background
+                shadowColor: am5.color(0xE2E2E2), // Shadow color (black)
+                shadowBlur: 8, // Blur effect of the shadow
+                shadowOffsetX: 0, // Horizontal offset of the shadow
+                shadowOffsetY: 0,  // Vertical offset of the shadow
+              })
+            });
+
+            // Apply corner radius to the tooltip background
+            tooltip.get("background").set("cornerRadiusTL", 2);
+            tooltip.get("background").set("cornerRadiusTR", 2);
+            tooltip.get("background").set("cornerRadiusBL", 2);
+            tooltip.get("background").set("cornerRadiusBR", 2);
+
+            // Set label properties after tooltip creation
+              tooltip.label.setAll({
+              paddingLeft: 0,
+              paddingRight: 0,
+              paddingTop: 0,
+              paddingBottom: 0,
+              textAlign: "left", // Align text to the left
+              fill: am5.color(0x344054), // Text color (black)
+              fontSize: "0.75rem", // Font size
+              fontFamily: "'Poppins', sans-serif", // Font family
+              lineHeight: 1.4,
+            });
+             
+            // Assign CSS class to the tooltip
+            tooltip.get("background").set("cssClass", "custom-tooltip");
+             
+            chart.plotContainer.set("tooltipPosition", "pointer");
+            chart.plotContainer.set("tooltipText", "a");
+            chart.plotContainer.set("tooltip", tooltip);
+             
+            // Mapping of abbreviated month names to full month names
+            var monthMapping = {
+              "Jan": "JANUARY",
+              "Feb": "FEBRUARY",
+              "Mar": "MARCH",
+              "Apr": "APRIL",
+              "May": "MAY",
+              "Jun": "JUNE",
+              "Jul": "JULY",
+              "Aug": "AUGUST",
+              "Sep": "SEPTEMBER",
+              "Oct": "OCTOBER",
+              "Nov": "NOVEMBER",
+              "Dec": "DECEMBER"
+            };
+             
+            // Add cursor
+            var cursor = chart.set("cursor", am5xy.XYCursor.new(root, {
+              behavior: "none"
+            }));
+            cursor.lineY.set("visible", false);
+            cursor.lineX.set("visible", false);
+             
+            // Updated data with months
+            var data = [{
+              "month": "Jan",
+              "year": 2023,
+              "tip": 150,
+              "call": 90,
+              "chat": 50,
+              "livestreaming": 70,
+            }, {
+              "month": "Feb",
+              "year": 2023,
+              "tip": 250,
+              "call": 190,
+              "chat": 150,
+              "livestreaming": 170,
+            }, {
+              "month": "Mar",
+              "year": 2023,
+              "tip": 350,
+              "call": 210,
+              "chat": 200,
+              "livestreaming": 170,
+            }, {
+              "month": "Apr",
+              "year": 2023,
+              "tip": 250,
+              "call": 190,
+              "chat": 150,
+              "livestreaming": 170,
+            }, {
+              "month": "May",
+              "year": 2023,
+              "tip": 350,
+              "call": 210,
+              "chat": 200,
+              "livestreaming": 170,
+            }, {
+              "month": "Jun",
+              "year": 2023,
+              "tip": 250,
+              "call": 250,
+              "chat": 150,
+              "livestreaming": 170,
+            }, {
+              "month": "Jul",
+              "year": 2023,
+              "tip": 350,
+              "call": 290,
+              "chat": 250,
+              "livestreaming": 170,
+            }, {
+              "month": "Aug",
+              "year": 2023,
+              "tip": 350,
+              "call": 210,
+              "chat": 200,
+              "livestreaming": 170,
+            }, {
+              "month": "Sep",
+              "year": 2023,
+              "tip": 350,
+              "call": 210,
+              "chat": 200,
+              "livestreaming": 170,
+            }, {
+              "month": "Oct",
+              "year": 2023,
+              "tip": 350,
+              "call": 210,
+              "chat": 200,
+              "livestreaming": 170,
+            }, {
+              "month": "Nov",
+              "year": 2023,
+              "tip": 350,
+              "call": 210,
+              "chat": 200,
+              "livestreaming": 170,
+            }, {
+              "month": "Dec",
+              "year": 2023,
+              "tip": 250,
+              "call": 210,
+              "chat": 200,
+              "livestreaming": 270,
+            }];
+             
+            // Create axes
+            var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
+              categoryField: "month",
+              renderer: am5xy.AxisRendererX.new(root, {
+                minGridDistance: 30
+              }),
+              // Disable the tooltip on the category axis
+              //tooltip: am5.Tooltip.new(root, {
+                //visible: false
+              //})
+            }));
+             
+            xAxis.data.setAll(data);
+             
+            xAxis.get("renderer").labels.template.setAll({
+              fontSize: "0.75rem", // Set the font size for X-axis labels
+              fill: am5.color(0x475467), // Text color (black)
+            });
+             
+            var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
+              renderer: am5xy.AxisRendererY.new(root, {}),
+              min: 0,      // Minimum value on the Y-axis
+                max: 1000,   // Maximum value on the Y-axis
+                strictMinMax: true // Enforce min and max values
+            }));
+             
+            // Create Y-axis (left axis)
+            yAxis.get("renderer").labels.template.setAll({
+              fontSize: "0.75rem", // Set the font size for Y-axis labels
+              fill: am5.color(0x475467), // Text color (black)
+            });
+             
+             
+            // Add series
+            function makeSeries(name, fieldName, color) {
+              var series = chart.series.push(am5xy.ColumnSeries.new(root, {
+                name: name,
+                stacked: true,
+                xAxis: xAxis,
+                yAxis: yAxis,
+                valueYField: fieldName,
+                categoryXField: "month",
+                fill: am5.color(color),
+                stroke: am5.color(color)
+              }));
+             
+              series.columns.template.setAll({
+                width: am5.percent(25), // Adjust the width of the bars (narrower than before)
+                fill: am5.color(color),
+                stroke: am5.color(color)
+              });
+             
+              series.data.setAll(data);
+              series.appear();
+            }
+             
+            //Y-Axis Grid Removed
+            yAxis.get("renderer").grid.template.setAll({
+                stroke: am5.color(0xf2f4f7)
+            });
+             
+            //X-Axis Grid Removed
+            xAxis.get("renderer").grid.template.setAll({    
+              stroke: am5.color(0xf2f4f7)
+            });
+             
+            makeSeries("Tip", "tip", 0x4CC9F0);
+            makeSeries("Call", "call", 0x4361EE);
+            makeSeries("Chat", "chat", 0x3A0BA3);
+            makeSeries("Live streaming", "livestreaming", 0xAE4AEF);
+
+            // Calculate total values for each month and format tooltip text
+            tooltip.label.adapters.add("text", function(text, target) {
+              text = "";
+              var total = 0;
+              var i = 0;
+              var xAxisLabel = "";
+              var year = "";
+             
+              chart.series.each(function(series) {
+                var tooltipDataItem = series.get("tooltipDataItem");
+                if (tooltipDataItem) {
+                  total += tooltipDataItem.get("valueY");
+                  if (i == 0) {
+                    xAxisLabel = tooltipDataItem.get("categoryX");
+                    year = tooltipDataItem.dataContext ? tooltipDataItem.dataContext.year : ""; // Get the year from the data context
+                  }
+                  if (i != 0) {
+                    text += "\n";
+                  }
+                  text += '[' + series.get("fill").toString() + ' width:12px height:12px fontSize: 16px]●[/] [fontWeight:normal width:120px]' + series.get("name") + '[/] [font color="#101828"][fontWeight:600 width:0px] ' + tooltipDataItem.get("valueY") + ' Tokens[/]';
+                }
+                i++;
+              });
+             
+              // Replace abbreviated month name with full month name
+              var fullMonthName = monthMapping[xAxisLabel] || xAxisLabel;
+             
+              // Add x-axis label with year at the top
+              text = "[font color='#667085'][bold]" + fullMonthName + " " + year + "[/]\n" + text;
+             
+              // Add total value with a line above it
+              text += "\n[font color='#D0D5DD']───────────────────────[/font]\n[fontWeight:normal width:135px height: 0px][font color='#667085'] Total Earnings[/font][/] [bold width:0px]" + total + " Tokens[/]";
+              return text;
+            });
+             
+            // Add scrollbar
+            chart.set("scrollbarX", am5.Scrollbar.new(root, {
+              orientation: "horizontal",
+              visible: false,
+            }));
+             
+            // Make stuff animate on load
+            chart.appear(1000, 100);
+        }
+
+        // Bar Chart Main Function for Token Trend
+        function TokenLineChart (tokenChartRenderLine) {
+          // Create root element
+          var root = am5.Root.new(tokenChartRenderLine);
+          root._logo.dispose();
+
+          // Create chart
+          var chart = root.container.children.push(am5xy.XYChart.new(root, {
+            panX: false,
+            panY: false,
+            wheelX: "none",
+            wheelY: "none",
+            pinchZoomX: false,
+            paddingLeft: 0,
+            paddingRight: 0,
+            paddingBottom: 0,
+            paddingTop: 0,
+            maxTooltipDistance: 0
+          }));
+
+          // Add cursor
+          var cursor = chart.set("cursor", am5xy.XYCursor.new(root, { behavior: "none" }));
+          cursor.lineY.set("visible", false);
+          cursor.lineX.set("visible", false);
+
+          // Static data with short month names for xAxis and full month names in uppercase for tooltips
+          var staticValues = [
+            { month: "Jan", fullMonth: "JANUARY", year: 2023, tip: 170, call: 130, chat: 50, livestreaming: 40},
+            { month: "Feb", fullMonth: "FEBRUARY", year: 2023, tip: 50, call: 120, chat: 90, livestreaming: 50 },
+            { month: "Mar", fullMonth: "MARCH", year: 2023, tip: 300, call: 120, chat: 120, livestreaming: 250 },
+            { month: "Apr", fullMonth: "APRIL", year: 2023, tip: 400, call: 520, chat: 160, livestreaming: 156 },
+            { month: "May", fullMonth: "MAY", year: 2023, tip: 155, call: 220, chat: 170, livestreaming: 521 },
+            { month: "Jun", fullMonth: "JUNE", year: 2023, tip: 100, call: 320, chat: 180, livestreaming: 124 },
+            { month: "Jul", fullMonth: "JULY", year: 2023, tip: 250, call: 120, chat: 150, livestreaming: 50 },
+            { month: "Aug", fullMonth: "AUGUST", year: 2023, tip: 655, call: 420, chat: 200, livestreaming: 52 },
+            { month: "Sep", fullMonth: "SEPTEMBER", year: 2023, tip: 750, call: 820, chat: 400, livestreaming: 158 },
+            { month: "Oct", fullMonth: "OCTOBER", year: 2023, tip: 160, call: 100, chat: 140, livestreaming: 320 },
+            { month: "Nov", fullMonth: "NOVEMBER", year: 2023, tip: 255, call: 120, chat: 150, livestreaming: 485 },
+            { month: "Dec", fullMonth: "DECEMBER", year: 2023, tip: 50, call: 60, chat: 90, livestreaming: 120 }
+          ];
+
+          // Create axes
+          var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
+            categoryField: "month",
+            renderer: am5xy.AxisRendererX.new(root, { minGridDistance: 30 })
+          }));
+          xAxis.data.setAll(staticValues); // Set the X-axis categories as the months
+          xAxis.get("renderer").labels.template.setAll({
+            fontSize: "0.75rem", // Set the font size for X-axis labels
+            fill: am5.color(0x475467), // Text color
+          });
+
+          var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
+            renderer: am5xy.AxisRendererY.new(root, {})
+          }));
+          yAxis.get("renderer").labels.template.setAll({
+            visible: false,
+            paddingLeft: 0,
+          });
+
+          // Function to add series with debugging and tooltips
+          function addSeries(name, fieldName, color) {
+            var series = chart.series.push(am5xy.SmoothedXLineSeries.new(root, {
+              name: name,
+              xAxis: xAxis,
+              yAxis: yAxis,
+              valueYField: fieldName,
+              categoryXField: "month",
+              stroke: color,
+              tooltip: am5.Tooltip.new(root, {
+                label: {
+                  fill: am5.color(0x000000), // Set text color to black
+                  lineHeight: 1.8
+                },
+                labelText: "[font color='#667085' fontFamily: 'Poppins' fontWeight:600 fontSize: .75rem]{fullMonth} {year.formatNumber('#')}[/]\n[font color='{stroke}' fontSize: 16px]● [/][font color='#344054' fontFamily: 'Poppins' fontWeight:400 fontSize: .75rem]{name}\t\t\t[/][font color='#101828' fontFamily: 'Poppins' fontWeight:500 fontSize: .75rem]{valueY} Tokens[/]", // Custom tooltip 
+
+                getFillFromSprite: false, // Prevent inheriting color from the series
+                pointerOrientation: "horizontal", // Ensure the tooltip is positioned horizontally
+                tooltipPosition: "pointer", // Fix the tooltip position
+                background: am5.RoundedRectangle.new(root, {
+                  fill: am5.color(0xFFFFFF), // White background
+                  cornerRadiusTL: 0,
+                  cornerRadiusTR: 0,
+                  cornerRadiusBL: 0,
+                  cornerRadiusBR: 0,
+                  shadowColor: am5.color(0xE2E2E2, 0.08), // Shadow color with opacity
+                  shadowBlur: 8,
+                  shadowOffsetX: 0,
+                  shadowOffsetY: 0
+                })
+              })
+            }));
+
+            series.strokes.template.setAll({ strokeWidth: 3, stroke: color });
+
+            // Ensure the tooltip references the correct stroke color
+            series.get("tooltip").label.adapters.add("text", function(text, target) {
+              return text.replace("{stroke}", am5.color(color).toCSSHex());
+            });
+
+            // Create a bullet template
+            var bulletTemplate = am5.Template.new({});
+
+            // Add bullet to the series
+            series.bullets.push(function() {
+                return am5.Bullet.new(root, {
+                    sprite: am5.Circle.new(root, {
+                        radius: 5,
+                        fill: color,
+                        opacity: 0 // Start with invisible bullet
+                    }, bulletTemplate)
+                });
+            });
+
+            // Show bullet when tooltip is shown
+            series.events.on("tooltipshownat", function(ev) {
+                var dataItem = ev.target.get("tooltipDataItem");
+                var bullet = dataItem.bullets[0];
+                if (bullet && bullet.get("sprite")) {
+                    bullet.get("sprite").set("opacity", 1); // Make bullet visible
+                }
+            });
+
+            // Hide bullet when tooltip is hidden
+            series.events.on("tooltiphiddenat", function(ev) {
+                var dataItem = ev.target.get("tooltipDataItem");
+                if (dataItem) {
+                    var bullet = dataItem.bullets[0];
+                    if (bullet && bullet.get("sprite")) {
+                        bullet.get("sprite").set("opacity", 0); // Make bullet invisible
+                    }
+                }
+            });
+
+            series.data.setAll(staticValues);
+            series.appear(1000);
+          }
+
+          // Add series with explicit colors
+          addSeries("Tip", "tip", am5.color(0x4CC9F0));
+          addSeries("Call", "call", am5.color(0x4361EE));
+          addSeries("Chat", "chat", am5.color(0x3A0BA3));
+          addSeries("Live Streaming", "livestreaming", am5.color(0xAE4AEF));
+
+          // Remove Y-Axis Grid
+          yAxis.get("renderer").grid.template.setAll({ stroke: am5.color(0xf2f4f7) });
+
+          // Remove X-Axis Grid
+          xAxis.get("renderer").grid.template.setAll({ stroke: am5.color(0xf2f4f7) });
+
+          // Add scrollbar
+          chart.set("scrollbarX", am5.Scrollbar.new(root, {
+            orientation: "horizontal",
+            visible: false
+          }));
+
+          // Animate chart on load
+          chart.appear(1000, 100);
+
+        }
+
         // Create root element
         // https://www.amcharts.com/docs/v5/getting-started/#Root_element
         var salesInsightBar = document.querySelector('[data-id="sales-insight-bar"]');
         var salesInsightLine = document.querySelector('[data-id="sales-insight-line"]');
+        var TokenInsightBar = document.querySelector('[data-id="token-insight-bar"]');
+        var TokenInsightLine = document.querySelector('[data-id="token-insight-line"]');
 
         // For Bar Chart
         BarChart(salesInsightBar);
+        TokenBarChart(TokenInsightBar);
 
         // For Line Chart
         LineChart(salesInsightLine);
+        TokenLineChart(TokenInsightLine);
 
 
 
-        // Bar Chart and Line Chart Tab Element Click Function
+        // Bar Chart and Line Chart Tab Element Click Function for Sales Insigh and Trend
         document.querySelectorAll('[data-button="sales-insight"]').forEach(function(element) {
             element.addEventListener('click', function() {
                 const dataId = this.getAttribute('data-id');
@@ -813,7 +1329,7 @@
                     el.classList.remove('bg-white'); // Remove bg-white from all elements
 
                     // Remove filter--col--black class from all images inside these elements
-                    el.querySelectorAll('[data-img]').forEach(function(img) {
+                    el.querySelectorAll('[data-img="sales-bar-img"], [data-img="sales-line-img"]').forEach(function(img) {
                         img.classList.remove('filter--col--black');
                     });
                 });
@@ -825,11 +1341,11 @@
                 });
 
                 // Hide all charts first
-                document.querySelectorAll('[data-chart]').forEach(function(chart) {
+                document.querySelectorAll('[data-id="sales-insight-bar"], [data-id="sales-insight-line"]').forEach(function(chart) {
                     chart.classList.add('dn'); // Add the 'dn' class to hide the chart
                 });
 
-                document.querySelectorAll('[data-title]').forEach(function(chart) {
+                document.querySelectorAll('[data-title="sales-insight"], [data-title="sales-trend"]').forEach(function(chart) {
                     chart.classList.add('dn'); // Add the 'dn' class to hide the chart
                 });
 
@@ -842,6 +1358,51 @@
                 } else if (dataId === 'sales-insight-line-btn') {
                     const lineChart = document.querySelector('[data-id="sales-insight-line"]');
                     const lineTitle = document.querySelector('[data-title="sales-trend"]'); 
+                    lineChart.classList.remove('dn'); // Remove 'dn' to display the chart
+                    lineTitle.classList.remove('dn');
+                }
+            });
+        });
+
+        // Bar Chart and Line Chart Tab Element Click Function for Token Insigh and Trend
+        document.querySelectorAll('[data-button="token-insight"]').forEach(function(element) {
+            element.addEventListener('click', function() {
+                const dataId = this.getAttribute('data-id');
+                
+                // Toggle bg-white class on the clicked element
+                document.querySelectorAll('[data-id]').forEach(function(el) {
+                    el.classList.remove('bg-white'); // Remove bg-white from all elements
+
+                    // Remove filter--col--black class from all images inside these elements
+                    el.querySelectorAll('[data-img="token-bar-img"], [data-img="token-line-img"]').forEach(function(img) {
+                        img.classList.remove('filter--col--black');
+                    });
+                });
+                this.classList.add('bg-white'); // Add bg-white to the clicked element
+
+                // Add filter--col--black class to images inside the clicked element
+                this.querySelectorAll('[data-img]').forEach(function(img) {
+                    img.classList.add('filter--col--black');
+                });
+
+                // Hide all charts first
+                document.querySelectorAll('[data-id="token-insight-bar"], [data-id="token-insight-line"]').forEach(function(chart) {
+                    chart.classList.add('dn'); // Add the 'dn' class to hide the chart
+                });
+
+                document.querySelectorAll('[data-title="token-insight"], [data-title="token-trend"]').forEach(function(chart) {
+                    chart.classList.add('dn'); // Add the 'dn' class to hide the chart
+                });
+
+                // Show the relevant chart based on the clicked toggle
+                if (dataId === 'token-insight-bar-btn') {
+                    const barChart = document.querySelector('[data-id="token-insight-bar"]');
+                    const barTitle = document.querySelector('[data-title="token-insight"]'); 
+                    barChart.classList.remove('dn'); // Remove 'dn' to display the chart
+                    barTitle.classList.remove('dn'); 
+                } else if (dataId === 'token-insight-line-btn') {
+                    const lineChart = document.querySelector('[data-id="token-insight-line"]');
+                    const lineTitle = document.querySelector('[data-title="token-trend"]'); 
                     lineChart.classList.remove('dn'); // Remove 'dn' to display the chart
                     lineTitle.classList.remove('dn');
                 }
