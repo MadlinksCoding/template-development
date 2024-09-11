@@ -214,7 +214,8 @@
                     <div data-secton="white-card" class="pad--16 flex flex-column gap--16 flex-auto bg-white-70 bg--blur--25 br--2">
                         <!-- Title -->
                         <div class="flex items-center justify-between gap--8">
-                            <h3 class="m--0 ff-poppins fs--18 fw6 lh--28 col--gray-950">Sales Insights</h3>
+                            <h3 data-title="sales-insight" class="m--0 ff-poppins fs--18 fw6 lh--28 col--gray-950">Sales Insights</h3>
+                            <h3 data-title="sales-trend"class="m--0 ff-poppins fs--18 fw6 lh--28 col--gray-950 dn">Sales Trend</h3>
                             <!-- Button Group -->
                             <div class="flex items-start bg-white-30 sh--7 br--7 ba br--col--gray-300 overflow-hidden">
                                 <!-- Bar Chart Button -->
@@ -828,13 +829,21 @@
                     chart.classList.add('dn'); // Add the 'dn' class to hide the chart
                 });
 
+                document.querySelectorAll('[data-title]').forEach(function(chart) {
+                    chart.classList.add('dn'); // Add the 'dn' class to hide the chart
+                });
+
                 // Show the relevant chart based on the clicked toggle
                 if (dataId === 'sales-insight-bar-btn') {
                     const barChart = document.querySelector('[data-id="sales-insight-bar"]');
+                    const barTitle = document.querySelector('[data-title="sales-insight"]'); 
                     barChart.classList.remove('dn'); // Remove 'dn' to display the chart
+                    barTitle.classList.remove('dn'); 
                 } else if (dataId === 'sales-insight-line-btn') {
                     const lineChart = document.querySelector('[data-id="sales-insight-line"]');
+                    const lineTitle = document.querySelector('[data-title="sales-trend"]'); 
                     lineChart.classList.remove('dn'); // Remove 'dn' to display the chart
+                    lineTitle.classList.remove('dn');
                 }
             });
         });
