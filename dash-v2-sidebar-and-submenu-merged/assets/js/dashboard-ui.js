@@ -623,6 +623,8 @@ class DashSideBarHandler {
  * 
  */
 class DashProfileStatusDropdown {
+	static instances = []; // to hold all status dropdown instances
+
   constructor(element) {
     this.element = element; // main dropdown wrapper [data-status-dropdown-main]
     this.trigger = element.querySelector('[data-status-dropdown-trigger]'); // dropdown trigger element [data-status-dropdown-trigger]
@@ -632,6 +634,9 @@ class DashProfileStatusDropdown {
     this.currentStatusValue = element.querySelector('[data-current-status-value]'); // hidden input field to hold currently selected status value [data-current-status-value]
     this.isOpen = false; // flag
 
+		// update the static instance
+		DashProfileStatusDropdown.instances.push(this);
+
 		// bind user "click" event listener to open/close the status dropdown list
     this.trigger.addEventListener('click', this.toggleDropdown.bind(this));
 
@@ -639,6 +644,9 @@ class DashProfileStatusDropdown {
     this.statusTypes.forEach((statusType) => {
       statusType.addEventListener('click', this.updateStatus.bind(this));
     });
+
+		// to close any other open instances
+		document.addEventListener('click', this.handleOutsideClick.bind(this));
   }
 
 
@@ -649,6 +657,14 @@ class DashProfileStatusDropdown {
 	 * 
 	 */
   toggleDropdown() {
+		// close any other open instances
+		DashProfileStatusDropdown.instances.forEach((instance) => {
+      if (instance !== this) {
+        instance.isOpen = false;
+        instance.element.setAttribute('data-is-open', instance.isOpen);
+      }
+    });
+
     this.isOpen = !this.isOpen;
     this.element.setAttribute('data-is-open', this.isOpen);
   }
@@ -676,7 +692,14 @@ class DashProfileStatusDropdown {
 		// toggle the dropdown
     this.toggleDropdown();
   }
+	
 
+	/** 
+	 * 
+	 * @method throwEvent 
+	 * @description Throws a custom event
+	 * 
+	 */
   throwEvent() {
 		// get the event name to throw
     const eventName = this.element.getAttribute('data-throw-event');
@@ -692,6 +715,20 @@ class DashProfileStatusDropdown {
 
 		// throw the event ( usage: document.addEventListener('custom_eventName', (evt) => { console.log('status changed', evt.detail); }); )
     document.dispatchEvent(event);
+  }
+	
+
+	/** 
+	 * 
+	 * @method handleOutsideClick 
+	 * @description Handles click outside of the instance and closes it
+	 * 
+	 */
+  handleOutsideClick(event) {
+    if (!this.element.contains(event.target)) {
+      this.isOpen = false;
+      this.element.setAttribute('data-is-open', this.isOpen);
+    }
   }
 }
 
