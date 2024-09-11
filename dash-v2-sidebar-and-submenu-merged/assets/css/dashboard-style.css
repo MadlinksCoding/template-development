@@ -1956,6 +1956,16 @@ html {
     -webkit-transform: translateX(0);
     transform: translateX(0)
   }
+
+  [data-notifications-container][hidden] {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%)
+  }
+
+  [data-notifications-container] {
+    -webkit-transform: translateX(0);
+    transform: translateX(0)
+  }
 }
 
 @media only screen and (max-width:479px) {
@@ -2250,6 +2260,16 @@ html {
 
   [data-submenu] [data-submenu-item][data-has-submenu=true]>[data-arrow] {
     opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0)
+  }
+
+  [data-notifications-container][hidden] {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%)
+  }
+
+  [data-notifications-container] {
     -webkit-transform: translateX(0);
     transform: translateX(0)
   }
