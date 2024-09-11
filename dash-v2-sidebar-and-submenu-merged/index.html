@@ -399,14 +399,16 @@
                     <div data-profile-panel-container class="flex flex-column items-start gap--0 w--480 vh-100 overflow-hidden bg--col--athens-gray--70--variation-2  bg--blur--25 bl br--col--mischka sh--sidebar fixed top-0 left--90 left--90--px z-1 transition--all transition--150 transition--ease-in-out vw--100--responsive-mobile vw--100--responsive-mobile-portrait left--0--responsive-mobile left--0--responsive-mobile-portrait" hidden>
                         <div data-scrollable-profile-panel class="flex flex-column items-start self-stretch gap--0 w-100 vh-100 overflow-y-auto">
                             <!-- back/close button -->
-                            <a data-back-button="" class="flex justify-center items-center pad--6 br--6 hover--bg--col--ebony--10 pointer absolute top--08 right--08 z-2 transition--background transition--200 transition--ease-in-out">
+                            <a data-back-button class="flex justify-center items-center pad--6 br--6 hover--bg--col--white--10 pointer absolute top--08 right--08 z-5 transition--background transition--200 transition--ease-in-out pad--0-responsive-mobile pad--0-responsive-mobile-portrait w--32--responsive-mobile w--32--responsive-mobile-portrait h--32--responsive-mobile h--32--responsive-mobile-portrait">
                                 <!-- render_svg_icon( 'align-left-01' ) -->
-                                <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/align-left-01.svg" alt="" class="w--20 h--20 filter--col--athens-gray2 pointer-events-none">
+                                <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/align-left-01.svg" alt="" class="w--20 h--20 filter--col--athens-gray2 pointer-events-none display-none--responsive-mobile display-none--responsive-mobile-portrait">
+
+                                <img src="assets/images/x-close.svg" alt="" class="dn w--24 h--24 filter--col--athens-gray2 pointer-events-none display-flex--responsive-mobile display-flex--responsive-mobile-portrait">
                             </a>
                             <!-- back/close button -->
 
                             <!-- profile top section -->
-                            <div data-profile-cover class="flex flex-column items-start self-stretch gap--16 bg-black-50 bg-center cover relative" style="background-image: url('assets/images/profile-bg.png');">
+                            <div data-profile-cover class="flex flex-column items-start self-stretch gap--16 bg-black-50 bg-center cover relative z-4" style="background-image: url('assets/images/profile-bg.png');">
                                 <!-- profile info section -->
                                 <div data-profile-main class="flex flex-column items-start self-stretch gap--16 pa3 bg-black-50">
                                     <!-- profile pic, name, handles etc. -->
@@ -541,7 +543,7 @@
 
                                                 <div class="flex items-center">
                                                     <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
-                                                    <div data-tooltip data-tooltip-arrow="true" data-tooltip-position="bottom center" data-tooltip-size="default" data-tooltip-theme="dark" class="relative z-5 pointer">
+                                                    <div data-tooltip data-tooltip-arrow="true" data-tooltip-position="bottom right" data-tooltip-size="default" data-tooltip-theme="dark" class="relative z-5 pointer">
                                                         <img src="assets/images/help-circle.svg" alt="" class="w--16 h--16 filter--col--pale-sky">
 
                                                         <div data-tooltip-text data-tooltip-content>
@@ -600,8 +602,8 @@
                                         <!-- left buttons wrapper -->
                                         <div class="flex items-center self-stretch flex--max">
                                             <!-- dot button -->
-                                            <div data-profile-dotted-button data-is-active="false" class="flex justify-center items-center w--40 h--40 relative pointer">
-                                                <img data-icon src="assets/images/dots-vertical.svg" alt="" class="w--24 h--24 pointer-events-none transition--all transition--150 transition--ease-in-out">
+                                            <div data-profile-dotted-button data-is-active="false" class="flex justify-center items-center w--40 h--40 relative pointer w--32--responsive-mobile w--32--responsive-mobile-portrait h--32--responsive-mobile h--32--responsive-mobile-portrait">
+                                                <img data-icon src="assets/images/dots-vertical.svg" alt="" class="w--24 h--24 pointer-events-none transition--all transition--150 transition--ease-in-out w--20--responsive-mobile w--20--responsive-mobile-portrait h--20--responsive-mobile h--20--responsive-mobile-portrait">
 
                                                 <!-- dropdown -->
                                                 <div data-dropdown-wrapper class="flex flex-column items-start gap--10 pt0 w--128 absolute top-2 left-0">
@@ -636,14 +638,14 @@
                                             <!-- /dot button -->
 
                                             <!-- view profile button -->
-                                            <a data-profile-view-button class="flex justify-center items-center flex--max self-stretch h--40 relative pointer">
-                                                <div data-main class="flex justify-center items-center flex--max self-stretch gap--10 h--40 pv1 ph2 pointer">
-                                                    <span data-text class="fs--18 fw5 lh--28 white transition--all transition--150 transition--ease-in-out">
+                                            <a data-profile-view-button class="flex justify-center items-center flex--max self-stretch h--40 relative pointer h--32--responsive-mobile h--32--responsive-mobile-portrait">
+                                                <div data-main class="flex justify-center items-center flex--max self-stretch gap--10 h--40 pv1 ph2 pointer h--32--responsive-mobile h--32--responsive-mobile-portrait">
+                                                    <span data-text class="fs--18 fw5 lh--28 white transition--all transition--150 transition--ease-in-out fs--16--responsive-mobile fs--16--responsive-mobile-portrait lh--24--responsive-mobile lh--24--responsive-mobile-portrait">
                                                         View Profile
                                                     </span>
                                                 </div>
 
-                                                <div data-skew class="flex justify-center items-center w1 h--40 pv1 ph2 pointer">&nbsp;</div>
+                                                <div data-skew class="flex justify-center items-center w1 h--40 pv1 ph2 pointer h--32--responsive-mobile h--32--responsive-mobile-portrait">&nbsp;</div>
                                             </a>
                                             <!-- /view profile button -->
                                         </div>
@@ -652,15 +654,15 @@
                                         <!-- right buttons wrapper -->
                                         <div class="flex items-center self-stretch flex--max">
                                             <!-- view profile button -->
-                                            <a data-go-live-button class="flex justify-center items-center flex--max self-stretch h--40 relative pointer">
-                                                <div data-skew class="flex justify-center items-center w1 h--40 pv1 ph2 pointer">&nbsp;</div>
+                                            <a data-go-live-button class="flex justify-center items-center flex--max self-stretch h--40 relative pointer h--32--responsive-mobile h--32--responsive-mobile-portrait">
+                                                <div data-skew class="flex justify-center items-center w1 h--40 pv1 ph2 pointer h--32--responsive-mobile h--32--responsive-mobile-portrait">&nbsp;</div>
 
-                                                <div data-main class="flex justify-center items-center flex--max self-stretch gap--10 h--40 pv1 ph2 pointer">
-                                                    <span data-text class="fs--18 fw5 lh--28 black transition--all transition--150 transition--ease-in-out">
+                                                <div data-main class="flex justify-center items-center flex--max self-stretch gap--10 h--40 pv1 ph2 pointer h--32--responsive-mobile h--32--responsive-mobile-portrait">
+                                                    <span data-text class="fs--18 fw5 lh--28 black transition--all transition--150 transition--ease-in-out fs--16--responsive-mobile fs--16--responsive-mobile-portrait lh--24--responsive-mobile lh--24--responsive-mobile-portrait">
                                                         Go Live
                                                     </span>
 
-                                                    <img data-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/arrow_right%20up.svg" alt="" class="w--24 h--24 transition--all transition--150 transition--ease-in-out">
+                                                    <img data-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/arrow_right%20up.svg" alt="" class="w--24 h--24 transition--all transition--150 transition--ease-in-out w--20--responsive-mobile w--20--responsive-mobile-portrait h--20--responsive-mobile h--20--responsive-mobile-portrait">
                                                 </div>
                                             </a>
                                             <!-- /view profile button -->
@@ -674,9 +676,9 @@
                             <!-- /profile top section -->
 
                             <!-- quick video, audio, chat settings -->
-                            <div class="flex flex-column items-start self-stretch bg--col--white-0-20">
+                            <div class="flex flex-column items-start self-stretch bg--col--white-0-20 relative z-3">
                                 <!-- controls block -->
-                                <div class="flex flex-column items-start self-stretch gap--16 pa3 bb br--col--mischka">
+                                <div class="flex flex-column items-start self-stretch gap--16 pa3 bb br--col--mischka relative z-3">
                                     <!-- block header -->
                                     <div class="flex justify-between items-center self-stretch">
                                         <!-- block icon, heading, tooltip -->
@@ -691,7 +693,7 @@
 
                                             <span class="flex justify-center items-center">
                                                 <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
-                                                <div data-tooltip data-tooltip-arrow="true" data-tooltip-position="top center" data-tooltip-size="small" data-tooltip-theme="dark" class="relative z-5 pointer">
+                                                <div data-tooltip data-tooltip-arrow="true" data-tooltip-position="bottom center" data-tooltip-size="small" data-tooltip-theme="dark" class="relative z-5 pointer">
                                                     <img src="assets/images/help-circle.svg" alt="" class="w--16 h--16 filter--col--pale-sky pointer-events-none">
 
                                                     <div data-tooltip-text data-tooltip-content>
@@ -856,7 +858,7 @@
 
                                                 <div class="flex items-center">
                                                     <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
-                                                    <div data-tooltip="" data-tooltip-arrow="true" data-tooltip-position="bottom center" data-tooltip-size="default" data-tooltip-theme="dark" class="relative z-5 pointer">
+                                                    <div data-tooltip="" data-tooltip-arrow="true" data-tooltip-position="bottom right" data-tooltip-size="default" data-tooltip-theme="dark" class="relative z-5 pointer">
                                                         <img src="assets/images/help-circle.svg" alt="" class="w--16 h--16 filter--col--pale-sky">
 
                                                         <div data-tooltip-text="" data-tooltip-content="">
@@ -876,7 +878,7 @@
                                 <!-- /controls block -->
 
                                 <!-- controls block -->
-                                <div class="flex flex-column items-start self-stretch gap--16 pa3 bb br--col--mischka">
+                                <div class="flex flex-column items-start self-stretch gap--16 pa3 bb br--col--mischka relative z-2">
                                     <!-- block header -->
                                     <div class="flex justify-between items-center self-stretch">
                                         <!-- block icon, heading, tooltip -->
@@ -891,7 +893,7 @@
 
                                             <span class="flex justify-center items-center">
                                                 <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
-                                                <div data-tooltip data-tooltip-arrow="true" data-tooltip-position="top center" data-tooltip-size="small" data-tooltip-theme="dark" class="relative z-5 pointer">
+                                                <div data-tooltip data-tooltip-arrow="true" data-tooltip-position="bottom center" data-tooltip-size="small" data-tooltip-theme="dark" class="relative z-5 pointer">
                                                     <img src="assets/images/help-circle.svg" alt="" class="w--16 h--16 filter--col--pale-sky">
 
                                                     <div data-tooltip-text data-tooltip-content>
@@ -1056,7 +1058,7 @@
 
                                                 <div class="flex items-center">
                                                     <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
-                                                    <div data-tooltip="" data-tooltip-arrow="true" data-tooltip-position="bottom center" data-tooltip-size="default" data-tooltip-theme="dark" class="relative z-5 pointer">
+                                                    <div data-tooltip="" data-tooltip-arrow="true" data-tooltip-position="bottom right" data-tooltip-size="default" data-tooltip-theme="dark" class="relative z-5 pointer">
                                                         <img src="assets/images/help-circle.svg" alt="" class="w--16 h--16 filter--col--pale-sky">
 
                                                         <div data-tooltip-text="" data-tooltip-content="">
@@ -1076,7 +1078,7 @@
                                 <!-- /controls block -->
 
                                 <!-- controls block -->
-                                <div class="flex flex-column items-start self-stretch gap--16 pa3 bb br--col--mischka">
+                                <div class="flex flex-column items-start self-stretch gap--16 pa3 bb br--col--mischka relative z-1">
                                     <!-- block header -->
                                     <div class="flex justify-between items-center self-stretch">
                                         <!-- block icon, heading, tooltip -->
@@ -1091,7 +1093,7 @@
 
                                             <span class="flex justify-center items-center">
                                                 <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
-                                                <div data-tooltip data-tooltip-arrow="true" data-tooltip-position="top center" data-tooltip-size="small" data-tooltip-theme="dark" class="relative z-5 pointer">
+                                                <div data-tooltip data-tooltip-arrow="true" data-tooltip-position="bottom center" data-tooltip-size="small" data-tooltip-theme="dark" class="relative z-5 pointer">
                                                     <img src="assets/images/help-circle.svg" alt="" class="w--16 h--16 filter--col--pale-sky">
 
                                                     <div data-tooltip-text data-tooltip-content>
@@ -1256,7 +1258,7 @@
 
                                                 <div class="flex items-center">
                                                     <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
-                                                    <div data-tooltip="" data-tooltip-arrow="true" data-tooltip-position="bottom center" data-tooltip-size="default" data-tooltip-theme="dark" class="relative z-5 pointer">
+                                                    <div data-tooltip="" data-tooltip-arrow="true" data-tooltip-position="bottom right" data-tooltip-size="default" data-tooltip-theme="dark" class="relative z-5 pointer">
                                                         <img src="assets/images/help-circle.svg" alt="" class="w--16 h--16 filter--col--pale-sky">
 
                                                         <div data-tooltip-text="" data-tooltip-content="">
@@ -1278,7 +1280,7 @@
                             <!-- /quick video, audio, chat settings -->
 
                             <!-- auto repost settings -->
-                            <div class="flex flex-column items-start self-stretch gap--16 pa3 bg--col--white--50">
+                            <div class="flex flex-column items-start self-stretch gap--16 pa3 bg--col--white--50 relative z-2">
                                 <!-- heading -->
                                 <div data-auto-repost-setting-toggle data-is-active="false" class="flex items-center gap--2 pointer transition--all transition--150 transition--ease-in-out">
                                     <span class="flex items-center fs--12 fw5 lh--18 col--oxford-blue pointer-events-none">

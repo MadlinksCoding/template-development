@@ -14,8 +14,16 @@ html {
   background-color: rgba(249, 250, 251, .7)
 }
 
+.fs--16--responsive-mobile {
+  font-size: 1rem
+}
+
 .fs--18-responsive-mobile {
   font-size: 1.125rem
+}
+
+.lh--24--responsive-mobile {
+  line-height: 1.5rem
 }
 
 .lh--28-responsive-mobile {
@@ -24,6 +32,10 @@ html {
 
 .bg--center-top-responsive-mobile {
   background-position: center top
+}
+
+.w--20--responsive-mobile {
+  width: 1.25rem
 }
 
 .w--32--responsive-mobile {
@@ -42,8 +54,8 @@ html {
   width: 100vw
 }
 
-.h--32--responsive-mobile {
-  height: 2rem
+.h--20--responsive-mobile {
+  height: 1.25rem
 }
 
 .h--48-responsive-mobile {
@@ -271,6 +283,16 @@ html {
 }
 
 [data-notifications-container] {
+  -webkit-transform: translateX(0);
+  transform: translateX(0)
+}
+
+[data-profile-panel-container][hidden] {
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%)
+}
+
+[data-profile-panel-container] {
   -webkit-transform: translateX(0);
   transform: translateX(0)
 }
