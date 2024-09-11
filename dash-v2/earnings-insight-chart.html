@@ -218,12 +218,12 @@
                             <!-- Button Group -->
                             <div class="flex items-start bg-white-30 sh--7 br--7 ba br--col--gray-300 overflow-hidden">
                                 <!-- Bar Chart Button -->
-                                <div data-id="sales-insight-bar-btn" class="flex items-center justify-center gap--7-12 pad--x--10-68 pad--y--7-12 br br--col--gray-300 pointer bg-white">
+                                <div data-id="sales-insight-bar-btn" data-button="sales-insight" class="flex items-center justify-center gap--7-12 pad--x--10-68 pad--y--7-12 br br--col--gray-300 pointer bg-white">
                                     <img src="assets/icons/bar-chart-07.svg" class="w--18 h--18 filter--col--black" data-img alt="" />
                                 </div>
                                 <!-- End Bar Chart Button -->
                                 <!-- Line Chart Button -->
-                                <div data-id="sales-insight-line-btn" class="flex items-center justify-center gap--7-12 pad--x--10-68 pad--y--7-12 pointer">
+                                <div data-id="sales-insight-line-btn" data-button="sales-insight" class="flex items-center justify-center gap--7-12 pad--x--10-68 pad--y--7-12 pointer">
                                     <img src="assets/icons/line-chart-up-01.svg" class="w--18 h--18" data-img alt="" />
                                 </div>
                                 <!-- End Line Chart Button -->
@@ -343,7 +343,7 @@
               panY: false,
               wheelX: "none",
               wheelY: "none",
-              maxTooltipDistance: -1,
+              maxTooltipDistance: 1,
               paddingLeft: 0,
               paddingRight: 0,
               paddingBottom: 0,
@@ -629,330 +629,164 @@
 
         // Bar Chart Main Function
         function LineChart (chartRenderLine) {
-            // Create root element
-            var root = am5.Root.new(chartRenderLine);
-
-            root._logo.dispose();
-             
-            // Create chart
-
-            var chart = root.container.children.push(am5xy.XYChart.new(root, {
-
-              panX: false,
-
-              panY: false,
-
-              wheelX: "none",
-
-              wheelY: "none",
-
-              pinchZoomX: false,
-
-              paddingLeft: 0,
-
-              paddingRight: 0,
-
-              paddingBottom: 0,
-
-              paddingTop: 0,
-
-              maxTooltipDistance: 0
-
-            }));
-             
-            // Add cursor
-
-            var cursor = chart.set("cursor", am5xy.XYCursor.new(root, {
-
-              behavior: "none"
-
-            }));
-
-            cursor.lineY.set("visible", false);
-
-            cursor.lineX.set("visible", false);
-             
-            // Static data with short month names for xAxis and full month names in uppercase for tooltips
-
-            var staticValues = [
-
-              { month: "Jan", fullMonth: "JANUARY", year: 2023, subscription: 155, paytoview: 120, merch: 90, wishtender: 120, customrequest: 50 },
-
-              { month: "Feb", fullMonth: "FEBRUARY", year: 2023, subscription: 105, paytoview: 95, merch: 145, wishtender: 120, customrequest: 50 },
-
-              { month: "Mar", fullMonth: "MARCH", year: 2023, subscription: 110, paytoview: 130, merch: 125, wishtender: 110, customrequest: 100 },
-
-              { month: "Apr", fullMonth: "APRIL", year: 2023, subscription: 115, paytoview: 165, merch: 105, wishtender: 160, customrequest: 90 },
-
-              { month: "May", fullMonth: "MAY", year: 2023, subscription: 120, paytoview: 160, merch: 140, wishtender: 120, customrequest: 90 },
-
-              { month: "Jun", fullMonth: "JUNE", year: 2023, subscription: 125, paytoview: 145, merch: 165, wishtender: 140, customrequest: 90 },
-
-              { month: "Jul", fullMonth: "JULY", year: 2023, subscription: 150, paytoview: 130, merch: 170, wishtender: 120, customrequest: 170 },
-
-              { month: "Aug", fullMonth: "AUGUST", year: 2023, subscription: 140, paytoview: 150, merch: 135, wishtender: 120, customrequest: 90 },
-
-              { month: "Sep", fullMonth: "SEPTEMBER", year: 2023, subscription: 130, paytoview: 110, merch: 120, wishtender: 180, customrequest: 120 },
-
-              { month: "Oct", fullMonth: "OCTOBER", year: 2023, subscription: 160, paytoview: 170, merch: 150, wishtender: 120, customrequest: 90 },
-
-              { month: "Nov", fullMonth: "NOVEMBER", year: 2023, subscription: 170, paytoview: 180, merch: 155, wishtender: 140, customrequest: 150 },
-
-              { month: "Dec", fullMonth: "DECEMBER", year: 2023, subscription: 180, paytoview: 190, merch: 160, wishtender: 120, customrequest: 90 }
-
-            ];
-             
-            // Create axes
-
-            var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
-
-              categoryField: "month",
-
-              renderer: am5xy.AxisRendererX.new(root, {
-
-                minGridDistance: 30
-
-              })
-
-            }));
-             
-            xAxis.data.setAll(staticValues); // Set the X-axis categories as the months
-             
-            xAxis.get("renderer").labels.template.setAll({
-
-              fontSize: "0.75rem", // Set the font size for X-axis labels
-
-              fill: am5.color(0x475467), // Text color
-
-            });
-             
-            var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
-
-              renderer: am5xy.AxisRendererY.new(root, {})
-
-            }));
-             
-            yAxis.get("renderer").labels.template.setAll({
-
-              visible: false,
-
-              paddingLeft: 0,
-
-            });
-             
-            // Function to add series with debugging and tooltips
-
-            function addSeries(name, fieldName, color) {
-
-              var series = chart.series.push(am5xy.SmoothedXLineSeries.new(root, {
-
-                name: name,
-
-                xAxis: xAxis,
-
-                yAxis: yAxis,
-
-                valueYField: fieldName,
-
-                categoryXField: "month",
-
-                stroke: color,
-
-                tooltip: am5.Tooltip.new(root, {
-
-                  labelText: "[font color='#667085'][bold]{fullMonth} {year.formatNumber('#')}[/]\n\n[font color='{stroke}']● [/][font color='#344054']{name}\t[/][font color='#101828'][bold]{valueY} USD[/]", // Custom tooltip content
-
-                  label: {
-
-                    fill: am5.color(0x000000), // Set text color to black
-
-                    fontSize: "12px", // Font size
-
-                    fontFamily: "'Poppins', sans-serif",
-
-                    lineHeight: "1.125rem"
-
-                  },
-
-                  getFillFromSprite: false, // Prevent inheriting color from the series
-
-                  tooltipPosition: "fixed", // Fix the tooltip position
-
-                  background: am5.RoundedRectangle.new(root, {
-
-                    fill: am5.color(0xFFFFFF), // White background
-
-                    cornerRadiusTL: 0, // Top-left corner radius
-
-                    cornerRadiusTR: 0, // Top-right corner radius
-
-                    cornerRadiusBL: 0, // Bottom-left corner radius
-
-                    cornerRadiusBR: 0, // Bottom-right corner radius
-
-                    shadowColor: am5.color(0xE2E2E2, 0.08), // Shadow color with opacity
-
-                    shadowBlur: 8, // Shadow blur
-
-                    shadowOffsetX: 0, // Horizontal shadow offset
-
-                    shadowOffsetY: 0  // Vertical shadow offset
-
-                  })
-
+          // Create root element
+          var root = am5.Root.new(chartRenderLine);
+          root._logo.dispose();
+
+          // Create chart
+          var chart = root.container.children.push(am5xy.XYChart.new(root, {
+            panX: false,
+            panY: false,
+            wheelX: "none",
+            wheelY: "none",
+            pinchZoomX: false,
+            paddingLeft: 0,
+            paddingRight: 0,
+            paddingBottom: 0,
+            paddingTop: 0,
+            maxTooltipDistance: 0
+          }));
+
+          // Add cursor
+          var cursor = chart.set("cursor", am5xy.XYCursor.new(root, { behavior: "none" }));
+          cursor.lineY.set("visible", false);
+          cursor.lineX.set("visible", false);
+
+          // Static data with short month names for xAxis and full month names in uppercase for tooltips
+          var staticValues = [
+            { month: "Jan", fullMonth: "JANUARY", year: 2023, subscription: 155, paytoview: 120, merch: 90, wishtender: 120, customrequest: 50 },
+            { month: "Feb", fullMonth: "FEBRUARY", year: 2023, subscription: 105, paytoview: 95, merch: 145, wishtender: 120, customrequest: 50 },
+            { month: "Mar", fullMonth: "MARCH", year: 2023, subscription: 110, paytoview: 130, merch: 125, wishtender: 110, customrequest: 100 },
+            { month: "Apr", fullMonth: "APRIL", year: 2023, subscription: 115, paytoview: 165, merch: 105, wishtender: 160, customrequest: 90 },
+            { month: "May", fullMonth: "MAY", year: 2023, subscription: 120, paytoview: 160, merch: 140, wishtender: 120, customrequest: 90 },
+            { month: "Jun", fullMonth: "JUNE", year: 2023, subscription: 125, paytoview: 145, merch: 165, wishtender: 140, customrequest: 90 },
+            { month: "Jul", fullMonth: "JULY", year: 2023, subscription: 150, paytoview: 130, merch: 170, wishtender: 120, customrequest: 170 },
+            { month: "Aug", fullMonth: "AUGUST", year: 2023, subscription: 140, paytoview: 150, merch: 135, wishtender: 120, customrequest: 90 },
+            { month: "Sep", fullMonth: "SEPTEMBER", year: 2023, subscription: 130, paytoview: 110, merch: 120, wishtender: 180, customrequest: 120 },
+            { month: "Oct", fullMonth: "OCTOBER", year: 2023, subscription: 160, paytoview: 170, merch: 150, wishtender: 120, customrequest: 90 },
+            { month: "Nov", fullMonth: "NOVEMBER", year: 2023, subscription: 170, paytoview: 180, merch: 155, wishtender: 140, customrequest: 150 },
+            { month: "Dec", fullMonth: "DECEMBER", year: 2023, subscription: 180, paytoview: 190, merch: 160, wishtender: 120, customrequest: 90 }
+          ];
+
+          // Create axes
+          var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
+            categoryField: "month",
+            renderer: am5xy.AxisRendererX.new(root, { minGridDistance: 30 })
+          }));
+          xAxis.data.setAll(staticValues); // Set the X-axis categories as the months
+          xAxis.get("renderer").labels.template.setAll({
+            fontSize: "0.75rem", // Set the font size for X-axis labels
+            fill: am5.color(0x475467), // Text color
+          });
+
+          var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
+            renderer: am5xy.AxisRendererY.new(root, {})
+          }));
+          yAxis.get("renderer").labels.template.setAll({
+            visible: false,
+            paddingLeft: 0,
+          });
+
+          // Function to add series with debugging and tooltips
+          function addSeries(name, fieldName, color) {
+            var series = chart.series.push(am5xy.SmoothedXLineSeries.new(root, {
+              name: name,
+              xAxis: xAxis,
+              yAxis: yAxis,
+              valueYField: fieldName,
+              categoryXField: "month",
+              stroke: color,
+              tooltip: am5.Tooltip.new(root, {
+                label: {
+                  fill: am5.color(0x000000), // Set text color to black
+                  lineHeight: 1.8
+                },
+                labelText: "[font color='#667085' fontFamily: 'Poppins' fontWeight:600 fontSize: .75rem]{fullMonth} {year.formatNumber('#')}[/]\n[font color='{stroke}' fontSize: 16px]● [/][font color='#344054' fontFamily: 'Poppins' fontWeight:400 fontSize: .75rem]{name}\t\t\t[/][font color='#101828' fontFamily: 'Poppins' fontWeight:500 fontSize: .75rem]USD {valueY}[/]", // Custom tooltip 
+
+                getFillFromSprite: false, // Prevent inheriting color from the series
+                pointerOrientation: "horizontal", // Ensure the tooltip is positioned horizontally
+                tooltipPosition: "pointer", // Fix the tooltip position
+                background: am5.RoundedRectangle.new(root, {
+                  fill: am5.color(0xFFFFFF), // White background
+                  cornerRadiusTL: 0,
+                  cornerRadiusTR: 0,
+                  cornerRadiusBL: 0,
+                  cornerRadiusBR: 0,
+                  shadowColor: am5.color(0xE2E2E2, 0.08), // Shadow color with opacity
+                  shadowBlur: 8,
+                  shadowOffsetX: 0,
+                  shadowOffsetY: 0
                 })
-
-              }));
-             
-              series.strokes.template.setAll({
-
-                strokeWidth: 3,
-
-                stroke: color,
-
-              });
-             
-              // Ensure the tooltip references the correct stroke color
-
-              series.get("tooltip").label.adapters.add("text", function(text, target) {
-
-                return text.replace("{stroke}", am5.color(color).toCSSHex());
-
-              });
-             
-              // Add bullet on hover
-
-              series.bullets.push(function() {
-
-                var circle = am5.Circle.new(root, {
-
-                  radius: 5,
-
-                  fill: color,
-
-                  stroke: am5.color(0xFFFFFF),
-
-                  strokeWidth: 2,
-
-                  visible: false // Hide bullet by default
-
-                });
-             
-                // Create hover state
-
-                circle.states.create("default", { visible: false });
-
-                circle.states.create("hover", { visible: true });
-             
-                var bullet = am5.Bullet.new(root, {
-
-                  sprite: circle,
-
-                  locationX: 0.5,
-
-                  locationY: 0.5
-
-                });
-             
-                // Show bullet on hover
-
-                bullet.events.on("pointerover", function() {
-
-                  circle.set("visible", true);
-
-                });
-             
-                // Hide bullet when not hovered
-
-                bullet.events.on("pointerout", function() {
-
-                  circle.set("visible", false);
-
-                });
-             
-                return bullet;
-
-              });
-             
-              // Add bullet on tooltip
-
-              series.events.on("tooltipshownat", function(ev) {
-
-                var dataItem = ev.target.dataItem;
-
-                var bullet = series.bulletsContainer.children.getIndex(0);
-
-                if (bullet) {
-
-                  bullet.set("locationX", dataItem.get("locationX"));
-
-                  bullet.set("locationY", dataItem.get("locationY"));
-
-                  bullet.set("visible", true);
-
-                }
-
-              });
-             
-              series.events.on("tooltiphiddenat", function(ev) {
-
-                var bullet = series.bulletsContainer.children.getIndex(0);
-
-                if (bullet) {
-
-                  bullet.set("visible", false);
-
-                }
-
-              });
-             
-              series.data.setAll(staticValues);
-
-              series.appear(1000);
-
-            }
-             
-            // Add series with explicit colors
-
-            addSeries("Subscription", "subscription", am5.color(0x4CC9F0));
-
-            addSeries("Pay to view", "paytoview", am5.color(0x4361EE));
-
-            addSeries("Merch", "merch", am5.color(0x3A0BA3));
-
-            addSeries("Wishtender", "wishtender", am5.color(0xAE4AEF));
-
-            addSeries("Custom request", "customrequest", am5.color(0xF72585));
-             
-            // Remove Y-Axis Grid
-
-            yAxis.get("renderer").grid.template.setAll({
-
-              stroke: am5.color(0xf2f4f7)
-
-            });
-             
-            // Remove X-Axis Grid
-
-            xAxis.get("renderer").grid.template.setAll({
-
-              stroke: am5.color(0xf2f4f7)
-
-            });
-             
-            // Add scrollbar
-
-            chart.set("scrollbarX", am5.Scrollbar.new(root, {
-
-              orientation: "horizontal",
-
-              visible: false,
-
+              })
             }));
-             
-            // Animate chart on load
 
-            chart.appear(1000, 100);
+            series.strokes.template.setAll({ strokeWidth: 3, stroke: color });
+
+            // Ensure the tooltip references the correct stroke color
+            series.get("tooltip").label.adapters.add("text", function(text, target) {
+              return text.replace("{stroke}", am5.color(color).toCSSHex());
+            });
+
+            // Create a bullet template
+            var bulletTemplate = am5.Template.new({});
+
+            // Add bullet to the series
+            series.bullets.push(function() {
+                return am5.Bullet.new(root, {
+                    sprite: am5.Circle.new(root, {
+                        radius: 5,
+                        fill: color,
+                        opacity: 0 // Start with invisible bullet
+                    }, bulletTemplate)
+                });
+            });
+
+            // Show bullet when tooltip is shown
+            series.events.on("tooltipshownat", function(ev) {
+                var dataItem = ev.target.get("tooltipDataItem");
+                var bullet = dataItem.bullets[0];
+                if (bullet && bullet.get("sprite")) {
+                    bullet.get("sprite").set("opacity", 1); // Make bullet visible
+                }
+            });
+
+            // Hide bullet when tooltip is hidden
+            series.events.on("tooltiphiddenat", function(ev) {
+                var dataItem = ev.target.get("tooltipDataItem");
+                if (dataItem) {
+                    var bullet = dataItem.bullets[0];
+                    if (bullet && bullet.get("sprite")) {
+                        bullet.get("sprite").set("opacity", 0); // Make bullet invisible
+                    }
+                }
+            });
+
+            series.data.setAll(staticValues);
+            series.appear(1000);
+          }
+
+          // Add series with explicit colors
+          addSeries("Subscription", "subscription", am5.color(0x4CC9F0));
+          addSeries("Pay to view", "paytoview", am5.color(0x4361EE));
+          addSeries("Merch", "merch", am5.color(0x3A0BA3));
+          addSeries("Wishtender", "wishtender", am5.color(0xAE4AEF));
+          addSeries("Custom request", "customrequest", am5.color(0xF72585));
+
+          // Remove Y-Axis Grid
+          yAxis.get("renderer").grid.template.setAll({ stroke: am5.color(0xf2f4f7) });
+
+          // Remove X-Axis Grid
+          xAxis.get("renderer").grid.template.setAll({ stroke: am5.color(0xf2f4f7) });
+
+          // Add scrollbar
+          chart.set("scrollbarX", am5.Scrollbar.new(root, {
+            orientation: "horizontal",
+            visible: false
+          }));
+
+          // Animate chart on load
+          chart.appear(1000, 100);
+
         }
 
         // Create root element
@@ -969,7 +803,7 @@
 
 
         // Bar Chart and Line Chart Tab Element Click Function
-        document.querySelectorAll('[data-id]').forEach(function(element) {
+        document.querySelectorAll('[data-button="sales-insight"]').forEach(function(element) {
             element.addEventListener('click', function() {
                 const dataId = this.getAttribute('data-id');
                 
