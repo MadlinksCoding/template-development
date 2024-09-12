@@ -41,6 +41,10 @@ class DashSideBarHandler {
 				profilePanelTriggerEl: '', // profile panel trigger element
 				profilePanelEl: '', // profile panel element
 
+				profileDottedButtonSelector: '[data-profile-dotted-button]', // profile dotted button selector
+
+				profileDottedButtonEl: '', // profile dotted button selector
+
 				notificationsPanelTriggerSelector: '[data-notifications-panel-trigger]', // notifications panel trigger selector
 				notificationsPanelSelector: '[data-notifications-container]', // notifications panel selector
 
@@ -506,6 +510,16 @@ class DashSideBarHandler {
 
 			_self.options.profilePanelEl.querySelector('[data-back-button]').classList.add('js-event-handler-attached');
 		}
+
+		// handle profile dotted button click
+		_self.options.profileDottedButtonEl.addEventListener('click', (evt) => {
+			if ( _self.options.profileDottedButtonEl.dataset.isActive === 'false' ) {
+				_self.options.profileDottedButtonEl.dataset.isActive = 'true';
+			}
+			else {
+				_self.options.profileDottedButtonEl.dataset.isActive = 'false';
+			}
+		});
 	}
 
 
@@ -582,6 +596,8 @@ class DashSideBarHandler {
 			if ( document.querySelector(this.options.profilePanelSelector) !== null && document.querySelector(this.options.profilePanelSelector) !== 'undefined' ) {
 				this.options.profilePanelTriggerEl = document.querySelectorAll(this.options.profilePanelTriggerSelector);
 				this.options.profilePanelEl = document.querySelector(this.options.profilePanelSelector);
+
+				this.options.profileDottedButtonEl = document.querySelector(this.options.profileDottedButtonSelector);
 
 				this.handleProfilePanel();
 			}
