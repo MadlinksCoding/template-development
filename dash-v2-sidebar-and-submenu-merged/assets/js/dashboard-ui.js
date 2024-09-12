@@ -618,7 +618,7 @@ class DashSideBarHandler {
 /**
  * 
  * @class DashProfileStatusDropdown
- * @classdesc Fansocial Dashboard Profile Submenu Status Dropdowns UI behavoir and handlers
+ * @classdesc Fansocial Dashboard Profile Submenu Status Dropdowns UI behavior and handlers
  * Once clicked any dropdown trigger, the dropdown will open and accept "click" on the dropdown options as user interaction and change dropdown trigger values and will throw a custom event
  * 
  */
@@ -626,7 +626,7 @@ class DashProfileStatusDropdown {
 	static instances = []; // to hold all status dropdown instances
 
   constructor(element) {
-    this.element = element; // main dropdown wrapper [data-status-dropdown-main]
+    this.element = element; // main dropdown wrapper [data-js-status-dropdown]
     this.trigger = element.querySelector('[data-status-dropdown-trigger]'); // dropdown trigger element [data-status-dropdown-trigger]
     this.dropdown = element.querySelector('[data-status-dropdown]'); // the dropdown list wrapper [data-status-dropdown]
     this.statusTypes = element.querySelectorAll('[data-status-type]'); // status types list items, holds the status values [data-status-type]
@@ -735,6 +735,138 @@ class DashProfileStatusDropdown {
 
 /**
  * 
+ * @class DashStatusMessageEditor
+ * @classdesc Fansocial Dashboard Profile Status Messages Editor UI behavior and handlers
+ * Clicking "Edit" button will enable editing, count characters entered, cancel edited text, save edited text and thorw custom event with details
+ * Once clicked any dropdown trigger, the dropdown will open and accept "click" on the dropdown options as user interaction and change dropdown trigger values and will throw a custom event
+ * 
+ */
+class DashStatusMessageEditor {
+  constructor(element) {
+    this.element = element; // main massage editor wrapper
+    this.textbox = element.querySelector('[data-online-status-message-text]'); // hidden input field to hold message
+    this.editButton = element.querySelector('[data-online-status-message-edit]'); // edit message button element
+    this.editControls = element.querySelector('[data-online-status-message-edit-controls]'); // word count, cancel, save elements wrapper
+    this.wordCount = element.querySelector('[data-online-status-message-edit-word-count]'); // word count element
+    this.cancelButton = element.querySelector('[data-online-status-message-edit-cancel]'); // cancel edit button element
+    this.saveButton = element.querySelector('[data-online-status-message-edit-save]'); // save edit button element
+    this.isEditing = false; // flag
+    this.previousText = this.textbox.value; // container to restore previous text in cancelled
+
+		// bind 'click' event to enable editing
+    this.editButton.addEventListener('click', this.enableEditing.bind(this));
+
+		// bind 'click' event to cancel editing
+    this.cancelButton.addEventListener('click', this.cancelEditing.bind(this));
+
+		// bind 'click' event to save new edited message
+    this.saveButton.addEventListener('click', this.saveEditing.bind(this));
+
+		// bind 'keyup' event to count characters
+    this.textbox.addEventListener('input', this.updateWordCount.bind(this));
+
+		// count characters
+		this.updateWordCount();
+  }
+
+
+	/** 
+	 * 
+	 * @method enableEditing 
+	 * @description Enables the current instance for editing
+	 * 
+	 */
+  enableEditing() {
+    this.isEditing = true;
+
+    this.element.setAttribute('data-is-editing', this.isEditing);
+    this.textbox.removeAttribute('readonly');
+  }
+
+
+	/** 
+	 * 
+	 * @method cancelEditing 
+	 * @description Canceles the current edited text and restores previous text
+	 * 
+	 */
+  cancelEditing() {
+    this.isEditing = false;
+
+    this.element.setAttribute('data-is-editing', this.isEditing);
+    this.textbox.setAttribute('readonly', '');
+    this.textbox.value = this.previousText;
+
+		// count characters
+		this.updateWordCount();
+  }
+
+
+	/** 
+	 * 
+	 * @method saveEditing 
+	 * @description Saves the current edited text and disbales editing
+	 * 
+	 */
+  saveEditing() {
+    this.isEditing = false;
+
+    this.element.setAttribute('data-is-editing', this.isEditing);
+    this.textbox.setAttribute('readonly', '');
+    this.previousText = this.textbox.value;
+
+		// count characters
+		this.updateWordCount();
+
+		// throw custom event
+    this.throwEvent();
+  }
+
+
+	/** 
+	 * 
+	 * @method updateWordCount 
+	 * @description Keeps track of characters entered and does not let the char count go beyond 100
+	 * 
+	 */
+	updateWordCount() {
+    const characterCount = this.textbox.value.length;
+    this.wordCount.textContent = `${characterCount}/100`;
+
+		// restrict characters upto 100 only (can be made dynamic by passing additional data-* attribute to instance)
+    if ( characterCount > 100 ) {
+      this.textbox.value = this.textbox.value.substring(0, 100);
+    }
+  }
+
+
+	/** 
+	 * 
+	 * @method throwEvent 
+	 * @description Invokes a custom event with details
+	 * 
+	 */
+	throwEvent() {
+    // get the event name to throw
+    const eventName = this.element.getAttribute('data-throw-event');
+
+		// create payload to be sent with event
+		let payload = {
+			textStatusChange: true,
+			textStatusValue: this.textbox.value
+		}
+
+		// create custom event
+    const event = new CustomEvent(eventName, { detail: {payload} });
+
+		// throw the event ( usage: document.addEventListener('custom_eventName', (evt) => { console.log('status changed', evt.detail); }); )
+    document.dispatchEvent(event);
+  }
+}
+
+
+/**
+ * 
  * Initiates JS executions after DOM contents are loaded (equivalant to jQuery $document.on(ready){...})
  * 
  */
@@ -748,8 +880,14 @@ document.addEventListener("DOMContentLoaded", (event) => {
 	fansocialDashSideBarHandler.init();
 
 
-	// Initialize the status dropdown class for all elements with data-status-dropdown-main
-	document.querySelectorAll('[data-status-dropdown-main]').forEach((element) => {
+	// Initialize the status dropdown class for all elements with data-js-status-dropdown
+	document.querySelectorAll('[data-js-status-dropdown]').forEach((element) => {
 		new DashProfileStatusDropdown(element);
+	});
+
+
+	// Initialize the status message editor class for all elements with data-js-status-message-editor
+	document.querySelectorAll('[data-js-status-message-editor]').forEach((element) => {
+		new DashStatusMessageEditor(element);
 	});
 });
