@@ -763,9 +763,9 @@ class DashStatusMessageEditor {
     this.saveButton.addEventListener('click', this.saveEditing.bind(this));
 
 		// bind 'keyup' event to count characters
-    this.textbox.addEventListener('keyup', this.updateWordCount.bind(this));
+    this.textbox.addEventListener('input', this.updateWordCount.bind(this));
 
-		// count characters initially
+		// count characters
 		this.updateWordCount();
   }
 
@@ -796,6 +796,9 @@ class DashStatusMessageEditor {
     this.element.setAttribute('data-is-editing', this.isEditing);
     this.textbox.setAttribute('readonly', '');
     this.textbox.value = this.previousText;
+
+		// count characters
+		this.updateWordCount();
   }
 
 
@@ -811,6 +814,9 @@ class DashStatusMessageEditor {
     this.element.setAttribute('data-is-editing', this.isEditing);
     this.textbox.setAttribute('readonly', '');
     this.previousText = this.textbox.value;
+
+		// count characters
+		this.updateWordCount();
 
 		// throw custom event
     this.throwEvent();
@@ -828,7 +834,7 @@ class DashStatusMessageEditor {
     this.wordCount.textContent = `${characterCount}/100`;
 
 		// restrict characters upto 100 only (can be made dynamic by passing additional data-* attribute to instance)
-    if ( characterCount >= 100 ) {
+    if ( characterCount > 100 ) {
       this.textbox.value = this.textbox.value.substring(0, 100);
     }
   }
