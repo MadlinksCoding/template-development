@@ -913,24 +913,43 @@
 
           // Static data with short month names for xAxis and full month names in uppercase for tooltips
           var staticValues = [
-            { month: "Jan", fullMonth: "JANUARY", year: 2023, subscription: 155, paytoview: 120, merch: 90, wishtender: 120, customrequest: 50 },
-            { month: "Feb", fullMonth: "FEBRUARY", year: 2023, subscription: 105, paytoview: 95, merch: 145, wishtender: 120, customrequest: 50 },
-            { month: "Mar", fullMonth: "MARCH", year: 2023, subscription: 110, paytoview: 130, merch: 125, wishtender: 110, customrequest: 100 },
-            { month: "Apr", fullMonth: "APRIL", year: 2023, subscription: 115, paytoview: 165, merch: 105, wishtender: 160, customrequest: 90 },
-            { month: "May", fullMonth: "MAY", year: 2023, subscription: 120, paytoview: 160, merch: 140, wishtender: 120, customrequest: 90 },
-            { month: "Jun", fullMonth: "JUNE", year: 2023, subscription: 125, paytoview: 145, merch: 165, wishtender: 140, customrequest: 90 },
-            { month: "Jul", fullMonth: "JULY", year: 2023, subscription: 150, paytoview: 130, merch: 170, wishtender: 120, customrequest: 170 },
-            { month: "Aug", fullMonth: "AUGUST", year: 2023, subscription: 140, paytoview: 150, merch: 135, wishtender: 120, customrequest: 90 },
-            { month: "Sep", fullMonth: "SEPTEMBER", year: 2023, subscription: 130, paytoview: 110, merch: 120, wishtender: 180, customrequest: 120 },
-            { month: "Oct", fullMonth: "OCTOBER", year: 2023, subscription: 160, paytoview: 170, merch: 150, wishtender: 120, customrequest: 90 },
-            { month: "Nov", fullMonth: "NOVEMBER", year: 2023, subscription: 170, paytoview: 180, merch: 155, wishtender: 140, customrequest: 150 },
-            { month: "Dec", fullMonth: "DECEMBER", year: 2023, subscription: 180, paytoview: 190, merch: 160, wishtender: 120, customrequest: 90 }
+            { day: "Jul 1", year: 2023, subscription: 155, paytoview: 120, merch: 90, wishtender: 120, customrequest: 50 },
+            { day: "Jul 2", year: 2023, subscription: 105, paytoview: 95, merch: 145, wishtender: 120, customrequest: 50 },
+            { day: "Jul 3", year: 2023, subscription: 110, paytoview: 130, merch: 125, wishtender: 110, customrequest: 100 },
+            { day: "Jul 4", year: 2023, subscription: 115, paytoview: 165, merch: 105, wishtender: 160, customrequest: 90 },
+            { day: "Jul 5", year: 2023, subscription: 120, paytoview: 160, merch: 140, wishtender: 120, customrequest: 90 },
+            { day: "Jul 6", year: 2023, subscription: 125, paytoview: 145, merch: 165, wishtender: 140, customrequest: 90 },
+            { day: "Jul 7", year: 2023, subscription: 150, paytoview: 130, merch: 170, wishtender: 120, customrequest: 170 },
+            { day: "Jul 8", year: 2023, subscription: 140, paytoview: 150, merch: 135, wishtender: 120, customrequest: 90 },
+            { day: "Jul 9", year: 2023, subscription: 130, paytoview: 110, merch: 120, wishtender: 180, customrequest: 120 },
+            { day: "Jul 10", year: 2023, subscription: 160, paytoview: 170, merch: 150, wishtender: 120, customrequest: 90 },
+            { day: "Jul 11", year: 2023, subscription: 170, paytoview: 180, merch: 155, wishtender: 140, customrequest: 150 },
+            { day: "Jul 12", year: 2023, subscription: 180, paytoview: 190, merch: 160, wishtender: 120, customrequest: 90 },
+            { day: "Jul 13", year: 2023, subscription: 160, paytoview: 170, merch: 150, wishtender: 120, customrequest: 90 },
+            { day: "Jul 14", year: 2023, subscription: 170, paytoview: 180, merch: 155, wishtender: 140, customrequest: 150 },
+            { day: "Jul 15", year: 2023, subscription: 180, paytoview: 190, merch: 160, wishtender: 120, customrequest: 90 },
+            { day: "Jul 16", year: 2023, subscription: 160, paytoview: 170, merch: 150, wishtender: 120, customrequest: 90 },
+            { day: "Jul 17", year: 2023, subscription: 170, paytoview: 180, merch: 155, wishtender: 140, customrequest: 150 },
+            { day: "Jul 18", year: 2023, subscription: 180, paytoview: 190, merch: 160, wishtender: 120, customrequest: 90 },
+            { day: "Jul 19", year: 2023, subscription: 160, paytoview: 170, merch: 150, wishtender: 120, customrequest: 90 },
+            { day: "Jul 20", year: 2023, subscription: 170, paytoview: 180, merch: 155, wishtender: 140, customrequest: 150 },
+            { day: "Jul 21", year: 2023, subscription: 180, paytoview: 190, merch: 160, wishtender: 120, customrequest: 90 },
+            { day: "Jul 22", year: 2023, subscription: 160, paytoview: 170, merch: 150, wishtender: 120, customrequest: 90 },
+            { day: "Jul 23", year: 2023, subscription: 170, paytoview: 180, merch: 155, wishtender: 140, customrequest: 150 },
+            { day: "Jul 24", year: 2023, subscription: 180, paytoview: 190, merch: 160, wishtender: 120, customrequest: 90 },
+            { day: "Jul 25", year: 2023, subscription: 160, paytoview: 170, merch: 150, wishtender: 120, customrequest: 90 },
+            { day: "Jul 26", year: 2023, subscription: 170, paytoview: 180, merch: 155, wishtender: 140, customrequest: 150 },
+            { day: "Jul 27", year: 2023, subscription: 180, paytoview: 190, merch: 160, wishtender: 120, customrequest: 90 },
+            { day: "Jul 28", year: 2023, subscription: 160, paytoview: 170, merch: 150, wishtender: 120, customrequest: 90 },
+            { day: "Jul 29", year: 2023, subscription: 170, paytoview: 180, merch: 155, wishtender: 140, customrequest: 150 },
+            { day: "Jul 30", year: 2023, subscription: 180, paytoview: 190, merch: 160, wishtender: 120, customrequest: 90 }
           ];
 
           // Create axes
           var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
             categoryField: "day",
-            renderer: am5xy.AxisRendererX.new(root, { minGridDistance: 30 })
+            paddingLeft: 20,
+            renderer: am5xy.AxisRendererX.new(root, { minGridDistance: 100 })
           }));
           xAxis.data.setAll(staticValues); // Set the X-axis categories as the months
           xAxis.get("renderer").labels.template.setAll({
@@ -944,6 +963,8 @@
           yAxis.get("renderer").labels.template.setAll({
             visible: false,
             paddingLeft: 0,
+            paddingRight: 0,
+              paddingBottom: 10,
           });
 
           // Function to add series with debugging and tooltips
@@ -960,7 +981,7 @@
                   fill: am5.color(0x000000), // Set text color to black
                   lineHeight: 1.8
                 },
-                labelText: "[font color='#667085' fontFamily: 'Poppins' fontWeight:600 fontSize: .75rem]{fullMonth} {year.formatNumber('#')}[/]\n[font color='{stroke}' fontSize: 16px]● [/][font color='#344054' fontFamily: 'Poppins' fontWeight:400 fontSize: .75rem]{name}\t\t\t[/][font color='#101828' fontFamily: 'Poppins' fontWeight:500 fontSize: .75rem]USD {valueY}[/]", // Custom tooltip 
+                labelText: "[font color='#667085' fontFamily: 'Poppins' fontWeight:600 fontSize: .75rem]{day} [/]\n[font color='{stroke}' fontSize: 16px]● [/][font color='#344054' fontFamily: 'Poppins' fontWeight:400 fontSize: .75rem]{name}\t\t\t[/][font color='#101828' fontFamily: 'Poppins' fontWeight:500 fontSize: .75rem]USD {valueY}[/]", // Custom tooltip 
 
                 getFillFromSprite: false, // Prevent inheriting color from the series
                 pointerOrientation: "horizontal", // Ensure the tooltip is positioned horizontally
@@ -1028,8 +1049,8 @@
           addSeries("Subscription", "subscription", am5.color(0x4CC9F0));
           addSeries("Pay to view", "paytoview", am5.color(0x4361EE));
           addSeries("Merch", "merch", am5.color(0x3A0BA3));
-          addSeries("Wishtender", "wishtender", am5.color(0xAE4AEF));
-          addSeries("Custom request", "customrequest", am5.color(0xF72585));
+          addSeries("Wishtender", "wishtender", am5.color(0xF72585));
+          addSeries("Custom request", "customrequest", am5.color(0x98A2B3));
 
           //Y-Axis Grid Removed
           yAxis.get("renderer").grid.template.setAll({
@@ -1289,24 +1310,43 @@
 
           // Static data with short month names for xAxis and full month names in uppercase for tooltips
           var staticValues = [
-            { month: "Jan", fullMonth: "JANUARY", year: 2023, tip: 170, call: 130, chat: 50, livestreaming: 40},
-            { month: "Feb", fullMonth: "FEBRUARY", year: 2023, tip: 50, call: 120, chat: 90, livestreaming: 50 },
-            { month: "Mar", fullMonth: "MARCH", year: 2023, tip: 300, call: 120, chat: 120, livestreaming: 250 },
-            { month: "Apr", fullMonth: "APRIL", year: 2023, tip: 400, call: 520, chat: 160, livestreaming: 156 },
-            { month: "May", fullMonth: "MAY", year: 2023, tip: 155, call: 220, chat: 170, livestreaming: 521 },
-            { month: "Jun", fullMonth: "JUNE", year: 2023, tip: 100, call: 320, chat: 180, livestreaming: 124 },
-            { month: "Jul", fullMonth: "JULY", year: 2023, tip: 250, call: 120, chat: 150, livestreaming: 50 },
-            { month: "Aug", fullMonth: "AUGUST", year: 2023, tip: 655, call: 420, chat: 200, livestreaming: 52 },
-            { month: "Sep", fullMonth: "SEPTEMBER", year: 2023, tip: 750, call: 820, chat: 400, livestreaming: 158 },
-            { month: "Oct", fullMonth: "OCTOBER", year: 2023, tip: 160, call: 100, chat: 140, livestreaming: 320 },
-            { month: "Nov", fullMonth: "NOVEMBER", year: 2023, tip: 255, call: 120, chat: 150, livestreaming: 485 },
-            { month: "Dec", fullMonth: "DECEMBER", year: 2023, tip: 50, call: 60, chat: 90, livestreaming: 120 }
+            { day: "Jul 1", year: 2023, tip: 170, call: 130, chat: 50, livestreaming: 40},
+            { day: "Jul 2", year: 2023, tip: 50, call: 120, chat: 90, livestreaming: 50 },
+            { day: "Jul 3", year: 2023, tip: 300, call: 120, chat: 120, livestreaming: 250 },
+            { day: "Jul 4", year: 2023, tip: 400, call: 520, chat: 160, livestreaming: 156 },
+            { day: "Jul 5", year: 2023, tip: 155, call: 220, chat: 170, livestreaming: 521 },
+            { day: "Jul 6", year: 2023, tip: 100, call: 320, chat: 180, livestreaming: 124 },
+            { day: "Jul 7", year: 2023, tip: 250, call: 120, chat: 150, livestreaming: 50 },
+            { day: "Jul 8", year: 2023, tip: 655, call: 420, chat: 200, livestreaming: 52 },
+            { day: "Jul 9", year: 2023, tip: 750, call: 820, chat: 400, livestreaming: 158 },
+            { day: "Jul 10", year: 2023, tip: 160, call: 100, chat: 140, livestreaming: 320 },
+            { day: "Jul 11", year: 2023, tip: 170, call: 130, chat: 50, livestreaming: 40},
+            { day: "Jul 12", year: 2023, tip: 50, call: 120, chat: 90, livestreaming: 50 },
+            { day: "Jul 13", year: 2023, tip: 300, call: 120, chat: 120, livestreaming: 250 },
+            { day: "Jul 14", year: 2023, tip: 400, call: 520, chat: 160, livestreaming: 156 },
+            { day: "Jul 15", year: 2023, tip: 155, call: 220, chat: 170, livestreaming: 521 },
+            { day: "Jul 16", year: 2023, tip: 100, call: 320, chat: 180, livestreaming: 124 },
+            { day: "Jul 17", year: 2023, tip: 250, call: 120, chat: 150, livestreaming: 50 },
+            { day: "Jul 18", year: 2023, tip: 655, call: 420, chat: 200, livestreaming: 52 },
+            { day: "Jul 19", year: 2023, tip: 750, call: 820, chat: 400, livestreaming: 158 },
+            { day: "Jul 20", year: 2023, tip: 160, call: 100, chat: 140, livestreaming: 320 },
+            { day: "Jul 21", year: 2023, tip: 170, call: 130, chat: 50, livestreaming: 40},
+            { day: "Jul 22", year: 2023, tip: 50, call: 120, chat: 90, livestreaming: 50 },
+            { day: "Jul 23", year: 2023, tip: 300, call: 120, chat: 120, livestreaming: 250 },
+            { day: "Jul 24", year: 2023, tip: 400, call: 520, chat: 160, livestreaming: 156 },
+            { day: "Jul 25", year: 2023, tip: 155, call: 220, chat: 170, livestreaming: 521 },
+            { day: "Jul 26", year: 2023, tip: 100, call: 320, chat: 180, livestreaming: 124 },
+            { day: "Jul 27", year: 2023, tip: 250, call: 120, chat: 150, livestreaming: 50 },
+            { day: "Jul 28", year: 2023, tip: 655, call: 420, chat: 200, livestreaming: 52 },
+            { day: "Jul 29", year: 2023, tip: 750, call: 820, chat: 400, livestreaming: 158 },
+            { day: "Jul 30", year: 2023, tip: 160, call: 100, chat: 140, livestreaming: 320 }
           ];
 
           // Create axes
           var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
-            categoryField: "month",
-            renderer: am5xy.AxisRendererX.new(root, { minGridDistance: 30 })
+            categoryField: "day",
+            paddingLeft: 20,
+            renderer: am5xy.AxisRendererX.new(root, { minGridDistance: 100 })
           }));
           xAxis.data.setAll(staticValues); // Set the X-axis categories as the months
           xAxis.get("renderer").labels.template.setAll({
@@ -1329,14 +1369,14 @@
               xAxis: xAxis,
               yAxis: yAxis,
               valueYField: fieldName,
-              categoryXField: "month",
+              categoryXField: "day",
               stroke: color,
               tooltip: am5.Tooltip.new(root, {
                 label: {
                   fill: am5.color(0x000000), // Set text color to black
                   lineHeight: 1.8
                 },
-                labelText: "[font color='#667085' fontFamily: 'Poppins' fontWeight:600 fontSize: .75rem]{fullMonth} {year.formatNumber('#')}[/]\n[font color='{stroke}' fontSize: 16px]● [/][font color='#344054' fontFamily: 'Poppins' fontWeight:400 fontSize: .75rem]{name}\t\t\t[/][font color='#101828' fontFamily: 'Poppins' fontWeight:500 fontSize: .75rem]{valueY} Tokens[/]", // Custom tooltip 
+                labelText: "[font color='#667085' fontFamily: 'Poppins' fontWeight:600 fontSize: .75rem]{day} [/]\n[font color='{stroke}' fontSize: 16px]● [/][font color='#344054' fontFamily: 'Poppins' fontWeight:400 fontSize: .75rem]{name}\t\t\t[/][font color='#101828' fontFamily: 'Poppins' fontWeight:500 fontSize: .75rem]{valueY} Tokens[/]", // Custom tooltip 
 
                 getFillFromSprite: false, // Prevent inheriting color from the series
                 pointerOrientation: "horizontal", // Ensure the tooltip is positioned horizontally
@@ -1404,7 +1444,7 @@
           addSeries("Tip", "tip", am5.color(0x4CC9F0));
           addSeries("Call", "call", am5.color(0x4361EE));
           addSeries("Chat", "chat", am5.color(0x3A0BA3));
-          addSeries("Live Streaming", "livestreaming", am5.color(0xAE4AEF));
+          addSeries("Live Streaming", "livestreaming", am5.color(0xF72485));
 
           //Y-Axis Grid Removed
           yAxis.get("renderer").grid.template.setAll({
