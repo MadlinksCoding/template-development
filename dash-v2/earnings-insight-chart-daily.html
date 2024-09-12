@@ -275,7 +275,7 @@
                       <div class="flex flex-column justify-center items-start gap--16 flex-auto">
                           <div class="flex flex-column gap--24 w-100">
                               <!-- Sales Insight Bar Chart -->
-                              <div data-id="sales-insight-daily" data-chart class="w-100 h--300"></div>
+                              <div data-id="tokens-trend-daily" data-chart class="w-100 h--300"></div>
 
                               <!-- Chart Category List -->
                               <div class="pad--x--8 flex flex-wrap gap--8 justify-center items-center">
@@ -696,7 +696,7 @@
 series.slices.template.adapters.add("tooltipHTML", function(tooltipHTML, target) {
   var slice = target.dataItem.dataContext;
   return "<div style='font-size: 12px; overflow: hidden; font-family: Poppins, sans-serif; color: #344054;'>" + 
-         escapeHTML(slice.category) + "<br>" +
+         "<span style='color:" + slice.color + "; font-size: 16px;'>●</span> " + escapeHTML(slice.category) + "<br>" +
          "<strong style='font-size: 12px;'>USD " + slice.value + "</strong>" +
          "</div>";
 });
@@ -744,12 +744,120 @@ series.slices.template.adapters.add("tooltipHTML", function(tooltipHTML, target)
             series.appear(1000, 100);
         }
 
+        function TokensDailyChart (tokensInsightDaily) {
+            // Create root element
+            var root = am5.Root.new(tokensInsightDaily);
+
+            root._logo.dispose();
+
+            // Set themes
+            root.setThemes([
+              am5themes_Animated.new(root)
+            ]);
+
+            // Create chart
+            var chart = root.container.children.push(am5percent.PieChart.new(root, {
+              layout: root.verticalLayout,
+              innerRadius: am5.percent(130), // Increase this value to make slices thinner
+              paddingTop: 10,
+              paddingBottom: 0 // Add padding to the bottom to ensure space for the legend
+            }));
+
+            function escapeHTML(str) {
+  return str.replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#039;');
+}
+
+            // Create series
+            var series = chart.series.push(am5percent.PieSeries.new(root, {
+              name: "Value",
+              valueField: "value",
+              categoryField: "category",
+              fillField: "color",
+              legendLabelText: "[bold {fill}]{category}",
+              legendValueText: ""
+            }));
+
+            series.labels.template.set("forceHidden", true);
+            series.ticks.template.set("forceHidden", true);
+
+            // Customize slices to only show tooltip
+            series.slices.template.setAll({
+              tooltipText: "{category}: {value}", // Tooltip content
+              tooltip: am5.Tooltip.new(root, { // Create a tooltip with custom styling
+                pointerOrientation: "horizontal",
+                getFillFromSprite: false,
+                background: am5.RoundedRectangle.new(root, {
+                  fill: am5.color(0xffffff), // Set tooltip background to white
+                  strokeOpacity: 0, // Remove border if not needed
+                  cornerRadius: 5 // Optional: add rounded corners
+                }),
+                labelText: "{category}: {value}" // Tooltip text
+              })
+            });
+
+            // Explicitly set tooltip label color and font properties
+series.slices.template.adapters.add("tooltipHTML", function(tooltipHTML, target) {
+  var slice = target.dataItem.dataContext;
+  return "<div style='font-size: 12px; overflow: hidden; font-family: Poppins, sans-serif; color: #344054;'>" + 
+         "<span style='color:" + slice.color + "; font-size: 16px;'>●</span> " + escapeHTML(slice.category) + "<br>" +
+         "<strong style='font-size: 12px;'>" + slice.value + " Tokens</strong>" +
+         "</div>";
+});
+
+            // Set data
+            var data = [
+              { value: 10, category: "Tip", color: am5.color(0x4CC9F0) },
+              { value: 9, category: "Call", color: am5.color(0x4361EE) },
+              { value: 6, category: "Chat", color: am5.color(0x3A0BA3) },
+              { value: 5, category: "Live streaming", color: am5.color(0xF72485) }
+            ];
+
+            series.data.setAll(data);
+
+            // Create legend
+            var legend = chart.children.push(am5.Legend.new(root, {
+              x: am5.percent(50),
+              y: am5.percent(100),
+              layout: root.horizontalLayout,
+              marginTop: 15,
+              marginBottom: 0, // Ensure space for the legend
+              centerX: am5.percent(50),
+              maxHeight: 100 // Adjust the maxHeight as needed
+            }));
+
+            //legend.data.setAll(series.dataItems);
+
+            // Customize legend to only display category names without percentages
+            legend.labels.template.setAll({
+              text: "{category}", // Only display the category name
+              textAlign: "left", // Align the text
+              fill: am5.color(0x344054), // Text color (dark gray)
+              fontSize: "0.75rem", // Font size
+              fontFamily: "'Poppins', sans-serif", // Font family
+              lineHeight: 0,
+            });
+
+            // Ensure value labels in the legend do not display percentages
+            legend.valueLabels.template.setAll({
+              text: "" // Hide value labels
+            });
+
+            // Play initial series animation
+            series.appear(1000, 100);
+        }
+
         // Create root element
         // https://www.amcharts.com/docs/v5/getting-started/#Root_element
         var salesInsightDaily = document.querySelector('[data-id="sales-insight-daily"]');
+        var tokenstrendDaily = document.querySelector('[data-id="tokens-trend-daily"]');
 
         // For Daily Chart
         SalesDailyChart(salesInsightDaily);
+        TokensDailyChart(tokenstrendDaily);
 
     </script>
 </body>
