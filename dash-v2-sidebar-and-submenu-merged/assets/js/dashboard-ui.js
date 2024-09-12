@@ -764,6 +764,9 @@ class DashStatusMessageEditor {
 
 		// bind 'keyup' event to count characters
     this.textbox.addEventListener('keyup', this.updateWordCount.bind(this));
+
+		// count characters initially
+		this.updateWordCount();
   }
 
 
