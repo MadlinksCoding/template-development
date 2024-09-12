@@ -754,7 +754,6 @@ class DashProfileStatusDropdown {
  * @class DashStatusMessageEditor
  * @classdesc Fansocial Dashboard Profile Status Messages Editor UI behavior and handlers
  * Clicking "Edit" button will enable editing, count characters entered, cancel edited text, save edited text and thorw custom event with details
- * Once clicked any dropdown trigger, the dropdown will open and accept "click" on the dropdown options as user interaction and change dropdown trigger values and will throw a custom event
  * 
  */
 class DashStatusMessageEditor {
@@ -883,6 +882,51 @@ class DashStatusMessageEditor {
 
 /**
  * 
+ * @class DashToggleSwitch
+ * @classdesc Fansocial Dashboard Profile Toggle Switches UI behavior and handlers
+ * Switching the toggles on/off will dispatch a custom event for further actions
+ * 
+ */
+class DashToggleSwitch {
+  constructor(element) {
+    this.element = element;
+    this.input = element.querySelector('input[type="checkbox"]');
+
+    this.input.addEventListener('change', this.handleChange.bind(this));
+  }
+
+  handleChange() {
+    const isChecked = this.input.checked;
+		
+		// do any additional stuff if needed
+		//console.log('Switch is on: ', isChecked);
+
+		// throw event
+		this.throwEvent();
+  }
+
+	throwEvent() {
+		// get the event name to throw
+    const eventName = this.element.getAttribute('data-throw-event');
+		const isChecked = this.input.checked;
+
+		// create payload to be sent with event
+		let payload = {
+			switchChanged: true,
+			switchIsOn: isChecked
+		}
+
+		// create custom event
+    const event = new CustomEvent(eventName, { detail: {payload} });
+
+		// throw the event ( usage: document.addEventListener('custom_eventName', (evt) => { console.log('status changed', evt.detail); }); )
+    document.dispatchEvent(event);
+  }
+}
+
+
+/**
+ * 
  * Initiates JS executions after DOM contents are loaded (equivalant to jQuery $document.on(ready){...})
  * 
  */
@@ -905,5 +949,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
 	// Initialize the status message editor class for all elements with data-js-status-message-editor
 	document.querySelectorAll('[data-js-status-message-editor]').forEach((element) => {
 		new DashStatusMessageEditor(element);
+	});
+
+
+	// Initialize the profile switch toggle class for all elements with data-switch
+	document.querySelectorAll('[data-switch]').forEach((element) => {
+		new DashToggleSwitch(element);
 	});
 });
