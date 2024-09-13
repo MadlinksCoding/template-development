@@ -2,6 +2,7 @@
 html { font-size: 16px; }
 
 /* Font Size */
+.fs--16-responsive-mobile-portrait { font-size: 1rem; /* font-size 16px */  }
 .fs--18-responsive-mobile-portrait { font-size: 1.125rem; /* font-size 18px */  } /* confirmed in use */ /* pixel conversion correct */
 .fs--36-responsive-mobile-portrait { font-size: 2.25rem; /* font-size 36px */ } /* confirmed in use */ /* pixel conversion correct */
 
@@ -16,6 +17,9 @@ html { font-size: 16px; }
 
 /* Height */
 .h--211-responsive-mobile-portrait { height: 13.1875rem; }
+
+/* Display */
+.display--none-responsive-mobile-portrait { display: none; }
 
 /* Flexbox */
 .dn-responsive-mobile { display: flex; }
@@ -37,6 +41,7 @@ html { font-size: 16px; }
 
 /* Grid */
 .grid--cols-1-responsive-mobile-portrait { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+.grid--cols-2-responsive-mobile-portrait { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
 /* Grid Column */
 .grid--col-span-2-responsive-mobile-portrait { grid-column: span 2 / span 2; }
