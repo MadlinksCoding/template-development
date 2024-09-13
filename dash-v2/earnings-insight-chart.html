@@ -58,6 +58,7 @@
         .bg--col--chart-3 { background-color: var(--Chart-3, #3A0BA3); }
         .bg--col--chart-4 { background-color: var(--Chart-4, #AE4AEF); }
         .bg--col--chart-5 { background-color: var(--Chart-5, #F72485); }
+        .bg--col--chart-6 { background-color: var(--Chart-5, #98A2B3); }
 
         /* Background Gradients */
         .bg--gradient-white { background: linear-gradient(180deg, rgba(255, 255, 255, 0.30) 0%, rgba(255, 255, 255, 0.00) 8%); }
@@ -156,10 +157,10 @@
                     <!-- Select Dropdown -->
                     <div class="relative z--10000 w--100-responsive-mobile-portrait">
                         <select data-nice-select>
+                            <option value="yearly">Yearly</option>
                             <option value="daily">Daily</option>
                             <option value="weekly">Weekly</option>
                             <option value="monthly">Mothly</option>
-                            <option value="yearly">Yearly</option>
                             <option value="alltime">All time</option>
                         </select>
                         <!-- <div class="pointer">
@@ -178,41 +179,41 @@
             <!-- End Popup Header -->
 
             <!-- Data Row -->
-            <div data-section="data-row" class="grid grid--cols-2 gap--16 grid--cols-2-responsive-tablet grid--cols-2-responsive-mobile grid--cols-1-responsive-mobile-portrait">
-                <!-- White Card -->
-                <div data-secton="white-card" class="pad--16 flex flex-column gap--16 flex-auto bg-white-70 bg--blur--25 br--2 w-100 grid--col-span-2-responsive-mobile-portrait br br--col--gray-300">
-                    <!-- Title -->
-                    <div class="flex items-center justify-center gap--8">
-                        <h3 class="m--0 ff-poppins fs--18 fw6 lh--28 col--gray-950">Total Earnings</h3>
-                    </div>
-                    <!-- Data Content -->
-                    <div class="flex flex-column justify-center items-center gap--16 flex-auto">
-                        <div class="flex items-center gap--24">
-                            <div class="flex flex-column items-start gap--8">
-                                <span class="fs--36 fw6 lh--44 tracked--neg--0-72 col--gray-900">--</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Ens Data Content -->
-                </div>
-                <!-- End White Card -->
-                <!-- White Card -->
-                <div data-secton="white-card" class="pad--16 flex flex-column gap--16 flex-auto bg-white-70 bg--blur--25 br--2 w-100 grid--col-span-2-responsive-mobile-portrait">
-                    <!-- Title -->
-                    <div class="flex items-center justify-center gap--8">
-                        <h3 class="m--0 ff-poppins fs--18 fw6 lh--28 col--gray-950">Tokens Received</h3>
-                    </div>
-                    <!-- Data Content -->
-                    <div class="flex flex-column justify-center items-center gap--16 flex-auto">
-                        <div class="flex items-center gap--24">
-                            <div class="flex flex-column items-start gap--8">
-                                <span class="fs--36 fw6 lh--44 tracked--neg--0-72 col--gray-900">--</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Ens Data Content -->
-                </div>
-                <!-- End White Card -->
+            <div data-section="data-row" class="grid grid--cols-2 gap--16 grid--cols-2-responsive-tablet grid--cols-2-responsive-mobile grid--cols-2-responsive-mobile-portrait">
+              <!-- White Card -->
+              <div data-secton="white-card" class="pad--16 flex flex-column gap--16 flex-auto bg-white-70 bg--blur--25 br--2 w-100 br br--col--gray-300">
+                  <!-- Title -->
+                  <div class="flex items-center justify-center gap--8">
+                      <h3 class="m--0 ff-poppins fs--18 fs--16-responsive-mobile fs--16-responsive-mobile-portrait fw6 lh--28 col--gray-950">Total Earnings</h3>
+                  </div>
+                  <!-- Data Content -->
+                  <div class="flex flex-column justify-center items-center gap--16 flex-auto">
+                      <div class="flex items-center gap--24">
+                          <div class="flex flex-column items-start gap--8">
+                              <span class="fs--36 fw6 lh--44 tracked--neg--0-72 col--gray-900">--</span>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- Ens Data Content -->
+              </div>
+              <!-- End White Card -->
+              <!-- White Card -->
+              <div data-secton="white-card" class="pad--16 flex flex-column gap--16 flex-auto bg-white-70 bg--blur--25 br--2 w-100">
+                  <!-- Title -->
+                  <div class="flex items-center justify-center gap--8">
+                      <h3 class="m--0 ff-poppins fs--18 fs--16-responsive-mobile fs--16-responsive-mobile-portrait fw6 lh--28 col--gray-950">Tokens Received</h3>
+                  </div>
+                  <!-- Data Content -->
+                  <div class="flex flex-column justify-center items-center gap--16 flex-auto">
+                      <div class="flex items-center gap--24">
+                          <div class="flex flex-column items-start gap--8">
+                              <span class="fs--36 fw6 lh--44 tracked--neg--0-72 col--gray-900">--</span>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- Ens Data Content -->
+              </div>
+              <!-- End White Card -->
             </div>
             <!-- End Data Row -->
 
@@ -250,27 +251,27 @@
                                 <div data-id="sales-insight-line" data-chart class="w-100 h--300 dn"></div>
 
                                 <!-- Chart Category List -->
-                                <div class="pad--x--8 flex gap--8 justify-center items-center">
-                                    <div class="flex gap--8 items-center">
-                                        <span class="db w--8 h--8 bg--col--chart-1 br-100"></span>
-                                        <span class="fs--12 lh--18 col--gray-500">Subscription</span>
-                                    </div>
-                                    <div class="flex gap--8 items-center">
-                                        <span class="db w--8 h--8 bg--col--chart-2 br-100"></span>
-                                        <span class="fs--12 lh--18 col--gray-500">Pay to view</span>
-                                    </div>
-                                    <div class="flex gap--8 items-center">
-                                        <span class="db w--8 h--8 bg--col--chart-3 br-100"></span>
-                                        <span class="fs--12 lh--18 col--gray-500">Merch</span>
-                                    </div>
-                                    <div class="flex gap--8 items-center">
-                                        <span class="db w--8 h--8 bg--col--chart-4 br-100"></span>
-                                        <span class="fs--12 lh--18 col--gray-500">Wishtender</span>
-                                    </div>
-                                    <div class="flex gap--8 items-center">
-                                        <span class="db w--8 h--8 bg--col--chart-5 br-100"></span>
-                                        <span class="fs--12 lh--18 col--gray-500">Custom request</span>
-                                    </div>
+                                <div class="pad--x--8 flex flex-wrap gap--8 justify-center items-center">
+                                  <div class="flex gap--8 items-center">
+                                      <span class="db w--8 h--8 bg--col--chart-1 br-100"></span>
+                                      <span class="fs--12 lh--18 col--gray-500">Subscription</span>
+                                  </div>
+                                  <div class="flex gap--8 items-center">
+                                      <span class="db w--8 h--8 bg--col--chart-2 br-100"></span>
+                                      <span class="fs--12 lh--18 col--gray-500">Pay to view</span>
+                                  </div>
+                                  <div class="flex gap--8 items-center">
+                                      <span class="db w--8 h--8 bg--col--chart-3 br-100"></span>
+                                      <span class="fs--12 lh--18 col--gray-500">Merch</span>
+                                  </div>
+                                  <div class="flex gap--8 items-center">
+                                      <span class="db w--8 h--8 bg--col--chart-5 br-100"></span>
+                                      <span class="fs--12 lh--18 col--gray-500">Wishtender</span>
+                                  </div>
+                                  <div class="flex gap--8 items-center">
+                                      <span class="db w--8 h--8 bg--col--chart-6 br-100"></span>
+                                      <span class="fs--12 lh--18 col--gray-500">Custom request</span>
+                                  </div>
                                 </div>
                             </div>
                         </div>
@@ -330,7 +331,7 @@
                                       <span class="fs--12 lh--18 col--gray-500">Chat</span>
                                   </div>
                                   <div class="flex gap--8 items-center">
-                                      <span class="db w--8 h--8 bg--col--chart-4 br-100"></span>
+                                      <span class="db w--8 h--8 bg--col--chart-5 br-100"></span>
                                       <span class="fs--12 lh--18 col--gray-500">Live streaming</span>
                                   </div>
                               </div>
@@ -346,135 +347,135 @@
 
             <!-- Data Row -->
             <div data-section="data-row" class="grid grid--cols-1 gap--16 grid--cols-1-responsive-mobile-portrait pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait">
-                <!-- One Column -->
-                <div class="flex flex-column gap--16 w-100 grid--col-span-2-responsive-mobile-portrait">
-                    <!-- White Card -->
-                    <div data-secton="white-card" class="pad--16 flex flex-column gap--16 flex-auto bg-white-70 bg--blur--25 br--2">
-                        <!-- Title -->
-                        <div class="flex items-center gap--8">
-                            <h3 class="m--0 ff-poppins fs--18 fw6 lh--28 col--gray-950">Top Countries</h3>
-                        </div>
-                        <!-- Data Content -->
-                        <div class="flex justify-start gap--16 flex-auto">
-                            <div class="w--335">
-                              <div class="bb br--col--gray-500 flex justify-between items-center">
-                                  <div class="pad--right--24 pad--y--12 pad--left--12">
-                                    <span class="fs--12 fw5 lh--18 col--gray-600">Media</span>
-                                  </div>
-                                  <div class="pad--right--12 pad--y--12 pad--left--12">
-                                    <span class="fs--12 fw5 lh--18 col--gray-600">Sales (USD)</span>
-                                  </div>
-                              </div>
-                              <div class="flex flex-column">
-                                <div class="h--40 flex justify-between items-center bg--col--gray--100 bg--blur--25">
-                                    <div class="pad--y--16 pad--right--12 pad--left--12 flex gap--12 items-center">
-                                      <span class="fs--12 fw6 lh--18 col--gray-900">1</span>
-                                      <span class="fs--14 lh--20 col--gray-600 overflow-hidden text--overflow--eclipse">Hong Kong</span>
-                                    </div>
-                                    <div class="pad--right--12 pad--y--12 pad--left--12">
-                                      <span class="fs--12 fw5 lh--18 col--gray-600">5,432.00</span>
-                                    </div>
+              <!-- One Column -->
+              <div class="flex flex-column gap--16 w-100 grid--col-span-2-responsive-mobile-portrait">
+                  <!-- White Card -->
+                  <div data-secton="white-card" class="pad--16 pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait flex flex-column gap--16 flex-auto bg-white-70 bg--blur--25 br--2">
+                      <!-- Title -->
+                      <div class="flex items-center gap--8 pad--x--16-responsive-mobile pad--x--16-responsive-mobile-portrait">
+                          <h3 class="m--0 ff-poppins fs--18 fw6 lh--28 col--gray-950">Top Countries</h3>
+                      </div>
+                      <!-- Data Content -->
+                      <div class="flex justify-start gap--16 flex-auto">
+                          <div class="w--335 w--100-responsive-mobile w--100-responsive-mobile-portrait">
+                            <div class="bb br--col--gray-500 flex justify-between items-center">
+                                <div class="pad--right--24 pad--y--12 pad--left--12">
+                                  <span class="fs--12 fw5 lh--18 col--gray-600">Media</span>
                                 </div>
-                                <div class="h--40 flex gap--12 justify-between items-center bg--blur--25">
-                                  <div class="pad--y--16 pad--right--12 pad--left--12 flex gap--12 items-center">
-                                    <span class="fs--12 fw6 lh--18 col--gray-900">2</span>
-                                    <span class="fs--14 lh--20 col--gray-600 overflow-hidden text--overflow--eclipse">United States of America</span>
-                                  </div>
-                                  <div class="pad--right--12 pad--y--12 pad--left--12">
-                                    <span class="fs--12 fw5 lh--18 col--gray-600">4,432.00</span>
-                                  </div>
+                                <div class="pad--right--12 pad--y--12 pad--left--12">
+                                  <span class="fs--12 fw5 lh--18 col--gray-600">Sales (USD)</span>
                                 </div>
-                                <div class="h--40 flex justify-between items-center bg--col--gray--100 bg--blur--25">
-                                  <div class="pad--y--16 pad--right--12 pad--left--12 flex gap--12 items-center">
-                                    <span class="fs--12 fw6 lh--18 col--gray-900">3</span>
-                                    <span class="fs--14 lh--20 col--gray-600 overflow-hidden text--overflow--eclipse">Singapore</span>
-                                  </div>
-                                  <div class="pad--right--12 pad--y--12 pad--left--12">
-                                    <span class="fs--12 fw5 lh--18 col--gray-600">3,432.00</span>
-                                  </div>
-                                </div>
-                                <div class="h--40 flex gap--12 justify-between items-center bg--blur--25">
-                                  <div class="pad--y--16 pad--right--12 pad--left--12 flex gap--12 items-center">
-                                    <span class="fs--12 fw6 lh--18 col--gray-900">4</span>
-                                    <span class="fs--14 lh--20 col--gray-600 overflow-hidden text--overflow--eclipse">Taiwan</span>
-                                  </div>
-                                  <div class="pad--right--12 pad--y--12 pad--left--12">
-                                    <span class="fs--12 fw5 lh--18 col--gray-600">2,432.00</span>
-                                  </div>
-                                </div>
-                                <div class="h--40 flex justify-between items-center bg--col--gray--100 bg--blur--25">
-                                  <div class="pad--y--16 pad--right--12 pad--left--12 flex gap--12 items-center">
-                                    <span class="fs--12 fw6 lh--18 col--gray-900">5</span>
-                                    <span class="fs--14 lh--20 col--gray-600 overflow-hidden text--overflow--eclipse">Australia</span>
-                                  </div>
-                                  <div class="pad--right--12 pad--y--12 pad--left--12">
-                                    <span class="fs--12 fw5 lh--18 col--gray-600">1,432.00</span>
-                                  </div>
-                                </div>
-                                <div class="h--40 flex gap--12 justify-between items-center bg--blur--25">
-                                  <div class="pad--y--16 pad--right--12 pad--left--12 flex gap--12 items-center">
-                                    <span class="fs--12 fw6 lh--18 col--gray-900">6</span>
-                                    <span class="fs--14 lh--20 col--gray-600 overflow-hidden text--overflow--eclipse">China</span>
-                                  </div>
-                                  <div class="pad--right--12 pad--y--12 pad--left--12">
-                                    <span class="fs--12 fw5 lh--18 col--gray-600">932.00</span>
-                                  </div>
-                                </div>
-                                <div class="h--40 flex justify-between items-center bg--col--gray--100 bg--blur--25">
-                                  <div class="pad--y--16 pad--right--12 pad--left--12 flex gap--12 items-center">
-                                    <span class="fs--12 fw6 lh--18 col--gray-900">7</span>
-                                    <span class="fs--14 lh--20 col--gray-600 overflow-hidden text--overflow--eclipse">Russia</span>
-                                  </div>
-                                  <div class="pad--right--12 pad--y--12 pad--left--12">
-                                    <span class="fs--12 fw5 lh--18 col--gray-600">832.00</span>
-                                  </div>
-                                </div>
-                                <div class="h--40 flex gap--12 justify-between items-center bg--blur--25">
-                                  <div class="pad--y--16 pad--right--12 pad--left--12 flex gap--12 items-center">
-                                    <span class="fs--12 fw6 lh--18 col--gray-900">8</span>
-                                    <span class="fs--14 lh--20 col--gray-600 overflow-hidden text--overflow--eclipse">Greenland</span>
-                                  </div>
-                                  <div class="pad--right--12 pad--y--12 pad--left--12">
-                                    <span class="fs--12 fw5 lh--18 col--gray-600">732.00</span>
-                                  </div>
-                                </div>
-                                <div class="h--40 flex justify-between items-center bg--col--gray--100 bg--blur--25">
-                                  <div class="pad--y--16 pad--right--12 pad--left--12 flex gap--12 items-center">
-                                    <span class="fs--12 fw6 lh--18 col--gray-900">9</span>
-                                    <span class="fs--14 lh--20 col--gray-600 overflow-hidden text--overflow--eclipse">Canada</span>
-                                  </div>
-                                  <div class="pad--right--12 pad--y--12 pad--left--12">
-                                    <span class="fs--12 fw5 lh--18 col--gray-600">632.00</span>
-                                  </div>
-                                </div>
-                                <div class="h--40 flex justify-between items-center bg--blur--25">
-                                  <div class="pad--y--16 pad--right--12 pad--left--12 flex gap--12 items-center">
-                                    <span class="fs--12 fw6 lh--18 col--gray-900">10</span>
-                                    <span class="fs--14 lh--20 col--gray-600 overflow-hidden text--overflow--eclipse">Brazil</span>
-                                  </div>
-                                  <div class="pad--right--12 pad--y--12 pad--left--12">
-                                    <span class="fs--12 fw5 lh--18 col--gray-600">532.00</span>
-                                  </div>
-                              </div>
-                              </div>
                             </div>
-                            <div class="flex-auto pad--top--42 pad--bottom--8 flex flex-column justify-between">
-                              <div id="chartdiv" class="w-100 h--340"></div>
-                              <!-- Chart Category List -->
-                              <div class="pad--x--8 flex gap--8 justify-start items-center ">
-                                  <div class="flex gap--8 items-center">
-                                      <span class="fs--12 lh--18 col--gray-950">0</span>
-                                      <img src="assets/img/map-color-img.svg" alt="">
-                                      <span class="fs--12 lh--18 col--gray-950">5,432.00 USD</span>
+                            <div class="flex flex-column">
+                              <div class="h--40 flex justify-between items-center bg--col--gray--100 bg--blur--25">
+                                  <div class="pad--y--16 pad--right--12 pad--left--12 flex gap--12 items-center">
+                                    <span class="fs--12 fw6 lh--18 col--gray-900">1</span>
+                                    <span class="fs--14 lh--20 col--gray-600 overflow-hidden text--overflow--eclipse">Hong Kong</span>
+                                  </div>
+                                  <div class="pad--right--12 pad--y--12 pad--left--12">
+                                    <span class="fs--12 fw5 lh--18 col--gray-600">5,432.00</span>
                                   </div>
                               </div>
+                              <div class="h--40 flex gap--12 justify-between items-center bg--blur--25">
+                                <div class="pad--y--16 pad--right--12 pad--left--12 flex gap--12 items-center">
+                                  <span class="fs--12 fw6 lh--18 col--gray-900">2</span>
+                                  <span class="fs--14 lh--20 col--gray-600 overflow-hidden text--overflow--eclipse">United States of America</span>
+                                </div>
+                                <div class="pad--right--12 pad--y--12 pad--left--12">
+                                  <span class="fs--12 fw5 lh--18 col--gray-600">4,432.00</span>
+                                </div>
+                              </div>
+                              <div class="h--40 flex justify-between items-center bg--col--gray--100 bg--blur--25">
+                                <div class="pad--y--16 pad--right--12 pad--left--12 flex gap--12 items-center">
+                                  <span class="fs--12 fw6 lh--18 col--gray-900">3</span>
+                                  <span class="fs--14 lh--20 col--gray-600 overflow-hidden text--overflow--eclipse">Singapore</span>
+                                </div>
+                                <div class="pad--right--12 pad--y--12 pad--left--12">
+                                  <span class="fs--12 fw5 lh--18 col--gray-600">3,432.00</span>
+                                </div>
+                              </div>
+                              <div class="h--40 flex gap--12 justify-between items-center bg--blur--25">
+                                <div class="pad--y--16 pad--right--12 pad--left--12 flex gap--12 items-center">
+                                  <span class="fs--12 fw6 lh--18 col--gray-900">4</span>
+                                  <span class="fs--14 lh--20 col--gray-600 overflow-hidden text--overflow--eclipse">Taiwan</span>
+                                </div>
+                                <div class="pad--right--12 pad--y--12 pad--left--12">
+                                  <span class="fs--12 fw5 lh--18 col--gray-600">2,432.00</span>
+                                </div>
+                              </div>
+                              <div class="h--40 flex justify-between items-center bg--col--gray--100 bg--blur--25">
+                                <div class="pad--y--16 pad--right--12 pad--left--12 flex gap--12 items-center">
+                                  <span class="fs--12 fw6 lh--18 col--gray-900">5</span>
+                                  <span class="fs--14 lh--20 col--gray-600 overflow-hidden text--overflow--eclipse">Australia</span>
+                                </div>
+                                <div class="pad--right--12 pad--y--12 pad--left--12">
+                                  <span class="fs--12 fw5 lh--18 col--gray-600">1,432.00</span>
+                                </div>
+                              </div>
+                              <div class="h--40 flex gap--12 justify-between items-center bg--blur--25">
+                                <div class="pad--y--16 pad--right--12 pad--left--12 flex gap--12 items-center">
+                                  <span class="fs--12 fw6 lh--18 col--gray-900">6</span>
+                                  <span class="fs--14 lh--20 col--gray-600 overflow-hidden text--overflow--eclipse">China</span>
+                                </div>
+                                <div class="pad--right--12 pad--y--12 pad--left--12">
+                                  <span class="fs--12 fw5 lh--18 col--gray-600">932.00</span>
+                                </div>
+                              </div>
+                              <div class="h--40 flex justify-between items-center bg--col--gray--100 bg--blur--25">
+                                <div class="pad--y--16 pad--right--12 pad--left--12 flex gap--12 items-center">
+                                  <span class="fs--12 fw6 lh--18 col--gray-900">7</span>
+                                  <span class="fs--14 lh--20 col--gray-600 overflow-hidden text--overflow--eclipse">Russia</span>
+                                </div>
+                                <div class="pad--right--12 pad--y--12 pad--left--12">
+                                  <span class="fs--12 fw5 lh--18 col--gray-600">832.00</span>
+                                </div>
+                              </div>
+                              <div class="h--40 flex gap--12 justify-between items-center bg--blur--25">
+                                <div class="pad--y--16 pad--right--12 pad--left--12 flex gap--12 items-center">
+                                  <span class="fs--12 fw6 lh--18 col--gray-900">8</span>
+                                  <span class="fs--14 lh--20 col--gray-600 overflow-hidden text--overflow--eclipse">Greenland</span>
+                                </div>
+                                <div class="pad--right--12 pad--y--12 pad--left--12">
+                                  <span class="fs--12 fw5 lh--18 col--gray-600">732.00</span>
+                                </div>
+                              </div>
+                              <div class="h--40 flex justify-between items-center bg--col--gray--100 bg--blur--25">
+                                <div class="pad--y--16 pad--right--12 pad--left--12 flex gap--12 items-center">
+                                  <span class="fs--12 fw6 lh--18 col--gray-900">9</span>
+                                  <span class="fs--14 lh--20 col--gray-600 overflow-hidden text--overflow--eclipse">Canada</span>
+                                </div>
+                                <div class="pad--right--12 pad--y--12 pad--left--12">
+                                  <span class="fs--12 fw5 lh--18 col--gray-600">632.00</span>
+                                </div>
+                              </div>
+                              <div class="h--40 flex justify-between items-center bg--blur--25">
+                                <div class="pad--y--16 pad--right--12 pad--left--12 flex gap--12 items-center">
+                                  <span class="fs--12 fw6 lh--18 col--gray-900">10</span>
+                                  <span class="fs--14 lh--20 col--gray-600 overflow-hidden text--overflow--eclipse">Brazil</span>
+                                </div>
+                                <div class="pad--right--12 pad--y--12 pad--left--12">
+                                  <span class="fs--12 fw5 lh--18 col--gray-600">532.00</span>
+                                </div>
                             </div>
-                        </div>
-                        <!-- Ens Data Content -->
-                    </div>
-                    <!-- End White Card -->
-                </div>
-                <!-- End One Column -->
+                            </div>
+                          </div>
+                          <div class="flex-auto pad--top--42 pad--bottom--8 flex flex-column justify-between display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                            <div id="chartdiv" class="w-100 h--340"></div>
+                            <!-- Chart Category List -->
+                            <div class="pad--x--8 flex gap--8 justify-start items-center ">
+                                <div class="flex gap--8 items-center">
+                                    <span class="fs--12 lh--18 col--gray-950">0</span>
+                                    <img src="assets/img/map-color-img.svg" alt="">
+                                    <span class="fs--12 lh--18 col--gray-950">5,432.00 USD</span>
+                                </div>
+                            </div>
+                          </div>
+                      </div>
+                      <!-- Ens Data Content -->
+                  </div>
+                  <!-- End White Card -->
+              </div>
+              <!-- End One Column -->
             </div>
             <!-- End Data Row -->
         </div>
@@ -928,8 +929,8 @@
             makeSeries("Subscription", "subscription", 0x4CC9F0);
             makeSeries("Pay to view", "paytoview", 0x4361EE);
             makeSeries("Merch", "merch", 0x3A0BA3);
-            makeSeries("Wishtender", "wishtender", 0xAE4AEF);
-            makeSeries("Custom request", "customrequest", 0xF72485);
+            makeSeries("Wishtender", "wishtender", 0xF72485);
+            makeSeries("Custom request", "customrequest", 0x98A2B3);
 
             // Calculate total values for each month and format tooltip text
             tooltip.label.adapters.add("text", function(text, target) {
@@ -1118,8 +1119,8 @@
           addSeries("Subscription", "subscription", am5.color(0x4CC9F0));
           addSeries("Pay to view", "paytoview", am5.color(0x4361EE));
           addSeries("Merch", "merch", am5.color(0x3A0BA3));
-          addSeries("Wishtender", "wishtender", am5.color(0xAE4AEF));
-          addSeries("Custom request", "customrequest", am5.color(0xF72585));
+          addSeries("Wishtender", "wishtender", am5.color(0xF72585));
+          addSeries("Custom request", "customrequest", am5.color(0x98A2B3));
 
           //Y-Axis Grid Removed
           yAxis.get("renderer").grid.template.setAll({
@@ -1384,7 +1385,7 @@
             makeSeries("Tip", "tip", 0x4CC9F0);
             makeSeries("Call", "call", 0x4361EE);
             makeSeries("Chat", "chat", 0x3A0BA3);
-            makeSeries("Live streaming", "livestreaming", 0xAE4AEF);
+            makeSeries("Live streaming", "livestreaming", 0xF72585);
 
             // Calculate total values for each month and format tooltip text
             tooltip.label.adapters.add("text", function(text, target) {
@@ -1573,7 +1574,7 @@
           addSeries("Tip", "tip", am5.color(0x4CC9F0));
           addSeries("Call", "call", am5.color(0x4361EE));
           addSeries("Chat", "chat", am5.color(0x3A0BA3));
-          addSeries("Live Streaming", "livestreaming", am5.color(0xAE4AEF));
+          addSeries("Live Streaming", "livestreaming", am5.color(0xF72585));
 
           //Y-Axis Grid Removed
           yAxis.get("renderer").grid.template.setAll({
