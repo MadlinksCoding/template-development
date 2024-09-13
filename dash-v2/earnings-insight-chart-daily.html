@@ -272,7 +272,7 @@
                           <h3 class="m--0 ff-poppins fs--18 fw6 lh--28 col--gray-950">Tokens Trend</h3>
                       </div>
                       <!-- Data Content -->
-                      <div class="flex flex-column justify-center items-start gap--16 flex-auto">
+                      <div class="flex flex-column justify-start items-start gap--16 flex-auto">
                           <div class="flex flex-column gap--24 w-100">
                               <!-- Sales Insight Bar Chart -->
                               <div data-id="tokens-trend-daily" data-chart class="w-100 h--300"></div>
@@ -657,7 +657,7 @@
             }));
 
             function escapeHTML(str) {
-  return str.replace(/&/g, '&amp;')
+            return str.replace(/&/g, '&amp;')
             .replace(/</g, '&lt;')
             .replace(/>/g, '&gt;')
             .replace(/"/g, '&quot;')
@@ -686,20 +686,56 @@
                 background: am5.RoundedRectangle.new(root, {
                   fill: am5.color(0xffffff), // Set tooltip background to white
                   strokeOpacity: 0, // Remove border if not needed
-                  cornerRadius: 5 // Optional: add rounded corners
+                  cornerRadius: 2 // Optional: add rounded corners
                 }),
+                strokeWidth: 0,
+                scale: 1,
+                stroke: am5.color(0xffffff),
                 labelText: "{category}: {value}" // Tooltip text
               })
             });
 
+            // Apply corner radius to the tooltip background
+            series.slices.template.get("tooltip").get("background").setAll({
+              cornerRadiusTL: 2,
+              cornerRadiusTR: 2,
+              cornerRadiusBL: 2,
+              cornerRadiusBR: 2
+            });
+
+            // Add hover state
+            series.slices.template.states.create("hover", {
+              scale: 1,
+              fillOpacity: 1,
+              shadowBlur: 20, // Blur effect of the shadow
+              shadowOffsetX: 0, // Horizontal offset of the shadow
+              shadowOffsetY: 0,  // Vertical offset of the shadow
+              transitionDuration: 100
+            });
+
+            // Use series color for shadow
+            series.slices.template.adapters.add("shadowColor", function(shadowColor, target) {
+              return target.get("fill");
+            });
+
+            // Add events for smooth transition
+            series.slices.template.events.on("pointerover", function(ev) {
+              ev.target.animate({
+                key: "shadowBlur",
+                to: 0,
+                duration: 100,
+                easing: am5.ease.out(am5.ease.cubic)
+              });
+            });
+
             // Explicitly set tooltip label color and font properties
-series.slices.template.adapters.add("tooltipHTML", function(tooltipHTML, target) {
-  var slice = target.dataItem.dataContext;
-  return "<div style='font-size: 12px; overflow: hidden; font-family: Poppins, sans-serif; color: #344054;'>" + 
-         "<span style='color:" + slice.color + "; font-size: 16px;'>●</span> " + escapeHTML(slice.category) + "<br>" +
-         "<strong style='font-size: 12px;'>USD " + slice.value + "</strong>" +
-         "</div>";
-});
+            series.slices.template.adapters.add("tooltipHTML", function(tooltipHTML, target) {
+              var slice = target.dataItem.dataContext;
+              return "<div style='font-size: 12px; overflow: hidden; font-family: Poppins, sans-serif; color: #344054;'>" + 
+                    "<span style='color:" + slice.color + "; font-size: 16px;'>●</span> " + escapeHTML(slice.category) + "<br>" +
+                    "<strong style='font-size: 12px;'>USD " + slice.value + "</strong>" +
+                    "</div>";
+            });
 
             // Set data
             var data = [
@@ -793,20 +829,56 @@ series.slices.template.adapters.add("tooltipHTML", function(tooltipHTML, target)
                 background: am5.RoundedRectangle.new(root, {
                   fill: am5.color(0xffffff), // Set tooltip background to white
                   strokeOpacity: 0, // Remove border if not needed
-                  cornerRadius: 5 // Optional: add rounded corners
+                  cornerRadius: 2 // Optional: add rounded corners
                 }),
+                strokeWidth: 0,
+                scale: 1,
+                stroke: am5.color(0xffffff),
                 labelText: "{category}: {value}" // Tooltip text
               })
             });
 
+            // Apply corner radius to the tooltip background
+            series.slices.template.get("tooltip").get("background").setAll({
+              cornerRadiusTL: 2,
+              cornerRadiusTR: 2,
+              cornerRadiusBL: 2,
+              cornerRadiusBR: 2
+            });
+
+            // Add hover state
+            series.slices.template.states.create("hover", {
+              scale: 1,
+              fillOpacity: 1,
+              shadowBlur: 20, // Blur effect of the shadow
+              shadowOffsetX: 0, // Horizontal offset of the shadow
+              shadowOffsetY: 0,  // Vertical offset of the shadow
+              transitionDuration: 100
+            });
+
+            // Use series color for shadow
+            series.slices.template.adapters.add("shadowColor", function(shadowColor, target) {
+              return target.get("fill");
+            });
+
+            // Add events for smooth transition
+            series.slices.template.events.on("pointerover", function(ev) {
+              ev.target.animate({
+                key: "shadowBlur",
+                to: 0,
+                duration: 100,
+                easing: am5.ease.out(am5.ease.cubic)
+              });
+            });
+
             // Explicitly set tooltip label color and font properties
-series.slices.template.adapters.add("tooltipHTML", function(tooltipHTML, target) {
-  var slice = target.dataItem.dataContext;
-  return "<div style='font-size: 12px; overflow: hidden; font-family: Poppins, sans-serif; color: #344054;'>" + 
-         "<span style='color:" + slice.color + "; font-size: 16px;'>●</span> " + escapeHTML(slice.category) + "<br>" +
-         "<strong style='font-size: 12px;'>" + slice.value + " Tokens</strong>" +
-         "</div>";
-});
+            series.slices.template.adapters.add("tooltipHTML", function(tooltipHTML, target) {
+              var slice = target.dataItem.dataContext;
+              return "<div style='font-size: 12px; overflow: hidden; font-family: Poppins, sans-serif; color: #344054;'>" + 
+                    "<span style='color:" + slice.color + "; font-size: 16px;'>●</span> " + escapeHTML(slice.category) + "<br>" +
+                    "<strong style='font-size: 12px;'>" + slice.value + " Tokens</strong>" +
+                    "</div>";
+            });
 
             // Set data
             var data = [
