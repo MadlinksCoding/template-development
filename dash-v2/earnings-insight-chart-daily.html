@@ -232,6 +232,29 @@
                             <div class="flex flex-column gap--24 w-100">
                                 <!-- Sales Insight Bar Chart -->
                                 <div data-id="sales-insight-daily" data-chart class="w-100 h--300"></div>
+                                <!-- Chart Category List -->
+                                <div class="pad--x--8 flex flex-wrap gap--8 justify-center items-center">
+                                    <div class="flex gap--8 items-center">
+                                        <span class="db w--8 h--8 bg--col--chart-1 br-100"></span>
+                                        <span class="fs--12 lh--18 col--gray-500">Subscription</span>
+                                    </div>
+                                    <div class="flex gap--8 items-center">
+                                        <span class="db w--8 h--8 bg--col--chart-2 br-100"></span>
+                                        <span class="fs--12 lh--18 col--gray-500">Pay to view</span>
+                                    </div>
+                                    <div class="flex gap--8 items-center">
+                                        <span class="db w--8 h--8 bg--col--chart-3 br-100"></span>
+                                        <span class="fs--12 lh--18 col--gray-500">Merch</span>
+                                    </div>
+                                    <div class="flex gap--8 items-center">
+                                        <span class="db w--8 h--8 bg--col--chart-5 br-100"></span>
+                                        <span class="fs--12 lh--18 col--gray-500">Wishtender</span>
+                                    </div>
+                                    <div class="flex gap--8 items-center">
+                                        <span class="db w--8 h--8 bg--col--chart-6 br-100"></span>
+                                        <span class="fs--12 lh--18 col--gray-500">Custom request</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <!-- Ens Data Content -->
@@ -252,6 +275,25 @@
                           <div class="flex flex-column gap--24 w-100">
                               <!-- Sales Insight Bar Chart -->
                               <div data-id="tokens-trend-daily" data-chart class="w-100 h--300"></div>
+                              <!-- Chart Category List -->
+                              <div class="pad--x--8 flex gap--8 justify-center items-center">
+                                  <div class="flex gap--8 items-center">
+                                      <span class="db w--8 h--8 bg--col--chart-1 br-100"></span>
+                                      <span class="fs--12 lh--18 col--gray-500">Tip</span>
+                                  </div>
+                                  <div class="flex gap--8 items-center">
+                                      <span class="db w--8 h--8 bg--col--chart-2 br-100"></span>
+                                      <span class="fs--12 lh--18 col--gray-500">Call</span>
+                                  </div>
+                                  <div class="flex gap--8 items-center">
+                                      <span class="db w--8 h--8 bg--col--chart-3 br-100"></span>
+                                      <span class="fs--12 lh--18 col--gray-500">Chat</span>
+                                  </div>
+                                  <div class="flex gap--8 items-center">
+                                      <span class="db w--8 h--8 bg--col--chart-5 br-100"></span>
+                                      <span class="fs--12 lh--18 col--gray-500">Live streaming</span>
+                                  </div>
+                              </div>
                           </div>
                       </div>
                       <!-- Ens Data Content -->
@@ -648,7 +690,11 @@
                 scale: 1,
                 stroke: am5.color(0xffffff),
                 labelText: "{category}: {value}" // Tooltip text
-              })
+              }),
+              // Disable click interactions
+              clickTarget: "none",
+              toggleKey: "none",
+              interactive: false
             });
 
             // Apply corner radius to the tooltip background
@@ -715,7 +761,7 @@
               maxHeight: 50, // Adjust the maxHeight as needed
               maxWidth: am5.percent(100),
               fillField: "color",
-              marginTop: 40,
+              marginTop: 8,
               marginBottom: 0,
             }));
 
@@ -766,7 +812,7 @@
             // Reduce spacing between legend items
             legend.set("itemGap", 4);
 
-            legend.data.setAll(series.dataItems);
+            //legend.data.setAll(series.dataItems);
 
             // Play initial series animation
             series.appear(1000, 100);
@@ -827,7 +873,11 @@
                 scale: 1,
                 stroke: am5.color(0xffffff),
                 labelText: "{category}: {value}" // Tooltip text
-              })
+              }),
+              // Disable click interactions
+              clickTarget: "none",
+              toggleKey: "none",
+              interactive: false
             });
 
             // Apply corner radius to the tooltip background
@@ -893,7 +943,7 @@
               maxHeight: 50, // Adjust the maxHeight as needed
               maxWidth: am5.percent(100),
               fillField: "color",
-              marginTop: 40,
+              marginTop: 8,
               marginBottom: 0,
             }));
 
@@ -944,7 +994,7 @@
             // Reduce spacing between legend items
             legend.set("itemGap", 5);
 
-            legend.data.setAll(series.dataItems);
+            //legend.data.setAll(series.dataItems);
 
             // Play initial series animation
             series.appear(1000, 100);
