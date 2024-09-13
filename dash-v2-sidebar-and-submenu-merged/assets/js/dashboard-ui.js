@@ -654,6 +654,75 @@ class DashSideBarHandler {
 
 /**
  * 
+ * @class DashCurrentPageDetector
+ * @classdesc Fansocial Dashboard - Detect Current Active Page
+ * When initialized, it will search and match the last two segments of 'window.location.href' with matching 'data-page' attribute and mark the menu item (parents as well if applicable) as current page
+ * 
+ */
+class DashCurrentPageDetector {
+  constructor() {
+    this.menuItems = document.querySelectorAll('[data-current-page-detector]'); // get all menu items
+  }
+
+
+	/** 
+	 * 
+	 * @method detectCurrentPage 
+	 * @description Detects current page based on location.href and highlights the corresponding menu item
+	 * 
+	 */
+  detectCurrentPage() {
+    const url = new URL(window.location.href); // get location href
+    const pathname = url.pathname; // get only pathname
+    const pathSegments = pathname.replace(/^\//, '').replace(/\/$/, '').split('/'); // create array of path segments
+    const lastTwoSegments = pathSegments.length > 1 ? pathSegments.slice(-2).join('/') : pathSegments.join('/'); // take and join only last two
+
+    this.menuItems.forEach((item) => {
+			// retrieve the data-page attribute, ensuring it's formatted without leading/trailing slashes
+      const dataPage = item.getAttribute('data-page').replace(/^\//, '').replace(/\/$/, '');
+
+			// if match found then call marking method for further processing
+      if (lastTwoSegments === dataPage) {
+        this.markCurrentPage(item);
+      }
+    });
+  }
+
+
+	/** 
+	 * 
+	 * @method markCurrentPage 
+	 * @description Highlights the selected menu item and (if applicable) it's parents (in case of submenu items)
+	 * 
+	 */
+  markCurrentPage(item) {
+		// get current page menu item
+    const menuItem = item.closest('[data-current-page-detector]');
+    menuItem.classList.add('is-current-page');
+
+    // Traverse parent li elements and add class (in case of submenu items)
+    let parentMenuItem = menuItem.parentElement.closest('[data-current-page-detector]');
+    while (parentMenuItem) {
+      parentMenuItem.classList.add('is-current-page');
+      parentMenuItem = parentMenuItem.parentElement.closest('[data-current-page-detector]');
+    }
+
+    // if item is part of a submenu then try getting the submenu
+    const submenuContainer = item.closest('[data-submenu-container]');
+
+		// if matched as submenu then highlight corresponding main menu item
+    if (submenuContainer) {
+      const mainMenuItem = document.querySelector(`[data-main-menu-item][data-target-submenu-container="${submenuContainer.dataset.submenuContainerId}"]`);
+      if (mainMenuItem) {
+        mainMenuItem.closest('[data-current-page-detector]').classList.add('is-current-page');
+      }
+    }
+  }
+}
+
+
+/**
+ * 
  * @class DashProfileStatusDropdown
  * @classdesc Fansocial Dashboard Profile Submenu Status Dropdowns UI behavior and handlers
  * Once clicked any dropdown trigger, the dropdown will open and accept "click" on the dropdown options as user interaction and change dropdown trigger values and will throw a custom event
@@ -1095,6 +1164,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
 		dashNavElSelector: '[data-dashboard-main-nav]', // dash menu main selector (desktop)
 	});
 	fansocialDashSideBarHandler.init();
+
+
+	// Initialize current page detector
+	const currentPageDetector = new DashCurrentPageDetector();
+	currentPageDetector.detectCurrentPage();
 
 
 	// Initialize the status dropdown class for all elements with data-js-status-dropdown

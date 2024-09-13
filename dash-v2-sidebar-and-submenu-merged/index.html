@@ -163,7 +163,7 @@
                             <div data-menu-panel-wrapper class="flex flex-column self-stretch relative z-5">
                                 <div data-menu-panel class="flex flex-column items-center self-stretch gap--4 display-grid--responsive-mobile display-grid--responsive-mobile-portrait grid--cols-4--responsive-mobile grid--cols-4--responsive-mobile-portrait gap--16--responsive-mobile gap--16--responsive-mobile-portrait">
                                     <!-- menu item (Push Menu Demo) (this item is added only to show a demo of multi level push menu system in corresponding submenu, not part of actual sidebar menu) -->
-                                    <div data-sidebar-menu-item data-page="dashboard/dummy-page" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
+                                    <div data-sidebar-menu-item data-current-page-detector data-page="dashboard/some-page" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
                                         <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
                                         <a href="javascript: void(0)" data-main-menu-item="true" data-main-menu-name="Multi Level Push Menu" data-is-active="false" data-has-submenu="true" data-target-submenu-container="dashboard-submenu-multi-level-push-menu-demo" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
                                             <!-- render_svg_icon( 'likes' ) -->
@@ -176,7 +176,7 @@
                                     <!-- /menu item -->
 
                                     <!-- menu item (Analytics) [if active page item, then "current-page" class should be added to the div] -->
-                                    <div data-sidebar-menu-item data-page="dashboard/analytics" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
+                                    <div data-sidebar-menu-item data-current-page-detector data-page="dashboard/overview" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
                                         <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
                                         <a href="javascript: void(0)" data-main-menu-item="true" data-main-menu-name="Analytics" data-is-active="false" data-has-submenu="false" data-target-submenu-container="" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
                                             <!-- render_svg_icon( 'dashboard_bar_chart' ) -->
@@ -190,7 +190,7 @@
                                     <!-- /menu item -->
 
                                     <!-- menu item (Earnings) [if active page item, then "current-page" class should be added to the div] -->
-                                    <div data-sidebar-menu-item data-page="dashboard/earnings" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
+                                    <div data-sidebar-menu-item data-current-page-detector data-page="dashboard/payout" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
                                         <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
                                         <a href="javascript: void(0)" data-main-menu-item="true" data-main-menu-name="Earnings" data-is-active="false" data-has-submenu="false"  data-target-submenu-container="" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
                                             <!-- render_svg_icon( 'money-1' ) -->
@@ -204,7 +204,7 @@
                                     <!-- /menu item -->
 
                                     <!-- menu item (Orders) [if active page item, then "current-page" class should be added to the div] -->
-                                    <div data-sidebar-menu-item data-page="dashboard/orders" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
+                                    <div data-sidebar-menu-item data-current-page-detector data-page="dashboard/your-orders" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
                                         <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
                                         <a href="javascript: void(0)" data-main-menu-item="true" data-main-menu-name="Your orders" data-is-active="false" data-has-submenu="true"  data-target-submenu-container="dashboard-submenu-your-orders" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
                                             <!-- render_svg_icon( 'order-1' ) -->
@@ -218,7 +218,7 @@
                                     <!-- /menu item -->
 
                                     <!-- menu item (Media) [if active page item, then "current-page" class should be added to the div] -->
-                                    <div data-sidebar-menu-item data-page="dashboard/media" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
+                                    <div data-sidebar-menu-item data-current-page-detector data-page="dashboard/my-media" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
                                         <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
                                         <a href="javascript: void(0)" data-main-menu-item="true" data-main-menu-name="Media" data-is-active="false" data-has-submenu="false"  data-target-submenu-container="" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
                                             <!-- render_svg_icon( 'image-03' ) -->
@@ -232,7 +232,7 @@
                                     <!-- /menu item -->
 
                                     <!-- menu item (Chats) [if active page item, then "current-page" class should be added to the div] -->
-                                    <div data-sidebar-menu-item data-page="dashboard/chats" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
+                                    <div data-sidebar-menu-item data-current-page-detector data-page="dashboard/private-chats" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
                                         <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
                                         <a href="javascript: void(0)" data-main-menu-item="true" data-main-menu-name="Chats" data-is-active="false" data-has-submenu="true"  data-target-submenu-container="dashboard-submenu-chats" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
                                             <!-- render_svg_icon( 'private_chat1' ) -->
@@ -246,7 +246,7 @@
                                     <!-- /menu item -->
 
                                     <!-- menu item (Subscriptions) [if active page item, then "current-page" class should be added to the div] -->
-                                    <div data-sidebar-menu-item data-page="dashboard/subscriptions" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
+                                    <div data-sidebar-menu-item data-current-page-detector data-page="dashboard/subscription-settings" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
                                         <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
                                         <a href="javascript: void(0)" data-main-menu-item="true" data-main-menu-name="Subscriptions" data-is-active="false" data-has-submenu="false"  data-target-submenu-container="" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
                                             <!-- render_svg_icon( 'logo_bg' ) -->
@@ -260,7 +260,7 @@
                                     <!-- /menu item -->
 
                                     <!-- menu item (Shops) [if active page item, then "current-page" class should be added to the div] -->
-                                    <div data-sidebar-menu-item data-page="dashboard/shops" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
+                                    <div data-sidebar-menu-item data-current-page-detector data-page="dashboard/merch-listing" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
                                         <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
                                         <a href="javascript: void(0)" data-main-menu-item="true" data-main-menu-name="Shops" data-is-active="false" data-has-submenu="true"  data-target-submenu-container="dashboard-submenu-shops" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
                                             <!-- render_svg_icon( 'merch' ) -->
@@ -274,7 +274,7 @@
                                     <!-- /menu item -->
 
                                     <!-- menu item (Profile) [if active page item, then "current-page" class should be added to the div] -->
-                                    <div data-sidebar-menu-item data-page="dashboard/profile" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
+                                    <div data-sidebar-menu-item data-current-page-detector data-page="dashboard/edit-profile" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
                                         <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
                                         <a href="javascript: void(0)" data-main-menu-item="true" data-main-menu-name="Profile" data-is-active="false" data-has-submenu="true"  data-target-submenu-container="dashboard-submenu-profile" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
                                             <!-- render_svg_icon( 'user-edit' ) -->
@@ -288,7 +288,7 @@
                                     <!-- /menu item -->
 
                                     <!-- menu item (Blog) [if active page item, then "current-page" class should be added to the div] -->
-                                    <div data-sidebar-menu-item data-page="dashboard/blog" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
+                                    <div data-sidebar-menu-item data-current-page-detector data-page="dashboard/blog" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
                                         <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
                                         <a href="javascript: void(0)" data-main-menu-item="true" data-main-menu-name="Blog" data-is-active="false" data-has-submenu="false"  data-target-submenu-container="" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
                                             <!-- render_svg_icon( 'blog-01' ) -->
@@ -302,7 +302,7 @@
                                     <!-- /menu item -->
 
                                     <!-- menu item (Settings) [if active page item, then "current-page" class should be added to the div] -->
-                                    <div data-sidebar-menu-item data-page="dashboard/settings" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
+                                    <div data-sidebar-menu-item data-current-page-detector data-page="dashboard/account" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
                                         <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
                                         <a href="javascript: void(0)" data-main-menu-item="true" data-main-menu-name="Settings" data-is-active="false" data-has-submenu="true"  data-target-submenu-container="dashboard-submenu-settings" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
                                             <!-- render_svg_icon( 'setting' ) -->
@@ -2932,7 +2932,7 @@
                         <div class="flex flex-column flex--max self-stretch gap--8 relative overflow-hidden">
                             <ul data-submenu class="flex flex-column self-stretch gap--8 w-100 transition--all transition--200 transition--ease-in-out" hidden>
                                 <!-- submenu item -->
-                                <li data-sidebar-menu-item data-page="dashboard/some-page" class="flex flex-column self-stretch">
+                                <li data-sidebar-menu-item data-current-page-detector data-page="dashboard/some-page" class="flex flex-column self-stretch">
                                     <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
                                     <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Sub Level Menu One" data-has-submenu="true" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                         <!-- submenu title -->
@@ -2955,7 +2955,7 @@
                                     <!-- submenu -->
                                     <ul data-submenu class="flex flex-column self-stretch gap--8 w-100 absolute top-0 left--100-p transition--all transition--200 transition--ease-in-out" hidden>
                                         <!-- submenu item -->
-                                        <li data-sidebar-menu-item data-page="dashboard/some-page" class="flex flex-column self-stretch">
+                                        <li data-sidebar-menu-item data-current-page-detector data-page="dashboard/some-page" class="flex flex-column self-stretch">
                                             <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
                                             <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Leticia Doyle" data-has-submenu="true" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                                 <!-- submenu title -->
@@ -2978,7 +2978,7 @@
                                             <!-- submenu -->
                                             <ul data-submenu class="flex flex-column self-stretch gap--8 w-100 absolute top-0 left--100-p transition--all transition--200 transition--ease-in-out" hidden>
                                                 <!-- submenu item -->
-                                                <li data-sidebar-menu-item data-page="dashboard/some-page" class="flex flex-column self-stretch">
+                                                <li data-sidebar-menu-item data-current-page-detector data-page="dashboard/some-page" class="flex flex-column self-stretch">
                                                     <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
                                                     <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Rory Ward" data-has-submenu="true" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                                         <!-- submenu title -->
@@ -3001,7 +3001,7 @@
                                                     <!-- submenu -->
                                                     <ul data-submenu class="flex flex-column self-stretch gap--8 w-100 absolute top-0 left--100-p transition--all transition--200 transition--ease-in-out" hidden>
                                                         <!-- submenu item -->
-                                                        <li data-sidebar-menu-item data-page="dashboard/some-page" class="flex flex-column self-stretch">
+                                                        <li data-sidebar-menu-item data-current-page-detector data-page="dashboard/some-page" class="flex flex-column self-stretch">
                                                             <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
                                                             <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Santos Fischer" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                                                 <!-- submenu title -->
@@ -3023,7 +3023,7 @@
                                                         </li>
 
                                                         <!-- submenu item -->
-                                                        <li data-sidebar-menu-item data-page="dashboard/some-page" class="flex flex-column self-stretch">
+                                                        <li data-sidebar-menu-item data-current-page-detector data-page="dashboard/some-page" class="flex flex-column self-stretch">
                                                             <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
                                                             <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Fredrick Long" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                                                 <!-- submenu title -->
@@ -3047,7 +3047,7 @@
                                                 </li>
 
                                                 <!-- submenu item -->
-                                                <li data-sidebar-menu-item data-page="dashboard/some-page" class="flex flex-column self-stretch">
+                                                <li data-sidebar-menu-item data-current-page-detector data-page="dashboard/some-page" class="flex flex-column self-stretch">
                                                     <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
                                                     <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Millie Blackburn" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                                         <!-- submenu title -->
@@ -3071,7 +3071,7 @@
                                         </li>
         
                                         <!-- submenu item -->
-                                        <li data-sidebar-menu-item data-page="dashboard/some-page" class="flex flex-column self-stretch">
+                                        <li data-sidebar-menu-item data-current-page-detector data-page="dashboard/some-page" class="flex flex-column self-stretch">
                                             <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
                                             <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Miriam Frye" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                                 <!-- submenu title -->
@@ -3093,7 +3093,7 @@
                                         </li>
         
                                         <!-- submenu item -->
-                                        <li data-sidebar-menu-item data-page="dashboard/some-page" class="flex flex-column self-stretch">
+                                        <li data-sidebar-menu-item data-current-page-detector data-page="dashboard/some-page" class="flex flex-column self-stretch">
                                             <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
                                             <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Joshua Shelton" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                                 <!-- submenu title -->
@@ -3115,7 +3115,7 @@
                                         </li>
         
                                         <!-- submenu item -->
-                                        <li data-sidebar-menu-item data-page="dashboard/some-page" class="flex flex-column self-stretch">
+                                        <li data-sidebar-menu-item data-current-page-detector data-page="dashboard/some-page" class="flex flex-column self-stretch">
                                             <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
                                             <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Jonas Wise" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                                 <!-- submenu title -->
@@ -3139,7 +3139,7 @@
                                 </li>
 
                                 <!-- submenu item -->
-                                <li data-sidebar-menu-item data-page="dashboard/some-page" class="flex flex-column self-stretch">
+                                <li data-sidebar-menu-item data-current-page-detector data-page="dashboard/some-page" class="flex flex-column self-stretch">
                                     <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
                                     <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Sub Level Menu Two" data-has-submenu="true" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                         <!-- submenu title -->
@@ -3162,7 +3162,7 @@
                                     <!-- submenu -->
                                     <ul data-submenu class="flex flex-column self-stretch gap--8 w-100 absolute top-0 left--100-p transition--all transition--200 transition--ease-in-out" hidden>
                                         <!-- submenu item -->
-                                        <li data-sidebar-menu-item data-page="dashboard/some-page" class="flex flex-column self-stretch">
+                                        <li data-sidebar-menu-item data-current-page-detector data-page="dashboard/some-page" class="flex flex-column self-stretch">
                                             <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
                                             <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Leticia Doyle" data-has-submenu="true" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                                 <!-- submenu title -->
@@ -3185,7 +3185,7 @@
                                             <!-- submenu -->
                                             <ul data-submenu class="flex flex-column self-stretch gap--8 w-100 absolute top-0 left--100-p transition--all transition--200 transition--ease-in-out" hidden>
                                                 <!-- submenu item -->
-                                                <li data-sidebar-menu-item data-page="dashboard/some-page" class="flex flex-column self-stretch">
+                                                <li data-sidebar-menu-item data-current-page-detector data-page="dashboard/some-page" class="flex flex-column self-stretch">
                                                     <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
                                                     <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Rory Ward" data-has-submenu="true" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                                         <!-- submenu title -->
@@ -3208,7 +3208,7 @@
                                                     <!-- submenu -->
                                                     <ul data-submenu class="flex flex-column self-stretch gap--8 w-100 absolute top-0 left--100-p transition--all transition--200 transition--ease-in-out" hidden>
                                                         <!-- submenu item -->
-                                                        <li data-sidebar-menu-item data-page="dashboard/some-page" class="flex flex-column self-stretch">
+                                                        <li data-sidebar-menu-item data-current-page-detector data-page="dashboard/some-page" class="flex flex-column self-stretch">
                                                             <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
                                                             <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Santos Fischer" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                                                 <!-- submenu title -->
@@ -3230,7 +3230,7 @@
                                                         </li>
 
                                                         <!-- submenu item -->
-                                                        <li data-sidebar-menu-item data-page="dashboard/some-page" class="flex flex-column self-stretch">
+                                                        <li data-sidebar-menu-item data-current-page-detector data-page="dashboard/some-page" class="flex flex-column self-stretch">
                                                             <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
                                                             <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Fredrick Long" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                                                 <!-- submenu title -->
@@ -3254,7 +3254,7 @@
                                                 </li>
 
                                                 <!-- submenu item -->
-                                                <li data-sidebar-menu-item data-page="dashboard/some-page" class="flex flex-column self-stretch">
+                                                <li data-sidebar-menu-item data-current-page-detector data-page="dashboard/some-page" class="flex flex-column self-stretch">
                                                     <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
                                                     <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Millie Blackburn" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                                         <!-- submenu title -->
@@ -3278,7 +3278,7 @@
                                         </li>
         
                                         <!-- submenu item -->
-                                        <li data-sidebar-menu-item data-page="dashboard/some-page" class="flex flex-column self-stretch">
+                                        <li data-sidebar-menu-item data-current-page-detector data-page="dashboard/some-page" class="flex flex-column self-stretch">
                                             <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
                                             <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Miriam Frye" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                                 <!-- submenu title -->
@@ -3300,7 +3300,7 @@
                                         </li>
         
                                         <!-- submenu item -->
-                                        <li data-sidebar-menu-item data-page="dashboard/some-page" class="flex flex-column self-stretch">
+                                        <li data-sidebar-menu-item data-current-page-detector data-page="dashboard/some-page" class="flex flex-column self-stretch">
                                             <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
                                             <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Joshua Shelton" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                                 <!-- submenu title -->
@@ -3322,7 +3322,7 @@
                                         </li>
         
                                         <!-- submenu item -->
-                                        <li data-sidebar-menu-item data-page="dashboard/some-page" class="flex flex-column self-stretch">
+                                        <li data-sidebar-menu-item data-current-page-detector data-page="dashboard/some-page" class="flex flex-column self-stretch">
                                             <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
                                             <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Jonas Wise" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                                 <!-- submenu title -->
@@ -3346,7 +3346,7 @@
                                 </li>
 
                                 <!-- submenu item -->
-                                <li data-sidebar-menu-item data-page="dashboard/some-page" class="flex flex-column self-stretch">
+                                <li data-sidebar-menu-item data-current-page-detector data-page="dashboard/some-page" class="flex flex-column self-stretch">
                                     <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
                                     <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Sub Level Menu Three" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                         <!-- submenu title -->
@@ -3368,7 +3368,7 @@
                                 </li>
 
                                 <!-- submenu item -->
-                                <li data-sidebar-menu-item data-page="dashboard/some-page" class="flex flex-column self-stretch">
+                                <li data-sidebar-menu-item data-current-page-detector data-page="dashboard/some-page" class="flex flex-column self-stretch">
                                     <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
                                     <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Sub Level Menu Four" data-has-submenu="true" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                         <!-- submenu title -->
@@ -3391,7 +3391,7 @@
                                     <!-- submenu -->
                                     <ul data-submenu class="flex flex-column self-stretch gap--8 w-100 absolute top-0 left--100-p transition--all transition--200 transition--ease-in-out" hidden>
                                         <!-- submenu item -->
-                                        <li data-sidebar-menu-item data-page="dashboard/some-page" class="flex flex-column self-stretch">
+                                        <li data-sidebar-menu-item data-current-page-detector data-page="dashboard/some-page" class="flex flex-column self-stretch">
                                             <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
                                             <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Leticia Doyle" data-has-submenu="true" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                                 <!-- submenu title -->
@@ -3414,7 +3414,7 @@
                                             <!-- submenu -->
                                             <ul data-submenu class="flex flex-column self-stretch gap--8 w-100 absolute top-0 left--100-p transition--all transition--200 transition--ease-in-out" hidden>
                                                 <!-- submenu item -->
-                                                <li data-sidebar-menu-item data-page="dashboard/some-page" class="flex flex-column self-stretch">
+                                                <li data-sidebar-menu-item data-current-page-detector data-page="dashboard/some-page" class="flex flex-column self-stretch">
                                                     <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
                                                     <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Rory Ward" data-has-submenu="true" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                                         <!-- submenu title -->
@@ -3437,7 +3437,7 @@
                                                     <!-- submenu -->
                                                     <ul data-submenu class="flex flex-column self-stretch gap--8 w-100 absolute top-0 left--100-p transition--all transition--200 transition--ease-in-out" hidden>
                                                         <!-- submenu item -->
-                                                        <li data-sidebar-menu-item data-page="dashboard/some-page" class="flex flex-column self-stretch">
+                                                        <li data-sidebar-menu-item data-current-page-detector data-page="dashboard/some-page" class="flex flex-column self-stretch">
                                                             <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
                                                             <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Santos Fischer" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                                                 <!-- submenu title -->
@@ -3459,7 +3459,7 @@
                                                         </li>
 
                                                         <!-- submenu item -->
-                                                        <li data-sidebar-menu-item data-page="dashboard/some-page" class="flex flex-column self-stretch">
+                                                        <li data-sidebar-menu-item data-current-page-detector data-page="dashboard/some-page" class="flex flex-column self-stretch">
                                                             <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
                                                             <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Fredrick Long" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                                                 <!-- submenu title -->
@@ -3483,7 +3483,7 @@
                                                 </li>
 
                                                 <!-- submenu item -->
-                                                <li data-sidebar-menu-item data-page="dashboard/some-page" class="flex flex-column self-stretch">
+                                                <li data-sidebar-menu-item data-current-page-detector data-page="dashboard/some-page" class="flex flex-column self-stretch">
                                                     <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
                                                     <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Millie Blackburn" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                                         <!-- submenu title -->
@@ -3507,7 +3507,7 @@
                                         </li>
         
                                         <!-- submenu item -->
-                                        <li data-sidebar-menu-item data-page="dashboard/some-page" class="flex flex-column self-stretch">
+                                        <li data-sidebar-menu-item data-current-page-detector data-page="dashboard/some-page" class="flex flex-column self-stretch">
                                             <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
                                             <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Miriam Frye" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                                 <!-- submenu title -->
@@ -3529,7 +3529,7 @@
                                         </li>
         
                                         <!-- submenu item -->
-                                        <li data-sidebar-menu-item data-page="dashboard/some-page" class="flex flex-column self-stretch">
+                                        <li data-sidebar-menu-item data-current-page-detector data-page="dashboard/some-page" class="flex flex-column self-stretch">
                                             <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
                                             <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Joshua Shelton" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                                 <!-- submenu title -->
@@ -3551,7 +3551,7 @@
                                         </li>
         
                                         <!-- submenu item -->
-                                        <li data-sidebar-menu-item data-page="dashboard/some-page" class="flex flex-column self-stretch">
+                                        <li data-sidebar-menu-item data-current-page-detector data-page="dashboard/some-page" class="flex flex-column self-stretch">
                                             <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
                                             <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Jonas Wise" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                                 <!-- submenu title -->
@@ -3575,7 +3575,7 @@
                                 </li>
 
                                 <!-- submenu item -->
-                                <li data-sidebar-menu-item data-page="dashboard/some-page" class="flex flex-column self-stretch">
+                                <li data-sidebar-menu-item data-current-page-detector data-page="dashboard/some-page" class="flex flex-column self-stretch">
                                     <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
                                     <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Sub Level Menu Five" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                         <!-- submenu title -->
@@ -3636,7 +3636,7 @@
                         <div class="flex flex-column flex--max self-stretch gap--8 relative overflow-hidden">
                             <ul data-submenu class="flex flex-column self-stretch gap--8 transition--all transition--200 transition--ease-in-out" hidden>
                                 <!-- submenu item -->
-                                <li data-sidebar-menu-item data-page="dashboard/your-orders" class="flex flex-column self-stretch">
+                                <li data-sidebar-menu-item data-current-page-detector data-page="dashboard/your-orders" class="flex flex-column self-stretch">
                                     <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
                                     <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Order recieved" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                         <!-- submenu title -->
@@ -3658,7 +3658,7 @@
                                 </li>
 
                                 <!-- submenu item -->
-                                <li data-sidebar-menu-item data-page="dashboard/custom-product-requests" class="flex flex-column self-stretch">
+                                <li data-sidebar-menu-item data-current-page-detector data-page="dashboard/custom-product-requests" class="flex flex-column self-stretch">
                                     <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
                                     <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Custom product request" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                         <!-- submenu title -->
@@ -3680,7 +3680,7 @@
                                 </li>
 
                                 <!-- submenu item -->
-                                <li data-sidebar-menu-item data-page="dashboard/purchases" class="flex flex-column self-stretch">
+                                <li data-sidebar-menu-item data-current-page-detector data-page="dashboard/purchases" class="flex flex-column self-stretch">
                                     <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
                                     <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Item purchased" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                         <!-- submenu title -->
@@ -3741,7 +3741,7 @@
                         <div class="flex flex-column flex--max self-stretch gap--8 relative overflow-hidden">
                             <ul data-submenu class="flex flex-column self-stretch gap--8 transition--all transition--200 transition--ease-in-out" hidden>
                                 <!-- submenu item -->
-                                <li data-sidebar-menu-item data-page="dashboard/private-chats" class="flex flex-column self-stretch">
+                                <li data-sidebar-menu-item data-current-page-detector data-page="dashboard/private-chats" class="flex flex-column self-stretch">
                                     <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
                                     <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Private Chats" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                         <!-- submenu title -->
@@ -3763,7 +3763,7 @@
                                 </li>
 
                                 <!-- submenu item -->
-                                <li data-sidebar-menu-item data-page="dashboard/call-and-chat-settings" class="flex flex-column self-stretch">
+                                <li data-sidebar-menu-item data-current-page-detector data-page="dashboard/call-and-chat-settings" class="flex flex-column self-stretch">
                                     <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
                                     <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Chat Settings" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                         <!-- submenu title -->
@@ -3824,7 +3824,7 @@
                         <div class="flex flex-column flex--max self-stretch gap--8 relative overflow-hidden">
                             <ul data-submenu class="flex flex-column self-stretch gap--8 transition--all transition--200 transition--ease-in-out" hidden>
                                 <!-- submenu item -->
-                                <li data-sidebar-menu-item data-page="dashboard/merch-listing" class="flex flex-column self-stretch">
+                                <li data-sidebar-menu-item data-current-page-detector data-page="dashboard/merch-listing" class="flex flex-column self-stretch">
                                     <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
                                     <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Physical Product Listings" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                         <!-- submenu title -->
@@ -3846,7 +3846,7 @@
                                 </li>
 
                                 <!-- submenu item -->
-                                <li data-sidebar-menu-item data-page="dashboard/custom-products-settings" class="flex flex-column self-stretch">
+                                <li data-sidebar-menu-item data-current-page-detector data-page="dashboard/custom-products-settings" class="flex flex-column self-stretch">
                                     <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
                                     <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Custom Product Settings" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                         <!-- submenu title -->
@@ -3868,7 +3868,7 @@
                                 </li>
 
                                 <!-- submenu item -->
-                                <li data-sidebar-menu-item data-page="dashboard/coupons" class="flex flex-column self-stretch">
+                                <li data-sidebar-menu-item data-current-page-detector data-page="dashboard/coupons" class="flex flex-column self-stretch">
                                     <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
                                     <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Your Coupons" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                         <!-- submenu title -->
@@ -3929,7 +3929,7 @@
                         <div class="flex flex-column flex--max self-stretch gap--8 relative overflow-hidden">
                             <ul data-submenu class="flex flex-column self-stretch gap--8 transition--all transition--200 transition--ease-in-out" hidden>
                                 <!-- submenu item -->
-                                <li data-sidebar-menu-item data-page="dashboard/edit-profile" class="flex flex-column self-stretch">
+                                <li data-sidebar-menu-item data-current-page-detector data-page="dashboard/edit-profile" class="flex flex-column self-stretch">
                                     <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
                                     <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Edit Profile" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                         <!-- submenu title -->
@@ -3951,7 +3951,7 @@
                                 </li>
 
                                 <!-- submenu item -->
-                                <li data-sidebar-menu-item data-page="dashboard/subscribers-followers" class="flex flex-column self-stretch">
+                                <li data-sidebar-menu-item data-current-page-detector data-page="dashboard/subscribers-followers" class="flex flex-column self-stretch">
                                     <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
                                     <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Subscribers & Followers" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                         <!-- submenu title -->
@@ -3973,7 +3973,7 @@
                                 </li>
 
                                 <!-- submenu item -->
-                                <li data-sidebar-menu-item data-page="dashboard/your-posts" class="flex flex-column self-stretch">
+                                <li data-sidebar-menu-item data-current-page-detector data-page="dashboard/your-posts" class="flex flex-column self-stretch">
                                     <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
                                     <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Your Posts" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                         <!-- submenu title -->
@@ -3995,7 +3995,7 @@
                                 </li>
 
                                 <!-- submenu item -->
-                                <li data-sidebar-menu-item data-page="dashboard/referrals" class="flex flex-column self-stretch">
+                                <li data-sidebar-menu-item data-current-page-detector data-page="dashboard/referrals" class="flex flex-column self-stretch">
                                     <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
                                     <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Referrals" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                         <!-- submenu title -->
@@ -4056,7 +4056,7 @@
                         <div class="flex flex-column flex--max self-stretch gap--8 relative overflow-hidden">
                             <ul data-submenu class="flex flex-column self-stretch gap--8 transition--all transition--200 transition--ease-in-out" hidden>
                                 <!-- submenu item -->
-                                <li data-sidebar-menu-item data-page="dashboard/account" class="flex flex-column self-stretch">
+                                <li data-sidebar-menu-item data-current-page-detector data-page="dashboard/account" class="flex flex-column self-stretch">
                                     <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
                                     <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Account Settings" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                         <!-- submenu title -->
@@ -4078,7 +4078,7 @@
                                 </li>
 
                                 <!-- submenu item -->
-                                <li data-sidebar-menu-item data-page="dashboard/shipping" class="flex flex-column self-stretch">
+                                <li data-sidebar-menu-item data-current-page-detector data-page="dashboard/shipping" class="flex flex-column self-stretch">
                                     <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
                                     <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Shipping & Billing" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                         <!-- submenu title -->
@@ -4100,7 +4100,7 @@
                                 </li>
 
                                 <!-- submenu item -->
-                                <li data-sidebar-menu-item data-page="dashboard/payout-settings" class="flex flex-column self-stretch">
+                                <li data-sidebar-menu-item data-current-page-detector data-page="dashboard/payout-settings" class="flex flex-column self-stretch">
                                     <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
                                     <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Payout Settings" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                         <!-- submenu title -->
@@ -4122,7 +4122,7 @@
                                 </li>
 
                                 <!-- submenu item -->
-                                <li data-sidebar-menu-item data-page="dashboard/newsletter" class="flex flex-column self-stretch">
+                                <li data-sidebar-menu-item data-current-page-detector data-page="dashboard/newsletter" class="flex flex-column self-stretch">
                                     <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
                                     <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Newsletter Settings" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                         <!-- submenu title -->
@@ -4144,7 +4144,7 @@
                                 </li>
 
                                 <!-- submenu item -->
-                                <li data-sidebar-menu-item data-page="dashboard/live-stream-settings" class="flex flex-column self-stretch">
+                                <li data-sidebar-menu-item data-current-page-detector data-page="dashboard/live-stream-settings" class="flex flex-column self-stretch">
                                     <!-- if item has submenu then "data-has-submenu" shall be "true". Provide submenu title as "data-submenu-name", required in JS -->
                                     <a href="javascript: void(0)" data-submenu-item="true" data-submenu-name="Live stream Settings" data-has-submenu="false" class="flex items-center self-stretch pad--8 gap--12 br--6 hover--bg--col--ebony--10 hover--parent--child--col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                         <!-- submenu title -->

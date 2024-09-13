@@ -588,21 +588,27 @@ html {
   height: 3.5rem
 }
 
-[data-dashboard-main-nav] .current-page[data-sidebar-menu-item]>[data-main-menu-item] {
+[data-dashboard-main-nav] .is-current-page[data-sidebar-menu-item]>[data-main-menu-item] {
   background: rgba(251, 91, 162, .2)
 }
 
-[data-dashboard-main-nav] .current-page[data-sidebar-menu-item]>[data-main-menu-item] [data-sidebar-menu-icon] {
+[data-dashboard-main-nav] .is-current-page[data-sidebar-menu-item]>[data-main-menu-item] [data-sidebar-menu-icon] {
   -webkit-filter: brightness(0) saturate(100%) invert(29%) sepia(98%) saturate(5809%) hue-rotate(325deg) brightness(92%) contrast(121%);
   filter: brightness(0) saturate(100%) invert(29%) sepia(98%) saturate(5809%) hue-rotate(325deg) brightness(92%) contrast(121%)
 }
 
-[data-dashboard-main-nav] .current-page[data-sidebar-menu-item]>[data-main-menu-item] [data-sidebar-menu-item-text] {
+[data-dashboard-main-nav] .is-current-page[data-sidebar-menu-item]>[data-main-menu-item] [data-sidebar-menu-item-text] {
   color: var(--color-rose)
 }
 
 [data-main-menu-item][data-is-active=true] {
   background: rgba(251, 91, 162, .1)
+}
+
+[data-submenu] .is-current-page[data-sidebar-menu-item]>[data-submenu-item] {
+  background: rgba(251, 91, 162, .1);
+  -webkit-filter: brightness(0) saturate(100%) invert(29%) sepia(98%) saturate(5809%) hue-rotate(325deg) brightness(92%) contrast(121%);
+  filter: brightness(0) saturate(100%) invert(29%) sepia(98%) saturate(5809%) hue-rotate(325deg) brightness(92%) contrast(121%)
 }
 
 [data-submenu-container][hidden] {

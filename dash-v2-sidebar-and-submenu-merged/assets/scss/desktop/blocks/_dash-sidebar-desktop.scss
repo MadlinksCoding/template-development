@@ -8,8 +8,12 @@
 [data-floating-panel-wrapper][data-is-floating="true"] [data-floating-panel][data-is-active="true"] { opacity: 1; visibility: visible; pointer-events: all; transform: scale(1) translateY(4rem); }
 [data-floating-panel-wrapper][data-is-floating="true"] [data-floating-panel] [data-sidebar-menu-item] { width: 3.5rem; height: 3.5rem; }
 
-[data-dashboard-main-nav] .current-page[data-sidebar-menu-item] > [data-main-menu-item] { background: rgba(251, 91, 162, 0.2); }
-[data-dashboard-main-nav] .current-page[data-sidebar-menu-item] > [data-main-menu-item] [data-sidebar-menu-icon] { filter: brightness(0) saturate(100%) invert(29%) sepia(98%) saturate(5809%) hue-rotate(325deg) brightness(92%) contrast(121%); }
-[data-dashboard-main-nav] .current-page[data-sidebar-menu-item] > [data-main-menu-item] [data-sidebar-menu-item-text] { color: var(--color-rose); }
+/* Dashboard Sidebar Main Menu : Custom Styles */
+[data-dashboard-main-nav] .is-current-page[data-sidebar-menu-item] > [data-main-menu-item] { background: rgba(251, 91, 162, 0.2); }
+[data-dashboard-main-nav] .is-current-page[data-sidebar-menu-item] > [data-main-menu-item] [data-sidebar-menu-icon] { filter: brightness(0) saturate(100%) invert(29%) sepia(98%) saturate(5809%) hue-rotate(325deg) brightness(92%) contrast(121%); }
+[data-dashboard-main-nav] .is-current-page[data-sidebar-menu-item] > [data-main-menu-item] [data-sidebar-menu-item-text] { color: var(--color-rose); }
 
 [data-main-menu-item][data-is-active="true"] { background: rgba(251, 91, 162, 0.1); }
+
+/* Dashboard Sidebar Sub Menu : Custom Styles */
+[data-submenu] .is-current-page[data-sidebar-menu-item] > [data-submenu-item] { background: rgba(251, 91, 162, .1); filter: brightness(0) saturate(100%) invert(29%) sepia(98%) saturate(5809%) hue-rotate(325deg) brightness(92%) contrast(121%); }
