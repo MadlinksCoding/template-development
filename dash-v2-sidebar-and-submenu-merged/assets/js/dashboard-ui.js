@@ -45,6 +45,12 @@ class DashSideBarHandler {
 
 				profileDottedButtonEl: '', // profile dotted button selector
 
+				profileAutoRepostSettingTriggerSelector: '[data-auto-repost-setting-toggle]', // profile auto repost setting trigger selector
+				profileAutoRepostSettingSelector: '[data-auto-repost-setting]', // profile auto repost setting selector
+
+				profileAutoRepostSettingTriggerEl: '', // profile auto repost setting trigger element
+				profileAutoRepostSettingEl: '', // profile auto repost setting element
+
 				notificationsPanelTriggerSelector: '[data-notifications-panel-trigger]', // notifications panel trigger selector
 				notificationsPanelSelector: '[data-notifications-container]', // notifications panel selector
 
@@ -520,6 +526,18 @@ class DashSideBarHandler {
 				_self.options.profileDottedButtonEl.dataset.isActive = 'false';
 			}
 		});
+
+		// handle profile auto repost setting toggle
+		_self.options.profileAutoRepostSettingTriggerEl.addEventListener('click', (evt) => {
+			if ( _self.options.profileAutoRepostSettingTriggerEl.dataset.isActive === 'false' ) {
+				_self.options.profileAutoRepostSettingTriggerEl.dataset.isActive = 'true';
+				_self.options.profileAutoRepostSettingEl.dataset.isActive = 'true';
+			}
+			else {
+				_self.options.profileAutoRepostSettingTriggerEl.dataset.isActive = 'false';
+				_self.options.profileAutoRepostSettingEl.dataset.isActive = 'false';
+			}
+		});
 	}
 
 
@@ -598,6 +616,9 @@ class DashSideBarHandler {
 				this.options.profilePanelEl = document.querySelector(this.options.profilePanelSelector);
 
 				this.options.profileDottedButtonEl = document.querySelector(this.options.profileDottedButtonSelector);
+
+				this.options.profileAutoRepostSettingTriggerEl = document.querySelector(this.options.profileAutoRepostSettingTriggerSelector);
+				this.options.profileAutoRepostSettingEl = document.querySelector(this.options.profileAutoRepostSettingSelector);
 
 				this.handleProfilePanel();
 			}
