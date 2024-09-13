@@ -232,30 +232,6 @@
                             <div class="flex flex-column gap--24 w-100">
                                 <!-- Sales Insight Bar Chart -->
                                 <div data-id="sales-insight-daily" data-chart class="w-100 h--300"></div>
-
-                                <!-- Chart Category List -->
-                                <div class="pad--x--8 flex flex-wrap gap--8 justify-center items-center">
-                                    <div class="flex gap--8 items-center">
-                                        <span class="db w--8 h--8 bg--col--chart-1 br-100"></span>
-                                        <span class="fs--12 lh--18 col--gray-500">Subscription</span>
-                                    </div>
-                                    <div class="flex gap--8 items-center">
-                                        <span class="db w--8 h--8 bg--col--chart-2 br-100"></span>
-                                        <span class="fs--12 lh--18 col--gray-500">Pay to view</span>
-                                    </div>
-                                    <div class="flex gap--8 items-center">
-                                        <span class="db w--8 h--8 bg--col--chart-3 br-100"></span>
-                                        <span class="fs--12 lh--18 col--gray-500">Merch</span>
-                                    </div>
-                                    <div class="flex gap--8 items-center">
-                                        <span class="db w--8 h--8 bg--col--chart-5 br-100"></span>
-                                        <span class="fs--12 lh--18 col--gray-500">Wishtender</span>
-                                    </div>
-                                    <div class="flex gap--8 items-center">
-                                        <span class="db w--8 h--8 bg--col--chart-6 br-100"></span>
-                                        <span class="fs--12 lh--18 col--gray-500">Custom request</span>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                         <!-- Ens Data Content -->
@@ -276,26 +252,6 @@
                           <div class="flex flex-column gap--24 w-100">
                               <!-- Sales Insight Bar Chart -->
                               <div data-id="tokens-trend-daily" data-chart class="w-100 h--300"></div>
-
-                              <!-- Chart Category List -->
-                              <div class="pad--x--8 flex flex-wrap gap--8 justify-center items-center">
-                                  <div class="flex gap--8 items-center">
-                                      <span class="db w--8 h--8 bg--col--chart-1 br-100"></span>
-                                      <span class="fs--12 lh--18 col--gray-500">Tip</span>
-                                  </div>
-                                  <div class="flex gap--8 items-center">
-                                      <span class="db w--8 h--8 bg--col--chart-2 br-100"></span>
-                                      <span class="fs--12 lh--18 col--gray-500">Call</span>
-                                  </div>
-                                  <div class="flex gap--8 items-center">
-                                      <span class="db w--8 h--8 bg--col--chart-3 br-100"></span>
-                                      <span class="fs--12 lh--18 col--gray-500">Chat</span>
-                                  </div>
-                                  <div class="flex gap--8 items-center">
-                                      <span class="db w--8 h--8 bg--col--chart-5 br-100"></span>
-                                      <span class="fs--12 lh--18 col--gray-500">Live streaming</span>
-                                  </div>
-                              </div>
                           </div>
                       </div>
                       <!-- Ens Data Content -->
@@ -751,30 +707,66 @@
             // Create legend
             var legend = chart.children.push(am5.Legend.new(root, {
               x: am5.percent(50),
-              y: am5.percent(100),
+              y: am5.percent(95),
+              centerX: am5.percent(50),
               layout: root.horizontalLayout,
-              marginTop: 15,
               marginBottom: 0, // Ensure space for the legend
               centerX: am5.percent(50),
-              maxHeight: 100 // Adjust the maxHeight as needed
+              maxHeight: 50, // Adjust the maxHeight as needed
+              maxWidth: am5.percent(100),
+              fillField: "color",
+              marginTop: 40,
+              marginBottom: 0,
             }));
 
-            //legend.data.setAll(series.dataItems);
+            // Custom adapter for legend labels
+            legend.labels.template.adapters.add("text", function(text, target) {
+              var dataItem = target.dataItem;
+              if (dataItem && dataItem.dataContext) {
+                return "[#667085]" + dataItem.dataContext.category + "[/]";
+              }
+              return text;
+            });
 
-            // Customize legend to only display category names without percentages
+            // Customize legend
             legend.labels.template.setAll({
-              text: "{category}", // Only display the category name
-              textAlign: "left", // Align the text
-              fill: am5.color(0x344054), // Text color (dark gray)
-              fontSize: "0.75rem", // Font size
-              fontFamily: "'Poppins', sans-serif", // Font family
-              lineHeight: 0,
+              fontSize: "0.75rem",
+              fontFamily: "'Poppins', sans-serif",
+              lineHeight: 1,
+              paddingLeft: 2,
+              oversizedBehavior: "truncate",
+              maxWidth: 100
+            });
+
+            // Create custom marker
+            legend.markers.template.setAll({
+              width: 6,
+              height: 6,
+            });
+
+            legend.markerRectangles.template.setAll({
+              cornerRadiusTL: 10,
+              cornerRadiusTR: 10,
+              cornerRadiusBL: 10,
+              cornerRadiusBR: 10
+            });
+            // Adjust legend item container
+            legend.itemContainers.template.setAll({
+              paddingTop: 0,
+              paddingBottom: 0,
+              paddingLeft: 0,
+              paddingRight: 8,
+              marginLeft: 0,
+              marginRight: 0
             });
 
             // Ensure value labels in the legend do not display percentages
-            legend.valueLabels.template.setAll({
-              text: "" // Hide value labels
-            });
+            legend.valueLabels.template.set("forceHidden", true);
+
+            // Reduce spacing between legend items
+            legend.set("itemGap", 5);
+
+            legend.data.setAll(series.dataItems);
 
             // Play initial series animation
             series.appear(1000, 100);
@@ -893,30 +885,66 @@
             // Create legend
             var legend = chart.children.push(am5.Legend.new(root, {
               x: am5.percent(50),
-              y: am5.percent(100),
+              y: am5.percent(95),
+              centerX: am5.percent(50),
               layout: root.horizontalLayout,
-              marginTop: 15,
               marginBottom: 0, // Ensure space for the legend
               centerX: am5.percent(50),
-              maxHeight: 100 // Adjust the maxHeight as needed
+              maxHeight: 50, // Adjust the maxHeight as needed
+              maxWidth: am5.percent(100),
+              fillField: "color",
+              marginTop: 40,
+              marginBottom: 0,
             }));
 
-            //legend.data.setAll(series.dataItems);
+            // Custom adapter for legend labels
+            legend.labels.template.adapters.add("text", function(text, target) {
+              var dataItem = target.dataItem;
+              if (dataItem && dataItem.dataContext) {
+                return "[#667085]" + dataItem.dataContext.category + "[/]";
+              }
+              return text;
+            });
 
-            // Customize legend to only display category names without percentages
+            // Customize legend
             legend.labels.template.setAll({
-              text: "{category}", // Only display the category name
-              textAlign: "left", // Align the text
-              fill: am5.color(0x344054), // Text color (dark gray)
-              fontSize: "0.75rem", // Font size
-              fontFamily: "'Poppins', sans-serif", // Font family
-              lineHeight: 0,
+              fontSize: "0.75rem",
+              fontFamily: "'Poppins', sans-serif",
+              lineHeight: 1,
+              paddingLeft: 2,
+              oversizedBehavior: "truncate",
+              maxWidth: 100
+            });
+
+            // Create custom marker
+            legend.markers.template.setAll({
+              width: 6,
+              height: 6,
+            });
+
+            legend.markerRectangles.template.setAll({
+              cornerRadiusTL: 10,
+              cornerRadiusTR: 10,
+              cornerRadiusBL: 10,
+              cornerRadiusBR: 10
+            });
+            // Adjust legend item container
+            legend.itemContainers.template.setAll({
+              paddingTop: 0,
+              paddingBottom: 0,
+              paddingLeft: 0,
+              paddingRight: 8,
+              marginLeft: 0,
+              marginRight: 0
             });
 
             // Ensure value labels in the legend do not display percentages
-            legend.valueLabels.template.setAll({
-              text: "" // Hide value labels
-            });
+            legend.valueLabels.template.set("forceHidden", true);
+
+            // Reduce spacing between legend items
+            legend.set("itemGap", 5);
+
+            legend.data.setAll(series.dataItems);
 
             // Play initial series animation
             series.appear(1000, 100);
