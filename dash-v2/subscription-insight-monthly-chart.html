@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subscription Insight Yearly Chart</title>
+    <title>Earnings Insight Empty State</title>
 
     <!-- Poppins Font Family -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -50,7 +50,6 @@
         .col--gray-900 { color: var(--color-gray-900,#101828); }
         .col--gray-950 { color: var(--color-gray-950,#0C111D); }
         .col--blue-dark-700 { color: var(--color-blue-dark-700, #004EEB); }
-        .col--teal-700 { color: var(--Teal-700, #107569); }
 
         /* Background */
         .bg--col--gray--100 { background-color: var(--Gray-100, #F2F4F7); }
@@ -158,10 +157,10 @@
                     <!-- Select Dropdown -->
                     <div class="relative z--10000 w--100-responsive-mobile-portrait">
                         <select data-nice-select>
-                            <option value="yearly">Yearly</option>
+                            <option value="monthly">Monthly</option>
                             <option value="daily">Daily</option>
                             <option value="weekly">Weekly</option>
-                            <option value="monthly">Monthly</option>
+                            <option value="yearly">Yearly</option>
                             <option value="alltime">All time</option>
                         </select>
                         <!-- <div class="pointer">
@@ -214,14 +213,26 @@
 
                                 <!-- Chart Category List -->
                                 <div class="pad--x--8 flex flex-wrap gap--8 justify-center items-center">
-                                  <div class="flex gap--8 items-center">
-                                      <span class="db w--8 h--8 bg--col--chart-1 br-100"></span>
-                                      <span class="fs--12 lh--18 col--gray-500">New Subscriber</span>
-                                  </div>
-                                  <div class="flex gap--8 items-center">
-                                      <span class="db w--8 h--8 bg--col--chart-2 br-100"></span>
-                                      <span class="fs--12 lh--18 col--gray-500">Recurring subscriber</span>
-                                  </div>
+                                    <div class="flex gap--8 items-center">
+                                        <span class="db w--8 h--8 bg--col--chart-1 br-100"></span>
+                                        <span class="fs--12 lh--18 col--gray-500">Subscription</span>
+                                    </div>
+                                    <div class="flex gap--8 items-center">
+                                        <span class="db w--8 h--8 bg--col--chart-2 br-100"></span>
+                                        <span class="fs--12 lh--18 col--gray-500">Pay to view</span>
+                                    </div>
+                                    <div class="flex gap--8 items-center">
+                                        <span class="db w--8 h--8 bg--col--chart-3 br-100"></span>
+                                        <span class="fs--12 lh--18 col--gray-500">Merch</span>
+                                    </div>
+                                    <div class="flex gap--8 items-center">
+                                        <span class="db w--8 h--8 bg--col--chart-5 br-100"></span>
+                                        <span class="fs--12 lh--18 col--gray-500">Wishtender</span>
+                                    </div>
+                                    <div class="flex gap--8 items-center">
+                                        <span class="db w--8 h--8 bg--col--chart-6 br-100"></span>
+                                        <span class="fs--12 lh--18 col--gray-500">Custom request</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -270,28 +281,20 @@
                               <div class="pad--x--8 flex gap--8 justify-center items-center">
                                   <div class="flex gap--8 items-center">
                                       <span class="db w--8 h--8 bg--col--chart-1 br-100"></span>
-                                      <span class="fs--12 lh--18 col--gray-500">Free</span>
+                                      <span class="fs--12 lh--18 col--gray-500">Tip</span>
                                   </div>
                                   <div class="flex gap--8 items-center">
                                       <span class="db w--8 h--8 bg--col--chart-2 br-100"></span>
-                                      <span class="fs--12 lh--18 col--gray-500">Tier 1</span>
+                                      <span class="fs--12 lh--18 col--gray-500">Call</span>
                                   </div>
                                   <div class="flex gap--8 items-center">
                                       <span class="db w--8 h--8 bg--col--chart-3 br-100"></span>
-                                      <span class="fs--12 lh--18 col--gray-500">Tier 2</span>
+                                      <span class="fs--12 lh--18 col--gray-500">Chat</span>
                                   </div>
                                   <div class="flex gap--8 items-center">
-                                      <span class="db w--8 h--8 bg--col--chart-4 br-100"></span>
-                                      <span class="fs--12 lh--18 col--gray-500">Tier 3</span>
+                                      <span class="db w--8 h--8 bg--col--chart-5 br-100"></span>
+                                      <span class="fs--12 lh--18 col--gray-500">Live streaming</span>
                                   </div>
-                                  <div class="flex gap--8 items-center">
-                                    <span class="db w--8 h--8 bg--col--chart-6 br-100"></span>
-                                    <span class="fs--12 lh--18 col--gray-500">Tier 4</span>
-                                </div>
-                                <div class="flex gap--8 items-center">
-                                  <span class="db w--8 h--8 bg--col--chart-5 br-100"></span>
-                                  <span class="fs--12 lh--18 col--gray-500">Tier 5</span>
-                              </div>
                               </div>
                           </div>
                       </div>
@@ -336,7 +339,7 @@
             root.setThemes([
               am5themes_Animated.new(root)
             ]);
-             
+
             // Create chart
             var chart = root.container.children.push(am5xy.XYChart.new(root, {
               panX: false,
@@ -349,16 +352,17 @@
               paddingBottom: 0,
               paddingTop: 0,
             }));
-             
+
             // Create tooltip
             var tooltip = am5.Tooltip.new(root, {
-              pointerOrientation: "horizontal", // Ensure the tooltip is positioned horizontally
+              pointerOrientation: "horizontal",
+              getFillFromSprite: false, // Prevent tooltip from inheriting color from sprite
               background: am5.RoundedRectangle.new(root, {
-                fill: am5.color(0xFFFFFF), // White background
-                shadowColor: am5.color(0xE2E2E2), // Shadow color (black)
-                shadowBlur: 8, // Blur effect of the shadow
-                shadowOffsetX: 0, // Horizontal offset of the shadow
-                shadowOffsetY: 0,  // Vertical offset of the shadow
+                fill: am5.color(0xFFFFFF),
+                shadowColor: am5.color(0xE2E2E2),
+                shadowBlur: 8,
+                shadowOffsetX: 0,
+                shadowOffsetY: 0,
               })
             });
 
@@ -369,144 +373,88 @@
             tooltip.get("background").set("cornerRadiusBR", 2);
 
             // Set label properties after tooltip creation
-              tooltip.label.setAll({
+            tooltip.label.setAll({
               paddingLeft: 0,
               paddingRight: 0,
               paddingTop: 0,
               paddingBottom: 0,
-              textAlign: "left", // Align text to the left
-              fill: am5.color(0x344054), // Text color (black)
-              fontSize: "0.75rem", // Font size
-              fontFamily: "'Poppins', sans-serif", // Font family
+              textAlign: "left",
+              fill: am5.color(0x344054),
+              fontSize: "0.75rem",
+              fontFamily: "'Poppins', sans-serif",
               lineHeight: 1.4,
             });
-             
+
             // Assign CSS class to the tooltip
             tooltip.get("background").set("cssClass", "custom-tooltip");
-             
+
             chart.plotContainer.set("tooltipPosition", "pointer");
             chart.plotContainer.set("tooltipText", "a");
             chart.plotContainer.set("tooltip", tooltip);
-             
-            // Mapping of abbreviated month names to full month names
-            var monthMapping = {
-              "Jan": "JANUARY",
-              "Feb": "FEBRUARY",
-              "Mar": "MARCH",
-              "Apr": "APRIL",
-              "May": "MAY",
-              "Jun": "JUNE",
-              "Jul": "JULY",
-              "Aug": "AUGUST",
-              "Sep": "SEPTEMBER",
-              "Oct": "OCTOBER",
-              "Nov": "NOVEMBER",
-              "Dec": "DECEMBER"
-            };
-             
-            // Add cursor
-            var cursor = chart.set("cursor", am5xy.XYCursor.new(root, {
-              behavior: "none"
-            }));
-            cursor.lineY.set("visible", false);
-            cursor.lineX.set("visible", false);
-             
-            // Updated data with months
-            var data = [{
-              "month": "Jan",
-              "year": 2023,
-              "newsubscriber": 400,
-              "recurringsubscriber": 400
-            }, {
-              "month": "Feb",
-              "year": 2023,
-              "newsubscriber": 500,
-              "recurringsubscriber": 350
-            }, {
-              "month": "Mar",
-              "year": 2023,
-              "newsubscriber": 350,
-              "recurringsubscriber": 500
-            }, {
-              "month": "Apr",
-              "year": 2023,
-              "newsubscriber": 250,
-              "recurringsubscriber": 750
-            }, {
-              "month": "May",
-              "year": 2023,
-              "newsubscriber": 300,
-              "recurringsubscriber": 500
-            }, {
-              "month": "Jun",
-              "year": 2023,
-              "newsubscriber": 650,
-              "recurringsubscriber": 150
-            }, {
-              "month": "Jul",
-              "year": 2023,
-              "newsubscriber": 356,
-              "recurringsubscriber": 258
-            }, {
-              "month": "Aug",
-              "year": 2023,
-              "newsubscriber": 524,
-              "recurringsubscriber": 325
-            }, {
-              "month": "Sep",
-              "year": 2023,
-              "newsubscriber": 256,
-              "recurringsubscriber": 750
-            }, {
-              "month": "Oct",
-              "year": 2023,
-              "newsubscriber": 325,
-              "recurringsubscriber": 425
-            }, {
-              "month": "Nov",
-              "year": 2023,
-              "newsubscriber": 236,
-              "recurringsubscriber": 560
-            }, {
-              "month": "Dec",
-              "year": 2023,
-              "newsubscriber": 234,
-              "recurringsubscriber": 568
-            }];
-             
+
+            // Daily data for June
+            var data = [
+              { "day": "Jul 1", "subscription": 200, "paytoview": 80, "merch": 50, "wishtender": 30, "customrequest": 30 },
+              { "day": "Jul 2", "subscription": 220, "paytoview": 120, "merch": 90, "wishtender": 50, "customrequest": 60 },
+              { "day": "Jul 3", "subscription": 280, "paytoview": 160, "merch": 120, "wishtender": 140, "customrequest": 80 },
+              { "day": "Jul 4", "subscription": 280, "paytoview": 160, "merch": 120, "wishtender": 140, "customrequest": 80 },
+              { "day": "Jul 5","subscription": 210, "paytoview": 160, "merch": 120, "wishtender": 140, "customrequest": 80 },
+              { "day": "Jul 6", "subscription": 280, "paytoview": 160, "merch": 120, "wishtender": 100, "customrequest": 80 },
+              { "day": "Jul 7", "subscription": 80, "paytoview": 160, "merch": 120, "wishtender": 140, "customrequest": 80 },
+              { "day": "Jul 8", "subscription": 280, "paytoview": 160, "merch": 120, "wishtender": 140, "customrequest": 80 },
+              { "day": "Jul 9", "subscription": 280, "paytoview": 110, "merch": 120, "wishtender": 140, "customrequest": 80 },
+              { "day": "Jul 10", "subscription": 280, "paytoview": 160, "merch": 120, "wishtender": 140, "customrequest": 80 },
+              { "day": "Jul 11", "subscription": 280, "paytoview": 160, "merch": 120, "wishtender": 140, "customrequest": 80 },
+              { "day": "Jul 12", "subscription": 280, "paytoview": 160, "merch": 120, "wishtender": 140, "customrequest": 80 },
+              { "day": "Jul 13", "subscription": 280, "paytoview": 160, "merch": 120, "wishtender": 140, "customrequest": 80 },
+              { "day": "Jul 14", "subscription": 280, "paytoview": 160, "merch": 120, "wishtender": 140, "customrequest": 80 },
+              { "day": "Jul 15", "subscription": 280, "paytoview": 160, "merch": 120, "wishtender": 140, "customrequest": 80 },
+              { "day": "Jul 16", "subscription": 150, "paytoview": 90, "merch": 50, "wishtender": 40, "customrequest": 20 },
+              { "day": "Jul 17", "subscription": 280, "paytoview": 160, "merch": 120, "wishtender": 140, "customrequest": 80 },
+              { "day": "Jul 18", "subscription": 280, "paytoview": 160, "merch": 120, "wishtender": 140, "customrequest": 80 },
+              { "day": "Jul 19", "subscription": 150, "paytoview": 90, "merch": 50, "wishtender": 40, "customrequest": 20 },
+              { "day": "Jul 20", "subscription": 280, "paytoview": 160, "merch": 120, "wishtender": 140, "customrequest": 80 },
+              { "day": "Jul 21", "subscription": 150, "paytoview": 90, "merch": 50, "wishtender": 40, "customrequest": 20 },
+              { "day": "Jul 22", "subscription": 280, "paytoview": 160, "merch": 120, "wishtender": 140, "customrequest": 80 },
+              { "day": "Jul 23", "subscription": 150, "paytoview": 90, "merch": 50, "wishtender": 40, "customrequest": 20 },
+              { "day": "Jul 24", "subscription": 150, "paytoview": 90, "merch": 50, "wishtender": 40, "customrequest": 20 },
+              { "day": "Jul 25", "subscription": 280, "paytoview": 160, "merch": 120, "wishtender": 140, "customrequest": 80 },
+              { "day": "Jul 26", "subscription": 150, "paytoview": 90, "merch": 50, "wishtender": 40, "customrequest": 20 },
+              { "day": "Jul 27", "subscription": 150, "paytoview": 90, "merch": 50, "wishtender": 40, "customrequest": 20 },
+              { "day": "Jul 28", "subscription": 280, "paytoview": 160, "merch": 120, "wishtender": 140, "customrequest": 80 },
+              { "day": "Jul 29", "subscription": 150, "paytoview": 90, "merch": 50, "wishtender": 40, "customrequest": 20 },
+              { "day": "Jul 30", "subscription": 280, "paytoview": 160, "merch": 120, "wishtender": 140, "customrequest": 80 }
+            ];
+
             // Create axes
             var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
-              categoryField: "month",
+              categoryField: "day",
               renderer: am5xy.AxisRendererX.new(root, {
-                minGridDistance: 30
-              }),
-              // Disable the tooltip on the category axis
-              //tooltip: am5.Tooltip.new(root, {
-                //visible: false
-              //})
+                minGridDistance: 100
+              })
             }));
-             
+
             xAxis.data.setAll(data);
-             
+
             xAxis.get("renderer").labels.template.setAll({
-              fontSize: "0.75rem", // Set the font size for X-axis labels
-              fill: am5.color(0x475467), // Text color (black)
+              fontSize: "0.75rem",
+              fill: am5.color(0x475467),
             });
-             
+
             var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
               renderer: am5xy.AxisRendererY.new(root, {}),
-              min: 0,      // Minimum value on the Y-axis
-                max: 1000,   // Maximum value on the Y-axis
-                strictMinMax: true // Enforce min and max values
+              min: 0,
+              max: 1000, // Adjusted max value for daily data
+              strictMinMax: true,
+              paddingRight: 10,
+              paddingBottom: 10,
             }));
-             
-            // Create Y-axis (left axis)
+
             yAxis.get("renderer").labels.template.setAll({
-              fontSize: "0.75rem", // Set the font size for Y-axis labels
-              fill: am5.color(0x475467), // Text color (black)
+              fontSize: "0.75rem",
+              fill: am5.color(0x475467),
             });
-             
-             
+
             // Add series
             function makeSeries(name, fieldName, color) {
               var series = chart.series.push(am5xy.ColumnSeries.new(root, {
@@ -515,76 +463,79 @@
                 xAxis: xAxis,
                 yAxis: yAxis,
                 valueYField: fieldName,
-                categoryXField: "month",
+                categoryXField: "day",
                 fill: am5.color(color),
                 stroke: am5.color(color)
               }));
-             
+
               series.columns.template.setAll({
-                width: am5.percent(25), // Adjust the width of the bars (narrower than before)
+                width: am5.percent(35),
                 fill: am5.color(color),
                 stroke: am5.color(color)
               });
-             
+
+              // Set tooltipText for each column
+              series.columns.template.set("tooltipText", "{name}: [bold]USD {valueY}[/]");
+
               series.data.setAll(data);
               series.appear();
+
+              return series; // Return the series object
             }
-             
-            //Y-Axis Grid Removed
+
+            // Y-Axis Grid Removed
             yAxis.get("renderer").grid.template.setAll({
-                stroke: am5.color(0xf2f4f7),
-                strokeOpacity: 1
+              stroke: am5.color(0xf2f4f7),
+              strokeOpacity: 1
             });
-             
-            //X-Axis Grid Removed
-            xAxis.get("renderer").grid.template.setAll({    
+
+            // X-Axis Grid Removed
+            xAxis.get("renderer").grid.template.setAll({
               stroke: am5.color(0xf2f4f7)
             });
-             
-            makeSeries("New", "newsubscriber", 0x4CC9F0);
-            makeSeries("Recurring", "recurringsubscriber", 0x4361EE);
 
-            // Calculate total values for each month and format tooltip text
+            // Create series and store them in an array
+            var allSeries = [
+              makeSeries("Subscription", "subscription", 0x4CC9F0),
+              makeSeries("Pay to view", "paytoview", 0x4361EE),
+              makeSeries("Merch", "merch", 0x3A0BA3),
+              makeSeries("Wishtender", "wishtender", 0xF72485),
+              makeSeries("Custom request", "customrequest", 0x98A2B3)
+            ];
+
+            // Tooltip text customization
             tooltip.label.adapters.add("text", function(text, target) {
-              text = "";
+              var tooltipDataItem = target.dataItem;
+              if (!tooltipDataItem) return text;
+
+              var xAxisLabel = tooltipDataItem.get("categoryX");
+              var result = "[font color='#667085'][bold]" + xAxisLabel + "[/]\n";
               var total = 0;
-              var i = 0;
-              var xAxisLabel = "";
-              var year = "";
-             
-              chart.series.each(function(series) {
-                var tooltipDataItem = series.get("tooltipDataItem");
-                if (tooltipDataItem) {
-                  total += tooltipDataItem.get("valueY");
-                  if (i == 0) {
-                    xAxisLabel = tooltipDataItem.get("categoryX");
-                    year = tooltipDataItem.dataContext ? tooltipDataItem.dataContext.year : ""; // Get the year from the data context
-                  }
-                  if (i != 0) {
-                    text += "\n";
-                  }
-                  text += '[' + series.get("fill").toString() + ' width:12px height:12px fontSize: 16px]●[/] [fontWeight:normal width:120px]' + series.get("name") + '[/] [font color="#101828"][fontWeight:600 width:0px] USD ' + tooltipDataItem.get("valueY") + '[/]';
+
+              allSeries.forEach(function(series) {
+                var dataItem = series.dataItems.find(item => item.get("categoryX") === xAxisLabel);
+                if (dataItem) {
+                  var value = dataItem.get("valueY");
+                  total += value;
+                  result += '[' + series.get("fill").toString() + ' width:12px height:12px fontSize: 16px]●[/] ' +
+                            '[fontWeight:normal width:120px]' + series.get("name") + '[/] ' +
+                            '[font color="#101828"][fontWeight:600 width:0px]USD ' + value.toFixed(2) + '[/]\n';
                 }
-                i++;
               });
-             
-              // Replace abbreviated month name with full month name
-              var fullMonthName = monthMapping[xAxisLabel] || xAxisLabel;
-             
-              // Add x-axis label with year at the top
-              text = "[font color='#667085'][bold]" + fullMonthName + " " + year + "[/]\n" + text;
-             
-              // Add total value with a line above it
-              text += "\n[font color='#D0D5DD']───────────────────────[/font]\n[fontWeight:normal width:135px height: 0px][font color='#667085'] Total Earnings[/font][/] [bold width:0px] USD " + total + "[/]";
-              return text;
+
+              result += "[font color='#D0D5DD']───────────────────────[/font]\n" +
+                        "[fontWeight:normal width:135px height: 0px][font color='#667085']Total Earnings[/font][/] " +
+                        "[bold width:0px]USD " + total.toFixed(2) + "[/]";
+              
+              return result;
             });
-             
-            // Add scrollbar
+
+            // Add scrollbar (optional)
             chart.set("scrollbarX", am5.Scrollbar.new(root, {
               orientation: "horizontal",
-              visible: false,
+              visible: false, // Make it visible since there are many days in June
             }));
-             
+
             // Make stuff animate on load
             chart.appear(1000, 100);
         }
@@ -616,24 +567,43 @@
 
           // Static data with short month names for xAxis and full month names in uppercase for tooltips
           var staticValues = [
-            { month: "Jan", fullMonth: "JANUARY", year: 2023, newsubscriber: 1280, recurringsubscriber: 190 },
-            { month: "Feb", fullMonth: "FEBRUARY", year: 2023, newsubscriber: 480, recurringsubscriber: 90 },
-            { month: "Mar", fullMonth: "MARCH", year: 2023, newsubscriber: 80, recurringsubscriber: 390 },
-            { month: "Apr", fullMonth: "APRIL", year: 2023, newsubscriber: 380, recurringsubscriber: 120 },
-            { month: "May", fullMonth: "MAY", year: 2023, newsubscriber: 280, recurringsubscriber: 190 },
-            { month: "Jun", fullMonth: "JUNE", year: 2023, newsubscriber: 180, recurringsubscriber: 190 },
-            { month: "Jul", fullMonth: "JULY", year: 2023, newsubscriber: 380, recurringsubscriber: 190 },
-            { month: "Aug", fullMonth: "AUGUST", year: 2023, newsubscriber: 180, recurringsubscriber: 190 },
-            { month: "Sep", fullMonth: "SEPTEMBER", year: 2023, newsubscriber: 580, recurringsubscriber: 190 },
-            { month: "Oct", fullMonth: "OCTOBER", year: 2023, newsubscriber: 680, recurringsubscriber: 190 },
-            { month: "Nov", fullMonth: "NOVEMBER", year: 2023, newsubscriber: 880, recurringsubscriber: 90 },
-            { month: "Dec", fullMonth: "DECEMBER", year: 2023, newsubscriber: 180, recurringsubscriber: 190 }
+            { day: "Jul 1", year: 2023, subscription: 155, paytoview: 120, merch: 90, wishtender: 120, customrequest: 50 },
+            { day: "Jul 2", year: 2023, subscription: 105, paytoview: 95, merch: 145, wishtender: 120, customrequest: 50 },
+            { day: "Jul 3", year: 2023, subscription: 110, paytoview: 130, merch: 125, wishtender: 110, customrequest: 100 },
+            { day: "Jul 4", year: 2023, subscription: 115, paytoview: 165, merch: 105, wishtender: 160, customrequest: 90 },
+            { day: "Jul 5", year: 2023, subscription: 120, paytoview: 160, merch: 140, wishtender: 120, customrequest: 90 },
+            { day: "Jul 6", year: 2023, subscription: 125, paytoview: 145, merch: 165, wishtender: 140, customrequest: 90 },
+            { day: "Jul 7", year: 2023, subscription: 150, paytoview: 130, merch: 170, wishtender: 120, customrequest: 170 },
+            { day: "Jul 8", year: 2023, subscription: 140, paytoview: 150, merch: 135, wishtender: 120, customrequest: 90 },
+            { day: "Jul 9", year: 2023, subscription: 130, paytoview: 110, merch: 120, wishtender: 180, customrequest: 120 },
+            { day: "Jul 10", year: 2023, subscription: 160, paytoview: 170, merch: 150, wishtender: 120, customrequest: 90 },
+            { day: "Jul 11", year: 2023, subscription: 170, paytoview: 180, merch: 155, wishtender: 140, customrequest: 150 },
+            { day: "Jul 12", year: 2023, subscription: 180, paytoview: 190, merch: 160, wishtender: 120, customrequest: 90 },
+            { day: "Jul 13", year: 2023, subscription: 160, paytoview: 170, merch: 150, wishtender: 120, customrequest: 90 },
+            { day: "Jul 14", year: 2023, subscription: 170, paytoview: 180, merch: 155, wishtender: 140, customrequest: 150 },
+            { day: "Jul 15", year: 2023, subscription: 180, paytoview: 190, merch: 160, wishtender: 120, customrequest: 90 },
+            { day: "Jul 16", year: 2023, subscription: 160, paytoview: 170, merch: 150, wishtender: 120, customrequest: 90 },
+            { day: "Jul 17", year: 2023, subscription: 170, paytoview: 180, merch: 155, wishtender: 140, customrequest: 150 },
+            { day: "Jul 18", year: 2023, subscription: 180, paytoview: 190, merch: 160, wishtender: 120, customrequest: 90 },
+            { day: "Jul 19", year: 2023, subscription: 160, paytoview: 170, merch: 150, wishtender: 120, customrequest: 90 },
+            { day: "Jul 20", year: 2023, subscription: 170, paytoview: 180, merch: 155, wishtender: 140, customrequest: 150 },
+            { day: "Jul 21", year: 2023, subscription: 180, paytoview: 190, merch: 160, wishtender: 120, customrequest: 90 },
+            { day: "Jul 22", year: 2023, subscription: 160, paytoview: 170, merch: 150, wishtender: 120, customrequest: 90 },
+            { day: "Jul 23", year: 2023, subscription: 170, paytoview: 180, merch: 155, wishtender: 140, customrequest: 150 },
+            { day: "Jul 24", year: 2023, subscription: 180, paytoview: 190, merch: 160, wishtender: 120, customrequest: 90 },
+            { day: "Jul 25", year: 2023, subscription: 160, paytoview: 170, merch: 150, wishtender: 120, customrequest: 90 },
+            { day: "Jul 26", year: 2023, subscription: 170, paytoview: 180, merch: 155, wishtender: 140, customrequest: 150 },
+            { day: "Jul 27", year: 2023, subscription: 180, paytoview: 190, merch: 160, wishtender: 120, customrequest: 90 },
+            { day: "Jul 28", year: 2023, subscription: 160, paytoview: 170, merch: 150, wishtender: 120, customrequest: 90 },
+            { day: "Jul 29", year: 2023, subscription: 170, paytoview: 180, merch: 155, wishtender: 140, customrequest: 150 },
+            { day: "Jul 30", year: 2023, subscription: 180, paytoview: 190, merch: 160, wishtender: 120, customrequest: 90 }
           ];
 
           // Create axes
           var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
-            categoryField: "month",
-            renderer: am5xy.AxisRendererX.new(root, { minGridDistance: 30 })
+            categoryField: "day",
+            paddingLeft: 20,
+            renderer: am5xy.AxisRendererX.new(root, { minGridDistance: 100 })
           }));
           xAxis.data.setAll(staticValues); // Set the X-axis categories as the months
           xAxis.get("renderer").labels.template.setAll({
@@ -646,484 +616,9 @@
           }));
           yAxis.get("renderer").labels.template.setAll({
             visible: false,
-            paddingLeft: 0,
-          });
-
-          // Function to add series with debugging and tooltips
-          function addSeries(name, fieldName, color) {
-            var series = chart.series.push(am5xy.SmoothedXLineSeries.new(root, {
-              name: name,
-              xAxis: xAxis,
-              yAxis: yAxis,
-              valueYField: fieldName,
-              categoryXField: "month",
-              stroke: color,
-              tooltip: am5.Tooltip.new(root, {
-                label: {
-                  fill: am5.color(0x000000), // Set text color to black
-                  lineHeight: 1.8
-                },
-                labelText: "[font color='#667085' fontFamily: 'Poppins' fontWeight:600 fontSize: .75rem]{fullMonth} {year.formatNumber('#')}[/]\n[font color='{stroke}' fontSize: 16px]● [/][font color='#344054' fontFamily: 'Poppins' fontWeight:400 fontSize: .75rem]{name}\t\t\t[/][font color='#101828' fontFamily: 'Poppins' fontWeight:500 fontSize: .75rem]USD {valueY}[/]", // Custom tooltip 
-
-                getFillFromSprite: false, // Prevent inheriting color from the series
-                pointerOrientation: "horizontal", // Ensure the tooltip is positioned horizontally
-                tooltipPosition: "pointer", // Fix the tooltip position
-                background: am5.RoundedRectangle.new(root, {
-                  fill: am5.color(0xFFFFFF), // White background
-                  cornerRadiusTL: 0,
-                  cornerRadiusTR: 0,
-                  cornerRadiusBL: 0,
-                  cornerRadiusBR: 0,
-                  shadowColor: am5.color(0xE2E2E2, 0.08), // Shadow color with opacity
-                  shadowBlur: 8,
-                  shadowOffsetX: 0,
-                  shadowOffsetY: 0
-                })
-              })
-            }));
-
-            series.strokes.template.setAll({ strokeWidth: 3, stroke: color });
-
-            // Ensure the tooltip references the correct stroke color
-            series.get("tooltip").label.adapters.add("text", function(text, target) {
-              return text.replace("{stroke}", am5.color(color).toCSSHex());
-            });
-
-            // Create a bullet template
-            var bulletTemplate = am5.Template.new({});
-
-            // Add bullet to the series
-            series.bullets.push(function() {
-                return am5.Bullet.new(root, {
-                    sprite: am5.Circle.new(root, {
-                        radius: 5,
-                        fill: color,
-                        opacity: 0 // Start with invisible bullet
-                    }, bulletTemplate)
-                });
-            });
-
-            // Show bullet when tooltip is shown
-            series.events.on("tooltipshownat", function(ev) {
-                var dataItem = ev.target.get("tooltipDataItem");
-                var bullet = dataItem.bullets[0];
-                if (bullet && bullet.get("sprite")) {
-                    bullet.get("sprite").set("opacity", 1); // Make bullet visible
-                }
-            });
-
-            // Hide bullet when tooltip is hidden
-            series.events.on("tooltiphiddenat", function(ev) {
-                var dataItem = ev.target.get("tooltipDataItem");
-                if (dataItem) {
-                    var bullet = dataItem.bullets[0];
-                    if (bullet && bullet.get("sprite")) {
-                        bullet.get("sprite").set("opacity", 0); // Make bullet invisible
-                    }
-                }
-            });
-
-            series.data.setAll(staticValues);
-            series.appear(1000);
-          }
-
-          addSeries("New", "newsubscriber", am5.color(0x4CC9F0));
-          addSeries("Recurring", "recurringsubscriber", am5.color(0x4361EE));
-
-          //Y-Axis Grid Removed
-          yAxis.get("renderer").grid.template.setAll({
-                stroke: am5.color(0xf2f4f7),
-                strokeOpacity: 1
-            });
-
-          // Remove X-Axis Grid
-          xAxis.get("renderer").grid.template.setAll({ stroke: am5.color(0xf2f4f7) });
-
-          // Add scrollbar
-          chart.set("scrollbarX", am5.Scrollbar.new(root, {
-            orientation: "horizontal",
-            visible: false
-          }));
-
-          // Animate chart on load
-          chart.appear(1000, 100);
-
-        }
-
-        // Bar Chart Main Function for Token Insight
-        function TokenBarChart (tokenChartRenderEl) {
-            // Create root element
-            var root = am5.Root.new(tokenChartRenderEl);
-
-            root._logo.dispose();
-
-            // Set themes
-            root.setThemes([
-              am5themes_Animated.new(root)
-            ]);
-             
-            // Create chart
-            var chart = root.container.children.push(am5xy.XYChart.new(root, {
-              panX: false,
-              panY: false,
-              wheelX: "none",
-              wheelY: "none",
-              maxTooltipDistance: 1,
-              paddingLeft: 0,
-              paddingRight: 0,
-              paddingBottom: 0,
-              paddingTop: 0,
-            }));
-             
-            // Create tooltip
-            var tooltip = am5.Tooltip.new(root, {
-              pointerOrientation: "horizontal", // Ensure the tooltip is positioned horizontally
-              background: am5.RoundedRectangle.new(root, {
-                fill: am5.color(0xFFFFFF), // White background
-                shadowColor: am5.color(0xE2E2E2), // Shadow color (black)
-                shadowBlur: 8, // Blur effect of the shadow
-                shadowOffsetX: 0, // Horizontal offset of the shadow
-                shadowOffsetY: 0,  // Vertical offset of the shadow
-              })
-            });
-
-            // Apply corner radius to the tooltip background
-            tooltip.get("background").set("cornerRadiusTL", 2);
-            tooltip.get("background").set("cornerRadiusTR", 2);
-            tooltip.get("background").set("cornerRadiusBL", 2);
-            tooltip.get("background").set("cornerRadiusBR", 2);
-
-            // Set label properties after tooltip creation
-              tooltip.label.setAll({
-              paddingLeft: 0,
-              paddingRight: 0,
-              paddingTop: 0,
-              paddingBottom: 0,
-              textAlign: "left", // Align text to the left
-              fill: am5.color(0x344054), // Text color (black)
-              fontSize: "0.75rem", // Font size
-              fontFamily: "'Poppins', sans-serif", // Font family
-              lineHeight: 1.4,
-            });
-             
-            // Assign CSS class to the tooltip
-            tooltip.get("background").set("cssClass", "custom-tooltip");
-             
-            chart.plotContainer.set("tooltipPosition", "pointer");
-            chart.plotContainer.set("tooltipText", "a");
-            chart.plotContainer.set("tooltip", tooltip);
-             
-            // Mapping of abbreviated month names to full month names
-            var monthMapping = {
-              "Jan": "JANUARY",
-              "Feb": "FEBRUARY",
-              "Mar": "MARCH",
-              "Apr": "APRIL",
-              "May": "MAY",
-              "Jun": "JUNE",
-              "Jul": "JULY",
-              "Aug": "AUGUST",
-              "Sep": "SEPTEMBER",
-              "Oct": "OCTOBER",
-              "Nov": "NOVEMBER",
-              "Dec": "DECEMBER"
-            };
-             
-            // Add cursor
-            var cursor = chart.set("cursor", am5xy.XYCursor.new(root, {
-              behavior: "none"
-            }));
-            cursor.lineY.set("visible", false);
-            cursor.lineX.set("visible", false);
-             
-            // Updated data with months
-            var data = [{
-              "month": "Jan",
-              "year": 2023,
-              "free": 150,
-              "tier1": 190,
-              "tier2": 150,
-              "tier3": 70,
-              "tier4": 170,
-              "tier5": 70,
-            }, {
-              "month": "Feb",
-              "year": 2023,
-              "free": 150,
-              "tier1": 190,
-              "tier2": 150,
-              "tier3": 70,
-              "tier4": 170,
-              "tier5": 70,
-            }, {
-              "month": "Mar",
-              "year": 2023,
-              "free": 150,
-              "tier1": 190,
-              "tier2": 90,
-              "tier3": 70,
-              "tier4": 170,
-              "tier5": 70,
-            }, {
-              "month": "Apr",
-              "year": 2023,
-              "free": 150,
-              "tier1": 190,
-              "tier2": 50,
-              "tier3": 70,
-              "tier4": 170,
-              "tier5": 70,
-            }, {
-              "month": "May",
-              "year": 2023,
-              "free": 150,
-              "tier1": 190,
-              "tier2": 150,
-              "tier3": 70,
-              "tier4": 170,
-              "tier5": 70,
-            }, {
-              "month": "Jun",
-              "year": 2023,
-              "free": 150,
-              "tier1": 190,
-              "tier2": 150,
-              "tier3": 70,
-              "tier4": 70,
-              "tier5": 70,
-            }, {
-              "month": "Jul",
-              "year": 2023,
-              "free": 150,
-              "tier1": 190,
-              "tier2": 50,
-              "tier3": 70,
-              "tier4": 170,
-              "tier5": 70,
-            }, {
-              "month": "Aug",
-              "year": 2023,
-              "free": 150,
-              "tier1": 190,
-              "tier2": 150,
-              "tier3": 70,
-              "tier4": 170,
-              "tier5": 170,
-            }, {
-              "month": "Sep",
-              "year": 2023,
-              "free": 150,
-              "tier1": 190,
-              "tier2": 50,
-              "tier3": 170,
-              "tier4": 170,
-              "tier5": 70,
-            }, {
-              "month": "Oct",
-              "year": 2023,
-              "free": 150,
-              "tier1": 190,
-              "tier2": 50,
-              "tier3": 70,
-              "tier4": 170,
-              "tier5": 70,
-            }, {
-              "month": "Nov",
-              "year": 2023,
-              "free": 150,
-              "tier1": 190,
-              "tier2": 250,
-              "tier3": 70,
-              "tier4": 170,
-              "tier5": 70,
-            }, {
-              "month": "Dec",
-              "year": 2023,
-              "free": 150,
-              "tier1": 190,
-              "tier2": 150,
-              "tier3": 170,
-              "tier4": 170,
-              "tier5": 70,
-            }];
-             
-            // Create axes
-            var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
-              categoryField: "month",
-              renderer: am5xy.AxisRendererX.new(root, {
-                minGridDistance: 30
-              }),
-              // Disable the tooltip on the category axis
-              //tooltip: am5.Tooltip.new(root, {
-                //visible: false
-              //})
-            }));
-             
-            xAxis.data.setAll(data);
-             
-            xAxis.get("renderer").labels.template.setAll({
-              fontSize: "0.75rem", // Set the font size for X-axis labels
-              fill: am5.color(0x475467), // Text color (black)
-            });
-             
-            var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
-              renderer: am5xy.AxisRendererY.new(root, {}),
-              min: 0,      // Minimum value on the Y-axis
-                max: 1000,   // Maximum value on the Y-axis
-                strictMinMax: true // Enforce min and max values
-            }));
-             
-            // Create Y-axis (left axis)
-            yAxis.get("renderer").labels.template.setAll({
-              fontSize: "0.75rem", // Set the font size for Y-axis labels
-              fill: am5.color(0x475467), // Text color (black)
-            });
-             
-             
-            // Add series
-            function makeSeries(name, fieldName, color) {
-              var series = chart.series.push(am5xy.ColumnSeries.new(root, {
-                name: name,
-                stacked: true,
-                xAxis: xAxis,
-                yAxis: yAxis,
-                valueYField: fieldName,
-                categoryXField: "month",
-                fill: am5.color(color),
-                stroke: am5.color(color)
-              }));
-             
-              series.columns.template.setAll({
-                width: am5.percent(25), // Adjust the width of the bars (narrower than before)
-                fill: am5.color(color),
-                stroke: am5.color(color)
-              });
-             
-              series.data.setAll(data);
-              series.appear();
-            }
-             
-            //Y-Axis Grid Removed
-            yAxis.get("renderer").grid.template.setAll({
-                stroke: am5.color(0xf2f4f7),
-                strokeOpacity: 1
-            });
-             
-            //X-Axis Grid Removed
-            xAxis.get("renderer").grid.template.setAll({    
-              stroke: am5.color(0xf2f4f7)
-            });
-             
-            makeSeries("Free", "free", 0x4CC9F0);
-            makeSeries("Tier 1", "tier1", 0x4361EE);
-            makeSeries("Tier 2", "tier2", 0x3A0BA3);
-            makeSeries("Tier 3", "tier3", 0xAE4AEF);
-            makeSeries("Tier 4", "tier4", 0x98A2B3);
-            makeSeries("Tier 5", "tier5", 0xF72485);
-
-            // Calculate total values for each month and format tooltip text
-            tooltip.label.adapters.add("text", function(text, target) {
-              text = "";
-              var total = 0;
-              var i = 0;
-              var xAxisLabel = "";
-              var year = "";
-             
-              chart.series.each(function(series) {
-                var tooltipDataItem = series.get("tooltipDataItem");
-                if (tooltipDataItem) {
-                  total += tooltipDataItem.get("valueY");
-                  if (i == 0) {
-                    xAxisLabel = tooltipDataItem.get("categoryX");
-                    year = tooltipDataItem.dataContext ? tooltipDataItem.dataContext.year : ""; // Get the year from the data context
-                  }
-                  if (i != 0) {
-                    text += "\n";
-                  }
-                  text += '[' + series.get("fill").toString() + ' width:12px height:12px fontSize: 16px]●[/] [fontWeight:normal width:120px]' + series.get("name") + '[/] [font color="#101828"][fontWeight:600 width:0px] ' + tooltipDataItem.get("valueY") + '[/]';
-                }
-                i++;
-              });
-             
-              // Replace abbreviated month name with full month name
-              var fullMonthName = monthMapping[xAxisLabel] || xAxisLabel;
-             
-              // Add x-axis label with year at the top
-              text = "[font color='#667085'][bold]" + fullMonthName + " " + year + "[/]\n" + text;
-             
-              // Add total value with a line above it
-              text += "\n[font color='#D0D5DD']───────────────────────[/font]\n[fontWeight:normal width:135px height: 0px][font color='#667085'] Total Earnings[/font][/] [bold width:0px]" + total + "[/]";
-              return text;
-            });
-             
-            // Add scrollbar
-            chart.set("scrollbarX", am5.Scrollbar.new(root, {
-              orientation: "horizontal",
-              visible: false,
-            }));
-             
-            // Make stuff animate on load
-            chart.appear(1000, 100);
-        }
-
-        // Bar Chart Main Function for Token Trend
-        function TokenLineChart (tokenChartRenderLine) {
-          // Create root element
-          var root = am5.Root.new(tokenChartRenderLine);
-          root._logo.dispose();
-
-          // Create chart
-          var chart = root.container.children.push(am5xy.XYChart.new(root, {
-            panX: false,
-            panY: false,
-            wheelX: "none",
-            wheelY: "none",
-            pinchZoomX: false,
             paddingLeft: 0,
             paddingRight: 0,
-            paddingBottom: 0,
-            paddingTop: 0,
-            maxTooltipDistance: 0
-          }));
-
-          // Add cursor
-          var cursor = chart.set("cursor", am5xy.XYCursor.new(root, { behavior: "none" }));
-          cursor.lineY.set("visible", false);
-          cursor.lineX.set("visible", false);
-
-          // Static data with short month names for xAxis and full month names in uppercase for tooltips
-          var staticValues = [
-            { month: "Jan", fullMonth: "JANUARY", free: 2023, tier1: 170, tier2: 130, tier3: 50, tier4: 40, tier5: 80 },
-            { month: "Feb", fullMonth: "FEBRUARY", year: 2023, free: 223, tier1: 570, tier2: 230, tier3: 550, tier4: 240, tier5: 180 },
-            { month: "Mar", fullMonth: "MARCH", year: 2023, free: 223, tier1: 170, tier2: 530, tier3: 550, tier4: 40, tier5: 380 },
-            { month: "Apr", fullMonth: "APRIL", year: 2023, free: 823, tier1: 170, tier2: 130, tier3: 350, tier4: 540, tier5: 80 },
-            { month: "May", fullMonth: "MAY", year: 2023, free: 223, tier1: 170, tier2: 130, tier3: 50, tier4: 40, tier5: 180 },
-            { month: "Jun", fullMonth: "JUNE", year: 2023, free: 523, tier1: 570, tier2: 530, tier3: 550, tier4: 640, tier5: 380 },
-            { month: "Jul", fullMonth: "JULY", year: 2023, free: 223, tier1: 170, tier2: 430, tier3: 550, tier4: 40, tier5: 680 },
-            { month: "Aug", fullMonth: "AUGUST", year: 2023, free: 223, tier1: 170, tier2: 130, tier3: 850, tier4: 140, tier5: 80 },
-            { month: "Sep", fullMonth: "SEPTEMBER", year: 2023, free: 223, tier1: 170, tier2: 130, tier3: 50, tier4: 240, tier5: 80 },
-            { month: "Oct", fullMonth: "OCTOBER", year: 2023, free: 623, tier1: 560, tier2: 130, tier3: 450, tier4: 840, tier5: 80 },
-            { month: "Nov", fullMonth: "NOVEMBER", year: 2023, free: 223, tier1: 170, tier2: 130, tier3: 550, tier4: 240, tier5: 80 },
-            { month: "Dec", fullMonth: "DECEMBER", year: 2023, free: 223, tier1: 170, tier2: 830, tier3: 50, tier4: 40, tier5: 280 }
-          ];
-
-          // Create axes
-          var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
-            categoryField: "month",
-            renderer: am5xy.AxisRendererX.new(root, { minGridDistance: 30 })
-          }));
-          xAxis.data.setAll(staticValues); // Set the X-axis categories as the months
-          xAxis.get("renderer").labels.template.setAll({
-            fontSize: "0.75rem", // Set the font size for X-axis labels
-            fill: am5.color(0x475467), // Text color
-          });
-
-          var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
-            renderer: am5xy.AxisRendererY.new(root, {})
-          }));
-          yAxis.get("renderer").labels.template.setAll({
-            visible: false,
-            paddingLeft: 0,
+              paddingBottom: 10,
           });
 
           // Function to add series with debugging and tooltips
@@ -1133,14 +628,14 @@
               xAxis: xAxis,
               yAxis: yAxis,
               valueYField: fieldName,
-              categoryXField: "month",
+              categoryXField: "day",
               stroke: color,
               tooltip: am5.Tooltip.new(root, {
                 label: {
                   fill: am5.color(0x000000), // Set text color to black
                   lineHeight: 1.8
                 },
-                labelText: "[font color='#667085' fontFamily: 'Poppins' fontWeight:600 fontSize: .75rem]{fullMonth} {year.formatNumber('#')}[/]\n[font color='{stroke}' fontSize: 16px]● [/][font color='#344054' fontFamily: 'Poppins' fontWeight:400 fontSize: .75rem]{name}\t\t\t[/][font color='#101828' fontFamily: 'Poppins' fontWeight:500 fontSize: .75rem]{valueY} Tokens[/]", // Custom tooltip 
+                labelText: "[font color='#667085' fontFamily: 'Poppins' fontWeight:600 fontSize: .75rem]{day} [/]\n[font color='{stroke}' fontSize: 16px]● [/][font color='#344054' fontFamily: 'Poppins' fontWeight:400 fontSize: .75rem]{name}\t\t\t[/][font color='#101828' fontFamily: 'Poppins' fontWeight:500 fontSize: .75rem]USD {valueY}[/]", // Custom tooltip 
 
                 getFillFromSprite: false, // Prevent inheriting color from the series
                 pointerOrientation: "horizontal", // Ensure the tooltip is positioned horizontally
@@ -1205,12 +700,405 @@
           }
 
           // Add series with explicit colors
-          addSeries("Free", "free", am5.color(0x4CC9F0));
-          addSeries("Tier 1", "tier1", am5.color(0x4361EE));
-          addSeries("Tier 2", "tier2", am5.color(0x3A0BA3));
-          addSeries("Tier 3", "tier3", am5.color(0xAE4AEF));
-          addSeries("Tier 4", "tier4", am5.color(0x98A2B3));
-          addSeries("Tier 5", "tier5", am5.color(0xF72485));
+          addSeries("Subscription", "subscription", am5.color(0x4CC9F0));
+          addSeries("Pay to view", "paytoview", am5.color(0x4361EE));
+          addSeries("Merch", "merch", am5.color(0x3A0BA3));
+          addSeries("Wishtender", "wishtender", am5.color(0xF72585));
+          addSeries("Custom request", "customrequest", am5.color(0x98A2B3));
+
+          //Y-Axis Grid Removed
+          yAxis.get("renderer").grid.template.setAll({
+                stroke: am5.color(0xf2f4f7),
+                strokeOpacity: 1
+            });
+
+          // Remove X-Axis Grid
+          xAxis.get("renderer").grid.template.setAll({ stroke: am5.color(0xf2f4f7) });
+
+          // Add scrollbar
+          chart.set("scrollbarX", am5.Scrollbar.new(root, {
+            orientation: "horizontal",
+            visible: false
+          }));
+
+          // Animate chart on load
+          chart.appear(1000, 100);
+
+        }
+
+        // Bar Chart Main Function for Token Insight
+        function TokenBarChart (tokenChartRenderEl) {
+            // Create root element
+            var root = am5.Root.new(tokenChartRenderEl);
+
+            root._logo.dispose();
+
+            // Set themes
+            root.setThemes([
+              am5themes_Animated.new(root)
+            ]);
+
+            // Create chart
+            var chart = root.container.children.push(am5xy.XYChart.new(root, {
+              panX: false,
+              panY: false,
+              wheelX: "none",
+              wheelY: "none",
+              maxTooltipDistance: 1,
+              paddingLeft: 0,
+              paddingRight: 0,
+              paddingBottom: 0,
+              paddingTop: 0,
+            }));
+
+            // Create tooltip
+            var tooltip = am5.Tooltip.new(root, {
+              pointerOrientation: "horizontal",
+              getFillFromSprite: false, // Prevent tooltip from inheriting color from sprite
+              background: am5.RoundedRectangle.new(root, {
+                fill: am5.color(0xFFFFFF),
+                shadowColor: am5.color(0xE2E2E2),
+                shadowBlur: 8,
+                shadowOffsetX: 0,
+                shadowOffsetY: 0,
+              })
+            });
+
+            // Apply corner radius to the tooltip background
+            tooltip.get("background").set("cornerRadiusTL", 2);
+            tooltip.get("background").set("cornerRadiusTR", 2);
+            tooltip.get("background").set("cornerRadiusBL", 2);
+            tooltip.get("background").set("cornerRadiusBR", 2);
+
+            // Set label properties after tooltip creation
+            tooltip.label.setAll({
+              paddingLeft: 0,
+              paddingRight: 0,
+              paddingTop: 0,
+              paddingBottom: 0,
+              textAlign: "left",
+              fill: am5.color(0x344054),
+              fontSize: "0.75rem",
+              fontFamily: "'Poppins', sans-serif",
+              lineHeight: 1.4,
+            });
+
+            // Assign CSS class to the tooltip
+            tooltip.get("background").set("cssClass", "custom-tooltip");
+
+            chart.plotContainer.set("tooltipPosition", "pointer");
+            chart.plotContainer.set("tooltipText", "a");
+            chart.plotContainer.set("tooltip", tooltip);
+
+            // Daily data for June
+            var data = [
+              { "day": "Jul 1", "tip": 180, "call": 50, "chat": 130, "livestreaming": 30 },
+              { "day": "Jul 2", "tip": 280, "call": 250, "chat": 130, "livestreaming": 30 },
+              { "day": "Jul 3", "tip": 280, "call": 450, "chat": 130, "livestreaming": 130 },
+              { "day": "Jul 4", "tip": 180, "call": 50, "chat": 130, "livestreaming": 30 },
+              { "day": "Jul 5", "tip": 520, "call": 150, "chat": 30, "livestreaming": 30 },
+              { "day": "Jul 6", "tip": 80, "call": 50, "chat": 30, "livestreaming": 30 },
+              { "day": "Jul 7", "tip": 80, "call": 50, "chat": 30, "livestreaming": 30 },
+              { "day": "Jul 8", "tip": 280, "call": 250, "chat": 30, "livestreaming": 30 },
+              { "day": "Jul 9", "tip": 80, "call": 550, "chat": 30, "livestreaming": 30 },
+              { "day": "Jul 10", "tip": 580, "call": 50, "chat": 30, "livestreaming": 30 },
+              { "day": "Jul 11", "tip": 780, "call": 50, "chat": 350, "livestreaming": 350 },
+              { "day": "Jul 12", "tip": 280, "call": 570, "chat": 30, "livestreaming": 730 },
+              { "day": "Jul 13", "tip": 480, "call": 50, "chat": 30, "livestreaming": 30 },
+              { "day": "Jul 14", "tip": 80, "call": 550, "chat": 230, "livestreaming": 30 },
+              { "day": "Jul 15", "tip": 80, "call": 50, "chat": 30, "livestreaming": 30 },
+              { "day": "Jul 16", "tip": 480, "call": 250, "chat": 30, "livestreaming": 30 },
+              { "day": "Jul 17", "tip": 80, "call": 50, "chat": 30, "livestreaming": 30 },
+              { "day": "Jul 18", "tip": 580, "call": 50, "chat": 230, "livestreaming": 30 },
+              { "day": "Jul 19", "tip": 80, "call": 50, "chat": 30, "livestreaming": 30 },
+              { "day": "Jul 20", "tip": 80, "call": 50, "chat": 230, "livestreaming": 30 },
+              { "day": "Jul 21", "tip": 850, "call": 50, "chat": 350, "livestreaming": 30 },
+              { "day": "Jul 22", "tip": 80, "call": 550, "chat": 30, "livestreaming": 30 },
+              { "day": "Jul 23", "tip": 80, "call": 50, "chat": 30, "livestreaming": 730 },
+              { "day": "Jul 24", "tip": 80, "call": 50, "chat": 30, "livestreaming": 30 },
+              { "day": "Jul 25", "tip": 850, "call": 50, "chat": 30, "livestreaming": 30 },
+              { "day": "Jul 26", "tip": 80, "call": 50, "chat": 30, "livestreaming": 350 },
+              { "day": "Jul 27", "tip": 80, "call": 50, "chat": 30, "livestreaming": 30 },
+              { "day": "Jul 28", "tip": 850, "call": 50, "chat": 30, "livestreaming": 30 },
+              { "day": "Jul 29", "tip": 80, "call": 50, "chat": 30, "livestreaming": 30 },
+              { "day": "Jul 30", "tip": 80, "call": 50, "chat": 30, "livestreaming": 30 }
+            ];
+
+            // Create axes
+            var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
+              categoryField: "day",
+              renderer: am5xy.AxisRendererX.new(root, {
+                minGridDistance: 100
+              })
+            }));
+
+            xAxis.data.setAll(data);
+
+            xAxis.get("renderer").labels.template.setAll({
+              fontSize: "0.75rem",
+              fill: am5.color(0x475467),
+            });
+
+            var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
+              renderer: am5xy.AxisRendererY.new(root, {}),
+              min: 0,
+              max: 1000, // Adjusted max value for daily data
+              strictMinMax: true,
+              paddingRight: 10,
+              paddingBottom: 10,
+            }));
+
+            yAxis.get("renderer").labels.template.setAll({
+              fontSize: "0.75rem",
+              fill: am5.color(0x475467),
+            });
+
+            // Add series
+            function makeSeries(name, fieldName, color) {
+              var series = chart.series.push(am5xy.ColumnSeries.new(root, {
+                name: name,
+                stacked: true,
+                xAxis: xAxis,
+                yAxis: yAxis,
+                valueYField: fieldName,
+                categoryXField: "day",
+                fill: am5.color(color),
+                stroke: am5.color(color)
+              }));
+
+              series.columns.template.setAll({
+                width: am5.percent(35),
+                fill: am5.color(color),
+                stroke: am5.color(color)
+              });
+
+              // Set tooltipText for each column
+              series.columns.template.set("tooltipText", "{name}: [bold] {valueY} Tokens[/]");
+
+              series.data.setAll(data);
+              series.appear();
+
+              return series; // Return the series object
+            }
+
+            // Y-Axis Grid Removed
+            yAxis.get("renderer").grid.template.setAll({
+              stroke: am5.color(0xf2f4f7),
+              strokeOpacity: 1
+            });
+
+            // X-Axis Grid Removed
+            xAxis.get("renderer").grid.template.setAll({
+              stroke: am5.color(0xf2f4f7)
+            });
+
+            // Create series and store them in an array
+            var allSeries = [
+              makeSeries("Tip", "tip", 0x4CC9F0),
+              makeSeries("Call", "call", 0x4361EE),
+              makeSeries("Chat", "chat", 0x3A0BA3),
+              makeSeries("Live Streaming", "livestreaming", 0xF72485)
+            ];
+
+            // Tooltip text customization
+            tooltip.label.adapters.add("text", function(text, target) {
+              var tooltipDataItem = target.dataItem;
+              if (!tooltipDataItem) return text;
+
+              var xAxisLabel = tooltipDataItem.get("categoryX");
+              var result = "[font color='#667085'][bold]" + xAxisLabel + "[/]\n";
+              var total = 0;
+
+              allSeries.forEach(function(series) {
+                var dataItem = series.dataItems.find(item => item.get("categoryX") === xAxisLabel);
+                if (dataItem) {
+                  var value = dataItem.get("valueY");
+                  total += value;
+                  result += '[' + series.get("fill").toString() + ' width:12px height:12px fontSize: 16px]●[/] ' +
+                            '[fontWeight:normal width:120px]' + series.get("name") + '[/] ' +
+                            '[font color="#101828"][fontWeight:600 width:0px]' + value.toFixed(2) + ' Tokens[/]\n';
+                }
+              });
+
+              result += "[font color='#D0D5DD']───────────────────────[/font]\n" +
+                        "[fontWeight:normal width:135px height: 0px][font color='#667085']Total Earnings[/font][/] " +
+                        "[bold width:0px]" + total.toFixed(2) + " Tokens[/]";
+              
+              return result;
+            });
+
+            // Add scrollbar (optional)
+            chart.set("scrollbarX", am5.Scrollbar.new(root, {
+              orientation: "horizontal",
+              visible: false, // Make it visible since there are many days in June
+            }));
+
+            // Make stuff animate on load
+            chart.appear(1000, 100);
+        }
+
+        // Bar Chart Main Function for Token Trend
+        function TokenLineChart (tokenChartRenderLine) {
+          // Create root element
+          var root = am5.Root.new(tokenChartRenderLine);
+          root._logo.dispose();
+
+          // Create chart
+          var chart = root.container.children.push(am5xy.XYChart.new(root, {
+            panX: false,
+            panY: false,
+            wheelX: "none",
+            wheelY: "none",
+            pinchZoomX: false,
+            paddingLeft: 0,
+            paddingRight: 0,
+            paddingBottom: 0,
+            paddingTop: 0,
+            maxTooltipDistance: 0
+          }));
+
+          // Add cursor
+          var cursor = chart.set("cursor", am5xy.XYCursor.new(root, { behavior: "none" }));
+          cursor.lineY.set("visible", false);
+          cursor.lineX.set("visible", false);
+
+          // Static data with short month names for xAxis and full month names in uppercase for tooltips
+          var staticValues = [
+            { day: "Jul 1", year: 2023, tip: 170, call: 130, chat: 50, livestreaming: 40},
+            { day: "Jul 2", year: 2023, tip: 50, call: 120, chat: 90, livestreaming: 50 },
+            { day: "Jul 3", year: 2023, tip: 300, call: 120, chat: 120, livestreaming: 250 },
+            { day: "Jul 4", year: 2023, tip: 400, call: 520, chat: 160, livestreaming: 156 },
+            { day: "Jul 5", year: 2023, tip: 155, call: 220, chat: 170, livestreaming: 521 },
+            { day: "Jul 6", year: 2023, tip: 100, call: 320, chat: 180, livestreaming: 124 },
+            { day: "Jul 7", year: 2023, tip: 250, call: 120, chat: 150, livestreaming: 50 },
+            { day: "Jul 8", year: 2023, tip: 655, call: 420, chat: 200, livestreaming: 52 },
+            { day: "Jul 9", year: 2023, tip: 750, call: 820, chat: 400, livestreaming: 158 },
+            { day: "Jul 10", year: 2023, tip: 160, call: 100, chat: 140, livestreaming: 320 },
+            { day: "Jul 11", year: 2023, tip: 170, call: 130, chat: 50, livestreaming: 40},
+            { day: "Jul 12", year: 2023, tip: 50, call: 120, chat: 90, livestreaming: 50 },
+            { day: "Jul 13", year: 2023, tip: 300, call: 120, chat: 120, livestreaming: 250 },
+            { day: "Jul 14", year: 2023, tip: 400, call: 520, chat: 160, livestreaming: 156 },
+            { day: "Jul 15", year: 2023, tip: 155, call: 220, chat: 170, livestreaming: 521 },
+            { day: "Jul 16", year: 2023, tip: 100, call: 320, chat: 180, livestreaming: 124 },
+            { day: "Jul 17", year: 2023, tip: 250, call: 120, chat: 150, livestreaming: 50 },
+            { day: "Jul 18", year: 2023, tip: 655, call: 420, chat: 200, livestreaming: 52 },
+            { day: "Jul 19", year: 2023, tip: 750, call: 820, chat: 400, livestreaming: 158 },
+            { day: "Jul 20", year: 2023, tip: 160, call: 100, chat: 140, livestreaming: 320 },
+            { day: "Jul 21", year: 2023, tip: 170, call: 130, chat: 50, livestreaming: 40},
+            { day: "Jul 22", year: 2023, tip: 50, call: 120, chat: 90, livestreaming: 50 },
+            { day: "Jul 23", year: 2023, tip: 300, call: 120, chat: 120, livestreaming: 250 },
+            { day: "Jul 24", year: 2023, tip: 400, call: 520, chat: 160, livestreaming: 156 },
+            { day: "Jul 25", year: 2023, tip: 155, call: 220, chat: 170, livestreaming: 521 },
+            { day: "Jul 26", year: 2023, tip: 100, call: 320, chat: 180, livestreaming: 124 },
+            { day: "Jul 27", year: 2023, tip: 250, call: 120, chat: 150, livestreaming: 50 },
+            { day: "Jul 28", year: 2023, tip: 655, call: 420, chat: 200, livestreaming: 52 },
+            { day: "Jul 29", year: 2023, tip: 750, call: 820, chat: 400, livestreaming: 158 },
+            { day: "Jul 30", year: 2023, tip: 160, call: 100, chat: 140, livestreaming: 320 }
+          ];
+
+          // Create axes
+          var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
+            categoryField: "day",
+            paddingLeft: 20,
+            renderer: am5xy.AxisRendererX.new(root, { minGridDistance: 100 })
+          }));
+          xAxis.data.setAll(staticValues); // Set the X-axis categories as the months
+          xAxis.get("renderer").labels.template.setAll({
+            fontSize: "0.75rem", // Set the font size for X-axis labels
+            fill: am5.color(0x475467), // Text color
+          });
+
+          var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
+            renderer: am5xy.AxisRendererY.new(root, {})
+          }));
+          yAxis.get("renderer").labels.template.setAll({
+            visible: false,
+            paddingLeft: 0,
+          });
+
+          // Function to add series with debugging and tooltips
+          function addSeries(name, fieldName, color) {
+            var series = chart.series.push(am5xy.SmoothedXLineSeries.new(root, {
+              name: name,
+              xAxis: xAxis,
+              yAxis: yAxis,
+              valueYField: fieldName,
+              categoryXField: "day",
+              stroke: color,
+              tooltip: am5.Tooltip.new(root, {
+                label: {
+                  fill: am5.color(0x000000), // Set text color to black
+                  lineHeight: 1.8
+                },
+                labelText: "[font color='#667085' fontFamily: 'Poppins' fontWeight:600 fontSize: .75rem]{day} [/]\n[font color='{stroke}' fontSize: 16px]● [/][font color='#344054' fontFamily: 'Poppins' fontWeight:400 fontSize: .75rem]{name}\t\t\t[/][font color='#101828' fontFamily: 'Poppins' fontWeight:500 fontSize: .75rem]{valueY} Tokens[/]", // Custom tooltip 
+
+                getFillFromSprite: false, // Prevent inheriting color from the series
+                pointerOrientation: "horizontal", // Ensure the tooltip is positioned horizontally
+                tooltipPosition: "pointer", // Fix the tooltip position
+                background: am5.RoundedRectangle.new(root, {
+                  fill: am5.color(0xFFFFFF), // White background
+                  cornerRadiusTL: 0,
+                  cornerRadiusTR: 0,
+                  cornerRadiusBL: 0,
+                  cornerRadiusBR: 0,
+                  shadowColor: am5.color(0xE2E2E2, 0.08), // Shadow color with opacity
+                  shadowBlur: 8,
+                  shadowOffsetX: 0,
+                  shadowOffsetY: 0
+                })
+              })
+            }));
+
+            series.strokes.template.setAll({ strokeWidth: 3, stroke: color });
+
+            // Ensure the tooltip references the correct stroke color
+            series.get("tooltip").label.adapters.add("text", function(text, target) {
+              return text.replace("{stroke}", am5.color(color).toCSSHex());
+            });
+
+            // Create a bullet template
+            var bulletTemplate = am5.Template.new({});
+
+            // Add bullet to the series
+            series.bullets.push(function() {
+                return am5.Bullet.new(root, {
+                    sprite: am5.Circle.new(root, {
+                        radius: 5,
+                        fill: color,
+                        opacity: 0 // Start with invisible bullet
+                    }, bulletTemplate)
+                });
+            });
+
+            // Show bullet when tooltip is shown
+            series.events.on("tooltipshownat", function(ev) {
+                var dataItem = ev.target.get("tooltipDataItem");
+                var bullet = dataItem.bullets[0];
+                if (bullet && bullet.get("sprite")) {
+                    bullet.get("sprite").set("opacity", 1); // Make bullet visible
+                }
+            });
+
+            // Hide bullet when tooltip is hidden
+            series.events.on("tooltiphiddenat", function(ev) {
+                var dataItem = ev.target.get("tooltipDataItem");
+                if (dataItem) {
+                    var bullet = dataItem.bullets[0];
+                    if (bullet && bullet.get("sprite")) {
+                        bullet.get("sprite").set("opacity", 0); // Make bullet invisible
+                    }
+                }
+            });
+
+            series.data.setAll(staticValues);
+            series.appear(1000);
+          }
+
+          // Add series with explicit colors
+          addSeries("Tip", "tip", am5.color(0x4CC9F0));
+          addSeries("Call", "call", am5.color(0x4361EE));
+          addSeries("Chat", "chat", am5.color(0x3A0BA3));
+          addSeries("Live Streaming", "livestreaming", am5.color(0xF72485));
 
           //Y-Axis Grid Removed
           yAxis.get("renderer").grid.template.setAll({
@@ -1246,13 +1134,6 @@
         // For Line Chart
         LineChart(salesInsightLine);
         TokenLineChart(TokenInsightLine);
-
-
-
-        
-
-
-
 
 
         // Bar Chart and Line Chart Tab Element Click Function for Sales Insigh and Trend
