@@ -58,6 +58,7 @@
         .bg--col--chart-3 { background-color: var(--Chart-3, #3A0BA3); }
         .bg--col--chart-4 { background-color: var(--Chart-4, #AE4AEF); }
         .bg--col--chart-5 { background-color: var(--Chart-5, #F72485); }
+        .bg--col--chart-6 { background-color: var(--Chart-5, #98A2B3); }
 
         /* Background Gradients */
         .bg--gradient-white { background: linear-gradient(180deg, rgba(255, 255, 255, 0.30) 0%, rgba(255, 255, 255, 0.00) 8%); }
@@ -251,26 +252,26 @@
 
                                 <!-- Chart Category List -->
                                 <div class="pad--x--8 flex gap--8 justify-center items-center">
-                                    <div class="flex gap--8 items-center">
-                                        <span class="db w--8 h--8 bg--col--chart-1 br-100"></span>
-                                        <span class="fs--12 lh--18 col--gray-500">Subscription</span>
-                                    </div>
-                                    <div class="flex gap--8 items-center">
-                                        <span class="db w--8 h--8 bg--col--chart-2 br-100"></span>
-                                        <span class="fs--12 lh--18 col--gray-500">Pay to view</span>
-                                    </div>
-                                    <div class="flex gap--8 items-center">
-                                        <span class="db w--8 h--8 bg--col--chart-3 br-100"></span>
-                                        <span class="fs--12 lh--18 col--gray-500">Merch</span>
-                                    </div>
-                                    <div class="flex gap--8 items-center">
-                                        <span class="db w--8 h--8 bg--col--chart-4 br-100"></span>
-                                        <span class="fs--12 lh--18 col--gray-500">Wishtender</span>
-                                    </div>
-                                    <div class="flex gap--8 items-center">
-                                        <span class="db w--8 h--8 bg--col--chart-5 br-100"></span>
-                                        <span class="fs--12 lh--18 col--gray-500">Custom request</span>
-                                    </div>
+                                  <div class="flex gap--8 items-center">
+                                      <span class="db w--8 h--8 bg--col--chart-1 br-100"></span>
+                                      <span class="fs--12 lh--18 col--gray-500">Subscription</span>
+                                  </div>
+                                  <div class="flex gap--8 items-center">
+                                      <span class="db w--8 h--8 bg--col--chart-2 br-100"></span>
+                                      <span class="fs--12 lh--18 col--gray-500">Pay to view</span>
+                                  </div>
+                                  <div class="flex gap--8 items-center">
+                                      <span class="db w--8 h--8 bg--col--chart-3 br-100"></span>
+                                      <span class="fs--12 lh--18 col--gray-500">Merch</span>
+                                  </div>
+                                  <div class="flex gap--8 items-center">
+                                      <span class="db w--8 h--8 bg--col--chart-5 br-100"></span>
+                                      <span class="fs--12 lh--18 col--gray-500">Wishtender</span>
+                                  </div>
+                                  <div class="flex gap--8 items-center">
+                                      <span class="db w--8 h--8 bg--col--chart-6 br-100"></span>
+                                      <span class="fs--12 lh--18 col--gray-500">Custom request</span>
+                                  </div>
                                 </div>
                             </div>
                         </div>
@@ -330,7 +331,7 @@
                                       <span class="fs--12 lh--18 col--gray-500">Chat</span>
                                   </div>
                                   <div class="flex gap--8 items-center">
-                                      <span class="db w--8 h--8 bg--col--chart-4 br-100"></span>
+                                      <span class="db w--8 h--8 bg--col--chart-5 br-100"></span>
                                       <span class="fs--12 lh--18 col--gray-500">Live streaming</span>
                                   </div>
                               </div>
@@ -928,8 +929,8 @@
             makeSeries("Subscription", "subscription", 0x4CC9F0);
             makeSeries("Pay to view", "paytoview", 0x4361EE);
             makeSeries("Merch", "merch", 0x3A0BA3);
-            makeSeries("Wishtender", "wishtender", 0xAE4AEF);
-            makeSeries("Custom request", "customrequest", 0xF72485);
+            makeSeries("Wishtender", "wishtender", 0xF72485);
+            makeSeries("Custom request", "customrequest", 0x98A2B3);
 
             // Calculate total values for each month and format tooltip text
             tooltip.label.adapters.add("text", function(text, target) {
@@ -1118,8 +1119,8 @@
           addSeries("Subscription", "subscription", am5.color(0x4CC9F0));
           addSeries("Pay to view", "paytoview", am5.color(0x4361EE));
           addSeries("Merch", "merch", am5.color(0x3A0BA3));
-          addSeries("Wishtender", "wishtender", am5.color(0xAE4AEF));
-          addSeries("Custom request", "customrequest", am5.color(0xF72585));
+          addSeries("Wishtender", "wishtender", am5.color(0xF72585));
+          addSeries("Custom request", "customrequest", am5.color(0x98A2B3));
 
           //Y-Axis Grid Removed
           yAxis.get("renderer").grid.template.setAll({
@@ -1384,7 +1385,7 @@
             makeSeries("Tip", "tip", 0x4CC9F0);
             makeSeries("Call", "call", 0x4361EE);
             makeSeries("Chat", "chat", 0x3A0BA3);
-            makeSeries("Live streaming", "livestreaming", 0xAE4AEF);
+            makeSeries("Live streaming", "livestreaming", 0xF72585);
 
             // Calculate total values for each month and format tooltip text
             tooltip.label.adapters.add("text", function(text, target) {
@@ -1573,7 +1574,7 @@
           addSeries("Tip", "tip", am5.color(0x4CC9F0));
           addSeries("Call", "call", am5.color(0x4361EE));
           addSeries("Chat", "chat", am5.color(0x3A0BA3));
-          addSeries("Live Streaming", "livestreaming", am5.color(0xAE4AEF));
+          addSeries("Live Streaming", "livestreaming", am5.color(0xF72585));
 
           //Y-Axis Grid Removed
           yAxis.get("renderer").grid.template.setAll({
