@@ -571,7 +571,7 @@ class DashSideBarHandler {
 	 * 
 	 */
 	init() {
-		console.log('%c DashMenu init', 'background: #3300ff; color: white; padding: 8px; border-radius: 4px;');
+		//console.log('%c DashMenu init', 'background: #3300ff; color: white; padding: 8px; border-radius: 4px;');
 
 		let _self = this;
 
@@ -579,7 +579,7 @@ class DashSideBarHandler {
 
 		// check if dash nav is present in the DOM, otherwise exit
 		if ( document.querySelector(this.options.dashNavElSelector) !== null && document.querySelector(this.options.dashNavElSelector) !== 'undefined') {
-			console.log('%c Valid "Dashboard Main Nav Found", Start Application.', 'background: #fb5ba2; color: white; padding: 8px; border-radius: 4px;');
+			//console.log('%c Valid "Dashboard Main Nav Found", Start Application.', 'background: #fb5ba2; color: white; padding: 8px; border-radius: 4px;');
 
 			// update initial vars
 			this.options.screenSizeDesktop = window.screen.width > 1024 ? true : false;
@@ -646,7 +646,7 @@ class DashSideBarHandler {
 			return true;
 		}
 		else {
-			console.log('%c No Valid "Dashboard Main Nav Found", Exit Application.', 'background: tomato; color: white; padding: 8px; border-radius: 4px;');
+			//console.log('%c No Valid "Dashboard Main Nav Found", Exit Application.', 'background: tomato; color: white; padding: 8px; border-radius: 4px;');
 		}
 	}
 }
@@ -916,6 +916,13 @@ class DashToggleSwitch {
     this.input.addEventListener('change', this.handleChange.bind(this));
   }
 
+
+	/** 
+	 * 
+	 * @method handleChange 
+	 * @description Handle on change event of toggle checkbox
+	 * 
+	 */
   handleChange() {
     const isChecked = this.input.checked;
 		
@@ -926,6 +933,13 @@ class DashToggleSwitch {
 		this.throwEvent();
   }
 
+
+	/** 
+	 * 
+	 * @method throwEvent 
+	 * @description Invokes a custom event with details
+	 * 
+	 */
 	throwEvent() {
 		// get the event name to throw
     const eventName = this.element.getAttribute('data-throw-event');
@@ -942,6 +956,128 @@ class DashToggleSwitch {
 
 		// throw the event ( usage: document.addEventListener('custom_eventName', (evt) => { console.log('status changed', evt.detail); }); )
     document.dispatchEvent(event);
+  }
+}
+
+
+/**
+ * 
+ * @class DashTabs
+ * @classdesc Fansocial Dashboard Profile Tabs UI behavior and handlers
+ * Clicking on Tab triggers under tab head will make the corresponding tab content container active and throw a custom event with details
+ * 
+ */
+class DashTabs {
+  constructor(element) {
+    this.element = element; // the main tab wrapper element
+    this.tabTriggers = element.querySelectorAll('[data-tab-trigger]'); // the tab trigger elements
+    this.tabContents = element.querySelectorAll('[data-tabbed-content]'); // the tab content containers (id'd)
+
+		// attach event handler (click) to the triggers
+    this.tabTriggers.forEach((trigger) => {
+      trigger.addEventListener('click', this.handleTabTriggerClick.bind(this));
+    });
+  }
+
+
+	/** 
+	 * 
+	 * @method handleTabTriggerClick 
+	 * @description Handles click event on tab triggers
+	 * 
+	 */
+  handleTabTriggerClick(event) {
+    const trigger = event.target; // current clicked trigger element
+
+		// detect target tab content container ID and the target content container element
+    const targetTabContentId = trigger.closest('[data-tab-head-list-item]').getAttribute('data-tabbed-child-id');
+    const targetTabContent = this.element.querySelector(`[data-tabbed-content="${targetTabContentId}"]`);
+
+		// set current clicked trigger as active
+    this.updateTabTriggers(trigger);
+
+		// set current target content container as active
+    this.updateTabContents(targetTabContent);
+
+		// get payload from trigger's parent 'li[data-tab-head-list-item]' element
+    const payload = this.getPayload(trigger);
+
+		// get event name from trigger's data-* attribute
+    const eventName = trigger.getAttribute('data-throw-event');
+    
+		// invoke custom event
+		this.throwEvent(eventName, payload);
+  }
+
+
+	/** 
+	 * 
+	 * @method getPayload 
+	 * @description Creates and returns data attributes of parent element of trigger as JSON payload
+	 * 
+	 */
+  getPayload(trigger) {
+		// get current trigger element's parent 'li' element
+    const tabHeadListItem = trigger.closest('[data-tab-head-list-item]');
+    const payload = {};
+
+		// loop through the parent elements data-* attributes and add them as JSON (can use element.dataset as well for camelCase key)
+    tabHeadListItem.getAttributeNames().forEach((attribute) => {
+      if (attribute.startsWith('data-')) {
+        payload[attribute.replace('data-', '')] = tabHeadListItem.getAttribute(attribute);
+      }
+    });
+
+    return payload;
+  }
+
+
+	/** 
+	 * 
+	 * @method updateTabTriggers 
+	 * @description Toggles active / inactive tab heads
+	 * 
+	 */
+  updateTabTriggers(activeTrigger) {
+    this.tabTriggers.forEach((trigger) => {
+      if (trigger === activeTrigger) {
+        trigger.setAttribute('data-is-active', 'true');
+      } else {
+        trigger.setAttribute('data-is-active', 'false');
+      }
+    });
+  }
+
+
+	/** 
+	 * 
+	 * @method updateTabContents 
+	 * @description Toggles active / inactive tab content containers
+	 * 
+	 */
+  updateTabContents(activeTabContent) {
+    this.tabContents.forEach((tabContent) => {
+      if (tabContent === activeTabContent) {
+        tabContent.setAttribute('data-is-active', 'true');
+      } else {
+        tabContent.setAttribute('data-is-active', 'false');
+      }
+    });
+  }
+
+
+	/** 
+	 * 
+	 * @method throwEvent 
+	 * @description Invokes a custom event with details
+	 * 
+	 */
+	throwEvent(eventName, payload) {
+		// create custom event
+    const customEvent = new CustomEvent(eventName, { detail: {payload} });
+
+		// throw the event ( usage: document.addEventListener('custom_eventName', (evt) => { console.log('status changed', evt.detail); }); )
+    document.dispatchEvent(customEvent);
   }
 }
 
@@ -976,5 +1112,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
 	// Initialize the profile switch toggle class for all elements with data-switch
 	document.querySelectorAll('[data-switch]').forEach((element) => {
 		new DashToggleSwitch(element);
+	});
+
+
+	// Initialize the tabs class for all elements with data-tab-main-wrapper
+	document.querySelectorAll('[data-tab-main-wrapper]').forEach((element) => {
+		new DashTabs(element);
 	});
 });
