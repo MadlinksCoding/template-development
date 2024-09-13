@@ -2,8 +2,12 @@
  * Template name: <Dashboard Tabs (Global)>
  */
 
-/* Dashboard Tabs : Custom Styles */
+/* Dashboard Tab Heads : Custom Styles */
 [data-tab-head-list] { box-shadow: 0px -1px 0px 0px var(--color-mischka, #D0D5DD) inset; }
 [data-tab-trigger]:hover { box-shadow: 0px -1px 0px 0px var(--color-pale-sky, #667085) inset; }
 [data-tab-trigger][data-is-active="true"] { box-shadow: 0px -1px 0px 0px var(--color-ebony-2, #0C111D) inset; opacity: 1; }
 [data-tab-trigger][data-is-active="true"] [data-tab-label] { color: var(--color-ebony-2, #0C111D); font-weight: 600; }
+
+/* Dashboard Tab Containers : Custom Styles */
+[data-tabbed-content][data-is-active="false"] { display: none; }
+[data-tabbed-content][data-is-active="true"] { display: flex; }

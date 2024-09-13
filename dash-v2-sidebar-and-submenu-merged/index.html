@@ -1448,7 +1448,7 @@
                                     <ul data-tab-head-list data-tabs-menu="notifications-tabs-menu" data-show-default-page-load="all" class="flex items-center self-stretch gap--4 overflow-x-auto">
                                         <!-- tab head list item -->
                                         <li data-tab-head-list-item data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-first-tab" data-attribute-run-once="1" data-target="first-tab" data-flag="all" data-offset="5" data-per_page="5" class="flex">
-                                            <a href="javascript: void(0)" data-tab-trigger data-is-active="true" class="flex flex-column items-center gap--10 pv2 ph3 mw--80 o-70 nowrap transition--all transition--200 transition--ease-in-out">
+                                            <a href="javascript: void(0)" data-tab-trigger data-is-active="true" data-throw-event="fs-evt-eventname" class="flex flex-column items-center gap--10 pv2 ph3 mw--80 o-70 nowrap transition--all transition--200 transition--ease-in-out">
                                                 <span class="flex items-center gap--2 h--32 pointer-events-none">
                                                     <span data-tab-label class="fs--14 fw5 lh--20 ttu nowrap col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                                         All
@@ -1464,8 +1464,8 @@
                                         <!-- /tab head list item -->
 
                                         <!-- tab head list item -->
-                                        <li data-tab-head-list-item data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-first-tab" data-attribute-run-once="1" data-target="second-tab" data-flag="unread" data-offset="5" data-per_page="5" class="flex">
-                                            <a href="javascript: void(0)" data-tab-trigger data-is-active="false" class="flex flex-column items-center gap--10 pv2 ph3 mw--80 o-70 nowrap transition--all transition--200 transition--ease-in-out">
+                                        <li data-tab-head-list-item data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-second-tab" data-attribute-run-once="1" data-target="second-tab" data-flag="unread" data-offset="5" data-per_page="5" class="flex">
+                                            <a href="javascript: void(0)" data-tab-trigger data-is-active="false" data-throw-event="fs-evt-eventname" class="flex flex-column items-center gap--10 pv2 ph3 mw--80 o-70 nowrap transition--all transition--200 transition--ease-in-out">
                                                 <span class="flex items-center gap--2 h--32 pointer-events-none">
                                                     <span data-tab-label class="fs--14 fw5 lh--20 ttu nowrap col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                                         Unread
@@ -1481,8 +1481,8 @@
                                         <!-- /tab head list item -->
 
                                         <!-- tab head list item -->
-                                        <li data-tab-head-list-item data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-first-tab" data-attribute-run-once="1" data-target="third-tab" data-flag="custom_request" data-offset="5" data-per_page="5" class="flex">
-                                            <a href="javascript: void(0)" data-tab-trigger data-is-active="false" class="flex flex-column items-center gap--10 pv2 ph3 mw--80 o-70 nowrap transition--all transition--200 transition--ease-in-out">
+                                        <li data-tab-head-list-item data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-third-tab" data-attribute-run-once="1" data-target="third-tab" data-flag="custom_request" data-offset="5" data-per_page="5" class="flex">
+                                            <a href="javascript: void(0)" data-tab-trigger data-is-active="false" data-throw-event="fs-evt-eventname" class="flex flex-column items-center gap--10 pv2 ph3 mw--80 o-70 nowrap transition--all transition--200 transition--ease-in-out">
                                                 <span class="flex items-center gap--2 h--32 pointer-events-none">
                                                     <span data-tab-label class="fs--14 fw5 lh--20 ttu nowrap col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                                         Custom Request
@@ -1498,8 +1498,8 @@
                                         <!-- /tab head list item -->
 
                                         <!-- tab head list item -->
-                                        <li data-tab-head-list-item data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-first-tab" data-attribute-run-once="1" data-target="fourth-tab" data-flag="account" data-offset="5" data-per_page="5" class="flex">
-                                            <a href="javascript: void(0)" data-tab-trigger data-is-active="false" class="flex flex-column items-center gap--10 pv2 ph3 mw--80 o-70 nowrap transition--all transition--200 transition--ease-in-out">
+                                        <li data-tab-head-list-item data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-fourth-tab" data-attribute-run-once="1" data-target="fourth-tab" data-flag="account" data-offset="5" data-per_page="5" class="flex">
+                                            <a href="javascript: void(0)" data-tab-trigger data-is-active="false" data-throw-event="fs-evt-eventname" class="flex flex-column items-center gap--10 pv2 ph3 mw--80 o-70 nowrap transition--all transition--200 transition--ease-in-out">
                                                 <span class="flex items-center gap--2 h--32 pointer-events-none">
                                                     <span data-tab-label class="fs--14 fw5 lh--20 ttu nowrap col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                                         Account
@@ -2853,7 +2853,7 @@
                                     <div data-tabbed-content="tabbed-content-second-tab" data-target="second-tab" data-is-active="false" class="flex flex-column self-stretch">
                                         <!-- scrollable notifications container panel -->
                                         <div data-scrollable-notification-panel class="flex flex-column self-stretch bg--col--white--50 bg--blur--50 overflow-y-auto">
-                                            <div data-notifications-container class="flex flex-column self-stretch items-start gap--0 pb5"></div>
+                                            <div data-notifications-container class="flex flex-column self-stretch items-start gap--0 pb5">Second Tab</div>
                                         </div>
                                         <!-- /scrollable notifications container panel -->
                                     </div>
@@ -2863,7 +2863,7 @@
                                     <div data-tabbed-content="tabbed-content-third-tab" data-target="third-tab" data-is-active="false" class="flex flex-column self-stretch">
                                         <!-- scrollable notifications container panel -->
                                         <div data-scrollable-notification-panel class="flex flex-column self-stretch bg--col--white--50 bg--blur--50 overflow-y-auto">
-                                            <div data-notifications-container class="flex flex-column self-stretch items-start gap--0 pb5"></div>
+                                            <div data-notifications-container class="flex flex-column self-stretch items-start gap--0 pb5">Third Tab</div>
                                         </div>
                                         <!-- /scrollable notifications container panel -->
                                     </div>
@@ -2873,7 +2873,7 @@
                                     <div data-tabbed-content="tabbed-content-fourth-tab" data-target="fourth-tab" data-is-active="false" class="flex flex-column self-stretch">
                                         <!-- scrollable notifications container panel -->
                                         <div data-scrollable-notification-panel class="flex flex-column self-stretch bg--col--white--50 bg--blur--50 overflow-y-auto">
-                                            <div data-notifications-container class="flex flex-column self-stretch items-start gap--0 pb5"></div>
+                                            <div data-notifications-container class="flex flex-column self-stretch items-start gap--0 pb5">Fourth Tab</div>
                                         </div>
                                         <!-- /scrollable notifications container panel -->
                                     </div>

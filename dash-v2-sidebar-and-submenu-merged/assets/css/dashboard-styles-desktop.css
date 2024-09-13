@@ -976,6 +976,16 @@ html {
   font-weight: 600
 }
 
+[data-tabbed-content][data-is-active=false] {
+  display: none
+}
+
+[data-tabbed-content][data-is-active=true] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex
+}
+
 [data-switch] {
   position: relative;
   display: -webkit-inline-box;
