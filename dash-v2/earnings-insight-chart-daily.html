@@ -708,19 +708,15 @@
             var legend = chart.children.push(am5.Legend.new(root, {
               x: am5.percent(50),
               y: am5.percent(95),
-              width: am5.percent(100),
               centerX: am5.percent(50),
               layout: root.horizontalLayout,
               marginBottom: 0, // Ensure space for the legend
               centerX: am5.percent(50),
-              maxHeight: 80, // Adjust the maxHeight as needed
+              maxHeight: 50, // Adjust the maxHeight as needed
               maxWidth: am5.percent(100),
               fillField: "color",
               marginTop: 40,
               marginBottom: 0,
-              oversizedBehavior: "wrap", // Enable wrapping
-              paddingLeft: 10,
-              paddingRight: 10
             }));
 
             // Custom adapter for legend labels
