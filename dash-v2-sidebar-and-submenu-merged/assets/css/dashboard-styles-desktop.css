@@ -945,6 +945,16 @@ html {
   filter: brightness(0) saturate(100%) invert(37%) sepia(57%) saturate(6169%) hue-rotate(214deg) brightness(91%) contrast(106%)
 }
 
+[data-profile-panel-container] [data-auto-repost-setting] {
+  display: none
+}
+
+[data-profile-panel-container] [data-auto-repost-setting][data-is-active=true] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex
+}
+
 [data-tab-head-list] {
   -webkit-box-shadow: 0 -1px 0 0 var(--color-mischka, #d0d5dd) inset;
   box-shadow: 0 -1px 0 0 var(--color-mischka, #d0d5dd) inset
