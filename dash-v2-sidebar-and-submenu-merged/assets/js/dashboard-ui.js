@@ -354,11 +354,11 @@ class DashSideBarHandler {
 
 	/** 
 	 * 
-	 * @method handleFloatingMenuTriggerClick 
-	 * @description independent method to handle floating menu behavior (if available screen height is less than 870px, hide the floating menu panel and show on click on "more" button)
+	 * @method handleFloatingMenu 
+	 * @description independent method to handle floating menu behavior (hide the floating menu panel and show on click on "more" button)
 	 * 
 	 */
-	handleFloatingMenuTriggerClick() {
+	handleFloatingMenu() {
 		let _self = this;
 
 		// handle click on trigger (attach event only once)
@@ -366,7 +366,7 @@ class DashSideBarHandler {
 			return;
 		}
 		else {
-			_self.options.floatingPanelTriggerEl.addEventListener('click', (event) => {
+			_self.options.floatingPanelTriggerEl.addEventListener('click', (evt) => {
 				//console.log('Floating trigger click');
 
 				if ( _self.options.floatingPanelTriggerEl.querySelector('a[data-floating-panel-trigger-btn]').dataset.isActive !== 'true' ) {
@@ -381,40 +381,6 @@ class DashSideBarHandler {
 			});
 
 			_self.options.floatingPanelTriggerEl.classList.add('js-event-handler-attached');
-		}
-	}
-
-
-	/** 
-	 * 
-	 * @method handleFloatingMenu 
-	 * @description independent method to handle floating menu behavior (if available screen height is less than 870px, hide the floating menu panel and show on click on "more" button)
-	 * 
-	 */
-	handleFloatingMenu() {
-		let _self = this;
-
-		// check if available screen height is less than 870px, if yes then proceed (applicable only for Desktop)
-		if ( _self.options.screenSizeDesktop === true && window.screen.availHeight < 850 ) {
-			// show floating pannel trigger button
-			_self.options.floatingPanelTriggerEl.removeAttribute('hidden');
-
-			// hide floating panel menu
-			_self.options.floatingPanelEl.setAttribute('class', _self.options.floatingPanelEl.dataset.floatingClasses);
-			_self.options.floatingPanelEl.dataset.isActive = false;
-			_self.options.floatingPanelWrapperEl.dataset.isFloating = true;
-
-			// handle floating menu trigger click
-			_self.handleFloatingMenuTriggerClick();
-		}
-		else {
-			// hide floating pannel trigger button
-			_self.options.floatingPanelTriggerEl.setAttribute('hidden', true);
-
-			// show floating panel menu as normal
-			_self.options.floatingPanelEl.setAttribute('class', _self.options.floatingPanelEl.dataset.normalClasses);
-			_self.options.floatingPanelEl.dataset.isActive = false;
-			_self.options.floatingPanelWrapperEl.dataset.isFloating = false;
 		}
 	}
 
