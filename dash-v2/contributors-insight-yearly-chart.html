@@ -645,36 +645,22 @@
                 tooltip.set("pointTo", {x: x, y: y});
             }
             }
-            // Create a container for the legend
-            var legendContainer = root.container.children.push(
-            am5.Container.new(root, {
-                width: am5.percent(100),
-                height: am5.percent(10),
-                layout: root.horizontalLayout,
-                centerX: am5.percent(50),
-                x: am5.percent(50),
-                paddingTop: 15,
-                paddingBottom: 15
-            })
-            );
+            // Function to update chart data
+            function updateChartData() {
+                var isMobile = window.innerWidth <= 767;
+                var chartData = isMobile ? data.slice(0, 5) : data;
 
-            // Add legend
-            var legend = legendContainer.children.push(
-            am5.Legend.new(root, {
-                centerX: am5.percent(50),
-                x: am5.percent(50)
-            })
-            );
+                orderSeries.data.setAll(chartData);
+                tokenSeries.data.setAll(chartData);
+                xAxis.data.setAll(chartData);
 
-            //legend.data.setAll(chart.series.values);
+                chart.series.each(function(series) {
+                series.appear(1000, 100);
+                });
+            }
 
-            // Adjust chart height to make room for legend
-            //chart.root.dom.style.height = "90%";
-
-            // Set data
-            orderSeries.data.setAll(data);
-            tokenSeries.data.setAll(data);
-            xAxis.data.setAll(data);
+            // Initial data set
+            updateChartData();
 
             // Make stuff animate on load
             chart.appear(1000, 100);
@@ -1096,38 +1082,25 @@
                 tooltip.set("pointTo", {x: x, y: y});
             }
             }
-            // Create a container for the legend
-            var legendContainer = root.container.children.push(
-            am5.Container.new(root, {
-                width: am5.percent(100),
-                height: am5.percent(10),
-                layout: root.horizontalLayout,
-                centerX: am5.percent(50),
-                x: am5.percent(50),
-                paddingTop: 15,
-                paddingBottom: 15
-            })
-            );
+            
+            // Function to update chart data
+            function updateChartData() {
+                var isMobile = window.innerWidth <= 767;
+                var chartData = isMobile ? data.slice(0, 5) : data;
 
-            // Add legend
-            var legend = legendContainer.children.push(
-            am5.Legend.new(root, {
-                centerX: am5.percent(50),
-                x: am5.percent(50)
-            })
-            );
+                tipSeries.data.setAll(chartData);
+                chatSeries.data.setAll(chartData);
+                callSeries.data.setAll(chartData);
+                livestreamingSeries.data.setAll(chartData);
+                xAxis.data.setAll(chartData);
 
-            //legend.data.setAll(chart.series.values);
+                chart.series.each(function(series) {
+                series.appear(1000, 100);
+                });
+            }
 
-            // Adjust chart height to make room for legend
-            //chart.root.dom.style.height = "90%";
-
-            // Set data
-            tipSeries.data.setAll(data);
-            chatSeries.data.setAll(data);
-            callSeries.data.setAll(data);
-            livestreamingSeries.data.setAll(data);
-            xAxis.data.setAll(data);
+            // Initial data set
+            updateChartData();
 
             // Make stuff animate on load
             chart.appear(1000, 100);
@@ -1583,39 +1556,25 @@
                 tooltip.set("pointTo", {x: x, y: y});
             }
             }
-            // Create a container for the legend
-            var legendContainer = root.container.children.push(
-            am5.Container.new(root, {
-                width: am5.percent(100),
-                height: am5.percent(10),
-                layout: root.horizontalLayout,
-                centerX: am5.percent(50),
-                x: am5.percent(50),
-                paddingTop: 15,
-                paddingBottom: 15
-            })
-            );
+            // Function to update chart data
+            function updateChartData() {
+                var isMobile = window.innerWidth <= 600;
+                var chartData = isMobile ? data.slice(0, 5) : data;
 
-            // Add legend
-            var legend = legendContainer.children.push(
-            am5.Legend.new(root, {
-                centerX: am5.percent(50),
-                x: am5.percent(50)
-            })
-            );
+                subscriptionSeries.data.setAll(chartData);
+                paytoviewSeries.data.setAll(chartData);
+                merchSeries.data.setAll(chartData);
+                wishtenderSeries.data.setAll(chartData);
+                customrequestSeries.data.setAll(chartData);
+                xAxis.data.setAll(chartData);
 
-            //legend.data.setAll(chart.series.values);
+                chart.series.each(function(series) {
+                series.appear(1000, 100);
+                });
+            }
 
-            // Adjust chart height to make room for legend
-            //chart.root.dom.style.height = "90%";
-
-            // Set data
-            subscriptionSeries.data.setAll(data);
-            paytoviewSeries.data.setAll(data);
-            merchSeries.data.setAll(data);
-            wishtenderSeries.data.setAll(data);
-            customrequestSeries.data.setAll(data);
-            xAxis.data.setAll(data);
+            // Initial data set
+            updateChartData();
 
             // Make stuff animate on load
             chart.appear(1000, 100);
