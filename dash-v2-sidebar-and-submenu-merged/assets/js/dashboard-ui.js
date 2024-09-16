@@ -12,6 +12,7 @@
 /**
  * 
  * @class DashSideBarHandler
+ * @author Abirlal Maiti <abirlal.maiti@gmail.com>
  * @classdesc Fansocial Dashboard Sidebar UI & Behavior handler - Logics for behavior of multi level push menu (desktop & mobile) and floating menu panel for small screens, profile panel, notifications panel
  * Once invoked and initialized using {@link init}, it will create an instance of Fansocial Dash Menu and call all additional constructors and methods.
  * 
@@ -621,6 +622,7 @@ class DashSideBarHandler {
 /**
  * 
  * @class DashCurrentPageDetector
+ * @author Abirlal Maiti <abirlal.maiti@gmail.com>
  * @classdesc Fansocial Dashboard - Detect Current Active Page
  * When initialized, it will search and match the last two segments of 'window.location.href' with matching 'data-page' attribute and mark the menu item (parents as well if applicable) as current page
  * 
@@ -689,7 +691,105 @@ class DashCurrentPageDetector {
 
 /**
  * 
+ * @class DashSidebarMenuAdjuster
+ * @author Abirlal Maiti <abirlal.maiti@gmail.com>
+ * @classdesc Fansocial Dashboard - Adjust Number of Sidebar Main Menu Items and Show/Hide Floating Menu Panel
+ * When initialized, it will calculate how many main menu item will fit in the main menu panel, the rest of menu items will be moved to floating panel and vice versa
+ * 
+ */
+class DashSidebarMenuAdjuster {
+  constructor() {
+    this.menuItems = document.querySelectorAll('[data-menu-panel-wrapper] [data-sidebar-menu-item]'); // get all main menu items
+    this.menuPanel = document.querySelector('[data-menu-panel]'); // main menu container panel
+    this.floatingPanel = document.querySelector('[data-floating-panel]'); // floating main menu container panel
+    this.moreButton = document.querySelector('[data-floating-panel-trigger]'); // floating menu panel trigger
+
+    this.windowHeight = window.innerHeight; // get current window height
+    this.menuItemHeight = this.menuPanel.querySelector('[data-sidebar-menu-item]').getBoundingClientRect().height + 4; // calculate single menu item height with addition of 4px as flex gap compensation
+		this.desktopLogoHeight = document.querySelector('[data-site-logo][data-desktop-only]').getBoundingClientRect().height; // calculate desktop logo height
+		this.desktopTopControlsHeight = document.querySelector('[data-sidebar-top-controls][data-desktop-only]').getBoundingClientRect().height; // calculate desktop top controls height
+		this.desktopBottomControlsHeight = document.querySelector('[data-sidebar-bottom-controls]:not(.dn)').getBoundingClientRect().height; // calculate desktop bottom controls height
+
+		// logic - height of other elements + (12px padding y of sidebar wrapper) + (6px * 3 flex gap compensation) + 'more' menu item height
+    this.otherElementsHeight = this.desktopLogoHeight + this.desktopTopControlsHeight + this.desktopBottomControlsHeight + (12 * 2) + (6 * 3) + this.menuItemHeight; 
+
+    this.maxVisibleItems = Math.floor((this.windowHeight - this.otherElementsHeight) / this.menuItemHeight); // calculate number of possible visible items
+  }
+
+
+	/** 
+	 * 
+	 * @method detectCurrentPage 
+	 * @description Added a delay between rapidly thorwing events (resize, scroll etc.)
+	 * 
+	 */
+  debounce(func, wait) {
+    let timeout;
+
+    return function () {
+      const context = this;
+      const args = arguments;
+      clearTimeout(timeout);
+      timeout = setTimeout(() => {
+        func.apply(context, args);
+      }, wait);
+    };
+  }
+
+
+	/** 
+	 * 
+	 * @method adjustMenu 
+	 * @description Moves/Restores main menu items from menu panel to floating panel and shows/hides floating panel trigger
+	 * 
+	 */
+  adjustMenu() {
+    if (window.innerWidth <= 767) {
+      // move items back to menu panel if window width is less than or equal to 767px
+      const floatingItems = this.floatingPanel.children;
+      while (floatingItems.length > 0) {
+        this.menuPanel.appendChild(floatingItems[0]);
+      }
+      this.moreButton.hidden = true;
+    } else {
+      if (this.menuItems.length > this.maxVisibleItems) {
+        // move excess items to floating panel
+        for (let i = this.maxVisibleItems; i < this.menuItems.length; i++) {
+          const excessItem = this.menuItems[i];
+          this.floatingPanel.prepend(excessItem);
+        }
+        this.moreButton.hidden = false;
+      } else {
+        // move items back to menu panel
+        const floatingItems = this.floatingPanel.children;
+        while (floatingItems.length > 0) {
+          this.menuPanel.appendChild(floatingItems[0]);
+        }
+        this.moreButton.hidden = true;
+      }
+    }
+  }
+
+
+	/** 
+	 * 
+	 * @method init 
+	 * @description Initiates the class execution
+	 * 
+	 */
+  init() {
+    this.adjustMenu();
+
+    window.addEventListener('resize', this.debounce(this.adjustMenu.bind(this), 200));
+    window.addEventListener('load', this.adjustMenu.bind(this));
+  }
+}
+
+
+/**
+ * 
  * @class DashProfileStatusDropdown
+ * @author Abirlal Maiti <abirlal.maiti@gmail.com>
  * @classdesc Fansocial Dashboard Profile Submenu Status Dropdowns UI behavior and handlers
  * Once clicked any dropdown trigger, the dropdown will open and accept "click" on the dropdown options as user interaction and change dropdown trigger values and will throw a custom event
  * 
@@ -808,6 +908,7 @@ class DashProfileStatusDropdown {
 /**
  * 
  * @class DashStatusMessageEditor
+ * @author Abirlal Maiti <abirlal.maiti@gmail.com>
  * @classdesc Fansocial Dashboard Profile Status Messages Editor UI behavior and handlers
  * Clicking "Edit" button will enable editing, count characters entered, cancel edited text, save edited text and thorw custom event with details
  * 
@@ -939,6 +1040,7 @@ class DashStatusMessageEditor {
 /**
  * 
  * @class DashToggleSwitch
+ * @author Abirlal Maiti <abirlal.maiti@gmail.com>
  * @classdesc Fansocial Dashboard Profile Toggle Switches UI behavior and handlers
  * Switching the toggles on/off will dispatch a custom event for further actions
  * 
@@ -998,6 +1100,7 @@ class DashToggleSwitch {
 /**
  * 
  * @class DashTabs
+ * @author Abirlal Maiti <abirlal.maiti@gmail.com>
  * @classdesc Fansocial Dashboard Profile Tabs UI behavior and handlers
  * Clicking on Tab triggers under tab head will make the corresponding tab content container active and throw a custom event with details
  * 
@@ -1135,6 +1238,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
 	// Initialize current page detector
 	const currentPageDetector = new DashCurrentPageDetector();
 	currentPageDetector.detectCurrentPage();
+
+
+	// Initialize sidebar menu items adjuster
+	const dashSidebarMenuAdjuster = new DashSidebarMenuAdjuster();
+	dashSidebarMenuAdjuster.init();
 
 
 	// Initialize the status dropdown class for all elements with data-js-status-dropdown
