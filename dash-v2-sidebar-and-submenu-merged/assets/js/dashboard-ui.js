@@ -719,16 +719,15 @@ class DashSidebarMenuAdjuster {
 
 	/** 
 	 * 
-	 * @method detectCurrentPage 
+	 * @method debounce 
 	 * @description Added a delay between rapidly thorwing events (resize, scroll etc.)
 	 * 
 	 */
   debounce(func, wait) {
     let timeout;
 
-    return function () {
+    return function (...args) {
       const context = this;
-      const args = arguments;
       clearTimeout(timeout);
       timeout = setTimeout(() => {
         func.apply(context, args);
@@ -744,27 +743,45 @@ class DashSidebarMenuAdjuster {
 	 * 
 	 */
   adjustMenu() {
+		console.log('adjustMenu - start excute');
+
     if (window.innerWidth <= 767) {
       // move items back to menu panel if window width is less than or equal to 767px
       const floatingItems = this.floatingPanel.children;
+
       while (floatingItems.length > 0) {
         this.menuPanel.appendChild(floatingItems[0]);
       }
+
       this.moreButton.hidden = true;
-    } else {
+    } 
+
+		else {
+			 // get current window height
+			this.windowHeight = window.innerHeight;
+
+			// calculate number of possible visible main items inside menu panel
+			this.maxVisibleItems = Math.floor((this.windowHeight - this.otherElementsHeight) / this.menuItemHeight);
+			console.log(this.menuItems.length, this.maxVisibleItems);
+
       if (this.menuItems.length > this.maxVisibleItems) {
         // move excess items to floating panel
         for (let i = this.maxVisibleItems; i < this.menuItems.length; i++) {
           const excessItem = this.menuItems[i];
-          this.floatingPanel.prepend(excessItem);
+          this.floatingPanel.appendChild(excessItem);
         }
+
         this.moreButton.hidden = false;
-      } else {
+      } 
+
+			else {
         // move items back to menu panel
         const floatingItems = this.floatingPanel.children;
+
         while (floatingItems.length > 0) {
           this.menuPanel.appendChild(floatingItems[0]);
         }
+
         this.moreButton.hidden = true;
       }
     }
@@ -780,7 +797,8 @@ class DashSidebarMenuAdjuster {
   init() {
     this.adjustMenu();
 
-    window.addEventListener('resize', this.debounce(this.adjustMenu.bind(this), 200));
+    window.addEventListener('resize', this.debounce(() => this.adjustMenu(), 200));
+
     window.addEventListener('load', this.adjustMenu.bind(this));
   }
 }
