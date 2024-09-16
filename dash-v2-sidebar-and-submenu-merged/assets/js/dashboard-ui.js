@@ -713,7 +713,8 @@ class DashSidebarMenuAdjuster {
 		// logic - height of other elements + (12px padding y of sidebar wrapper) + (6px * 3 flex gap compensation) + 'more' menu item height
     this.otherElementsHeight = this.desktopLogoHeight + this.desktopTopControlsHeight + this.desktopBottomControlsHeight + (12 * 2) + (6 * 3) + this.menuItemHeight; 
 
-    this.maxVisibleItems = Math.floor((this.windowHeight - this.otherElementsHeight) / this.menuItemHeight); // calculate number of possible visible items
+		// calculate number of possible visible items
+    this.maxVisibleItems = Math.floor((this.windowHeight - this.otherElementsHeight) / this.menuItemHeight); 
   }
 
 
@@ -738,51 +739,61 @@ class DashSidebarMenuAdjuster {
 
 	/** 
 	 * 
+	 * @method restoreMenu 
+	 * @description Restores main menu items from floating panel to menu panel
+	 * 
+	 */
+  restoreMenu() {
+		// get all menu items inside floating menu panel (if exists)
+    const floatingItems = this.floatingPanel.children;
+
+		// loop through to append the items back in menu panel
+		while (floatingItems.length > 0) {
+			this.menuPanel.appendChild(floatingItems[0]);
+		}
+
+		// hide the floating panel trigger button
+		this.moreButton.hidden = true;
+  }
+
+
+	/** 
+	 * 
 	 * @method adjustMenu 
 	 * @description Moves/Restores main menu items from menu panel to floating panel and shows/hides floating panel trigger
 	 * 
 	 */
   adjustMenu() {
-		console.log('adjustMenu - start excute');
-
-    if (window.innerWidth <= 767) {
-      // move items back to menu panel if window width is less than or equal to 767px
-      const floatingItems = this.floatingPanel.children;
-
-      while (floatingItems.length > 0) {
-        this.menuPanel.appendChild(floatingItems[0]);
-      }
-
-      this.moreButton.hidden = true;
+		// move items back to menu panel if window width is less than or equal to 767px
+		if (window.innerWidth <= 767) {
+      this.restoreMenu();
     } 
-
 		else {
-			 // get current window height
+			 // get current window height again (in case window has resized and the value changed)
 			this.windowHeight = window.innerHeight;
 
-			// calculate number of possible visible main items inside menu panel
+			// recalculate number of possible visible main items inside menu panel (in case window has resized and the value changed)
 			this.maxVisibleItems = Math.floor((this.windowHeight - this.otherElementsHeight) / this.menuItemHeight);
-			console.log(this.menuItems.length, this.maxVisibleItems);
 
+			// move items back to menu panel (full reset - otherwise there was a bug which was not updating the stack)
+			this.restoreMenu();
+
+			// if 'menuItems.length' is greater than 'maxVisibleItems', then there is no room all the main menu items inside menu panel
       if (this.menuItems.length > this.maxVisibleItems) {
-        // move excess items to floating panel
+        // loop through to move excess menu items to floating panel (probably we can also use Array.slice as well - have to check TECHDEBT)
         for (let i = this.maxVisibleItems; i < this.menuItems.length; i++) {
           const excessItem = this.menuItems[i];
+
+					// move the item to floating panel
           this.floatingPanel.appendChild(excessItem);
         }
 
+				// unhide the floating panel trigger button
         this.moreButton.hidden = false;
       } 
-
 			else {
         // move items back to menu panel
-        const floatingItems = this.floatingPanel.children;
-
-        while (floatingItems.length > 0) {
-          this.menuPanel.appendChild(floatingItems[0]);
-        }
-
-        this.moreButton.hidden = true;
+        this.restoreMenu();
       }
     }
   }
@@ -795,11 +806,10 @@ class DashSidebarMenuAdjuster {
 	 * 
 	 */
   init() {
+		// call adjust menu
     this.adjustMenu();
 
     window.addEventListener('resize', this.debounce(() => this.adjustMenu(), 200));
-
-    window.addEventListener('load', this.adjustMenu.bind(this));
   }
 }
 

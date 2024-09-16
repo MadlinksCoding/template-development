@@ -572,7 +572,9 @@ html {
   visibility: hidden;
   pointer-events: none;
   -webkit-transform: scale(0) translateY(4rem);
-  transform: scale(0) translateY(4rem)
+  transform: scale(0) translateY(4rem);
+  -webkit-transform-origin: left bottom;
+  transform-origin: left bottom
 }
 
 [data-floating-panel-wrapper][data-is-floating=true] [data-floating-panel][data-is-active=true] {
@@ -580,7 +582,9 @@ html {
   visibility: visible;
   pointer-events: all;
   -webkit-transform: scale(1) translateY(4rem);
-  transform: scale(1) translateY(4rem)
+  transform: scale(1) translateY(4rem);
+  -webkit-transform-origin: left bottom;
+  transform-origin: left bottom
 }
 
 [data-floating-panel-wrapper][data-is-floating=true] [data-floating-panel] [data-sidebar-menu-item] {
