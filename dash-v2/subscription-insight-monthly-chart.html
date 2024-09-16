@@ -97,6 +97,7 @@
         .pad--left--12 { padding-left: .75rem /* padding left 12px */ } /* confirmed in use */ /* pixel conversion correct */
         .pad--x--14 { padding-left: 0.875rem; padding-right: 0.875rem; /* padding left right 14px */ } /* confirmed in use */ /* pixel conversion correct */
         .pad--16 { padding: 1rem; /* padding 16px */ }
+        .pad--x--16 { padding-left: 1rem; padding-right: 1rem; /* padding-left 16px, padding-right 16px */ }
         .pad--y--16 { padding-top: 1rem; padding-bottom: 1rem; /* padding top bottom 16px */ }
         .pad--bottom--0 { padding-bottom: 0rem; /* padding bottom 0px */ }
         .pad--top--0 { padding-top: 0rem; /* padding top 0px */ }
@@ -179,11 +180,11 @@
             <!-- End Popup Header -->
 
             <!-- Data Row Sales -->
-            <div data-section="data-row" class="grid grid--cols-1 gap--16 grid--cols-2-responsive-tablet grid--cols-2-responsive-mobile grid--cols-1-responsive-mobile-portrait">
+            <div data-section="data-row" class="grid grid--cols-1 gap--16 grid--cols-1-responsive-tablet grid--cols-1-responsive-mobile grid--cols-1-responsive-mobile-portrait">
                 <!-- One Column -->
                 <div class="flex flex-column gap--16 w-100 grid--col-span-2-responsive-mobile-portrait">
                     <!-- White Card -->
-                    <div data-secton="white-card" class="pad--16 flex flex-column gap--16 flex-auto bg-white-70 bg--blur--25 br--2">
+                    <div data-secton="white-card" class="pad--16 flex flex-column gap--16 flex-auto bg-white-70 bg--blur--25 br--2 display--none-responsive-mobile display--none-responsive-mobile-portrait">
                         <!-- Title -->
                         <div class="flex items-center justify-between gap--8">
                             <h3 data-title="sales-insight" class="m--0 ff-poppins fs--18 fw6 lh--28 col--gray-950">Subscriptions Insights</h3>
@@ -227,17 +228,34 @@
                         <!-- Ens Data Content -->
                     </div>
                     <!-- End White Card -->
+                    <!-- Data Content -->
+                    <div class="flex-column justify-center items-start gap--16 flex-auto dn dn-responsive-mobile">
+                      <div class="w-100 pad--y--24 flex flex-column justify-center gap--8 flex-auto h--340">
+                          <div class="pad--16 flex items-center justify-center">
+                              <div class="w--161 h--161 flex items-center justify-center relative">
+                                  <div class="db w-100 h-100 absolute left-0 top-0 flex items-center justify-center">
+                                      <div class="db bg--col--lemon w--32 h--32 filter--blur--60"></div>
+                                  </div>
+                                  <img src="assets/img/monitor-03.svg" class="w--128 h--128" alt="">
+                              </div>
+                          </div>
+                          <div class="pad--x--16 flex flex-column gap--8 items-center tc">
+                              <span class="fs--16 lh--24 col--gray-700">Use tablet or desktop to view full trend.</span>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- Ens Data Content -->
                 </div>
                 <!-- End one Column -->
             </div>
             <!-- End Data Row Sales -->
 
             <!-- Data Row Token -->
-            <div data-section="data-row" class="grid grid--cols-1 gap--16 grid--cols-2-responsive-tablet grid--cols-2-responsive-mobile grid--cols-1-responsive-mobile-portrait">
+            <div data-section="data-row" class="grid grid--cols-1 gap--16 grid--cols-1-responsive-tablet grid--cols-1-responsive-mobile grid--cols-1-responsive-mobile-portrait">
               <!-- One Column -->
               <div class="flex flex-column gap--16 w-100 grid--col-span-2-responsive-mobile-portrait">
                   <!-- White Card -->
-                  <div data-secton="white-card" class="pad--16 flex flex-column gap--16 flex-auto bg-white-70 bg--blur--25 br--2">
+                  <div data-secton="white-card" class="pad--16 flex flex-column gap--16 flex-auto bg-white-70 bg--blur--25 br--2 display--none-responsive-mobile display--none-responsive-mobile-portrait">
                       <!-- Title -->
                       <div class="flex items-center justify-between gap--8">
                           <h3 data-title="token-insight" class="m--0 ff-poppins fs--18 fw6 lh--28 col--gray-950">Tiers Breakdown</h3>
@@ -297,6 +315,23 @@
                       <!-- Ens Data Content -->
                   </div>
                   <!-- End White Card -->
+                  <!-- Data Content -->
+                  <div class="flex-column justify-center items-start gap--16 flex-auto dn dn-responsive-mobile">
+                    <div class="w-100 pad--y--24 flex flex-column justify-center gap--8 flex-auto h--340">
+                        <div class="pad--16 flex items-center justify-center">
+                            <div class="w--161 h--161 flex items-center justify-center relative">
+                                <div class="db w-100 h-100 absolute left-0 top-0 flex items-center justify-center">
+                                    <div class="db bg--col--lemon w--32 h--32 filter--blur--60"></div>
+                                </div>
+                                <img src="assets/img/monitor-03.svg" class="w--128 h--128" alt="">
+                            </div>
+                        </div>
+                        <div class="pad--x--16 flex flex-column gap--8 items-center tc">
+                            <span class="fs--16 lh--24 col--gray-700">Use tablet or desktop to view full trend.</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Ens Data Content -->
               </div>
               <!-- End one Column -->
           </div>
