@@ -36,6 +36,7 @@
 
         /* Hright */
         .h--14 { height: 0.875rem; /* height 14px */ } /* confirmed in use */ /* pixel conversion correct */
+        .h--300 { height: 18.75rem; /* height 14px */ } /* confirmed in use */ /* pixel conversion correct */  
 
         /* Colors */
         .col--gray-500 { color: var(--color-gray-500,#667085); }
@@ -45,6 +46,15 @@
         .col--gray-900 { color: var(--color-gray-900,#101828); }
         .col--gray-950 { color: var(--color-gray-950,#0C111D); }
         .col--blue-dark-700 { color: var(--color-blue-dark-700, #004EEB); }
+
+        /* Background */
+        .bg--col--gray--100 { background-color: var(--Gray-100, #F2F4F7); }
+        .bg--col--chart-1 { background-color: var(--Chart-1, #4CC9F0); }
+        .bg--col--chart-2 { background-color: var(--Chart-2, #4361EE); }
+        .bg--col--chart-3 { background-color: var(--Chart-3, #3A0BA3); }
+        .bg--col--chart-4 { background-color: var(--Chart-4, #AE4AEF); }
+        .bg--col--chart-5 { background-color: var(--Chart-5, #F72485); }
+        .bg--col--chart-6 { background-color: var(--Chart-5, #98A2B3); }
 
         /* Background Gradients */
         .bg--gradient-white { background: linear-gradient(180deg, rgba(255, 255, 255, 0.30) 0%, rgba(255, 255, 255, 0.00) 8%); }
@@ -133,10 +143,10 @@
                     <!-- Select Dropdown -->
                     <div class="relative z--10000 w--100-responsive-mobile-portrait">
                         <select data-nice-select>
+                            <option value="yearly">Yearly</option>
                             <option value="daily">Daily</option>
                             <option value="weekly">Weekly</option>
                             <option value="monthly">Mothly</option>
-                            <option value="yearly">Yearly</option>
                             <option value="alltime">All time</option>
                         </select>
                         <!-- <div class="pointer">
@@ -166,18 +176,20 @@
                         </div>
                         <!-- Data Content -->
                         <div class="flex flex-column justify-center items-start gap--16 flex-auto">
-                            <div class="w-100 pad--y--24 flex flex-column justify-center gap--8 flex-auto h--340">
-                                <div class="pad--16 flex items-center justify-center">
-                                    <div class="w--161 h--161 flex items-center justify-center relative">
-                                        <div class="db w-100 h-100 absolute left-0 top-0 flex items-center justify-center">
-                                            <div class="db bg--col--lemon w--32 h--32 filter--blur--60"></div>
-                                        </div>
-                                        <img src="assets/img/bar-chart-empty-state.svg" class="w--128 h--128" alt="">
-                                    </div>
-                                </div>
-                                <div class="flex flex-column gap--8 items-center">
-                                    <span class="fs--16 lh--24 col--gray-700">No trend to show at the moment</span>
-                                    <a href="#" class="fs--16 lh--24"><span class="fs--16 lh--24 col--gray-700 underline">Learn ways to earn</span> </a>
+                            <div class="flex flex-column gap--24 w-100">
+                                <!-- Sales Insight Bar Chart -->
+                                <div data-id="contributors-insight-bar" data-chart class="w-100 h--300"></div>
+
+                                <!-- Chart Category List -->
+                                <div class="pad--x--8 flex flex-wrap gap--8 justify-center items-center">
+                                  <div class="flex gap--8 items-center">
+                                      <span class="db w--8 h--8 bg--col--chart-1 br-100"></span>
+                                      <span class="fs--12 lh--18 col--gray-500">Orders</span>
+                                  </div>
+                                  <div class="flex gap--8 items-center">
+                                      <span class="db w--8 h--8 bg--col--chart-2 br-100"></span>
+                                      <span class="fs--12 lh--18 col--gray-500">Tokens</span>
+                                  </div>
                                 </div>
                             </div>
                         </div>
@@ -254,6 +266,360 @@
     <!-- End SVG Image Render -->
     <!-- Nice Select JS -->
     <script type="text/javascript" src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/FINAL/js/nice-select.js"></script>
+    <!-- Chart JS -->
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+
+    <script type="text/javascript">
+  
+          // Bar Chart Main Function for Sales Insight
+          function BarChart (chartRenderEl) {
+              // Create root element
+              var root = am5.Root.new(chartRenderEl);
+  
+              root._logo.dispose();
+  
+              // Set themes
+            root.setThemes([
+            am5themes_Animated.new(root)
+            ]);
+
+            var data = [{
+            name: "MAN GOES",
+            orders: 120,
+            tokens: 112,
+            pictureSettings: {
+                src: "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+            }
+            }, {
+            name: "Joey",
+            orders: 120,
+            tokens: 112,
+            pictureSettings: {
+                src: "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+            }
+            }, {
+            name: "Ross",
+            orders: 120,
+            tokens: 112,
+            pictureSettings: {
+                src: "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+            }
+            }, {
+            name: "Phoebe",
+            orders: 120,
+            tokens: 112,
+            pictureSettings: {
+                src: "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+            }
+            }, {
+            name: "Rachel",
+            orders: 120,
+            tokens: 112,
+            pictureSettings: {
+                src: "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+            }
+            },
+            {
+            name: "Rachel1",
+            orders: 120,
+            tokens: 112,
+            pictureSettings: {
+                src: "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+            }
+            },
+            {
+            name: "Rachel2",
+            orders: 120,
+            tokens: 112,
+            pictureSettings: {
+                src: "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+            }
+            }, {
+            name: "Chandler",
+            orders: 120,
+            tokens: 112,
+            pictureSettings: {
+                src: "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+            }
+            },
+            {
+            name: "Chandler2",
+            orders: 120,
+            tokens: 112,
+            pictureSettings: {
+                src: "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+            }
+            },
+            {
+            name: "Chandler3",
+            orders: 120,
+            tokens: 112,
+            pictureSettings: {
+                src: "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+            }
+            }];
+
+            // Create chart
+            var chart = root.container.children.push(
+            am5xy.XYChart.new(root, {
+                panX: false,
+                panY: false,
+                wheelX: "none",
+                wheelY: "none",
+                paddingBottom: 70,
+                paddingTop: 20,
+                paddingLeft: 0,
+                paddingRight: 0
+            })
+            );
+
+            // Create axes
+            var xRenderer = am5xy.AxisRendererX.new(root, {
+            minGridDistance: 60,
+            cellStartLocation: 0.2,
+            cellEndLocation: 0.8
+            });
+            xRenderer.grid.template.set("visible", false);
+
+            var xAxis = chart.xAxes.push(
+  am5xy.CategoryAxis.new(root, {
+    categoryField: "name",
+    renderer: xRenderer,
+    bullet: function(root, axis, dataItem) {
+      var container = am5.Container.new(root, {});
+      
+      var picture = container.children.push(am5.Picture.new(root, {
+        width: 32,
+        height: 32,
+        centerY: am5.p50,
+        centerX: am5.p50,
+        src: dataItem.dataContext.pictureSettings.src,
+        mask: am5.Circle.new(root, { radius: 16 })  // Adjusted to match the new size
+      }));
+      
+      // Adjust the y position of the image to create space from the Y-axis
+      picture.set("y", 28);  // Move the image 20 pixels up
+      
+      return am5xy.AxisBullet.new(root, {
+        location: 0.5,
+        sprite: container
+      });
+    }
+  })
+);
+
+// Adjust the position of the entire x-axis
+xAxis.set("dy", 20);  // Move the entire x-axis down by 20 pixels
+
+            // Remove text labels from x-axis
+            xAxis.get("renderer").labels.template.set("forceHidden", true);
+
+            var yRenderer = am5xy.AxisRendererY.new(root, {});
+            yRenderer.grid.template.set("strokeDasharray", [3]);
+
+            var yAxis = chart.yAxes.push(
+            am5xy.ValueAxis.new(root, {
+                min: 0,      // Minimum value on the Y-axis
+                max: 1000,   // Maximum value on the Y-axis
+                strictMinMax: true, // Enforce min and max values
+                renderer: yRenderer,
+            })
+            );
+
+            //Y-Axis Grid Removed
+            yAxis.get("renderer").grid.template.setAll({
+                stroke: am5.color(0xf2f4f7),
+                strokeOpacity: 1
+            });
+             
+            //X-Axis Grid Removed
+            xAxis.get("renderer").grid.template.setAll({    
+              stroke: am5.color(0xf2f4f7)
+            });
+
+            // Create tooltip
+            var tooltip = am5.Tooltip.new(root, {
+              pointerOrientation: "horizontal", // Ensure the tooltip is positioned horizontally
+              background: am5.RoundedRectangle.new(root, {
+                fill: am5.color(0xFFFFFF), // White background
+                shadowColor: am5.color(0xE2E2E2), // Shadow color (black)
+                shadowBlur: 8, // Blur effect of the shadow
+                shadowOffsetX: 0, // Horizontal offset of the shadow
+                shadowOffsetY: 0,  // Vertical offset of the shadow
+              })
+            });
+
+            // Apply corner radius to the tooltip background
+            tooltip.get("background").set("cornerRadiusTL", 2);
+            tooltip.get("background").set("cornerRadiusTR", 2);
+            tooltip.get("background").set("cornerRadiusBL", 2);
+            tooltip.get("background").set("cornerRadiusBR", 2);
+
+            // Set label properties after tooltip creation
+              tooltip.label.setAll({
+              paddingLeft: 0,
+              paddingRight: 0,
+              paddingTop: 0,
+              paddingBottom: 0,
+              textAlign: "left", // Align text to the left
+              fill: am5.color(0x344054), // Text color (black)
+              fontSize: "0.75rem", // Font size
+              fontFamily: "'Poppins', sans-serif", // Font family
+              lineHeight: 1.4,
+            });
+             
+            // Assign CSS class to the tooltip
+            tooltip.get("background").set("cssClass", "custom-tooltip");
+             
+            chart.plotContainer.set("tooltipPosition", "pointer");
+            chart.plotContainer.set("tooltipText", "a");
+            chart.plotContainer.set("tooltip", tooltip);
+
+            // Add series for Orders
+            var orderSeries = chart.series.push(
+            am5xy.ColumnSeries.new(root, {
+                name: "Orders",
+                xAxis: xAxis,
+                yAxis: yAxis,
+                valueYField: "orders",
+                categoryXField: "name",
+                sequencedInterpolation: true,
+                stacked: true
+            })
+            );
+            orderSeries.columns.template.setAll({
+                fill: am5.color("#4CC9F0"), // Set custom color for Tip series
+            });
+
+            // Add series for Tokens
+            var tokenSeries = chart.series.push(
+            am5xy.ColumnSeries.new(root, {
+                name: "Tokens",
+                xAxis: xAxis,
+                yAxis: yAxis,
+                valueYField: "tokens",
+                categoryXField: "name",
+                sequencedInterpolation: true,
+                stacked: true
+            })
+            );
+
+            tokenSeries.columns.template.setAll({
+                fill: am5.color("#4361EE"), // Set custom color for Tip series
+            });
+
+            // Apply common column settings and enable tooltips
+            chart.series.each(function(series) {
+            series.columns.template.setAll({
+                strokeOpacity: 0,
+                width: am5.percent(30),
+                maxWidth: 50,
+                fillOpacity: 1,
+                tooltipY: 0
+            });
+            series.columns.template.set("interactive", true);
+            
+            // Add hover state
+            series.columns.template.states.create("hover", {
+                fillOpacity: 1
+            });
+
+            // Add event listeners to each column
+            series.columns.template.events.on("pointerover", function(event) {
+                handleHover(event);
+            });
+
+            series.columns.template.events.on("pointerout", function() {
+                tooltip.hide();
+            });
+
+            series.columns.template.events.on("pointermove", function(event) {
+                handleMove(event);
+            });
+            });
+
+            function handleHover(event) {
+            var dataItem = event.target.dataItem;
+            if (dataItem) {
+                var categoryX = dataItem.get("categoryX");
+                var series = dataItem.component;
+                var tokens = dataItem.dataContext.tokens;
+                var orders = dataItem.dataContext.orders;
+                var chatTokens = dataItem.dataContext.chatTokens;
+                var total = tokens + orders;
+
+                tooltip.set("labelText", `[bold]${categoryX}[/]\nOrders: ${orders}\nTokens: ${tokens}\nTotal spending: ${total}`);
+                
+                // Get the position of the hovered column
+                var columnRect = event.target.getPrivate("bbox");
+                if (columnRect) {
+                var x = columnRect.x + columnRect.width / 2;
+                var y = columnRect.y;
+
+                // Set the tooltip position
+                //tooltip.set("pointTo", {x: x, y: y});
+                }
+                tooltip.show();
+            }
+            }
+
+            function handleMove(event) {
+            // Get the position of the hovered column
+            var columnRect = event.target.getPrivate("bbox");
+            if (columnRect) {
+                var x = columnRect.x + columnRect.width / 2;
+                var y = columnRect.y;
+
+                // Set the tooltip position
+                tooltip.set("pointTo", {x: x, y: y});
+            }
+            }
+            // Create a container for the legend
+            var legendContainer = root.container.children.push(
+            am5.Container.new(root, {
+                width: am5.percent(100),
+                height: am5.percent(10),
+                layout: root.horizontalLayout,
+                centerX: am5.percent(50),
+                x: am5.percent(50),
+                paddingTop: 15,
+                paddingBottom: 15
+            })
+            );
+
+            // Add legend
+            var legend = legendContainer.children.push(
+            am5.Legend.new(root, {
+                centerX: am5.percent(50),
+                x: am5.percent(50)
+            })
+            );
+
+            //legend.data.setAll(chart.series.values);
+
+            // Adjust chart height to make room for legend
+            //chart.root.dom.style.height = "90%";
+
+            // Set data
+            orderSeries.data.setAll(data);
+            tokenSeries.data.setAll(data);
+            xAxis.data.setAll(data);
+
+            // Make stuff animate on load
+            chart.appear(1000, 100);
+          }
+  
+          // Create root element
+          // https://www.amcharts.com/docs/v5/getting-started/#Root_element
+          var contributorsInsightBar = document.querySelector('[data-id="contributors-insight-bar"]');
+          //var TokenInsightBar = document.querySelector('[data-id="token-insight-bar"]');
+  
+          // For Bar Chart
+          BarChart(contributorsInsightBar);
+  
+    </script>
 </body>
 
 </html>
