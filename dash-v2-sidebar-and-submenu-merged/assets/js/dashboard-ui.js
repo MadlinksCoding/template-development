@@ -825,7 +825,7 @@ class DashNotificationSwipe {
       handleswipe = callback || function (swipedir) { };
 
     touchsurface.addEventListener('touchstart', (e) => {
-      console.log('Touch start');
+      //console.log('Touch start');
       const touchobj = e.changedTouches[0];
       swipedir = 'none';
       startX = touchobj.pageX;
@@ -835,17 +835,17 @@ class DashNotificationSwipe {
     }, false);
 
     touchsurface.addEventListener('touchend', (e) => {
-      console.log('Touch end');
+      //console.log('Touch end');
       const touchobj = e.changedTouches[0];
       distX = touchobj.pageX - startX;
       distY = touchobj.pageY - startY;
       const elapsedTime = new Date().getTime() - startTime;
-      console.log(`distX: ${distX}, distY: ${distY}, elapsedTime: ${elapsedTime}`);
+      //console.log(`distX: ${distX}, distY: ${distY}, elapsedTime: ${elapsedTime}`);
 
       if (elapsedTime <= this.allowedTime) {
         if (Math.abs(distX) >= this.threshold && Math.abs(distY) <= this.restraint) {
           swipedir = (distX < 0) ? 'left' : 'right';
-          console.log(`Swipe detected: ${swipedir}`);
+          //console.log(`Swipe detected: ${swipedir}`);
           handleswipe(swipedir);
         }
       }
