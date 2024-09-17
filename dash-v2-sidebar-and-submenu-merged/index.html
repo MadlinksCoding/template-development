@@ -1525,8 +1525,8 @@
                                         <div data-scrollable-notification-panel class="flex flex-column self-stretch bg--col--white--50 bg--blur--50 overflow-y-auto">
                                             <div data-notifications-container class="flex flex-column self-stretch items-start gap--0 pb5">
                                                 <!-- notification card - info (based on the data attribute values some UI element will be hidden) -->
-                                                <div data-notification-card data-is-read="false" data-notification-type="info" data-single-icon-only="false" data-small-icon-bg-off="false" data-has-title="true" data-has-close-btn="true" data-has-cta="true" data-has-link="true" data-theme="light" class="flex justify-center items-center self-stretch bb br--col--athens-gray2">
-                                                    <div data-notification-card-body class="flex flex-column items-start self-stretch flex--max gap--16 pad--y--12 pad--x--8">
+                                                <div data-notification-card data-is-read="false" data-notification-type="info" data-single-icon-only="false" data-small-icon-bg-off="false" data-has-title="true" data-has-close-btn="true" data-has-cta="true" data-has-link="true" data-theme="light" class="flex justify-center items-center self-stretch bb br--col--athens-gray2 relative touch-action-none">
+                                                    <div data-notification-card-body class="flex flex-column items-start self-stretch flex--max gap--16 pad--y--12 pad--x--8 relative z-2 transition--all transition--150 transition--ease-in-out">
                                                         <div class="flex justify-start items-start self-stretch gap--20 relative">
                                                             <!-- notification close -->
                                                             <a data-close-notification-card class="flex justify-center items-center w--24 h--24 pointer absolute top-0 right-0">
@@ -1608,13 +1608,26 @@
                                                             </div>
                                                             <!-- /notification content -->
                                                         </div>
+                                                    </div>
+
+                                                    <!-- mobile control wrapper (on swipe to left this element will be visible to show 'delete' or 'dismiss' button) -->
+                                                    <div data-notification-card-mobile-controls class="dn flex-column justify-center items-center gap--6 w--63 h-100 absolute top-0 right-0 z-1 display-flex--responsive-mobile display-flex--responsive-mobile-portrait">
+                                                        <!-- delete button -->
+                                                        <a data-delete-notification class="flex flex-column justify-center items-center self-stretch gap--6 w--63 h-100 pa2 bg--col--vermilion">
+                                                            <img src="assets/images/trash-01.svg" alt="" class="flex w--20 h--20 filter--col--white pointer-events-none">
+
+                                                            <span class="flex justify-center items-center fs--12 fw5 lh--18 white pointer-events-none"> 
+                                                                Delete
+                                                            </span>
+                                                        </a>
+                                                        <!-- /delete button -->
                                                     </div>
                                                 </div>
                                                 <!-- /notification card -->
 
                                                 <!-- notification card - warning (based on the data attribute values some UI element will be hidden) -->
-                                                <div data-notification-card data-is-read="false" data-notification-type="warning" data-single-icon-only="false" data-small-icon-bg-off="false" data-has-title="true" data-has-close-btn="true" data-has-cta="true" data-has-link="true" data-theme="light" class="flex justify-center items-center self-stretch bb br--col--athens-gray2">
-                                                    <div data-notification-card-body class="flex flex-column items-start self-stretch flex--max gap--16 pad--y--12 pad--x--8">
+                                                <div data-notification-card data-is-read="false" data-notification-type="warning" data-single-icon-only="false" data-small-icon-bg-off="false" data-has-title="true" data-has-close-btn="true" data-has-cta="true" data-has-link="true" data-theme="light" class="flex justify-center items-center self-stretch bb br--col--athens-gray2 relative touch-action-none">
+                                                    <div data-notification-card-body class="flex flex-column items-start self-stretch flex--max gap--16 pad--y--12 pad--x--8 relative z-2 transition--all transition--150 transition--ease-in-out">
                                                         <div class="flex justify-start items-start self-stretch gap--20 relative">
                                                             <!-- notification close -->
                                                             <a data-close-notification-card class="flex justify-center items-center w--24 h--24 pointer absolute top-0 right-0">
@@ -1696,13 +1709,26 @@
                                                             </div>
                                                             <!-- /notification content -->
                                                         </div>
+                                                    </div>
+                                                    
+                                                    <!-- mobile control wrapper (on swipe to left this element will be visible to show 'delete' or 'dismiss' button) -->
+                                                    <div data-notification-card-mobile-controls class="dn flex-column justify-center items-center gap--6 w--63 h-100 absolute top-0 right-0 z-1 display-flex--responsive-mobile display-flex--responsive-mobile-portrait">
+                                                        <!-- delete button -->
+                                                        <a data-delete-notification class="flex flex-column justify-center items-center self-stretch gap--6 w--63 h-100 pa2 bg--col--athens-gray2">
+                                                            <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/close_circle.svg" alt="" class="flex w--20 h--20 filter--col--oxford-blue pointer-events-none">
+
+                                                            <span class="flex justify-center items-center fs--12 fw5 lh--18 col--oxford-blue pointer-events-none"> 
+                                                                Dismiss
+                                                            </span>
+                                                        </a>
+                                                        <!-- /delete button -->
                                                     </div>
                                                 </div>
                                                 <!-- /notification card -->
 
                                                 <!-- notification card - destructive (based on the data attribute values some UI element will be hidden) -->
-                                                <div data-notification-card data-is-read="false" data-notification-type="destructive" data-single-icon-only="false" data-small-icon-bg-off="false" data-has-title="true" data-has-close-btn="true" data-has-cta="true" data-has-link="true" data-theme="light" class="flex justify-center items-center self-stretch bb br--col--athens-gray2">
-                                                    <div data-notification-card-body class="flex flex-column items-start self-stretch flex--max gap--16 pad--y--12 pad--x--8">
+                                                <div data-notification-card data-is-read="false" data-notification-type="destructive" data-single-icon-only="false" data-small-icon-bg-off="false" data-has-title="true" data-has-close-btn="true" data-has-cta="true" data-has-link="true" data-theme="light" class="flex justify-center items-center self-stretch bb br--col--athens-gray2 relative touch-action-none">
+                                                    <div data-notification-card-body class="flex flex-column items-start self-stretch flex--max gap--16 pad--y--12 pad--x--8 relative z-2 transition--all transition--150 transition--ease-in-out">
                                                         <div class="flex justify-start items-start self-stretch gap--20 relative">
                                                             <!-- notification close -->
                                                             <a data-close-notification-card class="flex justify-center items-center w--24 h--24 pointer absolute top-0 right-0">
@@ -1785,12 +1811,25 @@
                                                             <!-- /notification content -->
                                                         </div>
                                                     </div>
+
+                                                    <!-- mobile control wrapper (on swipe to left this element will be visible to show 'delete' or 'dismiss' button) -->
+                                                    <div data-notification-card-mobile-controls class="dn flex-column justify-center items-center gap--6 w--63 h-100 absolute top-0 right-0 z-1 display-flex--responsive-mobile display-flex--responsive-mobile-portrait">
+                                                        <!-- delete button -->
+                                                        <a data-delete-notification class="flex flex-column justify-center items-center self-stretch gap--6 w--63 h-100 pa2 bg--col--vermilion">
+                                                            <img src="assets/images/trash-01.svg" alt="" class="flex w--20 h--20 filter--col--white pointer-events-none">
+
+                                                            <span class="flex justify-center items-center fs--12 fw5 lh--18 white pointer-events-none"> 
+                                                                Delete
+                                                            </span>
+                                                        </a>
+                                                        <!-- /delete button -->
+                                                    </div>
                                                 </div>
                                                 <!-- /notification card -->
 
                                                 <!-- notification card - success (based on the data attribute values some UI element will be hidden) -->
-                                                <div data-notification-card data-is-read="false" data-notification-type="success" data-single-icon-only="false" data-small-icon-bg-off="false" data-has-title="true" data-has-close-btn="true" data-has-cta="true" data-has-link="true" data-theme="light" class="flex justify-center items-center self-stretch bb br--col--athens-gray2">
-                                                    <div data-notification-card-body class="flex flex-column items-start self-stretch flex--max gap--16 pad--y--12 pad--x--8">
+                                                <div data-notification-card data-is-read="false" data-notification-type="success" data-single-icon-only="false" data-small-icon-bg-off="false" data-has-title="true" data-has-close-btn="true" data-has-cta="true" data-has-link="true" data-theme="light" class="flex justify-center items-center self-stretch bb br--col--athens-gray2 relative touch-action-none">
+                                                    <div data-notification-card-body class="flex flex-column items-start self-stretch flex--max gap--16 pad--y--12 pad--x--8 relative z-2 transition--all transition--150 transition--ease-in-out">
                                                         <div class="flex justify-start items-start self-stretch gap--20 relative">
                                                             <!-- notification close -->
                                                             <a data-close-notification-card class="flex justify-center items-center w--24 h--24 pointer absolute top-0 right-0">
@@ -1872,13 +1911,26 @@
                                                             </div>
                                                             <!-- /notification content -->
                                                         </div>
+                                                    </div>
+
+                                                    <!-- mobile control wrapper (on swipe to left this element will be visible to show 'delete' or 'dismiss' button) -->
+                                                    <div data-notification-card-mobile-controls class="dn flex-column justify-center items-center gap--6 w--63 h-100 absolute top-0 right-0 z-1 display-flex--responsive-mobile display-flex--responsive-mobile-portrait">
+                                                        <!-- delete button -->
+                                                        <a data-delete-notification class="flex flex-column justify-center items-center self-stretch gap--6 w--63 h-100 pa2 bg--col--athens-gray2">
+                                                            <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/close_circle.svg" alt="" class="flex w--20 h--20 filter--col--oxford-blue pointer-events-none">
+
+                                                            <span class="flex justify-center items-center fs--12 fw5 lh--18 col--oxford-blue pointer-events-none"> 
+                                                                Dismiss
+                                                            </span>
+                                                        </a>
+                                                        <!-- /delete button -->
                                                     </div>
                                                 </div>
                                                 <!-- /notification card -->
 
                                                 <!-- notification card - default (based on the data attribute values some UI element will be hidden) -->
-                                                <div data-notification-card data-is-read="false" data-notification-type="default" data-single-icon-only="false" data-small-icon-bg-off="false" data-has-title="true" data-has-close-btn="true" data-has-cta="true" data-has-link="true" data-theme="light" class="flex justify-center items-center self-stretch bb br--col--athens-gray2">
-                                                    <div data-notification-card-body class="flex flex-column items-start self-stretch flex--max gap--16 pad--y--12 pad--x--8">
+                                                <div data-notification-card data-is-read="false" data-notification-type="default" data-single-icon-only="false" data-small-icon-bg-off="false" data-has-title="true" data-has-close-btn="true" data-has-cta="true" data-has-link="true" data-theme="light" class="flex justify-center items-center self-stretch bb br--col--athens-gray2 relative touch-action-none">
+                                                    <div data-notification-card-body class="flex flex-column items-start self-stretch flex--max gap--16 pad--y--12 pad--x--8 relative z-2 transition--all transition--150 transition--ease-in-out">
                                                         <div class="flex justify-start items-start self-stretch gap--20 relative">
                                                             <!-- notification close -->
                                                             <a data-close-notification-card class="flex justify-center items-center w--24 h--24 pointer absolute top-0 right-0">
@@ -1960,13 +2012,26 @@
                                                             </div>
                                                             <!-- /notification content -->
                                                         </div>
+                                                    </div>
+
+                                                    <!-- mobile control wrapper (on swipe to left this element will be visible to show 'delete' or 'dismiss' button) -->
+                                                    <div data-notification-card-mobile-controls class="dn flex-column justify-center items-center gap--6 w--63 h-100 absolute top-0 right-0 z-1 display-flex--responsive-mobile display-flex--responsive-mobile-portrait">
+                                                        <!-- delete button -->
+                                                        <a data-delete-notification class="flex flex-column justify-center items-center self-stretch gap--6 w--63 h-100 pa2 bg--col--vermilion">
+                                                            <img src="assets/images/trash-01.svg" alt="" class="flex w--20 h--20 filter--col--white pointer-events-none">
+
+                                                            <span class="flex justify-center items-center fs--12 fw5 lh--18 white pointer-events-none"> 
+                                                                Delete
+                                                            </span>
+                                                        </a>
+                                                        <!-- /delete button -->
                                                     </div>
                                                 </div>
                                                 <!-- /notification card -->
 
                                                 <!-- notification card - info (data-is-read="true") -->
-                                                <div data-notification-card data-is-read="true" data-notification-type="info" data-single-icon-only="false" data-small-icon-bg-off="false" data-has-title="true" data-has-close-btn="true" data-has-cta="true" data-has-link="true" data-theme="light" class="flex justify-center items-center self-stretch bb br--col--athens-gray2">
-                                                    <div data-notification-card-body class="flex flex-column items-start self-stretch flex--max gap--16 pad--y--12 pad--x--8">
+                                                <div data-notification-card data-is-read="true" data-notification-type="info" data-single-icon-only="false" data-small-icon-bg-off="false" data-has-title="true" data-has-close-btn="true" data-has-cta="true" data-has-link="true" data-theme="light" class="flex justify-center items-center self-stretch bb br--col--athens-gray2 relative touch-action-none">
+                                                    <div data-notification-card-body class="flex flex-column items-start self-stretch flex--max gap--16 pad--y--12 pad--x--8 relative z-2 transition--all transition--150 transition--ease-in-out">
                                                         <div class="flex justify-start items-start self-stretch gap--20 relative">
                                                             <!-- notification close -->
                                                             <a data-close-notification-card class="flex justify-center items-center w--24 h--24 pointer absolute top-0 right-0">
@@ -2048,13 +2113,26 @@
                                                             </div>
                                                             <!-- /notification content -->
                                                         </div>
+                                                    </div>
+
+                                                    <!-- mobile control wrapper (on swipe to left this element will be visible to show 'delete' or 'dismiss' button) -->
+                                                    <div data-notification-card-mobile-controls class="dn flex-column justify-center items-center gap--6 w--63 h-100 absolute top-0 right-0 z-1 display-flex--responsive-mobile display-flex--responsive-mobile-portrait">
+                                                        <!-- delete button -->
+                                                        <a data-delete-notification class="flex flex-column justify-center items-center self-stretch gap--6 w--63 h-100 pa2 bg--col--athens-gray2">
+                                                            <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/close_circle.svg" alt="" class="flex w--20 h--20 filter--col--oxford-blue pointer-events-none">
+
+                                                            <span class="flex justify-center items-center fs--12 fw5 lh--18 col--oxford-blue pointer-events-none"> 
+                                                                Dismiss
+                                                            </span>
+                                                        </a>
+                                                        <!-- /delete button -->
                                                     </div>
                                                 </div>
                                                 <!-- /notification card -->
 
                                                 <!-- notification card - warning (data-is-read="true") -->
-                                                <div data-notification-card data-is-read="true" data-notification-type="warning" data-single-icon-only="false" data-small-icon-bg-off="false" data-has-title="true" data-has-close-btn="true" data-has-cta="true" data-has-link="true" data-theme="light" class="flex justify-center items-center self-stretch bb br--col--athens-gray2">
-                                                    <div data-notification-card-body class="flex flex-column items-start self-stretch flex--max gap--16 pad--y--12 pad--x--8">
+                                                <div data-notification-card data-is-read="true" data-notification-type="warning" data-single-icon-only="false" data-small-icon-bg-off="false" data-has-title="true" data-has-close-btn="true" data-has-cta="true" data-has-link="true" data-theme="light" class="flex justify-center items-center self-stretch bb br--col--athens-gray2 relative touch-action-none">
+                                                    <div data-notification-card-body class="flex flex-column items-start self-stretch flex--max gap--16 pad--y--12 pad--x--8 relative z-2 transition--all transition--150 transition--ease-in-out">
                                                         <div class="flex justify-start items-start self-stretch gap--20 relative">
                                                             <!-- notification close -->
                                                             <a data-close-notification-card class="flex justify-center items-center w--24 h--24 pointer absolute top-0 right-0">
@@ -2136,13 +2214,26 @@
                                                             </div>
                                                             <!-- /notification content -->
                                                         </div>
+                                                    </div>
+
+                                                    <!-- mobile control wrapper (on swipe to left this element will be visible to show 'delete' or 'dismiss' button) -->
+                                                    <div data-notification-card-mobile-controls class="dn flex-column justify-center items-center gap--6 w--63 h-100 absolute top-0 right-0 z-1 display-flex--responsive-mobile display-flex--responsive-mobile-portrait">
+                                                        <!-- delete button -->
+                                                        <a data-delete-notification class="flex flex-column justify-center items-center self-stretch gap--6 w--63 h-100 pa2 bg--col--vermilion">
+                                                            <img src="assets/images/trash-01.svg" alt="" class="flex w--20 h--20 filter--col--white pointer-events-none">
+
+                                                            <span class="flex justify-center items-center fs--12 fw5 lh--18 white pointer-events-none"> 
+                                                                Delete
+                                                            </span>
+                                                        </a>
+                                                        <!-- /delete button -->
                                                     </div>
                                                 </div>
                                                 <!-- /notification card -->
 
                                                 <!-- notification card - destructive (data-is-read="true") -->
-                                                <div data-notification-card data-is-read="true" data-notification-type="destructive" data-single-icon-only="false" data-small-icon-bg-off="false" data-has-title="true" data-has-close-btn="true" data-has-cta="true" data-has-link="true" data-theme="light" class="flex justify-center items-center self-stretch bb br--col--athens-gray2">
-                                                    <div data-notification-card-body class="flex flex-column items-start self-stretch flex--max gap--16 pad--y--12 pad--x--8">
+                                                <div data-notification-card data-is-read="true" data-notification-type="destructive" data-single-icon-only="false" data-small-icon-bg-off="false" data-has-title="true" data-has-close-btn="true" data-has-cta="true" data-has-link="true" data-theme="light" class="flex justify-center items-center self-stretch bb br--col--athens-gray2 relative touch-action-none">
+                                                    <div data-notification-card-body class="flex flex-column items-start self-stretch flex--max gap--16 pad--y--12 pad--x--8 relative z-2 transition--all transition--150 transition--ease-in-out">
                                                         <div class="flex justify-start items-start self-stretch gap--20 relative">
                                                             <!-- notification close -->
                                                             <a data-close-notification-card class="flex justify-center items-center w--24 h--24 pointer absolute top-0 right-0">
@@ -2224,13 +2315,26 @@
                                                             </div>
                                                             <!-- /notification content -->
                                                         </div>
+                                                    </div>
+
+                                                    <!-- mobile control wrapper (on swipe to left this element will be visible to show 'delete' or 'dismiss' button) -->
+                                                    <div data-notification-card-mobile-controls class="dn flex-column justify-center items-center gap--6 w--63 h-100 absolute top-0 right-0 z-1 display-flex--responsive-mobile display-flex--responsive-mobile-portrait">
+                                                        <!-- delete button -->
+                                                        <a data-delete-notification class="flex flex-column justify-center items-center self-stretch gap--6 w--63 h-100 pa2 bg--col--athens-gray2">
+                                                            <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/close_circle.svg" alt="" class="flex w--20 h--20 filter--col--oxford-blue pointer-events-none">
+
+                                                            <span class="flex justify-center items-center fs--12 fw5 lh--18 col--oxford-blue pointer-events-none"> 
+                                                                Dismiss
+                                                            </span>
+                                                        </a>
+                                                        <!-- /delete button -->
                                                     </div>
                                                 </div>
                                                 <!-- /notification card -->
 
                                                 <!-- notification card - success (data-is-read="true") -->
-                                                <div data-notification-card data-is-read="true" data-notification-type="success" data-single-icon-only="false" data-small-icon-bg-off="false" data-has-title="true" data-has-close-btn="true" data-has-cta="true" data-has-link="true" data-theme="light" class="flex justify-center items-center self-stretch bb br--col--athens-gray2">
-                                                    <div data-notification-card-body class="flex flex-column items-start self-stretch flex--max gap--16 pad--y--12 pad--x--8">
+                                                <div data-notification-card data-is-read="true" data-notification-type="success" data-single-icon-only="false" data-small-icon-bg-off="false" data-has-title="true" data-has-close-btn="true" data-has-cta="true" data-has-link="true" data-theme="light" class="flex justify-center items-center self-stretch bb br--col--athens-gray2 relative touch-action-none">
+                                                    <div data-notification-card-body class="flex flex-column items-start self-stretch flex--max gap--16 pad--y--12 pad--x--8 relative z-2 transition--all transition--150 transition--ease-in-out">
                                                         <div class="flex justify-start items-start self-stretch gap--20 relative">
                                                             <!-- notification close -->
                                                             <a data-close-notification-card class="flex justify-center items-center w--24 h--24 pointer absolute top-0 right-0">
@@ -2312,13 +2416,26 @@
                                                             </div>
                                                             <!-- /notification content -->
                                                         </div>
+                                                    </div>
+
+                                                    <!-- mobile control wrapper (on swipe to left this element will be visible to show 'delete' or 'dismiss' button) -->
+                                                    <div data-notification-card-mobile-controls class="dn flex-column justify-center items-center gap--6 w--63 h-100 absolute top-0 right-0 z-1 display-flex--responsive-mobile display-flex--responsive-mobile-portrait">
+                                                        <!-- delete button -->
+                                                        <a data-delete-notification class="flex flex-column justify-center items-center self-stretch gap--6 w--63 h-100 pa2 bg--col--vermilion">
+                                                            <img src="assets/images/trash-01.svg" alt="" class="flex w--20 h--20 filter--col--white pointer-events-none">
+
+                                                            <span class="flex justify-center items-center fs--12 fw5 lh--18 white pointer-events-none"> 
+                                                                Delete
+                                                            </span>
+                                                        </a>
+                                                        <!-- /delete button -->
                                                     </div>
                                                 </div>
                                                 <!-- /notification card -->
 
                                                 <!-- notification card - default (data-is-read="true") -->
-                                                <div data-notification-card data-is-read="true" data-notification-type="default" data-single-icon-only="false" data-small-icon-bg-off="false" data-has-title="true" data-has-close-btn="true" data-has-cta="true" data-has-link="true" data-theme="light" class="flex justify-center items-center self-stretch bb br--col--athens-gray2">
-                                                    <div data-notification-card-body class="flex flex-column items-start self-stretch flex--max gap--16 pad--y--12 pad--x--8">
+                                                <div data-notification-card data-is-read="true" data-notification-type="default" data-single-icon-only="false" data-small-icon-bg-off="false" data-has-title="true" data-has-close-btn="true" data-has-cta="true" data-has-link="true" data-theme="light" class="flex justify-center items-center self-stretch bb br--col--athens-gray2 relative touch-action-none">
+                                                    <div data-notification-card-body class="flex flex-column items-start self-stretch flex--max gap--16 pad--y--12 pad--x--8 relative z-2 transition--all transition--150 transition--ease-in-out">
                                                         <div class="flex justify-start items-start self-stretch gap--20 relative">
                                                             <!-- notification close -->
                                                             <a data-close-notification-card class="flex justify-center items-center w--24 h--24 pointer absolute top-0 right-0">
@@ -2400,13 +2517,26 @@
                                                             </div>
                                                             <!-- /notification content -->
                                                         </div>
+                                                    </div>
+
+                                                    <!-- mobile control wrapper (on swipe to left this element will be visible to show 'delete' or 'dismiss' button) -->
+                                                    <div data-notification-card-mobile-controls class="dn flex-column justify-center items-center gap--6 w--63 h-100 absolute top-0 right-0 z-1 display-flex--responsive-mobile display-flex--responsive-mobile-portrait">
+                                                        <!-- delete button -->
+                                                        <a data-delete-notification class="flex flex-column justify-center items-center self-stretch gap--6 w--63 h-100 pa2 bg--col--athens-gray2">
+                                                            <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/close_circle.svg" alt="" class="flex w--20 h--20 filter--col--oxford-blue pointer-events-none">
+
+                                                            <span class="flex justify-center items-center fs--12 fw5 lh--18 col--oxford-blue pointer-events-none"> 
+                                                                Dismiss
+                                                            </span>
+                                                        </a>
+                                                        <!-- /delete button -->
                                                     </div>
                                                 </div>
                                                 <!-- /notification card -->
                                                 
                                                 <!-- notification card - default (data-is-read="true", data-single-icon-only="true") -->
-                                                <div data-notification-card data-is-read="true" data-notification-type="default" data-single-icon-only="true" data-small-icon-bg-off="false" data-has-title="true" data-has-close-btn="true" data-has-cta="true" data-has-link="true" data-theme="light" class="flex justify-center items-center self-stretch bb br--col--athens-gray2">
-                                                    <div data-notification-card-body class="flex flex-column items-start self-stretch flex--max gap--16 pad--y--12 pad--x--8">
+                                                <div data-notification-card data-is-read="true" data-notification-type="default" data-single-icon-only="true" data-small-icon-bg-off="false" data-has-title="true" data-has-close-btn="true" data-has-cta="true" data-has-link="true" data-theme="light" class="flex justify-center items-center self-stretch bb br--col--athens-gray2 relative touch-action-none">
+                                                    <div data-notification-card-body class="flex flex-column items-start self-stretch flex--max gap--16 pad--y--12 pad--x--8 relative z-2 transition--all transition--150 transition--ease-in-out">
                                                         <div class="flex justify-start items-start self-stretch gap--20 relative">
                                                             <!-- notification close -->
                                                             <a data-close-notification-card class="flex justify-center items-center w--24 h--24 pointer absolute top-0 right-0">
@@ -2488,13 +2618,26 @@
                                                             </div>
                                                             <!-- /notification content -->
                                                         </div>
+                                                    </div>
+
+                                                    <!-- mobile control wrapper (on swipe to left this element will be visible to show 'delete' or 'dismiss' button) -->
+                                                    <div data-notification-card-mobile-controls class="dn flex-column justify-center items-center gap--6 w--63 h-100 absolute top-0 right-0 z-1 display-flex--responsive-mobile display-flex--responsive-mobile-portrait">
+                                                        <!-- delete button -->
+                                                        <a data-delete-notification class="flex flex-column justify-center items-center self-stretch gap--6 w--63 h-100 pa2 bg--col--vermilion">
+                                                            <img src="assets/images/trash-01.svg" alt="" class="flex w--20 h--20 filter--col--white pointer-events-none">
+
+                                                            <span class="flex justify-center items-center fs--12 fw5 lh--18 white pointer-events-none"> 
+                                                                Delete
+                                                            </span>
+                                                        </a>
+                                                        <!-- /delete button -->
                                                     </div>
                                                 </div>
                                                 <!-- /notification card -->
                                                 
                                                 <!-- notification card - default (data-is-read="true", data-has-title="false") -->
-                                                <div data-notification-card data-is-read="true" data-notification-type="default" data-single-icon-only="false" data-small-icon-bg-off="false" data-has-title="false" data-has-close-btn="true" data-has-cta="true" data-has-link="true" data-theme="light" class="flex justify-center items-center self-stretch bb br--col--athens-gray2">
-                                                    <div data-notification-card-body class="flex flex-column items-start self-stretch flex--max gap--16 pad--y--12 pad--x--8">
+                                                <div data-notification-card data-is-read="true" data-notification-type="default" data-single-icon-only="false" data-small-icon-bg-off="false" data-has-title="false" data-has-close-btn="true" data-has-cta="true" data-has-link="true" data-theme="light" class="flex justify-center items-center self-stretch bb br--col--athens-gray2 relative touch-action-none">
+                                                    <div data-notification-card-body class="flex flex-column items-start self-stretch flex--max gap--16 pad--y--12 pad--x--8 relative z-2 transition--all transition--150 transition--ease-in-out">
                                                         <div class="flex justify-start items-start self-stretch gap--20 relative">
                                                             <!-- notification close -->
                                                             <a data-close-notification-card class="flex justify-center items-center w--24 h--24 pointer absolute top-0 right-0">
@@ -2576,13 +2719,26 @@
                                                             </div>
                                                             <!-- /notification content -->
                                                         </div>
+                                                    </div>
+
+                                                    <!-- mobile control wrapper (on swipe to left this element will be visible to show 'delete' or 'dismiss' button) -->
+                                                    <div data-notification-card-mobile-controls class="dn flex-column justify-center items-center gap--6 w--63 h-100 absolute top-0 right-0 z-1 display-flex--responsive-mobile display-flex--responsive-mobile-portrait">
+                                                        <!-- delete button -->
+                                                        <a data-delete-notification class="flex flex-column justify-center items-center self-stretch gap--6 w--63 h-100 pa2 bg--col--athens-gray2">
+                                                            <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/close_circle.svg" alt="" class="flex w--20 h--20 filter--col--oxford-blue pointer-events-none">
+
+                                                            <span class="flex justify-center items-center fs--12 fw5 lh--18 col--oxford-blue pointer-events-none"> 
+                                                                Dismiss
+                                                            </span>
+                                                        </a>
+                                                        <!-- /delete button -->
                                                     </div>
                                                 </div>
                                                 <!-- /notification card -->
                                                 
                                                 <!-- notification card - default (data-is-read="true", data-has-close-btn="false") -->
-                                                <div data-notification-card data-is-read="true" data-notification-type="default" data-single-icon-only="false" data-small-icon-bg-off="false" data-has-title="true" data-has-close-btn="false" data-has-cta="true" data-has-link="true" data-theme="light" class="flex justify-center items-center self-stretch bb br--col--athens-gray2">
-                                                    <div data-notification-card-body class="flex flex-column items-start self-stretch flex--max gap--16 pad--y--12 pad--x--8">
+                                                <div data-notification-card data-is-read="true" data-notification-type="default" data-single-icon-only="false" data-small-icon-bg-off="false" data-has-title="true" data-has-close-btn="false" data-has-cta="true" data-has-link="true" data-theme="light" class="flex justify-center items-center self-stretch bb br--col--athens-gray2 relative touch-action-none">
+                                                    <div data-notification-card-body class="flex flex-column items-start self-stretch flex--max gap--16 pad--y--12 pad--x--8 relative z-2 transition--all transition--150 transition--ease-in-out">
                                                         <div class="flex justify-start items-start self-stretch gap--20 relative">
                                                             <!-- notification close -->
                                                             <a data-close-notification-card class="flex justify-center items-center w--24 h--24 pointer absolute top-0 right-0">
@@ -2664,13 +2820,26 @@
                                                             </div>
                                                             <!-- /notification content -->
                                                         </div>
+                                                    </div>
+
+                                                    <!-- mobile control wrapper (on swipe to left this element will be visible to show 'delete' or 'dismiss' button) -->
+                                                    <div data-notification-card-mobile-controls class="dn flex-column justify-center items-center gap--6 w--63 h-100 absolute top-0 right-0 z-1 display-flex--responsive-mobile display-flex--responsive-mobile-portrait">
+                                                        <!-- delete button -->
+                                                        <a data-delete-notification class="flex flex-column justify-center items-center self-stretch gap--6 w--63 h-100 pa2 bg--col--vermilion">
+                                                            <img src="assets/images/trash-01.svg" alt="" class="flex w--20 h--20 filter--col--white pointer-events-none">
+
+                                                            <span class="flex justify-center items-center fs--12 fw5 lh--18 white pointer-events-none"> 
+                                                                Delete
+                                                            </span>
+                                                        </a>
+                                                        <!-- /delete button -->
                                                     </div>
                                                 </div>
                                                 <!-- /notification card -->
                                                 
                                                 <!-- notification card - default (data-is-read="true", data-has-cta="false") -->
-                                                <div data-notification-card data-is-read="true" data-notification-type="default" data-single-icon-only="false" data-small-icon-bg-off="false" data-has-title="true" data-has-close-btn="true" data-has-cta="false" data-has-link="true" data-theme="light" class="flex justify-center items-center self-stretch bb br--col--athens-gray2">
-                                                    <div data-notification-card-body class="flex flex-column items-start self-stretch flex--max gap--16 pad--y--12 pad--x--8">
+                                                <div data-notification-card data-is-read="true" data-notification-type="default" data-single-icon-only="false" data-small-icon-bg-off="false" data-has-title="true" data-has-close-btn="true" data-has-cta="false" data-has-link="true" data-theme="light" class="flex justify-center items-center self-stretch bb br--col--athens-gray2 relative touch-action-none">
+                                                    <div data-notification-card-body class="flex flex-column items-start self-stretch flex--max gap--16 pad--y--12 pad--x--8 relative z-2 transition--all transition--150 transition--ease-in-out">
                                                         <div class="flex justify-start items-start self-stretch gap--20 relative">
                                                             <!-- notification close -->
                                                             <a data-close-notification-card class="flex justify-center items-center w--24 h--24 pointer absolute top-0 right-0">
@@ -2753,12 +2922,25 @@
                                                             <!-- /notification content -->
                                                         </div>
                                                     </div>
+
+                                                    <!-- mobile control wrapper (on swipe to left this element will be visible to show 'delete' or 'dismiss' button) -->
+                                                    <div data-notification-card-mobile-controls class="dn flex-column justify-center items-center gap--6 w--63 h-100 absolute top-0 right-0 z-1 display-flex--responsive-mobile display-flex--responsive-mobile-portrait">
+                                                        <!-- delete button -->
+                                                        <a data-delete-notification class="flex flex-column justify-center items-center self-stretch gap--6 w--63 h-100 pa2 bg--col--athens-gray2">
+                                                            <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/close_circle.svg" alt="" class="flex w--20 h--20 filter--col--oxford-blue pointer-events-none">
+
+                                                            <span class="flex justify-center items-center fs--12 fw5 lh--18 col--oxford-blue pointer-events-none"> 
+                                                                Dismiss
+                                                            </span>
+                                                        </a>
+                                                        <!-- /delete button -->
+                                                    </div>
                                                 </div>
                                                 <!-- /notification card -->
                                                 
                                                 <!-- notification card - default (data-is-read="true", data-has-link="false") -->
-                                                <div data-notification-card data-is-read="true" data-notification-type="default" data-single-icon-only="false" data-small-icon-bg-off="false" data-has-title="true" data-has-close-btn="true" data-has-cta="true" data-has-link="false" data-theme="light" class="flex justify-center items-center self-stretch bb br--col--athens-gray2">
-                                                    <div data-notification-card-body class="flex flex-column items-start self-stretch flex--max gap--16 pad--y--12 pad--x--8">
+                                                <div data-notification-card data-is-read="true" data-notification-type="default" data-single-icon-only="false" data-small-icon-bg-off="false" data-has-title="true" data-has-close-btn="true" data-has-cta="true" data-has-link="false" data-theme="light" class="flex justify-center items-center self-stretch bb br--col--athens-gray2 relative touch-action-none">
+                                                    <div data-notification-card-body class="flex flex-column items-start self-stretch flex--max gap--16 pad--y--12 pad--x--8 relative z-2 transition--all transition--150 transition--ease-in-out">
                                                         <div class="flex justify-start items-start self-stretch gap--20 relative">
                                                             <!-- notification close -->
                                                             <a data-close-notification-card class="flex justify-center items-center w--24 h--24 pointer absolute top-0 right-0">
@@ -2840,6 +3022,19 @@
                                                             </div>
                                                             <!-- /notification content -->
                                                         </div>
+                                                    </div>
+
+                                                    <!-- mobile control wrapper (on swipe to left this element will be visible to show 'delete' or 'dismiss' button) -->
+                                                    <div data-notification-card-mobile-controls class="dn flex-column justify-center items-center gap--6 w--63 h-100 absolute top-0 right-0 z-1 display-flex--responsive-mobile display-flex--responsive-mobile-portrait">
+                                                        <!-- delete button -->
+                                                        <a data-delete-notification class="flex flex-column justify-center items-center self-stretch gap--6 w--63 h-100 pa2 bg--col--vermilion">
+                                                            <img src="assets/images/trash-01.svg" alt="" class="flex w--20 h--20 filter--col--white pointer-events-none">
+
+                                                            <span class="flex justify-center items-center fs--12 fw5 lh--18 white pointer-events-none"> 
+                                                                Delete
+                                                            </span>
+                                                        </a>
+                                                        <!-- /delete button -->
                                                     </div>
                                                 </div>
                                                 <!-- /notification card -->

@@ -89,7 +89,6 @@ class DashSideBarHandler {
 		);
 	}
 
-
 	/** 
 	 * 
 	 * @method handleEvent 
@@ -104,7 +103,6 @@ class DashSideBarHandler {
 			}
 		});
 	}
-
 
 	/** 
 	 * 
@@ -159,7 +157,6 @@ class DashSideBarHandler {
 		) : '';
 	}
 
-
 	/** 
 	 * 
 	 * @method updateSubMenuTitle 
@@ -177,7 +174,6 @@ class DashSideBarHandler {
 		}
 	}
 
-
 	/** 
 	 * 
 	 * @method slideCurrentSubMenu 
@@ -189,7 +185,6 @@ class DashSideBarHandler {
 
 		_self.options.currentSubmenuMainEl.style.transform = `translateX(-${(_self.options.currentSubmenuLevel * 100)}%)`;
 	}
-
 
 	/** 
 	 * 
@@ -222,7 +217,6 @@ class DashSideBarHandler {
 		//console.log('submenu back', _self.options);
 	}
 
-
 	/** 
 	 * 
 	 * @method handleBackButtonClick 
@@ -243,7 +237,6 @@ class DashSideBarHandler {
 			_self.options.currentBackButton.classList.add('js-event-handler-attached');
 		}
 	}
-
 
 	/** 
 	 * 
@@ -281,7 +274,6 @@ class DashSideBarHandler {
 			//console.log('sub menu does not exist');
 		}
 	}
-
 
 	/** 
 	 * 
@@ -335,7 +327,6 @@ class DashSideBarHandler {
 		}
 	}
 
-
 	/** 
 	 * 
 	 * @method handleDashNavElClick 
@@ -351,7 +342,6 @@ class DashSideBarHandler {
 			el.dataset.targetSubmenuContainer ? _self.handleMainMenuClick(el) : _self.resetMenu();
 		});
 	}
-
 
 	/** 
 	 * 
@@ -384,7 +374,6 @@ class DashSideBarHandler {
 			_self.options.floatingPanelTriggerEl.classList.add('js-event-handler-attached');
 		}
 	}
-
 
 	/** 
 	 * 
@@ -434,7 +423,6 @@ class DashSideBarHandler {
 			_self.options.notificationsPanelEl.querySelector('[data-back-button]').classList.add('js-event-handler-attached');
 		}
 	}
-
 
 	/** 
 	 * 
@@ -507,7 +495,6 @@ class DashSideBarHandler {
 		});
 	}
 
-
 	/** 
 	 * 
 	 * @method handleMobileNav 
@@ -527,7 +514,6 @@ class DashSideBarHandler {
 			_self.options.mobileNavEl.dataset.isActive = false;
 		});
 	}
-
 
 	/** 
 	 * 
@@ -632,7 +618,6 @@ class DashCurrentPageDetector {
     this.menuItems = document.querySelectorAll('[data-current-page-detector]'); // get all menu items
   }
 
-
 	/** 
 	 * 
 	 * @method detectCurrentPage 
@@ -655,7 +640,6 @@ class DashCurrentPageDetector {
       }
     });
   }
-
 
 	/** 
 	 * 
@@ -717,7 +701,6 @@ class DashSidebarMenuAdjuster {
     this.maxVisibleItems = Math.floor((this.windowHeight - this.otherElementsHeight) / this.menuItemHeight); 
   }
 
-
 	/** 
 	 * 
 	 * @method debounce 
@@ -735,7 +718,6 @@ class DashSidebarMenuAdjuster {
       }, wait);
     };
   }
-
 
 	/** 
 	 * 
@@ -755,7 +737,6 @@ class DashSidebarMenuAdjuster {
 		// hide the floating panel trigger button
 		this.moreButton.hidden = true;
   }
-
 
 	/** 
 	 * 
@@ -798,7 +779,6 @@ class DashSidebarMenuAdjuster {
     }
   }
 
-
 	/** 
 	 * 
 	 * @method init 
@@ -810,6 +790,102 @@ class DashSidebarMenuAdjuster {
     this.adjustMenu();
 
     window.addEventListener('resize', this.debounce(() => this.adjustMenu(), 200));
+  }
+}
+
+
+/**
+ * 
+ * @class DashNotificationSwipe
+ * @author Abirlal Maiti <abirlal.maiti@gmail.com>
+ * @classdesc Handles swipe events on notification cards and shows/hides the 'delete' or 'dismiss' buttons (mobile only)
+ * 
+ */
+class DashNotificationSwipe {
+  constructor() {
+    this.threshold = 100; // Adjusted for testing restraint
+    this.restraint = 100;
+    this.allowedTime = 300;
+  }
+
+  /**
+   * @method swipedetect
+   * @description Detects swipe events on a given element
+   * @param {HTMLElement} el 
+   * @param {Function} callback 
+   */
+  swipedetect(el, callback) {
+    let touchsurface = el,
+      swipedir,
+      startX,
+      startY,
+      distX,
+      distY,
+      startTime,
+      handleswipe = callback || function (swipedir) { };
+
+    touchsurface.addEventListener('touchstart', (e) => {
+      //console.log('Touch start');
+      const touchobj = e.changedTouches[0];
+      swipedir = 'none';
+      startX = touchobj.pageX;
+      startY = touchobj.pageY;
+      startTime = new Date().getTime();
+      e.preventDefault();
+    }, false);
+
+    touchsurface.addEventListener('touchend', (e) => {
+      //console.log('Touch end');
+      const touchobj = e.changedTouches[0];
+      distX = touchobj.pageX - startX;
+      distY = touchobj.pageY - startY;
+      const elapsedTime = new Date().getTime() - startTime;
+      //console.log(`distX: ${distX}, distY: ${distY}, elapsedTime: ${elapsedTime}`);
+
+      if (elapsedTime <= this.allowedTime) {
+        if (Math.abs(distX) >= this.threshold && Math.abs(distY) <= this.restraint) {
+          swipedir = (distX < 0) ? 'left' : 'right';
+          //console.log(`Swipe detected: ${swipedir}`);
+          handleswipe(swipedir);
+        }
+      }
+      e.preventDefault();
+    }, false);
+  }
+
+  /**
+   * @method moveElement
+   * @description Moves the notification card body based on swipe direction
+   * @param {HTMLElement} el 
+   * @param {String} direction 
+   */
+  moveElement(el, direction) {
+    const moveDistance = '3.938rem'; // Move 15% of the element's width
+    const cardBody = el.querySelector('[data-notification-card-body]');
+
+    if (direction === 'left') {
+      cardBody.style.transform = `translateX(-${moveDistance})`;
+      el.dataset.swiped = 'left';
+    } else if (direction === 'right' && el.dataset.swiped === 'left') {
+      cardBody.style.transform = 'translateX(0)';
+      el.dataset.swiped = 'none';
+    }
+  }
+
+  /**
+   * @method init
+   * @description Initializes swipe event listeners on notification cards
+   */
+  init() {
+    document.querySelectorAll('[data-notification-card]').forEach((item) => {
+      item.dataset.swiped = 'none'; // Initialize swipe state
+
+      this.swipedetect(item, (swipedir) => {
+        if (swipedir === 'left' || swipedir === 'right') {
+          this.moveElement(item, swipedir);
+        }
+      });
+    });
   }
 }
 
@@ -849,7 +925,6 @@ class DashProfileStatusDropdown {
 		document.addEventListener('click', this.handleOutsideClick.bind(this));
   }
 
-
 	/** 
 	 * 
 	 * @method toggleDropdown 
@@ -868,7 +943,6 @@ class DashProfileStatusDropdown {
     this.isOpen = !this.isOpen;
     this.element.setAttribute('data-is-open', this.isOpen);
   }
-
 
 	/** 
 	 * 
@@ -893,7 +967,6 @@ class DashProfileStatusDropdown {
     this.toggleDropdown();
   }
 	
-
 	/** 
 	 * 
 	 * @method throwEvent 
@@ -917,7 +990,6 @@ class DashProfileStatusDropdown {
     document.dispatchEvent(event);
   }
 	
-
 	/** 
 	 * 
 	 * @method handleOutsideClick 
@@ -969,7 +1041,6 @@ class DashStatusMessageEditor {
 		this.updateWordCount();
   }
 
-
 	/** 
 	 * 
 	 * @method enableEditing 
@@ -982,7 +1053,6 @@ class DashStatusMessageEditor {
     this.element.setAttribute('data-is-editing', this.isEditing);
     this.textbox.removeAttribute('readonly');
   }
-
 
 	/** 
 	 * 
@@ -1000,7 +1070,6 @@ class DashStatusMessageEditor {
 		// count characters
 		this.updateWordCount();
   }
-
 
 	/** 
 	 * 
@@ -1022,7 +1091,6 @@ class DashStatusMessageEditor {
     this.throwEvent();
   }
 
-
 	/** 
 	 * 
 	 * @method updateWordCount 
@@ -1038,7 +1106,6 @@ class DashStatusMessageEditor {
       this.textbox.value = this.textbox.value.substring(0, 100);
     }
   }
-
 
 	/** 
 	 * 
@@ -1081,7 +1148,6 @@ class DashToggleSwitch {
     this.input.addEventListener('change', this.handleChange.bind(this));
   }
 
-
 	/** 
 	 * 
 	 * @method handleChange 
@@ -1097,7 +1163,6 @@ class DashToggleSwitch {
 		// throw event
 		this.throwEvent();
   }
-
 
 	/** 
 	 * 
@@ -1145,7 +1210,6 @@ class DashTabs {
     });
   }
 
-
 	/** 
 	 * 
 	 * @method handleTabTriggerClick 
@@ -1175,7 +1239,6 @@ class DashTabs {
 		this.throwEvent(eventName, payload);
   }
 
-
 	/** 
 	 * 
 	 * @method getPayload 
@@ -1197,7 +1260,6 @@ class DashTabs {
     return payload;
   }
 
-
 	/** 
 	 * 
 	 * @method updateTabTriggers 
@@ -1214,7 +1276,6 @@ class DashTabs {
     });
   }
 
-
 	/** 
 	 * 
 	 * @method updateTabContents 
@@ -1230,7 +1291,6 @@ class DashTabs {
       }
     });
   }
-
 
 	/** 
 	 * 
@@ -1271,6 +1331,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
 	// Initialize sidebar menu items adjuster
 	const dashSidebarMenuAdjuster = new DashSidebarMenuAdjuster();
 	dashSidebarMenuAdjuster.init();
+
+
+	// Initialize notification swipe handler
+	const dashNotificationSwipe = new DashNotificationSwipe();
+	dashNotificationSwipe.init();
 
 
 	// Initialize the status dropdown class for all elements with data-js-status-dropdown
