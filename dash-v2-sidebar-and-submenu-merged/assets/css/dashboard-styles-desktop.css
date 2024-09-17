@@ -124,6 +124,10 @@ html {
   background-color: var(--color-my-sin, #fdb022)
 }
 
+.bg--col--vermilion {
+  background-color: var(--color-vermilion, #ff4405)
+}
+
 .bg--col--persian-rose {
   background-color: var(--color-persian-rose, #f40793)
 }
@@ -313,6 +317,10 @@ html {
 
 .w--56 {
   width: 3.5rem
+}
+
+.w--63 {
+  width: 3.938rem
 }
 
 .w--90 {
@@ -560,6 +568,11 @@ html {
 
 .pointer-events-none {
   pointer-events: none
+}
+
+.touch-action-none {
+  -ms-touch-action: none;
+  touch-action: none
 }
 
 [data-floating-panel-wrapper] [data-floating-panel] {
@@ -917,7 +930,7 @@ html {
 [data-notification-card][data-notification-type=info][data-is-read=true] [data-notification-card-body],
 [data-notification-card][data-notification-type=success][data-is-read=true] [data-notification-card-body],
 [data-notification-card][data-notification-type=warning][data-is-read=true] [data-notification-card-body] {
-  background: 0 0
+  background: #fff
 }
 
 [data-profile-panel-trigger][data-is-active=true] {

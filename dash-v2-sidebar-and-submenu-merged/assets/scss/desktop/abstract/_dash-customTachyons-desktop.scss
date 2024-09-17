@@ -53,6 +53,7 @@
 .bg--col--bright-turquoise { background-color: var(--color-bright-turquoise, #22CCEE); }
 .bg--col--spring-green { background-color: var(--color-spring-green); }
 .bg--col--my-sin { background-color: var(--color-my-sin, #FDB022); }
+.bg--col--vermilion { background-color: var(--color-vermilion, #FF4405); }
 .bg--col--persian-rose { background-color: var(--color-persian-rose, #F40793); }
 .bg--col--dodger-blue { background-color: var(--color-dodger-blue, #2970FF); }
 .bg--col--dodger-blue--10 { background-color: rgba(41, 112, 255, 0.10); }
@@ -146,6 +147,7 @@
 .w--36 { width: 2.25rem; /* width 36px */ }
 .w--42 { width: 2.625rem; /* width 42px */ }
 .w--56 { width: 3.5rem; /* width 56px */ }
+.w--63 { width: 3.938rem; /* width 63px */ }
 .w--90 { width: 5.625rem; /* width 90px */ }
 .w--160 { width: 10rem; /* width 160px */ }
 .w--480 { width: 30rem; /* width 480px */ }
@@ -322,3 +324,7 @@
 /* Pointer Events */
 .pointer-events-all { pointer-events: all; }
 .pointer-events-none { pointer-events: none; }
+
+
+/* Touch Actions */
+.touch-action-none { touch-action: none; }
