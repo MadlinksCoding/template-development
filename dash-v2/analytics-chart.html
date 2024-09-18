@@ -28,10 +28,21 @@
         /* Width */
         .w--14 { width: 0.875rem; /* width 14px */ } /* confirmed in use */ /* pixel conversion correct */
 
+        /* Max Width */
+        .max--w--130 { width: 8.125rem; /* max-width 130px */ }
+
         /* Hright */
         .h--14 { height: 0.875rem; /* height 14px */ } /* confirmed in use */ /* pixel conversion correct */
+        .h--42 { height: 2.625rem; /* height 42px */ }
+
+        /* Min Height */
+        .min--h--42 { min-height: 2.625rem; /* min-height 42px */ }
+        .min--h--72 { min-height: 4.5rem; /* min-height 72px */ }
 
         /* Colors */
+        .col--pale-sky { color: var(--color-pale-sky,#667085); }
+        .col--ebony-2 { color: var(--color-ebony-2,#0C111D); }
+        .col--oxford-blue { color: var(--color-oxford-blue,#344054); }
         .col--gray-500 { color: var(--color-gray-500,#667085); }
         .col--gray-600 { color: var(--color-gray-600,#475467); }
         .col--gray-700 { color: var(--color-gray-700,#344054); }
@@ -60,6 +71,7 @@
 
         /* Border Colors */
         .br--col--gray-300 { border-color: var(--color-gray-300, #D0D5DD); } /* confirmed in use */
+        .br--col--pale-sky { border-color: var(--color-pale-sky, #667085); } /* confirmed in use */
 
         /* Border Radius */
         .br--2 { border-radius: 0.125rem; /* border-radius 2px */ } /* confirmed in use */ /* pixel conversion correct */
@@ -89,12 +101,15 @@
         .grid--col-span-2 { grid-column: span 2 / span 2; }
 
         /* Padding */
+        .pad--10 { padding: 0.625rem; /* padding 10px */ }
         .pad--16 { padding: 1rem; /* padding 16px */ }
         .pad--bottom--0 { padding-bottom: 0rem; /* padding bottom 0px */ }
         .pad--top--0 { padding-top: 0rem; /* padding top 0px */ }
 
         /* Margin */
         .m--0 { margin: 0rem; }
+        .ml--16-neg { margin-left: -1rem; /* margin-left -16px */ }
+        .mr--16-neg { margin-right: -1rem; /* margin-right -16px */ }
 
         /* Group Hover State Colors */
         .group:hover .hover--col--blue-dark-600 { color: var(--color-blue-dark-600, #155EEF); }
@@ -169,6 +184,7 @@
                     <!-- End Last Date / Refresh -->
                 </div>
                 <!-- End Section Header -->
+
                 <!-- Data Row -->
                 <div data-section="data-row" class="pad--16 pad--top--0 grid grid--cols-3 gap--16 grid--cols-2-responsive-tablet grid--cols-2-responsive-mobile grid--cols-1-responsive-mobile-portrait pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait">
                     <!-- Left Column -->
@@ -368,21 +384,193 @@
                                 <h3 class="m--0 poppins fs--16 fw5 lh--24 col--gray-700">Top Contributors</h3>
                             </div>
                             <!-- Data Content -->
-                            <div class="flex flex-column justify-center items-start gap--16 flex-auto">
-                                <div class="w-100 pad--y--24 flex flex-column justify-center gap--8 flex-auto h--340">
-                                    <div class="pad--16 flex items-center justify-center">
-                                        <div class="w--161 h--161 flex items-center justify-center relative">
-                                            <div class="db w-100 h-100 absolute left-0 top-0 flex items-center justify-center">
-                                                <div class="db bg--col--lemon w--32 h--32 filter--blur--60"></div>
-                                            </div>
-                                            <img src="assets/img/dot-option-placeholder.svg" class="w--128 h--128" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="flex flex-column gap--8 items-center">
-                                        <span class="fs--16 lh--24 col--gray-700">Empty State message</span>
-                                        <a href="#" class="fs--16 lh--24"><span class="fs--16 lh--24 col--gray-700 underline">Learn ways to earn</span> </a>
+                            <div class="flex flex-column justify-start items-start gap--16 flex-auto">
+                                <!-- Table Wrapper -->
+                                <div data-section="table-wrapper" class="flex flex-column items-start self-stretch flex-auto ml--16-neg mr--16-neg">
+                                    <div data-stat-container="1" class="w-100 top_contributors-container">
+                                        <table data-stat-table-for="top_contributors" class="w-100">
+                                            <thead>
+                                                <tr>
+                                                    <th class="fs--14 fw4 lh--20 col--pale-sky truncate min--h--42 pad--10 bb br--col--pale-sky">
+                                                        Fan
+                                                    </th>
+
+                                                    <th class="fs--14 fw4 lh--20 col--pale-sky truncate tr max--w--130 min--h--42 pad--10 bb br--col--pale-sky">
+                                                        Total (USD)
+                                                    </th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+                                                <tr>
+                                                    <td class="fs--14 fw4 lh--20 col--pale-sky truncate min--h--72 pad--10">
+                                                        <div class="flex items-center self-stretch gap--10 flex-auto min--h--72">
+                                                            <!-- Counter -->
+                                                            <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white">
+                                                                1
+                                                            </span>
+                                                            <!-- End Counter -->
+
+                                                            <!-- User -->
+                                                            <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer">
+                                                                <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                                    MAN GOES
+                                                                </span>
+
+                                                                <span class="flex items-center self-stretch gap--5">
+                                                                    <img src="assets/img/avatar-mango.png" alt="" class="w--20 h--20">
+                                                                    <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                                        @Mangoes4eva
+                                                                    </span>
+                                                                </span>
+                                                            </a>
+                                                            <!-- End User -->
+                                                        </div>
+                                                    </td>
+
+                                                    <!-- Contribution -->
+                                                    <td class="fs--12 fw6 lh--18 col--ebony-2 truncate tr max--w--130 min--h--72 pad--10">
+                                                        USD$ 9.99
+                                                    </td>
+                                                    <!-- End Contribution -->
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="fs--14 fw4 lh--20 col--pale-sky truncate min--h--72 pad--10">
+                                                        <div class="flex items-center self-stretch gap--10 flex-auto min--h--72">
+                                                            <!-- Counter -->
+                                                            <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white">
+                                                                2
+                                                            </span>
+                                                            <!-- End Counter -->
+
+                                                            <!-- User -->
+                                                            <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer">
+                                                                <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                                    MAN GOES
+                                                                </span>
+
+                                                                <span class="flex items-center self-stretch gap--5">
+                                                                    <img src="assets/img/avatar-mango.png" alt="" class="w--20 h--20">
+                                                                    <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                                        @Mangoes4eva
+                                                                    </span>
+                                                                </span>
+                                                            </a>
+                                                            <!-- End User -->
+                                                        </div>
+                                                    </td>
+
+                                                    <!-- Contribution -->
+                                                    <td class="fs--12 fw6 lh--18 col--ebony-2 truncate tr max--w--130 min--h--72 pad--10">
+                                                        USD$ 9.99
+                                                    </td>
+                                                    <!-- End Contribution -->
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="fs--14 fw4 lh--20 col--pale-sky truncate min--h--72 pad--10">
+                                                        <div class="flex items-center self-stretch gap--10 flex-auto min--h--72">
+                                                            <!-- Counter -->
+                                                            <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white">
+                                                                3
+                                                            </span>
+                                                            <!-- End Counter -->
+
+                                                            <!-- User -->
+                                                            <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer">
+                                                                <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                                    MAN GOES
+                                                                </span>
+
+                                                                <span class="flex items-center self-stretch gap--5">
+                                                                    <img src="assets/img/avatar-mango.png" alt="" class="w--20 h--20">
+                                                                    <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                                        @Mangoes4eva
+                                                                    </span>
+                                                                </span>
+                                                            </a>
+                                                            <!-- End User -->
+                                                        </div>
+                                                    </td>
+
+                                                    <!-- Contribution -->
+                                                    <td class="fs--12 fw6 lh--18 col--ebony-2 truncate tr max--w--130 min--h--72 pad--10">
+                                                        USD$ 9.99
+                                                    </td>
+                                                    <!-- End Contribution -->
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="fs--14 fw4 lh--20 col--pale-sky truncate min--h--72 pad--10">
+                                                        <div class="flex items-center self-stretch gap--10 flex-auto min--h--72">
+                                                            <!-- Counter -->
+                                                            <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white">
+                                                                4
+                                                            </span>
+                                                            <!-- End Counter -->
+
+                                                            <!-- User -->
+                                                            <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer">
+                                                                <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                                    MAN GOES
+                                                                </span>
+
+                                                                <span class="flex items-center self-stretch gap--5">
+                                                                    <img src="assets/img/avatar-mango.png" alt="" class="w--20 h--20">
+                                                                    <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                                        @Mangoes4eva
+                                                                    </span>
+                                                                </span>
+                                                            </a>
+                                                            <!-- End User -->
+                                                        </div>
+                                                    </td>
+
+                                                    <!-- Contribution -->
+                                                    <td class="fs--12 fw6 lh--18 col--ebony-2 truncate tr max--w--130 min--h--72 pad--10">
+                                                        USD$ 9.99
+                                                    </td>
+                                                    <!-- End Contribution -->
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="fs--14 fw4 lh--20 col--pale-sky truncate min--h--72 pad--10">
+                                                        <div class="flex items-center self-stretch gap--10 flex-auto min--h--72">
+                                                            <!-- Counter -->
+                                                            <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white">
+                                                                5
+                                                            </span>
+                                                            <!-- End Counter -->
+
+                                                            <!-- User -->
+                                                            <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer">
+                                                                <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                                    MAN GOES
+                                                                </span>
+
+                                                                <span class="flex items-center self-stretch gap--5">
+                                                                    <img src="assets/img/avatar-mango.png" alt="" class="w--20 h--20">
+                                                                    <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                                        @Mangoes4eva
+                                                                    </span>
+                                                                </span>
+                                                            </a>
+                                                            <!-- End User -->
+                                                        </div>
+                                                    </td>
+
+                                                    <!-- Contribution -->
+                                                    <td class="fs--12 fw6 lh--18 col--ebony-2 truncate tr max--w--130 min--h--72 pad--10">
+                                                        USD$ 1000.99
+                                                    </td>
+                                                    <!-- End Contribution -->
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
+                                <!-- End Table Wrapper -->
                             </div>
                             <!-- Ens Data Content -->
                         </div>
