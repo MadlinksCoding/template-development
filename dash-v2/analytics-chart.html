@@ -41,7 +41,9 @@
         /* Max Width */
         .max--w--72 { max-width: 4.5rem; /* max-width 72px */ }
         .max--w--120 { max-width: 7.5rem; /* max-width 120px */ }
+        .max--w--128 { max-width: 8rem; /* max-width 128px */ }
         .max--w--130 { max-width: 8.125rem; /* max-width 130px */ }
+        .max--w--240 { max-width: 15rem; /* max-width 240px */ }
 
         /* Hright */
         .h--14 { height: 0.875rem; /* height 14px */ } /* confirmed in use */ /* pixel conversion correct */
@@ -959,169 +961,189 @@
                                     </div>
                                 </div>
                                 <!-- Data Content -->
-                                <div class="flex flex-column justify-center items-start gap--16 flex-auto">
-                                    <!-- Table Wrapper -->
-                                    <div data-section="table-wrapper" class="flex flex-column items-start self-stretch flex-auto ml--16-neg mr--16-neg">
-                                        <div data-table-container="subscriptions" class="w-100 subscriptions-container">
-                                            <table data-table-for="order_received-subscriptions" class="w-100">
-                                                <thead>
-                                                    <tr>
-                                                        <th class="fs--14 fw4 lh--20 col--pale-sky truncate w--128 min--h--42 pad--10 bb br--col--pale-sky">
-                                                            Media
-                                                        </th>
-                                                        <th class="fs--14 fw4 lh--20 col--pale-sky truncate w--280 min--h--42 pad--10 bb br--col--pale-sky">
-                                                            &nbsp;
-                                                        </th>
-                                                        <th class="fs--14 fw4 lh--20 col--pale-sky truncate tr w--120 min--h--42 pad--10 bb br--col--pale-sky">
-                                                            # of clicks
-                                                        </th>
-                                                        <th class="fs--14 fw4 lh--20 col--pale-sky truncate tr w--240 min--h--42 pad--10 bb br--col--pale-sky">
-                                                            Watch Duration
-                                                        </th>
-                                                    </tr>
-                                                </thead>
+                                <div class="flex flex-column justify-start items-start gap--16 flex-auto">
+                                    <!-- Div Table Wrapper -->
+                                    <div data-div-table-wrapper data-target="analytics-top-merch-table" class="w-100">
+                                        <!-- table container -->
+                                        <div data-div-table data-html-container="1" class="flex flex-column flex--max justify-start items-start self-stretch ml--16-neg mr--16-neg">
+                                            <!-- table header -->
+                                            <div data-div-table-head class="flex flex--max justify-start items-center self-stretch gap--0 bb br--col--pale-sky">
+                                                <div data-div-table-head-col data-name="media" class="flex flex-column justify-center w--128 max--w--128 min--h--42 pad--10">
+                                                    <span class="fs--14 fw4 lh--20 col--pale-sky">
+                                                        Media
+                                                    </span>
+                                                </div>
+                                                <div data-div-table-head-col data-name="media-title" class="flex flex-column justify-center flex--max min--h--42 pad--10">
+                                                    <span class="fs--14 fw4 lh--20 col--pale-sky">
+                                                        &nbsp;
+                                                    </span>
+                                                </div>
+                                                <div data-div-table-head-col data-name="clicks" class="flex flex-column justify-center items-end w--120 max--w--120 min--h--42 pad--10">
+                                                    <span class="fs--14 fw4 lh--20 col--pale-sky">
+                                                        # of clicks
+                                                    </span>
+                                                </div>
+                                                <div data-div-table-head-col data-name="duration" class="flex flex-column justify-center items-end w--240 max--w--240 min--h--42 pad--10">
+                                                    <span class="fs--14 fw4 lh--20 col--pale-sky">
+                                                        Watch Duration
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <!-- /table header -->
 
-                                                <tbody>
-                                                    <tr class="bg--col--athens-gray-3--50">
-                                                        <td class="min--h--72 v-mid">
-                                                            <a href="#" class="flex justify-center items-center w-100 h--96 pointer relative">
-                                                                <!-- Counter -->
-                                                                <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white absolute top-0 left-0">
-                                                                    1
-                                                                </span>
-                                                                <!-- End Counter -->
-                                                                <img src="assets/img/thumb-3.png" alt="" class="w-100 h--96 fit--cover">
-                                                            </a>
-                                                        </td>
-                                                        <td class="min--h--72 pad--10 v-mid">
-                                                            <a href="#" class="fs--12 fw6 lh--18 col--ebony-2 truncate pointer">
-                                                                Record breaking fried chicken eating ! See my attempt to break world’s record! Watch now!
-                                                            </a>
-                                                        </td>
-                                                        <td class="tr min--h--72 pad--10 v-mid">
-                                                            <span class="fs--12 fw6 lh--18 col--ebony-2 truncate ">
-                                                                1,234
-                                                            </span>
-                                                        </td>
-                                                        <td class="tr w--240 min--h--72 pad--10 v-mid">
-                                                            <span class="fs--12 fw6 lh--18 col--ebony-2 truncate ">
-                                                                32h10m
-                                                            </span>
-                                                        </td>
-                                                    </tr>
-                                                    <tr class="">
-                                                        <td class="min--h--72 v-mid">
-                                                            <a href="#" class="flex justify-center items-center w-100 h--96 pointer relative">
-                                                                <!-- Counter -->
-                                                                <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white absolute top-0 left-0">
-                                                                    2
-                                                                </span>
-                                                                <!-- End Counter -->
-                                                                <img src="assets/img/thumb-4.png" alt="" class="w-100 h--96 fit--cover">
-                                                            </a>
-                                                        </td>
-                                                        <td class="min--h--72 pad--10 v-mid">
-                                                            <a href="#" class="fs--12 fw6 lh--18 col--ebony-2 truncate pointer">
-                                                                Record breaking fried chicken eating ! See my attempt to break world’s record! Watch now!
-                                                            </a>
-                                                        </td>
-                                                        <td class="tr min--h--72 pad--10 v-mid">
-                                                            <span class="fs--12 fw6 lh--18 col--ebony-2 truncate ">
-                                                                1,234
-                                                            </span>
-                                                        </td>
-                                                        <td class="tr w--240 min--h--72 pad--10 v-mid">
-                                                            <span class="fs--12 fw6 lh--18 col--ebony-2 truncate ">
-                                                                32h10m
-                                                            </span>
-                                                        </td>
-                                                    </tr>
-                                                    <tr class="bg--col--athens-gray-3--50">
-                                                        <td class="min--h--72 v-mid">
-                                                            <a href="#" class="flex justify-center items-center w-100 h--96 pointer relative">
-                                                                <!-- Counter -->
-                                                                <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white absolute top-0 left-0">
-                                                                    3
-                                                                </span>
-                                                                <!-- End Counter -->
-                                                                <img src="assets/img/thumb-3.png" alt="" class="w-100 h--96 fit--cover">
-                                                            </a>
-                                                        </td>
-                                                        <td class="min--h--72 pad--10 v-mid">
-                                                            <a href="#" class="fs--12 fw6 lh--18 col--ebony-2 truncate pointer">
-                                                                Record breaking fried chicken eating ! See my attempt to break world’s record! Watch now!
-                                                            </a>
-                                                        </td>
-                                                        <td class="tr min--h--72 pad--10 v-mid">
-                                                            <span class="fs--12 fw6 lh--18 col--ebony-2 truncate ">
-                                                                1,234
-                                                            </span>
-                                                        </td>
-                                                        <td class="tr w--240 min--h--72 pad--10 v-mid">
-                                                            <span class="fs--12 fw6 lh--18 col--ebony-2 truncate ">
-                                                                32h10m
-                                                            </span>
-                                                        </td>
-                                                    </tr>
-                                                    <tr class="">
-                                                        <td class="min--h--72 v-mid">
-                                                            <a href="#" class="flex justify-center items-center w-100 h--96 pointer relative">
-                                                                <!-- Counter -->
-                                                                <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white absolute top-0 left-0">
-                                                                    4
-                                                                </span>
-                                                                <!-- End Counter -->
-                                                                <img src="assets/img/thumb-4.png" alt="" class="w-100 h--96 fit--cover">
-                                                            </a>
-                                                        </td>
-                                                        <td class="min--h--72 pad--10 v-mid">
-                                                            <a href="#" class="fs--12 fw6 lh--18 col--ebony-2 truncate pointer">
-                                                                Record breaking fried chicken eating ! See my attempt to break world’s record! Watch now!
-                                                            </a>
-                                                        </td>
-                                                        <td class="tr min--h--72 pad--10 v-mid">
-                                                            <span class="fs--12 fw6 lh--18 col--ebony-2 truncate ">
-                                                                1,234
-                                                            </span>
-                                                        </td>
-                                                        <td class="tr w--240 min--h--72 pad--10 v-mid">
-                                                            <span class="fs--12 fw6 lh--18 col--ebony-2 truncate ">
-                                                                32h10m
-                                                            </span>
-                                                        </td>
-                                                    </tr>
-                                                    <tr class="bg--col--athens-gray-3--50">
-                                                        <td class="min--h--72 v-mid">
-                                                            <a href="#" class="flex justify-center items-center w-100 h--96 pointer relative">
-                                                                <!-- Counter -->
-                                                                <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white absolute top-0 left-0">
-                                                                    5
-                                                                </span>
-                                                                <!-- End Counter -->
-                                                                <img src="assets/img/thumb-3.png" alt="" class="w-100 h--96 fit--cover">
-                                                            </a>
-                                                        </td>
-                                                        <td class="min--h--72 pad--10 v-mid">
-                                                            <a href="#" class="fs--12 fw6 lh--18 col--ebony-2 truncate pointer">
-                                                                Record breaking fried chicken eating ! See my attempt to break world’s record! Watch now!
-                                                            </a>
-                                                        </td>
-                                                        <td class="tr min--h--72 pad--10 v-mid">
-                                                            <span class="fs--12 fw6 lh--18 col--ebony-2 truncate ">
-                                                                1,234
-                                                            </span>
-                                                        </td>
-                                                        <td class="tr w--240 min--h--72 pad--10 v-mid">
-                                                            <span class="fs--12 fw6 lh--18 col--ebony-2 truncate ">
-                                                                32h10m
-                                                            </span>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
+                                            <!-- table row -->
+                                            <div data-div-table-row class="flex flex--max justify-start items-center self-stretch gap--0 bg--col--athens-gray-3--50">
+                                                <div data-div-table-row-col data-title="merch" class="flex flex-column justify-center gap--10 w--128 max--w--128 min--h--72">
+                                                    <a href="#" class="flex justify-center items-center w-100 h--96 pointer relative">
+                                                        <!-- Counter -->
+                                                        <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white absolute top-0 left-0">
+                                                            1
+                                                        </span>
+                                                        <!-- End Counter -->
+                                                        <img src="assets/img/thumb-3.png" alt="" class="w-100 h--96 fit--cover">
+                                                    </a>
+                                                </div>
+                                                <div data-div-table-row-col data-title="merch-title" class="flex flex-column justify-center gap--10 flex--max min--h--72 pv2 pad--x--10">
+                                                    <a href="#" class="fs--12 fw6 lh--18 col--ebony-2 truncate pointer">
+                                                        Record breaking fried chicken eating ! See my attempt to break world’s record! Watch now!
+                                                    </a>
+                                                </div>
+                                                <div data-div-table-row-col data-title="views" class="flex flex-column justify-center items-end gap--10 w--120 max--w--120 min--h--72 pv2 pad--x--10">
+                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                        1,234
+                                                    </span>
+                                                </div>
+                                                <div data-div-table-row-col data-title="sales" class="flex flex-column justify-center items-end gap--10 w--240 min--h--72 pv2 pad--x--10">
+                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                        32h10m
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <!-- /table row -->
+
+                                            <!-- table row -->
+                                            <div data-div-table-row class="flex flex--max justify-start items-center self-stretch gap--0">
+                                                <div data-div-table-row-col data-title="merch" class="flex flex-column justify-center gap--10 w--128 max--w--128 min--h--72">
+                                                    <a href="#" class="flex justify-center items-center w-100 h--96 pointer relative">
+                                                        <!-- Counter -->
+                                                        <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white absolute top-0 left-0">
+                                                            2
+                                                        </span>
+                                                        <!-- End Counter -->
+                                                        <img src="assets/img/thumb-4.png" alt="" class="w-100 h--96 fit--cover">
+                                                    </a>
+                                                </div>
+                                                <div data-div-table-row-col data-title="merch-title" class="flex flex-column justify-center gap--10 flex--max min--h--72 pv2 pad--x--10">
+                                                    <a href="#" class="fs--12 fw6 lh--18 col--ebony-2 truncate pointer">
+                                                        Record breaking fried chicken eating ! See my attempt to break world’s record! Watch now!
+                                                    </a>
+                                                </div>
+                                                <div data-div-table-row-col data-title="views" class="flex flex-column justify-center items-end gap--10 w--120 max--w--120 min--h--72 pv2 pad--x--10">
+                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                        1,234
+                                                    </span>
+                                                </div>
+                                                <div data-div-table-row-col data-title="sales" class="flex flex-column justify-center items-end gap--10 w--240 min--h--72 pv2 pad--x--10">
+                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                        32h10m
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <!-- /table row -->
+
+                                            <!-- table row -->
+                                            <div data-div-table-row class="flex flex--max justify-start items-center self-stretch gap--0 bg--col--athens-gray-3--50">
+                                                <div data-div-table-row-col data-title="merch" class="flex flex-column justify-center gap--10 w--128 max--w--128 min--h--72">
+                                                    <a href="#" class="flex justify-center items-center w-100 h--96 pointer relative">
+                                                        <!-- Counter -->
+                                                        <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white absolute top-0 left-0">
+                                                            3
+                                                        </span>
+                                                        <!-- End Counter -->
+                                                        <img src="assets/img/thumb-3.png" alt="" class="w-100 h--96 fit--cover">
+                                                    </a>
+                                                </div>
+                                                <div data-div-table-row-col data-title="merch-title" class="flex flex-column justify-center gap--10 flex--max min--h--72 pv2 pad--x--10">
+                                                    <a href="#" class="fs--12 fw6 lh--18 col--ebony-2 truncate pointer">
+                                                        Record breaking fried chicken eating ! See my attempt to break world’s record! Watch now!
+                                                    </a>
+                                                </div>
+                                                <div data-div-table-row-col data-title="views" class="flex flex-column justify-center items-end gap--10 w--120 max--w--120 min--h--72 pv2 pad--x--10">
+                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                        1,234
+                                                    </span>
+                                                </div>
+                                                <div data-div-table-row-col data-title="sales" class="flex flex-column justify-center items-end gap--10 w--240 min--h--72 pv2 pad--x--10">
+                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                        32h10m
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <!-- /table row -->
+
+                                            <!-- table row -->
+                                            <div data-div-table-row class="flex flex--max justify-start items-center self-stretch gap--0">
+                                                <div data-div-table-row-col data-title="merch" class="flex flex-column justify-center gap--10 w--128 max--w--128 min--h--72">
+                                                    <a href="#" class="flex justify-center items-center w-100 h--96 pointer relative">
+                                                        <!-- Counter -->
+                                                        <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white absolute top-0 left-0">
+                                                            4
+                                                        </span>
+                                                        <!-- End Counter -->
+                                                        <img src="assets/img/thumb-4.png" alt="" class="w-100 h--96 fit--cover">
+                                                    </a>
+                                                </div>
+                                                <div data-div-table-row-col data-title="merch-title" class="flex flex-column justify-center gap--10 flex--max min--h--72 pv2 pad--x--10">
+                                                    <a href="#" class="fs--12 fw6 lh--18 col--ebony-2 truncate pointer">
+                                                        Record breaking fried chicken eating ! See my attempt to break world’s record! Watch now!
+                                                    </a>
+                                                </div>
+                                                <div data-div-table-row-col data-title="views" class="flex flex-column justify-center items-end gap--10 w--120 max--w--120 min--h--72 pv2 pad--x--10">
+                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                        1,234
+                                                    </span>
+                                                </div>
+                                                <div data-div-table-row-col data-title="sales" class="flex flex-column justify-center items-end gap--10 w--240 min--h--72 pv2 pad--x--10">
+                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                        32h10m
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <!-- /table row -->
+
+                                            <!-- table row -->
+                                            <div data-div-table-row class="flex flex--max justify-start items-center self-stretch gap--0 bg--col--athens-gray-3--50">
+                                                <div data-div-table-row-col data-title="merch" class="flex flex-column justify-center gap--10 w--128 max--w--128 min--h--72">
+                                                    <a href="#" class="flex justify-center items-center w-100 h--96 pointer relative">
+                                                        <!-- Counter -->
+                                                        <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white absolute top-0 left-0">
+                                                            5
+                                                        </span>
+                                                        <!-- End Counter -->
+                                                        <img src="assets/img/thumb-3.png" alt="" class="w-100 h--96 fit--cover">
+                                                    </a>
+                                                </div>
+                                                <div data-div-table-row-col data-title="merch-title" class="flex flex-column justify-center gap--10 flex--max min--h--72 pv2 pad--x--10">
+                                                    <a href="#" class="fs--12 fw6 lh--18 col--ebony-2 truncate pointer">
+                                                        Record breaking fried chicken eating ! See my attempt to break world’s record! Watch now!
+                                                    </a>
+                                                </div>
+                                                <div data-div-table-row-col data-title="views" class="flex flex-column justify-center items-end gap--10 w--120 max--w--120 min--h--72 pv2 pad--x--10">
+                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                        1,234
+                                                    </span>
+                                                </div>
+                                                <div data-div-table-row-col data-title="sales" class="flex flex-column justify-center items-end gap--10 w--240 min--h--72 pv2 pad--x--10">
+                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                        32h10m
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <!-- /table row -->
                                         </div>
+                                        <!-- /table container -->
                                     </div>
-                                    <!-- End Table Wrapper -->
+                                    <!-- End Div Table Wrapper -->
                                 </div>
                                 <!-- Ens Data Content -->
                             </div>
@@ -1431,7 +1453,7 @@
                                     <!-- Div Table Wrapper -->
                                     <div data-div-table-wrapper data-target="analytics-top-merch-table" class="w-100">
                                         <!-- table container -->
-                                        <div data-div-table data-html-container="1" class="flex flex-column flex--max justify-start items-start self-stretch">
+                                        <div data-div-table data-html-container="1" class="flex flex-column flex--max justify-start items-start self-stretch ml--16-neg mr--16-neg">
                                             <!-- table header -->
                                             <div data-div-table-head class="flex flex--max justify-start items-center self-stretch gap--0 bb br--col--pale-sky">
                                                 <div data-div-table-head-col data-name="merch" class="flex flex-column justify-center w--72 max--w--72 min--h--42 pad--10">
