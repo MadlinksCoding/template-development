@@ -27,11 +27,40 @@
 
         /* Width */
         .w--14 { width: 0.875rem; /* width 14px */ } /* confirmed in use */ /* pixel conversion correct */
+        .w--72 { width: 4.5rem; /* width 72px */ }
+        .w--80 { width: 5rem; /* width 80px */ }
+        .w--120 { width: 7.5rem; /* width 120px */ }
+        .w--130 { width: 8.125rem; /* width 130px */ }
+        .w--200 { width: 12.5rem; /* width 200px */ }
+        .w--250 { width: 15.625rem; /* width 250px */ }
+        .w--280 { width: 17.5rem; /* width 280px */ }
+
+        /* Min Width */
+        .min--w--130 { width: 8.125rem; /* min-width 130px */ }
+
+        /* Max Width */
+        .max--w--72 { max-width: 4.5rem; /* max-width 72px */ }
+        .max--w--120 { max-width: 7.5rem; /* max-width 120px */ }
+        .max--w--128 { max-width: 8rem; /* max-width 128px */ }
+        .max--w--130 { max-width: 8.125rem; /* max-width 130px */ }
+        .max--w--240 { max-width: 15rem; /* max-width 240px */ }
 
         /* Hright */
         .h--14 { height: 0.875rem; /* height 14px */ } /* confirmed in use */ /* pixel conversion correct */
+        .h--42 { height: 2.625rem; /* height 42px */ }
+        .h--72 { height: 4.5rem; /* height 72px */ }
+        .h--96 { height: 6rem; /* height 96px */ }
+
+        /* Min Height */
+        .min--h--42 { min-height: 2.625rem; /* min-height 42px */ }
+        .min--h--72 { min-height: 4.5rem; /* min-height 72px */ }
 
         /* Colors */
+        .col--pale-sky { color: var(--color-pale-sky,#667085); }
+        .col--ebony-2 { color: var(--color-ebony-2,#0C111D); }
+        .col--oxford-blue { color: var(--color-oxford-blue,#344054); }
+        .col--athens-gray-3 { color: var(--color-athens-gray-3,#F2F4F7); }
+        .col--blue-ribbon-2 { color: var(--color-blue-ribbon-2,#004EEB); }
         .col--gray-500 { color: var(--color-gray-500,#667085); }
         .col--gray-600 { color: var(--color-gray-600,#475467); }
         .col--gray-700 { color: var(--color-gray-700,#344054); }
@@ -43,11 +72,15 @@
         .col--orange-dark-700 { color: var(--Orange-dark-700, #BC1B06); }
         .col--teal-700 { color: var(--Teal-700, #107569); }
 
+        /* Background Colors */
+        .bg--col--athens-gray-3--50 { background: rgba(242, 244, 247, 0.50); }
+
         /* Group Hover Colors */
         .group:hover .hover--col--blue-dark-600 { color: var(--color-blue-dark-600, #155EEF); }
 
         /* Background Gradients */
         .bg--gradient-white { background: linear-gradient(180deg, rgba(255, 255, 255, 0.30) 0%, rgba(255, 255, 255, 0.00) 8%); }
+        .bg--gradient-white-2 { background: linear-gradient(270deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%), rgba(242, 244, 247, 0.50); }
 
         /* Background Style */
         .bg--no-repeat { background-repeat: no-repeat; }
@@ -60,9 +93,11 @@
 
         /* Border Colors */
         .br--col--gray-300 { border-color: var(--color-gray-300, #D0D5DD); } /* confirmed in use */
+        .br--col--pale-sky { border-color: var(--color-pale-sky, #667085); } /* confirmed in use */
 
         /* Border Radius */
         .br--2 { border-radius: 0.125rem; /* border-radius 2px */ } /* confirmed in use */ /* pixel conversion correct */
+        .br--6 { border-radius: 0.375rem; /* border-radius 6px */ }
 
         /* Box Shadow */
         .sh--6 { box-shadow: 0px 4px 6px -2px rgba(16, 24, 40, 0.08); } /* confirmed in use */
@@ -74,6 +109,7 @@
         /* Filter Colors */
         .filter--col--blue--dark--700 { filter: invert(17%) sepia(100%) saturate(5382%) hue-rotate(218deg) brightness(96%) contrast(105%); } /* confirmed in use */
         .filter--col--gray--500 { filter: invert(44%) sepia(39%) saturate(203%) hue-rotate(181deg) brightness(91%) contrast(91%); } /* confirmed in use */
+        .filter--col--blue-ribbon-2 { filter: brightness(0) saturate(100%) invert(24%) sepia(88%) saturate(7497%) hue-rotate(220deg) brightness(96%) contrast(101%); } /* #004EEB */
 
         /* Filter Blur */
         .filter--blur--60 { filter: blur(60px); -webkit-filter: blur(60px); }
@@ -89,12 +125,17 @@
         .grid--col-span-2 { grid-column: span 2 / span 2; }
 
         /* Padding */
+        .pad--10 { padding: 0.625rem; /* padding 10px */ }
         .pad--16 { padding: 1rem; /* padding 16px */ }
+        .pad--x--6 { padding-left: 0.375rem; padding-right: 0.375rem; /* padding left right 6px */ }
+        .pad--x--12 { padding-left: 0.75rem; padding-right: 0.75rem; /* padding left right 12px */ }
         .pad--bottom--0 { padding-bottom: 0rem; /* padding bottom 0px */ }
         .pad--top--0 { padding-top: 0rem; /* padding top 0px */ }
 
         /* Margin */
         .m--0 { margin: 0rem; }
+        .ml--16-neg { margin-left: -1rem; /* margin-left -16px */ }
+        .mr--16-neg { margin-right: -1rem; /* margin-right -16px */ }
 
         /* Group Hover State Colors */
         .group:hover .hover--col--blue-dark-600 { color: var(--color-blue-dark-600, #155EEF); }
@@ -169,6 +210,7 @@
                     <!-- End Last Date / Refresh -->
                 </div>
                 <!-- End Section Header -->
+
                 <!-- Data Row -->
                 <div data-section="data-row" class="pad--16 pad--top--0 grid grid--cols-3 gap--16 grid--cols-2-responsive-tablet grid--cols-2-responsive-mobile grid--cols-1-responsive-mobile-portrait pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait">
                     <!-- Left Column -->
@@ -368,21 +410,193 @@
                                 <h3 class="m--0 poppins fs--16 fw5 lh--24 col--gray-700">Top Contributors</h3>
                             </div>
                             <!-- Data Content -->
-                            <div class="flex flex-column justify-center items-start gap--16 flex-auto">
-                                <div class="w-100 pad--y--24 flex flex-column justify-center gap--8 flex-auto h--340">
-                                    <div class="pad--16 flex items-center justify-center">
-                                        <div class="w--161 h--161 flex items-center justify-center relative">
-                                            <div class="db w-100 h-100 absolute left-0 top-0 flex items-center justify-center">
-                                                <div class="db bg--col--lemon w--32 h--32 filter--blur--60"></div>
-                                            </div>
-                                            <img src="assets/img/dot-option-placeholder.svg" class="w--128 h--128" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="flex flex-column gap--8 items-center">
-                                        <span class="fs--16 lh--24 col--gray-700">Empty State message</span>
-                                        <a href="#" class="fs--16 lh--24"><span class="fs--16 lh--24 col--gray-700 underline">Learn ways to earn</span> </a>
+                            <div class="flex flex-column justify-start items-start gap--16 flex-auto">
+                                <!-- Table Wrapper -->
+                                <div data-section="table-wrapper" class="flex flex-column items-start self-stretch flex-auto ml--16-neg mr--16-neg">
+                                    <div data-stat-container="1" class="w-100 top_contributors-container">
+                                        <table data-stat-table-for="top_contributors" class="w-100">
+                                            <thead>
+                                                <tr>
+                                                    <th class="fs--14 fw4 lh--20 col--pale-sky truncate min--h--42 pad--10 bb br--col--pale-sky">
+                                                        Fan
+                                                    </th>
+
+                                                    <th class="fs--14 fw4 lh--20 col--pale-sky truncate tr w--130 min--h--42 pad--10 bb br--col--pale-sky">
+                                                        Total (USD)
+                                                    </th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+                                                <tr class="bg--col--athens-gray-3--50">
+                                                    <td class="fs--14 fw4 lh--20 col--pale-sky truncate min--h--72 pad--10">
+                                                        <div class="flex items-center self-stretch gap--10 flex-auto min--h--72">
+                                                            <!-- Counter -->
+                                                            <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white">
+                                                                1
+                                                            </span>
+                                                            <!-- End Counter -->
+
+                                                            <!-- User -->
+                                                            <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer">
+                                                                <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                                    MAN GOES
+                                                                </span>
+
+                                                                <span class="flex items-center self-stretch gap--5">
+                                                                    <img src="assets/img/avatar-mango.png" alt="" class="w--20 h--20">
+                                                                    <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                                        @Mangoes4eva
+                                                                    </span>
+                                                                </span>
+                                                            </a>
+                                                            <!-- End User -->
+                                                        </div>
+                                                    </td>
+
+                                                    <!-- Contribution -->
+                                                    <td class="fs--12 fw6 lh--18 col--ebony-2 truncate tr w--130 min--h--72 pad--10">
+                                                        USD$ 9.99
+                                                    </td>
+                                                    <!-- End Contribution -->
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="fs--14 fw4 lh--20 col--pale-sky truncate min--h--72 pad--10">
+                                                        <div class="flex items-center self-stretch gap--10 flex-auto min--h--72">
+                                                            <!-- Counter -->
+                                                            <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white">
+                                                                2
+                                                            </span>
+                                                            <!-- End Counter -->
+
+                                                            <!-- User -->
+                                                            <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer">
+                                                                <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                                    MAN GOES
+                                                                </span>
+
+                                                                <span class="flex items-center self-stretch gap--5">
+                                                                    <img src="assets/img/avatar-mango.png" alt="" class="w--20 h--20">
+                                                                    <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                                        @Mangoes4eva
+                                                                    </span>
+                                                                </span>
+                                                            </a>
+                                                            <!-- End User -->
+                                                        </div>
+                                                    </td>
+
+                                                    <!-- Contribution -->
+                                                    <td class="fs--12 fw6 lh--18 col--ebony-2 truncate tr w--130 min--h--72 pad--10">
+                                                        USD$ 9.99
+                                                    </td>
+                                                    <!-- End Contribution -->
+                                                </tr>
+
+                                                <tr class="bg--col--athens-gray-3--50">
+                                                    <td class="fs--14 fw4 lh--20 col--pale-sky truncate min--h--72 pad--10">
+                                                        <div class="flex items-center self-stretch gap--10 flex-auto min--h--72">
+                                                            <!-- Counter -->
+                                                            <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white">
+                                                                3
+                                                            </span>
+                                                            <!-- End Counter -->
+
+                                                            <!-- User -->
+                                                            <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer">
+                                                                <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                                    MAN GOES
+                                                                </span>
+
+                                                                <span class="flex items-center self-stretch gap--5">
+                                                                    <img src="assets/img/avatar-mango.png" alt="" class="w--20 h--20">
+                                                                    <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                                        @Mangoes4eva
+                                                                    </span>
+                                                                </span>
+                                                            </a>
+                                                            <!-- End User -->
+                                                        </div>
+                                                    </td>
+
+                                                    <!-- Contribution -->
+                                                    <td class="fs--12 fw6 lh--18 col--ebony-2 truncate tr w--130 min--h--72 pad--10">
+                                                        USD$ 9.99
+                                                    </td>
+                                                    <!-- End Contribution -->
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="fs--14 fw4 lh--20 col--pale-sky truncate min--h--72 pad--10">
+                                                        <div class="flex items-center self-stretch gap--10 flex-auto min--h--72">
+                                                            <!-- Counter -->
+                                                            <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white">
+                                                                4
+                                                            </span>
+                                                            <!-- End Counter -->
+
+                                                            <!-- User -->
+                                                            <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer">
+                                                                <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                                    MAN GOES
+                                                                </span>
+
+                                                                <span class="flex items-center self-stretch gap--5">
+                                                                    <img src="assets/img/avatar-mango.png" alt="" class="w--20 h--20">
+                                                                    <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                                        @Mangoes4eva
+                                                                    </span>
+                                                                </span>
+                                                            </a>
+                                                            <!-- End User -->
+                                                        </div>
+                                                    </td>
+
+                                                    <!-- Contribution -->
+                                                    <td class="fs--12 fw6 lh--18 col--ebony-2 truncate tr w--130 min--h--72 pad--10">
+                                                        USD$ 9.99
+                                                    </td>
+                                                    <!-- End Contribution -->
+                                                </tr>
+
+                                                <tr class="bg--col--athens-gray-3--50">
+                                                    <td class="fs--14 fw4 lh--20 col--pale-sky truncate min--h--72 pad--10">
+                                                        <div class="flex items-center self-stretch gap--10 flex-auto min--h--72">
+                                                            <!-- Counter -->
+                                                            <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white">
+                                                                5
+                                                            </span>
+                                                            <!-- End Counter -->
+
+                                                            <!-- User -->
+                                                            <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer">
+                                                                <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                                    MAN GOES
+                                                                </span>
+
+                                                                <span class="flex items-center self-stretch gap--5">
+                                                                    <img src="assets/img/avatar-mango.png" alt="" class="w--20 h--20">
+                                                                    <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                                        @Mangoes4eva
+                                                                    </span>
+                                                                </span>
+                                                            </a>
+                                                            <!-- End User -->
+                                                        </div>
+                                                    </td>
+
+                                                    <!-- Contribution -->
+                                                    <td class="fs--12 fw6 lh--18 col--ebony-2 truncate tr w--130 min--h--72 pad--10">
+                                                        USD$ 1000.99
+                                                    </td>
+                                                    <!-- End Contribution -->
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
+                                <!-- End Table Wrapper -->
                             </div>
                             <!-- Ens Data Content -->
                         </div>
@@ -397,7 +611,7 @@
             <!-- Order Received Section -->
             <div data-section="transparent-box" class="flex flex-column gap--24 bg-white-40 bg--blur--25 sh--6">
                 <!-- Section Header -->
-                <div data-section="transparent-section-header" class="pad--16 pad--bottom--0 flex justify-between items-center">
+                <div data-section="transparent-section-header" class="pad--16 pad--bottom--0 flex justify-between items-center flex-wrap gap--10">
                     <!-- Title -->
                     <div class="flex items-center gap--8 flex-auto">
                         <span>
@@ -406,34 +620,289 @@
                         <h2 class="poppins m--0 fs--20 fw5 lh--30 col--gray-500">Order Received</h2>
                     </div>
                     <!-- End Title -->
+
+                    <!-- Tabs Button Group -->
+                    <div class="flex items-start br--8 ba br--col--gray-300 bg-white-30 sh--7 overflow-hidden">
+                        <button class="bg-white pad--y--8 ph3 flex justify-center items-center gap--8 fs--14 fw5 lh--20 col--gray-800">
+                            Subscriptions
+                        </button>
+
+                        <button class="pad--y--8 ph3 flex justify-center items-center gap--8 bl br--col--gray-300 fs--14 fw5 lh--20 col--gray-500">
+                            Pay to View
+                        </button>
+                        
+                        <button class="pad--y--8 ph3 flex justify-center items-center gap--8 bl br--col--gray-300 fs--14 fw5 lh--20 col--gray-500">
+                            Merch
+                        </button>
+                        
+                        <button class="pad--y--8 ph3 flex justify-center items-center gap--8 bl br--col--gray-300 fs--14 fw5 lh--20 col--gray-500">
+                            Custom Request
+                        </button>
+                        
+                        <button class="pad--y--8 ph3 flex justify-center items-center gap--8 bl br--col--gray-300 fs--14 fw5 lh--20 col--gray-500">
+                            Wishtender
+                        </button>
+                    </div>
+                    <!-- End Tabs Button Group -->
                 </div>
                 <!-- End Section Header -->
                 <!-- All Analytics Data -->
                 <div class="pad--16 pad--top--0 flex flex-wrap gap--16 pad--x--0-responsive-tablet pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait ">
                     <!-- Order Data Section -->
                     <div class="flex flex-column gap--16 flex-auto w-100">
-                        <!-- Top Contributors -->
-                        <div class="pad--16 flex flex-column gap--16 flex-auto">
-                            <!-- Data Content -->
-                            <div class="flex flex-column justify-center items-start gap--16 flex-auto">
-                                <div class="w-100 pad--y--24 flex flex-column gap--8 flex-auto">
-                                    <div class="pad--16 flex items-center justify-center">
-                                        <div class="w--161 h--161 flex items-center justify-center relative">
-                                            <div class="db w-100 h-100 absolute left-0 top-0 flex items-center justify-center">
-                                                <div class="db bg--col--lemon w--32 h--32 filter--blur--60"></div>
-                                            </div>
-                                            <img src="assets/img/shopping-cart-03.svg" class="w--128 h--128" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="flex flex-column gap--8 items-center">
-                                        <span class="fs--16 lh--24 col--gray-700">You don’t have any orders at the moment</span>
-                                        <a href="#" class="fs--16 lh--24"><span class="fs--16 lh--24 col--gray-700 underline">Learn how you can earn </span> </a>
-                                    </div>
-                                </div>
+                        <!-- Table Wrapper -->
+                        <div data-section="table-wrapper" class="flex flex-column items-start self-stretch flex-auto ml--16-neg mr--16-neg">
+                            <div data-table-container="subscriptions" class="w-100 subscriptions-container">
+                                <table data-table-for="order_received-subscriptions" class="w-100">
+                                    <thead>
+                                        <tr>
+                                            <th class="fs--14 fw4 lh--20 col--pale-sky truncate w--72 min--h--42 pad--10 bb br--col--pale-sky">
+                                                Order#
+                                            </th>
+                                            <th class="fs--14 fw4 lh--20 col--pale-sky truncate w--250 min--h--42 pad--10 bb br--col--pale-sky">
+                                                &nbsp;
+                                            </th>
+                                            <th class="fs--14 fw4 lh--20 col--pale-sky truncate w--200 min--h--42 pad--10 bb br--col--pale-sky">
+                                                From
+                                            </th>
+                                            <th class="fs--14 fw4 lh--20 col--pale-sky truncate w--200 min--h--42 pad--10 bb br--col--pale-sky">
+                                                Date received
+                                            </th>
+                                            <th class="fs--14 fw4 lh--20 col--pale-sky truncate min--h--42 pad--10 bb br--col--pale-sky">
+                                                Total
+                                            </th>
+                                            <th class="fs--14 fw4 lh--20 col--pale-sky truncate tr w--80 min--h--42 pad--10 bb br--col--pale-sky">
+                                                &nbsp;
+                                            </th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr class="bg--col--athens-gray-3--50 hide-child">
+                                            <td class="min--h--72 v-mid">
+                                                <img src="assets/img/thumb-1.png" alt="" class="w--72 h--72">
+                                            </td>
+                                            <td class="min--h--72 pad--10 v-mid">
+                                                <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer">
+                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                        Tier 1 Subscription
+                                                    </span>
+
+                                                    <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                        #123456
+                                                    </span>
+                                                </a>
+                                            </td>
+                                            <td class="min--h--72 pad--10 v-mid">
+                                                <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer">
+                                                    <span class="flex items-center self-stretch gap--5">
+                                                        <img src="assets/img/avatar-mango.png" alt="" class="w--20 h--20">
+                                                        <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                            @Mangoes4eva
+                                                        </span>
+                                                    </span>
+                                                </a>
+                                            </td>
+                                            <td class="min--h--72 pad--10 v-mid">
+                                                <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                    22 Jan 2022
+                                                </span>
+                                            </td>
+                                            <td class="fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 v-mid">
+                                                USD$ 9.99
+                                            </td>
+                                            <td class="w--80 min--h--72 v-mid">
+                                                <a href="javascript: void(0)" data-cta="" class="flex justify-center items-center gap--2 pointer w--100 h--72 bg--gradient-white-2 child transition--all transition--200 transition--ease-in-out">
+                                                    <span data-text="" class="fs--12 fw5 lh--18 col--blue-ribbon-2 o-70">
+                                                        Details
+                                                    </span>
+                                                    <span class="o-70">
+                                                        <img data-icon="" src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/arrow-up-right.svg" alt="" class="w--16 h--16 filter--col--blue-ribbon-2">
+                                                    </span>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="hide-child">
+                                            <td class="min--h--72 v-mid">
+                                                <img src="assets/img/thumb-2.png" alt="" class="w--72 h--72">
+                                            </td>
+                                            <td class="min--h--72 pad--10 v-mid">
+                                                <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer">
+                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                        Tier 2 Subscription
+                                                    </span>
+
+                                                    <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                        #123456
+                                                    </span>
+                                                </a>
+                                            </td>
+                                            <td class="min--h--72 pad--10 v-mid">
+                                                <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer">
+                                                    <span class="flex items-center self-stretch gap--5">
+                                                        <img src="assets/img/avatar-mango.png" alt="" class="w--20 h--20">
+                                                        <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                            @Mangoes4eva
+                                                        </span>
+                                                    </span>
+                                                </a>
+                                            </td>
+                                            <td class="min--h--72 pad--10 v-mid">
+                                                <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                    22 Jan 2022
+                                                </span>
+                                            </td>
+                                            <td class="fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 v-mid">
+                                                USD$ 9.99
+                                            </td>
+                                            <td class="w--80 min--h--72 v-mid">
+                                                <a href="javascript: void(0)" data-cta="" class="flex justify-center items-center gap--2 pointer w--100 h--72 bg--gradient-white-2 child transition--all transition--200 transition--ease-in-out">
+                                                    <span data-text="" class="fs--12 fw5 lh--18 col--blue-ribbon-2 o-70">
+                                                        Details
+                                                    </span>
+                                                    <span class="o-70">
+                                                        <img data-icon="" src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/arrow-up-right.svg" alt="" class="w--16 h--16 filter--col--blue-ribbon-2">
+                                                    </span>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="bg--col--athens-gray-3--50 hide-child">
+                                            <td class="min--h--72 v-mid">
+                                                <img src="assets/img/thumb-1.png" alt="" class="w--72 h--72">
+                                            </td>
+                                            <td class="min--h--72 pad--10 v-mid">
+                                                <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer">
+                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                        Tier 3 Subscription
+                                                    </span>
+
+                                                    <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                        #123456
+                                                    </span>
+                                                </a>
+                                            </td>
+                                            <td class="min--h--72 pad--10 v-mid">
+                                                <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer">
+                                                    <span class="flex items-center self-stretch gap--5">
+                                                        <img src="assets/img/avatar-mango.png" alt="" class="w--20 h--20">
+                                                        <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                            @Mangoes4eva
+                                                        </span>
+                                                    </span>
+                                                </a>
+                                            </td>
+                                            <td class="min--h--72 pad--10 v-mid">
+                                                <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                    22 Jan 2022
+                                                </span>
+                                            </td>
+                                            <td class="fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 v-mid">
+                                                USD$ 9.99
+                                            </td>
+                                            <td class="w--80 min--h--72 v-mid">
+                                                <a href="javascript: void(0)" data-cta="" class="flex justify-center items-center gap--2 pointer w--100 h--72 bg--gradient-white-2 child transition--all transition--200 transition--ease-in-out">
+                                                    <span data-text="" class="fs--12 fw5 lh--18 col--blue-ribbon-2 o-70">
+                                                        Details
+                                                    </span>
+                                                    <span class="o-70">
+                                                        <img data-icon="" src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/arrow-up-right.svg" alt="" class="w--16 h--16 filter--col--blue-ribbon-2">
+                                                    </span>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="hide-child">
+                                            <td class="min--h--72 v-mid">
+                                                <img src="assets/img/thumb-2.png" alt="" class="w--72 h--72">
+                                            </td>
+                                            <td class="min--h--72 pad--10 v-mid">
+                                                <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer">
+                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                        Tier 4 Subscription
+                                                    </span>
+
+                                                    <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                        #123456
+                                                    </span>
+                                                </a>
+                                            </td>
+                                            <td class="min--h--72 pad--10 v-mid">
+                                                <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer">
+                                                    <span class="flex items-center self-stretch gap--5">
+                                                        <img src="assets/img/avatar-mango.png" alt="" class="w--20 h--20">
+                                                        <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                            @Mangoes4eva
+                                                        </span>
+                                                    </span>
+                                                </a>
+                                            </td>
+                                            <td class="min--h--72 pad--10 v-mid">
+                                                <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                    22 Jan 2022
+                                                </span>
+                                            </td>
+                                            <td class="fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 v-mid">
+                                                USD$ 9.99
+                                            </td>
+                                            <td class="w--80 min--h--72 v-mid">
+                                                <a href="javascript: void(0)" data-cta="" class="flex justify-center items-center gap--2 pointer w--100 h--72 bg--gradient-white-2 child transition--all transition--200 transition--ease-in-out">
+                                                    <span data-text="" class="fs--12 fw5 lh--18 col--blue-ribbon-2 o-70">
+                                                        Details
+                                                    </span>
+                                                    <span class="o-70">
+                                                        <img data-icon="" src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/arrow-up-right.svg" alt="" class="w--16 h--16 filter--col--blue-ribbon-2">
+                                                    </span>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="bg--col--athens-gray-3--50 hide-child">
+                                            <td class="min--h--72 v-mid">
+                                                <img src="assets/img/thumb-1.png" alt="" class="w--72 h--72">
+                                            </td>
+                                            <td class="min--h--72 pad--10 v-mid">
+                                                <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer">
+                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                        Tier 5 Subscription
+                                                    </span>
+
+                                                    <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                        #123456
+                                                    </span>
+                                                </a>
+                                            </td>
+                                            <td class="min--h--72 pad--10 v-mid">
+                                                <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer">
+                                                    <span class="flex items-center self-stretch gap--5">
+                                                        <img src="assets/img/avatar-mango.png" alt="" class="w--20 h--20">
+                                                        <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                            @Mangoes4eva
+                                                        </span>
+                                                    </span>
+                                                </a>
+                                            </td>
+                                            <td class="min--h--72 pad--10 v-mid">
+                                                <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                    22 Jan 2022
+                                                </span>
+                                            </td>
+                                            <td class="fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 v-mid">
+                                                USD$ 9.99
+                                            </td>
+                                            <td class="w--80 min--h--72 v-mid">
+                                                <a href="javascript: void(0)" data-cta="" class="flex justify-center items-center gap--2 pointer w--100 h--72 bg--gradient-white-2 child transition--all transition--200 transition--ease-in-out">
+                                                    <span data-text="" class="fs--12 fw5 lh--18 col--blue-ribbon-2 o-70">
+                                                        Details
+                                                    </span>
+                                                    <span class="o-70">
+                                                        <img data-icon="" src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/arrow-up-right.svg" alt="" class="w--16 h--16 filter--col--blue-ribbon-2">
+                                                    </span>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
-                            <!-- Ens Data Content -->
                         </div>
-                        <!-- End Top Contributors -->
+                        <!-- End Table Wrapper -->
                     </div>
                     <!-- End Order Data Section -->
                 </div>
@@ -453,6 +922,26 @@
                         <h2 class="poppins m--0 fs--20 fw5 lh--30 col--gray-500">Trends</h2>
                     </div>
                     <!-- End Title -->
+
+                    <!-- Tabs Button Group -->
+                    <div class="flex items-start br--8 ba br--col--gray-300 bg-white-30 sh--7 overflow-hidden">
+                        <button class="bg-white pad--y--8 ph3 flex justify-center items-center gap--8 fs--14 fw5 lh--20 col--gray-800">
+                            Yearly
+                        </button>
+
+                        <button class="pad--y--8 ph3 flex justify-center items-center gap--8 bl br--col--gray-300 fs--14 fw5 lh--20 col--gray-500">
+                            Monthly
+                        </button>
+                        
+                        <button class="pad--y--8 ph3 flex justify-center items-center gap--8 bl br--col--gray-300 fs--14 fw5 lh--20 col--gray-500">
+                            Weekly
+                        </button>
+                        
+                        <button class="pad--y--8 ph3 flex justify-center items-center gap--8 bl br--col--gray-300 fs--14 fw5 lh--20 col--gray-500">
+                            Daily
+                        </button>
+                    </div>
+                    <!-- End Tabs Button Group -->
                 </div>
                 <!-- End Section Header -->
                 <!-- All Analytics Data -->
@@ -472,21 +961,189 @@
                                     </div>
                                 </div>
                                 <!-- Data Content -->
-                                <div class="flex flex-column justify-center items-start gap--16 flex-auto">
-                                    <div class="w-100 pad--y--24 flex flex-column gap--8 flex-auto">
-                                        <div class="pad--16 flex items-center justify-center">
-                                            <div class="w--161 h--161 flex items-center justify-center relative">
-                                                <div class="db w-100 h-100 absolute left-0 top-0 flex items-center justify-center">
-                                                    <div class="db bg--col--lemon w--32 h--32 filter--blur--60"></div>
+                                <div class="flex flex-column justify-start items-start gap--16 flex-auto">
+                                    <!-- Div Table Wrapper -->
+                                    <div data-div-table-wrapper data-target="analytics-top-merch-table" class="w-100">
+                                        <!-- table container -->
+                                        <div data-div-table data-html-container="1" class="flex flex-column flex--max justify-start items-start self-stretch ml--16-neg mr--16-neg">
+                                            <!-- table header -->
+                                            <div data-div-table-head class="flex flex--max justify-start items-center self-stretch gap--0 bb br--col--pale-sky">
+                                                <div data-div-table-head-col data-name="media" class="flex flex-column justify-center w--128 max--w--128 min--h--42 pad--10">
+                                                    <span class="fs--14 fw4 lh--20 col--pale-sky">
+                                                        Media
+                                                    </span>
                                                 </div>
-                                                <img src="assets/img/dot-option-placeholder.svg" class="w--128 h--128" alt="">
+                                                <div data-div-table-head-col data-name="media-title" class="flex flex-column justify-center flex--max min--h--42 pad--10">
+                                                    <span class="fs--14 fw4 lh--20 col--pale-sky">
+                                                        &nbsp;
+                                                    </span>
+                                                </div>
+                                                <div data-div-table-head-col data-name="clicks" class="flex flex-column justify-center items-end w--120 max--w--120 min--h--42 pad--10">
+                                                    <span class="fs--14 fw4 lh--20 col--pale-sky">
+                                                        # of clicks
+                                                    </span>
+                                                </div>
+                                                <div data-div-table-head-col data-name="duration" class="flex flex-column justify-center items-end w--240 max--w--240 min--h--42 pad--10">
+                                                    <span class="fs--14 fw4 lh--20 col--pale-sky">
+                                                        Watch Duration
+                                                    </span>
+                                                </div>
                                             </div>
+                                            <!-- /table header -->
+
+                                            <!-- table row -->
+                                            <div data-div-table-row class="flex flex--max justify-start items-center self-stretch gap--0 bg--col--athens-gray-3--50">
+                                                <div data-div-table-row-col data-title="merch" class="flex flex-column justify-center gap--10 w--128 max--w--128 min--h--72">
+                                                    <a href="#" class="flex justify-center items-center w-100 h--96 pointer relative">
+                                                        <!-- Counter -->
+                                                        <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white absolute top-0 left-0">
+                                                            1
+                                                        </span>
+                                                        <!-- End Counter -->
+                                                        <img src="assets/img/thumb-3.png" alt="" class="w-100 h--96 fit--cover">
+                                                    </a>
+                                                </div>
+                                                <div data-div-table-row-col data-title="merch-title" class="flex flex-column justify-center gap--10 flex--max min--h--72 pv2 pad--x--10">
+                                                    <a href="#" class="fs--12 fw6 lh--18 col--ebony-2 truncate pointer">
+                                                        Record breaking fried chicken eating ! See my attempt to break world’s record! Watch now!
+                                                    </a>
+                                                </div>
+                                                <div data-div-table-row-col data-title="views" class="flex flex-column justify-center items-end gap--10 w--120 max--w--120 min--h--72 pv2 pad--x--10">
+                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                        1,234
+                                                    </span>
+                                                </div>
+                                                <div data-div-table-row-col data-title="sales" class="flex flex-column justify-center items-end gap--10 w--240 min--h--72 pv2 pad--x--10">
+                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                        32h10m
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <!-- /table row -->
+
+                                            <!-- table row -->
+                                            <div data-div-table-row class="flex flex--max justify-start items-center self-stretch gap--0">
+                                                <div data-div-table-row-col data-title="merch" class="flex flex-column justify-center gap--10 w--128 max--w--128 min--h--72">
+                                                    <a href="#" class="flex justify-center items-center w-100 h--96 pointer relative">
+                                                        <!-- Counter -->
+                                                        <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white absolute top-0 left-0">
+                                                            2
+                                                        </span>
+                                                        <!-- End Counter -->
+                                                        <img src="assets/img/thumb-4.png" alt="" class="w-100 h--96 fit--cover">
+                                                    </a>
+                                                </div>
+                                                <div data-div-table-row-col data-title="merch-title" class="flex flex-column justify-center gap--10 flex--max min--h--72 pv2 pad--x--10">
+                                                    <a href="#" class="fs--12 fw6 lh--18 col--ebony-2 truncate pointer">
+                                                        Record breaking fried chicken eating ! See my attempt to break world’s record! Watch now!
+                                                    </a>
+                                                </div>
+                                                <div data-div-table-row-col data-title="views" class="flex flex-column justify-center items-end gap--10 w--120 max--w--120 min--h--72 pv2 pad--x--10">
+                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                        1,234
+                                                    </span>
+                                                </div>
+                                                <div data-div-table-row-col data-title="sales" class="flex flex-column justify-center items-end gap--10 w--240 min--h--72 pv2 pad--x--10">
+                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                        32h10m
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <!-- /table row -->
+
+                                            <!-- table row -->
+                                            <div data-div-table-row class="flex flex--max justify-start items-center self-stretch gap--0 bg--col--athens-gray-3--50">
+                                                <div data-div-table-row-col data-title="merch" class="flex flex-column justify-center gap--10 w--128 max--w--128 min--h--72">
+                                                    <a href="#" class="flex justify-center items-center w-100 h--96 pointer relative">
+                                                        <!-- Counter -->
+                                                        <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white absolute top-0 left-0">
+                                                            3
+                                                        </span>
+                                                        <!-- End Counter -->
+                                                        <img src="assets/img/thumb-3.png" alt="" class="w-100 h--96 fit--cover">
+                                                    </a>
+                                                </div>
+                                                <div data-div-table-row-col data-title="merch-title" class="flex flex-column justify-center gap--10 flex--max min--h--72 pv2 pad--x--10">
+                                                    <a href="#" class="fs--12 fw6 lh--18 col--ebony-2 truncate pointer">
+                                                        Record breaking fried chicken eating ! See my attempt to break world’s record! Watch now!
+                                                    </a>
+                                                </div>
+                                                <div data-div-table-row-col data-title="views" class="flex flex-column justify-center items-end gap--10 w--120 max--w--120 min--h--72 pv2 pad--x--10">
+                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                        1,234
+                                                    </span>
+                                                </div>
+                                                <div data-div-table-row-col data-title="sales" class="flex flex-column justify-center items-end gap--10 w--240 min--h--72 pv2 pad--x--10">
+                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                        32h10m
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <!-- /table row -->
+
+                                            <!-- table row -->
+                                            <div data-div-table-row class="flex flex--max justify-start items-center self-stretch gap--0">
+                                                <div data-div-table-row-col data-title="merch" class="flex flex-column justify-center gap--10 w--128 max--w--128 min--h--72">
+                                                    <a href="#" class="flex justify-center items-center w-100 h--96 pointer relative">
+                                                        <!-- Counter -->
+                                                        <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white absolute top-0 left-0">
+                                                            4
+                                                        </span>
+                                                        <!-- End Counter -->
+                                                        <img src="assets/img/thumb-4.png" alt="" class="w-100 h--96 fit--cover">
+                                                    </a>
+                                                </div>
+                                                <div data-div-table-row-col data-title="merch-title" class="flex flex-column justify-center gap--10 flex--max min--h--72 pv2 pad--x--10">
+                                                    <a href="#" class="fs--12 fw6 lh--18 col--ebony-2 truncate pointer">
+                                                        Record breaking fried chicken eating ! See my attempt to break world’s record! Watch now!
+                                                    </a>
+                                                </div>
+                                                <div data-div-table-row-col data-title="views" class="flex flex-column justify-center items-end gap--10 w--120 max--w--120 min--h--72 pv2 pad--x--10">
+                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                        1,234
+                                                    </span>
+                                                </div>
+                                                <div data-div-table-row-col data-title="sales" class="flex flex-column justify-center items-end gap--10 w--240 min--h--72 pv2 pad--x--10">
+                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                        32h10m
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <!-- /table row -->
+
+                                            <!-- table row -->
+                                            <div data-div-table-row class="flex flex--max justify-start items-center self-stretch gap--0 bg--col--athens-gray-3--50">
+                                                <div data-div-table-row-col data-title="merch" class="flex flex-column justify-center gap--10 w--128 max--w--128 min--h--72">
+                                                    <a href="#" class="flex justify-center items-center w-100 h--96 pointer relative">
+                                                        <!-- Counter -->
+                                                        <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white absolute top-0 left-0">
+                                                            5
+                                                        </span>
+                                                        <!-- End Counter -->
+                                                        <img src="assets/img/thumb-3.png" alt="" class="w-100 h--96 fit--cover">
+                                                    </a>
+                                                </div>
+                                                <div data-div-table-row-col data-title="merch-title" class="flex flex-column justify-center gap--10 flex--max min--h--72 pv2 pad--x--10">
+                                                    <a href="#" class="fs--12 fw6 lh--18 col--ebony-2 truncate pointer">
+                                                        Record breaking fried chicken eating ! See my attempt to break world’s record! Watch now!
+                                                    </a>
+                                                </div>
+                                                <div data-div-table-row-col data-title="views" class="flex flex-column justify-center items-end gap--10 w--120 max--w--120 min--h--72 pv2 pad--x--10">
+                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                        1,234
+                                                    </span>
+                                                </div>
+                                                <div data-div-table-row-col data-title="sales" class="flex flex-column justify-center items-end gap--10 w--240 min--h--72 pv2 pad--x--10">
+                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                        32h10m
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <!-- /table row -->
                                         </div>
-                                        <div class="flex flex-column gap--8 items-center">
-                                            <span class="fs--16 lh--24 col--gray-700">No trend to show at the moment</span>
-                                            <a href="#" class="fs--16 lh--24"><span class="fs--16 lh--24 col--gray-700 underline">Learn ways to earn</span> </a>
-                                        </div>
+                                        <!-- /table container -->
                                     </div>
+                                    <!-- End Div Table Wrapper -->
                                 </div>
                                 <!-- Ens Data Content -->
                             </div>
@@ -504,20 +1161,278 @@
                                 </div>
                                 <!-- Data Content -->
                                 <div class="flex flex-column justify-center items-start gap--16 flex-auto">
-                                    <div class="w-100 pad--y--24 flex flex-column gap--8 flex-auto">
-                                        <div class="pad--16 flex items-center justify-center">
-                                            <div class="w--161 h--161 flex items-center justify-center relative">
-                                                <div class="db w-100 h-100 absolute left-0 top-0 flex items-center justify-center">
-                                                    <div class="db bg--col--lemon w--32 h--32 filter--blur--60"></div>
-                                                </div>
-                                                <img src="assets/img/dot-option-placeholder.svg" class="w--128 h--128" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-column gap--8 items-center">
-                                            <span class="fs--16 lh--24 col--gray-700">No trend to show at the moment</span>
-                                            <a href="#" class="fs--16 lh--24"><span class="fs--16 lh--24 col--gray-700 underline">Learn ways to earn</span> </a>
+                                    <!-- Table Wrapper -->
+                                    <div data-section="table-wrapper" class="flex flex-column items-start self-stretch flex-auto ml--16-neg mr--16-neg">
+                                        <div data-stat-container="1" class="w-100 top_contributors-container">
+                                            <table data-stat-table-for="top_contributors" class="w-100">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="fs--14 fw4 lh--20 col--pale-sky truncate min--h--42 pad--10 bb br--col--pale-sky">
+                                                            Tags
+                                                        </th>
+    
+                                                        <th class="fs--14 fw4 lh--20 col--pale-sky truncate tr w--130 min--h--42 pad--10 bb br--col--pale-sky">
+                                                            # of views
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+    
+                                                <tbody>
+                                                    <tr class="bg--col--athens-gray-3--50">
+                                                        <td class="fs--14 fw4 lh--20 col--pale-sky truncate pv2 pad--x--12 v-mid">
+                                                            <div class="flex items-center self-stretch gap--10 flex-auto">
+                                                                <!-- Counter -->
+                                                                <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white">
+                                                                    1
+                                                                </span>
+                                                                <!-- End Counter -->
+    
+                                                                <!-- User -->
+                                                                <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer pad--y--2 pad--x--6 br--6 bg--col--athens-gray2">
+                                                                    <span class="fs--12 fw5 lh--18 col--oxford-blue truncate">
+                                                                        Big foot
+                                                                    </span>
+                                                                </a>
+                                                                <!-- End User -->
+                                                            </div>
+                                                        </td>
+    
+                                                        <!-- Contribution -->
+                                                        <td class="fs--12 fw6 lh--18 col--ebony-2 truncate tr w--130 h--48 pv2 pad--x--10 v-mid">
+                                                            2,345
+                                                        </td>
+                                                        <!-- End Contribution -->
+                                                    </tr>
+                                                    <tr class="">
+                                                        <td class="fs--14 fw4 lh--20 col--pale-sky truncate pv2 pad--x--12 v-mid">
+                                                            <div class="flex items-center self-stretch gap--10 flex-auto">
+                                                                <!-- Counter -->
+                                                                <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white">
+                                                                    2
+                                                                </span>
+                                                                <!-- End Counter -->
+    
+                                                                <!-- User -->
+                                                                <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer pad--y--2 pad--x--6 br--6 bg--col--athens-gray2">
+                                                                    <span class="fs--12 fw5 lh--18 col--oxford-blue truncate">
+                                                                        Big hands
+                                                                    </span>
+                                                                </a>
+                                                                <!-- End User -->
+                                                            </div>
+                                                        </td>
+    
+                                                        <!-- Contribution -->
+                                                        <td class="fs--12 fw6 lh--18 col--ebony-2 truncate tr w--130 h--48 pv2 pad--x--10 v-mid">
+                                                            2,345
+                                                        </td>
+                                                        <!-- End Contribution -->
+                                                    </tr>
+                                                    <tr class="bg--col--athens-gray-3--50">
+                                                        <td class="fs--14 fw4 lh--20 col--pale-sky truncate pv2 pad--x--12 v-mid">
+                                                            <div class="flex items-center self-stretch gap--10 flex-auto">
+                                                                <!-- Counter -->
+                                                                <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white">
+                                                                    3
+                                                                </span>
+                                                                <!-- End Counter -->
+    
+                                                                <!-- User -->
+                                                                <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer pad--y--2 pad--x--6 br--6 bg--col--athens-gray2">
+                                                                    <span class="fs--12 fw5 lh--18 col--oxford-blue truncate">
+                                                                        Big smil
+                                                                    </span>
+                                                                </a>
+                                                                <!-- End User -->
+                                                            </div>
+                                                        </td>
+    
+                                                        <!-- Contribution -->
+                                                        <td class="fs--12 fw6 lh--18 col--ebony-2 truncate tr w--130 h--48 pv2 pad--x--10 v-mid">
+                                                            2,345
+                                                        </td>
+                                                        <!-- End Contribution -->
+                                                    </tr>
+                                                    <tr class="">
+                                                        <td class="fs--14 fw4 lh--20 col--pale-sky truncate pv2 pad--x--12 v-mid">
+                                                            <div class="flex items-center self-stretch gap--10 flex-auto">
+                                                                <!-- Counter -->
+                                                                <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white">
+                                                                    4
+                                                                </span>
+                                                                <!-- End Counter -->
+    
+                                                                <!-- User -->
+                                                                <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer pad--y--2 pad--x--6 br--6 bg--col--athens-gray2">
+                                                                    <span class="fs--12 fw5 lh--18 col--oxford-blue truncate">
+                                                                        Big apetite
+                                                                    </span>
+                                                                </a>
+                                                                <!-- End User -->
+                                                            </div>
+                                                        </td>
+    
+                                                        <!-- Contribution -->
+                                                        <td class="fs--12 fw6 lh--18 col--ebony-2 truncate tr w--130 h--48 pv2 pad--x--10 v-mid">
+                                                            2,345
+                                                        </td>
+                                                        <!-- End Contribution -->
+                                                    </tr>
+                                                    <tr class="bg--col--athens-gray-3--50">
+                                                        <td class="fs--14 fw4 lh--20 col--pale-sky truncate pv2 pad--x--12 v-mid">
+                                                            <div class="flex items-center self-stretch gap--10 flex-auto">
+                                                                <!-- Counter -->
+                                                                <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white">
+                                                                    5
+                                                                </span>
+                                                                <!-- End Counter -->
+    
+                                                                <!-- User -->
+                                                                <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer pad--y--2 pad--x--6 br--6 bg--col--athens-gray2">
+                                                                    <span class="fs--12 fw5 lh--18 col--oxford-blue truncate">
+                                                                        Big dreams
+                                                                    </span>
+                                                                </a>
+                                                                <!-- End User -->
+                                                            </div>
+                                                        </td>
+    
+                                                        <!-- Contribution -->
+                                                        <td class="fs--12 fw6 lh--18 col--ebony-2 truncate tr w--130 h--48 pv2 pad--x--10 v-mid">
+                                                            2,345
+                                                        </td>
+                                                        <!-- End Contribution -->
+                                                    </tr>
+                                                    <tr class="">
+                                                        <td class="fs--14 fw4 lh--20 col--pale-sky truncate pv2 pad--x--12 v-mid">
+                                                            <div class="flex items-center self-stretch gap--10 flex-auto">
+                                                                <!-- Counter -->
+                                                                <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white">
+                                                                    6
+                                                                </span>
+                                                                <!-- End Counter -->
+    
+                                                                <!-- User -->
+                                                                <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer pad--y--2 pad--x--6 br--6 bg--col--athens-gray2">
+                                                                    <span class="fs--12 fw5 lh--18 col--oxford-blue truncate">
+                                                                        Big dreams
+                                                                    </span>
+                                                                </a>
+                                                                <!-- End User -->
+                                                            </div>
+                                                        </td>
+    
+                                                        <!-- Contribution -->
+                                                        <td class="fs--12 fw6 lh--18 col--ebony-2 truncate tr w--130 h--48 pv2 pad--x--10 v-mid">
+                                                            2,345
+                                                        </td>
+                                                        <!-- End Contribution -->
+                                                    </tr>
+                                                    <tr class="bg--col--athens-gray-3--50">
+                                                        <td class="fs--14 fw4 lh--20 col--pale-sky truncate pv2 pad--x--12 v-mid">
+                                                            <div class="flex items-center self-stretch gap--10 flex-auto">
+                                                                <!-- Counter -->
+                                                                <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white">
+                                                                    7
+                                                                </span>
+                                                                <!-- End Counter -->
+    
+                                                                <!-- User -->
+                                                                <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer pad--y--2 pad--x--6 br--6 bg--col--athens-gray2">
+                                                                    <span class="fs--12 fw5 lh--18 col--oxford-blue truncate">
+                                                                        Big dreams
+                                                                    </span>
+                                                                </a>
+                                                                <!-- End User -->
+                                                            </div>
+                                                        </td>
+    
+                                                        <!-- Contribution -->
+                                                        <td class="fs--12 fw6 lh--18 col--ebony-2 truncate tr w--130 h--48 pv2 pad--x--10 v-mid">
+                                                            2,345
+                                                        </td>
+                                                        <!-- End Contribution -->
+                                                    </tr>
+                                                    <tr class="">
+                                                        <td class="fs--14 fw4 lh--20 col--pale-sky truncate pv2 pad--x--12 v-mid">
+                                                            <div class="flex items-center self-stretch gap--10 flex-auto">
+                                                                <!-- Counter -->
+                                                                <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white">
+                                                                    8
+                                                                </span>
+                                                                <!-- End Counter -->
+    
+                                                                <!-- User -->
+                                                                <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer pad--y--2 pad--x--6 br--6 bg--col--athens-gray2">
+                                                                    <span class="fs--12 fw5 lh--18 col--oxford-blue truncate">
+                                                                        Big dreams
+                                                                    </span>
+                                                                </a>
+                                                                <!-- End User -->
+                                                            </div>
+                                                        </td>
+    
+                                                        <!-- Contribution -->
+                                                        <td class="fs--12 fw6 lh--18 col--ebony-2 truncate tr w--130 h--48 pv2 pad--x--10 v-mid">
+                                                            2,345
+                                                        </td>
+                                                        <!-- End Contribution -->
+                                                    </tr>
+                                                    <tr class="bg--col--athens-gray-3--50">
+                                                        <td class="fs--14 fw4 lh--20 col--pale-sky truncate pv2 pad--x--12 v-mid">
+                                                            <div class="flex items-center self-stretch gap--10 flex-auto">
+                                                                <!-- Counter -->
+                                                                <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white">
+                                                                    9
+                                                                </span>
+                                                                <!-- End Counter -->
+    
+                                                                <!-- User -->
+                                                                <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer pad--y--2 pad--x--6 br--6 bg--col--athens-gray2">
+                                                                    <span class="fs--12 fw5 lh--18 col--oxford-blue truncate">
+                                                                        Big dreams
+                                                                    </span>
+                                                                </a>
+                                                                <!-- End User -->
+                                                            </div>
+                                                        </td>
+    
+                                                        <!-- Contribution -->
+                                                        <td class="fs--12 fw6 lh--18 col--ebony-2 truncate tr w--130 h--48 pv2 pad--x--10 v-mid">
+                                                            2,345
+                                                        </td>
+                                                        <!-- End Contribution -->
+                                                    </tr>
+                                                    <tr class="">
+                                                        <td class="fs--14 fw4 lh--20 col--pale-sky truncate pv2 pad--x--12 v-mid">
+                                                            <div class="flex items-center self-stretch gap--10 flex-auto">
+                                                                <!-- Counter -->
+                                                                <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white">
+                                                                    10
+                                                                </span>
+                                                                <!-- End Counter -->
+    
+                                                                <!-- User -->
+                                                                <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer pad--y--2 pad--x--6 br--6 bg--col--athens-gray2">
+                                                                    <span class="fs--12 fw5 lh--18 col--oxford-blue truncate">
+                                                                        Big dreams
+                                                                    </span>
+                                                                </a>
+                                                                <!-- End User -->
+                                                            </div>
+                                                        </td>
+    
+                                                        <!-- Contribution -->
+                                                        <td class="fs--12 fw6 lh--18 col--ebony-2 truncate tr w--130 h--48 pv2 pad--x--10 v-mid">
+                                                            2,345
+                                                        </td>
+                                                        <!-- End Contribution -->
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
+                                    <!-- End Table Wrapper -->
                                 </div>
                                 <!-- Ens Data Content -->
                             </div>
@@ -534,21 +1449,189 @@
                                     <h3 class="m--0 poppins fs--16 fw5 lh--24 col--gray-700">Top Merch</h3>
                                 </div>
                                 <!-- Data Content -->
-                                <div class="flex flex-column justify-center items-start gap--16 flex-auto">
-                                    <div class="w-100 pad--y--24 flex flex-column gap--8 flex-auto">
-                                        <div class="pad--16 flex items-center justify-center">
-                                            <div class="w--161 h--161 flex items-center justify-center relative">
-                                                <div class="db w-100 h-100 absolute left-0 top-0 flex items-center justify-center">
-                                                    <div class="db bg--col--lemon w--32 h--32 filter--blur--60"></div>
+                                <div class="flex flex-column justify-start items-start gap--16 flex-auto">
+                                    <!-- Div Table Wrapper -->
+                                    <div data-div-table-wrapper data-target="analytics-top-merch-table" class="w-100">
+                                        <!-- table container -->
+                                        <div data-div-table data-html-container="1" class="flex flex-column flex--max justify-start items-start self-stretch ml--16-neg mr--16-neg">
+                                            <!-- table header -->
+                                            <div data-div-table-head class="flex flex--max justify-start items-center self-stretch gap--0 bb br--col--pale-sky">
+                                                <div data-div-table-head-col data-name="merch" class="flex flex-column justify-center w--72 max--w--72 min--h--42 pad--10">
+                                                    <span class="fs--14 fw4 lh--20 col--pale-sky">
+                                                        Merch
+                                                    </span>
                                                 </div>
-                                                <img src="assets/img/dot-option-placeholder.svg" class="w--128 h--128" alt="">
+                                                <div data-div-table-head-col data-name="merch-title" class="flex flex-column justify-center flex--max min--h--42 pad--10">
+                                                    <span class="fs--14 fw4 lh--20 col--pale-sky">
+                                                        &nbsp;
+                                                    </span>
+                                                </div>
+                                                <div data-div-table-head-col data-name="views" class="flex flex-column justify-center items-end w--120 max--w--120 min--h--42 pad--10">
+                                                    <span class="fs--14 fw4 lh--20 col--pale-sky">
+                                                        # of views
+                                                    </span>
+                                                </div>
+                                                <div data-div-table-head-col data-name="sales" class="flex flex-column justify-center items-end w--130 max--w--130 min--h--42 pad--10">
+                                                    <span class="fs--14 fw4 lh--20 col--pale-sky">
+                                                        Sales (USD)
+                                                    </span>
+                                                </div>
                                             </div>
+                                            <!-- /table header -->
+
+                                            <!-- table row -->
+                                            <div data-div-table-row class="flex flex--max justify-start items-center self-stretch gap--0 bg--col--athens-gray-3--50">
+                                                <div data-div-table-row-col data-title="merch" class="flex flex-column justify-center gap--10 w--72 max--w--72 min--h--72">
+                                                    <a href="#" class="flex justify-center items-center w-100 h--96 pointer relative">
+                                                        <!-- Counter -->
+                                                        <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white absolute top-0 left-0">
+                                                            1
+                                                        </span>
+                                                        <!-- End Counter -->
+                                                        <img src="assets/img/thumb-5.png" alt="" class="w-100 h--96 fit--cover">
+                                                    </a>
+                                                </div>
+                                                <div data-div-table-row-col data-title="merch-title" class="flex flex-column justify-center gap--10 flex--max min--h--72 pv2 pad--x--10">
+                                                    <a href="#" class="fs--12 fw6 lh--18 col--ebony-2 truncate pointer">
+                                                        Socks (White, Extra Long)
+                                                    </a>
+                                                </div>
+                                                <div data-div-table-row-col data-title="views" class="flex flex-column justify-center items-end gap--10 w--120 max--w--120 min--h--72 pv2 pad--x--10">
+                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                        1,234
+                                                    </span>
+                                                </div>
+                                                <div data-div-table-row-col data-title="sales" class="flex flex-column justify-center items-end gap--10 w--130 max--w--130 min--h--72 pv2 pad--x--10">
+                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                        USD$ 1000.99
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <!-- /table row -->
+
+                                            <!-- table row -->
+                                            <div data-div-table-row class="flex flex--max justify-start items-center self-stretch gap--0">
+                                                <div data-div-table-row-col data-title="merch" class="flex flex-column justify-center gap--10 w--72 max--w--72 min--h--72">
+                                                    <a href="#" class="flex justify-center items-center w-100 h--96 pointer relative">
+                                                        <!-- Counter -->
+                                                        <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white absolute top-0 left-0">
+                                                            2
+                                                        </span>
+                                                        <!-- End Counter -->
+                                                        <img src="assets/img/thumb-5.png" alt="" class="w-100 h--96 fit--cover">
+                                                    </a>
+                                                </div>
+                                                <div data-div-table-row-col data-title="merch-title" class="flex flex-column justify-center gap--10 flex--max min--h--72 pv2 pad--x--10">
+                                                    <a href="#" class="fs--12 fw6 lh--18 col--ebony-2 truncate pointer">
+                                                        Socks (White, Extra Long)
+                                                    </a>
+                                                </div>
+                                                <div data-div-table-row-col data-title="views" class="flex flex-column justify-center items-end gap--10 w--120 max--w--120 min--h--72 pv2 pad--x--10">
+                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                        1,234
+                                                    </span>
+                                                </div>
+                                                <div data-div-table-row-col data-title="sales" class="flex flex-column justify-center items-end gap--10 w--130 max--w--130 min--h--72 pv2 pad--x--10">
+                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                        USD$ 1000.99
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <!-- /table row -->
+
+                                            <!-- table row -->
+                                            <div data-div-table-row class="flex flex--max justify-start items-center self-stretch gap--0 bg--col--athens-gray-3--50">
+                                                <div data-div-table-row-col data-title="merch" class="flex flex-column justify-center gap--10 w--72 max--w--72 min--h--72">
+                                                    <a href="#" class="flex justify-center items-center w-100 h--96 pointer relative">
+                                                        <!-- Counter -->
+                                                        <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white absolute top-0 left-0">
+                                                            3
+                                                        </span>
+                                                        <!-- End Counter -->
+                                                        <img src="assets/img/thumb-5.png" alt="" class="w-100 h--96 fit--cover">
+                                                    </a>
+                                                </div>
+                                                <div data-div-table-row-col data-title="merch-title" class="flex flex-column justify-center gap--10 flex--max min--h--72 pv2 pad--x--10">
+                                                    <a href="#" class="fs--12 fw6 lh--18 col--ebony-2 truncate pointer">
+                                                        Socks (White, Extra Long)
+                                                    </a>
+                                                </div>
+                                                <div data-div-table-row-col data-title="views" class="flex flex-column justify-center items-end gap--10 w--120 max--w--120 min--h--72 pv2 pad--x--10">
+                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                        1,234
+                                                    </span>
+                                                </div>
+                                                <div data-div-table-row-col data-title="sales" class="flex flex-column justify-center items-end gap--10 w--130 max--w--130 min--h--72 pv2 pad--x--10">
+                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                        USD$ 1000.99
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <!-- /table row -->
+
+                                            <!-- table row -->
+                                            <div data-div-table-row class="flex flex--max justify-start items-center self-stretch gap--0">
+                                                <div data-div-table-row-col data-title="merch" class="flex flex-column justify-center gap--10 w--72 max--w--72 min--h--72">
+                                                    <a href="#" class="flex justify-center items-center w-100 h--96 pointer relative">
+                                                        <!-- Counter -->
+                                                        <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white absolute top-0 left-0">
+                                                            4
+                                                        </span>
+                                                        <!-- End Counter -->
+                                                        <img src="assets/img/thumb-5.png" alt="" class="w-100 h--96 fit--cover">
+                                                    </a>
+                                                </div>
+                                                <div data-div-table-row-col data-title="merch-title" class="flex flex-column justify-center gap--10 flex--max min--h--72 pv2 pad--x--10">
+                                                    <a href="#" class="fs--12 fw6 lh--18 col--ebony-2 truncate pointer">
+                                                        Socks (White, Extra Long)
+                                                    </a>
+                                                </div>
+                                                <div data-div-table-row-col data-title="views" class="flex flex-column justify-center items-end gap--10 w--120 max--w--120 min--h--72 pv2 pad--x--10">
+                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                        1,234
+                                                    </span>
+                                                </div>
+                                                <div data-div-table-row-col data-title="sales" class="flex flex-column justify-center items-end gap--10 w--130 max--w--130 min--h--72 pv2 pad--x--10">
+                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                        USD$ 1000.99
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <!-- /table row -->
+
+                                            <!-- table row -->
+                                            <div data-div-table-row class="flex flex--max justify-start items-center self-stretch gap--0 bg--col--athens-gray-3--50">
+                                                <div data-div-table-row-col data-title="merch" class="flex flex-column justify-center gap--10 w--72 max--w--72 min--h--72">
+                                                    <a href="#" class="flex justify-center items-center w-100 h--96 pointer relative">
+                                                        <!-- Counter -->
+                                                        <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white absolute top-0 left-0">
+                                                            5
+                                                        </span>
+                                                        <!-- End Counter -->
+                                                        <img src="assets/img/thumb-5.png" alt="" class="w-100 h--96 fit--cover">
+                                                    </a>
+                                                </div>
+                                                <div data-div-table-row-col data-title="merch-title" class="flex flex-column justify-center gap--10 flex--max min--h--72 pv2 pad--x--10">
+                                                    <a href="#" class="fs--12 fw6 lh--18 col--ebony-2 truncate pointer">
+                                                        Socks (White, Extra Long)
+                                                    </a>
+                                                </div>
+                                                <div data-div-table-row-col data-title="views" class="flex flex-column justify-center items-end gap--10 w--120 max--w--120 min--h--72 pv2 pad--x--10">
+                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                        1,234
+                                                    </span>
+                                                </div>
+                                                <div data-div-table-row-col data-title="sales" class="flex flex-column justify-center items-end gap--10 w--130 max--w--130 min--h--72 pv2 pad--x--10">
+                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                        USD$ 1000.99
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <!-- /table row -->
                                         </div>
-                                        <div class="flex flex-column gap--8 items-center">
-                                            <span class="fs--16 lh--24 col--gray-700">No trend to show at the moment</span>
-                                            <a href="#" class="fs--16 lh--24"><span class="fs--16 lh--24 col--gray-700 underline">Learn ways to earn</span> </a>
-                                        </div>
+                                        <!-- /table container -->
                                     </div>
+                                    <!-- End Div Table Wrapper -->
                                 </div>
                                 <!-- Ens Data Content -->
                             </div>
@@ -566,19 +1649,278 @@
                                 </div>
                                 <!-- Data Content -->
                                 <div class="flex flex-column justify-center items-start gap--16 flex-auto">
-                                    <div class="w-100 pad--y--24 flex flex-column gap--8 flex-auto">
-                                        <div class="pad--16 flex items-center justify-center">
-                                            <div class="w--161 h--161 flex items-center justify-center relative">
-                                                <div class="db w-100 h-100 absolute left-0 top-0 flex items-center justify-center">
-                                                    <div class="db bg--col--lemon w--32 h--32 filter--blur--60"></div>
-                                                </div>
-                                                <img src="assets/img/dot-option-placeholder.svg" class="w--128 h--128" alt="">
-                                            </div>
-                                        </div>                                        <div class="flex flex-column gap--8 items-center">
-                                            <span class="fs--16 lh--24 col--gray-700">No trend to show at the moment</span>
-                                            <a href="#" class="fs--16 lh--24"><span class="fs--16 lh--24 col--gray-700 underline">Learn ways to earn</span> </a>
+                                    <!-- Table Wrapper -->
+                                    <div data-section="table-wrapper" class="flex flex-column items-start self-stretch flex-auto ml--16-neg mr--16-neg">
+                                        <div data-stat-container="1" class="w-100 top_contributors-container">
+                                            <table data-stat-table-for="top_contributors" class="w-100">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="fs--14 fw4 lh--20 col--pale-sky truncate min--h--42 pad--10 bb br--col--pale-sky">
+                                                            Countries
+                                                        </th>
+    
+                                                        <th class="fs--14 fw4 lh--20 col--pale-sky truncate tr w--130 min--h--42 pad--10 bb br--col--pale-sky">
+                                                            Sales (USD)
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+    
+                                                <tbody>
+                                                    <tr class="bg--col--athens-gray-3--50">
+                                                        <td class="fs--14 fw4 lh--20 col--pale-sky truncate pv2 pad--x--12 v-mid">
+                                                            <div class="flex items-center self-stretch gap--10 flex-auto">
+                                                                <!-- Counter -->
+                                                                <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white">
+                                                                    1
+                                                                </span>
+                                                                <!-- End Counter -->
+    
+                                                                <!-- User -->
+                                                                <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer pad--y--2 pad--x--6 br--6">
+                                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                                        Hong Kong
+                                                                    </span>
+                                                                </a>
+                                                                <!-- End User -->
+                                                            </div>
+                                                        </td>
+    
+                                                        <!-- Contribution -->
+                                                        <td class="fs--12 fw6 lh--18 col--ebony-2 truncate tr w--130 h--48 pv2 pad--x--10 v-mid">
+                                                            USD$ 512,345.99
+                                                        </td>
+                                                        <!-- End Contribution -->
+                                                    </tr>
+                                                    <tr class="">
+                                                        <td class="fs--14 fw4 lh--20 col--pale-sky truncate  pv2 pad--x--12  v-mid">
+                                                            <div class="flex items-center self-stretch gap--10 flex-auto">
+                                                                <!-- Counter -->
+                                                                <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white">
+                                                                    2
+                                                                </span>
+                                                                <!-- End Counter -->
+    
+                                                                <!-- User -->
+                                                                <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer pad--y--2 pad--x--6 br--6">
+                                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                                        United States of America
+                                                                    </span>
+                                                                </a>
+                                                                <!-- End User -->
+                                                            </div>
+                                                        </td>
+    
+                                                        <!-- Contribution -->
+                                                        <td class="fs--12 fw6 lh--18 col--ebony-2 truncate tr w--130 h--48 pv2 pad--x--10  v-mid">
+                                                            USD$ 512,345.99
+                                                        </td>
+                                                        <!-- End Contribution -->
+                                                    </tr>
+                                                    <tr class="bg--col--athens-gray-3--50">
+                                                        <td class="fs--14 fw4 lh--20 col--pale-sky truncate pv2 pad--x--12 v-mid">
+                                                            <div class="flex items-center self-stretch gap--10 flex-auto">
+                                                                <!-- Counter -->
+                                                                <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white">
+                                                                    3
+                                                                </span>
+                                                                <!-- End Counter -->
+    
+                                                                <!-- User -->
+                                                                <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer pad--y--2 pad--x--6 br--6">
+                                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                                        Singapore
+                                                                    </span>
+                                                                </a>
+                                                                <!-- End User -->
+                                                            </div>
+                                                        </td>
+    
+                                                        <!-- Contribution -->
+                                                        <td class="fs--12 fw6 lh--18 col--ebony-2 truncate tr w--130 h--48 pv2 pad--x--10 v-mid">
+                                                            USD$ 512,345.99
+                                                        </td>
+                                                        <!-- End Contribution -->
+                                                    </tr>
+                                                    <tr class="">
+                                                        <td class="fs--14 fw4 lh--20 col--pale-sky truncate pv2 pad--x--12 v-mid">
+                                                            <div class="flex items-center self-stretch gap--10 flex-auto">
+                                                                <!-- Counter -->
+                                                                <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white">
+                                                                    4
+                                                                </span>
+                                                                <!-- End Counter -->
+    
+                                                                <!-- User -->
+                                                                <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer pad--y--2 pad--x--6 br--6">
+                                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                                        Australia
+                                                                    </span>
+                                                                </a>
+                                                                <!-- End User -->
+                                                            </div>
+                                                        </td>
+    
+                                                        <!-- Contribution -->
+                                                        <td class="fs--12 fw6 lh--18 col--ebony-2 truncate tr w--130 h--48 pv2 pad--x--10 v-mid">
+                                                            USD$ 512,345.99
+                                                        </td>
+                                                        <!-- End Contribution -->
+                                                    </tr>
+                                                    <tr class="bg--col--athens-gray-3--50">
+                                                        <td class="fs--14 fw4 lh--20 col--pale-sky truncate pv2 pad--x--12 v-mid">
+                                                            <div class="flex items-center self-stretch gap--10 flex-auto">
+                                                                <!-- Counter -->
+                                                                <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white">
+                                                                    5
+                                                                </span>
+                                                                <!-- End Counter -->
+    
+                                                                <!-- User -->
+                                                                <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer pad--y--2 pad--x--6 br--6">
+                                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                                        Taiwan
+                                                                    </span>
+                                                                </a>
+                                                                <!-- End User -->
+                                                            </div>
+                                                        </td>
+    
+                                                        <!-- Contribution -->
+                                                        <td class="fs--12 fw6 lh--18 col--ebony-2 truncate tr w--130 h--48 pv2 pad--x--10 v-mid">
+                                                            USD$ 512,345.99
+                                                        </td>
+                                                        <!-- End Contribution -->
+                                                    </tr>
+                                                    <tr class="">
+                                                        <td class="fs--14 fw4 lh--20 col--pale-sky truncate pv2 pad--x--12 v-mid">
+                                                            <div class="flex items-center self-stretch gap--10 flex-auto">
+                                                                <!-- Counter -->
+                                                                <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white">
+                                                                    6
+                                                                </span>
+                                                                <!-- End Counter -->
+    
+                                                                <!-- User -->
+                                                                <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer pad--y--2 pad--x--6 br--6">
+                                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                                        Hong Kong
+                                                                    </span>
+                                                                </a>
+                                                                <!-- End User -->
+                                                            </div>
+                                                        </td>
+    
+                                                        <!-- Contribution -->
+                                                        <td class="fs--12 fw6 lh--18 col--ebony-2 truncate tr w--130 pv2 h--48 pad--x--10 v-mid">
+                                                            USD$ 512,345.99
+                                                        </td>
+                                                        <!-- End Contribution -->
+                                                    </tr>
+                                                    <tr class="bg--col--athens-gray-3--50">
+                                                        <td class="fs--14 fw4 lh--20 col--pale-sky truncate pv2 pad--x--12 v-mid">
+                                                            <div class="flex items-center self-stretch gap--10 flex-auto">
+                                                                <!-- Counter -->
+                                                                <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white">
+                                                                    7
+                                                                </span>
+                                                                <!-- End Counter -->
+    
+                                                                <!-- User -->
+                                                                <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer pad--y--2 pad--x--6 br--6">
+                                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                                        United States of America
+                                                                    </span>
+                                                                </a>
+                                                                <!-- End User -->
+                                                            </div>
+                                                        </td>
+    
+                                                        <!-- Contribution -->
+                                                        <td class="fs--12 fw6 lh--18 col--ebony-2 truncate tr w--130 h--48 pv2 pad--x--10 v-mid">
+                                                            USD$ 512,345.99
+                                                        </td>
+                                                        <!-- End Contribution -->
+                                                    </tr>
+                                                    <tr class="">
+                                                        <td class="fs--14 fw4 lh--20 col--pale-sky truncate pv2 pad--x--12 v-mid">
+                                                            <div class="flex items-center self-stretch gap--10 flex-auto">
+                                                                <!-- Counter -->
+                                                                <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white">
+                                                                    8
+                                                                </span>
+                                                                <!-- End Counter -->
+    
+                                                                <!-- User -->
+                                                                <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer pad--y--2 pad--x--6 br--6">
+                                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                                        Singapore
+                                                                    </span>
+                                                                </a>
+                                                                <!-- End User -->
+                                                            </div>
+                                                        </td>
+    
+                                                        <!-- Contribution -->
+                                                        <td class="fs--12 fw6 lh--18 col--ebony-2 truncate tr w--130 h--48 pv2 pad--x--10 v-mid">
+                                                            USD$ 512,345.99
+                                                        </td>
+                                                        <!-- End Contribution -->
+                                                    </tr>
+                                                    <tr class="bg--col--athens-gray-3--50">
+                                                        <td class="fs--14 fw4 lh--20 col--pale-sky truncate pv2 pad--x--12 v-mid">
+                                                            <div class="flex items-center self-stretch gap--10 flex-auto">
+                                                                <!-- Counter -->
+                                                                <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white">
+                                                                    9
+                                                                </span>
+                                                                <!-- End Counter -->
+    
+                                                                <!-- User -->
+                                                                <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer pad--y--2 pad--x--6 br--6">
+                                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                                        Australia
+                                                                    </span>
+                                                                </a>
+                                                                <!-- End User -->
+                                                            </div>
+                                                        </td>
+    
+                                                        <!-- Contribution -->
+                                                        <td class="fs--12 fw6 lh--18 col--ebony-2 truncate tr w--130 h--48 pv2 pad--x--10 v-mid">
+                                                            USD$ 512,345.99
+                                                        </td>
+                                                        <!-- End Contribution -->
+                                                    </tr>
+                                                    <tr class="">
+                                                        <td class="fs--14 fw4 lh--20 col--pale-sky truncate pv2 pad--x--12 v-mid">
+                                                            <div class="flex items-center self-stretch gap--10 flex-auto">
+                                                                <!-- Counter -->
+                                                                <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white">
+                                                                    10
+                                                                </span>
+                                                                <!-- End Counter -->
+    
+                                                                <!-- User -->
+                                                                <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer pad--y--2 pad--x--6 br--6">
+                                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                                        Taiwan
+                                                                    </span>
+                                                                </a>
+                                                                <!-- End User -->
+                                                            </div>
+                                                        </td>
+    
+                                                        <!-- Contribution -->
+                                                        <td class="fs--12 fw6 lh--18 col--ebony-2 truncate tr w--130 h--48 pv2 pad--x--10 v-mid">
+                                                            USD$ 512,345.99
+                                                        </td>
+                                                        <!-- End Contribution -->
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
+                                    <!-- End Table Wrapper -->
                                 </div>
                                 <!-- Ens Data Content -->
                             </div>

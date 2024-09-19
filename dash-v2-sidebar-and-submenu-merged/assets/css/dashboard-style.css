@@ -16,6 +16,10 @@ html {
   color: var(--color-blue-ribbon, #155eef)
 }
 
+.col--blue-ribbon-2 {
+  color: var(--color-blue-ribbon-2, #004eeb)
+}
+
 .col--ebony--variation-2 {
   color: var(--color-ebony-2, #0c111d)
 }
@@ -618,8 +622,17 @@ html {
   color: var(--color-rose)
 }
 
-[data-main-menu-item][data-is-active=true] {
-  background: rgba(251, 91, 162, .1)
+[data-dashboard-main-nav] [data-main-menu-item][data-is-active=true] {
+  background: rgba(251, 91, 162, .2)
+}
+
+[data-dashboard-main-nav] [data-main-menu-item][data-is-active=true] [data-sidebar-menu-icon] {
+  -webkit-filter: brightness(0) saturate(100%) invert(29%) sepia(98%) saturate(5809%) hue-rotate(325deg) brightness(92%) contrast(121%);
+  filter: brightness(0) saturate(100%) invert(29%) sepia(98%) saturate(5809%) hue-rotate(325deg) brightness(92%) contrast(121%)
+}
+
+[data-dashboard-main-nav] [data-main-menu-item][data-is-active=true] [data-sidebar-menu-item-text] {
+  color: var(--color-rose)
 }
 
 [data-submenu] .is-current-page[data-sidebar-menu-item]>[data-submenu-item] {
