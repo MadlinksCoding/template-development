@@ -104,7 +104,7 @@
                 <!-- sidebar main wrapper (to contain all sidebar UI elements, except submenu containers) -->
                 <div data-sidebar-main-wrapper data-mobile-nav-main-wrapper data-is-active="false" class="flex flex-column justify-center items-center gap--6 w--90 w--90--px vh-100 pa0 pad--y--12 transition--all transition--150 transition--ease-in-out vw--100--responsive-mobile vw--100--responsive-mobile-portrait fixed--responsive-mobile fixed--responsive-mobile-portrait top--0--responsive-mobile top--0--responsive-mobile-portrait left--0--responsive-mobile left--0--responsive-mobile-portrait bg--col--white--70--responsive-mobile bg--col--white--70--responsive-mobile-portrait bg--blur--25--responsive-mobile bg--blur--25--responsive-mobile-portrait gap--16--responsive-mobile gap--16--responsive-mobile-portrait pad--y--8--responsive-mobile pad--y--8--responsive-mobile-portrait pad--x--16-responsive-mobile pad--x--16-responsive-mobile-portrait">
                     <!-- site logo -->
-                    <a data-site-logo data-desktop-only href="/" title="" class="flex items-center gap--10 bg--col--lemon br--12 o-80 hov--o--100 display-none--responsive-mobile display-none--responsive-mobile-portrait transition--opacity transition--200 transition--ease-in-out">
+                    <a data-site-logo data-desktop-only href="/" title="" class="flex items-center gap--10 bg--col--lemon br--12 o-80 hov--o--100-x display-none--responsive-mobile display-none--responsive-mobile-portrait transition--opacity transition--200 transition--ease-in-out">
                         <!-- render_svg_icon( 'logo_bg-1' ) -->
                         <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/logo_bg-1.svg" alt="" class="flex w--36 h--36 pointer-events-none">
                     </a>
@@ -127,7 +127,7 @@
                         <!-- cta controls -->
                         <div class="flex justify-center items-center self-stretch gap--8 pv0 ph1">
                             <!-- log out -->
-                            <a href="javascript: void(0)" title="" class="flex justify-center items-center gap--12 w--32 h--32 br--6 hover--bg--col--brilliant-rose--10 pointer transition--all transition--200 transition--ease-in-out">
+                            <a data-logout-button title="" class="flex justify-center items-center gap--12 w--32 h--32 br--6 hover--bg--col--brilliant-rose--10 pointer transition--all transition--200 transition--ease-in-out">
                                 <!-- render_svg_icon( 'logout-1' ) -->
                                 <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/logout-1.svg" alt="" class="w--20 h--20 filter--col--pale-sky pointer-events-none">
                             </a>
@@ -346,14 +346,14 @@
                         <!-- cta controls -->
                         <div class="flex justify-center items-center self-stretch gap--8 pv0 ph1">
                             <!-- language -->
-                            <a href="javascript: void(0)" title="" class="flex justify-center items-center gap--12 w--32 h--32 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
+                            <a data-lang-selection-button href="javascript: void(0)" title="" class="flex justify-center items-center gap--12 w--32 h--32 br--6 hover--bg--col--brilliant-rose--10 pointer transition--all transition--200 transition--ease-in-out">
                                 <!-- render_svg_icon( 'globe' ) -->
                                 <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/globe.svg" alt="" class="w--20 h--20 filter--col--pale-sky pointer-events-none">
                             </a>
                             <!-- /language -->
 
                             <!-- help -->
-                            <a href="javascript: void(0)" title="" class="flex justify-center items-center gap--2 w--32 h--32 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out relative">
+                            <a data-help-button href="javascript: void(0)" title="" class="flex justify-center items-center gap--2 w--32 h--32 br--6 hover--bg--col--brilliant-rose--10 pointer transition--all transition--200 transition--ease-in-out relative">
                                 <!-- render_svg_icon( 'question_circle_1' ) -->
                                 <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/question_circle_1.svg" alt="" class="w--20 h--20 filter--col--pale-sky pointer-events-none">
                             </a>
@@ -4231,7 +4231,7 @@
                                     <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/setting.svg" alt="" class="w--20 h--20 filter--col--oxford-blue">
                                 </span>
                                 <span data-submenu-title class="flex flex--max justify-start items-center fs--14 fw6 lh--20 col--oxford-blue"> 
-                                    Profile
+                                    Settings
                                 </span>
                             </div>
                             
