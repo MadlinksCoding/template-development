@@ -237,7 +237,7 @@
                                                 <span class="fs--14 fw5 lh--20 col--teal-700">20%</span>
                                             </div>
                                         </div>
-                                        <div data-id="subscribers" class="w-100 h--48"></div>
+                                        <div data-id="subscribers" data-chart-name="subscriberNew" data-chart-type="donut" data-chart-timeframes="day" class="w-100 h--48"></div>
                                     </div>
                                 </div>
                             </div>
@@ -258,7 +258,7 @@
                                                 <span class="fs--14 fw5 lh--20 col--teal-700">20%</span>
                                             </div>
                                         </div>
-                                        <div data-id="recurring" class="w-100 h--48"></div>
+                                        <div data-id="recurring" data-chart-name="subscriberRecurring" data-chart-type="donut" data-chart-timeframes="day" class="w-100 h--48"></div>
                                     </div>
                                 </div>
                             </div>
@@ -285,7 +285,7 @@
                                                 <span class="fs--14 fw5 lh--20 col--orange-dark-700">20%</span>
                                             </div>
                                         </div>
-                                        <div data-id="newFollowers" class="w-100 h--48"></div>
+                                        <div data-id="newFollowers" data-chart-name="fansNewfollowers" data-chart-type="donut" data-chart-timeframes="day" class="w-100 h--48"></div>
                                     </div>
                                     <div class="flex flex-column items-start gap--8 flex-auto">
                                         <span class="fs--12 fw5 lh--18 col--gray-900">PROFILE VISIT</span>
@@ -298,7 +298,7 @@
                                                 <span class="fs--14 fw5 lh--20 col--teal-700">20%</span>
                                             </div>
                                         </div>
-                                        <div data-id="profileVisit" class="w-100 h--48"></div>
+                                        <div data-id="profileVisit" data-chart-name="fansProfilevisit" data-chart-type="donut" data-chart-timeframes="day" class="w-100 h--48"></div>
                                     </div>
                                 </div>
                             </div>
@@ -326,7 +326,7 @@
                                     <span class="fs--14 fw5 lh--20 col--teal-700">10%</span>
                                 </div>
                             </div>
-                            <div data-id="earnings" class="w-100 h--48"></div>
+                            <div data-id="earnings" data-chart-name="earnings" data-chart-type="donut" data-chart-timeframes="day" class="w-100 h--48"></div>
                             <!-- Ens Data Content -->
                         </div>
                         <!-- End white-card -->
@@ -350,7 +350,7 @@
                                                 <span class="fs--14 fw5 lh--20 col--orange-dark-700">20%</span>
                                             </div>
                                         </div>
-                                        <div data-id="mediaChart" class="w-100 h--48"></div>
+                                        <div data-id="mediaChart" data-chart-name="likesMedia" data-chart-type="donut" data-chart-timeframes="day" class="w-100 h--48"></div>
                                     </div>
                                     <div class="flex flex-column items-start gap--8 flex-auto">
                                         <span class="fs--12 fw5 lh--18 col--gray-600">MERCH</span>
@@ -363,7 +363,7 @@
                                                 <span class="fs--14 fw5 lh--20 col--orange-dark-700">20%</span>
                                             </div>
                                         </div>
-                                        <div data-id="merchChart" class="w-100 h--48"></div>
+                                        <div data-id="merchChart" data-chart-name="likeMerch" data-chart-type="donut" data-chart-timeframes="day" class="w-100 h--48"></div>
                                     </div>
                                 </div>
                                 <div class="flex items-center gap--24 flex-auto w-100">
@@ -378,7 +378,7 @@
                                                 <span class="fs--14 fw5 lh--20 col--teal-700">20%</span>
                                             </div>
                                         </div>
-                                        <div data-id="profileChart" class="w-100 h--48"></div>
+                                        <div data-id="profileChart" data-chart-name="likeProfile" data-chart-type="donut" data-chart-timeframes="day" class="w-100 h--48"></div>
                                     </div>
                                     <div class="flex flex-column justify-between items-start gap--8 flex-auto">
                                         <span class="fs--12 fw5 lh--18 col--gray-600">FEED</span>
@@ -391,7 +391,7 @@
                                                 <span class="fs--14 fw5 lh--20 col--teal-700">20%</span>
                                             </div>
                                         </div>
-                                        <div data-id="feedChart" class="w-100 h--48"></div>
+                                        <div data-id="feedChart" data-chart-name="likeFeed" data-chart-type="donut" data-chart-timeframes="day" class="w-100 h--48"></div>
                                     </div>
                                 </div>
                             </div>
@@ -2010,6 +2010,9 @@
           }
           return data;
         }
+
+        var dummyData = generateDatas(50);
+        //console.log(dummyData);
 
 
         // Create axes
