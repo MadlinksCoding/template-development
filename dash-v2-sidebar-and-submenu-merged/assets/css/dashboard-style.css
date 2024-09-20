@@ -609,6 +609,27 @@ html {
   height: 3.5rem
 }
 
+[data-dashboard-main-nav] [data-main-menu-item]:hover,
+[data-help-button]:hover,
+[data-lang-selection-button]:hover,
+[data-logout-button]:hover,
+[data-notifications-panel-trigger]:hover {
+  background: rgba(251, 91, 162, .1)
+}
+
+[data-dashboard-main-nav] [data-main-menu-item]:hover [data-sidebar-menu-icon],
+[data-help-button]:hover img,
+[data-lang-selection-button]:hover img,
+[data-logout-button]:hover img,
+[data-notifications-panel-trigger]:hover img {
+  -webkit-filter: brightness(0) saturate(100%) invert(22%) sepia(31%) saturate(534%) hue-rotate(179deg) brightness(93%) contrast(90%);
+  filter: brightness(0) saturate(100%) invert(22%) sepia(31%) saturate(534%) hue-rotate(179deg) brightness(93%) contrast(90%)
+}
+
+[data-dashboard-main-nav] [data-main-menu-item]:hover [data-sidebar-menu-item-text] {
+  color: var(--color-oxford-blue, #344054)
+}
+
 [data-dashboard-main-nav] .is-current-page[data-sidebar-menu-item]>[data-main-menu-item] {
   background: rgba(251, 91, 162, .2)
 }
