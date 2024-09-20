@@ -29,8 +29,9 @@ class ChartRenderer {
    * @constructor
    * @param {Object} chartDataSet - The chart data set passed from the fetched data.
    */
-  constructor(chartDataSet) {
-    this.chartDataSet = chartDataSet; // Store the fetched chart data
+  constructor(chartDataArray) {
+    this.chartDataArray = chartDataArray; // Store the fetched chart data array
+    //this.chartDataSet = chartDataSet; // Store the fetched chart data
   }
 
   /**
@@ -38,36 +39,39 @@ class ChartRenderer {
    * @description Loops through the chart data, finds matching DOM elements using attributes, and renders charts based on their type.
    */
   renderCharts() {
-    // Iterate through the keys of the chartDataSet object (e.g., 'salesInsight', 'salesTrend')
-    Object.keys(this.chartDataSet).forEach((key) => {
-      const chartData = this.chartDataSet[key]; // Get the chart data for the current key
-      // Find the DOM element that matches the 'data-chart-name' attribute with the current key
-      const chartElement = document.querySelector(`[data-chart-name="${key}"]`);
+    // Iterate through the array of chart data objects
+    this.chartDataArray.forEach((chartDataObject) => {
+      // For each chartDataObject, get its keys (e.g., 'salesInsight', 'salesTrend')
+      Object.keys(chartDataObject).forEach((key) => {
+        const chartData = chartDataObject[key]; // Get the chart data for the current key
+        // Find the DOM element that matches the 'data-chart-name' attribute with the current key
+        const chartElement = document.querySelector(`[data-chart-name="${key}"]`);
 
-      // Proceed if the DOM element is found
-      if (chartElement) {
-        // Check if the 'chartType' of the data matches the DOM element's 'data-chart-type' attribute
-        if (chartElement.getAttribute('data-chart-type') === chartData.chartType) {
-          // Retrieve the 'data-chart-timeframes' attribute from the DOM element
-          const timeframe = chartElement.getAttribute('data-chart-timeframes');
+        // Proceed if the DOM element is found
+        if (chartElement) {
+          // Check if 'chartType' matches the DOM element's 'data-chart-type' attribute
+          if (chartElement.getAttribute('data-chart-type') === chartData.chartType) {
+            // Retrieve the 'data-chart-timeframes' attribute from the DOM element
+            const timeframe = chartElement.getAttribute('data-chart-timeframes');
 
-          // Check if the chartData has a matching timeframe and get the corresponding data
-          if (chartData.timeFrames && chartData.timeFrames[timeframe]) {
-            const timeFrameData = chartData.timeFrames[timeframe];
+            // Check if the chartData has a matching timeframe and get the corresponding data
+            if (chartData.timeFrames && chartData.timeFrames[timeframe]) {
+              const timeFrameData = chartData.timeFrames[timeframe];
 
-            // Call the appropriate chart rendering method based on the chart type
-            this.renderChartByType(chartElement, chartData.chartType, timeFrameData);
+              // Call the appropriate chart rendering method based on the chart type
+              this.renderChartByType(chartElement, chartData.chartType, timeFrameData);
+            }
           }
         }
-      }
+      });
     });
   }
 
   /**
    * @function renderChartByType
-   * @description Renders a chart by determining its type (e.g., bar, line, map) and calling the corresponding method.
+   * @description Renders a chart by determining its type (e.g., bar, line, smoothed line, map, doughnut) and calling the corresponding method.
    * @param {HTMLElement} element - The DOM element where the chart should be rendered.
-   * @param {string} chartType - The type of chart to render (e.g., 'bar', 'line').
+   * @param {string} chartType - The type of chart to render (e.g., 'bar', 'line', 'smoothedline', 'map', '').
    * @param {Array|Object} data - The data to be used for rendering the chart.
    */
   renderChartByType(element, chartType, data) {

@@ -1,4 +1,4 @@
-{
+[{
     "salesInsight":{
         "chartType":"bar",
         "timeFrames":{
@@ -6970,4 +6970,4 @@
             ]
         }
     }
-}
+}]
