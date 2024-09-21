@@ -3,19 +3,24 @@ html { font-size: 16px; }
 
 /* Width */
 .w--100-responsive-mobile { width: 100%; }
+.w--16-responsive-mobile { width: 1rem; }
+.w--144-responsive-mobile { width: 9rem; }
 .w--423-responsive-mobile { width: 26.438rem; }
 .w--390-responsive-mobile { width: 24.375rem; }
 
 /* Height */
+.h--16-responsive-mobile { height: 1rem; }
 .h--327-responsive-mobile { height: 20.45925rem; }
 .h--274-responsive-mobile { height: 17.125rem; }
 
 /* Font Size */
+.fs--12-responsive-mobile { font-size: 0.75rem; /* font-size 12px */  }
 .fs--18-responsive-mobile { font-size: 1.125rem; /* font-size 18px */  } /* confirmed in use */ /* pixel conversion correct */
 .fs--16-responsive-mobile { font-size: 1rem; /* font-size 16px */  }
 .fs--30-responsive-mobile { font-size: 1.875rem; /* font-size 30px */  }
 
 /* Line Height */
+.lh--18-responsive-mobile { line-height: 1.125rem; /* line-height 18px */ } /* confirmed in use */ /* pixel conversion correct */
 .lh--28-responsive-mobile { line-height: 1.75rem; /* line-height 28px */ } /* confirmed in use */ /* pixel conversion correct */
 .lh--38-responsive-mobile { line-height: 2.375rem; /* line-height 38px */ } /* confirmed in use */ /* pixel conversion correct */
 
@@ -28,6 +33,7 @@ html { font-size: 16px; }
 .display--none-responsive-mobile { display: none; }
 
 /* Gap */
+.gap--4--responsive-mobile { gap: 0.25rem; }
 .gap--16--responsive-mobile { gap: 1rem; }
 
 /* Padding */
@@ -69,3 +75,6 @@ html { font-size: 16px; }
 
 /* Right */
 .right--8-responsive-mobile { right: 0.5rem; }
+
+/* Text Align */
+.text--align-right-mobile { text-align: right; }

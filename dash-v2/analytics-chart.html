@@ -682,13 +682,13 @@
                     <!-- End Title -->
 
                      <!-- Select Dropdown -->
-                    <div class="relative z--10000 w--100-responsive-mobile-portrait dn dn-responsive-mobile">
+                    <div data-id="order-select" class="relative z--10000 w--100-responsive-mobile-portrait dn dn-responsive-mobile">
                         <select data-nice-select>
-                            <option value="daily">Subscriptions</option>
-                            <option value="weekly">Pay to View</option>
-                            <option value="monthly">Merch</option>
-                            <option value="yearly">Custom Request</option>
-                            <option value="alltime">Wishtender</option>
+                            <option value="subscriptions">Subscriptions</option>
+                            <option value="paytoview">Pay to View</option>
+                            <option value="merch">Merch</option>
+                            <option value="customrequest">Custom Request</option>
+                            <option value="wishtender">Wishtender</option>
                         </select>
                         <!-- <div class="pointer">
                             <img src="assets/icons/arrow-down.svg" alt="" />
@@ -696,24 +696,24 @@
                     </div>
 
                     <!-- Tabs Button Group -->
-                    <div class="flex items-start br--8 ba br--col--gray-300 bg-white-30 sh--7 overflow-hidden display--none-responsive-mobile-portrait">
-                        <button class="bg-white pad--y--8 ph3 flex justify-center items-center gap--8 fs--14 fw5 lh--20 col--gray-800">
+                    <div class="flex items-start br--8 ba br--col--gray-300 bg-white-30 sh--7 overflow-hidden display--none-responsive-mobile display--none-responsive-mobile-portrait w--100-responsive-tablet">
+                        <button class="bg-white pad--y--8 ph3 flex justify-center items-center gap--8 fs--14 fw5 lh--20 col--gray-800 nowrap flex-auto">
                             Subscriptions
                         </button>
 
-                        <button class="pad--y--8 ph3 flex justify-center items-center gap--8 bl br--col--gray-300 fs--14 fw5 lh--20 col--gray-500">
+                        <button class="pad--y--8 ph3 flex justify-center items-center gap--8 bl br--col--gray-300 fs--14 fw5 lh--20 col--gray-500 nowrap flex-auto">
                             Pay to View
                         </button>
                         
-                        <button class="pad--y--8 ph3 flex justify-center items-center gap--8 bl br--col--gray-300 fs--14 fw5 lh--20 col--gray-500">
+                        <button class="pad--y--8 ph3 flex justify-center items-center gap--8 bl br--col--gray-300 fs--14 fw5 lh--20 col--gray-500 nowrap flex-auto">
                             Merch
                         </button>
                         
-                        <button class="pad--y--8 ph3 flex justify-center items-center gap--8 bl br--col--gray-300 fs--14 fw5 lh--20 col--gray-500">
+                        <button class="pad--y--8 ph3 flex justify-center items-center gap--8 bl br--col--gray-300 fs--14 fw5 lh--20 col--gray-500 nowrap flex-auto">
                             Custom Request
                         </button>
                         
-                        <button class="pad--y--8 ph3 flex justify-center items-center gap--8 bl br--col--gray-300 fs--14 fw5 lh--20 col--gray-500">
+                        <button class="pad--y--8 ph3 flex justify-center items-center gap--8 bl br--col--gray-300 fs--14 fw5 lh--20 col--gray-500 nowrap flex-auto">
                             Wishtender
                         </button>
                     </div>
@@ -736,16 +736,20 @@
                                             <th class="fs--14 fw4 lh--20 col--pale-sky truncate w--250 min--h--42 pad--10 bb br--col--pale-sky">
                                                 &nbsp;
                                             </th>
-                                            <th class="fs--14 fw4 lh--20 col--pale-sky truncate w--200 min--h--42 pad--10 bb br--col--pale-sky display--none-responsive-mobile-portrait">
+                                            <th class="fs--14 fw4 lh--20 col--pale-sky truncate w--200 min--h--42 pad--10 bb br--col--pale-sky display--none-responsive-mobile display--none-responsive-mobile-portrait">
                                                 From
                                             </th>
-                                            <th class="fs--14 fw4 lh--20 col--pale-sky truncate w--200 min--h--42 pad--10 bb br--col--pale-sky display--none-responsive-mobile-portrait">
+                                            <th class="fs--14 fw4 lh--20 col--pale-sky truncate w--200 min--h--42 pad--10 bb br--col--pale-sky 
+                                            display--none-responsive-mobile display--none-responsive-mobile-portrait display--none-responsive-tablet">
                                                 Date received
                                             </th>
-                                            <th class="fs--14 fw4 lh--20 col--pale-sky truncate min--h--42 pad--10 bb br--col--pale-sky">
+                                            <th class="fs--14 fw4 lh--20 col--pale-sky truncate w--200 min--h--42 pad--10 bb br--col--pale-sky dn dn-responsive-tablet display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                Date
+                                            </th>
+                                            <th class="fs--14 fw4 lh--20 col--pale-sky truncate min--h--42 pad--10 bb br--col--pale-sky text--align-right-tablet text--align-right-mobile text--align-right-mobile-portrait">
                                                 Total
                                             </th>
-                                            <th class="fs--14 fw4 lh--20 col--pale-sky truncate tr w--80 min--h--42 pad--10 bb br--col--pale-sky">
+                                            <th class="fs--14 fw4 lh--20 col--pale-sky truncate tr w--80 w--auto-responsive-tablet min--h--42 pad--10 bb br--col--pale-sky display--none-responsive-mobile display--none-responsive-mobile-portrait">
                                                 &nbsp;
                                             </th>
                                         </tr>
@@ -758,16 +762,30 @@
                                             </td>
                                             <td class="min--h--72 pad--10 v-mid">
                                                 <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer">
-                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate display--none-responsive-mobile display--none-responsive-mobile-portrait">
                                                         Tier 1 Subscription
                                                     </span>
 
-                                                    <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                    <span class="fs--12 fw4 lh--18 col--oxford-blue truncate display--none-responsive-mobile display--none-responsive-mobile-portrait">
                                                         #123456
                                                     </span>
+                                                    <div class="dn dn-responsive-mobile flex-column gap--4">
+                                                        <div class="flex items-center">
+                                                            <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                                #123456 &nbsp;
+                                                            </span>
+                                                            <span class="fs--12 fw4 lh--18 i col--pale-sky">22 Jan</span>
+                                                        </div>
+                                                        <span class="flex items-center self-stretch gap--5">
+                                                            <img src="assets/img/avatar-mango.png" alt="" class="w--20 h--20">
+                                                            <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                                @Mangoes4eva
+                                                            </span>
+                                                        </span>
+                                                    </div>
                                                 </a>
                                             </td>
-                                            <td class="min--h--72 pad--10 v-mid">
+                                            <td class="min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
                                                 <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer">
                                                     <span class="flex items-center self-stretch gap--5">
                                                         <img src="assets/img/avatar-mango.png" alt="" class="w--20 h--20">
@@ -777,17 +795,17 @@
                                                     </span>
                                                 </a>
                                             </td>
-                                            <td class="min--h--72 pad--10 v-mid">
+                                            <td class="min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
                                                 <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
                                                     22 Jan 2022
                                                 </span>
                                             </td>
-                                            <td class="fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 v-mid">
+                                            <td class="fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 v-mid nowrap text--align-right-mobile text--align-right-mobile-portrait">
                                                 USD$ 9.99
                                             </td>
-                                            <td class="w--80 min--h--72 v-mid">
-                                                <a href="javascript: void(0)" data-cta="" class="flex justify-center items-center gap--2 pointer w--100 h--72 bg--gradient-white-2 child transition--all transition--200 transition--ease-in-out">
-                                                    <span data-text="" class="fs--12 fw5 lh--18 col--blue-ribbon-2 o-70">
+                                            <td class="w--80 w--auto-responsive-tablet min--h--72 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                <a href="javascript: void(0)" data-cta="" class="flex justify-center items-center gap--2 pointer w--100 w--auto-responsive-tablet h--72 bg--gradient-white-2 child transition--all transition--200 transition--ease-in-out">
+                                                    <span data-text="" class="fs--12 fw5 lh--18 col--blue-ribbon-2 o-70 display--none-responsive-tablet">
                                                         Details
                                                     </span>
                                                     <span class="o-70">
@@ -802,16 +820,30 @@
                                             </td>
                                             <td class="min--h--72 pad--10 v-mid">
                                                 <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer">
-                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate display--none-responsive-mobile display--none-responsive-mobile-portrait">
                                                         Tier 2 Subscription
                                                     </span>
 
-                                                    <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                    <span class="fs--12 fw4 lh--18 col--oxford-blue truncate display--none-responsive-mobile display--none-responsive-mobile-portrait">
                                                         #123456
                                                     </span>
+                                                    <div class="dn dn-responsive-mobile flex-column gap--4">
+                                                        <div class="flex items-center">
+                                                            <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                                #123456 &nbsp;
+                                                            </span>
+                                                            <span class="fs--12 fw4 lh--18 i col--pale-sky">22 Jan</span>
+                                                        </div>
+                                                        <span class="flex items-center self-stretch gap--5">
+                                                            <img src="assets/img/avatar-mango.png" alt="" class="w--20 h--20">
+                                                            <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                                @Mangoes4eva
+                                                            </span>
+                                                        </span>
+                                                    </div>
                                                 </a>
                                             </td>
-                                            <td class="min--h--72 pad--10 v-mid">
+                                            <td class="min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
                                                 <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer">
                                                     <span class="flex items-center self-stretch gap--5">
                                                         <img src="assets/img/avatar-mango.png" alt="" class="w--20 h--20">
@@ -821,17 +853,17 @@
                                                     </span>
                                                 </a>
                                             </td>
-                                            <td class="min--h--72 pad--10 v-mid">
+                                            <td class="min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
                                                 <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
                                                     22 Jan 2022
                                                 </span>
                                             </td>
-                                            <td class="fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 v-mid">
+                                            <td class="fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 v-mid nowrap text--align-right-mobile text--align-right-mobile-portrait">
                                                 USD$ 9.99
                                             </td>
-                                            <td class="w--80 min--h--72 v-mid">
-                                                <a href="javascript: void(0)" data-cta="" class="flex justify-center items-center gap--2 pointer w--100 h--72 bg--gradient-white-2 child transition--all transition--200 transition--ease-in-out">
-                                                    <span data-text="" class="fs--12 fw5 lh--18 col--blue-ribbon-2 o-70">
+                                            <td class="w--80 w--auto-responsive-tablet min--h--72 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                <a href="javascript: void(0)" data-cta="" class="flex justify-center items-center gap--2 pointer w--100 w--auto-responsive-tablet h--72 bg--gradient-white-2 child transition--all transition--200 transition--ease-in-out">
+                                                    <span data-text="" class="fs--12 fw5 lh--18 col--blue-ribbon-2 o-70 display--none-responsive-tablet">
                                                         Details
                                                     </span>
                                                     <span class="o-70">
@@ -846,16 +878,30 @@
                                             </td>
                                             <td class="min--h--72 pad--10 v-mid">
                                                 <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer">
-                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate display--none-responsive-mobile display--none-responsive-mobile-portrait">
                                                         Tier 3 Subscription
                                                     </span>
 
-                                                    <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                    <span class="fs--12 fw4 lh--18 col--oxford-blue truncate display--none-responsive-mobile display--none-responsive-mobile-portrait">
                                                         #123456
                                                     </span>
+                                                    <div class="dn dn-responsive-mobile flex-column gap--4">
+                                                        <div class="flex items-center">
+                                                            <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                                #123456 &nbsp;
+                                                            </span>
+                                                            <span class="fs--12 fw4 lh--18 i col--pale-sky">22 Jan</span>
+                                                        </div>
+                                                        <span class="flex items-center self-stretch gap--5">
+                                                            <img src="assets/img/avatar-mango.png" alt="" class="w--20 h--20">
+                                                            <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                                @Mangoes4eva
+                                                            </span>
+                                                        </span>
+                                                    </div>
                                                 </a>
                                             </td>
-                                            <td class="min--h--72 pad--10 v-mid">
+                                            <td class="min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
                                                 <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer">
                                                     <span class="flex items-center self-stretch gap--5">
                                                         <img src="assets/img/avatar-mango.png" alt="" class="w--20 h--20">
@@ -865,17 +911,17 @@
                                                     </span>
                                                 </a>
                                             </td>
-                                            <td class="min--h--72 pad--10 v-mid">
+                                            <td class="min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
                                                 <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
                                                     22 Jan 2022
                                                 </span>
                                             </td>
-                                            <td class="fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 v-mid">
+                                            <td class="fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 v-mid nowrap text--align-right-mobile text--align-right-mobile-portrait">
                                                 USD$ 9.99
                                             </td>
-                                            <td class="w--80 min--h--72 v-mid">
-                                                <a href="javascript: void(0)" data-cta="" class="flex justify-center items-center gap--2 pointer w--100 h--72 bg--gradient-white-2 child transition--all transition--200 transition--ease-in-out">
-                                                    <span data-text="" class="fs--12 fw5 lh--18 col--blue-ribbon-2 o-70">
+                                            <td class="w--80 w--auto-responsive-tablet min--h--72 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                <a href="javascript: void(0)" data-cta="" class="flex justify-center items-center gap--2 pointer w--100 w--auto-responsive-tablet h--72 bg--gradient-white-2 child transition--all transition--200 transition--ease-in-out">
+                                                    <span data-text="" class="fs--12 fw5 lh--18 col--blue-ribbon-2 o-70 display--none-responsive-tablet">
                                                         Details
                                                     </span>
                                                     <span class="o-70">
@@ -890,16 +936,30 @@
                                             </td>
                                             <td class="min--h--72 pad--10 v-mid">
                                                 <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer">
-                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate display--none-responsive-mobile display--none-responsive-mobile-portrait">
                                                         Tier 4 Subscription
                                                     </span>
 
-                                                    <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                    <span class="fs--12 fw4 lh--18 col--oxford-blue truncate display--none-responsive-mobile display--none-responsive-mobile-portrait">
                                                         #123456
                                                     </span>
+                                                    <div class="dn dn-responsive-mobile flex-column gap--4">
+                                                        <div class="flex items-center">
+                                                            <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                                #123456 &nbsp;
+                                                            </span>
+                                                            <span class="fs--12 fw4 lh--18 i col--pale-sky">22 Jan</span>
+                                                        </div>
+                                                        <span class="flex items-center self-stretch gap--5">
+                                                            <img src="assets/img/avatar-mango.png" alt="" class="w--20 h--20">
+                                                            <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                                @Mangoes4eva
+                                                            </span>
+                                                        </span>
+                                                    </div>
                                                 </a>
                                             </td>
-                                            <td class="min--h--72 pad--10 v-mid">
+                                            <td class="min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
                                                 <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer">
                                                     <span class="flex items-center self-stretch gap--5">
                                                         <img src="assets/img/avatar-mango.png" alt="" class="w--20 h--20">
@@ -909,17 +969,17 @@
                                                     </span>
                                                 </a>
                                             </td>
-                                            <td class="min--h--72 pad--10 v-mid">
+                                            <td class="min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
                                                 <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
                                                     22 Jan 2022
                                                 </span>
                                             </td>
-                                            <td class="fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 v-mid">
+                                            <td class="fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 v-mid nowrap text--align-right-mobile text--align-right-mobile-portrait">
                                                 USD$ 9.99
                                             </td>
-                                            <td class="w--80 min--h--72 v-mid">
-                                                <a href="javascript: void(0)" data-cta="" class="flex justify-center items-center gap--2 pointer w--100 h--72 bg--gradient-white-2 child transition--all transition--200 transition--ease-in-out">
-                                                    <span data-text="" class="fs--12 fw5 lh--18 col--blue-ribbon-2 o-70">
+                                            <td class="w--80 w--auto-responsive-tablet min--h--72 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                <a href="javascript: void(0)" data-cta="" class="flex justify-center items-center gap--2 pointer w--100 w--auto-responsive-tablet h--72 bg--gradient-white-2 child transition--all transition--200 transition--ease-in-out">
+                                                    <span data-text="" class="fs--12 fw5 lh--18 col--blue-ribbon-2 o-70 display--none-responsive-tablet">
                                                         Details
                                                     </span>
                                                     <span class="o-70">
@@ -934,16 +994,30 @@
                                             </td>
                                             <td class="min--h--72 pad--10 v-mid">
                                                 <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer">
-                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate display--none-responsive-mobile display--none-responsive-mobile-portrait">
                                                         Tier 5 Subscription
                                                     </span>
 
-                                                    <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                    <span class="fs--12 fw4 lh--18 col--oxford-blue truncate display--none-responsive-mobile display--none-responsive-mobile-portrait">
                                                         #123456
                                                     </span>
+                                                    <div class="dn dn-responsive-mobile flex-column gap--4">
+                                                        <div class="flex items-center">
+                                                            <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                                #123456 &nbsp;
+                                                            </span>
+                                                            <span class="fs--12 fw4 lh--18 i col--pale-sky">22 Jan</span>
+                                                        </div>
+                                                        <span class="flex items-center self-stretch gap--5">
+                                                            <img src="assets/img/avatar-mango.png" alt="" class="w--20 h--20">
+                                                            <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                                @Mangoes4eva
+                                                            </span>
+                                                        </span>
+                                                    </div>
                                                 </a>
                                             </td>
-                                            <td class="min--h--72 pad--10 v-mid">
+                                            <td class="min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
                                                 <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer">
                                                     <span class="flex items-center self-stretch gap--5">
                                                         <img src="assets/img/avatar-mango.png" alt="" class="w--20 h--20">
@@ -953,17 +1027,17 @@
                                                     </span>
                                                 </a>
                                             </td>
-                                            <td class="min--h--72 pad--10 v-mid">
+                                            <td class="min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
                                                 <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
                                                     22 Jan 2022
                                                 </span>
                                             </td>
-                                            <td class="fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 v-mid">
+                                            <td class="fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 v-mid nowrap text--align-right-mobile text--align-right-mobile-portrait">
                                                 USD$ 9.99
                                             </td>
-                                            <td class="w--80 min--h--72 v-mid">
-                                                <a href="javascript: void(0)" data-cta="" class="flex justify-center items-center gap--2 pointer w--100 h--72 bg--gradient-white-2 child transition--all transition--200 transition--ease-in-out">
-                                                    <span data-text="" class="fs--12 fw5 lh--18 col--blue-ribbon-2 o-70">
+                                            <td class="w--80 w--auto-responsive-tablet min--h--72 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                <a href="javascript: void(0)" data-cta="" class="flex justify-center items-center gap--2 pointer w--100 w--auto-responsive-tablet h--72 bg--gradient-white-2 child transition--all transition--200 transition--ease-in-out">
+                                                    <span data-text="" class="fs--12 fw5 lh--18 col--blue-ribbon-2 o-70 display--none-responsive-tablet">
                                                         Details
                                                     </span>
                                                     <span class="o-70">
@@ -983,10 +1057,10 @@
                 <!-- Ens All Analytics Data -->
                 <!-- All Orders Button -->
                 <div class="flex justify-end">
-                    <button class="group bg-white cp--7 pad--4 pad--right--8 pad--left--16 flex gap--10 items-center justify-center hover--bg--col--blue-dark-700 active--bg--col--gray-700 active--col--base-white">
-                        <p class="fs--16 fw5 lh--24 col--blue-dark-700 hover--col--base-white">All Orders</p>
+                    <button class="group bg-white cp--7 pad--4 pad--right--8 pad--left--16 flex gap--10 items-center justify-center hover--bg--col--blue-dark-700 active--bg--col--gray-700 active--col--base-white gap--4--responsive-mobile gap--4--responsive-mobile-portrait">
+                        <p class="fs--16 fw5 lh--24 col--blue-dark-700 hover--col--base-white fs--12-responsive-mobile fs--12-responsive-mobile-portrait lh--18-responsive-mobile lh--18-responsive-mobile-portrait">All Orders</p>
                         <small class="h-100 flex items-start fs--10 fw5 lh--normal col--blue-dark-700 hover--filter--col--white">5</small>
-                        <span><img src="assets/icons/arrow-narrow-right.svg" alt="" class="w--20 h--20 hover--filter--col--white" /></span>
+                        <span><img src="assets/icons/arrow-narrow-right.svg" alt="" class="w--20 h--20 hover--filter--col--white w--16-responsive-mobile w--16-responsive-mobile-portrait h--16-responsive-mobile h--16-responsive-mobile-portrait" /></span>
                     </button>
                 </div>
                 <!-- End All Orders Button -->
@@ -1006,8 +1080,21 @@
                     </div>
                     <!-- End Title -->
 
+                    <!-- Select Dropdown -->
+                    <div class="relative justify-end z--10000 w--100-responsive-mobile-portrait dn dn-responsive-mobile">
+                        <select data-nice-select>
+                            <option value="yearly">Yearly</option>
+                            <option value="monthly">Monthly</option>
+                            <option value="weekly">Weekly</option>
+                            <option value="daily">Daily</option>
+                        </select>
+                        <!-- <div class="pointer">
+                            <img src="assets/icons/arrow-down.svg" alt="" />
+                        </div> -->
+                    </div>
+
                     <!-- Tabs Button Group -->
-                    <div class="flex items-start br--8 ba br--col--gray-300 bg-white-30 sh--7 overflow-hidden">
+                    <div class="flex items-start br--8 ba br--col--gray-300 bg-white-30 sh--7 overflow-hidden display--none-responsive-mobile display--none-responsive-mobile-portrait">
                         <button class="bg-white pad--y--8 ph3 flex justify-center items-center gap--8 fs--14 fw5 lh--20 col--gray-800">
                             Yearly
                         </button>
@@ -1075,12 +1162,12 @@
                                                     </span>
                                                 </div>
                                                 <div data-div-table-head-col data-name="clicks" class="flex flex-column justify-center items-end w--120 max--w--120 min--h--42 pad--10">
-                                                    <span class="fs--14 fw4 lh--20 col--pale-sky">
+                                                    <span class="fs--14 fw4 lh--20 col--pale-sky truncate">
                                                         # of Clicks
                                                     </span>
                                                 </div>
-                                                <div data-div-table-head-col data-name="duration" class="flex flex-column justify-center items-end w--240 max--w--240 min--h--42 pad--10">
-                                                    <span class="fs--14 fw4 lh--20 col--pale-sky">
+                                                <div data-div-table-head-col data-name="duration" class="flex flex-column justify-center items-end w--240 w--144-responsive-mobile w--144-responsive-mobile-portrait max--w--240 min--h--42 pad--10 pad--left--0-responsive-mobile-portrait">
+                                                    <span class="fs--14 fw4 lh--20 col--pale-sky nowrap">
                                                         Watch Duration
                                                     </span>
                                                 </div>
@@ -1089,27 +1176,27 @@
 
                                             <!-- table row -->
                                             <div data-div-table-row class="flex flex--max justify-start items-center self-stretch gap--0 bg--col--athens-gray-3--50">
-                                                <div data-div-table-row-col data-title="merch" class="flex flex-column justify-center gap--10 w--128 max--w--128 min--h--72">
-                                                    <a href="#" class="flex justify-center items-center w-100 h--96 pointer relative">
+                                                <div data-div-table-row-col data-title="merch" class="flex flex-column justify-center gap--10 w--128 w--64-responsive-mobile-portrait max--w--128 min--h--72">
+                                                    <a href="#" class="flex justify-center items-center w-100 h--96 h--72-responsive-mobile-portrait pointer relative">
                                                         <!-- Counter -->
                                                         <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white absolute top-0 left-0">
                                                             1
                                                         </span>
                                                         <!-- End Counter -->
-                                                        <img src="assets/img/thumb-3.png" alt="" class="w-100 h--96 fit--cover">
+                                                        <img src="assets/img/thumb-3.png" alt="" class="w-100 h--96 h--72-responsive-mobile-portrait fit--cover">
                                                     </a>
                                                 </div>
                                                 <div data-div-table-row-col data-title="merch-title" class="flex flex-column justify-center gap--10 flex--max min--h--72 pv2 pad--x--10">
-                                                    <a href="#" class="fs--12 fw6 lh--18 col--ebony-2 pointer">
+                                                    <a href="#" class="fs--12 fw6 lh--18 col--ebony-2 pointer h--54-responsive-mobile-portrait overflow--hidden-mobile-portrait truncate--overflow-mobile-portrait">
                                                         Record breaking fried chicken eating ! See my attempt to break world’s record! Watch now!
                                                     </a>
                                                 </div>
-                                                <div data-div-table-row-col data-title="views" class="flex flex-column justify-center items-end gap--10 w--120 max--w--120 min--h--72 pv2 pad--x--10">
+                                                <div data-div-table-row-col data-title="views" class="flex flex-column justify-center items-end gap--10 w--120 max--w--120 min--h--72 pv2 pad--x--10  ">
                                                     <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
                                                         1,234
                                                     </span>
                                                 </div>
-                                                <div data-div-table-row-col data-title="sales" class="flex flex-column justify-center items-end gap--10 w--240 min--h--72 pv2 pad--x--10">
+                                                <div data-div-table-row-col data-title="sales" class="flex flex-column justify-center items-end gap--10 w--240 w--144-responsive-mobile w--144-responsive-mobile-portrait min--h--72 pv2 pad--x--10">
                                                     <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
                                                         32h10m
                                                     </span>
@@ -1119,27 +1206,27 @@
 
                                             <!-- table row -->
                                             <div data-div-table-row class="flex flex--max justify-start items-center self-stretch gap--0">
-                                                <div data-div-table-row-col data-title="merch" class="flex flex-column justify-center gap--10 w--128 max--w--128 min--h--72">
-                                                    <a href="#" class="flex justify-center items-center w-100 h--96 pointer relative">
+                                                <div data-div-table-row-col data-title="merch" class="flex flex-column justify-center gap--10 w--128 w--64-responsive-mobile-portrait max--w--128 min--h--72">
+                                                    <a href="#" class="flex justify-center items-center w-100 h--96 h--72-responsive-mobile-portrait pointer relative">
                                                         <!-- Counter -->
                                                         <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white absolute top-0 left-0">
                                                             2
                                                         </span>
                                                         <!-- End Counter -->
-                                                        <img src="assets/img/thumb-4.png" alt="" class="w-100 h--96 fit--cover">
+                                                        <img src="assets/img/thumb-4.png" alt="" class="w-100 h--96 h--72-responsive-mobile-portrait fit--cover">
                                                     </a>
                                                 </div>
                                                 <div data-div-table-row-col data-title="merch-title" class="flex flex-column justify-center gap--10 flex--max min--h--72 pv2 pad--x--10">
-                                                    <a href="#" class="fs--12 fw6 lh--18 col--ebony-2 pointer">
+                                                    <a href="#" class="fs--12 fw6 lh--18 col--ebony-2 pointer h--54-responsive-mobile-portrait overflow--hidden-mobile-portrait truncate--overflow-mobile-portrait">
                                                         Record breaking fried chicken eating ! See my attempt to break world’s record! Watch now!
                                                     </a>
                                                 </div>
-                                                <div data-div-table-row-col data-title="views" class="flex flex-column justify-center items-end gap--10 w--120 max--w--120 min--h--72 pv2 pad--x--10">
+                                                <div data-div-table-row-col data-title="views" class="flex flex-column justify-center items-end gap--10 w--120 max--w--120 min--h--72 pv2 pad--x--10  ">
                                                     <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
                                                         1,234
                                                     </span>
                                                 </div>
-                                                <div data-div-table-row-col data-title="sales" class="flex flex-column justify-center items-end gap--10 w--240 min--h--72 pv2 pad--x--10">
+                                                <div data-div-table-row-col data-title="sales" class="flex flex-column justify-center items-end gap--10 w--240 w--144-responsive-mobile w--144-responsive-mobile-portrait min--h--72 pv2 pad--x--10">
                                                     <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
                                                         32h10m
                                                     </span>
@@ -1149,27 +1236,27 @@
 
                                             <!-- table row -->
                                             <div data-div-table-row class="flex flex--max justify-start items-center self-stretch gap--0 bg--col--athens-gray-3--50">
-                                                <div data-div-table-row-col data-title="merch" class="flex flex-column justify-center gap--10 w--128 max--w--128 min--h--72">
-                                                    <a href="#" class="flex justify-center items-center w-100 h--96 pointer relative">
+                                                <div data-div-table-row-col data-title="merch" class="flex flex-column justify-center gap--10 w--128 w--64-responsive-mobile-portrait max--w--128 min--h--72">
+                                                    <a href="#" class="flex justify-center items-center w-100 h--96 h--72-responsive-mobile-portrait pointer relative">
                                                         <!-- Counter -->
                                                         <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white absolute top-0 left-0">
                                                             3
                                                         </span>
                                                         <!-- End Counter -->
-                                                        <img src="assets/img/thumb-3.png" alt="" class="w-100 h--96 fit--cover">
+                                                        <img src="assets/img/thumb-3.png" alt="" class="w-100 h--96 h--72-responsive-mobile-portrait fit--cover">
                                                     </a>
                                                 </div>
                                                 <div data-div-table-row-col data-title="merch-title" class="flex flex-column justify-center gap--10 flex--max min--h--72 pv2 pad--x--10">
-                                                    <a href="#" class="fs--12 fw6 lh--18 col--ebony-2 pointer">
+                                                    <a href="#" class="fs--12 fw6 lh--18 col--ebony-2 pointer h--54-responsive-mobile-portrait overflow--hidden-mobile-portrait truncate--overflow-mobile-portrait">
                                                         Record breaking fried chicken eating ! See my attempt to break world’s record! Watch now!
                                                     </a>
                                                 </div>
-                                                <div data-div-table-row-col data-title="views" class="flex flex-column justify-center items-end gap--10 w--120 max--w--120 min--h--72 pv2 pad--x--10">
+                                                <div data-div-table-row-col data-title="views" class="flex flex-column justify-center items-end gap--10 w--120 max--w--120 min--h--72 pv2 pad--x--10  ">
                                                     <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
                                                         1,234
                                                     </span>
                                                 </div>
-                                                <div data-div-table-row-col data-title="sales" class="flex flex-column justify-center items-end gap--10 w--240 min--h--72 pv2 pad--x--10">
+                                                <div data-div-table-row-col data-title="sales" class="flex flex-column justify-center items-end gap--10 w--240 w--144-responsive-mobile w--144-responsive-mobile-portrait min--h--72 pv2 pad--x--10">
                                                     <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
                                                         32h10m
                                                     </span>
@@ -1179,27 +1266,27 @@
 
                                             <!-- table row -->
                                             <div data-div-table-row class="flex flex--max justify-start items-center self-stretch gap--0">
-                                                <div data-div-table-row-col data-title="merch" class="flex flex-column justify-center gap--10 w--128 max--w--128 min--h--72">
-                                                    <a href="#" class="flex justify-center items-center w-100 h--96 pointer relative">
+                                                <div data-div-table-row-col data-title="merch" class="flex flex-column justify-center gap--10 w--128 w--64-responsive-mobile-portrait max--w--128 min--h--72">
+                                                    <a href="#" class="flex justify-center items-center w-100 h--96 h--72-responsive-mobile-portrait pointer relative">
                                                         <!-- Counter -->
                                                         <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white absolute top-0 left-0">
                                                             4
                                                         </span>
                                                         <!-- End Counter -->
-                                                        <img src="assets/img/thumb-4.png" alt="" class="w-100 h--96 fit--cover">
+                                                        <img src="assets/img/thumb-4.png" alt="" class="w-100 h--96 h--72-responsive-mobile-portrait fit--cover">
                                                     </a>
                                                 </div>
                                                 <div data-div-table-row-col data-title="merch-title" class="flex flex-column justify-center gap--10 flex--max min--h--72 pv2 pad--x--10">
-                                                    <a href="#" class="fs--12 fw6 lh--18 col--ebony-2 pointer">
+                                                    <a href="#" class="fs--12 fw6 lh--18 col--ebony-2 pointer h--54-responsive-mobile-portrait overflow--hidden-mobile-portrait truncate--overflow-mobile-portrait">
                                                         Record breaking fried chicken eating ! See my attempt to break world’s record! Watch now!
                                                     </a>
                                                 </div>
-                                                <div data-div-table-row-col data-title="views" class="flex flex-column justify-center items-end gap--10 w--120 max--w--120 min--h--72 pv2 pad--x--10">
+                                                <div data-div-table-row-col data-title="views" class="flex flex-column justify-center items-end gap--10 w--120 max--w--120 min--h--72 pv2 pad--x--10  ">
                                                     <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
                                                         1,234
                                                     </span>
                                                 </div>
-                                                <div data-div-table-row-col data-title="sales" class="flex flex-column justify-center items-end gap--10 w--240 min--h--72 pv2 pad--x--10">
+                                                <div data-div-table-row-col data-title="sales" class="flex flex-column justify-center items-end gap--10 w--240 w--144-responsive-mobile w--144-responsive-mobile-portrait min--h--72 pv2 pad--x--10">
                                                     <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
                                                         32h10m
                                                     </span>
@@ -1209,27 +1296,27 @@
 
                                             <!-- table row -->
                                             <div data-div-table-row class="flex flex--max justify-start items-center self-stretch gap--0 bg--col--athens-gray-3--50">
-                                                <div data-div-table-row-col data-title="merch" class="flex flex-column justify-center gap--10 w--128 max--w--128 min--h--72">
-                                                    <a href="#" class="flex justify-center items-center w-100 h--96 pointer relative">
+                                                <div data-div-table-row-col data-title="merch" class="flex flex-column justify-center gap--10 w--128 w--64-responsive-mobile-portrait max--w--128 min--h--72">
+                                                    <a href="#" class="flex justify-center items-center w-100 h--96 h--72-responsive-mobile-portrait pointer relative">
                                                         <!-- Counter -->
                                                         <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white absolute top-0 left-0">
                                                             5
                                                         </span>
                                                         <!-- End Counter -->
-                                                        <img src="assets/img/thumb-3.png" alt="" class="w-100 h--96 fit--cover">
+                                                        <img src="assets/img/thumb-3.png" alt="" class="w-100 h--96 h--72-responsive-mobile-portrait fit--cover">
                                                     </a>
                                                 </div>
                                                 <div data-div-table-row-col data-title="merch-title" class="flex flex-column justify-center gap--10 flex--max min--h--72 pv2 pad--x--10">
-                                                    <a href="#" class="fs--12 fw6 lh--18 col--ebony-2 pointer">
+                                                    <a href="#" class="fs--12 fw6 lh--18 col--ebony-2 pointer h--54-responsive-mobile-portrait overflow--hidden-mobile-portrait truncate--overflow-mobile-portrait">
                                                         Record breaking fried chicken eating ! See my attempt to break world’s record! Watch now!
                                                     </a>
                                                 </div>
-                                                <div data-div-table-row-col data-title="views" class="flex flex-column justify-center items-end gap--10 w--120 max--w--120 min--h--72 pv2 pad--x--10">
+                                                <div data-div-table-row-col data-title="views" class="flex flex-column justify-center items-end gap--10 w--120 max--w--120 min--h--72 pv2 pad--x--10  ">
                                                     <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
                                                         1,234
                                                     </span>
                                                 </div>
-                                                <div data-div-table-row-col data-title="sales" class="flex flex-column justify-center items-end gap--10 w--240 min--h--72 pv2 pad--x--10">
+                                                <div data-div-table-row-col data-title="sales" class="flex flex-column justify-center items-end gap--10 w--240 w--144-responsive-mobile w--144-responsive-mobile-portrait min--h--72 pv2 pad--x--10">
                                                     <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
                                                         32h10m
                                                     </span>
@@ -1241,12 +1328,12 @@
                                     </div>
         
                                     <!-- second tab content items -->
-                                    <div data-tabbed-content="tabbed-content-second-tab" data-target="second-tab" class="flex flex-column justify-start items-start gap--16 flex-auto mt--8-neg dn-ns">
+                                    <div data-tabbed-content="tabbed-content-second-tab" data-target="second-tab" class="flex-column justify-start items-start gap--16 flex-auto mt--8-neg dn">
                                         <!-- table container -->
                                         <div data-div-table data-html-container="1" class="flex flex-column flex--max justify-start items-start self-stretch ml--16-neg mr--16-neg">
                                             <!-- table header -->
                                             <div data-div-table-head class="flex flex--max justify-start items-center self-stretch gap--0 bb br--col--pale-sky">
-                                                <div data-div-table-head-col data-name="media" class="flex flex-column justify-center w--128 max--w--128 min--h--42 pad--10">
+                                                <div data-div-table-head-col data-name="media" class="flex flex-column justify-center w--128 w--64-responsive-mobile-portrait max--w--128 min--h--42 pad--10">
                                                     <span class="fs--14 fw4 lh--20 col--pale-sky">
                                                         Media
                                                     </span>
@@ -1256,14 +1343,25 @@
                                                         &nbsp;
                                                     </span>
                                                 </div>
-                                                <div data-div-table-head-col data-name="clicks" class="flex flex-column justify-center items-end w--120 max--w--120 min--h--42 pad--10">
-                                                    <span class="fs--14 fw4 lh--20 col--pale-sky">
+                                                <div data-div-table-head-col data-name="clicks" class="flex flex-column justify-center items-end w--120 max--w--120 min--h--42 pad--10 pad--right--0-responsive-mobile-portrait">
+                                                    <span class="fs--14 fw4 lh--20 col--pale-sky display--none-responsive-mobile display--none-responsive-mobile-portrait">
                                                         # of Sales
                                                     </span>
+                                                    <span class="fs--14 fw4 lh--20 col--pale-sky dn dn-responsive-mobile dn-responsive-mobile-portrait">
+                                                        Clicks
+                                                    </span>
                                                 </div>
-                                                <div data-div-table-head-col data-name="duration" class="flex flex-column justify-center items-end w--240 max--w--240 min--h--42 pad--10">
+                                                <div data-div-table-head-col data-name="clicks" class="flex-column justify-center items-end w--120 max--w--120 min--h--42 pad--10 dn dn-responsive-mobile dn-responsive-mobile-portrait">
                                                     <span class="fs--14 fw4 lh--20 col--pale-sky">
+                                                        Duration
+                                                    </span>
+                                                </div>
+                                                <div data-div-table-head-col data-name="duration" class="flex flex-column justify-center items-end w--240 w--144-responsive-mobile w--144-responsive-mobile-portrait max--w--240 min--h--42 pad--10">
+                                                    <span class="fs--14 fw4 lh--20 col--pale-sky display--none-responsive-mobile display--none-responsive-mobile-portrait">
                                                         Sales(USD)
+                                                    </span>
+                                                    <span class="fs--14 fw4 lh--20 col--pale-sky dn dn-responsive-mobile dn-responsive-mobile-portrait">
+                                                        Sales
                                                     </span>
                                                 </div>
                                             </div>
@@ -1271,18 +1369,18 @@
 
                                             <!-- table row -->
                                             <div data-div-table-row class="flex flex--max justify-start items-center self-stretch gap--0 bg--col--athens-gray-3--50">
-                                                <div data-div-table-row-col data-title="merch" class="flex flex-column justify-center gap--10 w--128 max--w--128 min--h--72">
-                                                    <a href="#" class="flex justify-center items-center w-100 h--96 pointer relative">
+                                                <div data-div-table-row-col data-title="merch" class="flex flex-column justify-center gap--10 w--128 w--144-responsive-mobile-portrait max--w--128 min--h--72">
+                                                    <a href="#" class="flex justify-center items-center w-100 h--96 h--72-responsive-mobile-portrait pointer relative">
                                                         <!-- Counter -->
                                                         <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white absolute top-0 left-0">
                                                             1
                                                         </span>
                                                         <!-- End Counter -->
-                                                        <img src="assets/img/thumb-3.png" alt="" class="w-100 h--96 fit--cover">
+                                                        <img src="assets/img/thumb-3.png" alt="" class="w-100 h--96 h--72-responsive-mobile-portrait fit--cover">
                                                     </a>
                                                 </div>
                                                 <div data-div-table-row-col data-title="merch-title" class="flex flex-column justify-center gap--10 flex--max min--h--72 pv2 pad--x--10">
-                                                    <a href="#" class="fs--12 fw6 lh--18 col--ebony-2 pointer">
+                                                    <a href="#" class="fs--12 fw6 lh--18 col--ebony-2 pointer h--54-responsive-mobile-portrait overflow--hidden-mobile-portrait truncate--overflow-mobile-portrait">
                                                         Record breaking fried chicken eating ! See my attempt to break world’s record! Watch now!
                                                     </a>
                                                 </div>
@@ -1291,7 +1389,12 @@
                                                         1,234
                                                     </span>
                                                 </div>
-                                                <div data-div-table-row-col data-title="sales" class="flex flex-column justify-center items-end gap--10 w--240 min--h--72 pv2 pad--x--10">
+                                                <div data-div-table-row-col data-title="sales" class="dn dn-responsive-mobile dn-responsive-mobile-portrait flex-column justify-center items-end gap--10 w--240 w--144-responsive-mobile w--144-responsive-mobile-portrait min--h--72 pv2 pad--x--10">
+                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                        32h10m
+                                                    </span>
+                                                </div>
+                                                <div data-div-table-row-col data-title="sales" class="flex flex-column justify-center items-end gap--10 w--240 w--144-responsive-mobile w--144-responsive-mobile-portrait min--h--72 pv2 pad--x--10">
                                                     <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
                                                         USD$ 5123.45
                                                     </span>
@@ -1301,18 +1404,18 @@
 
                                             <!-- table row -->
                                             <div data-div-table-row class="flex flex--max justify-start items-center self-stretch gap--0">
-                                                <div data-div-table-row-col data-title="merch" class="flex flex-column justify-center gap--10 w--128 max--w--128 min--h--72">
-                                                    <a href="#" class="flex justify-center items-center w-100 h--96 pointer relative">
+                                                <div data-div-table-row-col data-title="merch" class="flex flex-column justify-center gap--10 w--128 w--144-responsive-mobile-portrait max--w--128 min--h--72">
+                                                    <a href="#" class="flex justify-center items-center w-100 h--96 h--72-responsive-mobile-portrait pointer relative">
                                                         <!-- Counter -->
                                                         <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white absolute top-0 left-0">
                                                             2
                                                         </span>
                                                         <!-- End Counter -->
-                                                        <img src="assets/img/thumb-4.png" alt="" class="w-100 h--96 fit--cover">
+                                                        <img src="assets/img/thumb-4.png" alt="" class="w-100 h--96 h--72-responsive-mobile-portrait fit--cover">
                                                     </a>
                                                 </div>
                                                 <div data-div-table-row-col data-title="merch-title" class="flex flex-column justify-center gap--10 flex--max min--h--72 pv2 pad--x--10">
-                                                    <a href="#" class="fs--12 fw6 lh--18 col--ebony-2 pointer">
+                                                    <a href="#" class="fs--12 fw6 lh--18 col--ebony-2 pointer h--54-responsive-mobile-portrait overflow--hidden-mobile-portrait truncate--overflow-mobile-portrait">
                                                         Record breaking fried chicken eating ! See my attempt to break world’s record! Watch now!
                                                     </a>
                                                 </div>
@@ -1321,7 +1424,12 @@
                                                         1,234
                                                     </span>
                                                 </div>
-                                                <div data-div-table-row-col data-title="sales" class="flex flex-column justify-center items-end gap--10 w--240 min--h--72 pv2 pad--x--10">
+                                                <div data-div-table-row-col data-title="sales" class="dn dn-responsive-mobile dn-responsive-mobile-portrait flex-column justify-center items-end gap--10 w--240 w--144-responsive-mobile w--144-responsive-mobile-portrait min--h--72 pv2 pad--x--10">
+                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                        32h10m
+                                                    </span>
+                                                </div>
+                                                <div data-div-table-row-col data-title="sales" class="flex flex-column justify-center items-end gap--10 w--240 w--144-responsive-mobile w--144-responsive-mobile-portrait min--h--72 pv2 pad--x--10">
                                                     <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
                                                         USD$ 4123.45
                                                     </span>
@@ -1331,18 +1439,18 @@
 
                                             <!-- table row -->
                                             <div data-div-table-row class="flex flex--max justify-start items-center self-stretch gap--0 bg--col--athens-gray-3--50">
-                                                <div data-div-table-row-col data-title="merch" class="flex flex-column justify-center gap--10 w--128 max--w--128 min--h--72">
-                                                    <a href="#" class="flex justify-center items-center w-100 h--96 pointer relative">
+                                                <div data-div-table-row-col data-title="merch" class="flex flex-column justify-center gap--10 w--128 w--144-responsive-mobile-portrait max--w--128 min--h--72">
+                                                    <a href="#" class="flex justify-center items-center w-100 h--96 h--72-responsive-mobile-portrait pointer relative">
                                                         <!-- Counter -->
                                                         <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white absolute top-0 left-0">
                                                             3
                                                         </span>
                                                         <!-- End Counter -->
-                                                        <img src="assets/img/thumb-3.png" alt="" class="w-100 h--96 fit--cover">
+                                                        <img src="assets/img/thumb-3.png" alt="" class="w-100 h--96 h--72-responsive-mobile-portrait fit--cover">
                                                     </a>
                                                 </div>
                                                 <div data-div-table-row-col data-title="merch-title" class="flex flex-column justify-center gap--10 flex--max min--h--72 pv2 pad--x--10">
-                                                    <a href="#" class="fs--12 fw6 lh--18 col--ebony-2 pointer">
+                                                    <a href="#" class="fs--12 fw6 lh--18 col--ebony-2 pointer h--54-responsive-mobile-portrait overflow--hidden-mobile-portrait truncate--overflow-mobile-portrait">
                                                         Record breaking fried chicken eating ! See my attempt to break world’s record! Watch now!
                                                     </a>
                                                 </div>
@@ -1351,7 +1459,12 @@
                                                         1,234
                                                     </span>
                                                 </div>
-                                                <div data-div-table-row-col data-title="sales" class="flex flex-column justify-center items-end gap--10 w--240 min--h--72 pv2 pad--x--10">
+                                                <div data-div-table-row-col data-title="sales" class="dn dn-responsive-mobile dn-responsive-mobile-portrait flex-column justify-center items-end gap--10 w--240 w--144-responsive-mobile w--144-responsive-mobile-portrait min--h--72 pv2 pad--x--10">
+                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                        32h10m
+                                                    </span>
+                                                </div>
+                                                <div data-div-table-row-col data-title="sales" class="flex flex-column justify-center items-end gap--10 w--240 w--144-responsive-mobile w--144-responsive-mobile-portrait min--h--72 pv2 pad--x--10">
                                                     <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
                                                         USD$ 3123.45
                                                     </span>
@@ -1361,18 +1474,18 @@
 
                                             <!-- table row -->
                                             <div data-div-table-row class="flex flex--max justify-start items-center self-stretch gap--0">
-                                                <div data-div-table-row-col data-title="merch" class="flex flex-column justify-center gap--10 w--128 max--w--128 min--h--72">
-                                                    <a href="#" class="flex justify-center items-center w-100 h--96 pointer relative">
+                                                <div data-div-table-row-col data-title="merch" class="flex flex-column justify-center gap--10 w--128 w--144-responsive-mobile-portrait max--w--128 min--h--72">
+                                                    <a href="#" class="flex justify-center items-center w-100 h--96 h--72-responsive-mobile-portrait pointer relative">
                                                         <!-- Counter -->
                                                         <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white absolute top-0 left-0">
                                                             4
                                                         </span>
                                                         <!-- End Counter -->
-                                                        <img src="assets/img/thumb-4.png" alt="" class="w-100 h--96 fit--cover">
+                                                        <img src="assets/img/thumb-4.png" alt="" class="w-100 h--96 h--72-responsive-mobile-portrait fit--cover">
                                                     </a>
                                                 </div>
                                                 <div data-div-table-row-col data-title="merch-title" class="flex flex-column justify-center gap--10 flex--max min--h--72 pv2 pad--x--10">
-                                                    <a href="#" class="fs--12 fw6 lh--18 col--ebony-2 pointer">
+                                                    <a href="#" class="fs--12 fw6 lh--18 col--ebony-2 pointer h--54-responsive-mobile-portrait overflow--hidden-mobile-portrait truncate--overflow-mobile-portrait">
                                                         Record breaking fried chicken eating ! See my attempt to break world’s record! Watch now!
                                                     </a>
                                                 </div>
@@ -1381,7 +1494,12 @@
                                                         1,234
                                                     </span>
                                                 </div>
-                                                <div data-div-table-row-col data-title="sales" class="flex flex-column justify-center items-end gap--10 w--240 min--h--72 pv2 pad--x--10">
+                                                <div data-div-table-row-col data-title="sales" class="dn dn-responsive-mobile dn-responsive-mobile-portrait flex-column justify-center items-end gap--10 w--240 w--144-responsive-mobile w--144-responsive-mobile-portrait min--h--72 pv2 pad--x--10">
+                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                        32h10m
+                                                    </span>
+                                                </div>
+                                                <div data-div-table-row-col data-title="sales" class="flex flex-column justify-center items-end gap--10 w--240 w--144-responsive-mobile w--144-responsive-mobile-portrait min--h--72 pv2 pad--x--10">
                                                     <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
                                                         USD$ 2123.45
                                                     </span>
@@ -1391,18 +1509,18 @@
 
                                             <!-- table row -->
                                             <div data-div-table-row class="flex flex--max justify-start items-center self-stretch gap--0 bg--col--athens-gray-3--50">
-                                                <div data-div-table-row-col data-title="merch" class="flex flex-column justify-center gap--10 w--128 max--w--128 min--h--72">
-                                                    <a href="#" class="flex justify-center items-center w-100 h--96 pointer relative">
+                                                <div data-div-table-row-col data-title="merch" class="flex flex-column justify-center gap--10 w--128 w--144-responsive-mobile-portrait max--w--128 min--h--72">
+                                                    <a href="#" class="flex justify-center items-center w-100 h--96 h--72-responsive-mobile-portrait pointer relative">
                                                         <!-- Counter -->
                                                         <span class="flex flex-column justify-center items-center gap--10 w--20 h--20 bg-black fs--14 fw7 lh--20 tc white absolute top-0 left-0">
                                                             5
                                                         </span>
                                                         <!-- End Counter -->
-                                                        <img src="assets/img/thumb-3.png" alt="" class="w-100 h--96 fit--cover">
+                                                        <img src="assets/img/thumb-3.png" alt="" class="w-100 h--96 h--72-responsive-mobile-portrait fit--cover">
                                                     </a>
                                                 </div>
                                                 <div data-div-table-row-col data-title="merch-title" class="flex flex-column justify-center gap--10 flex--max min--h--72 pv2 pad--x--10">
-                                                    <a href="#" class="fs--12 fw6 lh--18 col--ebony-2 pointer">
+                                                    <a href="#" class="fs--12 fw6 lh--18 col--ebony-2 pointer h--54-responsive-mobile-portrait overflow--hidden-mobile-portrait truncate--overflow-mobile-portrait">
                                                         Record breaking fried chicken eating ! See my attempt to break world’s record! Watch now!
                                                     </a>
                                                 </div>
@@ -1411,7 +1529,12 @@
                                                         1,234
                                                     </span>
                                                 </div>
-                                                <div data-div-table-row-col data-title="sales" class="flex flex-column justify-center items-end gap--10 w--240 min--h--72 pv2 pad--x--10">
+                                                <div data-div-table-row-col data-title="sales" class="dn dn-responsive-mobile dn-responsive-mobile-portrait flex-column justify-center items-end gap--10 w--240 w--144-responsive-mobile w--144-responsive-mobile-portrait min--h--72 pv2 pad--x--10">
+                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                        32h10m
+                                                    </span>
+                                                </div>
+                                                <div data-div-table-row-col data-title="sales" class="flex flex-column justify-center items-end gap--10 w--240 w--144-responsive-mobile w--144-responsive-mobile-portrait min--h--72 pv2 pad--x--10">
                                                     <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
                                                         USD$ 1123.45
                                                     </span>
@@ -1742,12 +1865,12 @@
                                                         &nbsp;
                                                     </span>
                                                 </div>
-                                                <div data-div-table-head-col data-name="views" class="flex flex-column justify-center items-end w--120 max--w--120 min--h--42 pad--10">
-                                                    <span class="fs--14 fw4 lh--20 col--pale-sky">
+                                                <div data-div-table-head-col data-name="views" class="flex flex-column justify-center items-end w--120 w--104-responsive-mobile-portrait max--w--120 min--h--42 pad--10">
+                                                    <span class="fs--14 fw4 lh--20 col--pale-sky nowrap">
                                                         # of views
                                                     </span>
                                                 </div>
-                                                <div data-div-table-head-col data-name="sales" class="flex flex-column justify-center items-end w--130 max--w--130 min--h--42 pad--10">
+                                                <div data-div-table-head-col data-name="sales" class="flex flex-column justify-center items-end w--130 w--104-responsive-mobile-portrait w--101-responsive-mobile-portrait  max--w--130 min--h--42 pad--10 pad--left--0-responsive-mobile-portrait">
                                                     <span class="fs--14 fw4 lh--20 col--pale-sky">
                                                         Sales (USD)
                                                     </span>
@@ -1768,16 +1891,16 @@
                                                     </a>
                                                 </div>
                                                 <div data-div-table-row-col data-title="merch-title" class="flex flex-column justify-center gap--10 flex--max min--h--72 pv2 pad--x--10">
-                                                    <a href="#" class="fs--12 fw6 lh--18 col--ebony-2 truncate pointer">
+                                                    <a href="#" class="fs--12 fw6 lh--18 col--ebony-2 pointer">
                                                         Socks (White, Extra Long)
                                                     </a>
                                                 </div>
-                                                <div data-div-table-row-col data-title="views" class="flex flex-column justify-center items-end gap--10 w--120 max--w--120 min--h--72 pv2 pad--x--10">
+                                                <div data-div-table-row-col data-title="views" class="flex flex-column justify-center items-end gap--10 w--120 w--104-responsive-mobile-portrait max--w--120 min--h--72 pv2 pad--x--10">
                                                     <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
                                                         1,234
                                                     </span>
                                                 </div>
-                                                <div data-div-table-row-col data-title="sales" class="flex flex-column justify-center items-end gap--10 w--130 max--w--130 min--h--72 pv2 pad--x--10">
+                                                <div data-div-table-row-col data-title="sales" class="flex flex-column justify-center items-end gap--10 w--130 w--104-responsive-mobile-portrait w--104-responsive-mobile-portrait max--w--130 min--h--72 pv2 pad--x--10">
                                                     <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
                                                         USD$ 1000.99
                                                     </span>
@@ -1798,16 +1921,16 @@
                                                     </a>
                                                 </div>
                                                 <div data-div-table-row-col data-title="merch-title" class="flex flex-column justify-center gap--10 flex--max min--h--72 pv2 pad--x--10">
-                                                    <a href="#" class="fs--12 fw6 lh--18 col--ebony-2 truncate pointer">
+                                                    <a href="#" class="fs--12 fw6 lh--18 col--ebony-2 pointer">
                                                         Socks (White, Extra Long)
                                                     </a>
                                                 </div>
-                                                <div data-div-table-row-col data-title="views" class="flex flex-column justify-center items-end gap--10 w--120 max--w--120 min--h--72 pv2 pad--x--10">
+                                                <div data-div-table-row-col data-title="views" class="flex flex-column justify-center items-end gap--10 w--120 w--104-responsive-mobile-portrait max--w--120 min--h--72 pv2 pad--x--10">
                                                     <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
                                                         1,234
                                                     </span>
                                                 </div>
-                                                <div data-div-table-row-col data-title="sales" class="flex flex-column justify-center items-end gap--10 w--130 max--w--130 min--h--72 pv2 pad--x--10">
+                                                <div data-div-table-row-col data-title="sales" class="flex flex-column justify-center items-end gap--10 w--130 w--104-responsive-mobile-portrait max--w--130 min--h--72 pv2 pad--x--10">
                                                     <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
                                                         USD$ 1000.99
                                                     </span>
@@ -1828,16 +1951,16 @@
                                                     </a>
                                                 </div>
                                                 <div data-div-table-row-col data-title="merch-title" class="flex flex-column justify-center gap--10 flex--max min--h--72 pv2 pad--x--10">
-                                                    <a href="#" class="fs--12 fw6 lh--18 col--ebony-2 truncate pointer">
+                                                    <a href="#" class="fs--12 fw6 lh--18 col--ebony-2 pointer">
                                                         Socks (White, Extra Long)
                                                     </a>
                                                 </div>
-                                                <div data-div-table-row-col data-title="views" class="flex flex-column justify-center items-end gap--10 w--120 max--w--120 min--h--72 pv2 pad--x--10">
+                                                <div data-div-table-row-col data-title="views" class="flex flex-column justify-center items-end gap--10 w--120 w--104-responsive-mobile-portrait max--w--120 min--h--72 pv2 pad--x--10">
                                                     <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
                                                         1,234
                                                     </span>
                                                 </div>
-                                                <div data-div-table-row-col data-title="sales" class="flex flex-column justify-center items-end gap--10 w--130 max--w--130 min--h--72 pv2 pad--x--10">
+                                                <div data-div-table-row-col data-title="sales" class="flex flex-column justify-center items-end gap--10 w--130 w--104-responsive-mobile-portrait max--w--130 min--h--72 pv2 pad--x--10">
                                                     <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
                                                         USD$ 1000.99
                                                     </span>
@@ -1858,16 +1981,16 @@
                                                     </a>
                                                 </div>
                                                 <div data-div-table-row-col data-title="merch-title" class="flex flex-column justify-center gap--10 flex--max min--h--72 pv2 pad--x--10">
-                                                    <a href="#" class="fs--12 fw6 lh--18 col--ebony-2 truncate pointer">
+                                                    <a href="#" class="fs--12 fw6 lh--18 col--ebony-2 pointer">
                                                         Socks (White, Extra Long)
                                                     </a>
                                                 </div>
-                                                <div data-div-table-row-col data-title="views" class="flex flex-column justify-center items-end gap--10 w--120 max--w--120 min--h--72 pv2 pad--x--10">
+                                                <div data-div-table-row-col data-title="views" class="flex flex-column justify-center items-end gap--10 w--120 w--104-responsive-mobile-portrait max--w--120 min--h--72 pv2 pad--x--10">
                                                     <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
                                                         1,234
                                                     </span>
                                                 </div>
-                                                <div data-div-table-row-col data-title="sales" class="flex flex-column justify-center items-end gap--10 w--130 max--w--130 min--h--72 pv2 pad--x--10">
+                                                <div data-div-table-row-col data-title="sales" class="flex flex-column justify-center items-end gap--10 w--130 w--104-responsive-mobile-portrait max--w--130 min--h--72 pv2 pad--x--10">
                                                     <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
                                                         USD$ 1000.99
                                                     </span>
@@ -1888,16 +2011,16 @@
                                                     </a>
                                                 </div>
                                                 <div data-div-table-row-col data-title="merch-title" class="flex flex-column justify-center gap--10 flex--max min--h--72 pv2 pad--x--10">
-                                                    <a href="#" class="fs--12 fw6 lh--18 col--ebony-2 truncate pointer">
+                                                    <a href="#" class="fs--12 fw6 lh--18 col--ebony-2 pointer">
                                                         Socks (White, Extra Long)
                                                     </a>
                                                 </div>
-                                                <div data-div-table-row-col data-title="views" class="flex flex-column justify-center items-end gap--10 w--120 max--w--120 min--h--72 pv2 pad--x--10">
+                                                <div data-div-table-row-col data-title="views" class="flex flex-column justify-center items-end gap--10 w--120 w--104-responsive-mobile-portrait max--w--120 min--h--72 pv2 pad--x--10">
                                                     <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
                                                         1,234
                                                     </span>
                                                 </div>
-                                                <div data-div-table-row-col data-title="sales" class="flex flex-column justify-center items-end gap--10 w--130 max--w--130 min--h--72 pv2 pad--x--10">
+                                                <div data-div-table-row-col data-title="sales" class="flex flex-column justify-center items-end gap--10 w--130 w--104-responsive-mobile-portrait max--w--130 min--h--72 pv2 pad--x--10">
                                                     <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
                                                         USD$ 1000.99
                                                     </span>
