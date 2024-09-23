@@ -556,8 +556,100 @@
     <script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
     <script src="assets/js/analytics-data-new.js"></script>
-    <script src="assets/js/earnings-insight-chart.js"></script>
+    <script src="assets/js/charts.js"></script>
     <script src="assets/js/chartRenderer.js"></script>
+
+    <script>
+      // Bar Chart and Line Chart Tab Element Click Function for Sales Insigh and Trend
+      document.querySelectorAll('[data-button="sales-insight"]').forEach(function(element) {
+        element.addEventListener('click', function() {
+            const dataId = this.getAttribute('data-id');
+
+            // Toggle bg-white class on the clicked element
+            document.querySelectorAll('[data-id]').forEach(function(el) {
+                el.classList.remove('bg-white'); // Remove bg-white from all elements
+
+                // Remove filter--col--black class from all images inside these elements
+                el.querySelectorAll('[data-img="sales-bar-img"], [data-img="sales-line-img"]').forEach(function(img) {
+                    img.classList.remove('filter--col--black');
+                });
+            });
+            this.classList.add('bg-white'); // Add bg-white to the clicked element
+
+            // Add filter--col--black class to images inside the clicked element
+            this.querySelectorAll('[data-img]').forEach(function(img) {
+                img.classList.add('filter--col--black');
+            });
+
+            // Hide all charts first
+            document.querySelectorAll('[data-id="sales-insight-bar"], [data-id="sales-insight-line"]').forEach(function(chart) {
+                chart.classList.add('dn'); // Add the 'dn' class to hide the chart
+            });
+
+            document.querySelectorAll('[data-title="sales-insight"], [data-title="sales-trend"]').forEach(function(chart) {
+                chart.classList.add('dn'); // Add the 'dn' class to hide the chart
+            });
+
+            // Show the relevant chart based on the clicked toggle
+            if (dataId === 'sales-insight-bar-btn') {
+                const barChart = document.querySelector('[data-id="sales-insight-bar"]');
+                const barTitle = document.querySelector('[data-title="sales-insight"]');
+                barChart.classList.remove('dn'); // Remove 'dn' to display the chart
+                barTitle.classList.remove('dn');
+            } else if (dataId === 'sales-insight-line-btn') {
+                const lineChart = document.querySelector('[data-id="sales-insight-line"]');
+                const lineTitle = document.querySelector('[data-title="sales-trend"]');
+                lineChart.classList.remove('dn'); // Remove 'dn' to display the chart
+                lineTitle.classList.remove('dn');
+            }
+        });
+      });
+
+      // Bar Chart and Line Chart Tab Element Click Function for Token Insigh and Trend
+      document.querySelectorAll('[data-button="token-insight"]').forEach(function(element) {
+        element.addEventListener('click', function() {
+            const dataId = this.getAttribute('data-id');
+
+            // Toggle bg-white class on the clicked element
+            document.querySelectorAll('[data-id]').forEach(function(el) {
+                el.classList.remove('bg-white'); // Remove bg-white from all elements
+
+                // Remove filter--col--black class from all images inside these elements
+                el.querySelectorAll('[data-img="token-bar-img"], [data-img="token-line-img"]').forEach(function(img) {
+                    img.classList.remove('filter--col--black');
+                });
+            });
+            this.classList.add('bg-white'); // Add bg-white to the clicked element
+
+            // Add filter--col--black class to images inside the clicked element
+            this.querySelectorAll('[data-img]').forEach(function(img) {
+                img.classList.add('filter--col--black');
+            });
+
+            // Hide all charts first
+            document.querySelectorAll('[data-id="token-insight-bar"], [data-id="token-insight-line"]').forEach(function(chart) {
+                chart.classList.add('dn'); // Add the 'dn' class to hide the chart
+            });
+
+            document.querySelectorAll('[data-title="token-insight"], [data-title="token-trend"]').forEach(function(chart) {
+                chart.classList.add('dn'); // Add the 'dn' class to hide the chart
+            });
+
+            // Show the relevant chart based on the clicked toggle
+            if (dataId === 'token-insight-bar-btn') {
+                const barChart = document.querySelector('[data-id="token-insight-bar"]');
+                const barTitle = document.querySelector('[data-title="token-insight"]');
+                barChart.classList.remove('dn'); // Remove 'dn' to display the chart
+                barTitle.classList.remove('dn');
+            } else if (dataId === 'token-insight-line-btn') {
+                const lineChart = document.querySelector('[data-id="token-insight-line"]');
+                const lineTitle = document.querySelector('[data-title="token-trend"]');
+                lineChart.classList.remove('dn'); // Remove 'dn' to display the chart
+                lineTitle.classList.remove('dn');
+            }
+        });
+      });
+    </script>
 </body>
 
 </html>

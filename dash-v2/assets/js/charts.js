@@ -1,10 +1,10 @@
 
 // Map Chart Function
-function MapChart(mapRenderEL, data) {
+function MapChart(renderingEl, data) {
   // Data
   var groupData = data;
   // Create root and chart
-  var root = am5.Root.new(mapRenderEL);
+  var root = am5.Root.new(renderingEl);
 
   root._logo.dispose();
   // Set themes
@@ -118,9 +118,9 @@ function MapChart(mapRenderEL, data) {
 }
 
 // Bar Chart Main Function for Sales Insight
-function BarChart(chartRenderEl, data) {
+function BarChart(renderingEl, data) {
   // Create root element
-  var root = am5.Root.new(chartRenderEl);
+  var root = am5.Root.new(renderingEl);
 
   root._logo.dispose();
 
@@ -273,16 +273,22 @@ function BarChart(chartRenderEl, data) {
       stroke: am5.color(0xf2f4f7)
   });
 
-  makeSeries("Subscription", "subscription", 0x4CC9F0);
-  makeSeries("Pay to view", "paytoview", 0x4361EE);
-  makeSeries("Merch", "merch", 0x3A0BA3);
-  makeSeries("Wishtender", "wishtender", 0xF72485);
-  makeSeries("Custom request", "customrequest", 0x98A2B3);
+  // if 'renderingEl' is 'salesInsight' and 'data-chart-timeframes' is 'month'
+  if ( renderingEl.dataset.chartName === 'salesInsight' && renderingEl.dataset.chartTimeframes === 'month' ) {
+    makeSeries("Subscription", "subscription", 0x4CC9F0);
+    makeSeries("Pay to view", "paytoview", 0x4361EE);
+    makeSeries("Merch", "merch", 0x3A0BA3);
+    makeSeries("Wishtender", "wishtender", 0xF72485);
+    makeSeries("Custom request", "customrequest", 0x98A2B3);
+  }
 
-  makeSeries("Tip", "tip", 0x4CC9F0);
-  makeSeries("Call", "call", 0x4361EE);
-  makeSeries("Chat", "chat", 0x3A0BA3);
-  makeSeries("Live streaming", "livestreaming", 0xF72585);
+  // if 'renderingEl' is 'tokenInsight' and 'data-chart-timeframes' is 'month'
+  if ( renderingEl.dataset.chartName === 'tokenInsight' && renderingEl.dataset.chartTimeframes === 'month' ) {
+    makeSeries("Tip", "tip", 0x4CC9F0);
+    makeSeries("Call", "call", 0x4361EE);
+    makeSeries("Chat", "chat", 0x3A0BA3);
+    makeSeries("Live streaming", "livestreaming", 0xF72585);
+  }
 
   // Calculate total values for each month and format tooltip text
   tooltip.label.adapters.add("text", function(text, target) {
@@ -330,9 +336,9 @@ function BarChart(chartRenderEl, data) {
 }
 
 // Bar Chart Main Function for Sales Trend
-function SmoothLineChart(chartRenderLine, data) {
+function SmoothLineChart(renderingEl, data) {
   // Create root element
-  var root = am5.Root.new(chartRenderLine);
+  var root = am5.Root.new(renderingEl);
   root._logo.dispose();
 
   // Create chart
@@ -462,16 +468,22 @@ function SmoothLineChart(chartRenderLine, data) {
   }
 
   // Add series with explicit colors
-  addSeries("Subscription", "subscription", am5.color(0x4CC9F0));
-  addSeries("Pay to view", "paytoview", am5.color(0x4361EE));
-  addSeries("Merch", "merch", am5.color(0x3A0BA3));
-  addSeries("Wishtender", "wishtender", am5.color(0xF72585));
-  addSeries("Custom request", "customrequest", am5.color(0x98A2B3));
+  // if 'renderingEl' is 'salesTrend' and 'data-chart-timeframes' is 'month'
+  if ( renderingEl.dataset.chartName === 'salesTrend' && renderingEl.dataset.chartTimeframes === 'month' ) {
+    addSeries("Subscription", "subscription", am5.color(0x4CC9F0));
+    addSeries("Pay to view", "paytoview", am5.color(0x4361EE));
+    addSeries("Merch", "merch", am5.color(0x3A0BA3));
+    addSeries("Wishtender", "wishtender", am5.color(0xF72585));
+    addSeries("Custom request", "customrequest", am5.color(0x98A2B3));
+  }
 
-  addSeries("Tip", "tip", am5.color(0x4CC9F0));
-  addSeries("Call", "call", am5.color(0x4361EE));
-  addSeries("Chat", "chat", am5.color(0x3A0BA3));
-  addSeries("Live Streaming", "livestreaming", am5.color(0xF72585));
+  // if 'renderingEl' is 'tokenTrend' and 'data-chart-timeframes' is 'month'
+  if ( renderingEl.dataset.chartName === 'tokenTrend' && renderingEl.dataset.chartTimeframes === 'month' ) {
+    addSeries("Tip", "tip", am5.color(0x4CC9F0));
+    addSeries("Call", "call", am5.color(0x4361EE));
+    addSeries("Chat", "chat", am5.color(0x3A0BA3));
+    addSeries("Live Streaming", "livestreaming", am5.color(0xF72585));
+  }
 
   //Y-Axis Grid Removed
   yAxis.get("renderer").grid.template.setAll({
@@ -495,121 +507,4 @@ function SmoothLineChart(chartRenderLine, data) {
 
 }
 
-// Create root element
-// https://www.amcharts.com/docs/v5/getting-started/#Root_element
-var salesInsightBar = document.querySelector('[data-id="sales-insight-bar"]');
-var salesInsightLine = document.querySelector('[data-id="sales-insight-line"]');
-var TokenInsightBar = document.querySelector('[data-id="token-insight-bar"]');
-var TokenInsightLine = document.querySelector('[data-id="token-insight-line"]');
-var LocationMapChart = document.querySelector('[data-id="location-map"]');
 
-// function to get data and call chart rendering functions
-function getdata(data) {
-  // For Bar Chart (Sales Insight)
-  BarChart(salesInsightBar, data.salesInsightBarData);
-
-  // For Line Chart (Sales Insight)
-  LineChart(salesInsightLine, data.salesInsightLineData);
-
-  //Bar Chart(Token Insight Bar);
-  TokenBarChart(TokenInsightBar, data.tokenInsightBarData);
-
-  //Line Chart(Token Insight Line);
-  TokenLineChart(TokenInsightLine, data.tokenInsightLineData);
-
-  // For Map Chart
-  MapChart(LocationMapChart, data.locationMapChartData);
-}
-
-// Render All Charts Using the Dataset
-//getdata(chartDataSet);
-
-// Bar Chart and Line Chart Tab Element Click Function for Sales Insigh and Trend
-document.querySelectorAll('[data-button="sales-insight"]').forEach(function(element) {
-  element.addEventListener('click', function() {
-      const dataId = this.getAttribute('data-id');
-
-      // Toggle bg-white class on the clicked element
-      document.querySelectorAll('[data-id]').forEach(function(el) {
-          el.classList.remove('bg-white'); // Remove bg-white from all elements
-
-          // Remove filter--col--black class from all images inside these elements
-          el.querySelectorAll('[data-img="sales-bar-img"], [data-img="sales-line-img"]').forEach(function(img) {
-              img.classList.remove('filter--col--black');
-          });
-      });
-      this.classList.add('bg-white'); // Add bg-white to the clicked element
-
-      // Add filter--col--black class to images inside the clicked element
-      this.querySelectorAll('[data-img]').forEach(function(img) {
-          img.classList.add('filter--col--black');
-      });
-
-      // Hide all charts first
-      document.querySelectorAll('[data-id="sales-insight-bar"], [data-id="sales-insight-line"]').forEach(function(chart) {
-          chart.classList.add('dn'); // Add the 'dn' class to hide the chart
-      });
-
-      document.querySelectorAll('[data-title="sales-insight"], [data-title="sales-trend"]').forEach(function(chart) {
-          chart.classList.add('dn'); // Add the 'dn' class to hide the chart
-      });
-
-      // Show the relevant chart based on the clicked toggle
-      if (dataId === 'sales-insight-bar-btn') {
-          const barChart = document.querySelector('[data-id="sales-insight-bar"]');
-          const barTitle = document.querySelector('[data-title="sales-insight"]');
-          barChart.classList.remove('dn'); // Remove 'dn' to display the chart
-          barTitle.classList.remove('dn');
-      } else if (dataId === 'sales-insight-line-btn') {
-          const lineChart = document.querySelector('[data-id="sales-insight-line"]');
-          const lineTitle = document.querySelector('[data-title="sales-trend"]');
-          lineChart.classList.remove('dn'); // Remove 'dn' to display the chart
-          lineTitle.classList.remove('dn');
-      }
-  });
-});
-
-// Bar Chart and Line Chart Tab Element Click Function for Token Insigh and Trend
-document.querySelectorAll('[data-button="token-insight"]').forEach(function(element) {
-  element.addEventListener('click', function() {
-      const dataId = this.getAttribute('data-id');
-
-      // Toggle bg-white class on the clicked element
-      document.querySelectorAll('[data-id]').forEach(function(el) {
-          el.classList.remove('bg-white'); // Remove bg-white from all elements
-
-          // Remove filter--col--black class from all images inside these elements
-          el.querySelectorAll('[data-img="token-bar-img"], [data-img="token-line-img"]').forEach(function(img) {
-              img.classList.remove('filter--col--black');
-          });
-      });
-      this.classList.add('bg-white'); // Add bg-white to the clicked element
-
-      // Add filter--col--black class to images inside the clicked element
-      this.querySelectorAll('[data-img]').forEach(function(img) {
-          img.classList.add('filter--col--black');
-      });
-
-      // Hide all charts first
-      document.querySelectorAll('[data-id="token-insight-bar"], [data-id="token-insight-line"]').forEach(function(chart) {
-          chart.classList.add('dn'); // Add the 'dn' class to hide the chart
-      });
-
-      document.querySelectorAll('[data-title="token-insight"], [data-title="token-trend"]').forEach(function(chart) {
-          chart.classList.add('dn'); // Add the 'dn' class to hide the chart
-      });
-
-      // Show the relevant chart based on the clicked toggle
-      if (dataId === 'token-insight-bar-btn') {
-          const barChart = document.querySelector('[data-id="token-insight-bar"]');
-          const barTitle = document.querySelector('[data-title="token-insight"]');
-          barChart.classList.remove('dn'); // Remove 'dn' to display the chart
-          barTitle.classList.remove('dn');
-      } else if (dataId === 'token-insight-line-btn') {
-          const lineChart = document.querySelector('[data-id="token-insight-line"]');
-          const lineTitle = document.querySelector('[data-title="token-trend"]');
-          lineChart.classList.remove('dn'); // Remove 'dn' to display the chart
-          lineTitle.classList.remove('dn');
-      }
-  });
-});
