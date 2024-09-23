@@ -3,19 +3,24 @@ html { font-size: 16px; }
 
 /* Width */
 .w--100-responsive-mobile { width: 100%; }
+.w--16-responsive-mobile { width: 1rem; }
+.w--144-responsive-mobile { width: 9rem; }
 .w--423-responsive-mobile { width: 26.438rem; }
 .w--390-responsive-mobile { width: 24.375rem; }
 
 /* Height */
+.h--16-responsive-mobile { height: 1rem; }
 .h--327-responsive-mobile { height: 20.45925rem; }
 .h--274-responsive-mobile { height: 17.125rem; }
 
 /* Font Size */
+.fs--12-responsive-mobile { font-size: 0.75rem; /* font-size 12px */  }
 .fs--18-responsive-mobile { font-size: 1.125rem; /* font-size 18px */  } /* confirmed in use */ /* pixel conversion correct */
 .fs--16-responsive-mobile { font-size: 1rem; /* font-size 16px */  }
 .fs--30-responsive-mobile { font-size: 1.875rem; /* font-size 30px */  }
 
 /* Line Height */
+.lh--18-responsive-mobile { line-height: 1.125rem; /* line-height 18px */ } /* confirmed in use */ /* pixel conversion correct */
 .lh--28-responsive-mobile { line-height: 1.75rem; /* line-height 28px */ } /* confirmed in use */ /* pixel conversion correct */
 .lh--38-responsive-mobile { line-height: 2.375rem; /* line-height 38px */ } /* confirmed in use */ /* pixel conversion correct */
 
@@ -23,15 +28,18 @@ html { font-size: 16px; }
 .dn-responsive-mobile { display: flex; }
 .flex--column-responsive-mobile { flex-direction: column; }
 .items--start-responsive-mobile { align-items: flex-start; }
+.justify--between-responsive-mobile { justify-content:space-between; }
 
 /* Display */
 .display--none-responsive-mobile { display: none; }
 
 /* Gap */
+.gap--4--responsive-mobile { gap: 0.25rem; }
 .gap--16--responsive-mobile { gap: 1rem; }
 
 /* Padding */
 .pad--0-responsive-mobile { padding: 0rem; /* padding top bottom left right 0px */ }
+.pad--16-responsive-mobile { padding: 1rem; /* padding top bottom left right 16px */ }
 .pad--top--52-responsive-mobile { padding-top: 3.28rem;}
 .pad--bottom--0-responsive-mobile { padding-bottom: 0rem; /* padding bottom 0px */ }
 .pad--top--64-responsive-mobile { padding-top: 4rem; /* padding top 64px */ }
@@ -39,6 +47,10 @@ html { font-size: 16px; }
 .pad--x--0-responsive-mobile { padding-left: 0rem; padding-right: 0rem; /* padding left right 0px */ }
 .pad--x--16-responsive-mobile { padding-left: 1rem; padding-right: 1rem; /* padding left right 16px */ }
 .pad--y-0-responsive-mobile{ padding-top: 0rem; padding-bottom: 0rem; /* padding top 96px padding bottom 96px */ }
+
+/* Margin */
+.mr--0-responsive-mobile { margin-right: 0; }
+.ml--0-responsive-mobile { margin-left: 0; }
 
 /* Grid */
 .grid--cols-2-responsive-mobile { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -65,3 +77,6 @@ html { font-size: 16px; }
 
 /* Right */
 .right--8-responsive-mobile { right: 0.5rem; }
+
+/* Text Align */
+.text--align-right-mobile { text-align: right; }
