@@ -108,7 +108,14 @@ class ChartRenderer {
     // Logic to render a bar chart
     console.log('Rendering bar chart for', element, data);
     // Implementation for rendering the bar chart goes here
-    BarChart(element, data);
+    if ( element.dataset.popupType == 'popup-contributors-insight' ) {
+      console.log('Call contributors bar chart');
+      ContributorsBarChart(element, data);
+    }
+    else {
+      console.log('Call common bar chart');
+      BarChart(element, data);
+    }
   }
 
   /**

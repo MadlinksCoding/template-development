@@ -334,6 +334,242 @@ function BarChart(renderingEl, data) {
     chart.appear(1000, 100);
 }
 
+// Bar Chart Contributors Function
+function ContributorsBarChart(renderingEl, data) {
+    // Create root element
+    var root = am5.Root.new(renderingEl);
+
+    root._logo.dispose();
+
+    // Set themes
+    root.setThemes([am5themes_Animated.new(root)]);
+
+    // Create chart
+    var chart = root.container.children.push(
+        am5xy.XYChart.new(root, {
+            panX: false,
+            panY: false,
+            wheelX: "none",
+            wheelY: "none",
+            paddingBottom: 70,
+            paddingTop: 20,
+            paddingLeft: 0,
+            paddingRight: 0,
+        })
+    );
+
+    // Create axes
+    var xRenderer = am5xy.AxisRendererX.new(root, {
+        minGridDistance: 0,
+        cellStartLocation: 0.2,
+        cellEndLocation: 0.8,
+    });
+    xRenderer.grid.template.set("visible", false);
+
+    var xAxis = chart.xAxes.push(
+        am5xy.CategoryAxis.new(root, {
+            categoryField: "name",
+            renderer: xRenderer,
+            bullet: function(root, axis, dataItem) {
+                var container = am5.Container.new(root, {});
+                var picture = container.children.push(
+                    am5.Picture.new(root, {
+                        width: 32,
+                        height: 32,
+                        centerY: am5.p50,
+                        centerX: am5.p50,
+                        src: dataItem.dataContext.pictureSettings?.src,
+                        mask: am5.Circle.new(root, {
+                            radius: 50
+                        }),
+                    })
+                );
+                picture.set("y", 28);
+                return am5xy.AxisBullet.new(root, {
+                    location: 0.5,
+                    sprite: container
+                });
+            },
+        })
+    );
+    xAxis.set("dy", 20);
+    xAxis.get("renderer").labels.template.set("forceHidden", true);
+
+    var yRenderer = am5xy.AxisRendererY.new(root, {});
+    yRenderer.grid.template.set("strokeDasharray", [3]);
+
+    var yAxis = chart.yAxes.push(
+        am5xy.ValueAxis.new(root, {
+            min: 0,
+            max: 1000,
+            strictMinMax: true,
+            renderer: yRenderer,
+        })
+    );
+    yAxis.get("renderer").grid.template.setAll({
+        stroke: am5.color(0xf2f4f7),
+        strokeOpacity: 1,
+    });
+    xAxis.get("renderer").grid.template.setAll({
+        stroke: am5.color(0xf2f4f7),
+    });
+
+    // Create tooltip
+    var tooltip = am5.Tooltip.new(root, {
+        getFillFromSprite: false,
+        pointerOrientation: "horizontal",
+        background: am5.RoundedRectangle.new(root, {
+            fill: am5.color(0xffffff),
+            shadowColor: am5.color(0xe2e2e2),
+            shadowBlur: 8,
+            shadowOffsetX: 0,
+            shadowOffsetY: 0,
+        }),
+    });
+    tooltip.get("background").setAll({
+        cornerRadiusTL: 2,
+        cornerRadiusTR: 2,
+        cornerRadiusBL: 2,
+        cornerRadiusBR: 2,
+    });
+    tooltip.label.setAll({
+        paddingLeft: 0,
+        paddingRight: 0,
+        paddingTop: 0,
+        paddingBottom: 0,
+        textAlign: "left",
+        fill: am5.color(0x344054),
+        fontSize: "0.75rem",
+        fontFamily: "'Poppins', sans-serif",
+        lineHeight: 1.4,
+    });
+    tooltip.get("background").set("cssClass", "custom-tooltip");
+    chart.plotContainer.set("tooltipPosition", "pointer");
+    chart.plotContainer.set("tooltip", tooltip);
+
+    // Create series dynamically based on available data fields
+    function addSeries(fieldName, displayName, color) {
+        var series = chart.series.push(
+            am5xy.ColumnSeries.new(root, {
+                name: displayName,
+                xAxis: xAxis,
+                yAxis: yAxis,
+                valueYField: fieldName,
+                categoryXField: "name",
+                sequencedInterpolation: true,
+                stacked: true,
+            })
+        );
+        series.columns.template.setAll({
+            fill: am5.color(color),
+            strokeOpacity: 0,
+            width: am5.percent(30),
+            maxWidth: 50,
+            fillOpacity: 1,
+            tooltipY: 0,
+        });
+        series.columns.template.set("interactive", true);
+        series.columns.template.states.create("hover", {
+            fillOpacity: 1,
+        });
+        return series;
+    }
+
+    var fields = Object.keys(data[0]);
+    var seriesList = [];
+
+    // Add relevant series based on data fields
+    if (fields.includes("orders") && fields.includes("tokens")) {
+        seriesList.push(addSeries("orders", "Orders", "#4CC9F0"));
+        seriesList.push(addSeries("tokens", "Tokens", "#4361EE"));
+    } else if (fields.includes("tip")) {
+        seriesList.push(addSeries("tip", "Tip", "#4CC9F0"));
+        seriesList.push(addSeries("call", "Call", "#4361EE"));
+        seriesList.push(addSeries("chat", "Chat", "#3A0BA3"));
+        seriesList.push(addSeries("livestreaming", "Live Streaming", "#F72485"));
+    } else if (fields.includes("subscription")) {
+        seriesList.push(addSeries("subscription", "Subscription", "#4CC9F0"));
+        seriesList.push(addSeries("paytoview", "Pay to View", "#4361EE"));
+        seriesList.push(addSeries("merch", "Merch", "#3A0BA3"));
+        seriesList.push(addSeries("wishtender", "Wishtender", "#F72485"));
+        seriesList.push(addSeries("customrequest", "Custom Request", "#98A2B3"));
+    }
+
+    // Handle tooltip dynamically
+    function handleHover(event) {
+        var dataItem = event.target.dataItem;
+        if (dataItem) {
+            var categoryX = dataItem.get("categoryX");
+            var avatarSrc = dataItem.dataContext.pictureSettings?.src || "";
+            var tag = dataItem.dataContext.tag || "";
+
+            var tooltipHTML = `<div style="display: flex; align-items: center; margin-bottom: 12px;">
+          <span style="display: flex; width: 20px; height: 20px; background-color: #ffffff; border-radius: 50%; margin-right: 4px;">
+          <img src="${avatarSrc}" style="width: 100%; height: 100%; border-radius: 50%;"></span>
+          <strong style="font-size: 12px; font-weight: 600; font-family: 'Poppins', sans-serif; color: #101828;">${categoryX}</strong>
+          ${tag ? `<span style="margin-left: 4px; font-family: 'Poppins', sans-serif; font-size: 12px; color: #101828;">@${tag}</span>` : ''}
+      </div>`;
+
+            seriesList.forEach(function(series) {
+                var fieldValue = dataItem.dataContext[series.get("valueYField")];
+                var seriesColor = am5.color(series.get("fill")).toCSS();
+                tooltipHTML += `<div style="display: flex; align-items: center; margin-bottom: 4px;">
+            <div style="display: flex; width: 8px; height: 8px; background-color: ${seriesColor}; border-radius: 50%; margin-right: 8px;"></div>
+            <span style="width: 120px; font-family: 'Poppins', sans-serif; font-size: 12px; color: #344054;">${series.get("name")}</span>
+            <strong style="font-family: 'Poppins', sans-serif; font-size: 12px; font-weight: 500; color: #101828;">USD ${fieldValue}</strong>
+        </div>`;
+            });
+
+            tooltip.set("html", tooltipHTML);
+            var columnRect = event.target.getPrivate("bbox");
+            if (columnRect) {
+                var x = columnRect.x + columnRect.width / 2;
+                var y = columnRect.y;
+                tooltip.set("pointTo", {
+                    x: x,
+                    y: y
+                });
+            }
+            tooltip.show();
+        }
+    }
+
+    // Event listeners for tooltips
+    chart.series.each(function(series) {
+        series.columns.template.events.on("pointerover", handleHover);
+        series.columns.template.events.on("pointerout", function() {
+            tooltip.hide();
+        });
+        series.columns.template.events.on("pointermove", function(event) {
+            var columnRect = event.target.getPrivate("bbox");
+            if (columnRect) {
+                var x = columnRect.x + columnRect.width / 2;
+                var y = columnRect.y;
+                tooltip.set("pointTo", {
+                    x: x,
+                    y: y
+                });
+            }
+        });
+    });
+
+    // Update chart data based on screen size
+    function updateChartData() {
+        var isMobile = window.innerWidth <= 767;
+        var chartData = isMobile ? data.slice(0, 5) : data;
+        seriesList.forEach(function(series) {
+            series.data.setAll(chartData);
+        });
+        xAxis.data.setAll(chartData);
+        chart.series.each(function(series) {
+            series.appear(1000, 100);
+        });
+    }
+
+    updateChartData();
+    chart.appear(1000, 100);
+}
+
 // Smoothed Line Chart Main Function
 function SmoothLineChart(renderingEl, data) {
     // Create root element
