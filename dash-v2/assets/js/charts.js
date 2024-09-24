@@ -272,8 +272,8 @@ function BarChart(renderingEl, data) {
         stroke: am5.color(0xf2f4f7)
     });
 
-    // if 'renderingEl' is 'salesInsight' and 'data-chart-timeframes' is 'month'
-    if (renderingEl.dataset.chartName === 'salesInsight' && (renderingEl.dataset.chartTimeframes === 'month' || renderingEl.dataset.chartTimeframes === 'day')) {
+    // if 'renderingEl' is 'salesInsight' and 'data-chart-timeframes' is 'month', 'week', 'day'
+    if (renderingEl.dataset.chartName === 'salesInsight' && (renderingEl.dataset.chartTimeframes === 'month' || renderingEl.dataset.chartTimeframes === 'week' || renderingEl.dataset.chartTimeframes === 'day')) {
         makeSeries("Subscription", "subscription", 0x4CC9F0);
         makeSeries("Pay to view", "paytoview", 0x4361EE);
         makeSeries("Merch", "merch", 0x3A0BA3);
@@ -281,8 +281,8 @@ function BarChart(renderingEl, data) {
         makeSeries("Custom request", "customrequest", 0x98A2B3);
     }
 
-    // if 'renderingEl' is 'tokenInsight' and 'data-chart-timeframes' is 'month'
-    if (renderingEl.dataset.chartName === 'tokenInsight' && (renderingEl.dataset.chartTimeframes === 'month' || renderingEl.dataset.chartTimeframes === 'day')) {
+    // if 'renderingEl' is 'tokenInsight' and 'data-chart-timeframes' is 'month', 'week', 'day'
+    if (renderingEl.dataset.chartName === 'tokenInsight' && (renderingEl.dataset.chartTimeframes === 'month' || renderingEl.dataset.chartTimeframes === 'week' || renderingEl.dataset.chartTimeframes === 'day')) {
         makeSeries("Tip", "tip", 0x4CC9F0);
         makeSeries("Call", "call", 0x4361EE);
         makeSeries("Chat", "chat", 0x3A0BA3);
