@@ -207,7 +207,7 @@ function BarChart(renderingEl, data) {
 
     // Create axes
     var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
-        categoryField: renderingEl.dataset.chartTimeframes, // reading month, day, year, week etc, from dataset
+        categoryField: renderingEl.dataset.chartCategoryXField, // reading month, day, year, week etc, from dataset
         renderer: am5xy.AxisRendererX.new(root, {
             minGridDistance: 30
         }),
@@ -246,7 +246,7 @@ function BarChart(renderingEl, data) {
             xAxis: xAxis,
             yAxis: yAxis,
             valueYField: fieldName,
-            categoryXField: renderingEl.dataset.chartTimeframes, // reading month, day, year, week etc, from dataset
+            categoryXField: renderingEl.dataset.chartCategoryXField, // reading month, day, year, week etc, from dataset
             fill: am5.color(color),
             stroke: am5.color(color)
         }));
@@ -366,7 +366,7 @@ function SmoothLineChart(renderingEl, data) {
 
     // Create axes
     var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
-        categoryField: renderingEl.dataset.chartTimeframes, // reading month, day, year, week etc, from dataset
+        categoryField: renderingEl.dataset.chartCategoryXField, // reading month, day, year, week etc, from dataset
         renderer: am5xy.AxisRendererX.new(root, {
             minGridDistance: 30
         })
@@ -392,7 +392,7 @@ function SmoothLineChart(renderingEl, data) {
             xAxis: xAxis,
             yAxis: yAxis,
             valueYField: fieldName,
-            categoryXField: renderingEl.dataset.chartTimeframes, // reading month, day, year, week etc, from dataset
+            categoryXField: renderingEl.dataset.chartCategoryXField, // reading month, day, year, week etc, from dataset
             stroke: color,
             tooltip: am5.Tooltip.new(root, {
                 label: {
@@ -467,8 +467,8 @@ function SmoothLineChart(renderingEl, data) {
     }
 
     // Add series with explicit colors
-    // if 'renderingEl' is 'salesTrend' and 'data-chart-timeframes' is 'month'
-    if ( renderingEl.dataset.chartName === 'salesTrend' && (renderingEl.dataset.chartTimeframes === 'month' || renderingEl.dataset.chartTimeframes === 'day') ) {
+    // if 'renderingEl' is 'salesTrend' and 'data-chart-timeframes' is 'month', 'week', 'day'
+    if ( renderingEl.dataset.chartName === 'salesTrend' && (renderingEl.dataset.chartTimeframes === 'month' || renderingEl.dataset.chartTimeframes === 'week' || renderingEl.dataset.chartTimeframes === 'day') ) {
         addSeries("Subscription", "subscription", am5.color(0x4CC9F0));
         addSeries("Pay to view", "paytoview", am5.color(0x4361EE));
         addSeries("Merch", "merch", am5.color(0x3A0BA3));
@@ -476,8 +476,8 @@ function SmoothLineChart(renderingEl, data) {
         addSeries("Custom request", "customrequest", am5.color(0x98A2B3));
     }
 
-    // if 'renderingEl' is 'tokenTrend' and 'data-chart-timeframes' is 'month'
-    if ( renderingEl.dataset.chartName === 'tokenTrend' && (renderingEl.dataset.chartTimeframes === 'month' || renderingEl.dataset.chartTimeframes === 'day') ) {
+    // if 'renderingEl' is 'tokenTrend' and 'data-chart-timeframes' is 'month', 'week', 'day'
+    if ( renderingEl.dataset.chartName === 'tokenTrend' && (renderingEl.dataset.chartTimeframes === 'month' || renderingEl.dataset.chartTimeframes === 'week' || renderingEl.dataset.chartTimeframes === 'day') ) {
         addSeries("Tip", "tip", am5.color(0x4CC9F0));
         addSeries("Call", "call", am5.color(0x4361EE));
         addSeries("Chat", "chat", am5.color(0x3A0BA3));
