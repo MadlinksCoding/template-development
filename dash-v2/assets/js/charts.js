@@ -116,7 +116,7 @@ function MapChart(renderingEl, data) {
     });
 }
 
-// Bar Chart Main Function for Sales Insight
+// Bar Chart Main Function
 function BarChart(renderingEl, data) {
     // Create root element
     var root = am5.Root.new(renderingEl);
@@ -334,7 +334,7 @@ function BarChart(renderingEl, data) {
     chart.appear(1000, 100);
 }
 
-// Bar Chart Main Function for Sales Trend
+// Smoothed Line Chart Main Function
 function SmoothLineChart(renderingEl, data) {
     // Create root element
     var root = am5.Root.new(renderingEl);
@@ -504,4 +504,184 @@ function SmoothLineChart(renderingEl, data) {
     // Animate chart on load
     chart.appear(1000, 100);
 
+}
+
+// Doughnut Chart Main Function
+function DonutChart(renderingEl, data) {
+    // Create root element
+    var root = am5.Root.new(renderingEl);
+
+    root._logo.dispose();
+
+    // Set themes
+    root.setThemes([
+        am5themes_Animated.new(root)
+    ]);
+
+    // Create chart
+    var chart = root.container.children.push(am5percent.PieChart.new(root, {
+        layout: root.verticalLayout,
+        innerRadius: am5.percent(130), // Increase this value to make slices thinner
+        paddingTop: 10,
+        paddingBottom: 0 // Add padding to the bottom to ensure space for the legend
+    }));
+
+    function escapeHTML(str) {
+        return str.replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#039;');
+    }
+
+    // Create series
+    var series = chart.series.push(am5percent.PieSeries.new(root, {
+        name: "Value",
+        valueField: "value",
+        categoryField: "category",
+        fillField: "color",
+        legendLabelText: "[bold {fill}]{category}",
+        legendValueText: ""
+    }));
+
+    series.labels.template.set("forceHidden", true);
+    series.ticks.template.set("forceHidden", true);
+
+    // Customize slices to only show tooltip
+    series.slices.template.setAll({
+        tooltipText: "{category}: {value}", // Tooltip content
+        tooltip: am5.Tooltip.new(root, { // Create a tooltip with custom styling
+            pointerOrientation: "horizontal",
+            getFillFromSprite: false,
+            background: am5.RoundedRectangle.new(root, {
+                fill: am5.color(0xffffff), // Set tooltip background to white
+                strokeOpacity: 0, // Remove border if not needed
+                cornerRadius: 2, // Optional: add rounded corners
+                shadowColor: am5.color(0xE2E2E2, 0.08), // Shadow color with opacity
+            }),
+            strokeWidth: 0,
+            scale: 1,
+            stroke: am5.color(0xffffff),
+            labelText: "{category}: {value}" // Tooltip text
+        }),
+        // Disable click interactions
+        clickTarget: "none",
+        toggleKey: "none",
+        interactive: false
+    });
+
+    // Apply corner radius to the tooltip background
+    series.slices.template.get("tooltip").get("background").setAll({
+        cornerRadiusTL: 2,
+        cornerRadiusTR: 2,
+        cornerRadiusBL: 2,
+        cornerRadiusBR: 2
+    });
+
+    // Add hover state
+    series.slices.template.states.create("hover", {
+        scale: 1,
+        fillOpacity: 1,
+        shadowBlur: 20, // Blur effect of the shadow
+        shadowOffsetX: 0, // Horizontal offset of the shadow
+        shadowOffsetY: 0, // Vertical offset of the shadow
+        transitionDuration: 100
+    });
+
+    // Use series color for shadow
+    /* series.slices.template.adapters.add("shadowColor", function(shadowColor, target) {
+        return target.get("fill");
+        return am5.color(0xE2E2E2);
+    }); */
+
+    // Add events for smooth transition
+    series.slices.template.events.on("pointerover", function(ev) {
+        ev.target.animate({
+            key: "shadowBlur",
+            to: 0,
+            duration: 100,
+            easing: am5.ease.out(am5.ease.cubic)
+        });
+    });
+
+    // Explicitly set tooltip label color and font properties
+    series.slices.template.adapters.add("tooltipHTML", function(tooltipHTML, target) {
+        var slice = target.dataItem.dataContext;
+        return "<div style='font-size: 12px; overflow: hidden; font-family: Poppins, sans-serif; color: #344054;'>" +
+            "<span style='color:" + slice.color + "; font-size: 16px;'>●</span> " + escapeHTML(slice.category) + "<br>" +
+            "<strong style='font-size: 12px;'>USD " + slice.value + "</strong>" +
+            "</div>";
+    });
+
+    // Set data
+    var data = data;
+
+    series.data.setAll(data);
+
+    // Create legend
+    var legend = chart.children.push(am5.Legend.new(root, {
+        x: am5.percent(50),
+        y: am5.percent(95),
+        centerX: am5.percent(50),
+        layout: root.horizontalLayout,
+        marginBottom: 0, // Ensure space for the legend
+        centerX: am5.percent(50),
+        maxHeight: 50, // Adjust the maxHeight as needed
+        maxWidth: am5.percent(100),
+        fillField: "color",
+        marginTop: 8,
+        marginBottom: 0,
+    }));
+
+    // Custom adapter for legend labels
+    legend.labels.template.adapters.add("text", function(text, target) {
+        var dataItem = target.dataItem;
+        if (dataItem && dataItem.dataContext) {
+            return "[#667085]" + dataItem.dataContext.category + "[/]";
+        }
+        return text;
+    });
+
+    // Customize legend
+    legend.labels.template.setAll({
+        fontSize: "0.75rem",
+        fontFamily: "'Poppins', sans-serif",
+        lineHeight: 1,
+        paddingLeft: 2,
+        oversizedBehavior: "truncate",
+        maxWidth: 90
+    });
+
+    // Create custom marker
+    legend.markers.template.setAll({
+        width: 6,
+        height: 6,
+    });
+
+    legend.markerRectangles.template.setAll({
+        cornerRadiusTL: 10,
+        cornerRadiusTR: 10,
+        cornerRadiusBL: 10,
+        cornerRadiusBR: 10
+    });
+    // Adjust legend item container
+    legend.itemContainers.template.setAll({
+        paddingTop: 0,
+        paddingBottom: 0,
+        paddingLeft: 0,
+        paddingRight: 8,
+        marginLeft: 0,
+        marginRight: 0
+    });
+
+    // Ensure value labels in the legend do not display percentages
+    legend.valueLabels.template.set("forceHidden", true);
+
+    // Reduce spacing between legend items
+    legend.set("itemGap", 4);
+
+    //legend.data.setAll(series.dataItems);
+
+    // Play initial series animation
+    series.appear(1000, 100);
 }

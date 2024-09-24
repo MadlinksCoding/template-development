@@ -471,7 +471,7 @@
                 {
                     "value":4,
                     "category":"Custom Request",
-                    "color":"98A2B3"
+                    "color":"#98A2B3"
                 }
             ]
         }
