@@ -159,6 +159,7 @@ class ChartRenderer {
     // Logic to render a map chart
     console.log('Rendering donut chart for', element, data);
     // Implementation for rendering the map chart goes here
+    DonutChart(element, data);
   }
 
   // Additional chart rendering methods (e.g., areaChart, pieChart) can be added here as needed.
