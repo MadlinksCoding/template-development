@@ -295,6 +295,22 @@ function BarChart(renderingEl, data) {
         makeSeries("Profile visit", "profilevisit", 0x4361EE);
     }
 
+    // if 'renderingEl' is 'subscriptionInsight' and 'data-chart-timeframes' is 'month', 'week', 'day'
+    if (renderingEl.dataset.chartName === 'subscriptionInsight' && (renderingEl.dataset.chartTimeframes === 'month' || renderingEl.dataset.chartTimeframes === 'week' || renderingEl.dataset.chartTimeframes === 'day')) {
+        makeSeries("New", "newsubscriber", 0x4CC9F0);
+        makeSeries("Recurring", "recurringsubscriber", 0x4361EE);
+    }
+
+    // if 'renderingEl' is 'tiersBreakdownInsight' and 'data-chart-timeframes' is 'month', 'week', 'day'
+    if (renderingEl.dataset.chartName === 'tiersBreakdownInsight' && (renderingEl.dataset.chartTimeframes === 'month' || renderingEl.dataset.chartTimeframes === 'week' || renderingEl.dataset.chartTimeframes === 'day')) {
+        makeSeries("Free", "free", 0x4CC9F0);
+        makeSeries("Tier 1", "tier1", 0x4361EE);
+        makeSeries("Tier 2", "tier2", 0x3A0BA3);
+        makeSeries("Tier 3", "tier3", 0xAE4AEF);
+        makeSeries("Tier 4", "tier4", 0x98A2B3);
+        makeSeries("Tier 5", "tier5", 0xF72485);
+    }
+
     // Calculate total values for each month and format tooltip text
     tooltip.label.adapters.add("text", function(text, target) {
         text = "";
@@ -730,6 +746,22 @@ function SmoothLineChart(renderingEl, data) {
     if ( renderingEl.dataset.chartName === 'fansTrend' && (renderingEl.dataset.chartTimeframes === 'month' || renderingEl.dataset.chartTimeframes === 'week' || renderingEl.dataset.chartTimeframes === 'day') ) {
         addSeries("New Followers", "newfollowers", am5.color(0x4CC9F0));
         addSeries("Profile visit", "profilevisit", am5.color(0x4361EE));
+    }
+
+    // if 'renderingEl' is 'subscriptionTrend' and 'data-chart-timeframes' is 'month', 'week', 'day'
+    if ( renderingEl.dataset.chartName === 'subscriptionTrend' && (renderingEl.dataset.chartTimeframes === 'month' || renderingEl.dataset.chartTimeframes === 'week' || renderingEl.dataset.chartTimeframes === 'day') ) {
+        addSeries("New", "newsubscriber", am5.color(0x4CC9F0));
+        addSeries("Recurring", "recurringsubscriber", am5.color(0x4361EE));
+    }
+
+    // if 'renderingEl' is 'tiersBreakdownTrend' and 'data-chart-timeframes' is 'month', 'week', 'day'
+    if ( renderingEl.dataset.chartName === 'tiersBreakdownTrend' && (renderingEl.dataset.chartTimeframes === 'month' || renderingEl.dataset.chartTimeframes === 'week' || renderingEl.dataset.chartTimeframes === 'day') ) {
+        addSeries("Free", "free", am5.color(0x4CC9F0));
+        addSeries("Tier 1", "tier1", am5.color(0x4361EE));
+        addSeries("Tier 2", "tier2", am5.color(0x3A0BA3));
+        addSeries("Tier 3", "tier3", am5.color(0xAE4AEF));
+        addSeries("Tier 4", "tier4", am5.color(0x98A2B3));
+        addSeries("Tier 5", "tier5", am5.color(0xF72485));
     }
 
     //Y-Axis Grid Removed
