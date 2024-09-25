@@ -106,14 +106,14 @@ class ChartRenderer {
    */
   barChart(element, data) {
     // Logic to render a bar chart
-    console.log('Rendering bar chart for', element, data);
+    //console.log('Rendering bar chart for', element, data);
     // Implementation for rendering the bar chart goes here
     if ( element.dataset.popupType == 'popup-contributors-insight' ) {
-      console.log('Call contributors bar chart');
+      //console.log('Call contributors bar chart');
       ContributorsBarChart(element, data);
     }
     else {
-      console.log('Call common bar chart');
+      //console.log('Call common bar chart');
       BarChart(element, data);
     }
   }
@@ -126,7 +126,7 @@ class ChartRenderer {
    */
   lineChart(element, data) {
     // Logic to render a line chart
-    console.log('Rendering line chart for', element, data);
+    //console.log('Rendering line chart for', element, data);
     // Implementation for rendering the line chart goes here
     LineChart(element, data, element.dataset.chartHex);
   }
@@ -139,7 +139,7 @@ class ChartRenderer {
    */
   smoothedLineChart(element, data) {
     // Logic to render a line chart
-    console.log('Rendering smoothed line chart for', element, data);
+    //console.log('Rendering smoothed line chart for', element, data);
     // Implementation for rendering the line chart goes here
     SmoothLineChart(element, data);
   }
@@ -152,7 +152,7 @@ class ChartRenderer {
    */
   mapChart(element, data) {
     // Logic to render a map chart
-    console.log('Rendering map chart for', element, data);
+    //console.log('Rendering map chart for', element, data);
     // Implementation for rendering the map chart goes here
     MapChart(element, data);
   }
@@ -165,7 +165,7 @@ class ChartRenderer {
    */
   donutChart(element, data) {
     // Logic to render a map chart
-    console.log('Rendering donut chart for', element, data);
+    //console.log('Rendering donut chart for', element, data);
     // Implementation for rendering the map chart goes here
     DonutChart(element, data);
   }
