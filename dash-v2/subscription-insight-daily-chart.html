@@ -193,7 +193,7 @@
                         <div class="flex flex-column justify-center items-start gap--16 flex-auto">
                             <div class="flex flex-column gap--24 w-100">
                                 <!-- Sales Insight Bar Chart -->
-                                <div data-id="sales-insight-daily" data-chart-name="subscriptionInsightdaily" data-chart-type="donut" data-chart-timeframes="day" data-chart class="w-100 h--300"></div>
+                                <div data-id="sales-insight-daily" data-chart-name="subscriptionInsightdaily" data-popup-type="popup-subscriptions-insight" data-chart-type="donut" data-chart-timeframes="day" data-chart-category-x-field="day" data-chart class="w-100 h--300"></div>
                                 <!-- Chart Category List -->
                                 <div class="pad--x--8 flex flex-wrap gap--8 justify-center items-center">
                                     <div class="flex gap--8 items-center">
@@ -224,7 +224,7 @@
                       <div class="flex flex-column justify-start items-start gap--16 flex-auto">
                           <div class="flex flex-column gap--24 w-100">
                               <!-- Sales Insight Bar Chart -->
-                              <div data-id="tokens-trend-daily" data-chart-name="tiersBreakdowndaily" data-chart-type="donut" data-chart-timeframes="day" data-chart class="w-100 h--300"></div>
+                              <div data-id="tokens-trend-daily" data-chart-name="tiersBreakdowndaily" data-popup-type="popup-subscriptions-insight" data-chart-type="donut" data-chart-timeframes="day" data-chart-category-x-field="day" data-chart class="w-100 h--300"></div>
                               <!-- Chart Category List -->
                               <div class="pad--x--8 flex flex-wrap gap--8 justify-center items-center">
                                     <div class="flex gap--8 items-center">
@@ -281,6 +281,8 @@
     <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+    <script src="assets/js/charts.js"></script>
+    <script src="assets/js/chartRenderer.js"></script>
     
 
     <script type="text/javascript">
@@ -655,8 +657,8 @@
         var tokenstrendDaily = document.querySelector('[data-id="tokens-trend-daily"]');
 
         // For Daily Chart
-        SubscribersDailyChart(salesInsightDaily);
-        TiersDailyChart(tokenstrendDaily);
+        /* SubscribersDailyChart(salesInsightDaily);
+        TiersDailyChart(tokenstrendDaily); */
 
     </script>
 </body>
