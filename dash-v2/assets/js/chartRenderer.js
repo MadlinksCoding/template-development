@@ -141,6 +141,14 @@ class ChartRenderer {
     console.log('Rendering smoothed line chart for', element, data);
     // Implementation for rendering the line chart goes here
     SmoothLineChart(element, data);
+    /* if ( element.dataset.popupType == 'popup-fans-insight' ) {
+      console.log('Call fans smoothed line chart');
+      FansSmoothLineChart(element, data);
+    }
+    else {
+      console.log('Call smoothed line chart');
+      SmoothLineChart(element, data);
+    } */
   }
 
   /**
