@@ -128,6 +128,7 @@ class ChartRenderer {
     // Logic to render a line chart
     console.log('Rendering line chart for', element, data);
     // Implementation for rendering the line chart goes here
+    LineChart(element, data, element.dataset.chartHex);
   }
 
   /**
