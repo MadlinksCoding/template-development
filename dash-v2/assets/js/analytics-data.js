@@ -4071,45 +4071,45 @@
             "week":[
                 {
                     "day":"Jul 1",
-                    "year":"2023",
-                    "newfollowers":"355",
-                    "profilevisit":"120"
+                    "year":2023,
+                    "newfollowers":355,
+                    "profilevisit":120
                 },
                 {
                     "day":"Jul 2",
-                    "year":"2023",
-                    "newfollowers":"155",
-                    "profilevisit":"320"
+                    "year":2023,
+                    "newfollowers":155,
+                    "profilevisit":320
                 },
                 {
                     "day":"Jul 3",
-                    "year":"2023",
-                    "newfollowers":"255",
-                    "profilevisit":"220"
+                    "year":2023,
+                    "newfollowers":255,
+                    "profilevisit":220
                 },
                 {
                     "day":"Jul 4",
-                    "year":"2023",
-                    "newfollowers":"155",
-                    "profilevisit":"620"
+                    "year":2023,
+                    "newfollowers":155,
+                    "profilevisit":620
                 },
                 {
                     "day":"Jul 5",
-                    "year":"2023",
-                    "newfollowers":"155",
-                    "profilevisit":"520"
+                    "year":2023,
+                    "newfollowers":155,
+                    "profilevisit":520
                 },
                 {
                     "day":"Jul 6",
-                    "year":"2023",
-                    "newfollowers":"855",
-                    "profilevisit":"120"
+                    "year":2023,
+                    "newfollowers":855,
+                    "profilevisit":120
                 },
                 {
                     "day":"Jul 7",
-                    "year":"2023",
-                    "newfollowers":"855",
-                    "profilevisit":"120"
+                    "year":2023,
+                    "newfollowers":855,
+                    "profilevisit":120
                 }
             ]
         }
