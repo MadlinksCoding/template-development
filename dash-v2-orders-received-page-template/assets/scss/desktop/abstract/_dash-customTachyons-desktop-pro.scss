@@ -1,0 +1,236 @@
+/**
+ * Template name: <Dashboard Custom Tachyons>
+ * Custom Tachyons Stylesheet: Enhances Tachyons functionality for rapid, consistent, and performant UI development.
+ * Tachyons: A functional CSS framework for creating scalable, responsive interfaces with minimal code.
+ * Tachyons Guidelines: https://knowledge.madlinkscoding.com/guide-customtachyons/
+ */
+
+/* Colors */
+.col--pale-sky { color: var(--color-pale-sky,#667085); }
+.col--gull-gray { color: var(--color-gull-gray,#98A2B3); }
+.col--oxford-blue { color: var(--color-oxford-blue,#344054); }
+
+
+/* Background Colors*/
+.bg--col--light-gray-50 { background: rgba(249, 250, 251, 0.50); }
+
+
+/* Background Gradients*/
+
+/* Background Style */
+.bg--no-repeat { background-repeat: no-repeat; }
+.bg--right-top { background-position: right top; }
+.bg--size-auto { background-size: auto; }
+.bg--fixed { background-attachment: fixed; }
+
+
+/* Border Colors */
+.br--col--mischka-gray { color: var(--color-mischka-gray,#D0D5DD); }
+
+
+/* Fill Colors */
+
+
+/* Stroke Colors */
+
+
+/* Filter Colors */
+
+/* Filter Blur */
+.filter--blur--500 { filter: blur(345px); -webkit-filter: blur(345px); -moz-filter: blur(600px); }
+
+
+/* Hover Filter Colors */
+
+
+/* Caret Colors */
+
+
+/* Hover Background Colors */
+
+
+/* Hover Colors */
+
+
+/* Active State Background Colors*/
+
+/* Active State Filter Colors */
+
+/* Active State Border Colors */
+
+
+/* Font Size */
+
+
+/* Line Height */
+
+
+/* Letter Spacing */ 
+.tracked--0-25 { letter-spacing: 0.016rem; /* letter spacing 0.25px */ } /* confirmed in use */ /* pixel conversion correct */
+
+
+/* Word Break */
+
+
+/* Width */
+
+
+/* Width Percent */
+
+
+/* Width (px) */
+
+
+/* Min Width */
+
+
+/* Max Width */
+
+
+/* Height */
+
+
+/* Height Percent */
+
+
+/* Height (px) */
+
+
+/* Min Height */
+
+
+/* Max Height */
+
+
+/* Padding */
+.pad--bottom--0 { padding-bottom: 0; }
+.pad--x--12 { padding-left: 0.75rem; padding-right: 0.75rem; /* padding left right 12px */ }
+
+
+/* Margin */
+.m--0 { margin: 0rem; }
+
+
+/* Display */
+
+
+/* Gap */
+
+
+/* Flexbox */
+
+
+/* Grid */
+
+
+/* Grid Column */
+
+
+/* Order */
+
+
+/* Position */
+
+
+/* Top */
+
+
+/* Right */
+
+
+/* Bottom */
+
+
+/* Left */
+
+
+/* Left (px) */
+
+
+/* Z-Index */
+
+
+/* Opacity */
+
+
+/* Hover Opacity */
+
+
+/* Object Fit */
+
+
+/* Backdrop Filter */
+
+
+/* Box Shadow */
+.sh--7 { box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05); } /* confirmed in use */
+
+
+/* Drop Shadow */
+
+
+/* Text Shadow */
+
+
+/* Overflow */
+
+
+/* Cursor Style */ 
+
+
+/* Border */
+
+
+/* Border Width */
+
+
+/* Border Radius */
+.br--5 { border-radius: 0.313rem; /* border-radius 5px */ } /* confirmed in use */ /* pixel conversion correct */
+.br--top--2 { border-radius: 0.125rem 0.125rem 0rem 0rem; /* border-radius top 2px */ } /* confirmed in use */ /* pixel conversion correct */
+
+/* Transform */
+.transform--3d { transform: translate3d(0, 0, 0); -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); }
+
+
+/* Transition Property */
+
+
+/* Transition Duration */
+
+
+/* Transition Timing */
+
+
+/* Pointer Events */
+
+
+
+
+
+/* Nice Select Box New Design Style */
+[data-id="order-type-select"] .nice-select.v1 { border: none;}
+[data-id="order-type-select"] .nice-select.v1 .nice-select-list { border-radius: 2px; background: rgba(255, 255, 255, 0.70); backdrop-filter: blur(25px); }
+[data-id="order-type-select"] .nice-select.v1:not(.auto-width) { min-width: 5.75rem; background: transparent; }
+[data-id="order-type-select"] .nice-select.v1:not(.has-tags) .current { border: none; padding: 0 0.5rem; justify-content:center; gap: 0.5rem; }
+[data-id="order-type-select"] .nice-select.v1 .current .elm_aQVICr { max-width: fit-content; }
+[data-id="order-type-select"] .nice-select.v1:not(.auto-width) .nice-select-dropdown { min-width: 7.438rem; right: 0; left: auto; transform: scale(1) translateY(0px); box-shadow: none; border: 0; }
+[data-id="order-type-select"] .nice-select.v1:not(.has-tags) .option { padding: 0; }
+[data-id="order-type-select"] .nice-select.v1:not(.has-tags) .option .elm_aQVICr { padding: 0.75rem; }
+[data-id="order-type-select"] .nice-select.v1:not(.has-tags) [data-option-label] { font-size: 0.875rem; font-weight:400; line-height: 1.25rem; color: var(--Gray-700, #344054); text-transform: capitalize; }
+[data-id="order-type-select"] .nice-select.v1:not(.has-tags) .option:not(.disabled):hover, [data-id="order-type-select"] .nice-select.v1:not(.has-tags) .option.selected { background-color:transparent; }
+[data-id="order-type-select"] .nice-select.v1:not(.has-tags) .option:not(.disabled):hover .elm_aQVICr { border-radius: 6px; background: #fff; }
+[data-id="order-type-select"] .nice-select.v1:not(.has-tags) .option.selected [data-option-label] {color: var(--Gray-700, #344054);}
+[data-id="order-type-select"] .nice-select.v1.filter:not(.has-tags) .multiple-options.active, [data-id="order-type-select"] .nice-select.v1.filter:not(.has-tags) .current.active { background: transparent; border: 0; }
+[data-id="order-type-select"] .nice-select.v1:not(.has-tags):not(.auto-width) [data-option-label] { text-wrap: nowrap; }
+
+
+/* Mozila Firefox Specific CSS */
+[data-container-bg-fixed]:-moz-read-only { filter: blur(0px); -webkit-filter: blur(0px); -moz-filter: blur(0px); background-image: url(assets/img/gradient-bg-firefox.svg) !important; }
+
+/* Card Hover CSS */
+[data-hover="card-hover"]:hover [data-section="hover-overlay"] { display: flex; }
+
+/* Tab Style */
+[data-tabs-content] [data-tabbed-content].active { display: block; }
+[data-tabs-menu] [data-tabbed-child-id].active { background: var(--Base-White, #FFF); }
+[data-tabs-menu] [data-tabbed-child-id].active [data-span-title] { color: var(--color-gray-800,#182230); }
