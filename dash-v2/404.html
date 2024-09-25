@@ -54,6 +54,7 @@
 
         /* Padding */
         .pad--x--32 { padding-left: 2rem; padding-right: 2rem; /* padding left right 32px */ } /* confirmed in use */ /* pixel conversion correct */
+        .pad--top--42 { padding-top: 2.625rem; /* padding-top 42px */ } /* confirmed in use */ /* pixel conversion correct */
 
         /* Margin */
         .m--0 { margin: 0rem; }
@@ -72,6 +73,12 @@
 
         /* Left */
         .left--61 { left: 3.813rem; } 
+
+        /* Cuatom Responsive media screen for larger screen */
+        @media screen and (min-width: 1758px) { 
+            .w--518-large-screen { width: 32.375rem; }
+            .h--461-large-screen { height: 28.8125rem; }
+        }
 
         /* Black Button style with data attribute */
         button[data-button-color="black"] { border-color: var(--color-spring-green); background-color: var(--color-gray-900,#101828); }
@@ -96,8 +103,8 @@
 
 <body class="ff-poppins">
     <div class="db absolute top-0 left-0 w-100 bg--center-top h--screen bg--size--cover bg--no-repeat" style="background-image: url(assets/img/404-bg.svg);"></div>
-    <div class="w-100 bg--gradient-black bg--blur--50 w-100 h--screen flex justify-center">
-        <div class="w-100 max--w--1280 pad--x--32 pad--x--16-responsive-mobile-portrait pad--top--52-responsive-tablet pad--top--52-responsive-mobile flex justify-center items-center gap--32 h-100 relative">
+    <div class="w-100 bg--gradient-black bg--blur--50 w-100 h--screen flex justify-center pad--top--42">
+        <div class="w-100 max--w--1280 pad--x--32 pad--x--16-responsive-mobile-portrait pad--top--42 pad--top--52-responsive-tablet pad--top--52-responsive-mobile flex justify-center items-center gap--32 h-100 relative">
             <div class="flex flex-column gap--48 justify-center items-center relative z--10000">
                 <!-- Heading -->
                 <div class="max--w--768 flex flex-column gap--24 items-center">
@@ -124,12 +131,12 @@
 
             <!-- Right Top Image -->
             <div class="absolute top--15 right--63 top--64-responsive-tablet top--64-responsive-mobile right--8-responsive-tablet right--8-responsive-mobile right--0-responsive-mobile-portrait top--34-responsive-mobile-portrait">
-                <img src="assets/img/404-top-img.svg" alt="" class="w--389 h--301 w--423-responsive-mobile w--274-responsive-mobile-portrait h--327-responsive-mobile h--211-responsive-mobile-portrait" />
+                <img src="assets/img/404-top-img.svg" alt="" class="w--389 h--301 w--518-large-screen h--461-large-screen w--423-responsive-mobile w--274-responsive-mobile-portrait h--327-responsive-mobile h--211-responsive-mobile-portrait" />
             </div>
 
             <!-- Left Bottom Image -->
             <div class="absolute bottom--90 left--61 bottom--80-responsive-tablet bottom--80-responsive-mobile bottom--32-responsive-mobile-portrait left--0-responsive-tablet left--17-responsive-mobile left--16-neg-responsive-mobile-portrait">
-                <img src="assets/img/404-bottom-img.svg" alt="" class="w--417 h--292 w--390-responsive-tablet w--390-responsive-mobile w--300-responsive-mobile-portrait h--274-responsive-tablet h--274-responsive-mobile h--211-responsive-mobile-portrait " />
+                <img src="assets/img/404-bottom-img.svg" alt="" class="w--417 h--292 w--518-large-screen h--461-large-screen w--390-responsive-tablet w--390-responsive-mobile w--300-responsive-mobile-portrait h--274-responsive-tablet h--274-responsive-mobile h--211-responsive-mobile-portrait " />
             </div>
         </div>
     </div>
