@@ -3804,312 +3804,312 @@
                 {
                     "month":"Jan",
                     "fullMonth":"JANUARY",
-                    "year":"2023",
-                    "newfollowers":"555",
-                    "profilevisit":"320"
+                    "year":2023,
+                    "newfollowers":555,
+                    "profilevisit":320
                 },
                 {
                     "month":"Feb",
                     "fullMonth":"FEBRUARY",
-                    "year":"2023",
-                    "newfollowers":"155",
-                    "profilevisit":"120"
+                    "year":2023,
+                    "newfollowers":155,
+                    "profilevisit":120
                 },
                 {
                     "month":"Mar",
                     "fullMonth":"MARCH",
-                    "year":"2023",
-                    "newfollowers":"355",
-                    "profilevisit":"420"
+                    "year":2023,
+                    "newfollowers":355,
+                    "profilevisit":420
                 },
                 {
                     "month":"Apr",
                     "fullMonth":"APRIL",
-                    "year":"2023",
-                    "newfollowers":"155",
-                    "profilevisit":"520"
+                    "year":2023,
+                    "newfollowers":155,
+                    "profilevisit":520
                 },
                 {
                     "month":"May",
                     "fullMonth":"MAY",
-                    "year":"2023",
-                    "newfollowers":"555",
-                    "profilevisit":"120"
+                    "year":2023,
+                    "newfollowers":555,
+                    "profilevisit":120
                 },
                 {
                     "month":"Jun",
                     "fullMonth":"JUNE",
-                    "year":"2023",
-                    "newfollowers":"155",
-                    "profilevisit":"120"
+                    "year":2023,
+                    "newfollowers":155,
+                    "profilevisit":120
                 },
                 {
                     "month":"Jul",
                     "fullMonth":"JULY",
-                    "year":"2023",
-                    "newfollowers":"655",
-                    "profilevisit":"220"
+                    "year":2023,
+                    "newfollowers":655,
+                    "profilevisit":220
                 },
                 {
                     "month":"Aug",
                     "fullMonth":"AUGUST",
-                    "year":"2023",
-                    "newfollowers":"155",
-                    "profilevisit":"120"
+                    "year":2023,
+                    "newfollowers":155,
+                    "profilevisit":120
                 },
                 {
                     "month":"Sep",
                     "fullMonth":"SEPTEMBER",
-                    "year":"2023",
-                    "newfollowers":"755",
-                    "profilevisit":"120"
+                    "year":2023,
+                    "newfollowers":755,
+                    "profilevisit":120
                 },
                 {
                     "month":"Oct",
                     "fullMonth":"OCTOBER",
-                    "year":"2023",
-                    "newfollowers":"155",
-                    "profilevisit":"920"
+                    "year":2023,
+                    "newfollowers":155,
+                    "profilevisit":920
                 },
                 {
                     "month":"Nov",
                     "fullMonth":"NOVEMBER",
-                    "year":"2023",
-                    "newfollowers":"855",
-                    "profilevisit":"120"
+                    "year":2023,
+                    "newfollowers":855,
+                    "profilevisit":120
                 },
                 {
                     "month":"Dec",
                     "fullMonth":"DECEMBER",
-                    "year":"2023",
-                    "newfollowers":"155",
-                    "profilevisit":"620"
+                    "year":2023,
+                    "newfollowers":155,
+                    "profilevisit":620
                 }
             ],
-            "day":[
+            "day": [
                 {
-                    "day":"Jul 1",
-                    "year":"2023",
-                    "newfollowers":"355",
-                    "profilevisit":"120"
+                    "day": "Jul 1",
+                    "year": 2023,
+                    "newfollowers": 355,
+                    "profilevisit": 120
                 },
                 {
-                    "day":"Jul 2",
-                    "year":"2023",
-                    "newfollowers":"155",
-                    "profilevisit":"320"
+                    "day": "Jul 2",
+                    "year": 2023,
+                    "newfollowers": 155,
+                    "profilevisit": 320
                 },
                 {
-                    "day":"Jul 3",
-                    "year":"2023",
-                    "newfollowers":"255",
-                    "profilevisit":"220"
+                    "day": "Jul 3",
+                    "year": 2023,
+                    "newfollowers": 255,
+                    "profilevisit": 220
                 },
                 {
-                    "day":"Jul 4",
-                    "year":"2023",
-                    "newfollowers":"155",
-                    "profilevisit":"620"
+                    "day": "Jul 4",
+                    "year": 2023,
+                    "newfollowers": 155,
+                    "profilevisit": 620
                 },
                 {
-                    "day":"Jul 5",
-                    "year":"2023",
-                    "newfollowers":"155",
-                    "profilevisit":"520"
+                    "day": "Jul 5",
+                    "year": 2023,
+                    "newfollowers": 155,
+                    "profilevisit": 520
                 },
                 {
-                    "day":"Jul 6",
-                    "year":"2023",
-                    "newfollowers":"855",
-                    "profilevisit":"120"
+                    "day": "Jul 6",
+                    "year": 2023,
+                    "newfollowers": 855,
+                    "profilevisit": 120
                 },
                 {
-                    "day":"Jul 7",
-                    "year":"2023",
-                    "newfollowers":"855",
-                    "profilevisit":"120"
+                    "day": "Jul 7",
+                    "year": 2023,
+                    "newfollowers": 855,
+                    "profilevisit": 120
                 },
                 {
-                    "day":"Jul 8",
-                    "year":"2023",
-                    "newfollowers":"195",
-                    "profilevisit":"120"
+                    "day": "Jul 8",
+                    "year": 2023,
+                    "newfollowers": 195,
+                    "profilevisit": 120
                 },
                 {
-                    "day":"Jul 9",
-                    "year":"2023",
-                    "newfollowers":"155",
-                    "profilevisit":"120"
+                    "day": "Jul 9",
+                    "year": 2023,
+                    "newfollowers": 155,
+                    "profilevisit": 120
                 },
                 {
-                    "day":"Jul 10",
-                    "year":"2023",
-                    "newfollowers":"155",
-                    "profilevisit":"120"
+                    "day": "Jul 10",
+                    "year": 2023,
+                    "newfollowers": 155,
+                    "profilevisit": 120
                 },
                 {
-                    "day":"Jul 11",
-                    "year":"2023",
-                    "newfollowers":"155",
-                    "profilevisit":"120"
+                    "day": "Jul 11",
+                    "year": 2023,
+                    "newfollowers": 155,
+                    "profilevisit": 120
                 },
                 {
-                    "day":"Jul 12",
-                    "year":"2023",
-                    "newfollowers":"55",
-                    "profilevisit":"620"
+                    "day": "Jul 12",
+                    "year": 2023,
+                    "newfollowers": 55,
+                    "profilevisit": 620
                 },
                 {
-                    "day":"Jul 13",
-                    "year":"2023",
-                    "newfollowers":"955",
-                    "profilevisit":"220"
+                    "day": "Jul 13",
+                    "year": 2023,
+                    "newfollowers": 955,
+                    "profilevisit": 220
                 },
                 {
-                    "day":"Jul 14",
-                    "year":"2023",
-                    "newfollowers":"755",
-                    "profilevisit":"520"
+                    "day": "Jul 14",
+                    "year": 2023,
+                    "newfollowers": 755,
+                    "profilevisit": 520
                 },
                 {
-                    "day":"Jul 15",
-                    "year":"2023",
-                    "newfollowers":"155",
-                    "profilevisit":"220"
+                    "day": "Jul 15",
+                    "year": 2023,
+                    "newfollowers": 155,
+                    "profilevisit": 220
                 },
                 {
-                    "day":"Jul 16",
-                    "year":"2023",
-                    "newfollowers":"655",
-                    "profilevisit":"120"
+                    "day": "Jul 16",
+                    "year": 2023,
+                    "newfollowers": 655,
+                    "profilevisit": 120
                 },
                 {
-                    "day":"Jul 17",
-                    "year":"2023",
-                    "newfollowers":"155",
-                    "profilevisit":"120"
+                    "day": "Jul 17",
+                    "year": 2023,
+                    "newfollowers": 155,
+                    "profilevisit": 120
                 },
                 {
-                    "day":"Jul 18",
-                    "year":"2023",
-                    "newfollowers":"555",
-                    "profilevisit":"420"
+                    "day": "Jul 18",
+                    "year": 2023,
+                    "newfollowers": 555,
+                    "profilevisit": 420
                 },
                 {
-                    "day":"Jul 19",
-                    "year":"2023",
-                    "newfollowers":"155",
-                    "profilevisit":"120"
+                    "day": "Jul 19",
+                    "year": 2023,
+                    "newfollowers": 155,
+                    "profilevisit": 120
                 },
                 {
-                    "day":"Jul 20",
-                    "year":"2023",
-                    "newfollowers":"155",
-                    "profilevisit":"220"
+                    "day": "Jul 20",
+                    "year": 2023,
+                    "newfollowers": 155,
+                    "profilevisit": 220
                 },
                 {
-                    "day":"Jul 21",
-                    "year":"2023",
-                    "newfollowers":"155",
-                    "profilevisit":"120"
+                    "day": "Jul 21",
+                    "year": 2023,
+                    "newfollowers": 155,
+                    "profilevisit": 120
                 },
                 {
-                    "day":"Jul 22",
-                    "year":"2023",
-                    "newfollowers":"855",
-                    "profilevisit":"620"
+                    "day": "Jul 22",
+                    "year": 2023,
+                    "newfollowers": 855,
+                    "profilevisit": 620
                 },
                 {
-                    "day":"Jul 23",
-                    "year":"2023",
-                    "newfollowers":"555",
-                    "profilevisit":"120"
+                    "day": "Jul 23",
+                    "year": 2023,
+                    "newfollowers": 555,
+                    "profilevisit": 120
                 },
                 {
-                    "day":"Jul 24",
-                    "year":"2023",
-                    "newfollowers":"255",
-                    "profilevisit":"120"
+                    "day": "Jul 24",
+                    "year": 2023,
+                    "newfollowers": 255,
+                    "profilevisit": 120
                 },
                 {
-                    "day":"Jul 25",
-                    "year":"2023",
-                    "newfollowers":"355",
-                    "profilevisit":"320"
+                    "day": "Jul 25",
+                    "year": 2023,
+                    "newfollowers": 355,
+                    "profilevisit": 320
                 },
                 {
-                    "day":"Jul 26",
-                    "year":"2023",
-                    "newfollowers":"155",
-                    "profilevisit":"120"
+                    "day": "Jul 26",
+                    "year": 2023,
+                    "newfollowers": 155,
+                    "profilevisit": 120
                 },
                 {
-                    "day":"Jul 27",
-                    "year":"2023",
-                    "newfollowers":"555",
-                    "profilevisit":"820"
+                    "day": "Jul 27",
+                    "year": 2023,
+                    "newfollowers": 555,
+                    "profilevisit": 820
                 },
                 {
-                    "day":"Jul 28",
-                    "year":"2023",
-                    "newfollowers":"155",
-                    "profilevisit":"120"
+                    "day": "Jul 28",
+                    "year": 2023,
+                    "newfollowers": 155,
+                    "profilevisit": 120
                 },
                 {
-                    "day":"Jul 29",
-                    "year":"2023",
-                    "newfollowers":"355",
-                    "profilevisit":"220"
+                    "day": "Jul 29",
+                    "year": 2023,
+                    "newfollowers": 355,
+                    "profilevisit": 220
                 },
                 {
-                    "day":"Jul 30",
-                    "year":"2023",
-                    "newfollowers":"155",
-                    "profilevisit":"120"
+                    "day": "Jul 30",
+                    "year": 2023,
+                    "newfollowers": 155,
+                    "profilevisit": 120
                 }
             ],
             "week":[
                 {
                     "day":"Jul 1",
-                    "year":"2023",
-                    "newfollowers":"355",
-                    "profilevisit":"120"
+                    "year":2023,
+                    "newfollowers":355,
+                    "profilevisit":120
                 },
                 {
                     "day":"Jul 2",
-                    "year":"2023",
-                    "newfollowers":"155",
-                    "profilevisit":"320"
+                    "year":2023,
+                    "newfollowers":155,
+                    "profilevisit":320
                 },
                 {
                     "day":"Jul 3",
-                    "year":"2023",
-                    "newfollowers":"255",
-                    "profilevisit":"220"
+                    "year":2023,
+                    "newfollowers":255,
+                    "profilevisit":220
                 },
                 {
                     "day":"Jul 4",
-                    "year":"2023",
-                    "newfollowers":"155",
-                    "profilevisit":"620"
+                    "year":2023,
+                    "newfollowers":155,
+                    "profilevisit":620
                 },
                 {
                     "day":"Jul 5",
-                    "year":"2023",
-                    "newfollowers":"155",
-                    "profilevisit":"520"
+                    "year":2023,
+                    "newfollowers":155,
+                    "profilevisit":520
                 },
                 {
                     "day":"Jul 6",
-                    "year":"2023",
-                    "newfollowers":"855",
-                    "profilevisit":"120"
+                    "year":2023,
+                    "newfollowers":855,
+                    "profilevisit":120
                 },
                 {
                     "day":"Jul 7",
-                    "year":"2023",
-                    "newfollowers":"855",
-                    "profilevisit":"120"
+                    "year":2023,
+                    "newfollowers":855,
+                    "profilevisit":120
                 }
             ]
         }
