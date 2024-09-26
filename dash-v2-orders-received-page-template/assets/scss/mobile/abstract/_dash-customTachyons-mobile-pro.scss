@@ -49,9 +49,11 @@
 
 
 /* Font Size */
+.fs--12-responsive-mobile { font-size: 0.75rem; /* font-size 12px */  }
 
 
 /* Line Height */
+.lh--18-responsive-mobile { line-height: 1.125rem; /* line-height 18px */ } /* confirmed in use */ /* pixel conversion correct */
 
 
 /* Letter Spacing */ 
@@ -61,6 +63,7 @@
 
 
 /* Width */
+.w--100-responsive-mobile { width: 100%; }
 
 
 /* Width Percent */
@@ -91,18 +94,29 @@
 
 
 /* Padding */
+.pad--8-responsive-mobile { padding: 0.5rem; /* padding left right top bottom 8px */ }
+.pad--x--0-responsive-mobile { padding-left: 0rem; padding-right: 0rem; /* padding left right 0px */ }
+.pad--y--0-responsive-mobile { padding-top: 0rem; padding-bottom: 0rem; /* padding top bottom 0px */ }
 
 
 /* Margin */
 
 
 /* Display */
+.display--none-responsive-mobile { display: none; }
+.display--flex-responsive-mobile { display: flex; }
 
 
 /* Gap */
+.gap--4-responsive-mobile { gap: 0.25rem; }
+.gap--8-responsive-mobile { gap: 0.5rem; }
 
 
 /* Flexbox */
+.flex--column-responsive-mobile { flex-direction: column; }
+.items--start-responsive-mobile { align-items: flex-start; }
+.flex--max-responsive-mobile { flex: 1 0 0; }
+
 
 
 /* Grid */

@@ -591,6 +591,10 @@ html {
   color: var(--color-oxford-blue, #344054)
 }
 
+.col--fiord-gray {
+  color: var(--color-fiord-gray, #475467)
+}
+
 .bg--col--light-gray-50 {
   background: rgba(249, 250, 251, .5)
 }
@@ -709,10 +713,14 @@ html {
 
 [data-id=order-type-select] .nice-select.v1:not(.has-tags) [data-option-label] {
   font-size: .875rem;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.25rem;
-  color: var(--Gray-700, #344054);
+  color: var(--ebony-gray, #0c111d);
   text-transform: capitalize
+}
+
+[data-id=order-type-select] .nice-select.v1:not(.has-tags) .current [data-option-label] {
+  font-weight: 400
 }
 
 [data-id=order-type-select] .nice-select.v1:not(.has-tags) .option.selected,
@@ -721,12 +729,12 @@ html {
 }
 
 [data-id=order-type-select] .nice-select.v1:not(.has-tags) .option:not(.disabled):hover .elm_aQVICr {
-  border-radius: 6px;
-  background: #fff
+  border-radius: 0;
+  background: var(--Base-White, #fff)
 }
 
 [data-id=order-type-select] .nice-select.v1:not(.has-tags) .option.selected [data-option-label] {
-  color: var(--Gray-700, #344054)
+  color: var(--ebony-gray, #0c111d)
 }
 
 [data-id=order-type-select] .nice-select.v1.filter:not(.has-tags) .current.active,
@@ -737,6 +745,11 @@ html {
 
 [data-id=order-type-select] .nice-select.v1:not(.has-tags):not(.auto-width) [data-option-label] {
   text-wrap: nowrap
+}
+
+[data-dropdown-arrow] {
+  width: 1rem !important;
+  height: 1rem !important
 }
 
 [data-container-bg-fixed]:-moz-read-only {
@@ -761,7 +774,11 @@ html {
 }
 
 [data-tabs-menu] [data-tabbed-child-id].active [data-span-title] {
-  color: var(--color-gray-800, #182230)
+  color: var(--color-oxford-blue, #344054)
+}
+
+[data-tabs-menu] [data-tabbed-child-id].active [data-span-value] {
+  color: var(--color-pale-sky, #667085)
 }
 
 [data-floating-panel-wrapper] [data-floating-panel] {
@@ -2257,6 +2274,69 @@ html {
     background-position: center top
   }
 
+  .fs--12-responsive-mobile {
+    font-size: .75rem
+  }
+
+  .lh--18-responsive-mobile {
+    line-height: 1.125rem
+  }
+
+  .w--100-responsive-mobile {
+    width: 100%
+  }
+
+  .pad--8-responsive-mobile {
+    padding: .5rem
+  }
+
+  .pad--x--0-responsive-mobile {
+    padding-left: 0;
+    padding-right: 0
+  }
+
+  .pad--y--0-responsive-mobile {
+    padding-top: 0;
+    padding-bottom: 0
+  }
+
+  .display--none-responsive-mobile {
+    display: none
+  }
+
+  .display--flex-responsive-mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+  }
+
+  .gap--4-responsive-mobile {
+    gap: .25rem
+  }
+
+  .gap--8-responsive-mobile {
+    gap: .5rem
+  }
+
+  .flex--column-responsive-mobile {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column
+  }
+
+  .items--start-responsive-mobile {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start
+  }
+
+  .flex--max-responsive-mobile {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 0px;
+    flex: 1 0 0
+  }
+
   [data-floating-panel-wrapper] {
     display: none !important
   }
@@ -2592,6 +2672,69 @@ html {
 
   .bg--center-top-responsive-mobile-portrait {
     background-position: center top
+  }
+
+  .fs--12-responsive-mobile-portrait {
+    font-size: .75rem
+  }
+
+  .lh--18-responsive-mobile-portrait {
+    line-height: 1.125rem
+  }
+
+  .w--100-responsive-mobile-portrait {
+    width: 100%
+  }
+
+  .pad--8-responsive-mobile-portrait {
+    padding: .5rem
+  }
+
+  .pad--x--0-responsive-mobile-portrait {
+    padding-left: 0;
+    padding-right: 0
+  }
+
+  .pad--y--0-responsive-mobile-portrait {
+    padding-top: 0;
+    padding-bottom: 0
+  }
+
+  .display--none-responsive-mobile-portrait {
+    display: none
+  }
+
+  .display--flex-responsive-mobile-portrait {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+  }
+
+  .gap--4-responsive-mobile-portrait {
+    gap: .25rem
+  }
+
+  .gap--8-responsive-mobile-portrait {
+    gap: .5rem
+  }
+
+  .flex--column-responsive-mobile-portrait {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column
+  }
+
+  .items--start-responsive-mobile-portrait {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start
+  }
+
+  .flex--max-responsive-mobile-portrait {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 0px;
+    flex: 1 0 0
   }
 
   [data-floating-panel-wrapper] {
