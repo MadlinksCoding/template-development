@@ -619,6 +619,11 @@ html {
   color: var(--color-mischka-gray, #d0d5dd)
 }
 
+.filter--col--gull-gray {
+  -webkit-filter: brightness(0) saturate(100%) invert(89%) sepia(55%) saturate(1988%) hue-rotate(178deg) brightness(74%) contrast(83%);
+  filter: brightness(0) saturate(100%) invert(89%) sepia(55%) saturate(1988%) hue-rotate(178deg) brightness(74%) contrast(83%)
+}
+
 .filter--blur--500 {
   filter: blur(345px);
   -webkit-filter: blur(345px);

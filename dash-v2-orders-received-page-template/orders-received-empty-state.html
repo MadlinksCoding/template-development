@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE-edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        <title>Template - Orders Received</title>
+        <title>Template - Orders Received Empty State</title>
 
         <!-- Poppins Font -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,7 +35,7 @@
     </head>
     <body>
         <!-- main wrapper -->
-        <div data-section="wrapper" class="flex flex--column-responsive-mobile flex--column-responsive-mobile-portrait">
+        <div data-section="wrapper" class="h--screen-tablet h--screen-mobile h--screen-mobile-portrait flex flex--column-responsive-mobile flex--column-responsive-mobile-portrait">
 
             <!-- page sidebar -->
             <section data-sidebar data-section="sidebar" class="flex vh-100 sticky top-0 z-2 bg--col--athens-gray--70 sh--sidebar vw--100--responsive-mobile vw--100--responsive-mobile-portrait h--48-responsive-mobile h--48-responsive-mobile-portrait bg--col--white--70--responsive-mobile bg--col--white--70--responsive-mobile-portrait sh--none--responsive-mobile sh--none--responsive-mobile-portrait">
@@ -4382,9 +4382,9 @@
             </div> <!-- End Background fixed container -->
 
             <!-- main section -->
-            <main data-dashboard-page="" data-section="main" class="flex flex-column flex--max relative z-1">
+            <main data-dashboard-page="" data-section="main" class="h-100 flex flex-column flex--max relative z-1">
                 <!-- Inner Container -->
-                <div data-section="inner-container" data-tabs-section="1" class="flex flex-column gap--24 bg--gradient-white pad--top--24-responsive-tablet pad--x--16-responsive-tablet pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait pad--y--0-responsive-mobile pad--y--0-responsive-mobile-portrait ">
+                <div data-section="inner-container" data-tabs-section="1" class="h-100 flex flex-column gap--24 bg--gradient-white pad--top--24-responsive-tablet pad--x--16-responsive-tablet pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait pad--y--0-responsive-mobile pad--y--0-responsive-mobile-portrait ">
                     <!-- Top Page Header Section -->
                     <div data-section="page-header" class="pad--40 pad--bottom--0 pad--x--0-responsive-tablet pad--top--0-responsive-tablet flex flex-column gap--24 pad--8-responsive-mobile pad--8-responsive-mobile-portrait">
                         <!-- Top Page Title Section -->
@@ -4467,16 +4467,35 @@
                             </div><!-- End Search and Select Content Section -->
                         </div><!-- End Top Page Settings -->
                     </div><!-- End Top Page Header Section -->
-
-                    <div data-tabs-content="1" class="h-100 dn">
+                    <div data-tabs-content="1" class="h-100">
                         <!-- first tab content items -->
-                        <div data-tabbed-content="tabbed-content-first-tab" data-target="first-tab" class="flex flex-column justify-start items-start gap--16 flex-auto mt--8-neg active">
-                            <p>First</p>
+                        <div data-tabbed-content="tabbed-content-first-tab" data-target="first-tab" class="h-100 flex flex-column justify-start items-start gap--16 flex-auto mt--8-neg active">
+                            <!-- Empty State Structure -->
+                            <div class="pad--y--32 flex flex-column gap--8 justify-center items-center h-100">
+                                <!-- Empty State Icon -->
+                                <div class="flex justify-center items-center w--161 h--161">
+                                    <img src="assets/icons/order-1.svg" alt="" class="w-100 h-100 filter--col--gull-gray">
+                                </div><!-- End Empty State Icon -->
+                                <!-- Empty State Text Content -->
+                                <div class="flex flex-column gap--8 items-center">
+                                    <p class="fs--16 lh--24 col--oxford-blue tc">You haven’t received any orders yet.</p>
+                                </div><!-- End Empty State Text Content -->
+                            </div> <!-- End Empty State Structure -->
                         </div>
 
                         <!-- second tab content items -->
-                        <div data-tabbed-content="tabbed-content-second-tab" data-target="second-tab" class="flex-column justify-start items-start gap--16 flex-auto mt--8-neg dn">
-                            <p>Second</p>
+                        <div data-tabbed-content="tabbed-content-second-tab" data-target="second-tab" class="h-100 flex-column justify-start items-start gap--16 flex-auto mt--8-neg dn">
+                            <!-- Empty State Structure -->
+                            <div class="pad--y--32 flex flex-column gap--8 justify-center items-center h-100">
+                                <!-- Empty State Icon -->
+                                <div class="flex justify-center items-center w--161 h--161">
+                                    <img src="assets/icons/order-1.svg" alt="" class="w-100 h-100 filter--col--gull-gray">
+                                </div><!-- End Empty State Icon -->
+                                <!-- Empty State Text Content -->
+                                <div class="flex flex-column gap--8 items-center">
+                                    <p class="fs--16 lh--24 col--oxford-blue tc">You haven’t received any orders yet.</p>
+                                </div><!-- End Empty State Text Content -->
+                            </div> <!-- End Empty State Structure -->
                         </div>
                     </div>
         
