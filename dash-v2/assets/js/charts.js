@@ -577,16 +577,20 @@ function ContributorsBarChart(renderingEl, data) {
 
     // Update chart data based on screen size
     function updateChartData() {
-        var isMobile = window.innerWidth <= 767;
-        var chartData = isMobile ? data.slice(0, 5) : data;
-        seriesList.forEach(function(series) {
-            series.data.setAll(chartData);
-        });
-        xAxis.data.setAll(chartData);
-        chart.series.each(function(series) {
-            series.appear(1000, 100);
-        });
-    }
+			var isMobile = window.innerWidth <= 767
+			var chartData = isMobile ? data.slice(0, 5) : data
+			seriesList.forEach(function (series) {
+				series.data.setAll(chartData)
+			})
+			xAxis.data.setAll(chartData)
+			chart.series.each(function (series) {
+				series.appear(1000, 100)
+			})
+
+			// Disable Y-axis in mobile view
+			yAxis.get('renderer').labels.template.set('visible', !isMobile) // Hide labels
+			yAxis.set('visible', !isMobile)
+		}
 
     updateChartData();
     chart.appear(1000, 100);
