@@ -6,4 +6,9 @@
 [data-submenu-container][hidden] { display: flex; opacity: 0; visibility: hidden; pointer-events: none; transform: translateX(-36rem); }
 [data-submenu-container] { opacity: 1; visibility: visible; pointer-events: all; transform: translateX(0rem); }
 [data-submenu] [data-submenu-item] [data-arrow] { transform: translateX(-1rem); opacity: 0; pointer-events: none; }
+
+/* Dashboard Submenu (Hover) : Custom Styles */
+[data-submenu] [data-submenu-item]:hover { background-color: var(--color-black, #000000); }
+[data-submenu] [data-submenu-item]:hover span { color: var(--color-spring-green) }
+[data-submenu] [data-submenu-item]:hover [data-arrow] { filter: brightness(0) saturate(100%) invert(75%) sepia(23%) saturate(7280%) hue-rotate(93deg) brightness(109%) contrast(95%); } /* #07F468 */
 [data-submenu] [data-submenu-item][data-has-submenu="true"]:hover [data-arrow] { transform: translateX(0rem); opacity: 1; pointer-events: none; }
