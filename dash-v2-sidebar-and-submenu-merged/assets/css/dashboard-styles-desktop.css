@@ -80,6 +80,10 @@ html {
   color: var(--color-dodger-blue, #2970ff)
 }
 
+.col--spring-green {
+  color: var(--color-spring-green)
+}
+
 .bg--col--white--50 {
   background: rgba(255, 255, 255, .5)
 }
@@ -221,6 +225,11 @@ html {
 .filter--col--dodger-blue {
   -webkit-filter: brightness(0) saturate(100%) invert(38%) sepia(57%) saturate(4201%) hue-rotate(211deg) brightness(99%) contrast(106%);
   filter: brightness(0) saturate(100%) invert(38%) sepia(57%) saturate(4201%) hue-rotate(211deg) brightness(99%) contrast(106%)
+}
+
+.filter--col--spring-green {
+  -webkit-filter: brightness(0) saturate(100%) invert(75%) sepia(23%) saturate(7280%) hue-rotate(93deg) brightness(109%) contrast(95%);
+  filter: brightness(0) saturate(100%) invert(75%) sepia(23%) saturate(7280%) hue-rotate(93deg) brightness(109%) contrast(95%)
 }
 
 .filter--col--gray-500 {
@@ -686,6 +695,19 @@ html {
   transform: translateX(-1rem);
   opacity: 0;
   pointer-events: none
+}
+
+[data-submenu] [data-submenu-item]:hover {
+  background-color: var(--color-black, #000)
+}
+
+[data-submenu] [data-submenu-item]:hover span {
+  color: var(--color-spring-green)
+}
+
+[data-submenu] [data-submenu-item]:hover [data-arrow] {
+  -webkit-filter: brightness(0) saturate(100%) invert(75%) sepia(23%) saturate(7280%) hue-rotate(93deg) brightness(109%) contrast(95%);
+  filter: brightness(0) saturate(100%) invert(75%) sepia(23%) saturate(7280%) hue-rotate(93deg) brightness(109%) contrast(95%)
 }
 
 [data-submenu] [data-submenu-item][data-has-submenu=true]:hover [data-arrow] {
