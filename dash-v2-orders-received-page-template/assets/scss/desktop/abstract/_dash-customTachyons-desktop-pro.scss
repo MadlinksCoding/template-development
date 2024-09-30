@@ -10,10 +10,14 @@
 .col--gull-gray { color: var(--color-gull-gray,#98A2B3); }
 .col--oxford-blue { color: var(--color-oxford-blue,#344054); }
 .col--fiord-gray { color: var(--color-fiord-gray,#475467); }
+.col-turbo-yellow { color: var(--color-turbo-yellow, #FFE500); }
 
 
 /* Background Colors*/
 .bg--col--light-gray-50 { background: rgba(249, 250, 251, 0.50); }
+.bg--col-brand-green { background: var(--color-brand-green, #07F468); }
+.bg--col-turbo-yellow { background: var(--color-turbo-yellow, #FFE500); }
+.bg--col--athens-gray-3--50 { background: rgba(242, 244, 247, 0.50); }
 
 
 /* Background Gradients*/
@@ -27,6 +31,7 @@
 
 /* Border Colors */
 .br--col--mischka-gray { color: var(--color-mischka-gray,#D0D5DD); }
+.br--col--pale-sky { border-color: var(--color-pale-sky, #667085); } /* confirmed in use */
 
 
 /* Fill Colors */
@@ -81,6 +86,17 @@
 
 
 /* Width (px) */
+.w--14 { width: 0.875rem; /* width 14px */ } /* confirmed in use */ /* pixel conversion correct */
+.w--72 { width: 4.5rem; /* width 72px */ } /* confirmed in use */ /* pixel conversion correct */
+.w--80 { width: 5rem; /* width 80px */ } /* confirmed in use */ /* pixel conversion correct */
+.w--120 { width: 7.5rem; /* width 120px */ } /* confirmed in use */ /* pixel conversion correct */
+.w--130 { width: 8.125rem; /* width 130px */ } /* confirmed in use */ /* pixel conversion correct */
+.w--142 { width: 8.875rem; /* width 142px */ } /* confirmed in use */ /* pixel conversion correct */
+.w--180 { width: 11.25rem; /* width 180px */ } /* confirmed in use */ /* pixel conversion correct */
+.w--200 { width: 12.5rem; /* width 200px */ } /* confirmed in use */ /* pixel conversion correct */
+.w--250 { width: 15.625rem; /* width 250px */ } /* confirmed in use */ /* pixel conversion correct */
+.w--280 { width: 17.5rem; /* width 280px */ } /* confirmed in use */ /* pixel conversion correct */
+.w--356 { width: 22.25rem; /* width 356px */ } /* confirmed in use */ /* pixel conversion correct */
 
 
 /* Min Width */
@@ -106,6 +122,9 @@
 
 
 /* Padding */
+.pad--x--6 { padding-left: 0.375rem; padding-right: 0.375rem; /* padding left right 6px */ }
+.pad--10 { padding: 0.625rem; /* padding 10px */ } /* confirmed in use */ /* pixel conversion correct */
+.pad--18 { padding: 1.125rem; /* padding 18px */ } /* confirmed in use */ /* pixel conversion correct */
 .pad--bottom--0 { padding-bottom: 0; }
 .pad--x--12 { padding-left: 0.75rem; padding-right: 0.75rem; /* padding left right 12px */ }
 

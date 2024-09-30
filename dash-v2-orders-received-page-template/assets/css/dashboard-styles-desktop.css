@@ -595,8 +595,24 @@ html {
   color: var(--color-fiord-gray, #475467)
 }
 
+.col-turbo-yellow {
+  color: var(--color-turbo-yellow, #ffe500)
+}
+
 .bg--col--light-gray-50 {
   background: rgba(249, 250, 251, .5)
+}
+
+.bg--col-brand-green {
+  background: var(--color-brand-green, #07f468)
+}
+
+.bg--col-turbo-yellow {
+  background: var(--color-turbo-yellow, #ffe500)
+}
+
+.bg--col--athens-gray-3--50 {
+  background: rgba(242, 244, 247, .5)
 }
 
 .bg--no-repeat {
@@ -619,6 +635,10 @@ html {
   color: var(--color-mischka-gray, #d0d5dd)
 }
 
+.br--col--pale-sky {
+  border-color: var(--color-pale-sky, #667085)
+}
+
 .filter--col--gull-gray {
   -webkit-filter: brightness(0) saturate(100%) invert(89%) sepia(55%) saturate(1988%) hue-rotate(178deg) brightness(74%) contrast(83%);
   filter: brightness(0) saturate(100%) invert(89%) sepia(55%) saturate(1988%) hue-rotate(178deg) brightness(74%) contrast(83%)
@@ -634,8 +654,65 @@ html {
   letter-spacing: .016rem
 }
 
+.w--14 {
+  width: .875rem
+}
+
+.w--72 {
+  width: 4.5rem
+}
+
+.w--80 {
+  width: 5rem
+}
+
+.w--120 {
+  width: 7.5rem
+}
+
+.w--130 {
+  width: 8.125rem
+}
+
+.w--142 {
+  width: 8.875rem
+}
+
+.w--180 {
+  width: 11.25rem
+}
+
+.w--200 {
+  width: 12.5rem
+}
+
+.w--250 {
+  width: 15.625rem
+}
+
+.w--280 {
+  width: 17.5rem
+}
+
+.w--356 {
+  width: 22.25rem
+}
+
 .h--screen {
   height: 100vh
+}
+
+.pad--x--6 {
+  padding-left: .375rem;
+  padding-right: .375rem
+}
+
+.pad--10 {
+  padding: .625rem
+}
+
+.pad--18 {
+  padding: 1.125rem
 }
 
 .pad--bottom--0 {
