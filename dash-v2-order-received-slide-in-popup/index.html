@@ -40,13 +40,13 @@
             Open Popup (type - slide-in-right)
         </button>
 
-        <!-- slidein-right-popup -->
+        <!-- slidein-right-popup (tech debt - have to remove static width from old popup.css so that tachyons can be used for width) -->
         <div data-popup data-popup-type="slidein-right-popup" data-popup-overlay-color="rgba(0,0,0,0.65)" data-popup-max-width="480px" id="slidein-right-popup" class="elm_UoRWYY items-center justify-center fixed dn top-0 left-0 w-100 h-100 z-9999 overflow-auto">
             <!-- inner wrapper -->
             <div data-popup-inner class="elm_yNwqwJ top-0 w-100 flex items-center justify-center absolute">
                 <!-- container -->
                 <div data-popup-content-container data-ajax-content data-attribute-popup-ajax-container="" class="elm_qJBugX flex flex-column mw--300 w-100 max--w--480 bg--col--athens-gray--90 sh--popup-1 bg--blur--10">
-                    <!-- header (paddings shall vary based on design) -->
+                    <!-- header (paddings & borders will vary based on design) -->
                     <div data-popup-header class="elm_nZyPEx flex pv2 ph2 bb br--col--mischka">
                         <div data-popup-header-wrapper class="flex justify-between items-center flex--max">
                             <h2 class="fs--14 fw6 lh--20 col--oxford-blue">
@@ -60,7 +60,7 @@
                         </div>
                     </div>
 
-                    <!-- contents (paddings shall vary based on design) -->
+                    <!-- contents (paddings will vary based on design) -->
                     <div data-popup-main-content class="elm_wdBhkC">
                         <div data-popup-main-content-wrapper class="pa2">
                             <p class="fs--14 fw4 lh--20 black">
