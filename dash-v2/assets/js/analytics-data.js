@@ -444,7 +444,7 @@
             ]
         }
     },
-    "salesInsightdaily":{
+    "salesInsightDaily":{
         "chartType":"donut",
         "timeFrames":{
             "day":[
@@ -1758,7 +1758,7 @@
             ]
         }
     },
-    "tokenTrenddaily":{
+    "tokenTrendDaily":{
         "chartType":"donut",
         "timeFrames":{
             "day":[
@@ -1785,7 +1785,7 @@
             ]
         }
     },
-    "trafficSourcedaily":{
+    "trafficSourceDaily":{
         "chartType":"donut",
         "timeFrames":{
             "day":[
@@ -2182,7 +2182,7 @@
             ]
         }
     },
-    "subscriptionInsightdaily":{
+    "subscriptionInsightDaily":{
         "chartType":"donut",
         "timeFrames":{
             "day":[
@@ -3492,7 +3492,7 @@
             ]
         }
     },
-    "tiersBreakdowndaily":{
+    "tiersBreakdownDaily":{
         "chartType":"donut",
         "timeFrames":{
             "day":[
@@ -5521,7 +5521,7 @@
             ]
         }
     },
-    "fansNewfollowers":{
+    "fansNewFollowers":{
         "chartType":"line",
         "timeFrames":{
             "day":[
@@ -5728,7 +5728,7 @@
             ]
         }
     },
-    "fansProfilevisit":{
+    "fansProfileVisit":{
         "chartType":"line",
         "timeFrames":{
             "day":[
