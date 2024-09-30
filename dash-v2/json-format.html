@@ -1,0 +1,126 @@
+<html>
+    <head>
+        <title>JSON Format</title>
+
+        <!-- Tachyons Styles -->
+        <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/main.css" />
+        <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" />
+        <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/theme.css" />
+        <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/customTachyons.css" />
+
+        <style>
+            pre * {
+                font-family: Menlo,Monaco,Consolas,"Courier New",monospace !important;
+                color: white;
+                font-size: 13px;
+            }
+        </style>
+    </head>
+    <body class="pa3">
+
+        <div class="flex flex-column items-start self-stretch gap--16 max--w--1024 center ba br--col--mercury pa3 br--7">
+            <div class="relative">
+                <a class="flex pv2 ph3 br--4 bg--col--brilliant-rose fs--16 fw5 lh--24 white hover-white">
+                    Load JSON File & Format
+                </a>
+                <input type="file" id="fileInput" class="flex w-100 h-100 absolute left-0 top-0 z-3 o-0 pointer">
+            </div>
+            <div class="flex flex-column items-start self-stretch">
+                <textarea id="json-input" autocomplete="off" class="flex flex-column items-start self-stretch bg--col--athens-gray2 pa3"></textarea>
+            </div>
+
+            <div>
+                <button id="json-copy" class="flex pv2 ph3 br--4 bg--col--blue fs--16 fw5 lh--24 white hover-white">Copy</button>
+            </div>
+
+            <div class="flex flex-column items-start self-stretch">
+                <pre id="json-display" class="w-100 br--7"></pre>
+            </div>
+        </div>
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://www.jqueryscript.net/demo/Beautiful-JSON-Viewer-Editor/dist/jquery.json-editor.min.js"></script>
+
+
+        <script>
+            function getJson() {
+                try {
+                    return JSON.parse($('#json-input').val());
+                } catch (ex) {
+                    alert('Wrong JSON Format: ' + ex);
+                }
+            }
+
+            function refactorJsonData(fileInput) {
+                const file = fileInput.files[0];
+                const reader = new FileReader();
+
+                reader.onload = (e) => {
+                    const jsonData = JSON.parse(e.target.result);
+
+                    // Convert object keys to camel case
+                    const camelCaseData = jsonData.map((item) => {
+                        const camelCaseItem = Object.fromEntries(
+                            Object.keys(item).map((key) => [
+                                key.replace(/_(\w)/g, (match, group) => group.toUpperCase()),
+                                item[key],
+                            ])
+                        );
+
+                        // Align timeFrames structure of "salesInsight"
+                        if (camelCaseItem.salesInsight && camelCaseItem.salesInsight.timeFrames) {
+                            Object.keys(camelCaseItem.salesInsight.timeFrames).forEach((key) => {
+                                const timeFrame = camelCaseItem.salesInsight.timeFrames[key];
+                                // Ensure consistent schema for timeFrames datasets
+                                camelCaseItem.salesInsight.timeFrames[key] = timeFrame.map((data) => ({
+                                    date: data.month || data.day,
+                                    year: data.year,
+                                    subscription: data.subscription || 0,
+                                    payToView: data.paytoview || 0,
+                                    merch: data.merch || 0,
+                                    wishTender: data.wishtender || 0,
+                                    customRequest: data.customrequest || 0,
+                                }));
+                            });
+                        }
+
+                        // Align timeFrames structure of "fansTrend"
+                        if (camelCaseItem.fansTrend && camelCaseItem.fansTrend.timeFrames) {
+                            Object.keys(camelCaseItem.fansTrend.timeFrames).forEach((key) => {
+                                const timeFrame = camelCaseItem.fansTrend.timeFrames[key];
+                                // Ensure consistent schema for timeFrames datasets
+                                camelCaseItem.fansTrend.timeFrames[key] = timeFrame.map((data) => ({
+                                    date: data.month || data.day,
+                                    year: data.year,
+                                    newFollowers: data.newfollowers || 0,
+                                    profileVisit: data.profilevisit || 0,
+                                }));
+                            });
+                        }
+
+                        return camelCaseItem;
+                    });
+
+                    // Print refactored data in a <pre> element
+                    const textArea = document.getElementById('json-input');
+                    textArea.value = JSON.stringify(camelCaseData, null, 2);
+                    
+                    // initiate editor
+                    var editor = new JsonEditor('#json-display', getJson());
+                };
+
+                reader.readAsText(file);
+            }
+
+            // Attach function to file input
+            const fileInput = document.getElementById('fileInput');
+            fileInput.addEventListener('change', () => refactorJsonData(fileInput));
+
+            // copy textarea value
+            $('#json-copy').on('click', function () {
+                $("#json-input").select();
+                document.execCommand('copy');
+            });
+        </script>
+    </body>
+</html>
