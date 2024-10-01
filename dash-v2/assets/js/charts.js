@@ -275,10 +275,10 @@ function BarChart(renderingEl, data) {
     // if 'renderingEl' is 'salesInsight' and 'data-chart-timeframes' is 'month', 'week', 'day'
     if (renderingEl.dataset.chartName === 'salesInsight' && (renderingEl.dataset.chartTimeframes === 'month' || renderingEl.dataset.chartTimeframes === 'week' || renderingEl.dataset.chartTimeframes === 'day')) {
         makeSeries("Subscription", "subscription", 0x4CC9F0);
-        makeSeries("Pay to view", "paytoview", 0x4361EE);
+        makeSeries("Pay to view", "payToView", 0x4361EE);
         makeSeries("Merch", "merch", 0x3A0BA3);
-        makeSeries("Wishtender", "wishtender", 0xF72485);
-        makeSeries("Custom request", "customrequest", 0x98A2B3);
+        makeSeries("Wishtender", "wishTender", 0xF72485);
+        makeSeries("Custom request", "customRequest", 0x98A2B3);
     }
 
     // if 'renderingEl' is 'tokenInsight' and 'data-chart-timeframes' is 'month', 'week', 'day'
@@ -286,19 +286,19 @@ function BarChart(renderingEl, data) {
         makeSeries("Tip", "tip", 0x4CC9F0);
         makeSeries("Call", "call", 0x4361EE);
         makeSeries("Chat", "chat", 0x3A0BA3);
-        makeSeries("Live streaming", "livestreaming", 0xF72585);
+        makeSeries("Live streaming", "liveStreaming", 0xF72585);
     }
 
     // if 'renderingEl' is 'salesInsight' and 'data-chart-timeframes' is 'month', 'week', 'day'
     if (renderingEl.dataset.chartName === 'fansInsight' && (renderingEl.dataset.chartTimeframes === 'month' || renderingEl.dataset.chartTimeframes === 'week' || renderingEl.dataset.chartTimeframes === 'day')) {
-        makeSeries("New Followers", "newfollowers", 0x4CC9F0);
-        makeSeries("Profile visit", "profilevisit", 0x4361EE);
+        makeSeries("New Followers", "newFollowers", 0x4CC9F0);
+        makeSeries("Profile visit", "profileVisit", 0x4361EE);
     }
 
     // if 'renderingEl' is 'subscriptionInsight' and 'data-chart-timeframes' is 'month', 'week', 'day'
     if (renderingEl.dataset.chartName === 'subscriptionInsight' && (renderingEl.dataset.chartTimeframes === 'month' || renderingEl.dataset.chartTimeframes === 'week' || renderingEl.dataset.chartTimeframes === 'day')) {
-        makeSeries("New", "newsubscriber", 0x4CC9F0);
-        makeSeries("Recurring", "recurringsubscriber", 0x4361EE);
+        makeSeries("New", "newSubscriber", 0x4CC9F0);
+        makeSeries("Recurring", "recurringSubscriber", 0x4361EE);
     }
 
     // if 'renderingEl' is 'tiersBreakdownInsight' and 'data-chart-timeframes' is 'month', 'week', 'day'
@@ -508,13 +508,13 @@ function ContributorsBarChart(renderingEl, data) {
         seriesList.push(addSeries("tip", "Tip", "#4CC9F0"));
         seriesList.push(addSeries("call", "Call", "#4361EE"));
         seriesList.push(addSeries("chat", "Chat", "#3A0BA3"));
-        seriesList.push(addSeries("livestreaming", "Live Streaming", "#F72485"));
+        seriesList.push(addSeries("liveStreaming", "Live Streaming", "#F72485"));
     } else if (fields.includes("subscription")) {
         seriesList.push(addSeries("subscription", "Subscription", "#4CC9F0"));
-        seriesList.push(addSeries("paytoview", "Pay to View", "#4361EE"));
+        seriesList.push(addSeries("payToView", "Pay to View", "#4361EE"));
         seriesList.push(addSeries("merch", "Merch", "#3A0BA3"));
-        seriesList.push(addSeries("wishtender", "Wishtender", "#F72485"));
-        seriesList.push(addSeries("customrequest", "Custom Request", "#98A2B3"));
+        seriesList.push(addSeries("wishTender", "Wishtender", "#F72485"));
+        seriesList.push(addSeries("customRequest", "Custom Request", "#98A2B3"));
     }
 
     // Handle tooltip dynamically
@@ -901,10 +901,10 @@ function SmoothLineChart(renderingEl, data) {
     // if 'renderingEl' is 'salesTrend' and 'data-chart-timeframes' is 'month', 'week', 'day'
     if ( renderingEl.dataset.chartName === 'salesTrend' && (renderingEl.dataset.chartTimeframes === 'month' || renderingEl.dataset.chartTimeframes === 'week' || renderingEl.dataset.chartTimeframes === 'day') ) {
         addSeries("Subscription", "subscription", am5.color(0x4CC9F0));
-        addSeries("Pay to view", "paytoview", am5.color(0x4361EE));
+        addSeries("Pay to view", "payToView", am5.color(0x4361EE));
         addSeries("Merch", "merch", am5.color(0x3A0BA3));
-        addSeries("Wishtender", "wishtender", am5.color(0xF72585));
-        addSeries("Custom request", "customrequest", am5.color(0x98A2B3));
+        addSeries("Wishtender", "wishTender", am5.color(0xF72585));
+        addSeries("Custom request", "customRequest", am5.color(0x98A2B3));
     }
 
     // if 'renderingEl' is 'tokenTrend' and 'data-chart-timeframes' is 'month', 'week', 'day'
@@ -912,19 +912,19 @@ function SmoothLineChart(renderingEl, data) {
         addSeries("Tip", "tip", am5.color(0x4CC9F0));
         addSeries("Call", "call", am5.color(0x4361EE));
         addSeries("Chat", "chat", am5.color(0x3A0BA3));
-        addSeries("Live Streaming", "livestreaming", am5.color(0xF72585));
+        addSeries("Live Streaming", "liveStreaming", am5.color(0xF72585));
     }
 
     // if 'renderingEl' is 'fansTrend' and 'data-chart-timeframes' is 'month', 'week', 'day'
     if ( renderingEl.dataset.chartName === 'fansTrend' && (renderingEl.dataset.chartTimeframes === 'month' || renderingEl.dataset.chartTimeframes === 'week' || renderingEl.dataset.chartTimeframes === 'day') ) {
-        addSeries("New Followers", "newfollowers", am5.color(0x4CC9F0));
-        addSeries("Profile visit", "profilevisit", am5.color(0x4361EE));
+        addSeries("New Followers", "newFollowers", am5.color(0x4CC9F0));
+        addSeries("Profile visit", "profileVisit", am5.color(0x4361EE));
     }
 
     // if 'renderingEl' is 'subscriptionTrend' and 'data-chart-timeframes' is 'month', 'week', 'day'
     if ( renderingEl.dataset.chartName === 'subscriptionTrend' && (renderingEl.dataset.chartTimeframes === 'month' || renderingEl.dataset.chartTimeframes === 'week' || renderingEl.dataset.chartTimeframes === 'day') ) {
-        addSeries("New", "newsubscriber", am5.color(0x4CC9F0));
-        addSeries("Recurring", "recurringsubscriber", am5.color(0x4361EE));
+        addSeries("New", "newSubscriber", am5.color(0x4CC9F0));
+        addSeries("Recurring", "recurringSubscriber", am5.color(0x4361EE));
     }
 
     // if 'renderingEl' is 'tiersBreakdownTrend' and 'data-chart-timeframes' is 'month', 'week', 'day'
