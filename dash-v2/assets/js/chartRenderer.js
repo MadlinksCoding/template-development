@@ -6,7 +6,7 @@
 async function fetchChartData() {
   try {
     // Fetch the content of the 'analytics-data.js' file
-    const response = await fetch('assets/js/analytics-data.js');
+    const response = await fetch('assets/js/analytics-data-formatted.js');
     // Parse the response as JSON (assuming the response is a JSON object)
     const chartDataSet = await response.json();
     return chartDataSet;
@@ -106,7 +106,7 @@ class ChartRenderer {
    */
   barChart(element, data) {
     // Logic to render a bar chart
-    //console.log('Rendering bar chart for', element, data);
+    console.log('Rendering bar chart for', element, data);
     // Implementation for rendering the bar chart goes here
     if ( element.dataset.popupType == 'popup-contributors-insight' ) {
       //console.log('Call contributors bar chart');
@@ -126,7 +126,7 @@ class ChartRenderer {
    */
   lineChart(element, data) {
     // Logic to render a line chart
-    //console.log('Rendering line chart for', element, data);
+    console.log('Rendering line chart for', element, data);
     // Implementation for rendering the line chart goes here
     LineChart(element, data, element.dataset.chartHex);
   }
@@ -139,7 +139,7 @@ class ChartRenderer {
    */
   smoothedLineChart(element, data) {
     // Logic to render a line chart
-    //console.log('Rendering smoothed line chart for', element, data);
+    console.log('Rendering smoothed line chart for', element, data);
     // Implementation for rendering the line chart goes here
     SmoothLineChart(element, data);
   }
@@ -152,7 +152,7 @@ class ChartRenderer {
    */
   mapChart(element, data) {
     // Logic to render a map chart
-    //console.log('Rendering map chart for', element, data);
+    console.log('Rendering map chart for', element, data);
     // Implementation for rendering the map chart goes here
     MapChart(element, data);
   }
@@ -165,7 +165,7 @@ class ChartRenderer {
    */
   donutChart(element, data) {
     // Logic to render a map chart
-    //console.log('Rendering donut chart for', element, data);
+    console.log('Rendering donut chart for', element, data);
     // Implementation for rendering the map chart goes here
     DonutChart(element, data);
   }

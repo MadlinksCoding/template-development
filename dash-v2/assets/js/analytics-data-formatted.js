@@ -5521,7 +5521,7 @@
             ]
         }
     },
-    "fansnewFollowers":{
+    "fansNewFollowers":{
         "chartType":"line",
         "timeFrames":{
             "day":[
@@ -5728,7 +5728,7 @@
             ]
         }
     },
-    "fansprofileVisit":{
+    "fansProfileVisit":{
         "chartType":"line",
         "timeFrames":{
             "day":[
