@@ -24,6 +24,22 @@
   transform-origin: left bottom; 
 }
 
+[data-floating-panel-wrapper][data-is-floating="true"] [data-floating-panel][data-position-lower="8rem"][data-is-active="false"] {
+  transform: scale(0) translateY(8rem); 
+}
+
+[data-floating-panel-wrapper][data-is-floating="true"] [data-floating-panel][data-position-lower="8rem"][data-is-active="true"] {
+  transform: scale(1) translateY(8rem); 
+}
+
+[data-floating-panel-wrapper][data-is-floating="true"] [data-floating-panel][data-position-lower="10rem"][data-is-active="false"] {
+  transform: scale(0) translateY(10rem); 
+}
+
+[data-floating-panel-wrapper][data-is-floating="true"] [data-floating-panel][data-position-lower="10rem"][data-is-active="true"] {
+  transform: scale(1) translateY(10rem); 
+}
+
 [data-floating-panel-wrapper][data-is-floating="true"] [data-floating-panel] [data-sidebar-menu-item] { 
   width: 3.5rem; 
   height: 3.5rem; 

@@ -753,6 +753,17 @@ class DashSidebarMenuAdjuster {
 			 // get current window height again (in case window has resized and the value changed)
 			this.windowHeight = window.innerHeight;
 
+			// add 'low' data-attribute to floating panel if window height is less than 450px so that the panel can hang lower
+			if ( this.windowHeight < 450 && this.windowHeight > 400 ) {
+				this.floatingPanel.dataset.positionLower = '8rem';
+			}
+			else if ( this.windowHeight <= 400 ) { 
+				this.floatingPanel.dataset.positionLower = '10rem';
+			}
+			else {
+				this.floatingPanel.dataset.positionLower = '4rem';
+			}
+
 			// recalculate number of possible visible main items inside menu panel (in case window has resized and the value changed)
 			this.maxVisibleItems = Math.floor((this.windowHeight - this.otherElementsHeight) / this.menuItemHeight);
 
