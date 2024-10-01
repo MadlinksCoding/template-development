@@ -407,31 +407,36 @@
         "timeFrames":{
             "day":[
                 {
-                    "value":10,
-                    "category":"Subscription",
-                    "color":"#4CC9F0"
+                  "date": "01-07-2023",
+                  "value": 10,
+                  "category": "Subscription",
+                  "color": "#4CC9F0"
                 },
                 {
-                    "value":9,
-                    "category":"Pay to View",
-                    "color":"#4361EE"
+                  "date": "01-07-2023",
+                  "value": 9,
+                  "category": "Pay to View",
+                  "color": "#4361EE"
                 },
                 {
-                    "value":6,
-                    "category":"Merch",
-                    "color":"#3A0BA3"
+                  "date": "01-07-2023",
+                  "value": 6,
+                  "category": "Merch",
+                  "color": "#3A0BA3"
                 },
                 {
-                    "value":5,
-                    "category":"wishTender",
-                    "color":"#F72485"
+                  "date": "01-07-2023",
+                  "value": 5,
+                  "category": "wishTender",
+                  "color": "#F72485"
                 },
                 {
-                    "value":4,
-                    "category":"Custom Request",
-                    "color":"#98A2B3"
+                  "date": "01-07-2023",
+                  "value": 4,
+                  "category": "Custom Request",
+                  "color": "#98A2B3"
                 }
-            ]
+              ]              
         }
     },
     "salesTrend":{
