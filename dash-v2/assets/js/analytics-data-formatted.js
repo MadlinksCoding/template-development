@@ -1984,16 +1984,18 @@
         "timeFrames":{
             "day":[
                 {
-                    "value":10,
-                    "category":"New Subscriber",
-                    "color":"#4CC9F0"
+                    "date": "01-07-2023",
+                    "value": 10,
+                    "category": "New Subscriber",
+                    "color": "#4CC9F0"
                 },
                 {
-                    "value":9,
-                    "category":"Recurring Subscriber",
-                    "color":"#4361EE"
+                    "date": "01-07-2023",
+                    "value": 9,
+                    "category": "Recurring Subscriber",
+                    "color": "#4361EE"
                 }
-            ]
+            ]            
         }
     },
     "subscriptionTrend":{
@@ -2001,316 +2003,256 @@
         "timeFrames":{
             "month":[
                 {
-                    "month":"Jan",
-                    "fullMonth":"JANUARY",
-                    "year":2023,
-                    "newSubscriber":1280,
-                    "recurringSubscriber":190
+                    "date": "01-01-2023",
+                    "newSubscriber": 1280,
+                    "recurringSubscriber": 190
                 },
                 {
-                    "month":"Feb",
-                    "fullMonth":"FEBRUARY",
-                    "year":2023,
-                    "newSubscriber":480,
-                    "recurringSubscriber":90
+                    "date": "01-02-2023",
+                    "newSubscriber": 480,
+                    "recurringSubscriber": 90
                 },
                 {
-                    "month":"Mar",
-                    "fullMonth":"MARCH",
-                    "year":2023,
-                    "newSubscriber":80,
-                    "recurringSubscriber":390
+                    "date": "01-03-2023",
+                    "newSubscriber": 80,
+                    "recurringSubscriber": 390
                 },
                 {
-                    "month":"Apr",
-                    "fullMonth":"APRIL",
-                    "year":2023,
-                    "newSubscriber":380,
-                    "recurringSubscriber":120
+                    "date": "01-04-2023",
+                    "newSubscriber": 380,
+                    "recurringSubscriber": 120
                 },
                 {
-                    "month":"May",
-                    "fullMonth":"MAY",
-                    "year":2023,
-                    "newSubscriber":280,
-                    "recurringSubscriber":190
+                    "date": "01-05-2023",
+                    "newSubscriber": 280,
+                    "recurringSubscriber": 190
                 },
                 {
-                    "month":"Jun",
-                    "fullMonth":"JUNE",
-                    "year":2023,
-                    "newSubscriber":180,
-                    "recurringSubscriber":190
+                    "date": "01-06-2023",
+                    "newSubscriber": 180,
+                    "recurringSubscriber": 190
                 },
                 {
-                    "month":"Jul",
-                    "fullMonth":"JULY",
-                    "year":2023,
-                    "newSubscriber":380,
-                    "recurringSubscriber":190
+                    "date": "01-07-2023",
+                    "newSubscriber": 380,
+                    "recurringSubscriber": 190
                 },
                 {
-                    "month":"Aug",
-                    "fullMonth":"AUGUST",
-                    "year":2023,
-                    "newSubscriber":180,
-                    "recurringSubscriber":190
+                    "date": "01-08-2023",
+                    "newSubscriber": 180,
+                    "recurringSubscriber": 190
                 },
                 {
-                    "month":"Sep",
-                    "fullMonth":"SEPTEMBER",
-                    "year":2023,
-                    "newSubscriber":580,
-                    "recurringSubscriber":190
+                    "date": "01-09-2023",
+                    "newSubscriber": 580,
+                    "recurringSubscriber": 190
                 },
                 {
-                    "month":"Oct",
-                    "fullMonth":"OCTOBER",
-                    "year":2023,
-                    "newSubscriber":680,
-                    "recurringSubscriber":190
+                    "date": "01-10-2023",
+                    "newSubscriber": 680,
+                    "recurringSubscriber": 190
                 },
                 {
-                    "month":"Nov",
-                    "fullMonth":"NOVEMBER",
-                    "year":2023,
-                    "newSubscriber":880,
-                    "recurringSubscriber":90
+                    "date": "01-11-2023",
+                    "newSubscriber": 880,
+                    "recurringSubscriber": 90
                 },
                 {
-                    "month":"Dec",
-                    "fullMonth":"DECEMBER",
-                    "year":2023,
-                    "newSubscriber":180,
-                    "recurringSubscriber":190
+                    "date": "01-12-2023",
+                    "newSubscriber": 180,
+                    "recurringSubscriber": 190
                 }
             ],
             "day":[
                 {
-                    "day":"Jul 1",
-                    "year":2023,
-                    "newSubscriber":355,
-                    "recurringSubscriber":120
+                    "date": "01-07-2023",
+                    "newSubscriber": 355,
+                    "recurringSubscriber": 120
                 },
                 {
-                    "day":"Jul 2",
-                    "year":2023,
-                    "newSubscriber":155,
-                    "recurringSubscriber":320
+                    "date": "02-07-2023",
+                    "newSubscriber": 155,
+                    "recurringSubscriber": 320
                 },
                 {
-                    "day":"Jul 3",
-                    "year":2023,
-                    "newSubscriber":255,
-                    "recurringSubscriber":220
+                    "date": "03-07-2023",
+                    "newSubscriber": 255,
+                    "recurringSubscriber": 220
                 },
                 {
-                    "day":"Jul 4",
-                    "year":2023,
-                    "newSubscriber":155,
-                    "recurringSubscriber":620
+                    "date": "04-07-2023",
+                    "newSubscriber": 155,
+                    "recurringSubscriber": 620
                 },
                 {
-                    "day":"Jul 5",
-                    "year":2023,
-                    "newSubscriber":155,
-                    "recurringSubscriber":520
+                    "date": "05-07-2023",
+                    "newSubscriber": 155,
+                    "recurringSubscriber": 520
                 },
                 {
-                    "day":"Jul 6",
-                    "year":2023,
-                    "newSubscriber":855,
-                    "recurringSubscriber":120
+                    "date": "06-07-2023",
+                    "newSubscriber": 855,
+                    "recurringSubscriber": 120
                 },
                 {
-                    "day":"Jul 7",
-                    "year":2023,
-                    "newSubscriber":855,
-                    "recurringSubscriber":120
+                    "date": "07-07-2023",
+                    "newSubscriber": 855,
+                    "recurringSubscriber": 120
                 },
                 {
-                    "day":"Jul 8",
-                    "year":2023,
-                    "newSubscriber":195,
-                    "recurringSubscriber":120
+                    "date": "08-07-2023",
+                    "newSubscriber": 195,
+                    "recurringSubscriber": 120
                 },
                 {
-                    "day":"Jul 9",
-                    "year":2023,
-                    "newSubscriber":155,
-                    "recurringSubscriber":120
+                    "date": "09-07-2023",
+                    "newSubscriber": 155,
+                    "recurringSubscriber": 120
                 },
                 {
-                    "day":"Jul 10",
-                    "year":2023,
-                    "newSubscriber":155,
-                    "recurringSubscriber":120
+                    "date": "10-07-2023",
+                    "newSubscriber": 155,
+                    "recurringSubscriber": 120
                 },
                 {
-                    "day":"Jul 11",
-                    "year":2023,
-                    "newSubscriber":155,
-                    "recurringSubscriber":120
+                    "date": "11-07-2023",
+                    "newSubscriber": 155,
+                    "recurringSubscriber": 120
                 },
                 {
-                    "day":"Jul 12",
-                    "year":2023,
-                    "newSubscriber":55,
-                    "recurringSubscriber":620
+                    "date": "12-07-2023",
+                    "newSubscriber": 55,
+                    "recurringSubscriber": 620
                 },
                 {
-                    "day":"Jul 13",
-                    "year":2023,
-                    "newSubscriber":955,
-                    "recurringSubscriber":220
+                    "date": "13-07-2023",
+                    "newSubscriber": 955,
+                    "recurringSubscriber": 220
                 },
                 {
-                    "day":"Jul 14",
-                    "year":2023,
-                    "newSubscriber":755,
-                    "recurringSubscriber":520
+                    "date": "14-07-2023",
+                    "newSubscriber": 755,
+                    "recurringSubscriber": 520
                 },
                 {
-                    "day":"Jul 15",
-                    "year":2023,
-                    "newSubscriber":155,
-                    "recurringSubscriber":220
+                    "date": "15-07-2023",
+                    "newSubscriber": 155,
+                    "recurringSubscriber": 220
                 },
                 {
-                    "day":"Jul 16",
-                    "year":2023,
-                    "newSubscriber":655,
-                    "recurringSubscriber":120
+                    "date": "16-07-2023",
+                    "newSubscriber": 655,
+                    "recurringSubscriber": 120
                 },
                 {
-                    "day":"Jul 17",
-                    "year":2023,
-                    "newSubscriber":155,
-                    "recurringSubscriber":120
+                    "date": "17-07-2023",
+                    "newSubscriber": 155,
+                    "recurringSubscriber": 120
                 },
                 {
-                    "day":"Jul 18",
-                    "year":2023,
-                    "newSubscriber":555,
-                    "recurringSubscriber":420
+                    "date": "18-07-2023",
+                    "newSubscriber": 555,
+                    "recurringSubscriber": 420
                 },
                 {
-                    "day":"Jul 19",
-                    "year":2023,
-                    "newSubscriber":155,
-                    "recurringSubscriber":120
+                    "date": "19-07-2023",
+                    "newSubscriber": 155,
+                    "recurringSubscriber": 120
                 },
                 {
-                    "day":"Jul 20",
-                    "year":2023,
-                    "newSubscriber":155,
-                    "recurringSubscriber":220
+                    "date": "20-07-2023",
+                    "newSubscriber": 155,
+                    "recurringSubscriber": 220
                 },
                 {
-                    "day":"Jul 21",
-                    "year":2023,
-                    "newSubscriber":155,
-                    "recurringSubscriber":120
+                    "date": "21-07-2023",
+                    "newSubscriber": 155,
+                    "recurringSubscriber": 120
                 },
                 {
-                    "day":"Jul 22",
-                    "year":2023,
-                    "newSubscriber":855,
-                    "recurringSubscriber":620
+                    "date": "22-07-2023",
+                    "newSubscriber": 855,
+                    "recurringSubscriber": 620
                 },
                 {
-                    "day":"Jul 23",
-                    "year":2023,
-                    "newSubscriber":555,
-                    "recurringSubscriber":120
+                    "date": "23-07-2023",
+                    "newSubscriber": 555,
+                    "recurringSubscriber": 120
                 },
                 {
-                    "day":"Jul 24",
-                    "year":2023,
-                    "newSubscriber":255,
-                    "recurringSubscriber":120
+                    "date": "24-07-2023",
+                    "newSubscriber": 255,
+                    "recurringSubscriber": 120
                 },
                 {
-                    "day":"Jul 25",
-                    "year":2023,
-                    "newSubscriber":355,
-                    "recurringSubscriber":320
+                    "date": "25-07-2023",
+                    "newSubscriber": 355,
+                    "recurringSubscriber": 320
                 },
                 {
-                    "day":"Jul 26",
-                    "year":2023,
-                    "newSubscriber":155,
-                    "recurringSubscriber":120
+                    "date": "26-07-2023",
+                    "newSubscriber": 155,
+                    "recurringSubscriber": 120
                 },
                 {
-                    "day":"Jul 27",
-                    "year":2023,
-                    "newSubscriber":555,
-                    "recurringSubscriber":820
+                    "date": "27-07-2023",
+                    "newSubscriber": 555,
+                    "recurringSubscriber": 820
                 },
                 {
-                    "day":"Jul 28",
-                    "year":2023,
-                    "newSubscriber":155,
-                    "recurringSubscriber":120
+                    "date": "28-07-2023",
+                    "newSubscriber": 155,
+                    "recurringSubscriber": 120
                 },
                 {
-                    "day":"Jul 29",
-                    "year":2023,
-                    "newSubscriber":355,
-                    "recurringSubscriber":220
+                    "date": "29-07-2023",
+                    "newSubscriber": 355,
+                    "recurringSubscriber": 220
                 },
                 {
-                    "day":"Jul 30",
-                    "year":2023,
-                    "newSubscriber":155,
-                    "recurringSubscriber":120
+                    "date": "30-07-2023",
+                    "newSubscriber": 155,
+                    "recurringSubscriber": 120
                 }
             ],
             "week":[
                 {
-                    "day":"Jul 1",
-                    "year":2023,
-                    "newSubscriber":355,
-                    "recurringSubscriber":120
+                    "date": "01-07-2023",
+                    "newSubscriber": 355,
+                    "recurringSubscriber": 120
                 },
                 {
-                    "day":"Jul 2",
-                    "year":2023,
-                    "newSubscriber":155,
-                    "recurringSubscriber":320
+                    "date": "02-07-2023",
+                    "newSubscriber": 155,
+                    "recurringSubscriber": 320
                 },
                 {
-                    "day":"Jul 3",
-                    "year":2023,
-                    "newSubscriber":255,
-                    "recurringSubscriber":220
+                    "date": "03-07-2023",
+                    "newSubscriber": 255,
+                    "recurringSubscriber": 220
                 },
                 {
-                    "day":"Jul 4",
-                    "year":2023,
-                    "newSubscriber":155,
-                    "recurringSubscriber":620
+                    "date": "04-07-2023",
+                    "newSubscriber": 155,
+                    "recurringSubscriber": 620
                 },
                 {
-                    "day":"Jul 5",
-                    "year":2023,
-                    "newSubscriber":155,
-                    "recurringSubscriber":520
+                    "date": "05-07-2023",
+                    "newSubscriber": 155,
+                    "recurringSubscriber": 520
                 },
                 {
-                    "day":"Jul 6",
-                    "year":2023,
-                    "newSubscriber":855,
-                    "recurringSubscriber":120
+                    "date": "06-07-2023",
+                    "newSubscriber": 855,
+                    "recurringSubscriber": 120
                 },
                 {
-                    "day":"Jul 7",
-                    "year":2023,
-                    "newSubscriber":855,
-                    "recurringSubscriber":120
+                    "date": "07-07-2023",
+                    "newSubscriber": 855,
+                    "recurringSubscriber": 120
                 }
             ]
+            
         }
     },
     "tiersBreakdownInsight":{
@@ -2318,463 +2260,451 @@
         "timeFrames":{
             "month":[
                 {
-                    "month":"Jan",
-                    "year":2023,
-                    "free":150,
-                    "tier1":190,
-                    "tier2":150,
-                    "tier3":70,
-                    "tier4":170,
-                    "tier5":70
+                    "date": "01-01-2023",
+                    "free": 150,
+                    "tier1": 190,
+                    "tier2": 150,
+                    "tier3": 70,
+                    "tier4": 170,
+                    "tier5": 70
                 },
                 {
-                    "month":"Feb",
-                    "year":2023,
-                    "free":150,
-                    "tier1":190,
-                    "tier2":150,
-                    "tier3":70,
-                    "tier4":170,
-                    "tier5":70
+                    "date": "01-02-2023",
+                    "free": 150,
+                    "tier1": 190,
+                    "tier2": 150,
+                    "tier3": 70,
+                    "tier4": 170,
+                    "tier5": 70
                 },
                 {
-                    "month":"Mar",
-                    "year":2023,
-                    "free":150,
-                    "tier1":190,
-                    "tier2":90,
-                    "tier3":70,
-                    "tier4":170,
-                    "tier5":70
+                    "date": "01-03-2023",
+                    "free": 150,
+                    "tier1": 190,
+                    "tier2": 90,
+                    "tier3": 70,
+                    "tier4": 170,
+                    "tier5": 70
                 },
                 {
-                    "month":"Apr",
-                    "year":2023,
-                    "free":150,
-                    "tier1":190,
-                    "tier2":50,
-                    "tier3":70,
-                    "tier4":170,
-                    "tier5":70
+                    "date": "01-04-2023",
+                    "free": 150,
+                    "tier1": 190,
+                    "tier2": 50,
+                    "tier3": 70,
+                    "tier4": 170,
+                    "tier5": 70
                 },
                 {
-                    "month":"May",
-                    "year":2023,
-                    "free":150,
-                    "tier1":190,
-                    "tier2":150,
-                    "tier3":70,
-                    "tier4":170,
-                    "tier5":70
+                    "date": "01-05-2023",
+                    "free": 150,
+                    "tier1": 190,
+                    "tier2": 150,
+                    "tier3": 70,
+                    "tier4": 170,
+                    "tier5": 70
                 },
                 {
-                    "month":"Jun",
-                    "year":2023,
-                    "free":150,
-                    "tier1":190,
-                    "tier2":150,
-                    "tier3":70,
-                    "tier4":70,
-                    "tier5":70
+                    "date": "01-06-2023",
+                    "free": 150,
+                    "tier1": 190,
+                    "tier2": 150,
+                    "tier3": 70,
+                    "tier4": 70,
+                    "tier5": 70
                 },
                 {
-                    "month":"Jul",
-                    "year":2023,
-                    "free":150,
-                    "tier1":190,
-                    "tier2":50,
-                    "tier3":70,
-                    "tier4":170,
-                    "tier5":70
+                    "date": "01-07-2023",
+                    "free": 150,
+                    "tier1": 190,
+                    "tier2": 50,
+                    "tier3": 70,
+                    "tier4": 170,
+                    "tier5": 70
                 },
                 {
-                    "month":"Aug",
-                    "year":2023,
-                    "free":150,
-                    "tier1":190,
-                    "tier2":150,
-                    "tier3":70,
-                    "tier4":170,
-                    "tier5":170
+                    "date": "01-08-2023",
+                    "free": 150,
+                    "tier1": 190,
+                    "tier2": 150,
+                    "tier3": 70,
+                    "tier4": 170,
+                    "tier5": 170
                 },
                 {
-                    "month":"Sep",
-                    "year":2023,
-                    "free":150,
-                    "tier1":190,
-                    "tier2":50,
-                    "tier3":170,
-                    "tier4":170,
-                    "tier5":70
+                    "date": "01-09-2023",
+                    "free": 150,
+                    "tier1": 190,
+                    "tier2": 50,
+                    "tier3": 170,
+                    "tier4": 170,
+                    "tier5": 70
                 },
                 {
-                    "month":"Oct",
-                    "year":2023,
-                    "free":150,
-                    "tier1":190,
-                    "tier2":50,
-                    "tier3":70,
-                    "tier4":170,
-                    "tier5":70
+                    "date": "01-10-2023",
+                    "free": 150,
+                    "tier1": 190,
+                    "tier2": 50,
+                    "tier3": 70,
+                    "tier4": 170,
+                    "tier5": 70
                 },
                 {
-                    "month":"Nov",
-                    "year":2023,
-                    "free":150,
-                    "tier1":190,
-                    "tier2":250,
-                    "tier3":70,
-                    "tier4":170,
-                    "tier5":70
+                    "date": "01-11-2023",
+                    "free": 150,
+                    "tier1": 190,
+                    "tier2": 250,
+                    "tier3": 70,
+                    "tier4": 170,
+                    "tier5": 70
                 },
                 {
-                    "month":"Dec",
-                    "year":2023,
-                    "free":150,
-                    "tier1":190,
-                    "tier2":150,
-                    "tier3":170,
-                    "tier4":170,
-                    "tier5":70
+                    "date": "01-12-2023",
+                    "free": 150,
+                    "tier1": 190,
+                    "tier2": 150,
+                    "tier3": 170,
+                    "tier4": 170,
+                    "tier5": 70
                 }
             ],
             "day":[
                 {
-                    "day":"Jul 1",
-                    "free":180,
-                    "tier1":50,
-                    "tier2":130,
-                    "tier3":30,
-                    "tier4":130,
-                    "tier5":30
+                    "date": "01-07-2023",
+                    "free": 180,
+                    "tier1": 50,
+                    "tier2": 130,
+                    "tier3": 30,
+                    "tier4": 130,
+                    "tier5": 30
                 },
                 {
-                    "day":"Jul 2",
-                    "free":180,
-                    "tier1":50,
-                    "tier2":130,
-                    "tier3":30,
-                    "tier4":130,
-                    "tier5":30
+                    "date": "02-07-2023",
+                    "free": 180,
+                    "tier1": 50,
+                    "tier2": 130,
+                    "tier3": 30,
+                    "tier4": 130,
+                    "tier5": 30
                 },
                 {
-                    "day":"Jul 3",
-                    "free":180,
-                    "tier1":50,
-                    "tier2":130,
-                    "tier3":30,
-                    "tier4":130,
-                    "tier5":30
+                    "date": "03-07-2023",
+                    "free": 180,
+                    "tier1": 50,
+                    "tier2": 130,
+                    "tier3": 30,
+                    "tier4": 130,
+                    "tier5": 30
                 },
                 {
-                    "day":"Jul 4",
-                    "free":180,
-                    "tier1":50,
-                    "tier2":130,
-                    "tier3":30,
-                    "tier4":130,
-                    "tier5":30
+                    "date": "04-07-2023",
+                    "free": 180,
+                    "tier1": 50,
+                    "tier2": 130,
+                    "tier3": 30,
+                    "tier4": 130,
+                    "tier5": 30
                 },
                 {
-                    "day":"Jul 5",
-                    "free":180,
-                    "tier1":50,
-                    "tier2":130,
-                    "tier3":30,
-                    "tier4":130,
-                    "tier5":30
+                    "date": "05-07-2023",
+                    "free": 180,
+                    "tier1": 50,
+                    "tier2": 130,
+                    "tier3": 30,
+                    "tier4": 130,
+                    "tier5": 30
                 },
                 {
-                    "day":"Jul 6",
-                    "free":180,
-                    "tier1":50,
-                    "tier2":130,
-                    "tier3":30,
-                    "tier4":130,
-                    "tier5":30
+                    "date": "06-07-2023",
+                    "free": 180,
+                    "tier1": 50,
+                    "tier2": 130,
+                    "tier3": 30,
+                    "tier4": 130,
+                    "tier5": 30
                 },
                 {
-                    "day":"Jul 7",
-                    "free":180,
-                    "tier1":50,
-                    "tier2":130,
-                    "tier3":30,
-                    "tier4":130,
-                    "tier5":30
+                    "date": "07-07-2023",
+                    "free": 180,
+                    "tier1": 50,
+                    "tier2": 130,
+                    "tier3": 30,
+                    "tier4": 130,
+                    "tier5": 30
                 },
                 {
-                    "day":"Jul 8",
-                    "free":180,
-                    "tier1":50,
-                    "tier2":130,
-                    "tier3":30,
-                    "tier4":130,
-                    "tier5":30
+                    "date": "08-07-2023",
+                    "free": 180,
+                    "tier1": 50,
+                    "tier2": 130,
+                    "tier3": 30,
+                    "tier4": 130,
+                    "tier5": 30
                 },
                 {
-                    "day":"Jul 9",
-                    "free":180,
-                    "tier1":50,
-                    "tier2":130,
-                    "tier3":30,
-                    "tier4":130,
-                    "tier5":30
+                    "date": "09-07-2023",
+                    "free": 180,
+                    "tier1": 50,
+                    "tier2": 130,
+                    "tier3": 30,
+                    "tier4": 130,
+                    "tier5": 30
                 },
                 {
-                    "day":"Jul 10",
-                    "free":180,
-                    "tier1":50,
-                    "tier2":130,
-                    "tier3":30,
-                    "tier4":130,
-                    "tier5":30
+                    "date": "10-07-2023",
+                    "free": 180,
+                    "tier1": 50,
+                    "tier2": 130,
+                    "tier3": 30,
+                    "tier4": 130,
+                    "tier5": 30
                 },
                 {
-                    "day":"Jul 11",
-                    "free":180,
-                    "tier1":50,
-                    "tier2":130,
-                    "tier3":30,
-                    "tier4":130,
-                    "tier5":30
+                    "date": "11-07-2023",
+                    "free": 180,
+                    "tier1": 50,
+                    "tier2": 130,
+                    "tier3": 30,
+                    "tier4": 130,
+                    "tier5": 30
                 },
                 {
-                    "day":"Jul 12",
-                    "free":180,
-                    "tier1":50,
-                    "tier2":130,
-                    "tier3":30,
-                    "tier4":130,
-                    "tier5":30
+                    "date": "12-07-2023",
+                    "free": 180,
+                    "tier1": 50,
+                    "tier2": 130,
+                    "tier3": 30,
+                    "tier4": 130,
+                    "tier5": 30
                 },
                 {
-                    "day":"Jul 13",
-                    "free":180,
-                    "tier1":50,
-                    "tier2":130,
-                    "tier3":30,
-                    "tier4":130,
-                    "tier5":30
+                    "date": "13-07-2023",
+                    "free": 180,
+                    "tier1": 50,
+                    "tier2": 130,
+                    "tier3": 30,
+                    "tier4": 130,
+                    "tier5": 30
                 },
                 {
-                    "day":"Jul 14",
-                    "free":180,
-                    "tier1":50,
-                    "tier2":130,
-                    "tier3":30,
-                    "tier4":130,
-                    "tier5":30
+                    "date": "14-07-2023",
+                    "free": 180,
+                    "tier1": 50,
+                    "tier2": 130,
+                    "tier3": 30,
+                    "tier4": 130,
+                    "tier5": 30
                 },
                 {
-                    "day":"Jul 15",
-                    "free":180,
-                    "tier1":50,
-                    "tier2":130,
-                    "tier3":30,
-                    "tier4":130,
-                    "tier5":30
+                    "date": "15-07-2023",
+                    "free": 180,
+                    "tier1": 50,
+                    "tier2": 130,
+                    "tier3": 30,
+                    "tier4": 130,
+                    "tier5": 30
                 },
                 {
-                    "day":"Jul 16",
-                    "free":180,
-                    "tier1":50,
-                    "tier2":130,
-                    "tier3":30,
-                    "tier4":130,
-                    "tier5":30
+                    "date": "16-07-2023",
+                    "free": 180,
+                    "tier1": 50,
+                    "tier2": 130,
+                    "tier3": 30,
+                    "tier4": 130,
+                    "tier5": 30
                 },
                 {
-                    "day":"Jul 17",
-                    "free":180,
-                    "tier1":50,
-                    "tier2":130,
-                    "tier3":30,
-                    "tier4":130,
-                    "tier5":30
+                    "date": "17-07-2023",
+                    "free": 180,
+                    "tier1": 50,
+                    "tier2": 130,
+                    "tier3": 30,
+                    "tier4": 130,
+                    "tier5": 30
                 },
                 {
-                    "day":"Jul 18",
-                    "free":180,
-                    "tier1":50,
-                    "tier2":130,
-                    "tier3":30,
-                    "tier4":130,
-                    "tier5":30
+                    "date": "18-07-2023",
+                    "free": 180,
+                    "tier1": 50,
+                    "tier2": 130,
+                    "tier3": 30,
+                    "tier4": 130,
+                    "tier5": 30
                 },
                 {
-                    "day":"Jul 19",
-                    "free":180,
-                    "tier1":50,
-                    "tier2":130,
-                    "tier3":30,
-                    "tier4":130,
-                    "tier5":30
+                    "date": "19-07-2023",
+                    "free": 180,
+                    "tier1": 50,
+                    "tier2": 130,
+                    "tier3": 30,
+                    "tier4": 130,
+                    "tier5": 30
                 },
                 {
-                    "day":"Jul 20",
-                    "free":180,
-                    "tier1":50,
-                    "tier2":130,
-                    "tier3":30,
-                    "tier4":130,
-                    "tier5":30
+                    "date": "20-07-2023",
+                    "free": 180,
+                    "tier1": 50,
+                    "tier2": 130,
+                    "tier3": 30,
+                    "tier4": 130,
+                    "tier5": 30
                 },
                 {
-                    "day":"Jul 21",
-                    "free":180,
-                    "tier1":50,
-                    "tier2":130,
-                    "tier3":30,
-                    "tier4":130,
-                    "tier5":30
+                    "date": "21-07-2023",
+                    "free": 180,
+                    "tier1": 50,
+                    "tier2": 130,
+                    "tier3": 30,
+                    "tier4": 130,
+                    "tier5": 30
                 },
                 {
-                    "day":"Jul 22",
-                    "free":180,
-                    "tier1":50,
-                    "tier2":130,
-                    "tier3":30,
-                    "tier4":130,
-                    "tier5":30
+                    "date": "22-07-2023",
+                    "free": 180,
+                    "tier1": 50,
+                    "tier2": 130,
+                    "tier3": 30,
+                    "tier4": 130,
+                    "tier5": 30
                 },
                 {
-                    "day":"Jul 23",
-                    "free":180,
-                    "tier1":50,
-                    "tier2":130,
-                    "tier3":30,
-                    "tier4":130,
-                    "tier5":30
+                    "date": "23-07-2023",
+                    "free": 180,
+                    "tier1": 50,
+                    "tier2": 130,
+                    "tier3": 30,
+                    "tier4": 130,
+                    "tier5": 30
                 },
                 {
-                    "day":"Jul 24",
-                    "free":180,
-                    "tier1":50,
-                    "tier2":130,
-                    "tier3":30,
-                    "tier4":130,
-                    "tier5":30
+                    "date": "24-07-2023",
+                    "free": 180,
+                    "tier1": 50,
+                    "tier2": 130,
+                    "tier3": 30,
+                    "tier4": 130,
+                    "tier5": 30
                 },
                 {
-                    "day":"Jul 25",
-                    "free":180,
-                    "tier1":50,
-                    "tier2":130,
-                    "tier3":30,
-                    "tier4":130,
-                    "tier5":30
+                    "date": "25-07-2023",
+                    "free": 180,
+                    "tier1": 50,
+                    "tier2": 130,
+                    "tier3": 30,
+                    "tier4": 130,
+                    "tier5": 30
                 },
                 {
-                    "day":"Jul 26",
-                    "free":180,
-                    "tier1":50,
-                    "tier2":130,
-                    "tier3":30,
-                    "tier4":130,
-                    "tier5":30
+                    "date": "26-07-2023",
+                    "free": 180,
+                    "tier1": 50,
+                    "tier2": 130,
+                    "tier3": 30,
+                    "tier4": 130,
+                    "tier5": 30
                 },
                 {
-                    "day":"Jul 27",
-                    "free":180,
-                    "tier1":50,
-                    "tier2":130,
-                    "tier3":30,
-                    "tier4":130,
-                    "tier5":30
+                    "date": "27-07-2023",
+                    "free": 180,
+                    "tier1": 50,
+                    "tier2": 130,
+                    "tier3": 30,
+                    "tier4": 130,
+                    "tier5": 30
                 },
                 {
-                    "day":"Jul 28",
-                    "free":180,
-                    "tier1":50,
-                    "tier2":130,
-                    "tier3":30,
-                    "tier4":130,
-                    "tier5":30
+                    "date": "28-07-2023",
+                    "free": 180,
+                    "tier1": 50,
+                    "tier2": 130,
+                    "tier3": 30,
+                    "tier4": 130,
+                    "tier5": 30
                 },
                 {
-                    "day":"Jul 29",
-                    "free":180,
-                    "tier1":50,
-                    "tier2":130,
-                    "tier3":30,
-                    "tier4":130,
-                    "tier5":30
+                    "date": "29-07-2023",
+                    "free": 180,
+                    "tier1": 50,
+                    "tier2": 130,
+                    "tier3": 30,
+                    "tier4": 130,
+                    "tier5": 30
                 },
                 {
-                    "day":"Jul 30",
-                    "free":180,
-                    "tier1":50,
-                    "tier2":130,
-                    "tier3":30,
-                    "tier4":130,
-                    "tier5":30
+                    "date": "30-07-2023",
+                    "free": 180,
+                    "tier1": 50,
+                    "tier2": 130,
+                    "tier3": 30,
+                    "tier4": 130,
+                    "tier5": 30
                 }
             ],
             "week":[
                 {
-                    "day":"Jul 1",
-                    "free":180,
-                    "tier1":50,
-                    "tier2":130,
-                    "tier3":30,
-                    "tier4":130,
-                    "tier5":30
+                    "date": "01-07-2023",
+                    "free": 180,
+                    "tier1": 50,
+                    "tier2": 130,
+                    "tier3": 30,
+                    "tier4": 130,
+                    "tier5": 30
                 },
                 {
-                    "day":"Jul 2",
-                    "free":180,
-                    "tier1":50,
-                    "tier2":130,
-                    "tier3":30,
-                    "tier4":130,
-                    "tier5":30
+                    "date": "02-07-2023",
+                    "free": 180,
+                    "tier1": 50,
+                    "tier2": 130,
+                    "tier3": 30,
+                    "tier4": 130,
+                    "tier5": 30
                 },
                 {
-                    "day":"Jul 3",
-                    "free":180,
-                    "tier1":50,
-                    "tier2":130,
-                    "tier3":30,
-                    "tier4":130,
-                    "tier5":30
+                    "date": "03-07-2023",
+                    "free": 180,
+                    "tier1": 50,
+                    "tier2": 130,
+                    "tier3": 30,
+                    "tier4": 130,
+                    "tier5": 30
                 },
                 {
-                    "day":"Jul 4",
-                    "free":180,
-                    "tier1":50,
-                    "tier2":130,
-                    "tier3":30,
-                    "tier4":130,
-                    "tier5":30
+                    "date": "04-07-2023",
+                    "free": 180,
+                    "tier1": 50,
+                    "tier2": 130,
+                    "tier3": 30,
+                    "tier4": 130,
+                    "tier5": 30
                 },
                 {
-                    "day":"Jul 5",
-                    "free":180,
-                    "tier1":50,
-                    "tier2":130,
-                    "tier3":30,
-                    "tier4":130,
-                    "tier5":30
+                    "date": "05-07-2023",
+                    "free": 180,
+                    "tier1": 50,
+                    "tier2": 130,
+                    "tier3": 30,
+                    "tier4": 130,
+                    "tier5": 30
                 },
                 {
-                    "day":"Jul 6",
-                    "free":180,
-                    "tier1":50,
-                    "tier2":130,
-                    "tier3":30,
-                    "tier4":130,
-                    "tier5":30
+                    "date": "06-07-2023",
+                    "free": 180,
+                    "tier1": 50,
+                    "tier2": 130,
+                    "tier3": 30,
+                    "tier4": 130,
+                    "tier5": 30
                 },
                 {
-                    "day":"Jul 7",
-                    "free":180,
-                    "tier1":50,
-                    "tier2":130,
-                    "tier3":30,
-                    "tier4":130,
-                    "tier5":30
+                    "date": "07-07-2023",
+                    "free": 180,
+                    "tier1": 50,
+                    "tier2": 130,
+                    "tier3": 30,
+                    "tier4": 130,
+                    "tier5": 30
                 }
-            ]
+            ]            
         }
     },
     "tiersBreakdownTrend":{
@@ -2782,511 +2712,451 @@
         "timeFrames":{
             "month":[
                 {
-                    "month":"Jan",
-                    "fullMonth":"JANUARY",
-                    "free":2023,
-                    "tier1":170,
-                    "tier2":130,
-                    "tier3":50,
-                    "tier4":40,
-                    "tier5":80
+                    "date": "01-01-2023",
+                    "free": 2023,
+                    "tier1": 170,
+                    "tier2": 130,
+                    "tier3": 50,
+                    "tier4": 40,
+                    "tier5": 80
                 },
                 {
-                    "month":"Feb",
-                    "fullMonth":"FEBRUARY",
-                    "year":2023,
-                    "free":223,
-                    "tier1":570,
-                    "tier2":230,
-                    "tier3":550,
-                    "tier4":240,
-                    "tier5":180
+                    "date": "01-02-2023",
+                    "free": 223,
+                    "tier1": 570,
+                    "tier2": 230,
+                    "tier3": 550,
+                    "tier4": 240,
+                    "tier5": 180
                 },
                 {
-                    "month":"Mar",
-                    "fullMonth":"MARCH",
-                    "year":2023,
-                    "free":223,
-                    "tier1":170,
-                    "tier2":530,
-                    "tier3":550,
-                    "tier4":40,
-                    "tier5":380
+                    "date": "01-03-2023",
+                    "free": 223,
+                    "tier1": 170,
+                    "tier2": 530,
+                    "tier3": 550,
+                    "tier4": 40,
+                    "tier5": 380
                 },
                 {
-                    "month":"Apr",
-                    "fullMonth":"APRIL",
-                    "year":2023,
-                    "free":823,
-                    "tier1":170,
-                    "tier2":130,
-                    "tier3":350,
-                    "tier4":540,
-                    "tier5":80
+                    "date": "01-04-2023",
+                    "free": 823,
+                    "tier1": 170,
+                    "tier2": 130,
+                    "tier3": 350,
+                    "tier4": 540,
+                    "tier5": 80
                 },
                 {
-                    "month":"May",
-                    "fullMonth":"MAY",
-                    "year":2023,
-                    "free":223,
-                    "tier1":170,
-                    "tier2":130,
-                    "tier3":50,
-                    "tier4":40,
-                    "tier5":180
+                    "date": "01-05-2023",
+                    "free": 223,
+                    "tier1": 170,
+                    "tier2": 130,
+                    "tier3": 50,
+                    "tier4": 40,
+                    "tier5": 180
                 },
                 {
-                    "month":"Jun",
-                    "fullMonth":"JUNE",
-                    "year":2023,
-                    "free":523,
-                    "tier1":570,
-                    "tier2":530,
-                    "tier3":550,
-                    "tier4":640,
-                    "tier5":380
+                    "date": "01-06-2023",
+                    "free": 523,
+                    "tier1": 570,
+                    "tier2": 530,
+                    "tier3": 550,
+                    "tier4": 640,
+                    "tier5": 380
                 },
                 {
-                    "month":"Jul",
-                    "fullMonth":"JULY",
-                    "year":2023,
-                    "free":223,
-                    "tier1":170,
-                    "tier2":430,
-                    "tier3":550,
-                    "tier4":40,
-                    "tier5":680
+                    "date": "01-07-2023",
+                    "free": 223,
+                    "tier1": 170,
+                    "tier2": 430,
+                    "tier3": 550,
+                    "tier4": 40,
+                    "tier5": 680
                 },
                 {
-                    "month":"Aug",
-                    "fullMonth":"AUGUST",
-                    "year":2023,
-                    "free":223,
-                    "tier1":170,
-                    "tier2":130,
-                    "tier3":850,
-                    "tier4":140,
-                    "tier5":80
+                    "date": "01-08-2023",
+                    "free": 223,
+                    "tier1": 170,
+                    "tier2": 130,
+                    "tier3": 850,
+                    "tier4": 140,
+                    "tier5": 80
                 },
                 {
-                    "month":"Sep",
-                    "fullMonth":"SEPTEMBER",
-                    "year":2023,
-                    "free":223,
-                    "tier1":170,
-                    "tier2":130,
-                    "tier3":50,
-                    "tier4":240,
-                    "tier5":80
+                    "date": "01-09-2023",
+                    "free": 223,
+                    "tier1": 170,
+                    "tier2": 130,
+                    "tier3": 50,
+                    "tier4": 240,
+                    "tier5": 80
                 },
                 {
-                    "month":"Oct",
-                    "fullMonth":"OCTOBER",
-                    "year":2023,
-                    "free":623,
-                    "tier1":560,
-                    "tier2":130,
-                    "tier3":450,
-                    "tier4":840,
-                    "tier5":80
+                    "date": "01-10-2023",
+                    "free": 623,
+                    "tier1": 560,
+                    "tier2": 130,
+                    "tier3": 450,
+                    "tier4": 840,
+                    "tier5": 80
                 },
                 {
-                    "month":"Nov",
-                    "fullMonth":"NOVEMBER",
-                    "year":2023,
-                    "free":223,
-                    "tier1":170,
-                    "tier2":130,
-                    "tier3":550,
-                    "tier4":240,
-                    "tier5":80
+                    "date": "01-11-2023",
+                    "free": 223,
+                    "tier1": 170,
+                    "tier2": 130,
+                    "tier3": 550,
+                    "tier4": 240,
+                    "tier5": 80
                 },
                 {
-                    "month":"Dec",
-                    "fullMonth":"DECEMBER",
-                    "year":2023,
-                    "free":223,
-                    "tier1":170,
-                    "tier2":830,
-                    "tier3":50,
-                    "tier4":40,
-                    "tier5":280
+                    "date": "01-12-2023",
+                    "free": 223,
+                    "tier1": 170,
+                    "tier2": 830,
+                    "tier3": 50,
+                    "tier4": 40,
+                    "tier5": 280
                 }
             ],
             "day":[
                 {
-                    "day":"Jul 1",
-                    "year":2023,
-                    "free":170,
-                    "tier1":130,
-                    "tier2":50,
-                    "tier3":40,
-                    "tier4":50,
-                    "tier5":40
+                    "date": "01-07-2023",
+                    "free": 170,
+                    "tier1": 130,
+                    "tier2": 50,
+                    "tier3": 40,
+                    "tier4": 50,
+                    "tier5": 40
                 },
                 {
-                    "day":"Jul 2",
-                    "year":2023,
-                    "free":170,
-                    "tier1":130,
-                    "tier2":50,
-                    "tier3":40,
-                    "tier4":50,
-                    "tier5":40
+                    "date": "02-07-2023",
+                    "free": 170,
+                    "tier1": 130,
+                    "tier2": 50,
+                    "tier3": 40,
+                    "tier4": 50,
+                    "tier5": 40
                 },
                 {
-                    "day":"Jul 3",
-                    "year":2023,
-                    "free":170,
-                    "tier1":130,
-                    "tier2":250,
-                    "tier3":40,
-                    "tier4":50,
-                    "tier5":40
+                    "date": "03-07-2023",
+                    "free": 170,
+                    "tier1": 130,
+                    "tier2": 250,
+                    "tier3": 40,
+                    "tier4": 50,
+                    "tier5": 40
                 },
                 {
-                    "day":"Jul 4",
-                    "year":2023,
-                    "free":170,
-                    "tier1":130,
-                    "tier2":50,
-                    "tier3":40,
-                    "tier4":50,
-                    "tier5":40
+                    "date": "04-07-2023",
+                    "free": 170,
+                    "tier1": 130,
+                    "tier2": 50,
+                    "tier3": 40,
+                    "tier4": 50,
+                    "tier5": 40
                 },
                 {
-                    "day":"Jul 5",
-                    "year":2023,
-                    "free":170,
-                    "tier1":130,
-                    "tier2":250,
-                    "tier3":40,
-                    "tier4":50,
-                    "tier5":40
+                    "date": "05-07-2023",
+                    "free": 170,
+                    "tier1": 130,
+                    "tier2": 250,
+                    "tier3": 40,
+                    "tier4": 50,
+                    "tier5": 40
                 },
                 {
-                    "day":"Jul 6",
-                    "year":2023,
-                    "free":170,
-                    "tier1":130,
-                    "tier2":50,
-                    "tier3":40,
-                    "tier4":50,
-                    "tier5":40
+                    "date": "06-07-2023",
+                    "free": 170,
+                    "tier1": 130,
+                    "tier2": 50,
+                    "tier3": 40,
+                    "tier4": 50,
+                    "tier5": 40
                 },
                 {
-                    "day":"Jul 7",
-                    "year":2023,
-                    "free":170,
-                    "tier1":130,
-                    "tier2":50,
-                    "tier3":40,
-                    "tier4":250,
-                    "tier5":40
+                    "date": "07-07-2023",
+                    "free": 170,
+                    "tier1": 130,
+                    "tier2": 50,
+                    "tier3": 40,
+                    "tier4": 250,
+                    "tier5": 40
                 },
                 {
-                    "day":"Jul 8",
-                    "year":2023,
-                    "free":170,
-                    "tier1":130,
-                    "tier2":350,
-                    "tier3":40,
-                    "tier4":50,
-                    "tier5":40
+                    "date": "08-07-2023",
+                    "free": 170,
+                    "tier1": 130,
+                    "tier2": 350,
+                    "tier3": 40,
+                    "tier4": 50,
+                    "tier5": 40
                 },
                 {
-                    "day":"Jul 9",
-                    "year":2023,
-                    "free":170,
-                    "tier1":130,
-                    "tier2":50,
-                    "tier3":40,
-                    "tier4":50,
-                    "tier5":240
+                    "date": "09-07-2023",
+                    "free": 170,
+                    "tier1": 130,
+                    "tier2": 50,
+                    "tier3": 40,
+                    "tier4": 50,
+                    "tier5": 240
                 },
                 {
-                    "day":"Jul 10",
-                    "year":2023,
-                    "free":170,
-                    "tier1":130,
-                    "tier2":50,
-                    "tier3":840,
-                    "tier4":50,
-                    "tier5":40
+                    "date": "10-07-2023",
+                    "free": 170,
+                    "tier1": 130,
+                    "tier2": 50,
+                    "tier3": 840,
+                    "tier4": 50,
+                    "tier5": 40
                 },
                 {
-                    "day":"Jul 11",
-                    "year":2023,
-                    "free":370,
-                    "tier1":130,
-                    "tier2":550,
-                    "tier3":40,
-                    "tier4":850,
-                    "tier5":40
+                    "date": "11-07-2023",
+                    "free": 370,
+                    "tier1": 130,
+                    "tier2": 550,
+                    "tier3": 40,
+                    "tier4": 850,
+                    "tier5": 40
                 },
                 {
-                    "day":"Jul 12",
-                    "year":2023,
-                    "free":170,
-                    "tier1":130,
-                    "tier2":50,
-                    "tier3":40,
-                    "tier4":50,
-                    "tier5":40
+                    "date": "12-07-2023",
+                    "free": 170,
+                    "tier1": 130,
+                    "tier2": 50,
+                    "tier3": 40,
+                    "tier4": 50,
+                    "tier5": 40
                 },
                 {
-                    "day":"Jul 13",
-                    "year":2023,
-                    "free":170,
-                    "tier1":130,
-                    "tier2":850,
-                    "tier3":540,
-                    "tier4":50,
-                    "tier5":40
+                    "date": "13-07-2023",
+                    "free": 170,
+                    "tier1": 130,
+                    "tier2": 850,
+                    "tier3": 540,
+                    "tier4": 50,
+                    "tier5": 40
                 },
                 {
-                    "day":"Jul 14",
-                    "year":2023,
-                    "free":170,
-                    "tier1":130,
-                    "tier2":50,
-                    "tier3":40,
-                    "tier4":50,
-                    "tier5":240
+                    "date": "14-07-2023",
+                    "free": 170,
+                    "tier1": 130,
+                    "tier2": 50,
+                    "tier3": 40,
+                    "tier4": 50,
+                    "tier5": 240
                 },
                 {
-                    "day":"Jul 15",
-                    "year":2023,
-                    "free":570,
-                    "tier1":330,
-                    "tier2":50,
-                    "tier3":40,
-                    "tier4":650,
-                    "tier5":40
+                    "date": "15-07-2023",
+                    "free": 570,
+                    "tier1": 330,
+                    "tier2": 50,
+                    "tier3": 40,
+                    "tier4": 650,
+                    "tier5": 40
                 },
                 {
-                    "day":"Jul 16",
-                    "year":2023,
-                    "free":170,
-                    "tier1":130,
-                    "tier2":750,
-                    "tier3":40,
-                    "tier4":50,
-                    "tier5":40
+                    "date": "16-07-2023",
+                    "free": 170,
+                    "tier1": 130,
+                    "tier2": 750,
+                    "tier3": 40,
+                    "tier4": 50,
+                    "tier5": 40
                 },
                 {
-                    "day":"Jul 17",
-                    "year":2023,
-                    "free":170,
-                    "tier1":130,
-                    "tier2":50,
-                    "tier3":40,
-                    "tier4":50,
-                    "tier5":40
+                    "date": "17-07-2023",
+                    "free": 170,
+                    "tier1": 130,
+                    "tier2": 50,
+                    "tier3": 40,
+                    "tier4": 50,
+                    "tier5": 40
                 },
                 {
-                    "day":"Jul 18",
-                    "year":2023,
-                    "free":170,
-                    "tier1":130,
-                    "tier2":50,
-                    "tier3":540,
-                    "tier4":350,
-                    "tier5":40
+                    "date": "18-07-2023",
+                    "free": 170,
+                    "tier1": 130,
+                    "tier2": 50,
+                    "tier3": 540,
+                    "tier4": 350,
+                    "tier5": 40
                 },
                 {
-                    "day":"Jul 19",
-                    "year":2023,
-                    "free":170,
-                    "tier1":130,
-                    "tier2":650,
-                    "tier3":440,
-                    "tier4":250,
-                    "tier5":240
+                    "date": "19-07-2023",
+                    "free": 170,
+                    "tier1": 130,
+                    "tier2": 650,
+                    "tier3": 440,
+                    "tier4": 250,
+                    "tier5": 240
                 },
                 {
-                    "day":"Jul 20",
-                    "year":2023,
-                    "free":170,
-                    "tier1":130,
-                    "tier2":50,
-                    "tier3":40,
-                    "tier4":50,
-                    "tier5":40
+                    "date": "20-07-2023",
+                    "free": 170,
+                    "tier1": 130,
+                    "tier2": 50,
+                    "tier3": 40,
+                    "tier4": 50,
+                    "tier5": 40
                 },
                 {
-                    "day":"Jul 21",
-                    "year":2023,
-                    "free":170,
-                    "tier1":130,
-                    "tier2":50,
-                    "tier3":40,
-                    "tier4":50,
-                    "tier5":40
+                    "date": "21-07-2023",
+                    "free": 170,
+                    "tier1": 130,
+                    "tier2": 50,
+                    "tier3": 40,
+                    "tier4": 50,
+                    "tier5": 40
                 },
                 {
-                    "day":"Jul 22",
-                    "year":2023,
-                    "free":670,
-                    "tier1":130,
-                    "tier2":850,
-                    "tier3":340,
-                    "tier4":50,
-                    "tier5":40
+                    "date": "22-07-2023",
+                    "free": 670,
+                    "tier1": 130,
+                    "tier2": 850,
+                    "tier3": 340,
+                    "tier4": 50,
+                    "tier5": 40
                 },
                 {
-                    "day":"Jul 23",
-                    "year":2023,
-                    "free":570,
-                    "tier1":430,
-                    "tier2":50,
-                    "tier3":40,
-                    "tier4":50,
-                    "tier5":40
+                    "date": "23-07-2023",
+                    "free": 570,
+                    "tier1": 430,
+                    "tier2": 50,
+                    "tier3": 40,
+                    "tier4": 50,
+                    "tier5": 40
                 },
                 {
-                    "day":"Jul 24",
-                    "year":2023,
-                    "free":170,
-                    "tier1":130,
-                    "tier2":150,
-                    "tier3":40,
-                    "tier4":50,
-                    "tier5":40
+                    "date": "24-07-2023",
+                    "free": 170,
+                    "tier1": 130,
+                    "tier2": 150,
+                    "tier3": 40,
+                    "tier4": 50,
+                    "tier5": 40
                 },
                 {
-                    "day":"Jul 25",
-                    "year":2023,
-                    "free":870,
-                    "tier1":130,
-                    "tier2":50,
-                    "tier3":340,
-                    "tier4":50,
-                    "tier5":40
+                    "date": "25-07-2023",
+                    "free": 870,
+                    "tier1": 130,
+                    "tier2": 50,
+                    "tier3": 340,
+                    "tier4": 50,
+                    "tier5": 40
                 },
                 {
-                    "day":"Jul 26",
-                    "year":2023,
-                    "free":170,
-                    "tier1":130,
-                    "tier2":50,
-                    "tier3":40,
-                    "tier4":550,
-                    "tier5":40
+                    "date": "26-07-2023",
+                    "free": 170,
+                    "tier1": 130,
+                    "tier2": 50,
+                    "tier3": 40,
+                    "tier4": 550,
+                    "tier5": 40
                 },
                 {
-                    "day":"Jul 27",
-                    "year":2023,
-                    "free":170,
-                    "tier1":130,
-                    "tier2":250,
-                    "tier3":40,
-                    "tier4":50,
-                    "tier5":40
+                    "date": "27-07-2023",
+                    "free": 170,
+                    "tier1": 130,
+                    "tier2": 250,
+                    "tier3": 40,
+                    "tier4": 50,
+                    "tier5": 40
                 },
                 {
-                    "day":"Jul 28",
-                    "year":2023,
-                    "free":270,
-                    "tier1":630,
-                    "tier2":50,
-                    "tier3":240,
-                    "tier4":250,
-                    "tier5":40
+                    "date": "28-07-2023",
+                    "free": 270,
+                    "tier1": 630,
+                    "tier2": 50,
+                    "tier3": 240,
+                    "tier4": 250,
+                    "tier5": 40
                 },
                 {
-                    "day":"Jul 29",
-                    "year":2023,
-                    "free":170,
-                    "tier1":130,
-                    "tier2":350,
-                    "tier3":40,
-                    "tier4":50,
-                    "tier5":40
+                    "date": "29-07-2023",
+                    "free": 170,
+                    "tier1": 130,
+                    "tier2": 350,
+                    "tier3": 40,
+                    "tier4": 50,
+                    "tier5": 40
                 },
                 {
-                    "day":"Jul 30",
-                    "year":2023,
-                    "free":170,
-                    "tier1":130,
-                    "tier2":50,
-                    "tier3":40,
-                    "tier4":50,
-                    "tier5":40
+                    "date": "30-07-2023",
+                    "free": 170,
+                    "tier1": 130,
+                    "tier2": 50,
+                    "tier3": 40,
+                    "tier4": 50,
+                    "tier5": 40
                 }
             ],
             "week":[
                 {
-                    "day":"Jul 1",
-                    "year":2023,
-                    "free":170,
-                    "tier1":130,
-                    "tier2":50,
-                    "tier3":40,
-                    "tier4":50,
-                    "tier5":40
+                    "date": "01-07-2023",
+                    "free": 170,
+                    "tier1": 130,
+                    "tier2": 50,
+                    "tier3": 40,
+                    "tier4": 50,
+                    "tier5": 40
                 },
                 {
-                    "day":"Jul 2",
-                    "year":2023,
-                    "free":170,
-                    "tier1":130,
-                    "tier2":50,
-                    "tier3":40,
-                    "tier4":50,
-                    "tier5":40
+                    "date": "02-07-2023",
+                    "free": 170,
+                    "tier1": 130,
+                    "tier2": 50,
+                    "tier3": 40,
+                    "tier4": 50,
+                    "tier5": 40
                 },
                 {
-                    "day":"Jul 3",
-                    "year":2023,
-                    "free":170,
-                    "tier1":130,
-                    "tier2":250,
-                    "tier3":40,
-                    "tier4":50,
-                    "tier5":40
+                    "date": "03-07-2023",
+                    "free": 170,
+                    "tier1": 130,
+                    "tier2": 250,
+                    "tier3": 40,
+                    "tier4": 50,
+                    "tier5": 40
                 },
                 {
-                    "day":"Jul 4",
-                    "year":2023,
-                    "free":170,
-                    "tier1":130,
-                    "tier2":50,
-                    "tier3":40,
-                    "tier4":50,
-                    "tier5":40
+                    "date": "04-07-2023",
+                    "free": 170,
+                    "tier1": 130,
+                    "tier2": 50,
+                    "tier3": 40,
+                    "tier4": 50,
+                    "tier5": 40
                 },
                 {
-                    "day":"Jul 5",
-                    "year":2023,
-                    "free":170,
-                    "tier1":130,
-                    "tier2":250,
-                    "tier3":40,
-                    "tier4":50,
-                    "tier5":40
+                    "date": "05-07-2023",
+                    "free": 170,
+                    "tier1": 130,
+                    "tier2": 250,
+                    "tier3": 40,
+                    "tier4": 50,
+                    "tier5": 40
                 },
                 {
-                    "day":"Jul 6",
-                    "year":2023,
-                    "free":170,
-                    "tier1":130,
-                    "tier2":50,
-                    "tier3":40,
-                    "tier4":50,
-                    "tier5":40
+                    "date": "06-07-2023",
+                    "free": 170,
+                    "tier1": 130,
+                    "tier2": 50,
+                    "tier3": 40,
+                    "tier4": 50,
+                    "tier5": 40
                 },
                 {
-                    "day":"Jul 7",
-                    "year":2023,
-                    "free":170,
-                    "tier1":130,
-                    "tier2":50,
-                    "tier3":40,
-                    "tier4":250,
-                    "tier5":40
+                    "date": "07-07-2023",
+                    "free": 170,
+                    "tier1": 130,
+                    "tier2": 50,
+                    "tier3": 40,
+                    "tier4": 250,
+                    "tier5": 40
                 }
-            ]
+            ]          
         }
     },
     "tiersBreakdownDaily":{
@@ -3294,36 +3164,42 @@
         "timeFrames":{
             "day":[
                 {
-                    "value":10,
-                    "category":"Free",
-                    "color":"#4CC9F0"
+                    "date": "01-07-2023",
+                    "value": 10,
+                    "category": "Free",
+                    "color": "#4CC9F0"
                 },
                 {
-                    "value":9,
-                    "category":"Tip 1",
-                    "color":"#4361EE"
+                    "date": "01-07-2023",
+                    "value": 9,
+                    "category": "Tip 1",
+                    "color": "#4361EE"
                 },
                 {
-                    "value":6,
-                    "category":"Tip 2",
-                    "color":"#3A0BA3"
+                    "date": "01-07-2023",
+                    "value": 6,
+                    "category": "Tip 2",
+                    "color": "#3A0BA3"
                 },
                 {
-                    "value":5,
-                    "category":"Tip 3",
-                    "color":"#AE4AEF"
+                    "date": "01-07-2023",
+                    "value": 5,
+                    "category": "Tip 3",
+                    "color": "#AE4AEF"
                 },
                 {
-                    "value":5,
-                    "category":"Tip 4",
-                    "color":"#98A2B3"
+                    "date": "01-07-2023",
+                    "value": 5,
+                    "category": "Tip 4",
+                    "color": "#98A2B3"
                 },
                 {
-                    "value":5,
-                    "category":"Tip 5",
-                    "color":"#F72485"
+                    "date": "01-07-2023",
+                    "value": 5,
+                    "category": "Tip 5",
+                    "color": "#F72485"
                 }
-            ]
+            ]            
         }
     },
     "fansInsight":{
@@ -3331,267 +3207,255 @@
         "timeFrames":{
             "month":[
                 {
-                    "month":"Jan",
-                    "year":"2023",
-                    "newFollowers":"500",
-                    "profileVisit":"300"
+                    "date": "01-01-2023",
+                    "newFollowers": "500",
+                    "profileVisit": "300"
                 },
                 {
-                    "month":"Feb",
-                    "year":"2023",
-                    "newFollowers":"500",
-                    "profileVisit":"300"
+                    "date": "01-02-2023",
+                    "newFollowers": "500",
+                    "profileVisit": "300"
                 },
                 {
-                    "month":"Mar",
-                    "year":"2023",
-                    "newFollowers":"500",
-                    "profileVisit":"300"
+                    "date": "01-03-2023",
+                    "newFollowers": "500",
+                    "profileVisit": "300"
                 },
                 {
-                    "month":"Apr",
-                    "year":"2023",
-                    "newFollowers":"500",
-                    "profileVisit":"300"
+                    "date": "01-04-2023",
+                    "newFollowers": "500",
+                    "profileVisit": "300"
                 },
                 {
-                    "month":"May",
-                    "year":"2023",
-                    "newFollowers":"500",
-                    "profileVisit":"300"
+                    "date": "01-05-2023",
+                    "newFollowers": "500",
+                    "profileVisit": "300"
                 },
                 {
-                    "month":"Jun",
-                    "year":"2023",
-                    "newFollowers":"500",
-                    "profileVisit":"300"
+                    "date": "01-06-2023",
+                    "newFollowers": "500",
+                    "profileVisit": "300"
                 },
                 {
-                    "month":"Jul",
-                    "year":"2023",
-                    "newFollowers":"500",
-                    "profileVisit":"300"
+                    "date": "01-07-2023",
+                    "newFollowers": "500",
+                    "profileVisit": "300"
                 },
                 {
-                    "month":"Aug",
-                    "year":"2023",
-                    "newFollowers":"500",
-                    "profileVisit":"300"
+                    "date": "01-08-2023",
+                    "newFollowers": "500",
+                    "profileVisit": "300"
                 },
                 {
-                    "month":"Sep",
-                    "year":"2023",
-                    "newFollowers":"500",
-                    "profileVisit":"300"
+                    "date": "01-09-2023",
+                    "newFollowers": "500",
+                    "profileVisit": "300"
                 },
                 {
-                    "month":"Oct",
-                    "year":"2023",
-                    "newFollowers":"500",
-                    "profileVisit":"300"
+                    "date": "01-10-2023",
+                    "newFollowers": "500",
+                    "profileVisit": "300"
                 },
                 {
-                    "month":"Nov",
-                    "year":"2023",
-                    "newFollowers":"500",
-                    "profileVisit":"300"
+                    "date": "01-11-2023",
+                    "newFollowers": "500",
+                    "profileVisit": "300"
                 },
                 {
-                    "month":"Dec",
-                    "year":"2023",
-                    "newFollowers":"500",
-                    "profileVisit":"300"
+                    "date": "01-12-2023",
+                    "newFollowers": "500",
+                    "profileVisit": "300"
                 }
             ],
             "day":[
                 {
-                    "day":"Jul 1",
-                    "newFollowers":"100",
-                    "profileVisit":"80"
+                    "date": "01-07-2023",
+                    "newFollowers": "100",
+                    "profileVisit": "80"
                 },
                 {
-                    "day":"Jul 2",
-                    "newFollowers":"200",
-                    "profileVisit":"80"
+                    "date": "02-07-2023",
+                    "newFollowers": "200",
+                    "profileVisit": "80"
                 },
                 {
-                    "day":"Jul 3",
-                    "newFollowers":"300",
-                    "profileVisit":"80"
+                    "date": "03-07-2023",
+                    "newFollowers": "300",
+                    "profileVisit": "80"
                 },
                 {
-                    "day":"Jul 4",
-                    "newFollowers":"400",
-                    "profileVisit":"80"
+                    "date": "04-07-2023",
+                    "newFollowers": "400",
+                    "profileVisit": "80"
                 },
                 {
-                    "day":"Jul 5",
-                    "newFollowers":"500",
-                    "profileVisit":"80"
+                    "date": "05-07-2023",
+                    "newFollowers": "500",
+                    "profileVisit": "80"
                 },
                 {
-                    "day":"Jul 6",
-                    "newFollowers":"600",
-                    "profileVisit":"80"
+                    "date": "06-07-2023",
+                    "newFollowers": "600",
+                    "profileVisit": "80"
                 },
                 {
-                    "day":"Jul 7",
-                    "newFollowers":"700",
-                    "profileVisit":"80"
+                    "date": "07-07-2023",
+                    "newFollowers": "700",
+                    "profileVisit": "80"
                 },
                 {
-                    "day":"Jul 8",
-                    "newFollowers":"500",
-                    "profileVisit":"80"
+                    "date": "08-07-2023",
+                    "newFollowers": "500",
+                    "profileVisit": "80"
                 },
                 {
-                    "day":"Jul 9",
-                    "newFollowers":"600",
-                    "profileVisit":"80"
+                    "date": "09-07-2023",
+                    "newFollowers": "600",
+                    "profileVisit": "80"
                 },
                 {
-                    "day":"Jul 10",
-                    "newFollowers":"800",
-                    "profileVisit":"80"
+                    "date": "10-07-2023",
+                    "newFollowers": "800",
+                    "profileVisit": "80"
                 },
                 {
-                    "day":"Jul 11",
-                    "newFollowers":"600",
-                    "profileVisit":"80"
+                    "date": "11-07-2023",
+                    "newFollowers": "600",
+                    "profileVisit": "80"
                 },
                 {
-                    "day":"Jul 12",
-                    "newFollowers":"200",
-                    "profileVisit":"80"
+                    "date": "12-07-2023",
+                    "newFollowers": "200",
+                    "profileVisit": "80"
                 },
                 {
-                    "day":"Jul 13",
-                    "newFollowers":"200",
-                    "profileVisit":"80"
+                    "date": "13-07-2023",
+                    "newFollowers": "200",
+                    "profileVisit": "80"
                 },
                 {
-                    "day":"Jul 14",
-                    "newFollowers":"200",
-                    "profileVisit":"80"
+                    "date": "14-07-2023",
+                    "newFollowers": "200",
+                    "profileVisit": "80"
                 },
                 {
-                    "day":"Jul 15",
-                    "newFollowers":"500",
-                    "profileVisit":"80"
+                    "date": "15-07-2023",
+                    "newFollowers": "500",
+                    "profileVisit": "80"
                 },
                 {
-                    "day":"Jul 16",
-                    "newFollowers":"200",
-                    "profileVisit":"80"
+                    "date": "16-07-2023",
+                    "newFollowers": "200",
+                    "profileVisit": "80"
                 },
                 {
-                    "day":"Jul 17",
-                    "newFollowers":"200",
-                    "profileVisit":"80"
+                    "date": "17-07-2023",
+                    "newFollowers": "200",
+                    "profileVisit": "80"
                 },
                 {
-                    "day":"Jul 18",
-                    "newFollowers":"500",
-                    "profileVisit":"80"
+                    "date": "18-07-2023",
+                    "newFollowers": "500",
+                    "profileVisit": "80"
                 },
                 {
-                    "day":"Jul 19",
-                    "newFollowers":"200",
-                    "profileVisit":"80"
+                    "date": "19-07-2023",
+                    "newFollowers": "200",
+                    "profileVisit": "80"
                 },
                 {
-                    "day":"Jul 20",
-                    "newFollowers":"600",
-                    "profileVisit":"80"
+                    "date": "20-07-2023",
+                    "newFollowers": "600",
+                    "profileVisit": "80"
                 },
                 {
-                    "day":"Jul 21",
-                    "newFollowers":"200",
-                    "profileVisit":"80"
+                    "date": "21-07-2023",
+                    "newFollowers": "200",
+                    "profileVisit": "80"
                 },
                 {
-                    "day":"Jul 22",
-                    "newFollowers":"200",
-                    "profileVisit":"80"
+                    "date": "22-07-2023",
+                    "newFollowers": "200",
+                    "profileVisit": "80"
                 },
                 {
-                    "day":"Jul 23",
-                    "newFollowers":"200",
-                    "profileVisit":"80"
+                    "date": "23-07-2023",
+                    "newFollowers": "200",
+                    "profileVisit": "80"
                 },
                 {
-                    "day":"Jul 24",
-                    "newFollowers":"500",
-                    "profileVisit":"80"
+                    "date": "24-07-2023",
+                    "newFollowers": "500",
+                    "profileVisit": "80"
                 },
                 {
-                    "day":"Jul 25",
-                    "newFollowers":"500",
-                    "profileVisit":"80"
+                    "date": "25-07-2023",
+                    "newFollowers": "500",
+                    "profileVisit": "80"
                 },
                 {
-                    "day":"Jul 26",
-                    "newFollowers":"200",
-                    "profileVisit":"80"
+                    "date": "26-07-2023",
+                    "newFollowers": "200",
+                    "profileVisit": "80"
                 },
                 {
-                    "day":"Jul 27",
-                    "newFollowers":"200",
-                    "profileVisit":"80"
+                    "date": "27-07-2023",
+                    "newFollowers": "200",
+                    "profileVisit": "80"
                 },
                 {
-                    "day":"Jul 28",
-                    "newFollowers":"800",
-                    "profileVisit":"80"
+                    "date": "28-07-2023",
+                    "newFollowers": "800",
+                    "profileVisit": "80"
                 },
                 {
-                    "day":"Jul 29",
-                    "newFollowers":"300",
-                    "profileVisit":"80"
+                    "date": "29-07-2023",
+                    "newFollowers": "300",
+                    "profileVisit": "80"
                 },
                 {
-                    "day":"Jul 30",
-                    "newFollowers":"200",
-                    "profileVisit":"80"
+                    "date": "30-07-2023",
+                    "newFollowers": "200",
+                    "profileVisit": "80"
                 }
             ],
             "week":[
                 {
-                    "day":"Jul 1",
-                    "newFollowers":"100",
-                    "profileVisit":"80"
+                    "date": "01-07-2023",
+                    "newFollowers": "100",
+                    "profileVisit": "80"
                 },
                 {
-                    "day":"Jul 2",
-                    "newFollowers":"200",
-                    "profileVisit":"80"
+                    "date": "02-07-2023",
+                    "newFollowers": "200",
+                    "profileVisit": "80"
                 },
                 {
-                    "day":"Jul 3",
-                    "newFollowers":"300",
-                    "profileVisit":"80"
+                    "date": "03-07-2023",
+                    "newFollowers": "300",
+                    "profileVisit": "80"
                 },
                 {
-                    "day":"Jul 4",
-                    "newFollowers":"400",
-                    "profileVisit":"80"
+                    "date": "04-07-2023",
+                    "newFollowers": "400",
+                    "profileVisit": "80"
                 },
                 {
-                    "day":"Jul 5",
-                    "newFollowers":"500",
-                    "profileVisit":"80"
+                    "date": "05-07-2023",
+                    "newFollowers": "500",
+                    "profileVisit": "80"
                 },
                 {
-                    "day":"Jul 6",
-                    "newFollowers":"600",
-                    "profileVisit":"80"
+                    "date": "06-07-2023",
+                    "newFollowers": "600",
+                    "profileVisit": "80"
                 },
                 {
-                    "day":"Jul 7",
-                    "newFollowers":"700",
-                    "profileVisit":"80"
+                    "date": "07-07-2023",
+                    "newFollowers": "700",
+                    "profileVisit": "80"
                 }
-            ]
+            ]           
         }
     },
     "fansTrend":{
@@ -3599,316 +3463,256 @@
         "timeFrames":{
             "month":[
                 {
-                    "month":"Jan",
-                    "fullMonth":"JANUARY",
-                    "year":2023,
-                    "newFollowers":555,
-                    "profileVisit":320
+                    "date": "01-01-2023",
+                    "newFollowers": 555,
+                    "profileVisit": 320
                 },
                 {
-                    "month":"Feb",
-                    "fullMonth":"FEBRUARY",
-                    "year":2023,
-                    "newFollowers":155,
-                    "profileVisit":120
+                    "date": "01-02-2023",
+                    "newFollowers": 155,
+                    "profileVisit": 120
                 },
                 {
-                    "month":"Mar",
-                    "fullMonth":"MARCH",
-                    "year":2023,
-                    "newFollowers":355,
-                    "profileVisit":420
+                    "date": "01-03-2023",
+                    "newFollowers": 355,
+                    "profileVisit": 420
                 },
                 {
-                    "month":"Apr",
-                    "fullMonth":"APRIL",
-                    "year":2023,
-                    "newFollowers":155,
-                    "profileVisit":520
+                    "date": "01-04-2023",
+                    "newFollowers": 155,
+                    "profileVisit": 520
                 },
                 {
-                    "month":"May",
-                    "fullMonth":"MAY",
-                    "year":2023,
-                    "newFollowers":555,
-                    "profileVisit":120
+                    "date": "01-05-2023",
+                    "newFollowers": 555,
+                    "profileVisit": 120
                 },
                 {
-                    "month":"Jun",
-                    "fullMonth":"JUNE",
-                    "year":2023,
-                    "newFollowers":155,
-                    "profileVisit":120
+                    "date": "01-06-2023",
+                    "newFollowers": 155,
+                    "profileVisit": 120
                 },
                 {
-                    "month":"Jul",
-                    "fullMonth":"JULY",
-                    "year":2023,
-                    "newFollowers":655,
-                    "profileVisit":220
+                    "date": "01-07-2023",
+                    "newFollowers": 655,
+                    "profileVisit": 220
                 },
                 {
-                    "month":"Aug",
-                    "fullMonth":"AUGUST",
-                    "year":2023,
-                    "newFollowers":155,
-                    "profileVisit":120
+                    "date": "01-08-2023",
+                    "newFollowers": 155,
+                    "profileVisit": 120
                 },
                 {
-                    "month":"Sep",
-                    "fullMonth":"SEPTEMBER",
-                    "year":2023,
-                    "newFollowers":755,
-                    "profileVisit":120
+                    "date": "01-09-2023",
+                    "newFollowers": 755,
+                    "profileVisit": 120
                 },
                 {
-                    "month":"Oct",
-                    "fullMonth":"OCTOBER",
-                    "year":2023,
-                    "newFollowers":155,
-                    "profileVisit":920
+                    "date": "01-10-2023",
+                    "newFollowers": 155,
+                    "profileVisit": 920
                 },
                 {
-                    "month":"Nov",
-                    "fullMonth":"NOVEMBER",
-                    "year":2023,
-                    "newFollowers":855,
-                    "profileVisit":120
+                    "date": "01-11-2023",
+                    "newFollowers": 855,
+                    "profileVisit": 120
                 },
                 {
-                    "month":"Dec",
-                    "fullMonth":"DECEMBER",
-                    "year":2023,
-                    "newFollowers":155,
-                    "profileVisit":620
+                    "date": "01-12-2023",
+                    "newFollowers": 155,
+                    "profileVisit": 620
                 }
             ],
             "day": [
                 {
-                    "day": "Jul 1",
-                    "year": 2023,
+                    "date": "01-07-2023",
                     "newFollowers": 355,
                     "profileVisit": 120
                 },
                 {
-                    "day": "Jul 2",
-                    "year": 2023,
+                    "date": "02-07-2023",
                     "newFollowers": 155,
                     "profileVisit": 320
                 },
                 {
-                    "day": "Jul 3",
-                    "year": 2023,
+                    "date": "03-07-2023",
                     "newFollowers": 255,
                     "profileVisit": 220
                 },
                 {
-                    "day": "Jul 4",
-                    "year": 2023,
+                    "date": "04-07-2023",
                     "newFollowers": 155,
                     "profileVisit": 620
                 },
                 {
-                    "day": "Jul 5",
-                    "year": 2023,
+                    "date": "05-07-2023",
                     "newFollowers": 155,
                     "profileVisit": 520
                 },
                 {
-                    "day": "Jul 6",
-                    "year": 2023,
+                    "date": "06-07-2023",
                     "newFollowers": 855,
                     "profileVisit": 120
                 },
                 {
-                    "day": "Jul 7",
-                    "year": 2023,
+                    "date": "07-07-2023",
                     "newFollowers": 855,
                     "profileVisit": 120
                 },
                 {
-                    "day": "Jul 8",
-                    "year": 2023,
+                    "date": "08-07-2023",
                     "newFollowers": 195,
                     "profileVisit": 120
                 },
                 {
-                    "day": "Jul 9",
-                    "year": 2023,
+                    "date": "09-07-2023",
                     "newFollowers": 155,
                     "profileVisit": 120
                 },
                 {
-                    "day": "Jul 10",
-                    "year": 2023,
+                    "date": "10-07-2023",
                     "newFollowers": 155,
                     "profileVisit": 120
                 },
                 {
-                    "day": "Jul 11",
-                    "year": 2023,
+                    "date": "11-07-2023",
                     "newFollowers": 155,
                     "profileVisit": 120
                 },
                 {
-                    "day": "Jul 12",
-                    "year": 2023,
+                    "date": "12-07-2023",
                     "newFollowers": 55,
                     "profileVisit": 620
                 },
                 {
-                    "day": "Jul 13",
-                    "year": 2023,
+                    "date": "13-07-2023",
                     "newFollowers": 955,
                     "profileVisit": 220
                 },
                 {
-                    "day": "Jul 14",
-                    "year": 2023,
+                    "date": "14-07-2023",
                     "newFollowers": 755,
                     "profileVisit": 520
                 },
                 {
-                    "day": "Jul 15",
-                    "year": 2023,
+                    "date": "15-07-2023",
                     "newFollowers": 155,
                     "profileVisit": 220
                 },
                 {
-                    "day": "Jul 16",
-                    "year": 2023,
+                    "date": "16-07-2023",
                     "newFollowers": 655,
                     "profileVisit": 120
                 },
                 {
-                    "day": "Jul 17",
-                    "year": 2023,
+                    "date": "17-07-2023",
                     "newFollowers": 155,
                     "profileVisit": 120
                 },
                 {
-                    "day": "Jul 18",
-                    "year": 2023,
+                    "date": "18-07-2023",
                     "newFollowers": 555,
                     "profileVisit": 420
                 },
                 {
-                    "day": "Jul 19",
-                    "year": 2023,
+                    "date": "19-07-2023",
                     "newFollowers": 155,
                     "profileVisit": 120
                 },
                 {
-                    "day": "Jul 20",
-                    "year": 2023,
+                    "date": "20-07-2023",
                     "newFollowers": 155,
                     "profileVisit": 220
                 },
                 {
-                    "day": "Jul 21",
-                    "year": 2023,
+                    "date": "21-07-2023",
                     "newFollowers": 155,
                     "profileVisit": 120
                 },
                 {
-                    "day": "Jul 22",
-                    "year": 2023,
+                    "date": "22-07-2023",
                     "newFollowers": 855,
                     "profileVisit": 620
                 },
                 {
-                    "day": "Jul 23",
-                    "year": 2023,
+                    "date": "23-07-2023",
                     "newFollowers": 555,
                     "profileVisit": 120
                 },
                 {
-                    "day": "Jul 24",
-                    "year": 2023,
+                    "date": "24-07-2023",
                     "newFollowers": 255,
                     "profileVisit": 120
                 },
                 {
-                    "day": "Jul 25",
-                    "year": 2023,
+                    "date": "25-07-2023",
                     "newFollowers": 355,
                     "profileVisit": 320
                 },
                 {
-                    "day": "Jul 26",
-                    "year": 2023,
+                    "date": "26-07-2023",
                     "newFollowers": 155,
                     "profileVisit": 120
                 },
                 {
-                    "day": "Jul 27",
-                    "year": 2023,
+                    "date": "27-07-2023",
                     "newFollowers": 555,
                     "profileVisit": 820
                 },
                 {
-                    "day": "Jul 28",
-                    "year": 2023,
+                    "date": "28-07-2023",
                     "newFollowers": 155,
                     "profileVisit": 120
                 },
                 {
-                    "day": "Jul 29",
-                    "year": 2023,
+                    "date": "29-07-2023",
                     "newFollowers": 355,
                     "profileVisit": 220
                 },
                 {
-                    "day": "Jul 30",
-                    "year": 2023,
+                    "date": "30-07-2023",
                     "newFollowers": 155,
                     "profileVisit": 120
                 }
             ],
             "week":[
                 {
-                    "day":"Jul 1",
-                    "year":2023,
-                    "newFollowers":355,
-                    "profileVisit":120
+                    "date": "01-07-2023",
+                    "newFollowers": 355,
+                    "profileVisit": 120
                 },
                 {
-                    "day":"Jul 2",
-                    "year":2023,
-                    "newFollowers":155,
-                    "profileVisit":320
+                    "date": "02-07-2023",
+                    "newFollowers": 155,
+                    "profileVisit": 320
                 },
                 {
-                    "day":"Jul 3",
-                    "year":2023,
-                    "newFollowers":255,
-                    "profileVisit":220
+                    "date": "03-07-2023",
+                    "newFollowers": 255,
+                    "profileVisit": 220
                 },
                 {
-                    "day":"Jul 4",
-                    "year":2023,
-                    "newFollowers":155,
-                    "profileVisit":620
+                    "date": "04-07-2023",
+                    "newFollowers": 155,
+                    "profileVisit": 620
                 },
                 {
-                    "day":"Jul 5",
-                    "year":2023,
-                    "newFollowers":155,
-                    "profileVisit":520
+                    "date": "05-07-2023",
+                    "newFollowers": 155,
+                    "profileVisit": 520
                 },
                 {
-                    "day":"Jul 6",
-                    "year":2023,
-                    "newFollowers":855,
-                    "profileVisit":120
+                    "date": "06-07-2023",
+                    "newFollowers": 855,
+                    "profileVisit": 120
                 },
                 {
-                    "day":"Jul 7",
-                    "year":2023,
-                    "newFollowers":855,
-                    "profileVisit":120
+                    "date": "07-07-2023",
+                    "newFollowers": 855,
+                    "profileVisit": 120
                 }
             ]
+            
         }
     },
     "topContributorsInsight":{
@@ -3916,280 +3720,310 @@
         "timeFrames":{
             "month":[
                 {
-                    "name":"MAN GOES",
-                    "tag":"mangoes4eva",
-                    "orders":120,
-                    "tokens":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "01-01-2023",
+                    "name": "MAN GOES",
+                    "tag": "mangoes4eva",
+                    "orders": 120,
+                    "tokens": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Joey",
-                    "tag":"mangoes4eva",
-                    "orders":150,
-                    "tokens":162,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "01-02-2023",
+                    "name": "Joey",
+                    "tag": "mangoes4eva",
+                    "orders": 150,
+                    "tokens": 162,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Ross",
-                    "tag":"mangoes4eva",
-                    "orders":220,
-                    "tokens":362,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "01-03-2023",
+                    "name": "Ross",
+                    "tag": "mangoes4eva",
+                    "orders": 220,
+                    "tokens": 362,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Phoebe",
-                    "tag":"mangoes4eva",
-                    "orders":200,
-                    "tokens":192,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "01-04-2023",
+                    "name": "Phoebe",
+                    "tag": "mangoes4eva",
+                    "orders": 200,
+                    "tokens": 192,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Rachel",
-                    "tag":"mangoes4eva",
-                    "orders":220,
-                    "tokens":510,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "01-05-2023",
+                    "name": "Rachel",
+                    "tag": "mangoes4eva",
+                    "orders": 220,
+                    "tokens": 510,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Rachel1",
-                    "tag":"mangoes4eva",
-                    "orders":230,
-                    "tokens":356,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "01-06-2023",
+                    "name": "Rachel1",
+                    "tag": "mangoes4eva",
+                    "orders": 230,
+                    "tokens": 356,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Rachel2",
-                    "tag":"mangoes4eva",
-                    "orders":452,
-                    "tokens":563,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "01-07-2023",
+                    "name": "Rachel2",
+                    "tag": "mangoes4eva",
+                    "orders": 452,
+                    "tokens": 563,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Chandler",
-                    "tag":"mangoes4eva",
-                    "orders":254,
-                    "tokens":452,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "01-08-2023",
+                    "name": "Chandler",
+                    "tag": "mangoes4eva",
+                    "orders": 254,
+                    "tokens": 452,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Chandler2",
-                    "tag":"mangoes4eva",
-                    "orders":236,
-                    "tokens":225,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "01-09-2023",
+                    "name": "Chandler2",
+                    "tag": "mangoes4eva",
+                    "orders": 236,
+                    "tokens": 225,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Chandler3",
-                    "tag":"mangoes4eva",
-                    "orders":586,
-                    "tokens":225,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "01-10-2023",
+                    "name": "Chandler3",
+                    "tag": "mangoes4eva",
+                    "orders": 586,
+                    "tokens": 225,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 }
             ],
             "day":[
                 {
-                    "name":"MAN GOES",
-                    "tag":"mangoes4eva",
-                    "orders":120,
-                    "tokens":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "01-07-2023",
+                    "name": "MAN GOES",
+                    "tag": "mangoes4eva",
+                    "orders": 120,
+                    "tokens": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Joey",
-                    "tag":"mangoes4eva",
-                    "orders":150,
-                    "tokens":162,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "02-07-2023",
+                    "name": "Joey",
+                    "tag": "mangoes4eva",
+                    "orders": 150,
+                    "tokens": 162,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Ross",
-                    "tag":"mangoes4eva",
-                    "orders":220,
-                    "tokens":362,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "03-07-2023",
+                    "name": "Ross",
+                    "tag": "mangoes4eva",
+                    "orders": 220,
+                    "tokens": 362,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Phoebe",
-                    "tag":"mangoes4eva",
-                    "orders":200,
-                    "tokens":192,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "04-07-2023",
+                    "name": "Phoebe",
+                    "tag": "mangoes4eva",
+                    "orders": 200,
+                    "tokens": 192,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Rachel",
-                    "tag":"mangoes4eva",
-                    "orders":220,
-                    "tokens":510,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "05-07-2023",
+                    "name": "Rachel",
+                    "tag": "mangoes4eva",
+                    "orders": 220,
+                    "tokens": 510,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Rachel1",
-                    "tag":"mangoes4eva",
-                    "orders":230,
-                    "tokens":356,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "06-07-2023",
+                    "name": "Rachel1",
+                    "tag": "mangoes4eva",
+                    "orders": 230,
+                    "tokens": 356,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Rachel2",
-                    "tag":"mangoes4eva",
-                    "orders":452,
-                    "tokens":563,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "07-07-2023",
+                    "name": "Rachel2",
+                    "tag": "mangoes4eva",
+                    "orders": 452,
+                    "tokens": 563,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Chandler",
-                    "tag":"mangoes4eva",
-                    "orders":254,
-                    "tokens":452,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "08-07-2023",
+                    "name": "Chandler",
+                    "tag": "mangoes4eva",
+                    "orders": 254,
+                    "tokens": 452,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Chandler2",
-                    "tag":"mangoes4eva",
-                    "orders":236,
-                    "tokens":225,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "09-07-2023",
+                    "name": "Chandler2",
+                    "tag": "mangoes4eva",
+                    "orders": 236,
+                    "tokens": 225,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Chandler3",
-                    "tag":"mangoes4eva",
-                    "orders":586,
-                    "tokens":225,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "10-07-2023",
+                    "name": "Chandler3",
+                    "tag": "mangoes4eva",
+                    "orders": 586,
+                    "tokens": 225,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 }
             ],
             "week":[
                 {
-                    "name":"MAN GOES",
-                    "tag":"mangoes4eva",
-                    "orders":120,
-                    "tokens":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "01-07-2023",
+                    "name": "MAN GOES",
+                    "tag": "mangoes4eva",
+                    "orders": 120,
+                    "tokens": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Joey",
-                    "tag":"mangoes4eva",
-                    "orders":150,
-                    "tokens":162,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "02-07-2023",
+                    "name": "Joey",
+                    "tag": "mangoes4eva",
+                    "orders": 150,
+                    "tokens": 162,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Ross",
-                    "tag":"mangoes4eva",
-                    "orders":220,
-                    "tokens":362,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "03-07-2023",
+                    "name": "Ross",
+                    "tag": "mangoes4eva",
+                    "orders": 220,
+                    "tokens": 362,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Phoebe",
-                    "tag":"mangoes4eva",
-                    "orders":200,
-                    "tokens":192,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "04-07-2023",
+                    "name": "Phoebe",
+                    "tag": "mangoes4eva",
+                    "orders": 200,
+                    "tokens": 192,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Rachel",
-                    "tag":"mangoes4eva",
-                    "orders":220,
-                    "tokens":510,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "05-07-2023",
+                    "name": "Rachel",
+                    "tag": "mangoes4eva",
+                    "orders": 220,
+                    "tokens": 510,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Rachel1",
-                    "tag":"mangoes4eva",
-                    "orders":230,
-                    "tokens":356,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "06-07-2023",
+                    "name": "Rachel1",
+                    "tag": "mangoes4eva",
+                    "orders": 230,
+                    "tokens": 356,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Rachel2",
-                    "tag":"mangoes4eva",
-                    "orders":452,
-                    "tokens":563,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "07-07-2023",
+                    "name": "Rachel2",
+                    "tag": "mangoes4eva",
+                    "orders": 452,
+                    "tokens": 563,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Chandler",
-                    "tag":"mangoes4eva",
-                    "orders":254,
-                    "tokens":452,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "08-07-2023",
+                    "name": "Chandler",
+                    "tag": "mangoes4eva",
+                    "orders": 254,
+                    "tokens": 452,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Chandler2",
-                    "tag":"mangoes4eva",
-                    "orders":236,
-                    "tokens":225,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "09-07-2023",
+                    "name": "Chandler2",
+                    "tag": "mangoes4eva",
+                    "orders": 236,
+                    "tokens": 225,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Chandler3",
-                    "tag":"mangoes4eva",
-                    "orders":586,
-                    "tokens":225,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "10-07-2023",
+                    "name": "Chandler3",
+                    "tag": "mangoes4eva",
+                    "orders": 586,
+                    "tokens": 225,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 }
-            ]
+            ]            
         }
     },
     "topFansInsight":{
@@ -4197,340 +4031,370 @@
         "timeFrames":{
             "month":[
                 {
-                    "name":"MAN GOES",
-                    "tag":"mangoes4eva",
-                    "tip":220,
-                    "call":212,
-                    "chat":122,
-                    "liveStreaming":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "01-01-2023",
+                    "name": "MAN GOES",
+                    "tag": "mangoes4eva",
+                    "tip": 220,
+                    "call": 212,
+                    "chat": 122,
+                    "liveStreaming": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Joey",
-                    "tag":"mangoes4eva",
-                    "tip":220,
-                    "call":212,
-                    "chat":122,
-                    "liveStreaming":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "01-02-2023",
+                    "name": "Joey",
+                    "tag": "mangoes4eva",
+                    "tip": 220,
+                    "call": 212,
+                    "chat": 122,
+                    "liveStreaming": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Ross",
-                    "tag":"mangoes4eva",
-                    "tip":220,
-                    "call":212,
-                    "chat":122,
-                    "liveStreaming":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "01-03-2023",
+                    "name": "Ross",
+                    "tag": "mangoes4eva",
+                    "tip": 220,
+                    "call": 212,
+                    "chat": 122,
+                    "liveStreaming": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Phoebe",
-                    "tag":"mangoes4eva",
-                    "tip":220,
-                    "call":212,
-                    "chat":122,
-                    "liveStreaming":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "01-04-2023",
+                    "name": "Phoebe",
+                    "tag": "mangoes4eva",
+                    "tip": 220,
+                    "call": 212,
+                    "chat": 122,
+                    "liveStreaming": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Rachel",
-                    "tag":"mangoes4eva",
-                    "tip":220,
-                    "call":212,
-                    "chat":122,
-                    "liveStreaming":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "01-05-2023",
+                    "name": "Rachel",
+                    "tag": "mangoes4eva",
+                    "tip": 220,
+                    "call": 212,
+                    "chat": 122,
+                    "liveStreaming": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Rachel1",
-                    "tag":"mangoes4eva",
-                    "tip":220,
-                    "call":212,
-                    "chat":122,
-                    "liveStreaming":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "01-06-2023",
+                    "name": "Rachel1",
+                    "tag": "mangoes4eva",
+                    "tip": 220,
+                    "call": 212,
+                    "chat": 122,
+                    "liveStreaming": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Rachel2",
-                    "tag":"mangoes4eva",
-                    "tip":220,
-                    "call":212,
-                    "chat":122,
-                    "liveStreaming":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "01-07-2023",
+                    "name": "Rachel2",
+                    "tag": "mangoes4eva",
+                    "tip": 220,
+                    "call": 212,
+                    "chat": 122,
+                    "liveStreaming": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Chandler",
-                    "tag":"mangoes4eva",
-                    "tip":220,
-                    "call":212,
-                    "chat":122,
-                    "liveStreaming":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "01-08-2023",
+                    "name": "Chandler",
+                    "tag": "mangoes4eva",
+                    "tip": 220,
+                    "call": 212,
+                    "chat": 122,
+                    "liveStreaming": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Chandler2",
-                    "tag":"mangoes4eva",
-                    "tip":220,
-                    "call":212,
-                    "chat":122,
-                    "liveStreaming":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "01-09-2023",
+                    "name": "Chandler2",
+                    "tag": "mangoes4eva",
+                    "tip": 220,
+                    "call": 212,
+                    "chat": 122,
+                    "liveStreaming": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Chandler3",
-                    "tag":"mangoes4eva",
-                    "tip":220,
-                    "call":212,
-                    "chat":122,
-                    "liveStreaming":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "01-10-2023",
+                    "name": "Chandler3",
+                    "tag": "mangoes4eva",
+                    "tip": 220,
+                    "call": 212,
+                    "chat": 122,
+                    "liveStreaming": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 }
             ],
             "day":[
                 {
-                    "name":"MAN GOES",
-                    "tag":"mangoes4eva",
-                    "tip":220,
-                    "call":212,
-                    "chat":122,
-                    "liveStreaming":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "01-07-2023",
+                    "name": "MAN GOES",
+                    "tag": "mangoes4eva",
+                    "tip": 220,
+                    "call": 212,
+                    "chat": 122,
+                    "liveStreaming": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Joey",
-                    "tag":"mangoes4eva",
-                    "tip":220,
-                    "call":212,
-                    "chat":122,
-                    "liveStreaming":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "02-07-2023",
+                    "name": "Joey",
+                    "tag": "mangoes4eva",
+                    "tip": 220,
+                    "call": 212,
+                    "chat": 122,
+                    "liveStreaming": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Ross",
-                    "tag":"mangoes4eva",
-                    "tip":220,
-                    "call":212,
-                    "chat":122,
-                    "liveStreaming":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "03-07-2023",
+                    "name": "Ross",
+                    "tag": "mangoes4eva",
+                    "tip": 220,
+                    "call": 212,
+                    "chat": 122,
+                    "liveStreaming": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Phoebe",
-                    "tag":"mangoes4eva",
-                    "tip":220,
-                    "call":212,
-                    "chat":122,
-                    "liveStreaming":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "04-07-2023",
+                    "name": "Phoebe",
+                    "tag": "mangoes4eva",
+                    "tip": 220,
+                    "call": 212,
+                    "chat": 122,
+                    "liveStreaming": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Rachel",
-                    "tag":"mangoes4eva",
-                    "tip":220,
-                    "call":212,
-                    "chat":122,
-                    "liveStreaming":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "05-07-2023",
+                    "name": "Rachel",
+                    "tag": "mangoes4eva",
+                    "tip": 220,
+                    "call": 212,
+                    "chat": 122,
+                    "liveStreaming": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Rachel1",
-                    "tag":"mangoes4eva",
-                    "tip":220,
-                    "call":212,
-                    "chat":122,
-                    "liveStreaming":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "06-07-2023",
+                    "name": "Rachel1",
+                    "tag": "mangoes4eva",
+                    "tip": 220,
+                    "call": 212,
+                    "chat": 122,
+                    "liveStreaming": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Rachel2",
-                    "tag":"mangoes4eva",
-                    "tip":220,
-                    "call":212,
-                    "chat":122,
-                    "liveStreaming":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "07-07-2023",
+                    "name": "Rachel2",
+                    "tag": "mangoes4eva",
+                    "tip": 220,
+                    "call": 212,
+                    "chat": 122,
+                    "liveStreaming": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Chandler",
-                    "tag":"mangoes4eva",
-                    "tip":220,
-                    "call":212,
-                    "chat":122,
-                    "liveStreaming":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "08-07-2023",
+                    "name": "Chandler",
+                    "tag": "mangoes4eva",
+                    "tip": 220,
+                    "call": 212,
+                    "chat": 122,
+                    "liveStreaming": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Chandler2",
-                    "tag":"mangoes4eva",
-                    "tip":220,
-                    "call":212,
-                    "chat":122,
-                    "liveStreaming":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "09-07-2023",
+                    "name": "Chandler2",
+                    "tag": "mangoes4eva",
+                    "tip": 220,
+                    "call": 212,
+                    "chat": 122,
+                    "liveStreaming": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Chandler3",
-                    "tag":"mangoes4eva",
-                    "tip":220,
-                    "call":212,
-                    "chat":122,
-                    "liveStreaming":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "10-07-2023",
+                    "name": "Chandler3",
+                    "tag": "mangoes4eva",
+                    "tip": 220,
+                    "call": 212,
+                    "chat": 122,
+                    "liveStreaming": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 }
             ],
             "week":[
                 {
-                    "name":"MAN GOES",
-                    "tag":"mangoes4eva",
-                    "tip":220,
-                    "call":212,
-                    "chat":122,
-                    "liveStreaming":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "01-07-2023",
+                    "name": "MAN GOES",
+                    "tag": "mangoes4eva",
+                    "tip": 220,
+                    "call": 212,
+                    "chat": 122,
+                    "liveStreaming": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Joey",
-                    "tag":"mangoes4eva",
-                    "tip":220,
-                    "call":212,
-                    "chat":122,
-                    "liveStreaming":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "02-07-2023",
+                    "name": "Joey",
+                    "tag": "mangoes4eva",
+                    "tip": 220,
+                    "call": 212,
+                    "chat": 122,
+                    "liveStreaming": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Ross",
-                    "tag":"mangoes4eva",
-                    "tip":220,
-                    "call":212,
-                    "chat":122,
-                    "liveStreaming":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "03-07-2023",
+                    "name": "Ross",
+                    "tag": "mangoes4eva",
+                    "tip": 220,
+                    "call": 212,
+                    "chat": 122,
+                    "liveStreaming": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Phoebe",
-                    "tag":"mangoes4eva",
-                    "tip":220,
-                    "call":212,
-                    "chat":122,
-                    "liveStreaming":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "04-07-2023",
+                    "name": "Phoebe",
+                    "tag": "mangoes4eva",
+                    "tip": 220,
+                    "call": 212,
+                    "chat": 122,
+                    "liveStreaming": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Rachel",
-                    "tag":"mangoes4eva",
-                    "tip":220,
-                    "call":212,
-                    "chat":122,
-                    "liveStreaming":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "05-07-2023",
+                    "name": "Rachel",
+                    "tag": "mangoes4eva",
+                    "tip": 220,
+                    "call": 212,
+                    "chat": 122,
+                    "liveStreaming": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Rachel1",
-                    "tag":"mangoes4eva",
-                    "tip":220,
-                    "call":212,
-                    "chat":122,
-                    "liveStreaming":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "06-07-2023",
+                    "name": "Rachel1",
+                    "tag": "mangoes4eva",
+                    "tip": 220,
+                    "call": 212,
+                    "chat": 122,
+                    "liveStreaming": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Rachel2",
-                    "tag":"mangoes4eva",
-                    "tip":220,
-                    "call":212,
-                    "chat":122,
-                    "liveStreaming":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "07-07-2023",
+                    "name": "Rachel2",
+                    "tag": "mangoes4eva",
+                    "tip": 220,
+                    "call": 212,
+                    "chat": 122,
+                    "liveStreaming": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Chandler",
-                    "tag":"mangoes4eva",
-                    "tip":220,
-                    "call":212,
-                    "chat":122,
-                    "liveStreaming":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "08-07-2023",
+                    "name": "Chandler",
+                    "tag": "mangoes4eva",
+                    "tip": 220,
+                    "call": 212,
+                    "chat": 122,
+                    "liveStreaming": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Chandler2",
-                    "tag":"mangoes4eva",
-                    "tip":220,
-                    "call":212,
-                    "chat":122,
-                    "liveStreaming":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "09-07-2023",
+                    "name": "Chandler2",
+                    "tag": "mangoes4eva",
+                    "tip": 220,
+                    "call": 212,
+                    "chat": 122,
+                    "liveStreaming": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Chandler3",
-                    "tag":"mangoes4eva",
-                    "tip":220,
-                    "call":212,
-                    "chat":122,
-                    "liveStreaming":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "10-07-2023",
+                    "name": "Chandler3",
+                    "tag": "mangoes4eva",
+                    "tip": 220,
+                    "call": 212,
+                    "chat": 122,
+                    "liveStreaming": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 }
-            ]
+            ]            
         }
     },
     "topOrderInsight":{
@@ -4538,370 +4402,400 @@
         "timeFrames":{
             "month":[
                 {
-                    "name":"MAN GOES",
-                    "tag":"mangoes4eva",
-                    "subscription":220,
-                    "payToView":212,
-                    "merch":222,
-                    "wishTender":212,
-                    "customRequest":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "01-01-2023",
+                    "name": "MAN GOES",
+                    "tag": "mangoes4eva",
+                    "subscription": 220,
+                    "payToView": 212,
+                    "merch": 222,
+                    "wishTender": 212,
+                    "customRequest": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Joey",
-                    "tag":"mangoes4eva",
-                    "subscription":220,
-                    "payToView":212,
-                    "merch":122,
-                    "wishTender":412,
-                    "customRequest":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "01-02-2023",
+                    "name": "Joey",
+                    "tag": "mangoes4eva",
+                    "subscription": 220,
+                    "payToView": 212,
+                    "merch": 122,
+                    "wishTender": 412,
+                    "customRequest": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Ross",
-                    "tag":"mangoes4eva",
-                    "subscription":220,
-                    "payToView":212,
-                    "merch":122,
-                    "wishTender":312,
-                    "customRequest":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "01-03-2023",
+                    "name": "Ross",
+                    "tag": "mangoes4eva",
+                    "subscription": 220,
+                    "payToView": 212,
+                    "merch": 122,
+                    "wishTender": 312,
+                    "customRequest": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Phoebe",
-                    "tag":"mangoes4eva",
-                    "subscription":220,
-                    "payToView":212,
-                    "merch":122,
-                    "wishTender":112,
-                    "customRequest":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "01-04-2023",
+                    "name": "Phoebe",
+                    "tag": "mangoes4eva",
+                    "subscription": 220,
+                    "payToView": 212,
+                    "merch": 122,
+                    "wishTender": 112,
+                    "customRequest": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Rachel",
-                    "tag":"mangoes4eva",
-                    "subscription":220,
-                    "payToView":212,
-                    "merch":122,
-                    "wishTender":112,
-                    "customRequest":312,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "01-05-2023",
+                    "name": "Rachel",
+                    "tag": "mangoes4eva",
+                    "subscription": 220,
+                    "payToView": 212,
+                    "merch": 122,
+                    "wishTender": 112,
+                    "customRequest": 312,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Rachel1",
-                    "tag":"mangoes4eva",
-                    "subscription":220,
-                    "payToView":312,
-                    "merch":122,
-                    "wishTender":112,
-                    "customRequest":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "01-06-2023",
+                    "name": "Rachel1",
+                    "tag": "mangoes4eva",
+                    "subscription": 220,
+                    "payToView": 312,
+                    "merch": 122,
+                    "wishTender": 112,
+                    "customRequest": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Rachel2",
-                    "tag":"mangoes4eva",
-                    "subscription":220,
-                    "payToView":212,
-                    "merch":122,
-                    "wishTender":212,
-                    "customRequest":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "01-07-2023",
+                    "name": "Rachel2",
+                    "tag": "mangoes4eva",
+                    "subscription": 220,
+                    "payToView": 212,
+                    "merch": 122,
+                    "wishTender": 212,
+                    "customRequest": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Chandler",
-                    "tag":"mangoes4eva",
-                    "subscription":220,
-                    "payToView":212,
-                    "merch":322,
-                    "wishTender":112,
-                    "customRequest":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "01-08-2023",
+                    "name": "Chandler",
+                    "tag": "mangoes4eva",
+                    "subscription": 220,
+                    "payToView": 212,
+                    "merch": 322,
+                    "wishTender": 112,
+                    "customRequest": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Chandler2",
-                    "tag":"mangoes4eva",
-                    "subscription":220,
-                    "payToView":212,
-                    "merch":122,
-                    "wishTender":212,
-                    "customRequest":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "01-09-2023",
+                    "name": "Chandler2",
+                    "tag": "mangoes4eva",
+                    "subscription": 220,
+                    "payToView": 212,
+                    "merch": 122,
+                    "wishTender": 212,
+                    "customRequest": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Chandler3",
-                    "tag":"mangoes4eva",
-                    "subscription":220,
-                    "payToView":212,
-                    "merch":122,
-                    "wishTender":112,
-                    "customRequest":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "01-10-2023",
+                    "name": "Chandler3",
+                    "tag": "mangoes4eva",
+                    "subscription": 220,
+                    "payToView": 212,
+                    "merch": 122,
+                    "wishTender": 112,
+                    "customRequest": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 }
             ],
             "day":[
                 {
-                    "name":"MAN GOES",
-                    "tag":"mangoes4eva",
-                    "subscription":220,
-                    "payToView":212,
-                    "merch":222,
-                    "wishTender":212,
-                    "customRequest":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "01-07-2023",
+                    "name": "MAN GOES",
+                    "tag": "mangoes4eva",
+                    "subscription": 220,
+                    "payToView": 212,
+                    "merch": 222,
+                    "wishTender": 212,
+                    "customRequest": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Joey",
-                    "tag":"mangoes4eva",
-                    "subscription":220,
-                    "payToView":212,
-                    "merch":122,
-                    "wishTender":412,
-                    "customRequest":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "02-07-2023",
+                    "name": "Joey",
+                    "tag": "mangoes4eva",
+                    "subscription": 220,
+                    "payToView": 212,
+                    "merch": 122,
+                    "wishTender": 412,
+                    "customRequest": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Ross",
-                    "tag":"mangoes4eva",
-                    "subscription":220,
-                    "payToView":212,
-                    "merch":122,
-                    "wishTender":312,
-                    "customRequest":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "03-07-2023",
+                    "name": "Ross",
+                    "tag": "mangoes4eva",
+                    "subscription": 220,
+                    "payToView": 212,
+                    "merch": 122,
+                    "wishTender": 312,
+                    "customRequest": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Phoebe",
-                    "tag":"mangoes4eva",
-                    "subscription":220,
-                    "payToView":212,
-                    "merch":122,
-                    "wishTender":112,
-                    "customRequest":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "04-07-2023",
+                    "name": "Phoebe",
+                    "tag": "mangoes4eva",
+                    "subscription": 220,
+                    "payToView": 212,
+                    "merch": 122,
+                    "wishTender": 112,
+                    "customRequest": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Rachel",
-                    "tag":"mangoes4eva",
-                    "subscription":220,
-                    "payToView":212,
-                    "merch":122,
-                    "wishTender":112,
-                    "customRequest":312,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "05-07-2023",
+                    "name": "Rachel",
+                    "tag": "mangoes4eva",
+                    "subscription": 220,
+                    "payToView": 212,
+                    "merch": 122,
+                    "wishTender": 112,
+                    "customRequest": 312,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Rachel1",
-                    "tag":"mangoes4eva",
-                    "subscription":220,
-                    "payToView":312,
-                    "merch":122,
-                    "wishTender":112,
-                    "customRequest":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "06-07-2023",
+                    "name": "Rachel1",
+                    "tag": "mangoes4eva",
+                    "subscription": 220,
+                    "payToView": 312,
+                    "merch": 122,
+                    "wishTender": 112,
+                    "customRequest": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Rachel2",
-                    "tag":"mangoes4eva",
-                    "subscription":220,
-                    "payToView":212,
-                    "merch":122,
-                    "wishTender":212,
-                    "customRequest":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "07-07-2023",
+                    "name": "Rachel2",
+                    "tag": "mangoes4eva",
+                    "subscription": 220,
+                    "payToView": 212,
+                    "merch": 122,
+                    "wishTender": 212,
+                    "customRequest": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Chandler",
-                    "tag":"mangoes4eva",
-                    "subscription":220,
-                    "payToView":212,
-                    "merch":322,
-                    "wishTender":112,
-                    "customRequest":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "08-07-2023",
+                    "name": "Chandler",
+                    "tag": "mangoes4eva",
+                    "subscription": 220,
+                    "payToView": 212,
+                    "merch": 322,
+                    "wishTender": 112,
+                    "customRequest": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Chandler2",
-                    "tag":"mangoes4eva",
-                    "subscription":220,
-                    "payToView":212,
-                    "merch":122,
-                    "wishTender":212,
-                    "customRequest":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "09-07-2023",
+                    "name": "Chandler2",
+                    "tag": "mangoes4eva",
+                    "subscription": 220,
+                    "payToView": 212,
+                    "merch": 122,
+                    "wishTender": 212,
+                    "customRequest": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Chandler3",
-                    "tag":"mangoes4eva",
-                    "subscription":220,
-                    "payToView":212,
-                    "merch":122,
-                    "wishTender":112,
-                    "customRequest":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "10-07-2023",
+                    "name": "Chandler3",
+                    "tag": "mangoes4eva",
+                    "subscription": 220,
+                    "payToView": 212,
+                    "merch": 122,
+                    "wishTender": 112,
+                    "customRequest": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 }
             ],
             "week":[
                 {
-                    "name":"MAN GOES",
-                    "tag":"mangoes4eva",
-                    "subscription":220,
-                    "payToView":212,
-                    "merch":222,
-                    "wishTender":212,
-                    "customRequest":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "01-07-2023",
+                    "name": "MAN GOES",
+                    "tag": "mangoes4eva",
+                    "subscription": 220,
+                    "payToView": 212,
+                    "merch": 222,
+                    "wishTender": 212,
+                    "customRequest": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Joey",
-                    "tag":"mangoes4eva",
-                    "subscription":220,
-                    "payToView":212,
-                    "merch":122,
-                    "wishTender":412,
-                    "customRequest":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "02-07-2023",
+                    "name": "Joey",
+                    "tag": "mangoes4eva",
+                    "subscription": 220,
+                    "payToView": 212,
+                    "merch": 122,
+                    "wishTender": 412,
+                    "customRequest": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Ross",
-                    "tag":"mangoes4eva",
-                    "subscription":220,
-                    "payToView":212,
-                    "merch":122,
-                    "wishTender":312,
-                    "customRequest":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "03-07-2023",
+                    "name": "Ross",
+                    "tag": "mangoes4eva",
+                    "subscription": 220,
+                    "payToView": 212,
+                    "merch": 122,
+                    "wishTender": 312,
+                    "customRequest": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Phoebe",
-                    "tag":"mangoes4eva",
-                    "subscription":220,
-                    "payToView":212,
-                    "merch":122,
-                    "wishTender":112,
-                    "customRequest":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "04-07-2023",
+                    "name": "Phoebe",
+                    "tag": "mangoes4eva",
+                    "subscription": 220,
+                    "payToView": 212,
+                    "merch": 122,
+                    "wishTender": 112,
+                    "customRequest": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Rachel",
-                    "tag":"mangoes4eva",
-                    "subscription":220,
-                    "payToView":212,
-                    "merch":122,
-                    "wishTender":112,
-                    "customRequest":312,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "05-07-2023",
+                    "name": "Rachel",
+                    "tag": "mangoes4eva",
+                    "subscription": 220,
+                    "payToView": 212,
+                    "merch": 122,
+                    "wishTender": 112,
+                    "customRequest": 312,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Rachel1",
-                    "tag":"mangoes4eva",
-                    "subscription":220,
-                    "payToView":312,
-                    "merch":122,
-                    "wishTender":112,
-                    "customRequest":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "06-07-2023",
+                    "name": "Rachel1",
+                    "tag": "mangoes4eva",
+                    "subscription": 220,
+                    "payToView": 312,
+                    "merch": 122,
+                    "wishTender": 112,
+                    "customRequest": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Rachel2",
-                    "tag":"mangoes4eva",
-                    "subscription":220,
-                    "payToView":212,
-                    "merch":122,
-                    "wishTender":212,
-                    "customRequest":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "07-07-2023",
+                    "name": "Rachel2",
+                    "tag": "mangoes4eva",
+                    "subscription": 220,
+                    "payToView": 212,
+                    "merch": 122,
+                    "wishTender": 212,
+                    "customRequest": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Chandler",
-                    "tag":"mangoes4eva",
-                    "subscription":220,
-                    "payToView":212,
-                    "merch":322,
-                    "wishTender":112,
-                    "customRequest":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "08-07-2023",
+                    "name": "Chandler",
+                    "tag": "mangoes4eva",
+                    "subscription": 220,
+                    "payToView": 212,
+                    "merch": 322,
+                    "wishTender": 112,
+                    "customRequest": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Chandler2",
-                    "tag":"mangoes4eva",
-                    "subscription":220,
-                    "payToView":212,
-                    "merch":122,
-                    "wishTender":212,
-                    "customRequest":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "09-07-2023",
+                    "name": "Chandler2",
+                    "tag": "mangoes4eva",
+                    "subscription": 220,
+                    "payToView": 212,
+                    "merch": 122,
+                    "wishTender": 212,
+                    "customRequest": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 },
                 {
-                    "name":"Chandler3",
-                    "tag":"mangoes4eva",
-                    "subscription":220,
-                    "payToView":212,
-                    "merch":122,
-                    "wishTender":112,
-                    "customRequest":112,
-                    "pictureSettings":{
-                        "src":"https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
+                    "date": "10-07-2023",
+                    "name": "Chandler3",
+                    "tag": "mangoes4eva",
+                    "subscription": 220,
+                    "payToView": 212,
+                    "merch": 122,
+                    "wishTender": 112,
+                    "customRequest": 112,
+                    "thumbnailURL": {
+                        "src": "https://madlinkscoding.github.io/template-development/dash-v2/assets/img/avatar-mango.png"
                     }
                 }
-            ]
+            ]            
         }
     },
     "subscriberNew":{
@@ -4909,206 +4803,206 @@
         "timeFrames":{
             "day":[
                 {
-                    "date":1727634600000,
-                    "value":26
+                    "date": "01-07-2023",
+                    "value": 26
                 },
                 {
-                    "date":1728498600000,
-                    "value":30
+                    "date": "02-07-2023",
+                    "value": 30
                 },
                 {
-                    "date":1729362600000,
-                    "value":30
+                    "date": "03-07-2023",
+                    "value": 30
                 },
                 {
-                    "date":1730226600000,
-                    "value":31
+                    "date": "04-07-2023",
+                    "value": 31
                 },
                 {
-                    "date":1731090600000,
-                    "value":26
+                    "date": "05-07-2023",
+                    "value": 26
                 },
                 {
-                    "date":1731954600000,
-                    "value":29
+                    "date": "06-07-2023",
+                    "value": 29
                 },
                 {
-                    "date":1732818600000,
-                    "value":33
+                    "date": "07-07-2023",
+                    "value": 33
                 },
                 {
-                    "date":1733682600000,
-                    "value":29
+                    "date": "08-07-2023",
+                    "value": 29
                 },
                 {
-                    "date":1734546600000,
-                    "value":33
+                    "date": "09-07-2023",
+                    "value": 33
                 },
                 {
-                    "date":1735410600000,
-                    "value":29
+                    "date": "10-07-2023",
+                    "value": 29
                 },
                 {
-                    "date":1736274600000,
-                    "value":32
+                    "date": "11-07-2023",
+                    "value": 32
                 },
                 {
-                    "date":1737138600000,
-                    "value":29
+                    "date": "12-07-2023",
+                    "value": 29
                 },
                 {
-                    "date":1738002600000,
-                    "value":27
+                    "date": "13-07-2023",
+                    "value": 27
                 },
                 {
-                    "date":1738866600000,
-                    "value":27
+                    "date": "14-07-2023",
+                    "value": 27
                 },
                 {
-                    "date":1739730600000,
-                    "value":28
+                    "date": "15-07-2023",
+                    "value": 28
                 },
                 {
-                    "date":1740594600000,
-                    "value":26
+                    "date": "16-07-2023",
+                    "value": 26
                 },
                 {
-                    "date":1741458600000,
-                    "value":25
+                    "date": "17-07-2023",
+                    "value": 25
                 },
                 {
-                    "date":1742322600000,
-                    "value":22
+                    "date": "18-07-2023",
+                    "value": 22
                 },
                 {
-                    "date":1743186600000,
-                    "value":20
+                    "date": "19-07-2023",
+                    "value": 20
                 },
                 {
-                    "date":1744050600000,
-                    "value":23
+                    "date": "20-07-2023",
+                    "value": 23
                 },
                 {
-                    "date":1744914600000,
-                    "value":21
+                    "date": "21-07-2023",
+                    "value": 21
                 },
                 {
-                    "date":1745778600000,
-                    "value":17
+                    "date": "22-07-2023",
+                    "value": 17
                 },
                 {
-                    "date":1746642600000,
-                    "value":14
+                    "date": "23-07-2023",
+                    "value": 14
                 },
                 {
-                    "date":1747506600000,
-                    "value":9
+                    "date": "24-07-2023",
+                    "value": 9
                 },
                 {
-                    "date":1748370600000,
-                    "value":12
+                    "date": "25-07-2023",
+                    "value": 12
                 },
                 {
-                    "date":1749234600000,
-                    "value":12
+                    "date": "26-07-2023",
+                    "value": 12
                 },
                 {
-                    "date":1750098600000,
-                    "value":12
+                    "date": "27-07-2023",
+                    "value": 12
                 },
                 {
-                    "date":1750962600000,
-                    "value":10
+                    "date": "28-07-2023",
+                    "value": 10
                 },
                 {
-                    "date":1751826600000,
-                    "value":14
+                    "date": "29-07-2023",
+                    "value": 14
                 },
                 {
-                    "date":1752690600000,
-                    "value":17
+                    "date": "30-07-2023",
+                    "value": 17
                 },
                 {
-                    "date":1753554600000,
-                    "value":21
+                    "date": "31-07-2023",
+                    "value": 21
                 },
                 {
-                    "date":1754418600000,
-                    "value":25
+                    "date": "01-08-2023",
+                    "value": 25
                 },
                 {
-                    "date":1755282600000,
-                    "value":28
+                    "date": "02-08-2023",
+                    "value": 28
                 },
                 {
-                    "date":1756146600000,
-                    "value":30
+                    "date": "03-08-2023",
+                    "value": 30
                 },
                 {
-                    "date":1757010600000,
-                    "value":28
+                    "date": "04-08-2023",
+                    "value": 28
                 },
                 {
-                    "date":1757874600000,
-                    "value":29
+                    "date": "05-08-2023",
+                    "value": 29
                 },
                 {
-                    "date":1758738600000,
-                    "value":28
+                    "date": "06-08-2023",
+                    "value": 28
                 },
                 {
-                    "date":1759602600000,
-                    "value":27
+                    "date": "07-08-2023",
+                    "value": 27
                 },
                 {
-                    "date":1760466600000,
-                    "value":32
+                    "date": "08-08-2023",
+                    "value": 32
                 },
                 {
-                    "date":1761330600000,
-                    "value":27
+                    "date": "09-08-2023",
+                    "value": 27
                 },
                 {
-                    "date":1762194600000,
-                    "value":24
+                    "date": "10-08-2023",
+                    "value": 24
                 },
                 {
-                    "date":1763058600000,
-                    "value":25
+                    "date": "11-08-2023",
+                    "value": 25
                 },
                 {
-                    "date":1763922600000,
-                    "value":21
+                    "date": "12-08-2023",
+                    "value": 21
                 },
                 {
-                    "date":1764786600000,
-                    "value":25
+                    "date": "13-08-2023",
+                    "value": 25
                 },
                 {
-                    "date":1765650600000,
-                    "value":28
+                    "date": "14-08-2023",
+                    "value": 28
                 },
                 {
-                    "date":1766514600000,
-                    "value":26
+                    "date": "15-08-2023",
+                    "value": 26
                 },
                 {
-                    "date":1767378600000,
-                    "value":27
+                    "date": "16-08-2023",
+                    "value": 27
                 },
                 {
-                    "date":1768242600000,
-                    "value":22
+                    "date": "17-08-2023",
+                    "value": 22
                 },
                 {
-                    "date":1769106600000,
-                    "value":20
+                    "date": "18-08-2023",
+                    "value": 20
                 },
                 {
-                    "date":1769970600000,
-                    "value":16
+                    "date": "19-08-2023",
+                    "value": 16
                 }
-            ]
+            ]            
         }
     },
     "subscriberRecurring":{
@@ -5116,206 +5010,206 @@
         "timeFrames":{
             "day":[
                 {
-                    "date":1727634600000,
-                    "value":32
+                    "date": "01-07-2023",
+                    "value": 32
                 },
                 {
-                    "date":1728498600000,
-                    "value":31
+                    "date": "02-07-2023",
+                    "value": 31
                 },
                 {
-                    "date":1729362600000,
-                    "value":35
+                    "date": "03-07-2023",
+                    "value": 35
                 },
                 {
-                    "date":1730226600000,
-                    "value":32
+                    "date": "04-07-2023",
+                    "value": 32
                 },
                 {
-                    "date":1731090600000,
-                    "value":33
+                    "date": "05-07-2023",
+                    "value": 33
                 },
                 {
-                    "date":1731954600000,
-                    "value":37
+                    "date": "06-07-2023",
+                    "value": 37
                 },
                 {
-                    "date":1732818600000,
-                    "value":39
+                    "date": "07-07-2023",
+                    "value": 39
                 },
                 {
-                    "date":1733682600000,
-                    "value":40
+                    "date": "08-07-2023",
+                    "value": 40
                 },
                 {
-                    "date":1734546600000,
-                    "value":39
+                    "date": "09-07-2023",
+                    "value": 39
                 },
                 {
-                    "date":1735410600000,
-                    "value":38
+                    "date": "10-07-2023",
+                    "value": 38
                 },
                 {
-                    "date":1736274600000,
-                    "value":36
+                    "date": "11-07-2023",
+                    "value": 36
                 },
                 {
-                    "date":1737138600000,
-                    "value":38
+                    "date": "12-07-2023",
+                    "value": 38
                 },
                 {
-                    "date":1738002600000,
-                    "value":37
+                    "date": "13-07-2023",
+                    "value": 37
                 },
                 {
-                    "date":1738866600000,
-                    "value":39
+                    "date": "14-07-2023",
+                    "value": 39
                 },
                 {
-                    "date":1739730600000,
-                    "value":36
+                    "date": "15-07-2023",
+                    "value": 36
                 },
                 {
-                    "date":1740594600000,
-                    "value":40
+                    "date": "16-07-2023",
+                    "value": 40
                 },
                 {
-                    "date":1741458600000,
-                    "value":42
+                    "date": "17-07-2023",
+                    "value": 42
                 },
                 {
-                    "date":1742322600000,
-                    "value":45
+                    "date": "18-07-2023",
+                    "value": 45
                 },
                 {
-                    "date":1743186600000,
-                    "value":48
+                    "date": "19-07-2023",
+                    "value": 48
                 },
                 {
-                    "date":1744050600000,
-                    "value":53
+                    "date": "20-07-2023",
+                    "value": 53
                 },
                 {
-                    "date":1744914600000,
-                    "value":48
+                    "date": "21-07-2023",
+                    "value": 48
                 },
                 {
-                    "date":1745778600000,
-                    "value":44
+                    "date": "22-07-2023",
+                    "value": 44
                 },
                 {
-                    "date":1746642600000,
-                    "value":47
+                    "date": "23-07-2023",
+                    "value": 47
                 },
                 {
-                    "date":1747506600000,
-                    "value":42
+                    "date": "24-07-2023",
+                    "value": 42
                 },
                 {
-                    "date":1748370600000,
-                    "value":38
+                    "date": "25-07-2023",
+                    "value": 38
                 },
                 {
-                    "date":1749234600000,
-                    "value":35
+                    "date": "26-07-2023",
+                    "value": 35
                 },
                 {
-                    "date":1750098600000,
-                    "value":38
+                    "date": "27-07-2023",
+                    "value": 38
                 },
                 {
-                    "date":1750962600000,
-                    "value":42
+                    "date": "28-07-2023",
+                    "value": 42
                 },
                 {
-                    "date":1751826600000,
-                    "value":46
+                    "date": "29-07-2023",
+                    "value": 46
                 },
                 {
-                    "date":1752690600000,
-                    "value":50
+                    "date": "30-07-2023",
+                    "value": 50
                 },
                 {
-                    "date":1753554600000,
-                    "value":47
+                    "date": "31-07-2023",
+                    "value": 47
                 },
                 {
-                    "date":1754418600000,
-                    "value":51
+                    "date": "01-08-2023",
+                    "value": 51
                 },
                 {
-                    "date":1755282600000,
-                    "value":55
+                    "date": "02-08-2023",
+                    "value": 55
                 },
                 {
-                    "date":1756146600000,
-                    "value":54
+                    "date": "03-08-2023",
+                    "value": 54
                 },
                 {
-                    "date":1757010600000,
-                    "value":56
+                    "date": "04-08-2023",
+                    "value": 56
                 },
                 {
-                    "date":1757874600000,
-                    "value":56
+                    "date": "05-08-2023",
+                    "value": 56
                 },
                 {
-                    "date":1758738600000,
-                    "value":57
+                    "date": "06-08-2023",
+                    "value": 57
                 },
                 {
-                    "date":1759602600000,
-                    "value":59
+                    "date": "07-08-2023",
+                    "value": 59
                 },
                 {
-                    "date":1760466600000,
-                    "value":63
+                    "date": "08-08-2023",
+                    "value": 63
                 },
                 {
-                    "date":1761330600000,
-                    "value":66
+                    "date": "09-08-2023",
+                    "value": 66
                 },
                 {
-                    "date":1762194600000,
-                    "value":64
+                    "date": "10-08-2023",
+                    "value": 64
                 },
                 {
-                    "date":1763058600000,
-                    "value":68
+                    "date": "11-08-2023",
+                    "value": 68
                 },
                 {
-                    "date":1763922600000,
-                    "value":65
+                    "date": "12-08-2023",
+                    "value": 65
                 },
                 {
-                    "date":1764786600000,
-                    "value":68
+                    "date": "13-08-2023",
+                    "value": 68
                 },
                 {
-                    "date":1765650600000,
-                    "value":68
+                    "date": "14-08-2023",
+                    "value": 68
                 },
                 {
-                    "date":1766514600000,
-                    "value":70
+                    "date": "15-08-2023",
+                    "value": 70
                 },
                 {
-                    "date":1767378600000,
-                    "value":67
+                    "date": "16-08-2023",
+                    "value": 67
                 },
                 {
-                    "date":1768242600000,
-                    "value":66
+                    "date": "17-08-2023",
+                    "value": 66
                 },
                 {
-                    "date":1769106600000,
-                    "value":69
+                    "date": "18-08-2023",
+                    "value": 69
                 },
                 {
-                    "date":1769970600000,
-                    "value":72
+                    "date": "19-08-2023",
+                    "value": 72
                 }
-            ]
+            ]            
         }
     },
     "fansNewFollowers":{
@@ -5323,206 +5217,206 @@
         "timeFrames":{
             "day":[
                 {
-                    "date":1727634600000,
-                    "value":31
+                    "date": "01-07-2023",
+                    "value": 31
                 },
                 {
-                    "date":1728498600000,
-                    "value":27
+                    "date": "02-07-2023",
+                    "value": 27
                 },
                 {
-                    "date":1729362600000,
-                    "value":26
+                    "date": "03-07-2023",
+                    "value": 26
                 },
                 {
-                    "date":1730226600000,
-                    "value":23
+                    "date": "04-07-2023",
+                    "value": 23
                 },
                 {
-                    "date":1731090600000,
-                    "value":27
+                    "date": "05-07-2023",
+                    "value": 27
                 },
                 {
-                    "date":1731954600000,
-                    "value":30
+                    "date": "06-07-2023",
+                    "value": 30
                 },
                 {
-                    "date":1732818600000,
-                    "value":32
+                    "date": "07-07-2023",
+                    "value": 32
                 },
                 {
-                    "date":1733682600000,
-                    "value":29
+                    "date": "08-07-2023",
+                    "value": 29
                 },
                 {
-                    "date":1734546600000,
-                    "value":26
+                    "date": "09-07-2023",
+                    "value": 26
                 },
                 {
-                    "date":1735410600000,
-                    "value":28
+                    "date": "10-07-2023",
+                    "value": 28
                 },
                 {
-                    "date":1736274600000,
-                    "value":26
+                    "date": "11-07-2023",
+                    "value": 26
                 },
                 {
-                    "date":1737138600000,
-                    "value":27
+                    "date": "12-07-2023",
+                    "value": 27
                 },
                 {
-                    "date":1738002600000,
-                    "value":29
+                    "date": "13-07-2023",
+                    "value": 29
                 },
                 {
-                    "date":1738866600000,
-                    "value":31
+                    "date": "14-07-2023",
+                    "value": 31
                 },
                 {
-                    "date":1739730600000,
-                    "value":35
+                    "date": "15-07-2023",
+                    "value": 35
                 },
                 {
-                    "date":1740594600000,
-                    "value":38
+                    "date": "16-07-2023",
+                    "value": 38
                 },
                 {
-                    "date":1741458600000,
-                    "value":35
+                    "date": "17-07-2023",
+                    "value": 35
                 },
                 {
-                    "date":1742322600000,
-                    "value":35
+                    "date": "18-07-2023",
+                    "value": 35
                 },
                 {
-                    "date":1743186600000,
-                    "value":33
+                    "date": "19-07-2023",
+                    "value": 33
                 },
                 {
-                    "date":1744050600000,
-                    "value":33
+                    "date": "20-07-2023",
+                    "value": 33
                 },
                 {
-                    "date":1744914600000,
-                    "value":35
+                    "date": "21-07-2023",
+                    "value": 35
                 },
                 {
-                    "date":1745778600000,
-                    "value":35
+                    "date": "22-07-2023",
+                    "value": 35
                 },
                 {
-                    "date":1746642600000,
-                    "value":39
+                    "date": "23-07-2023",
+                    "value": 39
                 },
                 {
-                    "date":1747506600000,
-                    "value":40
+                    "date": "24-07-2023",
+                    "value": 40
                 },
                 {
-                    "date":1748370600000,
-                    "value":42
+                    "date": "25-07-2023",
+                    "value": 42
                 },
                 {
-                    "date":1749234600000,
-                    "value":45
+                    "date": "26-07-2023",
+                    "value": 45
                 },
                 {
-                    "date":1750098600000,
-                    "value":44
+                    "date": "27-07-2023",
+                    "value": 44
                 },
                 {
-                    "date":1750962600000,
-                    "value":41
+                    "date": "28-07-2023",
+                    "value": 41
                 },
                 {
-                    "date":1751826600000,
-                    "value":40
+                    "date": "29-07-2023",
+                    "value": 40
                 },
                 {
-                    "date":1752690600000,
-                    "value":37
+                    "date": "30-07-2023",
+                    "value": 37
                 },
                 {
-                    "date":1753554600000,
-                    "value":40
+                    "date": "31-07-2023",
+                    "value": 40
                 },
                 {
-                    "date":1754418600000,
-                    "value":42
+                    "date": "01-08-2023",
+                    "value": 42
                 },
                 {
-                    "date":1755282600000,
-                    "value":43
+                    "date": "02-08-2023",
+                    "value": 43
                 },
                 {
-                    "date":1756146600000,
-                    "value":41
+                    "date": "03-08-2023",
+                    "value": 41
                 },
                 {
-                    "date":1757010600000,
-                    "value":41
+                    "date": "04-08-2023",
+                    "value": 41
                 },
                 {
-                    "date":1757874600000,
-                    "value":39
+                    "date": "05-08-2023",
+                    "value": 39
                 },
                 {
-                    "date":1758738600000,
-                    "value":37
+                    "date": "06-08-2023",
+                    "value": 37
                 },
                 {
-                    "date":1759602600000,
-                    "value":38
+                    "date": "07-08-2023",
+                    "value": 38
                 },
                 {
-                    "date":1760466600000,
-                    "value":38
+                    "date": "08-08-2023",
+                    "value": 38
                 },
                 {
-                    "date":1761330600000,
-                    "value":38
+                    "date": "09-08-2023",
+                    "value": 38
                 },
                 {
-                    "date":1762194600000,
-                    "value":39
+                    "date": "10-08-2023",
+                    "value": 39
                 },
                 {
-                    "date":1763058600000,
-                    "value":39
+                    "date": "11-08-2023",
+                    "value": 39
                 },
                 {
-                    "date":1763922600000,
-                    "value":35
+                    "date": "12-08-2023",
+                    "value": 35
                 },
                 {
-                    "date":1764786600000,
-                    "value":39
+                    "date": "13-08-2023",
+                    "value": 39
                 },
                 {
-                    "date":1765650600000,
-                    "value":43
+                    "date": "14-08-2023",
+                    "value": 43
                 },
                 {
-                    "date":1766514600000,
-                    "value":42
+                    "date": "15-08-2023",
+                    "value": 42
                 },
                 {
-                    "date":1767378600000,
-                    "value":42
+                    "date": "16-08-2023",
+                    "value": 42
                 },
                 {
-                    "date":1768242600000,
-                    "value":41
+                    "date": "17-08-2023",
+                    "value": 41
                 },
                 {
-                    "date":1769106600000,
-                    "value":37
+                    "date": "18-08-2023",
+                    "value": 37
                 },
                 {
-                    "date":1769970600000,
-                    "value":36
+                    "date": "19-08-2023",
+                    "value": 36
                 }
-            ]
+            ]            
         }
     },
     "fansProfileVisit":{
@@ -5530,206 +5424,206 @@
         "timeFrames":{
             "day":[
                 {
-                    "date":1727634600000,
-                    "value":29
+                    "date": "01-07-2023",
+                    "value": 29
                 },
                 {
-                    "date":1728498600000,
-                    "value":30
+                    "date": "02-07-2023",
+                    "value": 30
                 },
                 {
-                    "date":1729362600000,
-                    "value":34
+                    "date": "03-07-2023",
+                    "value": 34
                 },
                 {
-                    "date":1730226600000,
-                    "value":35
+                    "date": "04-07-2023",
+                    "value": 35
                 },
                 {
-                    "date":1731090600000,
-                    "value":38
+                    "date": "05-07-2023",
+                    "value": 38
                 },
                 {
-                    "date":1731954600000,
-                    "value":35
+                    "date": "06-07-2023",
+                    "value": 35
                 },
                 {
-                    "date":1732818600000,
-                    "value":35
+                    "date": "07-07-2023",
+                    "value": 35
                 },
                 {
-                    "date":1733682600000,
-                    "value":32
+                    "date": "08-07-2023",
+                    "value": 32
                 },
                 {
-                    "date":1734546600000,
-                    "value":33
+                    "date": "09-07-2023",
+                    "value": 33
                 },
                 {
-                    "date":1735410600000,
-                    "value":29
+                    "date": "10-07-2023",
+                    "value": 29
                 },
                 {
-                    "date":1736274600000,
-                    "value":27
+                    "date": "11-07-2023",
+                    "value": 27
                 },
                 {
-                    "date":1737138600000,
-                    "value":26
+                    "date": "12-07-2023",
+                    "value": 26
                 },
                 {
-                    "date":1738002600000,
-                    "value":22
+                    "date": "13-07-2023",
+                    "value": 22
                 },
                 {
-                    "date":1738866600000,
-                    "value":19
+                    "date": "14-07-2023",
+                    "value": 19
                 },
                 {
-                    "date":1739730600000,
-                    "value":15
+                    "date": "15-07-2023",
+                    "value": 15
                 },
                 {
-                    "date":1740594600000,
-                    "value":10
+                    "date": "16-07-2023",
+                    "value": 10
                 },
                 {
-                    "date":1741458600000,
-                    "value":12
+                    "date": "17-07-2023",
+                    "value": 12
                 },
                 {
-                    "date":1742322600000,
-                    "value":11
+                    "date": "18-07-2023",
+                    "value": 11
                 },
                 {
-                    "date":1743186600000,
-                    "value":10
+                    "date": "19-07-2023",
+                    "value": 10
                 },
                 {
-                    "date":1744050600000,
-                    "value":9
+                    "date": "20-07-2023",
+                    "value": 9
                 },
                 {
-                    "date":1744914600000,
-                    "value":7
+                    "date": "21-07-2023",
+                    "value": 7
                 },
                 {
-                    "date":1745778600000,
-                    "value":7
+                    "date": "22-07-2023",
+                    "value": 7
                 },
                 {
-                    "date":1746642600000,
-                    "value":3
+                    "date": "23-07-2023",
+                    "value": 3
                 },
                 {
-                    "date":1747506600000,
-                    "value":0
+                    "date": "24-07-2023",
+                    "value": 0
                 },
                 {
-                    "date":1748370600000,
-                    "value":2
+                    "date": "25-07-2023",
+                    "value": 2
                 },
                 {
-                    "date":1749234600000,
-                    "value":1
+                    "date": "26-07-2023",
+                    "value": 1
                 },
                 {
-                    "date":1750098600000,
-                    "value":-3
+                    "date": "27-07-2023",
+                    "value": -3
                 },
                 {
-                    "date":1750962600000,
-                    "value":-7
+                    "date": "28-07-2023",
+                    "value": -7
                 },
                 {
-                    "date":1751826600000,
-                    "value":-11
+                    "date": "29-07-2023",
+                    "value": -11
                 },
                 {
-                    "date":1752690600000,
-                    "value":-13
+                    "date": "30-07-2023",
+                    "value": -13
                 },
                 {
-                    "date":1753554600000,
-                    "value":-12
+                    "date": "31-07-2023",
+                    "value": -12
                 },
                 {
-                    "date":1754418600000,
-                    "value":-13
+                    "date": "01-08-2023",
+                    "value": -13
                 },
                 {
-                    "date":1755282600000,
-                    "value":-16
+                    "date": "02-08-2023",
+                    "value": -16
                 },
                 {
-                    "date":1756146600000,
-                    "value":-20
+                    "date": "03-08-2023",
+                    "value": -20
                 },
                 {
-                    "date":1757010600000,
-                    "value":-17
+                    "date": "04-08-2023",
+                    "value": -17
                 },
                 {
-                    "date":1757874600000,
-                    "value":-19
+                    "date": "05-08-2023",
+                    "value": -19
                 },
                 {
-                    "date":1758738600000,
-                    "value":-20
+                    "date": "06-08-2023",
+                    "value": -20
                 },
                 {
-                    "date":1759602600000,
-                    "value":-18
+                    "date": "07-08-2023",
+                    "value": -18
                 },
                 {
-                    "date":1760466600000,
-                    "value":-15
+                    "date": "08-08-2023",
+                    "value": -15
                 },
                 {
-                    "date":1761330600000,
-                    "value":-12
+                    "date": "09-08-2023",
+                    "value": -12
                 },
                 {
-                    "date":1762194600000,
-                    "value":-13
+                    "date": "10-08-2023",
+                    "value": -13
                 },
                 {
-                    "date":1763058600000,
-                    "value":-16
+                    "date": "11-08-2023",
+                    "value": -16
                 },
                 {
-                    "date":1763922600000,
-                    "value":-16
+                    "date": "12-08-2023",
+                    "value": -16
                 },
                 {
-                    "date":1764786600000,
-                    "value":-17
+                    "date": "13-08-2023",
+                    "value": -17
                 },
                 {
-                    "date":1765650600000,
-                    "value":-13
+                    "date": "14-08-2023",
+                    "value": -13
                 },
                 {
-                    "date":1766514600000,
-                    "value":-14
+                    "date": "15-08-2023",
+                    "value": -14
                 },
                 {
-                    "date":1767378600000,
-                    "value":-12
+                    "date": "16-08-2023",
+                    "value": -12
                 },
                 {
-                    "date":1768242600000,
-                    "value":-9
+                    "date": "17-08-2023",
+                    "value": -9
                 },
                 {
-                    "date":1769106600000,
-                    "value":-4
+                    "date": "18-08-2023",
+                    "value": -4
                 },
                 {
-                    "date":1769970600000,
-                    "value":-5
+                    "date": "19-08-2023",
+                    "value": -5
                 }
-            ]
+            ]            
         }
     },
     "earnings":{
@@ -5737,206 +5631,207 @@
         "timeFrames":{
             "day":[
                 {
-                    "date":1727634600000,
-                    "value":25
+                    "date": "01-07-2023",
+                    "value": 25
                 },
                 {
-                    "date":1728498600000,
-                    "value":25
+                    "date": "02-07-2023",
+                    "value": 25
                 },
                 {
-                    "date":1729362600000,
-                    "value":27
+                    "date": "03-07-2023",
+                    "value": 27
                 },
                 {
-                    "date":1730226600000,
-                    "value":30
+                    "date": "04-07-2023",
+                    "value": 30
                 },
                 {
-                    "date":1731090600000,
-                    "value":33
+                    "date": "05-07-2023",
+                    "value": 33
                 },
                 {
-                    "date":1731954600000,
-                    "value":31
+                    "date": "06-07-2023",
+                    "value": 31
                 },
                 {
-                    "date":1732818600000,
-                    "value":35
+                    "date": "07-07-2023",
+                    "value": 35
                 },
                 {
-                    "date":1733682600000,
-                    "value":38
+                    "date": "08-07-2023",
+                    "value": 38
                 },
                 {
-                    "date":1734546600000,
-                    "value":37
+                    "date": "09-07-2023",
+                    "value": 37
                 },
                 {
-                    "date":1735410600000,
-                    "value":40
+                    "date": "10-07-2023",
+                    "value": 40
                 },
                 {
-                    "date":1736274600000,
-                    "value":41
+                    "date": "11-07-2023",
+                    "value": 41
                 },
                 {
-                    "date":1737138600000,
-                    "value":44
+                    "date": "12-07-2023",
+                    "value": 44
                 },
                 {
-                    "date":1738002600000,
-                    "value":46
+                    "date": "13-07-2023",
+                    "value": 46
                 },
                 {
-                    "date":1738866600000,
-                    "value":42
+                    "date": "14-07-2023",
+                    "value": 42
                 },
                 {
-                    "date":1739730600000,
-                    "value":44
+                    "date": "15-07-2023",
+                    "value": 44
                 },
                 {
-                    "date":1740594600000,
-                    "value":43
+                    "date": "16-07-2023",
+                    "value": 43
                 },
                 {
-                    "date":1741458600000,
-                    "value":44
+                    "date": "17-07-2023",
+                    "value": 44
                 },
                 {
-                    "date":1742322600000,
-                    "value":43
+                    "date": "18-07-2023",
+                    "value": 43
                 },
                 {
-                    "date":1743186600000,
-                    "value":42
+                    "date": "19-07-2023",
+                    "value": 42
                 },
                 {
-                    "date":1744050600000,
-                    "value":39
+                    "date": "20-07-2023",
+                    "value": 39
                 },
                 {
-                    "date":1744914600000,
-                    "value":42
+                    "date": "21-07-2023",
+                    "value": 42
                 },
                 {
-                    "date":1745778600000,
-                    "value":43
+                    "date": "22-07-2023",
+                    "value": 43
                 },
                 {
-                    "date":1746642600000,
-                    "value":46
+                    "date": "23-07-2023",
+                    "value": 46
                 },
                 {
-                    "date":1747506600000,
-                    "value":41
+                    "date": "24-07-2023",
+                    "value": 41
                 },
                 {
-                    "date":1748370600000,
-                    "value":36
+                    "date": "25-07-2023",
+                    "value": 36
                 },
                 {
-                    "date":1749234600000,
-                    "value":31
+                    "date": "26-07-2023",
+                    "value": 31
                 },
                 {
-                    "date":1750098600000,
-                    "value":30
+                    "date": "27-07-2023",
+                    "value": 30
                 },
                 {
-                    "date":1750962600000,
-                    "value":30
+                    "date": "28-07-2023",
+                    "value": 30
                 },
                 {
-                    "date":1751826600000,
-                    "value":34
+                    "date": "29-07-2023",
+                    "value": 34
                 },
                 {
-                    "date":1752690600000,
-                    "value":31
+                    "date": "30-07-2023",
+                    "value": 31
                 },
                 {
-                    "date":1753554600000,
-                    "value":27
+                    "date": "31-07-2023",
+                    "value": 27
                 },
                 {
-                    "date":1754418600000,
-                    "value":27
+                    "date": "01-08-2023",
+                    "value": 27
                 },
                 {
-                    "date":1755282600000,
-                    "value":28
+                    "date": "02-08-2023",
+                    "value": 28
                 },
                 {
-                    "date":1756146600000,
-                    "value":27
+                    "date": "03-08-2023",
+                    "value": 27
                 },
                 {
-                    "date":1757010600000,
-                    "value":23
+                    "date": "04-08-2023",
+                    "value": 23
                 },
                 {
-                    "date":1757874600000,
-                    "value":18
+                    "date": "05-08-2023",
+                    "value": 18
                 },
                 {
-                    "date":1758738600000,
-                    "value":18
+                    "date": "06-08-2023",
+                    "value": 18
                 },
                 {
-                    "date":1759602600000,
-                    "value":21
+                    "date": "07-08-2023",
+                    "value": 21
                 },
                 {
-                    "date":1760466600000,
-                    "value":17
+                    "date": "08-08-2023",
+                    "value": 17
                 },
                 {
-                    "date":1761330600000,
-                    "value":13
+                    "date": "09-08-2023",
+                    "value": 13
                 },
                 {
-                    "date":1762194600000,
-                    "value":9
+                    "date": "10-08-2023",
+                    "value": 9
                 },
                 {
-                    "date":1763058600000,
-                    "value":8
+                    "date": "11-08-2023",
+                    "value": 8
                 },
                 {
-                    "date":1763922600000,
-                    "value":4
+                    "date": "12-08-2023",
+                    "value": 4
                 },
                 {
-                    "date":1764786600000,
-                    "value":1
+                    "date": "13-08-2023",
+                    "value": 1
                 },
                 {
-                    "date":1765650600000,
-                    "value":1
+                    "date": "14-08-2023",
+                    "value": 1
                 },
                 {
-                    "date":1766514600000,
-                    "value":-4
+                    "date": "15-08-2023",
+                    "value": -4
                 },
                 {
-                    "date":1767378600000,
-                    "value":0
+                    "date": "16-08-2023",
+                    "value": 0
                 },
                 {
-                    "date":1768242600000,
-                    "value":-2
+                    "date": "17-08-2023",
+                    "value": -2
                 },
                 {
-                    "date":1769106600000,
-                    "value":-5
+                    "date": "18-08-2023",
+                    "value": -5
                 },
                 {
-                    "date":1769970600000,
-                    "value":-2
+                    "date": "19-08-2023",
+                    "value": -2
                 }
             ]
+            
         }
     },
     "likesMedia":{
@@ -5944,206 +5839,206 @@
         "timeFrames":{
             "day":[
                 {
-                    "date":1727634600000,
-                    "value":26
+                    "date": "01-07-2023",
+                    "value": 26
                 },
                 {
-                    "date":1728498600000,
-                    "value":23
+                    "date": "02-07-2023",
+                    "value": 23
                 },
                 {
-                    "date":1729362600000,
-                    "value":20
+                    "date": "03-07-2023",
+                    "value": 20
                 },
                 {
-                    "date":1730226600000,
-                    "value":20
+                    "date": "04-07-2023",
+                    "value": 20
                 },
                 {
-                    "date":1731090600000,
-                    "value":22
+                    "date": "05-07-2023",
+                    "value": 22
                 },
                 {
-                    "date":1731954600000,
-                    "value":26
+                    "date": "06-07-2023",
+                    "value": 26
                 },
                 {
-                    "date":1732818600000,
-                    "value":29
+                    "date": "07-07-2023",
+                    "value": 29
                 },
                 {
-                    "date":1733682600000,
-                    "value":31
+                    "date": "08-07-2023",
+                    "value": 31
                 },
                 {
-                    "date":1734546600000,
-                    "value":27
+                    "date": "09-07-2023",
+                    "value": 27
                 },
                 {
-                    "date":1735410600000,
-                    "value":31
+                    "date": "10-07-2023",
+                    "value": 31
                 },
                 {
-                    "date":1736274600000,
-                    "value":36
+                    "date": "11-07-2023",
+                    "value": 36
                 },
                 {
-                    "date":1737138600000,
-                    "value":34
+                    "date": "12-07-2023",
+                    "value": 34
                 },
                 {
-                    "date":1738002600000,
-                    "value":32
+                    "date": "13-07-2023",
+                    "value": 32
                 },
                 {
-                    "date":1738866600000,
-                    "value":29
+                    "date": "14-07-2023",
+                    "value": 29
                 },
                 {
-                    "date":1739730600000,
-                    "value":32
+                    "date": "15-07-2023",
+                    "value": 32
                 },
                 {
-                    "date":1740594600000,
-                    "value":28
+                    "date": "16-07-2023",
+                    "value": 28
                 },
                 {
-                    "date":1741458600000,
-                    "value":32
+                    "date": "17-07-2023",
+                    "value": 32
                 },
                 {
-                    "date":1742322600000,
-                    "value":34
+                    "date": "18-07-2023",
+                    "value": 34
                 },
                 {
-                    "date":1743186600000,
-                    "value":33
+                    "date": "19-07-2023",
+                    "value": 33
                 },
                 {
-                    "date":1744050600000,
-                    "value":32
+                    "date": "20-07-2023",
+                    "value": 32
                 },
                 {
-                    "date":1744914600000,
-                    "value":30
+                    "date": "21-07-2023",
+                    "value": 30
                 },
                 {
-                    "date":1745778600000,
-                    "value":35
+                    "date": "22-07-2023",
+                    "value": 35
                 },
                 {
-                    "date":1746642600000,
-                    "value":39
+                    "date": "23-07-2023",
+                    "value": 39
                 },
                 {
-                    "date":1747506600000,
-                    "value":37
+                    "date": "24-07-2023",
+                    "value": 37
                 },
                 {
-                    "date":1748370600000,
-                    "value":36
+                    "date": "25-07-2023",
+                    "value": 36
                 },
                 {
-                    "date":1749234600000,
-                    "value":39
+                    "date": "26-07-2023",
+                    "value": 39
                 },
                 {
-                    "date":1750098600000,
-                    "value":43
+                    "date": "27-07-2023",
+                    "value": 43
                 },
                 {
-                    "date":1750962600000,
-                    "value":41
+                    "date": "28-07-2023",
+                    "value": 41
                 },
                 {
-                    "date":1751826600000,
-                    "value":40
+                    "date": "29-07-2023",
+                    "value": 40
                 },
                 {
-                    "date":1752690600000,
-                    "value":40
+                    "date": "30-07-2023",
+                    "value": 40
                 },
                 {
-                    "date":1753554600000,
-                    "value":40
+                    "date": "31-07-2023",
+                    "value": 40
                 },
                 {
-                    "date":1754418600000,
-                    "value":43
+                    "date": "01-08-2023",
+                    "value": 43
                 },
                 {
-                    "date":1755282600000,
-                    "value":41
+                    "date": "02-08-2023",
+                    "value": 41
                 },
                 {
-                    "date":1756146600000,
-                    "value":39
+                    "date": "03-08-2023",
+                    "value": 39
                 },
                 {
-                    "date":1757010600000,
-                    "value":43
+                    "date": "04-08-2023",
+                    "value": 43
                 },
                 {
-                    "date":1757874600000,
-                    "value":48
+                    "date": "05-08-2023",
+                    "value": 48
                 },
                 {
-                    "date":1758738600000,
-                    "value":49
+                    "date": "06-08-2023",
+                    "value": 49
                 },
                 {
-                    "date":1759602600000,
-                    "value":50
+                    "date": "07-08-2023",
+                    "value": 50
                 },
                 {
-                    "date":1760466600000,
-                    "value":50
+                    "date": "08-08-2023",
+                    "value": 50
                 },
                 {
-                    "date":1761330600000,
-                    "value":53
+                    "date": "09-08-2023",
+                    "value": 53
                 },
                 {
-                    "date":1762194600000,
-                    "value":56
+                    "date": "10-08-2023",
+                    "value": 56
                 },
                 {
-                    "date":1763058600000,
-                    "value":58
+                    "date": "11-08-2023",
+                    "value": 58
                 },
                 {
-                    "date":1763922600000,
-                    "value":54
+                    "date": "12-08-2023",
+                    "value": 54
                 },
                 {
-                    "date":1764786600000,
-                    "value":54
+                    "date": "13-08-2023",
+                    "value": 54
                 },
                 {
-                    "date":1765650600000,
-                    "value":51
+                    "date": "14-08-2023",
+                    "value": 51
                 },
                 {
-                    "date":1766514600000,
-                    "value":53
+                    "date": "15-08-2023",
+                    "value": 53
                 },
                 {
-                    "date":1767378600000,
-                    "value":54
+                    "date": "16-08-2023",
+                    "value": 54
                 },
                 {
-                    "date":1768242600000,
-                    "value":56
+                    "date": "17-08-2023",
+                    "value": 56
                 },
                 {
-                    "date":1769106600000,
-                    "value":56
+                    "date": "18-08-2023",
+                    "value": 56
                 },
                 {
-                    "date":1769970600000,
-                    "value":53
+                    "date": "19-08-2023",
+                    "value": 53
                 }
-            ]
+            ]            
         }
     },
     "likesMerch":{
@@ -6151,206 +6046,207 @@
         "timeFrames":{
             "day":[
                 {
-                    "date":1727634600000,
-                    "value":33
+                    "date": "01-07-2023",
+                    "value": 33
                 },
                 {
-                    "date":1728498600000,
-                    "value":38
+                    "date": "02-07-2023",
+                    "value": 38
                 },
                 {
-                    "date":1729362600000,
-                    "value":37
+                    "date": "03-07-2023",
+                    "value": 37
                 },
                 {
-                    "date":1730226600000,
-                    "value":40
+                    "date": "04-07-2023",
+                    "value": 40
                 },
                 {
-                    "date":1731090600000,
-                    "value":37
+                    "date": "05-07-2023",
+                    "value": 37
                 },
                 {
-                    "date":1731954600000,
-                    "value":39
+                    "date": "06-07-2023",
+                    "value": 39
                 },
                 {
-                    "date":1732818600000,
-                    "value":42
+                    "date": "07-07-2023",
+                    "value": 42
                 },
                 {
-                    "date":1733682600000,
-                    "value":44
+                    "date": "08-07-2023",
+                    "value": 44
                 },
                 {
-                    "date":1734546600000,
-                    "value":45
+                    "date": "09-07-2023",
+                    "value": 45
                 },
                 {
-                    "date":1735410600000,
-                    "value":49
+                    "date": "10-07-2023",
+                    "value": 49
                 },
                 {
-                    "date":1736274600000,
-                    "value":46
+                    "date": "11-07-2023",
+                    "value": 46
                 },
                 {
-                    "date":1737138600000,
-                    "value":48
+                    "date": "12-07-2023",
+                    "value": 48
                 },
                 {
-                    "date":1738002600000,
-                    "value":46
+                    "date": "13-07-2023",
+                    "value": 46
                 },
                 {
-                    "date":1738866600000,
-                    "value":41
+                    "date": "14-07-2023",
+                    "value": 41
                 },
                 {
-                    "date":1739730600000,
-                    "value":44
+                    "date": "15-07-2023",
+                    "value": 44
                 },
                 {
-                    "date":1740594600000,
-                    "value":40
+                    "date": "16-07-2023",
+                    "value": 40
                 },
                 {
-                    "date":1741458600000,
-                    "value":42
+                    "date": "17-07-2023",
+                    "value": 42
                 },
                 {
-                    "date":1742322600000,
-                    "value":45
+                    "date": "18-07-2023",
+                    "value": 45
                 },
                 {
-                    "date":1743186600000,
-                    "value":44
+                    "date": "19-07-2023",
+                    "value": 44
                 },
                 {
-                    "date":1744050600000,
-                    "value":42
+                    "date": "20-07-2023",
+                    "value": 42
                 },
                 {
-                    "date":1744914600000,
-                    "value":41
+                    "date": "21-07-2023",
+                    "value": 41
                 },
                 {
-                    "date":1745778600000,
-                    "value":44
+                    "date": "22-07-2023",
+                    "value": 44
                 },
                 {
-                    "date":1746642600000,
-                    "value":45
+                    "date": "23-07-2023",
+                    "value": 45
                 },
                 {
-                    "date":1747506600000,
-                    "value":41
+                    "date": "24-07-2023",
+                    "value": 41
                 },
                 {
-                    "date":1748370600000,
-                    "value":40
+                    "date": "25-07-2023",
+                    "value": 40
                 },
                 {
-                    "date":1749234600000,
-                    "value":38
+                    "date": "26-07-2023",
+                    "value": 38
                 },
                 {
-                    "date":1750098600000,
-                    "value":35
+                    "date": "27-07-2023",
+                    "value": 35
                 },
                 {
-                    "date":1750962600000,
-                    "value":37
+                    "date": "28-07-2023",
+                    "value": 37
                 },
                 {
-                    "date":1751826600000,
-                    "value":36
+                    "date": "29-07-2023",
+                    "value": 36
                 },
                 {
-                    "date":1752690600000,
-                    "value":38
+                    "date": "30-07-2023",
+                    "value": 38
                 },
                 {
-                    "date":1753554600000,
-                    "value":38
+                    "date": "31-07-2023",
+                    "value": 38
                 },
                 {
-                    "date":1754418600000,
-                    "value":35
+                    "date": "01-08-2023",
+                    "value": 35
                 },
                 {
-                    "date":1755282600000,
-                    "value":39
+                    "date": "02-08-2023",
+                    "value": 39
                 },
                 {
-                    "date":1756146600000,
-                    "value":42
+                    "date": "03-08-2023",
+                    "value": 42
                 },
                 {
-                    "date":1757010600000,
-                    "value":46
+                    "date": "04-08-2023",
+                    "value": 46
                 },
                 {
-                    "date":1757874600000,
-                    "value":46
+                    "date": "05-08-2023",
+                    "value": 46
                 },
                 {
-                    "date":1758738600000,
-                    "value":49
+                    "date": "06-08-2023",
+                    "value": 49
                 },
                 {
-                    "date":1759602600000,
-                    "value":45
+                    "date": "07-08-2023",
+                    "value": 45
                 },
                 {
-                    "date":1760466600000,
-                    "value":43
+                    "date": "08-08-2023",
+                    "value": 43
                 },
                 {
-                    "date":1761330600000,
-                    "value":43
+                    "date": "09-08-2023",
+                    "value": 43
                 },
                 {
-                    "date":1762194600000,
-                    "value":48
+                    "date": "10-08-2023",
+                    "value": 48
                 },
                 {
-                    "date":1763058600000,
-                    "value":50
+                    "date": "11-08-2023",
+                    "value": 50
                 },
                 {
-                    "date":1763922600000,
-                    "value":55
+                    "date": "12-08-2023",
+                    "value": 55
                 },
                 {
-                    "date":1764786600000,
-                    "value":54
+                    "date": "13-08-2023",
+                    "value": 54
                 },
                 {
-                    "date":1765650600000,
-                    "value":56
+                    "date": "14-08-2023",
+                    "value": 56
                 },
                 {
-                    "date":1766514600000,
-                    "value":60
+                    "date": "15-08-2023",
+                    "value": 60
                 },
                 {
-                    "date":1767378600000,
-                    "value":64
+                    "date": "16-08-2023",
+                    "value": 64
                 },
                 {
-                    "date":1768242600000,
-                    "value":63
+                    "date": "17-08-2023",
+                    "value": 63
                 },
                 {
-                    "date":1769106600000,
-                    "value":66
+                    "date": "18-08-2023",
+                    "value": 66
                 },
                 {
-                    "date":1769970600000,
-                    "value":68
+                    "date": "19-08-2023",
+                    "value": 68
                 }
             ]
+            
         }
     },
     "likesProfile":{
@@ -6358,206 +6254,207 @@
         "timeFrames":{
             "day":[
                 {
-                    "date":1727634600000,
-                    "value":33
+                    "date": "01-07-2023",
+                    "value": 33
                 },
                 {
-                    "date":1728498600000,
-                    "value":29
+                    "date": "02-07-2023",
+                    "value": 29
                 },
                 {
-                    "date":1729362600000,
-                    "value":30
+                    "date": "03-07-2023",
+                    "value": 30
                 },
                 {
-                    "date":1730226600000,
-                    "value":28
+                    "date": "04-07-2023",
+                    "value": 28
                 },
                 {
-                    "date":1731090600000,
-                    "value":33
+                    "date": "05-07-2023",
+                    "value": 33
                 },
                 {
-                    "date":1731954600000,
-                    "value":28
+                    "date": "06-07-2023",
+                    "value": 28
                 },
                 {
-                    "date":1732818600000,
-                    "value":25
+                    "date": "07-07-2023",
+                    "value": 25
                 },
                 {
-                    "date":1733682600000,
-                    "value":29
+                    "date": "08-07-2023",
+                    "value": 29
                 },
                 {
-                    "date":1734546600000,
-                    "value":31
+                    "date": "09-07-2023",
+                    "value": 31
                 },
                 {
-                    "date":1735410600000,
-                    "value":27
+                    "date": "10-07-2023",
+                    "value": 27
                 },
                 {
-                    "date":1736274600000,
-                    "value":27
+                    "date": "11-07-2023",
+                    "value": 27
                 },
                 {
-                    "date":1737138600000,
-                    "value":25
+                    "date": "12-07-2023",
+                    "value": 25
                 },
                 {
-                    "date":1738002600000,
-                    "value":21
+                    "date": "13-07-2023",
+                    "value": 21
                 },
                 {
-                    "date":1738866600000,
-                    "value":24
+                    "date": "14-07-2023",
+                    "value": 24
                 },
                 {
-                    "date":1739730600000,
-                    "value":22
+                    "date": "15-07-2023",
+                    "value": 22
                 },
                 {
-                    "date":1740594600000,
-                    "value":21
+                    "date": "16-07-2023",
+                    "value": 21
                 },
                 {
-                    "date":1741458600000,
-                    "value":24
+                    "date": "17-07-2023",
+                    "value": 24
                 },
                 {
-                    "date":1742322600000,
-                    "value":22
+                    "date": "18-07-2023",
+                    "value": 22
                 },
                 {
-                    "date":1743186600000,
-                    "value":22
+                    "date": "19-07-2023",
+                    "value": 22
                 },
                 {
-                    "date":1744050600000,
-                    "value":22
+                    "date": "20-07-2023",
+                    "value": 22
                 },
                 {
-                    "date":1744914600000,
-                    "value":26
+                    "date": "21-07-2023",
+                    "value": 26
                 },
                 {
-                    "date":1745778600000,
-                    "value":24
+                    "date": "22-07-2023",
+                    "value": 24
                 },
                 {
-                    "date":1746642600000,
-                    "value":23
+                    "date": "23-07-2023",
+                    "value": 23
                 },
                 {
-                    "date":1747506600000,
-                    "value":18
+                    "date": "24-07-2023",
+                    "value": 18
                 },
                 {
-                    "date":1748370600000,
-                    "value":16
+                    "date": "25-07-2023",
+                    "value": 16
                 },
                 {
-                    "date":1749234600000,
-                    "value":16
+                    "date": "26-07-2023",
+                    "value": 16
                 },
                 {
-                    "date":1750098600000,
-                    "value":18
+                    "date": "27-07-2023",
+                    "value": 18
                 },
                 {
-                    "date":1750962600000,
-                    "value":14
+                    "date": "28-07-2023",
+                    "value": 14
                 },
                 {
-                    "date":1751826600000,
-                    "value":13
+                    "date": "29-07-2023",
+                    "value": 13
                 },
                 {
-                    "date":1752690600000,
-                    "value":16
+                    "date": "30-07-2023",
+                    "value": 16
                 },
                 {
-                    "date":1753554600000,
-                    "value":19
+                    "date": "31-07-2023",
+                    "value": 19
                 },
                 {
-                    "date":1754418600000,
-                    "value":21
+                    "date": "01-08-2023",
+                    "value": 21
                 },
                 {
-                    "date":1755282600000,
-                    "value":20
+                    "date": "02-08-2023",
+                    "value": 20
                 },
                 {
-                    "date":1756146600000,
-                    "value":24
+                    "date": "03-08-2023",
+                    "value": 24
                 },
                 {
-                    "date":1757010600000,
-                    "value":27
+                    "date": "04-08-2023",
+                    "value": 27
                 },
                 {
-                    "date":1757874600000,
-                    "value":26
+                    "date": "05-08-2023",
+                    "value": 26
                 },
                 {
-                    "date":1758738600000,
-                    "value":31
+                    "date": "06-08-2023",
+                    "value": 31
                 },
                 {
-                    "date":1759602600000,
-                    "value":31
+                    "date": "07-08-2023",
+                    "value": 31
                 },
                 {
-                    "date":1760466600000,
-                    "value":35
+                    "date": "08-08-2023",
+                    "value": 35
                 },
                 {
-                    "date":1761330600000,
-                    "value":31
+                    "date": "09-08-2023",
+                    "value": 31
                 },
                 {
-                    "date":1762194600000,
-                    "value":26
+                    "date": "10-08-2023",
+                    "value": 26
                 },
                 {
-                    "date":1763058600000,
-                    "value":24
+                    "date": "11-08-2023",
+                    "value": 24
                 },
                 {
-                    "date":1763922600000,
-                    "value":28
+                    "date": "12-08-2023",
+                    "value": 28
                 },
                 {
-                    "date":1764786600000,
-                    "value":27
+                    "date": "13-08-2023",
+                    "value": 27
                 },
                 {
-                    "date":1765650600000,
-                    "value":28
+                    "date": "14-08-2023",
+                    "value": 28
                 },
                 {
-                    "date":1766514600000,
-                    "value":27
+                    "date": "15-08-2023",
+                    "value": 27
                 },
                 {
-                    "date":1767378600000,
-                    "value":23
+                    "date": "16-08-2023",
+                    "value": 23
                 },
                 {
-                    "date":1768242600000,
-                    "value":26
+                    "date": "17-08-2023",
+                    "value": 26
                 },
                 {
-                    "date":1769106600000,
-                    "value":29
+                    "date": "18-08-2023",
+                    "value": 29
                 },
                 {
-                    "date":1769970600000,
-                    "value":33
+                    "date": "19-08-2023",
+                    "value": 33
                 }
             ]
+            
         }
     },
     "likesFeed":{
@@ -6565,206 +6462,206 @@
         "timeFrames":{
             "day":[
                 {
-                    "date":1727634600000,
-                    "value":34
+                    "date": "01-07-2023",
+                    "value": 34
                 },
                 {
-                    "date":1728498600000,
-                    "value":33
+                    "date": "02-07-2023",
+                    "value": 33
                 },
                 {
-                    "date":1729362600000,
-                    "value":31
+                    "date": "03-07-2023",
+                    "value": 31
                 },
                 {
-                    "date":1730226600000,
-                    "value":34
+                    "date": "04-07-2023",
+                    "value": 34
                 },
                 {
-                    "date":1731090600000,
-                    "value":31
+                    "date": "05-07-2023",
+                    "value": 31
                 },
                 {
-                    "date":1731954600000,
-                    "value":29
+                    "date": "06-07-2023",
+                    "value": 29
                 },
                 {
-                    "date":1732818600000,
-                    "value":26
+                    "date": "07-07-2023",
+                    "value": 26
                 },
                 {
-                    "date":1733682600000,
-                    "value":29
+                    "date": "08-07-2023",
+                    "value": 29
                 },
                 {
-                    "date":1734546600000,
-                    "value":33
+                    "date": "09-07-2023",
+                    "value": 33
                 },
                 {
-                    "date":1735410600000,
-                    "value":28
+                    "date": "10-07-2023",
+                    "value": 28
                 },
                 {
-                    "date":1736274600000,
-                    "value":30
+                    "date": "11-07-2023",
+                    "value": 30
                 },
                 {
-                    "date":1737138600000,
-                    "value":28
+                    "date": "12-07-2023",
+                    "value": 28
                 },
                 {
-                    "date":1738002600000,
-                    "value":33
+                    "date": "13-07-2023",
+                    "value": 33
                 },
                 {
-                    "date":1738866600000,
-                    "value":32
+                    "date": "14-07-2023",
+                    "value": 32
                 },
                 {
-                    "date":1739730600000,
-                    "value":28
+                    "date": "15-07-2023",
+                    "value": 28
                 },
                 {
-                    "date":1740594600000,
-                    "value":31
+                    "date": "16-07-2023",
+                    "value": 31
                 },
                 {
-                    "date":1741458600000,
-                    "value":32
+                    "date": "17-07-2023",
+                    "value": 32
                 },
                 {
-                    "date":1742322600000,
-                    "value":28
+                    "date": "18-07-2023",
+                    "value": 28
                 },
                 {
-                    "date":1743186600000,
-                    "value":29
+                    "date": "19-07-2023",
+                    "value": 29
                 },
                 {
-                    "date":1744050600000,
-                    "value":30
+                    "date": "20-07-2023",
+                    "value": 30
                 },
                 {
-                    "date":1744914600000,
-                    "value":29
+                    "date": "21-07-2023",
+                    "value": 29
                 },
                 {
-                    "date":1745778600000,
-                    "value":33
+                    "date": "22-07-2023",
+                    "value": 33
                 },
                 {
-                    "date":1746642600000,
-                    "value":30
+                    "date": "23-07-2023",
+                    "value": 30
                 },
                 {
-                    "date":1747506600000,
-                    "value":28
+                    "date": "24-07-2023",
+                    "value": 28
                 },
                 {
-                    "date":1748370600000,
-                    "value":28
+                    "date": "25-07-2023",
+                    "value": 28
                 },
                 {
-                    "date":1749234600000,
-                    "value":24
+                    "date": "26-07-2023",
+                    "value": 24
                 },
                 {
-                    "date":1750098600000,
-                    "value":29
+                    "date": "27-07-2023",
+                    "value": 29
                 },
                 {
-                    "date":1750962600000,
-                    "value":32
+                    "date": "28-07-2023",
+                    "value": 32
                 },
                 {
-                    "date":1751826600000,
-                    "value":29
+                    "date": "29-07-2023",
+                    "value": 29
                 },
                 {
-                    "date":1752690600000,
-                    "value":26
+                    "date": "30-07-2023",
+                    "value": 26
                 },
                 {
-                    "date":1753554600000,
-                    "value":24
+                    "date": "31-07-2023",
+                    "value": 24
                 },
                 {
-                    "date":1754418600000,
-                    "value":25
+                    "date": "01-08-2023",
+                    "value": 25
                 },
                 {
-                    "date":1755282600000,
-                    "value":23
+                    "date": "02-08-2023",
+                    "value": 23
                 },
                 {
-                    "date":1756146600000,
-                    "value":26
+                    "date": "03-08-2023",
+                    "value": 26
                 },
                 {
-                    "date":1757010600000,
-                    "value":22
+                    "date": "04-08-2023",
+                    "value": 22
                 },
                 {
-                    "date":1757874600000,
-                    "value":21
+                    "date": "05-08-2023",
+                    "value": 21
                 },
                 {
-                    "date":1758738600000,
-                    "value":20
+                    "date": "06-08-2023",
+                    "value": 20
                 },
                 {
-                    "date":1759602600000,
-                    "value":19
+                    "date": "07-08-2023",
+                    "value": 19
                 },
                 {
-                    "date":1760466600000,
-                    "value":22
+                    "date": "08-08-2023",
+                    "value": 22
                 },
                 {
-                    "date":1761330600000,
-                    "value":21
+                    "date": "09-08-2023",
+                    "value": 21
                 },
                 {
-                    "date":1762194600000,
-                    "value":24
+                    "date": "10-08-2023",
+                    "value": 24
                 },
                 {
-                    "date":1763058600000,
-                    "value":26
+                    "date": "11-08-2023",
+                    "value": 26
                 },
                 {
-                    "date":1763922600000,
-                    "value":23
+                    "date": "12-08-2023",
+                    "value": 23
                 },
                 {
-                    "date":1764786600000,
-                    "value":27
+                    "date": "13-08-2023",
+                    "value": 27
                 },
                 {
-                    "date":1765650600000,
-                    "value":28
+                    "date": "14-08-2023",
+                    "value": 28
                 },
                 {
-                    "date":1766514600000,
-                    "value":30
+                    "date": "15-08-2023",
+                    "value": 30
                 },
                 {
-                    "date":1767378600000,
-                    "value":25
+                    "date": "16-08-2023",
+                    "value": 25
                 },
                 {
-                    "date":1768242600000,
-                    "value":29
+                    "date": "17-08-2023",
+                    "value": 29
                 },
                 {
-                    "date":1769106600000,
-                    "value":28
+                    "date": "18-08-2023",
+                    "value": 28
                 },
                 {
-                    "date":1769970600000,
-                    "value":32
+                    "date": "19-08-2023",
+                    "value": 32
                 }
-            ]
+            ]            
         }
     }
 }]
