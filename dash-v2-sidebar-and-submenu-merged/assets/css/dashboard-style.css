@@ -588,6 +588,19 @@ html {
   touch-action: none
 }
 
+[data-floating-panel-trigger] [data-floating-panel-trigger-btn][data-is-active=true] {
+  background: rgba(251, 91, 162, .2)
+}
+
+[data-floating-panel-trigger] [data-floating-panel-trigger-btn][data-is-active=true] [data-sidebar-menu-item-text] {
+  color: var(--color-rose)
+}
+
+[data-floating-panel-trigger] [data-floating-panel-trigger-btn][data-is-active=true] img {
+  -webkit-filter: brightness(0) saturate(100%) invert(29%) sepia(98%) saturate(5809%) hue-rotate(325deg) brightness(92%) contrast(121%);
+  filter: brightness(0) saturate(100%) invert(29%) sepia(98%) saturate(5809%) hue-rotate(325deg) brightness(92%) contrast(121%)
+}
+
 [data-floating-panel-wrapper] [data-floating-panel] {
   display: grid;
   grid-template-columns: repeat(2, 1fr)
