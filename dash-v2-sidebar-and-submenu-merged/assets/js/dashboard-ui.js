@@ -754,7 +754,7 @@ class DashSidebarMenuAdjuster {
 			this.windowHeight = window.innerHeight;
 
 			// add 'low' data-attribute to floating panel if window height is less than 450px so that the panel can hang lower
-			if ( this.windowHeight < 450 && this.windowHeight > 400 ) {
+			if ( this.windowHeight < 480 && this.windowHeight > 400 ) {
 				this.floatingPanel.dataset.positionLower = '8rem';
 			}
 			else if ( this.windowHeight <= 400 ) { 
