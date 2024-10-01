@@ -1201,414 +1201,353 @@
         "timeFrames":{
             "month":[
                 {
-                    "month":"Jan",
-                    "fullMonth":"JANUARY",
-                    "year":2023,
-                    "tip":170,
-                    "call":130,
-                    "chat":50,
-                    "liveStreaming":40
+                    "date": "01-01-2023",
+                    "tip": 170,
+                    "call": 130,
+                    "chat": 50,
+                    "liveStreaming": 40
                 },
                 {
-                    "month":"Feb",
-                    "fullMonth":"FEBRUARY",
-                    "year":2023,
-                    "tip":50,
-                    "call":120,
-                    "chat":90,
-                    "liveStreaming":50
+                    "date": "01-02-2023",
+                    "tip": 50,
+                    "call": 120,
+                    "chat": 90,
+                    "liveStreaming": 50
                 },
                 {
-                    "month":"Mar",
-                    "fullMonth":"MARCH",
-                    "year":2023,
-                    "tip":300,
-                    "call":120,
-                    "chat":120,
-                    "liveStreaming":250
+                    "date": "01-03-2023",
+                    "tip": 300,
+                    "call": 120,
+                    "chat": 120,
+                    "liveStreaming": 250
                 },
                 {
-                    "month":"Apr",
-                    "fullMonth":"APRIL",
-                    "year":2023,
-                    "tip":400,
-                    "call":520,
-                    "chat":160,
-                    "liveStreaming":156
+                    "date": "01-04-2023",
+                    "tip": 400,
+                    "call": 520,
+                    "chat": 160,
+                    "liveStreaming": 156
                 },
                 {
-                    "month":"May",
-                    "fullMonth":"MAY",
-                    "year":2023,
-                    "tip":155,
-                    "call":220,
-                    "chat":170,
-                    "liveStreaming":521
+                    "date": "01-05-2023",
+                    "tip": 155,
+                    "call": 220,
+                    "chat": 170,
+                    "liveStreaming": 521
                 },
                 {
-                    "month":"Jun",
-                    "fullMonth":"JUNE",
-                    "year":2023,
-                    "tip":100,
-                    "call":320,
-                    "chat":180,
-                    "liveStreaming":124
+                    "date": "01-06-2023",
+                    "tip": 100,
+                    "call": 320,
+                    "chat": 180,
+                    "liveStreaming": 124
                 },
                 {
-                    "month":"Jul",
-                    "fullMonth":"JULY",
-                    "year":2023,
-                    "tip":250,
-                    "call":120,
-                    "chat":150,
-                    "liveStreaming":50
+                    "date": "01-07-2023",
+                    "tip": 250,
+                    "call": 120,
+                    "chat": 150,
+                    "liveStreaming": 50
                 },
                 {
-                    "month":"Aug",
-                    "fullMonth":"AUGUST",
-                    "year":2023,
-                    "tip":655,
-                    "call":420,
-                    "chat":200,
-                    "liveStreaming":52
+                    "date": "01-08-2023",
+                    "tip": 655,
+                    "call": 420,
+                    "chat": 200,
+                    "liveStreaming": 52
                 },
                 {
-                    "month":"Sep",
-                    "fullMonth":"SEPTEMBER",
-                    "year":2023,
-                    "tip":750,
-                    "call":820,
-                    "chat":400,
-                    "liveStreaming":158
+                    "date": "01-09-2023",
+                    "tip": 750,
+                    "call": 820,
+                    "chat": 400,
+                    "liveStreaming": 158
                 },
                 {
-                    "month":"Oct",
-                    "fullMonth":"OCTOBER",
-                    "year":2023,
-                    "tip":160,
-                    "call":100,
-                    "chat":140,
-                    "liveStreaming":320
+                    "date": "01-10-2023",
+                    "tip": 160,
+                    "call": 100,
+                    "chat": 140,
+                    "liveStreaming": 320
                 },
                 {
-                    "month":"Nov",
-                    "fullMonth":"NOVEMBER",
-                    "year":2023,
-                    "tip":255,
-                    "call":120,
-                    "chat":150,
-                    "liveStreaming":485
+                    "date": "01-11-2023",
+                    "tip": 255,
+                    "call": 120,
+                    "chat": 150,
+                    "liveStreaming": 485
                 },
                 {
-                    "month":"Dec",
-                    "fullMonth":"DECEMBER",
-                    "year":2023,
-                    "tip":50,
-                    "call":60,
-                    "chat":90,
-                    "liveStreaming":120
+                    "date": "01-12-2023",
+                    "tip": 50,
+                    "call": 60,
+                    "chat": 90,
+                    "liveStreaming": 120
                 }
             ],
             "day":[
                 {
-                    "day":"Jul 1",
-                    "year":2023,
-                    "tip":170,
-                    "call":130,
-                    "chat":50,
-                    "liveStreaming":40
+                    "date": "01-07-2023",
+                    "tip": 170,
+                    "call": 130,
+                    "chat": 50,
+                    "liveStreaming": 40
                 },
                 {
-                    "day":"Jul 2",
-                    "year":2023,
-                    "tip":50,
-                    "call":120,
-                    "chat":90,
-                    "liveStreaming":50
+                    "date": "02-07-2023",
+                    "tip": 50,
+                    "call": 120,
+                    "chat": 90,
+                    "liveStreaming": 50
                 },
                 {
-                    "day":"Jul 3",
-                    "year":2023,
-                    "tip":300,
-                    "call":120,
-                    "chat":120,
-                    "liveStreaming":250
+                    "date": "03-07-2023",
+                    "tip": 300,
+                    "call": 120,
+                    "chat": 120,
+                    "liveStreaming": 250
                 },
                 {
-                    "day":"Jul 4",
-                    "year":2023,
-                    "tip":400,
-                    "call":520,
-                    "chat":160,
-                    "liveStreaming":156
+                    "date": "04-07-2023",
+                    "tip": 400,
+                    "call": 520,
+                    "chat": 160,
+                    "liveStreaming": 156
                 },
                 {
-                    "day":"Jul 5",
-                    "year":2023,
-                    "tip":155,
-                    "call":220,
-                    "chat":170,
-                    "liveStreaming":521
+                    "date": "05-07-2023",
+                    "tip": 155,
+                    "call": 220,
+                    "chat": 170,
+                    "liveStreaming": 521
                 },
                 {
-                    "day":"Jul 6",
-                    "year":2023,
-                    "tip":100,
-                    "call":320,
-                    "chat":180,
-                    "liveStreaming":124
+                    "date": "06-07-2023",
+                    "tip": 100,
+                    "call": 320,
+                    "chat": 180,
+                    "liveStreaming": 124
                 },
                 {
-                    "day":"Jul 7",
-                    "year":2023,
-                    "tip":250,
-                    "call":120,
-                    "chat":150,
-                    "liveStreaming":50
+                    "date": "07-07-2023",
+                    "tip": 250,
+                    "call": 120,
+                    "chat": 150,
+                    "liveStreaming": 50
                 },
                 {
-                    "day":"Jul 8",
-                    "year":2023,
-                    "tip":655,
-                    "call":420,
-                    "chat":200,
-                    "liveStreaming":52
+                    "date": "08-07-2023",
+                    "tip": 655,
+                    "call": 420,
+                    "chat": 200,
+                    "liveStreaming": 52
                 },
                 {
-                    "day":"Jul 9",
-                    "year":2023,
-                    "tip":750,
-                    "call":820,
-                    "chat":400,
-                    "liveStreaming":158
+                    "date": "09-07-2023",
+                    "tip": 750,
+                    "call": 820,
+                    "chat": 400,
+                    "liveStreaming": 158
                 },
                 {
-                    "day":"Jul 10",
-                    "year":2023,
-                    "tip":160,
-                    "call":100,
-                    "chat":140,
-                    "liveStreaming":320
+                    "date": "10-07-2023",
+                    "tip": 160,
+                    "call": 100,
+                    "chat": 140,
+                    "liveStreaming": 320
                 },
                 {
-                    "day":"Jul 11",
-                    "year":2023,
-                    "tip":170,
-                    "call":130,
-                    "chat":50,
-                    "liveStreaming":40
+                    "date": "11-07-2023",
+                    "tip": 170,
+                    "call": 130,
+                    "chat": 50,
+                    "liveStreaming": 40
                 },
                 {
-                    "day":"Jul 12",
-                    "year":2023,
-                    "tip":50,
-                    "call":120,
-                    "chat":90,
-                    "liveStreaming":50
+                    "date": "12-07-2023",
+                    "tip": 50,
+                    "call": 120,
+                    "chat": 90,
+                    "liveStreaming": 50
                 },
                 {
-                    "day":"Jul 13",
-                    "year":2023,
-                    "tip":300,
-                    "call":120,
-                    "chat":120,
-                    "liveStreaming":250
+                    "date": "13-07-2023",
+                    "tip": 300,
+                    "call": 120,
+                    "chat": 120,
+                    "liveStreaming": 250
                 },
                 {
-                    "day":"Jul 14",
-                    "year":2023,
-                    "tip":400,
-                    "call":520,
-                    "chat":160,
-                    "liveStreaming":156
+                    "date": "14-07-2023",
+                    "tip": 400,
+                    "call": 520,
+                    "chat": 160,
+                    "liveStreaming": 156
                 },
                 {
-                    "day":"Jul 15",
-                    "year":2023,
-                    "tip":155,
-                    "call":220,
-                    "chat":170,
-                    "liveStreaming":521
+                    "date": "15-07-2023",
+                    "tip": 155,
+                    "call": 220,
+                    "chat": 170,
+                    "liveStreaming": 521
                 },
                 {
-                    "day":"Jul 16",
-                    "year":2023,
-                    "tip":100,
-                    "call":320,
-                    "chat":180,
-                    "liveStreaming":124
+                    "date": "16-07-2023",
+                    "tip": 100,
+                    "call": 320,
+                    "chat": 180,
+                    "liveStreaming": 124
                 },
                 {
-                    "day":"Jul 17",
-                    "year":2023,
-                    "tip":250,
-                    "call":120,
-                    "chat":150,
-                    "liveStreaming":50
+                    "date": "17-07-2023",
+                    "tip": 250,
+                    "call": 120,
+                    "chat": 150,
+                    "liveStreaming": 50
                 },
                 {
-                    "day":"Jul 18",
-                    "year":2023,
-                    "tip":655,
-                    "call":420,
-                    "chat":200,
-                    "liveStreaming":52
+                    "date": "18-07-2023",
+                    "tip": 655,
+                    "call": 420,
+                    "chat": 200,
+                    "liveStreaming": 52
                 },
                 {
-                    "day":"Jul 19",
-                    "year":2023,
-                    "tip":750,
-                    "call":820,
-                    "chat":400,
-                    "liveStreaming":158
+                    "date": "19-07-2023",
+                    "tip": 750,
+                    "call": 820,
+                    "chat": 400,
+                    "liveStreaming": 158
                 },
                 {
-                    "day":"Jul 20",
-                    "year":2023,
-                    "tip":160,
-                    "call":100,
-                    "chat":140,
-                    "liveStreaming":320
+                    "date": "20-07-2023",
+                    "tip": 160,
+                    "call": 100,
+                    "chat": 140,
+                    "liveStreaming": 320
                 },
                 {
-                    "day":"Jul 21",
-                    "year":2023,
-                    "tip":170,
-                    "call":130,
-                    "chat":50,
-                    "liveStreaming":40
+                    "date": "21-07-2023",
+                    "tip": 170,
+                    "call": 130,
+                    "chat": 50,
+                    "liveStreaming": 40
                 },
                 {
-                    "day":"Jul 22",
-                    "year":2023,
-                    "tip":50,
-                    "call":120,
-                    "chat":90,
-                    "liveStreaming":50
+                    "date": "22-07-2023",
+                    "tip": 50,
+                    "call": 120,
+                    "chat": 90,
+                    "liveStreaming": 50
                 },
                 {
-                    "day":"Jul 23",
-                    "year":2023,
-                    "tip":300,
-                    "call":120,
-                    "chat":120,
-                    "liveStreaming":250
+                    "date": "23-07-2023",
+                    "tip": 300,
+                    "call": 120,
+                    "chat": 120,
+                    "liveStreaming": 250
                 },
                 {
-                    "day":"Jul 24",
-                    "year":2023,
-                    "tip":400,
-                    "call":520,
-                    "chat":160,
-                    "liveStreaming":156
+                    "date": "24-07-2023",
+                    "tip": 400,
+                    "call": 520,
+                    "chat": 160,
+                    "liveStreaming": 156
                 },
                 {
-                    "day":"Jul 25",
-                    "year":2023,
-                    "tip":155,
-                    "call":220,
-                    "chat":170,
-                    "liveStreaming":521
+                    "date": "25-07-2023",
+                    "tip": 155,
+                    "call": 220,
+                    "chat": 170,
+                    "liveStreaming": 521
                 },
                 {
-                    "day":"Jul 26",
-                    "year":2023,
-                    "tip":100,
-                    "call":320,
-                    "chat":180,
-                    "liveStreaming":124
+                    "date": "26-07-2023",
+                    "tip": 100,
+                    "call": 320,
+                    "chat": 180,
+                    "liveStreaming": 124
                 },
                 {
-                    "day":"Jul 27",
-                    "year":2023,
-                    "tip":250,
-                    "call":120,
-                    "chat":150,
-                    "liveStreaming":50
+                    "date": "27-07-2023",
+                    "tip": 250,
+                    "call": 120,
+                    "chat": 150,
+                    "liveStreaming": 50
                 },
                 {
-                    "day":"Jul 28",
-                    "year":2023,
-                    "tip":655,
-                    "call":420,
-                    "chat":200,
-                    "liveStreaming":52
+                    "date": "28-07-2023",
+                    "tip": 655,
+                    "call": 420,
+                    "chat": 200,
+                    "liveStreaming": 52
                 },
                 {
-                    "day":"Jul 29",
-                    "year":2023,
-                    "tip":750,
-                    "call":820,
-                    "chat":400,
-                    "liveStreaming":158
+                    "date": "29-07-2023",
+                    "tip": 750,
+                    "call": 820,
+                    "chat": 400,
+                    "liveStreaming": 158
                 },
                 {
-                    "day":"Jul 30",
-                    "year":2023,
-                    "tip":160,
-                    "call":100,
-                    "chat":140,
-                    "liveStreaming":320
+                    "date": "30-07-2023",
+                    "tip": 160,
+                    "call": 100,
+                    "chat": 140,
+                    "liveStreaming": 320
                 }
             ],
             "week":[
                 {
-                    "day":"Jul 1",
-                    "year":2023,
-                    "tip":170,
-                    "call":130,
-                    "chat":50,
-                    "liveStreaming":40
+                    "date": "01-07-2023",
+                    "tip": 170,
+                    "call": 130,
+                    "chat": 50,
+                    "liveStreaming": 40
                 },
                 {
-                    "day":"Jul 2",
-                    "year":2023,
-                    "tip":50,
-                    "call":120,
-                    "chat":90,
-                    "liveStreaming":50
+                    "date": "02-07-2023",
+                    "tip": 50,
+                    "call": 120,
+                    "chat": 90,
+                    "liveStreaming": 50
                 },
                 {
-                    "day":"Jul 3",
-                    "year":2023,
-                    "tip":300,
-                    "call":120,
-                    "chat":120,
-                    "liveStreaming":250
+                    "date": "03-07-2023",
+                    "tip": 300,
+                    "call": 120,
+                    "chat": 120,
+                    "liveStreaming": 250
                 },
                 {
-                    "day":"Jul 4",
-                    "year":2023,
-                    "tip":400,
-                    "call":520,
-                    "chat":160,
-                    "liveStreaming":156
+                    "date": "04-07-2023",
+                    "tip": 400,
+                    "call": 520,
+                    "chat": 160,
+                    "liveStreaming": 156
                 },
                 {
-                    "day":"Jul 5",
-                    "year":2023,
-                    "tip":155,
-                    "call":220,
-                    "chat":170,
-                    "liveStreaming":521
+                    "date": "05-07-2023",
+                    "tip": 155,
+                    "call": 220,
+                    "chat": 170,
+                    "liveStreaming": 521
                 },
                 {
-                    "day":"Jul 6",
-                    "year":2023,
-                    "tip":100,
-                    "call":320,
-                    "chat":180,
-                    "liveStreaming":124
+                    "date": "06-07-2023",
+                    "tip": 100,
+                    "call": 320,
+                    "chat": 180,
+                    "liveStreaming": 124
                 },
                 {
-                    "day":"Jul 7",
-                    "year":2023,
-                    "tip":250,
-                    "call":120,
-                    "chat":150,
-                    "liveStreaming":50
+                    "date": "07-07-2023",
+                    "tip": 250,
+                    "call": 120,
+                    "chat": 150,
+                    "liveStreaming": 50
                 }
-            ]
+            ]            
         }
     },
     "tokenTrendDaily":{
@@ -1616,26 +1555,30 @@
         "timeFrames":{
             "day":[
                 {
-                    "value":10,
-                    "category":"Tip",
-                    "color":"#4CC9F0"
+                    "date": "01-07-2023",
+                    "value": 10,
+                    "category": "Tip",
+                    "color": "#4CC9F0"
                 },
                 {
-                    "value":9,
-                    "category":"Call",
-                    "color":"#4361EE"
+                    "date": "01-07-2023",
+                    "value": 9,
+                    "category": "Call",
+                    "color": "#4361EE"
                 },
                 {
-                    "value":6,
-                    "category":"Chat",
-                    "color":"#3A0BA3"
+                    "date": "01-07-2023",
+                    "value": 6,
+                    "category": "Chat",
+                    "color": "#3A0BA3"
                 },
                 {
-                    "value":5,
-                    "category":"Live streaming",
-                    "color":"#F72485"
+                    "date": "01-07-2023",
+                    "value": 5,
+                    "category": "Live streaming",
+                    "color": "#F72485"
                 }
-            ]
+            ]            
         }
     },
     "trafficSourceDaily":{
@@ -1643,21 +1586,24 @@
         "timeFrames":{
             "day":[
                 {
-                    "value":10,
-                    "category":"Direct",
-                    "color":"#4361EE"
+                    "date": "01-07-2023",
+                    "value": 10,
+                    "category": "Direct",
+                    "color": "#4361EE"
                 },
                 {
-                    "value":9,
-                    "category":"Twitter(X)",
-                    "color":"#4CC9F0"
+                    "date": "01-07-2023",
+                    "value": 9,
+                    "category": "Twitter(X)",
+                    "color": "#4CC9F0"
                 },
                 {
-                    "value":6,
-                    "category":"Pornhub",
-                    "color":"#3A0BA3"
+                    "date": "01-07-2023",
+                    "value": 6,
+                    "category": "Pornhub",
+                    "color": "#3A0BA3"
                 }
-            ]
+            ]            
         }
     },
     "locationMap":{
@@ -1665,106 +1611,116 @@
         "timeFrames":{
             "month":[
                 {
-                    "name":"Hong Kong",
-                    "color":"#3A0CA4",
-                    "data":[
+                    "date": "01-07-2023",
+                    "name": "Hong Kong",
+                    "color": "#3A0CA4",
+                    "data": [
                         {
-                            "id":"HK",
-                            "sales":"5432"
+                            "id": "HK",
+                            "sales": "5432"
                         }
                     ]
                 },
                 {
-                    "name":"United States of America",
-                    "color":"#3F37C9",
-                    "data":[
+                    "date": "01-07-2023",
+                    "name": "United States of America",
+                    "color": "#3F37C9",
+                    "data": [
                         {
-                            "id":"US",
-                            "sales":"4432"
+                            "id": "US",
+                            "sales": "4432"
                         }
                     ]
                 },
                 {
-                    "name":"Singapore",
-                    "color":"#425CE9",
-                    "data":[
+                    "date": "01-07-2023",
+                    "name": "Singapore",
+                    "color": "#425CE9",
+                    "data": [
                         {
-                            "id":"SG",
-                            "sales":"3432"
+                            "id": "SG",
+                            "sales": "3432"
                         }
                     ]
                 },
                 {
-                    "name":"Taiwan",
-                    "color":"#814DCA",
-                    "data":[
+                    "date": "01-07-2023",
+                    "name": "Taiwan",
+                    "color": "#814DCA",
+                    "data": [
                         {
-                            "id":"TW",
-                            "sales":"2432"
+                            "id": "TW",
+                            "sales": "2432"
                         }
                     ]
                 },
                 {
-                    "name":"Australia",
-                    "color":"#EE278A",
-                    "data":[
+                    "date": "01-07-2023",
+                    "name": "Australia",
+                    "color": "#EE278A",
+                    "data": [
                         {
-                            "id":"AU",
-                            "sales":"1432"
+                            "id": "AU",
+                            "sales": "1432"
                         }
                     ]
                 },
                 {
-                    "name":"China",
-                    "color":"#C734A1",
-                    "data":[
+                    "date": "01-07-2023",
+                    "name": "China",
+                    "color": "#C734A1",
+                    "data": [
                         {
-                            "id":"CN",
-                            "sales":"932"
+                            "id": "CN",
+                            "sales": "932"
                         }
                     ]
                 },
                 {
-                    "name":"Russia",
-                    "color":"#A653EF",
-                    "data":[
+                    "date": "01-07-2023",
+                    "name": "Russia",
+                    "color": "#A653EF",
+                    "data": [
                         {
-                            "id":"RU",
-                            "sales":"832"
+                            "id": "RU",
+                            "sales": "832"
                         }
                     ]
                 },
                 {
-                    "name":"Greenland",
-                    "color":"#69A4F0",
-                    "data":[
+                    "date": "01-07-2023",
+                    "name": "Greenland",
+                    "color": "#69A4F0",
+                    "data": [
                         {
-                            "id":"GL",
-                            "sales":"732"
+                            "id": "GL",
+                            "sales": "732"
                         }
                     ]
                 },
                 {
-                    "name":"Canada",
-                    "color":"#6CCCEC",
-                    "data":[
+                    "date": "01-07-2023",
+                    "name": "Canada",
+                    "color": "#6CCCEC",
+                    "data": [
                         {
-                            "id":"CA",
-                            "sales":"632"
+                            "id": "CA",
+                            "sales": "632"
                         }
                     ]
                 },
                 {
-                    "name":"Brazil",
-                    "color":"#92D0E6",
-                    "data":[
+                    "date": "01-07-2023",
+                    "name": "Brazil",
+                    "color": "#92D0E6",
+                    "data": [
                         {
-                            "id":"BR",
-                            "sales":"532"
+                            "id": "BR",
+                            "sales": "532"
                         }
                     ]
                 }
-            ]
+            ]          
         }
     },
     "subscriptionInsight":{
@@ -1772,267 +1728,255 @@
         "timeFrames":{
             "month":[
                 {
-                    "month":"Jan",
-                    "year":2023,
-                    "newSubscriber":400,
-                    "recurringSubscriber":400
+                    "date": "01-01-2023",
+                    "newSubscriber": 400,
+                    "recurringSubscriber": 400
                 },
                 {
-                    "month":"Feb",
-                    "year":2023,
-                    "newSubscriber":500,
-                    "recurringSubscriber":350
+                    "date": "01-02-2023",
+                    "newSubscriber": 500,
+                    "recurringSubscriber": 350
                 },
                 {
-                    "month":"Mar",
-                    "year":2023,
-                    "newSubscriber":350,
-                    "recurringSubscriber":500
+                    "date": "01-03-2023",
+                    "newSubscriber": 350,
+                    "recurringSubscriber": 500
                 },
                 {
-                    "month":"Apr",
-                    "year":2023,
-                    "newSubscriber":250,
-                    "recurringSubscriber":750
+                    "date": "01-04-2023",
+                    "newSubscriber": 250,
+                    "recurringSubscriber": 750
                 },
                 {
-                    "month":"May",
-                    "year":2023,
-                    "newSubscriber":300,
-                    "recurringSubscriber":500
+                    "date": "01-05-2023",
+                    "newSubscriber": 300,
+                    "recurringSubscriber": 500
                 },
                 {
-                    "month":"Jun",
-                    "year":2023,
-                    "newSubscriber":650,
-                    "recurringSubscriber":150
+                    "date": "01-06-2023",
+                    "newSubscriber": 650,
+                    "recurringSubscriber": 150
                 },
                 {
-                    "month":"Jul",
-                    "year":2023,
-                    "newSubscriber":356,
-                    "recurringSubscriber":258
+                    "date": "01-07-2023",
+                    "newSubscriber": 356,
+                    "recurringSubscriber": 258
                 },
                 {
-                    "month":"Aug",
-                    "year":2023,
-                    "newSubscriber":524,
-                    "recurringSubscriber":325
+                    "date": "01-08-2023",
+                    "newSubscriber": 524,
+                    "recurringSubscriber": 325
                 },
                 {
-                    "month":"Sep",
-                    "year":2023,
-                    "newSubscriber":256,
-                    "recurringSubscriber":750
+                    "date": "01-09-2023",
+                    "newSubscriber": 256,
+                    "recurringSubscriber": 750
                 },
                 {
-                    "month":"Oct",
-                    "year":2023,
-                    "newSubscriber":325,
-                    "recurringSubscriber":425
+                    "date": "01-10-2023",
+                    "newSubscriber": 325,
+                    "recurringSubscriber": 425
                 },
                 {
-                    "month":"Nov",
-                    "year":2023,
-                    "newSubscriber":236,
-                    "recurringSubscriber":560
+                    "date": "01-11-2023",
+                    "newSubscriber": 236,
+                    "recurringSubscriber": 560
                 },
                 {
-                    "month":"Dec",
-                    "year":2023,
-                    "newSubscriber":234,
-                    "recurringSubscriber":568
+                    "date": "01-12-2023",
+                    "newSubscriber": 234,
+                    "recurringSubscriber": 568
                 }
             ],
             "day":[
                 {
-                    "day":"Jul 1",
-                    "newSubscriber":100,
-                    "recurringSubscriber":80
+                    "date": "01-07-2023",
+                    "newSubscriber": 100,
+                    "recurringSubscriber": 80
                 },
                 {
-                    "day":"Jul 2",
-                    "newSubscriber":200,
-                    "recurringSubscriber":80
+                    "date": "02-07-2023",
+                    "newSubscriber": 200,
+                    "recurringSubscriber": 80
                 },
                 {
-                    "day":"Jul 3",
-                    "newSubscriber":300,
-                    "recurringSubscriber":80
+                    "date": "03-07-2023",
+                    "newSubscriber": 300,
+                    "recurringSubscriber": 80
                 },
                 {
-                    "day":"Jul 4",
-                    "newSubscriber":400,
-                    "recurringSubscriber":80
+                    "date": "04-07-2023",
+                    "newSubscriber": 400,
+                    "recurringSubscriber": 80
                 },
                 {
-                    "day":"Jul 5",
-                    "newSubscriber":500,
-                    "recurringSubscriber":80
+                    "date": "05-07-2023",
+                    "newSubscriber": 500,
+                    "recurringSubscriber": 80
                 },
                 {
-                    "day":"Jul 6",
-                    "newSubscriber":600,
-                    "recurringSubscriber":80
+                    "date": "06-07-2023",
+                    "newSubscriber": 600,
+                    "recurringSubscriber": 80
                 },
                 {
-                    "day":"Jul 7",
-                    "newSubscriber":700,
-                    "recurringSubscriber":80
+                    "date": "07-07-2023",
+                    "newSubscriber": 700,
+                    "recurringSubscriber": 80
                 },
                 {
-                    "day":"Jul 8",
-                    "newSubscriber":500,
-                    "recurringSubscriber":80
+                    "date": "08-07-2023",
+                    "newSubscriber": 500,
+                    "recurringSubscriber": 80
                 },
                 {
-                    "day":"Jul 9",
-                    "newSubscriber":600,
-                    "recurringSubscriber":80
+                    "date": "09-07-2023",
+                    "newSubscriber": 600,
+                    "recurringSubscriber": 80
                 },
                 {
-                    "day":"Jul 10",
-                    "newSubscriber":800,
-                    "recurringSubscriber":80
+                    "date": "10-07-2023",
+                    "newSubscriber": 800,
+                    "recurringSubscriber": 80
                 },
                 {
-                    "day":"Jul 11",
-                    "newSubscriber":600,
-                    "recurringSubscriber":80
+                    "date": "11-07-2023",
+                    "newSubscriber": 600,
+                    "recurringSubscriber": 80
                 },
                 {
-                    "day":"Jul 12",
-                    "newSubscriber":200,
-                    "recurringSubscriber":80
+                    "date": "12-07-2023",
+                    "newSubscriber": 200,
+                    "recurringSubscriber": 80
                 },
                 {
-                    "day":"Jul 13",
-                    "newSubscriber":200,
-                    "recurringSubscriber":80
+                    "date": "13-07-2023",
+                    "newSubscriber": 200,
+                    "recurringSubscriber": 80
                 },
                 {
-                    "day":"Jul 14",
-                    "newSubscriber":200,
-                    "recurringSubscriber":80
+                    "date": "14-07-2023",
+                    "newSubscriber": 200,
+                    "recurringSubscriber": 80
                 },
                 {
-                    "day":"Jul 15",
-                    "newSubscriber":500,
-                    "recurringSubscriber":80
+                    "date": "15-07-2023",
+                    "newSubscriber": 500,
+                    "recurringSubscriber": 80
                 },
                 {
-                    "day":"Jul 16",
-                    "newSubscriber":200,
-                    "recurringSubscriber":80
+                    "date": "16-07-2023",
+                    "newSubscriber": 200,
+                    "recurringSubscriber": 80
                 },
                 {
-                    "day":"Jul 17",
-                    "newSubscriber":200,
-                    "recurringSubscriber":80
+                    "date": "17-07-2023",
+                    "newSubscriber": 200,
+                    "recurringSubscriber": 80
                 },
                 {
-                    "day":"Jul 18",
-                    "newSubscriber":500,
-                    "recurringSubscriber":80
+                    "date": "18-07-2023",
+                    "newSubscriber": 500,
+                    "recurringSubscriber": 80
                 },
                 {
-                    "day":"Jul 19",
-                    "newSubscriber":200,
-                    "recurringSubscriber":80
+                    "date": "19-07-2023",
+                    "newSubscriber": 200,
+                    "recurringSubscriber": 80
                 },
                 {
-                    "day":"Jul 20",
-                    "newSubscriber":600,
-                    "recurringSubscriber":80
+                    "date": "20-07-2023",
+                    "newSubscriber": 600,
+                    "recurringSubscriber": 80
                 },
                 {
-                    "day":"Jul 21",
-                    "newSubscriber":200,
-                    "recurringSubscriber":80
+                    "date": "21-07-2023",
+                    "newSubscriber": 200,
+                    "recurringSubscriber": 80
                 },
                 {
-                    "day":"Jul 22",
-                    "newSubscriber":200,
-                    "recurringSubscriber":80
+                    "date": "22-07-2023",
+                    "newSubscriber": 200,
+                    "recurringSubscriber": 80
                 },
                 {
-                    "day":"Jul 23",
-                    "newSubscriber":200,
-                    "recurringSubscriber":80
+                    "date": "23-07-2023",
+                    "newSubscriber": 200,
+                    "recurringSubscriber": 80
                 },
                 {
-                    "day":"Jul 24",
-                    "newSubscriber":500,
-                    "recurringSubscriber":80
+                    "date": "24-07-2023",
+                    "newSubscriber": 500,
+                    "recurringSubscriber": 80
                 },
                 {
-                    "day":"Jul 25",
-                    "newSubscriber":500,
-                    "recurringSubscriber":80
+                    "date": "25-07-2023",
+                    "newSubscriber": 500,
+                    "recurringSubscriber": 80
                 },
                 {
-                    "day":"Jul 26",
-                    "newSubscriber":200,
-                    "recurringSubscriber":80
+                    "date": "26-07-2023",
+                    "newSubscriber": 200,
+                    "recurringSubscriber": 80
                 },
                 {
-                    "day":"Jul 27",
-                    "newSubscriber":200,
-                    "recurringSubscriber":80
+                    "date": "27-07-2023",
+                    "newSubscriber": 200,
+                    "recurringSubscriber": 80
                 },
                 {
-                    "day":"Jul 28",
-                    "newSubscriber":800,
-                    "recurringSubscriber":80
+                    "date": "28-07-2023",
+                    "newSubscriber": 800,
+                    "recurringSubscriber": 80
                 },
                 {
-                    "day":"Jul 29",
-                    "newSubscriber":300,
-                    "recurringSubscriber":80
+                    "date": "29-07-2023",
+                    "newSubscriber": 300,
+                    "recurringSubscriber": 80
                 },
                 {
-                    "day":"Jul 30",
-                    "newSubscriber":200,
-                    "recurringSubscriber":80
+                    "date": "30-07-2023",
+                    "newSubscriber": 200,
+                    "recurringSubscriber": 80
                 }
             ],
             "week":[
                 {
-                    "day":"Jul 1",
-                    "newSubscriber":100,
-                    "recurringSubscriber":80
+                    "date": "01-07-2023",
+                    "newSubscriber": 100,
+                    "recurringSubscriber": 80
                 },
                 {
-                    "day":"Jul 2",
-                    "newSubscriber":200,
-                    "recurringSubscriber":80
+                    "date": "02-07-2023",
+                    "newSubscriber": 200,
+                    "recurringSubscriber": 80
                 },
                 {
-                    "day":"Jul 3",
-                    "newSubscriber":300,
-                    "recurringSubscriber":80
+                    "date": "03-07-2023",
+                    "newSubscriber": 300,
+                    "recurringSubscriber": 80
                 },
                 {
-                    "day":"Jul 4",
-                    "newSubscriber":400,
-                    "recurringSubscriber":80
+                    "date": "04-07-2023",
+                    "newSubscriber": 400,
+                    "recurringSubscriber": 80
                 },
                 {
-                    "day":"Jul 5",
-                    "newSubscriber":500,
-                    "recurringSubscriber":80
+                    "date": "05-07-2023",
+                    "newSubscriber": 500,
+                    "recurringSubscriber": 80
                 },
                 {
-                    "day":"Jul 6",
-                    "newSubscriber":600,
-                    "recurringSubscriber":80
+                    "date": "06-07-2023",
+                    "newSubscriber": 600,
+                    "recurringSubscriber": 80
                 },
                 {
-                    "day":"Jul 7",
-                    "newSubscriber":700,
-                    "recurringSubscriber":80
+                    "date": "07-07-2023",
+                    "newSubscriber": 700,
+                    "recurringSubscriber": 80
                 }
-            ]
+            ]            
         }
     },
     "subscriptionInsightDaily":{
