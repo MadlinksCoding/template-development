@@ -4,8 +4,7 @@
         "timeFrames":{
             "month":[
                 {
-                    "month":"Jan",
-                    "year":2023,
+                    "date": "01-01-2023",
                     "subscription":150,
                     "payToView":90,
                     "merch":50,
@@ -13,8 +12,7 @@
                     "customRequest":20
                 },
                 {
-                    "month":"Feb",
-                    "year":2023,
+                    "date": "01-02-2023",
                     "subscription":130,
                     "payToView":100,
                     "merch":60,
@@ -22,8 +20,7 @@
                     "customRequest":50
                 },
                 {
-                    "month":"Mar",
-                    "year":2023,
+                    "date": "01-03-2023",
                     "subscription":150,
                     "payToView":100,
                     "merch":150,
@@ -31,8 +28,7 @@
                     "customRequest":20
                 },
                 {
-                    "month":"Apr",
-                    "year":2023,
+                    "date": "01-04-2023",
                     "subscription":150,
                     "payToView":160,
                     "merch":100,
@@ -40,8 +36,7 @@
                     "customRequest":50
                 },
                 {
-                    "month":"May",
-                    "year":2023,
+                    "date": "01-05-2023",
                     "subscription":180,
                     "payToView":180,
                     "merch":100,
@@ -49,8 +44,7 @@
                     "customRequest":50
                 },
                 {
-                    "month":"Jun",
-                    "year":2023,
+                    "date": "01-06-2023",
                     "subscription":200,
                     "payToView":200,
                     "merch":100,
@@ -58,8 +52,7 @@
                     "customRequest":50
                 },
                 {
-                    "month":"Jul",
-                    "year":2023,
+                    "date": "01-07-2023",
                     "subscription":250,
                     "payToView":200,
                     "merch":100,
@@ -67,8 +60,7 @@
                     "customRequest":50
                 },
                 {
-                    "month":"Aug",
-                    "year":2023,
+                    "date": "01-08-2023",
                     "subscription":300,
                     "payToView":200,
                     "merch":100,
@@ -76,8 +68,7 @@
                     "customRequest":50
                 },
                 {
-                    "month":"Sep",
-                    "year":2023,
+                    "date": "01-09-2023",
                     "subscription":350,
                     "payToView":200,
                     "merch":100,
@@ -85,8 +76,7 @@
                     "customRequest":50
                 },
                 {
-                    "month":"Oct",
-                    "year":2023,
+                    "date": "01-10-2023",
                     "subscription":380,
                     "payToView":200,
                     "merch":100,
@@ -94,8 +84,7 @@
                     "customRequest":50
                 },
                 {
-                    "month":"Nov",
-                    "year":2023,
+                    "date": "01-11-2023",
                     "subscription":400,
                     "payToView":200,
                     "merch":100,
@@ -103,8 +92,7 @@
                     "customRequest":50
                 },
                 {
-                    "month":"Dec",
-                    "year":2023,
+                    "date": "01-12-2023",
                     "subscription":500,
                     "payToView":200,
                     "merch":100,
@@ -114,8 +102,7 @@
             ],
             "day":[
                 {
-                    "day":"Jul 1",
-                    "year":2023,
+                    "date": "01-07-2023",
                     "subscription":155,
                     "payToView":120,
                     "merch":90,
@@ -123,8 +110,7 @@
                     "customRequest":50
                 },
                 {
-                    "day":"Jul 2",
-                    "year":2023,
+                    "date": "02-07-2023",
                     "subscription":105,
                     "payToView":95,
                     "merch":145,
@@ -132,8 +118,7 @@
                     "customRequest":50
                 },
                 {
-                    "day":"Jul 3",
-                    "year":2023,
+                    "date": "03-07-2023",
                     "subscription":110,
                     "payToView":130,
                     "merch":125,
@@ -141,8 +126,7 @@
                     "customRequest":100
                 },
                 {
-                    "day":"Jul 4",
-                    "year":2023,
+                    "date": "04-07-2023",
                     "subscription":115,
                     "payToView":165,
                     "merch":105,
@@ -150,8 +134,7 @@
                     "customRequest":90
                 },
                 {
-                    "day":"Jul 5",
-                    "year":2023,
+                    "date": "05-07-2023",
                     "subscription":120,
                     "payToView":160,
                     "merch":140,
@@ -159,8 +142,7 @@
                     "customRequest":90
                 },
                 {
-                    "day":"Jul 6",
-                    "year":2023,
+                    "date": "06-07-2023",
                     "subscription":125,
                     "payToView":145,
                     "merch":165,
@@ -168,8 +150,7 @@
                     "customRequest":90
                 },
                 {
-                    "day":"Jul 7",
-                    "year":2023,
+                    "date": "06-07-2023",
                     "subscription":150,
                     "payToView":130,
                     "merch":170,
@@ -177,8 +158,7 @@
                     "customRequest":170
                 },
                 {
-                    "day":"Jul 8",
-                    "year":2023,
+                    "date": "08-07-2023",
                     "subscription":140,
                     "payToView":150,
                     "merch":135,
@@ -186,8 +166,7 @@
                     "customRequest":90
                 },
                 {
-                    "day":"Jul 9",
-                    "year":2023,
+                    "date": "09-07-2023",
                     "subscription":130,
                     "payToView":110,
                     "merch":120,
@@ -195,8 +174,7 @@
                     "customRequest":120
                 },
                 {
-                    "day":"Jul 10",
-                    "year":2023,
+                    "date": "10-07-2023",
                     "subscription":160,
                     "payToView":170,
                     "merch":150,
@@ -204,8 +182,7 @@
                     "customRequest":90
                 },
                 {
-                    "day":"Jul 11",
-                    "year":2023,
+                    "date": "11-07-2023",
                     "subscription":170,
                     "payToView":180,
                     "merch":155,
@@ -213,8 +190,7 @@
                     "customRequest":150
                 },
                 {
-                    "day":"Jul 12",
-                    "year":2023,
+                    "date": "12-07-2023",
                     "subscription":180,
                     "payToView":190,
                     "merch":160,
@@ -222,8 +198,7 @@
                     "customRequest":90
                 },
                 {
-                    "day":"Jul 13",
-                    "year":2023,
+                    "date": "13-07-2023",
                     "subscription":160,
                     "payToView":170,
                     "merch":150,
@@ -231,8 +206,7 @@
                     "customRequest":90
                 },
                 {
-                    "day":"Jul 14",
-                    "year":2023,
+                    "date": "14-07-2023",
                     "subscription":170,
                     "payToView":180,
                     "merch":155,
@@ -240,8 +214,7 @@
                     "customRequest":150
                 },
                 {
-                    "day":"Jul 15",
-                    "year":2023,
+                    "date": "15-07-2023",
                     "subscription":180,
                     "payToView":190,
                     "merch":160,
@@ -249,8 +222,7 @@
                     "customRequest":90
                 },
                 {
-                    "day":"Jul 16",
-                    "year":2023,
+                    "date": "16-07-2023",
                     "subscription":160,
                     "payToView":170,
                     "merch":150,
@@ -258,8 +230,7 @@
                     "customRequest":90
                 },
                 {
-                    "day":"Jul 17",
-                    "year":2023,
+                    "date": "17-07-2023",
                     "subscription":170,
                     "payToView":180,
                     "merch":155,
@@ -267,8 +238,7 @@
                     "customRequest":150
                 },
                 {
-                    "day":"Jul 18",
-                    "year":2023,
+                    "date": "18-07-2023",
                     "subscription":180,
                     "payToView":190,
                     "merch":160,
@@ -276,8 +246,7 @@
                     "customRequest":90
                 },
                 {
-                    "day":"Jul 19",
-                    "year":2023,
+                    "date": "19-07-2023",
                     "subscription":160,
                     "payToView":170,
                     "merch":150,
@@ -285,8 +254,7 @@
                     "customRequest":90
                 },
                 {
-                    "day":"Jul 20",
-                    "year":2023,
+                    "date": "20-07-2023",
                     "subscription":170,
                     "payToView":180,
                     "merch":155,
@@ -294,8 +262,7 @@
                     "customRequest":150
                 },
                 {
-                    "day":"Jul 21",
-                    "year":2023,
+                    "date": "21-07-2023",
                     "subscription":180,
                     "payToView":190,
                     "merch":160,
@@ -303,8 +270,7 @@
                     "customRequest":90
                 },
                 {
-                    "day":"Jul 22",
-                    "year":2023,
+                    "date": "22-07-2023",
                     "subscription":160,
                     "payToView":170,
                     "merch":150,
@@ -312,8 +278,7 @@
                     "customRequest":90
                 },
                 {
-                    "day":"Jul 23",
-                    "year":2023,
+                    "date": "23-07-2023",
                     "subscription":170,
                     "payToView":180,
                     "merch":155,
@@ -321,8 +286,7 @@
                     "customRequest":150
                 },
                 {
-                    "day":"Jul 24",
-                    "year":2023,
+                    "date": "24-07-2023",
                     "subscription":180,
                     "payToView":190,
                     "merch":160,
@@ -330,8 +294,7 @@
                     "customRequest":90
                 },
                 {
-                    "day":"Jul 25",
-                    "year":2023,
+                    "date": "25-07-2023",
                     "subscription":160,
                     "payToView":170,
                     "merch":150,
@@ -339,8 +302,7 @@
                     "customRequest":90
                 },
                 {
-                    "day":"Jul 26",
-                    "year":2023,
+                    "date": "26-07-2023",
                     "subscription":170,
                     "payToView":180,
                     "merch":155,
@@ -348,8 +310,7 @@
                     "customRequest":150
                 },
                 {
-                    "day":"Jul 27",
-                    "year":2023,
+                    "date": "27-07-2023",
                     "subscription":180,
                     "payToView":190,
                     "merch":160,
@@ -357,8 +318,7 @@
                     "customRequest":90
                 },
                 {
-                    "day":"Jul 28",
-                    "year":2023,
+                    "date": "28-07-2023",
                     "subscription":160,
                     "payToView":170,
                     "merch":150,
@@ -366,8 +326,7 @@
                     "customRequest":90
                 },
                 {
-                    "day":"Jul 29",
-                    "year":2023,
+                    "date": "29-07-2023",
                     "subscription":170,
                     "payToView":180,
                     "merch":155,
@@ -375,8 +334,7 @@
                     "customRequest":150
                 },
                 {
-                    "day":"Jul 30",
-                    "year":2023,
+                    "date": "30-07-2023",
                     "subscription":180,
                     "payToView":190,
                     "merch":160,
@@ -386,62 +344,62 @@
             ],
             "week":[
                 {
-                    "day":"Jul 1",
-                    "subscription":200,
-                    "payToView":80,
-                    "merch":50,
-                    "wishTender":30,
-                    "customRequest":30
+                  "date": "01-07-2023",
+                  "subscription": 200,
+                  "payToView": 80,
+                  "merch": 50,
+                  "wishTender": 30,
+                  "customRequest": 30
                 },
                 {
-                    "day":"Jul 2",
-                    "subscription":220,
-                    "payToView":120,
-                    "merch":90,
-                    "wishTender":50,
-                    "customRequest":60
+                  "date": "02-07-2023",
+                  "subscription": 220,
+                  "payToView": 120,
+                  "merch": 90,
+                  "wishTender": 50,
+                  "customRequest": 60
                 },
                 {
-                    "day":"Jul 3",
-                    "subscription":280,
-                    "payToView":160,
-                    "merch":120,
-                    "wishTender":140,
-                    "customRequest":80
+                  "date": "03-07-2023",
+                  "subscription": 280,
+                  "payToView": 160,
+                  "merch": 120,
+                  "wishTender": 140,
+                  "customRequest": 80
                 },
                 {
-                    "day":"Jul 4",
-                    "subscription":280,
-                    "payToView":160,
-                    "merch":120,
-                    "wishTender":140,
-                    "customRequest":80
+                  "date": "04-07-2023",
+                  "subscription": 280,
+                  "payToView": 160,
+                  "merch": 120,
+                  "wishTender": 140,
+                  "customRequest": 80
                 },
                 {
-                    "day":"Jul 5",
-                    "subscription":210,
-                    "payToView":160,
-                    "merch":120,
-                    "wishTender":140,
-                    "customRequest":80
+                  "date": "05-07-2023",
+                  "subscription": 210,
+                  "payToView": 160,
+                  "merch": 120,
+                  "wishTender": 140,
+                  "customRequest": 80
                 },
                 {
-                    "day":"Jul 6",
-                    "subscription":280,
-                    "payToView":160,
-                    "merch":120,
-                    "wishTender":100,
-                    "customRequest":80
+                  "date": "06-07-2023",
+                  "subscription": 280,
+                  "payToView": 160,
+                  "merch": 120,
+                  "wishTender": 100,
+                  "customRequest": 80
                 },
                 {
-                    "day":"Jul 7",
-                    "subscription":80,
-                    "payToView":160,
-                    "merch":120,
-                    "wishTender":140,
-                    "customRequest":80
+                  "date": "07-07-2023",
+                  "subscription": 80,
+                  "payToView": 160,
+                  "merch": 120,
+                  "wishTender": 140,
+                  "customRequest": 80
                 }
-            ]
+              ]              
         }
     },
     "salesInsightDaily":{
