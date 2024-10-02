@@ -221,6 +221,9 @@ html {
 }
 
 [data-sidebar-main-wrapper][data-is-active=false] {
+  height: auto;
+  -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, .08);
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, .08);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -231,6 +234,9 @@ html {
 }
 
 [data-sidebar-main-wrapper][data-is-active=true] {
+  height: auto;
+  -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, .08);
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, .08);
   opacity: 1;
   visibility: visible;
   pointer-events: all;
