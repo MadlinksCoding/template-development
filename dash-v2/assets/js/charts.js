@@ -400,7 +400,7 @@ function ContributorsBarChart(renderingEl, data) {
                         height: 32,
                         centerY: am5.p50,
                         centerX: am5.p50,
-                        src: dataItem.dataContext.pictureSettings?.src,
+                        src: dataItem.dataContext.thumbnailURL?.src,
                         mask: am5.Circle.new(root, {
                             radius: 50
                         }),
@@ -522,24 +522,24 @@ function ContributorsBarChart(renderingEl, data) {
         var dataItem = event.target.dataItem;
         if (dataItem) {
             var categoryX = dataItem.get("categoryX");
-            var avatarSrc = dataItem.dataContext.pictureSettings?.src || "";
+            var avatarSrc = dataItem.dataContext.thumbnailURL?.src || "";
             var tag = dataItem.dataContext.tag || "";
 
             var tooltipHTML = `<div style="display: flex; align-items: center; margin-bottom: 12px;">
-          <span style="display: flex; width: 20px; height: 20px; background-color: #ffffff; border-radius: 50%; margin-right: 4px;">
-          <img src="${avatarSrc}" style="width: 100%; height: 100%; border-radius: 50%;"></span>
-          <strong style="font-size: 12px; font-weight: 600; font-family: 'Poppins', sans-serif; color: #101828;">${categoryX}</strong>
-          ${tag ? `<span style="margin-left: 4px; font-family: 'Poppins', sans-serif; font-size: 12px; color: #101828;">@${tag}</span>` : ''}
-      </div>`;
+                <span style="display: flex; width: 20px; height: 20px; background-color: #ffffff; border-radius: 50%; margin-right: 4px;">
+                <img src="${avatarSrc}" style="width: 100%; height: 100%; border-radius: 50%;"></span>
+                <strong style="font-size: 12px; font-weight: 600; font-family: 'Poppins', sans-serif; color: #101828;">${categoryX}</strong>
+                ${tag ? `<span style="margin-left: 4px; font-family: 'Poppins', sans-serif; font-size: 12px; color: #101828;">@${tag}</span>` : ''}
+            </div>`;
 
             seriesList.forEach(function(series) {
                 var fieldValue = dataItem.dataContext[series.get("valueYField")];
                 var seriesColor = am5.color(series.get("fill")).toCSS();
                 tooltipHTML += `<div style="display: flex; align-items: center; margin-bottom: 4px;">
-            <div style="display: flex; width: 8px; height: 8px; background-color: ${seriesColor}; border-radius: 50%; margin-right: 8px;"></div>
-            <span style="width: 120px; font-family: 'Poppins', sans-serif; font-size: 12px; color: #344054;">${series.get("name")}</span>
-            <strong style="font-family: 'Poppins', sans-serif; font-size: 12px; font-weight: 500; color: #101828;">USD ${fieldValue}</strong>
-        </div>`;
+                    <div style="display: flex; width: 8px; height: 8px; background-color: ${seriesColor}; border-radius: 50%; margin-right: 8px;"></div>
+                    <span style="width: 120px; font-family: 'Poppins', sans-serif; font-size: 12px; color: #344054;">${series.get("name")}</span>
+                    <strong style="font-family: 'Poppins', sans-serif; font-size: 12px; font-weight: 500; color: #101828;">USD ${fieldValue}</strong>
+                </div>`;
             });
 
             tooltip.set("html", tooltipHTML);
@@ -678,7 +678,8 @@ function LineChart(renderingEl, data, hexCode) {
         xAxis: xAxis,
         yAxis: yAxis,
         valueYField: "value",
-        valueXField: "date",
+        //valueXField: "date",
+        valueXField: "dateInMilliSeconds",
         stroke: am5.color(hexCode)
     }));
 
@@ -751,9 +752,24 @@ function LineChart(renderingEl, data, hexCode) {
         visible: false,
     }));
 
+    // function to take dataset and convert date in 'dd-mm-yyyy' to milli seconds and return new dataset with 'dateInMilliSeconds' as a new key
+    function convertDateToMillis(dataset) {
+        return dataset.map((data) => {
+            const [day, month, year] = data.date.split('-');
+            const date = new Date(year, month - 1, day); // month is 0-indexed
+            const dateInMilliSeconds = date.getTime();
+            return { ...data, dateInMilliSeconds };
+        });
+    } 
+
+    // convert dataset
+    var convertedData = convertDateToMillis(data);
+    //console.log(convertedData);
+    
     // set data
     //var data = generateDatas(50);
-    var data = data;
+    //var data = data;
+    var data = convertedData;
     series.data.setAll(data);
 
     // Make stuff animate on load
