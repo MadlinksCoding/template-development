@@ -35,6 +35,52 @@ class ChartRenderer {
   }
 
   /**
+   * @function processDatasetDates
+   * @description Processes a dataset by extracting date information and adding new keys.
+   * @param {Array<Object>} dataset - The input dataset with a "date" key in "dd-mm-yyyy" format.
+   * @returns {Array<Object>} The updated dataset with additional date-related keys.
+   */
+  processDatasetDates(dataset) {
+    // Define arrays for month names
+    const months = [
+      'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+      'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+    ];
+
+    // Define arrays for full month names
+    const fullMonths = [
+      'JANUARY', 'FEBRUARY', 'MARCH', 'APRIL', 'MAY', 'JUNE',
+      'JULY', 'AUGUST', 'SEPTEMBER', 'OCTOBER', 'NOVEMBER', 'DECEMBER'
+    ];
+
+    // Use map() to iterate over the dataset and create a new array with updated objects
+    return dataset.map((data) => {
+      // Split the date string into day, month, and year
+      const [day, month, year] = data.date.split('-');
+
+      // Create a new Date object to ensure correct date parsing
+      const date = new Date(year, month - 1, day);
+
+      // Return a new object with the original data and additional date-related keys
+      return {
+        ...data,
+        // Day of the month in "Month Day" format (e.g., "July 1")
+        day: `${months[month - 1]} ${day}`,
+        
+        // Abbreviated month name (e.g., "July")
+        month: months[month - 1],
+        
+        // Full month name (e.g., "JULY")
+        fullMonth: fullMonths[month - 1],
+        
+        // Year as an integer
+        year: parseInt(year),
+      };
+    });
+  }
+
+
+  /**
    * @function renderCharts
    * @description Loops through the chart data, finds matching DOM elements using attributes, and renders charts based on their type.
    */
@@ -58,8 +104,11 @@ class ChartRenderer {
             if (chartData.timeFrames && chartData.timeFrames[timeframe]) {
               const timeFrameData = chartData.timeFrames[timeframe];
 
+              // process data using 'date' key for new date 'key' & 'value' pairs
+              const processedTimeFrameData = this.processDatasetDates(timeFrameData);
+
               // Call the appropriate chart rendering method based on the chart type
-              this.renderChartByType(chartElement, chartData.chartType, timeFrameData);
+              this.renderChartByType(chartElement, chartData.chartType, processedTimeFrameData);
             }
           }
         }
@@ -106,7 +155,7 @@ class ChartRenderer {
    */
   barChart(element, data) {
     // Logic to render a bar chart
-    console.log('Rendering bar chart for', element, data);
+    //console.log('Rendering bar chart for', element, data);
     // Implementation for rendering the bar chart goes here
     if ( element.dataset.popupType == 'popup-contributors-insight' ) {
       //console.log('Call contributors bar chart');
@@ -126,7 +175,7 @@ class ChartRenderer {
    */
   lineChart(element, data) {
     // Logic to render a line chart
-    console.log('Rendering line chart for', element, data);
+    //console.log('Rendering line chart for', element, data);
     // Implementation for rendering the line chart goes here
     LineChart(element, data, element.dataset.chartHex);
   }
@@ -139,7 +188,7 @@ class ChartRenderer {
    */
   smoothedLineChart(element, data) {
     // Logic to render a line chart
-    console.log('Rendering smoothed line chart for', element, data);
+    //console.log('Rendering smoothed line chart for', element, data);
     // Implementation for rendering the line chart goes here
     SmoothLineChart(element, data);
   }
@@ -152,7 +201,7 @@ class ChartRenderer {
    */
   mapChart(element, data) {
     // Logic to render a map chart
-    console.log('Rendering map chart for', element, data);
+    //console.log('Rendering map chart for', element, data);
     // Implementation for rendering the map chart goes here
     MapChart(element, data);
   }
@@ -165,7 +214,7 @@ class ChartRenderer {
    */
   donutChart(element, data) {
     // Logic to render a map chart
-    console.log('Rendering donut chart for', element, data);
+    //console.log('Rendering donut chart for', element, data);
     // Implementation for rendering the map chart goes here
     DonutChart(element, data);
   }
