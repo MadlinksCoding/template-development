@@ -678,7 +678,8 @@ function LineChart(renderingEl, data, hexCode) {
         xAxis: xAxis,
         yAxis: yAxis,
         valueYField: "value",
-        valueXField: "date",
+        //valueXField: "date",
+        valueXField: "dateInMilliSeconds",
         stroke: am5.color(hexCode)
     }));
 
@@ -751,9 +752,24 @@ function LineChart(renderingEl, data, hexCode) {
         visible: false,
     }));
 
+    // function to take dataset and convert date in 'dd-mm-yyyy' to milli seconds and return new dataset with 'dateInMilliSeconds' as a new key
+    function convertDateToMillis(dataset) {
+        return dataset.map((data) => {
+            const [day, month, year] = data.date.split('-');
+            const date = new Date(year, month - 1, day); // month is 0-indexed
+            const dateInMilliSeconds = date.getTime();
+            return { ...data, dateInMilliSeconds };
+        });
+    } 
+
+    // convert dataset
+    var convertedData = convertDateToMillis(data);
+    //console.log(convertedData);
+    
     // set data
     //var data = generateDatas(50);
-    var data = data;
+    //var data = data;
+    var data = convertedData;
     series.data.setAll(data);
 
     // Make stuff animate on load
