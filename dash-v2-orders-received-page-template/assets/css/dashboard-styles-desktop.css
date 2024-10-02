@@ -684,6 +684,19 @@ html {
   -moz-filter: blur(600px)
 }
 
+.hover--parent--child--col--black-ribbon:hover .hov--filter--col--black-ribbon {
+  -webkit-filter: brightness(0) saturate(100%) invert(0) sepia(96%) saturate(7494%) hue-rotate(96deg) brightness(112%) contrast(97%);
+  filter: brightness(0) saturate(100%) invert(0) sepia(96%) saturate(7494%) hue-rotate(96deg) brightness(112%) contrast(97%)
+}
+
+.hover--bg--col-brand-green:hover {
+  background: var(--color-brand-green, #07f468)
+}
+
+.group:hover .hover--col-black {
+  color: #000
+}
+
 .tracked--0-25 {
   letter-spacing: .016rem
 }
