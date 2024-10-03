@@ -163,7 +163,16 @@
                             <div data-menu-panel-wrapper class="flex flex-column self-stretch relative z-5">
                                 <div data-menu-panel class="flex flex-column items-center self-stretch gap--4 display-grid--responsive-mobile display-grid--responsive-mobile-portrait grid--cols-6--responsive-mobile grid--cols-3--responsive-mobile-portrait gap--16--responsive-mobile gap--16--responsive-mobile-portrait">
                                     <!-- menu item (Push Menu Demo) (this item is added only to show a demo of multi level push menu system in corresponding submenu, not part of actual sidebar menu) -->
-                                    
+                                    <div data-sidebar-menu-item data-current-page-detector data-page="dashboard/some-page" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
+                                        <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
+                                        <a href="javascript: void(0)" data-main-menu-item="true" data-main-menu-name="Multi Level Push Menu" data-is-active="false" data-has-submenu="true" data-target-submenu-container="dashboard-submenu-multi-level-push-menu-demo" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
+                                            <!-- render_svg_icon( 'likes' ) -->
+                                            <img data-sidebar-menu-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/likes.svg" alt="" class="w--24 h--24 filter--col--pale-sky pointer-events-none">
+                                            <span data-sidebar-menu-item-text class="fs--10 fw5 lh--18 col--fiord pointer-events-none">
+                                                PushMenu
+                                            </span>
+                                        </a>
+                                    </div>
                                     <!-- /menu item -->
 
                                     <!-- menu item (Analytics) [if active page item, then "current-page" class should be added to the div] -->
