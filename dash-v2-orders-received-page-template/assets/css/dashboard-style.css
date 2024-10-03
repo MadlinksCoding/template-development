@@ -877,8 +877,7 @@ html {
   padding-bottom: 0
 }
 
-.pad--x--12 {
-  padding-left: .75rem;
+.pad--right--12 {
   padding-right: .75rem
 }
 
@@ -904,8 +903,21 @@ html {
   top: 1.8rem
 }
 
+.top--50 {
+  top: 50%
+}
+
+.translate--50-y-neg {
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%)
+}
+
 .right--9-neg {
   right: -.563rem
+}
+
+.right--12 {
+  right: .75rem
 }
 
 .bottom--1 {
