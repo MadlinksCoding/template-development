@@ -107,7 +107,9 @@ html { font-size: 16px; }
 
 /* Grid */
 .grid--cols-1-responsive-mobile-portrait { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+.grid--cols-3--responsive-mobile-portrait { grid-template-columns: repeat(3, 1fr); }
 .grid--cols-4--responsive-mobile-portrait { grid-template-columns: repeat(4, 1fr); }
+.grid--cols-6--responsive-mobile-portrait { grid-template-columns: repeat(6, 1fr); }
 
 /* Grid Column */
 .grid--col-span-2-responsive-mobile-portrait { grid-column: span 2 / span 2; }
