@@ -268,7 +268,11 @@ html {
   width: 50%
 }
 
-.h--screen-mobile {
+.max--w--100-responsive-mobile-portrait {
+  max-width: 100%
+}
+
+.h--screen-mobile-portrait {
   height: 100vh
 }
 
@@ -328,6 +332,10 @@ html {
   padding-right: 0
 }
 
+.pad--right--18-responsive-mobile-portrait {
+  padding-right: 1.125rem
+}
+
 .pad--right--32-responsive-mobile-portrait {
   padding-right: 2rem
 }
@@ -377,10 +385,20 @@ html {
   align-items: flex-start
 }
 
+.items--end-responsive-mobile-portrait {
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end
+}
+
 .flex--max-responsive-mobile-portrait {
   -webkit-box-flex: 1;
   -ms-flex: 1 0 0px;
   flex: 1 0 0
+}
+
+.right--0-responsive-mobile-portrait {
+  right: 0
 }
 
 [data-floating-panel-wrapper] {

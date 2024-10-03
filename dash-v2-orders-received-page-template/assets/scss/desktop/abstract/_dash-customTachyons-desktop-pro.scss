@@ -23,10 +23,16 @@
 .bg--col--athens-gray--90 { background-color: rgba(249, 250, 251, 0.90); }
 .bg--col--pale-sky { background-color: var(--color-pale-sky, #667085); }
 .bg--col--white-ice-green { background-color: var(--color-white-ice-green, #DCFAE6); }
+.bg--col--athens-gray-2 { background-color: var(--color-athens-gray, #EAECF0); }
+.bg--col--ebony--variation-2 { background-color: var(--color-ebony-2, #0C111D); }
+.bg--col--black--05 { background: rgba(0, 0, 0, 0.05); }
+.bg--col--green--10 { background: rgba(46, 211, 183, 0.10); }
+.bg--col--turquoise { background-color: var(--color-turquoise, #2ED3B7); }
 
 
 /* Background Gradients*/
 .bg--gd--light-white { background: linear-gradient(0deg, rgba(242, 244, 247, 0.50) 0%, rgba(242, 244, 247, 0.50) 100%), rgba(255, 255, 255, 0.50); }
+.bg--gd--light-green-to-white { background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.90) 100%), linear-gradient(0deg, rgba(46, 211, 183, 0.15) 0%, rgba(46, 211, 183, 0.15) 100%), #FFF; }
 
 /* Background Style */
 .bg--no-repeat { background-repeat: no-repeat; }
@@ -36,10 +42,13 @@
 
 
 /* Border Colors */
+.br--col--transparent { border-color: transparent; } /* confirmed in use */
 .br--col--mischka-gray { color: var(--color-mischka-gray,#D0D5DD); } /* confirmed in use */
 .br--col--pale-sky { border-color: var(--color-pale-sky, #667085); } /* confirmed in use */
 .br--col--pale-sky { border-color: var(--color-pale-sky, #667085); } /* confirmed in use */
-
+.br--col--athens-gray-2 { border-color: var(--color-athens-gray, #EAECF0); }
+.br--col--turquoise { border-color: var(--color-turquoise, #2ED3B7); }
+.br--col-brand-green { border-color: var(--color-brand-green, #07F468); }
 
 /* Fill Colors */
 
@@ -50,6 +59,7 @@
 /* Filter Colors */
 .filter--col--gull-gray { filter: brightness(0) saturate(100%) invert(89%) sepia(55%) saturate(1988%) hue-rotate(178deg) brightness(74%) contrast(83%); } /* confirmed in use */
 .filter--col--brand-green { filter: brightness(0) saturate(100%) invert(50%) sepia(94%) saturate(408%) hue-rotate(100deg) brightness(93%) contrast(87%); } /* #17B26A */
+.filter--col--turquoise { filter: brightness(0) saturate(100%) invert(77%) sepia(13%) saturate(2041%) hue-rotate(116deg) brightness(89%) contrast(95%); } /* #2ED3B7 */
 
 /* Filter Blur */
 .filter--blur--500 { filter: blur(345px); -webkit-filter: blur(345px); -moz-filter: blur(600px); }
@@ -63,11 +73,23 @@
 
 
 /* Hover Background Colors */
+.hover--bg--col--white--100:hover { background: var(--Base-White, #FFF);; }
+.hover--bg--col--black--10:hover { background: rgba(0, 0, 0, 0.10); }
 .hover--bg--col-brand-green:hover { background: var(--color-brand-green, #07F468); }
+.hover--bg--col-ebony:hover { background: var(--color-ebony, #101828); }
+.hover--bg--col-burning-orange:hover { background: var(--color-burning-orange, #FF692E); }
 
 
 /* Hover Colors */
 .group:hover .hover--col-black { color: #000; }
+.hover--parent--child--col--white:hover .hover--col--white { color: #fff; }
+.hover--parent--child--col--gull-gray:hover .hover--col--gull-gray { color: var(--color-gull-gray, #98A2B3); }
+.hover--col--brand-green:hover { color: var(--color-brand-green, #07F468); }
+.hover--col--milano-red:hover { color: var(--color-milano-red, #BC1B06); }
+
+/* Hover Border Colors*/
+.hover--br--col-brand-green:hover { border-color: var(--color-brand-green, #07F468); }
+.hover--br--col--ebony--variation-2:hover { border-color: var(--color-ebony-2, #0C111D); }
 
 
 /* Active State Background Colors*/
@@ -98,6 +120,7 @@
 
 /* Width (px) */
 .w--2 { width: 0.125rem; /* width 2px */ } /* confirmed in use */ /* pixel conversion correct */
+.w--3 { width: 0.188rem; /* width 3px */ } /* confirmed in use */ /* pixel conversion correct */
 .w--14 { width: 0.875rem; /* width 14px */ } /* confirmed in use */ /* pixel conversion correct */
 .w--72 { width: 4.5rem; /* width 72px */ } /* confirmed in use */ /* pixel conversion correct */
 .w--80 { width: 5rem; /* width 80px */ } /* confirmed in use */ /* pixel conversion correct */
@@ -109,6 +132,7 @@
 .w--250 { width: 15.625rem; /* width 250px */ } /* confirmed in use */ /* pixel conversion correct */
 .w--280 { width: 17.5rem; /* width 280px */ } /* confirmed in use */ /* pixel conversion correct */
 .w--356 { width: 22.25rem; /* width 356px */ } /* confirmed in use */ /* pixel conversion correct */
+.w--464 { width: 29rem; /* width 464px */ } /* confirmed in use */ /* pixel conversion correct */
 
 
 /* Min Width */
@@ -136,11 +160,15 @@
 
 /* Padding */
 .pad--x--6 { padding-left: 0.375rem; padding-right: 0.375rem; /* padding left right 6px */ }
+.pad--x--9 { padding-left: 0.563rem; padding-right: 0.563rem; /* padding left right 9px */ }
 .pad--10 { padding: 0.625rem; /* padding 10px */ } /* confirmed in use */ /* pixel conversion correct */
 .pad--16 { padding: 1rem; /* padding 16px */ } /* confirmed in use */ /* pixel conversion correct */
 .pad--18 { padding: 1.125rem; /* padding 18px */ } /* confirmed in use */ /* pixel conversion correct */
 .pad--bottom--0 { padding-bottom: 0; }
 .pad--x--12 { padding-left: 0.75rem; padding-right: 0.75rem; /* padding left right 12px */ }
+.pad--y--4 { padding-top: 0.25rem; padding-bottom: 0.25rem; /* padding top bottom 4px */ }
+.pad--y--16 { padding-top: 1rem; padding-bottom: 1rem; /* padding top bottom 16px */ }
+.pad--right--4 { padding-right: 0.25rem; /* padding right 4px */ } /* confirmed in use */ /* pixel conversion correct */
 
 
 /* Margin */
@@ -169,12 +197,15 @@
 
 
 /* Top */
+.top--1-8 { top: 1.8rem; }
 
 
 /* Right */
+.right--9-neg { right: -0.563rem;  /* right -9px */ }
 
 
 /* Bottom */
+.bottom--1 { bottom: 0.063rem; }
 
 
 /* Left */
@@ -196,11 +227,13 @@
 
 
 /* Backdrop Filter */
+.bg--blur--5 { -webkit-backdrop-filter: blur(5px); backdrop-filter: blur(5px); } /* confirmed in use */
 
 
 /* Box Shadow */
 .sh--7 { box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05); } /* confirmed in use */
 .sh--8 { box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25); } /* confirmed in use */
+.sh--9 { box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.25); }
 
 
 /* Drop Shadow */
@@ -219,6 +252,7 @@
 
 
 /* Border Width */
+.bw--2 { border-width: 0.125rem; }
 
 
 /* Border Radius */

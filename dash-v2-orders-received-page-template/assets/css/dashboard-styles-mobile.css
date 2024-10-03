@@ -240,6 +240,10 @@ html {
   width: 3.5rem
 }
 
+.max--w--100-responsive-mobile {
+  max-width: 100%
+}
+
 .h--screen-mobile-portrait {
   height: 100vh
 }
@@ -348,6 +352,12 @@ html {
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start
+}
+
+.items--end-responsive-mobile {
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end
 }
 
 .flex--max-responsive-mobile {
