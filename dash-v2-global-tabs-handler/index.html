@@ -31,95 +31,104 @@
         <link rel="stylesheet" href="assets/css/dashboard-styles-mobile-portrait.css" media="screen and (max-width: 479px)">
     </head>
     <body>
-        <div class="flex flex-column self-stretch flex--max">
-            <!-- tab main wrapper -->
-            <div data-tab-main-wrapper data-tabs-section="1" class="flex flex-column self-stretch flex--max">
-                <!-- tab header list -->
-                <div data-tab-header-main data-tabs-container="1" class="flex flex-column items-start self-stretch gap--8 pa2 pb0 relative">
-                    <ul data-tab-head-list data-tabs-menu="notifications-tabs-menu" data-show-default-page-load="all" class="flex items-center self-stretch gap--4 overflow-x-auto">
-                        <!-- tab head list item -->
-                        <li data-tab-head-list-item data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-first-tab" data-attribute-run-once="1" data-target="first-tab" data-flag="all" data-offset="5" data-per_page="5" class="flex">
-                            <a href="javascript: void(0)" data-tab-trigger data-is-active="true" class="flex flex-column items-center gap--10 pv2 ph3 mw--80 o-70 nowrap transition--all transition--200 transition--ease-in-out">
-                                <span class="flex items-center gap--2 h--32">
-                                    <span data-tab-label class="fs--14 fw5 lh--20 ttu nowrap col--oxford-blue transition--all transition--200 transition--ease-in-out">
-                                        All
-                                    </span>
-                                    <span data-count-badge="" class="flex flex-column items-center self-stretch gap--10">
-                                        <span data-count-text="" data-attribute-type="total-order-received-count" data-actual-stat-count="" class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal tracked--0-25 col--pale-sky">
-                                            120
-                                        </span>
-                                    </span>
-                                </span>
-                            </a>
-                        </li>
-                        <!-- /tab head list item -->
-        
-                        <!-- tab head list item -->
-                        <li data-tab-head-list-item data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-first-tab" data-attribute-run-once="1" data-target="second-tab" data-flag="unread" data-offset="5" data-per_page="5" class="flex">
-                            <a href="javascript: void(0)" data-tab-trigger data-is-active="false" class="flex flex-column items-center gap--10 pv2 ph3 mw--80 o-70 nowrap transition--all transition--200 transition--ease-in-out">
-                                <span class="flex items-center gap--2 h--32">
-                                    <span data-tab-label class="fs--14 fw5 lh--20 ttu nowrap col--oxford-blue transition--all transition--200 transition--ease-in-out">
-                                        Unread
-                                    </span>
-                                    <span data-count-badge="" class="flex flex-column items-center self-stretch gap--10">
-                                        <span data-count-text="" data-attribute-type="total-order-received-count" data-actual-stat-count="" class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal tracked--0-25 col--pale-sky">
-                                            5
-                                        </span>
-                                    </span>
-                                </span>
-                            </a>
-                        </li>
-                        <!-- /tab head list item -->
-        
-                        <!-- tab head list item -->
-                        <li data-tab-head-list-item data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-first-tab" data-attribute-run-once="1" data-target="third-tab" data-flag="custom_request" data-offset="5" data-per_page="5" class="flex">
-                            <a href="javascript: void(0)" data-tab-trigger data-is-active="false" class="flex flex-column items-center gap--10 pv2 ph3 mw--80 o-70 nowrap transition--all transition--200 transition--ease-in-out">
-                                <span class="flex items-center gap--2 h--32">
-                                    <span data-tab-label class="fs--14 fw5 lh--20 ttu nowrap col--oxford-blue transition--all transition--200 transition--ease-in-out">
-                                        Custom Request
-                                    </span>
-                                    <span data-count-badge="" class="flex flex-column items-center self-stretch gap--10">
-                                        <span data-count-text="" data-attribute-type="total-order-received-count" data-actual-stat-count="" class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal tracked--0-25 col--pale-sky">
-                                            2
-                                        </span>
-                                    </span>
-                                </span>
-                            </a>
-                        </li>
-                        <!-- /tab head list item -->
-        
-                        <!-- tab head list item -->
-                        <li data-tab-head-list-item data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-first-tab" data-attribute-run-once="1" data-target="fourth-tab" data-flag="account" data-offset="5" data-per_page="5" class="flex">
-                            <a href="javascript: void(0)" data-tab-trigger data-is-active="false" class="flex flex-column items-center gap--10 pv2 ph3 mw--80 o-70 nowrap transition--all transition--200 transition--ease-in-out">
-                                <span class="flex items-center gap--2 h--32">
-                                    <span data-tab-label class="fs--14 fw5 lh--20 ttu nowrap col--oxford-blue transition--all transition--200 transition--ease-in-out">
-                                        Account
-                                    </span>
-                                    <span data-count-badge="" class="flex flex-column items-center self-stretch gap--10" hidden>
-                                        <span data-count-text="" data-attribute-type="total-order-received-count" data-actual-stat-count="" class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal tracked--0-25 col--pale-sky">
-                                            5
-                                        </span>
-                                    </span>
-                                </span>
-                            </a>
-                        </li>
-                        <!-- /tab head list item -->
-                    </ul>
-                </div>
-                <!-- /tab header list -->
-        
-                <!-- tab content containers wrapper -->
-                <div data-tab-contents-containers-main data-tabs-content="1" class="flex flex-column self-stretch">
-                    <!-- tab content container -->
-                    <div data-tabbed-content="tabbed-content-first-tab" data-target="first-tab" class="flex flex-column self-stretch">
-                        
-                    </div>
-                    <!-- /tab content container -->
-                </div>
-                <!-- /tab content containers wrapper -->
+
+        <!-- scrollable tab -->
+        <div class="flex flex-column self-stretch flex--max pa3">
+            <div class="flex flex-column self-stretch flex--max mb3">
+                <h3 class="fs--18">Scrollable Tab</h3>
             </div>
-            <!-- /tab main wrapper -->
+
+            <div class="flex flex-column self-stretch flex--max">
+                <!-- tab main wrapper -->
+                <div data-tab-main-wrapper data-tabs-section="1" class="flex flex-column self-stretch flex--max">
+                    <!-- tab header list -->
+                    <div data-tab-header-main data-tabs-container="1" class="flex flex-column items-start self-stretch gap--8 pa2 pb0 relative">
+                        <ul data-tab-head-list data-tabs-menu="notifications-tabs-menu" data-show-default-page-load="all" class="flex items-center self-stretch gap--4 overflow-x-auto">
+                            <!-- tab head list item -->
+                            <li data-tab-head-list-item data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-first-tab" data-attribute-run-once="1" data-target="first-tab" data-flag="all" data-offset="5" data-per_page="5" class="flex">
+                                <a href="javascript: void(0)" data-tab-trigger data-is-active="true" class="flex flex-column items-center gap--10 pv2 ph3 mw--80 o-70 nowrap transition--all transition--200 transition--ease-in-out">
+                                    <span class="flex items-center gap--2 h--32">
+                                        <span data-tab-label class="fs--14 fw5 lh--20 ttu nowrap col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                            All
+                                        </span>
+                                        <span data-count-badge="" class="flex flex-column items-center self-stretch gap--10">
+                                            <span data-count-text="" data-attribute-type="total-order-received-count" data-actual-stat-count="" class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal tracked--0-25 col--pale-sky">
+                                                120
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <!-- /tab head list item -->
+            
+                            <!-- tab head list item -->
+                            <li data-tab-head-list-item data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-first-tab" data-attribute-run-once="1" data-target="second-tab" data-flag="unread" data-offset="5" data-per_page="5" class="flex">
+                                <a href="javascript: void(0)" data-tab-trigger data-is-active="false" class="flex flex-column items-center gap--10 pv2 ph3 mw--80 o-70 nowrap transition--all transition--200 transition--ease-in-out">
+                                    <span class="flex items-center gap--2 h--32">
+                                        <span data-tab-label class="fs--14 fw5 lh--20 ttu nowrap col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                            Unread
+                                        </span>
+                                        <span data-count-badge="" class="flex flex-column items-center self-stretch gap--10">
+                                            <span data-count-text="" data-attribute-type="total-order-received-count" data-actual-stat-count="" class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal tracked--0-25 col--pale-sky">
+                                                5
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <!-- /tab head list item -->
+            
+                            <!-- tab head list item -->
+                            <li data-tab-head-list-item data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-first-tab" data-attribute-run-once="1" data-target="third-tab" data-flag="custom_request" data-offset="5" data-per_page="5" class="flex">
+                                <a href="javascript: void(0)" data-tab-trigger data-is-active="false" class="flex flex-column items-center gap--10 pv2 ph3 mw--80 o-70 nowrap transition--all transition--200 transition--ease-in-out">
+                                    <span class="flex items-center gap--2 h--32">
+                                        <span data-tab-label class="fs--14 fw5 lh--20 ttu nowrap col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                            Custom Request
+                                        </span>
+                                        <span data-count-badge="" class="flex flex-column items-center self-stretch gap--10">
+                                            <span data-count-text="" data-attribute-type="total-order-received-count" data-actual-stat-count="" class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal tracked--0-25 col--pale-sky">
+                                                2
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <!-- /tab head list item -->
+            
+                            <!-- tab head list item -->
+                            <li data-tab-head-list-item data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-first-tab" data-attribute-run-once="1" data-target="fourth-tab" data-flag="account" data-offset="5" data-per_page="5" class="flex">
+                                <a href="javascript: void(0)" data-tab-trigger data-is-active="false" class="flex flex-column items-center gap--10 pv2 ph3 mw--80 o-70 nowrap transition--all transition--200 transition--ease-in-out">
+                                    <span class="flex items-center gap--2 h--32">
+                                        <span data-tab-label class="fs--14 fw5 lh--20 ttu nowrap col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                            Account
+                                        </span>
+                                        <span data-count-badge="" class="flex flex-column items-center self-stretch gap--10" hidden>
+                                            <span data-count-text="" data-attribute-type="total-order-received-count" data-actual-stat-count="" class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal tracked--0-25 col--pale-sky">
+                                                5
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <!-- /tab head list item -->
+                        </ul>
+                    </div>
+                    <!-- /tab header list -->
+            
+                    <!-- tab content containers wrapper -->
+                    <div data-tab-contents-containers-main data-tabs-content="1" class="flex flex-column self-stretch">
+                        <!-- tab content container -->
+                        <div data-tabbed-content="tabbed-content-first-tab" data-target="first-tab" class="flex flex-column self-stretch">
+                            
+                        </div>
+                        <!-- /tab content container -->
+                    </div>
+                    <!-- /tab content containers wrapper -->
+                </div>
+                <!-- /tab main wrapper -->
+            </div>
         </div>
+        <!-- /scrollable tab -->
 
         <script src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/FINAL/js/main.js?ver=1181376583" id="main-js"></script>
         <script src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/FINAL/js/pageElements.js?ver=3464059505" id="pageElements-js"></script>
