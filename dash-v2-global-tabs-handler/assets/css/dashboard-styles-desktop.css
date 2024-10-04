@@ -112,10 +112,6 @@ html {
   background-color: rgba(249, 250, 251, .7)
 }
 
-.bg--col--athens-gray--90 {
-  background-color: rgba(249, 250, 251, .9)
-}
-
 .bg--col--athens-gray--70--variation-2 {
   background-color: rgba(234, 236, 240, .7)
 }
@@ -150,6 +146,14 @@ html {
 
 .bg--col--dodger-blue--10 {
   background-color: rgba(41, 112, 255, .1)
+}
+
+.bg--col--very-dark-ebony {
+  background-color: var(--color-very-dark-ebony)
+}
+
+.bg--col--very-dark-ebony-70 {
+  background-color: rgba(16, 24, 40, .7)
 }
 
 .br--col--mischka {
@@ -360,14 +364,6 @@ html {
   min-width: 5rem
 }
 
-.mw--300 {
-  min-width: 18.75rem
-}
-
-.max--w--480 {
-  max-width: 30rem
-}
-
 .max--w--767 {
   max-width: 47.938rem
 }
@@ -406,6 +402,10 @@ html {
 
 .h--56 {
   height: 3.5rem
+}
+
+.h--88 {
+  height: 5.5rem
 }
 
 .pad--6 {
@@ -497,13 +497,12 @@ html {
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, .15)
 }
 
-.sh--popup-1 {
-  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .25);
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, .25)
-}
-
 .br--2 {
   border-radius: .125rem
+}
+
+.br--5 {
+  border-radius: .313rem
 }
 
 .br--6 {
