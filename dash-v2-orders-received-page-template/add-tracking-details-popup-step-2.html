@@ -40,7 +40,7 @@
             <!-- page sidebar -->
             <section data-sidebar data-section="sidebar" class="flex vh-100 sticky top-0 z-2 bg--col--athens-gray--70 sh--sidebar vw--100--responsive-mobile vw--100--responsive-mobile-portrait h--48-responsive-mobile h--48-responsive-mobile-portrait bg--col--white--70--responsive-mobile bg--col--white--70--responsive-mobile-portrait sh--none--responsive-mobile sh--none--responsive-mobile-portrait">
                 <!-- mobile header -->
-                <div data-mobile-header data-mobile-only class="pad--y--8 pad--x--16 flex-column flex--max gap--16 br--24 bg--blur--25 dn dn-responsive-mobile">
+                <div data-mobile-header data-mobile-only class="pad--y--8 pad--x--16 flex-column flex--max gap--16 bg--blur--25 dn dn-responsive-mobile">
                     <div class="flex justify-between items-center">
                         <!-- Site Logo -->
                         <div class="relative">
@@ -5093,14 +5093,14 @@
             <!-- Order Details Popup -->
             <div data-id="order-details-popup" class="w--480 w--100-responsive-mobile w--100-responsive-mobile-portrait h--screen flex flex-column bg--col--athens-gray--90 sh--8 bg--blur--10 fixed right-0 top-0 z--11100">
                 <!-- Popup Top Order Info -->
-                <div class="bb br--col--mischka-gray flex items-start">
+                <div class="flex items-start">
                     <!-- Item Image -->
-                    <div class="pad--10 bg-black flex items-center justify-center">
+                    <div class="h-100 pad--10 bg-black flex items-center justify-center">
                         <img src="assets/icons/merch-icon.svg" alt="" class="w--36 h--36">
                     </div>
                     <!-- End Item Image -->
                     <!-- Item ID -->
-                    <div class="pad--y--8 pad--x--16 gap--4 flex items-start flex-auto">
+                    <div class="pad--y--8 pad--x--16 pad--x--8-responsive-mobile pad--x--8-responsive-mobile-portrait gap--4 flex items-start flex-auto bb br--col--mischka-gray ">
                         <div class="flex flex-column gap--4 flex-auto">
                             <span class="fs--12 fw6 lh--18 black">Order#123456</span>
                             <span class="fs--12 fw4 lh--18 col--pale-sky">Received  on 22 Jan 2024</span>
@@ -5116,7 +5116,7 @@
                 </div>
                 <!-- End Popup Top Order Info -->
                 <!-- Order Details Info -->
-                <div class="flex flex-column">
+                <div class="flex flex-column overflow-auto">
                     <!-- Add Tracking Details Upload Screenshot -->
                     <div class="w-100 pad--16 pad--8-responsive-mobile pad--8-responsive-mobile-portrait bg--col--athens-gray-2 bb br--col--mischka-gray flex flex-column gap--16">
                         <div class="flex justify-between">
@@ -5163,7 +5163,9 @@
                                         <img src="assets/images/avatar-mango.png" alt="" class="w--20 h--20">
                                         <span class="fs--14 fw4 lh--20 col--oxford-blue truncate">@mangoes</span>
                                     </div>
-                                    <a href="#" class="fs--12 fw4 lh--18 col--gull-gray">email@email.com</a>
+                                    <a href="#">
+                                        <span class="fs--12 fw4 lh--18 col--gull-gray">email@email.com</span>
+                                    </a>
                                 </div>
                             </div>
                         </div>
