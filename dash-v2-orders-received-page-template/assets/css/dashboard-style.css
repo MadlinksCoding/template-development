@@ -1075,7 +1075,8 @@ html {
 }
 
 [data-tabs-menu] [data-tabbed-child-id].active [data-span-title] {
-  color: var(--color-oxford-blue, #344054)
+  color: var(--color-oxford-blue, #344054);
+  font-weight: 600
 }
 
 [data-tabs-menu] [data-tabbed-child-id].active [data-span-value] {
@@ -1101,6 +1102,10 @@ html {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg)
   }
+}
+
+input[type=text] {
+  border-radius: 0
 }
 
 [data-floating-panel-wrapper] [data-floating-panel] {

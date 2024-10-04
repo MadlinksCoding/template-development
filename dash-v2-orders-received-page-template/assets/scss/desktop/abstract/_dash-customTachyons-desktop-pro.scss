@@ -308,7 +308,7 @@
 /* Tab Style */
 [data-tabs-content] [data-tabbed-content].active { display: block; }
 [data-tabs-menu] [data-tabbed-child-id].active { background: var(--Base-White, #FFF); }
-[data-tabs-menu] [data-tabbed-child-id].active [data-span-title] { color: var(--color-oxford-blue,#344054); }
+[data-tabs-menu] [data-tabbed-child-id].active [data-span-title] { color: var(--color-oxford-blue,#344054); font-weight: 600; }
 [data-tabs-menu] [data-tabbed-child-id].active [data-span-value] { color: var(--color-pale-sky,#667085); }
 
 
@@ -322,3 +322,6 @@
         transform:rotate(360deg)
     }
 }
+
+/* Global Input style */
+input[type="text"] { border-radius: 0;}
