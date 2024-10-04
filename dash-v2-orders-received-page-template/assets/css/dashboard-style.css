@@ -1145,6 +1145,12 @@ html {
   height: 1rem !important
 }
 
+[data-id=courier-select] .nice-select.v1.filter:not(.has-tags) .current.active,
+[data-id=courier-select] .nice-select.v1.filter:not(.has-tags) .multiple-options.active {
+  background: 0 0;
+  border: 0
+}
+
 [data-container-bg-fixed]:-moz-read-only {
   filter: blur(0);
   -webkit-filter: blur(0);
