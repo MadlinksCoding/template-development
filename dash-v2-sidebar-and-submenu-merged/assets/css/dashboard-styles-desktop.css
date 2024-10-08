@@ -2,6 +2,18 @@ html {
   font-size: 16px !important
 }
 
+@media screen and (max-width:375px) {
+  html {
+    font-size: 14px !important
+  }
+}
+
+@media screen and (max-width:329px) {
+  html {
+    font-size: 12px !important
+  }
+}
+
 * {
   scrollbar-width: none;
   -ms-overflow-style: none
