@@ -1203,6 +1203,11 @@ html {
   border: 0
 }
 
+.nice-select.v1.filter .current:not(.active) [data-dropdown-arrow] path,
+[data-id=courier-select] .nice-select.v1.filter .multiple-options:not(.active) [data-dropdown-arrow] path {
+  fill: none !important
+}
+
 [data-container-bg-fixed]:-moz-read-only {
   filter: blur(0);
   -webkit-filter: blur(0);
