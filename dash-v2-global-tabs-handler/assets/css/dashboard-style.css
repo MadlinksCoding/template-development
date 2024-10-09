@@ -1101,6 +1101,17 @@ html {
   font-weight: 600
 }
 
+[data-responsive-tab-header-type=stretchable] .active[data-tab-head-list-item] [data-tab-trigger],
+[data-responsive-tab-header-type=stretchable] [data-tab-head-list-item] [data-tab-trigger][data-is-active=true] {
+  background-color: var(--color-ebony-2, #0c111d)
+}
+
+[data-responsive-tab-header-type=stretchable] .active[data-tab-head-list-item] [data-tab-trigger] [data-tab-label],
+[data-responsive-tab-header-type=stretchable] [data-tab-head-list-item] [data-tab-trigger][data-is-active=true] [data-tab-label] {
+  color: var(--color-white, #fff);
+  font-weight: 600
+}
+
 [data-responsive-tab-header-type=dropdown] {
   position: relative
 }

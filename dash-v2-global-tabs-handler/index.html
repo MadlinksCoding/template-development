@@ -41,8 +41,8 @@
             <div class="flex flex-column self-stretch flex--max">
                 <!-- tab main wrapper -->
                 <div data-tab-main-wrapper="" data-tabs-section="1" class="flex flex-column self-stretch flex--max">
-                    <!-- tab header list (type = [scrollable, dropdown], responsive-breakpoint = [default, number in px]) -->
-                    <div data-tab-header-main="" data-tabs-container="1" data-responsive-tab-header-type="scrollable" data-responsive-breakpoint="default" class="flex flex-column items-start self-stretch gap--8 pa2 pb0 relative">
+                    <!-- tab header list (type = [scrollable, stretchable, dropdown]) -->
+                    <div data-tab-header-main="" data-tabs-container="1" data-responsive-tab-header-type="scrollable" class="flex flex-column items-start self-stretch gap--8 pa2 pb0 relative">
                         <ul data-tab-head-list="" data-tabs-menu="notifications-tabs-menu" data-show-default-page-load="all" class="flex items-center self-stretch gap--4 overflow-x-auto">
                             <!-- tab head list item -->
                             <li data-tab-head-list-item="" data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-first-tab-1" data-attribute-run-once="1" data-target="first-tab" data-flag="all" data-offset="5" data-per_page="5" class="flex active">
@@ -118,9 +118,9 @@
                     <!-- tab content containers wrapper -->
                     <div data-tab-contents-containers-main="" data-tabs-content="1" class="flex flex-column self-stretch">
                         <!-- tab content container (first tab) -->
-                        <div data-tabbed-content="tabbed-content-first-tab-1" data-target="first-tab" data-is-active="true" class="flex flex-column self-stretch">
+                        <div data-tabbed-content="tabbed-content-first-tab-1" data-target="first-tab" data-is-active="false" class="flex flex-column self-stretch active">
                             <div class="flex flex-column pv3">
-                                First Tab
+                                First Tab Content
                             </div>
                         </div>
                         <!-- /tab content container -->
@@ -128,7 +128,7 @@
                         <!-- tab content container (second tab) -->
                         <div data-tabbed-content="tabbed-content-second-tab-1" data-target="second-tab" data-is-active="false" class="flex flex-column self-stretch">
                             <div class="flex flex-column pv3">
-                                Second Tab
+                                Second Tab Content
                             </div>
                         </div>
                         <!-- tab content container -->
@@ -136,7 +136,7 @@
                         <!-- tab content container (third tab) -->
                         <div data-tabbed-content="tabbed-content-third-tab-1" data-target="third-tab" data-is-active="false" class="flex flex-column self-stretch">
                             <div class="flex flex-column pv3">
-                                Third Tab
+                                Third Tab Content
                             </div>
                         </div>
                         <!-- tab content container -->
@@ -144,7 +144,7 @@
                         <!-- tab content container (fourth tab) -->
                         <div data-tabbed-content="tabbed-content-fourth-tab-1" data-target="fourth-tab" data-is-active="false" class="flex flex-column self-stretch">
                             <div class="flex flex-column pv3">
-                                Fourth Tab
+                                Fourth Tab Content
                             </div>
                         </div>
                         <!-- tab content container -->
@@ -156,6 +156,71 @@
         </div>
         <!-- /scrollable tab -->
 
+        <!-- stretchable tab -->
+        <div class="flex flex-column self-stretch flex--max pa3">
+            <div class="flex flex-column self-stretch flex--max mb3">
+                <h3 class="fs--18">Stretchable Tab</h3>
+            </div>
+
+            <div class="flex flex-column self-stretch flex--max">
+                <!-- tab main wrapper -->
+                <div data-tab-main-wrapper="" data-tabs-section="1" class="flex flex-column self-stretch flex--max">
+                    <!-- tab header list (type = [scrollable, stretchable, dropdown]) -->
+                    <div data-tab-header-main="" data-tabs-container="1" data-responsive-tab-header-type="stretchable" class="flex w--100-responsive-tablet w--100-responsive-mobile w--100-responsive-mobile-portrait" data-show-default-page-load="views">
+                        <!-- main tab head list -->
+                        <ul data-tab-head-list data-tabs-menu="dashboard-tabs-menu" class="flex flex--max items-start br--5 ba br--col--mischka bg-white overflow-hidden w--100-responsive-tablet w--100-responsive-mobile w--100-responsive-mobile-portrait" data-show-default-page-load="unread">
+                            <!-- first tab menu item -->
+                            <li data-tab-head-list-item data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-1x-tab" data-attribute-run-once="1" data-target="first-tab" data-flag="unread" data-status="unread" data-offset="5" data-per_page="5" class="flex justify-center items-center flex--max gap--8 flex--max-responsive-tablet flex--max-responsive-mobile flex--max-responsive-mobile-portrait active">
+                                <a href="#" tab-trigger="1" data-tab-trigger="1" data-is-active="false" data-throw-event="fs-evt-eventname" class="w-100 inline-flex justify-center items-center gap--8 gap--4-responsive-mobile gap--4-responsive-mobile-portrait pointer w-100 pad--y--8 pad--x--16 pad--8-responsive-mobile pad--8-responsive-mobile-portrait">
+                                    <span data-tab-label class="fs--14 fw5 lh--20 col--gull-gray nowrap fs--12-responsive-mobile lh--18-responsive-mobile fs--12-responsive-mobile-portrait lh--18-responsive-mobile-portrait">Free</span>
+                                </a>
+                            </li>
+
+                            <!-- second tab menu item -->
+                            <li data-tab-head-list-item data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-2x-tab" data-attribute-run-once="1" data-target="second-tab" data-flag="cpr" data-status="unread" data-offset="0" data-per_page="5" class="flex justify-center items-center flex--max gap--8 bl br--col--mischka flex--max-responsive-tablet flex--max-responsive-mobile flex--max-responsive-mobile-portrait">
+                               <a href="#" tab-trigger="1" data-tab-trigger="1" data-is-active="false" data-throw-event="fs-evt-eventname" class="inline-flex justify-center items-center gap--8 gap--4-responsive-mobile gap--4-responsive-mobile-portrait pointer w-100 pad--y--8 pad--x--16 pad--8-responsive-mobile pad--8-responsive-mobile-portrait">
+                                    <span data-tab-label class="fs--14 fw5 lh--20 col--gull-gray nowrap fs--12-responsive-mobile lh--18-responsive-mobile fs--12-responsive-mobile-portrait lh--18-responsive-mobile-portrait">Hybrid</span> 
+                                </a>
+                            </li>
+
+                            <!-- third tab menu item -->
+                            <li data-tab-head-list-item data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-3x-tab" data-attribute-run-once="1" data-target="third-tab" data-flag="cpr" data-status="unread" data-offset="0" data-per_page="5" class="flex justify-center items-center flex--max gap--8 bl br--col--mischka flex--max-responsive-tablet flex--max-responsive-mobile flex--max-responsive-mobile-portrait">
+                               <a href="#" tab-trigger="1" data-tab-trigger="1" data-is-active="false" data-throw-event="fs-evt-eventname" class="inline-flex justify-center items-center gap--8 gap--4-responsive-mobile gap--4-responsive-mobile-portrait pointer w-100 pad--y--8 pad--x--16 pad--8-responsive-mobile pad--8-responsive-mobile-portrait">
+                                    <span data-tab-label class="fs--14 fw5 lh--20 col--gull-gray nowrap fs--12-responsive-mobile lh--18-responsive-mobile fs--12-responsive-mobile-portrait lh--18-responsive-mobile-portrait">Paid</span> 
+                                </a>
+                            </li>
+                        </ul>
+                   </div>
+                    <!-- /tab header list -->
+
+                    <!-- tab content containers wrapper -->
+                    <div data-tabs-content="1" class="h-100">
+                        <!-- first tab content items -->
+                        <div data-tabbed-content="tabbed-content-1x-tab" data-target="first-tab" class="h-100 flex flex-column justify-start items-start gap--16 flex-auto mt--8-neg active">
+                            <div class="flex flex-column pv3">
+                                First Tab Content
+                            </div>
+                        </div>
+
+                        <!-- second tab content items -->
+                        <div data-tabbed-content="tabbed-content-2x-tab" data-target="second-tab" class="h-100 flex-column justify-start items-start gap--16 flex-auto mt--8-neg dn">
+                            <div class="flex flex-column pv3">
+                                Second Tab Content
+                            </div>
+                        </div>
+
+                        <!-- third tab content items -->
+                        <div data-tabbed-content="tabbed-content-3x-tab" data-target="third-tab" class="h-100 flex-column justify-start items-start gap--16 flex-auto mt--8-neg dn">
+                            <div class="flex flex-column pv3">
+                                Third Tab Content
+                            </div>
+                        </div>
+                </div>
+                <!-- /tab main wrapper -->
+            </div>
+        </div>
+        <!-- /stretchable tab -->
+
         <!-- responsive dropdown tab -->
         <div class="flex flex-column self-stretch flex--max pa3">
             <div class="flex flex-column self-stretch flex--max mb3">
@@ -165,7 +230,7 @@
             <div class="flex flex-column self-stretch flex--max">
                 <!-- tab main wrapper -->
                 <div data-tab-main-wrapper="" data-tabs-section="1" class="flex flex-column self-stretch flex--max">
-                    <!-- tab header list (type = [scrollable, dropdown], responsive-breakpoint = [default, number in px], dropdown-tab-active = [false, true - dynamic], dropdown-tab-x-position = [left, right]) -->
+                    <!-- tab header list (type = [scrollable, stretchable, dropdown], responsive-breakpoint = [default, number in px], dropdown-tab-active = [false, true - dynamic], dropdown-tab-x-position = [left, right]) -->
                     <div data-tab-header-main="" data-tabs-container="1" data-responsive-tab-header-type="dropdown" data-responsive-breakpoint="767" data-dropdown-tab-active="false" data-dropdown-tab-x-position="left" class="flex w--100-responsive-tablet w--100-responsive-mobile w--100-responsive-mobile-portrait" data-show-default-page-load="views">
                         <!-- dropdown trigger & selected state -->
                         <a data-dropdown-tab-trigger data-is-active="false" class="flex justify-center items-center gap--4 pv2 ph3 br--5 ba br--col--mischka bg--col--light-gray-50 pointer">
