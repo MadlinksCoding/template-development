@@ -591,10 +591,6 @@ html {
   touch-action: none
 }
 
-.col--gull-gray {
-  color: var(--color-gull-gray, #98a2b3)
-}
-
 .col--oxford-blue {
   color: var(--color-oxford-blue, #344054)
 }
@@ -617,6 +613,10 @@ html {
 
 .col-salem-green {
   color: var(--color-salem-green, #067647)
+}
+
+.bg--col--white--25 {
+  background: rgba(255, 255, 255, .25)
 }
 
 .bg--col--light-gray-50 {
@@ -665,6 +665,10 @@ html {
 
 .bg--col--turquoise {
   background-color: var(--color-turquoise, #2ed3b7)
+}
+
+.bg--col--gray--05 {
+  background: rgba(52, 64, 84, .05)
 }
 
 .bg--gd--light-white {
@@ -859,6 +863,10 @@ html {
   width: 29rem
 }
 
+.w--927 {
+  width: 57.938rem
+}
+
 .h--screen {
   height: 100vh
 }
@@ -875,6 +883,16 @@ html {
 .pad--x--9 {
   padding-left: .563rem;
   padding-right: .563rem
+}
+
+.pad--x--40 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem
+}
+
+.pad--x--14 {
+  padding-left: .875rem;
+  padding-right: .875rem
 }
 
 .pad--10 {
@@ -897,6 +915,14 @@ html {
   padding-right: .75rem
 }
 
+.pad--right--4 {
+  padding-right: .25rem
+}
+
+.pad--right--30 {
+  padding-right: 1.875rem
+}
+
 .pad--y--4 {
   padding-top: .25rem;
   padding-bottom: .25rem
@@ -907,12 +933,17 @@ html {
   padding-bottom: 1rem
 }
 
-.pad--right--4 {
-  padding-right: .25rem
+.pad--y--10 {
+  padding-top: .625rem;
+  padding-bottom: .625rem
 }
 
 .m--0 {
   margin: 0
+}
+
+.gap--26 {
+  gap: 1.625rem
 }
 
 .top--1-8 {
@@ -970,6 +1001,11 @@ html {
 
 .br--top--2 {
   border-radius: .125rem .125rem 0 0
+}
+
+.br--bottom--left--right {
+  border-bottom-right-radius: 0 !important;
+  border-bottom-left-radius: 0 !important
 }
 
 .transform--3d {
@@ -1218,8 +1254,77 @@ html {
   }
 }
 
-input[type=text] {
+input[type=text],
+textarea {
   border-radius: 0 !important
+}
+
+[data-form-input-type=checkbox][data-form-accent-color=green] input[type=checkbox]:checked {
+  accent-color: var(--color-brand-green, #07f468);
+  background-color: var(--color-brand-green, #07f468);
+  border-color: var(--color-brand-green, #07f468)
+}
+
+[data-form-input-type=checkbox][data-form-accent-color=green] input[type=checkbox]:checked::after {
+  border-color: #000
+}
+
+[data-form-input-type=checkbox] input[type=checkbox] {
+  margin-right: .5rem;
+  margin-left: .188rem
+}
+
+[data-form-input-type=radio] input[type=radio]+label {
+  padding-left: 2rem;
+  position: relative
+}
+
+[data-form-input-type=radio] input[type=radio]+label:before {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: solid 1px var(--color-mischka, #d0d5dd);
+  background: #fff;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  cursor: pointer
+}
+
+[data-form-input-type=radio] input[type=radio]:checked+label:before {
+  background: #000
+}
+
+[data-form-input-type=radio][data-form-accent-color=green] input[type=radio]:checked+label:after {
+  content: "";
+  width: .375rem;
+  height: .375rem;
+  border-radius: 50%;
+  background: var(--Brand-green, #07f468);
+  position: absolute;
+  left: .313rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%)
+}
+
+ul[data-theme=default] li {
+  position: relative;
+  padding-left: 1rem
+}
+
+ul[data-theme=default] li:before {
+  content: "";
+  width: .25rem;
+  height: .25rem;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  left: .188rem;
+  top: .438rem
 }
 
 [data-floating-panel-wrapper] [data-floating-panel] {
@@ -3283,6 +3388,16 @@ input[type=text] {
     padding-right: 0
   }
 
+  .pad--x--8-responsive-mobile-portrait {
+    padding-left: .5rem;
+    padding-right: .5rem
+  }
+
+  .pad--x--16-responsive-mobile-portrait {
+    padding-left: 1rem;
+    padding-right: 1rem
+  }
+
   .pad--y--0-responsive-mobile-portrait {
     padding-top: 0;
     padding-bottom: 0
@@ -3332,16 +3447,6 @@ input[type=text] {
 
   .pad--right--32-responsive-mobile-portrait {
     padding-right: 2rem
-  }
-
-  .pad--x--8-responsive-mobile-portrait {
-    padding-left: .5rem;
-    padding-right: .5rem
-  }
-
-  .pad--x--16-responsive-mobile-portrait {
-    padding-left: 1rem;
-    padding-right: 1rem
   }
 
   .pad--bottom--32-responsive-mobile-portrait {
