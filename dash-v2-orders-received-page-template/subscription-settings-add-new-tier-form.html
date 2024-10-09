@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE-edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        <title>Template - Orders Received</title>
+        <title>Template - Subscription Settings Page Add New Tier Form</title>
 
         <!-- Poppins Font -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,10 +35,10 @@
     </head>
     <body>
         <!-- main wrapper -->
-        <div data-section="wrapper" class="flex flex--column-responsive-mobile flex--column-responsive-mobile-portrait">
+        <div data-section="wrapper" class="h--screen-tablet h--screen-mobile h--screen-mobile-portrait flex flex--column-responsive-mobile flex--column-responsive-mobile-portrait">
 
             <!-- page sidebar -->
-            <section data-sidebar data-section="sidebar" class="flex vh-100 sticky top-0 z-2 bg--col--athens-gray--70 sh--sidebar vw--100--responsive-mobile vw--100--responsive-mobile-portrait h--48-responsive-mobile h--48-responsive-mobile-portrait bg--col--white--70--responsive-mobile bg--col--white--70--responsive-mobile-portrait sh--none--responsive-mobile sh--none--responsive-mobile-portrait">
+            <section data-sidebar data-section="sidebar" class="flex vh-100 sticky top-0 z-2 bg--col--athens-gray--70 sh--sidebar vw--100--responsive-mobile vw--100--responsive-mobile-portrait h--48-responsive-mobile h--48-responsive-mobile-portrait bg--col--white--70--responsive-mobile bg--col--white--70--responsive-mobile-portrait sh--none--responsive-mobile sh--none--responsive-mobile-portrait display--none-responsive-mobile display--none-responsive-mobile-portrait">
                 <!-- mobile header -->
                 <div data-mobile-header data-mobile-only class="pad--y--8 pad--x--16 flex-column flex--max gap--16 bg--blur--25 dn dn-responsive-mobile">
                     <div class="flex justify-between items-center">
@@ -47,7 +47,7 @@
                             <a class="db w--24 h--24 display--none-responsive-mobile display--none-responsive-mobile-portrait" href="#">
                                 <img src="assets/img/site-logo.svg" alt="" class="w--24 h--24 o-80 pointer-events-none">
                             </a>
-                            <h1 class="poppins fs--14 lh--20 fw6 col--fiord-gray m--0 dn display--flex-responsive-mobile display--flex-responsive-mobile-portrait">Order Received</h1>
+                            <h1 class="poppins fs--14 lh--20 fw6 col--fiord-gray m--0 dn display--flex-responsive-mobile display--flex-responsive-mobile-portrait">Subscription Settings</h1>
                         </div>
                         <!-- /Site Logo -->
             
@@ -4382,103 +4382,334 @@
             </div> <!-- End Background fixed container -->
 
             <!-- main section -->
-            <main data-dashboard-page="" data-section="main" class="flex flex-column flex--max relative z-1">
+            <main data-dashboard-page="" data-section="main" class="h--screen flex flex-column flex--max relative z-1">
                 <!-- Inner Container -->
-                <div data-section="inner-container" data-tabs-section="1" class="flex flex-column gap--24 bg--gradient-white pad--top--24-responsive-tablet pad--x--16-responsive-tablet pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait pad--y--0-responsive-mobile pad--y--0-responsive-mobile-portrait ">
+                <div data-section="inner-container" data-tabs-section="1" class="h-100 flex flex-column gap--24 bg--gradient-white pad--top--24-responsive-tablet pad--x--0-responsive-tablet pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait pad--y--0-responsive-mobile pad--y--0-responsive-mobile-portrait ">
                     <!-- Top Page Header Section -->
-                    <div data-section="page-header" class="pad--40 pad--bottom--0 pad--x--0-responsive-tablet pad--top--0-responsive-tablet flex flex-column gap--24 pad--8-responsive-mobile pad--8-responsive-mobile-portrait">
+                    <div data-section="page-header" class="pad--40 pad--bottom--0 pad--x--16-responsive-tablet pad--top--0-responsive-tablet flex flex-column gap--24 pad--8-responsive-mobile pad--8-responsive-mobile-portrait">
                         <!-- Top Page Title Section -->
-                        <div data-section="page-title" class="w-100 flex gap--24 items-start justify-between gap--16--responsive-tablet gap--16--responsive-mobile gap--16--responsive-mobile-portrait flex--column-responsive-tablet flex--column-responsive-mobile flex--column-responsive-mobile-portrait display--none-responsive-mobile display--none-responsive-mobile-portrait">
-                            <h1 class="poppins fs--36 lh--44 fw6 tracked--neg--0-72 col--fiord-gray m--0 fs--30-responsive-tablet lh--38-responsive-tablet">Order Received</h1>
-                        </div><!-- End Top Page Title Section -->
-                        <!-- Top Page Settings -->
-                        <div class="flex items-center gap--16 gap--8-responsive-mobile gap--8-responsive-mobile-portrait flex--column-responsive-tablet flex--column-responsive-mobile flex--column-responsive-mobile-portrait items--start-responsive-tablet items--start-responsive-mobile items--start-responsive-mobile-portrait">
-                            <!-- Tab Content Section -->
-                            <div data-tabs-container="1" class="w--100-responsive-tablet w--100-responsive-mobile w--100-responsive-mobile-portrait" data-show-default-page-load="views">
-                                <!-- Title -->
-                                <div class="flex items-center br--5 ba br--col--mischka-gray bg--col--light-gray-50 w--100-responsive-tablet overflow-hidden">
-                                    <ul data-tabs-menu="dashboard-tabs-menu" class="flex items-start w--100-responsive-tablet w--100-responsive-mobile w--100-responsive-mobile-portrait" data-show-default-page-load="unread">
-                                        <!-- first tab menu item -->
-                                        <li data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-first-tab" data-attribute-run-once="1" data-target="first-tab" data-flag="unread" data-status="unread" data-offset="5" data-per_page="5" class="flex justify-center items-center gap--8 flex--max-responsive-tablet flex--max-responsive-mobile flex--max-responsive-mobile-portrait active">
-                                            <a href="#" class="w-100 inline-flex justify-center items-center gap--8 gap--4-responsive-mobile gap--4-responsive-mobile-portrait pointer w-100 pad--y--8 pad--x--16 pad--8-responsive-mobile pad--8-responsive-mobile-portrait" tab-trigger="1">
-                                                <span data-span-title class="fs--14 fw5 lh--20 col--gull-gray nowrap fs--12-responsive-mobile lh--18-responsive-mobile fs--12-responsive-mobile-portrait lh--18-responsive-mobile-portrait">In Progress</span>
-                                                <small data-span-value class="fs--10 fw5 lh--normal col--gull-gray tracked--0-25 h--24">60</small>
-                                            </a>
-                                        </li>
-            
-                                        <!-- second tab menu item -->
-                                        <li data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-second-tab" data-attribute-run-once="1" data-target="second-tab" data-flag="cpr" data-status="unread" data-offset="0" data-per_page="5" class="flex justify-center items-center gap--8 bl br--col--mischka-gray flex--max-responsive-tablet flex--max-responsive-mobile flex--max-responsive-mobile-portrait">
-                                           <a href="#" class="inline-flex justify-center items-center gap--8 gap--4-responsive-mobile gap--4-responsive-mobile-portrait pointer w-100 pad--y--8 pad--x--16 pad--8-responsive-mobile pad--8-responsive-mobile-portrait" tab-trigger="1">
-                                                <span data-span-title class="fs--14 fw5 lh--20 col--gull-gray nowrap fs--12-responsive-mobile lh--18-responsive-mobile fs--12-responsive-mobile-portrait lh--18-responsive-mobile-portrait">Completed</span> 
-                                                <small data-span-value class="fs--10 fw5 lh--normal col--gull-gray tracked--0-25 h--24">40</small>
-                                            </a>
-                                        </li>
-
-                                        <!-- third tab menu item -->
-                                        <li data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-second-tab" data-attribute-run-once="1" data-target="second-tab" data-flag="cpr" data-status="unread" data-offset="0" data-per_page="5" class="flex justify-center items-center gap--8 bl br--col--mischka-gray flex--max-responsive-tablet flex--max-responsive-mobile flex--max-responsive-mobile-portrait">
-                                           <a href="#" class="inline-flex justify-center items-center gap--8 gap--4-responsive-mobile gap--4-responsive-mobile-portrait pointer w-100 pad--y--8 pad--x--16 pad--8-responsive-mobile pad--8-responsive-mobile-portrait" tab-trigger="1">
-                                                <span data-span-title class="fs--14 fw5 lh--20 col--gull-gray nowrap fs--12-responsive-mobile lh--18-responsive-mobile fs--12-responsive-mobile-portrait lh--18-responsive-mobile-portrait">Canceled</span> 
-                                                <small data-span-value class="fs--10 fw5 lh--normal col--gull-gray tracked--0-25 h--24">4</small>
-                                            </a>
-                                        </li>
-                                        <!-- fourth tab menu item -->
-                                        <li data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-second-tab" data-attribute-run-once="1" data-target="second-tab" data-flag="cpr" data-status="unread" data-offset="0" data-per_page="5" class="flex justify-center items-center gap--8 bl br--col--mischka-gray flex--max-responsive-tablet flex--max-responsive-mobile flex--max-responsive-mobile-portrait">
-                                           <a href="#" class="inline-flex justify-center items-center gap--8 gap--4-responsive-mobile gap--4-responsive-mobile-portrait pointer w-100 pad--y--8 pad--x--16 pad--8-responsive-mobile pad--8-responsive-mobile-portrait" tab-trigger="1">
-                                                <span data-span-title class="fs--14 fw5 lh--20 col--gull-gray nowrap fs--12-responsive-mobile lh--18-responsive-mobile fs--12-responsive-mobile-portrait lh--18-responsive-mobile-portrait">All</span> 
-                                                <small data-span-value class="fs--10 fw5 lh--normal col--gull-gray tracked--0-25 h--24">120</small>
-                                            </a>
-                                        </li>
-                                    </ul>
+                        <div data-section="page-title" class="w-100 flex gap--24 items-center justify-between gap--16--responsive-tablet gap--16--responsive-mobile gap--16--responsive-mobile-portrait">
+                            <div class="flex items-center gap--2 pointer">
+                                <span>
+                                    <img src="assets/icons/arrow-left.svg" alt="" class="w--16 h--16" />
+                                </span>
+                                <span class="fs--12 fw5 lh--18 col--oxford-blue display--none-responsive-mobile display--none-responsive-mobile-portrait">Back</span>
+                                <span class="fs--14 fw6 lh--20 col--oxford-blue dn display--flex-responsive-mobile display--flex-responsive-mobile-portrait">New Tier</span>
+                            </div>
+                            <!-- Save/Cancel Button Group -->
+                            <div class=" flex items-center justify-end">
+                                <div class="flex items-center gap--8">
+                                    <button class="mw--100 pad--y--8 flex items-center justify-center fs--18 fw5 lh--28 col--ebony--variation-2 flex--max-responsive-mobile flex--max-responsive-mobile-portrait hover--bg--col--white--100">Cancel</button>
+                                    <button class="mw--100 pad--y--8 flex items-center justify-center fs--18 fw5 lh--28 col--gull-gray bg--col--gray--05 flex--max-responsive-mobile flex--max-responsive-mobile-portrait">SAVE</button>
                                 </div>
-                           </div>
-                            <!--End Tab Content Section -->
-                            <!-- Search and Select Content Section -->
-                            <div class="flex items-center gap--8 flex--max w--100-responsive-tablet w--100-responsive-mobile w--100-responsive-mobile-portrait">
-                                <!-- Search Field -->
-                                <div class="flex gap--6 w-100">
-                                    <div class="w-100 pad--y--8 pad--x--12 flex items-center gap--8 br--top--2">
-                                        <div class="w-100 flex items-center gap--8">
-                                            <span>
-                                                <img src="assets/images/search-sm-icon.svg" alt="" class="w--20 h--20" />
-                                            </span>
-                                            <div class="flex--max">
-                                                <input type="text" name="" placeholder="Search..." class="fs--16 lh--24 col--pale-sky">
+                            </div>
+                            <!-- End Save/Cancel Button Group -->
+                        </div><!-- End Top Page Title Section -->
+                    </div><!-- End Top Page Header Section -->
+                    <!-- Tier Information main Page Structure -->
+                    <div class="flex">
+                        <!-- Tier Information left Page Structure -->
+                        <div class="pad--bottom--32 flex-auto">
+                            <!-- Tier Information Page Structure -->
+                            <div class="flex flex-column gap--32 pad--x--40 pad--x--0-responsive-tablet pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait">
+                                <!-- Tier Information -->
+                                <div class="pad--16 flex flex-column gap--24 bg--col--white--25 bg--blur--25 pad--x--8-responsive-mobile pad--x--8-responsive-mobile-portrait">
+                                    <!-- Title -->
+                                    <h2 class="fs--24 fw6 lh--32 col--pale-sky">Tier Information</h2>
+                                    <!-- Input Field -->
+                                    <div class="flex flex-column gap--6">
+                                        <div class="pad--x--14 pad--y--10 gap--8 br--2 br--bottom--left--right bb br--col--mischka-gray bg-white-30 sh--7 relative">
+                                            <input type="text" placeholder="Tier Name..." class="w-100 bn flex-auto fs--16 lh--24 col--pale-sky" />
+                                        </div>
+                                        <span class="fs--14 lh--20 col--fiord">120/300</span>
+                                    </div>
+                                    <!-- Description Field -->
+                                    <div class="flex flex-column gap--6">
+                                        <div class="pad--x--14 pad--y--10 flex flex-column gap--8 br--2 br--bottom--left--right bb br--col--mischka-gray bg-white-30 sh--7 relative">
+                                            <div class="flex items-center gap--4">
+                                                <img src="assets/icons/bold-icon.svg" alt="" class="w--32 h--32 pointer" />
+                                                <img src="assets/icons/italic-icon.svg" alt="" class="w--32 h--32 pointer" />
+                                                <img src="assets/icons/link-icon.svg" alt="" class="w--32 h--32 pointer" />
+                                                <img src="assets/icons/list-ul-icon.svg" alt="" class="w--32 h--32 pointer" />
+                                                <img src="assets/icons/list-ol-icon.svg" alt="" class="w--32 h--32 pointer" />
                                             </div>
+                                            <textarea placeholder="Tier Description..." class="w-100 bn flex-auto fs--16 lh--24 col--pale-sky h--128"></textarea>
+                                        </div>
+                                        <span class="fs--14 lh--20 col--fiord">120/300</span>
+                                    </div>
+                                    <!-- Upload Background Image -->
+                                    <div class="flex flex-column gap--8">
+                                        <h3 class="fs--18 fw5 lh--28 col--ebony--variation-2">Background Image</h3>
+                                         <!-- File Upload box -->
+                                         <div class="pad--40 br--8 bg--col--black--05 hover--bg--col--black--10">
+                                             <label for="file-upload" class="w-100 flex flex-column justify-center items-center gap--8 pointer">
+                                                 <span class="w--40 h--40 flex justify-center">
+                                                     <img src="assets/icons/image-upload-icon.svg" alt="" class="w--40 h--40" />
+                                                 </span>
+                                                 <span class="flex flex-column gap--8 items-center justify-center">
+                                                     <p class="fs--14 lh--20 col--fiord-gray tc">
+                                                         <span class="fs--14 lh--20 fw6 col--ebony--variation-2 pointer"><span class="underline fs--14 lh--20 fw6 col--ebony--variation-2 pointer">Click here</span> to select image or drag and drop image here </span>
+                                                     </p>
+                                                     <span class="fs--14 fw5 lh--normal tracked--0-14 col--mine-shaft o-70 tc">(Allowed formats:  JPEG, PNG. Max size: 10MB)</span>
+                                                </span>
+                                             </label>
+                                             <input type="file" id="file-upload" name="" class="dn">
+                                         </div>
+                                         <!-- End File Upload box -->
+                                    </div>
+                                    <!-- End Upload Background Image -->
+                                </div><!-- End Tier Information -->
+                                <!-- Subscription Free Setting -->
+                                <div class="pad--16 flex flex-column gap--24 bg--col--white--25 bg--blur--25 pad--x--8-responsive-mobile pad--x--8-responsive-mobile-portrait">
+                                    <!-- Title -->
+                                    <h2 class="fs--24 fw6 lh--32 col--pale-sky">Subscription Fee Settings</h2>
+                                    <!-- Tab Button Group -->
+                                    <div class="flex items-center bg--col--athens-gray ba br--col--mischka br--5 overflow-hidden">
+                                        <span class="pad--x--16 pad--x--8-responsive-mobile pad--x--8-responsive-mobile-portrait pad--y--8 flex items-center justify-center gap--8 flex-auto br br--col--mischka bg--col--ebony--variation-2 hover--parent--child--col--white">
+                                            <span class="fs--14 fw6 lh--20 white hover--col--white fs--12-responsive-mobile fs--12-responsive-mobile-portrait lh--18-responsive-mobile lh--18-responsive-mobile-portrait">Free Tier </span>
+                                        </span>
+                                        <span class="pad--x--16 pad--x--8-responsive-mobile pad--x--8-responsive-mobile-portrait pad--y--8 flex items-center justify-center gap--8 flex-auto hover--parent--child--col--gull-gray">
+                                            <span class="fs--14 fw5 lh--20 col--gull-gray hover--col--gull-gray fs--12-responsive-mobile fs--12-responsive-mobile-portrait lh--18-responsive-mobile lh--18-responsive-mobile-portrait">Paid Tier</span>
+                                        </span>
+                                    </div>
+                                     <!-- End Tab Button Group -->
+                                </div><!-- End Subscription Free Setting -->
+                                <!-- Member Benefits -->
+                                <div class="pad--16 flex flex-column gap--24 bg--col--white--25 bg--blur--25 pad--x--8-responsive-mobile pad--x--8-responsive-mobile-portrait">
+                                    <!-- Title -->
+                                    <div class="flex items-center gap--8">
+                                        <h2 class="fs--24 fw6 lh--32 col--pale-sky">Member Benefits</h2>
+                                        <span class="fs--12 fw5 col--ebony--variation-2">(optional)</span>
+                                        <span class="flex justify-center items-center">
+                                            <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
+                                            <div data-tooltip data-tooltip-arrow="true" data-tooltip-position="center right" data-tooltip-size="medium" data-tooltip-theme="dark" class="relative z-5 pointer">
+                                                <img src="assets/images/help-circle.svg" alt="" class="w--16 h--16 filter--col--pale-sky pointer-events-none">
+
+                                                <div data-tooltip-text data-tooltip-content>
+                                                    <span class="fs--12 fw5 lh--18 color-inherit">
+                                                        Leave blank to disable any benefits below.
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <!-- /tooltip -->
+                                        </span>
+                                    </div>
+                                    <!-- End Title -->
+                                    <!-- Form Item Section -->
+                                    <div class="flex justify-between items-center">
+                                        <div class="flex items-center gap--8 w--400">
+                                            <span class="fs--18 fw5 lh--28">Free Tokens</span>
+                                        </div>
+                                        <!-- Input Field -->
+                                        <div class="pad--x--14 pad--y--10 br--2 br--bottom br--left bb br--col--mischka-gray bg-white-30 sh--7 relative flex items-center flex-auto">
+                                            <input type="text" class="w-100 bn flex-auto fs--16 lh--24 col--pale-sky" />
+                                            <span class="pad--x--16 fs--16 fw5 lh--24 col--oxford-blue nowrap">Tokens/mo</span>
                                         </div>
                                     </div>
-                                </div><!-- End Search Field -->
+                                    <!-- End Form Item Section -->
+                                    <!-- Form Item Section -->
+                                    <div class="flex justify-between items-center">
+                                        <div class="flex flex-column gap--8 w--400">
+                                            <div class="flex items-center gap--8">
+                                                <span class="fs--18 fw5 lh--28">Merch Discount</span>
+                                                <span class="flex justify-center items-center">
+                                                <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
+                                                    <div data-tooltip data-tooltip-arrow="true" data-tooltip-position="center right" data-tooltip-size="medium" data-tooltip-theme="dark" class="relative z-5 pointer">
+                                                        <img src="assets/images/help-circle.svg" alt="" class="w--16 h--16 filter--col--pale-sky pointer-events-none">
 
-                                <!-- Select Field -->
-                                <div data-id="order-type-select" class="relative z--10000">
-                                    <select data-nice-select>
-                                        <option value="ordertype" use-as-placeholder >Order type</option>
-                                        <option value="alltypes">All Types</option>
-                                        <option value="pv">P2V</option>
-                                        <option value="subscription">Subscription</option>
-                                        <option value="merch">Merch</option>
-                                        <option value="mix">Mix</option>
-                                    </select>
-                                    <!-- <div class="pointer">
-                                        <img src="assets/icons/arrow-down.svg" alt="" />
-                                    </div> -->
+                                                        <div data-tooltip-text data-tooltip-content>
+                                                            <span class="fs--12 fw5 lh--18 white">
+                                                                <ul data-theme="default">
+                                                                    <li class="fs--12 fw5 lh--18 white">Set percentage discount for all the merch in your shop (e.g. type ‘10’ in the input field if you want 10% off)
+                                                                    </li>
+                                                                    <li class="fs--12 fw4 lh--18 white">Leave blank to disable feature.</li>
+                                                                </ul>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <!-- /tooltip -->
+                                                </span>
+                                            </div>
+                                            <div class="flex items-center gap--8">
+                                                <div class="flex justify-start items-start c--pointer flex-column  " data-form-input-type="checkbox" data-form-input-layout="vertical" data-form-accent-color="green">
+
+                                                    <label class="flex flex-row items-center justify-start flex-shrink-0 gap10 gap--8 c--pointer">
+                                                        <input name="ppv" value="yes" type="checkbox" data-name="ppv" data-fetch-on-change="1" data-show-save-on-change="1" checked>
+                                                        <span class="fs--14 lh--20 col--ebony--variation-2 c--pointer">Apply to items already on sale</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Input Field -->
+                                        <div class="pad--x--14 pad--y--10 br--2 br--bottom br--left bb br--col--mischka-gray bg-white-30 sh--7 relative flex items-center flex-auto">
+                                            <input type="text" class="w-100 bn flex-auto fs--16 lh--24 col--pale-sky" />
+                                            <span class="pad--x--16 fs--16 fw5 lh--24 col--oxford-blue nowrap">% off</span>
+                                        </div>
+                                    </div>
+                                    <!-- End Form Item Section -->
+                                    <!-- Form Item Section -->
+                                    <div class="flex justify-between items-center">
+                                        <div class="flex flex-column gap--8 w--400">
+                                            <div class="flex items-center gap--8">
+                                                <span class="fs--18 fw5 lh--28">Pay to View Discount</span>
+                                                <span class="flex justify-center items-center">
+                                                <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
+                                                    <div data-tooltip data-tooltip-arrow="true" data-tooltip-position="center right" data-tooltip-size="medium" data-tooltip-theme="dark" class="relative z-5 pointer">
+                                                        <img src="assets/images/help-circle.svg" alt="" class="w--16 h--16 filter--col--pale-sky pointer-events-none">
+
+                                                        <div data-tooltip-text data-tooltip-content>
+                                                            <span class="fs--12 fw5 lh--18 white">
+                                                                <ul data-theme="default">
+                                                                    <li class="fs--12 fw5 lh--18 white">Set percentage discount for all pay to view product in your shop(e.g. type ‘10’ in the input field if you want 10% off) 
+                                                                    </li>
+                                                                </ul>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <!-- /tooltip -->
+                                                </span>
+                                            </div>
+                                            <div class="flex items-center gap--8">
+                                                <div class="flex justify-start items-start c--pointer flex-column  " data-form-input-type="checkbox" data-form-input-layout="vertical" data-form-accent-color="green">
+
+                                                    <label class="flex flex-row items-center justify-start flex-shrink-0 gap10 gap--8 c--pointer">
+                                                        <input name="ppv" value="yes" type="checkbox" data-name="ppv" data-fetch-on-change="1" data-show-save-on-change="1" checked>
+                                                        <span class="fs--14 lh--20 col--ebony--variation-2 c--pointer">Apply to items already on sale</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Input Field -->
+                                        <div class="pad--x--14 pad--y--10 br--2 br--bottom br--left bb br--col--mischka-gray bg-white-30 sh--7 relative flex items-center flex-auto">
+                                            <input type="text" class="w-100 bn flex-auto fs--16 lh--24 col--pale-sky" />
+                                            <span class="pad--x--16 fs--16 fw5 lh--24 col--oxford-blue nowrap">% off</span>
+                                        </div>
+                                    </div>
+                                    <!-- End Form Item Section -->
+                                    <!-- Form Item Section -->
+                                    <div class="flex justify-between items-center">
+                                        <div class="flex items-center gap--8 w--400">
+                                            <span class="fs--18 fw5 lh--28">Custom Request Discount</span>
+                                            <span class="flex justify-center items-center">
+                                            <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
+                                                <div data-tooltip data-tooltip-arrow="true" data-tooltip-position="center right" data-tooltip-size="medium" data-tooltip-theme="dark" class="relative z-5 pointer">
+                                                    <img src="assets/images/help-circle.svg" alt="" class="w--16 h--16 filter--col--pale-sky pointer-events-none">
+
+                                                    <div data-tooltip-text data-tooltip-content>
+                                                        <span class="fs--12 fw5 lh--18 white">
+                                                            <ul data-theme="default">
+                                                                <li class="fs--12 fw5 lh--18 white">Set percentage discount for all pay to view product in your shop(e.g. type ‘10’ in the input field if you want 10% off)  
+                                                                </li>
+                                                                <li class="fs--12 fw4 lh--18 white">Leave blank to disable feature.</li>
+                                                            </ul>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <!-- /tooltip -->
+                                            </span>
+                                        </div>
+                                        <!-- Input Field -->
+                                        <div class="pad--x--14 pad--y--10 br--2 br--bottom br--left bb br--col--mischka-gray bg-white-30 sh--7 relative flex items-center flex-auto">
+                                            <input type="text" class="w-100 bn flex-auto fs--16 lh--24 col--pale-sky" />
+                                            <span class="pad--x--16 fs--16 fw5 lh--24 col--oxford-blue nowrap">Tokens/mo</span>
+                                        </div>
+                                    </div>
+                                    <!-- End Form Item Section -->
+                                    <!-- Form Item Section -->
+                                    <div class="flex justify-between items-center">
+                                        <div class="flex items-center gap--8 w--400">
+                                            <span class="fs--18 fw5 lh--28">Unsubscribe Discount</span>
+                                            <span class="flex justify-center items-center">
+                                                <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
+                                                <div data-tooltip data-tooltip-arrow="true" data-tooltip-position="center right" data-tooltip-size="medium" data-tooltip-theme="dark" class="relative z-5 pointer">
+                                                    <img src="assets/images/help-circle.svg" alt="" class="w--16 h--16 filter--col--pale-sky pointer-events-none">
+
+                                                    <div data-tooltip-text data-tooltip-content>
+                                                        <span class="fs--12 fw5 lh--18 color-inherit">
+                                                            Offer discount to leaving subscriber if they decided to unsubscribe from this tier
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <!-- /tooltip -->
+                                            </span>
+                                        </div>
+                                        <!-- Input Field -->
+                                        <div class="pad--x--14 pad--y--10 br--2 br--bottom br--left bb br--col--mischka-gray bg-white-30 sh--7 relative flex items-center flex-auto">
+                                            <input type="text" class="w-100 bn flex-auto fs--16 lh--24 col--pale-sky" />
+                                            <span class="pad--x--16 fs--16 fw5 lh--24 col--oxford-blue nowrap">Tokens/mo</span>
+                                        </div>
+                                    </div>
+                                    <!-- End Form Item Section -->
                                 </div>
-                                <!-- End Select Field -->
-                                
-                            </div><!-- End Search and Select Content Section -->
-                        </div><!-- End Top Page Settings -->
-                    </div><!-- End Top Page Header Section -->
+                                <!-- End Member Benefits -->
+                                <!-- Sharing Options -->
+                                <div class="pad--16 flex flex-column gap--24 bg--col--white--25 bg--blur--25 pad--x--8-responsive-mobile pad--x--8-responsive-mobile-portrait">
+                                    <!-- Title -->
+                                    <div class="flex items-center gap--8">
+                                        <h2 class="fs--24 fw6 lh--32 col--pale-sky">Sharing Options</h2>
+                                        <span class="flex justify-center items-center">
+                                            <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
+                                            <div data-tooltip data-tooltip-arrow="true" data-tooltip-position="center right" data-tooltip-size="medium" data-tooltip-theme="dark" class="relative z-5 pointer">
+                                                <img src="assets/images/help-circle.svg" alt="" class="w--16 h--16 filter--col--pale-sky pointer-events-none">
 
-                    <div data-tabs-content="1" class="h-100 dn">
-                        <!-- first tab content items -->
-                        <div data-tabbed-content="tabbed-content-first-tab" data-target="first-tab" class="flex flex-column justify-start items-start gap--16 flex-auto mt--8-neg active">
-                            <p>First</p>
-                        </div>
+                                                <div data-tooltip-text data-tooltip-content>
+                                                    <span class="fs--12 fw5 lh--18 color-inherit">
+                                                        Offer discount to leaving subscriber if they decided to unsubscribe from this tier
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <!-- /tooltip -->
+                                        </span>
+                                    </div>
+                                    <!-- End Title -->
+                                    <!-- Toggle Switch -->
+                                    <!-- toggle -->
+                                    <div class="flex flex-column justify-center items-start self-stretch">
+                                        <div class="flex items-center gap--8 o-50">
+                                            <!-- toggle container -->
+                                            <div class="flex">
+                                                <!-- toggle switch (switch size = ['default', 'small'] / switch theme = ['default', 'light', 'dark']) -->
+                                                <label data-switch="" data-switch-size="small" data-switch-theme="dark" data-switch-for="" data-throw-event="fs-evt-eventname">
+                                                    <input type="checkbox" value="switch_slide" name="switch_slide" class="dn">
+                                                    <span data-switch-slide="" class="db"></span>
+                                                </label>
+                                                <!-- /toggle switch -->
+                                            </div>
+                                            <!-- /toggle container -->
 
-                        <!-- second tab content items -->
-                        <div data-tabbed-content="tabbed-content-second-tab" data-target="second-tab" class="flex-column justify-start items-start gap--16 flex-auto mt--8-neg dn">
-                            <p>Second</p>
+                                            <!-- toggle text -->
+                                            <div class="flex items-center gap--4">
+                                                <div class="flex items-center">
+                                                    <span class="fs--16 fw5 lh--24 col--pale-sky">
+                                                        Post updates of this tier to X 
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <!-- /toggle text -->
+                                        </div>
+                                    </div>
+                                    <!-- /toggle -->
+                                    <!-- End Toggle Switch -->
+                                </div>
+                                <!-- End Sharing Options -->
+                                <!-- Save/Cancel Button Group -->
+                                <div class=" flex items-center justify-end">
+                                    <div class="flex items-center gap--8">
+                                        <button class="mw--100 pad--y--8 flex items-center justify-center fs--18 fw5 lh--28 col--ebony--variation-2 flex--max-responsive-mobile flex--max-responsive-mobile-portrait hover--bg--col--white--100">Cancel</button>
+                                        <button class="mw--100 pad--y--8 flex items-center justify-center fs--18 fw5 lh--28 col--gull-gray bg--col--gray--05 flex--max-responsive-mobile flex--max-responsive-mobile-portrait">SAVE</button>
+                                    </div>
+                                </div>
+                                <!-- End Save/Cancel Button Group -->
+                            </div> <!-- End Tier Information Page Structure -->
                         </div>
+                        <!-- End Tier Information left Page Structure -->
+                        <!-- Card Section on Right -->
+                        <div class="pad--right--30 display--none-responsive-tablet display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                            <img src="assets/images/tier detail-card.png" alt="" />
+                        </div>
+                        <!-- End Card Section on Right -->
                     </div>
+                    <!-- End Tier Information main Page Structure -->
         
                 </div> <!-- End Inner Container -->
             </main>
