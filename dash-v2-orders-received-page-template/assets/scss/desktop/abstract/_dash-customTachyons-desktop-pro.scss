@@ -326,6 +326,7 @@
 [data-id="courier-select"] .nice-select.v1:not(.has-tags):not(.auto-width) [data-option-label] { text-wrap: nowrap; }
 [data-dropdown-arrow] { width: 1rem !important; height: 1rem !important; }
 [data-id="courier-select"] .nice-select.v1.filter:not(.has-tags) .multiple-options.active, [data-id="courier-select"] .nice-select.v1.filter:not(.has-tags) .current.active { background: transparent; border: 0; }
+[data-id="courier-select"] .nice-select.v1.filter .multiple-options:not(.active) [data-dropdown-arrow] path, .nice-select.v1.filter .current:not(.active) [data-dropdown-arrow] path { fill: none !important;}
 
 
 /* Mozila Firefox Specific CSS */
