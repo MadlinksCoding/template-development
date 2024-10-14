@@ -6,6 +6,10 @@
 [data-notifications-container][hidden] { transform: translateX(100%); }
 [data-notifications-container] { transform: translateX(0%); }
 
+[data-notification-card] [data-close-notification-card] {
+  display: none;
+}
+
 /* Notifications - Show/Hide Elements based on data attribute values */
 
 /* Notification Style - Default */
