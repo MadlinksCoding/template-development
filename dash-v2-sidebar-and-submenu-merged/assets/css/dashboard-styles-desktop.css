@@ -1042,6 +1042,10 @@ html {
   filter: brightness(0) saturate(100%) invert(34%) sepia(63%) saturate(508%) hue-rotate(123deg) brightness(94%) contrast(97%)
 }
 
+[data-notification-card][data-is-read=true] {
+  border-bottom-color: #fff
+}
+
 [data-notification-card][data-is-read=true] [data-notification-card-body],
 [data-notification-card][data-notification-type=destructive][data-is-read=true] [data-notification-card-body],
 [data-notification-card][data-notification-type=info][data-is-read=true] [data-notification-card-body],
