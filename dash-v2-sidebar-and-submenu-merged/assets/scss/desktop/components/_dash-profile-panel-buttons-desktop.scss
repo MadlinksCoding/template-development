@@ -11,12 +11,15 @@
 
 [data-profile-dotted-button][data-is-active="true"],
 [data-profile-dotted-button]:hover {
-  background-color: var(--color-brilliant-rose);
+  //background-color: var(--color-brilliant-rose);
+  background-color: var(--color-spring-green, #07F468);
+  box-shadow: 4px 4px 0px 0px var(--color-black, #000000);
 }
 
 [data-profile-dotted-button][data-is-active="true"] [data-icon] ,
 [data-profile-dotted-button]:hover [data-icon] {
-  filter: brightness(0) saturate(100%) invert(99%) sepia(99%) saturate(0%) hue-rotate(176deg) brightness(107%) contrast(100%); /* #FFFFFF */
+  //filter: brightness(0) saturate(100%) invert(99%) sepia(99%) saturate(0%) hue-rotate(176deg) brightness(107%) contrast(100%); /* #FFFFFF */
+  filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(7500%) hue-rotate(125deg) brightness(94%) contrast(105%); /* #000000 */
 }
 
 [data-profile-dotted-button] [data-dropdown-wrapper] {
@@ -44,7 +47,9 @@
 }
 
 [data-profile-view-button]:hover  [data-main] {
-  background-color: var(--color-blue-ribbon, #155EEF);
+  //background-color: var(--color-blue-ribbon, #155EEF);
+  background-color: var(--color-spring-green, #07F468);
+  box-shadow: 4px 4px 0px 0px var(--color-black, #000000);
 }
 
 [data-profile-view-button] [data-skew] {
@@ -56,7 +61,13 @@
 }
 
 [data-profile-view-button]:hover [data-skew] {
-  background-color: var(--color-blue-ribbon, #155EEF);
+  //background-color: var(--color-blue-ribbon, #155EEF);
+  background-color: var(--color-spring-green, #07F468);
+  box-shadow: 4px 4px 0px 0px var(--color-black, #000000);
+}
+
+[data-profile-view-button]:hover [data-text] {
+  color: var(--color-black, #000000);
 }
 
 /* Dashboard Go Live Button : Custom Styles */
@@ -68,7 +79,8 @@
 }
 
 [data-go-live-button]:hover  [data-main] {
-  background-color: var(--color-white, #FFFFFF);
+  //background-color: var(--color-white, #FFFFFF);
+  background-color: var(--color-brilliant-rose);
 }
 
 [data-go-live-button]:hover [data-main] [data-text] {
@@ -91,5 +103,6 @@
 }
 
 [data-go-live-button]:hover [data-skew] {
-  background-color: var(--color-white, #FFFFFF);
+  //background-color: var(--color-white, #FFFFFF);
+  background-color: var(--color-brilliant-rose);
 }

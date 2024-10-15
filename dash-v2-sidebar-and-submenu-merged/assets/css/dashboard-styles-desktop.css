@@ -1782,13 +1782,15 @@ html {
 
 [data-profile-dotted-button]:hover,
 [data-profile-dotted-button][data-is-active=true] {
-  background-color: var(--color-brilliant-rose)
+  background-color: var(--color-spring-green, #07f468);
+  -webkit-box-shadow: 4px 4px 0 0 var(--color-black, #000);
+  box-shadow: 4px 4px 0 0 var(--color-black, #000)
 }
 
 [data-profile-dotted-button]:hover [data-icon],
 [data-profile-dotted-button][data-is-active=true] [data-icon] {
-  -webkit-filter: brightness(0) saturate(100%) invert(99%) sepia(99%) saturate(0) hue-rotate(176deg) brightness(107%) contrast(100%);
-  filter: brightness(0) saturate(100%) invert(99%) sepia(99%) saturate(0) hue-rotate(176deg) brightness(107%) contrast(100%)
+  -webkit-filter: brightness(0) saturate(100%) invert(0) sepia(0) saturate(7500%) hue-rotate(125deg) brightness(94%) contrast(105%);
+  filter: brightness(0) saturate(100%) invert(0) sepia(0) saturate(7500%) hue-rotate(125deg) brightness(94%) contrast(105%)
 }
 
 [data-profile-dotted-button] [data-dropdown-wrapper] {
@@ -1820,7 +1822,9 @@ html {
 }
 
 [data-profile-view-button]:hover [data-main] {
-  background-color: var(--color-blue-ribbon, #155eef)
+  background-color: var(--color-spring-green, #07f468);
+  -webkit-box-shadow: 4px 4px 0 0 var(--color-black, #000);
+  box-shadow: 4px 4px 0 0 var(--color-black, #000)
 }
 
 [data-profile-view-button] [data-skew] {
@@ -1835,7 +1839,13 @@ html {
 }
 
 [data-profile-view-button]:hover [data-skew] {
-  background-color: var(--color-blue-ribbon, #155eef)
+  background-color: var(--color-spring-green, #07f468);
+  -webkit-box-shadow: 4px 4px 0 0 var(--color-black, #000);
+  box-shadow: 4px 4px 0 0 var(--color-black, #000)
+}
+
+[data-profile-view-button]:hover [data-text] {
+  color: var(--color-black, #000)
 }
 
 [data-go-live-button] [data-main] {
@@ -1848,7 +1858,7 @@ html {
 }
 
 [data-go-live-button]:hover [data-main] {
-  background-color: var(--color-white, #fff)
+  background-color: var(--color-brilliant-rose)
 }
 
 [data-go-live-button]:hover [data-main] [data-text] {
@@ -1876,6 +1886,6 @@ html {
 }
 
 [data-go-live-button]:hover [data-skew] {
-  background-color: var(--color-white, #fff)
+  background-color: var(--color-brilliant-rose)
 }
 /*# sourceMappingURL=../css/map/dashboard-styles-desktop.css.map */
