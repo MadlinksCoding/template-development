@@ -842,7 +842,7 @@ class DashNotificationSwipe {
       startX = touchobj.pageX;
       startY = touchobj.pageY;
       startTime = new Date().getTime();
-      e.preventDefault();
+      //e.preventDefault();
     }, false);
 
     touchsurface.addEventListener('touchend', (e) => {
@@ -860,7 +860,7 @@ class DashNotificationSwipe {
           handleswipe(swipedir);
         }
       }
-      e.preventDefault();
+      //e.preventDefault();
     }, false);
   }
 
