@@ -1,0 +1,23 @@
+/**
+ * Template name: <Dashboard Global Show Hide Container>
+ */
+
+[data-show-hide-container] {
+  display: none;
+}
+
+[data-show-hide-container][data-show-on-desktop="true"],
+[data-show-hide-container][data-show-on-desktop="true"][data-show-on-tablet="true"],
+[data-show-hide-container][data-show-on-desktop="true"][data-show-on-mobile="true"],
+[data-show-hide-container][data-show-on-desktop="true"][data-show-on-tablet="true"][data-show-on-mobile="true"] {
+  display: flex;
+}
+
+[data-show-hide-container][data-show-on-tablet="true"],
+[data-show-hide-container][data-show-on-tablet="true"][data-show-on-mobile="true"] {
+  display: none;
+}
+
+[data-show-hide-container][data-show-on-mobile="true"] {
+  display: none;
+}
