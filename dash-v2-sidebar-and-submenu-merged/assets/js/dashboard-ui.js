@@ -842,7 +842,7 @@ class DashNotificationSwipe {
       startX = touchobj.pageX;
       startY = touchobj.pageY;
       startTime = new Date().getTime();
-      e.preventDefault();
+      //e.preventDefault();
     }, false);
 
     touchsurface.addEventListener('touchend', (e) => {
@@ -860,7 +860,7 @@ class DashNotificationSwipe {
           handleswipe(swipedir);
         }
       }
-      e.preventDefault();
+      //e.preventDefault();
     }, false);
   }
 
@@ -1036,8 +1036,9 @@ class DashStatusMessageEditor {
     this.isEditing = false; // flag
     this.previousText = this.textbox.value; // container to restore previous text in cancelled
 
-		// bind 'click' event to enable editing
+		// bind 'click' event to enable editing (both edit button & textbox)
     this.editButton.addEventListener('click', this.enableEditing.bind(this));
+    this.textbox.addEventListener('click', this.enableEditing.bind(this));
 
 		// bind 'click' event to cancel editing
     this.cancelButton.addEventListener('click', this.cancelEditing.bind(this));
