@@ -40,14 +40,13 @@
             <!-- page sidebar -->
             <section data-sidebar data-section="sidebar" class="flex vh-100 sticky top-0 z-2 bg--col--athens-gray--70 sh--sidebar vw--100--responsive-mobile vw--100--responsive-mobile-portrait h--48-responsive-mobile h--48-responsive-mobile-portrait bg--col--white--70--responsive-mobile bg--col--white--70--responsive-mobile-portrait sh--none--responsive-mobile sh--none--responsive-mobile-portrait">
                 <!-- mobile header -->
-                <div data-mobile-header data-mobile-only class="pad--y--8 pad--x--16 flex-column flex--max gap--16 bg--blur--25 dn dn-responsive-mobile">
+                <div data-mobile-header data-mobile-only class="pad--y--8 pad--x--16 flex-column flex--max gap--16 br--24 bg--blur--25 dn dn-responsive-mobile">
                     <div class="flex justify-between items-center">
                         <!-- Site Logo -->
                         <div class="relative">
-                            <a class="db w--24 h--24 display--none-responsive-mobile display--none-responsive-mobile-portrait" href="#">
+                            <a class="db w--24 h--24" href="#">
                                 <img src="assets/img/site-logo.svg" alt="" class="w--24 h--24 o-80 pointer-events-none">
                             </a>
-                            <h1 class="poppins fs--14 lh--20 fw6 col--fiord-gray m--0 dn display--flex-responsive-mobile display--flex-responsive-mobile-portrait">Order Received</h1>
                         </div>
                         <!-- /Site Logo -->
             
@@ -106,7 +105,7 @@
                 <!-- /mobile header -->
 
                 <!-- sidebar main wrapper (to contain all sidebar UI elements, except submenu containers) -->
-                <div data-sidebar-main-wrapper data-mobile-nav-main-wrapper data-is-active="false" class="flex flex-column justify-center items-center gap--6 w--90 w--90--px vh-100 pa0 pad--y--12 transition--all transition--150 transition--ease-in-out vw--100--responsive-mobile vw--100--responsive-mobile-portrait fixed--responsive-mobile fixed--responsive-mobile-portrait top--0--responsive-mobile top--0--responsive-mobile-portrait left--0--responsive-mobile left--0--responsive-mobile-portrait bg--col--white--70--responsive-mobile bg--col--white--70--responsive-mobile-portrait bg--blur--25--responsive-mobile bg--blur--25--responsive-mobile-portrait gap--16--responsive-mobile gap--16--responsive-mobile-portrait pad--y--8--responsive-mobile pad--y--8--responsive-mobile-portrait pad--x--16-responsive-mobile pad--x--16-responsive-mobile-portrait">
+                <div data-sidebar-main-wrapper data-mobile-nav-main-wrapper data-is-active="false" class="flex flex-column justify-center items-center gap--6 relative z-5 w--90 w--90--px vh-100 pa0 pad--y--12 bg--col--athens-gray transition--all transition--150 transition--ease-in-out vw--100--responsive-mobile vw--100--responsive-mobile-portrait fixed--responsive-mobile fixed--responsive-mobile-portrait top--0--responsive-mobile top--0--responsive-mobile-portrait left--0--responsive-mobile left--0--responsive-mobile-portrait bg--col--white--70--responsive-mobile bg--col--white--70--responsive-mobile-portrait bg--blur--25--responsive-mobile bg--blur--25--responsive-mobile-portrait gap--16--responsive-mobile gap--16--responsive-mobile-portrait pad--y--8--responsive-mobile pad--y--8--responsive-mobile-portrait pad--x--16-responsive-mobile pad--x--16-responsive-mobile-portrait">
                     <!-- site logo -->
                     <a data-site-logo data-desktop-only href="/" title="" class="flex items-center gap--10 bg--col--lemon br--12 o-80 hov--o--100-x display-none--responsive-mobile display-none--responsive-mobile-portrait transition--opacity transition--200 transition--ease-in-out">
                         <!-- render_svg_icon( 'logo_bg-1' ) -->
@@ -122,7 +121,7 @@
                                 <img src="assets/images/avatar-2.jpeg" alt="" class="w-100 h-100 fit--cover br--20 pointer-events-none">
 
                                 <!-- status indicator -->
-                                <span class="flex w--10 h--10 bg--col--spring-green ba bw1 b--white br--7 absolute bottom-0 right-0">&nbsp;</span>
+                                <span class="flex w--10 h--10 bg--col--spring-green br--7 absolute bottom-0 right-0">&nbsp;</span>
                                 <!-- /status indicator -->
                             </a>
                         </div>
@@ -165,7 +164,7 @@
                         <nav data-dashboard-main-nav class="flex flex-column items-center self-stretch gap--4">
                             <!-- container to show normal menu items (only desktop version, when viewport height is fine to show items, keep appending elements) -->
                             <div data-menu-panel-wrapper class="flex flex-column self-stretch relative z-5">
-                                <div data-menu-panel class="flex flex-column items-center self-stretch gap--4 display-grid--responsive-mobile display-grid--responsive-mobile-portrait grid--cols-4--responsive-mobile grid--cols-4--responsive-mobile-portrait gap--16--responsive-mobile gap--16--responsive-mobile-portrait">
+                                <div data-menu-panel class="flex flex-column items-center self-stretch gap--4 display-grid--responsive-mobile display-grid--responsive-mobile-portrait grid--cols-6--responsive-mobile grid--cols-3--responsive-mobile-portrait gap--16--responsive-mobile gap--16--responsive-mobile-portrait">
                                     <!-- menu item (Push Menu Demo) (this item is added only to show a demo of multi level push menu system in corresponding submenu, not part of actual sidebar menu) -->
                                     <div data-sidebar-menu-item data-current-page-detector data-page="dashboard/some-page" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
                                         <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
@@ -291,20 +290,6 @@
                                     </div>
                                     <!-- /menu item -->
 
-                                    <!-- menu item (Blog) [if active page item, then "current-page" class should be added to the div] -->
-                                    <div data-sidebar-menu-item data-current-page-detector data-page="dashboard/blog" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
-                                        <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
-                                        <a href="javascript: void(0)" data-main-menu-item="true" data-main-menu-name="Blog" data-is-active="false" data-has-submenu="false"  data-target-submenu-container="" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
-                                            <!-- render_svg_icon( 'blog-01' ) -->
-                                            <img data-sidebar-menu-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/blog-01.svg" alt="" class="w--24 h--24 filter--col--pale-sky pointer-events-none">
-
-                                            <span data-sidebar-menu-item-text class="fs--10 fw5 lh--18 col--fiord pointer-events-none">
-                                                Blog
-                                            </span>
-                                        </a>
-                                    </div>
-                                    <!-- /menu item -->
-
                                     <!-- menu item (Settings) [if active page item, then "current-page" class should be added to the div] -->
                                     <div data-sidebar-menu-item data-current-page-detector data-page="dashboard/account" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
                                         <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
@@ -314,6 +299,20 @@
 
                                             <span data-sidebar-menu-item-text class="fs--10 fw5 lh--18 col--fiord pointer-events-none">
                                                 Settings
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <!-- /menu item -->
+
+                                    <!-- menu item (Blog) [if active page item, then "current-page" class should be added to the div] -->
+                                    <div data-sidebar-menu-item data-current-page-detector data-page="dashboard/blog" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out o-50 pointer-events-none">
+                                        <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
+                                        <a href="javascript: void(0)" data-main-menu-item="true" data-main-menu-name="Blog" data-is-active="false" data-has-submenu="false"  data-target-submenu-container="" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
+                                            <!-- render_svg_icon( 'blog-01' ) -->
+                                            <img data-sidebar-menu-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/blog-01.svg" alt="" class="w--24 h--24 filter--col--pale-sky pointer-events-none">
+
+                                            <span data-sidebar-menu-item-text class="fs--10 fw5 lh--18 col--fiord pointer-events-none">
+                                                Blog
                                             </span>
                                         </a>
                                     </div>
@@ -398,7 +397,7 @@
                 <!-- /sidebar main wrapper -->
 
                 <!-- profile, notifications and submenu panels container (keep profile/model panel, notification panel and  all submenu containers inside this div) -->
-                <div data-submenus-wrapper>
+                <div data-submenus-wrapper class="relative z-3">
                     <!-- profile panel container (same template shall be used in mobile also) -->
                     <div data-profile-panel-container class="flex flex-column items-start gap--0 w--480 vh-100 overflow-hidden bg--col--athens-gray--70--variation-2  bg--blur--25 bl br--col--mischka sh--sidebar fixed top-0 left--90 left--90--px z-1 transition--all transition--150 transition--ease-in-out vw--100--responsive-mobile vw--100--responsive-mobile-portrait left--0--responsive-mobile left--0--responsive-mobile-portrait" hidden>
                         <div data-scrollable-profile-panel class="flex flex-column items-start self-stretch gap--0 w-100 vh-100 overflow-y-auto">
@@ -474,12 +473,12 @@
 
                                                     <!-- drop down -->
                                                     <div data-status-dropdown class="flex flex-column items-start gap--10 absolute top-2 right-0 transition--all transition--150 transition--ease-in-out">
-                                                        <div class="flex flex-column self-stretch br--2 bg--col--white--70 bg--blur--25 overflow-hidden">
+                                                        <div class="flex flex-column self-stretch br--2 bg--col--white--90 bg--blur--25 overflow-hidden">
                                                             <!-- status type (online) -->
                                                             <a data-status-type="online" class="flex flex-column items-start self-stretch gap--8 pad--12 bb br--col--athens-gray2 hover-bg-white transition--background transition--150 transition--ease-in-out">
                                                                 <!-- status -->
                                                                 <div data-status-label class="flex items-center gap--8 pointer-events-none">
-                                                                    <span class="flex w--6 h--6 br--4 ba br--col--spring-green bg--col--spring-green pointer-events-none">&nbsp;</span>
+                                                                    <span class="dn w--6 h--6 br--4 ba br--col--spring-green bg--col--spring-green pointer-events-none">&nbsp;</span>
 
                                                                     <span class="flex fs--14 fw5 lh--20 ttu col--ebony--variation-2 pointer-events-none">Online</span>
                                                                 </div>
@@ -491,7 +490,7 @@
                                                             <a data-status-type="away" class="flex flex-column items-start self-stretch gap--8 pad--12 bb br--col--athens-gray2 hover-bg-white transition--background transition--150 transition--ease-in-out">
                                                                 <!-- status -->
                                                                 <div data-status-label class="flex items-center gap--8 pointer-events-none">
-                                                                    <span class="flex w--6 h--6 br--4 ba br--col--my-sin bg--col--my-sin pointer-events-none">&nbsp;</span>
+                                                                    <span class="dn w--6 h--6 br--4 ba br--col--my-sin bg--col--my-sin pointer-events-none">&nbsp;</span>
 
                                                                     <span class="flex fs--14 fw5 lh--20 ttu col--ebony--variation-2 pointer-events-none">Away</span>
                                                                 </div>
@@ -503,7 +502,7 @@
                                                             <a data-status-type="invisible" class="flex flex-column items-start self-stretch gap--8 pad--12 bb br--col--athens-gray2 bn hover-bg-white transition--background transition--150 transition--ease-in-out">
                                                                 <!-- status -->
                                                                 <div data-status-label class="flex items-center gap--8 pointer-events-none">
-                                                                    <span class="flex w--6 h--6 br--4 ba b--dotted br--col--gull-gray bg-white pointer-events-none">&nbsp;</span>
+                                                                    <span class="dn w--6 h--6 br--4 ba b--dotted br--col--gull-gray bg-none pointer-events-none">&nbsp;</span>
 
                                                                     <span class="flex fs--14 fw5 lh--20 ttu col--ebony--variation-2 pointer-events-none">Invisible</span>
                                                                 </div>
@@ -541,19 +540,83 @@
                                             <div class="flex items-center gap--4">
                                                 <div class="flex items-center">
                                                     <span class="fs--12 fw4 lh--18 white">
-                                                        Repost status message to X Automatically
+                                                        Repost status message to X
                                                     </span>
                                                 </div>
 
                                                 <div class="flex items-center">
                                                     <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
-                                                    <div data-tooltip data-tooltip-arrow="true" data-tooltip-position="bottom right" data-tooltip-size="default" data-tooltip-theme="dark" class="relative z-5 pointer">
+                                                    <div data-tooltip data-tooltip-arrow="true" data-tooltip-position="bottom center" data-tooltip-size="medium" data-tooltip-theme="dark" class="relative z-5 pointer">
                                                         <img src="assets/images/help-circle.svg" alt="" class="w--16 h--16 filter--col--pale-sky">
 
                                                         <div data-tooltip-text data-tooltip-content>
                                                             <span class="fs--12 fw4 lh--18 color-inherit">
-                                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                                                We will repost your status and custom message to X everytime you updated
                                                             </span>
+
+                                                            <!-- twitter card -->
+                                                            <div data-twitter-card data-twitter-card-type="tooltip" class="flex flex-column items-start self-stretch gap--8 pad--12 bg--col--very-dark-ebony-70">
+                                                                <!-- card header -->
+                                                                <div data-twitter-card-header class="flex items-center self-stretch gap--4">
+                                                                    <!-- avater -->
+                                                                    <a href="javascript: void(0)" title="" class="flex w--24 h--24 br--30 relative">
+                                                                        <img src="assets/images/avatar.png" alt="" class="w--24 h--24 fit--cover br--30 pointer-events-none">
+                                        
+                                                                        <!-- status indicator -->
+                                                                        <span class="flex w--6 h--6 bg--col--spring-green br--7 absolute bottom-0 right-0">&nbsp;</span>
+                                                                        <!-- /status indicator -->
+                                                                    </a>
+                                                                    <!-- /avater -->
+
+                                                                    <!-- username -->
+                                                                    <div class="flex items-center gap--8">
+                                                                        <div class="flex items-center gap--4">
+                                                                            <!-- name -->
+                                                                            <span data-profile-name="" class="flex fs--12 fw6 lh--18 white">
+                                                                                Jelly FISH
+                                                                            </span>
+                                                                            <!-- /name -->
+                    
+                                                                            <!-- verified tick -->
+                                                                            <img src="assets/images/verified-tick.svg" alt="" class="w--12 h--12">
+                                                                            <!-- /verified tick -->
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- /username -->
+
+                                                                    <!-- disclaimer -->
+                                                                    <div class="flex flex--max justify-end items-center">
+                                                                        <span class="flex fs--12 fw5 lh--18 white o-50">
+                                                                            post preview
+                                                                        </span>
+                                                                    </div>
+                                                                    <!-- /disclaimer -->
+                                                                </div>
+                                                                <!-- /card header -->
+
+                                                                <!-- status -->
+                                                                <div data-twitter-card-status class="flex items-center self-stretch gap--4">
+                                                                    <p class="flex self-stretch fs--12 fw5 lh--18 white">
+                                                                        Jelly’s always hungry, come get me some sweets 💋
+                                                                    </p>
+                                                                </div>
+                                                                <!-- /status -->
+
+                                                                <!-- url -->
+                                                                <div data-twitter-card-url class="flex items-center self-stretch gap--4">
+                                                                    <a href="javascript: void(0)" class="flex self-stretch fs--12 fw5 lh--18 white underline pointer">
+                                                                        fansocial.app/model/jellyskitchen
+                                                                    </a>
+                                                                </div>
+                                                                <!-- /url -->
+
+                                                                <!-- thumbnail preview -->
+                                                                <div data-twitter-card-thumbnail class="flex items-center self-stretch gap--4 br--5 h-auto">
+                                                                    <img src="assets/images/profile-bg.png" alt="" class="w-100 h-auto br--5 fit--cover">
+                                                                </div>
+                                                                <!-- /thumbnail preview -->
+                                                            </div>
+                                                            <!-- /twitter card -->
                                                         </div>
                                                     </div>
                                                     <!-- /tooltip -->
@@ -697,12 +760,12 @@
 
                                             <span class="flex justify-center items-center">
                                                 <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
-                                                <div data-tooltip data-tooltip-arrow="true" data-tooltip-position="bottom center" data-tooltip-size="small" data-tooltip-theme="dark" class="relative z-5 pointer">
+                                                <div data-tooltip data-tooltip-arrow="true" data-tooltip-position="bottom center" data-tooltip-size="medium" data-tooltip-theme="light" class="relative z-5 pointer">
                                                     <img src="assets/images/help-circle.svg" alt="" class="w--16 h--16 filter--col--pale-sky pointer-events-none">
 
                                                     <div data-tooltip-text data-tooltip-content>
                                                         <span class="fs--12 fw4 lh--18 color-inherit">
-                                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                                            Your status and custom message will appear on your profile when someone want to make you a video call
                                                         </span>
                                                     </div>
                                                 </div>
@@ -856,19 +919,83 @@
                                             <div class="flex items-center gap--4">
                                                 <div class="flex items-center">
                                                     <span class="fs--12 fw4 lh--18 col--pale-sky">
-                                                        Repost status message to X Automatically
+                                                        Repost status message to X
                                                     </span>
                                                 </div>
 
                                                 <div class="flex items-center">
                                                     <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
-                                                    <div data-tooltip="" data-tooltip-arrow="true" data-tooltip-position="bottom right" data-tooltip-size="default" data-tooltip-theme="dark" class="relative z-5 pointer">
+                                                    <div data-tooltip data-tooltip-arrow="true" data-tooltip-position="bottom center" data-tooltip-size="medium" data-tooltip-theme="dark" class="relative z-5 pointer">
                                                         <img src="assets/images/help-circle.svg" alt="" class="w--16 h--16 filter--col--pale-sky">
 
-                                                        <div data-tooltip-text="" data-tooltip-content="">
+                                                        <div data-tooltip-text data-tooltip-content>
                                                             <span class="fs--12 fw4 lh--18 color-inherit">
-                                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                                                We will repost your status and custom message to X everytime you updated
                                                             </span>
+
+                                                            <!-- twitter card -->
+                                                            <div data-twitter-card data-twitter-card-type="tooltip" class="flex flex-column items-start self-stretch gap--8 pad--12 bg--col--very-dark-ebony-70">
+                                                                <!-- card header -->
+                                                                <div data-twitter-card-header class="flex items-center self-stretch gap--4">
+                                                                    <!-- avater -->
+                                                                    <a href="javascript: void(0)" title="" class="flex w--24 h--24 br--30 relative">
+                                                                        <img src="assets/images/avatar.png" alt="" class="w--24 h--24 fit--cover br--30 pointer-events-none">
+                                        
+                                                                        <!-- status indicator -->
+                                                                        <span class="flex w--6 h--6 bg--col--spring-green br--7 absolute bottom-0 right-0">&nbsp;</span>
+                                                                        <!-- /status indicator -->
+                                                                    </a>
+                                                                    <!-- /avater -->
+
+                                                                    <!-- username -->
+                                                                    <div class="flex items-center gap--8">
+                                                                        <div class="flex items-center gap--4">
+                                                                            <!-- name -->
+                                                                            <span data-profile-name="" class="flex fs--12 fw6 lh--18 white">
+                                                                                Jelly FISH
+                                                                            </span>
+                                                                            <!-- /name -->
+                    
+                                                                            <!-- verified tick -->
+                                                                            <img src="assets/images/verified-tick.svg" alt="" class="w--12 h--12">
+                                                                            <!-- /verified tick -->
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- /username -->
+
+                                                                    <!-- disclaimer -->
+                                                                    <div class="flex flex--max justify-end items-center">
+                                                                        <span class="flex fs--12 fw5 lh--18 white o-50">
+                                                                            post preview
+                                                                        </span>
+                                                                    </div>
+                                                                    <!-- /disclaimer -->
+                                                                </div>
+                                                                <!-- /card header -->
+
+                                                                <!-- status -->
+                                                                <div data-twitter-card-status class="flex items-center self-stretch gap--4">
+                                                                    <p class="flex self-stretch fs--12 fw5 lh--18 white">
+                                                                        Jelly’s always hungry, come get me some sweets 💋
+                                                                    </p>
+                                                                </div>
+                                                                <!-- /status -->
+
+                                                                <!-- url -->
+                                                                <div data-twitter-card-url class="flex items-center self-stretch gap--4">
+                                                                    <a href="javascript: void(0)" class="flex self-stretch fs--12 fw5 lh--18 white underline pointer">
+                                                                        fansocial.app/model/jellyskitchen
+                                                                    </a>
+                                                                </div>
+                                                                <!-- /url -->
+
+                                                                <!-- thumbnail preview -->
+                                                                <div data-twitter-card-thumbnail class="flex items-center self-stretch gap--4 br--5 h-auto">
+                                                                    <img src="assets/images/profile-bg.png" alt="" class="w-100 h-auto br--5 fit--cover">
+                                                                </div>
+                                                                <!-- /thumbnail preview -->
+                                                            </div>
+                                                            <!-- /twitter card -->
                                                         </div>
                                                     </div>
                                                     <!-- /tooltip -->
@@ -897,12 +1024,12 @@
 
                                             <span class="flex justify-center items-center">
                                                 <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
-                                                <div data-tooltip data-tooltip-arrow="true" data-tooltip-position="bottom center" data-tooltip-size="small" data-tooltip-theme="dark" class="relative z-5 pointer">
-                                                    <img src="assets/images/help-circle.svg" alt="" class="w--16 h--16 filter--col--pale-sky">
+                                                <div data-tooltip data-tooltip-arrow="true" data-tooltip-position="bottom center" data-tooltip-size="medium" data-tooltip-theme="light" class="relative z-5 pointer">
+                                                    <img src="assets/images/help-circle.svg" alt="" class="w--16 h--16 filter--col--pale-sky pointer-events-none">
 
                                                     <div data-tooltip-text data-tooltip-content>
                                                         <span class="fs--12 fw4 lh--18 color-inherit">
-                                                            Away Message...
+                                                            Your status and custom message will appear on your profile when someone want to make you a video call
                                                         </span>
                                                     </div>
                                                 </div>
@@ -1056,19 +1183,83 @@
                                             <div class="flex items-center gap--4">
                                                 <div class="flex items-center">
                                                     <span class="fs--12 fw4 lh--18 col--pale-sky">
-                                                        Repost status message to X Automatically
+                                                        Repost status message to X
                                                     </span>
                                                 </div>
 
                                                 <div class="flex items-center">
                                                     <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
-                                                    <div data-tooltip="" data-tooltip-arrow="true" data-tooltip-position="bottom right" data-tooltip-size="default" data-tooltip-theme="dark" class="relative z-5 pointer">
+                                                    <div data-tooltip data-tooltip-arrow="true" data-tooltip-position="bottom center" data-tooltip-size="medium" data-tooltip-theme="dark" class="relative z-5 pointer">
                                                         <img src="assets/images/help-circle.svg" alt="" class="w--16 h--16 filter--col--pale-sky">
 
-                                                        <div data-tooltip-text="" data-tooltip-content="">
+                                                        <div data-tooltip-text data-tooltip-content>
                                                             <span class="fs--12 fw4 lh--18 color-inherit">
-                                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                                                We will repost your status and custom message to X everytime you updated
                                                             </span>
+
+                                                            <!-- twitter card -->
+                                                            <div data-twitter-card data-twitter-card-type="tooltip" class="flex flex-column items-start self-stretch gap--8 pad--12 bg--col--very-dark-ebony-70">
+                                                                <!-- card header -->
+                                                                <div data-twitter-card-header class="flex items-center self-stretch gap--4">
+                                                                    <!-- avater -->
+                                                                    <a href="javascript: void(0)" title="" class="flex w--24 h--24 br--30 relative">
+                                                                        <img src="assets/images/avatar.png" alt="" class="w--24 h--24 fit--cover br--30 pointer-events-none">
+                                        
+                                                                        <!-- status indicator -->
+                                                                        <span class="flex w--6 h--6 bg--col--spring-green br--7 absolute bottom-0 right-0">&nbsp;</span>
+                                                                        <!-- /status indicator -->
+                                                                    </a>
+                                                                    <!-- /avater -->
+
+                                                                    <!-- username -->
+                                                                    <div class="flex items-center gap--8">
+                                                                        <div class="flex items-center gap--4">
+                                                                            <!-- name -->
+                                                                            <span data-profile-name="" class="flex fs--12 fw6 lh--18 white">
+                                                                                Jelly FISH
+                                                                            </span>
+                                                                            <!-- /name -->
+                    
+                                                                            <!-- verified tick -->
+                                                                            <img src="assets/images/verified-tick.svg" alt="" class="w--12 h--12">
+                                                                            <!-- /verified tick -->
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- /username -->
+
+                                                                    <!-- disclaimer -->
+                                                                    <div class="flex flex--max justify-end items-center">
+                                                                        <span class="flex fs--12 fw5 lh--18 white o-50">
+                                                                            post preview
+                                                                        </span>
+                                                                    </div>
+                                                                    <!-- /disclaimer -->
+                                                                </div>
+                                                                <!-- /card header -->
+
+                                                                <!-- status -->
+                                                                <div data-twitter-card-status class="flex items-center self-stretch gap--4">
+                                                                    <p class="flex self-stretch fs--12 fw5 lh--18 white">
+                                                                        Jelly’s always hungry, come get me some sweets 💋
+                                                                    </p>
+                                                                </div>
+                                                                <!-- /status -->
+
+                                                                <!-- url -->
+                                                                <div data-twitter-card-url class="flex items-center self-stretch gap--4">
+                                                                    <a href="javascript: void(0)" class="flex self-stretch fs--12 fw5 lh--18 white underline pointer">
+                                                                        fansocial.app/model/jellyskitchen
+                                                                    </a>
+                                                                </div>
+                                                                <!-- /url -->
+
+                                                                <!-- thumbnail preview -->
+                                                                <div data-twitter-card-thumbnail class="flex items-center self-stretch gap--4 br--5 h-auto">
+                                                                    <img src="assets/images/profile-bg.png" alt="" class="w-100 h-auto br--5 fit--cover">
+                                                                </div>
+                                                                <!-- /thumbnail preview -->
+                                                            </div>
+                                                            <!-- /twitter card -->
                                                         </div>
                                                     </div>
                                                     <!-- /tooltip -->
@@ -1097,12 +1288,12 @@
 
                                             <span class="flex justify-center items-center">
                                                 <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
-                                                <div data-tooltip data-tooltip-arrow="true" data-tooltip-position="bottom center" data-tooltip-size="small" data-tooltip-theme="dark" class="relative z-5 pointer">
-                                                    <img src="assets/images/help-circle.svg" alt="" class="w--16 h--16 filter--col--pale-sky">
+                                                <div data-tooltip data-tooltip-arrow="true" data-tooltip-position="bottom center" data-tooltip-size="medium" data-tooltip-theme="light" class="relative z-5 pointer">
+                                                    <img src="assets/images/help-circle.svg" alt="" class="w--16 h--16 filter--col--pale-sky pointer-events-none">
 
                                                     <div data-tooltip-text data-tooltip-content>
                                                         <span class="fs--12 fw4 lh--18 color-inherit">
-                                                            Away Message...
+                                                            Your status and custom message will appear on your profile when someone want to make you a video call
                                                         </span>
                                                     </div>
                                                 </div>
@@ -1256,19 +1447,83 @@
                                             <div class="flex items-center gap--4">
                                                 <div class="flex items-center">
                                                     <span class="fs--12 fw4 lh--18 col--pale-sky">
-                                                        Repost status message to X Automatically
+                                                        Repost status message to X
                                                     </span>
                                                 </div>
 
                                                 <div class="flex items-center">
                                                     <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
-                                                    <div data-tooltip="" data-tooltip-arrow="true" data-tooltip-position="bottom right" data-tooltip-size="default" data-tooltip-theme="dark" class="relative z-5 pointer">
+                                                    <div data-tooltip data-tooltip-arrow="true" data-tooltip-position="bottom center" data-tooltip-size="medium" data-tooltip-theme="dark" class="relative z-5 pointer">
                                                         <img src="assets/images/help-circle.svg" alt="" class="w--16 h--16 filter--col--pale-sky">
 
-                                                        <div data-tooltip-text="" data-tooltip-content="">
+                                                        <div data-tooltip-text data-tooltip-content>
                                                             <span class="fs--12 fw4 lh--18 color-inherit">
-                                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                                                We will repost your status and custom message to X everytime you updated
                                                             </span>
+
+                                                            <!-- twitter card -->
+                                                            <div data-twitter-card data-twitter-card-type="tooltip" class="flex flex-column items-start self-stretch gap--8 pad--12 bg--col--very-dark-ebony-70">
+                                                                <!-- card header -->
+                                                                <div data-twitter-card-header class="flex items-center self-stretch gap--4">
+                                                                    <!-- avater -->
+                                                                    <a href="javascript: void(0)" title="" class="flex w--24 h--24 br--30 relative">
+                                                                        <img src="assets/images/avatar.png" alt="" class="w--24 h--24 fit--cover br--30 pointer-events-none">
+                                        
+                                                                        <!-- status indicator -->
+                                                                        <span class="flex w--6 h--6 bg--col--spring-green br--7 absolute bottom-0 right-0">&nbsp;</span>
+                                                                        <!-- /status indicator -->
+                                                                    </a>
+                                                                    <!-- /avater -->
+
+                                                                    <!-- username -->
+                                                                    <div class="flex items-center gap--8">
+                                                                        <div class="flex items-center gap--4">
+                                                                            <!-- name -->
+                                                                            <span data-profile-name="" class="flex fs--12 fw6 lh--18 white">
+                                                                                Jelly FISH
+                                                                            </span>
+                                                                            <!-- /name -->
+                    
+                                                                            <!-- verified tick -->
+                                                                            <img src="assets/images/verified-tick.svg" alt="" class="w--12 h--12">
+                                                                            <!-- /verified tick -->
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- /username -->
+
+                                                                    <!-- disclaimer -->
+                                                                    <div class="flex flex--max justify-end items-center">
+                                                                        <span class="flex fs--12 fw5 lh--18 white o-50">
+                                                                            post preview
+                                                                        </span>
+                                                                    </div>
+                                                                    <!-- /disclaimer -->
+                                                                </div>
+                                                                <!-- /card header -->
+
+                                                                <!-- status -->
+                                                                <div data-twitter-card-status class="flex items-center self-stretch gap--4">
+                                                                    <p class="flex self-stretch fs--12 fw5 lh--18 white">
+                                                                        Jelly’s always hungry, come get me some sweets 💋
+                                                                    </p>
+                                                                </div>
+                                                                <!-- /status -->
+
+                                                                <!-- url -->
+                                                                <div data-twitter-card-url class="flex items-center self-stretch gap--4">
+                                                                    <a href="javascript: void(0)" class="flex self-stretch fs--12 fw5 lh--18 white underline pointer">
+                                                                        fansocial.app/model/jellyskitchen
+                                                                    </a>
+                                                                </div>
+                                                                <!-- /url -->
+
+                                                                <!-- thumbnail preview -->
+                                                                <div data-twitter-card-thumbnail class="flex items-center self-stretch gap--4 br--5 h-auto">
+                                                                    <img src="assets/images/profile-bg.png" alt="" class="w-100 h-auto br--5 fit--cover">
+                                                                </div>
+                                                                <!-- /thumbnail preview -->
+                                                            </div>
+                                                            <!-- /twitter card -->
                                                         </div>
                                                     </div>
                                                     <!-- /tooltip -->
@@ -1284,11 +1539,11 @@
                             <!-- /quick video, audio, chat settings -->
 
                             <!-- auto repost settings -->
-                            <div class="flex flex-column items-start self-stretch gap--16 pa3 bg--col--white--50 relative z-2">
+                            <div class="flex flex-column items-start self-stretch gap--16 pa3 bg--col--white--500 relative z-2">
                                 <!-- heading -->
                                 <div data-auto-repost-setting-toggle data-is-active="false" class="flex items-center gap--2 pointer transition--all transition--150 transition--ease-in-out">
                                     <span class="flex items-center fs--12 fw5 lh--18 col--oxford-blue pointer-events-none">
-                                        Auto Repost Setting
+                                        Advanced Repost Settings
                                     </span>
                                     
                                     <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/setting.svg" alt="" class="w--16 h--16 filter--col--oxford-blue pointer-events-none">
@@ -1447,14 +1702,14 @@
                         <div class="flex flex-column self-stretch flex--max">
                             <!-- tab main wrapper -->
                             <div data-tab-main-wrapper data-tabs-section="1" class="flex flex-column self-stretch flex--max">
-                                <!-- tab header list -->
-                                <div data-tab-header-main data-tabs-container="1" class="flex flex-column items-start self-stretch gap--8 pa2 pb0 relative">
-                                    <ul data-tab-head-list data-tabs-menu="notifications-tabs-menu" data-show-default-page-load="all" class="flex items-center self-stretch gap--4 overflow-x-auto">
+                                <!-- tab header list (type = [scrollable, stretchable, dropdown]) -->
+                                <div data-tab-header-main data-tabs-container="1" data-responsive-tab-header-type="scrollable" class="flex flex-column items-start self-stretch gap--8 pa2 pb0 relative">
+                                    <ul data-tab-head-list="" data-tabs-menu="notifications-tabs-menu" data-show-default-page-load="all" class="flex items-center self-stretch gap--4 overflow-x-auto">
                                         <!-- tab head list item -->
-                                        <li data-tab-head-list-item data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-first-tab" data-attribute-run-once="1" data-target="first-tab" data-flag="all" data-offset="5" data-per_page="5" class="flex">
-                                            <a href="javascript: void(0)" data-tab-trigger data-is-active="true" data-throw-event="fs-evt-eventname" class="flex flex-column items-center gap--10 pv2 ph3 mw--80 o-70 nowrap transition--all transition--200 transition--ease-in-out">
+                                        <li data-tab-head-list-item="" data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-first-tab" data-attribute-run-once="1" data-target="first-tab" data-flag="all" data-offset="5" data-per_page="5" class="flex active">
+                                            <a href="javascript: void(0)" tab-trigger="1" data-tab-trigger="1" data-is-active="false" data-throw-event="fs-evt-eventname" class="flex flex-column items-center gap--10 pv2 ph3 mw--80 o-70 nowrap transition--all transition--200 transition--ease-in-out">
                                                 <span class="flex items-center gap--2 h--32 pointer-events-none">
-                                                    <span data-tab-label class="fs--14 fw5 lh--20 ttu nowrap col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                    <span data-tab-label="" class="fs--14 fw5 lh--20 ttu nowrap col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                                         All
                                                     </span>
                                                     <span data-count-badge="" class="flex flex-column items-center self-stretch gap--10">
@@ -1468,10 +1723,10 @@
                                         <!-- /tab head list item -->
 
                                         <!-- tab head list item -->
-                                        <li data-tab-head-list-item data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-second-tab" data-attribute-run-once="1" data-target="second-tab" data-flag="unread" data-offset="5" data-per_page="5" class="flex">
-                                            <a href="javascript: void(0)" data-tab-trigger data-is-active="false" data-throw-event="fs-evt-eventname" class="flex flex-column items-center gap--10 pv2 ph3 mw--80 o-70 nowrap transition--all transition--200 transition--ease-in-out">
+                                        <li data-tab-head-list-item="" data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-second-tab" data-attribute-run-once="1" data-target="second-tab" data-flag="unread" data-offset="5" data-per_page="5" class="flex">
+                                            <a href="javascript: void(0)" tab-trigger="1" data-tab-trigger="1" data-is-active="false" data-throw-event="fs-evt-eventname" class="flex flex-column items-center gap--10 pv2 ph3 mw--80 o-70 nowrap transition--all transition--200 transition--ease-in-out">
                                                 <span class="flex items-center gap--2 h--32 pointer-events-none">
-                                                    <span data-tab-label class="fs--14 fw5 lh--20 ttu nowrap col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                    <span data-tab-label="" class="fs--14 fw5 lh--20 ttu nowrap col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                                         Unread
                                                     </span>
                                                     <span data-count-badge="" class="flex flex-column items-center self-stretch gap--10">
@@ -1485,10 +1740,10 @@
                                         <!-- /tab head list item -->
 
                                         <!-- tab head list item -->
-                                        <li data-tab-head-list-item data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-third-tab" data-attribute-run-once="1" data-target="third-tab" data-flag="custom_request" data-offset="5" data-per_page="5" class="flex">
-                                            <a href="javascript: void(0)" data-tab-trigger data-is-active="false" data-throw-event="fs-evt-eventname" class="flex flex-column items-center gap--10 pv2 ph3 mw--80 o-70 nowrap transition--all transition--200 transition--ease-in-out">
+                                        <li data-tab-head-list-item="" data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-third-tab" data-attribute-run-once="1" data-target="third-tab" data-flag="custom_request" data-offset="5" data-per_page="5" class="flex">
+                                            <a href="javascript: void(0)" tab-trigger="1" data-tab-trigger="1" data-is-active="false" data-throw-event="fs-evt-eventname" class="flex flex-column items-center gap--10 pv2 ph3 mw--80 o-70 nowrap transition--all transition--200 transition--ease-in-out">
                                                 <span class="flex items-center gap--2 h--32 pointer-events-none">
-                                                    <span data-tab-label class="fs--14 fw5 lh--20 ttu nowrap col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                    <span data-tab-label="" class="fs--14 fw5 lh--20 ttu nowrap col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                                         Custom Request
                                                     </span>
                                                     <span data-count-badge="" class="flex flex-column items-center self-stretch gap--10">
@@ -1502,13 +1757,13 @@
                                         <!-- /tab head list item -->
 
                                         <!-- tab head list item -->
-                                        <li data-tab-head-list-item data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-fourth-tab" data-attribute-run-once="1" data-target="fourth-tab" data-flag="account" data-offset="5" data-per_page="5" class="flex">
-                                            <a href="javascript: void(0)" data-tab-trigger data-is-active="false" data-throw-event="fs-evt-eventname" class="flex flex-column items-center gap--10 pv2 ph3 mw--80 o-70 nowrap transition--all transition--200 transition--ease-in-out">
+                                        <li data-tab-head-list-item="" data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-fourth-tab" data-attribute-run-once="1" data-target="fourth-tab" data-flag="account" data-offset="5" data-per_page="5" class="flex">
+                                            <a href="javascript: void(0)" tab-trigger="1" data-tab-trigger="1" data-is-active="false" data-throw-event="fs-evt-eventname" class="flex flex-column items-center gap--10 pv2 ph3 mw--80 o-70 nowrap transition--all transition--200 transition--ease-in-out">
                                                 <span class="flex items-center gap--2 h--32 pointer-events-none">
-                                                    <span data-tab-label class="fs--14 fw5 lh--20 ttu nowrap col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                                    <span data-tab-label="" class="fs--14 fw5 lh--20 ttu nowrap col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                                         Account
                                                     </span>
-                                                    <span data-count-badge="" class="flex flex-column items-center self-stretch gap--10" hidden>
+                                                    <span data-count-badge="" class="flex flex-column items-center self-stretch gap--10" hidden="">
                                                         <span data-count-text="" data-attribute-type="total-order-received-count" data-actual-stat-count="" class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal tracked--0-25 col--pale-sky">
                                                             5
                                                         </span>
@@ -1524,10 +1779,10 @@
                                 <!-- tab content containers wrapper -->
                                 <div data-tab-contents-containers-main data-tabs-content="1" class="flex flex-column self-stretch">
                                     <!-- tab content container (first tab) -->
-                                    <div data-tabbed-content="tabbed-content-first-tab" data-target="first-tab" data-is-active="true" class="flex flex-column self-stretch">
+                                    <div data-tabbed-content="tabbed-content-first-tab" data-target="first-tab" data-is-active="false" class="flex flex-column self-stretch active">
                                         <!-- scrollable notifications container panel -->
                                         <div data-scrollable-notification-panel class="flex flex-column self-stretch bg--col--white--50 bg--blur--50 overflow-y-auto">
-                                            <div data-notifications-container class="flex flex-column self-stretch items-start gap--0 pb5">
+                                            <div data-notifications-card-container class="flex flex-column self-stretch items-start gap--0 pb5">
                                                 <!-- notification card - info (based on the data attribute values some UI element will be hidden) -->
                                                 <div data-notification-card data-is-read="false" data-notification-type="info" data-single-icon-only="false" data-small-icon-bg-off="false" data-has-title="true" data-has-close-btn="true" data-has-cta="true" data-has-link="true" data-theme="light" class="flex justify-center items-center self-stretch bb br--col--athens-gray2 relative touch-action-none">
                                                     <div data-notification-card-body class="flex flex-column items-start self-stretch flex--max gap--16 pad--y--12 pad--x--8 relative z-2 transition--all transition--150 transition--ease-in-out">
@@ -2034,7 +2289,7 @@
                                                 <!-- /notification card -->
 
                                                 <!-- notification card - info (data-is-read="true") -->
-                                                <div data-notification-card data-is-read="true" data-notification-type="info" data-single-icon-only="false" data-small-icon-bg-off="false" data-has-title="true" data-has-close-btn="true" data-has-cta="true" data-has-link="true" data-theme="light" class="flex justify-center items-center self-stretch bb br--col--athens-gray2 relative touch-action-none">
+                                                <div data-notification-card data-is-read="false" data-notification-type="info" data-single-icon-only="false" data-small-icon-bg-off="false" data-has-title="true" data-has-close-btn="true" data-has-cta="true" data-has-link="true" data-theme="light" class="flex justify-center items-center self-stretch bb br--col--athens-gray2 relative touch-action-none">
                                                     <div data-notification-card-body class="flex flex-column items-start self-stretch flex--max gap--16 pad--y--12 pad--x--8 relative z-2 transition--all transition--150 transition--ease-in-out">
                                                         <div class="flex justify-start items-start self-stretch gap--20 relative">
                                                             <!-- notification close -->
@@ -2135,7 +2390,7 @@
                                                 <!-- /notification card -->
 
                                                 <!-- notification card - warning (data-is-read="true") -->
-                                                <div data-notification-card data-is-read="true" data-notification-type="warning" data-single-icon-only="false" data-small-icon-bg-off="false" data-has-title="true" data-has-close-btn="true" data-has-cta="true" data-has-link="true" data-theme="light" class="flex justify-center items-center self-stretch bb br--col--athens-gray2 relative touch-action-none">
+                                                <div data-notification-card data-is-read="false" data-notification-type="warning" data-single-icon-only="false" data-small-icon-bg-off="false" data-has-title="true" data-has-close-btn="true" data-has-cta="true" data-has-link="true" data-theme="light" class="flex justify-center items-center self-stretch bb br--col--athens-gray2 relative touch-action-none">
                                                     <div data-notification-card-body class="flex flex-column items-start self-stretch flex--max gap--16 pad--y--12 pad--x--8 relative z-2 transition--all transition--150 transition--ease-in-out">
                                                         <div class="flex justify-start items-start self-stretch gap--20 relative">
                                                             <!-- notification close -->
@@ -2236,7 +2491,7 @@
                                                 <!-- /notification card -->
 
                                                 <!-- notification card - destructive (data-is-read="true") -->
-                                                <div data-notification-card data-is-read="true" data-notification-type="destructive" data-single-icon-only="false" data-small-icon-bg-off="false" data-has-title="true" data-has-close-btn="true" data-has-cta="true" data-has-link="true" data-theme="light" class="flex justify-center items-center self-stretch bb br--col--athens-gray2 relative touch-action-none">
+                                                <div data-notification-card data-is-read="false" data-notification-type="destructive" data-single-icon-only="false" data-small-icon-bg-off="false" data-has-title="true" data-has-close-btn="true" data-has-cta="true" data-has-link="true" data-theme="light" class="flex justify-center items-center self-stretch bb br--col--athens-gray2 relative touch-action-none">
                                                     <div data-notification-card-body class="flex flex-column items-start self-stretch flex--max gap--16 pad--y--12 pad--x--8 relative z-2 transition--all transition--150 transition--ease-in-out">
                                                         <div class="flex justify-start items-start self-stretch gap--20 relative">
                                                             <!-- notification close -->
@@ -2337,7 +2592,7 @@
                                                 <!-- /notification card -->
 
                                                 <!-- notification card - success (data-is-read="true") -->
-                                                <div data-notification-card data-is-read="true" data-notification-type="success" data-single-icon-only="false" data-small-icon-bg-off="false" data-has-title="true" data-has-close-btn="true" data-has-cta="true" data-has-link="true" data-theme="light" class="flex justify-center items-center self-stretch bb br--col--athens-gray2 relative touch-action-none">
+                                                <div data-notification-card data-is-read="false" data-notification-type="success" data-single-icon-only="false" data-small-icon-bg-off="false" data-has-title="true" data-has-close-btn="true" data-has-cta="true" data-has-link="true" data-theme="light" class="flex justify-center items-center self-stretch bb br--col--athens-gray2 relative touch-action-none">
                                                     <div data-notification-card-body class="flex flex-column items-start self-stretch flex--max gap--16 pad--y--12 pad--x--8 relative z-2 transition--all transition--150 transition--ease-in-out">
                                                         <div class="flex justify-start items-start self-stretch gap--20 relative">
                                                             <!-- notification close -->
@@ -3085,12 +3340,12 @@
                         <!-- /notifications body -->
 
                         <!-- notifications footer -->
-                        <div class="flex flex-column self-stretch items-start gap--10 w-100 pa2 bg--col--athens-gray--70--variation-2 bg--blur--25 absolute left-0 bottom-0 z-1">
+                        <div class="flex flex-column self-stretch items-start gap--10 w-100 pa2 bg--col--athens-gray--70--variation-2 bg--blur--50 absolute left-0 bottom-0 z-1">
                             <!-- mark all notifactions as read button -->
-                             <a href="javascript: void(0)" data-button-behavior="mark-all-notification-read" class="inline-flex items-center gap--2 pa2 br--6 hover--bg--col--ebony--10 transition--all transition--200 transition--ease-in-out">
-                                <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/check-done-01.svg" alt="" class="w--16 h--16 filter--col--oxford-blue pointer-events-none">
+                             <a href="javascript: void(0)" data-button-behavior="mark-all-notification-read" class="inline-flex items-center gap--2 pa2 br--6 hover--parent--child--col--blue-ribbon transition--all transition--200 transition--ease-in-out">
+                                <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/check-done-01.svg" alt="" class="w--16 h--16 filter--col--oxford-blue hov--filter--col--blue-ribbon transition--all transition--200 transition--ease-in-out pointer-events-none">
 
-                                <span class="fs--12 fw5 lh--18 col--oxford-blue pointer-events-none">
+                                <span class="fs--12 fw5 lh--18 col--oxford-blue hover--col--blue-ribbon transition--all transition--200 transition--ease-in-out pointer-events-none">
                                     Mark all as read
                                 </span>
                              </a>
@@ -4386,99 +4641,28 @@
                 <!-- Inner Container -->
                 <div data-section="inner-container" data-tabs-section="1" class="flex flex-column gap--24 bg--gradient-white pad--top--24-responsive-tablet pad--x--16-responsive-tablet pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait pad--y--0-responsive-mobile pad--y--0-responsive-mobile-portrait ">
                     <!-- Top Page Header Section -->
-                    <div data-section="page-header" class="pad--40 pad--bottom--0 pad--x--0-responsive-tablet pad--top--0-responsive-tablet flex flex-column gap--24 pad--8-responsive-mobile pad--8-responsive-mobile-portrait">
+                    <div data-section="page-header" class="pad--40 pad--x--24 pad--bottom--0 pad--x--0-responsive-tablet pad--top--0-responsive-tablet flex flex-column gap--24 pad--8-responsive-mobile pad--8-responsive-mobile-portrait">
                         <!-- Top Page Title Section -->
                         <div data-section="page-title" class="w-100 flex gap--24 items-start justify-between gap--16--responsive-tablet gap--16--responsive-mobile gap--16--responsive-mobile-portrait flex--column-responsive-tablet flex--column-responsive-mobile flex--column-responsive-mobile-portrait display--none-responsive-mobile display--none-responsive-mobile-portrait">
-                            <h1 class="poppins fs--36 lh--44 fw6 tracked--neg--0-72 col--fiord-gray m--0 fs--30-responsive-tablet lh--38-responsive-tablet">Order Received</h1>
-                        </div><!-- End Top Page Title Section -->
-                        <!-- Top Page Settings -->
-                        <div class="flex items-center gap--16 gap--8-responsive-mobile gap--8-responsive-mobile-portrait flex--column-responsive-tablet flex--column-responsive-mobile flex--column-responsive-mobile-portrait items--start-responsive-tablet items--start-responsive-mobile items--start-responsive-mobile-portrait">
-                            <!-- Tab Content Section -->
-                            <div data-tabs-container="1" class="w--100-responsive-tablet w--100-responsive-mobile w--100-responsive-mobile-portrait" data-show-default-page-load="views">
-                                <!-- Title -->
-                                <div class="flex items-center br--5 ba br--col--mischka-gray bg--col--light-gray-50 w--100-responsive-tablet overflow-hidden">
-                                    <ul data-tabs-menu="dashboard-tabs-menu" class="flex items-start w--100-responsive-tablet w--100-responsive-mobile w--100-responsive-mobile-portrait" data-show-default-page-load="unread">
-                                        <!-- first tab menu item -->
-                                        <li data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-first-tab" data-attribute-run-once="1" data-target="first-tab" data-flag="unread" data-status="unread" data-offset="5" data-per_page="5" class="flex justify-center items-center gap--8 flex--max-responsive-tablet flex--max-responsive-mobile flex--max-responsive-mobile-portrait active">
-                                            <a href="#" class="w-100 inline-flex justify-center items-center gap--8 gap--4-responsive-mobile gap--4-responsive-mobile-portrait pointer w-100 pad--y--8 pad--x--16 pad--8-responsive-mobile pad--8-responsive-mobile-portrait" tab-trigger="1">
-                                                <span data-span-title class="fs--14 fw5 lh--20 col--gull-gray nowrap fs--12-responsive-mobile lh--18-responsive-mobile fs--12-responsive-mobile-portrait lh--18-responsive-mobile-portrait">In Progress</span>
-                                                <small data-span-value class="fs--10 fw5 lh--normal col--gull-gray tracked--0-25 h--24">60</small>
-                                            </a>
-                                        </li>
-            
-                                        <!-- second tab menu item -->
-                                        <li data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-second-tab" data-attribute-run-once="1" data-target="second-tab" data-flag="cpr" data-status="unread" data-offset="0" data-per_page="5" class="flex justify-center items-center gap--8 bl br--col--mischka-gray flex--max-responsive-tablet flex--max-responsive-mobile flex--max-responsive-mobile-portrait">
-                                           <a href="#" class="inline-flex justify-center items-center gap--8 gap--4-responsive-mobile gap--4-responsive-mobile-portrait pointer w-100 pad--y--8 pad--x--16 pad--8-responsive-mobile pad--8-responsive-mobile-portrait" tab-trigger="1">
-                                                <span data-span-title class="fs--14 fw5 lh--20 col--gull-gray nowrap fs--12-responsive-mobile lh--18-responsive-mobile fs--12-responsive-mobile-portrait lh--18-responsive-mobile-portrait">Completed</span> 
-                                                <small data-span-value class="fs--10 fw5 lh--normal col--gull-gray tracked--0-25 h--24">40</small>
-                                            </a>
-                                        </li>
-
-                                        <!-- third tab menu item -->
-                                        <li data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-second-tab" data-attribute-run-once="1" data-target="second-tab" data-flag="cpr" data-status="unread" data-offset="0" data-per_page="5" class="flex justify-center items-center gap--8 bl br--col--mischka-gray flex--max-responsive-tablet flex--max-responsive-mobile flex--max-responsive-mobile-portrait">
-                                           <a href="#" class="inline-flex justify-center items-center gap--8 gap--4-responsive-mobile gap--4-responsive-mobile-portrait pointer w-100 pad--y--8 pad--x--16 pad--8-responsive-mobile pad--8-responsive-mobile-portrait" tab-trigger="1">
-                                                <span data-span-title class="fs--14 fw5 lh--20 col--gull-gray nowrap fs--12-responsive-mobile lh--18-responsive-mobile fs--12-responsive-mobile-portrait lh--18-responsive-mobile-portrait">Canceled</span> 
-                                                <small data-span-value class="fs--10 fw5 lh--normal col--gull-gray tracked--0-25 h--24">4</small>
-                                            </a>
-                                        </li>
-                                        <!-- fourth tab menu item -->
-                                        <li data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-second-tab" data-attribute-run-once="1" data-target="second-tab" data-flag="cpr" data-status="unread" data-offset="0" data-per_page="5" class="flex justify-center items-center gap--8 bl br--col--mischka-gray flex--max-responsive-tablet flex--max-responsive-mobile flex--max-responsive-mobile-portrait">
-                                           <a href="#" class="inline-flex justify-center items-center gap--8 gap--4-responsive-mobile gap--4-responsive-mobile-portrait pointer w-100 pad--y--8 pad--x--16 pad--8-responsive-mobile pad--8-responsive-mobile-portrait" tab-trigger="1">
-                                                <span data-span-title class="fs--14 fw5 lh--20 col--gull-gray nowrap fs--12-responsive-mobile lh--18-responsive-mobile fs--12-responsive-mobile-portrait lh--18-responsive-mobile-portrait">All</span> 
-                                                <small data-span-value class="fs--10 fw5 lh--normal col--gull-gray tracked--0-25 h--24">120</small>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                           </div>
-                            <!--End Tab Content Section -->
-                            <!-- Search and Select Content Section -->
-                            <div class="flex items-center gap--8 flex--max w--100-responsive-tablet w--100-responsive-mobile w--100-responsive-mobile-portrait">
-                                <!-- Search Field -->
-                                <div class="flex gap--6 w-100">
-                                    <div class="w-100 pad--y--8 pad--x--12 flex items-center gap--8 br--top--2">
-                                        <div class="w-100 flex items-center gap--8">
-                                            <span>
-                                                <img src="assets/images/search-sm-icon.svg" alt="" class="w--20 h--20" />
-                                            </span>
-                                            <div class="flex--max">
-                                                <input type="text" name="" placeholder="Search..." class="fs--16 lh--24 col--pale-sky">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div><!-- End Search Field -->
-
-                                <!-- Select Field -->
-                                <div data-id="order-type-select" class="relative z--10000">
-                                    <select data-nice-select>
-                                        <option value="ordertype" use-as-placeholder >Order type</option>
-                                        <option value="alltypes">All Types</option>
-                                        <option value="pv">P2V</option>
-                                        <option value="subscription">Subscription</option>
-                                        <option value="merch">Merch</option>
-                                        <option value="mix">Mix</option>
-                                    </select>
-                                    <!-- <div class="pointer">
-                                        <img src="assets/icons/arrow-down.svg" alt="" />
-                                    </div> -->
-                                </div>
-                                <!-- End Select Field -->
-                                
-                            </div><!-- End Search and Select Content Section -->
-                        </div><!-- End Top Page Settings -->
-                    </div><!-- End Top Page Header Section -->
-
-                    <div data-tabs-content="1" class="h-100 dn">
-                        <!-- first tab content items -->
-                        <div data-tabbed-content="tabbed-content-first-tab" data-target="first-tab" class="flex flex-column justify-start items-start gap--16 flex-auto mt--8-neg active">
-                            <p>First</p>
+                            <h1 class="poppins fs--30 lh--38 fw5 tracked--neg--0-72 col--fiord-gray m--0 fs--30-responsive-tablet lh--38-responsive-tablet">
+                                Media
+                            </h1>
                         </div>
-
-                        <!-- second tab content items -->
-                        <div data-tabbed-content="tabbed-content-second-tab" data-target="second-tab" class="flex-column justify-start items-start gap--16 flex-auto mt--8-neg dn">
-                            <p>Second</p>
-                        </div>
+                        <!-- /Top Page Title Section -->
                     </div>
+                    <!-- End Top Page Header Section -->
+
+                    <!-- page top control section -->
+                    <div class="flex flex--max pad--x--24 pad--x--16-responsive-tablet pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait">
+                        <!-- control blocks here -->
+                    </div>
+                    <!-- /page top control section -->
+
+                    <!-- page main content section -->
+                    <div class="flex h-100 flex--max pad--x--24 pad--x--16-responsive-tablet pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait">
+                        <!-- main contents here -->
+                    </div>
+                    <!-- /page main content section -->
         
                 </div> <!-- End Inner Container -->
             </main>
