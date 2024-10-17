@@ -76,6 +76,10 @@
 [data-notification-type="success"] [data-link] [data-icon] { filter: brightness(0) saturate(100%) invert(34%) sepia(63%) saturate(508%) hue-rotate(123deg) brightness(94%) contrast(97%); }
 
 /* Notification Style - Read Messages */
+[data-notification-card][data-is-read="true"] {
+  border-left-color: white;
+}
+
 [data-notification-card][data-is-read="true"] [data-notification-card-body],
 [data-notification-card][data-notification-type="info"][data-is-read="true"] [data-notification-card-body],
 [data-notification-card][data-notification-type="warning"][data-is-read="true"] [data-notification-card-body],
