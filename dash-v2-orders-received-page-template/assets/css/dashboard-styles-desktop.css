@@ -1515,6 +1515,18 @@ button[data-color=gray]:not(:disabled):hover span {
   display: -webkit-box
 }
 
+[data-card-hover-overlay] {
+  display: none
+}
+
+[data-card-hover]:hover [data-card-hover-overlay] {
+  display: block
+}
+
+[data-card-hover]:hover [data-button-hover-overlay=false] {
+  opacity: 0
+}
+
 [data-floating-panel-wrapper] [data-floating-panel] {
   display: grid;
   grid-template-columns: repeat(2, 1fr)

@@ -451,3 +451,8 @@ button[data-color="gray"]:not(:disabled):hover span { color: #fff !important; }
 
 /* Text line Clamp */
 [data-line-clamp] { overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 2; display: -webkit-box; }
+
+/* Card Hover */
+[data-card-hover-overlay] { display: none; }
+[data-card-hover]:hover [data-card-hover-overlay] { display: block; }
+[data-card-hover]:hover [data-button-hover-overlay="false"] { opacity: 0; }
