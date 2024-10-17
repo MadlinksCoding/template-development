@@ -695,6 +695,10 @@ html {
   background-color: var(--color-electric-violet, #4d20ff)
 }
 
+.bg--col-ebony {
+  background: var(--color-ebony, #101828)
+}
+
 .bg--gd--light-white {
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(242, 244, 247, .5)), to(rgba(242, 244, 247, .5))), rgba(255, 255, 255, .5);
   background: linear-gradient(0deg, rgba(242, 244, 247, .5) 0, rgba(242, 244, 247, .5) 100%), rgba(255, 255, 255, .5)
@@ -756,6 +760,10 @@ html {
 
 .br--col-electric-violet {
   border-color: var(--color-electric-violet, #4d20ff)
+}
+
+.br--col--vermilion {
+  border-color: var(--color-vermilion, #ff4405)
 }
 
 .filter--col--gull-gray {
@@ -1427,6 +1435,84 @@ ul[data-theme=default] li:before {
   position: absolute;
   left: .188rem;
   top: .438rem
+}
+
+[data-color=green]:hover img {
+  -webkit-filter: brightness(0) saturate(100%) invert(50%) sepia(94%) saturate(408%) hue-rotate(100deg) brightness(93%) contrast(87%);
+  filter: brightness(0) saturate(100%) invert(50%) sepia(94%) saturate(408%) hue-rotate(100deg) brightness(93%) contrast(87%)
+}
+
+[data-color=black]:hover img {
+  -webkit-filter: brightness(0) saturate(100%) invert(0) sepia(0) saturate(0) hue-rotate(335deg) brightness(93%) contrast(107%);
+  filter: brightness(0) saturate(100%) invert(0) sepia(0) saturate(0) hue-rotate(335deg) brightness(93%) contrast(107%)
+}
+
+[data-color=black]:hover {
+  background: var(--color-brand-green, #07f468);
+  color: #000
+}
+
+[data-color=gray] {
+  background: rgba(152, 162, 179, .5);
+  border-color: rgba(89, 96, 106, .5)
+}
+
+button[data-color=gray]:not(:disabled):hover span {
+  color: #fff !important
+}
+
+[data-button-style=skew-left]:before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  -webkit-box-shadow: 4px 4px 0 0 #000;
+  box-shadow: 4px 4px 0 0 #000;
+  -webkit-transition: all 0s ease-in-out;
+  transition: all 0s ease-in-out
+}
+
+[data-button-style=skew-left]:after {
+  content: '';
+  display: block;
+  width: 2rem;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -1rem;
+  z-index: -1;
+  -webkit-box-shadow: 4px 4px 0 0 #000;
+  box-shadow: 4px 4px 0 0 #000;
+  -webkit-transform: skew(-20deg, 0) translateX(3px);
+  transform: skew(-20deg, 0) translateX(3px);
+  -webkit-transition: all 0s ease-in-out;
+  transition: all 0s ease-in-out
+}
+
+[data-button-color=grey],
+[data-button-color=grey]:after {
+  background-color: var(--color-mischka, #d0d5dd)
+}
+
+[data-button-color=green],
+[data-button-color=green]:after {
+  background-color: var(--color-brand-green, #07f468)
+}
+
+[data-button-color=blue],
+[data-button-color=blue]:after {
+  background-color: var(--color-electric-violet, #4d20ff)
+}
+
+[data-line-clamp] {
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  display: -webkit-box
 }
 
 [data-floating-panel-wrapper] [data-floating-panel] {
