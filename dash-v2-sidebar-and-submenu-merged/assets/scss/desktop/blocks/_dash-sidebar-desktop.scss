@@ -57,6 +57,12 @@
   height: 3.5rem; 
 }
 
+[data-floating-panel-wrapper][data-is-floating="true"] [data-floating-panel][data-single-item="true"] {
+  width: 5rem;
+  grid-template-columns: repeat(1, 1fr); 
+  right: -6rem;
+}
+
 /* Dashboard Sidebar Main Menu : Custom Styles */
 [data-logout-button]:hover,
 [data-notifications-panel-trigger]:hover,
