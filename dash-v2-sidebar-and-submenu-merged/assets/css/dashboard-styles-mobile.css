@@ -259,6 +259,10 @@ html {
   min-height: 4.5rem
 }
 
+[data-submenus-wrapper] {
+  z-index: 6
+}
+
 [data-submenu-container][hidden] {
   -webkit-transform: translateX(100%);
   transform: translateX(100%)
@@ -270,7 +274,7 @@ html {
 }
 
 [data-submenu] [data-submenu-item] {
-  padding: .375rem .5rem
+  padding: .375rem 1rem .5rem .375rem
 }
 
 [data-submenu] [data-submenu-item]>span.gap--12 {

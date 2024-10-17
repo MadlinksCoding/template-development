@@ -57,6 +57,12 @@
   height: 3.5rem; 
 }
 
+[data-floating-panel-wrapper][data-is-floating="true"] [data-floating-panel][data-single-item="true"] {
+  width: 5rem;
+  grid-template-columns: repeat(1, 1fr); 
+  right: -6rem;
+}
+
 /* Dashboard Sidebar Main Menu : Custom Styles */
 [data-logout-button]:hover,
 [data-notifications-panel-trigger]:hover,
@@ -100,10 +106,4 @@
 
 [data-dashboard-main-nav] [data-main-menu-item][data-is-active="true"] [data-sidebar-menu-item-text] { 
   color: var(--color-rose); 
-}
-
-/* Dashboard Sidebar Sub Menu : Custom Styles */
-[data-submenu] .is-current-page[data-sidebar-menu-item] > [data-submenu-item] { 
-  background: rgba(251, 91, 162, .1); 
-  filter: brightness(0) saturate(100%) invert(29%) sepia(98%) saturate(5809%) hue-rotate(325deg) brightness(92%) contrast(121%); 
 }

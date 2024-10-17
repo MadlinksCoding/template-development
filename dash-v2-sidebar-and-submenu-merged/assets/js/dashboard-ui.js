@@ -780,6 +780,9 @@ class DashSidebarMenuAdjuster {
           this.floatingPanel.appendChild(excessItem);
         }
 
+				// check if floating panel has only one item, if true then data-single-item will be true, else false
+				this.floatingPanel.querySelectorAll('[data-sidebar-menu-item]').length == 1 ? this.floatingPanel.dataset.singleItem = true : this.floatingPanel.dataset.singleItem = false;
+
 				// unhide the floating panel trigger button
         this.moreButton.hidden = false;
       } 
