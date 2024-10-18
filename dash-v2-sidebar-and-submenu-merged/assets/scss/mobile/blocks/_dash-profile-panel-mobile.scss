@@ -3,6 +3,8 @@
  */
 
 /* Dashboard Submenu (Profile Container) : Custom Styles */
+[data-profile-panel-container] { border-left: none; }
+
 [data-profile-panel-container][hidden] { transform: translateX(100%); }
 [data-profile-panel-container] { transform: translateX(0%); }
 
