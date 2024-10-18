@@ -753,6 +753,17 @@ class DashSidebarMenuAdjuster {
 			 // get current window height again (in case window has resized and the value changed)
 			this.windowHeight = window.innerHeight;
 
+			// add 'low' data-attribute to floating panel if window height is less than 450px so that the panel can hang lower
+			if ( this.windowHeight < 480 && this.windowHeight > 400 ) {
+				this.floatingPanel.dataset.positionLower = '8rem';
+			}
+			else if ( this.windowHeight <= 400 ) { 
+				this.floatingPanel.dataset.positionLower = '10rem';
+			}
+			else {
+				this.floatingPanel.dataset.positionLower = '4rem';
+			}
+
 			// recalculate number of possible visible main items inside menu panel (in case window has resized and the value changed)
 			this.maxVisibleItems = Math.floor((this.windowHeight - this.otherElementsHeight) / this.menuItemHeight);
 
@@ -768,6 +779,9 @@ class DashSidebarMenuAdjuster {
 					// move the item to floating panel
           this.floatingPanel.appendChild(excessItem);
         }
+
+				// check if floating panel has only one item, if true then data-single-item will be true, else false
+				this.floatingPanel.querySelectorAll('[data-sidebar-menu-item]').length == 1 ? this.floatingPanel.dataset.singleItem = true : this.floatingPanel.dataset.singleItem = false;
 
 				// unhide the floating panel trigger button
         this.moreButton.hidden = false;
@@ -831,7 +845,7 @@ class DashNotificationSwipe {
       startX = touchobj.pageX;
       startY = touchobj.pageY;
       startTime = new Date().getTime();
-      e.preventDefault();
+      //e.preventDefault();
     }, false);
 
     touchsurface.addEventListener('touchend', (e) => {
@@ -849,7 +863,7 @@ class DashNotificationSwipe {
           handleswipe(swipedir);
         }
       }
-      e.preventDefault();
+      //e.preventDefault();
     }, false);
   }
 
@@ -1025,8 +1039,9 @@ class DashStatusMessageEditor {
     this.isEditing = false; // flag
     this.previousText = this.textbox.value; // container to restore previous text in cancelled
 
-		// bind 'click' event to enable editing
+		// bind 'click' event to enable editing (both edit button & textbox)
     this.editButton.addEventListener('click', this.enableEditing.bind(this));
+    this.textbox.addEventListener('click', this.enableEditing.bind(this));
 
 		// bind 'click' event to cancel editing
     this.cancelButton.addEventListener('click', this.cancelEditing.bind(this));
