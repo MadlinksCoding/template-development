@@ -1537,9 +1537,9 @@ html {
 }
 
 [data-tooltip][data-tooltip-arrow=true][data-tooltip-position="top left"] [data-tooltip-content]:before {
-  border-width: .375rem .375rem 0 .375rem;
+  border-width: 5px 5px 0 5px;
   left: .813rem;
-  bottom: -.375rem
+  bottom: -5px
 }
 
 [data-tooltip][data-tooltip-position="top center"] [data-tooltip-content] {
@@ -1552,9 +1552,9 @@ html {
 }
 
 [data-tooltip][data-tooltip-arrow=true][data-tooltip-position="top center"] [data-tooltip-content]:before {
-  border-width: .375rem .375rem 0 .375rem;
+  border-width: 5px 5px 0 5px;
   left: 50%;
-  bottom: -.375rem;
+  bottom: -5px;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%)
 }
@@ -1570,9 +1570,9 @@ html {
 }
 
 [data-tooltip][data-tooltip-arrow=true][data-tooltip-position="top right"] [data-tooltip-content]:before {
-  border-width: .375rem .375rem 0 .375rem;
+  border-width: 5px 5px 0 5px;
   right: .813rem;
-  bottom: -.375rem
+  bottom: -5px
 }
 
 [data-tooltip][data-tooltip-position="bottom left"] [data-tooltip-content] {
@@ -1585,9 +1585,9 @@ html {
 }
 
 [data-tooltip][data-tooltip-arrow=true][data-tooltip-position="bottom left"] [data-tooltip-content]:before {
-  border-width: 0 .375rem .375rem .375rem;
+  border-width: 0 5px 5px 5px;
   left: .813rem;
-  top: -.375rem
+  top: -5px
 }
 
 [data-tooltip][data-tooltip-position="bottom center"] [data-tooltip-content] {
@@ -1617,9 +1617,9 @@ html {
 }
 
 [data-tooltip][data-tooltip-arrow=true][data-tooltip-position="bottom right"] [data-tooltip-content]:before {
-  border-width: 0 .375rem .375rem .375rem;
+  border-width: 0 5px 5px 5px;
   right: .813rem;
-  top: -.375rem
+  top: -5px
 }
 
 [data-tooltip][data-tooltip-position="center left"] [data-tooltip-content] {
@@ -1632,8 +1632,8 @@ html {
 }
 
 [data-tooltip][data-tooltip-arrow=true][data-tooltip-position="center left"] [data-tooltip-content]:before {
-  border-width: .375rem 0 .375rem .375rem;
-  right: -.375rem;
+  border-width: 5px 0 5px 5px;
+  right: -5px;
   top: 50%;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%)
@@ -1649,8 +1649,8 @@ html {
 }
 
 [data-tooltip][data-tooltip-arrow=true][data-tooltip-position="center right"] [data-tooltip-content]:before {
-  border-width: .375rem .375rem .375rem 0;
-  left: -.375rem;
+  border-width: 5px 5px 5px 0;
+  left: -5px;
   top: 50%;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%)
