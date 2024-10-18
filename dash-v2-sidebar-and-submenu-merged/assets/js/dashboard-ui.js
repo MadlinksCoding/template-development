@@ -24,6 +24,10 @@ class DashSideBarHandler {
 				screenSizeTablet: false, // if device screensize is tablet
 				screenSizeMobile: false, // if device screensize is mobile
 
+				sidebarSelector: '[data-sidebar]', // dash sidebar selector
+
+				sidebarEl: '', // dash sidebar element
+
 				dashNavElSelector: '[data-dashboard-main-nav]', // dash menu main selector
 
 				dashNavEl: '', // dash menu main container
@@ -540,6 +544,7 @@ class DashSideBarHandler {
 			this.options.screenSizeMobile = window.screen.width < 768 ? true : false;
 
 			// update initial selectors
+			this.options.sidebarEl = document.querySelector(this.options.sidebarSelector);
 			this.options.dashNavEl = document.querySelector(this.options.dashNavElSelector);
 
 			// attach click handler to dashNavEl
@@ -586,6 +591,11 @@ class DashSideBarHandler {
 			}
 			
 			//console.log(this.options);
+
+			// Close opened submenu on outside click o sidebar or submenus
+			document.addEventListener('click', (e) => {
+				!_self.options.sidebarEl.contains(e.target) ? _self.resetMenu() : '';
+			});
 
 			// handle "Esc" key event to close the submenu (if opened)
 			document.addEventListener('keydown', function(event) {

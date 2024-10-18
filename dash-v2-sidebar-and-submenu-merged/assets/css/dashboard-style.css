@@ -369,6 +369,10 @@ html {
   width: 10rem
 }
 
+.w--188 {
+  width: 11.75rem
+}
+
 .w--480 {
   width: 30rem
 }
@@ -482,6 +486,10 @@ html {
 
 .right--176-neg {
   right: -11rem
+}
+
+.right--204-neg {
+  right: -12.75rem
 }
 
 .bottom--4 {
@@ -675,14 +683,14 @@ html {
 }
 
 [data-floating-panel-wrapper][data-is-floating=true] [data-floating-panel] [data-sidebar-menu-item] {
-  width: 3.5rem;
+  width: 4.625rem;
   height: 3.5rem
 }
 
 [data-floating-panel-wrapper][data-is-floating=true] [data-floating-panel][data-single-item=true] {
-  width: 5rem;
+  width: 6.125rem;
   grid-template-columns: repeat(1, 1fr);
-  right: -6rem
+  right: -7.125rem
 }
 
 [data-dashboard-main-nav] [data-main-menu-item]:hover,
@@ -2095,6 +2103,10 @@ html {
     font-size: 16px
   }
 
+  .bg--col--transparent--responsive-mobile {
+    background: 0 0
+  }
+
   .bg--col--white--responsive-mobile {
     background: #fff
   }
@@ -2356,6 +2368,10 @@ html {
     z-index: 6
   }
 
+  [data-submenu-container] {
+    border-left: none
+  }
+
   [data-submenu-container][hidden] {
     -webkit-transform: translateX(100%);
     transform: translateX(100%)
@@ -2388,6 +2404,10 @@ html {
     transform: translateX(0)
   }
 
+  [data-notifications-container] {
+    border-left: none
+  }
+
   [data-notifications-container][hidden] {
     -webkit-transform: translateX(100%);
     transform: translateX(100%)
@@ -2400,6 +2420,10 @@ html {
 
   [data-notification-card] [data-close-notification-card] {
     display: none
+  }
+
+  [data-profile-panel-container] {
+    border-left: none
   }
 
   [data-profile-panel-container][hidden] {
@@ -2416,6 +2440,10 @@ html {
 @media only screen and (max-width:479px) {
   html {
     font-size: 16px
+  }
+
+  .bg--col--transparent--responsive-mobile-portrait {
+    background: 0 0
   }
 
   .bg--col--white--responsive-mobile-portrait {
@@ -2705,6 +2733,10 @@ html {
     z-index: 6
   }
 
+  [data-submenu-container] {
+    border-left: none
+  }
+
   [data-submenu-container][hidden] {
     -webkit-transform: translateX(100%);
     transform: translateX(100%)
@@ -2737,6 +2769,10 @@ html {
     transform: translateX(0)
   }
 
+  [data-notifications-container] {
+    border-left: none
+  }
+
   [data-notifications-container][hidden] {
     -webkit-transform: translateX(100%);
     transform: translateX(100%)
@@ -2749,6 +2785,10 @@ html {
 
   [data-notification-card] [data-close-notification-card] {
     display: none
+  }
+
+  [data-profile-panel-container] {
+    border-left: none
   }
 
   [data-profile-panel-container][hidden] {

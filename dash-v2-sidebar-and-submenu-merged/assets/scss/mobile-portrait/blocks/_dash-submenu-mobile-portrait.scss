@@ -5,6 +5,8 @@
 /* Dashboard Submenu : Custom Styles */
 [data-submenus-wrapper] { z-index: 6; }
 
+[data-submenu-container] {border-left: none;}
+
 [data-submenu-container][hidden] { transform: translateX(100%); }
 [data-submenu-container] { transform: translateX(0%); }
 

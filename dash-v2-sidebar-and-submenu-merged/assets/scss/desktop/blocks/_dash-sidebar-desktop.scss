@@ -53,14 +53,15 @@
 }
 
 [data-floating-panel-wrapper][data-is-floating="true"] [data-floating-panel] [data-sidebar-menu-item] { 
-  width: 3.5rem; 
+  //width: 3.5rem; 
+  width: 4.625rem; 
   height: 3.5rem; 
 }
 
 [data-floating-panel-wrapper][data-is-floating="true"] [data-floating-panel][data-single-item="true"] {
-  width: 5rem;
+  width: 6.125rem;
   grid-template-columns: repeat(1, 1fr); 
-  right: -6rem;
+  right: -7.125rem;
 }
 
 /* Dashboard Sidebar Main Menu : Custom Styles */
