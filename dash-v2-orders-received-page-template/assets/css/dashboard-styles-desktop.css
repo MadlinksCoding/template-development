@@ -982,6 +982,10 @@ html {
   padding-bottom: 4.25rem
 }
 
+.pad--left--40 {
+  padding-left: 2.5rem
+}
+
 .pad--right--12 {
   padding-right: .75rem
 }
@@ -1037,6 +1041,10 @@ html {
   top: -.375rem
 }
 
+.top--neg--74 {
+  top: -4.625rem
+}
+
 .translate--50-y-neg {
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%)
@@ -1048,6 +1056,10 @@ html {
 
 .right--12 {
   right: .75rem
+}
+
+.right--16 {
+  right: 1rem
 }
 
 .bottom--1 {
@@ -1461,6 +1473,7 @@ button[data-color=gray]:not(:disabled):hover span {
   color: #fff !important
 }
 
+[data-button-style="skew-left top"]:before,
 [data-button-style=skew-left]:before {
   content: '';
   display: block;
@@ -1493,6 +1506,23 @@ button[data-color=gray]:not(:disabled):hover span {
   transition: all 0s ease-in-out
 }
 
+[data-button-style="skew-left top"]:after {
+  content: '';
+  display: block;
+  width: 2rem;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -1rem;
+  z-index: -1;
+  -webkit-box-shadow: 4px 4px 0 0 #000;
+  box-shadow: 4px 4px 0 0 #000;
+  -webkit-transform: skew(20deg, 0) translateX(3px);
+  transform: skew(20deg, 0) translateX(3px);
+  -webkit-transition: all 0s ease-in-out;
+  transition: all 0s ease-in-out
+}
+
 [data-button-color=grey],
 [data-button-color=grey]:after {
   background-color: var(--color-mischka, #d0d5dd)
@@ -1516,15 +1546,13 @@ button[data-color=gray]:not(:disabled):hover span {
 }
 
 [data-card-hover-overlay] {
-  display: none
+  display: none;
+  -webkit-transition: all 0s ease-in-out;
+  transition: all 0s ease-in-out
 }
 
 [data-card-hover]:hover [data-card-hover-overlay] {
   display: block
-}
-
-[data-card-hover]:hover [data-button-hover-overlay=false] {
-  opacity: 0
 }
 
 [data-floating-panel-wrapper] [data-floating-panel] {
