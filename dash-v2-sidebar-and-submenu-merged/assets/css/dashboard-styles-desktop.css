@@ -1796,8 +1796,9 @@ html {
 }
 
 [data-status-dropdown-main] [data-current-status] {
-  outline: 1px solid var(--color-athens-gray2);
-  outline-offset: -1px;
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 1px var(--color-athens-gray2);
+  box-shadow: 0 0 0 1px var(--color-athens-gray2);
   background-color: var(--color-athens-gray2)
 }
 
@@ -1806,7 +1807,8 @@ html {
 }
 
 [data-status-dropdown-main] [data-current-status][data-current-status=online] {
-  outline: 1px solid var(--color-spring-green);
+  -webkit-box-shadow: 0 0 0 1px var(--color-spring-green);
+  box-shadow: 0 0 0 1px var(--color-spring-green);
   background-color: var(--color-spring-green)
 }
 
@@ -1815,7 +1817,8 @@ html {
 }
 
 [data-status-dropdown-main] [data-current-status][data-current-status=away] {
-  outline: 1px solid var(--color-lightning-yellow, #fac515);
+  -webkit-box-shadow: 0 0 0 1px var(--color-lightning-yellow, #fac515);
+  box-shadow: 0 0 0 1px var(--color-lightning-yellow, #fac515);
   background-color: var(--color-lightning-yellow, #fac515)
 }
 
@@ -1824,7 +1827,8 @@ html {
 }
 
 [data-status-dropdown-main] [data-current-status][data-current-status=invisible] {
-  outline: 1px solid var(--color-athens-gray2);
+  -webkit-box-shadow: 0 0 0 1px var(--color-athens-gray2);
+  box-shadow: 0 0 0 1px var(--color-athens-gray2);
   background-color: var(--color-white, #fff)
 }
 
