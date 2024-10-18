@@ -714,6 +714,11 @@ html {
   background: linear-gradient(90deg, #4d20ff 0, #7e5eff 100%)
 }
 
+.bg--gd--my--sin {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, .9))), -webkit-gradient(linear, left bottom, left top, from(rgba(253, 176, 34, .15)), to(rgba(253, 176, 34, .15))), rgba(255, 255, 255, .9);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, .9) 100%), linear-gradient(0deg, rgba(253, 176, 34, .15) 0, rgba(253, 176, 34, .15) 100%), rgba(255, 255, 255, .9)
+}
+
 .bg--no-repeat {
   background-repeat: no-repeat
 }
