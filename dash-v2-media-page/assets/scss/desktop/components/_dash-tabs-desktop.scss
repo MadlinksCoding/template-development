@@ -1,0 +1,152 @@
+/**
+ * Template name: <Dashboard Tabs (Global)>
+ */
+
+/* Dashboard Tab Containers : Custom Styles */
+[data-tabbed-content],
+[data-tabbed-content][data-is-active="false"] { 
+  display: none; 
+}
+
+.active[data-tabbed-content],
+[data-tabbed-content][data-is-active="true"] { 
+  display: flex !important; 
+}
+
+/* Dashboard Tab Heads (Responsive Type - Scrollable) : Custom Styles */
+[data-responsive-tab-header-type="scrollable"] [data-tab-head-list] { 
+  box-shadow: 0px -1.5px 0px 0px var(--color-mischka, #D0D5DD) inset; 
+}
+
+[data-responsive-tab-header-type="scrollable"] [data-tab-head-list-item] [data-tab-trigger]:hover,
+[data-responsive-tab-header-type="scrollable"] [data-tab-head-list-item] [data-tab-trigger]:hover { 
+  box-shadow: 0px -1.5px 0px 0px var(--color-pale-sky, #667085) inset; 
+}
+
+[data-responsive-tab-header-type="scrollable"] .active[data-tab-head-list-item] [data-tab-trigger],
+[data-responsive-tab-header-type="scrollable"] [data-tab-head-list-item] [data-tab-trigger][data-is-active="true"] { 
+  box-shadow: 0px -1.5px 0px 0px var(--color-ebony-2, #0C111D) inset; 
+  opacity: 1; 
+}
+
+[data-responsive-tab-header-type="scrollable"] .active[data-tab-head-list-item] [data-tab-trigger] [data-tab-label],
+[data-responsive-tab-header-type="scrollable"] [data-tab-head-list-item] [data-tab-trigger][data-is-active="true"] [data-tab-label] { 
+  color: var(--color-ebony-2, #0C111D); 
+  font-weight: 600; 
+}
+
+/* Dashboard Tab Heads (Responsive Type - Stretchable) : Custom Styles */
+[data-responsive-tab-header-type="stretchable"] [data-tab-head-list] { 
+  
+}
+
+[data-responsive-tab-header-type="stretchable"] [data-tab-head-list-item] [data-tab-trigger]:hover,
+[data-responsive-tab-header-type="stretchable"] [data-tab-head-list-item] [data-tab-trigger]:hover { 
+  
+}
+
+[data-responsive-tab-header-type="stretchable"] .active[data-tab-head-list-item] [data-tab-trigger],
+[data-responsive-tab-header-type="stretchable"] [data-tab-head-list-item] [data-tab-trigger][data-is-active="true"] { 
+  background-color: var(--color-ebony-2, #0c111d);
+}
+
+[data-responsive-tab-header-type="stretchable"] .active[data-tab-head-list-item] [data-tab-trigger] [data-tab-label],
+[data-responsive-tab-header-type="stretchable"] [data-tab-head-list-item] [data-tab-trigger][data-is-active="true"] [data-tab-label] { 
+  color: var(--color-white, #FFFFFF); 
+  font-weight: 600; 
+}
+
+/* Dashboard Tab Heads (Responsive Type - Dropdown - Default Desktop) : Custom Styles */
+[data-responsive-tab-header-type="dropdown"] {
+  position: relative;
+}
+
+/* [data-responsive-tab-header-type="dropdown"] [data-tab-head-list] { 
+   
+} */
+
+/* [data-responsive-tab-header-type="dropdown"] [data-tab-head-list-item] [data-tab-trigger]:hover,
+[data-responsive-tab-header-type="dropdown"] [data-tab-head-list-item] [data-tab-trigger]:hover { 
+  
+} */
+
+/* [data-responsive-tab-header-type="dropdown"] .active[data-tab-head-list-item] [data-tab-trigger],
+[data-responsive-tab-header-type="dropdown"] [data-tab-head-list-item] [data-tab-trigger][data-is-active="true"] { 
+  
+} */
+
+[data-responsive-tab-header-type="dropdown"] .active[data-tab-head-list-item] [data-tab-trigger] [data-tab-label],
+[data-responsive-tab-header-type="dropdown"] [data-tab-head-list-item] [data-tab-trigger][data-is-active="true"] [data-tab-label] { 
+  color: var(--color-oxford-blue, #344054); 
+  font-weight: 600; 
+}
+
+[data-responsive-tab-header-type="dropdown"] .active[data-tab-head-list-item] [data-tab-trigger] [data-count-text],
+[data-responsive-tab-header-type="dropdown"] [data-tab-head-list-item] [data-tab-trigger][data-is-active="true"] [data-count-text] { 
+  color: var(--color-pale-sky, #667085);
+}
+
+/* Dashboard Tab Heads (Responsive Type - Dropdown - Default Responsive) : Custom Styles */
+[data-responsive-tab-header-type="dropdown"][data-dropdown-tab-active="false"] [data-dropdown-tab-trigger] { 
+   display: none;
+}
+
+[data-responsive-tab-header-type="dropdown"][data-dropdown-tab-active="false"] [data-tab-head-list] { 
+  display: flex;
+}
+
+[data-responsive-tab-header-type="dropdown"][data-dropdown-tab-active="true"] [data-dropdown-tab-trigger] { 
+  display: flex;
+}
+
+[data-responsive-tab-header-type="dropdown"][data-dropdown-tab-active="true"] [data-tab-head-list] { 
+  position: absolute;
+  left: 0;
+  top: calc(100% + 0.5rem);
+  z-index: 5;
+  padding: 0.25rem 0;
+  background: white;
+  flex-direction: column;
+  min-width: 15rem;
+  max-width: 17rem;
+  border: none;
+  box-shadow: 0 0 0.25rem 0 rgba(51, 51, 51, 0.25);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0);
+  pointer-events: none;
+  transform-origin: center top;
+  transition: all 0.15s ease-in-out;
+}
+
+[data-responsive-tab-header-type="dropdown"][data-dropdown-tab-active="true"] [data-dropdown-tab-trigger][data-is-active="true"] ~ [data-tab-head-list] {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  pointer-events: all;
+}
+
+[data-responsive-tab-header-type="dropdown"][data-dropdown-tab-active="true"][data-dropdown-tab-x-position="right"] [data-tab-head-list] {
+  left: auto;
+  right: 0;
+}
+
+[data-responsive-tab-header-type="dropdown"][data-dropdown-tab-active="true"] [data-tab-head-list] [data-tab-head-list-item] {
+  border: none;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+[data-responsive-tab-header-type="dropdown"][data-dropdown-tab-active="true"] [data-tab-head-list] [data-tab-head-list-item] [data-tab-trigger] {
+  justify-content: flex-start;
+}
+
+[data-responsive-tab-header-type="dropdown"][data-dropdown-tab-active="true"] [data-tab-head-list] [data-tab-head-list-item] [data-tab-trigger]:hover,
+[data-responsive-tab-header-type="dropdown"][data-dropdown-tab-active="true"] [data-tab-head-list] [data-tab-head-list-item] [data-tab-trigger]:active {
+  background: var(--color-athens-gray2);
+}
+
+[data-responsive-tab-header-type="dropdown"][data-dropdown-tab-active="true"] [data-tab-head-list] [data-tab-head-list-item] [data-tab-trigger]:hover [data-tab-label],
+[data-responsive-tab-header-type="dropdown"][data-dropdown-tab-active="true"] [data-tab-head-list] [data-tab-head-list-item] [data-tab-trigger]:active [data-tab-label] {
+  color: var(--color-pale-sky, #667085);
+}
