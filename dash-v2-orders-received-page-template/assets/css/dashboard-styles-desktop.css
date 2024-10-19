@@ -806,6 +806,11 @@ html {
   filter: brightness(0) saturate(100%) invert(0) sepia(96%) saturate(7494%) hue-rotate(96deg) brightness(112%) contrast(97%)
 }
 
+.hover--parent--child--col--brand-green:hover .hov--filter--col--brand-green {
+  -webkit-filter: brightness(0) saturate(100%) invert(50%) sepia(94%) saturate(408%) hue-rotate(100deg) brightness(93%) contrast(87%);
+  filter: brightness(0) saturate(100%) invert(50%) sepia(94%) saturate(408%) hue-rotate(100deg) brightness(93%) contrast(87%)
+}
+
 .hover--bg--col--white--100:hover {
   background: var(--Base-White, #fff)
 }

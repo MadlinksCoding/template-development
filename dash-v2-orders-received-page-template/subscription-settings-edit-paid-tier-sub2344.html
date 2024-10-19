@@ -4446,9 +4446,12 @@
                             <!-- Save/Cancel Button Group -->
                             <div class=" flex items-center justify-end">
                                 <div class="flex items-center gap--8">
-                                    <button class="mw--100 pad--y--8 flex items-center justify-center fs--18 fw5 lh--28 col--ebony--variation-2 flex--max-responsive-mobile flex--max-responsive-mobile-portrait hover--bg--col--white--100">Cancel</button>
+                                    <button class="mw--100 pad--y--8 flex items-center justify-center fs--18 fw5 lh--28 col--ebony--variation-2 flex--max-responsive-mobile flex--max-responsive-mobile-portrait hover--bg--col--white--100 ttu">Cancel</button>
                                     <button class="bg-black pad--y--4 pad--x--8 flex justify-center items-center gap--10 hover--bg--col-brand-green hover--parent--child--col--black-ribbon">
-                                        <span class="fs--18 fw5 lh--28 col-brand-green ttu">SAVE & PUBLISH</span>
+                                        <span class="fs--18 fw5 lh--28 col-brand-green ttu">PUBLISH PREFERENCE</span>
+                                        <span>
+                                            <img src="assets/icons/arrow-narrow-right.svg" alt="" class="w--24 h--24" />
+                                        </span>
                                     </button>
                                 </div>
                             </div>
@@ -4550,6 +4553,25 @@
                                         <span class="fs--14 lh--20 col--fiord"> Price must be between USD$ 1.95 to 500.</span>
                                     </div><!-- End Input Field -->
 
+                                    <!-- Warning Alert -->
+                                    <div class="flex w-100 relative bb br--col--athens-gray-2">
+                                        <div class="db bg--col--my-sin w--3 h-100 absolute left-0 top-0"></div>
+                                        <div class="w-100 pad--y--12 pad--x--8 pad--right--18-responsive-mobile-portrait flex gap--16 bg--gd--my--sin flex-auto">
+                                            <div class="flex gap--20 w-100 relative items-start">                               
+                                                <!-- Right Tecxt -->
+                                                <div class="flex flex-column flex-auto">
+                                                    <div class="pad--bottom--8 flex flex-column gap--8">
+                                                        <div class="flex justify-between items-center pad--top--4 pad--right--4">
+                                                            <span class="fs--14 fw6 lh--20 col--vesuvius">You have changed your subscription price since you last published (original price USD$3.99)</span>
+                                                        </div>
+                                                    </div>
+                                                    <span class="fs--14 lh--20 text--sh--1 black">You can choose to keep original price or update to new price for your existing members before publishing your changes.</span>
+                                                </div>
+                                                <!-- End Right Tecxt -->
+                                            </div>
+                                        </div>
+                                    </div><!-- End Warning Alert -->
+
                                     <!-- Input Field -->
                                     <div class="flex flex-column gap--6 flex-auto">
                                         <span class="fs--18 fw5 lh--28 col--ebony--variation-2">Discounted Price <small class="fs--12 lh--18 col--ebony--variation-2">(optional)</small></span>
@@ -4562,6 +4584,25 @@
                                         </div>
                                         <span class="fs--14 lh--20 col--ebony--variation-2">Leave blank to disable discount display.</span>
                                     </div><!-- End Input Field -->
+
+                                    <!-- Warning Alert -->
+                                    <div class="flex w-100 relative bb br--col--athens-gray-2">
+                                        <div class="db bg--col--my-sin w--3 h-100 absolute left-0 top-0"></div>
+                                        <div class="w-100 pad--y--12 pad--x--8 pad--right--18-responsive-mobile-portrait flex gap--16 bg--gd--my--sin flex-auto">
+                                            <div class="flex gap--20 w-100 relative items-start">                               
+                                                <!-- Right Tecxt -->
+                                                <div class="flex flex-column flex-auto">
+                                                    <div class="pad--bottom--8 flex flex-column gap--8">
+                                                        <div class="flex justify-between items-center pad--top--4 pad--right--4">
+                                                            <span class="fs--14 fw6 lh--20 col--vesuvius">You have changed your subscription price since you last published (original price USD$3.99)</span>
+                                                        </div>
+                                                    </div>
+                                                    <span class="fs--14 lh--20 text--sh--1 black">You can choose to keep original price or update to new price for your existing members before publishing your changes.</span>
+                                                </div>
+                                                <!-- End Right Tecxt -->
+                                            </div>
+                                        </div>
+                                    </div><!-- End Warning Alert -->
 
                                 </div><!-- End Subscription Free Setting -->
                                 <!-- Member Benefits -->
@@ -4585,6 +4626,24 @@
                                         </span>
                                     </div>
                                     <!-- End Title -->
+                                    <!-- Warning Alert -->
+                                    <div class="flex w-100 relative bb br--col--athens-gray-2">
+                                        <div class="db bg--col--my-sin w--3 h-100 absolute left-0 top-0"></div>
+                                        <div class="w-100 pad--y--12 pad--x--8 pad--right--18-responsive-mobile-portrait flex gap--16 bg--gd--my--sin flex-auto">
+                                            <div class="flex gap--20 w-100 relative items-start">                               
+                                                <!-- Right Tecxt -->
+                                                <div class="flex flex-column flex-auto">
+                                                    <div class="pad--bottom--8 flex flex-column gap--8">
+                                                        <div class="flex justify-between items-center pad--top--4 pad--right--4">
+                                                            <span class="fs--14 fw6 lh--20 col--vesuvius">You have changed your benefits since you last published.</span>
+                                                        </div>
+                                                    </div>
+                                                    <span class="fs--14 lh--20 text--sh--1 black">You will be asked to specify member benefit preference for your existing member before you publish.</span>
+                                                </div>
+                                                <!-- End Right Tecxt -->
+                                            </div>
+                                        </div>
+                                    </div><!-- End Warning Alert -->
                                     <!-- Form Item Section -->
                                     <div class="flex justify-between items-start">
                                         <div class="flex items-center gap--8 w--400">
@@ -4857,9 +4916,12 @@
                                 <!-- Save/Cancel Button Group -->
                                 <div class=" flex items-center justify-end">
                                     <div class="flex items-center gap--8">
-                                        <button class="mw--100 pad--y--8 flex items-center justify-center fs--18 fw5 lh--28 col--ebony--variation-2 flex--max-responsive-mobile flex--max-responsive-mobile-portrait hover--bg--col--white--100">Cancel</button>
+                                        <button class="mw--100 pad--y--8 flex items-center justify-center fs--18 fw5 lh--28 col--ebony--variation-2 flex--max-responsive-mobile flex--max-responsive-mobile-portrait hover--bg--col--white--100 ttu">Cancel</button>
                                         <button class="bg-black pad--y--4 pad--x--8 flex justify-center items-center gap--10 hover--bg--col-brand-green hover--parent--child--col--black-ribbon">
-                                            <span class="fs--18 fw5 lh--28 col-brand-green ttu">SAVE &amp; PUBLISH</span>
+                                            <span class="fs--18 fw5 lh--28 col-brand-green ttu">PUBLISH PREFERENCE</span>
+                                            <span>
+                                                <img src="assets/icons/arrow-narrow-right.svg" alt="" class="w--24 h--24" />
+                                            </span>
                                         </button>
                                     </div>
                                 </div>
@@ -4911,12 +4973,12 @@
                                             <div class="flex items-end gap--4">
                                                 <span class="relative">
                                                     <span class="fs--20 fw6 lh--30 col--sunglow-yellow">USD$</span>
-                                                    <span class="fs--48 fw6 lh--60 col--sunglow-yellow tracked--neg--0-96">30.99</span>
+                                                    <span class="fs--48 fw6 lh--60 col--sunglow-yellow tracked--neg--0-96">6.99</span>
                                                 </span>
                                                 <div class="flex flex-column gap--6">
                                                     <span class="bg--col--sunglow-yellow pad--x--5 pad--y--2 fs--14 fw7 lh--20 w--max-content">-50% </span>
                                                     <span>
-                                                        <span class="fs--16 fw5 lh--20 col--sunglow-yellow strike">60.99</span>
+                                                        <span class="fs--16 fw5 lh--20 col--sunglow-yellow strike">12.99</span>
                                                         <small class="fs--10 lh--32 col--sunglow-yellow tracked--0-01">/mo</small>
                                                     </span>
                                                 </div>
@@ -5007,9 +5069,10 @@
                                         <!-- End Hover overlay -->  
                                     </div><!-- Card main content -->
                                     <!-- Button -->
-                                    <div class="absolute right-0 bottom-0 z--10000">
-                                        <a href="#" data-button-overlay-hover-hide data-button-style="skew-left" data-button-color="green" class="h--56 pad--x--8 flex items-center gap--10 justify-center">
-                                            <span class="flex pad--y--4 fs--24 fw6 lh--32 black">30 followers</span>
+                                    <div class="w--188 absolute right-0 bottom-0 z--10000">
+                                        <a href="#" data-button-style="skew-left" data-button-color="green" class="h--56 pad--x--8 flex items-center gap--10 justify-center absolute right-0 bottom-0">
+                                            <span class="flex pad--y--4 fs--24 fw6 lh--32 black">SUBSCRIBE</span>
+                                            <span> <img src="assets/icons/arrow-narrow-up-right.svg" class="w--24 h--24"> </span>
                                         </a>
                                     </div>
                                 </div><!-- End Single Tier card Inner -->
