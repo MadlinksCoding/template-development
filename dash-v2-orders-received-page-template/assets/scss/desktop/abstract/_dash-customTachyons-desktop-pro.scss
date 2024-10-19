@@ -36,13 +36,14 @@
 .bg--col--sunglow-yellow { background-color: var(--color-sunglow-yellow, #FFCD29); }
 .bg--col-electric-violet { background-color: var(--color-electric-violet, #4D20FF); }
 .bg--col-ebony { background: var(--color-ebony, #101828); }
-
+.bg--col--light-bondi-blue { background: rgba(34, 204, 238, 0.10); }
 
 /* Background Gradients*/
 .bg--gd--light-white { background: linear-gradient(0deg, rgba(242, 244, 247, 0.50) 0%, rgba(242, 244, 247, 0.50) 100%), rgba(255, 255, 255, 0.50); }
 .bg--gd--light-green-to-white { background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.90) 100%), linear-gradient(0deg, rgba(46, 211, 183, 0.15) 0%, rgba(46, 211, 183, 0.15) 100%), #FFF; }
 .bg--gd--electric-violet { background: linear-gradient(90deg, #4D20FF 0%, #7E5EFF 100%); }
 .bg--gd--my--sin { background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.90) 100%), linear-gradient(0deg, rgba(253, 176, 34, 0.15) 0%, rgba(253, 176, 34, 0.15) 100%), rgba(255, 255, 255, 0.90);}
+.bg--gd--turquoise { background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.90) 100%), linear-gradient(0deg, rgba(34, 204, 238, 0.15) 0%, rgba(34, 204, 238, 0.15) 100%), rgba(255, 255, 255, 0.90); }
 
 /* Background Style */
 .bg--no-repeat { background-repeat: no-repeat; }
@@ -191,6 +192,7 @@
 .pad--18 { padding: 1.125rem; /* padding 18px */ } /* confirmed in use */ /* pixel conversion correct */
 .pad--bottom--0 { padding-bottom: 0; }
 .pad--bottom--68 { padding-bottom: 4.25rem; /* padding bottom 68px */ } /* confirmed in use */ /* pixel conversion correct */
+.pad--left--3 { padding-left: 0.188rem; /* padding left 3px */ } /* confirmed in use */ /* pixel conversion correct */ 
 .pad--left--40 { padding-left: 2.5rem; /*  left 40px */ } /* confirmed in use */ /* pixel conversion correct */
 .pad--right--12 { padding-right: 0.75rem; /* padding right 12px */ }
 .pad--right--18 { padding-right: 1.125rem; /* padding right 18px */ }
@@ -389,6 +391,7 @@
 
 /* Global Input style */
 input[type="text"], textarea { border-radius: 0 !important;}
+[data-form-input-type="select"] select, input:not([type="submit"]):not([type="radio"]):not([type="checkbox"]):not( [type="file"] ):not([type="color"]), input[type="text"], input[type="email"], input[type="tel"], input[type="url"], input[type="number"], input[type="password"], textarea { color: var(--color-ebony,#101828); }
 
 
 /* Checkbox Green color */
@@ -406,6 +409,8 @@ input[type="text"], textarea { border-radius: 0 !important;}
 /* Default */
 ul[data-theme="default"] li { position: relative; padding-left: 1rem; }
 ul[data-theme="default"] li:before{ content:""; width: 0.25rem; height: 0.25rem; border-radius: 50%; background: #fff; position: absolute; left: 0.188rem; top: 0.438rem; }
+ul[data-theme="default black"] li { position: relative; padding-left: 1rem; }
+ul[data-theme="default black"] li:before{ content:""; width: 0.25rem; height: 0.25rem; border-radius: 50%; background: #101828; position: absolute; left: 0.188rem; top: 0.438rem; }
 
 
 /* Button style */

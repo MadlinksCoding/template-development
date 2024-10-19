@@ -699,6 +699,10 @@ html {
   background: var(--color-ebony, #101828)
 }
 
+.bg--col--light-bondi-blue {
+  background: rgba(34, 204, 238, .1)
+}
+
 .bg--gd--light-white {
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(242, 244, 247, .5)), to(rgba(242, 244, 247, .5))), rgba(255, 255, 255, .5);
   background: linear-gradient(0deg, rgba(242, 244, 247, .5) 0, rgba(242, 244, 247, .5) 100%), rgba(255, 255, 255, .5)
@@ -717,6 +721,11 @@ html {
 .bg--gd--my--sin {
   background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, .9))), -webkit-gradient(linear, left bottom, left top, from(rgba(253, 176, 34, .15)), to(rgba(253, 176, 34, .15))), rgba(255, 255, 255, .9);
   background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, .9) 100%), linear-gradient(0deg, rgba(253, 176, 34, .15) 0, rgba(253, 176, 34, .15) 100%), rgba(255, 255, 255, .9)
+}
+
+.bg--gd--turquoise {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, .9))), -webkit-gradient(linear, left bottom, left top, from(rgba(34, 204, 238, .15)), to(rgba(34, 204, 238, .15))), rgba(255, 255, 255, .9);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, .9) 100%), linear-gradient(0deg, rgba(34, 204, 238, .15) 0, rgba(34, 204, 238, .15) 100%), rgba(255, 255, 255, .9)
 }
 
 .bg--no-repeat {
@@ -985,6 +994,10 @@ html {
 
 .pad--bottom--68 {
   padding-bottom: 4.25rem
+}
+
+.pad--left--3 {
+  padding-left: .188rem
 }
 
 .pad--left--40 {
@@ -1386,6 +1399,18 @@ textarea {
   border-radius: 0 !important
 }
 
+[data-form-input-type=select] select,
+input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=file]):not([type=color]),
+input[type=email],
+input[type=number],
+input[type=password],
+input[type=tel],
+input[type=text],
+input[type=url],
+textarea {
+  color: var(--color-ebony, #101828)
+}
+
 [data-form-input-type=checkbox][data-form-accent-color=green] input[type=checkbox]:checked {
   accent-color: var(--color-brand-green, #07f468);
   background-color: var(--color-brand-green, #07f468);
@@ -1449,6 +1474,22 @@ ul[data-theme=default] li:before {
   height: .25rem;
   border-radius: 50%;
   background: #fff;
+  position: absolute;
+  left: .188rem;
+  top: .438rem
+}
+
+ul[data-theme="default black"] li {
+  position: relative;
+  padding-left: 1rem
+}
+
+ul[data-theme="default black"] li:before {
+  content: "";
+  width: .25rem;
+  height: .25rem;
+  border-radius: 50%;
+  background: #101828;
   position: absolute;
   left: .188rem;
   top: .438rem
