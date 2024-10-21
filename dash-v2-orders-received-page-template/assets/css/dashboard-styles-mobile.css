@@ -216,6 +216,10 @@ html {
   box-shadow: none
 }
 
+.bg-white-70-responsive-mobile {
+  background: rgba(255, 255, 255, .7)
+}
+
 .bg--center-top-responsive-mobile {
   background-position: center top
 }
@@ -246,6 +250,10 @@ html {
 
 .h--screen-mobile {
   height: 100vh
+}
+
+.pad--10-responsive-mobile {
+  padding: .625rem
 }
 
 .pad--6-responsive-mobile {
@@ -376,6 +384,16 @@ html {
   -webkit-box-flex: 1;
   -ms-flex: 1 0 0px;
   flex: 1 0 0
+}
+
+.justify--center-responsive-mobile {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center
+}
+
+.fixed--responsive-mobile {
+  position: fixed
 }
 
 .right--8-responsive-mobile {
