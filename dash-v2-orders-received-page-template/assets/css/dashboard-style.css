@@ -1258,6 +1258,11 @@ html {
   height: 1rem !important
 }
 
+[data-id=courier-select] .nice-select.v1.filter .multiple-options:not(.active) [data-dropdown-arrow] path,
+[data-id=order-type-select] .nice-select.v1.filter .current:not(.active) [data-dropdown-arrow] path {
+  fill: var(--secondary) !important
+}
+
 [data-id=courier-select] .nice-select.v1 {
   border: none
 }
