@@ -732,6 +732,11 @@ html {
   background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, .9) 100%), linear-gradient(0deg, rgba(34, 204, 238, .15) 0, rgba(34, 204, 238, .15) 100%), rgba(255, 255, 255, .9)
 }
 
+.bg--gd--gull-gray {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, .9))), -webkit-gradient(linear, left bottom, left top, from(rgba(152, 162, 179, .15)), to(rgba(152, 162, 179, .15))), rgba(255, 255, 255, .9);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, .9) 100%), linear-gradient(0deg, rgba(152, 162, 179, .15) 0, rgba(152, 162, 179, .15) 100%), rgba(255, 255, 255, .9)
+}
+
 .bg--no-repeat {
   background-repeat: no-repeat
 }
@@ -1013,6 +1018,10 @@ html {
   padding-left: 2.5rem
 }
 
+.pad--left--32 {
+  padding-left: 2rem
+}
+
 .pad--right--12 {
   padding-right: .75rem
 }
@@ -1249,6 +1258,11 @@ html {
   height: 1rem !important
 }
 
+[data-id=courier-select] .nice-select.v1.filter .multiple-options:not(.active) [data-dropdown-arrow] path,
+[data-id=order-type-select] .nice-select.v1.filter .current:not(.active) [data-dropdown-arrow] path {
+  fill: var(--secondary) !important
+}
+
 [data-id=courier-select] .nice-select.v1 {
   border: none
 }
@@ -1470,6 +1484,18 @@ textarea {
   top: 50%;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%)
+}
+
+[data-form-input-type=radio][data-form-input-layout="vertical top"] input[type=radio]+label:before {
+  top: .25rem;
+  -webkit-transform: translateY(0);
+  transform: translateY(0)
+}
+
+[data-form-input-type=radio][data-form-input-layout="vertical top"] input[type=radio]:checked+label:after {
+  top: .563rem;
+  -webkit-transform: translateY(0);
+  transform: translateY(0)
 }
 
 ul[data-theme=default] li {
