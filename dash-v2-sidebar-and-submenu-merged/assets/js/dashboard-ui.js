@@ -159,6 +159,14 @@ class DashSideBarHandler {
 			}),
 			_self.options.profilePanelEl.setAttribute('hidden', true)
 		) : '';
+
+		// resetting swipped notification cards (hiding delete & dismiss in mobile)
+		document.querySelectorAll('[data-notification-card]').forEach( card => {
+			card.dataset.swiped == 'left' ? (
+				card.querySelector('[data-notification-card-body]').style.transform = 'translateX(0)',
+      	card.dataset.swiped = 'none'
+			) : '';
+		});
 	}
 
 	/** 
