@@ -40,7 +40,7 @@
                 <div data-mobile-header data-mobile-only class="pad--y--8 pad--x--16 flex-column flex--max gap--16 br--24 bg--blur--25 dn dn-responsive-mobile">
                     <div class="flex justify-between items-center">
                         <!-- Site Logo -->
-                        <div class="relative">
+                        <div class="relative pad--x--8">
                             <a class="db w--24 h--24" href="#">
                                 <img src="assets/img/site-logo.svg" alt="" class="w--24 h--24 o-80 pointer-events-none">
                             </a>
@@ -53,19 +53,19 @@
                             <div class="flex justify-end items-center gap--8">
                                 <!-- Choose Language -->
                                 <a class="pad--6 flex justify-center items-center gap--12 br--6 pointer hover--bg--col--light-grey-10 active--bg--col--grey-800">
-                                    <div class="w--20 h--20 pointer-events-none">
-                                        <img src="assets/icons/globe.svg" alt="" class="w--20 h--20 filter--col--gray-500 active--filter--col--white pointer-events-none">
+                                    <div class="w--24 h--24 pointer-events-none">
+                                        <img src="assets/icons/globe.svg" alt="" class="w--24 h--24 filter--col--gray-500 active--filter--col--white pointer-events-none">
                                     </div>
                                 </a>
 
                                 <!-- Notification Item -->
-                                <div class="w--32 h--32 relative">
+                                <div class="relative">
                                     <!-- Notification Dot -->
                                     <span class="db w--7 h--7 br-100 bg--col--persian-rose absolute top--2 right--3"></span>
                                     <!-- Menu item 2 -->
                                     <a data-notifications-panel-trigger data-is-active="false" class="pad--6 flex justify-center items-center gap--12 br--6 pointer hover--bg--col--light-grey-10 active--bg--col--grey-800">
-                                        <div class="w--20 h--20 pointer-events-none">
-                                            <img src="assets/icons/bell-03.svg" alt="" class="w--20 h--20 filter--col--gray-500 active--filter--col--white pointer-events-none">
+                                        <div class="w--24 h--24 pointer-events-none">
+                                            <img src="assets/icons/bell-03.svg" alt="" class="w--24 h--24 filter--col--gray-500 active--filter--col--white pointer-events-none">
                                         </div>
                                     </a>
                                 </div>
@@ -1700,7 +1700,7 @@
                             <!-- tab main wrapper -->
                             <div data-tab-main-wrapper data-tabs-section="1" class="flex flex-column self-stretch flex--max">
                                 <!-- tab header list (type = [scrollable, stretchable, dropdown]) -->
-                                <div data-tab-header-main data-tabs-container="1" data-responsive-tab-header-type="scrollable" class="flex flex-column items-start self-stretch gap--8 pa2 pb0 relative">
+                                <div data-tab-header-main data-tabs-container="1" data-responsive-tab-header-type="scrollable" class="flex flex-column items-start self-stretch gap--8 pa2 pr0 pb0 pl0 relative">
                                     <ul data-tab-head-list="" data-tabs-menu="notifications-tabs-menu" data-show-default-page-load="all" class="flex items-center self-stretch gap--4 overflow-x-auto">
                                         <!-- tab head list item -->
                                         <li data-tab-head-list-item="" data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-first-tab" data-attribute-run-once="1" data-target="first-tab" data-flag="all" data-offset="5" data-per_page="5" class="flex active">
@@ -3355,9 +3355,9 @@
                     <!-- submenu container (Multi Level Push Menu) ("data-submenu-container-id" should be same as "data-target-submenu-container" value in the main menu item) -->
                     <div data-submenu-container data-submenu-container-id="dashboard-submenu-multi-level-push-menu-demo" class="flex flex-column items-start gap--16 w--480 vh-100 overflow-hidden pv4 ph3 bg--col--athens-gray--70--variation-2  bg--blur--25 bl br--col--mischka sh--sidebar fixed top-0 left--90 left--90--px z-1 transition--all transition--150 transition--ease-in-out vw--100--responsive-mobile vw--100--responsive-mobile-portrait left--0--responsive-mobile left--0--responsive-mobile-portrait pad--y--8--responsive-mobile pad--y--8--responsive-mobile-portrait pad--x--16-responsive-mobile pad--x--16-responsive-mobile-portrait bg--col--athens-gray--70--responsive-mobile bg--col--athens-gray--70--responsive-mobile-portrait" hidden>
                         <!-- submenu header -->
-                        <div class="flex items-center self-stretch gap--8 flex--column-responsive-mobile flex--column-responsive-mobile-portrait items--start-responsive-mobile items--start-responsive-mobile-portrait gap--16--responsive-mobile gap--16--responsive-mobile-portrait flex-column-reverse--responsive-mobile flex-column-reverse--responsive-mobile-portrait">
+                        <div data-submenu-header class="flex items-center self-stretch gap--8 flex--column-responsive-mobile flex--column-responsive-mobile-portrait items--start-responsive-mobile items--start-responsive-mobile-portrait gap--16--responsive-mobile gap--16--responsive-mobile-portrait flex-column-reverse--responsive-mobile flex-column-reverse--responsive-mobile-portrait">
                             <!-- title -->
-                            <div class="flex flex--max items-center gap--8">
+                            <div data-submenu-title class="flex flex--max items-center gap--8">
                                 <span class="flex justify-start items-center"> 
                                     <!-- render_svg_icon( 'likes' ) -->
                                     <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/likes.svg" alt="" class="w--20 h--20 filter--col--oxford-blue">
@@ -4059,9 +4059,9 @@
                     <!-- submenu container (Orders) ("data-submenu-container-id" should be same as "data-target-submenu-container" value in the main menu item) -->
                     <div data-submenu-container data-submenu-container-id="dashboard-submenu-your-orders" class="flex flex-column items-start gap--16 w--480 vh-100 overflow-hidden pv4 ph3 bg--col--athens-gray--70--variation-2  bg--blur--25 bl br--col--mischka sh--sidebar fixed top-0 left--90 left--90--px z-1 transition--all transition--150 transition--ease-in-out vw--100--responsive-mobile vw--100--responsive-mobile-portrait left--0--responsive-mobile left--0--responsive-mobile-portrait pad--y--8--responsive-mobile pad--y--8--responsive-mobile-portrait pad--x--16-responsive-mobile pad--x--16-responsive-mobile-portrait bg--col--athens-gray--70--responsive-mobile bg--col--athens-gray--70--responsive-mobile-portrait" hidden>
                         <!-- submenu header -->
-                        <div class="flex items-center self-stretch gap--8 flex--column-responsive-mobile flex--column-responsive-mobile-portrait items--start-responsive-mobile items--start-responsive-mobile-portrait gap--16--responsive-mobile gap--16--responsive-mobile-portrait flex-column-reverse--responsive-mobile flex-column-reverse--responsive-mobile-portrait">
+                        <div data-submenu-header class="flex items-center self-stretch gap--8 flex--column-responsive-mobile flex--column-responsive-mobile-portrait items--start-responsive-mobile items--start-responsive-mobile-portrait gap--16--responsive-mobile gap--16--responsive-mobile-portrait flex-column-reverse--responsive-mobile flex-column-reverse--responsive-mobile-portrait">
                             <!-- title -->
-                            <div class="flex flex--max items-center gap--8">
+                            <div data-submenu-title class="flex flex--max items-center gap--8">
                                 <span class="flex justify-start items-center"> 
                                     <!-- render_svg_icon( 'order-1' ) -->
                                     <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/order-1.svg" alt="" class="w--20 h--20 filter--col--oxford-blue">
@@ -4164,9 +4164,9 @@
                     <!-- submenu container (Chats) ("data-submenu-container-id" should be same as "data-target-submenu-container" value in the main menu item) -->
                     <div data-submenu-container data-submenu-container-id="dashboard-submenu-chats" class="flex flex-column items-start gap--16 w--480 vh-100 overflow-hidden pv4 ph3 bg--col--athens-gray--70--variation-2  bg--blur--25 bl br--col--mischka sh--sidebar fixed top-0 left--90 left--90--px z-1 transition--all transition--150 transition--ease-in-out vw--100--responsive-mobile vw--100--responsive-mobile-portrait left--0--responsive-mobile left--0--responsive-mobile-portrait pad--y--8--responsive-mobile pad--y--8--responsive-mobile-portrait pad--x--16-responsive-mobile pad--x--16-responsive-mobile-portrait bg--col--athens-gray--70--responsive-mobile bg--col--athens-gray--70--responsive-mobile-portrait" hidden>
                         <!-- submenu header -->
-                        <div class="flex items-center self-stretch gap--8 flex--column-responsive-mobile flex--column-responsive-mobile-portrait items--start-responsive-mobile items--start-responsive-mobile-portrait gap--16--responsive-mobile gap--16--responsive-mobile-portrait flex-column-reverse--responsive-mobile flex-column-reverse--responsive-mobile-portrait">
+                        <div data-submenu-header class="flex items-center self-stretch gap--8 flex--column-responsive-mobile flex--column-responsive-mobile-portrait items--start-responsive-mobile items--start-responsive-mobile-portrait gap--16--responsive-mobile gap--16--responsive-mobile-portrait flex-column-reverse--responsive-mobile flex-column-reverse--responsive-mobile-portrait">
                             <!-- title -->
-                            <div class="flex flex--max items-center gap--8">
+                            <div data-submenu-title class="flex flex--max items-center gap--8">
                                 <span class="flex justify-start items-center"> 
                                     <!-- render_svg_icon( 'private_chat1' ) -->
                                     <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/private_chat1.svg" alt="" class="w--20 h--20 filter--col--oxford-blue">
@@ -4247,9 +4247,9 @@
                     <!-- submenu container (Shops) ("data-submenu-container-id" should be same as "data-target-submenu-container" value in the main menu item) -->
                     <div data-submenu-container data-submenu-container-id="dashboard-submenu-shops" class="flex flex-column items-start gap--16 w--480 vh-100 overflow-hidden pv4 ph3 bg--col--athens-gray--70--variation-2  bg--blur--25 bl br--col--mischka sh--sidebar fixed top-0 left--90 left--90--px z-1 transition--all transition--150 transition--ease-in-out vw--100--responsive-mobile vw--100--responsive-mobile-portrait left--0--responsive-mobile left--0--responsive-mobile-portrait pad--y--8--responsive-mobile pad--y--8--responsive-mobile-portrait pad--x--16-responsive-mobile pad--x--16-responsive-mobile-portrait bg--col--athens-gray--70--responsive-mobile bg--col--athens-gray--70--responsive-mobile-portrait" hidden>
                         <!-- submenu header -->
-                        <div class="flex items-center self-stretch gap--8 flex--column-responsive-mobile flex--column-responsive-mobile-portrait items--start-responsive-mobile items--start-responsive-mobile-portrait gap--16--responsive-mobile gap--16--responsive-mobile-portrait flex-column-reverse--responsive-mobile flex-column-reverse--responsive-mobile-portrait">
+                        <div data-submenu-header class="flex items-center self-stretch gap--8 flex--column-responsive-mobile flex--column-responsive-mobile-portrait items--start-responsive-mobile items--start-responsive-mobile-portrait gap--16--responsive-mobile gap--16--responsive-mobile-portrait flex-column-reverse--responsive-mobile flex-column-reverse--responsive-mobile-portrait">
                             <!-- title -->
-                            <div class="flex flex--max items-center gap--8">
+                            <div data-submenu-title class="flex flex--max items-center gap--8">
                                 <span class="flex justify-start items-center"> 
                                     <!-- render_svg_icon( 'merch' ) -->
                                     <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/merch.svg" alt="" class="w--20 h--20 filter--col--oxford-blue">
@@ -4352,9 +4352,9 @@
                     <!-- submenu container (Profile) ("data-submenu-container-id" should be same as "data-target-submenu-container" value in the main menu item) -->
                     <div data-submenu-container data-submenu-container-id="dashboard-submenu-profile" class="flex flex-column items-start gap--16 w--480 vh-100 overflow-hidden pv4 ph3 bg--col--athens-gray--70--variation-2  bg--blur--25 bl br--col--mischka sh--sidebar fixed top-0 left--90 left--90--px z-1 transition--all transition--150 transition--ease-in-out vw--100--responsive-mobile vw--100--responsive-mobile-portrait left--0--responsive-mobile left--0--responsive-mobile-portrait pad--y--8--responsive-mobile pad--y--8--responsive-mobile-portrait pad--x--16-responsive-mobile pad--x--16-responsive-mobile-portrait bg--col--athens-gray--70--responsive-mobile bg--col--athens-gray--70--responsive-mobile-portrait" hidden>
                         <!-- submenu header -->
-                        <div class="flex items-center self-stretch gap--8 flex--column-responsive-mobile flex--column-responsive-mobile-portrait items--start-responsive-mobile items--start-responsive-mobile-portrait gap--16--responsive-mobile gap--16--responsive-mobile-portrait flex-column-reverse--responsive-mobile flex-column-reverse--responsive-mobile-portrait">
+                        <div data-submenu-header class="flex items-center self-stretch gap--8 flex--column-responsive-mobile flex--column-responsive-mobile-portrait items--start-responsive-mobile items--start-responsive-mobile-portrait gap--16--responsive-mobile gap--16--responsive-mobile-portrait flex-column-reverse--responsive-mobile flex-column-reverse--responsive-mobile-portrait">
                             <!-- title -->
-                            <div class="flex flex--max items-center gap--8">
+                            <div data-submenu-title class="flex flex--max items-center gap--8">
                                 <span class="flex justify-start items-center"> 
                                     <!-- render_svg_icon( 'user-edit' ) -->
                                     <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/user-edit.svg" alt="" class="w--20 h--20 filter--col--oxford-blue">
@@ -4479,9 +4479,9 @@
                     <!-- submenu container (Settings) ("data-submenu-container-id" should be same as "data-target-submenu-container" value in the main menu item) -->
                     <div data-submenu-container data-submenu-container-id="dashboard-submenu-settings" class="flex flex-column items-start gap--16 w--480 vh-100 overflow-hidden pv4 ph3 bg--col--athens-gray--70--variation-2  bg--blur--25 bl br--col--mischka sh--sidebar fixed top-0 left--90 left--90--px z-1 transition--all transition--150 transition--ease-in-out vw--100--responsive-mobile vw--100--responsive-mobile-portrait left--0--responsive-mobile left--0--responsive-mobile-portrait pad--y--8--responsive-mobile pad--y--8--responsive-mobile-portrait pad--x--16-responsive-mobile pad--x--16-responsive-mobile-portrait bg--col--athens-gray--70--responsive-mobile bg--col--athens-gray--70--responsive-mobile-portrait" hidden>
                         <!-- submenu header -->
-                        <div class="flex items-center self-stretch gap--8 flex--column-responsive-mobile flex--column-responsive-mobile-portrait items--start-responsive-mobile items--start-responsive-mobile-portrait gap--16--responsive-mobile gap--16--responsive-mobile-portrait flex-column-reverse--responsive-mobile flex-column-reverse--responsive-mobile-portrait">
+                        <div data-submenu-header class="flex items-center self-stretch gap--8 flex--column-responsive-mobile flex--column-responsive-mobile-portrait items--start-responsive-mobile items--start-responsive-mobile-portrait gap--16--responsive-mobile gap--16--responsive-mobile-portrait flex-column-reverse--responsive-mobile flex-column-reverse--responsive-mobile-portrait">
                             <!-- title -->
-                            <div class="flex flex--max items-center gap--8">
+                            <div data-submenu-title class="flex flex--max items-center gap--8">
                                 <span class="flex justify-start items-center"> 
                                     <!-- render_svg_icon( 'setting' ) -->
                                     <img src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/setting.svg" alt="" class="w--20 h--20 filter--col--oxford-blue">
