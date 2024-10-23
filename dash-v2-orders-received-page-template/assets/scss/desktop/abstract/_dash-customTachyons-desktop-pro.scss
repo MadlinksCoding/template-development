@@ -388,11 +388,21 @@
 /* Loader Animation */
 .elm_cWpNRq {
     transform-origin: center;
+    -webkit-transform-origin: center; /* Add this */
     animation: elm_jVsoBw .75s infinite linear;
+    -webkit-animation: elm_jVsoBw .75s infinite linear; /* Add this */
 }
-@keyframes elm_jVsoBw{
-    100%{
-        transform:rotate(360deg)
+
+@-webkit-keyframes elm_jVsoBw {
+    100% {
+        -webkit-transform: rotate(360deg); /* Add this */
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes elm_jVsoBw {
+    100% {
+        transform: rotate(360deg);
     }
 }
 
