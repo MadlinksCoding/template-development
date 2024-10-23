@@ -1399,8 +1399,10 @@ html {
 .elm_cWpNRq {
   transform-origin: center;
   -webkit-transform-origin: center;
-  animation: elm_jVsoBw .75s infinite linear;
-  -webkit-animation: elm_jVsoBw .75s infinite linear
+  animation: elm_jVsoBw 1s infinite linear;
+  -webkit-animation: elm_jVsoBw 1s infinite linear;
+  -webkit-animation-name: elm_jVsoBw, fallback;
+  animation-name: elm_jVsoBw, fallback
 }
 
 @-webkit-keyframes elm_jVsoBw {
@@ -1414,6 +1416,18 @@ html {
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg)
+  }
+}
+
+@-webkit-keyframes fallback {
+  100% {
+    opacity: .5
+  }
+}
+
+@keyframes fallback {
+  100% {
+    opacity: .5
   }
 }
 
