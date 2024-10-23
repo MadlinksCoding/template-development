@@ -388,13 +388,25 @@
 /* Loader Animation */
 .elm_cWpNRq {
     transform-origin: center;
-    animation: elm_jVsoBw .75s infinite linear;
+    -webkit-transform-origin: center;
+    animation: elm_jVsoBw 1s infinite linear;
+    -webkit-animation: elm_jVsoBw 1s infinite linear;
+    animation-name: elm_jVsoBw, fallback;
 }
-@keyframes elm_jVsoBw{
-    100%{
-        transform:rotate(360deg)
+
+@-webkit-keyframes elm_jVsoBw {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
     }
 }
+
+@keyframes elm_jVsoBw {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 
 /* Global Input style */
 input[type="text"], textarea { border-radius: 0 !important;}
