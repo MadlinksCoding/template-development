@@ -1083,8 +1083,12 @@ class DashStatusMessageEditor {
   enableEditing() {
     this.isEditing = true;
 
+		this.textbox.blur(); // iOS needs this before a change of the readOnly
+
     this.element.setAttribute('data-is-editing', this.isEditing);
     this.textbox.removeAttribute('readonly');
+
+		this.textbox.focus(); // iOS needs this after a change of the readOnly so that keyboard appears
   }
 
 	/** 
