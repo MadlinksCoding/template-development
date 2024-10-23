@@ -2934,6 +2934,10 @@ button[data-color=gray]:not(:disabled):hover span {
     display: none
   }
 
+  .gap--16-responsive-tablet {
+    gap: 1rem
+  }
+
   .flex--column-responsive-tablet {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -3197,6 +3201,10 @@ button[data-color=gray]:not(:disabled):hover span {
 
   .bg-white-70-responsive-mobile {
     background: rgba(255, 255, 255, .7)
+  }
+
+  .bg--col--none--responsive-mobile {
+    background: 0 0
   }
 
   .bg--center-top-responsive-mobile {
@@ -3714,6 +3722,10 @@ button[data-color=gray]:not(:disabled):hover span {
 
   .bg-white-70-responsive-mobile-portrait {
     background: rgba(255, 255, 255, .7)
+  }
+
+  .bg--col--none--responsive-mobile-portrait {
+    background: 0 0
   }
 
   .bg--center-top-responsive-mobile-portrait {
