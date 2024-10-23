@@ -1179,13 +1179,14 @@ html {
 }
 
 [data-profile-panel-container] [data-auto-repost-setting] {
-  display: none
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height .5s ease-in-out;
+  transition: height .5s ease-in-out
 }
 
 [data-profile-panel-container] [data-auto-repost-setting][data-is-active=true] {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex
+  height: 154px
 }
 
 [data-tabbed-content],
