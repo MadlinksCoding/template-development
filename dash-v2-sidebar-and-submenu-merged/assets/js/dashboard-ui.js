@@ -830,20 +830,19 @@ class DashSidebarMenuAdjuster {
  * 
  * @class DashNotificationSwipe
  * @author Abirlal Maiti <abirlal.maiti@gmail.com>
- * @classdesc Handles swipe and drag events on notification cards and shows/hides the 'delete' or 'dismiss' buttons (mobile only)
+ * @classdesc Handles swipe events on notification cards and shows/hides the 'delete' or 'dismiss' buttons (mobile only)
  * 
  */
 class DashNotificationSwipe {
   constructor() {
     this.threshold = 100; // Adjusted for testing restraint
-    this.restraint = 0;
+    this.restraint = 100;
     this.allowedTime = 300;
-    this.moveDistance = 3.938 * 16 + 'px'; // Move 15% of the element's width (converted to px from rem)
   }
 
   /**
    * @method swipedetect
-   * @description Detects swipe and drag events on a given element
+   * @description Detects swipe events on a given element
    * @param {HTMLElement} el 
    * @param {Function} callback 
    */
@@ -855,47 +854,20 @@ class DashNotificationSwipe {
       distX,
       distY,
       startTime,
-      isDragging = false,
-      currentTranslate = 0,
       handleswipe = callback || function (swipedir) { };
 
-    const cardBody = el.querySelector('[data-notification-card-body]');
-
     touchsurface.addEventListener('touchstart', (e) => {
-      console.log('Touch start');
+      //console.log('Touch start');
       const touchobj = e.changedTouches[0];
       swipedir = 'none';
       startX = touchobj.pageX;
       startY = touchobj.pageY;
       startTime = new Date().getTime();
-      isDragging = true;
-      currentTranslate = 0;
-    }, false);
-
-    touchsurface.addEventListener('touchmove', (e) => {
-			console.log('Touch move');
-      if (!isDragging) return;
-      const touchobj = e.changedTouches[0];
-      distX = touchobj.pageX - startX;
-      distY = touchobj.pageY - startY;
-
-			console.log('distX: ', distX);
-
-      // Ensure movement is only horizontal and within the limit
-      if (distX < 0 && Math.abs(distX) <= parseFloat(this.moveDistance)) {
-				currentTranslate = distX;
-				cardBody.style.transform = `translateX(${currentTranslate}px)`;
-			}
-			else {
-				currentTranslate = distX;
-				cardBody.style.transform = `translateX(${currentTranslate}px)`;
-			}
       //e.preventDefault();
     }, false);
 
     touchsurface.addEventListener('touchend', (e) => {
-			console.log('Touch end');
-      isDragging = false;
+      //console.log('Touch end');
       const touchobj = e.changedTouches[0];
       distX = touchobj.pageX - startX;
       distY = touchobj.pageY - startY;
@@ -907,13 +879,6 @@ class DashNotificationSwipe {
           swipedir = (distX < 0) ? 'left' : 'right';
           //console.log(`Swipe detected: ${swipedir}`);
           handleswipe(swipedir);
-        } else {
-          // Reset to original position if no swipe is detected
-          //cardBody.style.transition = 'transform 0.3s ease';
-          cardBody.style.transform = 'translateX(0)';
-          setTimeout(() => {
-            cardBody.style.transition = ''; // Remove transition after reset
-          }, 300);
         }
       }
       //e.preventDefault();
@@ -927,26 +892,21 @@ class DashNotificationSwipe {
    * @param {String} direction 
    */
   moveElement(el, direction) {
+    const moveDistance = '3.938rem'; // Move 15% of the element's width
     const cardBody = el.querySelector('[data-notification-card-body]');
 
     if (direction === 'left') {
-      //cardBody.style.transition = 'transform 0.3s ease';
-      cardBody.style.transform = `translateX(-${this.moveDistance})`;
+      cardBody.style.transform = `translateX(-${moveDistance})`;
       el.dataset.swiped = 'left';
     } else if (direction === 'right' && el.dataset.swiped === 'left') {
-      //cardBody.style.transition = 'transform 0.3s ease';
       cardBody.style.transform = 'translateX(0)';
       el.dataset.swiped = 'none';
     }
-
-    setTimeout(() => {
-      cardBody.style.transition = ''; // Remove transition after the move
-    }, 300);
   }
 
   /**
    * @method init
-   * @description Initializes swipe and drag event listeners on notification cards
+   * @description Initializes swipe event listeners on notification cards
    */
   init() {
     document.querySelectorAll('[data-notification-card]').forEach((item) => {
@@ -1123,8 +1083,12 @@ class DashStatusMessageEditor {
   enableEditing() {
     this.isEditing = true;
 
+		this.textbox.blur(); // iOS needs this before a change of the readOnly
+
     this.element.setAttribute('data-is-editing', this.isEditing);
     this.textbox.removeAttribute('readonly');
+
+		this.textbox.focus(); // iOS needs this after a change of the readOnly so that keyboard appears
   }
 
 	/** 
