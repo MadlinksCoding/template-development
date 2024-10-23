@@ -109,6 +109,10 @@ html {
   right: .5rem
 }
 
+.bg-white-70-responsive-tablet {
+  background: rgba(255, 255, 255, .7)
+}
+
 .bg--center-top-responsive-tablet {
   background-position: center top
 }
@@ -125,8 +129,16 @@ html {
   width: 100%
 }
 
+.w--257-responsive-tablet {
+  width: 16.063rem
+}
+
 .h--screen-tablet {
   height: 100vh
+}
+
+.pad--10-responsive-tablet {
+  padding: .625rem
 }
 
 .pad--x--0-responsive-tablet {
@@ -137,6 +149,10 @@ html {
 .pad--x--16-responsive-tablet {
   padding-left: 1rem;
   padding-right: 1rem
+}
+
+.pad--left--16-responsive-tablet {
+  padding-left: 1rem
 }
 
 .pad--top--24-responsive-tablet {
@@ -179,6 +195,10 @@ html {
   display: none
 }
 
+.gap--10-responsive-tablet {
+  gap: .625rem
+}
+
 .flex--column-responsive-tablet {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -192,10 +212,26 @@ html {
   align-items: flex-start
 }
 
+.items--center-responsive-tablet {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center
+}
+
+.justify--center-responsive-tablet {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center
+}
+
 .flex--max-responsive-tablet {
   -webkit-box-flex: 1;
   -ms-flex: 1 0 0px;
   flex: 1 0 0
+}
+
+.fixed--responsive-tablet {
+  position: fixed
 }
 
 [data-submenu] [data-submenu-item][data-has-submenu=true]>[data-arrow] {

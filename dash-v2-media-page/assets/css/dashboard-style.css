@@ -1649,6 +1649,17 @@ button[data-color=gray]:not(:disabled):hover span {
   transition: all 0s ease-in-out
 }
 
+[data-button-shadow=no]:after,
+[data-button-shadow=no]:before {
+  -webkit-box-shadow: none;
+  box-shadow: none
+}
+
+[data-button-shadow=no]:after {
+  width: 1rem;
+  right: -.4rem
+}
+
 [data-button-color=grey],
 [data-button-color=grey]:after {
   background-color: var(--color-mischka, #d0d5dd)
@@ -3143,6 +3154,10 @@ button[data-color=gray]:not(:disabled):hover span {
     right: .5rem
   }
 
+  .bg-white-70-responsive-tablet {
+    background: rgba(255, 255, 255, .7)
+  }
+
   .bg--center-top-responsive-tablet {
     background-position: center top
   }
@@ -3159,8 +3174,16 @@ button[data-color=gray]:not(:disabled):hover span {
     width: 100%
   }
 
+  .w--257-responsive-tablet {
+    width: 16.063rem
+  }
+
   .h--screen-tablet {
     height: 100vh
+  }
+
+  .pad--10-responsive-tablet {
+    padding: .625rem
   }
 
   .pad--x--0-responsive-tablet {
@@ -3171,6 +3194,10 @@ button[data-color=gray]:not(:disabled):hover span {
   .pad--x--16-responsive-tablet {
     padding-left: 1rem;
     padding-right: 1rem
+  }
+
+  .pad--left--16-responsive-tablet {
+    padding-left: 1rem
   }
 
   .pad--top--24-responsive-tablet {
@@ -3213,6 +3240,10 @@ button[data-color=gray]:not(:disabled):hover span {
     display: none
   }
 
+  .gap--10-responsive-tablet {
+    gap: .625rem
+  }
+
   .flex--column-responsive-tablet {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -3226,10 +3257,26 @@ button[data-color=gray]:not(:disabled):hover span {
     align-items: flex-start
   }
 
+  .items--center-responsive-tablet {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+  }
+
+  .justify--center-responsive-tablet {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
+  }
+
   .flex--max-responsive-tablet {
     -webkit-box-flex: 1;
     -ms-flex: 1 0 0px;
     flex: 1 0 0
+  }
+
+  .fixed--responsive-tablet {
+    position: fixed
   }
 
   [data-submenu] [data-submenu-item][data-has-submenu=true]>[data-arrow] {
@@ -3466,6 +3513,10 @@ button[data-color=gray]:not(:disabled):hover span {
     box-shadow: none
   }
 
+  .bg-white-70-responsive-mobile {
+    background: rgba(255, 255, 255, .7)
+  }
+
   .bg--center-top-responsive-mobile {
     background-position: center top
   }
@@ -3494,8 +3545,12 @@ button[data-color=gray]:not(:disabled):hover span {
     max-width: 100%
   }
 
-  .h--screen-mobile-portrait {
+  .h--screen-mobile {
     height: 100vh
+  }
+
+  .pad--10-responsive-mobile {
+    padding: .625rem
   }
 
   .pad--6-responsive-mobile {
@@ -3519,6 +3574,10 @@ button[data-color=gray]:not(:disabled):hover span {
   .pad--y--8-responsive-mobile {
     padding-top: .5rem;
     padding-bottom: .5rem
+  }
+
+  .pad--left--8-responsive-mobile {
+    padding-left: .5rem
   }
 
   .pad--y--16-responsive-mobile {
@@ -3622,6 +3681,20 @@ button[data-color=gray]:not(:disabled):hover span {
     -webkit-box-flex: 1;
     -ms-flex: 1 0 0px;
     flex: 1 0 0
+  }
+
+  .justify--center-responsive-mobile {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
+  }
+
+  .fixed--responsive-mobile {
+    position: fixed
+  }
+
+  .right--8-responsive-mobile {
+    right: .5rem
   }
 
   [data-floating-panel-wrapper] {
@@ -3979,6 +4052,10 @@ button[data-color=gray]:not(:disabled):hover span {
     box-shadow: none
   }
 
+  .bg-white-70-responsive-mobile-portrait {
+    background: rgba(255, 255, 255, .7)
+  }
+
   .bg--center-top-responsive-mobile-portrait {
     background-position: center top
   }
@@ -4003,12 +4080,28 @@ button[data-color=gray]:not(:disabled):hover span {
     width: 20.875rem
   }
 
+  .w--20-responsive-mobile-portrait {
+    width: 1.25rem
+  }
+
   .max--w--100-responsive-mobile-portrait {
     max-width: 100%
   }
 
   .h--screen-mobile-portrait {
     height: 100vh
+  }
+
+  .h--auto-mobile-portrait {
+    height: auto
+  }
+
+  .h--20-responsive-mobile-portrait {
+    height: 1.25rem
+  }
+
+  .pad--10-responsive-mobile-portrait {
+    padding: .625rem
   }
 
   .pad--6-responsive-mobile-portrait {
@@ -4071,6 +4164,10 @@ button[data-color=gray]:not(:disabled):hover span {
 
   .pad--left--0-responsive-mobile-portrait {
     padding-left: 0
+  }
+
+  .pad--left--8-responsive-mobile-portrait {
+    padding-left: .5rem
   }
 
   .pad--right--0-responsive-mobile-portrait {
@@ -4136,8 +4233,22 @@ button[data-color=gray]:not(:disabled):hover span {
     flex: 1 0 0
   }
 
+  .justify--center-responsive-mobile-portrait {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
+  }
+
+  .fixed--responsive-mobile-portrait {
+    position: fixed
+  }
+
   .right--0-responsive-mobile-portrait {
     right: 0
+  }
+
+  .right--8-responsive-mobile-portrait {
+    right: .5rem
   }
 
   [data-floating-panel-wrapper] {

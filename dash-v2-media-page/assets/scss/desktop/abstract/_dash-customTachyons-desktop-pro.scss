@@ -504,6 +504,9 @@ button[data-color="gray"]:not(:disabled):hover span { color: #fff !important; }
     -webkit-transition: all 0s ease-in-out;
     transition: all 0s ease-in-out;
 }
+[data-button-shadow="no"]:before,
+[data-button-shadow="no"]:after { box-shadow: none;}
+[data-button-shadow="no"]:after{ width: 1rem; right: -0.4rem; }
 [data-button-color="grey"],
 [data-button-color="grey"]:after { background-color: var(--color-mischka, #d0d5dd); }
 

@@ -1649,6 +1649,17 @@ button[data-color=gray]:not(:disabled):hover span {
   transition: all 0s ease-in-out
 }
 
+[data-button-shadow=no]:after,
+[data-button-shadow=no]:before {
+  -webkit-box-shadow: none;
+  box-shadow: none
+}
+
+[data-button-shadow=no]:after {
+  width: 1rem;
+  right: -.4rem
+}
+
 [data-button-color=grey],
 [data-button-color=grey]:after {
   background-color: var(--color-mischka, #d0d5dd)
