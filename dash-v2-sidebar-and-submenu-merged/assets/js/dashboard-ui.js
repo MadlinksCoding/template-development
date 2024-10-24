@@ -1347,6 +1347,57 @@ class DashTabs {
 
 /**
  * 
+ * @class ProfileLinkCopier
+ * @author Abirlal Maiti <abirlal.maiti@gmail.com>
+ * @classdesc Fansocial Dashboard Profile Panel - Click to copy profile link
+ * Clicking on "Copy Profile Link" will copy the profile URL (given as data attribute) and will keep in device clipboard for pasting
+ * 
+ */
+class ProfileLinkCopier {
+  constructor() {
+    // Bind the event listener
+    this.bindEvents();
+  }
+
+  // Method to bind the click event
+  bindEvents() {
+    // Use event delegation to listen for clicks on elements with the [data-copy-profile-link] attribute
+    document.addEventListener('click', (event) => {
+      const copyLinkElement = event.target.closest('[data-copy-profile-link]');
+
+      if (copyLinkElement) {
+        event.preventDefault();
+        this.copyToClipboard(copyLinkElement.getAttribute('data-copy-profile-link'));
+      }
+    });
+  }
+
+  // Method to copy the link to clipboard
+  copyToClipboard(link) {
+    // Create a temporary input element
+    const tempInput = document.createElement('input');
+    tempInput.value = link;
+    document.body.appendChild(tempInput);
+
+    // Select the input field and execute the copy command
+    tempInput.select();
+    tempInput.setSelectionRange(0, 99999); // For mobile devices
+
+		// execCommand() is deprecated now in new specs but since there is no alternative yet, all browser still supports it. Should be replaced with alternatives once new method(s) are added in spec
+    document.execCommand('copy'); 
+
+    // Remove the temporary input field
+    document.body.removeChild(tempInput);
+
+    // You can also add a notification or visual feedback here if needed
+    alert('Profile link copied to clipboard!');
+  }
+}
+
+
+
+/**
+ * 
  * Initiates JS executions after DOM contents are loaded (equivalant to jQuery $document.on(ready){...})
  * 
  */
@@ -1373,6 +1424,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
 	// Initialize notification swipe handler
 	const dashNotificationSwipe = new DashNotificationSwipe();
 	dashNotificationSwipe.init();
+
+
+	// Initialize profile link copy feature
+	const dashCopyProfileLink = new ProfileLinkCopier();
 
 
 	// Initialize the status dropdown class for all elements with data-js-status-dropdown
