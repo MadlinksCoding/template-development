@@ -15,5 +15,5 @@
   filter: brightness(0) saturate(100%) invert(37%) sepia(57%) saturate(6169%) hue-rotate(214deg) brightness(91%) contrast(106%);
 }
 
-[data-profile-panel-container] [data-auto-repost-setting] { display: none; }
-[data-profile-panel-container] [data-auto-repost-setting][data-is-active="true"] { display: flex; }
+[data-profile-panel-container] [data-auto-repost-setting] { /*display: none;*/ height: 0px; overflow: hidden; transition: height 0.5s ease-in-out; }
+[data-profile-panel-container] [data-auto-repost-setting][data-is-active="true"] { /*display: flex;*/ height: 154px; }
