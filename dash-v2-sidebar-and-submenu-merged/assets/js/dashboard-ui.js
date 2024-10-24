@@ -1136,7 +1136,7 @@ class DashStatusMessageEditor {
 	 */
 	updateWordCount() {
     const characterCount = this.textbox.value.length;
-    this.wordCount.textContent = `${characterCount}/100`;
+    this.wordCount.textContent = `${characterCount > 100 ? 100 : characterCount}/100`;
 
 		// restrict characters upto 100 only (can be made dynamic by passing additional data-* attribute to instance)
     if ( characterCount > 100 ) {
