@@ -1374,23 +1374,50 @@ class ProfileLinkCopier {
 
   // Method to copy the link to clipboard
   copyToClipboard(link) {
+    // Check if Clipboard API is supported
+    if (navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
+      navigator.clipboard.writeText(link)
+        .then(() => {
+          // Success feedback
+          console.info('%cProfile link copied to clipboard!', 'color: blue');
+        })
+        .catch(err => {
+          // If Clipboard API fails, fallback to execCommand
+          console.error('Clipboard API failed. Falling back to execCommand. Error: ', err);
+          this.fallbackCopyToClipboard(link);
+        });
+    } else {
+      // Fallback for older browsers
+      this.fallbackCopyToClipboard(link);
+    }
+  }
+
+  // Fallback method using document.execCommand('copy'). execCommand() is deprecated now in new specs but since there is no alternative yet, all browser still supports it. Should be replaced with alternatives once new method(s) are added in spec
+  fallbackCopyToClipboard(link) {
     // Create a temporary input element
     const tempInput = document.createElement('input');
     tempInput.value = link;
     document.body.appendChild(tempInput);
 
-    // Select the input field and execute the copy command
+    // Select the input field
     tempInput.select();
     tempInput.setSelectionRange(0, 99999); // For mobile devices
 
-		// execCommand() is deprecated now in new specs but since there is no alternative yet, all browser still supports it. Should be replaced with alternatives once new method(s) are added in spec
-    document.execCommand('copy'); 
+    try {
+      // Attempt to copy
+      const successful = document.execCommand('copy');
+      if (successful) {
+        console.info('%cProfile link copied to clipboard!', 'color: blue');
+      } else {
+        throw new Error('Fallback copy failed');
+      }
+    } catch (err) {
+      console.error('Fallback copy failed: ', err);
+			console.info('%cFailed to copy the link. Please try manually.', 'color: red');
+    }
 
-    // Remove the temporary input field
+    // Clean up the temporary input
     document.body.removeChild(tempInput);
-
-    // You can also add a notification or visual feedback here if needed
-    alert('Profile link copied to clipboard!');
   }
 }
 
