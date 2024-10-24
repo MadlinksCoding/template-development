@@ -25,6 +25,11 @@ html {
   height: 0
 }
 
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent
+}
+
 .col--blue-ribbon {
   color: var(--color-blue-ribbon, #155eef)
 }
@@ -1358,8 +1363,8 @@ html {
   bottom: 0;
   border-radius: .75rem;
   background-color: var(--colol-gull-gray--50, rgba(152, 162, 179, .5));
-  -webkit-transition: all .15s ease-in-out;
-  transition: all .15s ease-in-out
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out
 }
 
 [data-switch]:hover [data-switch-slide] {
@@ -1387,8 +1392,8 @@ html {
   border-radius: 50%;
   -webkit-box-shadow: 0 1px 3px 0 rgba(16, 24, 40, .1), 0 1px 2px 0 rgba(16, 24, 40, .06);
   box-shadow: 0 1px 3px 0 rgba(16, 24, 40, .1), 0 1px 2px 0 rgba(16, 24, 40, .06);
-  -webkit-transition: all .15s ease-in-out;
-  transition: all .15s ease-in-out
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out
 }
 
 [data-switch] input:checked+[data-switch-slide]:before {
