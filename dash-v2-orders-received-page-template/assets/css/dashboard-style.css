@@ -1433,7 +1433,10 @@ input[type=tel],
 input[type=text],
 input[type=url],
 textarea {
-  color: var(--color-ebony, #101828)
+  color: var(--color-ebony, #101828);
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400
 }
 
 [data-form-input-type=checkbox][data-form-accent-color=green] input[type=checkbox]:checked {
