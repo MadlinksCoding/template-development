@@ -38,6 +38,9 @@
 .bg--col-ebony { background: var(--color-ebony, #101828); }
 .bg--col--light-bondi-blue { background: rgba(34, 204, 238, 0.10); }
 .bg--col--light-gray-152-50 { background: rgba(152, 162, 179, 0.50);}
+.bg--col--trans-dark-black-70 { background: rgba(48, 52, 55, 0.70); }
+.bg--col--light-gray-234-70 { background: rgba(234, 236, 240, 0.70); }
+.bg--col--rose { background-color: var(--color-rose, #F06); } /* confirmed in use */
 
 /* Background Gradients*/
 .bg--gd--light-white { background: linear-gradient(0deg, rgba(242, 244, 247, 0.50) 0%, rgba(242, 244, 247, 0.50) 100%), rgba(255, 255, 255, 0.50); }
@@ -77,6 +80,7 @@
 .filter--col--turquoise { filter: brightness(0) saturate(100%) invert(77%) sepia(13%) saturate(2041%) hue-rotate(116deg) brightness(89%) contrast(95%); } /* #2ED3B7 */
 
 /* Filter Blur */
+.filter--blur--2 { filter: blur(2px); -webkit-filter: blur(2px); -moz-filter: blur(2px); }
 .filter--blur--500 { filter: blur(345px); -webkit-filter: blur(345px); -moz-filter: blur(600px); }
 
 
@@ -186,6 +190,7 @@
 
 
 /* Padding */
+.pad--x--2 { padding-left: 0.125rem; padding-right: 0.125rem; /* padding left right 2px */ }
 .pad--x--6 { padding-left: 0.375rem; padding-right: 0.375rem; /* padding left right 6px */ }
 .pad--x--9 { padding-left: 0.563rem; padding-right: 0.563rem; /* padding left right 9px */ }
 .pad--x--40 { padding-left: 2.5rem; padding-right: 2.5rem; /* padding-left 40px padding-right 40px */ }
@@ -226,6 +231,11 @@
 
 
 /* Grid Column */
+.grid--cols--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+
+/* aspect-ratio */
+.aspect--ratio--16-9 { aspect-ratio: 16 / 9; }
 
 
 /* Order */
@@ -383,6 +393,9 @@
 [data-tabs-menu] [data-tabbed-child-id].active { background: var(--Base-White, #FFF); }
 [data-tabs-menu] [data-tabbed-child-id].active [data-span-title] { color: var(--color-oxford-blue,#344054); font-weight: 600; }
 [data-tabs-menu] [data-tabbed-child-id].active [data-span-value] { color: var(--color-pale-sky,#667085); }
+/* Grid and List tabs menu style */
+[data-tabs-menu="grid-list-tabs-menu"] [data-tabbed-child-id].active { background-color: var(--color-ebony-2, #0C111D); }
+[data-tabs-menu="grid-list-tabs-menu"] [data-tabbed-child-id].active [data-span-icon] img { filter: brightness(0) saturate(100%) invert(99%) sepia(99%) saturate(0%) hue-rotate(176deg) brightness(107%) contrast(100%); }
 
 
 /* Loader Animation */
