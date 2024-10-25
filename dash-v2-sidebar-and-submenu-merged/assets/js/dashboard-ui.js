@@ -600,9 +600,11 @@ class DashSideBarHandler {
 			
 			//console.log(this.options);
 
-			// Close opened submenu on outside click o sidebar or submenus
+			// Close opened submenu on outside click o sidebar or submenus. Same for profile dotted dropdown menu as well
 			document.addEventListener('click', (e) => {
 				!_self.options.sidebarEl.contains(e.target) ? _self.resetMenu() : '';
+
+				!_self.options.profileDottedButtonEl.contains(e.target) ? _self.options.profileDottedButtonEl.dataset.isActive = false : '';
 			});
 
 			// handle "Esc" key event to close the submenu (if opened)
@@ -1136,7 +1138,7 @@ class DashStatusMessageEditor {
 	 */
 	updateWordCount() {
     const characterCount = this.textbox.value.length;
-    this.wordCount.textContent = `${characterCount}/100`;
+    this.wordCount.textContent = `${characterCount > 100 ? 100 : characterCount}/100`;
 
 		// restrict characters upto 100 only (can be made dynamic by passing additional data-* attribute to instance)
     if ( characterCount > 100 ) {
@@ -1347,6 +1349,84 @@ class DashTabs {
 
 /**
  * 
+ * @class ProfileLinkCopier
+ * @author Abirlal Maiti <abirlal.maiti@gmail.com>
+ * @classdesc Fansocial Dashboard Profile Panel - Click to copy profile link
+ * Clicking on "Copy Profile Link" will copy the profile URL (given as data attribute) and will keep in device clipboard for pasting
+ * 
+ */
+class ProfileLinkCopier {
+  constructor() {
+    // Bind the event listener
+    this.bindEvents();
+  }
+
+  // Method to bind the click event
+  bindEvents() {
+    // Use event delegation to listen for clicks on elements with the [data-copy-profile-link] attribute
+    document.addEventListener('click', (event) => {
+      const copyLinkElement = event.target.closest('[data-copy-profile-link]');
+
+      if (copyLinkElement) {
+        event.preventDefault();
+        this.copyToClipboard(copyLinkElement.getAttribute('data-copy-profile-link'));
+      }
+    });
+  }
+
+  // Method to copy the link to clipboard
+  copyToClipboard(link) {
+    // Check if Clipboard API is supported
+    if (navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
+      navigator.clipboard.writeText(link)
+        .then(() => {
+          // Success feedback
+          console.info('%cProfile link copied to clipboard!', 'color: blue');
+        })
+        .catch(err => {
+          // If Clipboard API fails, fallback to execCommand
+          console.error('Clipboard API failed. Falling back to execCommand. Error: ', err);
+          this.fallbackCopyToClipboard(link);
+        });
+    } else {
+      // Fallback for older browsers
+      this.fallbackCopyToClipboard(link);
+    }
+  }
+
+  // Fallback method using document.execCommand('copy'). execCommand() is deprecated now in new specs but since there is no alternative yet, all browser still supports it. Should be replaced with alternatives once new method(s) are added in spec
+  fallbackCopyToClipboard(link) {
+    // Create a temporary input element
+    const tempInput = document.createElement('input');
+    tempInput.value = link;
+    document.body.appendChild(tempInput);
+
+    // Select the input field
+    tempInput.select();
+    tempInput.setSelectionRange(0, 99999); // For mobile devices
+
+    try {
+      // Attempt to copy
+      const successful = document.execCommand('copy');
+      if (successful) {
+        console.info('%cProfile link copied to clipboard!', 'color: blue');
+      } else {
+        throw new Error('Fallback copy failed');
+      }
+    } catch (err) {
+      console.error('Fallback copy failed: ', err);
+			console.info('%cFailed to copy the link. Please try manually.', 'color: red');
+    }
+
+    // Clean up the temporary input
+    document.body.removeChild(tempInput);
+  }
+}
+
+
+
+/**
+ * 
  * Initiates JS executions after DOM contents are loaded (equivalant to jQuery $document.on(ready){...})
  * 
  */
@@ -1373,6 +1453,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
 	// Initialize notification swipe handler
 	const dashNotificationSwipe = new DashNotificationSwipe();
 	dashNotificationSwipe.init();
+
+
+	// Initialize profile link copy feature
+	const dashCopyProfileLink = new ProfileLinkCopier();
 
 
 	// Initialize the status dropdown class for all elements with data-js-status-dropdown

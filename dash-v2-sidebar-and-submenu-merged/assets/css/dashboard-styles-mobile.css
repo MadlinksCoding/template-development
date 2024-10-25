@@ -289,13 +289,27 @@ html {
 [data-submenu] [data-submenu-item] {
   padding: .375rem .375rem .5rem .375rem;
   -ms-flex-item-align: center;
-  align-self: center
+  align-self: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%
 }
 
 [data-submenu] [data-submenu-item] {
   padding: .375rem 1rem .5rem 1rem;
   -ms-flex-item-align: center;
-  align-self: center
+  align-self: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%
+}
+
+[data-submenu] [data-submenu-item]>span.flex--max {
+  -webkit-box-flex: initial;
+  -ms-flex: initial;
+  flex: initial
 }
 
 [data-submenu] [data-submenu-item]>span.gap--12 {
