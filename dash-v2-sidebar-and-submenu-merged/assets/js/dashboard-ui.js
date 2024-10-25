@@ -600,9 +600,11 @@ class DashSideBarHandler {
 			
 			//console.log(this.options);
 
-			// Close opened submenu on outside click o sidebar or submenus
+			// Close opened submenu on outside click o sidebar or submenus. Same for profile dotted dropdown menu as well
 			document.addEventListener('click', (e) => {
 				!_self.options.sidebarEl.contains(e.target) ? _self.resetMenu() : '';
+
+				!_self.options.profileDottedButtonEl.contains(e.target) ? _self.options.profileDottedButtonEl.dataset.isActive = false : '';
 			});
 
 			// handle "Esc" key event to close the submenu (if opened)
