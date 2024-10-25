@@ -1211,7 +1211,8 @@ html {
 
 [data-responsive-tab-header-type=scrollable] [data-tab-head-list] {
   -webkit-box-shadow: 0 -1.5px 0 0 var(--color-mischka, #d0d5dd) inset;
-  box-shadow: 0 -1.5px 0 0 var(--color-mischka, #d0d5dd) inset
+  box-shadow: 0 -1.5px 0 0 var(--color-mischka, #d0d5dd) inset;
+  scroll-behavior: smooth
 }
 
 [data-responsive-tab-header-type=scrollable] [data-tab-head-list-item] [data-tab-trigger]:hover {

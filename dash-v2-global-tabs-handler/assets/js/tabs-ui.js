@@ -1,9 +1,82 @@
 /**
  * 
+ * @class ScrollableTabs
+ * @author Abirlal Maiti <abirlal.maiti@gmail.com>
+ * 
+ * @classdesc Class representing a horizontal scoll-based tab system with responsive behavior.
+ * Clicking on any tab head will try to bring the tab head to center of the screen (if possible), works when the combined width of all tab heads is greater than tab head wrapper
+ * 
+ */
+class ScrollableTabs {
+	constructor() {
+		this.init();
+	}
+
+	init() {
+		// Find all tab headers with the "data-tab-header-main" attribute
+		document.querySelectorAll('[data-tab-header-main]').forEach(tabHeader => {
+			if (tabHeader.getAttribute('data-responsive-tab-header-type') === 'scrollable') {
+				this.setupTabScroll(tabHeader);
+			}
+		});
+
+		// Observe for any AJAX-injected HTML
+		const observer = new MutationObserver(mutations => {
+			mutations.forEach(mutation => {
+				mutation.addedNodes.forEach(node => {
+					if (node.nodeType === 1 && node.hasAttribute('data-tab-header-main')) {
+						if (node.getAttribute('data-responsive-tab-header-type') === 'scrollable') {
+							this.setupTabScroll(node);
+						}
+					}
+				});
+			});
+		});
+
+		observer.observe(document.body, { childList: true, subtree: true });
+	}
+
+	setupTabScroll(tabHeader) {
+		const tabList = tabHeader.querySelector('[data-tab-head-list]');
+		const tabItems = Array.from(tabList.querySelectorAll('[data-tab-head-list-item]'));
+
+		// Set up click listeners on each tab item
+		tabItems.forEach((tabItem, index) => {
+			tabItem.addEventListener('click', () => this.handleTabClick(tabList, tabItems, index));
+		});
+	}
+
+	handleTabClick(tabList, tabItems, index) {
+		const combinedWidth = tabItems.reduce((total, item) => total + item.offsetWidth + this.getGap(tabItems), 0);
+		const tabListWidth = tabList.offsetWidth;
+
+		if (combinedWidth > tabListWidth) {
+			const clickedTab = tabItems[index];
+			const tabCenter = clickedTab.offsetLeft + clickedTab.offsetWidth / 2;
+			const scrollLeft = tabCenter - tabListWidth / 2;
+            //console.log('%cscrollLeft', 'color: blue', scrollLeft);
+
+			// Adjust scrollLeft to center the clicked tab
+			tabList.scrollTo({
+				left: scrollLeft,
+				behavior: 'smooth'
+			});
+		}
+	}
+
+	getGap(tabItems) {
+		const gap = window.getComputedStyle(tabItems[0].parentElement).gap || '0px';
+		return parseInt(gap, 10);
+	}
+}
+
+/**
+ * 
  * @class DropdownTabs
  * @author Abirlal Maiti <abirlal.maiti@gmail.com>
  * 
  * @classdesc Class representing a dropdown-based tab system with responsive behavior.
+ * Makes the tab into a dropdown when the breakpoint defined as data-* attribute is reached
  * 
  */
 class DropdownTabs {
@@ -170,6 +243,9 @@ class DropdownTabs {
  * 
  */
 document.addEventListener("DOMContentLoaded", (e) => {
-    // Instantiate the class to apply the functionality
+    // Instantiate the scrollableTabs class to apply the functionality
+    const scrollableTabs = new ScrollableTabs();
+
+    // Instantiate the dropdownTabs class to apply the functionality
     const dropdownTabs = new DropdownTabs();
 });
