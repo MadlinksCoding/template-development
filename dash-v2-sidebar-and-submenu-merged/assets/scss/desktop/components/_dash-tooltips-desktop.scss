@@ -3,6 +3,15 @@
  */
 
 /* Dashboard Tooltips : Custom Styles */
+[data-tooltip] {
+  overflow: hidden;
+}
+
+[data-tooltip]:hover,
+[data-tooltip]:active {
+  overflow: visible;
+}
+
 [data-tooltip] [data-tooltip-content] {
   display: flex;
   flex-direction: column;

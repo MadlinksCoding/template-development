@@ -499,6 +499,11 @@ class DashSideBarHandler {
 			if ( _self.options.profileAutoRepostSettingTriggerEl.dataset.isActive === 'false' ) {
 				_self.options.profileAutoRepostSettingTriggerEl.dataset.isActive = 'true';
 				_self.options.profileAutoRepostSettingEl.dataset.isActive = 'true';
+
+				// smooth scroll down
+				setTimeout( () => {
+					document.querySelector('[data-scrollable-profile-panel]').scrollTop = 200;
+				}, 50);
 			}
 			else {
 				_self.options.profileAutoRepostSettingTriggerEl.dataset.isActive = 'false';

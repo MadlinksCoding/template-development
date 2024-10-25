@@ -1177,6 +1177,10 @@ html {
   transform: translateX(0)
 }
 
+[data-profile-panel-container] [data-scrollable-profile-panel] {
+  scroll-behavior: smooth
+}
+
 [data-profile-panel-container] [data-auto-repost-setting-toggle]:hover,
 [data-profile-panel-container] [data-auto-repost-setting-toggle][data-is-active=true] {
   -webkit-filter: brightness(0) saturate(100%) invert(37%) sepia(57%) saturate(6169%) hue-rotate(214deg) brightness(91%) contrast(106%);
@@ -1184,14 +1188,13 @@ html {
 }
 
 [data-profile-panel-container] [data-auto-repost-setting] {
-  height: 0;
-  overflow: hidden;
-  -webkit-transition: height .5s ease-in-out;
-  transition: height .5s ease-in-out
+  display: none
 }
 
 [data-profile-panel-container] [data-auto-repost-setting][data-is-active=true] {
-  height: 154px
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex
 }
 
 [data-tabbed-content],
@@ -1208,7 +1211,8 @@ html {
 
 [data-responsive-tab-header-type=scrollable] [data-tab-head-list] {
   -webkit-box-shadow: 0 -1.5px 0 0 var(--color-mischka, #d0d5dd) inset;
-  box-shadow: 0 -1.5px 0 0 var(--color-mischka, #d0d5dd) inset
+  box-shadow: 0 -1.5px 0 0 var(--color-mischka, #d0d5dd) inset;
+  scroll-behavior: smooth
 }
 
 [data-responsive-tab-header-type=scrollable] [data-tab-head-list-item] [data-tab-trigger]:hover {
@@ -1426,6 +1430,15 @@ html {
 
 [data-switch][data-switch-theme=light] input:checked+[data-switch-slide] {
   background-color: var(--colol-ebony, #0c111d)
+}
+
+[data-tooltip] {
+  overflow: hidden
+}
+
+[data-tooltip]:active,
+[data-tooltip]:hover {
+  overflow: visible
 }
 
 [data-tooltip] [data-tooltip-content] {
@@ -1860,6 +1873,11 @@ html {
   filter: brightness(0) saturate(100%) invert(99%) sepia(99%) saturate(0) hue-rotate(176deg) brightness(107%) contrast(100%)
 }
 
+[data-status-dropdown-main] {
+  overflow: hidden;
+  border-radius: .9375rem
+}
+
 [data-status-dropdown-main] [data-current-status] {
   outline: 0;
   -webkit-box-shadow: 0 0 0 1px var(--color-athens-gray2);
@@ -1916,6 +1934,11 @@ html {
 
 [data-status-dropdown-main][data-dropdown-type=small] [data-status-dropdown] [data-status-desc] {
   display: none
+}
+
+[data-status-dropdown-main]:hover,
+[data-status-dropdown-main][data-is-open=true] {
+  overflow: visible
 }
 
 [data-status-dropdown-main][data-is-open=true] [data-status-dropdown-arrow] {

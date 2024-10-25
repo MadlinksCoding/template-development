@@ -3,6 +3,11 @@
  */
 
 /* Dashboard Status : Custom Styles */
+[data-status-dropdown-main] {
+  overflow: hidden;
+  border-radius: 0.9375rem; /* 15px */
+}
+
 [data-status-dropdown-main] [data-current-status] {
   outline: none;
   // outline: 1px solid var(--color-athens-gray2);
@@ -66,8 +71,9 @@
 }
 
 /* Dashboard Status Dropdown (Open) : Custom Styles */
+[data-status-dropdown-main]:hover,
 [data-status-dropdown-main][data-is-open="true"] {
-  
+  overflow: visible;
 }
 
 [data-status-dropdown-main][data-is-open="true"] [data-status-dropdown-arrow] {

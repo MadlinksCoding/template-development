@@ -9,11 +9,13 @@
 [data-profile-panel-container][hidden] { display: flex; opacity: 0; visibility: hidden; pointer-events: none; transform: translateX(-36rem); }
 [data-profile-panel-container] { opacity: 1; visibility: visible; pointer-events: all; transform: translateX(0rem); }
 
+[data-profile-panel-container] [data-scrollable-profile-panel] { scroll-behavior: smooth; }
+
 /* Auto Repost Settings Section */
 [data-profile-panel-container] [data-auto-repost-setting-toggle]:hover,
 [data-profile-panel-container] [data-auto-repost-setting-toggle][data-is-active="true"] {
   filter: brightness(0) saturate(100%) invert(37%) sepia(57%) saturate(6169%) hue-rotate(214deg) brightness(91%) contrast(106%);
 }
 
-[data-profile-panel-container] [data-auto-repost-setting] { /*display: none;*/ height: 0px; overflow: hidden; transition: height 0.5s ease-in-out; }
-[data-profile-panel-container] [data-auto-repost-setting][data-is-active="true"] { /*display: flex;*/ height: 154px; }
+[data-profile-panel-container] [data-auto-repost-setting] { display: none; /*height: 0px; overflow: hidden; transition: height 0.5s ease-in-out;*/ }
+[data-profile-panel-container] [data-auto-repost-setting][data-is-active="true"] { display: flex; /*height: 154px;*/ }
