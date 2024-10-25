@@ -260,6 +260,10 @@ html {
   height: 100vh
 }
 
+.pad--2-responsive-mobile {
+  padding: .125rem
+}
+
 .pad--10-responsive-mobile {
   padding: .625rem
 }
@@ -361,6 +365,10 @@ html {
   gap: 0
 }
 
+.gap--2-responsive-mobile {
+  gap: .125rem
+}
+
 .gap--4-responsive-mobile {
   gap: .25rem
 }
@@ -398,6 +406,10 @@ html {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center
+}
+
+.grid--cols--2-responsive-mobile {
+  grid-template-columns: repeat(2, minmax(0, 1fr))
 }
 
 .fixed--responsive-mobile {
