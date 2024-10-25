@@ -707,6 +707,10 @@ html {
   background: rgba(152, 162, 179, .5)
 }
 
+.bg--col--athens-gray-2 {
+  background-color: var(--color-athens-gray2, #f9fafb)
+}
+
 .bg--gd--light-white {
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(242, 244, 247, .5)), to(rgba(242, 244, 247, .5))), rgba(255, 255, 255, .5);
   background: linear-gradient(0deg, rgba(242, 244, 247, .5) 0, rgba(242, 244, 247, .5) 100%), rgba(255, 255, 255, .5)
@@ -1148,6 +1152,11 @@ html {
   border-bottom-left-radius: 0 !important
 }
 
+.br--top-bottom-left {
+  border-bottom-left-radius: 0 !important;
+  border-top-left-radius: 0 !important
+}
+
 .transform--3d {
   transform: translate3d(0, 0, 0);
   -webkit-transform: translate3d(0, 0, 0);
@@ -1533,6 +1542,10 @@ ul[data-theme="default black"] li:before {
   position: absolute;
   left: .188rem;
   top: .438rem
+}
+
+[data-button="editor icon"]:active {
+  background: var(--color-athens-gray2, #f9fafb)
 }
 
 [data-color=green]:hover img {

@@ -38,6 +38,7 @@
 .bg--col-ebony { background: var(--color-ebony, #101828); }
 .bg--col--light-bondi-blue { background: rgba(34, 204, 238, 0.10); }
 .bg--col--light-gray-152-50 { background: rgba(152, 162, 179, 0.50);}
+.bg--col--athens-gray-2 { background-color: var(--color-athens-gray2, #F9FAFB); }
 
 /* Background Gradients*/
 .bg--gd--light-white { background: linear-gradient(0deg, rgba(242, 244, 247, 0.50) 0%, rgba(242, 244, 247, 0.50) 100%), rgba(255, 255, 255, 0.50); }
@@ -308,6 +309,7 @@
 .br--5 { border-radius: 0.313rem; /* border-radius 5px */ } /* confirmed in use */ /* pixel conversion correct */
 .br--top--2 { border-radius: 0.125rem 0.125rem 0rem 0rem; /* border-radius top 2px */ } /* confirmed in use */ /* pixel conversion correct */
 .br--bottom--left--right {border-bottom-right-radius: 0 !important; border-bottom-left-radius: 0 !important;}
+.br--top-bottom-left {border-bottom-left-radius: 0 !important; border-top-left-radius: 0 !important;}
 
 /* Transform */
 .transform--3d { transform: translate3d(0, 0, 0); -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); }
@@ -435,6 +437,7 @@ ul[data-theme="default black"] li:before{ content:""; width: 0.25rem; height: 0.
 
 
 /* Button style */
+[data-button="editor icon"]:active { background: var(--color-athens-gray2, #F9FAFB); }
 [data-color="green"]:hover img { filter: brightness(0) saturate(100%) invert(50%) sepia(94%) saturate(408%) hue-rotate(100deg) brightness(93%) contrast(87%); } /* #17B26A */
 [data-color="black"]:hover img { filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(0%) hue-rotate(335deg) brightness(93%) contrast(107%); } /* #000 */
 [data-color="black"]:hover { background: var(--color-brand-green, #07F468); color: #000; }
