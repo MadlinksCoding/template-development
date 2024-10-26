@@ -2,6 +2,11 @@ html {
   font-size: 16px
 }
 
+body.stop-mobile-scrolling {
+  max-height: 100vh;
+  overflow: hidden
+}
+
 .bg--col--transparent--responsive-mobile {
   background: 0 0
 }

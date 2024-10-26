@@ -24,6 +24,8 @@ class DashSideBarHandler {
 				screenSizeTablet: false, // if device screensize is tablet
 				screenSizeMobile: false, // if device screensize is mobile
 
+				domBody: '', // body element
+
 				sidebarSelector: '[data-sidebar]', // dash sidebar selector
 
 				sidebarEl: '', // dash sidebar element
@@ -167,6 +169,9 @@ class DashSideBarHandler {
       	card.dataset.swiped = 'none'
 			) : '';
 		});
+
+		// enable scroll in body
+		_self.options.domBody.classList.remove('stop-mobile-scrolling');
 	}
 
 	/** 
@@ -320,6 +325,7 @@ class DashSideBarHandler {
 				_self.options.currentSubmenuTitleStack.push(mainMenuEl.dataset.mainMenuName),
 				_self.options.currentSubmenuEl = _self.options.currentSubmenuContainer.querySelector('[data-submenu]'),
 				_self.options.currentSubmenuEl.removeAttribute('hidden'),
+				_self.options.domBody.classList.add('stop-mobile-scrolling'),
 				_self.options.currentSubmenuElStack.push(_self.options.currentSubmenuContainer.querySelector('[data-submenu]'))
 			) : '';
 
@@ -411,6 +417,7 @@ class DashSideBarHandler {
 
 						trigger.dataset.isActive = 'true';
 						_self.options.notificationsPanelEl.removeAttribute('hidden');
+						_self.options.domBody.classList.add('stop-mobile-scrolling');
 					}
 					else {
 						_self.resetMenu();
@@ -460,6 +467,7 @@ class DashSideBarHandler {
 
 						trigger.dataset.isActive = 'true';
 						_self.options.profilePanelEl.removeAttribute('hidden');
+						_self.options.domBody.classList.add('stop-mobile-scrolling');
 					}
 					else {
 						_self.resetMenu();
@@ -524,11 +532,13 @@ class DashSideBarHandler {
 		// open mobile nav
 		_self.options.mobileNavOpenTriggerEl.addEventListener('click', (evt) => {
 			_self.options.mobileNavEl.dataset.isActive = true;
+			_self.options.domBody.classList.add('stop-mobile-scrolling');
 		});
 
 		// close mobile nav
 		_self.options.mobileNavCloseTriggerEl.addEventListener('click', (evt) => {
 			_self.options.mobileNavEl.dataset.isActive = false;
+			_self.options.domBody.classList.remove('stop-mobile-scrolling');
 		});
 	}
 
@@ -557,6 +567,7 @@ class DashSideBarHandler {
 			this.options.screenSizeMobile = window.screen.width < 768 ? true : false;
 
 			// update initial selectors
+			this.options.domBody = document.querySelector('body');
 			this.options.sidebarEl = document.querySelector(this.options.sidebarSelector);
 			this.options.dashNavEl = document.querySelector(this.options.dashNavElSelector);
 
