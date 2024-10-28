@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Meta Tags -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>Template - Dashboard Slide In Right Popup</title>
+
+        <!-- Poppins Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+        <!-- Tachyons Styles -->
+        <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/main.css" />
+        <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" />
+        <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/theme.css" />
+        <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/customTachyons.css" />
+
+        <!-- Previous Popup CSS -->
+        <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/css/dev/popup.css" />
+
+        <!-- Dashboard Sidebar Custom Style -->
+        <link rel="stylesheet" href="../assets/css/dashboard-styles-desktop.css" />
+
+        <!-- Tablet Stylesheet -->
+        <link rel="stylesheet" href="../assets/css/dashboard-styles-tablet.css" media="screen and (min-width: 768px) and (max-width: 1365px)">
+        
+        <!-- Mobile Stylesheet -->
+        <link rel="stylesheet" href="../assets/css/dashboard-styles-mobile.css" media="screen and (min-width: 480px) and (max-width: 767px)">
+
+        <!-- Mobile Portrait Stylesheet -->
+        <link rel="stylesheet" href="../assets/css/dashboard-styles-mobile-portrait.css" media="screen and (max-width: 479px)">
+    </head>
+    <body>
+
+        <!-- popup demo (slide in from right) -->
+        <button onclick="open_popup({'target': '#slidein-right-popup'});" class="flex pv2 ph3 ma2 br--6 white bg--col--brilliant-rose hover--bg--col--tall-poppy">
+            Open Popup (type - slide-in-right)
+        </button>
+
+        <!-- slidein-right-popup (tech debt - have to remove static width from old popup.css so that tachyons can be used for width) -->
+        <div data-popup data-popup-type="slidein-right-popup" data-popup-overlay-color="rgba(0,0,0,0.65)" data-popup-max-width="480px" id="slidein-right-popup" class="elm_UoRWYY items-center justify-center fixed dn top-0 left-0 w-100 h-100 z-9999 overflow-auto">
+            <!-- inner wrapper -->
+            <div data-popup-inner class="elm_yNwqwJ top-0 w-100 flex items-center justify-center absolute">
+                <!-- container -->
+                <div data-popup-content-container data-ajax-content data-attribute-popup-ajax-container="" class="elm_qJBugX flex flex-column mw--300 w-100 max--w--480 bg--col--athens-gray--90 sh--popup-1 bg--blur--10">
+                    <!-- header (paddings & borders will vary based on design) -->
+                    <div data-popup-header class="elm_nZyPEx flex pv2 ph2 bb br--col--mischka">
+                        <div data-popup-header-wrapper class="flex justify-between items-center flex--max">
+                            <h2 class="fs--14 fw6 lh--20 col--oxford-blue">
+                                Heading - Slide In From Right
+                            </h2>
+
+                            <!-- close-icon -->
+                            <a class="elm_UOkrrN flex justify-center items-center w--24 h--24 pointer br--6 hover--bg--col--ebony--10 transition--background transition--200 transition--ease-in-out">
+                                <img src="../assets/images/popup-close.svg" alt="" class="w--24 h--24 filter--col--gull-gray pointer-events-none">
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- contents (paddings will vary based on design) -->
+                    <div data-popup-main-content class="elm_wdBhkC">
+                        <div data-popup-main-content-wrapper class="pa2">
+                            <p class="fs--14 fw4 lh--20 black">
+                                Dummy content to show where the main content will appear.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <!-- Previous Popup Script -->
+        <script src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/FINAL/js/popup.js"></script>
+        <script src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/FINAL/js/main.js?ver=1.0" id="main-js"></script>
+    </body>
+</html>

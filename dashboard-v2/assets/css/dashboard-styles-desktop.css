@@ -2092,4 +2092,31 @@ html {
 [data-show-hide-container][data-show-on-mobile=true] {
   display: none
 }
+
+[data-popup][data-popup-max-width="480px"] [data-popup-content-container] {
+  max-width: 30rem
+}
+
+[data-popup][data-popup-type=slidein-right-popup] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: transparent !important;
+  -webkit-transform: translate(100%, 0);
+  transform: translate(100%, 0);
+  -webkit-transition: .25s -webkit-transform ease-in-out;
+  transition: .25s -webkit-transform ease-in-out;
+  transition: .25s transform ease-in-out;
+  transition: .25s transform ease-in-out, .25s -webkit-transform ease-in-out
+}
+
+.flex.opened[data-popup][data-popup-type=slidein-right-popup] {
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0)
+}
+
+[data-popup][data-popup-type=slidein-right-popup] [data-popup-content-container] {
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .25);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, .25)
+}
 /*# sourceMappingURL=../css/map/dashboard-styles-desktop.css.map */

@@ -1,0 +1,24 @@
+/**
+ * Template name: <Dashboard Popups (Global)>
+ */
+
+/* Dashboard Popup (content container width presets) : Custom Styles */
+[data-popup][data-popup-max-width="480px"] [data-popup-content-container] {
+  max-width: 30rem; /* max width 480px */
+}
+
+/* Dashboard Popup (type - slide in right) : Custom Styles */
+[data-popup][data-popup-type="slidein-right-popup"] {
+  display: flex;
+  background-color: transparent !important;
+  transform: translate(100%, 0);
+  transition: 0.25s transform ease-in-out;
+}
+
+.flex.opened[data-popup][data-popup-type="slidein-right-popup"] {
+  transform: translate(0, 0);
+}
+
+[data-popup][data-popup-type="slidein-right-popup"] [data-popup-content-container] {
+  box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.25);
+}
