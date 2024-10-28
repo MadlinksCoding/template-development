@@ -1,0 +1,21 @@
+/* Loader Animation */
+.elm_cWpNRq {
+   transform-origin: center;
+   -webkit-transform-origin: center;
+   animation: elm_jVsoBw 1s infinite linear;
+   -webkit-animation: elm_jVsoBw 1s infinite linear;
+   animation-name: elm_jVsoBw, fallback;
+}
+
+@-webkit-keyframes elm_jVsoBw {
+   100% {
+       -webkit-transform: rotate(360deg);
+       transform: rotate(360deg);
+   }
+}
+
+@keyframes elm_jVsoBw {
+   100% {
+       transform: rotate(360deg);
+   }
+}

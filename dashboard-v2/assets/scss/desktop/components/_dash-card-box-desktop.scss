@@ -1,0 +1,9 @@
+/* Card Hover CSS */
+[data-hover="card-hover"]:hover [data-section="hover-overlay"] { display: flex; }
+
+/* Card Hover */
+[data-card-hover-overlay] { display: none; -webkit-transition: all 0s ease-in-out;
+   transition: all 0s ease-in-out; }
+[data-card-hover]:hover [data-card-hover-overlay] { display: block; }
+/*[data-card-hover]:hover [data-button-hover-overlay="false"] { opacity: 0; }
+[data-card-hover]:hover + [data-button-overlay-hover-hide] { opacity: 0; }*/

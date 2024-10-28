@@ -1,0 +1,4 @@
+/* Checkbox Green color */
+[data-form-input-type="checkbox"][data-form-accent-color='green'] input[type=checkbox]:checked {accent-color: var(--color-brand-green, #07F468); background-color: var(--color-brand-green, #07F468); border-color: var(--color-brand-green, #07F468);}
+[data-form-input-type="checkbox"][data-form-accent-color='green'] input[type="checkbox"]:checked::after { border-color: #000;}
+[data-form-input-type="checkbox"] input[type=checkbox] { margin-right: 0.5rem; margin-left: 0.188rem; }

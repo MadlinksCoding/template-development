@@ -151,3 +151,12 @@
 [data-responsive-tab-header-type="dropdown"][data-dropdown-tab-active="true"] [data-tab-head-list] [data-tab-head-list-item] [data-tab-trigger]:active [data-tab-label] {
   color: var(--color-pale-sky, #667085);
 }
+
+/* Tab Style */
+[data-tabs-content] [data-tabbed-content].active { display: block; }
+[data-tabs-menu] [data-tabbed-child-id].active { background: var(--Base-White, #FFF); }
+[data-tabs-menu] [data-tabbed-child-id].active [data-span-title] { color: var(--color-oxford-blue,#344054); font-weight: 600; }
+[data-tabs-menu] [data-tabbed-child-id].active [data-span-value] { color: var(--color-pale-sky,#667085); }
+/* Grid and List tabs menu style */
+[data-tabs-menu="grid-list-tabs-menu"] [data-tabbed-child-id].active { background-color: var(--color-ebony-2, #0C111D); }
+[data-tabs-menu="grid-list-tabs-menu"] [data-tabbed-child-id].active [data-span-icon] img { filter: brightness(0) saturate(100%) invert(99%) sepia(99%) saturate(0%) hue-rotate(176deg) brightness(107%) contrast(100%); }
