@@ -1,0 +1,176 @@
+/* Adaptive font size */
+html { font-size: 16px; }
+
+/* Body Scroll Restriction */
+body.stop-mobile-scrolling {
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+/* Colors */
+
+/* Background Colors*/
+.bg--col--transparent--responsive-mobile-portrait { background: transparent; }
+.bg--col--white--responsive-mobile-portrait { background: rgba(255, 255, 255, 1.0); }
+.bg--col--white--70--responsive-mobile-portrait { background: rgba(255, 255, 255, 0.70); }
+.bg--col--athens-gray--70--responsive-mobile-portrait { background-color: rgba(249, 250, 251, 0.70); }
+
+/* Background Gradients*/
+
+/* Border Colors */
+
+/* Fill Colors */
+
+/* Stroke Colors */
+
+/* Filter Colors */
+
+/* Hover Filter Colors */
+
+/* Caret Colors */
+
+/* Hover Background Colors */
+
+/* Hover Colors */
+
+/* Active State Background Colors*/
+
+/* Active State Filter Colors */
+
+/* Active State Border Colors */
+
+/* Font Size */
+.fs--16--responsive-mobile-portrait { font-size: 1rem; /* font-size 16px */  }
+.fs--18-responsive-mobile-portrait { font-size: 1.125rem; /* font-size 18px */  } /* confirmed in use */ /* pixel conversion correct */
+.fs--36-responsive-mobile-portrait { font-size: 2.25rem; /* font-size 36px */ } /* confirmed in use */ /* pixel conversion correct */
+
+/* Line Height */
+.lh--24--responsive-mobile-portrait { line-height: 1.5rem; /* line-height 24px */ }
+.lh--28-responsive-mobile-portrait { line-height: 1.75rem; /* line-height 28px */ } /* confirmed in use */ /* pixel conversion correct */
+.lh--44-responsive-mobile-portrait { line-height:2.75rem; /* line height 44px */ } /* confirmed in use */ /* pixel conversion correct */
+
+/* Letter Spacing */ 
+
+/* Word Break */
+
+/* Background Style */
+.bg--center-top-responsive-mobile-portrait { background-position: center top; }
+
+/* Width */
+.w--20--responsive-mobile-portrait { width: 1.25rem; /* width 20px */ }
+.w--32--responsive-mobile-portrait { width: 2rem; /* width 32px */ }
+.w--100-responsive-mobile-portrait { width: 100%; }
+.w--274-responsive-mobile-portrait { width: 17.1525rem; }
+.w--300-responsive-mobile-portrait { width: 18.75rem; }
+.vw--100--responsive-mobile-portrait { width: 100vw; /* width 100vw */ }
+
+/* Width Percent */
+
+/* Width (px) */
+
+/* Min Width */
+
+/* Max Width */
+
+/* Height */
+.h--20--responsive-mobile-portrait { height: 1.25rem; /* height 20px */ }
+.h--32--responsive-mobile-portrait { height: 2rem; /* height 32px */ }
+.h--48-responsive-mobile-portrait { height: 3rem; /* height 48px*/ }
+.h--211-responsive-mobile-portrait { height: 13.1875rem; }
+
+/* Height Percent */
+
+/* Height (px) */
+
+/* Min Height */
+
+/* Max Height */
+
+/* Padding */
+.pad--0-responsive-mobile-portrait { padding: 0rem; /* padding top bottom left right 0px */ }
+.pad--top--64-responsive-mobile-portrait { padding-top: 4rem; /* padding top 64px */ }
+.pad--bottom--24-responsive-mobile-portrait { padding-bottom: 1.5rem; /* padding top 24px */ }
+.pad--x--0-responsive-mobile-portrait { padding-left: 0rem; padding-right: 0rem; /* padding left right 0px */ }
+.pad--x--16-responsive-mobile-portrait { padding-left: 1rem; padding-right: 1rem; /* padding left right 16px */ }
+.pad--y-0-responsive-mobile-portrait{ padding-top: 0rem; padding-bottom: 0rem; /* padding top 96px padding bottom 96px */ }
+.pad--y--8--responsive-mobile-portrait { padding-top: 0.5rem; padding-bottom: 0.5rem; /* padding top 8px padding bottom 8px */ }
+
+/* Margin */
+
+/* Display */
+.display-none--responsive-mobile-portrait { display: none; }
+.display-flex--responsive-mobile-portrait { display: flex; }
+.display-grid--responsive-mobile-portrait { display: grid; }
+
+/* Gap */
+.gap--16--responsive-mobile-portrait { gap: 1rem; }
+
+/* Flexbox */
+.dn-responsive-mobile { display: flex; }
+.flex--column-responsive-mobile-portrait { flex-direction: column; }
+.items--start-responsive-mobile-portrait { align-items: flex-start; }
+.justify--between-responsive-mobile-portrait { justify-content:space-between; }
+.flex--1-responsive-mobile-portrait { flex: 1; }
+
+/* Grid */
+.grid--cols-1-responsive-mobile-portrait { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+.grid--cols-3--responsive-mobile-portrait { grid-template-columns: repeat(3, 1fr); }
+.grid--cols-4--responsive-mobile-portrait { grid-template-columns: repeat(4, 1fr); }
+.grid--cols-6--responsive-mobile-portrait { grid-template-columns: repeat(6, 1fr); }
+
+/* Grid Column */
+.grid--col-span-2-responsive-mobile-portrait { grid-column: span 2 / span 2; }
+
+/* Order */
+.flex-column-reverse--responsive-mobile-portrait { flex-direction:column-reverse; }
+.order--1-responsive-mobile-portrait { order: 1; }
+.order--2-responsive-mobile-portrait { order: 2; }
+
+/* Position */
+.fixed--responsive-mobile-portrait { position: fixed; }
+.absolute-responsive-mobile-portrait { position: absolute; }
+.top--neg-8-responsive-mobile-portrait { top: -0.5rem; }
+.right--16-responsive-mobile-portrait { right: 1rem; }
+
+/* Text Align */
+.tl--responsive-mobile-portrait { text-align: left; }
+
+/* Top */
+.top--0--responsive-mobile-portrait { top: 0rem; }
+.top--34-responsive-mobile-portrait { top: 2.125rem; }
+
+/* Bottom */
+.bottom--32-responsive-mobile-portrait { bottom: 2rem; }
+
+/* Left */
+.left--0--responsive-mobile-portrait { left: 0rem; }
+.left--16-neg-responsive-mobile-portrait { left: -1rem; }
+
+/* Right */
+.right--0-responsive-mobile-portrait { right: 0rem; }
+
+/* Z-Index */
+
+/* Opacity */
+
+/* Hover Opacity */
+
+/* Object Fit */
+
+/* Backdrop Filter */
+.bg--blur--25--responsive-mobile-portrait { backdrop-filter: blur(25px); }
+
+/* Box Shadow */
+.sh--none--responsive-mobile-portrait { box-shadow: none; }
+
+/* Drop Shadow */
+
+/* Text Shadow */
+
+/* Overflow */
+
+/* Cursor Style */ 
+
+/* Border */
+
+/* Border Width */

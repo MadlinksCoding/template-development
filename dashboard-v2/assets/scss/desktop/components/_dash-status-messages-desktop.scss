@@ -1,0 +1,132 @@
+/**
+ * Template name: <Dashboard Status Messages (Global)>
+ */
+
+/* Dashboard Status Messages : Custom Styles */
+[data-online-status-message-container] {
+  opacity: 0.7;
+  background: rgba(255, 255, 255, 0.30);
+  transition: all 0.15s ease-in-out;
+}
+
+[data-online-status-message-container] [data-online-status-message-text] {
+  width: 100%;
+  border-radius: 0 !important;
+  font-weight: 500 !important;
+  color: var(--color-oxford-blue, #344054) !important;
+  font-size: var(--input-font-size, 0.75rem) !important;
+  margin-top: var(--input-margin-top, 0rem);
+  margin-bottom: var(--input-margin-bottom, 0rem);
+  border-radius: var(--input-border-radius,0.625rem);
+  letter-spacing: var(--input-letter-spacing, 0rem);
+  transition: all 0.15s ease-in-out;
+}
+
+[data-online-status-message-container] [data-online-status-message-text]::placeholder {
+  color: var(--color-oxford-blue, #344054);
+  opacity: 1; /* Firefox */
+}
+
+[data-online-status-message-container] [data-online-status-message-text]::-ms-input-placeholder { /* Edge 12-18 */
+  color: var(--color-oxford-blue, #344054);
+}
+
+[data-online-status-message-container] [data-online-status-message-edit] {
+  filter: brightness(0) saturate(100%) invert(22%) sepia(31%) saturate(534%) hue-rotate(179deg) brightness(93%) contrast(90%);
+  transition: all 0.15s ease-in-out;
+}
+
+[data-online-status-message-container] [data-online-status-message-edit-controls] {
+  display: none;
+  right: 0.25rem;
+  bottom: 0.25rem;
+}
+
+[data-online-status-message-container] [data-online-status-message-edit-controls] [data-online-status-message-edit-cancel]:hover,
+[data-online-status-message-container] [data-online-status-message-edit-controls] [data-online-status-message-edit-save]:hover {
+  opacity: 1;
+}
+
+[data-online-status-message-container] [data-online-status-message-edit-word-count] {
+  color: var(--color-fiord, #475467);
+}
+
+[data-online-status-message-container]:hover {
+  background: rgba(255, 255, 255, 0.50);
+}
+
+[data-online-status-message-container]:hover [data-online-status-message-text] {
+  color: var(--color-ebony-2, #0C111D) !important;
+}
+
+[data-online-status-message-container]:hover [data-online-status-message-edit] {
+  filter: brightness(0) saturate(100%) invert(34%) sepia(81%) saturate(2464%) hue-rotate(211deg) brightness(99%) contrast(108%); /* var(--color-bodger-blue, #2970FF) */
+}
+
+[data-online-status-message-container][data-is-editing="true"] {
+  background: rgba(255, 255, 255, 0.50);
+  padding-bottom: 2rem;
+}
+
+[data-online-status-message-container][data-is-editing="true"] [data-online-status-message-text] {
+  color: var(--color-ebony-2, #0C111D) !important;
+}
+
+[data-online-status-message-container][data-is-editing="true"] [data-online-status-message-edit] {
+  display: none;
+}
+
+[data-online-status-message-container][data-is-editing="true"] [data-online-status-message-edit-controls] {
+  display: flex;
+}
+
+/* Dashboard Status Messages (Light) : Custom Styles */
+[data-online-status-message-container][data-theme="light"] {
+  background: rgba(255, 255, 255, 0.20);
+}
+
+[data-online-status-message-container][data-theme="light"] [data-online-status-message-text] {
+  color: #fff !important;
+}
+
+[data-online-status-message-container][data-theme="light"] [data-online-status-message-text]::placeholder {
+  color: #fff;
+  opacity: 1; /* Firefox */
+}
+
+[data-online-status-message-container][data-theme="light"] [data-online-status-message-text]::-ms-input-placeholder { /* Edge 12-18 */
+  color: #fff;
+}
+
+[data-online-status-message-container][data-theme="light"] [data-online-status-message-edit] {
+  filter: brightness(0) saturate(100%) invert(99%) sepia(99%) saturate(0%) hue-rotate(176deg) brightness(107%) contrast(100%);
+}
+
+[data-online-status-message-container][data-theme="light"] [data-online-status-message-edit-word-count] {
+  color: var(--color-athens-gray2, #EAECF0);
+}
+
+[data-online-status-message-container][data-theme="light"]:hover {
+  background: rgba(255, 255, 255, 0.20);
+}
+
+[data-online-status-message-container][data-theme="light"]:hover [data-online-status-message-text] {
+  color: #fff !important;
+}
+
+[data-online-status-message-container][data-theme="light"]:hover [data-online-status-message-edit] {
+  filter: brightness(0) saturate(100%) invert(67%) sepia(37%) saturate(913%) hue-rotate(145deg) brightness(95%) contrast(97%);
+}
+
+[data-online-status-message-container][data-theme="light"][data-is-editing="true"] {
+  background: rgba(255, 255, 255, 0.20);
+}
+
+[data-online-status-message-container][data-theme="light"][data-is-editing="true"] [data-online-status-message-text] {
+  color: #fff !important;
+}
+
+[data-online-status-message-container][data-theme="light"] [data-online-status-message-edit-controls] [data-online-status-message-edit-cancel],
+[data-online-status-message-container][data-theme="light"] [data-online-status-message-edit-controls] [data-online-status-message-edit-save] {
+  filter: brightness(0) saturate(100%) invert(99%) sepia(99%) saturate(0%) hue-rotate(176deg) brightness(107%) contrast(100%);
+}

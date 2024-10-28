@@ -1,0 +1,84 @@
+/**
+ * Template name: <Dashboard Toggle Switches (Global)>
+ */
+
+/* Dashboard Toggle Switches : Custom Styles */
+[data-switch] {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  width: 2.25rem;
+  height: 1.25rem;
+  min-width: fit-content;
+  caret-color: transparent;
+}
+
+[data-switch] [data-switch-slide] {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 0.75rem;
+  background-color: var(--colol-gull-gray--50, rgba(152, 162, 179, 0.50));
+  transition: all 0.1s ease-in-out;
+}
+
+[data-switch]:hover [data-switch-slide] {
+  background-color: var(--colol-gull-gray, #98A2B3);
+}
+
+[data-switch] input:checked + [data-switch-slide] {
+  background-color: var(--colol-ebony, #0C111D);
+}
+
+[data-switch] [data-switch-slide]:before {
+  content: "";
+  display: block;
+  flex-shrink: 0;
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  left: 0.125rem;
+  top: 50%;
+  transform: translate(0rem, -50%);
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0px 1px 3px 0px rgba(16, 24, 40, 0.10), 0px 1px 2px 0px rgba(16, 24, 40, 0.06);
+  transition: all 0.1s ease-in-out;
+}
+
+[data-switch] input:checked + [data-switch-slide]:before {
+  transform: translate(1rem, -50%);
+}
+
+/* Dashboard Toggle Switches (Small) : Custom Styles */
+[data-switch][data-switch-size="small"] {
+  width: 2rem;
+  height: 1rem;
+}
+
+[data-switch][data-switch-size="small"] [data-switch-slide]:before {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+[data-switch][data-switch-size="small"] input:checked + [data-switch-slide]:before {
+  transform: translate(1rem, -50%);
+}
+
+/* Dashboard Toggle Switches (Dark) : Custom Styles */
+[data-switch][data-switch-theme="light"] [data-switch-slide] {
+  background-color: rgba(255, 255, 255, 0.20);;
+}
+
+[data-switch][data-switch-theme="light"]:hover [data-switch-slide] {
+  background-color: rgba(255, 255, 255, 0.50);;
+}
+
+[data-switch][data-switch-theme="light"] input:checked + [data-switch-slide] {
+  background-color: var(--colol-ebony, #0C111D);
+}
