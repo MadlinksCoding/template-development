@@ -2071,6 +2071,28 @@ html {
   background-color: var(--color-brilliant-rose)
 }
 
+[data-show-hide-container] {
+  display: none
+}
+
+[data-show-hide-container][data-show-on-desktop=true],
+[data-show-hide-container][data-show-on-desktop=true][data-show-on-mobile=true],
+[data-show-hide-container][data-show-on-desktop=true][data-show-on-tablet=true],
+[data-show-hide-container][data-show-on-desktop=true][data-show-on-tablet=true][data-show-on-mobile=true] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex
+}
+
+[data-show-hide-container][data-show-on-tablet=true],
+[data-show-hide-container][data-show-on-tablet=true][data-show-on-mobile=true] {
+  display: none
+}
+
+[data-show-hide-container][data-show-on-mobile=true] {
+  display: none
+}
+
 @media only screen and (min-width:768px) and (max-width:1365px) {
   html {
     font-size: 16px
@@ -2187,6 +2209,23 @@ html {
     opacity: 1;
     -webkit-transform: translateX(0);
     transform: translateX(0)
+  }
+
+  [data-show-hide-container][data-show-on-desktop=true],
+  [data-show-hide-container][data-show-on-desktop=true][data-show-on-mobile=true] {
+    display: none
+  }
+
+  [data-show-hide-container][data-show-on-desktop=true][data-show-on-tablet=true][data-show-on-mobile=true],
+  [data-show-hide-container][data-show-on-tablet=true],
+  [data-show-hide-container][data-show-on-tablet=true][data-show-on-mobile=true] {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+  }
+
+  [data-show-hide-container][data-show-on-mobile=true] {
+    display: none
   }
 }
 
@@ -2562,6 +2601,23 @@ html {
   [data-profile-panel-container] {
     -webkit-transform: translateX(0);
     transform: translateX(0)
+  }
+
+  [data-show-hide-container][data-show-on-desktop=true],
+  [data-show-hide-container][data-show-on-desktop=true][data-show-on-tablet=true] {
+    display: none
+  }
+
+  [data-show-hide-container][data-show-on-tablet=true] {
+    display: none
+  }
+
+  [data-show-hide-container][data-show-on-desktop=true][data-show-on-tablet=true][data-show-on-mobile=true],
+  [data-show-hide-container][data-show-on-mobile=true],
+  [data-show-hide-container][data-show-on-tablet=true][data-show-on-mobile=true] {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
   }
 }
 
@@ -2963,6 +3019,23 @@ html {
   [data-profile-panel-container] {
     -webkit-transform: translateX(0);
     transform: translateX(0)
+  }
+
+  [data-show-hide-container][data-show-on-desktop=true],
+  [data-show-hide-container][data-show-on-desktop=true][data-show-on-tablet=true] {
+    display: none
+  }
+
+  [data-show-hide-container][data-show-on-tablet=true] {
+    display: none
+  }
+
+  [data-show-hide-container][data-show-on-desktop=true][data-show-on-tablet=true][data-show-on-mobile=true],
+  [data-show-hide-container][data-show-on-mobile=true],
+  [data-show-hide-container][data-show-on-tablet=true][data-show-on-mobile=true] {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
   }
 }
 /*# sourceMappingURL=../css/map/dashboard-style.css.map */

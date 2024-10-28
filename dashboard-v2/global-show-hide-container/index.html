@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Meta Tags -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>Template - Global Show Hide Container</title>
+
+        <!-- Poppins Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+        <!-- Tachyons Styles -->
+        <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/main.css" />
+        <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" />
+        <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/theme.css" />
+        <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/customTachyons.css" />
+
+        <!-- Dashboard Sidebar Custom Style -->
+        <link rel="stylesheet" href="../assets/css/dashboard-styles-desktop.css" />
+
+        <!-- Tablet Stylesheet -->
+        <link rel="stylesheet" href="../assets/css/dashboard-styles-tablet.css" media="screen and (min-width: 768px) and (max-width: 1365px)">
+        
+        <!-- Mobile Stylesheet -->
+        <link rel="stylesheet" href="../assets/css/dashboard-styles-mobile.css" media="screen and (min-width: 480px) and (max-width: 767px)">
+
+        <!-- Mobile Portrait Stylesheet -->
+        <link rel="stylesheet" href="../assets/css/dashboard-styles-mobile-portrait.css" media="screen and (max-width: 479px)">
+    </head>
+    <body>
+
+        <!-- Demo Block -->
+        <div class="flex flex-column self-stretch flex--max pa3 mb2">
+            <div class="flex flex-column self-stretch flex--max mb2">
+                <h3 class="fs--14">Show on All Device</h3>
+            </div>
+
+            <div class="flex flex-column self-stretch flex--max">
+                <!-- show/hide container -->
+                <div data-section="1" data-show-hide-container data-show-on-desktop="true" data-show-on-tablet="true" data-show-on-mobile="true" class="flex flex-column self-stretch flex--max">
+                    <div class="flex flex--max pa3 br--6 bg--col--athens-gray2">
+                        <p class="fs--14 fw4 lh--24 col--ebony--variation-2">
+                            This block will be visible only on - All Device
+                        </p>
+                    </div>
+                </div>
+                <!-- end show/hide container -->
+            </div>
+        </div>
+        <!-- /Demo Block -->
+
+        <!-- Demo Block -->
+        <div class="flex flex-column self-stretch flex--max pa3 mb2">
+            <div class="flex flex-column self-stretch flex--max mb2">
+                <h3 class="fs--14">Show on Desktop Only</h3>
+            </div>
+
+            <div class="flex flex-column self-stretch flex--max">
+                <!-- show/hide container -->
+                <div data-section="1" data-show-hide-container data-show-on-desktop="true" data-show-on-tablet="false" data-show-on-mobile="false" class="flex flex-column self-stretch flex--max">
+                    <div class="flex flex--max pa3 br--6 bg--col--athens-gray2">
+                        <p class="fs--14 fw4 lh--24 col--ebony--variation-2">
+                            This block will be visible only on - Desktop
+                        </p>
+                    </div>
+                </div>
+                <!-- end show/hide container -->
+            </div>
+        </div>
+        <!-- /Demo Block -->
+
+        <!-- Demo Block -->
+        <div class="flex flex-column self-stretch flex--max pa3 mb2">
+            <div class="flex flex-column self-stretch flex--max mb2">
+                <h3 class="fs--14">Show on Tablet Only</h3>
+            </div>
+
+            <div class="flex flex-column self-stretch flex--max">
+                <!-- show/hide container -->
+                <div data-section="1" data-show-hide-container data-show-on-desktop="false" data-show-on-tablet="true" data-show-on-mobile="false" class="flex flex-column self-stretch flex--max">
+                    <div class="flex flex--max pa3 br--6 bg--col--athens-gray2">
+                        <p class="fs--14 fw4 lh--24 col--ebony--variation-2">
+                            This block will be visible only on - Tablet
+                        </p>
+                    </div>
+                </div>
+                <!-- end show/hide container -->
+            </div>
+        </div>
+        <!-- /Demo Block -->
+
+        <!-- Demo Block -->
+        <div class="flex flex-column self-stretch flex--max pa3 mb2">
+            <div class="flex flex-column self-stretch flex--max mb2">
+                <h3 class="fs--14">Show on Mobile Only</h3>
+            </div>
+
+            <div class="flex flex-column self-stretch flex--max">
+                <!-- show/hide container -->
+                <div data-section="1" data-show-hide-container data-show-on-desktop="false" data-show-on-tablet="false" data-show-on-mobile="true" class="flex flex-column self-stretch flex--max">
+                    <div class="flex flex--max pa3 br--6 bg--col--athens-gray2">
+                        <p class="fs--14 fw4 lh--24 col--ebony--variation-2">
+                            This block will be visible only on - Mobile
+                        </p>
+                    </div>
+                </div>
+                <!-- end show/hide container -->
+            </div>
+        </div>
+        <!-- /Demo Block -->
+
+        <!-- Demo Block -->
+        <div class="flex flex-column self-stretch flex--max pa3 mb2">
+            <div class="flex flex-column self-stretch flex--max mb2">
+                <h3 class="fs--14">Show on Desktop & Tablet Only</h3>
+            </div>
+
+            <div class="flex flex-column self-stretch flex--max">
+                <!-- show/hide container -->
+                <div data-section="1" data-show-hide-container data-show-on-desktop="true" data-show-on-tablet="true" data-show-on-mobile="false" class="flex flex-column self-stretch flex--max">
+                    <div class="flex flex--max pa3 br--6 bg--col--athens-gray2">
+                        <p class="fs--14 fw4 lh--24 col--ebony--variation-2">
+                            This block will be visible only on - Desktop & Tablet
+                        </p>
+                    </div>
+                </div>
+                <!-- end show/hide container -->
+            </div>
+        </div>
+        <!-- /Demo Block -->
+
+        <!-- Demo Block -->
+        <div class="flex flex-column self-stretch flex--max pa3 mb2">
+            <div class="flex flex-column self-stretch flex--max mb2">
+                <h3 class="fs--14">Show on Desktop & Mobile Only</h3>
+            </div>
+
+            <div class="flex flex-column self-stretch flex--max">
+                <!-- show/hide container -->
+                <div data-section="1" data-show-hide-container data-show-on-desktop="true" data-show-on-tablet="false" data-show-on-mobile="true" class="flex flex-column self-stretch flex--max">
+                    <div class="flex flex--max pa3 br--6 bg--col--athens-gray2">
+                        <p class="fs--14 fw4 lh--24 col--ebony--variation-2">
+                            This block will be visible only on - Desktop & Mobile
+                        </p>
+                    </div>
+                </div>
+                <!-- end show/hide container -->
+            </div>
+        </div>
+        <!-- /Demo Block -->
+
+        <!-- Demo Block -->
+        <div class="flex flex-column self-stretch flex--max pa3 mb2">
+            <div class="flex flex-column self-stretch flex--max mb2">
+                <h3 class="fs--14">Show on Tablet & Mobile Only</h3>
+            </div>
+
+            <div class="flex flex-column self-stretch flex--max">
+                <!-- show/hide container -->
+                <div data-section="1" data-show-hide-container data-show-on-desktop="false" data-show-on-tablet="true" data-show-on-mobile="true" class="flex flex-column self-stretch flex--max">
+                    <div class="flex flex--max pa3 br--6 bg--col--athens-gray2">
+                        <p class="fs--14 fw4 lh--24 col--ebony--variation-2">
+                            This block will be visible only on - Tablet & Mobile
+                        </p>
+                    </div>
+                </div>
+                <!-- end show/hide container -->
+            </div>
+        </div>
+        <!-- /Demo Block -->
+    </body>
+</html>

@@ -114,4 +114,21 @@ html {
   -webkit-transform: translateX(0);
   transform: translateX(0)
 }
+
+[data-show-hide-container][data-show-on-desktop=true],
+[data-show-hide-container][data-show-on-desktop=true][data-show-on-mobile=true] {
+  display: none
+}
+
+[data-show-hide-container][data-show-on-desktop=true][data-show-on-tablet=true][data-show-on-mobile=true],
+[data-show-hide-container][data-show-on-tablet=true],
+[data-show-hide-container][data-show-on-tablet=true][data-show-on-mobile=true] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex
+}
+
+[data-show-hide-container][data-show-on-mobile=true] {
+  display: none
+}
 /*# sourceMappingURL=../css/map/dashboard-styles-tablet.css.map */

@@ -396,4 +396,21 @@ body.stop-mobile-scrolling {
   -webkit-transform: translateX(0);
   transform: translateX(0)
 }
+
+[data-show-hide-container][data-show-on-desktop=true],
+[data-show-hide-container][data-show-on-desktop=true][data-show-on-tablet=true] {
+  display: none
+}
+
+[data-show-hide-container][data-show-on-tablet=true] {
+  display: none
+}
+
+[data-show-hide-container][data-show-on-desktop=true][data-show-on-tablet=true][data-show-on-mobile=true],
+[data-show-hide-container][data-show-on-mobile=true],
+[data-show-hide-container][data-show-on-tablet=true][data-show-on-mobile=true] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex
+}
 /*# sourceMappingURL=../css/map/dashboard-styles-mobile-portrait.css.map */
