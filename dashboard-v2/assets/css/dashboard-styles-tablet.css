@@ -125,8 +125,16 @@ html {
   line-height: 2.375rem
 }
 
+.w--85vw-responsive-tablet {
+  width: 85vw
+}
+
 .w--100-responsive-tablet {
   width: 100%
+}
+
+.w--177-responsive-tablet {
+  width: 11.063rem
 }
 
 .w--257-responsive-tablet {
@@ -135,6 +143,10 @@ html {
 
 .h--screen-tablet {
   height: 100vh
+}
+
+.h--100-responsive-tablet {
+  height: 6.25rem
 }
 
 .pad--10-responsive-tablet {
@@ -232,6 +244,14 @@ html {
 
 .fixed--responsive-tablet {
   position: fixed
+}
+
+.sticky--responsive-tablet {
+  position: sticky
+}
+
+.z--10000-responsive-tablet {
+  z-index: 10000
 }
 
 [data-submenu] [data-submenu-item][data-has-submenu=true]>[data-arrow] {

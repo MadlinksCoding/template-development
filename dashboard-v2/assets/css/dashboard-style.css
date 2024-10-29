@@ -761,6 +761,10 @@ html {
   background-color: var(--color-rose, #f06)
 }
 
+.bg--col-light-blue {
+  background: rgba(41, 112, 255, .2)
+}
+
 .bg--gd--light-white {
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(242, 244, 247, .5)), to(rgba(242, 244, 247, .5))), rgba(255, 255, 255, .5);
   background: linear-gradient(0deg, rgba(242, 244, 247, .5) 0, rgba(242, 244, 247, .5) 100%), rgba(255, 255, 255, .5)
@@ -858,6 +862,11 @@ html {
   filter: brightness(0) saturate(100%) invert(77%) sepia(13%) saturate(2041%) hue-rotate(116deg) brightness(89%) contrast(95%)
 }
 
+.filter--col--vermilion {
+  -webkit-filter: brightness(0) saturate(100%) invert(39%) sepia(92%) saturate(3503%) hue-rotate(354deg) brightness(98%) contrast(113%);
+  filter: brightness(0) saturate(100%) invert(39%) sepia(92%) saturate(3503%) hue-rotate(354deg) brightness(98%) contrast(113%)
+}
+
 .filter--blur--2 {
   filter: blur(2px);
   -webkit-filter: blur(2px);
@@ -898,6 +907,10 @@ html {
 
 .hover--bg--col-burning-orange:hover {
   background: var(--color-burning-orange, #ff692e)
+}
+
+.hover--bg--col-light-blue:hover {
+  background: rgba(41, 112, 255, .2)
 }
 
 .group:hover .hover--col-black {
@@ -956,6 +969,10 @@ html {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content
+}
+
+.w--p--11 {
+  width: 11%
 }
 
 .w--2 {
@@ -1028,6 +1045,10 @@ html {
 
 .h--3 {
   height: .188rem
+}
+
+.h--112 {
+  height: 7rem
 }
 
 .pad--x--2 {
@@ -1111,6 +1132,11 @@ html {
 .pad--y--16 {
   padding-top: 1rem;
   padding-bottom: 1rem
+}
+
+.pad--y--9 {
+  padding-top: .563rem;
+  padding-bottom: .563rem
 }
 
 .pad--y--10 {
@@ -1202,6 +1228,11 @@ html {
 .sh--10 {
   -webkit-box-shadow: 4px 4px 0 0 #000;
   box-shadow: 4px 4px 0 0 #000
+}
+
+.sh--11 {
+  -webkit-box-shadow: 0 12px 16px -4px rgba(16, 24, 40, .08), 0 4px 6px -2px rgba(16, 24, 40, .03);
+  box-shadow: 0 12px 16px -4px rgba(16, 24, 40, .08), 0 4px 6px -2px rgba(16, 24, 40, .03)
 }
 
 .bw--2 {
@@ -3380,8 +3411,16 @@ textarea {
     line-height: 2.375rem
   }
 
+  .w--85vw-responsive-tablet {
+    width: 85vw
+  }
+
   .w--100-responsive-tablet {
     width: 100%
+  }
+
+  .w--177-responsive-tablet {
+    width: 11.063rem
   }
 
   .w--257-responsive-tablet {
@@ -3390,6 +3429,10 @@ textarea {
 
   .h--screen-tablet {
     height: 100vh
+  }
+
+  .h--100-responsive-tablet {
+    height: 6.25rem
   }
 
   .pad--10-responsive-tablet {
@@ -3487,6 +3530,14 @@ textarea {
 
   .fixed--responsive-tablet {
     position: fixed
+  }
+
+  .sticky--responsive-tablet {
+    position: sticky
+  }
+
+  .z--10000-responsive-tablet {
+    z-index: 10000
   }
 
   [data-submenu] [data-submenu-item][data-has-submenu=true]>[data-arrow] {
