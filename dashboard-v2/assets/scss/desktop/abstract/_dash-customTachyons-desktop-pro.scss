@@ -42,6 +42,7 @@
 .bg--col--trans-dark-black-70 { background: rgba(48, 52, 55, 0.70); }
 .bg--col--light-gray-234-70 { background: rgba(234, 236, 240, 0.70); }
 .bg--col--rose { background-color: var(--color-rose, #F06); }
+.bg--col-light-blue { background: rgba(41, 112, 255, 0.20); }
 
 /* Background Gradients*/
 .bg--gd--light-white { background: linear-gradient(0deg, rgba(242, 244, 247, 0.50) 0%, rgba(242, 244, 247, 0.50) 100%), rgba(255, 255, 255, 0.50); }
@@ -79,6 +80,7 @@
 .filter--col--gull-gray { filter: brightness(0) saturate(100%) invert(89%) sepia(55%) saturate(1988%) hue-rotate(178deg) brightness(74%) contrast(83%); } /* confirmed in use */
 .filter--col--brand-green { filter: brightness(0) saturate(100%) invert(50%) sepia(94%) saturate(408%) hue-rotate(100deg) brightness(93%) contrast(87%); } /* #17B26A */
 .filter--col--turquoise { filter: brightness(0) saturate(100%) invert(77%) sepia(13%) saturate(2041%) hue-rotate(116deg) brightness(89%) contrast(95%); } /* #2ED3B7 */
+.filter--col--vermilion { filter: brightness(0) saturate(100%) invert(39%) sepia(92%) saturate(3503%) hue-rotate(354deg) brightness(98%) contrast(113%); } /* #FF4405 */
 
 /* Filter Blur */
 .filter--blur--2 { filter: blur(2px); -webkit-filter: blur(2px); -moz-filter: blur(2px); }
@@ -99,6 +101,7 @@
 .hover--bg--col-brand-green:hover { background: var(--color-brand-green, #07F468); }
 .hover--bg--col-ebony:hover { background: var(--color-ebony, #101828); }
 .hover--bg--col-burning-orange:hover { background: var(--color-burning-orange, #FF692E); }
+.hover--bg--col-light-blue:hover { background: rgba(41, 112, 255, 0.20); }
 
 
 /* Hover Colors */
@@ -146,7 +149,7 @@
 
 
 /* Width Percent */
-
+.w--p--11 { width: 11%; /* width 11& */ } /* confirmed in use */ /* pixel conversion correct */
 
 /* Width (px) */
 .w--2 { width: 0.125rem; /* width 2px */ } /* confirmed in use */ /* pixel conversion correct */
@@ -182,6 +185,7 @@
 /* Height (px) */
 .h--2 { height: 0.125rem; /* height 2px */ } /* confirmed in use */ /* pixel conversion correct */
 .h--3 { height: 0.188rem; /* height 3px */ } /* confirmed in use */ /* pixel conversion correct */
+.h--112 { height: 7rem; /* height 112px */ } /* confirmed in use */ /* pixel conversion correct */
 
 
 /* Min Height */
@@ -210,6 +214,7 @@
 .pad--right--30 { padding-right: 1.875rem; /* padding right 30px */ } /* confirmed in use */ /* pixel conversion correct */
 .pad--y--4 { padding-top: 0.25rem; padding-bottom: 0.25rem; /* padding top bottom 4px */ }
 .pad--y--16 { padding-top: 1rem; padding-bottom: 1rem; /* padding top bottom 16px */ }
+.pad--y--9 { padding-top: 0.563rem; padding-bottom: 0.563rem; /* padding top bottom 9px */ }
 .pad--y--10 { padding-top: 0.625rem; padding-bottom: 0.625rem; /* padding top bottom 10px */ }
 
 
@@ -293,6 +298,7 @@
 .sh--8 { box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25); } /* confirmed in use */
 .sh--9 { box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.25); }
 .sh--10 { box-shadow: 4px 4px 0px 0px #000; } /* confirmed in use */
+.sh--11 { box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03); } /* confirmed in use */
 
 
 /* Drop Shadow */

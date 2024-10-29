@@ -64,13 +64,14 @@
 
 
 /* Width */
-.w--100-responsive-tablet { width: 100%; }
+.w--85vw-responsive-tablet { width: 85vw; }
 
 
 /* Width Percent */
-
+.w--100-responsive-tablet { width: 100%; }
 
 /* Width (px) */
+.w--177-responsive-tablet { width: 11.063rem; }
 .w--257-responsive-tablet { width: 16.063rem; }
 
 
@@ -88,6 +89,7 @@
 
 
 /* Height (px) */
+.h--100-responsive-tablet { height: 6.25rem; /* height 100px */ } /* confirmed in use */ /* pixel conversion correct */
 
 
 /* Min Height */
@@ -141,6 +143,7 @@
 
 /* Position */
 .fixed--responsive-tablet { position: fixed; }
+.sticky--responsive-tablet { position: sticky; }
 
 
 /* Top */
@@ -159,6 +162,7 @@
 
 
 /* Z-Index */
+.z--10000-responsive-tablet { z-index: 10000; } /* confirmed in use */
 
 
 /* Opacity */
