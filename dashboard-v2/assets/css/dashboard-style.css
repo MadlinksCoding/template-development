@@ -3302,6 +3302,15 @@ textarea {
   flex: none
 }
 
+.tier-card-splide {
+  display: block;
+  width: calc(100vw - 8.125rem)
+}
+
+.tier-card-splide .splide__track {
+  padding: .5rem
+}
+
 @media only screen and (min-width:768px) and (max-width:1365px) {
   html {
     font-size: 16px
