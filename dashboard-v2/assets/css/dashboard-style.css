@@ -3283,14 +3283,20 @@ textarea {
   }
 }
 
-[data-tier-card-slider-wrapper] {
+.css-scroll[data-tier-card-slider-wrapper] {
   display: block;
-  padding: .5rem;
-  width: calc(100vw - 8.125rem);
-  overflow: hidden
+  padding: .5rem
 }
 
-[data-tier-card-slider-wrapper] [data-tier-card-slider] [data-tier-card-slide] {
+.css-scroll[data-tier-card-slider-wrapper] [data-tier-card-slider] {
+  width: calc(100vw - 8.125rem);
+  overflow-x: auto;
+  -ms-scroll-snap-type: x mandatory;
+  scroll-snap-type: x mandatory
+}
+
+.css-scroll[data-tier-card-slider-wrapper] [data-tier-card-slider] [data-tier-card-slide] {
+  scroll-snap-align: center;
   -webkit-box-flex: 0;
   -ms-flex: none;
   flex: none

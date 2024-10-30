@@ -1,15 +1,16 @@
 /* Tier Card Slider */
-[data-tier-card-slider-wrapper] {
+.css-scroll[data-tier-card-slider-wrapper] {
   display: block;
   padding: 0.5rem;
+}
+
+.css-scroll[data-tier-card-slider-wrapper] [data-tier-card-slider] {
   width: calc(100vw - 8.125rem);
-  overflow: hidden;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
 }
 
-[data-tier-card-slider-wrapper] [data-tier-card-slider] {
-
-}
-
-[data-tier-card-slider-wrapper] [data-tier-card-slider] [data-tier-card-slide] {
+.css-scroll[data-tier-card-slider-wrapper] [data-tier-card-slider] [data-tier-card-slide] {
+  scroll-snap-align: center;
   flex: none;
 }
