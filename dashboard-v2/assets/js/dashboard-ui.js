@@ -325,7 +325,7 @@ class DashSideBarHandler {
 				_self.options.currentSubmenuTitleStack.push(mainMenuEl.dataset.mainMenuName),
 				_self.options.currentSubmenuEl = _self.options.currentSubmenuContainer.querySelector('[data-submenu]'),
 				_self.options.currentSubmenuEl.removeAttribute('hidden'),
-				_self.options.domBody.classList.add('stop-mobile-scrolling'),
+				//_self.options.domBody.classList.add('stop-mobile-scrolling'),
 				_self.options.currentSubmenuElStack.push(_self.options.currentSubmenuContainer.querySelector('[data-submenu]'))
 			) : '';
 
@@ -417,7 +417,7 @@ class DashSideBarHandler {
 
 						trigger.dataset.isActive = 'true';
 						_self.options.notificationsPanelEl.removeAttribute('hidden');
-						_self.options.domBody.classList.add('stop-mobile-scrolling');
+						//_self.options.domBody.classList.add('stop-mobile-scrolling');
 					}
 					else {
 						_self.resetMenu();
@@ -467,7 +467,7 @@ class DashSideBarHandler {
 
 						trigger.dataset.isActive = 'true';
 						_self.options.profilePanelEl.removeAttribute('hidden');
-						_self.options.domBody.classList.add('stop-mobile-scrolling');
+						//_self.options.domBody.classList.add('stop-mobile-scrolling');
 					}
 					else {
 						_self.resetMenu();

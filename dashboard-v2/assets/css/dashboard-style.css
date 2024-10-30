@@ -3361,6 +3361,34 @@ textarea {
   }
 }
 
+.css-scroll[data-tier-card-slider-wrapper] {
+  display: block;
+  padding: .5rem
+}
+
+.css-scroll[data-tier-card-slider-wrapper] [data-tier-card-slider] {
+  width: calc(100vw - 8.125rem);
+  overflow-x: auto;
+  -ms-scroll-snap-type: x mandatory;
+  scroll-snap-type: x mandatory
+}
+
+.css-scroll[data-tier-card-slider-wrapper] [data-tier-card-slider] [data-tier-card-slide] {
+  scroll-snap-align: center;
+  -webkit-box-flex: 0;
+  -ms-flex: none;
+  flex: none
+}
+
+.tier-card-splide {
+  display: block;
+  width: calc(100vw - 8.125rem)
+}
+
+.tier-card-splide .splide__track {
+  padding: .5rem
+}
+
 @media only screen and (min-width:768px) and (max-width:1365px) {
   html {
     font-size: 16px
