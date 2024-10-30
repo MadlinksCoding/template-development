@@ -2,3 +2,15 @@
 [data-form-input-type="checkbox"][data-form-accent-color='green'] input[type=checkbox]:checked {accent-color: var(--color-brand-green, #07F468); background-color: var(--color-brand-green, #07F468); border-color: var(--color-brand-green, #07F468);}
 [data-form-input-type="checkbox"][data-form-accent-color='green'] input[type="checkbox"]:checked::after { border-color: #000;}
 [data-form-input-type="checkbox"] input[type=checkbox] { margin-right: 0.5rem; margin-left: 0.188rem; }
+
+/* Checkbox Basic Black */
+[data-form-input-type="checkbox"][data-form-accent-color='basic'] input[type=checkbox] {accent-color: #fff; background-color: #fff; border-color: #fff; margin: 0; border-radius: 0.25rem;}
+[data-form-input-type="checkbox"][data-form-accent-color='basic'] input[type=checkbox]:checked {accent-color: var(--Gray-950, #0C111D); background-color: var(--Gray-950, #0C111D); border-color: var(--Gray-950, #0C111D);}
+[data-form-input-type="checkbox"][data-form-accent-color='basic'] input[type="checkbox"]:checked::after { border-color: var(--color-brand-green, #07F468); left: 0.21rem; width: 0.20rem; height: 0.4rem; border-width: 0 1px 1px 0; top: 0.04rem;}
+
+/* Outline checkbox style */
+[data-form-input-type="checkbox"][data-form-accent-color='transparent'] input[type=checkbox] { border-color: #000; border-radius: 0.25rem; }
+[data-form-input-type="checkbox"][data-form-accent-color='transparent'] input[type=checkbox]:checked { background-color: #000; border-color: var(--Brand-green, #07F468);}
+[data-form-input-type="checkbox"][data-form-accent-color='transparent'] input[type="checkbox"]:checked::after { border-color: var(--color-brand-green, #07F468); left: 0.21rem; width: 0.20rem; height: 0.4rem; border-width: 0 1px 1px 0; top: 0.04rem;}
+[data-form-input-type="checkbox"][data-form-accent-color='transparent'] input[type=checkbox]:checked + div span {color: var(--color-brand-green, #07F468);}
+[data-form-input-type="checkbox"][data-form-accent-color='transparent'] input[type=checkbox]:checked + div:before { content: ''; width: 100%; height: 100%; background: #000; position: absolute; left: 0; top: 0; z-index: -1; }

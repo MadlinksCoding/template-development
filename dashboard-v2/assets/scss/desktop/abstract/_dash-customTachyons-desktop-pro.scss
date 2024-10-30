@@ -91,6 +91,8 @@
 .hover--parent--child--col--black-ribbon:hover .hov--filter--col--black-ribbon { filter: brightness(0) saturate(100%) invert(0%) sepia(96%) saturate(7494%) hue-rotate(96deg) brightness(112%) contrast(97%); } /* #000000 */
 .hover--parent--child--col--brand-green:hover .hov--filter--col--brand-green { filter: brightness(0) saturate(100%) invert(50%) sepia(94%) saturate(408%) hue-rotate(100deg) brightness(93%) contrast(87%); } /* #17B26A */
 
+.hover--parent--child--milano-red:hover:hover .hover--filter--col--milano-red { filter: brightness(0) saturate(100%) invert(21%) sepia(38%) saturate(4085%) hue-rotate(347deg) brightness(99%) contrast(119%); }
+
 
 /* Caret Colors */
 
@@ -110,6 +112,7 @@
 .hover--parent--child--col--gull-gray:hover .hover--col--gull-gray { color: var(--color-gull-gray, #98A2B3); }
 .hover--col--brand-green:hover { color: var(--color-brand-green, #07F468); }
 .hover--col--milano-red:hover { color: var(--color-milano-red, #BC1B06); }
+.hover--parent--child--milano-red:hover .hover--col--milano-red-text { color: var(--color-milano-red, #BC1B06); }
 .hover--col--black:hover { color: var(--color-black, #000000); }
 
 /* Hover Border Colors*/
@@ -164,6 +167,7 @@
 .w--200 { width: 12.5rem; /* width 200px */ } /* confirmed in use */ /* pixel conversion correct */
 .w--250 { width: 15.625rem; /* width 250px */ } /* confirmed in use */ /* pixel conversion correct */
 .w--280 { width: 17.5rem; /* width 280px */ } /* confirmed in use */ /* pixel conversion correct */
+.w--285 { width: 17.813rem; /* width 285px */ } /* confirmed in use */ /* pixel conversion correct */
 .w--356 { width: 22.25rem; /* width 356px */ } /* confirmed in use */ /* pixel conversion correct */
 .w--464 { width: 29rem; /* width 464px */ } /* confirmed in use */ /* pixel conversion correct */
 .w--927 { width: 57.938rem; /* width 927px */ } /* confirmed in use */ /* pixel conversion correct */
@@ -195,16 +199,17 @@
 
 
 /* Padding */
+.pad--10 { padding: 0.625rem; /* padding 10px */ } /* confirmed in use */ /* pixel conversion correct */
+.pad--16 { padding: 1rem; /* padding 16px */ } /* confirmed in use */ /* pixel conversion correct */
+.pad--18 { padding: 1.125rem; /* padding 18px */ } /* confirmed in use */ /* pixel conversion correct */
 .pad--x--2 { padding-left: 0.125rem; padding-right: 0.125rem; /* padding left right 2px */ }
 .pad--x--6 { padding-left: 0.375rem; padding-right: 0.375rem; /* padding left right 6px */ }
 .pad--x--9 { padding-left: 0.563rem; padding-right: 0.563rem; /* padding left right 9px */ }
 .pad--x--40 { padding-left: 2.5rem; padding-right: 2.5rem; /* padding-left 40px padding-right 40px */ }
 .pad--x--14 { padding-left: 0.875rem; padding-right: 0.875rem; /* padding-left 14px padding-right 14px */ }
-.pad--10 { padding: 0.625rem; /* padding 10px */ } /* confirmed in use */ /* pixel conversion correct */
-.pad--16 { padding: 1rem; /* padding 16px */ } /* confirmed in use */ /* pixel conversion correct */
-.pad--18 { padding: 1.125rem; /* padding 18px */ } /* confirmed in use */ /* pixel conversion correct */
 .pad--bottom--0 { padding-bottom: 0; }
 .pad--bottom--68 { padding-bottom: 4.25rem; /* padding bottom 68px */ } /* confirmed in use */ /* pixel conversion correct */
+.pad--left--2 { padding-left:0.125rem; /* padding left 2px */ } /* confirmed in use */ /* pixel conversion correct */ 
 .pad--left--3 { padding-left: 0.188rem; /* padding left 3px */ } /* confirmed in use */ /* pixel conversion correct */ 
 .pad--left--40 { padding-left: 2.5rem; /*  left 40px */ } /* confirmed in use */ /* pixel conversion correct */
 .pad--left--32 { padding-left: 2rem; /*  left 32px */ } /* confirmed in use */ /* pixel conversion correct */
@@ -250,6 +255,7 @@
 
 
 /* Top */
+.top--63 {top: 3.938rem;}
 .top--1-8 { top: 1.8rem; }
 .top--50 { top: 50%; }
 .top--neg--6 { top: -0.375rem; }
