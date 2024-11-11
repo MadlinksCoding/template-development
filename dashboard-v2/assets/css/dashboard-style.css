@@ -1427,6 +1427,11 @@ html {
   color: var(--color-rose)
 }
 
+[data-floating-panel-wrapper][data-is-floating=true] [data-floating-panel][data-scrollable=true] {
+  overflow-y: auto;
+  max-height: 100vh
+}
+
 [data-submenu-container][hidden] {
   display: -webkit-box;
   display: -ms-flexbox;

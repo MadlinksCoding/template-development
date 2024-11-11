@@ -108,3 +108,9 @@
 [data-dashboard-main-nav] [data-main-menu-item][data-is-active="true"] [data-sidebar-menu-item-text] { 
   color: var(--color-rose); 
 }
+
+/* make the floating panel scrollable */ /* added by @nayhtetsoe */
+[data-floating-panel-wrapper][data-is-floating="true"] [data-floating-panel][data-scrollable="true"]{
+  overflow-y: auto;
+  max-height: 100vh; /* Ensure it doesn't exceed the viewport height */
+}
