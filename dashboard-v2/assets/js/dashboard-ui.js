@@ -821,6 +821,13 @@ class DashSidebarMenuAdjuster {
 
 				// unhide the floating panel trigger button
         this.moreButton.hidden = false;
+
+		// Add data-scrollable attribute if floatingPanel height exceeds window height
+		if (this.floatingPanel.scrollHeight > this.windowHeight) {
+			this.floatingPanel.dataset.scrollable = true;
+		} else {
+			this.floatingPanel.dataset.scrollable = false;
+		}
       } 
 			else {
         // move items back to menu panel
