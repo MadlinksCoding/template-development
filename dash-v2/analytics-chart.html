@@ -195,6 +195,9 @@
         [data-tabs-menu] [data-tabbed-child-id].active { background: var(--Base-White, #FFF); }
         [data-tabs-menu] [data-tabbed-child-id].active [data-span-title] { color: var(--color-gray-800,#182230); }
 
+        /* Set all chart background color */ /* updated by Nay 1/11/2024. task link: https://app.clickup.com/t/86eq9zr52 */
+        [data-section="transparent-box"][data-overview-section-bg-svg] { background-image: url(assets/img/background-blur.svg); }
+
     </style>
 
     <!-- Tablet Stylesheet -->
@@ -234,7 +237,7 @@
             <!-- End Top Page Title Section -->
 
             <!-- Overview / Insight Section -->
-            <div data-section="transparent-box" class="flex flex-column gap--24 bg-white-40 bg--blur--25 sh--6">
+            <div data-section="transparent-box" data-overview-section-bg-svg class="flex flex-column gap--24 bg-white-40 bg--blur--25 sh--6">
                 <!-- Section Header -->
                 <div data-section="transparent-section-header" class="pad--16 pad--bottom--0 flex justify-between items-center flex--column-responsive-mobile-portrait items--start-responsive-mobile-portrait pad--x--8-responsive-mobile pad--x--8-responsive-mobile-portrait">
                     <!-- Title -->
