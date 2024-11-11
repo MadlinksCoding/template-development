@@ -884,7 +884,7 @@ function SmoothLineChart(renderingEl, data) {
                 sprite: am5.Circle.new(root, {
                     radius: 5,
                     fill: color,
-                    opacity: 0 // Start with invisible bullet
+                    opacity: 1 // Start with visible bullet. /* updated by NayHtetSoe 11/11/2024 */
                 }, bulletTemplate)
             });
         });
