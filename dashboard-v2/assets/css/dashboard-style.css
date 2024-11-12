@@ -773,6 +773,10 @@ html {
   background-color: var(--color-brilliant-rose, #f04cc9)
 }
 
+.bg--col--link-water {
+  background-color: var(--color-link-water, #f2f6fc)
+}
+
 .bg--gd--light-white {
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(242, 244, 247, .5)), to(rgba(242, 244, 247, .5))), rgba(255, 255, 255, .5);
   background: linear-gradient(0deg, rgba(242, 244, 247, .5) 0, rgba(242, 244, 247, .5) 100%), rgba(255, 255, 255, .5)
@@ -1000,6 +1004,10 @@ html {
   width: .188rem
 }
 
+.w--12 {
+  width: .75rem
+}
+
 .w--14 {
   width: .875rem
 }
@@ -1048,6 +1056,10 @@ html {
   width: 22.25rem
 }
 
+.w--378 {
+  width: 23.625rem
+}
+
 .w--464 {
   width: 29rem
 }
@@ -1068,12 +1080,20 @@ html {
   height: .188rem
 }
 
+.h--12 {
+  height: .75rem
+}
+
 .h--112 {
   height: 7rem
 }
 
 .h--120 {
   height: 7.5rem
+}
+
+.h--213 {
+  height: 13.313rem
 }
 
 .pad--10 {
@@ -3697,6 +3717,10 @@ textarea {
     width: 16.063rem
   }
 
+  .w--282-responsive-tablet {
+    width: 17.625rem
+  }
+
   .h--screen-tablet {
     height: 100vh
   }
@@ -4180,6 +4204,10 @@ textarea {
 
   .h--120-responsive-mobile {
     height: 7.5rem
+  }
+
+  .h--177-responsive-mobile {
+    height: 11.063rem
   }
 
   .h--213-responsive-mobile {
@@ -4862,6 +4890,10 @@ textarea {
 
   .h--120-responsive-mobile-portrait {
     height: 7.5rem
+  }
+
+  .h--177-responsive-mobile-portrait {
+    height: 11.063rem
   }
 
   .h--213-responsive-mobile-portrait {
