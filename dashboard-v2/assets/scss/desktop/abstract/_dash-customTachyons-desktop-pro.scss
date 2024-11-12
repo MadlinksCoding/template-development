@@ -43,6 +43,7 @@
 .bg--col--light-gray-234-70 { background: rgba(234, 236, 240, 0.70); }
 .bg--col--rose { background-color: var(--color-rose, #F06); }
 .bg--col-light-blue { background: rgba(41, 112, 255, 0.20); }
+.bg--col--brilliant-rose { background-color: var(--color-brilliant-rose, #F04CC9); }
 
 /* Background Gradients*/
 .bg--gd--light-white { background: linear-gradient(0deg, rgba(242, 244, 247, 0.50) 0%, rgba(242, 244, 247, 0.50) 100%), rgba(255, 255, 255, 0.50); }
@@ -207,6 +208,7 @@
 .pad--x--9 { padding-left: 0.563rem; padding-right: 0.563rem; /* padding left right 9px */ }
 .pad--x--40 { padding-left: 2.5rem; padding-right: 2.5rem; /* padding-left 40px padding-right 40px */ }
 .pad--x--14 { padding-left: 0.875rem; padding-right: 0.875rem; /* padding-left 14px padding-right 14px */ }
+.pad--top--80 { padding-top: 5rem; /* padding top 80px */ } /* confirmed in use */ /* pixel conversion correct */
 .pad--bottom--0 { padding-bottom: 0; }
 .pad--bottom--68 { padding-bottom: 4.25rem; /* padding bottom 68px */ } /* confirmed in use */ /* pixel conversion correct */
 .pad--left--2 { padding-left:0.125rem; /* padding left 2px */ } /* confirmed in use */ /* pixel conversion correct */ 
@@ -305,6 +307,7 @@
 .sh--9 { box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.25); }
 .sh--10 { box-shadow: 4px 4px 0px 0px #000; } /* confirmed in use */
 .sh--11 { box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03); } /* confirmed in use */
+.sh--12 { box-shadow: 0px 4px 6px -2px rgba(16, 24, 40, 0.08); }
 
 
 /* Drop Shadow */
