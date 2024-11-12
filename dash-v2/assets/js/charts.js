@@ -319,6 +319,12 @@ function BarChart(renderingEl, data) {
         var xAxisLabel = "";
         var year = "";
 
+        // Hide tooltip if the pointer is not over the chart /* Added by NayHtetSoe 12/11/2024 */
+        if (!target.root.dom.classList.contains("amcharts-tooltip-visible")) {
+            // Hide the tooltip
+            tooltip.hide();
+        }
+
         chart.series.each(function(series) {
             var tooltipDataItem = series.get("tooltipDataItem");
             if (tooltipDataItem) {
@@ -345,6 +351,20 @@ function BarChart(renderingEl, data) {
         text += "\n[font color='#D0D5DD']───────────────────────[/font]\n[fontWeight:normal width:135px height: 0px][font color='#667085'] Total Earnings[/font][/] [bold width:0px] USD " + total + "[/]";
         return text;
     });
+
+    /* Added by NayHtetSoe 12/11/2024 */
+    // Add event listener to show tooltip when pointer enters the chart.
+    chart.events.on("pointerover", function() {
+        // Add class to the root element to show the tooltip.
+        chart.root.dom.classList.add("amcharts-tooltip-visible");
+    });
+
+    // Add event listener to hide tooltip when pointer leaves the chart.
+    chart.events.on("pointerout", function() {
+        // Remove class from the root element to hide the tooltip.
+        chart.root.dom.classList.remove("amcharts-tooltip-visible");
+    });
+    /* End by NayHtetSoe 12/11/2024 */
 
     // Add scrollbar
     chart.set("scrollbarX", am5.Scrollbar.new(root, {

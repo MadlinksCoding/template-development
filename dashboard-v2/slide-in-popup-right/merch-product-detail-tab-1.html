@@ -6,7 +6,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE-edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        <title>Template - Edit Profile</title>
+        <title>Template - Merch</title>
 
         <!-- Poppins Font -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,6 +42,21 @@
         <!-- Mobile Portrait Stylesheet -->
         <link rel="stylesheet" href="../assets/css/dashboard-styles-mobile-portrait.css"
             media="screen and (max-width: 479px)">
+
+        <style>
+            .tabs-menu li {
+                background-color: transparent !important;
+                flex: auto;
+            }
+            .tabs-menu li a {
+                width: 100%;
+            }
+            .product-details-popup-w {
+                max-width: 56rem;
+                width: 100%;
+            }
+            
+        </style>
     </head>
 
     <body>
@@ -64,7 +79,7 @@
                             </a>
                             <h1
                                 class="poppins fs--14 lh--20 fw6 col--fiord-gray m--0 dn display--flex-responsive-mobile display--flex-responsive-mobile-portrait">
-                                Edit Profile</h1>
+                                Media</h1>
                         </div>
                         <!-- /Site Logo -->
 
@@ -6029,13 +6044,13 @@
                     class="flex flex-column gap--24 min-h-100 bg--gradient-white pad--top--24-responsive-tablet pad--x--16-responsive-tablet pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait pad--y--0-responsive-mobile pad--y--0-responsive-mobile-portrait">
                     <!-- Top Page Header Section -->
                     <div data-section="page-header"
-                        class="pad--40 pad--x--40 pad--bottom--0 pad--x--0-responsive-tablet pad--top--0-responsive-tablet flex flex-column gap--24 pad--8-responsive-mobile pad--8-responsive-mobile-portrait">
+                        class="pad--40 pad--x--24 pad--bottom--0 pad--x--0-responsive-tablet pad--top--0-responsive-tablet flex flex-column gap--24 pad--8-responsive-mobile pad--8-responsive-mobile-portrait">
                         <!-- Top Page Title Section -->
                         <div data-section="page-title"
                             class="w-100 flex gap--24 items-start justify-between gap--16--responsive-tablet gap--16--responsive-mobile gap--16--responsive-mobile-portrait flex--column-responsive-tablet flex--column-responsive-mobile flex--column-responsive-mobile-portrait display--none-responsive-mobile display--none-responsive-mobile-portrait">
                             <h1
                                 class="poppins fs--30 lh--38 fw5 tracked--neg--0-72 col--fiord-gray m--0 fs--30-responsive-tablet lh--38-responsive-tablet">
-                                Edit Profile
+                                Merch
                             </h1>
                         </div>
                         <!-- /Top Page Title Section -->
@@ -6059,6 +6074,285 @@
                 </div> <!-- End Inner Container -->
             </main>
             <!-- /main section -->
+
+            <!-- Product Detail Tab Popup -->
+
+            <div data-id="product-details-popup"
+                class="product-details-popup-w w--100-responsive-mobile w--100-responsive-mobile-portrait h--screen flex flex-column bg-white sh--8 bg--blur--10 fixed right-0 top-0 z--11100">
+                <!-- Popup Top Order Info -->
+
+                <!-- New Merch Listing -->
+                <div class="flex flex-column self-stretch flex--max" data-tab-main-wrapper data-tabs-section="1">
+                    <div class="flex justify-between pad--16">
+                        <h3 class="fs--14 fw4">New Merch Listing</h3>
+                        <div class="flex">
+                            <a href="#">
+                                <img src="../assets/icons/close-btn.svg" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                    <!-- tab header list (type = [scrollable, stretchable, dropdown]) -->
+                    <div data-tab-header-main data-tabs-container="1" data-responsive-tab-header-type="scrollable" class="flex flex-column items-start self-stretch gap--8 relative">
+                        <ul data-tab-head-list="" data-tabs-menu="notifications-tabs-menu" data-show-default-page-load="all" class="flex items-center self-stretch overflow-x-auto tabs-menu">
+                            <!-- tab head list item -->
+                            <li data-tab-head-list-item="" data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-first-tab-1" data-attribute-run-once="1" data-target="first-tab" data-flag="all" data-offset="5" data-per_page="5" class="flex active">
+                                <a href="javascript: void(0)" tab-trigger="1" data-tab-trigger="1" data-is-active="false" data-throw-event="fs-evt-eventname" class="flex flex-column items-center gap--10 pv2 ph3 mw--80 o-70 nowrap transition--all transition--200 transition--ease-in-out">
+                                    <span class="flex items-center gap--2 h--32 pointer-events-none">
+                                        <span data-tab-label="" class="fs--14 fw4 lh--20 nowrap col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                            Product Details
+                                        </span>
+                                        <span data-count-badge="" class="flex flex-column items-center self-stretch gap--10" hidden="">
+                                            <span data-count-text="" data-attribute-type="total-order-received-count" data-actual-stat-count="" class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal tracked--0-25 col--pale-sky">
+                                                5
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <!-- /tab head list item -->
+
+                            <!-- tab head list item -->
+                            <li data-tab-head-list-item="" data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-second-tab-1" data-attribute-run-once="1" data-target="second-tab" data-flag="unread" data-offset="5" data-per_page="5" class="flex">
+                                <a href="javascript: void(0)" tab-trigger="1" data-tab-trigger="1" data-is-active="false" data-throw-event="fs-evt-eventname" class="flex flex-column items-center gap--10 pv2 ph3 mw--80 o-70 nowrap transition--all transition--200 transition--ease-in-out">
+                                    <span class="flex items-center gap--2 h--32 pointer-events-none">
+                                        <span data-tab-label="" class="fs--14 fw4 lh--20 nowrap col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                            Gallery
+                                        </span>
+                                        <span data-count-badge="" class="flex flex-column items-center self-stretch gap--10" hidden="">
+                                            <span data-count-text="" data-attribute-type="total-order-received-count" data-actual-stat-count="" class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal tracked--0-25 col--pale-sky">
+                                                5
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <!-- /tab head list item -->
+
+                            <!-- tab head list item -->
+                            <li data-tab-head-list-item="" data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-third-tab-1" data-attribute-run-once="1" data-target="third-tab" data-flag="custom_request" data-offset="5" data-per_page="5" class="flex">
+                                <a href="javascript: void(0)" tab-trigger="1" data-tab-trigger="1" data-is-active="false" data-throw-event="fs-evt-eventname" class="flex flex-column items-center gap--10 pv2 ph3 mw--80 o-70 nowrap transition--all transition--200 transition--ease-in-out">
+                                    <span class="flex items-center gap--2 h--32 pointer-events-none">
+                                        <span data-tab-label="" class="fs--14 fw4 lh--20 nowrap col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                            Inventory and Shipment
+                                        </span>
+                                        <span data-count-badge="" class="flex flex-column items-center self-stretch gap--10" hidden="">
+                                            <span data-count-text="" data-attribute-type="total-order-received-count" data-actual-stat-count="" class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal tracked--0-25 col--pale-sky">
+                                                2
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <!-- /tab head list item -->
+
+                            <!-- tab head list item -->
+                            <li data-tab-head-list-item="" data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-fourth-tab-1" data-attribute-run-once="1" data-target="fourth-tab" data-flag="account" data-offset="5" data-per_page="5" class="flex">
+                                <a href="javascript: void(0)" tab-trigger="1" data-tab-trigger="1" data-is-active="false" data-throw-event="fs-evt-eventname" class="flex flex-column items-center gap--10 pv2 ph3 mw--80 o-70 nowrap transition--all transition--200 transition--ease-in-out">
+                                    <span class="flex items-center gap--2 h--32 pointer-events-none">
+                                        <span data-tab-label="" class="fs--14 fw4 lh--20 nowrap col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                            Publish Settings
+                                        </span>
+                                        <span data-count-badge="" class="flex flex-column items-center self-stretch gap--10" hidden="">
+                                            <span data-count-text="" data-attribute-type="total-order-received-count" data-actual-stat-count="" class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal tracked--0-25 col--pale-sky">
+                                                5
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <!-- /tab head list item -->
+
+                            <!-- tab head list item -->
+                            <li data-tab-head-list-item="" data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-fifth-tab-1" data-attribute-run-once="1" data-target="fifth-tab" data-flag="account" data-offset="5" data-per_page="5" class="flex">
+                                <a href="javascript: void(0)" tab-trigger="1" data-tab-trigger="1" data-is-active="false" data-throw-event="fs-evt-eventname" class="flex flex-column items-center gap--10 pv2 ph3 mw--80 o-70 nowrap transition--all transition--200 transition--ease-in-out">
+                                    <span class="flex items-center gap--2 h--32 pointer-events-none">
+                                        <span data-tab-label="" class="fs--14 fw4 lh--20 nowrap col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                            Gallery
+                                        </span>
+                                        <span data-count-badge="" class="flex flex-column items-center self-stretch gap--10" hidden="">
+                                            <span data-count-text="" data-attribute-type="total-order-received-count" data-actual-stat-count="" class="flex flex-column items-center self-stretch gap--10 fs--10 fw5 lh--normal tracked--0-25 col--pale-sky">
+                                                15
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <!-- /tab head list item -->
+                        </ul>
+                    </div>
+                    <!-- /tab header list -->
+
+                    <div class="flex flex-column self-stretch flex--max">
+                        <!-- tab main wrapper -->
+                        <div  class="flex flex-column self-stretch flex--max overflow-y-auto">
+                            
+
+                            <!-- tab content containers wrapper -->
+                            <div data-tab-contents-containers-main data-tabs-content="1" class="flex flex-column flex--max self-stretch">
+                                <!-- tab content container (first tab) -->
+                                <div data-tabbed-content="tabbed-content-first-tab-1" data-target="first-tab" data-is-active="false" class="flex flex-column self-stretch active">
+                                    <div class="flex flex-column gap--16 pad--16">
+                                        <!-- Product name -->
+                                        <div class="flex flex-column gap--16">
+                                            <div class="flex gap--8 items-center br--2 br--bottom br--left bb br--col--mischka bg-white-50 sh--7 relative">
+                                                <input type="text" placeholder="Product Name" class="w-100 bn flex-auto fs--16 lh--24 col--pale-sky pad--y--10 pad--x--12">
+                                            </div>
+                                            <div class="flex gap--8 items-center br--2 br--bottom br--left bb br--col--mischka bg-white-50 sh--7 relative">
+                                                <textarea type="text" placeholder="Description" rows="3" class="w-100 bn flex-auto fs--16 lh--24 col--pale-sky pad--y--10 pad--x--12"></textarea>
+                                            </div>
+                                            <!-- This product is for subscribers only -->
+                                            <div class="flex items-center gap--8">
+                                                <!-- toggle container -->
+                                                <div class="flex">
+                                                    <!-- toggle switch (switch size = ['default', 'small'] / switch theme = ['default', 'light', 'dark']) -->
+                                                    <label data-switch="" data-switch-size="small" data-switch-theme="dark"
+                                                        data-switch-for="" data-throw-event="fs-evt-eventname">
+                                                        <input type="checkbox" value="switch_slide" name="switch_slide"
+                                                            class="dn">
+                                                        <span data-switch-slide="" class="db"></span>
+                                                    </label>
+                                                    <!-- /toggle switch -->
+                                                </div>
+                                                <!-- /toggle container -->
+    
+                                                <!-- toggle text -->
+                                                <div class="flex items-center gap--4">
+                                                    <div class="flex items-center">
+                                                        <span class="fs--16 fw6 lh--24 col--ebony">
+                                                            This product is for subscribers only
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <!-- /toggle text -->
+                                            </div>
+                                            <!-- /This product is for subscribers only -->
+                                        </div>
+                                        <!-- /Product name -->
+                                        
+                                        <!-- Price -->
+                                        <div class="flex flex-column gap--10">
+                                            <div class="flex flex-column">
+                                                <h6 class="fs--14 col--gull-gray">Price</h6>
+                                                <p>Include domestic shipping cost in your price.</p>
+                                            </div>
+                                            <div class="flex gap--16">
+                                                <div class="flex flex-auto flex-column gap--6">
+                                                    <span class="fs--12 fw4 lh--20 col--ebony">Original Price</span>
+                                                    <div class="flex gap--8 items-center br--2 br--bottom br--left bb br--col--mischka bg-white-50 sh--7 relative">
+                                                        <div class="w-100 bn flex gap--10 items-center fs--16 lh--24 col--pale-sky pad--y--10 pad--x--12">
+                                                            <span class="fw7">
+                                                                USD$
+                                                            </span>
+                                                            <div class="flex--max">
+                                                                <input type="text" name="" placeholder="" class="fs--16 lh--24 col--pale-sky w-100">
+                                                            </div>
+                                                        </div>
+                                                    </div> 
+                                                    <p class="fs--14 lh--20 col--ebony">Price must be between USD$ 1.95 to 500.</p>
+                                                </div>
+                                                <div class="flex flex-auto flex-column gap--6">
+                                                    <span class="fs--12 fw4 lh--20 col--ebony">Discounted Price (optional)</span>
+                                                    <div class="flex gap--8 items-center br--2 br--bottom br--left bb br--col--mischka bg-white-50 sh--7 relative">
+                                                        <div class="w-100 bn flex gap--10 items-center fs--16 lh--24 col--pale-sky pad--y--10 pad--x--12">
+                                                            <span class="fw7">
+                                                                USD$
+                                                            </span>
+                                                            <div class="flex--max">
+                                                                <input type="text" name="" placeholder="" class="fs--16 lh--24 col--pale-sky w-100">
+                                                            </div>
+                                                        </div>
+                                                    </div> 
+                                                    <p class="fs--14 lh--20 col--ebony">Leave blank to disable discount display.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /Price -->
+
+                                        <!-- Tags -->
+                                        <div class="flex flex-column gap--10">
+                                            <div class="flex flex-column">
+                                                <h6 class="fs--14 col--gull-gray">Tags</h6>
+                                                <p>Add maximum of 10 tags to your media.</p>
+                                            </div>
+                                            <div class="flex gap--8 items-center br--2 br--bottom br--left bb br--col--mischka bg-white-50 sh--7 relative">
+                                                <div class="w-100 bn flex gap--10 items-center fs--16 lh--24 col--pale-sky pad--y--12 pad--x--12">
+                                                    <span>
+                                                        <img src="../assets/images/search-sm-icon.svg" alt="" class="w--20 h--20">
+                                                    </span>
+                                                    <div class="flex--max">
+                                                        <input type="text" name="" placeholder="Search tags..." class="fs--16 lh--24 col--pale-sky w-100">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /Tags -->
+
+                                        <!-- Tags -->
+                                        <div class="flex flex-column gap--10">
+                                            <div class="flex flex-column">
+                                                <h6 class="fs--14 col--gull-gray">Collection</h6>
+                                            </div>
+                                            <div class="flex gap--8 items-center br--2 br--bottom br--left bb br--col--mischka bg-white-50 sh--7 relative">
+                                                <div class="w-100 bn flex gap--10 items-center fs--16 lh--24 col--pale-sky pad--y--12 pad--x--12">
+                                                    <span>
+                                                        <img src="../assets/images/search-sm-icon.svg" alt="" class="w--20 h--20">
+                                                    </span>
+                                                    <div class="flex--max">
+                                                        <input type="text" name="" placeholder="Search or add new collection..." class="fs--16 lh--24 col--pale-sky w-100">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /Tags -->
+                                    </div>
+                                </div>
+                                <!-- /tab content container -->
+
+                                <!-- tab content container (second tab) -->
+                                <div data-tabbed-content="tabbed-content-second-tab-1" data-target="second-tab" data-is-active="false" class="flex flex-column self-stretch">
+                                    <div class="flex flex-column pad--16">
+                                        Gallery
+                                    </div>
+                                </div>
+                                <!-- tab content container -->
+
+                                <!-- tab content container (third tab) -->
+                                <div data-tabbed-content="tabbed-content-third-tab-1" data-target="third-tab" data-is-active="false" class="flex flex-column self-stretch">
+                                    <div class="flex flex-column pad--16">
+                                        Inventory and Shipment
+                                    </div>
+                                </div>
+                                <!-- tab content container -->
+
+                                <!-- tab content container (fourth tab) -->
+                                <div data-tabbed-content="tabbed-content-fourth-tab-1" data-target="fourth-tab" data-is-active="false" class="flex flex-column self-stretch">
+                                    <div class="flex flex-column pad--16">
+                                        Publish Settings
+                                    </div>
+                                </div>
+                                <!-- tab content container -->
+
+                                <!-- tab content container (fifth tab) -->
+                                <div data-tabbed-content="tabbed-content-fifth-tab-1" data-target="fifth-tab" data-is-active="false" class="flex flex-column self-stretch">
+                                    <div class="flex flex-column pad--16">
+                                        Gallery
+                                    </div>
+                                </div>
+                                <!-- tab content container -->
+                            </div>
+                            <!-- /tab content containers wrapper -->
+                        </div>
+                        <!-- /tab main wrapper -->
+                    </div>
+                </div>
+                <!-- /New Merch Listing -->
+                
+
+                <!-- End Popup Top Order Info -->
+                
+            </div>
+
+            <!-- Product Detail Tab Popup End -->
 
         </div>
         <!-- /main wrapper -->

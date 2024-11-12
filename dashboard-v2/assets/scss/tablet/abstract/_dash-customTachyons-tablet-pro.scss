@@ -71,6 +71,7 @@
 .w--100-responsive-tablet { width: 100%; }
 
 /* Width (px) */
+.w--171-responsive-tablet { width: 10.688rem; }
 .w--177-responsive-tablet { width: 11.063rem; }
 .w--257-responsive-tablet { width: 16.063rem; }
 
@@ -83,6 +84,7 @@
 
 /* Height */
 .h--screen-tablet { height: 100vh }
+.h--auto-tablet { height: auto; }
 
 
 /* Height Percent */
@@ -90,6 +92,8 @@
 
 /* Height (px) */
 .h--100-responsive-tablet { height: 6.25rem; /* height 100px */ } /* confirmed in use */ /* pixel conversion correct */
+.h--171-responsive-tablet { height: 10.688rem; }
+.h--213-responsive-tablet { height: 13.313rem; /* height 213px */ } /* confirmed in use */ /* pixel conversion correct */
 
 
 /* Min Height */
@@ -103,6 +107,7 @@
 .pad--x--0-responsive-tablet { padding-left: 0rem; padding-right: 0rem; /* padding left right 0px */ }
 .pad--x--16-responsive-tablet { padding-left: 1rem; padding-right: 1rem; /* padding left right 16px */ }
 .pad--left--16-responsive-tablet { padding-left: 1rem; /* padding left 16px */ }
+.pad--left--32-responsive-tablet { padding-left: 2rem; /* padding left 32px */ }
 .pad--top--24-responsive-tablet { padding-top: 1.5rem; /* padding top 24px */ }
 .pad--top--0-responsive-tablet { padding-top: 0rem; /* padding top 0px */ }
 .pad--0-responsive-tablet { padding: 0rem; /* padding top bottom left right 0px */ }
@@ -125,11 +130,14 @@
 
 
 /* Flexbox */
+.flex--row-responsive-tablet { flex-direction: row; }
 .flex--column-responsive-tablet { flex-direction: column; }
+.flex--reverse--column-responsive-tablet { flex-direction: column-reverse; }
 .items--start-responsive-tablet { align-items: flex-start; }
 .items--center-responsive-tablet { align-items: center; }
 .justify--center-responsive-tablet { justify-content: center; }
 .flex--max-responsive-tablet { flex: 1 0 0; }
+.flex--none-responsive-tablet { flex: 0 0 auto; }
 
 
 /* Grid */

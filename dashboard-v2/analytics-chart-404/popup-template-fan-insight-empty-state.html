@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup Template</title>
+
+    <!-- Poppins Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Tachyons Style -->
+    <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/main.css" />
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" />
+    <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/theme.css" />
+    <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/customTachyons.css" />
+
+    <!-- Nice Select CSS -->
+    <link rel="stylesheet" type="text/css" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/FINAL/css/nice-select.css">
+
+    <!-- /* Custom Tachyons */ -->
+    <style>
+        /* Font */
+        .ff-poppins { font-family: 'Poppins'; }
+
+        /* Letter Spacing */ 
+        .tracked--neg--0-72 { letter-spacing: --0.045rem; /* letter-spacing -0.72px */ } /* confirmed in use */ /* pixel conversion correct */
+
+        /* Width */
+        .w--14 { width: 0.875rem; /* width 14px */ } /* confirmed in use */ /* pixel conversion correct */
+        .w--90 { width: 5.625rem; /* width 90px */ } /* confirmed in use */ /* pixel conversion correct */
+
+        /* Max Width */
+        .max--w--952 { max-width: 59.5rem; /* width 952px */ } /* confirmed in use */ /* pixel conversion correct */
+
+        /* Height */
+        .h--screen { height: 100vh; }
+        .h--14 { height: 0.875rem; /* height 14px */ } /* confirmed in use */ /* pixel conversion correct */
+
+        /* Colors */
+        .col--gray-500 { color: var(--color-gray-500,#667085); }
+        .col--gray-600 { color: var(--color-gray-600,#475467); }
+        .col--gray-700 { color: var(--color-gray-700,#344054); }
+        .col--gray-800 { color: var(--color-gray-800,#182230); }
+        .col--gray-900 { color: var(--color-gray-900,#101828); }
+        .col--gray-950 { color: var(--color-gray-950,#0C111D); }
+        .col--blue-dark-700 { color: var(--color-blue-dark-700, #004EEB); }
+
+        /* Background Gradients */
+        .bg--gradient-white { background: linear-gradient(180deg, rgba(255, 255, 255, 0.30) 0%, rgba(255, 255, 255, 0.00) 8%); }
+
+        /* Background */
+        .bg--no-repeat { background-repeat: no-repeat; }
+        .bg--cover { background-size: cover; }
+
+        /* Border Colors */
+        .br--col--gray-300 { border-color: var(--color-gray-300, #D0D5DD); } /* confirmed in use */
+
+        /* Border Radius */
+        .br--2 { border-radius: 0.125rem; /* border-radius 2px */ } /* confirmed in use */ /* pixel conversion correct */
+
+        /* Box Shadow */
+        .sh--6 { box-shadow: 0px 4px 6px -2px rgba(16, 24, 40, 0.08); } /* confirmed in use */
+        .sh--7 { box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05); } /* confirmed in use */
+        .sh--sm { box-shadow: 0px 1px 3px 0px rgba(16, 24, 40, 0.10), 0px 1px 2px 0px rgba(16, 24, 40, 0.06); }
+
+        /* clip path */
+        .cp--6 { clip-path: polygon(0% 0%, 100% 0, 105% 105%, 16% 105%); }
+
+        /* Filter Colors */
+        .filter--col--blue--dark--700 { filter: invert(17%) sepia(100%) saturate(5382%) hue-rotate(218deg) brightness(96%) contrast(105%); } /* confirmed in use */
+        .filter--col--gray--500 { filter: invert(44%) sepia(39%) saturate(203%) hue-rotate(181deg) brightness(91%) contrast(91%); } /* confirmed in use */
+
+        /* Filter Blur */
+        .filter--blur--60 { filter: blur(60px); }
+
+        /* Grid */
+        .grid--cols-2 { grid-template-columns: repeat(2, 1fr); }
+        .grid--cols-1 { grid-template-columns: repeat(1, 1fr); }
+
+        /* Grid Column */
+        .grid--col-span-2 { grid-column: span 2 / span 2; }
+
+        /* Padding */
+        .pad--10 { padding: 0.625rem; /* padding 10px */ } /* confirmed in use */ /* pixel conversion correct */
+        .pad--x--14 { padding-left: 0.875rem; padding-right: 0.875rem; /* padding left right 14px */ } /* confirmed in use */ /* pixel conversion correct */
+        .pad--16 { padding: 1rem; /* padding 16px */ }
+        .pad--bottom--0 { padding-bottom: 0rem; /* padding bottom 0px */ }
+        .pad--top--0 { padding-top: 0rem; /* padding top 0px */ }
+        .pad--y--96 { padding-top: 6rem; padding-bottom: 6rem; /* padding top 96px padding bottom 96px */ }
+
+        /* Margin */
+        .m--0 { margin: 0rem; }
+        .neg--ml-10 { margin-left: -0.625rem; }
+
+        /* Top */
+        .top--50 { top: 50%; }
+
+        /* Left */
+        .left--50 { left: 50%; }
+
+        /* Translate */
+        .transform--center { transform: translateX(-50%); }
+
+        /* Nice Select Box New Design Style */
+        .nice-select.v1 { border: none; border-radius: 0.5rem; background: rgba(255, 255, 255, 0.50);}
+        .nice-select.v1 .nice-select-list { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+        .nice-select.v1:not(.auto-width) { min-width: 5.75rem; }
+        .nice-select.v1:not(.has-tags) .current { border: none; padding: 0.625rem 0.875rem; justify-content:center; gap: 0.25rem; border-radius: 0.5rem; background: rgba(255, 255, 255, 0.50); }
+        .nice-select.v1 .current .elm_aQVICr { max-width: fit-content; }
+        .nice-select.v1:not(.auto-width) .nice-select-dropdown { min-width: 15rem; right: 0; left: auto; transform: scale(1) translateY(0px); }
+        .nice-select.v1:not(.has-tags) .option { padding: 0.063rem 0.375rem; }
+        .nice-select.v1:not(.has-tags) .option .elm_aQVICr { padding: 0.563rem 0.625rem; }
+        .nice-select.v1:not(.has-tags) [data-option-label] { font-size: 0.875rem; font-weight:500; line-height: 1.25rem; color: var(--color-oxford-blue,#344054); }
+        .nice-select.v1:not(.has-tags) .option:not(.disabled):hover, .nice-select.v1:not(.has-tags) .option.selected { background-color:transparent; }
+        .nice-select.v1:not(.has-tags) .option:not(.disabled):hover .elm_aQVICr { border-radius: 6px; background: var(--Gray-50, #F9FAFB); }
+        .nice-select.v1:not(.has-tags) .option.selected [data-option-label] {color: var(--color-oxford-blue,#344054);}
+        .nice-select.v1.filter:not(.has-tags) .multiple-options.active, .nice-select.v1.filter:not(.has-tags) .current.active { background: rgba(255, 255, 255, 0.50); border: 0; }
+        .nice-select.v1:not(.has-tags) .multiple-options [data-option-label], .nice-select.v1:not(.has-tags) .current [data-option-label],
+        .nice-select.v1:not(.has-tags) .multiple-options [data-option-label], .nice-select.v1:not(.has-tags) .current.active [data-option-label] { color: var(--color-oxford-blue,#344054); font-weight: 600; }
+
+        /* Overflow auto scrollbar width none; */
+        [data-section="popup-overlay"] { scrollbar-width: none; }
+    </style>
+
+    <!-- Tablet Stylesheet -->
+    <link rel="stylesheet" href="assets/css/tablet.css" media="screen and (min-width: 768px) and (max-width: 1365px)">
+     
+    <!-- Mobile Stylesheet -->
+    <link rel="stylesheet" href="assets/css/mobile.css" media="screen and (min-width: 480px) and (max-width: 767px)">
+
+    <!-- Mobile Portrait Stylesheet -->
+    <link rel="stylesheet" href="assets/css/mobile-portrait.css" media="screen and (max-width: 479px)">
+</head>
+
+<body class="ff-poppins overflow-hidden">
+    <div class="h--screen flex">
+        <!-- Sidebar as image for matching popup template with Figma -->
+        <div class="flex-none w--90 relative z--10000 display--none-responsive-tablet display--none-responsive-mobile display--none-responsive-mobile-portrait">
+            <img src="assets/img/dashboard-ui-left-menu.png" alt="" class="w-100 h-100 fit--cover">
+        </div>
+        <!-- Loader -->
+        <div class="h--screen bg--no-repeat bg--cover flex-auto relative neg--ml-10 ml--0-responsive-mobile ml--0-responsive-mobile-portrait" style="background-image: url(assets/img/dashboard-ui-bg.png);">
+            <!-- Popup Overlay Container -->
+            <div data-section="popup-overlay" class="w-100 h-100 bg--white--25 bg--blur--10 fixed left-0 top-0 overflow-auto">
+                <!-- Popup Container -->
+                <div data-section="popup-container" class="absolute left--50 transform--center overflow-auto pad--y--96 pad--y-0-responsive-tablet pad--y-0-responsive-mobile pad--y-0-responsive-mobile-portrait flex justify-center w-100">
+                    <!-- Popup Inner -->
+                    <div data-section="popup-inner" class="w-100 max--w--952 bg-white-90 pad--24 pad--16-responsive-mobile pad--16-responsive-mobile-portrait pad--x--8-responsive-mobile pad--x--8-responsive-mobile-portrait flex flex-column gap--16">
+                        <!-- Popup Header -->
+                        <div data-section="popup-header" class="relative flex items-center justify-between gap--8 gap--16--responsive-mobile gap--16--responsive-mobile-portrait pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait flex--column-responsive-mobile flex--column-responsive-mobile-portrait items--start-responsive-mobile items--start-responsive-mobile-portrait">
+                            <!-- Title -->
+                            <div data-section="popup-title" class="flex items-center gap--8">
+                                <div class="w--24 h--24">
+                                    <img src="assets/icons/profile.svg" alt="" class="w--24 h--24 filter--col--black">
+                                </div>
+                                <h3 class="ff-poppins fs--24 fs--18-responsive-mobile fs--18-responsive-mobile-portrait fw6 lh--32 lh--28-responsive-mobile lh--28-responsive-mobile-portrait col--gray-950">Fans Insight</h3>
+                            </div>
+                            <!-- End Title -->
+                            <!-- Select Dropdown and Close Button -->
+                            <div class="flex items-center gap--16 w--100-responsive-mobile w--100-responsive-mobile-portrait">
+
+                                <!-- Select Dropdown -->
+                                <div class="relative z--10000 w--100-responsive-mobile w--100-responsive-mobile-portrait">
+                                    <select data-nice-select>
+                                        <option value="daily">Daily</option>
+                                        <option value="weekly">Weekly</option>
+                                        <option value="monthly">Monthly</option>
+                                        <option value="yearly">Yearly</option>
+                                        <option value="alltime">All time</option>
+                                    </select>
+                                    <!-- <div class="pointer">
+                                        <img src="assets/icons/arrow-down.svg" alt="" />
+                                    </div> -->
+                                </div>
+                                
+                                <!-- Close Button -->
+                                <div class="bg-white br-100 sh--sm pad--10 flex items-center justify-center pointer absolute-responsive-mobile absolute-responsive-mobile-portrait top--neg-8-responsive-mobile top--neg-8-responsive-mobile-portrait right--0-responsive-mobile right--0-responsive-mobile-portrait">
+                                    <img src="assets/icons/close-btn.svg">
+                                </div>
+                                <!-- End Close Button -->
+                            </div>
+                            <!-- End Select Dropdown and Close Button -->
+                        </div>
+                        <!-- End Popup Header -->
+
+                        <!-- Data Row -->
+                        <div data-section="data-row" class="grid grid--cols-2 grid--cols-2-responsive-tablet grid--cols-2-responsive-mobile grid--cols-2-responsive-mobile-portrait">
+                            <!-- Chart Card -->
+                            <div data-secton="chart-card" class="pad--16 pad--12-responsive-mobile-portrait flex flex-column gap--16 flex-auto br--2 w-100 grid--col-span-1-responsive-mobile-portrait br br--col--gray-300">
+                                <!-- Title -->
+                                <div class="flex items-center justify-center gap--8">
+                                    <h3 class="m--0 ff-poppins fs--18 fs--16-responsive-mobile-portrait fw6 lh--28 lh--24-responsive-mobile-portrait col--gray-950">New Followers</h3>
+                                </div>
+                                <!-- Data Content -->
+                                <div class="flex flex-column justify-center items-center gap--16 flex-auto">
+                                    <div class="flex items-center gap--24">
+                                        <div class="flex flex-column items-start gap--8">
+                                            <span class="fs--36 fw6 lh--44 tracked--neg--0-72 col--gray-900">--</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Ens Data Content -->
+                            </div>
+                            <!-- End Chart Card -->
+                            <!-- Chart Card -->
+                            <div data-secton="chart-card" class="pad--16 pad--12-responsive-mobile-portrait flex flex-column gap--16 flex-auto w-100 grid--col-span-1-responsive-mobile-portrait">
+                                <!-- Title -->
+                                <div class="flex items-center justify-center gap--8">
+                                    <h3 class="m--0 ff-poppins fs--18 fs--16-responsive-mobile-portrait fw6 lh--28 lh--24-responsive-mobile-portrait col--gray-950">Total Profile Visit</h3>
+                                </div>
+                                <!-- Data Content -->
+                                <div class="flex flex-column justify-center items-center gap--16 flex-auto">
+                                    <div class="flex items-center gap--24">
+                                        <div class="flex flex-column items-start gap--8">
+                                            <span class="fs--36 fw6 lh--44 tracked--neg--0-72 col--gray-900">--</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Ens Data Content -->
+                            </div>
+                            <!-- End Chart Card -->
+                        </div>
+                        <!-- End Data Row -->
+
+                        <!-- Data Row -->
+                        <div data-section="data-row" class="grid grid--cols-2 gap--16 grid--cols-2-responsive-tablet grid--cols-1-responsive-mobile grid--cols-1-responsive-mobile-portrait">
+                            <!-- Left Column -->
+                            <div class="flex flex-column gap--16 w-100 grid--col-span-2-responsive-mobile-portrait">
+                                <!-- Chart Card -->
+                                <div data-secton="chart-card" class="pad--16 flex flex-column gap--16 flex-auto">
+                                    <!-- Title -->
+                                    <div class="flex items-center gap--8">
+                                        <h3 class="m--0 ff-poppins fs--18 fw6 lh--28 col--gray-950">Traffic Source</h3>
+                                    </div>
+                                    <!-- Data Content -->
+                                    <div class="flex flex-column justify-center items-start gap--16 flex-auto">
+                                        <div class="w-100 pad--y--24 flex flex-column justify-center gap--8 flex-auto h--340">
+                                            <div class="pad--16 flex items-center justify-center">
+                                                <div class="w--161 h--161 flex items-center justify-center relative">
+                                                    <div class="db w-100 h-100 absolute left-0 top-0 flex items-center justify-center">
+                                                        <div class="db bg--col--lemon w--32 h--32 filter--blur--60"></div>
+                                                    </div>
+                                                    <img src="assets/img/pie-chart-03.svg" class="w--128 h--128" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="flex flex-column gap--8 items-center">
+                                                <span class="fs--16 lh--24 col--gray-700">No trend to show at the moment</span>
+                                                <a href="#" class="fs--16 lh--24"><span class="fs--16 lh--24 col--gray-700 underline">Learn ways to earn</span> </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Ens Data Content -->
+                                </div>
+                                <!-- End Chart Card -->
+                            </div>
+                            <!-- End Left Column -->
+                            <!-- Right Column -->
+                            <div class="flex flex-column gap--16 w-100 grid--col-span-2-responsive-mobile-portrait">
+                                <!-- Chart Card -->
+                                <div data-secton="chart-card" class="pad--16 flex flex-column gap--16 flex-auto">
+                                    <!-- Title -->
+                                    <div class="flex items-center gap--8">
+                                        <h3 class="m--0 ff-poppins fs--18 fw6 lh--28 col--gray-950">Top Countries</h3>
+                                    </div>
+                                    <!-- Data Content -->
+                                    <div class="flex flex-column justify-center items-start gap--16 flex-auto">
+                                        <div class="w-100 pad--y--24 flex flex-column justify-center gap--8 flex-auto h--340">
+                                            <div class="pad--16 flex items-center justify-center">
+                                                <div class="w--161 h--161 flex items-center justify-center relative">
+                                                    <div class="db w-100 h-100 absolute left-0 top-0 flex items-center justify-center">
+                                                        <div class="db bg--col--lemon w--32 h--32 filter--blur--60"></div>
+                                                    </div>
+                                                    <img src="assets/img/dot-option-placeholder.svg" class="w--128 h--128" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="flex flex-column gap--8 items-center">
+                                                <span class="fs--16 lh--24 col--gray-700">No trend to show at the moment</span>
+                                                <a href="#" class="fs--16 lh--24"><span class="fs--16 lh--24 col--gray-700 underline">Learn ways to earn</span> </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Ens Data Content -->
+                                </div>
+                                <!-- End Chart Card -->
+                            </div>
+                            <!-- End Right Column -->
+                        </div>
+                        <!-- End Data Row -->
+                    </div>
+                    <!-- Popup Inner -->
+                </div>
+                <!-- End Popup Container -->
+            </div><!-- End Popup Overlay Container -->
+        </div> <!-- End Loader -->
+    </div>
+
+    <!-- SVG Image Render -->
+    <script type="text/javascript">
+        var svgIcons = {"blog":"<svg data-icon=\"blog\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M10.4277 3.19271C8.49021 3.11561 6.57385 3.12069 4.67858 3.20797C4.57592 3.21316 4.47771 3.25148 4.39866 3.31716C4.3196 3.38285 4.26394 3.47238 4.24003 3.57234C4.16003 3.91561 4.12076 4.27925 4.12221 4.66325C4.13676 8.52652 4.14039 12.5069 4.13312 16.6043C4.13167 17.432 4.15785 18.2778 4.21167 19.1418C4.22185 19.3134 4.26912 19.4945 4.35348 19.6851C4.38548 19.7549 4.4393 19.7985 4.51494 19.816C4.85385 19.8872 5.11712 19.9221 5.30476 19.9207C6.69385 19.9149 8.17603 19.9251 9.7513 19.9512C9.9273 19.9541 9.98985 20.0392 9.93894 20.2065L9.64658 21.1665C9.60294 21.309 9.50621 21.384 9.35639 21.3912C7.36948 21.4814 5.72221 21.4582 4.41458 21.3214C3.50694 21.2269 2.97385 20.7672 2.8153 19.9425C2.66694 19.1832 2.61458 18.3672 2.61894 17.5905C2.6393 13.5251 2.63494 9.56216 2.60585 5.7018C2.60003 4.96725 2.6393 4.23195 2.72367 3.49595C2.8873 2.0625 3.98039 1.65888 5.22621 1.65451C7.26548 1.64724 9.17821 1.65089 10.9644 1.66543C11.3266 1.66761 11.728 1.82252 11.9877 2.07343C13.7651 3.79416 15.5957 5.59997 17.4793 7.49088C17.936 7.94906 18.2204 8.33379 18.3324 8.64507C18.5135 9.14252 18.6793 10.4538 18.0553 10.8094C17.8037 10.9549 17.5353 11.1076 17.2502 11.2676C17.2353 11.2756 17.2187 11.2798 17.2018 11.2798C17.1848 11.2798 17.1682 11.2756 17.1533 11.2676C17.1384 11.2596 17.1257 11.2481 17.1163 11.234C17.107 11.2199 17.1013 11.2037 17.0997 11.1869L16.9862 9.89961C16.9784 9.8115 16.9375 9.72966 16.8718 9.67086C16.8061 9.61205 16.7206 9.58071 16.6328 9.58323C15.4429 9.61669 14.2444 9.59996 13.0371 9.53305C12.4989 9.50396 12.0008 9.39633 11.5426 9.21015C10.7353 8.8807 10.5738 7.72216 10.5564 6.95197C10.5317 5.82325 10.5244 4.60723 10.5346 3.30395C10.5346 3.27518 10.5235 3.24754 10.5035 3.2268C10.4836 3.20605 10.4564 3.19383 10.4277 3.19271ZM12.0793 7.43196C12.0974 7.5817 12.1647 7.72111 12.2706 7.82819C12.3765 7.93527 12.5149 8.00389 12.664 8.02323C13.6546 8.15414 14.6618 8.16432 15.6858 8.05378C15.8153 8.04069 15.8335 7.98833 15.7404 7.89669L12.1688 4.33379C12.0946 4.25961 12.0538 4.27487 12.0466 4.3796C11.9637 5.52578 11.9746 6.54324 12.0793 7.43196Z\" fill=\"#303437\"\/>\n<path d=\"M18.0793 11.9243C19.8859 10.781 21.9346 12.5941 21.2648 14.4617C21.1222 14.8574 20.7629 15.3461 20.1869 15.9279C18.2509 17.8828 16.4939 19.6268 14.9157 21.1599C14.7193 21.3519 14.4837 21.4937 14.2088 21.5854C13.4626 21.8356 12.6531 22.0719 11.7804 22.2945C11.4444 22.3803 11.1208 22.365 10.8095 22.2487C10.7772 22.2369 10.7475 22.2187 10.7224 22.1951C10.6973 22.1714 10.6772 22.1429 10.6633 22.1112C10.5688 21.8959 10.5484 21.6719 10.6022 21.4392C10.8859 20.1868 11.1651 18.6596 12.0968 17.7083C13.7637 16.0079 15.4393 14.3316 17.1237 12.6792C17.4102 12.3985 17.7288 12.1468 18.0793 11.9243Z\" fill=\"#303437\"\/>\n<\/svg>\n","dashboard":"<svg data-icon=\"dashboard\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M17 2C16.4477 2 16 2.44772 16 3V20H14.5V9C14.5 8.44772 14.0523 8 13.5 8H10.5C9.94771 8 9.5 8.44772 9.5 9V20H8V14C8 13.4477 7.55228 13 7 13H4C3.44772 13 3 13.4477 3 14V20H2C1.44772 20 1 20.4477 1 21C1 21.5523 1.44772 22 2 22H22C22.5523 22 23 21.5523 23 21C23 20.4477 22.5523 20 22 20H21V3C21 2.44772 20.5523 2 20 2H17Z\" fill=\"#303437\"\/>\n<\/svg>\n","arrow_up":"<svg data-icon=\"arrow_up\" width=\"2.\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M6.60652 9.70709C6.21599 10.0976 5.58283 10.0976 5.19231 9.70708C4.80178 9.31656 4.80178 8.6834 5.19231 8.29287L11.1923 2.29289C11.3876 2.09763 11.6435 1.99999 11.8994 1.99999C12.035 1.99999 12.1643 2.02698 12.2822 2.07587C12.4001 2.12467 12.5106 2.19701 12.6065 2.29289L18.6065 8.29287C18.997 8.68339 18.997 9.31656 18.6065 9.70708C18.216 10.0976 17.5828 10.0976 17.1923 9.70709L12.8994 5.4142L12.8994 21C12.8994 21.5523 12.4517 22 11.8994 22C11.3471 22 10.8994 21.5523 10.8994 21L10.8994 5.4142L6.60652 9.70709Z\" fill=\"#303437\"\/>\n<\/svg>\n","arrow_down-1":"<svg data-icon=\"arrow_down-1\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M6.60652 14.2929C6.21599 13.9024 5.58283 13.9024 5.19231 14.2929C4.80178 14.6834 4.80178 15.3166 5.19231 15.7071L11.1923 21.7071C11.3876 21.9024 11.6435 22 11.8994 22C12.035 22 12.1643 21.973 12.2822 21.9241C12.4001 21.8753 12.5106 21.803 12.6065 21.7071L18.6065 15.7071C18.997 15.3166 18.997 14.6834 18.6065 14.2929C18.216 13.9024 17.5828 13.9024 17.1923 14.2929L12.8994 18.5858L12.8994 3C12.8994 2.44772 12.4517 2 11.8994 2C11.3471 2 10.8994 2.44772 10.8994 3L10.8994 18.5858L6.60652 14.2929Z\" fill=\"#303437\"\/>\n<\/svg>\n","arrow_up_2":"<svg data-icon=\"arrow_up_2\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M18.7071 14.7071C18.3166 15.0976 17.6834 15.0976 17.2929 14.7071L12 9.41421L6.70711 14.7071C6.31658 15.0976 5.68342 15.0976 5.29289 14.7071C4.90237 14.3166 4.90237 13.6834 5.29289 13.2929L11.2929 7.29289C11.6834 6.90237 12.3166 6.90237 12.7071 7.29289L18.7071 13.2929C19.0976 13.6834 19.0976 14.3166 18.7071 14.7071Z\" fill=\"#303437\"\/>\n<\/svg>\n","arrow_down":"<svg data-icon=\"arrow_down\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M5.29289 9.29289C5.68342 8.90237 6.31658 8.90237 6.70711 9.29289L12 14.5858L17.2929 9.29289C17.6834 8.90237 18.3166 8.90237 18.7071 9.29289C19.0976 9.68342 19.0976 10.3166 18.7071 10.7071L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L5.29289 10.7071C4.90237 10.3166 4.90237 9.68342 5.29289 9.29289Z\" fill=\"#303437\"\/>\n<\/svg>\n","media":"<svg data-icon=\"media\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M18.94 15.151C18.94 16.1509 18.5428 17.1099 17.8358 17.8169C17.1287 18.524 16.1698 18.9212 15.1698 18.9212H6.37712C5.3772 18.9212 4.41824 18.524 3.71119 17.8169C3.00415 17.1099 2.60693 16.1509 2.60693 15.151V6.37138C2.60693 5.37147 3.00415 4.41251 3.71119 3.70546C4.41824 2.99842 5.3772 2.6012 6.37712 2.6012H15.1698C16.1698 2.6012 17.1287 2.99842 17.8358 3.70546C18.5428 4.41251 18.94 5.37147 18.94 6.37138V15.151ZM11.4411 12.3343C12.5277 11.1168 13.6775 10.4187 15.0978 11.7605C15.8818 12.5038 16.5895 13.2172 17.2208 13.9008C17.3458 14.0361 17.4106 14.0114 17.4149 13.8267C17.4717 11.511 17.4811 9.23247 17.4433 6.99101C17.4171 5.39829 16.9633 4.12629 15.0804 4.10884C12.3444 4.08557 9.48403 4.08774 6.4993 4.11538C4.60548 4.13283 4.11457 5.30447 4.06875 7.01066C4.02657 8.67466 4.04621 10.2507 4.12766 11.7387C4.13639 11.8943 4.19239 11.9132 4.29566 11.7954C4.85857 11.1408 5.45202 10.5343 6.13712 9.98447C6.89202 9.38011 7.83239 9.43683 8.57202 10.0477C9.3633 10.7023 10.1495 11.4645 10.9306 12.3343C10.9627 12.3702 11.002 12.3989 11.046 12.4186C11.09 12.4383 11.1377 12.4484 11.1858 12.4484C11.234 12.4484 11.2817 12.4383 11.3257 12.4186C11.3696 12.3989 11.409 12.3702 11.4411 12.3343Z\" fill=\"#303437\"\/>\n<path d=\"M20.9168 17.9153C19.871 20.2077 18.0324 21.3648 15.4011 21.3866C13.2993 21.4041 11.1626 21.4026 8.99096 21.3823C7.83315 21.3721 6.85206 20.9757 6.04769 20.1932C6.03356 20.1795 6.02315 20.1625 6.01744 20.1436C6.01173 20.1248 6.01091 20.1049 6.01506 20.0856C6.01921 20.0664 6.02819 20.0486 6.04115 20.0338C6.05412 20.019 6.07063 20.0078 6.08915 20.0012C6.28987 19.9313 6.49933 19.8964 6.71751 19.8964C9.33715 19.9008 12.0273 19.8986 14.7881 19.8899C15.4448 19.8877 16.0862 19.9073 16.7233 19.7393C18.1764 19.3568 19.1488 18.5001 19.6404 17.1692C19.8673 16.5553 19.9684 15.4855 19.9437 13.9597C19.903 11.3023 19.9015 8.81061 19.9393 6.48479C19.9408 6.37134 19.9546 6.25498 19.9808 6.13571C19.9873 6.1027 20.0031 6.07222 20.0262 6.04775C20.0493 6.02329 20.0789 6.00583 20.1114 5.9974C20.144 5.98897 20.1783 5.98991 20.2104 6.00009C20.2425 6.01028 20.271 6.0293 20.2928 6.05498C20.9968 6.86953 21.3568 7.88408 21.3728 9.09862C21.3975 11.0826 21.3997 13.2448 21.3793 15.5852C21.3706 16.4797 21.2164 17.2564 20.9168 17.9153Z\" fill=\"#303437\"\/>\n<path d=\"M14.9605 7.80045C14.9605 8.12392 14.832 8.43413 14.6032 8.66286C14.3745 8.89159 14.0643 9.0201 13.7408 9.0201C13.4173 9.0201 13.1071 8.89159 12.8784 8.66286C12.6497 8.43413 12.5212 8.12392 12.5212 7.80045C12.5212 7.47699 12.6497 7.16676 12.8784 6.93803C13.1071 6.70931 13.4173 6.58081 13.7408 6.58081C14.0643 6.58081 14.3745 6.70931 14.6032 6.93803C14.832 7.16676 14.9605 7.47699 14.9605 7.80045Z\" fill=\"#303437\"\/>\n<\/svg>\n","video_filled":"<svg data-icon=\"video_filled\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M20.4002 18.4558C20.8617 17.9959 21.1216 17.3715 21.1228 16.7199L21.1392 7.31195C21.1398 6.98932 21.0768 6.66975 20.9538 6.37147C20.8309 6.07318 20.6504 5.80204 20.4227 5.57351C20.1949 5.34498 19.9244 5.16355 19.6266 5.03956C19.3287 4.91558 19.0094 4.85148 18.6867 4.85092L5.3384 4.82764C4.68684 4.82651 4.06151 5.08424 3.59998 5.54416C3.13846 6.00408 2.87853 6.62851 2.8774 7.28007L2.86097 16.6881C2.8604 17.0107 2.92339 17.3303 3.04633 17.6285C3.16927 17.9268 3.34976 18.198 3.57749 18.4265C3.80522 18.655 4.07574 18.8364 4.37359 18.9604C4.67144 19.0844 4.99079 19.1485 5.31342 19.1491L18.6618 19.1723C19.3133 19.1735 19.9386 18.9157 20.4002 18.4558ZM9.86621 14.3694C9.92294 14.544 9.97458 14.6167 10.0211 14.5876C10.0517 14.5687 10.0837 14.5665 10.1171 14.5811C10.4313 14.7163 10.7528 14.6931 11.0815 14.5113C12.1986 13.8931 13.2568 13.2814 14.256 12.6763C14.712 12.4014 14.8713 11.8102 14.3695 11.4633C13.5302 10.8829 12.4451 10.2371 11.1142 9.5258C10.8218 9.37016 10.5149 9.31706 10.1935 9.36652C9.96221 9.40143 9.83858 9.53598 9.82258 9.77016C9.72076 11.1898 9.71421 12.6022 9.80294 14.0073C9.80876 14.096 9.82112 14.184 9.84003 14.2713C9.8473 14.3047 9.85603 14.3374 9.86621 14.3694Z\" fill=\"#303437\"\/>\n<\/svg>\n","image":"<svg data-icon=\"image\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M20.1665 16.3898C20.1665 17.3897 19.7693 18.3487 19.0623 19.0557C18.3552 19.7628 17.3963 20.16 16.3963 20.16H7.60362C6.6037 20.16 5.64474 19.7628 4.9377 19.0557C4.23065 18.3487 3.83344 17.3897 3.83344 16.3898V7.61015C3.83344 6.61024 4.23065 5.65128 4.9377 4.94423C5.64474 4.23719 6.6037 3.83997 7.60362 3.83997H16.3963C17.3963 3.83997 18.3552 4.23719 19.0623 4.94423C19.7693 5.65128 20.1665 6.61024 20.1665 7.61015V16.3898ZM12.6676 14.664C13.7542 13.4465 14.904 12.7483 16.3243 14.0902C17.1083 14.8334 17.816 15.5469 18.4473 16.2305C18.5723 16.3658 18.6371 16.3411 18.6414 16.1563C18.6982 13.8407 18.7076 10.4712 18.6698 8.22978C18.6436 6.63706 18.1898 5.36506 16.3069 5.34761C13.5709 5.32434 10.7105 5.32651 7.7258 5.35415C5.83198 5.3716 5.34107 6.54324 5.29525 8.24942C5.25307 9.91342 5.27271 12.5803 5.35416 14.0683C5.36289 14.224 5.41889 14.2429 5.52216 14.1251C6.08507 13.4705 6.67853 12.864 7.36362 12.3142C8.11853 11.7098 9.05889 11.7665 9.79853 12.3774C10.5898 13.032 11.376 13.7941 12.1571 14.664C12.1892 14.6999 12.2285 14.7286 12.2725 14.7483C12.3165 14.7679 12.3642 14.7781 12.4123 14.7781C12.4605 14.7781 12.5082 14.7679 12.5522 14.7483C12.5961 14.7286 12.6355 14.6999 12.6676 14.664Z\" fill=\"#303437\"\/>\n<path d=\"M16.187 9.03922C16.187 9.36269 16.0585 9.6729 15.8297 9.90163C15.601 10.1304 15.2908 10.2589 14.9673 10.2589C14.6439 10.2589 14.3336 10.1304 14.1049 9.90163C13.8762 9.6729 13.7477 9.36269 13.7477 9.03922C13.7477 8.71575 13.8762 8.40553 14.1049 8.1768C14.3336 7.94808 14.6439 7.81958 14.9673 7.81958C15.2908 7.81958 15.601 7.94808 15.8297 8.1768C16.0585 8.40553 16.187 8.71575 16.187 9.03922Z\" fill=\"#303437\"\/>\n<\/svg>\n","close":"<svg data-icon=\"close\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4.22185 4.22185C4.61237 3.83132 5.24554 3.83132 5.63606 4.22185L12 10.5858L18.364 4.22185C18.7545 3.83132 19.3877 3.83132 19.7782 4.22185C20.1687 4.61237 20.1687 5.24554 19.7782 5.63606L13.4142 12L19.7782 18.364C20.1687 18.7545 20.1687 19.3877 19.7782 19.7782C19.3877 20.1687 18.7545 20.1687 18.364 19.7782L12 13.4142L5.63606 19.7782C5.24554 20.1687 4.61237 20.1687 4.22185 19.7782C3.83132 19.3877 3.83132 18.7545 4.22185 18.364L10.5858 12L4.22185 5.63606C3.83132 5.24554 3.83132 4.61237 4.22185 4.22185Z\" fill=\"#303437\"\/>\n<\/svg>\n","upload":"<svg data-icon=\"upload\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M17.9447 8.94409C18.3157 8.57311 18.3157 7.97163 17.9447 7.60066L13.1718 2.82803C12.8008 2.45706 12.1993 2.45706 11.8283 2.82803L7.05529 7.60066C6.68429 7.97163 6.68429 8.57311 7.05529 8.94409C7.42629 9.31506 8.02779 9.31506 8.39879 8.94409L11.55 5.7931L11.55 15.4989C11.55 16.0235 11.9754 16.4488 12.5 16.4488C13.0247 16.4488 13.45 16.0235 13.45 15.4989L13.45 5.7931L16.6012 8.94409C16.9722 9.31506 17.5737 9.31506 17.9447 8.94409Z\" fill=\"#303437\"\/>\n<path d=\"M3.33505 19.5977C2.84427 19.5977 2.44641 19.9955 2.44641 20.4863C2.44641 20.9771 2.84427 21.3749 3.33505 21.3749H21.7364C22.2271 21.3749 22.625 20.9771 22.625 20.4863C22.625 19.9955 22.2271 19.5977 21.7364 19.5977H3.33505Z\" fill=\"#303437\"\/>\n<\/svg>\n","search-1":"<svg data-icon=\"search-1\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M9 1C4.58174 1 1 4.58174 1 9C1 13.4183 4.58174 17 9 17C10.8487 17 12.551 16.3729 13.9056 15.3199L20.1464 21.5606C20.5369 21.9511 21.1701 21.9511 21.5606 21.5606C21.9511 21.1701 21.9511 20.5369 21.5606 20.1464L15.3199 13.9056C16.3729 12.551 17 10.8487 17 9C17 4.58174 13.4183 1 9 1ZM3 9C3 5.68631 5.68631 3 9 3C12.3137 3 15 5.68631 15 9C15 12.3137 12.3137 15 9 15C5.68631 15 3 12.3137 3 9Z\" fill=\"#333333\"\/>\n<\/svg>\n","dropdown_arrow_up":"<svg data-icon=\"dropdown_arrow_up\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<g id=\"dropdown arrow\/up\">\n<path id=\"Polygon 1\" d=\"M8.86615 5.09997C8.48125 4.43331 7.519 4.43331 7.1341 5.09998L3.78547 10.9C3.40057 11.5666 3.8817 12.4 4.6515 12.4H11.3488C12.1186 12.4 12.5997 11.5666 12.2148 10.9L8.86615 5.09997Z\" fill=\"#9FFF02\"\/>\n<\/g>\n<\/svg>\n","dropdown_arrow_down":"<svg data-icon=\"dropdown_arrow_down\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<g id=\"dropdown arrow\/down\">\n<path id=\"Polygon 1\" d=\"M8.86615 10.9C8.48125 11.5667 7.519 11.5667 7.1341 10.9L3.78547 5.10002C3.40057 4.43336 3.8817 3.60002 4.6515 3.60002H11.3488C12.1186 3.60002 12.5997 4.43336 12.2148 5.10002L8.86615 10.9Z\" fill=\"#E7E5E4\"\/>\n<\/g>\n<\/svg>\n","close-2":"<svg data-icon=\"close-2\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<g id=\"x\">\n<path id=\"Icon\" d=\"M11.3334 4.66669L4.66675 11.3334M4.66675 4.66669L11.3334 11.3334\" stroke=\"black\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"\/>\n<\/g>\n<\/svg>\n"};
+    </script>
+    <!-- End SVG Image Render -->
+    <!-- Nice Select JS -->
+    <script type="text/javascript" src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/FINAL/js/nice-select.js"></script>
+</body>
+
+</html>
