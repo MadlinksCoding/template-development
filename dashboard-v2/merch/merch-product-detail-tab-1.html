@@ -44,9 +44,12 @@
             media="screen and (max-width: 479px)">
 
         <style>
+            [data-responsive-tab-header-type=scrollable] [data-tab-head-list] {
+                box-shadow: 0 -1px 0 0 #ffffff inset;
+            }
             .tabs-menu li {
                 background-color: transparent !important;
-                flex: auto;
+                flex: 1 1 0;
             }
             .tabs-menu li a {
                 width: 100%;
@@ -54,6 +57,27 @@
             .product-details-popup-w {
                 max-width: 56rem;
                 width: 100%;
+            }
+            .text-gray-500 {
+                color: var(--Gray-500, #667085);
+            }
+            .text-gray-600 {
+                color: var(--Gray-600, #475467);
+            }
+            .text-gray-700 {
+                color: var(--Gray-700, #344054);
+            }
+            .text-gray-900 {
+                color: var(--Gray-900, #101828);
+            }
+            .text-gray-950 {
+                color: var(--Gray-950, #0C111D);
+            }
+            .form-input {
+                color: var(--Gray-900, #101828);
+            }
+            .form-input::placeholder {
+                color: var(--Gray-500, #667085);
             }
             
         </style>
@@ -79,7 +103,7 @@
                             </a>
                             <h1
                                 class="poppins fs--14 lh--20 fw6 col--fiord-gray m--0 dn display--flex-responsive-mobile display--flex-responsive-mobile-portrait">
-                                Media</h1>
+                                Merch</h1>
                         </div>
                         <!-- /Site Logo -->
 
@@ -6084,7 +6108,7 @@
                 <!-- New Merch Listing -->
                 <div class="flex flex-column self-stretch flex--max" data-tab-main-wrapper data-tabs-section="1">
                     <div class="flex justify-between pad--16">
-                        <h3 class="fs--14 fw4">New Merch Listing</h3>
+                        <h3 class="fs--14 fw6 lh--20 text-gray-700">New Merch Listing</h3>
                         <div class="flex">
                             <a href="#">
                                 <img src="../assets/icons/close-btn.svg" alt="" />
@@ -6098,7 +6122,7 @@
                             <li data-tab-head-list-item="" data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-first-tab-1" data-attribute-run-once="1" data-target="first-tab" data-flag="all" data-offset="5" data-per_page="5" class="flex active">
                                 <a href="javascript: void(0)" tab-trigger="1" data-tab-trigger="1" data-is-active="false" data-throw-event="fs-evt-eventname" class="flex flex-column items-center gap--10 pv2 ph3 mw--80 o-70 nowrap transition--all transition--200 transition--ease-in-out">
                                     <span class="flex items-center gap--2 h--32 pointer-events-none">
-                                        <span data-tab-label="" class="fs--14 fw4 lh--20 nowrap col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                        <span data-tab-label="" class="fs--12 fw4 lh--20 nowrap col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                             Product Details
                                         </span>
                                         <span data-count-badge="" class="flex flex-column items-center self-stretch gap--10" hidden="">
@@ -6115,7 +6139,7 @@
                             <li data-tab-head-list-item="" data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-second-tab-1" data-attribute-run-once="1" data-target="second-tab" data-flag="unread" data-offset="5" data-per_page="5" class="flex">
                                 <a href="javascript: void(0)" tab-trigger="1" data-tab-trigger="1" data-is-active="false" data-throw-event="fs-evt-eventname" class="flex flex-column items-center gap--10 pv2 ph3 mw--80 o-70 nowrap transition--all transition--200 transition--ease-in-out">
                                     <span class="flex items-center gap--2 h--32 pointer-events-none">
-                                        <span data-tab-label="" class="fs--14 fw4 lh--20 nowrap col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                        <span data-tab-label="" class="fs--12 fw4 lh--20 nowrap col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                             Gallery
                                         </span>
                                         <span data-count-badge="" class="flex flex-column items-center self-stretch gap--10" hidden="">
@@ -6132,7 +6156,7 @@
                             <li data-tab-head-list-item="" data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-third-tab-1" data-attribute-run-once="1" data-target="third-tab" data-flag="custom_request" data-offset="5" data-per_page="5" class="flex">
                                 <a href="javascript: void(0)" tab-trigger="1" data-tab-trigger="1" data-is-active="false" data-throw-event="fs-evt-eventname" class="flex flex-column items-center gap--10 pv2 ph3 mw--80 o-70 nowrap transition--all transition--200 transition--ease-in-out">
                                     <span class="flex items-center gap--2 h--32 pointer-events-none">
-                                        <span data-tab-label="" class="fs--14 fw4 lh--20 nowrap col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                        <span data-tab-label="" class="fs--12 fw4 lh--20 nowrap col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                             Inventory and Shipment
                                         </span>
                                         <span data-count-badge="" class="flex flex-column items-center self-stretch gap--10" hidden="">
@@ -6149,7 +6173,7 @@
                             <li data-tab-head-list-item="" data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-fourth-tab-1" data-attribute-run-once="1" data-target="fourth-tab" data-flag="account" data-offset="5" data-per_page="5" class="flex">
                                 <a href="javascript: void(0)" tab-trigger="1" data-tab-trigger="1" data-is-active="false" data-throw-event="fs-evt-eventname" class="flex flex-column items-center gap--10 pv2 ph3 mw--80 o-70 nowrap transition--all transition--200 transition--ease-in-out">
                                     <span class="flex items-center gap--2 h--32 pointer-events-none">
-                                        <span data-tab-label="" class="fs--14 fw4 lh--20 nowrap col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                        <span data-tab-label="" class="fs--12 fw4 lh--20 nowrap col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                             Publish Settings
                                         </span>
                                         <span data-count-badge="" class="flex flex-column items-center self-stretch gap--10" hidden="">
@@ -6166,7 +6190,7 @@
                             <li data-tab-head-list-item="" data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-fifth-tab-1" data-attribute-run-once="1" data-target="fifth-tab" data-flag="account" data-offset="5" data-per_page="5" class="flex">
                                 <a href="javascript: void(0)" tab-trigger="1" data-tab-trigger="1" data-is-active="false" data-throw-event="fs-evt-eventname" class="flex flex-column items-center gap--10 pv2 ph3 mw--80 o-70 nowrap transition--all transition--200 transition--ease-in-out">
                                     <span class="flex items-center gap--2 h--32 pointer-events-none">
-                                        <span data-tab-label="" class="fs--14 fw4 lh--20 nowrap col--oxford-blue transition--all transition--200 transition--ease-in-out">
+                                        <span data-tab-label="" class="fs--12 fw4 lh--20 nowrap col--oxford-blue transition--all transition--200 transition--ease-in-out">
                                             Gallery
                                         </span>
                                         <span data-count-badge="" class="flex flex-column items-center self-stretch gap--10" hidden="">
@@ -6195,10 +6219,10 @@
                                         <!-- Product name -->
                                         <div class="flex flex-column gap--16">
                                             <div class="flex gap--8 items-center br--2 br--bottom br--left bb br--col--mischka bg-white-50 sh--7 relative">
-                                                <input type="text" placeholder="Product Name" class="w-100 bn flex-auto fs--16 lh--24 col--pale-sky pad--y--10 pad--x--12">
+                                                <input type="text" placeholder="Product Name" class="form-input w-100 bn flex-auto fs--16 lh--24 pad--y--10 pad--x--12">
                                             </div>
                                             <div class="flex gap--8 items-center br--2 br--bottom br--left bb br--col--mischka bg-white-50 sh--7 relative">
-                                                <textarea type="text" placeholder="Description" rows="3" class="w-100 bn flex-auto fs--16 lh--24 col--pale-sky pad--y--10 pad--x--12"></textarea>
+                                                <textarea type="text" placeholder="Description" rows="3" class="form-input w-100 bn flex-auto fs--16 lh--24 pad--y--10 pad--x--12"></textarea>
                                             </div>
                                             <!-- This product is for subscribers only -->
                                             <div class="flex items-center gap--8">
@@ -6232,37 +6256,37 @@
                                         <!-- Price -->
                                         <div class="flex flex-column gap--10">
                                             <div class="flex flex-column">
-                                                <h6 class="fs--14 col--gull-gray">Price</h6>
-                                                <p>Include domestic shipping cost in your price.</p>
+                                                <h6 class="fs--14 col--gull-gray fw7">Price</h6>
+                                                <p class="o-70 text-gray-950">Include domestic shipping cost in your price.</p>
                                             </div>
                                             <div class="flex gap--16">
                                                 <div class="flex flex-auto flex-column gap--6">
-                                                    <span class="fs--12 fw4 lh--20 col--ebony">Original Price</span>
+                                                    <span class="fs--12 fw4 lh--20 col--ebony--variation-2">Original Price</span>
                                                     <div class="flex gap--8 items-center br--2 br--bottom br--left bb br--col--mischka bg-white-50 sh--7 relative">
                                                         <div class="w-100 bn flex gap--10 items-center fs--16 lh--24 col--pale-sky pad--y--10 pad--x--12">
-                                                            <span class="fw7">
+                                                            <span class="fw7 text-gray-700">
                                                                 USD$
                                                             </span>
                                                             <div class="flex--max">
-                                                                <input type="text" name="" placeholder="" class="fs--16 lh--24 col--pale-sky w-100">
+                                                                <input type="text" name="" placeholder="" class="form-input fs--16 lh--24 w-100">
                                                             </div>
                                                         </div>
                                                     </div> 
-                                                    <p class="fs--14 lh--20 col--ebony">Price must be between USD$ 1.95 to 500.</p>
+                                                    <p class="fs--14 lh--20 text-gray-600">Price must be between USD$ 1.95 to 500.</p>
                                                 </div>
                                                 <div class="flex flex-auto flex-column gap--6">
-                                                    <span class="fs--12 fw4 lh--20 col--ebony">Discounted Price (optional)</span>
+                                                    <span class="fs--12 fw4 lh--20 col--ebony--variation-2">Discounted Price (optional)</span>
                                                     <div class="flex gap--8 items-center br--2 br--bottom br--left bb br--col--mischka bg-white-50 sh--7 relative">
                                                         <div class="w-100 bn flex gap--10 items-center fs--16 lh--24 col--pale-sky pad--y--10 pad--x--12">
-                                                            <span class="fw7">
+                                                            <span class="fw7 text-gray-700">
                                                                 USD$
                                                             </span>
                                                             <div class="flex--max">
-                                                                <input type="text" name="" placeholder="" class="fs--16 lh--24 col--pale-sky w-100">
+                                                                <input type="text" name="" placeholder="" class="form-input fs--16 lh--24 w-100">
                                                             </div>
                                                         </div>
                                                     </div> 
-                                                    <p class="fs--14 lh--20 col--ebony">Leave blank to disable discount display.</p>
+                                                    <p class="fs--14 lh--20 text-gray-600">Leave blank to disable discount display.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -6271,8 +6295,8 @@
                                         <!-- Tags -->
                                         <div class="flex flex-column gap--10">
                                             <div class="flex flex-column">
-                                                <h6 class="fs--14 col--gull-gray">Tags</h6>
-                                                <p>Add maximum of 10 tags to your media.</p>
+                                                <h6 class="fs--14 col--gull-gray fw7">Tags</h6>
+                                                <p class="o-70 text-gray-950">Add maximum of 10 tags to your media.</p>
                                             </div>
                                             <div class="flex gap--8 items-center br--2 br--bottom br--left bb br--col--mischka bg-white-50 sh--7 relative">
                                                 <div class="w-100 bn flex gap--10 items-center fs--16 lh--24 col--pale-sky pad--y--12 pad--x--12">
@@ -6280,7 +6304,7 @@
                                                         <img src="../assets/images/search-sm-icon.svg" alt="" class="w--20 h--20">
                                                     </span>
                                                     <div class="flex--max">
-                                                        <input type="text" name="" placeholder="Search tags..." class="fs--16 lh--24 col--pale-sky w-100">
+                                                        <input type="text" name="" placeholder="Search tags..." class="form-input fs--16 lh--24 w-100">
                                                     </div>
                                                 </div>
                                             </div>
@@ -6290,7 +6314,7 @@
                                         <!-- Tags -->
                                         <div class="flex flex-column gap--10">
                                             <div class="flex flex-column">
-                                                <h6 class="fs--14 col--gull-gray">Collection</h6>
+                                                <h6 class="fs--14 col--gull-gray fw7">Collection</h6>
                                             </div>
                                             <div class="flex gap--8 items-center br--2 br--bottom br--left bb br--col--mischka bg-white-50 sh--7 relative">
                                                 <div class="w-100 bn flex gap--10 items-center fs--16 lh--24 col--pale-sky pad--y--12 pad--x--12">
@@ -6298,7 +6322,7 @@
                                                         <img src="../assets/images/search-sm-icon.svg" alt="" class="w--20 h--20">
                                                     </span>
                                                     <div class="flex--max">
-                                                        <input type="text" name="" placeholder="Search or add new collection..." class="fs--16 lh--24 col--pale-sky w-100">
+                                                        <input type="text" name="" placeholder="Search or add new collection..." class="form-input fs--16 lh--24 w-100">
                                                     </div>
                                                 </div>
                                             </div>
