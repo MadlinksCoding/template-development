@@ -285,20 +285,36 @@ body.stop-mobile-scrolling {
   line-height: 1.125rem
 }
 
+.w--auto-responsive-mobile-portrait {
+  width: auto
+}
+
 .w--100-responsive-mobile-portrait {
   width: 100%
+}
+
+.w--60-responsive-mobile-portrait {
+  width: 60%
 }
 
 .w--50-responsive-mobile-portrait {
   width: 50%
 }
 
-.w--334-responsive-mobile-portrait {
-  width: 20.875rem
-}
-
 .w--20-responsive-mobile-portrait {
   width: 1.25rem
+}
+
+.w--40-responsive-mobile-portrait {
+  width: 2.5rem
+}
+
+.w--120-responsive-mobile-portrait {
+  width: 7.5rem
+}
+
+.w--334-responsive-mobile-portrait {
+  width: 20.875rem
 }
 
 .max--w--100-responsive-mobile-portrait {
@@ -315,6 +331,18 @@ body.stop-mobile-scrolling {
 
 .h--20-responsive-mobile-portrait {
   height: 1.25rem
+}
+
+.h--40-responsive-mobile-portrait {
+  height: 2.5rem
+}
+
+.h--120-responsive-mobile-portrait {
+  height: 7.5rem
+}
+
+.h--213-responsive-mobile-portrait {
+  height: 13.313rem
 }
 
 .pad--10-responsive-mobile-portrait {
@@ -432,6 +460,13 @@ body.stop-mobile-scrolling {
   flex-direction: column
 }
 
+.flex--reverse--column-responsive-mobile-portrait {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse
+}
+
 .items--start-responsive-mobile-portrait {
   -webkit-box-align: start;
   -ms-flex-align: start;
@@ -456,6 +491,12 @@ body.stop-mobile-scrolling {
   justify-content: center
 }
 
+.flex--none-responsive-mobile-portrait {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto
+}
+
 .fixed--responsive-mobile-portrait {
   position: fixed
 }
@@ -470,6 +511,10 @@ body.stop-mobile-scrolling {
 
 .right--0-responsive-mobile-portrait {
   right: 0
+}
+
+.right--2-responsive-mobile-portrait {
+  right: .125rem
 }
 
 .right--8-responsive-mobile-portrait {

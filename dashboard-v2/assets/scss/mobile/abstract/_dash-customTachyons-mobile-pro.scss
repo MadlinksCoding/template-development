@@ -65,7 +65,9 @@
 
 
 /* Width */
+.w--auto-responsive-mobile { width: auto; }
 .w--100-responsive-mobile { width: 100%; }
+.w--60-responsive-mobile { width: 60%; }
 .w--50-responsive-mobile { width: 50%; }
 
 
@@ -73,7 +75,9 @@
 
 
 /* Width (px) */
+.w--40-responsive-mobile { width: 2.5rem; }
 .w--56-responsive-mobile { width: 3.5rem; }
+.w--120-responsive-mobile { width: 7.5rem; }
 
 
 /* Min Width */
@@ -85,13 +89,15 @@
 
 /* Height */
 .h--screen-mobile { height: 100vh }
-
+.h--auto-mobile { height: auto; }
 
 /* Height Percent */
 
 
 /* Height (px) */
-
+.h--40-responsive-mobile { height: 2.5rem; }
+.h--120-responsive-mobile { height: 7.5rem; }
+.h--213-responsive-mobile { height: 13.313rem; /* height 213px */ } /* confirmed in use */ /* pixel conversion correct */
 
 /* Min Height */
 
@@ -138,10 +144,12 @@
 
 /* Flexbox */
 .flex--column-responsive-mobile { flex-direction: column; }
+.flex--reverse--column-responsive-mobile { flex-direction: column-reverse; }
 .items--start-responsive-mobile { align-items: flex-start; }
 .items--end-responsive-mobile { align-items: flex-end; }
 .flex--max-responsive-mobile { flex: 1 0 0; }
 .justify--center-responsive-mobile { justify-content: center; }
+.flex--none-responsive-mobile { flex: 0 0 auto; }
 
 
 
@@ -164,6 +172,7 @@
 
 
 /* Right */
+.right--2-responsive-mobile { right: 0.125rem;  /* right 2px */ }
 .right--8-responsive-mobile { right: 0.5rem;  /* right 8px */ }
 
 

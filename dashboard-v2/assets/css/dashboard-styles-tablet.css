@@ -133,6 +133,10 @@ html {
   width: 100%
 }
 
+.w--171-responsive-tablet {
+  width: 10.688rem
+}
+
 .w--177-responsive-tablet {
   width: 11.063rem
 }
@@ -145,8 +149,20 @@ html {
   height: 100vh
 }
 
+.h--auto-tablet {
+  height: auto
+}
+
 .h--100-responsive-tablet {
   height: 6.25rem
+}
+
+.h--171-responsive-tablet {
+  height: 10.688rem
+}
+
+.h--213-responsive-tablet {
+  height: 13.313rem
 }
 
 .pad--10-responsive-tablet {
@@ -165,6 +181,10 @@ html {
 
 .pad--left--16-responsive-tablet {
   padding-left: 1rem
+}
+
+.pad--left--32-responsive-tablet {
+  padding-left: 2rem
 }
 
 .pad--top--24-responsive-tablet {
@@ -211,11 +231,25 @@ html {
   gap: 1rem
 }
 
+.flex--row-responsive-tablet {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row
+}
+
 .flex--column-responsive-tablet {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column
+}
+
+.flex--reverse--column-responsive-tablet {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse
 }
 
 .items--start-responsive-tablet {
@@ -240,6 +274,12 @@ html {
   -webkit-box-flex: 1;
   -ms-flex: 1 0 0px;
   flex: 1 0 0
+}
+
+.flex--none-responsive-tablet {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto
 }
 
 .fixed--responsive-tablet {
