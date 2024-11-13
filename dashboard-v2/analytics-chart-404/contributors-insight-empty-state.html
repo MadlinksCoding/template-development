@@ -103,6 +103,10 @@
         .nice-select.v1.filter:not(.has-tags) .multiple-options.active, .nice-select.v1.filter:not(.has-tags) .current.active { background: rgba(255, 255, 255, 0.50); border: 0; }
         .nice-select.v1:not(.has-tags) .multiple-options [data-option-label], .nice-select.v1:not(.has-tags) .current [data-option-label],
         .nice-select.v1:not(.has-tags) .multiple-options [data-option-label], .nice-select.v1:not(.has-tags) .current.active [data-option-label] { color: var(--color-oxford-blue,#344054); font-weight: 600; }
+
+        /* Add this as background so it looks like popup */ /* updated by Nay 13/11/2024. task link: https://app.clickup.com/t/86eq9zr52 */
+        [data-empty-state-loading-bg] { background-image: url(../assets/img/empty-state-loading-bg.svg);background-size: 100%;backdrop-filter: blur(10px); }
+        [data-empty-state-loading-bg-blur] { background-image: url(../assets/img/empty-state-loading-bg-blur.svg); }
     </style>
 
     <!-- Tablet Stylesheet -->
@@ -115,9 +119,9 @@
     <link rel="stylesheet" href="assets/css/mobile-portrait.css" media="screen and (max-width: 479px)">
 </head>
 
-<body class="ff-poppins">
+<body class="ff-poppins" data-empty-state-loading-bg>
     <!-- Popup Container -->
-    <div data-section="popup-container" class="flex justify-center">
+    <div data-section="popup-container" data-empty-state-loading-bg-blur class="flex justify-center">
         <!-- Popup Inner -->
         <div data-section="popup-inner" class="w-100 max--w--952 bg-white-90 pad--24 pad--16-responsive-mobile pad--16-responsive-mobile-portrait pad--x--8-responsive-mobile pad--x--8-responsive-mobile-portrait flex flex-column gap--16">
             <!-- Popup Header -->
