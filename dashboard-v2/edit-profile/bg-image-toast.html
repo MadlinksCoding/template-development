@@ -6027,535 +6027,625 @@
                 <!-- Inner Container -->
                 <div data-section="inner-container" data-tabs-section="1"
                     class="flex flex-column min-h-100 bg--gradient-white pad--top--24-responsive-tablet pad--x--16-responsive-tablet pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait pad--y--0-responsive-mobile pad--y--0-responsive-mobile-portrait">
-                    <!-- Top Page Header Section -->
-                    <div data-section="page-header"
-                        class="pad--40 pad--x--40 pad--bottom--24 pad--x--0-responsive-tablet pad--top--0-responsive-tablet flex flex-column gap--24 pad--8-responsive-mobile pad--8-responsive-mobile-portrait">
-                        <!-- Top Page Title Section -->
-                        <div data-section="page-title"
-                            class="w-100 flex gap--24 items-start justify-between gap--16--responsive-tablet gap--16--responsive-mobile gap--16--responsive-mobile-portrait flex--column-responsive-tablet flex--column-responsive-mobile flex--column-responsive-mobile-portrait display--none-responsive-mobile display--none-responsive-mobile-portrait">
-                            <h1
-                                class="poppins fs--30 lh--38 fw5 tracked--neg--0-72 col--fiord-gray m--0 fs--30-responsive-tablet lh--38-responsive-tablet">
-                                Edit Profile
-                            </h1>
-                        </div>
-                        <!-- /Top Page Title Section -->
-                    </div>
-                    <!-- End Top Page Header Section -->
-
-                    <!-- page main content section -->
-                    <div
-                        class="flex h-100 flex--max pad--x--40 pad--y--24 pad--x--0-responsive-tablet pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait flex flex-column gap--32">
-                        <!-- main contents here -->
-                        <!-- From Top Section -->
-                        <div class="flex flex-column">
-                            <!-- Profile Image Section -->
-                            <div class="w--195 h--195 w--auto-responsive-mobile h--auto-mobile w--auto-responsive-mobile-portrait h--auto-mobile-portrait pad--left--40 pad--left--32-responsive-tablet pad--0-responsive-mobile pad--0-responsive-mobile-portrait flex flex-column gap--16 justify-center items-center br--15 sh--3">
-                                <!-- Image Wrapper -->
-                                <div class="pad--24 flex justify-center items-center">
-                                    <!-- Image Inner Wrapper -->
-                                    <div class="w--195 h--195 w--171-responsive-tablet h--171-responsive-tablet w--120-responsive-mobile w--120-responsive-mobile-portrait h--120-responsive-mobile h--120-responsive-mobile-portrait br-100 bg--col--brilliant-rose flex justify-center items-center relative z--index--1">
-                                        <!-- Image -->
-                                        <div class="w-100 h-100 flex items-center justify-center">
-                                            <img src="../assets/images/profile-letter-img.svg" alt="" class="w--60-responsive-mobile w--60-responsive-mobile-portrait">
-                                        </div>
-                                        <!-- Edit Image Icon -->
-                                        <div class="w--48 h--48 w--40-responsive-mobile w--40-responsive-mobile-portrait h--40-responsive-mobile h--40-responsive-mobile-portrait br-100 bg--col-brand-green absolute right-1 bottom-0 pointer flex items-center justify-center right--2-responsive-mobile right--2-responsive-mobile-portrait">
-                                            <img src="../assets/icons/edit-pencil-black.svg" alt="" class="w--32 h--32 filter--col--black">
-                                        </div>
-                                        <!-- End Edit Image Icon -->
+                    <!-- Order Details Alert -->
+                    <div class="w-100 pad--left--3">
+                        <div class="flex w-100 relative bb br--col--athens-gray-2">
+                            <div class="db bg--col--bright-turquoise w--3 h-100 absolute left-0 top-0"></div>
+                            <div
+                                class="pad--y--12 pad--x--8 pad--right--18-responsive-mobile-portrait flex gap--16 bg--gd--turquoise flex-auto">
+                                <div class="flex gap--20 w-100 relative items-start">
+                                    <!-- Close Icon -->
+                                    <div class="absolute right-0 top-0 pointer">
+                                        <img src="../assets/icons/close-btn.svg" alt=""
+                                            class="w--24 h--24 filter--col--mischka">
                                     </div>
-                                    <!-- End Image Inner Wrapper -->
-                                </div>
-                                <!-- End Image Wrapper -->
-                            </div>
-                            <!-- End Profile Image Section -->
-                            <!-- Basic Form Section -->
-                            <div class="pad--x--16 pad--bottom--16 pad--top--80 flex flex-column gap--24 bg-white-40 bg--blur--25 sh--12 relative top--neg--64">
-                                <!-- Basic Top Form Field Section -->
-                                <div class="flex flex-column gap--16">
-                                    <!-- Field Group -->
-                                    <div class="flex flex-wrap gap--16">
-                                        <!-- Input Field -->
-                                        <div class="flex flex-column gap--6 flex--max">
-                                            <span class="fs--14 fw5 lh--20 col--pale-sky"> Display Name</span>
-                                            <div class="flex gap--8 items-center br--2 br--bottom br--left bb br--col--mischka bg-white-50 sh--7 relative">
-                                                <input type="text" class="w-100 bn flex-auto fs--16 lh--24 col--pale-sky pad--y--10 pad--x--14">
-                                            </div>
-                                        </div>
-                                        <!-- End Input Field -->
-                                        <!-- Input Field -->
-                                        <div class="flex flex-column gap--6 flex--max">
-                                            <span class="fs--14 fw5 lh--20 col--pale-sky"> Age</span>
-                                            <div class="flex gap--8 items-center br--2 br--bottom br--left bb br--col--mischka bg-white-50 sh--7 relative">
-                                                <input type="text" class="w-100 bn flex-auto fs--16 lh--24 col--pale-sky pad--y--10 pad--x--14">
-                                            </div>
-                                        </div>
-                                        <!-- End Input Field -->
-                                    </div>
-                                    <!-- End Field Group -->
-                                    <!-- Field Group -->
-                                    <div class="flex flex-wrap gap--16">
-                                        <!-- Select Field -->
-                                        <div class="flex flex-column gap--6 flex--max w-two-thirds">
-                                            <span class="fs--14 fw5 lh--20 col--pale-sky">Gender</span>
-                                            <div
-                                                class="br--2 br--bottom br--left bb br--col--mischka bg-white-50 sh--7 relative">
-                                                <!-- Select Field -->
-                                                <div data-id="edit-profile" class="relative z--10000">
-                                                    <select data-nice-select data-dropdown-icon-down="select_arrow_down"
-                                                        data-dropdown-icon-up="select_arrow_up">
-                                                        <option use-as-placeholder>Select</option>
-                                                        <option>Male</option>
-                                                        <option>Female</option>
-                                                    </select>
-                                                </div>
-                                                <!-- End Select Field -->
-                                            </div>
-                                        </div>
-                                        <!-- End Select Field -->
-                                        <!-- Select Field -->
-                                        <div class="flex flex-column gap--6 flex--max w-two-thirds">
-                                            <span class="fs--14 fw5 lh--20 col--pale-sky">Country</span>
-                                            <div
-                                                class="br--2 br--bottom br--left bb br--col--mischka bg-white-50 sh--7 relative">
-                                                <!-- Select Field -->
-                                                <div data-id="edit-profile" class="relative z--10000">
-                                                    <select data-nice-select data-dropdown-icon-down="select_arrow_down"
-                                                        data-dropdown-icon-up="select_arrow_up">
-                                                        <option use-as-placeholder>Select</option>
-                                                        <option>Country 1</option>
-                                                        <option>Country 2</option>
-                                                    </select>
-                                                </div>
-                                                <!-- End Select Field -->
-                                            </div>
-                                        </div>
-                                        <!-- End Select Field -->
-                                    </div>
-                                    <!-- End Field Group -->
-                                    <!-- Field Group -->
-                                    <div class="flex flex-wrap gap--16">
-                                        <!-- Select Field -->
-                                        <div class="flex flex-column gap--6 flex--max w-two-thirds">
-                                            <span class="fs--14 fw5 lh--20 col--pale-sky">Body Type</span>
-                                            <div
-                                                class="br--2 br--bottom br--left bb br--col--mischka bg-white-50 sh--7 relative">
-                                                <!-- Select Field -->
-                                                <div data-id="edit-profile" class="relative z--10000">
-                                                    <select data-nice-select data-dropdown-icon-down="select_arrow_down"
-                                                        data-dropdown-icon-up="select_arrow_up">
-                                                        <option use-as-placeholder>Select</option>
-                                                        <option>Skinny</option>
-                                                        <option>Slim</option>
-                                                        <option>Athletic</option>
-                                                        <option>Medium</option>
-                                                        <option>Curvy</option>
-                                                        <option>BBW</option>
-                                                    </select>
-                                                </div>
-                                                <!-- End Select Field -->
-                                            </div>
-                                        </div>
-                                        <!-- End Select Field -->
-                                        <!-- Select Field -->
-                                        <div class="flex flex-column gap--6 flex--max w-two-thirds">
-                                            <span class="fs--14 fw5 lh--20 col--pale-sky">Hair</span>
-                                            <div
-                                                class="br--2 br--bottom br--left bb br--col--mischka bg-white-50 sh--7 relative">
-                                                <!-- Select Field -->
-                                                <div data-id="edit-profile" class="relative z--10000">
-                                                    <select data-nice-select data-dropdown-icon-down="select_arrow_down"
-                                                        data-dropdown-icon-up="select_arrow_up">
-                                                        <option use-as-placeholder>Select</option>
-                                                        <option>Blonde</option>
-                                                        <option>Black</option>
-                                                        <option>Brunette</option>
-                                                        <option>Brown</option>
-                                                        <option>Redhead</option>
-                                                        <option>Colorful</option>
-                                                    </select>
-                                                </div>
-                                                <!-- End Select Field -->
-                                            </div>
-                                        </div>
-                                        <!-- End Select Field -->
-                                    </div>
-                                    <!-- End Field Group -->
-                                    <!-- Field Group -->
-                                    <div class="flex flex-wrap gap--16">
-                                        <!-- Description Field -->
-                                        <div class="flex flex-column gap--6 flex--max">
-                                            <span class="fs--14 fw5 lh--20 col--pale-sky"> Description</span>
-                                            <div class="pad--x--14 flex flex-column gap--8 br--2 br--bottom--left--right bb br--col--mischka-gray bg-white-30 sh--7 relative h--120">
-                                                <textarea class="w-100 pad--y--10 bn flex-auto fs--16 lh--24 col--ebony"></textarea>
-                                            </div>
-                                        </div>
-                                        <!-- End Description Field -->
-                                    </div>
-                                    <!-- End Field Group -->
-                                </div>
-                                <!-- End Basic Top Form Field Section -->
-
-                                <!-- Profile Gallery Section -->
-                                <div class="flex flex-column gap--16">
-                                    <!-- First Section -->
-                                    <div class="flex flex-column gap--8">
-                                        <!-- Title -->
-                                        <span class="fs--18 fw5 lh--28 col--ebony--variation-2">Profile Gallery</span>
-                                        <!-- End Title -->
-                                        <!-- Listing -->
-                                        <ul data-theme="default black">
-                                            <li>Your uploaded media will appear on your profile page background. Drag and drop uploaded media to reorder sequence.</li>
-                                            <li>You may upload up to 6 media files (Max. 2 video files)</li>
-                                        </ul>
-                                        <!-- End Listing -->
-                                    </div>
-                                    <!-- End First Section -->
-                                    <!-- Image Upload Group Wrapper -->
-                                    <div class=" flex flex--reverse--column-responsive-tablet flex--reverse--column-responsive-mobile flex--reverse--column-responsive-mobile-portrait gap--16 h--216 h--auto-tablet h--auto-mobile h--auto-mobile-portrait">
-                                        <!-- Upload One -->
-                                        <div class="flex--max flex flex-column justify-center gap--24 br--12 br--col--mischka bw1 b--dashed w--100-responsive-tablet w--100-responsive-mobile w--100-responsive-mobile-portrait flex--none-responsive-tablet flex--none-responsive-mobile flex--none-responsive-mobile-portrait flex--row-responsive-tablet items--center-responsive-tablet h--213-responsive-tablet h--213-responsive-mobile h--213-responsive-mobile-portrait">
-                                            <span class="flex justify-center">
-                                                <img src="../assets/icons/image-03-light.svg" alt="" class="w--64 h--64 filter--col--gull-gray">
-                                            </span>
-                                            <span class="fs--12 lh--18 col--pale-sky flex justify-center tc">Upload your first piece and watch yourself shine!</span>
-                                        </div>
-                                        <!-- End Upload One -->
-
-                                        <!-- File Upload box -->
+                                    <!-- Close Icon -->
+                                    <!-- Icons -->
+                                    <div class="relative">
                                         <div
-                                            class="flex--max pad--x--24 pad--y--16 br--12 bg--col--black--05 hover--bg--col--black--10 ba bw--2 br--col--transparent hover--br--col--ebony--variation-2 w--100-responsive-tablet w--100-responsive-mobile w--100-responsive-mobile-portrait flex--none-responsive-tablet flex--none-responsive-mobile flex--none-responsive-mobile-portrait h--213-responsive-tablet h--213-responsive-mobile h--213-responsive-mobile-portrait">
-                                            <label for="file-upload"
-                                                class="w-100 h-100 flex flex-column justify-center items-center gap--12 pointer">
-                                                <span
-                                                    class="w--40 h--40 flex justify-center items-center br--8 sh--7 bg--col-brand-green">
-                                                    <img src="../assets/icons/upload-cloud-02.svg" alt="" class="w--20 h--20" />
-                                                </span>
-                                                <span class="flex flex-column gap--4 items-center">
-                                                    <p class="fs--14 lh--20 col--fiord-gray">
-                                                        <span class="fw6 col--ebony--variation-2 pointer">Click to upload</span>
-                                                        <span>or drag and drop image or video files here</span>
-                                                    </p>
-                                                    <span class="fs--12 lh--18 col--fiord">MP4, AVI, QUICKTIME, X-MATROSKA, X-MS-WMV, WEBM, OGG, PNG or JPG (max. 15MB)</span>
-                                                </span>
-                                            </label>
-                                            <input type="file" id="file-upload" name="" class="dn">
+                                            class="w--40 h--40 br--8 bg--col--light-bondi-blue flex items-center justify-center">
+                                            <img src="../assets/icons/face-wink.svg" alt=""
+                                                class="w--28 h--28 filter--col--turquoise">
                                         </div>
-                                        <!-- End File Upload box -->
-                                    </div>
-                                    <!-- End Image Upload Group Wrapper -->
-                                    <!-- Button -->
-                                    <div class="flex">
-                                        <div class="relative">
-                                            <a href="#" data-button-style="skew-right bottom" data-button-color="wild-strawberry"
-                                                class="h--32 pad--x--8 flex items-center gap--10 justify-center">
-                                                <span class="flex pad--y--4 fs--16 fw5 lh--24 black">Unlock premium to upload videos</span>
-                                            </a>
+                                        <div
+                                            class="w--22 h--22 br--8 bg--col--bright-turquoise flex items-center justify-center absolute right--9-neg top--1-8">
+                                            <img src="../assets/icons/info-square.svg" alt=""
+                                                class="w--16 h--16 filter--col--white">
                                         </div>
                                     </div>
-                                    <!-- End Button -->
+                                    <!-- End Icons -->
+                                    <!-- Right Tecxt -->
+                                    <div class="flex flex-column flex-auto">
+                                        <div class="pad--bottom--8 flex flex-column gap--8">
+                                            <div class="flex justify-between items-center pad--top--4 pad--right--4">
+                                                <span class="fs--14 fw6 lh--20 col--bondi-blue">You have unsaved change</span>
+                                            </div>
+                                        </div>
+                                        <div class="flex justify-between items-center">
+                                            <span class="fs--14 lh--20 text--sh--1 black">You have made changes to your profile since you last saved. Remember to click ‘save’ to publish your change.</span>
+                                        </div>
+                                    </div>
+                                    <!-- End Right Tecxt -->
                                 </div>
-                                <!-- End Profile Gallery Section -->
                             </div>
-                            <!-- End Basic Form Section -->
                         </div>
-                        <!-- End From Top Section -->
-
-                        <!-- From Middle Section -->
-                        <div class="flex flex-column">
-                            <!-- Basic Form Section -->
-                            <div class="pad--16 flex flex-column gap--24 bg-white-40 bg--blur--25 sh--12 relative">
-                                <!-- Basic Top Form Field Section -->
-                                <div class="flex flex-column gap--16">
-                                    <!-- Title -->
-                                    <h2 class="fs--24 fw6 lh--32 col--pale-sky">Social Media</h2>
-                                    <!-- End Title -->
-                                    <!-- Field Group -->
-                                    <div class="flex flex-wrap gap--16">
-                                        <!-- Input Field -->
-                                        <div class="flex flex-column gap--6 flex--max w--100-responsive-tablet w--100-responsive-mobile w--100-responsive-mobile-portrait flex--none-responsive-tablet flex--none-responsive-mobile flex--none-responsive-mobile-portrait">
-                                            <span class="fs--14 fw5 lh--20 col--pale-sky"> Twitter</span>
-                                            <div class="flex gap--8 items-center br--2 br--bottom br--left bb br--col--mischka bg-white-50 sh--7 relative">
-                                                <input type="text" class="w-100 bn flex-auto fs--16 lh--24 col--pale-sky pad--y--10 pad--x--14">
-                                            </div>
-                                        </div>
-                                        <!-- End Input Field -->
-                                        <!-- Input Field -->
-                                        <div class="flex flex-column gap--6 flex--max w--100-responsive-tablet w--100-responsive-mobile w--100-responsive-mobile-portrait flex--none-responsive-tablet flex--none-responsive-mobile flex--none-responsive-mobile-portrait">
-                                            <span class="fs--14 fw5 lh--20 col--pale-sky"> Instagram</span>
-                                            <div class="flex gap--8 items-center br--2 br--bottom br--left bb br--col--mischka bg-white-50 sh--7 relative">
-                                                <input type="text" class="w-100 bn flex-auto fs--16 lh--24 col--pale-sky pad--y--10 pad--x--14">
-                                            </div>
-                                        </div>
-                                        <!-- End Input Field -->
+                    </div>
+                    <!-- End Order Details Alert -->
+                    <!-- Page Content Wrapper -->
+                    <div class="flex flex-column relative">
+                        <!-- Cover Image -->
+                        <div class="db w-100 h--520 absolute top-0 neg--z--index--1 left-0 bg--no-repeat bg--size-cover" style="background-image:url(../assets/images/header-cover-background.png);">
+                        </div>
+                        <!-- /Cover Image -->
+                        <!-- Top Page Header Section -->
+                        <div data-section="page-header"
+                            class="pad--40 pad--x--40 pad--bottom--24 pad--x--0-responsive-tablet pad--top--0-responsive-tablet flex flex-column gap--24 pad--8-responsive-mobile pad--8-responsive-mobile-portrait">
+                            <!-- Top Page Title Section -->
+                            <div data-section="page-title"
+                                class="w-100 flex gap--24 items-start justify-between gap--16--responsive-tablet gap--16--responsive-mobile gap--16--responsive-mobile-portrait flex--column-responsive-tablet flex--column-responsive-mobile flex--column-responsive-mobile-portrait display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                <h1
+                                    class="poppins fs--30 lh--38 fw5 tracked--neg--0-72 col--fiord-gray m--0 fs--30-responsive-tablet lh--38-responsive-tablet">
+                                    Edit Profile
+                                </h1>
+                                <!-- Save/Cancel Button Group -->
+                                <div class=" flex items-center justify-end">
+                                    <div class="flex items-center gap--8">
+                                        <button
+                                            class="mw--100 pad--y--8 flex items-center justify-center fs--18 fw5 lh--28 col--ebony--variation-2 flex--max-responsive-mobile flex--max-responsive-mobile-portrait hover--bg--col--white--100">Cancel</button>
+                                        <button
+                                            class="bg-black mw--85 pad--y--4 pad--x--8 flex justify-center items-center gap--10 hover--bg--col-brand-green hover--parent--child--col--black-ribbon">
+                                            <span class="fs--18 fw5 lh--28 col-brand-green ttu">SAVE</span>
+                                        </button>
                                     </div>
-                                    <!-- End Field Group -->
-                                    <!-- Field Group -->
-                                    <div class="flex flex-wrap gap--16">
-                                        <!-- Input Field -->
-                                        <div class="flex flex-column gap--6 flex--max w--100-responsive-tablet w--100-responsive-mobile w--100-responsive-mobile-portrait flex--none-responsive-tablet flex--none-responsive-mobile flex--none-responsive-mobile-portrait">
-                                            <span class="fs--14 fw5 lh--20 col--pale-sky"> Wishlist</span>
-                                            <div class="flex gap--8 items-center br--2 br--bottom br--left bb br--col--mischka bg-white-50 sh--7 relative">
-                                                <input type="text" class="w-100 bn flex-auto fs--16 lh--24 col--pale-sky pad--y--10 pad--x--14">
-                                            </div>
-                                        </div>
-                                        <!-- End Input Field -->
-                                        <!-- Input Field -->
-                                        <div class="flex flex-column gap--6 flex--max w--100-responsive-tablet w--100-responsive-mobile w--100-responsive-mobile-portrait flex--none-responsive-tablet flex--none-responsive-mobile flex--none-responsive-mobile-portrait">
-                                            <span class="fs--14 fw5 lh--20 col--pale-sky"> Additional URL 1</span>
-                                            <div class="flex gap--8 items-center br--2 br--bottom br--left bb br--col--mischka bg-white-50 sh--7 relative">
-                                                <input type="text" class="w-100 bn flex-auto fs--16 lh--24 col--pale-sky pad--y--10 pad--x--14">
-                                            </div>
-                                        </div>
-                                        <!-- End Input Field -->
-                                    </div>
-                                    <!-- End Field Group -->
-                                    <!-- Button -->
-                                    <div class="flex">
-                                        <div class="relative">
-                                            <a href="#" data-button-style="skew-right bottom" data-button-color="wild-strawberry"
-                                                class="h--32 pad--x--8 flex items-center gap--10 justify-center">
-                                                <span class="flex pad--y--4 fs--16 fw5 lh--24 black">Unlock premium to add more links</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <!-- End Button -->
                                 </div>
-                                <!-- End Basic Top Form Field Section -->
+                                <!-- End Save/Cancel Button Group -->
                             </div>
-                            <!-- End Basic Form Section -->
+                            <!-- /Top Page Title Section -->
                         </div>
-                        <!-- End From Middle Section -->
+                        <!-- End Top Page Header Section -->
 
-                        <!-- From Bottom Section -->
-                        <div class="flex flex-column">
-                            <!-- Basic Form Section -->
-                            <div class="pad--16 flex flex-column gap--24 bg-white-40 bg--blur--25 sh--12 relative">
-                                <!-- Tipping Settings Section -->
-                                <div class="flex flex-column gap--24">
-                                    <!-- Title -->
-                                    <h2 class="fs--24 fw6 lh--32 col--pale-sky">Tipping Settings</h2>
-                                    <!-- End Title -->
-                                    <!-- Tip Message Section -->
+                        <!-- page main content section -->
+                        <div
+                            class="flex h-100 flex--max pad--x--40 pad--y--24 pad--x--0-responsive-tablet pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait flex flex-column gap--32">
+                            <!-- main contents here -->
+                            <!-- From Top Section -->
+                            <div class="flex flex-column">
+                                <!-- Profile Image Section -->
+                                <div class="w--195 h--195 w--auto-responsive-mobile h--auto-mobile w--auto-responsive-mobile-portrait h--auto-mobile-portrait pad--left--40 pad--left--32-responsive-tablet pad--0-responsive-mobile pad--0-responsive-mobile-portrait flex flex-column gap--16 justify-center items-center br--15 sh--3">
+                                    <!-- Image Wrapper -->
+                                    <div class="pad--24 flex justify-center items-center">
+                                        <!-- Image Inner Wrapper -->
+                                        <div class="w--195 h--195 w--171-responsive-tablet h--171-responsive-tablet w--120-responsive-mobile w--120-responsive-mobile-portrait h--120-responsive-mobile h--120-responsive-mobile-portrait br-100 bg--col--brilliant-rose flex justify-center items-center relative z--index--1">
+                                            <!-- Image -->
+                                            <div class="w-100 h-100 flex items-center justify-center">
+                                                <img src="../assets/images/avatar.png" alt="" class="w-100 h-100 fit--cover">
+                                            </div>
+                                            <!-- Edit Image Icon -->
+                                            <div class="w--48 h--48 w--40-responsive-mobile w--40-responsive-mobile-portrait h--40-responsive-mobile h--40-responsive-mobile-portrait br-100 bg--col-brand-green absolute right-1 bottom-0 pointer flex items-center justify-center right--2-responsive-mobile right--2-responsive-mobile-portrait">
+                                                <img src="../assets/icons/edit-pencil-black.svg" alt="" class="w--32 h--32 filter--col--black">
+                                            </div>
+                                            <!-- End Edit Image Icon -->
+                                        </div>
+                                        <!-- End Image Inner Wrapper -->
+                                    </div>
+                                    <!-- End Image Wrapper -->
+                                </div>
+                                <!-- End Profile Image Section -->
+                                <!-- Basic Form Section -->
+                                <div class="pad--x--16 pad--bottom--16 pad--top--80 flex flex-column gap--24 bg-white-40 bg--blur--25 sh--12 relative top--neg--64">
+                                    <!-- Basic Top Form Field Section -->
                                     <div class="flex flex-column gap--16">
-                                        <!-- Title -->
-                                        <span class="fs--14 fw7 lh--20 col--pale-sky">Tip Message</span>
-                                        <!-- End Title -->
-                                        <!-- Listing -->
-                                        <ul data-theme="default black">
-                                            <li>Your fan will see this message when they tip you.</li>
-                                            <li>Leave empty to show default message</li>
-                                        </ul>
-                                        <!-- End Listing -->
+                                        <!-- Field Group -->
+                                        <div class="flex flex-wrap gap--16">
+                                            <!-- Input Field -->
+                                            <div class="flex flex-column gap--6 flex--max">
+                                                <span class="fs--14 fw5 lh--20 col--pale-sky"> Display Name</span>
+                                                <div class="flex gap--8 items-center br--2 br--bottom br--left bb br--col--mischka bg-white-50 sh--7 relative">
+                                                    <input type="text" class="w-100 bn flex-auto fs--16 lh--24 col--pale-sky pad--y--10 pad--x--14">
+                                                </div>
+                                            </div>
+                                            <!-- End Input Field -->
+                                            <!-- Input Field -->
+                                            <div class="flex flex-column gap--6 flex--max">
+                                                <span class="fs--14 fw5 lh--20 col--pale-sky"> Age</span>
+                                                <div class="flex gap--8 items-center br--2 br--bottom br--left bb br--col--mischka bg-white-50 sh--7 relative">
+                                                    <input type="text" class="w-100 bn flex-auto fs--16 lh--24 col--pale-sky pad--y--10 pad--x--14">
+                                                </div>
+                                            </div>
+                                            <!-- End Input Field -->
+                                        </div>
+                                        <!-- End Field Group -->
+                                        <!-- Field Group -->
+                                        <div class="flex flex-wrap gap--16">
+                                            <!-- Select Field -->
+                                            <div class="flex flex-column gap--6 flex--max w-two-thirds">
+                                                <span class="fs--14 fw5 lh--20 col--pale-sky">Gender</span>
+                                                <div
+                                                    class="br--2 br--bottom br--left bb br--col--mischka bg-white-50 sh--7 relative">
+                                                    <!-- Select Field -->
+                                                    <div data-id="edit-profile" class="relative z--10000">
+                                                        <select data-nice-select data-dropdown-icon-down="select_arrow_down"
+                                                            data-dropdown-icon-up="select_arrow_up">
+                                                            <option use-as-placeholder>Select</option>
+                                                            <option>Male</option>
+                                                            <option>Female</option>
+                                                        </select>
+                                                    </div>
+                                                    <!-- End Select Field -->
+                                                </div>
+                                            </div>
+                                            <!-- End Select Field -->
+                                            <!-- Select Field -->
+                                            <div class="flex flex-column gap--6 flex--max w-two-thirds">
+                                                <span class="fs--14 fw5 lh--20 col--pale-sky">Country</span>
+                                                <div
+                                                    class="br--2 br--bottom br--left bb br--col--mischka bg-white-50 sh--7 relative">
+                                                    <!-- Select Field -->
+                                                    <div data-id="edit-profile" class="relative z--10000">
+                                                        <select data-nice-select data-dropdown-icon-down="select_arrow_down"
+                                                            data-dropdown-icon-up="select_arrow_up">
+                                                            <option use-as-placeholder>Select</option>
+                                                            <option>Country 1</option>
+                                                            <option>Country 2</option>
+                                                        </select>
+                                                    </div>
+                                                    <!-- End Select Field -->
+                                                </div>
+                                            </div>
+                                            <!-- End Select Field -->
+                                        </div>
+                                        <!-- End Field Group -->
+                                        <!-- Field Group -->
+                                        <div class="flex flex-wrap gap--16">
+                                            <!-- Select Field -->
+                                            <div class="flex flex-column gap--6 flex--max w-two-thirds">
+                                                <span class="fs--14 fw5 lh--20 col--pale-sky">Body Type</span>
+                                                <div
+                                                    class="br--2 br--bottom br--left bb br--col--mischka bg-white-50 sh--7 relative">
+                                                    <!-- Select Field -->
+                                                    <div data-id="edit-profile" class="relative z--10000">
+                                                        <select data-nice-select data-dropdown-icon-down="select_arrow_down"
+                                                            data-dropdown-icon-up="select_arrow_up">
+                                                            <option use-as-placeholder>Select</option>
+                                                            <option>Skinny</option>
+                                                            <option>Slim</option>
+                                                            <option>Athletic</option>
+                                                            <option>Medium</option>
+                                                            <option>Curvy</option>
+                                                            <option>BBW</option>
+                                                        </select>
+                                                    </div>
+                                                    <!-- End Select Field -->
+                                                </div>
+                                            </div>
+                                            <!-- End Select Field -->
+                                            <!-- Select Field -->
+                                            <div class="flex flex-column gap--6 flex--max w-two-thirds">
+                                                <span class="fs--14 fw5 lh--20 col--pale-sky">Hair</span>
+                                                <div
+                                                    class="br--2 br--bottom br--left bb br--col--mischka bg-white-50 sh--7 relative">
+                                                    <!-- Select Field -->
+                                                    <div data-id="edit-profile" class="relative z--10000">
+                                                        <select data-nice-select data-dropdown-icon-down="select_arrow_down"
+                                                            data-dropdown-icon-up="select_arrow_up">
+                                                            <option use-as-placeholder>Select</option>
+                                                            <option>Blonde</option>
+                                                            <option>Black</option>
+                                                            <option>Brunette</option>
+                                                            <option>Brown</option>
+                                                            <option>Redhead</option>
+                                                            <option>Colorful</option>
+                                                        </select>
+                                                    </div>
+                                                    <!-- End Select Field -->
+                                                </div>
+                                            </div>
+                                            <!-- End Select Field -->
+                                        </div>
+                                        <!-- End Field Group -->
                                         <!-- Field Group -->
                                         <div class="flex flex-wrap gap--16">
                                             <!-- Description Field -->
                                             <div class="flex flex-column gap--6 flex--max">
-                                                <div class="pad--x--14 pad--y--10 flex flex-column gap--8 br--2 br--bottom--left--right bb br--col--mischka-gray bg-white-30 sh--7 relative h--88">
-                                                    <textarea placeholder="Thank you for your tip!" class="w-100 bn flex-auto fs--16 lh--24 col--ebony h--88"></textarea>
+                                                <span class="fs--14 fw5 lh--20 col--pale-sky"> Description</span>
+                                                <div class="pad--x--14 flex flex-column gap--8 br--2 br--bottom--left--right bb br--col--mischka-gray bg-white-30 sh--7 relative h--120">
+                                                    <textarea class="w-100 pad--y--10 bn flex-auto fs--16 lh--24 col--ebony"></textarea>
                                                 </div>
-                                                <span class="fs--14 lh--20 col--pale-sky">50/200 characters</span>
                                             </div>
                                             <!-- End Description Field -->
                                         </div>
                                         <!-- End Field Group -->
                                     </div>
-                                    <!-- End Tip Message Section -->
-                                    <!-- Share Settings Section -->
+                                    <!-- End Basic Top Form Field Section -->
+
+                                    <!-- Profile Gallery Section -->
+                                    <div class="flex flex-column gap--16">
+                                        <!-- First Section -->
+                                        <div class="flex flex-column gap--8">
+                                            <!-- Title -->
+                                            <span class="fs--18 fw5 lh--28 col--ebony--variation-2">Profile Gallery</span>
+                                            <!-- End Title -->
+                                            <!-- Listing -->
+                                            <ul data-theme="default black">
+                                                <li>Your uploaded media will appear on your profile page background. Drag and drop uploaded media to reorder sequence.</li>
+                                                <li>You may upload up to 6 media files (Max. 2 video files)</li>
+                                            </ul>
+                                            <!-- End Listing -->
+                                        </div>
+                                        <!-- End First Section -->
+                                        <!-- Image Upload Group Wrapper -->
+                                        <div class=" flex flex--reverse--column-responsive-tablet flex--reverse--column-responsive-mobile flex--reverse--column-responsive-mobile-portrait gap--16 h--216 h--auto-tablet h--auto-mobile h--auto-mobile-portrait">
+                                            <!-- Upload One -->
+                                            <div class="flex--max flex flex-column justify-center gap--24 br--12 br--col--mischka bw1 b--dashed w--100-responsive-tablet w--100-responsive-mobile w--100-responsive-mobile-portrait flex--none-responsive-tablet flex--none-responsive-mobile flex--none-responsive-mobile-portrait flex--row-responsive-tablet items--center-responsive-tablet h--213-responsive-tablet h--213-responsive-mobile h--213-responsive-mobile-portrait">
+                                                <span class="flex justify-center">
+                                                    <img src="../assets/icons/image-03-light.svg" alt="" class="w--64 h--64 filter--col--gull-gray">
+                                                </span>
+                                                <span class="fs--12 lh--18 col--pale-sky flex justify-center tc">Upload your first piece and watch yourself shine!</span>
+                                            </div>
+                                            <!-- End Upload One -->
+
+                                            <!-- File Upload box -->
+                                            <div
+                                                class="flex--max pad--x--24 pad--y--16 br--12 bg--col--black--05 hover--bg--col--black--10 ba bw--2 br--col--transparent hover--br--col--ebony--variation-2 w--100-responsive-tablet w--100-responsive-mobile w--100-responsive-mobile-portrait flex--none-responsive-tablet flex--none-responsive-mobile flex--none-responsive-mobile-portrait h--213-responsive-tablet h--213-responsive-mobile h--213-responsive-mobile-portrait">
+                                                <label for="file-upload"
+                                                    class="w-100 h-100 flex flex-column justify-center items-center gap--12 pointer">
+                                                    <span
+                                                        class="w--40 h--40 flex justify-center items-center br--8 sh--7 bg--col-brand-green">
+                                                        <img src="../assets/icons/upload-cloud-02.svg" alt="" class="w--20 h--20" />
+                                                    </span>
+                                                    <span class="flex flex-column gap--4 items-center">
+                                                        <p class="fs--14 lh--20 col--fiord-gray">
+                                                            <span class="fw6 col--ebony--variation-2 pointer">Click to upload</span>
+                                                            <span>or drag and drop image or video files here</span>
+                                                        </p>
+                                                        <span class="fs--12 lh--18 col--fiord">MP4, AVI, QUICKTIME, X-MATROSKA, X-MS-WMV, WEBM, OGG, PNG or JPG (max. 15MB)</span>
+                                                    </span>
+                                                </label>
+                                                <input type="file" id="file-upload" name="" class="dn">
+                                            </div>
+                                            <!-- End File Upload box -->
+                                        </div>
+                                        <!-- End Image Upload Group Wrapper -->
+                                    </div>
+                                    <!-- End Profile Gallery Section -->
+                                </div>
+                                <!-- End Basic Form Section -->
+                            </div>
+                            <!-- End From Top Section -->
+
+                            <!-- From Middle Section -->
+                            <div class="flex flex-column">
+                                <!-- Basic Form Section -->
+                                <div class="pad--16 flex flex-column gap--24 bg-white-40 bg--blur--25 sh--12 relative">
+                                    <!-- Basic Top Form Field Section -->
                                     <div class="flex flex-column gap--16">
                                         <!-- Title -->
-                                        <span class="fs--14 fw7 lh--20 col--pale-sky">Share Settings</span>
+                                        <h2 class="fs--24 fw6 lh--32 col--pale-sky">Social Media</h2>
                                         <!-- End Title -->
-                                        <!-- Toggle Switch -->
-                                        <div
-                                        class="flex gap--24 gap--16-responsive-tablet gap--16-responsive-mobile gap--16--responsive-mobile-portrait flex--column-responsive-mobile flex--column-responsive-mobile-portrait">
-                                            <!-- Share options content -->
-                                            <div class="flex flex-column gap--16 flex--max">
-                                                <!-- Toggle Switch -->
-                                                <!-- toggle -->
-                                                <div class="flex flex-column justify-center items-start self-stretch">
-                                                    <div class="flex items-center gap--8">
-                                                        <!-- toggle container -->
-                                                        <div class="flex">
-                                                            <!-- toggle switch (switch size = ['default', 'small'] / switch theme = ['default', 'light', 'dark']) -->
-                                                            <label data-switch="" data-switch-size="small"
-                                                                data-switch-theme="dark" data-switch-for=""
-                                                                data-throw-event="fs-evt-eventname">
-                                                                <input type="checkbox" value="switch_slide"
-                                                                    name="switch_slide" class="dn" checked>
-                                                                <span data-switch-slide="" class="db"></span>
-                                                            </label>
-                                                            <!-- /toggle switch -->
-                                                        </div>
-                                                        <!-- /toggle container -->
-
-                                                        <!-- toggle text -->
-                                                        <div class="flex items-center gap--4">
-                                                            <div class="flex items-center gap--8">
-                                                                <span class="fs--16 fw5 lh--24 black">
-                                                                    Post to X when you receive tips
-                                                                </span>
-                                                                <span class="flex justify-center items-center">
-                                                                    <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
-                                                                    <div data-tooltip data-tooltip-arrow="true"
-                                                                        data-tooltip-position="center right"
-                                                                        data-tooltip-size="medium" data-tooltip-theme="dark"
-                                                                        class="relative z-5 pointer">
-                                                                        <img src="../assets/images/help-circle.svg" alt=""
-                                                                            class="w--16 h--16 filter--col--pale-sky pointer-events-none">
-
-                                                                        <div data-tooltip-text data-tooltip-content>
-                                                                            <span class="fs--12 fw5 lh--18 color-inherit">
-                                                                                Offer discount to leaving subscriber if they
-                                                                                decided to unsubscribe from this tier
-                                                                            </span>
-                                                                        </div>
-                                                                    </div>
-                                                                    <!-- /tooltip -->
-                                                                </span>
-                                                            </div>
-                                                        </div>
-                                                        <!-- /toggle text -->
-                                                    </div>
-                                                </div>
-                                                <!-- /toggle -->
-                                                <!-- End Toggle Switch -->
-                                                <!-- Post Message -->
-                                                <div data-section="post-message" class="flex flex-column gap--8">
-                                                    <span class="fs--14 fw6 lh--20 col--ebony--variation-2">Post Message
-                                                        (Leave blank to use system default message.)</span>
-                                                    <div
-                                                        class="pad--x--14 pad--y--10 gap--8 br--2 br--bottom--left--right bb br--col--mischka-gray bg-white-30 sh--7 relative">
-                                                        <input type="text" placeholder="I got some lovely tips from @username..."
-                                                            class="w-100 bn flex-auto fs--16 lh--24 col--pale-sky" />
-                                                    </div>
-                                                    <span class="fs--14 lh--20 col--fiord">66/72 characters</span>
-                                                    <!-- Show Fans Checkbox -->
-                                                    <div class="flex justify-start items-start c--pointer flex-column  "
-                                                    data-form-input-type="checkbox" data-form-input-layout="vertical"
-                                                    data-form-accent-color="green">
-
-                                                        <label
-                                                            class="flex flex-row items-center justify-start flex-shrink-0 gap10 gap--8 c--pointer">
-                                                            <input name="ppv" value="yes" type="checkbox" data-name="ppv"
-                                                                data-fetch-on-change="1" data-show-save-on-change="1"
-                                                                >
-                                                            <span
-                                                                class="fs--14 lh--20 col--ebony--variation-2 c--pointer">Show fan’s username on your post</span>
-                                                                <span class="flex justify-center items-center">
-                                                                    <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
-                                                                    <div data-tooltip data-tooltip-arrow="true"
-                                                                        data-tooltip-position="bottom center" data-tooltip-size="large"
-                                                                        data-tooltip-theme="dark" class="relative z-5 pointer">
-                                                                        <img src="../assets/images/help-circle.svg" alt=""
-                                                                            class="w--16 h--16 filter--col--pale-sky pointer-events-none">
-
-                                                                        <div data-tooltip-text data-tooltip-content>
-                                                                            <span class="fs--12 fw5 lh--18 white">
-                                                                                Fan who tips anonymously will be recognized as '@anonymous'.
-                                                                            </span>
-                                                                        </div>
-                                                                    </div>
-                                                                    <!-- /tooltip -->
-                                                                </span>
-                                                        </label>
-                                                    </div>
-                                                    <!-- End Show Fans Checkbox -->
-                                                </div><!-- End Post Message -->
-                                                <!-- Attach Media -->
-                                                <div data-section="attach-media" class="flex flex-column gap--8">
-                                                    <span class="fs--14 fw6 lh--20 col--ebony--variation-2">Attach
-                                                        Media</span>
-                                                    <!-- radio group -->
-                                                    <ul class="flex flex-column gap--8">
-                                                        <li data-form-input-type="radio" data-form-input-layout="vertical"
-                                                            data-form-accent-color="green">
-                                                            <input type="radio" id="f-option" name="selector" class="dn"
-                                                                checked>
-                                                            <label for="f-option" class="fs--15 fw5 lh--24 black">Upload media</label>
-                                                        </li>
-
-                                                        <li data-form-input-type="radio" data-form-input-layout="vertical"
-                                                            data-form-accent-color="green">
-                                                            <input type="radio" id="s-option" name="selector" class="dn">
-                                                            <label for="s-option" class="fs--15 fw5 lh--24 black">Do not attach media</label>
-                                                        </li>
-                                                    </ul>
-                                                    <!-- End radio group -->
-                                                    <!-- File Upload box -->
-                                                    <div
-                                                        class="flex--max pad--x--24 pad--y--16 br--12 bg--col--black--05 hover--bg--col--black--10 ba bw--2 br--col--transparent hover--br--col--ebony--variation-2 w--100-responsive-tablet w--100-responsive-mobile w--100-responsive-mobile-portrait flex--none-responsive-tablet flex--none-responsive-mobile flex--none-responsive-mobile-portrait h--213-responsive-tablet h--213-responsive-mobile h--213-responsive-mobile-portrait">
-                                                        <label for="file-upload"
-                                                            class="w-100 h-100 flex flex-column justify-center items-center gap--12 pointer">
-                                                            <span
-                                                                class="w--40 h--40 flex justify-center items-center br--8 sh--7 bg--col-brand-green">
-                                                                <img src="../assets/icons/upload-cloud-02.svg" alt="" class="w--20 h--20" />
-                                                            </span>
-                                                            <span class="flex flex-column gap--4 items-center">
-                                                                <p class="fs--14 lh--20 col--fiord-gray">
-                                                                    <span class="fw6 col--ebony--variation-2 pointer">Click to upload</span>
-                                                                    <span>or drag and drop image or video files here</span>
-                                                                </p>
-                                                                <span class="fs--12 lh--18 col--fiord">MP4, AVI, QUICKTIME, X-MATROSKA, X-MS-WMV, WEBM, OGG, PNG or JPG (max. 15MB)</span>
-                                                            </span>
-                                                        </label>
-                                                        <input type="file" id="file-upload" name="" class="dn">
-                                                    </div>
-                                                    <!-- End File Upload box -->
-                                                </div><!-- End Attach Media -->
-                                            </div><!-- End Share options content -->
-                                            <!-- Post preview -->
-                                            <div data-section="post-review" class="w--360 w--282-responsive-tablet w--100-responsive-mobile w--100-responsive-mobile-portrait h--177-responsive-mobile h--177-responsive-mobile-portrait flex flex-column gap--8">
-                                                <span class="fs--12 lh--18 col--pale-sky tr">POST PREVIEW</span>
-                                                <div class="relative w-100 br--5 bg-white-70 pad--8 gap--8 flex">
-                                                    <!-- User Image -->
-                                                    <div class="w--24 h--24 br--6 flex items-center justify-center">
-                                                        <img src="../assets/images/avatar.png" class="w-100 h-100 fit--cover">
-                                                    </div>
-                                                    <!-- End User Image -->
-                                                    <!-- User Content -->
-                                                    <div class="flex--max flex flex-column gap--4">
-                                                        <!-- User Info -->
-                                                        <div class="flex items-center gap--8">
-                                                            <!-- User Name -->
-                                                            <div class="flex items-center gap--4">
-                                                                <span class="fs--12 fw6 lh--18 col--ebony--variation-2">Jelly FISH</span>
-                                                                <img src="../assets/icons/verified-tick.svg" alt="w--12 h--12">
-                                                            </div>
-                                                            <!-- End User Name -->
-                                                            <span class="fs--12 lh--18 col--pale-sky">@jellyf1sh</span>
-                                                            <span class="fs--12 lh--18 col--pale-sky">Jul 31</span>
-                                                        </div>
-                                                        <!-- End User Info -->
-                                                        <!-- User Description -->
-                                                        <div class="flex">
-                                                            <p class="fs--12 fw5 lh--18 col--ebony--variation-2">I got some lovely tips from fans...</p>
-                                                        </div>
-                                                        <!-- long Content -->
-                                                        <div class="w-100 h--195 flex justify-center items-center br--20 bg--col--link-water">
-                                                            <img src="../assets/images/logo-white.svg" alt="">
-                                                        </div>
-                                                        <!-- End long Content -->
-                                                        <!-- End User Description -->
-                                                    </div>
-                                                    <!-- End User Content -->
+                                        <!-- Field Group -->
+                                        <div class="flex flex-wrap gap--16">
+                                            <!-- Input Field -->
+                                            <div class="flex flex-column gap--6 flex--max w--100-responsive-tablet w--100-responsive-mobile w--100-responsive-mobile-portrait flex--none-responsive-tablet flex--none-responsive-mobile flex--none-responsive-mobile-portrait">
+                                                <span class="fs--14 fw5 lh--20 col--pale-sky"> Twitter</span>
+                                                <div class="flex gap--8 items-center br--2 br--bottom br--left bb br--col--mischka bg-white-50 sh--7 relative">
+                                                    <input type="text" value="socialmedia.com/model/jennyplayhouse" class="w-100 bn flex-auto fs--16 lh--24 col--pale-sky pad--y--10 pad--x--14">
                                                 </div>
                                             </div>
-                                            <!-- End Post preview -->
+                                            <!-- End Input Field -->
+                                            <!-- Input Field -->
+                                            <div class="flex flex-column gap--6 flex--max w--100-responsive-tablet w--100-responsive-mobile w--100-responsive-mobile-portrait flex--none-responsive-tablet flex--none-responsive-mobile flex--none-responsive-mobile-portrait">
+                                                <span class="fs--14 fw5 lh--20 col--pale-sky"> Instagram</span>
+                                                <div class="flex gap--8 items-center br--2 br--bottom br--left bb br--col--mischka bg-white-50 sh--7 relative">
+                                                    <input type="text" value="socialmedia.com/model/jennyplayhouse" class="w-100 bn flex-auto fs--16 lh--24 col--pale-sky pad--y--10 pad--x--14">
+                                                </div>
+                                            </div>
+                                            <!-- End Input Field -->
                                         </div>
-                                        <!-- End Toggle Switch -->
+                                        <!-- End Field Group -->
+                                        <!-- Field Group -->
+                                        <div class="flex flex-wrap gap--16">
+                                            <!-- Input Field -->
+                                            <div class="flex flex-column gap--6 flex--max w--100-responsive-tablet w--100-responsive-mobile w--100-responsive-mobile-portrait flex--none-responsive-tablet flex--none-responsive-mobile flex--none-responsive-mobile-portrait">
+                                                <span class="fs--14 fw5 lh--20 col--pale-sky"> Wishlist</span>
+                                                <div class="flex gap--8 items-center br--2 br--bottom br--left bb br--col--mischka bg-white-50 sh--7 relative">
+                                                    <input type="text" value="socialmedia.com/model/jennyplayhouse" class="w-100 bn flex-auto fs--16 lh--24 col--pale-sky pad--y--10 pad--x--14">
+                                                </div>
+                                            </div>
+                                            <!-- End Input Field -->
+                                            <!-- Input Field -->
+                                            <div class="flex flex-column gap--6 flex--max w--100-responsive-tablet w--100-responsive-mobile w--100-responsive-mobile-portrait flex--none-responsive-tablet flex--none-responsive-mobile flex--none-responsive-mobile-portrait">
+                                                <span class="fs--14 fw5 lh--20 col--pale-sky"> Additional URL 1</span>
+                                                <div class="flex gap--8 items-center br--2 br--bottom br--left bb br--col--mischka bg-white-50 sh--7 relative">
+                                                    <input type="text" value="socialmedia.com/model/jennyplayhouse" class="w-100 bn flex-auto fs--16 lh--24 col--pale-sky pad--y--10 pad--x--14">
+                                                </div>
+                                            </div>
+                                            <!-- End Input Field -->
+                                        </div>
+                                        <!-- End Field Group -->
+                                        <!-- Field Group -->
+                                        <div class="flex flex-wrap gap--16">
+                                            <!-- Input Field -->
+                                            <div class="flex flex-column gap--6 flex--max w--100-responsive-tablet w--100-responsive-mobile w--100-responsive-mobile-portrait flex--none-responsive-tablet flex--none-responsive-mobile flex--none-responsive-mobile-portrait">
+                                                <span class="fs--14 fw5 lh--20 col--pale-sky"> Additional URL 2</span>
+                                                <div class="flex gap--8 items-center br--2 br--bottom br--left bb br--col--mischka bg-white-50 sh--7 relative">
+                                                    <input type="text" value="socialmedia.com/model/jennyplayhouse" class="w-100 bn flex-auto fs--16 lh--24 col--pale-sky pad--y--10 pad--x--14">
+                                                </div>
+                                            </div>
+                                            <!-- End Input Field -->
+                                            <!-- Input Field -->
+                                            <div class="flex flex-column gap--6 flex--max w--100-responsive-tablet w--100-responsive-mobile w--100-responsive-mobile-portrait flex--none-responsive-tablet flex--none-responsive-mobile flex--none-responsive-mobile-portrait">
+                                                <span class="fs--14 fw5 lh--20 col--pale-sky"> Additional URL 3</span>
+                                                <div class="flex gap--8 items-center br--2 br--bottom br--left bb br--col--mischka bg-white-50 sh--7 relative">
+                                                    <input type="text" value="socialmedia.com/model/jennyplayhouse" class="w-100 bn flex-auto fs--16 lh--24 col--pale-sky pad--y--10 pad--x--14">
+                                                </div>
+                                            </div>
+                                            <!-- End Input Field -->
+                                        </div>
+                                        <!-- End Field Group -->
+                                        <!-- Field Group -->
+                                        <div class="flex flex-wrap gap--16">
+                                            <!-- Input Field -->
+                                            <div class="flex flex-column gap--6 flex--max w--100-responsive-tablet w--100-responsive-mobile w--100-responsive-mobile-portrait flex--none-responsive-tablet flex--none-responsive-mobile flex--none-responsive-mobile-portrait">
+                                                <span class="fs--14 fw5 lh--20 col--pale-sky"> Additional URL 4</span>
+                                                <div class="flex gap--8 items-center br--2 br--bottom br--left bb br--col--mischka bg-white-50 sh--7 relative">
+                                                    <input type="text" value="socialmedia.com/model/jennyplayhouse" class="w-100 bn flex-auto fs--16 lh--24 col--pale-sky pad--y--10 pad--x--14">
+                                                </div>
+                                            </div>
+                                            <!-- End Input Field -->
+
+                                            <!-- Input Field -->
+                                            <div class="flex flex-column gap--6 flex--max w--100-responsive-tablet w--100-responsive-mobile w--100-responsive-mobile-portrait flex--none-responsive-tablet flex--none-responsive-mobile flex--none-responsive-mobile-portrait">
+                                            </div>
+                                            <!-- End Input Field -->
+                                        </div>
+                                        <!-- End Field Group -->
                                     </div>
-                                    <!-- End Share Settings Section -->
+                                    <!-- End Basic Top Form Field Section -->
                                 </div>
-                                <!-- End Tipping Settings Section -->
+                                <!-- End Basic Form Section -->
                             </div>
-                            <!-- End Basic Form Section -->
+                            <!-- End From Middle Section -->
+
+                            <!-- From Bottom Section -->
+                            <div class="flex flex-column">
+                                <!-- Basic Form Section -->
+                                <div class="pad--16 flex flex-column gap--24 bg-white-40 bg--blur--25 sh--12 relative">
+                                    <!-- Tipping Settings Section -->
+                                    <div class="flex flex-column gap--24">
+                                        <!-- Title -->
+                                        <h2 class="fs--24 fw6 lh--32 col--pale-sky">Tipping Settings</h2>
+                                        <!-- End Title -->
+                                        <!-- Tip Message Section -->
+                                        <div class="flex flex-column gap--16">
+                                            <!-- Title -->
+                                            <span class="fs--14 fw7 lh--20 col--pale-sky">Tip Message</span>
+                                            <!-- End Title -->
+                                            <!-- Listing -->
+                                            <ul data-theme="default black">
+                                                <li>Your fan will see this message when they tip you.</li>
+                                                <li>Leave empty to show default message</li>
+                                            </ul>
+                                            <!-- End Listing -->
+                                            <!-- Field Group -->
+                                            <div class="flex flex-wrap gap--16">
+                                                <!-- Description Field -->
+                                                <div class="flex flex-column gap--6 flex--max">
+                                                    <div class="pad--x--14 pad--y--10 flex flex-column gap--8 br--2 br--bottom--left--right bb br--col--mischka-gray bg-white-30 sh--7 relative h--88">
+                                                        <textarea placeholder="Thank you for your tip!" class="w-100 bn flex-auto fs--16 lh--24 col--ebony h--88"></textarea>
+                                                    </div>
+                                                    <span class="fs--14 lh--20 col--pale-sky">50/200 characters</span>
+                                                </div>
+                                                <!-- End Description Field -->
+                                            </div>
+                                            <!-- End Field Group -->
+                                        </div>
+                                        <!-- End Tip Message Section -->
+                                        <!-- Share Settings Section -->
+                                        <div class="flex flex-column gap--16">
+                                            <!-- Title -->
+                                            <span class="fs--14 fw7 lh--20 col--pale-sky">Share Settings</span>
+                                            <!-- End Title -->
+                                            <!-- Toggle Switch -->
+                                            <div
+                                            class="flex gap--24 gap--16-responsive-tablet gap--16-responsive-mobile gap--16--responsive-mobile-portrait flex--column-responsive-mobile flex--column-responsive-mobile-portrait">
+                                                <!-- Share options content -->
+                                                <div class="flex flex-column gap--16 flex--max">
+                                                    <!-- Toggle Switch -->
+                                                    <!-- toggle -->
+                                                    <div class="flex flex-column justify-center items-start self-stretch">
+                                                        <div class="flex items-center gap--8">
+                                                            <!-- toggle container -->
+                                                            <div class="flex">
+                                                                <!-- toggle switch (switch size = ['default', 'small'] / switch theme = ['default', 'light', 'dark']) -->
+                                                                <label data-switch="" data-switch-size="small"
+                                                                    data-switch-theme="dark" data-switch-for=""
+                                                                    data-throw-event="fs-evt-eventname">
+                                                                    <input type="checkbox" value="switch_slide"
+                                                                        name="switch_slide" class="dn" checked>
+                                                                    <span data-switch-slide="" class="db"></span>
+                                                                </label>
+                                                                <!-- /toggle switch -->
+                                                            </div>
+                                                            <!-- /toggle container -->
+
+                                                            <!-- toggle text -->
+                                                            <div class="flex items-center gap--4">
+                                                                <div class="flex items-center gap--8">
+                                                                    <span class="fs--16 fw5 lh--24 black">
+                                                                        Post to X when you receive tips
+                                                                    </span>
+                                                                    <span class="flex justify-center items-center">
+                                                                        <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
+                                                                        <div data-tooltip data-tooltip-arrow="true"
+                                                                            data-tooltip-position="center right"
+                                                                            data-tooltip-size="medium" data-tooltip-theme="dark"
+                                                                            class="relative z-5 pointer">
+                                                                            <img src="../assets/images/help-circle.svg" alt=""
+                                                                                class="w--16 h--16 filter--col--pale-sky pointer-events-none">
+
+                                                                            <div data-tooltip-text data-tooltip-content>
+                                                                                <span class="fs--12 fw5 lh--18 color-inherit">
+                                                                                    Offer discount to leaving subscriber if they
+                                                                                    decided to unsubscribe from this tier
+                                                                                </span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <!-- /tooltip -->
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                            <!-- /toggle text -->
+                                                        </div>
+                                                    </div>
+                                                    <!-- /toggle -->
+                                                    <!-- End Toggle Switch -->
+                                                    <!-- Input Field -->
+                                                    <div class="flex flex-column gap--8">
+                                                        <span class="fs--14 fw6 lh--20 col--ebony--variation-2">Post Message
+                                                            (Leave blank to use system default message.)</span>
+                                                        <div
+                                                            class="pad--x--14 pad--y--10 gap--8 br--2 br--bottom--left--right bb br--col--mischka-gray bg-white-30 sh--7 relative">
+                                                            <input type="text" placeholder="I got some lovely tips from @username..."
+                                                                class="w-100 bn flex-auto fs--16 lh--24 col--pale-sky" />
+                                                        </div>
+                                                        <span class="fs--14 lh--20 col--fiord">66/72 characters</span>
+                                                        <!-- Show Fans Checkbox -->
+                                                        <div class="flex justify-start items-start c--pointer flex-column  "
+                                                        data-form-input-type="checkbox" data-form-input-layout="vertical"
+                                                        data-form-accent-color="green">
+
+                                                            <label
+                                                                class="flex flex-row items-center justify-start flex-shrink-0 gap10 gap--8 c--pointer">
+                                                                <input name="ppv" value="yes" type="checkbox" data-name="ppv"
+                                                                    data-fetch-on-change="1" data-show-save-on-change="1" checked
+                                                                    >
+                                                                <span
+                                                                    class="fs--14 lh--20 col--ebony--variation-2 c--pointer">Show fan’s username on your post</span>
+                                                                    <span class="flex justify-center items-center">
+                                                                        <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
+                                                                        <div data-tooltip data-tooltip-arrow="true"
+                                                                            data-tooltip-position="bottom center" data-tooltip-size="large"
+                                                                            data-tooltip-theme="dark" class="relative z-5 pointer">
+                                                                            <img src="../assets/images/help-circle.svg" alt=""
+                                                                                class="w--16 h--16 filter--col--pale-sky pointer-events-none">
+
+                                                                            <div data-tooltip-text data-tooltip-content>
+                                                                                <span class="fs--12 fw5 lh--18 white">
+                                                                                    Fan who tips anonymously will be recognized as '@anonymous'.
+                                                                                </span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <!-- /tooltip -->
+                                                                    </span>
+                                                            </label>
+                                                        </div>
+                                                        <!-- End Show Fans Checkbox -->
+                                                    </div><!-- End Input Field -->
+                                                    <!-- Attach Media -->
+                                                    <div data-section="attach-media" class="flex flex-column gap--8">
+                                                        <span class="fs--14 fw6 lh--20 col--ebony--variation-2">Attach
+                                                            Media</span>
+                                                        <!-- radio group -->
+                                                        <ul class="flex flex-column gap--8">
+                                                            <li data-form-input-type="radio" data-form-input-layout="vertical"
+                                                                data-form-accent-color="green">
+                                                                <input type="radio" id="f-option" name="selector" class="dn"
+                                                                    checked>
+                                                                <label for="f-option" class="fs--15 fw5 lh--24 black">Upload media</label>
+                                                            </li>
+
+                                                            <li data-form-input-type="radio" data-form-input-layout="vertical"
+                                                                data-form-accent-color="green">
+                                                                <input type="radio" id="s-option" name="selector" class="dn">
+                                                                <label for="s-option" class="fs--15 fw5 lh--24 black">Do not attach media</label>
+                                                            </li>
+                                                        </ul>
+                                                        <!-- End radio group -->
+                                                        <!-- Order Details Image -->
+                                                        <div class="w--378 h--213 w--100-responsive-mobile w--100-responsive-mobile-portrait h--177-responsive-mobile h--177-responsive-mobile-portrait br--5 sh--9 flex items-center relative overflow-hidden">
+                                                            <img src="../assets/images/avatar-2.jpeg" alt="" class="w-100 h-100 fit--cover" />
+                                                            <!-- Trash Button -->
+                                                            <button
+                                                                class="bg--col--vermilion w--24 h--24 flex justify-center items-center gap--10 absolute top-0 right-0 hover--bg--col-burning-orange">
+                                                                <img src="../assets/icons/trash-03.svg" alt="" class="w--20 h--20" />
+                                                            </button>
+                                                            <span class=" pad--4 bg-black fs--12 fw6 lh--18 white flex items-center justify-center absolute right-0 bottom-0">Thumbnail</span>
+                                                            <!-- Enlarge icon -->
+                                                            <span class="w--32 h--32 flex items-center justify-center bg-black pointer absolute left-0 bottom-0">
+                                                                <img src="../assets/icons/maximize-03.svg" alt="" class="w--20 h--20 filter--col--spring-green">
+                                                            </span>
+                                                        </div>
+                                                        <!-- End Order Details Image -->
+                                                    </div><!-- End Attach Media -->
+                                                </div><!-- End Share options content -->
+                                                <!-- Post preview -->
+                                                <div class="w--360 w--282-responsive-tablet w--100-responsive-mobile w--100-responsive-mobile-portrait h--177-responsive-mobile h--177-responsive-mobile-portrait flex flex-column gap--8">
+                                                    <span class="fs--12 lh--18 col--pale-sky tr">POST PREVIEW</span>
+                                                    <div class="relative w-100 br--5 bg-white-70 pad--8 gap--8 flex">
+                                                        <!-- User Image -->
+                                                        <div class="w--24 h--24 br--6 flex items-center justify-center">
+                                                            <img src="../assets/images/avatar.png" class="w-100 h-100 fit--cover">
+                                                        </div>
+                                                        <!-- End User Image -->
+                                                        <!-- User Content -->
+                                                        <div class="flex--max flex flex-column gap--4">
+                                                            <!-- User Info -->
+                                                            <div class="flex items-center gap--8">
+                                                                <!-- User Name -->
+                                                                <div class="flex items-center gap--4">
+                                                                    <span class="fs--12 fw6 lh--18 col--ebony--variation-2">Jelly FISH</span>
+                                                                    <img src="../assets/icons/verified-tick.svg" alt="w--12 h--12">
+                                                                </div>
+                                                                <!-- End User Name -->
+                                                                <span class="fs--12 lh--18 col--pale-sky">@jellyf1sh</span>
+                                                                <span class="fs--12 lh--18 col--pale-sky">Jul 31</span>
+                                                            </div>
+                                                            <!-- End User Info -->
+                                                            <!-- User Description -->
+                                                            <div class="flex">
+                                                                <p class="fs--12 fw5 lh--18 col--ebony--variation-2">I got some lovely tips from fans...</p>
+                                                            </div>
+                                                            <!-- long Content -->
+                                                            <div class="w-100 h--195 flex justify-center items-center br--20 bg--col--link-water overflow-hidden">
+                                                                <img src="../assets/images/avatar-2.jpeg" alt="" class="w-100 h-100 fit--cover">
+                                                            </div>
+                                                            <!-- End long Content -->
+                                                            <!-- End User Description -->
+                                                        </div>
+                                                        <!-- End User Content -->
+                                                    </div>
+                                                </div>
+                                                <!-- End Post preview -->
+                                            </div>
+                                            <!-- End Toggle Switch -->
+                                        </div>
+                                        <!-- End Share Settings Section -->
+                                    </div>
+                                    <!-- End Tipping Settings Section -->
+                                </div>
+                                <!-- End Basic Form Section -->
+                            </div>
+                            <!-- End From Middle Section -->
+
+                            <!-- Button Wrapper Section -->
+                            <!-- Save/Cancel Button Group -->
+                            <div class=" flex items-center justify-start">
+                                <div class="flex items-center gap--8">
+                                    <button
+                                        class="mw--100 pad--y--8 flex items-center justify-center fs--18 fw5 lh--28 col--ebony--variation-2 flex--max-responsive-mobile flex--max-responsive-mobile-portrait hover--bg--col--white--100">Cancel</button>
+                                    <button
+                                        class="bg-black mw--85 pad--y--4 pad--x--8 flex justify-center items-center gap--10 hover--bg--col-brand-green hover--parent--child--col--black-ribbon">
+                                        <span class="fs--18 fw5 lh--28 col-brand-green ttu">SAVE</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- End Save/Cancel Button Group -->
+                            <!-- End Button Wrapper Section -->
+
                         </div>
-                        <!-- End From Middle Section -->
-
+                        <!-- /page main content section -->
                     </div>
-                    <!-- /page main content section -->
-
+                    <!-- /Page Content Wrapper -->
                 </div> <!-- End Inner Container -->
             </main>
             <!-- /main section -->

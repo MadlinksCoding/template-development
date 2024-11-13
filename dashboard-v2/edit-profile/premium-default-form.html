@@ -6449,63 +6449,42 @@
                                                 </div>
                                                 <!-- /toggle -->
                                                 <!-- End Toggle Switch -->
-                                                <!-- Input Field -->
-                                                <div class="flex flex-column gap--8">
-                                                    <span class="fs--14 fw6 lh--20 col--ebony--variation-2">Post Message
-                                                        (Leave blank to use system default message.)</span>
-                                                    <div
-                                                        class="pad--x--14 pad--y--10 gap--8 br--2 br--bottom--left--right bb br--col--mischka-gray bg-white-30 sh--7 relative">
-                                                        <input type="text" placeholder="I got some lovely tips from @username..."
-                                                            class="w-100 bn flex-auto fs--16 lh--24 col--pale-sky" />
-                                                    </div>
-                                                    <span class="fs--14 lh--20 col--fiord">66/72 characters</span>
-                                                    <!-- Show Fans Checkbox -->
-                                                    <div class="flex justify-start items-start c--pointer flex-column  "
-                                                    data-form-input-type="checkbox" data-form-input-layout="vertical"
-                                                    data-form-accent-color="green">
+                                                <!-- Attach Media -->
+                                                <div data-section="attach-media" class="flex flex-column gap--8">
+                                                    <span class="fs--14 fw6 lh--20 col--ebony--variation-2">Attach
+                                                        Media</span>
+                                                    <!-- radio group -->
+                                                    <ul class="flex flex-column gap--8">
+                                                        <li data-form-input-type="radio" data-form-input-layout="vertical"
+                                                            data-form-accent-color="green">
+                                                            <input type="radio" id="f-option" name="selector" class="dn"
+                                                                checked>
+                                                            <label for="f-option" class="fs--15 fw5 lh--24 black">Upload media</label>
+                                                        </li>
 
-                                                        <label
-                                                            class="flex flex-row items-center justify-start flex-shrink-0 gap10 gap--8 c--pointer">
-                                                            <input name="ppv" value="yes" type="checkbox" data-name="ppv"
-                                                                data-fetch-on-change="1" data-show-save-on-change="1" checked
-                                                                >
-                                                            <span
-                                                                class="fs--14 lh--20 col--ebony--variation-2 c--pointer">Show fan’s username on your post</span>
-                                                                <span class="flex justify-center items-center">
-                                                                    <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
-                                                                    <div data-tooltip data-tooltip-arrow="true"
-                                                                        data-tooltip-position="bottom center" data-tooltip-size="large"
-                                                                        data-tooltip-theme="dark" class="relative z-5 pointer">
-                                                                        <img src="../assets/images/help-circle.svg" alt=""
-                                                                            class="w--16 h--16 filter--col--pale-sky pointer-events-none">
-
-                                                                        <div data-tooltip-text data-tooltip-content>
-                                                                            <span class="fs--12 fw5 lh--18 white">
-                                                                                Fan who tips anonymously will be recognized as '@anonymous'.
-                                                                            </span>
-                                                                        </div>
-                                                                    </div>
-                                                                    <!-- /tooltip -->
-                                                                </span>
-                                                        </label>
+                                                        <li data-form-input-type="radio" data-form-input-layout="vertical"
+                                                            data-form-accent-color="green">
+                                                            <input type="radio" id="s-option" name="selector" class="dn">
+                                                            <label for="s-option" class="fs--15 fw5 lh--24 black">Do not attach media</label>
+                                                        </li>
+                                                    </ul>
+                                                    <!-- End radio group -->
+                                                    <!-- Order Details Image -->
+                                                    <div class="w--378 h--213 w--100-responsive-mobile w--100-responsive-mobile-portrait h--177-responsive-mobile h--177-responsive-mobile-portrait br--5 sh--9 flex items-center relative overflow-hidden">
+                                                        <img src="../assets/images/avatar-2.jpeg" alt="" class="w-100 h-100 fit--cover" />
+                                                        <!-- Trash Button -->
+                                                        <button
+                                                            class="bg--col--vermilion w--24 h--24 flex justify-center items-center gap--10 absolute top-0 right-0 hover--bg--col-burning-orange">
+                                                            <img src="../assets/icons/trash-03.svg" alt="" class="w--20 h--20" />
+                                                        </button>
+                                                        <span class=" pad--4 bg-black fs--12 fw6 lh--18 white flex items-center justify-center absolute right-0 bottom-0">Thumbnail</span>
+                                                        <!-- Enlarge icon -->
+                                                        <span class="w--32 h--32 flex items-center justify-center bg-black pointer absolute left-0 bottom-0">
+                                                            <img src="../assets/icons/maximize-03.svg" alt="" class="w--20 h--20 filter--col--spring-green">
+                                                        </span>
                                                     </div>
-                                                    <!-- End Show Fans Checkbox -->
-                                                </div><!-- End Input Field -->
-                                                <!-- Order Details Image -->
-                                                <div class="w--378 h--213 w--100-responsive-mobile w--100-responsive-mobile-portrait h--177-responsive-mobile h--177-responsive-mobile-portrait br--5 sh--9 flex items-center relative overflow-hidden">
-                                                    <img src="../assets/images/avatar-2.jpeg" alt="" class="w-100 h-100 fit--cover" />
-                                                    <!-- Trash Button -->
-                                                    <button
-                                                        class="bg--col--vermilion w--24 h--24 flex justify-center items-center gap--10 absolute top-0 right-0 hover--bg--col-burning-orange">
-                                                        <img src="../assets/icons/trash-03.svg" alt="" class="w--20 h--20" />
-                                                    </button>
-                                                    <span class=" pad--4 bg-black fs--12 fw6 lh--18 white flex items-center justify-center absolute right-0 bottom-0">Thumbnail</span>
-                                                    <!-- Enlarge icon -->
-                                                    <span class="w--32 h--32 flex items-center justify-center bg-black pointer absolute left-0 bottom-0">
-                                                        <img src="../assets/icons/maximize-03.svg" alt="" class="w--20 h--20 filter--col--spring-green">
-                                                    </span>
-                                                </div>
-                                                <!-- End Order Details Image -->
+                                                    <!-- End Order Details Image -->
+                                                </div><!-- End Attach Media -->
                                             </div><!-- End Share options content -->
                                             <!-- Post preview -->
                                             <div class="w--360 w--282-responsive-tablet w--100-responsive-mobile w--100-responsive-mobile-portrait h--177-responsive-mobile h--177-responsive-mobile-portrait flex flex-column gap--8">
