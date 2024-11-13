@@ -6,7 +6,6 @@
  */
 
 /* Colors */
-.col--oxford-blue { color: var(--color-oxford-blue,#344054); }
 .col--fiord-gray { color: var(--color-fiord-gray,#475467); }
 .col-turbo-yellow { color: var(--color-turbo-yellow, #FFE500); }
 .col-brand-green { color: var(--color-brand-green, #07F468); }
@@ -45,6 +44,24 @@
 .bg--col-light-blue { background: rgba(41, 112, 255, 0.20); }
 .bg--col--brilliant-rose { background-color: var(--color-brilliant-rose, #F04CC9); }
 .bg--col--link-water { background-color: var(--color-link-water, #F2F6FC); } /* confirmed in use */ 
+.bg--col--viking-green { background-color: var(--color-viking-green, #55CFCD); }
+.bg--black-75 { background: rgba(0, 0, 0, 0.75); }
+
+
+/* Background Data Colors*/
+[data-bg-color="Persian Rose"] { background-color: var(--color-persian-rose, #F72485); }
+[data-bg-color="Electric Violet"] { background-color: var(--color-electric-violet, #680EEB); }
+[data-bg-color="Blue Gem"] { background-color: var(--color-blue-gem, #3A0BA3); }
+[data-bg-color="Royal Blue"] { background-color: var(--color-royal-blue, #4361EE); }
+[data-bg-color="Shakespeare"] { background-color: var(--color-shakespeare, #55AACF); }
+[data-bg-color="Viking Green"] { background-color: var(--color-viking-green, #55CFCD); }
+[data-bg-color="Picton Blue"] { background-color: var(--color-picton-blue, #4CC9F0); }
+[data-bg-color="Cornflower Blue"] { background-color: var(--color-cornflower-blue, #8569FA); }
+[data-bg-color="Heliotrope"] { background-color: var(--color-heliotrope, #AE4AEF); }
+[data-bg-color="Blush Pink"] { background-color: var(--color-blush-pink, #FF76DD); }
+[data-bg-color="Aquamarine"] { background-color: var(--color-aquamarine, #89FAD3); }
+[data-bg-color="Spray"] { background-color: var(--color-spray, #78F0F5); }
+
 
 /* Background Gradients*/
 .bg--gd--light-white { background: linear-gradient(0deg, rgba(242, 244, 247, 0.50) 0%, rgba(242, 244, 247, 0.50) 100%), rgba(255, 255, 255, 0.50); }
@@ -71,6 +88,8 @@
 .br--col-brand-green { border-color: var(--color-brand-green, #07F468); }
 .br--col-electric-violet { border-color: var(--color-electric-violet, #4D20FF); }
 .br--col--vermilion { border-color: var(--color-vermilion, #FF4405); }
+.br--col--white { border-color: var(--white, #fff); }
+
 
 /* Fill Colors */
 
@@ -175,12 +194,14 @@
 .w--378 { width: 23.625rem; /* width 378px */ } /* confirmed in use */ /* pixel conversion correct */
 .w--464 { width: 29rem; /* width 464px */ } /* confirmed in use */ /* pixel conversion correct */
 .w--927 { width: 57.938rem; /* width 927px */ } /* confirmed in use */ /* pixel conversion correct */
+.w--1024 { width: 64rem; /* width 1024px */ } /* confirmed in use */ /* pixel conversion correct */
 
 
 /* Min Width */
 
 
 /* Max Width */
+.max--w--375 { max-width:23.438rem; /* max width 375px */ } /* confirmed in use */ /* pixel conversion correct */
 
 
 /* Height */
@@ -194,6 +215,7 @@
 .h--2 { height: 0.125rem; /* height 2px */ } /* confirmed in use */ /* pixel conversion correct */
 .h--3 { height: 0.188rem; /* height 3px */ } /* confirmed in use */ /* pixel conversion correct */
 .h--12 { height: 0.75rem; /* height 12px */ } /* confirmed in use */ /* pixel conversion correct */
+.h--80 { height: 5rem; /* height 80px */ } /* confirmed in use */ /* pixel conversion correct */
 .h--112 { height: 7rem; /* height 112px */ } /* confirmed in use */ /* pixel conversion correct */
 .h--120 { height: 7.5rem; /* height 120px */ } /* confirmed in use */ /* pixel conversion correct */
 .h--213 { height: 13.313rem; /* height 213px */ } /* confirmed in use */ /* pixel conversion correct */
@@ -206,6 +228,7 @@
 
 
 /* Padding */
+.pad--2 { padding: 0.125rem; /* padding 2px */ } /* confirmed in use */ /* pixel conversion correct */
 .pad--10 { padding: 0.625rem; /* padding 10px */ } /* confirmed in use */ /* pixel conversion correct */
 .pad--16 { padding: 1rem; /* padding 16px */ } /* confirmed in use */ /* pixel conversion correct */
 .pad--18 { padding: 1.125rem; /* padding 18px */ } /* confirmed in use */ /* pixel conversion correct */
@@ -316,6 +339,7 @@
 .sh--10 { box-shadow: 4px 4px 0px 0px #000; } /* confirmed in use */
 .sh--11 { box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03); } /* confirmed in use */
 .sh--12 { box-shadow: 0px 4px 6px -2px rgba(16, 24, 40, 0.08); }
+.sh--2000{ box-shadow: 0 0 2000px 2000px rgba(0, 0, 0, 0.5); }
 
 
 /* Drop Shadow */
@@ -328,6 +352,7 @@
 
 
 /* Cursor Style */ 
+.cr--move { cursor: move; }
 
 
 /* Border */
@@ -335,6 +360,7 @@
 
 /* Border Width */
 .bw--2 { border-width: 0.125rem; }
+.bw--3 { border-width: 0.188rem; }
 
 
 /* Border Radius */

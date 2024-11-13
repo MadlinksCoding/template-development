@@ -812,8 +812,15 @@ class DashSidebarMenuAdjuster {
         for (let i = this.maxVisibleItems; i < this.menuItems.length; i++) {
           const excessItem = this.menuItems[i];
 
-					// move the item to floating panel
-          this.floatingPanel.appendChild(excessItem);
+		    /* updated by NayHtetSoe 13/11/2024. task link https://app.clickup.com/t/86eqquzp7 */
+			// Check if excessItem is a valid DOM node
+			if (excessItem instanceof Node) {
+				// Move the item to the floating panel
+				this.floatingPanel.appendChild(excessItem);
+			} else {
+				console.error('Invalid DOM node:', excessItem);
+			}
+			/* ended */
         }
 
 				// check if floating panel has only one item, if true then data-single-item will be true, else false
