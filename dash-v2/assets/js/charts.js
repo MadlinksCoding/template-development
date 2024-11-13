@@ -904,7 +904,7 @@ function SmoothLineChart(renderingEl, data) {
                 sprite: am5.Circle.new(root, {
                     radius: 5,
                     fill: color,
-                    opacity: 1 // Start with visible bullet. /* updated by NayHtetSoe 11/11/2024 */
+                    opacity: 0 // Start with unvisible bullet. /* updated by NayHtetSoe 13/11/2024 */
                 }, bulletTemplate)
             });
         });
@@ -928,6 +928,38 @@ function SmoothLineChart(renderingEl, data) {
                 }
             }
         });
+
+        /* added by NayHtetSoe 13/11/2024 */
+        // Access tooltip directly and control bullet visibility with shown/hidden events
+        var tooltip = series.get("tooltip");
+
+        // Show bullet when tooltip is pointed over
+        tooltip.events.on("pointerover", function() {
+            // Get the data item associated with the tooltip
+            var dataItem = tooltip.dataItem;
+            
+            // Get the first bullet from the data item's bullets array
+            var bullet = dataItem.bullets[0];
+            
+            // Check if the bullet and its sprite are defined
+            if (bullet && bullet.get("sprite")) {
+                // Set the opacity of the bullet's sprite to 1 to make it visible
+                bullet.get("sprite").set("opacity", 1);
+            }
+        });
+
+        // Hide bullet when tooltip is pointed out
+        tooltip.events.on("pointerout", function() {
+            // Loop through all data items and hide the bullet
+            series.dataItems.forEach(function(item) {
+                // var item = series.dataItems[key];
+                if (item.bullets) {
+                    // Hide the bullet
+                    item.bullets[0].get("sprite").set("opacity", 0);
+                }
+            });
+        });
+        /* ended */
 
         series.data.setAll(staticValues);
         series.appear(1000);
