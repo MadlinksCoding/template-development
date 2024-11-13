@@ -6421,7 +6421,7 @@
                                                 <!-- /toggle -->
                                                 <!-- End Toggle Switch -->
                                                 <!-- Post Message -->
-                                                <div data-section="post-message" class="flex flex-column gap--8">
+                                                <div data-section="post-message" class="dn flex-column gap--8">
                                                     <span class="fs--14 fw6 lh--20 col--ebony--variation-2">Post Message
                                                         (Leave blank to use system default message.)</span>
                                                     <div
@@ -6463,7 +6463,7 @@
                                                     <!-- End Show Fans Checkbox -->
                                                 </div><!-- End Post Message -->
                                                 <!-- Attach Media -->
-                                                <div data-section="attach-media" class="flex flex-column gap--8">
+                                                <div data-section="attach-media" class="dn flex-column gap--8">
                                                     <span class="fs--14 fw6 lh--20 col--ebony--variation-2">Attach
                                                         Media</span>
                                                     <!-- radio group -->
@@ -6505,7 +6505,7 @@
                                                 </div><!-- End Attach Media -->
                                             </div><!-- End Share options content -->
                                             <!-- Post preview -->
-                                            <div data-section="post-review" class="w--360 w--282-responsive-tablet w--100-responsive-mobile w--100-responsive-mobile-portrait h--177-responsive-mobile h--177-responsive-mobile-portrait flex flex-column gap--8">
+                                            <div data-section="post-review" class="w--360 w--282-responsive-tablet w--100-responsive-mobile w--100-responsive-mobile-portrait h--177-responsive-mobile h--177-responsive-mobile-portrait dn flex-column gap--8">
                                                 <span class="fs--12 lh--18 col--pale-sky tr">POST PREVIEW</span>
                                                 <div class="relative w-100 br--5 bg-white-70 pad--8 gap--8 flex">
                                                     <!-- User Image -->
@@ -6557,6 +6557,116 @@
                     <!-- /page main content section -->
 
                 </div> <!-- End Inner Container -->
+
+                <!-- Modal / Crop photo -->
+                <div class="w-100 h-100 fixed left-0 top-0 z--10000 bg-white-10 bg--blur--5 flex justify-center items-center fixed--responsive-mobile-portrait z--9--responsive-mobile-portrait">
+                    <div class="relative w--360 bg-white-70 bg--blur--50 br--5 w--100-responsive-mobile-portrait h--screen-mobile-portrait">
+                        <div class="flex items-start flex-column justify--between-responsive-mobile-portrait h--screen-mobile-portrait">
+                            <!-- Modal Header section -->
+                            <div class="w-100 pad--16 flex justify-between items-center">
+                                <h2 class="fs--20 lh--30 fw6 col--oxford-blue">Crop photo</h2>
+                                <!-- Close Button -->
+                                <button class="flex items-center justify-end">
+                                    <img src="../assets/icons/close-btn.svg" alt="" class="w--24 h--24 filter--col--gull-gray">
+                                </button>
+                            </div>
+                
+                            <!-- Modal body section -->
+                            <div class="w-100 flex flex-column h--100-full-mobile-portrait">
+                                <!-- Image crop section -->
+                                <div class="w-100 h--245 h--323-responsive-mobile-portrait bg-black-30 flex flex--max-responsive-mobile-portrait">
+                                    <div class="db w-100 h-100 flex items-center justify-center relative of--hidden bg--no-repaet bg--55 bg-position" style="background-image: url('../assets/images/avatar-2.jpeg');">
+                                        <div class="db bg--blur--10  w-100 h-100 absolute left-0 top-0"></div>
+                                        <div class="w--195 h--195 absolute br-100 ba bw--3 br--col--white sh--2000 of--hidden">
+                                            <img src="../assets/images/avatar-2.jpeg" alt="" class="w-100 h-100 fit--cover cr--move">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Crop Other Options -->
+                                <div class="w-100 pad--x--16 pad--y--24 flex flex-column gap--16">
+                                    <!-- Horizontal and Vertical allignment settings option -->
+                                    <div class="flex items-center justify-center gap--36">
+                                        <!-- Horizontai Allignment option -->
+                                        <button>
+                                            <img src="../assets/icons/reflect-01.svg" alt="" class="w--24 h--24 filter--col--black">
+                                        </button>
+                                        <!-- Vertical Allignment option -->
+                                        <button>
+                                            <img src="../assets/icons/reflect-01.svg" alt="" class="w--24 h--24 filter--col--black">
+                                        </button>
+                                    </div>
+                                    
+                                    <div class="flex flex-column gap--24">
+                                        <!-- Zoom Option -->
+                                        <div class="w-100 flex flex-column gap--8">
+                                            <span class="fs--12 lh--18 fw5 black">Zoom</span>
+                                            <div class="flex items-center justify-between gap--16">
+                                                <button class="pointer">
+                                                    <img src="../assets/icons/zoom-out.svg" alt="" class="w--20 h--20 filter--col--black">
+                                                </button>
+                                                <div class="w-100 h--8 br--4 bg--col--athens-gray-2 w-100 flex-auto">
+                                                    <div class="db w--64 h--8 br--4 bg--col-brand-green flex justify-end items-center">
+                                                        <span class="db w--24 h--24 bg-white br-100 ba br--col--mischka-gray pointer"></span>
+                                                    </div>
+                                                </div>
+                                                <button class="pointer">
+                                                    <img src="../assets/icons/zoom-in.svg" alt="" class="w--20 h--20 filter--col--black">
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Rotate Option -->
+                                        <div class="w-100 flex flex-column gap--8">
+                                            <span class="fs--12 lh--18 fw5 black">Rotate</span>
+                                            <div class="flex items-center justify-between gap--16">
+                                                <button class="pointer">
+                                                    <img src="../assets/icons/refresh-ccw-01.svg" alt="" class="w--20 h--20 filter--col--black">
+                                                </button>
+                                                <div class="w-100 h--8 br--4 bg--col--athens-gray-2 w-100 flex-auto">
+                                                    <div class="db w--128 h--8 br--4 bg--col--athens-gray-2 flex justify-end items-center">
+                                                        <span class="db w--24 h--24 bg-white ba br--col--mischka-gray br-100 pointer"></span>
+                                                    </div>
+                                                </div>
+                                                <button class="pointer">
+                                                    <img src="../assets/icons/refresh-cw-01.svg" alt="" class="w--20 h--20 filter--col--black">
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Footer Button section -->
+                                <!-- Save/Cancel Button Group -->
+                                <div class="pad--16 flex items-center justify-end">
+                                    <div class="w-100 flex items-center gap--16">
+                                        <button
+                                            class="mw--100 pad--y--4 pad--x--8 flex items-center justify-center fs--18 fw5 lh--28 col--ebony--variation-2 flex--max hover--bg--col--white--100">Cancel</button>
+                                        <button
+                                            class="bg-black mw--85 flex--max pad--y--4 pad--x--8 flex justify-center items-center gap--10 hover--bg--col-brand-green hover--parent--child--col--black-ribbon">
+                                            <span class="fs--18 fw5 lh--28 col-brand-green ttu">SAVE</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- End Save/Cancel Button Group -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Modal / Crop photo -->
+
+                <!-- Modal / Discard popup -->
+                <div class="w-100 h-100 fixed top-0 left-0 z--11100 bg--blur--5 flex items-center justify-center items--end-responsive-mobile items--end-responsive-mobile-portrait">
+                    <div
+                        class="w-100 max--w--375 max--w--100-responsive-mobile max--w--100-responsive-mobile-portrait bg-white-90 br--5 bg--blur--50 pad--16 flex flex-column gap--24">
+                        <h4 class="fs--16 fw6 lh--24 col--oxford-blue ws-normal">Upload new image.</h4>
+                        <div class="flex items-center gap--8">
+                            <button
+                                class="mw--100 flex--max pad--y--8 flex items-center justify-center fs--16 fw5 lh--24 col--vermilion flex--max-responsive-mobile flex--max-responsive-mobile-portrait hover--bg--col--white--100 hover--col--milano-red">Cancel</button>
+                            <button
+                                class="mw--100 flex--max pad--y--8 flex items-center justify-center fs--16 fw5 lh--24 white bg--col--vermilion flex--max-responsive-mobile flex--max-responsive-mobile-portrait hover--bg--col-burning-orange">Upload New</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Modal / Discard popup -->
             </main>
             <!-- /main section -->
 
