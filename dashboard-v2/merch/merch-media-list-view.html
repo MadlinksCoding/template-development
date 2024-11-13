@@ -53,6 +53,35 @@
             .w--p--8 {
                 width: 8%;
             }
+            .col--cyan {
+                color: #67E3F9;
+            }
+            .col-sale {
+                color: #F093FB;
+            }
+            @media (min-width: 768px) and (max-width: 1365px) {
+                .grid--cols--2-responsive-tablet {
+                    grid-template-columns: repeat(3, minmax(0, 1fr));
+                }
+            }
+
+            @media (min-width: 480px) and (max-width: 767px) {
+                .grid--cols--2-responsive-mobile {
+                    grid-template-columns: repeat(2, minmax(0, 1fr));
+                }
+            }
+            /* Mobile Portrait */
+            @media (max-width: 479px) {
+                .grid--cols--2-responsive-mobile-portrait {
+                    grid-template-columns: repeat(2, minmax(0, 1fr));
+                }
+                .h--112 {
+                    height: 5rem;
+                }
+                .w--200 {
+                    width: 8.5rem;
+                }
+            }
         </style>
     </head>
 
@@ -62,10 +91,10 @@
 
             <!-- page sidebar -->
             <section data-sidebar data-section="sidebar"
-                class="flex vh-100 sticky top-0 z-2 bg--col--athens-gray--70 sh--sidebar vw--100--responsive-mobile vw--100--responsive-mobile-portrait h--48-responsive-mobile h--48-responsive-mobile-portrait bg--col--white--70--responsive-mobile bg--col--white--70--responsive-mobile-portrait sh--none--responsive-mobile sh--none--responsive-mobile-portrait">
+                class="flex vh-100 sticky top-0 z-2 sh--sidebar vw--100--responsive-mobile vw--100--responsive-mobile-portrait h--48-responsive-mobile h--48-responsive-mobile-portrait sh--none--responsive-mobile sh--none--responsive-mobile-portrait">
                 <!-- mobile header -->
                 <div data-mobile-header data-mobile-only
-                    class="pad--y--8 pad--x--16 flex-column flex--max gap--16 bg--blur--25 dn dn-responsive-mobile">
+                    class="pad--y--8 pad--x--16 flex-column flex--max gap--16   dn dn-responsive-mobile">
                     <div class="flex justify-between items-center">
                         <!-- Site Logo -->
                         <div class="relative">
@@ -6059,7 +6088,7 @@
                         <div
                             class="flex items-center gap--16 gap--8-responsive-mobile gap--8-responsive-mobile-portrait flex--column-responsive-tablet flex--column-responsive-mobile flex--column-responsive-mobile-portrait items--start-responsive-tablet items--start-responsive-mobile items--start-responsive-mobile-portrait">
                             <!-- Tabs -->
-                            <div class="flex gap--16 items-center">
+                            <div class="flex gap--16 items-center w--100-responsive-mobile w--100-responsive-mobile-portrait">
                                 <!-- Grid and LIst Tab Section -->
                                 <div data-tabs-container="1"
                                     class="w--100-responsive-mobile w--100-responsive-mobile-portrait display--none-responsive-mobile display--none-responsive-mobile-portrait"
@@ -6074,7 +6103,7 @@
                                             <li data-tabbed-scrollable-menu="0" data-tabbed-child-id="grid-tabbed-content"
                                                 data-attribute-run-once="1" data-target="grid-tab" data-flag="grid"
                                                 data-status="grid" data-offset="5" data-per_page="5"
-                                                class="flex justify-center items-center gap--8 flex--max-responsive-tablet flex--max-responsive-mobile flex--max-responsive-mobile-portrait">
+                                                class="flex justify-center items-center gap--8 flex--max-responsive-tablet flex--max-responsive-mobile flex--max-responsive-mobile-portrait active">
                                                 <a href="#"
                                                     class="w-100 inline-flex justify-center items-center gap--8 gap--4-responsive-mobile gap--4-responsive-mobile-portrait pointer w-100 pad--y--8 pad--x--16 pad--8-responsive-mobile pad--8-responsive-mobile-portrait"
                                                     tab-trigger="1">
@@ -6089,7 +6118,7 @@
                                             <li data-tabbed-scrollable-menu="0" data-tabbed-child-id="list-tabbed-content"
                                                 data-attribute-run-once="1" data-target="list-tab" data-flag="list"
                                                 data-status="list" data-offset="0" data-per_page="5"
-                                                class="flex justify-center items-center gap--8 bl br--col--mischka-gray flex--max-responsive-tablet flex--max-responsive-mobile flex--max-responsive-mobile-portrait active">
+                                                class="flex justify-center items-center gap--8 bl br--col--mischka-gray flex--max-responsive-tablet flex--max-responsive-mobile flex--max-responsive-mobile-portrait">
                                                 <a href="#"
                                                     class="inline-flex justify-center items-center gap--8 gap--4-responsive-mobile gap--4-responsive-mobile-portrait pointer w-100 pad--y--8 pad--x--16 pad--8-responsive-mobile pad--8-responsive-mobile-portrait"
                                                     tab-trigger="1">
@@ -6228,30 +6257,26 @@
                         class="h-100  pad--x--0-responsive-tablet pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait"> <!-- pad--x--24 -->
                         <!-- first tab content items -->
                         <div data-tabbed-content="grid-tabbed-content" data-target="grid-tab"
-                            class="flex flex-column justify-start items-start gap--16 flex-auto mt--8-neg active">
+                            class="flex flex-column justify-start items-start gap--16 flex-auto mt--8-neg pad--x--16-responsive-tablet pad--x--16-responsive-mobile pad--x--8-responsive-mobile-portrait pad--x--24 active" style="display: flex !important;">
                             <!-- Tabs Content -->
                             <div data-tabs-content="2" class="w-100 h-100">
                                 <!-- first tab content items -->
-                                <div data-tabbed-content="tabbed-content-first-tab-no" data-target="first-tab"
-                                    class="flex flex-column justify-start items-start gap--16 flex-auto mt--8-neg">
+                                <div data-target="first-tab"
+                                    class="flex flex-column justify-start items-start gap--16 flex-auto mt--8-neg"> 
                                     <!-- Media Grid View -->
                                     <div
-                                        class="w-100 grid gap--16 gap--2-responsive-tablet gap--2-responsive-mobile gap--2-responsive-mobile-portrait grid--cols--4 grid--cols--2-responsive-tablet grid--cols--2-responsive-mobile grid--cols--2-responsive-mobile-portrait pad--2-responsive-mobile pad--2-responsive-mobile-portrait">
+                                        class="w-100 grid gap--16 gap--2-responsive-tablet gap--2-responsive-mobile gap--2-responsive-mobile-portrait  pad--2-responsive-mobile pad--2-responsive-mobile-portrait
+                                        
+                                        grid--cols--4
+                                        grid--cols--2-responsive-tablet
+                                        grid--cols--2-responsive-mobile grid--cols--2-responsive-mobile-portrait
+
+                                        ">
                                         <!-- Media Grid Item -->
                                         <div class="br--4 pointer relative">
                                             <div class="relative aspect--ratio--16-9">
-                                                <img src="../assets/images/grid-thumb-1.svg" alt="" class="w-100" />
-                                            </div>
-                                            <!-- Video tag -->
-                                            <div
-                                                class="absolute left-0 top-0 bg--col--trans-dark-black-70 pad--x--4 pad--y--1 flex items-center justify-center gap--3">
-                                                <span class="fs--12 lh--normal white tracked--0-12">video</span>
-                                                <span>
-                                                    <img src="../assets/icons/play-square.svg" alt=""
-                                                        class="w--16 h--16 filter--col--white">
-                                                </span>
-                                            </div>
-                                            <!-- End Video tag -->
+                                                <img src="../assets/images/merch-media-01.jpg" alt="" class="w-100" />
+                                            </div> 
                                             <!-- Reviewing Tag -->
                                             <div data-status-type="reviewing" class="absolute left-0 bottom-0 flex">
                                                 <span
@@ -6270,138 +6295,9 @@
                                         <!-- Media Grid Item -->
                                         <div class="br--4 pointer relative">
                                             <div class="relative aspect--ratio--16-9">
-                                                <img src="../assets/images/grid-thumb-2.svg" alt="" class="w-100" />
+                                                <img src="../assets/images/merch-media-02.jpg" alt="" class="w-100" />
                                             </div>
-                                            <!-- Video tag -->
-                                            <div
-                                                class="absolute left-0 top-0 bg--col--trans-dark-black-70 pad--x--4 pad--y--1 flex items-center justify-center gap--3">
-                                                <span class="fs--12 lh--normal white tracked--0-12">video</span>
-                                                <span>
-                                                    <img src="../assets/icons/play-square.svg" alt=""
-                                                        class="w--16 h--16 filter--col--white">
-                                                </span>
-                                            </div>
-                                            <!-- End Video tag -->
-                                            <!-- Reviewing Tag -->
-                                            <div data-status-type="reviewing" class="absolute left-0 bottom-0 flex">
-                                                <span
-                                                    class="pad--4 bg--blur--10 flex items-center justify-center gap--8 bg--col--my-sin">
-                                                    <img src="../assets/icons/credit-card-search.svg" alt=""
-                                                        class="w--16 h--16 filter--col--black" />
-                                                </span>
-                                                <span
-                                                    class="pad--y--3 pad--x--6 flex items-center justify-center gap--8 bg-black fs--12 fw5 lh--18 col--my-sin">
-                                                    Reviewing
-                                                </span>
-                                            </div>
-                                            <!-- End Reviewing Tag -->
-                                        </div>
-                                        <!-- End Media Grid Item -->
-                                        <!-- Media Grid Item -->
-                                        <div class="br--4 pointer relative">
-                                            <div class="relative aspect--ratio--16-9">
-                                                <img src="../assets/images/grid-thumb-3.svg" alt="" class="w-100" />
-                                            </div>
-                                            <!-- Video tag -->
-                                            <div
-                                                class="absolute left-0 top-0 bg--col--trans-dark-black-70 pad--x--4 pad--y--1 flex items-center justify-center gap--3">
-                                                <span class="fs--12 lh--normal white tracked--0-12">video</span>
-                                                <span>
-                                                    <img src="../assets/icons/play-square.svg" alt=""
-                                                        class="w--16 h--16 filter--col--white">
-                                                </span>
-                                            </div>
-                                            <!-- End Video tag -->
-                                            <!-- Published Tag -->
-                                            <div data-status-type="published" class="absolute left-0 bottom-0 flex">
-                                                <span
-                                                    class="pad--4 bg--blur--10 flex items-center justify-center gap--8 bg--col-brand-green">
-                                                    <img src="../assets/icons/upload-cloud-01.svg" alt=""
-                                                        class="w--16 h--16 filter--col--black" />
-                                                </span>
-                                                <span
-                                                    class="pad--y--3 pad--x--6 flex items-center justify-center gap--8 bg-black fs--12 fw5 lh--18 col-brand-green">
-                                                    Published
-                                                </span>
-                                            </div>
-                                            <!-- End Published Tag -->
-                                        </div>
-                                        <!-- End Media Grid Item -->
-                                        <!-- Media Grid Item -->
-                                        <div class="br--4 pointer relative">
-                                            <div class="relative aspect--ratio--16-9">
-                                                <img src="../assets/images/grid-thumb-1.svg" alt="" class="w-100" />
-                                            </div>
-                                            <!-- Video tag -->
-                                            <div
-                                                class="absolute left-0 top-0 bg--col--trans-dark-black-70 pad--x--4 pad--y--1 flex items-center justify-center gap--3">
-                                                <span class="fs--12 lh--normal white tracked--0-12">video</span>
-                                                <span>
-                                                    <img src="../assets/icons/play-square.svg" alt=""
-                                                        class="w--16 h--16 filter--col--white">
-                                                </span>
-                                            </div>
-                                            <!-- End Video tag -->
-                                            <!-- Published Tag -->
-                                            <div data-status-type="reviewing" class="absolute left-0 bottom-0 flex">
-                                                <span
-                                                    class="pad--4 bg--blur--10 flex items-center justify-center gap--8 bg--col-brand-green">
-                                                    <img src="../assets/icons/upload-cloud-01.svg" alt=""
-                                                        class="w--16 h--16 filter--col--black" />
-                                                </span>
-                                                <span
-                                                    class="pad--y--3 pad--x--6 flex items-center justify-center gap--8 bg-black fs--12 fw5 lh--18 col-brand-green">
-                                                    Published
-                                                </span>
-                                            </div>
-                                            <!-- End Published Tag -->
-                                        </div>
-                                        <!-- End Media Grid Item -->
-                                        <!-- Media Grid Item -->
-                                        <div class="br--4 pointer relative">
-                                            <div class="relative aspect--ratio--16-9">
-                                                <img src="../assets/images/grid-thumb-4.svg" alt="" class="w-100" />
-                                            </div>
-                                            <!-- Video tag -->
-                                            <div
-                                                class="absolute left-0 top-0 bg--col--trans-dark-black-70 pad--x--4 pad--y--1 flex items-center justify-center gap--3">
-                                                <span class="fs--12 lh--normal white tracked--0-12">video</span>
-                                                <span>
-                                                    <img src="../assets/icons/play-square.svg" alt=""
-                                                        class="w--16 h--16 filter--col--white">
-                                                </span>
-                                            </div>
-                                            <!-- End Video tag -->
-                                            <!-- Published Tag -->
-                                            <div data-status-type="reviewing" class="absolute left-0 bottom-0 flex">
-                                                <span
-                                                    class="pad--4 bg--blur--10 flex items-center justify-center gap--8 bg--col-brand-green">
-                                                    <img src="../assets/icons/upload-cloud-01.svg" alt=""
-                                                        class="w--16 h--16 filter--col--black" />
-                                                </span>
-                                                <span
-                                                    class="pad--y--3 pad--x--6 flex items-center justify-center gap--8 bg-black fs--12 fw5 lh--18 col-brand-green">
-                                                    Published
-                                                </span>
-                                            </div>
-                                            <!-- End Published Tag -->
-                                        </div>
-                                        <!-- End Media Grid Item -->
-                                        <!-- Media Grid Item -->
-                                        <div class="br--4 pointer relative">
-                                            <div class="relative aspect--ratio--16-9">
-                                                <img src="../assets/images/grid-thumb-1.svg" alt="" class="w-100" />
-                                            </div>
-                                            <!-- Video tag -->
-                                            <div
-                                                class="absolute left-0 top-0 bg--col--trans-dark-black-70 pad--x--4 pad--y--1 flex items-center justify-center gap--3">
-                                                <span class="fs--12 lh--normal white tracked--0-12">video</span>
-                                                <span>
-                                                    <img src="../assets/icons/play-square.svg" alt=""
-                                                        class="w--16 h--16 filter--col--white">
-                                                </span>
-                                            </div>
-                                            <!-- End Video tag -->
+                                             
                                             <!-- Draft Tag -->
                                             <div data-status-type="draft" class="absolute left-0 bottom-0 flex">
                                                 <span
@@ -6420,19 +6316,20 @@
                                         <!-- Media Grid Item -->
                                         <div class="br--4 pointer relative">
                                             <div class="relative aspect--ratio--16-9">
-                                                <img src="../assets/images/grid-thumb-2.svg" alt=""
-                                                    class="w-100 filter--blur--2" />
+                                                <img src="../assets/images/merch-media-03.jpg" alt=""
+                                                    class="w-100" />
                                             </div>
-                                            <!-- Video tag -->
-                                            <div
-                                                class="absolute left-0 top-0 bg--col--trans-dark-black-70 pad--x--4 pad--y--1 flex items-center justify-center gap--3">
-                                                <span class="fs--12 lh--normal white tracked--0-12">video</span>
-                                                <span>
-                                                    <img src="../assets/icons/play-square.svg" alt=""
-                                                        class="w--16 h--16 filter--col--white">
-                                                </span>
+                                            <!-- Subscriber Only PRE-ORDER -->
+                                            <div class="absolute flex gap--2 top-0 right-0">
+                                                <div
+                                                    class="h--20 pad--x--4 flex items-center bg-black">
+                                                    <span class="fs--12 fw5 lh--18 col-brand-green">Subscriber Only</span>
+                                                </div>
+                                                <div class="h--20 pad--x--4 flex items-center bg-black">
+                                                    <span class="fs--12 fw5 lh--18 col--cyan">PRE-ORDER</span>
+                                                </div>
                                             </div>
-                                            <!-- End Video tag -->
+                                            <!-- End Subscriber Only PRE-ORDER  -->
                                             <!-- Published Tag -->
                                             <div data-status-type="published" class="absolute left-0 bottom-0 flex">
                                                 <span
@@ -6446,74 +6343,23 @@
                                                 </span>
                                             </div>
                                             <!-- End Published Tag -->
-                                            <!-- Contrast Tag -->
-                                            <div
-                                                class="absolute top-0 right-0 h--20 pad--x--2 flex items-center justify-center gap--3 bg--col--light-gray-234-70">
-                                                <span>
-                                                    <img src="../assets/icons/contrast-01.svg"
-                                                        class="w--16 h--16 filter--col--ebony--variation-2">
-                                                </span>
-                                                <span class="fs--12 fw5 lh--18 col--ebony--variation-2">100px</span>
-                                            </div>
-                                            <!-- End Contrast Tag -->
+                                            
                                         </div>
                                         <!-- End Media Grid Item -->
                                         <!-- Media Grid Item -->
                                         <div class="br--4 pointer relative">
                                             <div class="relative aspect--ratio--16-9">
-                                                <img src="../assets/images/grid-thumb-1.svg" alt=""
-                                                    class="w-100 filter--blur--2" />
+                                                <img src="../assets/images/merch-media-04.jpg" alt=""
+                                                    class="w-100" />
                                             </div>
-                                            <!-- Video tag -->
-                                            <div
-                                                class="absolute left-0 top-0 bg--col--trans-dark-black-70 pad--x--4 pad--y--1 flex items-center justify-center gap--3">
-                                                <span class="fs--12 lh--normal white tracked--0-12">video</span>
-                                                <span>
-                                                    <img src="../assets/icons/play-square.svg" alt=""
-                                                        class="w--16 h--16 filter--col--white">
-                                                </span>
+                                            <!-- Subscriber Only PRE-ORDER -->
+                                            <div class="absolute flex gap--2 top-0 right-0">
+                                                <div
+                                                    class="h--20 pad--x--4 flex items-center bg-black">
+                                                    <span class="fs--12 fw5 lh--18 col-brand-green">Subscriber Only</span>
+                                                </div>
                                             </div>
-                                            <!-- End Video tag -->
-                                            <!-- Published Tag -->
-                                            <div data-status-type="published" class="absolute left-0 bottom-0 flex">
-                                                <span
-                                                    class="pad--4 bg--blur--10 flex items-center justify-center gap--8 bg--col-brand-green">
-                                                    <img src="../assets/icons/upload-cloud-01.svg" alt=""
-                                                        class="w--16 h--16 filter--col--black" />
-                                                </span>
-                                                <span
-                                                    class="pad--y--3 pad--x--6 flex items-center justify-center gap--8 bg-black fs--12 fw5 lh--18 col-brand-green">
-                                                    Published
-                                                </span>
-                                            </div>
-                                            <!-- End Published Tag -->
-                                            <!-- Contrast Tag -->
-                                            <div
-                                                class="absolute top-0 right-0 h--20 pad--x--2 flex items-center justify-center gap--3 bg--col--light-gray-234-70">
-                                                <span>
-                                                    <img src="../assets/icons/contrast-01.svg"
-                                                        class="w--16 h--16 filter--col--ebony--variation-2">
-                                                </span>
-                                                <span class="fs--12 fw5 lh--18 col--ebony--variation-2">50px</span>
-                                            </div>
-                                            <!-- End Contrast Tag -->
-                                        </div>
-                                        <!-- End Media Grid Item -->
-                                        <!-- Media Grid Item -->
-                                        <div class="br--4 pointer relative">
-                                            <div class="relative aspect--ratio--16-9">
-                                                <img src="../assets/images/grid-thumb-2.svg" alt="" class="w-100" />
-                                            </div>
-                                            <!-- Video tag -->
-                                            <div
-                                                class="absolute left-0 top-0 bg--col--trans-dark-black-70 pad--x--4 pad--y--1 flex items-center justify-center gap--3">
-                                                <span class="fs--12 lh--normal white tracked--0-12">video</span>
-                                                <span>
-                                                    <img src="../assets/icons/play-square.svg" alt=""
-                                                        class="w--16 h--16 filter--col--white">
-                                                </span>
-                                            </div>
-                                            <!-- End Video tag -->
+                                            <!-- End Subscriber Only PRE-ORDER  -->
                                             <!-- Published Tag -->
                                             <div data-status-type="published" class="absolute left-0 bottom-0 flex">
                                                 <span
@@ -6532,18 +6378,15 @@
                                         <!-- Media Grid Item -->
                                         <div class="br--4 pointer relative">
                                             <div class="relative aspect--ratio--16-9">
-                                                <img src="../assets/images/grid-thumb-5.svg" alt="" class="w-100" />
+                                                <img src="../assets/images/merch-media-05.jpg" alt="" class="w-100" />
                                             </div>
-                                            <!-- Video tag -->
-                                            <div
-                                                class="absolute left-0 top-0 bg--col--trans-dark-black-70 pad--x--4 pad--y--1 flex items-center justify-center gap--3">
-                                                <span class="fs--12 lh--normal white tracked--0-12">video</span>
-                                                <span>
-                                                    <img src="../assets/icons/play-square.svg" alt=""
-                                                        class="w--16 h--16 filter--col--white">
-                                                </span>
+                                            <!-- Subscriber Only PRE-ORDER -->
+                                            <div class="absolute flex gap--2 top-0 right-0"> 
+                                                <div class="h--20 pad--x--4 flex items-center bg-black">
+                                                    <span class="fs--12 fw5 lh--18 col--cyan">PRE-ORDER</span>
+                                                </div>
                                             </div>
-                                            <!-- End Video tag -->
+                                            <!-- End Subscriber Only PRE-ORDER  -->
                                             <!-- Published Tag -->
                                             <div data-status-type="published" class="absolute left-0 bottom-0 flex">
                                                 <span
@@ -6562,18 +6405,55 @@
                                         <!-- Media Grid Item -->
                                         <div class="br--4 pointer relative">
                                             <div class="relative aspect--ratio--16-9">
-                                                <img src="../assets/images/grid-thumb-1.svg" alt="" class="w-100" />
+                                                <img src="../assets/images/merch-media-06.jpg" alt="" class="w-100" />
                                             </div>
-                                            <!-- Video tag -->
-                                            <div
-                                                class="absolute left-0 top-0 bg--col--trans-dark-black-70 pad--x--4 pad--y--1 flex items-center justify-center gap--3">
-                                                <span class="fs--12 lh--normal white tracked--0-12">video</span>
-                                                <span>
-                                                    <img src="../assets/icons/play-square.svg" alt=""
-                                                        class="w--16 h--16 filter--col--white">
+                                            <!-- Subscriber Only PRE-ORDER -->
+                                            <div class="absolute flex gap--2 top-0 right-0">
+                                                <div
+                                                    class="h--20 pad--x--4 flex items-center bg-black">
+                                                    <span class="fs--12 fw5 lh--18 col-brand-green">Subscriber Only</span>
+                                                </div> 
+                                            </div>
+                                            <!-- End Subscriber Only PRE-ORDER  -->
+
+                                            <!-- Subscriber Only PRE-ORDER -->
+                                            <div class="absolute flex gap--2 bottom-0 right-0"> 
+                                                <div class="h--20 pad--x--4 flex items-center bg--col--vermilion">
+                                                    <span class="fs--12 fw5 lh--18 white">Low in stock</span>
+                                                </div>
+                                            </div>
+                                            <!-- End Subscriber Only PRE-ORDER  -->
+
+                                            <!-- Published Tag -->
+                                            <div data-status-type="published" class="absolute left-0 bottom-0 flex">
+                                                <span
+                                                    class="pad--4 bg--blur--10 flex items-center justify-center gap--8 bg--col-brand-green">
+                                                    <img src="../assets/icons/upload-cloud-01.svg" alt=""
+                                                        class="w--16 h--16 filter--col--black" />
+                                                </span>
+                                                <span
+                                                    class="pad--y--3 pad--x--6 flex items-center justify-center gap--8 bg-black fs--12 fw5 lh--18 col-brand-green">
+                                                    Published
                                                 </span>
                                             </div>
-                                            <!-- End Video tag -->
+                                            <!-- End Published Tag -->
+                                        </div>
+                                        <!-- End Media Grid Item -->
+                                         <!-- Media Grid Item -->
+                                        <div class="br--4 pointer relative">
+                                            <div class="relative aspect--ratio--16-9">
+                                                <img src="../assets/images/merch-media-01.jpg" alt="" class="w-100" />
+                                            </div>
+                                            <!-- Subscriber Only SALE -->
+                                            <div class="absolute flex gap--2 top-0 right-0">
+                                                <div class="h--20 pad--x--4 flex items-center bg-black">
+                                                    <span class="fs--12 fw5 lh--18 col-brand-green">Subscriber Only</span>
+                                                </div>
+                                                <div class="h--20 pad--x--4 flex items-center bg-black">
+                                                    <span class="fs--12 fw5 lh--18 col-sale">SALE</span>
+                                                </div>
+                                            </div>
+                                            <!-- End Subscriber Only SALE -->
                                             <!-- Published Tag -->
                                             <div data-status-type="published" class="absolute left-0 bottom-0 flex">
                                                 <span
@@ -6592,18 +6472,18 @@
                                         <!-- Media Grid Item -->
                                         <div class="br--4 pointer relative">
                                             <div class="relative aspect--ratio--16-9">
-                                                <img src="../assets/images/grid-thumb-2.svg" alt="" class="w-100" />
+                                                <img src="../assets/images/merch-media-02.jpg" alt="" class="w-100" />
                                             </div>
-                                            <!-- Video tag -->
-                                            <div
-                                                class="absolute left-0 top-0 bg--col--trans-dark-black-70 pad--x--4 pad--y--1 flex items-center justify-center gap--3">
-                                                <span class="fs--12 lh--normal white tracked--0-12">video</span>
-                                                <span>
-                                                    <img src="../assets/icons/play-square.svg" alt=""
-                                                        class="w--16 h--16 filter--col--white">
-                                                </span>
+                                            <!-- Subscriber Only SALE -->
+                                            <div class="absolute flex gap--2 top-0 right-0">
+                                                <div class="h--20 pad--x--4 flex items-center bg-black">
+                                                    <span class="fs--12 fw5 lh--18 col-brand-green">Subscriber Only</span>
+                                                </div>
+                                                <div class="h--20 pad--x--4 flex items-center bg-black">
+                                                    <span class="fs--12 fw5 lh--18 col-sale">SALE</span>
+                                                </div>
                                             </div>
-                                            <!-- End Video tag -->
+                                            <!-- End Subscriber Only SALE -->
                                             <!-- Published Tag -->
                                             <div data-status-type="published" class="absolute left-0 bottom-0 flex">
                                                 <span
@@ -6619,47 +6499,7 @@
                                             <!-- End Published Tag -->
                                         </div>
                                         <!-- End Media Grid Item -->
-                                        <!-- Media Grid Item -->
-                                        <div class="br--4 pointer relative">
-                                            <div class="relative aspect--ratio--16-9">
-                                                <img src="../assets/images/grid-thumb-1.svg" alt=""
-                                                    class="w-100 filter--blur--2" />
-                                            </div>
-                                            <!-- Video tag -->
-                                            <div
-                                                class="absolute left-0 top-0 bg--col--trans-dark-black-70 pad--x--4 pad--y--1 flex items-center justify-center gap--3">
-                                                <span class="fs--12 lh--normal white tracked--0-12">video</span>
-                                                <span>
-                                                    <img src="../assets/icons/play-square.svg" alt=""
-                                                        class="w--16 h--16 filter--col--white">
-                                                </span>
-                                            </div>
-                                            <!-- End Video tag -->
-                                            <!-- Published Tag -->
-                                            <div data-status-type="published" class="absolute left-0 bottom-0 flex">
-                                                <span
-                                                    class="pad--4 bg--blur--10 flex items-center justify-center gap--8 bg--col-brand-green">
-                                                    <img src="../assets/icons/upload-cloud-01.svg" alt=""
-                                                        class="w--16 h--16 filter--col--black" />
-                                                </span>
-                                                <span
-                                                    class="pad--y--3 pad--x--6 flex items-center justify-center gap--8 bg-black fs--12 fw5 lh--18 col-brand-green">
-                                                    Published
-                                                </span>
-                                            </div>
-                                            <!-- End Published Tag -->
-                                            <!-- Contrast Tag -->
-                                            <div
-                                                class="absolute top-0 right-0 h--20 pad--x--2 flex items-center justify-center gap--3 bg--col--light-gray-234-70">
-                                                <span>
-                                                    <img src="../assets/icons/contrast-01.svg"
-                                                        class="w--16 h--16 filter--col--ebony--variation-2">
-                                                </span>
-                                                <span class="fs--12 fw5 lh--18 col--ebony--variation-2">50px</span>
-                                            </div>
-                                            <!-- End Contrast Tag -->
-                                        </div>
-                                        <!-- End Media Grid Item -->
+                                        
                                     </div>
                                     <!-- End Media Grid View -->
                                 </div>
@@ -6675,9 +6515,9 @@
 
                         <!-- second tab content items -->
                         <div data-tabbed-content="list-tabbed-content" data-target="list-tab"
-                            class="flex-column justify-start items-start gap--16 flex-auto mt--8-neg dn active" style="display: flex !important;">
+                            class="flex-column justify-start items-start gap--16 flex-auto mt--8-neg dn">
                             <!-- Media Table View -->
-                                    <div data-table-container="media-table-view" class="w-100 relative overflow-x-auto w--85vw-responsive-tablet">
+                                    <div data-table-container="media-table-view" class="w-100 relative overflow-x-auto">
                                         <table data-table-for="media-table-view" class="w-100">
                                             <thead>
                                                 <tr>
@@ -6717,7 +6557,7 @@
                                             <tbody>
 
                                                 <tr class="bg--col--athens-gray-3--50 hide-child">
-                                                    <td class="v-mid w--p--8 sticky--responsive-tablet left-0 z--10000-responsive-tablet">
+                                                    <td class="v-mid w--p--8 sticky left-0 z--10000">
                                                         <!-- Media Image -->
                                                         <div class="w--200 h--112 bb br--col--athens-gray-2 relative w--177-responsive-tablet h--100-responsive-tablet">
                                                             <!-- Image Item -->
@@ -6850,7 +6690,7 @@
                                                 </tr>
 
                                                 <tr class="hide-child">
-                                                    <td class="v-mid w--p--8 sticky--responsive-tablet left-0 z--10000-responsive-tablet">
+                                                    <td class="v-mid w--p--8 sticky left-0 z--10000">
                                                         <!-- Media Image -->
                                                         <div class="w--200 h--112 bb br--col--athens-gray-2 relative w--177-responsive-tablet h--100-responsive-tablet">
                                                             <!-- Image Item -->
@@ -6958,7 +6798,7 @@
                                                 </tr>
 
                                                 <tr class="bg--col--athens-gray-3--50 hide-child">
-                                                    <td class="v-mid w--p--8 sticky--responsive-tablet left-0 z--10000-responsive-tablet">
+                                                    <td class="v-mid w--p--8 sticky left-0 z--10000">
                                                         <!-- Media Image -->
                                                         <div class="w--200 h--112 bb br--col--athens-gray-2 relative w--177-responsive-tablet h--100-responsive-tablet">
                                                             <!-- Image Item -->
@@ -7066,7 +6906,7 @@
                                                 </tr>
                                                 
                                                 <tr class="hide-child">
-                                                    <td class="v-mid w--p--8 sticky--responsive-tablet left-0 z--10000-responsive-tablet">
+                                                    <td class="v-mid w--p--8 sticky left-0 z--10000">
                                                         <!-- Media Image -->
                                                         <div class="w--200 h--112 bb br--col--athens-gray-2 relative w--177-responsive-tablet h--100-responsive-tablet">
                                                             <!-- Image Item -->
@@ -7171,7 +7011,7 @@
                                                 </tr>
 
                                                 <tr class="bg--col--athens-gray-3--50 hide-child">
-                                                    <td class="v-mid w--p--8 sticky--responsive-tablet left-0 z--10000-responsive-tablet">
+                                                    <td class="v-mid w--p--8 sticky left-0 z--10000">
                                                         <!-- Media Image -->
                                                         <div class="w--200 h--112 bb br--col--athens-gray-2 relative w--177-responsive-tablet h--100-responsive-tablet">
                                                             <!-- Image Item -->
@@ -7279,7 +7119,7 @@
                                                 </tr>
 
                                                 <tr class="hide-child">
-                                                    <td class="v-mid w--p--8 sticky--responsive-tablet left-0 z--10000-responsive-tablet">
+                                                    <td class="v-mid w--p--8 sticky left-0 z--10000">
                                                         <!-- Media Image -->
                                                         <div class="w--200 h--112 bb br--col--athens-gray-2 relative w--177-responsive-tablet h--100-responsive-tablet">
                                                             <!-- Image Item -->
@@ -7396,6 +7236,8 @@
                     <!-- End Grid and List Tabs Content -->
 
                 </div> <!-- End Inner Container -->
+
+                
             </main>
             <!-- /main section -->
 
