@@ -784,7 +784,6 @@ class DashSidebarMenuAdjuster {
 		// move items back to menu panel if window width is less than or equal to 767px
 		if (window.innerWidth <= 767) {
       this.restoreMenu();
-	  console.error('restored');
     } 
 		else {
 			 // get current window height again (in case window has resized and the value changed)
@@ -800,7 +799,6 @@ class DashSidebarMenuAdjuster {
 			else {
 				this.floatingPanel.dataset.positionLower = '4rem';
 			}
-			console.error('removed', this.floatingPanel);
 
 			// recalculate number of possible visible main items inside menu panel (in case window has resized and the value changed)
 			this.maxVisibleItems = Math.floor((this.windowHeight - this.otherElementsHeight) / this.menuItemHeight);
