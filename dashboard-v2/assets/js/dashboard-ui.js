@@ -1225,6 +1225,13 @@ class DashToggleSwitch {
 	 */
   handleChange() {
     const isChecked = this.input.checked;
+    if(this.element.dataset.hideShowSection){
+    	document.querySelectorAll(`[data-section="${this.element.dataset.hideShowSection}"]`).forEach(element=>{
+    		if(this.input.checked == true) {
+    			element.classList.add("active");
+    		}
+    	});
+    }
 		
 		// do any additional stuff if needed
 		//console.log('Switch is on: ', isChecked);

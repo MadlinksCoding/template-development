@@ -390,3 +390,13 @@
 
 
 /* Pointer Events */
+
+
+
+/* share settings switch check hide and show */
+[data-share-settings-container] [data-section="hide-show-section"] {
+	display: none;
+}
+[data-share-settings-container] [data-section="hide-show-section"].active{
+	display: flex;
+}

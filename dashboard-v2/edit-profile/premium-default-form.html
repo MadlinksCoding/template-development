@@ -6391,7 +6391,7 @@
                                     </div>
                                     <!-- End Tip Message Section -->
                                     <!-- Share Settings Section -->
-                                    <div class="flex flex-column gap--16">
+                                    <div data-share-settings-container class="flex flex-column gap--16">
                                         <!-- Title -->
                                         <span class="fs--14 fw7 lh--20 col--pale-sky">Share Settings</span>
                                         <!-- End Title -->
@@ -6407,11 +6407,11 @@
                                                         <!-- toggle container -->
                                                         <div class="flex">
                                                             <!-- toggle switch (switch size = ['default', 'small'] / switch theme = ['default', 'light', 'dark']) -->
-                                                            <label data-switch="" data-switch-size="small"
+                                                            <label data-hide-show-section="hide-show-section" data-switch="" data-switch-size="small"
                                                                 data-switch-theme="dark" data-switch-for=""
                                                                 data-throw-event="fs-evt-eventname">
                                                                 <input type="checkbox" value="switch_slide"
-                                                                    name="switch_slide" class="dn" checked>
+                                                                    name="switch_slide" class="dn">
                                                                 <span data-switch-slide="" class="db"></span>
                                                             </label>
                                                             <!-- /toggle switch -->
@@ -6449,8 +6449,50 @@
                                                 </div>
                                                 <!-- /toggle -->
                                                 <!-- End Toggle Switch -->
+                                                <!-- Input Field -->
+                                                    <div data-section="hide-show-section" class="flex flex-column gap--8">
+                                                        <span class="fs--14 fw6 lh--20 col--ebony--variation-2">Post Message
+                                                            (Leave blank to use system default message.)</span>
+                                                        <div
+                                                            class="pad--x--14 pad--y--10 gap--8 br--2 br--bottom--left--right bb br--col--mischka-gray bg-white-30 sh--7 relative">
+                                                            <input type="text" placeholder="I got some lovely tips from @username..."
+                                                                class="w-100 bn flex-auto fs--16 lh--24 col--pale-sky" />
+                                                        </div>
+                                                        <span class="fs--14 lh--20 col--fiord">66/72 characters</span>
+                                                        <!-- Show Fans Checkbox -->
+                                                        <div class="flex justify-start items-start c--pointer flex-column  "
+                                                        data-form-input-type="checkbox" data-form-input-layout="vertical"
+                                                        data-form-accent-color="green">
+
+                                                            <label
+                                                                class="flex flex-row items-center justify-start flex-shrink-0 gap10 gap--8 c--pointer">
+                                                                <input name="ppv" value="yes" type="checkbox" data-name="ppv"
+                                                                    data-fetch-on-change="1" data-show-save-on-change="1" checked
+                                                                    >
+                                                                <span
+                                                                    class="fs--14 lh--20 col--ebony--variation-2 c--pointer">Show fan’s username on your post</span>
+                                                                    <span class="flex justify-center items-center">
+                                                                        <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
+                                                                        <div data-tooltip data-tooltip-arrow="true"
+                                                                            data-tooltip-position="bottom center" data-tooltip-size="large"
+                                                                            data-tooltip-theme="dark" class="relative z-5 pointer">
+                                                                            <img src="../assets/images/help-circle.svg" alt=""
+                                                                                class="w--16 h--16 filter--col--pale-sky pointer-events-none">
+
+                                                                            <div data-tooltip-text data-tooltip-content>
+                                                                                <span class="fs--12 fw5 lh--18 white">
+                                                                                    Fan who tips anonymously will be recognized as '@anonymous'.
+                                                                                </span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <!-- /tooltip -->
+                                                                    </span>
+                                                            </label>
+                                                        </div>
+                                                        <!-- End Show Fans Checkbox -->
+                                                    </div><!-- End Input Field -->
                                                 <!-- Attach Media -->
-                                                <div data-section="attach-media" class="flex flex-column gap--8">
+                                                <div data-section="hide-show-section" class="flex flex-column gap--8">
                                                     <span class="fs--14 fw6 lh--20 col--ebony--variation-2">Attach
                                                         Media</span>
                                                     <!-- radio group -->
@@ -6487,7 +6529,7 @@
                                                 </div><!-- End Attach Media -->
                                             </div><!-- End Share options content -->
                                             <!-- Post preview -->
-                                            <div class="w--360 w--282-responsive-tablet w--100-responsive-mobile w--100-responsive-mobile-portrait h--177-responsive-mobile h--177-responsive-mobile-portrait flex flex-column gap--8">
+                                            <div data-section="hide-show-section" class="w--360 w--282-responsive-tablet w--100-responsive-mobile w--100-responsive-mobile-portrait h--177-responsive-mobile h--177-responsive-mobile-portrait flex flex-column gap--8">
                                                 <span class="fs--12 lh--18 col--pale-sky tr">POST PREVIEW</span>
                                                 <div class="relative w-100 br--5 bg-white-70 pad--8 gap--8 flex">
                                                     <!-- User Image -->
@@ -6575,7 +6617,7 @@
             id="pageElements-js"></script>
 
         <!-- Dashboard Sidebar Custom Script -->
-        <script src="assets/js/dashboard-ui.js"></script>
+        <script src="../assets/js/dashboard-ui.js"></script>
     </body>
 
 </html>

@@ -1435,6 +1435,16 @@ html {
   clip-path: polygon(0 0, 100% 0, 88% 105%, 0 105%)
 }
 
+[data-share-settings-container] [data-section=hide-show-section] {
+  display: none
+}
+
+[data-share-settings-container] [data-section=hide-show-section].active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex
+}
+
 [data-container-bg-fixed]:-moz-read-only {
   filter: blur(0);
   -webkit-filter: blur(0);
