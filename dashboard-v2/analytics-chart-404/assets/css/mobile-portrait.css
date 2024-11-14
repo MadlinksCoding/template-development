@@ -116,3 +116,13 @@ html { font-size: 16px; }
 
 /* Nice Select */
 [data-id="order-select"] .nice-select.v1:not(.auto-width) { width: 100%; }
+
+/* Update root font for 375px screen  : task link: https://app.clickup.com/t/86eqqfvxn */
+@media screen and (max-width:375px) {
+  html { font-size: 14px !important }
+}
+
+/* Update root font for 329px screen  : task link: https://app.clickup.com/t/86eqqfvxn */
+@media screen and (max-width:329px) {
+  html { font-size: 12px !important }
+}
