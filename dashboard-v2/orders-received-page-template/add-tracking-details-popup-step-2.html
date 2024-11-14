@@ -6162,798 +6162,763 @@
                             class="h-100 flex flex-column justify-start items-start gap--16 flex-auto mt--8-neg active">
                             <!-- Order Data Section -->
                             <div class="flex flex-column gap--16 flex-auto w-100">
-                                <!-- Table Wrapper -->
-                                <div data-section="table-wrapper"
-                                    class="flex flex-column items-start self-stretch flex-auto ml--16-neg mr--16-neg mr--0-responsive-tablet ml--0-responsive-tablet mr--0-responsive-mobile ml--0-responsive-mobile mr--0-responsive-mobile-portrait ml--0-responsive-mobile-portrait">
-                                    <div data-table-container="subscriptions" class="w-100 subscriptions-container">
-                                        <table data-table-for="order_received-subscriptions" class="w-100">
-                                            <thead>
-                                                <tr>
-                                                    <th
-                                                        class="pad--10 fs--14 fw4 lh--20 col--pale-sky truncate w--72 w--56-responsive-mobile min--h--42 pad--10 bb br--col--pale-sky">
-                                                        Order#
-                                                    </th>
-                                                    <th
-                                                        class="pad--10 fs--14 fw4 lh--20 col--pale-sky truncate w--200 w--50-responsive-mobile w--50-responsive-mobile-portrait min--h--42 pad--10 bb br--col--pale-sky">
-                                                        &nbsp;
-                                                    </th>
-                                                    <th
-                                                        class="pad--10 fs--14 fw4 lh--20 col--pale-sky truncate w--200 min--h--42 pad--10 bb br--col--pale-sky display--none-responsive-mobile display--none-responsive-mobile-portrait">
-                                                        From
-                                                    </th>
-                                                    <th
-                                                        class="pad--10 fs--14 fw4 lh--20 col--pale-sky truncate w--142 min--h--42 pad--10 bb br--col--pale-sky 
-                                                    display--none-responsive-mobile display--none-responsive-mobile-portrait">
-                                                        Status
-                                                    </th>
-                                                    <th
-                                                        class="pad--10 fs--14 fw4 lh--20 col--pale-sky truncate w--180 min--h--42 pad--10 bb br--col--pale-sky display--none-responsive-mobile display--none-responsive-mobile-portrait">
-                                                        Date
-                                                    </th>
-                                                    <th
-                                                        class="pad--10 fs--14 fw4 lh--20 col--pale-sky truncate w--200 min--h--42 pad--10 bb br--col--pale-sky tr">
-                                                        Total
-                                                    </th>
-                                                    <th
-                                                        class="pad--10 fs--14 fw4 lh--20 col--pale-sky truncate tr w--720 w--auto-responsive-tablet min--h--42 pad--10 bb br--col--pale-sky display--none-responsive-tablet display--none-responsive-mobile display--none-responsive-mobile-portrait">
-                                                        &nbsp;
-                                                    </th>
-                                                </tr>
-                                            </thead>
-
-                                            <tbody>
-                                                <tr class="hide-child">
-                                                    <td class="min--h--72 v-mid bg--gd--light-white">
-                                                        <div
-                                                            class="pad--18 pad--x--10-responsive-mobile bg-black flex items-center justify-center">
-                                                            <img src="../assets/icons/merch-icon.svg" alt=""
-                                                                class="w--36 h--36">
-                                                        </div>
-                                                    </td>
-                                                    <td
-                                                        class="min--h--72 pad--10 pad--6-responsive-mobile pad--6-responsive-mobile-portrait v-mid bg--gd--light-white">
-                                                        <a href="javascript: void(0)"
-                                                            class="flex flex-column justify-center items-start gap--2 gap--2 gap--0-responsive-mobile gap--0-responsive-mobile-portrait pointer">
-                                                            <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
-                                                                Merch
-                                                            </span>
-
-                                                            <span
-                                                                class="fs--12 fw4 lh--18 col--oxford-blue truncate display--none-responsive-mobile display--none-responsive-mobile-portrait">
-                                                                #123456
-                                                            </span>
-                                                            <div class="dn dn-responsive-mobile flex-column gap--4">
-                                                                <div class="flex items-center">
-                                                                    <span
-                                                                        class="fs--12 fw4 lh--18 col--oxford-blue truncate">
-                                                                        #123456 &nbsp;
-                                                                    </span>
-                                                                    <span class="fs--12 fw4 lh--18 i col--pale-sky">22
-                                                                        Jan</span>
-                                                                </div>
-                                                                <span class="flex items-center self-stretch gap--5">
-                                                                    <img src="../assets/images/avatar-mango.png" alt=""
-                                                                        class="w--20 h--20">
-                                                                    <span
-                                                                        class="fs--12 fw4 lh--18 col--oxford-blue truncate">
-                                                                        @Mangoes4eva
-                                                                    </span>
-                                                                </span>
-                                                            </div>
-                                                        </a>
-                                                    </td>
-                                                    <td
-                                                        class="min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait bg--gd--light-white">
-                                                        <a href="javascript: void(0)"
-                                                            class="flex flex-column justify-center items-start gap--2 pointer">
-                                                            <span class="flex items-center self-stretch gap--5">
-                                                                <img src="../assets/images/avatar-mango.png" alt=""
-                                                                    class="w--20 h--20">
-                                                                <span
-                                                                    class="fs--12 fw4 lh--18 col--oxford-blue truncate">
-                                                                    @Mangoes4eva
-                                                                </span>
-                                                            </span>
-                                                        </a>
-                                                    </td>
-                                                    <td
-                                                        class="min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait bg--gd--light-white">
-                                                        <div class="flex items-start">
-                                                            <span
-                                                                class="bg--col-turbo-yellow pad--4 flex items-center justify-center bg--blur--10">
-                                                                <img src="../assets/icons/stars-01.svg" alt=""
-                                                                    class="w--16 h--16">
-                                                            </span>
-                                                            <span
-                                                                class="pad--y--3 pad--x--6 gap--8 flex items-center justify-center bg-black bg--blur--10 fs--12 fw5 lh--18 col-turbo-yellow">
-                                                                New
-                                                            </span>
-                                                        </div>
-                                                    </td>
-                                                    <td
-                                                        class="min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait bg--gd--light-white">
-                                                        <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
-                                                            22 Jan 2022
-                                                        </span>
-                                                    </td>
-                                                    <td
-                                                        class="fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 pad--y--8-responsive-mobile pad--y--8-responsive-mobile-portrait v-mid nowrap tr bg--gd--light-white">
-                                                        USD$ 9.99
-                                                    </td>
-                                                    <td
-                                                        class="w--80 w--auto-responsive-tablet min--h--72 v-mid display--none-responsive-tablet display--none-responsive-mobile display--none-responsive-mobile-portrait bg--gd--light-white">
-
-                                                    </td>
-                                                </tr>
-                                                <tr class="hide-child o-50">
-                                                    <td class="min--h--72 v-mid">
-                                                        <div
-                                                            class="pad--18 pad--x--10-responsive-mobile bg-black flex items-center justify-center">
-                                                            <img src="../assets/icons/merch-icon.svg" alt=""
-                                                                class="w--36 h--36">
-                                                        </div>
-                                                    </td>
-                                                    <td
-                                                        class="min--h--72 pad--10 pad--6-responsive-mobile pad--6-responsive-mobile-portrait v-mid">
-                                                        <a href="javascript: void(0)"
-                                                            class="flex flex-column justify-center items-start gap--2 gap--2 gap--0-responsive-mobile gap--0-responsive-mobile-portrait pointer">
-                                                            <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
-                                                                Merch
-                                                            </span>
-
-                                                            <span
-                                                                class="fs--12 fw4 lh--18 col--oxford-blue truncate display--none-responsive-mobile display--none-responsive-mobile-portrait">
-                                                                #123456
-                                                            </span>
-                                                            <div class="dn dn-responsive-mobile flex-column gap--4">
-                                                                <div class="flex items-center">
-                                                                    <span
-                                                                        class="fs--12 fw4 lh--18 col--oxford-blue truncate">
-                                                                        #123456 &nbsp;
-                                                                    </span>
-                                                                    <span class="fs--12 fw4 lh--18 i col--pale-sky">22
-                                                                        Jan</span>
-                                                                </div>
-                                                                <span class="flex items-center self-stretch gap--5">
-                                                                    <img src="../assets/images/avatar-mango.png" alt=""
-                                                                        class="w--20 h--20">
-                                                                    <span
-                                                                        class="fs--12 fw4 lh--18 col--oxford-blue truncate">
-                                                                        @Mangoes4eva
-                                                                    </span>
-                                                                </span>
-                                                            </div>
-                                                        </a>
-                                                    </td>
-                                                    <td
-                                                        class="min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
-                                                        <a href="javascript: void(0)"
-                                                            class="flex flex-column justify-center items-start gap--2 pointer">
-                                                            <span class="flex items-center self-stretch gap--5">
-                                                                <img src="../assets/images/avatar-mango.png" alt=""
-                                                                    class="w--20 h--20">
-                                                                <span
-                                                                    class="fs--12 fw4 lh--18 col--oxford-blue truncate">
-                                                                    @Mangoes4eva
-                                                                </span>
-                                                            </span>
-                                                        </a>
-                                                    </td>
-                                                    <td
-                                                        class="min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
-                                                        <div class="flex items-start">
-                                                            <span
-                                                                class="bg--col-turbo-yellow pad--4 flex items-center justify-center bg--blur--10">
-                                                                <img src="../assets/icons/stars-01.svg" alt=""
-                                                                    class="w--16 h--16">
-                                                            </span>
-                                                            <span
-                                                                class="pad--y--3 pad--x--6 gap--8 flex items-center justify-center bg-black bg--blur--10 fs--12 fw5 lh--18 col-turbo-yellow">
-                                                                New
-                                                            </span>
-                                                        </div>
-                                                    </td>
-                                                    <td
-                                                        class="min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
-                                                        <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
-                                                            22 Jan 2022
-                                                        </span>
-                                                    </td>
-                                                    <td
-                                                        class="fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 pad--y--8-responsive-mobile pad--y--8-responsive-mobile-portrait v-mid nowrap tr">
-                                                        USD$ 9.99
-                                                    </td>
-                                                    <td
-                                                        class="w--80 w--auto-responsive-tablet min--h--72 v-mid display--none-responsive-tablet display--none-responsive-mobile display--none-responsive-mobile-portrait">
-
-                                                    </td>
-                                                </tr>
-                                                <tr class="bg--col--athens-gray-3--50 hide-child o-50">
-                                                    <td class="min--h--72 v-mid">
-                                                        <div
-                                                            class="pad--18 pad--x--10-responsive-mobile bg--col-brand-green flex items-center justify-center">
-                                                            <img src="../assets/icons/shopping-cart-03.svg" alt=""
-                                                                class="w--36 h--36">
-                                                        </div>
-                                                    </td>
-                                                    <td
-                                                        class="min--h--72 pad--10 pad--6-responsive-mobile pad--6-responsive-mobile-portrait v-mid">
-                                                        <a href="javascript: void(0)"
-                                                            class="flex flex-column justify-center items-start gap--2 gap--2 gap--0-responsive-mobile gap--0-responsive-mobile-portrait pointer">
-                                                            <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
-                                                                Merch
-                                                            </span>
-
-                                                            <span
-                                                                class="fs--12 fw4 lh--18 col--oxford-blue truncate display--none-responsive-mobile display--none-responsive-mobile-portrait">
-                                                                #123456
-                                                            </span>
-                                                            <div class="dn dn-responsive-mobile flex-column gap--4">
-                                                                <div class="flex items-center">
-                                                                    <span
-                                                                        class="fs--12 fw4 lh--18 col--oxford-blue truncate">
-                                                                        #123456 &nbsp;
-                                                                    </span>
-                                                                    <span class="fs--12 fw4 lh--18 i col--pale-sky">22
-                                                                        Jan</span>
-                                                                </div>
-                                                                <span class="flex items-center self-stretch gap--5">
-                                                                    <img src="../assets/images/avatar-mango.png" alt=""
-                                                                        class="w--20 h--20">
-                                                                    <span
-                                                                        class="fs--12 fw4 lh--18 col--oxford-blue truncate">
-                                                                        @Mangoes4eva
-                                                                    </span>
-                                                                </span>
-                                                            </div>
-                                                        </a>
-                                                    </td>
-                                                    <td
-                                                        class="min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
-                                                        <a href="javascript: void(0)"
-                                                            class="flex flex-column justify-center items-start gap--2 pointer">
-                                                            <span class="flex items-center self-stretch gap--5">
-                                                                <img src="../assets/images/avatar-mango.png" alt=""
-                                                                    class="w--20 h--20">
-                                                                <span
-                                                                    class="fs--12 fw4 lh--18 col--oxford-blue truncate">
-                                                                    @Mangoes4eva
-                                                                </span>
-                                                            </span>
-                                                        </a>
-                                                    </td>
-                                                    <td
-                                                        class="min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
-                                                        <div class="flex items-start">
-                                                            <span
-                                                                class="bg--col-turbo-yellow pad--4 flex items-center justify-center bg--blur--10">
-                                                                <img src="../assets/icons/stars-01.svg" alt=""
-                                                                    class="w--16 h--16">
-                                                            </span>
-                                                            <span
-                                                                class="pad--y--3 pad--x--6 gap--8 flex items-center justify-center bg-black bg--blur--10 fs--12 fw5 lh--18 col-turbo-yellow">
-                                                                New
-                                                            </span>
-                                                        </div>
-                                                    </td>
-                                                    <td
-                                                        class="min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
-                                                        <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
-                                                            22 Jan 2022
-                                                        </span>
-                                                    </td>
-                                                    <td
-                                                        class="fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 pad--y--8-responsive-mobile pad--y--8-responsive-mobile-portrait v-mid nowrap tr">
-                                                        USD$ 9.99
-                                                    </td>
-                                                    <td
-                                                        class="w--80 w--auto-responsive-tablet min--h--72 v-mid display--none-responsive-tablet display--none-responsive-mobile display--none-responsive-mobile-portrait">
-
-                                                    </td>
-                                                </tr>
-                                                <tr class="hide-child o-50">
-                                                    <td class="min--h--72 v-mid">
-                                                        <div
-                                                            class="pad--18 pad--x--10-responsive-mobile bg--col-brand-green flex items-center justify-center">
-                                                            <img src="../assets/icons/shopping-cart-03.svg" alt=""
-                                                                class="w--36 h--36">
-                                                        </div>
-                                                    </td>
-                                                    <td
-                                                        class="min--h--72 pad--10 pad--6-responsive-mobile pad--6-responsive-mobile-portrait v-mid">
-                                                        <a href="javascript: void(0)"
-                                                            class="flex flex-column justify-center items-start gap--2 gap--2 gap--0-responsive-mobile gap--0-responsive-mobile-portrait pointer">
-                                                            <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
-                                                                Merch
-                                                            </span>
-
-                                                            <span
-                                                                class="fs--12 fw4 lh--18 col--oxford-blue truncate display--none-responsive-mobile display--none-responsive-mobile-portrait">
-                                                                #123456
-                                                            </span>
-                                                            <div class="dn dn-responsive-mobile flex-column gap--4">
-                                                                <div class="flex items-center">
-                                                                    <span
-                                                                        class="fs--12 fw4 lh--18 col--oxford-blue truncate">
-                                                                        #123456 &nbsp;
-                                                                    </span>
-                                                                    <span class="fs--12 fw4 lh--18 i col--pale-sky">22
-                                                                        Jan</span>
-                                                                </div>
-                                                                <span class="flex items-center self-stretch gap--5">
-                                                                    <img src="../assets/images/avatar-mango.png" alt=""
-                                                                        class="w--20 h--20">
-                                                                    <span
-                                                                        class="fs--12 fw4 lh--18 col--oxford-blue truncate">
-                                                                        @Mangoes4eva
-                                                                    </span>
-                                                                </span>
-                                                            </div>
-                                                        </a>
-                                                    </td>
-                                                    <td
-                                                        class="min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
-                                                        <a href="javascript: void(0)"
-                                                            class="flex flex-column justify-center items-start gap--2 pointer">
-                                                            <span class="flex items-center self-stretch gap--5">
-                                                                <img src="../assets/images/avatar-mango.png" alt=""
-                                                                    class="w--20 h--20">
-                                                                <span
-                                                                    class="fs--12 fw4 lh--18 col--oxford-blue truncate">
-                                                                    @Mangoes4eva
-                                                                </span>
-                                                            </span>
-                                                        </a>
-                                                    </td>
-                                                    <td
-                                                        class="min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
-                                                        <div class="flex items-start">
-                                                            <span
-                                                                class="bg--col-turbo-yellow pad--4 flex items-center justify-center bg--blur--10">
-                                                                <img src="../assets/icons/stars-01.svg" alt=""
-                                                                    class="w--16 h--16">
-                                                            </span>
-                                                            <span
-                                                                class="pad--y--3 pad--x--6 gap--8 flex items-center justify-center bg-black bg--blur--10 fs--12 fw5 lh--18 col-turbo-yellow">
-                                                                New
-                                                            </span>
-                                                        </div>
-                                                    </td>
-                                                    <td
-                                                        class="min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
-                                                        <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
-                                                            22 Jan 2022
-                                                        </span>
-                                                    </td>
-                                                    <td
-                                                        class="fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 pad--y--8-responsive-mobile pad--y--8-responsive-mobile-portrait v-mid nowrap tr">
-                                                        USD$ 9.99
-                                                    </td>
-                                                    <td
-                                                        class="w--80 w--auto-responsive-tablet min--h--72 v-mid display--none-responsive-tablet display--none-responsive-mobile display--none-responsive-mobile-portrait">
-
-                                                    </td>
-                                                </tr>
-                                                <tr class="bg--col--athens-gray-3--50 hide-child o-50">
-                                                    <td class="min--h--72 v-mid">
-                                                        <div
-                                                            class="pad--18 pad--x--10-responsive-mobile bg-black flex items-center justify-center">
-                                                            <img src="../assets/icons/merch-icon.svg" alt=""
-                                                                class="w--36 h--36">
-                                                        </div>
-                                                    </td>
-                                                    <td
-                                                        class="min--h--72 pad--10 pad--6-responsive-mobile pad--6-responsive-mobile-portrait v-mid">
-                                                        <a href="javascript: void(0)"
-                                                            class="flex flex-column justify-center items-start gap--2 gap--0-responsive-mobile gap--0-responsive-mobile-portrait pointer">
-                                                            <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
-                                                                Merch
-                                                            </span>
-
-                                                            <span
-                                                                class="fs--12 fw4 lh--18 col--oxford-blue truncate display--none-responsive-mobile display--none-responsive-mobile-portrait">
-                                                                #123456
-                                                            </span>
-                                                            <div class="dn dn-responsive-mobile flex-column gap--4">
-                                                                <div class="flex items-center">
-                                                                    <span
-                                                                        class="fs--12 fw4 lh--18 col--oxford-blue truncate">
-                                                                        #123456 &nbsp;
-                                                                    </span>
-                                                                    <span class="fs--12 fw4 lh--18 i col--pale-sky">22
-                                                                        Jan</span>
-                                                                </div>
-                                                                <span class="flex items-center self-stretch gap--5">
-                                                                    <img src="../assets/images/avatar-mango.png" alt=""
-                                                                        class="w--20 h--20">
-                                                                    <span
-                                                                        class="fs--12 fw4 lh--18 col--oxford-blue truncate">
-                                                                        @Mangoes4eva
-                                                                    </span>
-                                                                </span>
-                                                            </div>
-                                                        </a>
-                                                    </td>
-                                                    <td
-                                                        class="min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
-                                                        <a href="javascript: void(0)"
-                                                            class="flex flex-column justify-center items-start gap--2 pointer">
-                                                            <span class="flex items-center self-stretch gap--5">
-                                                                <img src="../assets/images/avatar-mango.png" alt=""
-                                                                    class="w--20 h--20">
-                                                                <span
-                                                                    class="fs--12 fw4 lh--18 col--oxford-blue truncate">
-                                                                    @Mangoes4eva
-                                                                </span>
-                                                            </span>
-                                                        </a>
-                                                    </td>
-                                                    <td
-                                                        class="min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
-                                                        <div class="flex items-start">
-                                                            <span
-                                                                class="bg--col-turbo-yellow pad--4 flex items-center justify-center bg--blur--10">
-                                                                <img src="../assets/icons/stars-01.svg" alt=""
-                                                                    class="w--16 h--16">
-                                                            </span>
-                                                            <span
-                                                                class="pad--y--3 pad--x--6 gap--8 flex items-center justify-center bg-black bg--blur--10 fs--12 fw5 lh--18 col-turbo-yellow">
-                                                                New
-                                                            </span>
-                                                        </div>
-                                                    </td>
-                                                    <td
-                                                        class="min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
-                                                        <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
-                                                            22 Jan 2022
-                                                        </span>
-                                                    </td>
-                                                    <td
-                                                        class="fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 pad--y--8-responsive-mobile pad--y--8-responsive-mobile-portrait v-mid nowrap tr">
-                                                        USD$ 9.99
-                                                    </td>
-                                                    <td
-                                                        class="w--80 w--auto-responsive-tablet min--h--72 v-mid display--none-responsive-tablet display--none-responsive-mobile display--none-responsive-mobile-portrait">
-
-                                                    </td>
-                                                </tr>
-                                                <tr class="hide-child o-50">
-                                                    <td class="min--h--72 v-mid">
-                                                        <div
-                                                            class="pad--18 pad--x--10-responsive-mobile bg-black flex items-center justify-center">
-                                                            <img src="../assets/icons/merch-icon.svg" alt=""
-                                                                class="w--36 h--36">
-                                                        </div>
-                                                    </td>
-                                                    <td
-                                                        class="min--h--72 pad--10 pad--6-responsive-mobile pad--6-responsive-mobile-portrait v-mid">
-                                                        <a href="javascript: void(0)"
-                                                            class="flex flex-column justify-center items-start gap--2 gap--2 gap--0-responsive-mobile gap--0-responsive-mobile-portrait pointer">
-                                                            <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
-                                                                Merch
-                                                            </span>
-
-                                                            <span
-                                                                class="fs--12 fw4 lh--18 col--oxford-blue truncate display--none-responsive-mobile display--none-responsive-mobile-portrait">
-                                                                #123456
-                                                            </span>
-                                                            <div class="dn dn-responsive-mobile flex-column gap--4">
-                                                                <div class="flex items-center">
-                                                                    <span
-                                                                        class="fs--12 fw4 lh--18 col--oxford-blue truncate">
-                                                                        #123456 &nbsp;
-                                                                    </span>
-                                                                    <span class="fs--12 fw4 lh--18 i col--pale-sky">22
-                                                                        Jan</span>
-                                                                </div>
-                                                                <span class="flex items-center self-stretch gap--5">
-                                                                    <img src="../assets/images/avatar-mango.png" alt=""
-                                                                        class="w--20 h--20">
-                                                                    <span
-                                                                        class="fs--12 fw4 lh--18 col--oxford-blue truncate">
-                                                                        @Mangoes4eva
-                                                                    </span>
-                                                                </span>
-                                                            </div>
-                                                        </a>
-                                                    </td>
-                                                    <td
-                                                        class="min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
-                                                        <a href="javascript: void(0)"
-                                                            class="flex flex-column justify-center items-start gap--2 pointer">
-                                                            <span class="flex items-center self-stretch gap--5">
-                                                                <img src="../assets/images/avatar-mango.png" alt=""
-                                                                    class="w--20 h--20">
-                                                                <span
-                                                                    class="fs--12 fw4 lh--18 col--oxford-blue truncate">
-                                                                    @Mangoes4eva
-                                                                </span>
-                                                            </span>
-                                                        </a>
-                                                    </td>
-                                                    <td
-                                                        class="min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
-                                                        <div class="flex items-start">
-                                                            <span
-                                                                class="bg--col-turbo-yellow pad--4 flex items-center justify-center bg--blur--10">
-                                                                <img src="../assets/icons/stars-01.svg" alt=""
-                                                                    class="w--16 h--16">
-                                                            </span>
-                                                            <span
-                                                                class="pad--y--3 pad--x--6 gap--8 flex items-center justify-center bg-black bg--blur--10 fs--12 fw5 lh--18 col-turbo-yellow">
-                                                                New
-                                                            </span>
-                                                        </div>
-                                                    </td>
-                                                    <td
-                                                        class="min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
-                                                        <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
-                                                            22 Jan 2022
-                                                        </span>
-                                                    </td>
-                                                    <td
-                                                        class="fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 pad--y--8-responsive-mobile pad--y--8-responsive-mobile-portrait v-mid nowrap tr">
-                                                        USD$ 9.99
-                                                    </td>
-                                                    <td
-                                                        class="w--80 w--auto-responsive-tablet min--h--72 v-mid display--none-responsive-tablet display--none-responsive-mobile display--none-responsive-mobile-portrait">
-
-                                                    </td>
-                                                </tr>
-                                                <tr class="bg--col--athens-gray-3--50 hide-child o-50">
-                                                    <td class="min--h--72 v-mid">
-                                                        <div
-                                                            class="pad--18 pad--x--10-responsive-mobile bg--col-brand-green flex items-center justify-center">
-                                                            <img src="../assets/icons/shopping-cart-03.svg" alt=""
-                                                                class="w--36 h--36">
-                                                        </div>
-                                                    </td>
-                                                    <td
-                                                        class="min--h--72 pad--10 pad--6-responsive-mobile pad--6-responsive-mobile-portrait v-mid">
-                                                        <a href="javascript: void(0)"
-                                                            class="flex flex-column justify-center items-start gap--2 gap--2 gap--0-responsive-mobile gap--0-responsive-mobile-portrait pointer">
-                                                            <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
-                                                                Merch
-                                                            </span>
-
-                                                            <span
-                                                                class="fs--12 fw4 lh--18 col--oxford-blue truncate display--none-responsive-mobile display--none-responsive-mobile-portrait">
-                                                                #123456
-                                                            </span>
-                                                            <div class="dn dn-responsive-mobile flex-column gap--4">
-                                                                <div class="flex items-center">
-                                                                    <span
-                                                                        class="fs--12 fw4 lh--18 col--oxford-blue truncate">
-                                                                        #123456 &nbsp;
-                                                                    </span>
-                                                                    <span class="fs--12 fw4 lh--18 i col--pale-sky">22
-                                                                        Jan</span>
-                                                                </div>
-                                                                <span class="flex items-center self-stretch gap--5">
-                                                                    <img src="../assets/images/avatar-mango.png" alt=""
-                                                                        class="w--20 h--20">
-                                                                    <span
-                                                                        class="fs--12 fw4 lh--18 col--oxford-blue truncate">
-                                                                        @Mangoes4eva
-                                                                    </span>
-                                                                </span>
-                                                            </div>
-                                                        </a>
-                                                    </td>
-                                                    <td
-                                                        class="min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
-                                                        <a href="javascript: void(0)"
-                                                            class="flex flex-column justify-center items-start gap--2 pointer">
-                                                            <span class="flex items-center self-stretch gap--5">
-                                                                <img src="../assets/images/avatar-mango.png" alt=""
-                                                                    class="w--20 h--20">
-                                                                <span
-                                                                    class="fs--12 fw4 lh--18 col--oxford-blue truncate">
-                                                                    @Mangoes4eva
-                                                                </span>
-                                                            </span>
-                                                        </a>
-                                                    </td>
-                                                    <td
-                                                        class="min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
-                                                        <div class="flex items-start">
-                                                            <span
-                                                                class="bg--col-turbo-yellow pad--4 flex items-center justify-center bg--blur--10">
-                                                                <img src="../assets/icons/stars-01.svg" alt=""
-                                                                    class="w--16 h--16">
-                                                            </span>
-                                                            <span
-                                                                class="pad--y--3 pad--x--6 gap--8 flex items-center justify-center bg-black bg--blur--10 fs--12 fw5 lh--18 col-turbo-yellow">
-                                                                New
-                                                            </span>
-                                                        </div>
-                                                    </td>
-                                                    <td
-                                                        class="min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
-                                                        <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
-                                                            22 Jan 2022
-                                                        </span>
-                                                    </td>
-                                                    <td
-                                                        class="fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 pad--y--8-responsive-mobile pad--y--8-responsive-mobile-portrait v-mid nowrap tr">
-                                                        USD$ 9.99
-                                                    </td>
-                                                    <td
-                                                        class="w--80 w--auto-responsive-tablet min--h--72 v-mid display--none-responsive-tablet display--none-responsive-mobile display--none-responsive-mobile-portrait">
-
-                                                    </td>
-                                                </tr>
-                                                <tr class="hide-child o-50">
-                                                    <td class="min--h--72 v-mid">
-                                                        <div
-                                                            class="pad--18 pad--x--10-responsive-mobile bg--col-brand-green flex items-center justify-center">
-                                                            <img src="../assets/icons/shopping-cart-03.svg" alt=""
-                                                                class="w--36 h--36">
-                                                        </div>
-                                                    </td>
-                                                    <td
-                                                        class="min--h--72 pad--10 pad--6-responsive-mobile pad--6-responsive-mobile-portrait v-mid">
-                                                        <a href="javascript: void(0)"
-                                                            class="flex flex-column justify-center items-start gap--2 gap--2 gap--0-responsive-mobile gap--0-responsive-mobile-portrait pointer">
-                                                            <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
-                                                                Merch
-                                                            </span>
-
-                                                            <span
-                                                                class="fs--12 fw4 lh--18 col--oxford-blue truncate display--none-responsive-mobile display--none-responsive-mobile-portrait">
-                                                                #123456
-                                                            </span>
-                                                            <div class="dn dn-responsive-mobile flex-column gap--4">
-                                                                <div class="flex items-center">
-                                                                    <span
-                                                                        class="fs--12 fw4 lh--18 col--oxford-blue truncate">
-                                                                        #123456 &nbsp;
-                                                                    </span>
-                                                                    <span class="fs--12 fw4 lh--18 i col--pale-sky">22
-                                                                        Jan</span>
-                                                                </div>
-                                                                <span class="flex items-center self-stretch gap--5">
-                                                                    <img src="../assets/images/avatar-mango.png" alt=""
-                                                                        class="w--20 h--20">
-                                                                    <span
-                                                                        class="fs--12 fw4 lh--18 col--oxford-blue truncate">
-                                                                        @Mangoes4eva
-                                                                    </span>
-                                                                </span>
-                                                            </div>
-                                                        </a>
-                                                    </td>
-                                                    <td
-                                                        class="min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
-                                                        <a href="javascript: void(0)"
-                                                            class="flex flex-column justify-center items-start gap--2 pointer">
-                                                            <span class="flex items-center self-stretch gap--5">
-                                                                <img src="../assets/images/avatar-mango.png" alt=""
-                                                                    class="w--20 h--20">
-                                                                <span
-                                                                    class="fs--12 fw4 lh--18 col--oxford-blue truncate">
-                                                                    @Mangoes4eva
-                                                                </span>
-                                                            </span>
-                                                        </a>
-                                                    </td>
-                                                    <td
-                                                        class="min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
-                                                        <div class="flex items-start">
-                                                            <span
-                                                                class="bg--col-turbo-yellow pad--4 flex items-center justify-center bg--blur--10">
-                                                                <img src="../assets/icons/stars-01.svg" alt=""
-                                                                    class="w--16 h--16">
-                                                            </span>
-                                                            <span
-                                                                class="pad--y--3 pad--x--6 gap--8 flex items-center justify-center bg-black bg--blur--10 fs--12 fw5 lh--18 col-turbo-yellow">
-                                                                New
-                                                            </span>
-                                                        </div>
-                                                    </td>
-                                                    <td
-                                                        class="min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
-                                                        <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
-                                                            22 Jan 2022
-                                                        </span>
-                                                    </td>
-                                                    <td
-                                                        class="fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 pad--y--8-responsive-mobile pad--y--8-responsive-mobile-portrait v-mid nowrap tr">
-                                                        USD$ 9.99
-                                                    </td>
-                                                    <td
-                                                        class="w--80 w--auto-responsive-tablet min--h--72 v-mid display--none-responsive-tablet display--none-responsive-mobile display--none-responsive-mobile-portrait">
-
-                                                    </td>
-                                                </tr>
-                                                <tr class="bg--col--athens-gray-3--50 hide-child o-50">
-                                                    <td class="min--h--72 v-mid">
-                                                        <div
-                                                            class="pad--18 pad--x--10-responsive-mobile bg-black flex items-center justify-center">
-                                                            <img src="../assets/icons/merch-icon.svg" alt=""
-                                                                class="w--36 h--36">
-                                                        </div>
-                                                    </td>
-                                                    <td
-                                                        class="min--h--72 pad--10 pad--6-responsive-mobile pad--6-responsive-mobile-portrait v-mid">
-                                                        <a href="javascript: void(0)"
-                                                            class="flex flex-column justify-center items-start gap--2 gap--0-responsive-mobile gap--0-responsive-mobile-portrait pointer">
-                                                            <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
-                                                                Merch
-                                                            </span>
-
-                                                            <span
-                                                                class="fs--12 fw4 lh--18 col--oxford-blue truncate display--none-responsive-mobile display--none-responsive-mobile-portrait">
-                                                                #123456
-                                                            </span>
-                                                            <div class="dn dn-responsive-mobile flex-column gap--4">
-                                                                <div class="flex items-center">
-                                                                    <span
-                                                                        class="fs--12 fw4 lh--18 col--oxford-blue truncate">
-                                                                        #123456 &nbsp;
-                                                                    </span>
-                                                                    <span class="fs--12 fw4 lh--18 i col--pale-sky">22
-                                                                        Jan</span>
-                                                                </div>
-                                                                <span class="flex items-center self-stretch gap--5">
-                                                                    <img src="../assets/images/avatar-mango.png" alt=""
-                                                                        class="w--20 h--20">
-                                                                    <span
-                                                                        class="fs--12 fw4 lh--18 col--oxford-blue truncate">
-                                                                        @Mangoes4eva
-                                                                    </span>
-                                                                </span>
-                                                            </div>
-                                                        </a>
-                                                    </td>
-                                                    <td
-                                                        class="min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
-                                                        <a href="javascript: void(0)"
-                                                            class="flex flex-column justify-center items-start gap--2 pointer">
-                                                            <span class="flex items-center self-stretch gap--5">
-                                                                <img src="../assets/images/avatar-mango.png" alt=""
-                                                                    class="w--20 h--20">
-                                                                <span
-                                                                    class="fs--12 fw4 lh--18 col--oxford-blue truncate">
-                                                                    @Mangoes4eva
-                                                                </span>
-                                                            </span>
-                                                        </a>
-                                                    </td>
-                                                    <td
-                                                        class="min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
-                                                        <div class="flex items-start">
-                                                            <span
-                                                                class="bg--col-turbo-yellow pad--4 flex items-center justify-center bg--blur--10">
-                                                                <img src="../assets/icons/stars-01.svg" alt=""
-                                                                    class="w--16 h--16">
-                                                            </span>
-                                                            <span
-                                                                class="pad--y--3 pad--x--6 gap--8 flex items-center justify-center bg-black bg--blur--10 fs--12 fw5 lh--18 col-turbo-yellow">
-                                                                New
-                                                            </span>
-                                                        </div>
-                                                    </td>
-                                                    <td
-                                                        class="min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
-                                                        <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
-                                                            22 Jan 2022
-                                                        </span>
-                                                    </td>
-                                                    <td
-                                                        class="fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 pad--y--8-responsive-mobile pad--y--8-responsive-mobile-portrait v-mid nowrap tr">
-                                                        USD$ 9.99
-                                                    </td>
-                                                    <td
-                                                        class="w--80 w--auto-responsive-tablet min--h--72 v-mid display--none-responsive-tablet display--none-responsive-mobile display--none-responsive-mobile-portrait">
-
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                <!-- Flexbox Table Data -->
+                                <div data-section="content-wrapper" class="w-100">
+                                    <!-- Header -->
+                                    <div class="flex items-center">
+                                        <!-- Header Item -->
+                                        <div class="w--250 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--42 pad--10 bb br--col--pale-sky pad--10 pad--right--0-responsive-mobile pad--right--0-responsive-mobile-portrait">
+                                            <span class="db fs--14 fw4 lh--20 col--pale-sky truncate">Order#</span>
+                                        </div>
+                                        <!-- /Header Item -->
+                                        <!-- Header Item -->
+                                        <div class="w--180 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--42 pad--10 bb br--col--pale-sky pad--10 pad--right--0-responsive-mobile pad--right--0-responsive-mobile-portrait">
+                                            <span class="fs--14 fw4 lh--20 col--pale-sky truncate">From</span>
+                                        </div>
+                                        <!-- /Header Item -->
+                                        <!-- Header Item -->
+                                        <div class="w--120 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--42 pad--10 bb br--col--pale-sky pad--10 pad--right--0-responsive-mobile pad--right--0-responsive-mobile-portrait">
+                                            <span class="fs--14 fw4 lh--20 col--pale-sky truncate">Status </span>
+                                        </div>
+                                        <!-- /Header Item -->
+                                        <!-- Header Item -->
+                                        <div class="w--250 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--42 pad--10 bb br--col--pale-sky pad--10 pad--right--0-responsive-mobile pad--right--0-responsive-mobile-portrait">
+                                            <span class="fs--14 fw4 lh--20 col--pale-sky truncate">Date</span>
+                                        </div>
+                                        <!-- /Header Item -->
+                                        <!-- Header Item -->
+                                        <div class="w--72 w--56-responsive-mobile min--h--42 pad--10 bb br--col--pale-sky pad--10 pad--right--0-responsive-mobile pad--right--0-responsive-mobile-portrait flex--max">
+                                            <span class="fs--14 fw4 lh--20 col--pale-sky truncate">Total</span>
+                                        </div>
+                                        <!-- /Header Item -->
                                     </div>
+                                    <!-- /Header -->
+                                    <!-- Body -->
+                                    <div class="flex flex-column">
+                                        <!-- Item Row -->
+                                        <div class="flex items-center bg--col--athens-gray-3--50 pointer">
+                                            <!-- Item -->
+                                            <div class="w--250 w--100-responsive-mobile w--100-responsive-mobile-portrait flex items-center">
+                                                <div class="pad--18 pad--x--10-responsive-mobile bg-black flex items-center justify-center">
+                                                    <img src="../assets/icons/merch-icon.svg" alt="" class="w--36 h--36">
+                                                </div>
+                                                <div class="flex--max min--h--72 pad--10 pad--6-responsive-mobile pad--6-responsive-mobile-portrait flex flex-column justify-center items-start gap--2 gap--2 gap--0-responsive-mobile gap--0-responsive-mobile-portrait pointer">
+                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                        Merch
+                                                    </span>
+
+                                                    <span
+                                                        class="fs--12 fw4 lh--18 col--oxford-blue truncate display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                        #123456
+                                                    </span>
+                                                    <div class="dn dn-responsive-mobile flex-column gap--4">
+                                                        <div class="flex items-center">
+                                                            <span
+                                                                class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                                #123456 &nbsp;
+                                                            </span>
+                                                            <span class="fs--12 fw4 lh--18 i col--pale-sky">22
+                                                                Jan</span>
+                                                        </div>
+                                                        <span class="flex items-center self-stretch gap--5">
+                                                            <img src="../assets/images/avatar-mango.png" alt=""
+                                                                class="w--20 h--20">
+                                                            <span
+                                                                class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                                @Mangoes4eva
+                                                            </span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /Item -->
+                                            <!-- Item -->
+                                            <div class="w--180 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                <div class="flex flex-column justify-center items-start gap--2 pointer">
+                                                    <span class="flex items-center self-stretch gap--5">
+                                                        <img src="../assets/images/avatar-mango.png" alt=""
+                                                            class="w--20 h--20">
+                                                        <span
+                                                            class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                            @Mangoes4eva
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <!-- /Item -->
+                                            <!-- Item -->
+                                            <div class="w--120 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                <div class="flex items-start">
+                                                    <span
+                                                        class="bg--col-turbo-yellow pad--4 flex items-center justify-center bg--blur--10">
+                                                        <img src="../assets/icons/stars-01.svg" alt=""
+                                                            class="w--16 h--16">
+                                                    </span>
+                                                    <span
+                                                        class="pad--y--3 pad--x--6 gap--8 flex items-center justify-center bg-black bg--blur--10 fs--12 fw5 lh--18 col-turbo-yellow">
+                                                        New
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <!-- /Item -->
+                                            <!-- Item -->
+                                            <div class="w--250 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                    22 Jan 2022
+                                                </span>
+                                            </div>
+                                            <!-- /Item -->
+                                            <!-- Item -->
+                                            <div class="flex--max fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 pad--y--8-responsive-mobile pad--y--8-responsive-mobile-portrait v-mid nowrap">
+                                                        USD$ 9.99
+                                            </div>
+                                            <!-- /Item -->
+                                        </div>
+                                        <!-- /Item Row -->
+                                        <!-- Item Row -->
+                                        <div class="flex items-center pointer o-50">
+                                            <!-- Item -->
+                                            <div class="w--250 w--100-responsive-mobile w--100-responsive-mobile-portrait flex items-center">
+                                                <div class="pad--18 pad--x--10-responsive-mobile bg-black flex items-center justify-center">
+                                                    <img src="../assets/icons/merch-icon.svg" alt="" class="w--36 h--36">
+                                                </div>
+                                                <div class="flex--max min--h--72 pad--10 pad--6-responsive-mobile pad--6-responsive-mobile-portrait flex flex-column justify-center items-start gap--2 gap--2 gap--0-responsive-mobile gap--0-responsive-mobile-portrait pointer">
+                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                        Merch
+                                                    </span>
+
+                                                    <span
+                                                        class="fs--12 fw4 lh--18 col--oxford-blue truncate display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                        #123456
+                                                    </span>
+                                                    <div class="dn dn-responsive-mobile flex-column gap--4">
+                                                        <div class="flex items-center">
+                                                            <span
+                                                                class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                                #123456 &nbsp;
+                                                            </span>
+                                                            <span class="fs--12 fw4 lh--18 i col--pale-sky">22
+                                                                Jan</span>
+                                                        </div>
+                                                        <span class="flex items-center self-stretch gap--5">
+                                                            <img src="../assets/images/avatar-mango.png" alt=""
+                                                                class="w--20 h--20">
+                                                            <span
+                                                                class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                                @Mangoes4eva
+                                                            </span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /Item -->
+                                            <!-- Item -->
+                                            <div class="w--180 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                <div class="flex flex-column justify-center items-start gap--2 pointer">
+                                                    <span class="flex items-center self-stretch gap--5">
+                                                        <img src="../assets/images/avatar-mango.png" alt=""
+                                                            class="w--20 h--20">
+                                                        <span
+                                                            class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                            @Mangoes4eva
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <!-- /Item -->
+                                            <!-- Item -->
+                                            <div class="w--120 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                <div class="flex items-start">
+                                                    <span
+                                                        class="bg--col-turbo-yellow pad--4 flex items-center justify-center bg--blur--10">
+                                                        <img src="../assets/icons/stars-01.svg" alt=""
+                                                            class="w--16 h--16">
+                                                    </span>
+                                                    <span
+                                                        class="pad--y--3 pad--x--6 gap--8 flex items-center justify-center bg-black bg--blur--10 fs--12 fw5 lh--18 col-turbo-yellow">
+                                                        New
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <!-- /Item -->
+                                            <!-- Item -->
+                                            <div class="w--250 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                    22 Jan 2022
+                                                </span>
+                                            </div>
+                                            <!-- /Item -->
+                                            <!-- Item -->
+                                            <div class="flex--max fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 pad--y--8-responsive-mobile pad--y--8-responsive-mobile-portrait v-mid nowrap">
+                                                        USD$ 9.99
+                                            </div>
+                                            <!-- /Item -->
+                                        </div>
+                                        <!-- /Item Row -->
+                                        <!-- Item Row -->
+                                        <div class="flex items-center bg--col--athens-gray-3--50 pointer o-50">
+                                            <!-- Item -->
+                                            <div class="w--250 w--100-responsive-mobile w--100-responsive-mobile-portrait flex items-center">
+                                                <div class="pad--18 pad--x--10-responsive-mobile bg--col-brand-green flex items-center justify-center">
+                                                    <img src="../assets/icons/shopping-cart-03.svg" alt="" class="w--36 h--36">
+                                                </div>
+                                                <div class="flex--max min--h--72 pad--10 pad--6-responsive-mobile pad--6-responsive-mobile-portrait flex flex-column justify-center items-start gap--2 gap--2 gap--0-responsive-mobile gap--0-responsive-mobile-portrait pointer">
+                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                        Merch
+                                                    </span>
+
+                                                    <span
+                                                        class="fs--12 fw4 lh--18 col--oxford-blue truncate display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                        #123456
+                                                    </span>
+                                                    <div class="dn dn-responsive-mobile flex-column gap--4">
+                                                        <div class="flex items-center">
+                                                            <span
+                                                                class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                                #123456 &nbsp;
+                                                            </span>
+                                                            <span class="fs--12 fw4 lh--18 i col--pale-sky">22
+                                                                Jan</span>
+                                                        </div>
+                                                        <span class="flex items-center self-stretch gap--5">
+                                                            <img src="../assets/images/avatar-mango.png" alt=""
+                                                                class="w--20 h--20">
+                                                            <span
+                                                                class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                                @Mangoes4eva
+                                                            </span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /Item -->
+                                            <!-- Item -->
+                                            <div class="w--180 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                <div class="flex flex-column justify-center items-start gap--2 pointer">
+                                                    <span class="flex items-center self-stretch gap--5">
+                                                        <img src="../assets/images/avatar-mango.png" alt=""
+                                                            class="w--20 h--20">
+                                                        <span
+                                                            class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                            @Mangoes4eva
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <!-- /Item -->
+                                            <!-- Item -->
+                                            <div class="w--120 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                <div class="flex items-start">
+                                                    <span
+                                                        class="bg--col-turbo-yellow pad--4 flex items-center justify-center bg--blur--10">
+                                                        <img src="../assets/icons/stars-01.svg" alt=""
+                                                            class="w--16 h--16">
+                                                    </span>
+                                                    <span
+                                                        class="pad--y--3 pad--x--6 gap--8 flex items-center justify-center bg-black bg--blur--10 fs--12 fw5 lh--18 col-turbo-yellow">
+                                                        New
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <!-- /Item -->
+                                            <!-- Item -->
+                                            <div class="w--250 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                    22 Jan 2022
+                                                </span>
+                                            </div>
+                                            <!-- /Item -->
+                                            <!-- Item -->
+                                            <div class="flex--max fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 pad--y--8-responsive-mobile pad--y--8-responsive-mobile-portrait v-mid nowrap">
+                                                        USD$ 9.99
+                                            </div>
+                                            <!-- /Item -->
+                                        </div>
+                                        <!-- /Item Row -->
+                                        <!-- Item Row -->
+                                        <div class="flex items-center pointer o-50">
+                                            <!-- Item -->
+                                            <div class="w--250 w--100-responsive-mobile w--100-responsive-mobile-portrait flex items-center">
+                                                <div class="pad--18 pad--x--10-responsive-mobile bg--col-brand-green flex items-center justify-center">
+                                                    <img src="../assets/icons/shopping-cart-03.svg" alt="" class="w--36 h--36">
+                                                </div>
+                                                <div class="flex--max min--h--72 pad--10 pad--6-responsive-mobile pad--6-responsive-mobile-portrait flex flex-column justify-center items-start gap--2 gap--2 gap--0-responsive-mobile gap--0-responsive-mobile-portrait pointer">
+                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                        Merch
+                                                    </span>
+
+                                                    <span
+                                                        class="fs--12 fw4 lh--18 col--oxford-blue truncate display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                        #123456
+                                                    </span>
+                                                    <div class="dn dn-responsive-mobile flex-column gap--4">
+                                                        <div class="flex items-center">
+                                                            <span
+                                                                class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                                #123456 &nbsp;
+                                                            </span>
+                                                            <span class="fs--12 fw4 lh--18 i col--pale-sky">22
+                                                                Jan</span>
+                                                        </div>
+                                                        <span class="flex items-center self-stretch gap--5">
+                                                            <img src="../assets/images/avatar-mango.png" alt=""
+                                                                class="w--20 h--20">
+                                                            <span
+                                                                class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                                @Mangoes4eva
+                                                            </span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /Item -->
+                                            <!-- Item -->
+                                            <div class="w--180 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                <div class="flex flex-column justify-center items-start gap--2 pointer">
+                                                    <span class="flex items-center self-stretch gap--5">
+                                                        <img src="../assets/images/avatar-mango.png" alt=""
+                                                            class="w--20 h--20">
+                                                        <span
+                                                            class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                            @Mangoes4eva
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <!-- /Item -->
+                                            <!-- Item -->
+                                            <div class="w--120 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                <div class="flex items-start">
+                                                    <span
+                                                        class="bg--col-turbo-yellow pad--4 flex items-center justify-center bg--blur--10">
+                                                        <img src="../assets/icons/stars-01.svg" alt=""
+                                                            class="w--16 h--16">
+                                                    </span>
+                                                    <span
+                                                        class="pad--y--3 pad--x--6 gap--8 flex items-center justify-center bg-black bg--blur--10 fs--12 fw5 lh--18 col-turbo-yellow">
+                                                        New
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <!-- /Item -->
+                                            <!-- Item -->
+                                            <div class="w--250 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                    22 Jan 2022
+                                                </span>
+                                            </div>
+                                            <!-- /Item -->
+                                            <!-- Item -->
+                                            <div class="flex--max fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 pad--y--8-responsive-mobile pad--y--8-responsive-mobile-portrait v-mid nowrap">
+                                                        USD$ 9.99
+                                            </div>
+                                            <!-- /Item -->
+                                        </div>
+                                        <!-- /Item Row -->
+                                        <!-- Item Row -->
+                                        <div class="flex items-center bg--col--athens-gray-3--50 pointer o-50">
+                                            <!-- Item -->
+                                            <div class="w--250 w--100-responsive-mobile w--100-responsive-mobile-portrait flex items-center">
+                                                <div class="pad--18 pad--x--10-responsive-mobile bg-black flex items-center justify-center">
+                                                    <img src="../assets/icons/merch-icon.svg" alt="" class="w--36 h--36">
+                                                </div>
+                                                <div class="flex--max min--h--72 pad--10 pad--6-responsive-mobile pad--6-responsive-mobile-portrait flex flex-column justify-center items-start gap--2 gap--2 gap--0-responsive-mobile gap--0-responsive-mobile-portrait pointer">
+                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                        Merch
+                                                    </span>
+
+                                                    <span
+                                                        class="fs--12 fw4 lh--18 col--oxford-blue truncate display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                        #123456
+                                                    </span>
+                                                    <div class="dn dn-responsive-mobile flex-column gap--4">
+                                                        <div class="flex items-center">
+                                                            <span
+                                                                class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                                #123456 &nbsp;
+                                                            </span>
+                                                            <span class="fs--12 fw4 lh--18 i col--pale-sky">22
+                                                                Jan</span>
+                                                        </div>
+                                                        <span class="flex items-center self-stretch gap--5">
+                                                            <img src="../assets/images/avatar-mango.png" alt=""
+                                                                class="w--20 h--20">
+                                                            <span
+                                                                class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                                @Mangoes4eva
+                                                            </span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /Item -->
+                                            <!-- Item -->
+                                            <div class="w--180 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                <div class="flex flex-column justify-center items-start gap--2 pointer">
+                                                    <span class="flex items-center self-stretch gap--5">
+                                                        <img src="../assets/images/avatar-mango.png" alt=""
+                                                            class="w--20 h--20">
+                                                        <span
+                                                            class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                            @Mangoes4eva
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <!-- /Item -->
+                                            <!-- Item -->
+                                            <div class="w--120 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                <div class="flex items-start">
+                                                    <span
+                                                        class="bg--col-turbo-yellow pad--4 flex items-center justify-center bg--blur--10">
+                                                        <img src="../assets/icons/stars-01.svg" alt=""
+                                                            class="w--16 h--16">
+                                                    </span>
+                                                    <span
+                                                        class="pad--y--3 pad--x--6 gap--8 flex items-center justify-center bg-black bg--blur--10 fs--12 fw5 lh--18 col-turbo-yellow">
+                                                        New
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <!-- /Item -->
+                                            <!-- Item -->
+                                            <div class="w--250 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                    22 Jan 2022
+                                                </span>
+                                            </div>
+                                            <!-- /Item -->
+                                            <!-- Item -->
+                                            <div class="flex--max fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 pad--y--8-responsive-mobile pad--y--8-responsive-mobile-portrait v-mid nowrap">
+                                                        USD$ 9.99
+                                            </div>
+                                            <!-- /Item -->
+                                        </div>
+                                        <!-- /Item Row -->
+                                        <!-- Item Row -->
+                                        <div class="flex items-center pointer o-50">
+                                            <!-- Item -->
+                                            <div class="w--250 w--100-responsive-mobile w--100-responsive-mobile-portrait flex items-center">
+                                                <div class="pad--18 pad--x--10-responsive-mobile bg-black flex items-center justify-center">
+                                                    <img src="../assets/icons/merch-icon.svg" alt="" class="w--36 h--36">
+                                                </div>
+                                                <div class="flex--max min--h--72 pad--10 pad--6-responsive-mobile pad--6-responsive-mobile-portrait flex flex-column justify-center items-start gap--2 gap--2 gap--0-responsive-mobile gap--0-responsive-mobile-portrait pointer">
+                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                        Merch
+                                                    </span>
+
+                                                    <span
+                                                        class="fs--12 fw4 lh--18 col--oxford-blue truncate display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                        #123456
+                                                    </span>
+                                                    <div class="dn dn-responsive-mobile flex-column gap--4">
+                                                        <div class="flex items-center">
+                                                            <span
+                                                                class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                                #123456 &nbsp;
+                                                            </span>
+                                                            <span class="fs--12 fw4 lh--18 i col--pale-sky">22
+                                                                Jan</span>
+                                                        </div>
+                                                        <span class="flex items-center self-stretch gap--5">
+                                                            <img src="../assets/images/avatar-mango.png" alt=""
+                                                                class="w--20 h--20">
+                                                            <span
+                                                                class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                                @Mangoes4eva
+                                                            </span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /Item -->
+                                            <!-- Item -->
+                                            <div class="w--180 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                <div class="flex flex-column justify-center items-start gap--2 pointer">
+                                                    <span class="flex items-center self-stretch gap--5">
+                                                        <img src="../assets/images/avatar-mango.png" alt=""
+                                                            class="w--20 h--20">
+                                                        <span
+                                                            class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                            @Mangoes4eva
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <!-- /Item -->
+                                            <!-- Item -->
+                                            <div class="w--120 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                <div class="flex items-start">
+                                                    <span
+                                                        class="bg--col-turbo-yellow pad--4 flex items-center justify-center bg--blur--10">
+                                                        <img src="../assets/icons/stars-01.svg" alt=""
+                                                            class="w--16 h--16">
+                                                    </span>
+                                                    <span
+                                                        class="pad--y--3 pad--x--6 gap--8 flex items-center justify-center bg-black bg--blur--10 fs--12 fw5 lh--18 col-turbo-yellow">
+                                                        New
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <!-- /Item -->
+                                            <!-- Item -->
+                                            <div class="w--250 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                    22 Jan 2022
+                                                </span>
+                                            </div>
+                                            <!-- /Item -->
+                                            <!-- Item -->
+                                            <div class="flex--max fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 pad--y--8-responsive-mobile pad--y--8-responsive-mobile-portrait v-mid nowrap">
+                                                        USD$ 9.99
+                                            </div>
+                                            <!-- /Item -->
+                                        </div>
+                                        <!-- /Item Row -->
+                                        <!-- Item Row -->
+                                        <div class="flex items-center bg--col--athens-gray-3--50 pointer o-50">
+                                            <!-- Item -->
+                                            <div class="w--250 w--100-responsive-mobile w--100-responsive-mobile-portrait flex items-center">
+                                                <div class="pad--18 pad--x--10-responsive-mobile bg--col-brand-green flex items-center justify-center">
+                                                    <img src="../assets/icons/shopping-cart-03.svg" alt="" class="w--36 h--36">
+                                                </div>
+                                                <div class="flex--max min--h--72 pad--10 pad--6-responsive-mobile pad--6-responsive-mobile-portrait flex flex-column justify-center items-start gap--2 gap--2 gap--0-responsive-mobile gap--0-responsive-mobile-portrait pointer">
+                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                        Merch
+                                                    </span>
+
+                                                    <span
+                                                        class="fs--12 fw4 lh--18 col--oxford-blue truncate display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                        #123456
+                                                    </span>
+                                                    <div class="dn dn-responsive-mobile flex-column gap--4">
+                                                        <div class="flex items-center">
+                                                            <span
+                                                                class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                                #123456 &nbsp;
+                                                            </span>
+                                                            <span class="fs--12 fw4 lh--18 i col--pale-sky">22
+                                                                Jan</span>
+                                                        </div>
+                                                        <span class="flex items-center self-stretch gap--5">
+                                                            <img src="../assets/images/avatar-mango.png" alt=""
+                                                                class="w--20 h--20">
+                                                            <span
+                                                                class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                                @Mangoes4eva
+                                                            </span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /Item -->
+                                            <!-- Item -->
+                                            <div class="w--180 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                <div class="flex flex-column justify-center items-start gap--2 pointer">
+                                                    <span class="flex items-center self-stretch gap--5">
+                                                        <img src="../assets/images/avatar-mango.png" alt=""
+                                                            class="w--20 h--20">
+                                                        <span
+                                                            class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                            @Mangoes4eva
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <!-- /Item -->
+                                            <!-- Item -->
+                                            <div class="w--120 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                <div class="flex items-start">
+                                                    <span
+                                                        class="bg--col-turbo-yellow pad--4 flex items-center justify-center bg--blur--10">
+                                                        <img src="../assets/icons/stars-01.svg" alt=""
+                                                            class="w--16 h--16">
+                                                    </span>
+                                                    <span
+                                                        class="pad--y--3 pad--x--6 gap--8 flex items-center justify-center bg-black bg--blur--10 fs--12 fw5 lh--18 col-turbo-yellow">
+                                                        New
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <!-- /Item -->
+                                            <!-- Item -->
+                                            <div class="w--250 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                    22 Jan 2022
+                                                </span>
+                                            </div>
+                                            <!-- /Item -->
+                                            <!-- Item -->
+                                            <div class="flex--max fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 pad--y--8-responsive-mobile pad--y--8-responsive-mobile-portrait v-mid nowrap">
+                                                        USD$ 9.99
+                                            </div>
+                                            <!-- /Item -->
+                                        </div>
+                                        <!-- /Item Row -->
+                                        <!-- Item Row -->
+                                        <div class="flex items-center pointer o-50">
+                                            <!-- Item -->
+                                            <div class="w--250 w--100-responsive-mobile w--100-responsive-mobile-portrait flex items-center">
+                                                <div class="pad--18 pad--x--10-responsive-mobile bg--col-brand-green flex items-center justify-center">
+                                                    <img src="../assets/icons/shopping-cart-03.svg" alt="" class="w--36 h--36">
+                                                </div>
+                                                <div class="flex--max min--h--72 pad--10 pad--6-responsive-mobile pad--6-responsive-mobile-portrait flex flex-column justify-center items-start gap--2 gap--2 gap--0-responsive-mobile gap--0-responsive-mobile-portrait pointer">
+                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                        Merch
+                                                    </span>
+
+                                                    <span
+                                                        class="fs--12 fw4 lh--18 col--oxford-blue truncate display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                        #123456
+                                                    </span>
+                                                    <div class="dn dn-responsive-mobile flex-column gap--4">
+                                                        <div class="flex items-center">
+                                                            <span
+                                                                class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                                #123456 &nbsp;
+                                                            </span>
+                                                            <span class="fs--12 fw4 lh--18 i col--pale-sky">22
+                                                                Jan</span>
+                                                        </div>
+                                                        <span class="flex items-center self-stretch gap--5">
+                                                            <img src="../assets/images/avatar-mango.png" alt=""
+                                                                class="w--20 h--20">
+                                                            <span
+                                                                class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                                @Mangoes4eva
+                                                            </span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /Item -->
+                                            <!-- Item -->
+                                            <div class="w--180 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                <div class="flex flex-column justify-center items-start gap--2 pointer">
+                                                    <span class="flex items-center self-stretch gap--5">
+                                                        <img src="../assets/images/avatar-mango.png" alt=""
+                                                            class="w--20 h--20">
+                                                        <span
+                                                            class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                            @Mangoes4eva
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <!-- /Item -->
+                                            <!-- Item -->
+                                            <div class="w--120 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                <div class="flex items-start">
+                                                    <span
+                                                        class="bg--col-turbo-yellow pad--4 flex items-center justify-center bg--blur--10">
+                                                        <img src="../assets/icons/stars-01.svg" alt=""
+                                                            class="w--16 h--16">
+                                                    </span>
+                                                    <span
+                                                        class="pad--y--3 pad--x--6 gap--8 flex items-center justify-center bg-black bg--blur--10 fs--12 fw5 lh--18 col-turbo-yellow">
+                                                        New
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <!-- /Item -->
+                                            <!-- Item -->
+                                            <div class="w--250 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                    22 Jan 2022
+                                                </span>
+                                            </div>
+                                            <!-- /Item -->
+                                            <!-- Item -->
+                                            <div class="flex--max fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 pad--y--8-responsive-mobile pad--y--8-responsive-mobile-portrait v-mid nowrap">
+                                                        USD$ 9.99
+                                            </div>
+                                            <!-- /Item -->
+                                        </div>
+                                        <!-- /Item Row -->
+                                        <!-- Item Row -->
+                                        <div class="flex items-center bg--col--athens-gray-3--50 pointer o-50">
+                                            <!-- Item -->
+                                            <div class="w--250 w--100-responsive-mobile w--100-responsive-mobile-portrait flex items-center">
+                                                <div class="pad--18 pad--x--10-responsive-mobile bg-black flex items-center justify-center">
+                                                    <img src="../assets/icons/merch-icon.svg" alt="" class="w--36 h--36">
+                                                </div>
+                                                <div class="flex--max min--h--72 pad--10 pad--6-responsive-mobile pad--6-responsive-mobile-portrait flex flex-column justify-center items-start gap--2 gap--2 gap--0-responsive-mobile gap--0-responsive-mobile-portrait pointer">
+                                                    <span class="fs--12 fw6 lh--18 col--ebony-2 truncate">
+                                                        Merch
+                                                    </span>
+
+                                                    <span
+                                                        class="fs--12 fw4 lh--18 col--oxford-blue truncate display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                        #123456
+                                                    </span>
+                                                    <div class="dn dn-responsive-mobile flex-column gap--4">
+                                                        <div class="flex items-center">
+                                                            <span
+                                                                class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                                #123456 &nbsp;
+                                                            </span>
+                                                            <span class="fs--12 fw4 lh--18 i col--pale-sky">22
+                                                                Jan</span>
+                                                        </div>
+                                                        <span class="flex items-center self-stretch gap--5">
+                                                            <img src="../assets/images/avatar-mango.png" alt=""
+                                                                class="w--20 h--20">
+                                                            <span
+                                                                class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                                @Mangoes4eva
+                                                            </span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /Item -->
+                                            <!-- Item -->
+                                            <div class="w--180 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                <div class="flex flex-column justify-center items-start gap--2 pointer">
+                                                    <span class="flex items-center self-stretch gap--5">
+                                                        <img src="../assets/images/avatar-mango.png" alt=""
+                                                            class="w--20 h--20">
+                                                        <span
+                                                            class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                            @Mangoes4eva
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <!-- /Item -->
+                                            <!-- Item -->
+                                            <div class="w--120 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                <div class="flex items-start">
+                                                    <span
+                                                        class="bg--col-turbo-yellow pad--4 flex items-center justify-center bg--blur--10">
+                                                        <img src="../assets/icons/stars-01.svg" alt=""
+                                                            class="w--16 h--16">
+                                                    </span>
+                                                    <span
+                                                        class="pad--y--3 pad--x--6 gap--8 flex items-center justify-center bg-black bg--blur--10 fs--12 fw5 lh--18 col-turbo-yellow">
+                                                        New
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <!-- /Item -->
+                                            <!-- Item -->
+                                            <div class="w--250 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
+                                                    22 Jan 2022
+                                                </span>
+                                            </div>
+                                            <!-- /Item -->
+                                            <!-- Item -->
+                                            <div class="flex--max fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 pad--y--8-responsive-mobile pad--y--8-responsive-mobile-portrait v-mid nowrap">
+                                                        USD$ 9.99
+                                            </div>
+                                            <!-- /Item -->
+                                        </div>
+                                        <!-- /Item Row -->
+                                    </div>
+                                    <!-- /Body -->
                                 </div>
-                                <!-- End Table Wrapper -->
+                                <!-- /Flexbox Table Data -->
                             </div>
                             <!-- End Order Data Section -->
                         </div>
