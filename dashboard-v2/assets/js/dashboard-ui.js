@@ -1230,6 +1230,9 @@ class DashToggleSwitch {
     		if(this.input.checked == true) {
     			element.classList.add("active");
     		}
+    		else {
+	            element.classList.remove("active");
+	        }
     	});
     }
 		
