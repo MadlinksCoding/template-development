@@ -3172,31 +3172,31 @@
                 {
                     "date": "01-07-2023",
                     "value": 9,
-                    "category": "Tip 1",
+                    "category": "Tier 1",
                     "color": "#4361EE"
                 },
                 {
                     "date": "01-07-2023",
                     "value": 6,
-                    "category": "Tip 2",
+                    "category": "Tier 2",
                     "color": "#3A0BA3"
                 },
                 {
                     "date": "01-07-2023",
                     "value": 5,
-                    "category": "Tip 3",
+                    "category": "Tier 3",
                     "color": "#AE4AEF"
                 },
                 {
                     "date": "01-07-2023",
                     "value": 5,
-                    "category": "Tip 4",
+                    "category": "Tier 4",
                     "color": "#98A2B3"
                 },
                 {
                     "date": "01-07-2023",
                     "value": 5,
-                    "category": "Tip 5",
+                    "category": "Tier 5",
                     "color": "#F72485"
                 }
             ]            
