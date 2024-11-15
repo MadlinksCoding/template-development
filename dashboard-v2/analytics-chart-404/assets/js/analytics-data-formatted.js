@@ -1584,7 +1584,7 @@
     "trafficSourceDaily":{
         "chartType":"donut",
         "timeFrames":{
-            "day":[ // Edited by Nay Htet Soe on 15/11/2024. task link: https://app.clickup.com/t/86eq9wvt0
+            "day":[
                 {
                     "date": "01-07-2023",
                     "value": 5,
