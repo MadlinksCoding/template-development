@@ -1584,24 +1584,24 @@
     "trafficSourceDaily":{
         "chartType":"donut",
         "timeFrames":{
-            "day":[
+            "day":[ // Edited by Nay Htet Soe on 15/11/2024. task link: https://app.clickup.com/t/86eq9wvt0
+                {
+                    "date": "01-07-2023",
+                    "value": 5,
+                    "category": "Direct",
+                    "color": "#4CC9F0"
+                },
                 {
                     "date": "01-07-2023",
                     "value": 10,
-                    "category": "Direct",
-                    "color": "#4361EE"
+                    "category": "Pornhub",
+                    "color": "#3A0BA3"
                 },
                 {
                     "date": "01-07-2023",
                     "value": 9,
                     "category": "Twitter(X)",
-                    "color": "#4CC9F0"
-                },
-                {
-                    "date": "01-07-2023",
-                    "value": 6,
-                    "category": "Pornhub",
-                    "color": "#3A0BA3"
+                    "color": "#4361EE"
                 }
             ]            
         }
