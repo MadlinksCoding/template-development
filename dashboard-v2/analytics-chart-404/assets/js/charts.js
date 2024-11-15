@@ -142,7 +142,7 @@ function BarChart(renderingEl, data) {
     }));
 
     // Get tooltip settings from data attribute or use default values /* Added by NayHtetSoe 15/11/2024. task link: https://app.clickup.com/t/86eq9wnxg */
-    var tooltipSettings = renderingEl.dataset.chartTooltip ? JSON.parse(renderingEl.dataset.chartTooltip) : { currency: "USD", totalText: "Total Earnings" };
+    var tooltipSettings = renderingEl.dataset.chartTooltip ? JSON.parse(renderingEl.dataset.chartTooltip) : { preText: "USD", totalText: "Total Earnings" };
 
     // Create tooltip
     var tooltip = am5.Tooltip.new(root, {
@@ -339,7 +339,7 @@ function BarChart(renderingEl, data) {
                 if (i != 0) {
                     text += "\n";
                 }
-                text += '[' + series.get("fill").toString() + ' width:12px height:12px fontSize: 16px]●[/] [fontWeight:normal width:120px]' + series.get("name") + '[/] [font color="#101828"][fontWeight:600 width:0px] ' + tooltipSettings.currency + ' ' + tooltipDataItem.get("valueY") + '[/]';
+                text += '[' + series.get("fill").toString() + ' width:12px height:12px fontSize: 16px]●[/] [fontWeight:normal width:120px]' + series.get("name") + '[/] [font color="#101828"][fontWeight:600 width:0px] ' + tooltipSettings.preText + ' ' + tooltipDataItem.get("valueY") + '[/]';
             }
             i++;
         });
@@ -351,7 +351,7 @@ function BarChart(renderingEl, data) {
         text = "[font color='#667085'][bold]" + fullMonthName + " " + year + "[/]\n" + text;
 
         // Add total value with a line above it
-        text += "\n[font color='#D0D5DD']───────────────────────[/font]\n[fontWeight:normal width:135px height: 0px][font color='#667085'] " + tooltipSettings.totalText + "[/font][/] [bold width:0px] " + tooltipSettings.currency + " " + total + "[/]";
+        text += "\n[font color='#D0D5DD']───────────────────────[/font]\n[fontWeight:normal width:135px height: 0px][font color='#667085'] " + tooltipSettings.totalText + "[/font][/] [bold width:0px] " + tooltipSettings.preText + " " + total + "[/]";
         return text;
     });
 
@@ -501,7 +501,7 @@ function ContributorsBarChart(renderingEl, data) {
     });
 
     // Get tooltip settings from data attribute or use default values /* Added by NayHtetSoe 15/11/2024. task link: https://app.clickup.com/t/86eq9wnxg */
-    var tooltipSettings = renderingEl.dataset.chartTooltip ? JSON.parse(renderingEl.dataset.chartTooltip) : { currency: "USD", totalText: "Total Earnings" };
+    var tooltipSettings = renderingEl.dataset.chartTooltip ? JSON.parse(renderingEl.dataset.chartTooltip) : { preText: "USD", totalText: "Total Earnings" };
 
     // Create tooltip
     var tooltip = am5.Tooltip.new(root, {
@@ -605,7 +605,7 @@ function ContributorsBarChart(renderingEl, data) {
                 tooltipHTML += `<div style="display: flex; align-items: center; margin-bottom: 4px;">
                     <div style="display: flex; width: 8px; height: 8px; background-color: ${seriesColor}; border-radius: 50%; margin-right: 8px;"></div>
                     <span style="width: 120px; font-family: 'Poppins', sans-serif; font-size: 12px; color: #344054;">${series.get("name")}</span>
-                    <strong style="font-family: 'Poppins', sans-serif; font-size: 12px; font-weight: 500; color: #101828;">${tooltipSettings.currency} ${fieldValue}</strong>
+                    <strong style="font-family: 'Poppins', sans-serif; font-size: 12px; font-weight: 500; color: #101828;">${tooltipSettings.preText} ${fieldValue}</strong>
                 </div>`;
             });
 
@@ -900,7 +900,7 @@ function SmoothLineChart(renderingEl, data) {
     });
 
     // Get tooltip settings from data attribute or use default values /* Added by NayHtetSoe 15/11/2024. task link: https://app.clickup.com/t/86eq9wnxg */
-    var tooltipSettings = renderingEl.dataset.chartTooltip ? JSON.parse(renderingEl.dataset.chartTooltip) : { currency: "USD", totalText: "Total Earnings" };
+    var tooltipSettings = renderingEl.dataset.chartTooltip ? JSON.parse(renderingEl.dataset.chartTooltip) : { preText: "USD", totalText: "Total Earnings" };
 
     // Function to add series with debugging and tooltips
     function addSeries(name, fieldName, color) {
@@ -916,7 +916,7 @@ function SmoothLineChart(renderingEl, data) {
                     fill: am5.color(0x000000), // Set text color to black
                     lineHeight: 1.8
                 },
-                labelText: "[font color='#667085' fontFamily: 'Poppins' fontWeight:600 fontSize: .75rem]{fullMonth} {year.formatNumber('#')}[/]\n[font color='{stroke}' fontSize: 16px]● [/][font color='#344054' fontFamily: 'Poppins' fontWeight:400 fontSize: .75rem]{name}\t\t\t[/][font color='#101828' fontFamily: 'Poppins' fontWeight:500 fontSize: .75rem]"+tooltipSettings.currency+" {valueY}[/]", // Custom tooltip 
+                labelText: "[font color='#667085' fontFamily: 'Poppins' fontWeight:600 fontSize: .75rem]{fullMonth} {year.formatNumber('#')}[/]\n[font color='{stroke}' fontSize: 16px]● [/][font color='#344054' fontFamily: 'Poppins' fontWeight:400 fontSize: .75rem]{name}\t\t\t[/][font color='#101828' fontFamily: 'Poppins' fontWeight:500 fontSize: .75rem]"+tooltipSettings.preText+" {valueY}[/]", // Custom tooltip 
 
                 getFillFromSprite: false, // Prevent inheriting color from the series
                 pointerOrientation: "horizontal", // Ensure the tooltip is positioned horizontally
@@ -1098,7 +1098,7 @@ function DonutChart(renderingEl, data) {
     }));
 
     // Get tooltip settings from data attribute or use default values /* Added by NayHtetSoe 15/11/2024. task link: https://app.clickup.com/t/86eq9wnxg */
-    var tooltipSettings = renderingEl.dataset.chartTooltip ? JSON.parse(renderingEl.dataset.chartTooltip) : { currency: "USD" };
+    var tooltipSettings = renderingEl.dataset.chartTooltip ? JSON.parse(renderingEl.dataset.chartTooltip) : { preText: "USD", afterText: "" };
 
     function escapeHTML(str) {
         return str.replace(/&/g, '&amp;')
@@ -1183,7 +1183,7 @@ function DonutChart(renderingEl, data) {
         var slice = target.dataItem.dataContext;
         return "<div style='font-size: 12px; overflow: hidden; font-family: Poppins, sans-serif; color: #344054;'>" +
             "<span style='color:" + slice.color + "; font-size: 16px;'>●</span> " + escapeHTML(slice.category) + "<br>" +
-            "<strong style='font-size: 12px;'>" + tooltipSettings.currency + " " + slice.value + "</strong>" +
+            "<strong style='font-size: 12px;'>" + tooltipSettings.preText + " " + slice.value + "" + tooltipSettings.afterText +  "</strong>" +
             "</div>";
     });
 
