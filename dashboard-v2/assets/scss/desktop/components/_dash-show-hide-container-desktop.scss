@@ -21,3 +21,11 @@
 [data-show-hide-container][data-show-on-mobile="true"] {
   display: none;
 }
+
+/* share settings switch check hide and show */
+[data-section="hide-show-section"] {
+  display: none;
+}
+[data-section="hide-show-section"].active{
+  display: flex;
+}
