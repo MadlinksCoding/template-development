@@ -217,7 +217,7 @@ function BarChart(renderingEl, data) {
     var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
         categoryField: renderingEl.dataset.chartCategoryXField, // reading month, day, year, week etc, from dataset
         renderer: am5xy.AxisRendererX.new(root, {
-            minGridDistance: 0 // Reduce the minimum grid distance to show all labels
+            minGridDistance: renderingEl.dataset.chartTimeframes === 'day' ? 0 : 30 // Reduce the minimum grid distance to show all labels
         }),
         // Disable the tooltip on the category axis
         //tooltip: am5.Tooltip.new(root, {
@@ -905,7 +905,7 @@ function SmoothLineChart(renderingEl, data) {
     var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
         categoryField: renderingEl.dataset.chartCategoryXField, // reading month, day, year, week etc, from dataset
         renderer: am5xy.AxisRendererX.new(root, {
-            minGridDistance: 30
+            minGridDistance: renderingEl.dataset.chartTimeframes === 'day' ? 0 : 30 // Reduce the minimum grid distance to show all labels
         })
     }));
     xAxis.data.setAll(staticValues); // Set the X-axis categories as the months
@@ -913,6 +913,21 @@ function SmoothLineChart(renderingEl, data) {
         fontSize: "0.75rem", // Set the font size for X-axis labels
         fill: am5.color(0x475467), // Text color
     });
+
+     // Custom label formatting for day timeframe /* Added by NayHtetSoe 18/11/2024. task link: https://app.clickup.com/t/86eq96d7j */
+    if (renderingEl.dataset.chartTimeframes === 'day') {
+        // Show only specific x-axis labels (1, 5, 10, 15, 20, 25, 30)
+        xAxis.get("renderer").labels.template.adapters.add("visible", function(visible, target) {
+            if (target.dataItem) {
+
+                var category = target.dataItem.get("category");
+                var date = new Date(category);
+                var day = date.getDate();
+                return [1, 5, 10, 15, 20, 25, 30].includes(day);
+            }
+            return visible;
+        });
+    }
 
     var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
         renderer: am5xy.AxisRendererY.new(root, {})
