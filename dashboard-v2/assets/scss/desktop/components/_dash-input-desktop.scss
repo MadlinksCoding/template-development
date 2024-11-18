@@ -1,3 +1,24 @@
 /* Global Input style */
 input[type="text"], textarea { border-radius: 0 !important;}
 [data-form-input-type="select"] select, input:not([type="submit"]):not([type="radio"]):not([type="checkbox"]):not( [type="file"] ):not([type="color"]), input[type="text"], input[type="email"], input[type="tel"], input[type="url"], input[type="number"], input[type="password"], textarea { color: var(--color-ebony,#101828); font-size: 1rem; line-height: 1.5rem; font-weight: 400; }
+
+/* Add by MAIA to fix Tip Message textarea  */
+[data-tip-message-textarea] textarea::-webkit-input-placeholder {
+    color: var(--color-pale-sky, #667085);
+}
+
+[data-tip-message-textarea] textarea::-moz-placeholder{
+    color: var(--color-pale-sky, #667085);
+}
+
+[data-tip-message-textarea] textarea:-ms-input-placeholder{
+    color: var(--color-pale-sky, #667085);
+}
+
+[data-tip-message-textarea] textarea::-ms-input-placeholder{
+    color: var(--color-pale-sky, #667085);
+}
+
+[data-tip-message-textarea] textarea::placeholder {
+    color: var(--color-pale-sky, #667085);
+}

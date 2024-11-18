@@ -457,6 +457,10 @@ html {
   padding-right: .75rem
 }
 
+.mt--neg--64 {
+  margin-top: -4rem
+}
+
 .gap--12 {
   gap: .75rem
 }
@@ -3603,6 +3607,26 @@ textarea {
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: 400
+}
+
+[data-tip-message-textarea] textarea::-webkit-input-placeholder {
+  color: var(--color-pale-sky, #667085)
+}
+
+[data-tip-message-textarea] textarea::-moz-placeholder {
+  color: var(--color-pale-sky, #667085)
+}
+
+[data-tip-message-textarea] textarea:-ms-input-placeholder {
+  color: var(--color-pale-sky, #667085)
+}
+
+[data-tip-message-textarea] textarea::-ms-input-placeholder {
+  color: var(--color-pale-sky, #667085)
+}
+
+[data-tip-message-textarea] textarea::placeholder {
+  color: var(--color-pale-sky, #667085)
 }
 
 [data-hover=card-hover]:hover [data-section=hover-overlay] {

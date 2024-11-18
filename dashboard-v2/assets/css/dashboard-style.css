@@ -457,6 +457,10 @@ html {
   padding-right: .75rem
 }
 
+.mt--neg--64 {
+  margin-top: -4rem
+}
+
 .gap--12 {
   gap: .75rem
 }
@@ -3605,6 +3609,26 @@ textarea {
   font-weight: 400
 }
 
+[data-tip-message-textarea] textarea::-webkit-input-placeholder {
+  color: var(--color-pale-sky, #667085)
+}
+
+[data-tip-message-textarea] textarea::-moz-placeholder {
+  color: var(--color-pale-sky, #667085)
+}
+
+[data-tip-message-textarea] textarea:-ms-input-placeholder {
+  color: var(--color-pale-sky, #667085)
+}
+
+[data-tip-message-textarea] textarea::-ms-input-placeholder {
+  color: var(--color-pale-sky, #667085)
+}
+
+[data-tip-message-textarea] textarea::placeholder {
+  color: var(--color-pale-sky, #667085)
+}
+
 [data-hover=card-hover]:hover [data-section=hover-overlay] {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3679,6 +3703,10 @@ textarea {
 
   .bg--center-top-responsive-tablet {
     background-position: center top
+  }
+
+  .w--100-responsive-tablet {
+    width: 100%
   }
 
   .w--390-responsive-tablet {
@@ -4152,6 +4180,10 @@ textarea {
 
   .gap--16--responsive-mobile {
     gap: 1rem
+  }
+
+  .gap--24--responsive-tablet {
+    gap: 1.5rem
   }
 
   .dn-responsive-mobile {
