@@ -57,6 +57,10 @@
   font-weight: 600; 
 }
 
+[data-tabs-menu][data-responsive-tab-header-type="stretchable nobg"] [data-tab-head-list-item].active {
+  background-color: transparent;
+}
+
 /* Dashboard Tab Heads (Responsive Type - Dropdown - Default Desktop) : Custom Styles */
 [data-responsive-tab-header-type="dropdown"] {
   position: relative;

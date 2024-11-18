@@ -42,104 +42,6 @@
         <!-- Mobile Portrait Stylesheet -->
         <link rel="stylesheet" href="../assets/css/dashboard-styles-mobile-portrait.css"
             media="screen and (max-width: 479px)">
-
-        <style>
-            .text-gray-500 {
-                color: var(--Gray-500, #667085);
-            }
-            .text-gray-600 {
-                color: var(--Gray-600, #475467);
-            }
-            .text-gray-700 {
-                color: var(--Gray-700, #344054);
-            }
-            .text-gray-900 {
-                color: var(--Gray-900, #101828);
-            }
-            .text-gray-950 {
-                color: var(--Gray-950, #0C111D);
-            }
-            .form-input {
-                color: var(--Gray-900, #101828);
-            }
-            .form-input::placeholder {
-                color: var(--Gray-500, #667085);
-            }
-            
-            .w--140 {
-                width: 8.875rem;
-            }
-            .h--80 {
-                height: 5rem;
-            }
-            .w--p--8 {
-                width: 8%;
-            }
-            .col--cyan {
-                color: #67E3F9;
-            }
-            .col-sale {
-                color: #F093FB;
-            }
-            .checkbox-item input[type="checkbox"] {
-                width: 1rem;
-                min-width: 1rem;
-                height: 1rem;
-                border-width: 1px;
-                
-            }
-            [data-form-input-type=checkbox][data-form-accent-color=transparent] input[type=checkbox] {
-                border-color: var(--color-dodger-blue, #2970ff);
-            }
-            [data-form-input-type=checkbox][data-form-accent-color=basic] input[type=checkbox]:checked {
-                border-color: var(--color-brand-green, #07f468);
-                background-color: var(--color-brand-green, #07f468);
-            }
-            [data-form-input-type=checkbox][data-form-accent-color=basic] input[type=checkbox]:checked::after {
-                width: .25rem;
-                height: 0.5rem;
-                top: .1rem;
-                left: .3rem;
-                border-color: var(--color-brand-black, #000);
-            }
-            [data-form-input-type=checkbox][data-form-accent-color=basic] input[type=checkbox] {
-                border-color: var(--color-brand-black, #000);
-            }
-            .multiple-options:after {
-                content: "";
-                position: absolute;
-                width: 1.25rem;
-                height: 1.25rem;
-                right: .625rem;
-                top: .625rem;
-                background-image: url(../assets/icons/arrow-down.svg);
-                background-size: contain;
-            }
-
-            @media (min-width: 768px) and (max-width: 1365px) {
-                .grid--cols--2-responsive-tablet {
-                    grid-template-columns: repeat(3, minmax(0, 1fr));
-                }
-            }
-
-            @media (min-width: 480px) and (max-width: 767px) {
-                .grid--cols--2-responsive-mobile {
-                    grid-template-columns: repeat(2, minmax(0, 1fr));
-                }
-            }
-            /* Mobile Portrait */
-            @media (max-width: 479px) {
-                .grid--cols--2-responsive-mobile-portrait {
-                    grid-template-columns: repeat(2, minmax(0, 1fr));
-                }
-                .h--112 {
-                    height: 5rem;
-                }
-                .w--200 {
-                    width: 8.5rem;
-                }
-            }
-        </style>
     </head>
 
     <body>
@@ -7514,18 +7416,18 @@
                         <div class="flex items-center gap--8 pad--8">
                             <div class="w-100 flex justify-start items-start c--pointer flex-column  "
                                 data-form-input-type="checkbox" data-form-input-layout="vertical"
-                                data-form-accent-color="basic">
+                                data-form-accent-color="green">
 
                                 <label
-                                    class="checkbox-item w-100 flex flex-row items-center justify-between flex-shrink-0 gap10 gap--8 c--pointer">
-                                    <div class="flex items-center gap--8 flex--max">
-                                        <span class="fs--14 fw5 lh--20 col--ebony--variation-2 truncate w--285">
-                                            Premium library of LOREM LPSUM ATIER dolor sit amet, consectetur adipiscing elit.
-                                        </span>
-                                    </div>
+                                    class="checkbox-item w-100 flex flex-row flex-row-reverse items-center justify-between flex-shrink-0 gap10 gap--8 c--pointer">
                                     <input name="ppv" value="yes" type="checkbox" data-name="ppv"
                                         data-fetch-on-change="1" data-show-save-on-change="1"
                                         checked>
+                                    <div class="flex items-center gap--8 flex--max">
+                                        <span class="fs--14 lh--20 col--ebony--variation-2 truncate w--285">
+                                            Premium library of LOREM LPSUM ATIER dolor sit amet, consectetur adipiscing elit.
+                                        </span>
+                                    </div>
                                 </label>
                             </div>
                         </div>
@@ -7534,18 +7436,18 @@
                         <div class="flex items-center gap--8 pad--8">
                             <div class="w-100 flex justify-start items-start c--pointer flex-column  "
                                 data-form-input-type="checkbox" data-form-input-layout="vertical"
-                                data-form-accent-color="basic">
+                                data-form-accent-color="green">
 
                                 <label
-                                    class="checkbox-item w-100 flex flex-row items-center justify-between flex-shrink-0 gap10 gap--8 c--pointer">
+                                    class="checkbox-item w-100 flex flex-row flex-row-reverse items-center justify-between flex-shrink-0 gap10 gap--8 c--pointer">
+                                    <input name="ppv" value="yes" type="checkbox" data-name="ppv"
+                                        data-fetch-on-change="1" data-show-save-on-change="1"
+                                        checked>
                                     <div class="flex items-center gap--8 flex--max">
-                                        <span class="fs--14 fw5 lh--20 col--ebony--variation-2 truncate w--285">
+                                        <span class="fs--14 lh--20 col--ebony--variation-2 truncate w--285">
                                             Premium library of LOREM LPSUM ATIER dolor sit amet, consectetur adipiscing elit.
                                         </span>
                                     </div>
-                                    <input name="ppv" value="yes" type="checkbox" data-name="ppv"
-                                        data-fetch-on-change="1" data-show-save-on-change="1"
-                                        >
                                 </label>
                             </div>
                         </div>
@@ -7554,18 +7456,18 @@
                         <div class="flex items-center gap--8 pad--8">
                             <div class="w-100 flex justify-start items-start c--pointer flex-column  "
                                 data-form-input-type="checkbox" data-form-input-layout="vertical"
-                                data-form-accent-color="basic">
+                                data-form-accent-color="green">
 
                                 <label
-                                    class="checkbox-item w-100 flex flex-row items-center justify-between flex-shrink-0 gap10 gap--8 c--pointer">
-                                    <div class="flex items-center gap--8 flex--max">
-                                        <span class="fs--14 fw5 lh--20 col--ebony--variation-2 truncate w--285">
-                                            Premium library of LOREM LPSUM ATIER dolor sit amet, consectetur adipiscing elit.
-                                        </span>
-                                    </div>
+                                    class="checkbox-item w-100 flex flex-row flex-row-reverse items-center justify-between flex-shrink-0 gap10 gap--8 c--pointer">
                                     <input name="ppv" value="yes" type="checkbox" data-name="ppv"
                                         data-fetch-on-change="1" data-show-save-on-change="1"
                                         checked>
+                                    <div class="flex items-center gap--8 flex--max">
+                                        <span class="fs--14 lh--20 col--ebony--variation-2 truncate w--285">
+                                            Premium library of LOREM LPSUM ATIER dolor sit amet, consectetur adipiscing elit.
+                                        </span>
+                                    </div>
                                 </label>
                             </div>
                         </div>
@@ -7574,18 +7476,18 @@
                         <div class="flex items-center gap--8 pad--8">
                             <div class="w-100 flex justify-start items-start c--pointer flex-column  "
                                 data-form-input-type="checkbox" data-form-input-layout="vertical"
-                                data-form-accent-color="basic">
+                                data-form-accent-color="green">
 
                                 <label
-                                    class="checkbox-item w-100 flex flex-row items-center justify-between flex-shrink-0 gap10 gap--8 c--pointer">
-                                    <div class="flex items-center gap--8 flex--max">
-                                        <span class="fs--14 fw5 lh--20 col--ebony--variation-2 truncate w--285">
-                                            Premium library of LOREM LPSUM ATIER dolor sit amet, consectetur adipiscing elit.
-                                        </span>
-                                    </div>
+                                    class="checkbox-item w-100 flex flex-row flex-row-reverse items-center justify-between flex-shrink-0 gap10 gap--8 c--pointer">
                                     <input name="ppv" value="yes" type="checkbox" data-name="ppv"
                                         data-fetch-on-change="1" data-show-save-on-change="1"
                                         checked>
+                                    <div class="flex items-center gap--8 flex--max">
+                                        <span class="fs--14 lh--20 col--ebony--variation-2 truncate w--285">
+                                            Premium library of LOREM LPSUM ATIER dolor sit amet, consectetur adipiscing elit.
+                                        </span>
+                                    </div>
                                 </label>
                             </div>
                         </div>

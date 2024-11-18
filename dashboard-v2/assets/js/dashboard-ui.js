@@ -800,6 +800,36 @@ class DashSidebarMenuAdjuster {
 				this.floatingPanel.dataset.positionLower = '4rem';
 			}
 
+			// Check if window height is less than or equal to 350px /* added by NayHtetSoe 18/11/2024. task link https://app.clickup.com/t/86eq9vyj6 */
+			if (this.windowHeight <= 350) {
+				// Get the parent sidebar element
+				let parentSidebar = this.floatingPanel.closest('[data-sidebar-main-wrapper]');
+				
+				// Enable vertical scrolling and unset the position of the parent sidebar
+				parentSidebar.style.overflowY = 'scroll';
+				parentSidebar.style.position = 'unset';
+			
+				// Set the position of the floating panel's parent element to absolute
+				this.floatingPanel.parentElement.style.position = 'absolute';
+				
+				// Position the floating panel's parent element to the right of the parent sidebar
+				this.floatingPanel.parentElement.style.left = (parentSidebar.getBoundingClientRect().width - 10) + 'px';
+				
+				// Log the bounding rectangle of the floating panel for debugging
+				console.error('getBoundingClientRect', this.floatingPanel.getBoundingClientRect());
+			} else {
+				// Get the parent sidebar element
+				let parentSidebar = this.floatingPanel.closest('[data-sidebar-main-wrapper]');
+				
+				// Reset the overflow and position styles of the parent sidebar
+				parentSidebar.style.overflowY = '';
+				parentSidebar.style.position = '';
+			
+				// Reset the position and left styles of the floating panel's parent element
+				this.floatingPanel.parentElement.style.position = '';
+				this.floatingPanel.parentElement.style.left = '';
+			}
+
 			// recalculate number of possible visible main items inside menu panel (in case window has resized and the value changed)
 			this.maxVisibleItems = Math.floor((this.windowHeight - this.otherElementsHeight) / this.menuItemHeight);
 

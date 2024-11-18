@@ -150,7 +150,7 @@
                     "customRequest":90
                 },
                 {
-                    "date": "06-07-2023",
+                    "date": "07-07-2023",
                     "subscription":150,
                     "payToView":130,
                     "merch":170,
@@ -1587,21 +1587,21 @@
             "day":[
                 {
                     "date": "01-07-2023",
-                    "value": 10,
+                    "value": 5,
                     "category": "Direct",
-                    "color": "#4361EE"
+                    "color": "#4CC9F0"
+                },
+                {
+                    "date": "01-07-2023",
+                    "value": 10,
+                    "category": "Pornhub",
+                    "color": "#3A0BA3"
                 },
                 {
                     "date": "01-07-2023",
                     "value": 9,
                     "category": "Twitter(X)",
-                    "color": "#4CC9F0"
-                },
-                {
-                    "date": "01-07-2023",
-                    "value": 6,
-                    "category": "Pornhub",
-                    "color": "#3A0BA3"
+                    "color": "#4361EE"
                 }
             ]            
         }
@@ -3172,31 +3172,31 @@
                 {
                     "date": "01-07-2023",
                     "value": 9,
-                    "category": "Tip 1",
+                    "category": "Tier 1",
                     "color": "#4361EE"
                 },
                 {
                     "date": "01-07-2023",
                     "value": 6,
-                    "category": "Tip 2",
+                    "category": "Tier 2",
                     "color": "#3A0BA3"
                 },
                 {
                     "date": "01-07-2023",
                     "value": 5,
-                    "category": "Tip 3",
+                    "category": "Tier 3",
                     "color": "#AE4AEF"
                 },
                 {
                     "date": "01-07-2023",
                     "value": 5,
-                    "category": "Tip 4",
+                    "category": "Tier 4",
                     "color": "#98A2B3"
                 },
                 {
                     "date": "01-07-2023",
                     "value": 5,
-                    "category": "Tip 5",
+                    "category": "Tier 5",
                     "color": "#F72485"
                 }
             ]            
