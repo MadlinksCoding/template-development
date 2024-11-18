@@ -141,8 +141,13 @@ function BarChart(renderingEl, data) {
         paddingTop: 0,
     }));
 
+    // Create Default Tooltip Settings
+    var defaultTooltipSettings = { preText: "USD", totalText: "Total Earnings", showTotal: true, };
     // Get tooltip settings from data attribute or use default values /* Added by NayHtetSoe 15/11/2024. task link: https://app.clickup.com/t/86eq9wnxg */
-    var tooltipSettings = renderingEl.dataset.chartTooltip ? JSON.parse(renderingEl.dataset.chartTooltip) : { preText: "USD", totalText: "Total Earnings" };
+    var tooltipSettings = renderingEl.dataset.chartTooltip ? JSON.parse(renderingEl.dataset.chartTooltip): defaultTooltipSettings;
+
+    // combine default and custom tooltip settings
+    tooltipSettings = { ...defaultTooltipSettings, ...tooltipSettings };
 
     // Create tooltip
     var tooltip = am5.Tooltip.new(root, {
@@ -350,8 +355,11 @@ function BarChart(renderingEl, data) {
         // Add x-axis label with year at the top
         text = "[font color='#667085'][bold]" + fullMonthName + " " + year + "[/]\n" + text;
 
-        // Add total value with a line above it
-        text += "\n[font color='#D0D5DD']───────────────────────[/font]\n[fontWeight:normal width:135px height: 0px][font color='#667085'] " + tooltipSettings.totalText + "[/font][/] [bold width:0px] " + tooltipSettings.preText + " " + total + "[/]";
+        if (tooltipSettings.showTotal) {
+            // Add total value with a line above it
+            text += "\n[font color='#D0D5DD']───────────────────────[/font]\n[fontWeight:normal width:135px height: 0px][font color='#667085'] " + tooltipSettings.totalText + "[/font][/] [bold width:0px] " + tooltipSettings.preText + " " + total + "[/]";
+        }
+
         return text;
     });
 
