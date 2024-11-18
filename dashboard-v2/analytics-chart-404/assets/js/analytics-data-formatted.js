@@ -150,7 +150,7 @@
                     "customRequest":90
                 },
                 {
-                    "date": "06-07-2023",
+                    "date": "07-07-2023",
                     "subscription":150,
                     "payToView":130,
                     "merch":170,
