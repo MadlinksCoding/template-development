@@ -155,7 +155,7 @@
 
 /* Flexbox */
 .flex--wrap-responsive-mobile-portrait { flex-wrap: wrap; }
-.flex--column-responsive-mobile-portrait { flex-direction: column; }
+// .flex--column-responsive-mobile-portrait { flex-direction: column; } /* Conflicting with the same class in _dash-customTachyons-mobile-portrait.scss */
 .flex--reverse--column-responsive-mobile-portrait { flex-direction: column-reverse; }
 .items--start-responsive-mobile-portrait { align-items: flex-start; }
 .items--end-responsive-mobile-portrait { align-items: flex-end; }
