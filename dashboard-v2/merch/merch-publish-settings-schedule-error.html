@@ -7909,23 +7909,105 @@
                                             <div
                                                 class="flex items-center bg--col--athens-gray ba br--col--mischka br--5 overflow-hidden">
                                                 <button
-                                                    class="pad--x--16 pad--x--8-responsive-mobile pad--x--8-responsive-mobile-portrait pad--y--8 flex items-center justify-center gap--8 flex-auto br br--col--mischka bg--col--ebony--variation-2 hover--parent--child--col--white">
-                                                    <img src="../assets/icons/upload-cloud-01.svg" alt="" class="w--16 h--16 filter--col--white" />
+                                                    class="pad--x--16 pad--x--8-responsive-mobile pad--x--8-responsive-mobile-portrait pad--y--8 flex items-center justify-center gap--8 flex-auto hover--parent--child--col--gull-gray">
+                                                    <img src="../assets/icons/upload-cloud-01.svg" alt="" class="w--16 h--16 filter--col--gull-gray" />
                                                     <span
-                                                        class="fs--12 fw6 lh--18 white hover--col--white">Publish immediately after approval</span>
+                                                        class="fs--12 fw6 lh--18 col--gull-gray hover--col--gull-gray">Publish immediately after approval</span>
                                                 </button>
                                                 <button
-                                                    class="pad--x--16 pad--x--8-responsive-mobile pad--x--8-responsive-mobile-portrait pad--y--8 flex items-center justify-center gap--8 flex-auto hover--parent--child--col--gull-gray">
-                                                    <img src="../assets/icons/clock-check.svg" alt="" class="w--20 h--20 filter--col--gull-gray" />
+                                                    class="pad--x--16 pad--x--8-responsive-mobile pad--x--8-responsive-mobile-portrait pad--y--8 flex items-center justify-center gap--8 flex-auto bg--col--ebony--variation-2 hover--parent--child--col--white">
+                                                    <img src="../assets/icons/clock-check.svg" alt="" class="w--20 h--20 filter--col--white" />
                                                     <span
-                                                        class="fs--14 fw5 lh--20 col--gull-gray hover--col--gull-gray">Schedule a publish time</span>
+                                                        class="fs--14 fw5 lh--20 white hover--col--white">Schedule a publish time</span>
                                                 </button>
                                             </div>
                                             <!-- End Upload Button Group -->
 
                                             <!-- Tab Content -->
-                                            <div class=" flex flex-column">
-                                                <p class="fs--14 lh--20 col--outer-space">We will publish the merch to your store after admin review. It usually takes 2 working days.</p>
+                                            <div class=" flex flex-column gap--16">
+                                                <!-- Publish Date group -->
+                                                <div class="flex flex-column gap--6">
+                                                    <span class="fs--14 fw6 lh--20 col--oxford-blue">Publish Date</span>
+                                                    <!-- Input Field -->
+                                                    <div class="flex flex-column gap--6">
+                                                        <div class="flex gap--8 items-center br--2 br--bottom br--left bb br--col--mischka bg-white-50 sh--7 relative">
+                                                            <span>
+                                                                <img src="../assets/icons/calendar.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                                            </span>
+                                                            <input type="text" placeholder="Select Date and Time" class="form-input w-100 bn flex-auto fs--16 lh--24 pad--y--10 pad--x--12">
+                                                        </div>
+                                                        <span class="fs--14 lh--20 col--vermilion">Publish Date must be after xx-xx-xxxx xx:xx.</span>
+                                                    </div>
+                                                    <!-- /Input Field -->
+                                                </div>
+                                                <!-- /Publish Date group -->
+                                                <!-- Pre Order content -->
+                                                <div class="flex flex-column gap--16 flex--max">
+                                                    <!-- Toggle Switch -->
+                                                    <!-- toggle -->
+                                                    <div class="flex flex-column justify-center items-start self-stretch">
+                                                        <div class="flex items-center gap--8">
+                                                            <!-- toggle container -->
+                                                            <div class="flex">
+                                                                <!-- toggle switch (switch size = ['default', 'small'] / switch theme = ['default', 'light', 'dark']) -->
+                                                                <label data-hide-show-section="hide-show-section" data-switch="" data-switch-size="small"
+                                                                    data-switch-theme="dark" data-switch-for=""
+                                                                    data-throw-event="fs-evt-eventname">
+                                                                    <input type="checkbox" value="switch_slide" checked
+                                                                        name="switch_slide" class="dn">
+                                                                    <span data-switch-slide="" class="db"></span>
+                                                                </label>
+                                                                <!-- /toggle switch -->
+                                                            </div>
+                                                            <!-- /toggle container -->
+
+                                                            <!-- toggle text -->
+                                                            <div class="flex items-center gap--4">
+                                                                <div class="flex items-center gap--8">
+                                                                    <span class="fs--16 fw5 lh--24 black">
+                                                                        Open for Pre-order
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                            <!-- /toggle text -->
+                                                        </div>
+                                                    </div>
+                                                    <!-- /toggle -->
+                                                    <!-- End Toggle Switch -->
+                                                    <!-- Input Field wrapper -->
+                                                    <div class="flex flex-column gap--8">
+                                                        <span class="fs--14 fw6 lh--20 col--ebony--variation-2">Pre-order Price (optional)</span>
+                                                        <!-- Input Field -->
+                                                        <div class="flex flex-column gap--6">
+                                                            <div class="flex gap--8 items-center pad--x--12 br--2 br--bottom br--left bb br--col--mischka bg-white-50 sh--7 relative">
+                                                                <span class="fs--16 fw7 lh--24 col--oxford-blue">USD$</span>
+                                                                <input type="text" value="12.99" class="form-input w-100 bn flex-auto fs--16 lh--24 pad--y--10 pad--x--0 col--oxford-blue">
+                                                            </div> 
+                                                            <span class="fs--14 lh--20 col--vermilion">Price must be between USD 1.95-USD XX</span>
+                                                        </div>
+                                                        <!-- /Input Field -->
+                                                    </div><!-- End Input Field wrapper -->
+                                                    <!-- Attach Media -->
+                                                    <div class="flex flex-column gap--8">
+                                                        <span class="fs--14 fw6 lh--20 col--ebony--variation-2">After pre-order end date:</span>
+                                                        <!-- radio group -->
+                                                        <ul class="flex flex-column gap--8">
+                                                            <li data-form-input-type="radio" data-form-input-layout="vertical"
+                                                                data-form-accent-color="green">
+                                                                <input type="radio" id="f-option" name="selector" class="dn"
+                                                                    checked>
+                                                                <label for="f-option" class="fs--16 fw5 lh--24 black">Keep this merch in store</label>
+                                                            </li>
+
+                                                            <li data-form-input-type="radio" data-form-input-layout="vertical"
+                                                                data-form-accent-color="green">
+                                                                <input type="radio" id="s-option" name="selector" class="dn">
+                                                                <label for="s-option" class="fs--16 fw5 lh--24 black">Unpublish this merch from store</label>
+                                                            </li>
+                                                        </ul>
+                                                        <!-- End radio group -->
+                                                    </div><!-- End Attach Media -->
+                                                </div><!-- End Pre Order content -->
                                             </div>
                                             <!-- /Tab Content -->
                                         </div>
@@ -7946,8 +8028,8 @@
                                             class="absolute right-0 bottom-0 z--10000">
                                             <a href="#"
                                                 data-button-style="skew-left shadow-none"
-                                                data-button-color="green"
-                                                class="h--40 pad--x--8 flex items-center gap--5 justify-center hover--bg--col-ebony hover--col--brand-green hover--br--col-brand-green">
+                                                data-button-color="gull-gray"
+                                                class="h--40 pad--x--8 flex items-center gap--5 justify-center">
                                                 <span
                                                     class="flex pad--y--4 fs--16 fw6 lh--32 black">SUBMIT FOR APPROVAL</span>
                                                 <span> <img
