@@ -101,6 +101,9 @@ button[data-color="gray"]:not(:disabled):hover span { color: #fff !important; }
    filter: brightness(0) saturate(100%) invert(75%) sepia(23%) saturate(7280%) hue-rotate(93deg) brightness(109%) contrast(95%);
 }
 
+[data-button-color="gull-gray"],
+[data-button-color="gull-gray"]:after { background: rgba(52, 64, 84, 0.05); }
+
 [data-button-color="blue"],
 [data-button-color="blue"]:after { background-color: var(--color-electric-violet, #4D20FF); }
 
