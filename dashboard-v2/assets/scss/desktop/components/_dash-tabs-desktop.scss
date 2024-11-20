@@ -37,6 +37,13 @@
   font-size: 0.875rem;
 }
 
+[data-responsive-tab-header-type="scrollable"] .active[data-tab-head-list-item] [data-tab-trigger] [data-tab-label="white"],
+[data-responsive-tab-header-type="scrollable"] [data-tab-head-list-item] [data-tab-trigger][data-is-active="true"] [data-tab-label="white"] { 
+  color: var(--color-white, #FFFFFF);  
+  font-weight: 400; 
+  font-size: 1rem;
+}
+
 /* Dashboard Tab Heads (Responsive Type - Stretchable) : Custom Styles */
 [data-responsive-tab-header-type="stretchable"] [data-tab-head-list] { 
   
@@ -165,3 +172,10 @@
 /* Grid and List tabs menu style */
 [data-tabs-menu="grid-list-tabs-menu"] [data-tabbed-child-id].active { background-color: var(--color-ebony-2, #0C111D); }
 [data-tabs-menu="grid-list-tabs-menu"] [data-tabbed-child-id].active [data-span-icon] img { filter: brightness(0) saturate(100%) invert(99%) sepia(99%) saturate(0%) hue-rotate(176deg) brightness(107%) contrast(100%); }
+
+[data-responsive-tab-header-type=stretchable][data-tab-select="transparent"] .active[data-tab-head-list-item] [data-tab-trigger]{
+  background-color: transparent;
+  border-bottom: solid 1px #fff;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+}

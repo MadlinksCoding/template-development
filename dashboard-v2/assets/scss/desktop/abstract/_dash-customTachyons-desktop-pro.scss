@@ -15,7 +15,8 @@
 .col-electric-violet { color: var(--color-electric-violet, #4D20FF); }
 .col--malibu { color: var(--color-malibu, #67E3F9); }
 .col--heliotrope {color: var(--color-heliotrope);}
-
+.col--athens-gray-2 { color: var(--color-athens-gray2, #F9FAFB); }
+.col--athens-gray-3 { color: var(--color-athens-gray3, #F2F4F7); }
 
 /* Background Colors*/
 .bg--col--white--25 { background: rgba(255, 255, 255, 0.25); }
@@ -36,6 +37,7 @@
 .bg--col--mischka { background-color: var(--color-mischka, #D0D5DD); }
 .bg--col--sunglow-yellow { background-color: var(--color-sunglow-yellow, #FFCD29); }
 .bg--col-electric-violet { background-color: var(--color-electric-violet, #4D20FF); }
+.bg--col-electric-violet-2 { background-color: var(--color-electric-violet-2, #F600FE); }
 .bg--col-ebony { background: var(--color-ebony, #101828); }
 .bg--col--light-bondi-blue { background: rgba(34, 204, 238, 0.10); }
 .bg--col--light-gray-152-50 { background: rgba(152, 162, 179, 0.50);}
@@ -105,6 +107,8 @@
 .filter--col--brand-green { filter: brightness(0) saturate(100%) invert(50%) sepia(94%) saturate(408%) hue-rotate(100deg) brightness(93%) contrast(87%); } /* #17B26A */
 .filter--col--turquoise { filter: brightness(0) saturate(100%) invert(77%) sepia(13%) saturate(2041%) hue-rotate(116deg) brightness(89%) contrast(95%); } /* #2ED3B7 */
 .filter--col--vermilion { filter: brightness(0) saturate(100%) invert(39%) sepia(92%) saturate(3503%) hue-rotate(354deg) brightness(98%) contrast(113%); } /* #FF4405 */
+.filter--col--athens-gray { filter: brightness(0) saturate(100%) invert(96%) sepia(13%) saturate(39%) hue-rotate(169deg) brightness(99%) contrast(96%); } /* #F2F4F7 */
+.filter--col--Mercury { filter: brightness(0) saturate(100%) invert(99%) sepia(4%) saturate(583%) hue-rotate(226deg) brightness(119%) contrast(80%); } /* #E7E5E4 */
 
 /* Filter Blur */
 .filter--blur--2 { filter: blur(2px); -webkit-filter: blur(2px); -moz-filter: blur(2px); }
@@ -230,6 +234,7 @@
 
 
 /* Max Height */
+.max-h--800 { max-height: 50rem; /* max height 800px */ } /* pixel conversion correct */
 
 
 /* Padding */
@@ -270,8 +275,9 @@
 
 
 /* Gap */
-.gap--26 { gap: 1.625rem; /* gap 26px */ } /* confirmed in use */ /* pixel conversion correct */
 .gap--1 { gap: 0.063rem; /* gap 1px */ } /* confirmed in use */ /* pixel conversion correct */
+.gap--26 { gap: 1.625rem; /* gap 26px */ } /* confirmed in use */ /* pixel conversion correct */
+.gap--44 { gap: 2.75rem; /* gap 44px */ } /* pixel conversion correct */ /* pixel conversion correct */
 
 
 /* Flexbox */
@@ -342,6 +348,7 @@
 /* Backdrop Filter */
 .bg--blur--5 { -webkit-backdrop-filter: blur(5px); backdrop-filter: blur(5px); } /* confirmed in use */
 .bg--blur--15 { -webkit-backdrop-filter: blur(15px); backdrop-filter: blur(15px); } /* confirmed in use */
+.bg--blur--125 { -webkit-backdrop-filter: blur(125px); backdrop-filter: blur(125px); } /* confirmed in use */
 
 
 /* Box Shadow */
