@@ -2174,6 +2174,14 @@ html {
   font-weight: 400
 }
 
+[data-tabs-menu][data-responsive-tab-header-type="stretchable nobg"] [data-tab-head-list-item][data-tab-opactiy-50] {
+  opacity: .5
+}
+
+[data-tabs-menu][data-responsive-tab-header-type="stretchable nobg"] [data-tab-head-list-item][data-tab-opactiy-50].active {
+  opacity: 1
+}
+
 [data-tabs-menu][data-responsive-tab-header-type="stretchable nobg"] [data-tab-head-list-item].active {
   background-color: transparent
 }
