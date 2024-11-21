@@ -7324,6 +7324,21 @@
                             </div>
                             <!-- /Product Title section top -->
 
+                            <!-- Cart Button -->
+                            <div class="w-100 pad--x--20 flex items-start">
+                                <!-- Buy Now Button -->
+                                <button data-button-style="skew-left-top" data-button-theme="pink-1" class="pad--x--40 pad--y--5 h--72 flex--max flex items-center justify-center">
+                                    <span data-button-label class="fs--30 fw6 lh--38 ttu col--wild-sand">Buy Now</span>
+                                </button>
+                                <!-- /Buy Now Button -->
+                                <!-- Buy Now Button -->
+                                <button data-button-style="skew-left-top" data-button-theme="pink-2" class="pad--x--40 pad--y--5 h--72 flex--max flex items-center justify-center">
+                                    <span data-button-label class="fs--30 fw6 lh--38 col--wild-sand">Add to Cart</span>
+                                </button>
+                                <!-- /Buy Now Button -->
+                            </div>
+                            <!-- /Cart Button -->
+
                             <!-- Produvt Details Listing -->
                             <div class="flex flex-column flex--max gap--16" data-tab-main-wrapper data-tabs-section="1">
                                 <!-- tab header list (type = [scrollable, stretchable, dropdown]) -->
@@ -7403,33 +7418,54 @@
                                     <!-- Button group -->
                                     <div class="flex items-center gap--8">
                                         <!-- Edit Details -->
-                                        <button class="pad--y--4 pad--x--8 flex items-center gap--10">
-                                            <img src="../assets/icons/edit-02-green.svg" alt="" class="w--24 h--24 filter--col--gull-gray">
-                                            <span class="fs--18 fw5 lh--28 col--gull-gray">Edit Details</span>
+                                        <button class="pad--y--4 pad--x--8 flex items-center gap--10 bg-black hover--bg--col-brand-green hover--parent--child--col--black-ribbon group">
+                                            <img src="../assets/icons/edit-02-green.svg" alt="" class="w--24 h--24 filter--col--spring-green hov--filter--col--black-ribbon">
+                                            <span
+                                                class="fs--18 fw5 lh--28 col-brand-green hover--col-black">
+                                                Edit Details
+                                            </span>
                                         </button>
                                         <!-- /Edit Details -->
 
-                                        <!-- Reviewing Tag -->
-                                        <div class="pad--y--8 pad--x--9 bg--col--my-sin flex items-center gap--10">
-                                            <img src="../assets/icons/credit-card-search.svg" alt="" class="w--24 h--24 filter--col--ebony--variation-2">
-                                            <span class="fs--16 fw5 lh--24 col--ebony--variation-2">Reviewing</span>
+                                        <!-- Unpublish Tag -->
+                                        <div class="pad--y--8 pad--x--9 bg--col--vermilion flex items-center gap--10">
+                                            <img src="../assets/icons/download-cloud-01.svg" alt="" class="w--24 h--24 filter--col--ebony--variation-2">
+                                            <span class="fs--16 fw5 lh--24 col--ebony--variation-2">UNPUBLISH</span>
                                         </div>
-                                        <!-- Reviewing Tag -->
+                                        <!-- Unpublish Tag -->
                                     </div>
                                     <!-- /Button Group -->
-                                    <span class="fs--12 lh--18 col--my-sin">This merch will be published after review.</span>
+                                    <!-- Published Date --->
+                                    <div class="flex items-center gap--4">
+                                        <img src="../assets/icons/upload-cloud-01.svg" alt="" class="w--16 h--16 filter--col--white">
+                                        <span class="fs--12 lh--18 white">Published on Nov-3-2024 23:23</span>
+                                    </div>
+                                    <!-- /Published Date --->
                                 </div>
                                 <!-- /Left -->
 
                                 <!-- Three Dots Settings -->
-                                <div class="flex">
+                                <div class="flex gap--8">
+                                    <button class="w--32 h--32 flex items-center justify-center ba br--col--white-rock br-100">
+                                        <img src="../assets/icons/share-06.svg" alt="" class="w--16 h--16 filter--col--Mercury">
+                                    </button> 
                                     <!-- Settings Button --->
                                     <div class="relative">
                                         <button class="w--32 h--32 flex items-center justify-center ba br--col--white-rock br-100">
                                             <img src="../assets/icons/dots-vertical.svg" alt="" class="w--16 h--16 filter--col--Mercury">
                                         </button>
+                                        <!-- Button Dropdown -->
+                                        <div class="w--150 absolute bottom--48 right-0 bg-white-70 sh--11 pad--y--4 pad--x--6 flex flex-column br--8">
+                                            <!-- Dropdown Item -->
+                                            <button class="pad--x--10 pad--y--9 gap--8 flex--max flex items-center">
+                                                <img src="../assets/icons/trash-03.svg" alt="" class="w--16 h--16 filter--col--vermilion">
+                                                <span class="fs--14 fw5 lh--20 col--vermilion nowrap">Delete Merch</span>
+                                            </button>
+                                            <!-- Dropdown Item -->
+                                        </div>
+                                        <!-- Button Dropdown -->
                                     </div>  
-                                    <!-- Settings Button ---> 
+                                    <!-- Settings Button --->
                                 </div>
                                 <!-- Three Dots Settings -->
                             </div>
