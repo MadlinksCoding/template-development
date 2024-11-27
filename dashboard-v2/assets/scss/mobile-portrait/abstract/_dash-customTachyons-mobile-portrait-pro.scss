@@ -141,6 +141,7 @@
 .pad--right--18-responsive-mobile-portrait { padding-right: 1.125rem; /* padding left 18px */ }
 .pad--right--32-responsive-mobile-portrait { padding-right: 2rem; /* padding left 32px */ }
 .pad--bottom--32-responsive-mobile-portrait { padding-bottom: 2rem; /* padding bottom 32px */ }
+.pad--bottom--70-responsive-mobile-portrait { padding-bottom: 4.375rem;}
 
 
 /* Margin */
@@ -156,10 +157,12 @@
 .gap--0-responsive-mobile-portrait { gap: 0rem; }
 .gap--4-responsive-mobile-portrait { gap: 0.25rem; }
 .gap--8-responsive-mobile-portrait { gap: 0.5rem; }
+.gap--24-responsive-mobile-portrait { gap: 1.5rem; }
 
 
 /* Flexbox */
 .flex--wrap-responsive-mobile-portrait { flex-wrap: wrap; }
+.flex--row-responsive-mobile-portrait { flex-direction: row; }
 // .flex--column-responsive-mobile-portrait { flex-direction: column; } /* Conflicting with the same class in _dash-customTachyons-mobile-portrait.scss */
 .flex--reverse--column-responsive-mobile-portrait { flex-direction: column-reverse; }
 .items--start-responsive-mobile-portrait { align-items: flex-start; }

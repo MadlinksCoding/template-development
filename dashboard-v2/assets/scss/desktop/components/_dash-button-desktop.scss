@@ -211,3 +211,39 @@ button[data-color="gray"]:not(:disabled):hover span { color: #fff !important; }
 [data-button-theme="pink-2"]:before{
    background-color: rgba(200, 10, 139, 1);
 }
+
+/* Blue Avaibility buttons */
+[data-button-theme="blue"]{
+   border: 3px solid #fff;
+   box-shadow: 0px 0px 1px 0px #1B45FF inset, 0px 0px 10px 0px rgba(13, 113, 252, 0.05), 0px 0px 35px 0px rgba(13, 113, 252, 0.25), 0px 5px 50px 0px rgba(13, 113, 252, 0.50), 0px 0px 40px 0px rgba(13, 113, 252, 0.50) inset, 0px 0px 10px 0px rgba(30, 187, 255, 0.70);
+}
+[data-button-theme="blue"]:after{
+   box-shadow: 0px 0px 1px 0px #1B45FF inset, 0px 0px 10px 0px rgba(13, 113, 252, 0.05), 0px 0px 35px 0px rgba(13, 113, 252, 0.25), 0px 5px 50px 0px rgba(13, 113, 252, 0.50), 0px 0px 40px 0px rgba(13, 113, 252, 0.50) inset, 0px 0px 10px 0px rgba(30, 187, 255, 0.70);
+}
+[data-button-theme="blue"]:before{
+   background-color: rgba(0, 51, 255, 1);
+}
+
+/* Brown Avaibility buttons */
+[data-button-theme="brown"]{
+   border: 3px solid #FFE0E3;
+   box-shadow: 0px 0px 1px 0px #FFB6BC inset, 0px 0px 10px 0px rgba(252, 25, 13, 0.05), 0px 0px 35px 0px rgba(252, 25, 13, 0.25), 0px 5px 50px 0px rgba(252, 25, 13, 0.50), 0px 0px 40px 0px rgba(252, 25, 13, 0.50) inset;
+}
+[data-button-theme="brown"]:after{
+   box-shadow: 0px 0px 1px 0px #FFB6BC inset, 0px 0px 10px 0px rgba(252, 25, 13, 0.05), 0px 0px 35px 0px rgba(252, 25, 13, 0.25), 0px 5px 50px 0px rgba(252, 25, 13, 0.50), 0px 0px 40px 0px rgba(252, 25, 13, 0.50) inset;
+}
+[data-button-theme="brown"]:before{
+   background-color: rgba(255, 68, 0, 1);
+}
+
+/* yellow Avaibility buttons */
+[data-button-theme="yellow"]{
+   border: 3px solid #FFFADD;
+   box-shadow: 0px 0px 10px 0px rgba(242, 242, 3, 0.05), 0px 5px 50px 0px rgba(242, 242, 3, 0.50), 0px 0px 1px 0px #FFF3A1 inset, 0px 0px 10px 0px rgba(255, 185, 9, 0.70), 0px 0px 10px 0px rgba(255, 185, 9, 0.70);
+}
+[data-button-theme="yellow"]:after{
+   box-shadow: 0px 0px 10px 0px rgba(242, 242, 3, 0.05), 0px 5px 50px 0px rgba(242, 242, 3, 0.50), 0px 0px 1px 0px #FFF3A1 inset, 0px 0px 10px 0px rgba(255, 185, 9, 0.70), 0px 0px 10px 0px rgba(255, 185, 9, 0.70);
+}
+[data-button-theme="yellow"]:before{
+   background-color: rgba(184, 235, 0, 1);
+}

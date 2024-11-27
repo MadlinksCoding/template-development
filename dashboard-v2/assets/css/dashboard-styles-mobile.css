@@ -417,6 +417,10 @@ body.stop-mobile-scrolling {
   padding-bottom: 2rem
 }
 
+.pad--bottom--70-responsive-mobile {
+  padding-bottom: 4.375rem
+}
+
 .pad--x--10-responsive-mobile {
   padding-left: .625rem;
   padding-right: .625rem
@@ -462,9 +466,20 @@ body.stop-mobile-scrolling {
   gap: .5rem
 }
 
+.gap--24-responsive-mobile {
+  gap: 1.5rem
+}
+
 .flex--wrap-responsive-mobile {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap
+}
+
+.flex--row-responsive-mobile {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row
 }
 
 .flex--column-responsive-mobile {

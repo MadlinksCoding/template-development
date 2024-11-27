@@ -235,7 +235,15 @@ html {
   padding-bottom: 0
 }
 
+.pad--bottom--70-responsive-tablet {
+  padding-bottom: 4.375rem
+}
+
 .display--none-responsive-tablet {
+  display: none
+}
+
+.display--flex-responsive-tablet {
   display: none
 }
 
@@ -319,6 +327,10 @@ html {
   top: 0
 }
 
+.bottom--0--responsive-tablet {
+  bottom: 0
+}
+
 .z--10000-responsive-tablet {
   z-index: 10000
 }
@@ -327,6 +339,13 @@ html {
   opacity: 1;
   -webkit-transform: translateX(0);
   transform: translateX(0)
+}
+
+[data-button-place="fixed vertical"] {
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  -webkit-transform-origin: right bottom;
+  transform-origin: right bottom
 }
 
 [data-show-hide-container][data-show-on-desktop=true],

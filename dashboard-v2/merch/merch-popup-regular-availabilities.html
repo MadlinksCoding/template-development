@@ -6,7 +6,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE-edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        <title>Template - Subscription Settings Page Add New Tier Form</title>
+        <title>Template - Merch</title>
 
         <!-- Poppins Font -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,15 +46,14 @@
 
     <body>
         <!-- main wrapper -->
-        <div data-section="wrapper"
-            class="h--screen-tablet h--screen-mobile h--screen-mobile-portrait flex flex--column-responsive-mobile flex--column-responsive-mobile-portrait">
+        <div data-section="wrapper" class="flex flex--column-responsive-mobile flex--column-responsive-mobile-portrait">
 
             <!-- page sidebar -->
             <section data-sidebar data-section="sidebar"
-                class="flex vh-100 sticky top-0 z-2 bg--col--athens-gray--70 sh--sidebar vw--100--responsive-mobile vw--100--responsive-mobile-portrait h--48-responsive-mobile h--48-responsive-mobile-portrait bg--col--none--responsive-mobile bg--col--none--responsive-mobile-portrait sh--none--responsive-mobile sh--none--responsive-mobile-portrait">
+                class="flex vh-100 sticky top-0 z-2 sh--sidebar vw--100--responsive-mobile vw--100--responsive-mobile-portrait h--48-responsive-mobile h--48-responsive-mobile-portrait sh--none--responsive-mobile sh--none--responsive-mobile-portrait">
                 <!-- mobile header -->
                 <div data-mobile-header data-mobile-only
-                    class="pad--y--8 pad--x--16 flex-column flex--max gap--16 bg--blur--25 dn dn-responsive-mobile">
+                    class="pad--y--8 pad--x--16 flex-column flex--max gap--16   dn dn-responsive-mobile">
                     <div class="flex justify-between items-center">
                         <!-- Site Logo -->
                         <div class="relative">
@@ -65,7 +64,7 @@
                             </a>
                             <h1
                                 class="poppins fs--14 lh--20 fw6 col--fiord-gray m--0 dn display--flex-responsive-mobile display--flex-responsive-mobile-portrait">
-                                Subscription Settings</h1>
+                                Merch</h1>
                         </div>
                         <!-- /Site Logo -->
 
@@ -350,7 +349,7 @@
                                         class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
                                         <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
                                         <a href="javascript: void(0)" data-main-menu-item="true"
-                                            data-main-menu-name="Subscriptions" data-is-active="true"
+                                            data-main-menu-name="Subscriptions" data-is-active="false"
                                             data-has-submenu="false" data-target-submenu-container=""
                                             class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
                                             <!-- render_svg_icon( 'logo_bg' ) -->
@@ -6024,746 +6023,1421 @@
             </div> <!-- End Background fixed container -->
 
             <!-- main section -->
-            <main data-dashboard-page="" data-section="main" class="h-100 flex flex-column flex--max relative z-1">
+            <main data-dashboard-page="" data-section="main" class="flex flex-column flex--max relative z-1">
                 <!-- Inner Container -->
                 <div data-section="inner-container" data-tabs-section="1"
-                    class="h-100 flex flex-column gap--24 bg--gradient-white pad--top--24-responsive-tablet pad--x--0-responsive-tablet pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait pad--y--0-responsive-mobile pad--y--0-responsive-mobile-portrait ">
-                    <!-- Order Details Alert -->
-                    <div class="w-100 pad--left--3">
-                        <div class="flex w-100 relative bb br--col--athens-gray-2">
-                            <div class="db bg--col--bright-turquoise w--3 h-100 absolute left-0 top-0"></div>
-                            <div
-                                class="pad--y--12 pad--x--8 pad--right--18-responsive-mobile-portrait flex gap--16 bg--gd--turquoise flex-auto">
-                                <div class="flex gap--20 w-100 relative items-start">
-                                    <!-- Close Icon -->
-                                    <div class="absolute right-0 top-0 pointer">
-                                        <img src="../assets/icons/close-btn.svg" alt=""
-                                            class="w--24 h--24 filter--col--mischka">
-                                    </div>
-                                    <!-- Close Icon -->
-                                    <!-- Icons -->
-                                    <div class="relative">
-                                        <div
-                                            class="w--40 h--40 br--8 bg--col--light-bondi-blue flex items-center justify-center">
-                                            <img src="../assets/icons/users-01.svg" alt=""
-                                                class="w--28 h--28 filter--col--turquoise">
-                                        </div>
-                                        <div
-                                            class="w--22 h--22 br--8 bg--col--bright-turquoise flex items-center justify-center absolute right--9-neg top--1-8">
-                                            <img src="../assets/icons/info-square.svg" alt=""
-                                                class="w--16 h--16 filter--col--white">
-                                        </div>
-                                    </div>
-                                    <!-- End Icons -->
-                                    <!-- Right Tecxt -->
-                                    <div class="flex flex-column flex-auto">
-                                        <div class="pad--bottom--8 flex flex-column gap--8">
-                                            <div class="flex justify-between items-center pad--top--4 pad--right--4">
-                                                <span class="fs--14 fw6 lh--20 col--bondi-blue">You have 12 active
-                                                    subscriber in this tier</span>
-                                            </div>
-                                        </div>
-                                        <div class="flex justify-between items-center">
-                                            <span class="fs--14 lh--20 text--sh--1 black">Changing detail of this plan
-                                                might affect current subscriber’s subscription fee and benefits.</span>
-                                            <!-- Link Item -->
-                                            <a href="#" class="flex items-center gap--2">
-                                                <span class="fs--12 fw5 lh--18 col--bondi-blue">Learn more</span>
-                                                <span>
-                                                    <img src="../assets/icons/arrow-up-right.svg" alt=""
-                                                        class="w--16 h--16">
-                                                </span>
-                                            </a>
-                                            <!-- End Link Item -->
-                                        </div>
-                                    </div>
-                                    <!-- End Right Tecxt -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Order Details Alert -->
-
+                    class="flex flex-column gap--24 bg--gradient-white pad--top--24-responsive-tablet pad--x--0-responsive-tablet pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait pad--y--0-responsive-mobile pad--y--0-responsive-mobile-portrait ">
                     <!-- Top Page Header Section -->
                     <div data-section="page-header"
-                        class="pad--40 pad--top--8 pad--bottom--0 pad--x--16-responsive-tablet pad--top--0-responsive-tablet flex flex-column gap--24 pad--8-responsive-mobile pad--8-responsive-mobile-portrait">
+                        class="pad--40 pad--x--24 pad--bottom--0 pad--x--16-responsive-tablet pad--top--0-responsive-tablet flex flex-column gap--24 pad--8-responsive-mobile pad--8-responsive-mobile-portrait">
                         <!-- Top Page Title Section -->
                         <div data-section="page-title"
-                            class="w-100 flex gap--24 items-center justify-between gap--16--responsive-tablet gap--16--responsive-mobile gap--16--responsive-mobile-portrait">
-                            <div class="flex items-center gap--2 pointer">
-                                <span>
-                                    <img src="../assets/icons/arrow-left.svg" alt="" class="w--16 h--16" />
-                                </span>
-                                <span
-                                    class="fs--12 fw5 lh--18 col--oxford-blue display--none-responsive-mobile display--none-responsive-mobile-portrait">Back</span>
-                                <span
-                                    class="fs--14 fw6 lh--20 col--oxford-blue dn display--flex-responsive-mobile display--flex-responsive-mobile-portrait">New
-                                    Tier</span>
-                            </div>
-                            <!-- Save/Cancel Button Group -->
-                            <div class=" flex items-center justify-end">
-                                <div class="flex items-center gap--8">
-                                    <button
-                                        class="mw--100 pad--y--8 flex items-center justify-center fs--18 fw5 lh--28 col--ebony--variation-2 flex--max-responsive-mobile flex--max-responsive-mobile-portrait hover--bg--col--white--100">Cancel</button>
-                                    <button
-                                        class="bg-black pad--y--4 pad--x--8 flex justify-center items-center gap--10 hover--bg--col-brand-green hover--parent--child--col--black-ribbon">
-                                        <span class="fs--18 fw5 lh--28 col-brand-green ttu">SAVE & PUBLISH</span>
-                                    </button>
-                                </div>
-                            </div>
-                            <!-- End Save/Cancel Button Group -->
+                            class="w-100 flex gap--24 items-start justify-between gap--16--responsive-tablet gap--16--responsive-mobile gap--16--responsive-mobile-portrait flex--column-responsive-mobile flex--column-responsive-mobile-portrait display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                            <h1
+                                class="poppins fs--36 lh--44 fw6 tracked--neg--0-72 col--fiord-gray m--0 fs--30-responsive-tablet lh--38-responsive-tablet">
+                                Merch</h1>
+                            <button
+                                class="bg-black pad--y--4 pad--x--8 flex justify-center items-center gap--10 hover--bg--col-brand-green hover--parent--child--col--black-ribbon display--none-responsive-mobile display--none-responsive-mobile-portrait group">
+                                <img src="../assets/icons/plus.svg" alt=""
+                                    class="w--24 h--24 hov--filter--col--black-ribbon">
+                                <span class="fs--18 fw5 lh--28 col-brand-green ttu hover--col-black">NEW MERCH</span>
+                            </button>
                         </div><!-- End Top Page Title Section -->
-                    </div><!-- End Top Page Header Section -->
-                    <!-- Tier Information main Page Structure -->
-                    <div class="flex">
-                        <!-- Tier Information left Page Structure -->
-                        <div class="flex-auto pad--bottom--32">
-                            <!-- Tier Information Page Structure -->
-                            <div
-                                class="flex flex-column gap--32 pad--x--40 pad--x--0-responsive-tablet pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait">
-                                <!-- Tier Information -->
-                                <div
-                                    class="pad--16 flex flex-column gap--24 bg--col--white--25 bg--blur--25 pad--x--8-responsive-mobile pad--x--8-responsive-mobile-portrait">
-                                    <!-- Title -->
-                                    <h2 class="fs--24 fw6 lh--32 col--pale-sky">Tier Information</h2>
-                                    <!-- Input Field -->
-                                    <div class="flex flex-column gap--6">
-                                        <div
-                                            class="pad--x--14 pad--y--10 gap--8 br--2 br--bottom--left--right bb br--col--mischka-gray bg-white-30 sh--7 relative">
-                                            <input type="text"
-                                                value="FREE library of LOREM LPSUM ATIER dolor sit amet, consectetur adipiscing elit."
-                                                class="w-100 bn flex-auto fs--16 lh--24 col--ebony" />
-                                        </div>
-                                        <span class="fs--14 lh--20 col--fiord">120/300</span>
-                                    </div>
-                                    <!-- Description Field -->
-                                    <div class="flex flex-column gap--6">
-                                        <div
-                                            class="pad--x--14 pad--y--10 flex flex-column gap--8 br--2 br--bottom--left--right bb br--col--mischka-gray bg-white-30 sh--7 relative">
-                                            <div class="flex items-center gap--4">
-                                                <img src="../assets/icons/bold-icon.svg" alt=""
-                                                    class="w--32 h--32 pointer" />
-                                                <img src="../assets/icons/italic-icon.svg" alt=""
-                                                    class="w--32 h--32 pointer" />
-                                                <img src="../assets/icons/link-icon.svg" alt=""
-                                                    class="w--32 h--32 pointer" />
-                                                <img src="../assets/icons/list-ul-icon.svg" alt=""
-                                                    class="w--32 h--32 pointer" />
-                                                <img src="../assets/icons/list-ol-icon.svg" alt=""
-                                                    class="w--32 h--32 pointer" />
-                                            </div>
-                                            <div
-                                                class="w-100 bn flex-auto fs--16 lh--24 col--pale-sky h--128 flex flex-column gap--16">
-                                                <p>Watch all of my mango eating content! content update weekly!</p>
-                                                <ul data-theme="default black">
-                                                    <li class="fs--16 fw4 lh--24 col--ebony">100% real content</li>
-                                                    <li class="fs--16 fw4 lh--24 col--ebony">no editing</li>
-                                                    <li class="fs--16 fw4 lh--24 col--ebony">100% real content</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <span class="fs--14 lh--20 col--fiord">300/300</span>
-                                    </div>
-                                    <!-- Upload Background Image -->
-                                    <div class="flex flex-column gap--8">
-                                        <h3 class="fs--18 fw5 lh--28 col--ebony--variation-2">Background Image</h3>
-                                        <!-- Order Details Image -->
-                                        <div class="flex br--8">
-                                            <div class="flex items-center relative overflow-hidden">
-                                                <img src="../assets/images/model-portrait-img.svg" alt="" />
-                                                <!-- Trash Button -->
-                                                <button
-                                                    class="bg--col--vermilion w--24 h--24 flex justify-center items-center gap--10 absolute top-0 right-0 hover--bg--col-burning-orange">
-                                                    <img src="../assets/icons/trash-03.svg" alt=""
-                                                        class="w--20 h--20" />
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <!-- End Order Details Image -->
-                                    </div>
-                                    <!-- End Upload Background Image -->
-                                </div><!-- End Tier Information -->
-                                <!-- Subscription Free Setting -->
-                                <div
-                                    class="pad--16 flex flex-column gap--24 bg--col--white--25 bg--blur--25 pad--x--8-responsive-mobile pad--x--8-responsive-mobile-portrait">
-                                    <!-- Title -->
-                                    <h2 class="fs--24 fw6 lh--32 col--pale-sky">Subscription Fee Settings</h2>
-                                    <!-- Tab Button Group -->
-                                    <div class="flex items-center bg--col--athens-gray ba br--col--mischka br--5">
-                                        <span
-                                            class="pad--x--16 pad--x--8-responsive-mobile pad--x--8-responsive-mobile-portrait pad--y--8 flex items-center justify-center gap--8 flex-auto hover--parent--child--col--gull-gray">
-                                            <span class="flex justify-center items-center">
-                                                <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
-                                                <div data-tooltip data-tooltip-arrow="true"
-                                                    data-tooltip-position="bottom center" data-tooltip-size="small"
-                                                    data-tooltip-theme="dark" class="relative z-5 pointer">
-                                                    <img src="../assets/images/help-circle.svg" alt=""
-                                                        class="w--16 h--16 filter--col--pale-sky pointer-events-none">
-
-                                                    <div data-tooltip-text data-tooltip-content>
-                                                        <span class="fs--12 fw5 lh--18 color-inherit">
-                                                            Cannot make this a free tier because there is already a free
-                                                            tier in your subscription settings
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <!-- /tooltip -->
-                                            </span>
-                                            <span
-                                                class="fs--14 fw5 lh--20 col--gull-gray hover--col--gull-gray fs--12-responsive-mobile fs--12-responsive-mobile-portrait lh--18-responsive-mobile lh--18-responsive-mobile-portrait">Free
-                                                Tier</span>
-                                        </span>
-                                        <span
-                                            class="pad--x--16 pad--x--8-responsive-mobile pad--x--8-responsive-mobile-portrait pad--y--8 flex items-center justify-center gap--8 flex-auto br--5 br--top-bottom-left bg--col--ebony--variation-2 hover--parent--child--col--white pointer">
-                                            <span
-                                                class="fs--14 fw6 lh--20 white hover--col--white fs--12-responsive-mobile fs--12-responsive-mobile-portrait lh--18-responsive-mobile lh--18-responsive-mobile-portrait">Paid
-                                                Tier </span>
-                                        </span>
-
-                                    </div>
-                                    <!-- End Tab Button Group -->
-                                    <!-- Input Field -->
-                                    <div class="flex flex-column gap--6 flex-auto">
-                                        <span class="fs--18 fw5 lh--28 col--ebony--variation-2">Original price</span>
-                                        <div
-                                            class="pad--x--14 pad--y--10 br--2 br--bottom br--left bb br--col--mischka-gray bg-white-30 sh--7 relative flex items-center flex-auto">
-                                            <div class="relative w-100 flex items-center gap--8">
-                                                <span class="fs--16 fw7 lh--24 col--oxford-blue">USD$</span>
-                                                <input type="text" value="12.99"
-                                                    class="w-100 bn flex-auto fs--16 fw7 lh--24 col--pale-sky" />
-                                            </div>
-                                            <span
-                                                class="pad--x--16 fs--16 fw5 lh--24 col--oxford-blue nowrap">USD/mo</span>
-                                        </div>
-                                        <span class="fs--14 lh--20 col--fiord"> Price must be between USD$ 1.95 to
-                                            500.</span>
-                                    </div><!-- End Input Field -->
-
-                                    <!-- Input Field -->
-                                    <div class="flex flex-column gap--6 flex-auto">
-                                        <span class="fs--18 fw5 lh--28 col--ebony--variation-2">Discounted Price <small
-                                                class="fs--12 lh--18 col--ebony--variation-2">(optional)</small></span>
-                                        <span class="fs--16 lh--24 col--ebony--variation-2">Offer one-off discount price
-                                            to your new fans joining the tier for the first month.</span>
-                                        <div
-                                            class="pad--x--14 pad--y--10 br--2 br--bottom br--left bb br--col--mischka-gray bg-white-30 sh--7 relative flex items-center flex-auto">
-                                            <div class="relative w-100 flex items-center gap--8">
-                                                <span class="fs--16 fw7 lh--24 col--oxford-blue">USD$</span>
-                                                <input type="text" value="6.99"
-                                                    class="w-100 bn flex-auto fs--16 fw7 lh--24 col--pale-sky" />
-                                            </div>
-                                            <span
-                                                class="pad--x--16 fs--16 fw5 lh--24 col--oxford-blue nowrap">Tokens/mo</span>
-                                        </div>
-                                        <span class="fs--14 lh--20 col--ebony--variation-2">Leave blank to disable
-                                            discount display.</span>
-                                    </div><!-- End Input Field -->
-
-                                </div><!-- End Subscription Free Setting -->
-                                <!-- Member Benefits -->
-                                <div
-                                    class="pad--16 flex flex-column gap--24 bg--col--white--25 bg--blur--25 pad--x--8-responsive-mobile pad--x--8-responsive-mobile-portrait">
-                                    <!-- Title -->
-                                    <div class="flex items-center gap--8">
-                                        <h2 class="fs--24 fw6 lh--32 col--pale-sky">Member Benefits</h2>
-                                        <span class="fs--12 fw5 col--ebony--variation-2">(optional)</span>
-                                        <span class="flex justify-center items-center">
-                                            <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
-                                            <div data-tooltip data-tooltip-arrow="true"
-                                                data-tooltip-position="center right" data-tooltip-size="medium"
-                                                data-tooltip-theme="dark" class="relative z-5 pointer">
-                                                <img src="../assets/images/help-circle.svg" alt=""
-                                                    class="w--16 h--16 filter--col--pale-sky pointer-events-none">
-
-                                                <div data-tooltip-text data-tooltip-content>
-                                                    <span class="fs--12 fw5 lh--18 color-inherit">
-                                                        Leave blank to disable any benefits below.
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <!-- /tooltip -->
-                                        </span>
-                                    </div>
-                                    <!-- End Title -->
-                                    <!-- Form Item Section -->
-                                    <div class="flex justify-between items-start">
-                                        <div class="flex items-center gap--8 w--400">
-                                            <span class="fs--18 fw5 lh--28">Free Tokens</span>
-                                            <span class="flex justify-center items-center">
-                                                <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
-                                                <div data-tooltip data-tooltip-arrow="true"
-                                                    data-tooltip-position="center right" data-tooltip-size="medium"
-                                                    data-tooltip-theme="dark" class="relative z-5 pointer">
-                                                    <img src="../assets/images/help-circle.svg" alt=""
-                                                        class="w--16 h--16 filter--col--pale-sky pointer-events-none">
-
-                                                    <div data-tooltip-text data-tooltip-content>
-                                                        <span class="fs--12 fw5 lh--18 color-inherit">
-                                                            Set amount of free tokens given to member of this tier every
-                                                            month.
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <!-- /tooltip -->
-                                            </span>
-                                        </div>
-                                        <!-- Input Field -->
-                                        <div class="flex flex-column gap--6 flex-auto">
-                                            <div
-                                                class="pad--x--14 pad--y--10 br--2 br--bottom br--left bb br--col--mischka-gray bg-white-30 sh--7 relative flex items-center flex-auto">
-                                                <div class="relative w-100">
-                                                    <input type="text" value="10"
-                                                        class="w-100 bn flex-auto fs--16 lh--24 col--pale-sky" />
-                                                </div>
-                                                <span
-                                                    class="pad--x--16 fs--16 fw5 lh--24 col--oxford-blue nowrap">Tokens/mo</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End Form Item Section -->
-                                    <!-- Form Item Section -->
-                                    <div class="flex justify-between items-center">
-                                        <div class="flex flex-column gap--8 w--400">
-                                            <div class="flex items-center gap--8">
-                                                <span class="fs--18 fw5 lh--28">Merch Discount</span>
-                                                <span class="flex justify-center items-center">
-                                                    <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
-                                                    <div data-tooltip data-tooltip-arrow="true"
-                                                        data-tooltip-position="center right" data-tooltip-size="medium"
-                                                        data-tooltip-theme="dark" class="relative z-5 pointer">
-                                                        <img src="../assets/images/help-circle.svg" alt=""
-                                                            class="w--16 h--16 filter--col--pale-sky pointer-events-none">
-
-                                                        <div data-tooltip-text data-tooltip-content>
-                                                            <span class="fs--12 fw5 lh--18 white">
-                                                                <ul data-theme="default">
-                                                                    <li class="fs--12 fw5 lh--18 white">Set percentage
-                                                                        discount for all the merch in your shop (e.g.
-                                                                        type ‘10’ in the input field if you want 10%
-                                                                        off)
-                                                                    </li>
-                                                                    <li class="fs--12 fw4 lh--18 white">Leave blank to
-                                                                        disable feature.</li>
-                                                                </ul>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                    <!-- /tooltip -->
-                                                </span>
-                                            </div>
-                                            <div class="flex items-center gap--8">
-                                                <div class="flex justify-start items-start c--pointer flex-column  "
-                                                    data-form-input-type="checkbox" data-form-input-layout="vertical"
-                                                    data-form-accent-color="green">
-
-                                                    <label
-                                                        class="flex flex-row items-center justify-start flex-shrink-0 gap10 gap--8 c--pointer">
-                                                        <input name="ppv" value="yes" type="checkbox" data-name="ppv"
-                                                            data-fetch-on-change="1" data-show-save-on-change="1"
-                                                            checked>
-                                                        <span
-                                                            class="fs--14 lh--20 col--ebony--variation-2 c--pointer">Apply
-                                                            to items already on sale</span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Input Field -->
-                                        <div
-                                            class="pad--x--14 pad--y--10 br--2 br--bottom br--left bb br--col--mischka-gray bg-white-30 sh--7 relative flex items-center flex-auto">
-                                            <input type="text" value="10"
-                                                class="w-100 bn flex-auto fs--16 lh--24 col--pale-sky" />
-                                            <span class="pad--x--16 fs--16 fw5 lh--24 col--oxford-blue nowrap">%
-                                                off</span>
-                                        </div>
-                                    </div>
-                                    <!-- End Form Item Section -->
-                                    <!-- Form Item Section -->
-                                    <div class="flex justify-between items-center">
-                                        <div class="flex flex-column gap--8 w--400">
-                                            <div class="flex items-center gap--8">
-                                                <span class="fs--18 fw5 lh--28">Pay to View Discount</span>
-                                                <span class="flex justify-center items-center">
-                                                    <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
-                                                    <div data-tooltip data-tooltip-arrow="true"
-                                                        data-tooltip-position="center right" data-tooltip-size="medium"
-                                                        data-tooltip-theme="dark" class="relative z-5 pointer">
-                                                        <img src="../assets/images/help-circle.svg" alt=""
-                                                            class="w--16 h--16 filter--col--pale-sky pointer-events-none">
-
-                                                        <div data-tooltip-text data-tooltip-content>
-                                                            <span class="fs--12 fw5 lh--18 white">
-                                                                <ul data-theme="default">
-                                                                    <li class="fs--12 fw5 lh--18 white">Set percentage
-                                                                        discount for all pay to view product in your
-                                                                        shop(e.g. type ‘10’ in the input field if you
-                                                                        want 10% off)
-                                                                    </li>
-                                                                </ul>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                    <!-- /tooltip -->
-                                                </span>
-                                            </div>
-                                            <div class="flex items-center gap--8">
-                                                <div class="flex justify-start items-start c--pointer flex-column  "
-                                                    data-form-input-type="checkbox" data-form-input-layout="vertical"
-                                                    data-form-accent-color="green">
-
-                                                    <label
-                                                        class="flex flex-row items-center justify-start flex-shrink-0 gap10 gap--8 c--pointer">
-                                                        <input name="ppv" value="yes" type="checkbox" data-name="ppv"
-                                                            data-fetch-on-change="1" data-show-save-on-change="1"
-                                                            checked>
-                                                        <span
-                                                            class="fs--14 lh--20 col--ebony--variation-2 c--pointer">Apply
-                                                            to items already on sale</span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Input Field -->
-                                        <div
-                                            class="pad--x--14 pad--y--10 br--2 br--bottom br--left bb br--col--mischka-gray bg-white-30 sh--7 relative flex items-center flex-auto">
-                                            <input type="text" value="10"
-                                                class="w-100 bn flex-auto fs--16 lh--24 col--pale-sky" />
-                                            <span class="pad--x--16 fs--16 fw5 lh--24 col--oxford-blue nowrap">%
-                                                off</span>
-                                        </div>
-                                    </div>
-                                    <!-- End Form Item Section -->
-                                    <!-- Form Item Section -->
-                                    <div class="flex justify-between items-center">
-                                        <div class="flex items-center gap--8 w--400">
-                                            <span class="fs--18 fw5 lh--28">Custom Request Discount</span>
-                                            <span class="flex justify-center items-center">
-                                                <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
-                                                <div data-tooltip data-tooltip-arrow="true"
-                                                    data-tooltip-position="center right" data-tooltip-size="medium"
-                                                    data-tooltip-theme="dark" class="relative z-5 pointer">
-                                                    <img src="../assets/images/help-circle.svg" alt=""
-                                                        class="w--16 h--16 filter--col--pale-sky pointer-events-none">
-
-                                                    <div data-tooltip-text data-tooltip-content>
-                                                        <span class="fs--12 fw5 lh--18 white">
-                                                            <ul data-theme="default">
-                                                                <li class="fs--12 fw5 lh--18 white">Set percentage
-                                                                    discount for all pay to view product in your
-                                                                    shop(e.g. type ‘10’ in the input field if you want
-                                                                    10% off)  
-                                                                </li>
-                                                                <li class="fs--12 fw4 lh--18 white">Leave blank to
-                                                                    disable feature.</li>
-                                                            </ul>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <!-- /tooltip -->
-                                            </span>
-                                        </div>
-                                        <!-- Input Field -->
-                                        <div
-                                            class="pad--x--14 pad--y--10 br--2 br--bottom br--left bb br--col--mischka-gray bg-white-30 sh--7 relative flex items-center flex-auto">
-                                            <input type="text" value="10"
-                                                class="w-100 bn flex-auto fs--16 lh--24 col--pale-sky" />
-                                            <span
-                                                class="pad--x--16 fs--16 fw5 lh--24 col--oxford-blue nowrap">Tokens/mo</span>
-                                        </div>
-                                    </div>
-                                    <!-- End Form Item Section -->
-                                    <!-- Form Item Section -->
-                                    <div class="flex justify-between items-center">
-                                        <div class="flex items-center gap--8 w--400">
-                                            <span class="fs--18 fw5 lh--28">Unsubscribe Discount</span>
-                                            <span class="flex justify-center items-center">
-                                                <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
-                                                <div data-tooltip data-tooltip-arrow="true"
-                                                    data-tooltip-position="center right" data-tooltip-size="medium"
-                                                    data-tooltip-theme="dark" class="relative z-5 pointer">
-                                                    <img src="../assets/images/help-circle.svg" alt=""
-                                                        class="w--16 h--16 filter--col--pale-sky pointer-events-none">
-
-                                                    <div data-tooltip-text data-tooltip-content>
-                                                        <span class="fs--12 fw5 lh--18 color-inherit">
-                                                            Offer discount to leaving subscriber if they decided to
-                                                            unsubscribe from this tier
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <!-- /tooltip -->
-                                            </span>
-                                        </div>
-                                        <!-- Input Field -->
-                                        <div
-                                            class="pad--x--14 pad--y--10 br--2 br--bottom br--left bb br--col--mischka-gray bg-white-30 sh--7 relative flex items-center flex-auto">
-                                            <input type="text" value="10"
-                                                class="w-100 bn flex-auto fs--16 lh--24 col--pale-sky" />
-                                            <span
-                                                class="pad--x--16 fs--16 fw5 lh--24 col--oxford-blue nowrap">Tokens/mo</span>
-                                        </div>
-                                    </div>
-                                    <!-- End Form Item Section -->
-                                </div>
-                                <!-- End Member Benefits -->
-                                <!-- Sharing Options -->
-                                <div
-                                    class="pad--16 flex flex-column gap--24 bg--col--white--25 bg--blur--25 pad--x--8-responsive-mobile pad--x--8-responsive-mobile-portrait">
-                                    <!-- Title -->
-                                    <div class="flex items-center gap--8">
-                                        <h2 class="fs--24 fw6 lh--32 col--pale-sky">Sharing Options</h2>
-                                        <span class="flex justify-center items-center">
-                                            <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
-                                            <div data-tooltip data-tooltip-arrow="true"
-                                                data-tooltip-position="center right" data-tooltip-size="medium"
-                                                data-tooltip-theme="dark" class="relative z-5 pointer">
-                                                <img src="../assets/images/help-circle.svg" alt=""
-                                                    class="w--16 h--16 filter--col--pale-sky pointer-events-none">
-
-                                                <div data-tooltip-text data-tooltip-content>
-                                                    <span class="fs--12 fw5 lh--18 color-inherit">
-                                                        Offer discount to leaving subscriber if they decided to
-                                                        unsubscribe from this tier
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <!-- /tooltip -->
-                                        </span>
-                                    </div>
-                                    <!-- End Title -->
+                        <!-- Top Page Settings -->
+                        <div
+                            class="flex items-center gap--16 gap--8-responsive-mobile gap--8-responsive-mobile-portrait flex--column-responsive-tablet flex--column-responsive-mobile flex--column-responsive-mobile-portrait items--start-responsive-tablet items--start-responsive-mobile items--start-responsive-mobile-portrait">
+                            <!-- Tabs -->
+                            <div class="flex gap--16 items-center w--100-responsive-mobile w--100-responsive-mobile-portrait">
+                                <!-- Grid and LIst Tab Section -->
+                                <div data-tabs-container="1"
+                                    class="w--100-responsive-mobile w--100-responsive-mobile-portrait display--none-responsive-mobile display--none-responsive-mobile-portrait"
+                                    data-show-default-page-load="views">
+                                    <!-- Tab -->
                                     <div
-                                        class="flex gap--16 flex--column-responsive-mobile flex--column-responsive-mobile-portrait">
-                                        <!-- Share options content -->
-                                        <div class="flex flex-column gap--16 flex-auto">
-                                            <!-- Toggle Switch -->
-                                            <!-- toggle -->
-                                            <div class="flex flex-column justify-center items-start self-stretch">
-                                                <div class="flex items-center gap--8">
-                                                    <!-- toggle container -->
-                                                    <div class="flex">
-                                                        <!-- toggle switch (switch size = ['default', 'small'] / switch theme = ['default', 'light', 'dark']) -->
-                                                        <label data-switch="" data-switch-size="small"
-                                                            data-switch-theme="dark" data-switch-for=""
-                                                            data-throw-event="fs-evt-eventname">
-                                                            <input type="checkbox" value="switch_slide"
-                                                                name="switch_slide" class="dn">
-                                                            <span data-switch-slide="" class="db"></span>
-                                                        </label>
-                                                        <!-- /toggle switch -->
-                                                    </div>
-                                                    <!-- /toggle container -->
+                                        class="flex items-center br--5 ba br--col--mischka-gray bg--col--light-gray-50 w--100-responsive-tablet overflow-hidden">
+                                        <ul data-tabs-menu="grid-list-tabs-menu"
+                                            class="flex items-start w--100-responsive-tablet w--100-responsive-mobile w--100-responsive-mobile-portrait"
+                                            data-show-default-page-load="grid">
+                                            <!-- first tab menu item -->
+                                            <li data-tabbed-scrollable-menu="0" data-tabbed-child-id="grid-tabbed-content"
+                                                data-attribute-run-once="1" data-target="grid-tab" data-flag="grid"
+                                                data-status="grid" data-offset="5" data-per_page="5"
+                                                class="flex justify-center items-center gap--8 flex--max-responsive-tablet flex--max-responsive-mobile flex--max-responsive-mobile-portrait active">
+                                                <a href="#"
+                                                    class="w-100 inline-flex justify-center items-center gap--8 gap--4-responsive-mobile gap--4-responsive-mobile-portrait pointer w-100 pad--y--8 pad--x--16 pad--8-responsive-mobile pad--8-responsive-mobile-portrait"
+                                                    tab-trigger="1">
+                                                    <span data-span-icon class="flex-none">
+                                                        <img src="../assets/icons/grid-01.svg" alt=""
+                                                            class="w--20 h--20 filter--col--gull-gray">
+                                                    </span>
+                                                </a>
+                                            </li>
 
-                                                    <!-- toggle text -->
-                                                    <div class="flex items-center gap--4">
-                                                        <div class="flex items-center gap--8">
-                                                            <span class="fs--16 fw5 lh--24 black">
-                                                                Post updates of this tier to X
+                                            <!-- second tab menu item -->
+                                            <li data-tabbed-scrollable-menu="0" data-tabbed-child-id="list-tabbed-content"
+                                                data-attribute-run-once="1" data-target="list-tab" data-flag="list"
+                                                data-status="list" data-offset="0" data-per_page="5"
+                                                class="flex justify-center items-center gap--8 bl br--col--mischka-gray flex--max-responsive-tablet flex--max-responsive-mobile flex--max-responsive-mobile-portrait">
+                                                <a href="#"
+                                                    class="inline-flex justify-center items-center gap--8 gap--4-responsive-mobile gap--4-responsive-mobile-portrait pointer w-100 pad--y--8 pad--x--16 pad--8-responsive-mobile pad--8-responsive-mobile-portrait"
+                                                    tab-trigger="1">
+                                                    <span data-span-icon class="flex-none">
+                                                        <img src="../assets/icons/list.svg" alt=""
+                                                            class="w--20 h--20 filter--col--gull-gray">
+                                                    </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- End Tab -->
+                                </div>
+                                <!--End Grid and LIst Tab Section -->
+
+                                <!-- Tab Content Section -->
+                                <div data-tabs-container="2"
+                                    class="w--100-responsive-mobile w--100-responsive-mobile-portrait"
+                                    data-show-default-page-load="views">
+                                    <!-- Tab -->
+                                    <div
+                                        class="flex items-center br--5 ba br--col--mischka-gray bg--col--light-gray-50 w--100-responsive-tablet overflow-hidden">
+                                        <ul data-tabs-menu="dashboard-tabs-menu"
+                                            class="flex items-start w--100-responsive-tablet w--100-responsive-mobile w--100-responsive-mobile-portrait"
+                                            data-show-default-page-load="unread">
+                                            <!-- first tab menu item -->
+                                            <li data-tabbed-scrollable-menu="0"
+                                                data-tabbed-child-id="tabbed-content-first-tab" data-attribute-run-once="1"
+                                                data-target="first-tab" data-flag="unread" data-status="unread"
+                                                data-offset="5" data-per_page="5"
+                                                class="flex justify-center items-center gap--8 flex--max-responsive-tablet flex--max-responsive-mobile flex--max-responsive-mobile-portrait active">
+                                                <a href="#"
+                                                    class="w-100 inline-flex justify-center items-center gap--8 gap--4-responsive-mobile gap--4-responsive-mobile-portrait pointer w-100 pad--y--8 pad--x--16 pad--8-responsive-mobile pad--8-responsive-mobile-portrait"
+                                                    tab-trigger="1">
+                                                    <span data-span-title
+                                                        class="fs--14 fw5 lh--20 col--gull-gray nowrap fs--12-responsive-mobile lh--18-responsive-mobile fs--12-responsive-mobile-portrait lh--18-responsive-mobile-portrait">All</span>
+                                                    <small data-span-value
+                                                        class="fs--10 fw5 lh--normal col--gull-gray tracked--0-25 h--24">120</small>
+                                                </a>
+                                            </li>
+
+                                            <!-- second tab menu item -->
+                                            <li data-tabbed-scrollable-menu="0"
+                                                data-tabbed-child-id="tabbed-content-second-tab" data-attribute-run-once="1"
+                                                data-target="second-tab" data-flag="cpr" data-status="unread"
+                                                data-offset="0" data-per_page="5"
+                                                class="flex justify-center items-center gap--8 bl br--col--mischka-gray flex--max-responsive-tablet flex--max-responsive-mobile flex--max-responsive-mobile-portrait">
+                                                <a href="#"
+                                                    class="inline-flex justify-center items-center gap--8 gap--4-responsive-mobile gap--4-responsive-mobile-portrait pointer w-100 pad--y--8 pad--x--16 pad--8-responsive-mobile pad--8-responsive-mobile-portrait"
+                                                    tab-trigger="1">
+                                                    <span data-span-title
+                                                        class="fs--14 fw5 lh--20 col--gull-gray nowrap fs--12-responsive-mobile lh--18-responsive-mobile fs--12-responsive-mobile-portrait lh--18-responsive-mobile-portrait">Published</span>
+                                                    <small data-span-value
+                                                        class="fs--10 fw5 lh--normal col--gull-gray tracked--0-25 h--24">20</small>
+                                                </a>
+                                            </li>
+
+                                            <!-- third tab menu item -->
+                                            <li data-tabbed-scrollable-menu="0"
+                                                data-tabbed-child-id="tabbed-content-second-tab" data-attribute-run-once="1"
+                                                data-target="second-tab" data-flag="cpr" data-status="unread"
+                                                data-offset="0" data-per_page="5"
+                                                class="flex justify-center items-center gap--8 bl br--col--mischka-gray flex--max-responsive-tablet flex--max-responsive-mobile flex--max-responsive-mobile-portrait">
+                                                <a href="#"
+                                                    class="inline-flex justify-center items-center gap--8 gap--4-responsive-mobile gap--4-responsive-mobile-portrait pointer w-100 pad--y--8 pad--x--16 pad--8-responsive-mobile pad--8-responsive-mobile-portrait"
+                                                    tab-trigger="1">
+                                                    <span data-span-title
+                                                        class="fs--14 fw5 lh--20 col--gull-gray nowrap fs--12-responsive-mobile lh--18-responsive-mobile fs--12-responsive-mobile-portrait lh--18-responsive-mobile-portrait">Draft</span>
+                                                    <small data-span-value
+                                                        class="fs--10 fw5 lh--normal col--gull-gray tracked--0-25 h--24">98</small>
+                                                </a>
+                                            </li>
+                                            <!-- fourth tab menu item -->
+                                            <li data-tabbed-scrollable-menu="0"
+                                                data-tabbed-child-id="tabbed-content-second-tab" data-attribute-run-once="1"
+                                                data-target="second-tab" data-flag="cpr" data-status="unread"
+                                                data-offset="0" data-per_page="5"
+                                                class="flex justify-center items-center gap--8 bl br--col--mischka-gray flex--max-responsive-tablet flex--max-responsive-mobile flex--max-responsive-mobile-portrait">
+                                                <a href="#"
+                                                    class="inline-flex justify-center items-center gap--8 gap--4-responsive-mobile gap--4-responsive-mobile-portrait pointer w-100 pad--y--8 pad--x--16 pad--8-responsive-mobile pad--8-responsive-mobile-portrait"
+                                                    tab-trigger="1">
+                                                    <span data-span-title
+                                                        class="fs--14 fw5 lh--20 col--gull-gray nowrap fs--12-responsive-mobile lh--18-responsive-mobile fs--12-responsive-mobile-portrait lh--18-responsive-mobile-portrait">Reviewing</span>
+                                                    <small data-span-value
+                                                        class="fs--10 fw5 lh--normal col--gull-gray tracked--0-25 h--24">2</small>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- End Tab -->
+                                </div>
+                                <!--End Tab Content Section -->
+                            </div>
+                            <!-- End Tabs -->
+                            <!-- Search and Select Content Section -->
+                            <div
+                                class="flex items-center gap--8 flex--max w--100-responsive-tablet w--100-responsive-mobile w--100-responsive-mobile-portrait">
+                                <!-- Search Field -->
+                                <div class="flex gap--6 w-100">
+                                    <div class="w-100 pad--y--8 pad--x--12 flex items-center gap--8 br--top--2">
+                                        <div class="w-100 flex items-center gap--8">
+                                            <span>
+                                                <img src="../assets/images/search-sm-icon.svg" alt=""
+                                                    class="w--20 h--20" />
+                                            </span>
+                                            <div class="flex--max">
+                                                <input type="text" name="" placeholder="Search..."
+                                                    class="fs--16 lh--24 col--pale-sky">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- End Search Field -->
+
+                                <!-- Select Field -->
+                                <div class="relative z--10000">
+                                    <div class="pad--y--8 pad--x--16 br--5 flex justify-center items-center gap--8">
+                                        <span class="flex flex-none">
+                                            <img src="../assets/icons/filter-funnel-02.svg" alt=""
+                                                class="w--20 h--20 filter--col--oxford-blue">
+                                        </span>
+                                        <span class="fs--14 fw6 lh--20 col--oxford-blue">Filter</span>
+                                        <span class="w--8 h--8 br-100 bg--col--rose db flex-none"></span>
+                                    </div>
+                                    <!-- <div class="pointer">
+                                        <img src="../assets/icons/arrow-down.svg" alt="" />
+                                    </div> -->
+                                </div>
+                                <!-- End Select Field -->
+
+                            </div><!-- End Search and Select Content Section -->
+                        </div><!-- End Top Page Settings -->
+                    </div><!-- End Top Page Header Section -->
+
+                    <!-- Grid and List Tabs Content -->
+                    <div data-tabs-content="1"
+                        class="h-100  pad--x--0-responsive-tablet pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait"> <!-- pad--x--24 -->
+                        <!-- first tab content items -->
+                        <div data-tabbed-content="grid-tabbed-content" data-target="grid-tab"
+                            class="flex flex-column justify-start items-start gap--16 flex-auto mt--8-neg pad--x--16-responsive-tablet pad--x--16-responsive-mobile pad--x--8-responsive-mobile-portrait pad--x--24 active" style="display: flex !important;">
+                            <!-- Tabs Content -->
+                            <div data-tabs-content="2" class="w-100 h-100">
+                                <!-- first tab content items -->
+                                <div data-target="first-tab"
+                                    class="flex flex-column justify-start items-start gap--16 flex-auto mt--8-neg"> 
+                                    <!-- Media Grid View -->
+                                    <div
+                                        class="w-100 grid gap--16 gap--2-responsive-tablet gap--2-responsive-mobile gap--2-responsive-mobile-portrait  pad--2-responsive-mobile pad--2-responsive-mobile-portrait
+                                        
+                                        grid--cols--4
+                                        grid--cols--2-responsive-tablet
+                                        grid--cols--2-responsive-mobile grid--cols--2-responsive-mobile-portrait
+
+                                        ">
+                                        <!-- Media Grid Item -->
+                                        <div class="br--4 pointer relative">
+                                            <div class="relative aspect--ratio--16-9">
+                                                <img src="../assets/images/merch-media-01.jpg" alt="" class="w-100" />
+                                            </div> 
+                                            <!-- Reviewing Tag -->
+                                            <div data-status-type="reviewing" class="absolute left-0 bottom-0 flex">
+                                                <span
+                                                    class="pad--4 bg--blur--10 flex items-center justify-center gap--8 bg--col--my-sin">
+                                                    <img src="../assets/icons/credit-card-search.svg" alt=""
+                                                        class="w--16 h--16 filter--col--black" />
+                                                </span>
+                                                <span
+                                                    class="pad--y--3 pad--x--6 flex items-center justify-center gap--8 bg-black fs--12 fw5 lh--18 col--my-sin">
+                                                    Reviewing
+                                                </span>
+                                            </div>
+                                            <!-- End Reviewing Tag -->
+                                        </div>
+                                        <!-- End Media Grid Item -->
+                                        <!-- Media Grid Item -->
+                                        <div class="br--4 pointer relative">
+                                            <div class="relative aspect--ratio--16-9">
+                                                <img src="../assets/images/merch-media-02.jpg" alt="" class="w-100" />
+                                            </div>
+                                             
+                                            <!-- Draft Tag -->
+                                            <div data-status-type="draft" class="absolute left-0 bottom-0 flex">
+                                                <span
+                                                    class="pad--4 bg--blur--10 flex items-center justify-center gap--8 bg--col--mischka">
+                                                    <img src="../assets/icons/draft-cloud.svg" alt=""
+                                                        class="w--16 h--16 filter--col--black" />
+                                                </span>
+                                                <span
+                                                    class="pad--y--3 pad--x--6 flex items-center justify-center gap--8 bg-black fs--12 fw5 lh--18 col--mischka">
+                                                    Draft
+                                                </span>
+                                            </div>
+                                            <!-- End Draft Tag -->
+                                        </div>
+                                        <!-- End Media Grid Item -->
+                                        <!-- Media Grid Item -->
+                                        <div class="br--4 pointer relative">
+                                            <div class="relative aspect--ratio--16-9">
+                                                <img src="../assets/images/merch-media-03.jpg" alt=""
+                                                    class="w-100" />
+                                            </div>
+                                            <!-- Subscriber Only PRE-ORDER -->
+                                            <div class="absolute flex gap--2 top-0 right-0">
+                                                <div
+                                                    class="h--20 pad--x--4 flex items-center bg-black">
+                                                    <span class="fs--12 fw5 lh--18 col-brand-green">Subscriber Only</span>
+                                                </div>
+                                                <div class="h--20 pad--x--4 flex items-center bg-black">
+                                                    <span class="fs--12 fw5 lh--18 col--malibu">PRE-ORDER</span>
+                                                </div>
+                                            </div>
+                                            <!-- End Subscriber Only PRE-ORDER  -->
+                                            <!-- Published Tag -->
+                                            <div data-status-type="published" class="absolute left-0 bottom-0 flex">
+                                                <span
+                                                    class="pad--4 bg--blur--10 flex items-center justify-center gap--8 bg--col-brand-green">
+                                                    <img src="../assets/icons/upload-cloud-01.svg" alt=""
+                                                        class="w--16 h--16 filter--col--black" />
+                                                </span>
+                                                <span
+                                                    class="pad--y--3 pad--x--6 flex items-center justify-center gap--8 bg-black fs--12 fw5 lh--18 col-brand-green">
+                                                    Published
+                                                </span>
+                                            </div>
+                                            <!-- End Published Tag -->
+                                            
+                                        </div>
+                                        <!-- End Media Grid Item -->
+                                        <!-- Media Grid Item -->
+                                        <div class="br--4 pointer relative">
+                                            <div class="relative aspect--ratio--16-9">
+                                                <img src="../assets/images/merch-media-04.jpg" alt=""
+                                                    class="w-100" />
+                                            </div>
+                                            <!-- Subscriber Only PRE-ORDER -->
+                                            <div class="absolute flex gap--2 top-0 right-0">
+                                                <div
+                                                    class="h--20 pad--x--4 flex items-center bg-black">
+                                                    <span class="fs--12 fw5 lh--18 col-brand-green">Subscriber Only</span>
+                                                </div>
+                                            </div>
+                                            <!-- End Subscriber Only PRE-ORDER  -->
+                                            <!-- Published Tag -->
+                                            <div data-status-type="published" class="absolute left-0 bottom-0 flex">
+                                                <span
+                                                    class="pad--4 bg--blur--10 flex items-center justify-center gap--8 bg--col-brand-green">
+                                                    <img src="../assets/icons/upload-cloud-01.svg" alt=""
+                                                        class="w--16 h--16 filter--col--black" />
+                                                </span>
+                                                <span
+                                                    class="pad--y--3 pad--x--6 flex items-center justify-center gap--8 bg-black fs--12 fw5 lh--18 col-brand-green">
+                                                    Published
+                                                </span>
+                                            </div>
+                                            <!-- End Published Tag -->
+                                        </div>
+                                        <!-- End Media Grid Item -->
+                                        <!-- Media Grid Item -->
+                                        <div class="br--4 pointer relative">
+                                            <div class="relative aspect--ratio--16-9">
+                                                <img src="../assets/images/merch-media-05.jpg" alt="" class="w-100" />
+                                            </div>
+                                            <!-- Subscriber Only PRE-ORDER -->
+                                            <div class="absolute flex gap--2 top-0 right-0"> 
+                                                <div class="h--20 pad--x--4 flex items-center bg-black">
+                                                    <span class="fs--12 fw5 lh--18 col--malibu">PRE-ORDER</span>
+                                                </div>
+                                            </div>
+                                            <!-- End Subscriber Only PRE-ORDER  -->
+                                            <!-- Published Tag -->
+                                            <div data-status-type="published" class="absolute left-0 bottom-0 flex">
+                                                <span
+                                                    class="pad--4 bg--blur--10 flex items-center justify-center gap--8 bg--col-brand-green">
+                                                    <img src="../assets/icons/upload-cloud-01.svg" alt=""
+                                                        class="w--16 h--16 filter--col--black" />
+                                                </span>
+                                                <span
+                                                    class="pad--y--3 pad--x--6 flex items-center justify-center gap--8 bg-black fs--12 fw5 lh--18 col-brand-green">
+                                                    Published
+                                                </span>
+                                            </div>
+                                            <!-- End Published Tag -->
+                                        </div>
+                                        <!-- End Media Grid Item -->
+                                        <!-- Media Grid Item -->
+                                        <div class="br--4 pointer relative">
+                                            <div class="relative aspect--ratio--16-9">
+                                                <img src="../assets/images/merch-media-06.jpg" alt="" class="w-100" />
+                                            </div>
+                                            <!-- Subscriber Only PRE-ORDER -->
+                                            <div class="absolute flex gap--2 top-0 right-0">
+                                                <div
+                                                    class="h--20 pad--x--4 flex items-center bg-black">
+                                                    <span class="fs--12 fw5 lh--18 col-brand-green">Subscriber Only</span>
+                                                </div> 
+                                            </div>
+                                            <!-- End Subscriber Only PRE-ORDER  -->
+
+                                            <!-- Subscriber Only PRE-ORDER -->
+                                            <div class="absolute flex gap--2 bottom-0 right-0"> 
+                                                <div class="h--20 pad--x--4 flex items-center bg--col--vermilion">
+                                                    <span class="fs--12 fw5 lh--18 white">Low in stock</span>
+                                                </div>
+                                            </div>
+                                            <!-- End Subscriber Only PRE-ORDER  -->
+
+                                            <!-- Published Tag -->
+                                            <div data-status-type="published" class="absolute left-0 bottom-0 flex">
+                                                <span
+                                                    class="pad--4 bg--blur--10 flex items-center justify-center gap--8 bg--col-brand-green">
+                                                    <img src="../assets/icons/upload-cloud-01.svg" alt=""
+                                                        class="w--16 h--16 filter--col--black" />
+                                                </span>
+                                                <span
+                                                    class="pad--y--3 pad--x--6 flex items-center justify-center gap--8 bg-black fs--12 fw5 lh--18 col-brand-green">
+                                                    Published
+                                                </span>
+                                            </div>
+                                            <!-- End Published Tag -->
+                                        </div>
+                                        <!-- End Media Grid Item -->
+                                         <!-- Media Grid Item -->
+                                        <div class="br--4 pointer relative">
+                                            <div class="relative aspect--ratio--16-9">
+                                                <img src="../assets/images/merch-media-01.jpg" alt="" class="w-100" />
+                                            </div>
+                                            <!-- Subscriber Only SALE -->
+                                            <div class="absolute flex gap--2 top-0 right-0">
+                                                <div class="h--20 pad--x--4 flex items-center bg-black">
+                                                    <span class="fs--12 fw5 lh--18 col-brand-green">Subscriber Only</span>
+                                                </div>
+                                                <div class="h--20 pad--x--4 flex items-center bg-black">
+                                                    <span class="fs--12 fw5 lh--18 col--heliotrope">SALE</span>
+                                                </div>
+                                            </div>
+                                            <!-- End Subscriber Only SALE -->
+                                            <!-- Published Tag -->
+                                            <div data-status-type="published" class="absolute left-0 bottom-0 flex">
+                                                <span
+                                                    class="pad--4 bg--blur--10 flex items-center justify-center gap--8 bg--col-brand-green">
+                                                    <img src="../assets/icons/upload-cloud-01.svg" alt=""
+                                                        class="w--16 h--16 filter--col--black" />
+                                                </span>
+                                                <span
+                                                    class="pad--y--3 pad--x--6 flex items-center justify-center gap--8 bg-black fs--12 fw5 lh--18 col-brand-green">
+                                                    Published
+                                                </span>
+                                            </div>
+                                            <!-- End Published Tag -->
+                                        </div>
+                                        <!-- End Media Grid Item -->
+                                        <!-- Media Grid Item -->
+                                        <div class="br--4 pointer relative">
+                                            <div class="relative aspect--ratio--16-9">
+                                                <img src="../assets/images/merch-media-02.jpg" alt="" class="w-100" />
+                                            </div>
+                                            <!-- Subscriber Only SALE -->
+                                            <div class="absolute flex gap--2 top-0 right-0">
+                                                <div class="h--20 pad--x--4 flex items-center bg-black">
+                                                    <span class="fs--12 fw5 lh--18 col-brand-green">Subscriber Only</span>
+                                                </div>
+                                                <div class="h--20 pad--x--4 flex items-center bg-black">
+                                                    <span class="fs--12 fw5 lh--18 col--heliotrope">SALE</span>
+                                                </div>
+                                            </div>
+                                            <!-- End Subscriber Only SALE -->
+                                            <!-- Published Tag -->
+                                            <div data-status-type="published" class="absolute left-0 bottom-0 flex">
+                                                <span
+                                                    class="pad--4 bg--blur--10 flex items-center justify-center gap--8 bg--col-brand-green">
+                                                    <img src="../assets/icons/upload-cloud-01.svg" alt=""
+                                                        class="w--16 h--16 filter--col--black" />
+                                                </span>
+                                                <span
+                                                    class="pad--y--3 pad--x--6 flex items-center justify-center gap--8 bg-black fs--12 fw5 lh--18 col-brand-green">
+                                                    Published
+                                                </span>
+                                            </div>
+                                            <!-- End Published Tag -->
+                                        </div>
+                                        <!-- End Media Grid Item -->
+                                        
+                                    </div>
+                                    <!-- End Media Grid View -->
+                                </div>
+
+                                <!-- second tab content items -->
+                                <div data-tabbed-content="tabbed-content-second-tab" data-target="second-tab"
+                                    class="flex-column justify-start items-start gap--16 flex-auto mt--8-neg dn">
+                                    
+                                </div>
+                            </div>
+                            <!-- End Tabs Content -->
+                        </div>
+
+                        <!-- second tab content items -->
+                        <div data-tabbed-content="list-tabbed-content" data-target="list-tab"
+                            class="flex-column justify-start items-start gap--16 flex-auto mt--8-neg dn">
+                            <!-- Media Table View -->
+                                    <div data-table-container="media-table-view" class="w-100 relative overflow-x-auto">
+                                        <table data-table-for="media-table-view" class="w-100">
+                                            <thead>
+                                                <tr>
+                                                    <th
+                                                        class="pad--10 pad--right--0-responsive-mobile pad--right--0-responsive-mobile-portrait fs--14 fw4 lh--20 col--pale-sky truncate w--72 w--56-responsive-mobile min--h--42 pad--10 bb br--col--pale-sky">
+                                                        Media
+                                                    </th>
+                                                    <th
+                                                        class="pad--10 pad--right--0-responsive-mobile pad--right--0-responsive-mobile-portrait fs--14 fw4 lh--20 col--pale-sky truncate w--72 w--56-responsive-mobile min--h--42 pad--10 bb br--col--pale-sky">
+                                                        
+                                                    </th>
+                                                    <th
+                                                        class="pad--10 pad--right--0-responsive-mobile pad--right--0-responsive-mobile-portrait fs--14 fw4 lh--20 col--pale-sky truncate w--72 w--56-responsive-mobile min--h--42 pad--10 bb br--col--pale-sky">
+                                                        Status
+                                                    </th>
+                                                    <th
+                                                        class="pad--10 pad--right--0-responsive-mobile pad--right--0-responsive-mobile-portrait fs--14 fw4 lh--20 col--pale-sky truncate w--72 w--56-responsive-mobile min--h--42 pad--10 bb br--col--pale-sky">
+                                                        Collection
+                                                    </th>
+                                                    <th
+                                                        class="pad--10 pad--right--0-responsive-mobile pad--right--0-responsive-mobile-portrait fs--14 fw4 lh--20 col--pale-sky truncate w--72 w--56-responsive-mobile min--h--42 pad--10 bb br--col--pale-sky">
+                                                        Inventory
+                                                    </th>
+                                                    <th
+                                                        class="pad--10 pad--right--0-responsive-mobile pad--right--0-responsive-mobile-portrait fs--14 fw4 lh--20 col--pale-sky truncate w--72 w--56-responsive-mobile min--h--42 pad--10 bb br--col--pale-sky">
+                                                        Total Items Sold
+                                                    </th>
+                                                    <th
+                                                        class="pad--10 pad--right--0-responsive-mobile pad--right--0-responsive-mobile-portrait fs--14 fw4 lh--20 col--pale-sky truncate w--72 w--56-responsive-mobile min--h--42 pad--10 bb br--col--pale-sky">
+                                                        Total Sales
+                                                    </th>
+                                                    <th
+                                                        class="pad--10 pad--right--0-responsive-mobile pad--right--0-responsive-mobile-portrait fs--14 fw4 lh--20 col--pale-sky truncate w--72 w--56-responsive-mobile min--h--42 pad--10 bb br--col--pale-sky">
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+
+                                                <tr class="bg--col--athens-gray-3--50 hide-child">
+                                                    <td class="v-mid w--p--8 sticky left-0 z--10000">
+                                                        <!-- Media Image -->
+                                                        <div class="w--200 h--112 bb br--col--athens-gray-2 relative w--177-responsive-tablet h--100-responsive-tablet">
+                                                            <!-- Image Item -->
+                                                            <div class="w-100 h-100 overflow-hidden">
+                                                                <img src="../assets/images/merch-media-01.jpg" class="w-100 h-100 fit--cover">
+                                                            </div>
+                                                            <!-- End Image Item -->
+                                                            <!-- Video tag -->
+                                                            <!-- <div
+                                                                class="absolute left-0 top-0 bg--col--trans-dark-black-70 pad--x--4 pad--y--1 flex items-center justify-center gap--3">
+                                                                <span class="fs--12 lh--normal white tracked--0-12">video</span>
+                                                                <span>
+                                                                    <img src="../assets/icons/play-square.svg" alt=""
+                                                                        class="w--16 h--16 filter--col--white">
+                                                                </span>
+                                                            </div> -->
+                                                            <!-- End Video tag -->
+                                                            <!-- Trailer Tag -->
+                                                            <!-- <span class="pad--y--1 pad--x--4 flex items-center justify-center gap--8 bg-black fs--12 fw6 lh--18 white absolute right-0 bottom-0">
+                                                                Trailer
+                                                            </span> -->
+                                                            <!-- End Trailer Tag -->
+                                                            <!-- Play Button -->
+                                                            <!-- <div class="w--32 h--32 flex justify-center items-center pointer bg-black absolute left-0 bottom-0">
+                                                                <img src="../assets/icons/play.svg" alt="" class="w--20 h--20 filter--col--spring-green">
+                                                            </div> -->
+                                                            <!-- End Play Button -->
+                                                        </div>
+                                                        <!-- End Media Image -->
+                                                    </td>
+                                                    <td class="v-mid">
+                                                        <!-- Media Content -->
+                                                        <div class="flex items-center">
+                                                            <!-- Media Description -->
+                                                            <div class="pad--x--12 pad--y--8 flex-auto flex flex-column gap--2 relative">
+                                                                <p class="fs--12 fw6 lh--18 col--ebony--variation-2">Orange (Australis)</p>
+                                                                <!-- Media Tag Type -->
+                                                                <div class="flex items-center gap--8 relative">
+                                                                    <!-- Tag Item -->
+                                                                    <span class="pad--y--4 pad--x--6 bg-white flex items-center justify-center fs--12 fw5 lh--18 col--oxford-blue">
+                                                                        Featured
+                                                                    </span>
+                                                                    <!-- End Tag Item -->
+                                                                    <!-- Tag Item -->
+                                                                    <span class="pad--y--4 pad--x--6 bg-white flex items-center justify-center fs--12 fw5 lh--18 col--oxford-blue">
+                                                                        Food
+                                                                    </span>
+                                                                    <!-- End Tag Item -->  
+                                                                 </div>
+                                                                
+                                                                <!-- End Media Tag Type -->
+                                                            </div>
+                                                            <!-- Media Description -->
+                                                        </div>
+                                                        <!-- End Media Content -->
+                                                    </td>
+                                                    <td class="v-mid pad--x--12 pad--y--8">
+                                                        <!-- Reviewing Tag -->
+                                                        <div data-status-type="reviewing" class="flex items-center">
+                                                            <span class="pad--4 bg--blur--10 flex items-center justify-center gap--8 bg--col--my-sin flex-none">
+                                                                <img src="../assets/icons/credit-card-search.svg" alt="" class="w--16 h--16 filter--col--black">
                                                             </span>
-                                                            <span class="flex justify-center items-center">
-                                                                <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
-                                                                <div data-tooltip data-tooltip-arrow="true"
-                                                                    data-tooltip-position="center right"
-                                                                    data-tooltip-size="medium" data-tooltip-theme="dark"
-                                                                    class="relative z-5 pointer">
-                                                                    <img src="../assets/images/help-circle.svg" alt=""
-                                                                        class="w--16 h--16 filter--col--pale-sky pointer-events-none">
-
-                                                                    <div data-tooltip-text data-tooltip-content>
-                                                                        <span class="fs--12 fw5 lh--18 color-inherit">
-                                                                            Offer discount to leaving subscriber if they
-                                                                            decided to unsubscribe from this tier
+                                                            <span class="pad--y--3 pad--x--6 flex items-center justify-center gap--8 bg-black fs--12 fw5 lh--18 col--my-sin">
+                                                                Reviewing
+                                                            </span>
+                                                        </div>
+                                                        <!-- End Reviewing Tag -->
+                                                    </td>
+                                                    <td class="v-mid pad--x--12 pad--y--8">
+                                                        <div class="flex items-center gap--8 relative">
+                                                            <!-- Tag Item -->
+                                                            <span class="pad--y--4 pad--x--6 bg-black flex items-center justify-center fs--12 fw5 lh--18 white">
+                                                                Featured
+                                                            </span>
+                                                            <!-- End Tag Item -->
+                                                            <!-- Tag Item -->
+                                                            <span class="pad--y--4 pad--x--6 bg-black flex items-center justify-center fs--12 fw5 lh--18 white">
+                                                                Food
+                                                            </span>
+                                                            <!-- End Tag Item -->  
+                                                         </div> 
+                                                    </td>
+                                                    <td class="fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--x--12 pad--y--8 v-mid nowrap">
+                                                        10 in stock
+                                                    </td>
+                                                    <td class="fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--x--12 pad--y--8 v-mid nowrap">
+                                                        --
+                                                    </td>
+                                                    <td class="fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--x--12 pad--y--8 v-mid nowrap">
+                                                        --
+                                                    </td>
+                                                    <td class="v-mid pad--x--12 pad--y--8">
+                                                        <div class="flex items-center gap--24 justify-end relative">
+                                                            <span class="w--24 h--24 pointer pad--4 br--5 flex items-center justify-center hover--bg--col-light-blue">
+                                                                <img src="../assets/icons/pencil-01.svg" class="w--16 h--16 filter--col--oxford-blue">
+                                                            </span>
+                                                            <span class="w--24 h--24 pointer pad--4 br--5 flex items-center justify-center hover--bg--col-light-blue">
+                                                                <img src="../assets/icons/dots-vertical.svg" class="w--16 h--16 filter--col--oxford-blue">
+                                                            </span>
+                                                            <!-- Settings Dropdown -->
+                                                            <!-- <div class="w--150 pa--y--4 flex flex-column bg-white-70 br--8 sh--11 absolute right-0 top-2 z--10000">
+                                                                <div class="w-100 pad--y--1 pad--x--6 flex items-center pointer">
+                                                                    <div class="pad--y--9 pad--x--10 flex-auto flex items-center gap--12">
+                                                                        <span class="flex">
+                                                                            <img src="../assets/icons/share-06.svg" alt="" class="w--16 h--16 filter--col--oxford-blue">
                                                                         </span>
+                                                                        <span class="fs--14 fw5 lh--20 col--oxford-blue">Share</span>
                                                                     </div>
                                                                 </div>
-                                                                <!-- /tooltip -->
+                                                                <div class="w-100 pad--y--1 pad--x--6 flex items-center pointer">
+                                                                    <div class="pad--y--9 pad--x--10 flex-auto flex items-center gap--12">
+                                                                        <span class="flex">
+                                                                            <img src="../assets/icons/download-cloud-01.svg" alt="" class="w--16 h--16 filter--col--vermilion">
+                                                                        </span>
+                                                                        <span class="fs--14 fw5 lh--20 col--vermilion">Unpublish</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="w-100 pad--y--1 pad--x--6 flex items-center pointer">
+                                                                    <div class="pad--y--9 pad--x--10 flex-auto flex items-center gap--12">
+                                                                        <span class="flex">
+                                                                            <img src="../assets/icons/trash-03.svg" alt="" class="w--16 h--16 filter--col--vermilion">
+                                                                        </span>
+                                                                        <span class="fs--14 fw5 lh--20 col--vermilion nowrap">Delete Media</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div> -->
+                                                            <!-- End Settings Dropdown -->
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr class="hide-child">
+                                                    <td class="v-mid w--p--8 sticky left-0 z--10000">
+                                                        <!-- Media Image -->
+                                                        <div class="w--200 h--112 bb br--col--athens-gray-2 relative w--177-responsive-tablet h--100-responsive-tablet">
+                                                            <!-- Image Item -->
+                                                            <div class="w-100 h-100 overflow-hidden">
+                                                                <img src="../assets/images/merch-media-02.jpg" class="w-100 h-100 fit--cover">
+                                                            </div>
+                                                            <!-- End Image Item -->
+                                                            <!-- Video tag -->
+                                                            <!-- <div
+                                                                class="absolute left-0 top-0 bg--col--trans-dark-black-70 pad--x--4 pad--y--1 flex items-center justify-center gap--3">
+                                                                <span class="fs--12 lh--normal white tracked--0-12">video</span>
+                                                                <span>
+                                                                    <img src="../assets/icons/play-square.svg" alt=""
+                                                                        class="w--16 h--16 filter--col--white">
+                                                                </span>
+                                                            </div> -->
+                                                            <!-- End Video tag -->
+                                                            <!-- Trailer Tag -->
+                                                            <!-- <span class="pad--y--1 pad--x--4 flex items-center justify-center gap--8 bg-black fs--12 fw6 lh--18 white absolute right-0 bottom-0">
+                                                                Trailer
+                                                            </span> -->
+                                                            <!-- End Trailer Tag -->
+                                                            <!-- Play Button -->
+                                                            <!-- <div class="w--32 h--32 flex justify-center items-center pointer bg-black absolute left-0 bottom-0">
+                                                                <img src="../assets/icons/play.svg" alt="" class="w--20 h--20 filter--col--spring-green">
+                                                            </div> -->
+                                                            <!-- End Play Button -->
+                                                        </div>
+                                                        <!-- End Media Image -->
+                                                    </td>
+                                                    <td class="v-mid">
+                                                        <!-- Media Content -->
+                                                        <div class="flex items-center">
+                                                            <!-- Media Description -->
+                                                            <div class="pad--x--12 pad--y--8 flex-auto flex flex-column gap--2 relative">
+                                                                <p class="fs--12 fw6 lh--18 col--ebony--variation-2">Orange (Australis)</p>
+                                                                <!-- Media Tag Type -->
+                                                                <div class="flex items-center gap--8 relative">
+                                                                    <!-- Tag Item -->
+                                                                    <span class="pad--y--4 pad--x--6 bg-white flex items-center justify-center fs--12 fw5 lh--18 col--oxford-blue">
+                                                                        Featured
+                                                                    </span>
+                                                                    <!-- End Tag Item -->
+                                                                    <!-- Tag Item -->
+                                                                    <span class="pad--y--4 pad--x--6 bg-white flex items-center justify-center fs--12 fw5 lh--18 col--oxford-blue">
+                                                                        Food
+                                                                    </span>
+                                                                    <!-- End Tag Item -->
+                                                                </div>
+                                                                
+                                                                <!-- End Media Tag Type -->
+                                                            </div>
+                                                            <!-- Media Description -->
+                                                        </div>
+                                                        <!-- End Media Content -->
+                                                    </td>
+                                                    <td class="v-mid pad--x--12 pad--y--8">
+                                                        <!-- Published Tag -->
+                                                        <div data-status-type="published" class="flex items-center">
+                                                            <span
+                                                                class="pad--4 bg--blur--10 flex items-center justify-center gap--8 bg--col-brand-green flex-none">
+                                                                <img src="../assets/icons/upload-cloud-01.svg" alt=""
+                                                                    class="w--16 h--16 filter--col--black" />
+                                                            </span>
+                                                            <span
+                                                                class="pad--y--3 pad--x--6 flex items-center justify-center gap--8 bg-black fs--12 fw5 lh--18 col-brand-green">
+                                                                Published
                                                             </span>
                                                         </div>
-                                                    </div>
-                                                    <!-- /toggle text -->
-                                                </div>
-                                            </div>
-                                            <!-- /toggle -->
-                                            <!-- End Toggle Switch -->
-                                        </div><!-- End Share options content -->
-                                    </div>
-                                </div>
-                                <!-- End Sharing Options -->
-                                <!-- Save/Cancel Button Group -->
-                                <div class=" flex items-center justify-end">
-                                    <div class="flex items-center gap--8">
-                                        <button
-                                            class="mw--100 pad--y--8 flex items-center justify-center fs--18 fw5 lh--28 col--ebony--variation-2 flex--max-responsive-mobile flex--max-responsive-mobile-portrait hover--bg--col--white--100">Cancel</button>
-                                        <button
-                                            class="bg-black pad--y--4 pad--x--8 flex justify-center items-center gap--10 hover--bg--col-brand-green hover--parent--child--col--black-ribbon">
-                                            <span class="fs--18 fw5 lh--28 col-brand-green ttu">SAVE &amp;
-                                                PUBLISH</span>
-                                        </button>
-                                    </div>
-                                </div>
-                                <!-- End Save/Cancel Button Group -->
-                            </div> <!-- End Tier Information Page Structure -->
-                        </div>
-                        <!-- End Tier Information left Page Structure -->
-                        <!-- Card Section on Right -->
-                        <div
-                            class="pad--right--30 display--none-responsive-tablet display--none-responsive-mobile display--none-responsive-mobile-portrait">
-                            <!-- Followers Single Tier card -->
-                            <div data-id="featured-no-offer" class="w--384 br--2 ba br--col-brand-green relative"
-                                style="background-image: url(../assets/images/tier-card-bg.svg);">
-                                <!-- Single Tier card Inner -->
-                                <div class="flex flex-column gap--16 br--2 relative">
-                                    <!-- Card main content -->
-                                    <div data-card-hover class="relative bg-black-50 bg--blur--5">
-                                        <!-- Single Tier card content -->
-                                        <div class="flex flex-column gap--16 pad--x--24 pad--top--32 pad--bottom--68">
-                                            <!-- Card Title -->
-                                            <h2 data-line-clamp class="fs--30 fw6 lh--38 col--athens-gray">FREE library
-                                                of LOREM LPSUM ATIER dolor sit amet, consectetur adipiscing elit.</h2>
-                                            <!-- End Card Title -->
-                                            <!-- Details info -->
-                                            <div class="flex items-center gap--10">
-                                                <!-- item-1 -->
-                                                <div class="flex items-center gap--1">
-                                                    <span class="fs--16 lh--normal tracked--0-08 white db">0</span>
-                                                    <span>
-                                                        <img src="../assets/icons/play-square.svg" alt=""
-                                                            class="w--20 h--20" />
-                                                    </span>
-                                                </div>
-                                                <span class="w--3 h--3 br-100 bg-white db"></span>
-                                                <!-- item-2 -->
-                                                <div class="flex items-center gap--1">
-                                                    <span class="fs--16 lh--normal tracked--0-08 white db">0</span>
-                                                    <span class="w--20 h--20 flex items-center justify-center">
-                                                        <img src="../assets/icons/single-image.svg" alt=""
-                                                            class="filter--col--white" />
-                                                    </span>
-                                                </div>
-                                                <span class="w--3 h--3 br-100 bg-white db"></span>
-                                                <!-- item-3 -->
-                                                <div class="flex items-center gap--1">
-                                                    <span class="fs--16 lh--normal tracked--0-08 white db">0</span>
-                                                    <span class="w--20 h--20 flex items-center justify-center">
-                                                        <img src="../assets/icons/image-group.svg" alt="" />
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <!-- End Details info -->
-                                            <!-- Card Price -->
-                                            <div class="flex items-end gap--4">
-                                                <span class="relative">
-                                                    <span class="fs--20 fw6 lh--30 col--sunglow-yellow">USD$</span>
-                                                    <span
-                                                        class="fs--48 fw6 lh--60 col--sunglow-yellow tracked--neg--0-96">30.99</span>
-                                                </span>
-                                                <div class="flex flex-column gap--6">
-                                                    <span
-                                                        class="bg--col--sunglow-yellow pad--x--5 pad--y--2 fs--14 fw7 lh--20 w--max-content">-50%
-                                                    </span>
-                                                    <span>
-                                                        <span
-                                                            class="fs--16 fw5 lh--20 col--sunglow-yellow strike">60.99</span>
-                                                        <small
-                                                            class="fs--10 lh--32 col--sunglow-yellow tracked--0-01">/mo</small>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <!-- End Card Price -->
-                                            <!-- Card Description -->
-                                            <div class="flex flex-column pad--top--4 gap--4">
-                                                <div class="flex flex-column">
-                                                    <p class="fs--14 fw4 lh--20 col--athens-gray text--sh--2">Watch all
-                                                        of my mango eating content! content update weekly!</p><br />
-                                                    <ul data-theme="default">
-                                                        <li class="fs--14 fw4 lh--20 col--athens-gray text--sh--2">100%
-                                                            real content</li>
-                                                        <li class="fs--14 fw4 lh--20 col--athens-gray text--sh--2">no
-                                                            editing</li>
-                                                        <li class="fs--14 fw4 lh--20 col--athens-gray text--sh--2">100%
-                                                            real content</li>
-                                                        <li class="fs--14 fw4 lh--20 col--athens-gray text--sh--2">no
-                                                            editing</li>
-                                                    </ul>
-                                                </div>
-                                                <a href="#">
-                                                    <span class="fs--12 fw5 lh--18 col-brand-green">...Read more</span>
-                                                </a>
-                                            </div>
-                                            <!-- End Card Description -->
-                                            <!-- Offer Options -->
-                                            <div class="flex flex-column gap--8">
-                                                <div class="flex gap--15 items-center">
-                                                    <span>
-                                                        <img src="../assets/icons/square.svg" alt=""
-                                                            class="w--12 h--12">
-                                                    </span>
-                                                    <span class="fs--16 lh--24 white">
-                                                        <span class="fw6 col-brand-green">10 free tokens</span> each
-                                                        month
-                                                    </span>
-                                                </div>
-                                                <div class="flex gap--15 items-center">
-                                                    <span>
-                                                        <img src="../assets/icons/square.svg" alt=""
-                                                            class="w--12 h--12">
-                                                    </span>
-                                                    <span class="fs--16 lh--24 white">
-                                                        <span class="fw6 col-brand-green">10% off</span> on all
-                                                        Merchandise
-                                                    </span>
-                                                </div>
-                                                <div class="flex gap--15 items-center">
-                                                    <span>
-                                                        <img src="../assets/icons/square.svg" alt=""
-                                                            class="w--12 h--12">
-                                                    </span>
-                                                    <span class="fs--16 lh--24 white">
-                                                        <span class="fw6 col-brand-green">10% off</span> on all Custom
-                                                        Request
-                                                    </span>
-                                                </div>
-                                                <div class="flex gap--15 items-center">
-                                                    <span>
-                                                        <img src="../assets/icons/square.svg" alt=""
-                                                            class="w--12 h--12">
-                                                    </span>
-                                                    <span class="fs--16 lh--24 white">
-                                                        <span class="fw6 col-brand-green">10% off</span> on all Pay to
-                                                        View videos
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <!-- End Offer Options -->
-                                        </div><!-- End Single Tier card content -->
-                                    </div><!-- Card main content -->
-                                    <!-- Button -->
-                                    <div class="absolute right-0 bottom-0 z--10000">
-                                        <a href="#" data-button-style="skew-left" data-button-color="green"
-                                            class="h--56 pad--x--8 flex items-center gap--10 justify-center">
-                                            <span class="flex pad--y--4 fs--24 fw6 lh--32 black">SUBSCRIBE</span>
-                                            <span> <img src="../assets/icons/arrow-narrow-up-right.svg" class="w--24 h--24 flex-none">
-                                            </span>
-                                        </a>
-                                    </div>
-                                </div><!-- End Single Tier card Inner -->
+                                                        <!-- End Published Tag -->
+                                                    </td>
+                                                    <td class="v-mid pad--x--12 pad--y--8">
+                                                        <div class="flex items-center gap--8 relative">
+                                                            <!-- Tag Item -->
+                                                            <span class="pad--y--4 pad--x--6 bg-black flex items-center justify-center fs--12 fw5 lh--18 white">
+                                                                Featured
+                                                            </span>
+                                                            <!-- End Tag Item -->
+                                                            <!-- Tag Item -->
+                                                            <span class="pad--y--4 pad--x--6 bg-black flex items-center justify-center fs--12 fw5 lh--18 white">
+                                                                Food
+                                                            </span>
+                                                            <!-- End Tag Item -->  
+                                                         </div>
+                                                    </td>
+                                                    <td class="fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--x--12 pad--y--8 v-mid nowrap">
+                                                        10 in stock
+                                                    </td>
+                                                    <td class="fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--x--12 pad--y--8 v-mid nowrap">
+                                                        3	
+                                                    </td>
+                                                    <td class="fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--x--12 pad--y--8 v-mid nowrap">
+                                                        USD$ 24.99
+                                                    </td>
+                                                    <td class="v-mid pad--x--12 pad--y--8">
+                                                        <div class="flex items-center gap--24 justify-end">
+                                                            <span class="w--24 h--24 pointer pad--4 br--5 flex items-center justify-center hover--bg--col-light-blue">
+                                                                <img src="../assets/icons/pencil-01.svg" class="w--16 h--16 filter--col--oxford-blue">
+                                                            </span>
+                                                            <span class="w--24 h--24 pointer pad--4 br--5 flex items-center justify-center hover--bg--col-light-blue">
+                                                                <img src="../assets/icons/dots-vertical.svg" class="w--16 h--16 filter--col--oxford-blue">
+                                                            </span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
 
-                            </div><!-- End Followers Single Tier card -->
+                                                <tr class="bg--col--athens-gray-3--50 hide-child">
+                                                    <td class="v-mid w--p--8 sticky left-0 z--10000">
+                                                        <!-- Media Image -->
+                                                        <div class="w--200 h--112 bb br--col--athens-gray-2 relative w--177-responsive-tablet h--100-responsive-tablet">
+                                                            <!-- Image Item -->
+                                                            <div class="w-100 h-100 overflow-hidden">
+                                                                <img src="../assets/images/merch-media-03.jpg" class="w-100 h-100 fit--cover">
+                                                            </div>
+                                                            <!-- End Image Item -->
+                                                            <!-- Video tag -->
+                                                            <!-- <div
+                                                                class="absolute left-0 top-0 bg--col--trans-dark-black-70 pad--x--4 pad--y--1 flex items-center justify-center gap--3">
+                                                                <span class="fs--12 lh--normal white tracked--0-12">video</span>
+                                                                <span>
+                                                                    <img src="../assets/icons/play-square.svg" alt=""
+                                                                        class="w--16 h--16 filter--col--white">
+                                                                </span>
+                                                            </div> -->
+                                                            <!-- End Video tag -->
+                                                            <!-- Trailer Tag -->
+                                                            <!-- <span class="pad--y--1 pad--x--4 flex items-center justify-center gap--8 bg-black fs--12 fw6 lh--18 white absolute right-0 bottom-0">
+                                                                Trailer
+                                                            </span> -->
+                                                            <!-- End Trailer Tag -->
+                                                            <!-- Play Button -->
+                                                            <!-- <div class="w--32 h--32 flex justify-center items-center pointer bg-black absolute left-0 bottom-0">
+                                                                <img src="../assets/icons/play.svg" alt="" class="w--20 h--20 filter--col--spring-green">
+                                                            </div> -->
+                                                            <!-- End Play Button -->
+                                                        </div>
+                                                        <!-- End Media Image -->
+                                                    </td>
+                                                    <td class="v-mid">
+                                                        <!-- Media Content -->
+                                                        <div class="flex items-center">
+                                                            <!-- Media Description -->
+                                                            <div class="pad--x--12 pad--y--8 flex-auto flex flex-column gap--2 relative">
+                                                                <p class="fs--12 fw6 lh--18 col--ebony--variation-2">Orange (Australis)</p>
+                                                                <!-- Media Tag Type -->
+                                                                <div class="flex items-center gap--8 relative">
+                                                                    <!-- Tag Item -->
+                                                                    <span class="pad--y--4 pad--x--6 bg-white flex items-center justify-center fs--12 fw5 lh--18 col--oxford-blue">
+                                                                        Featured
+                                                                    </span>
+                                                                    <!-- End Tag Item -->
+                                                                    <!-- Tag Item -->
+                                                                    <span class="pad--y--4 pad--x--6 bg-white flex items-center justify-center fs--12 fw5 lh--18 col--oxford-blue">
+                                                                        Food
+                                                                    </span>
+                                                                    <!-- End Tag Item -->
+                                                                </div>
+                                                                
+                                                                <!-- End Media Tag Type -->
+                                                            </div>
+                                                            <!-- Media Description -->
+                                                        </div>
+                                                        <!-- End Media Content -->
+                                                    </td>
+                                                    <td class="v-mid pad--x--12 pad--y--8">
+                                                        <!-- Published Tag -->
+                                                        <div data-status-type="published" class="flex items-center">
+                                                            <span
+                                                                class="pad--4 bg--blur--10 flex items-center justify-center gap--8 bg--col-brand-green flex-none">
+                                                                <img src="../assets/icons/upload-cloud-01.svg" alt=""
+                                                                    class="w--16 h--16 filter--col--black" />
+                                                            </span>
+                                                            <span
+                                                                class="pad--y--3 pad--x--6 flex items-center justify-center gap--8 bg-black fs--12 fw5 lh--18 col-brand-green">
+                                                                Published
+                                                            </span>
+                                                        </div>
+                                                        <!-- End Published Tag -->
+                                                    </td>
+                                                    <td class="v-mid pad--x--12 pad--y--8">
+                                                        <div class="flex items-center gap--8 relative">
+                                                            <!-- Tag Item -->
+                                                            <span class="pad--y--4 pad--x--6 bg-black flex items-center justify-center fs--12 fw5 lh--18 white">
+                                                                Featured
+                                                            </span>
+                                                            <!-- End Tag Item -->
+                                                            <!-- Tag Item -->
+                                                            <span class="pad--y--4 pad--x--6 bg-black flex items-center justify-center fs--12 fw5 lh--18 white">
+                                                                Food
+                                                            </span>
+                                                            <!-- End Tag Item -->  
+                                                         </div>
+                                                    </td>
+                                                    <td class="fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--x--12 pad--y--8 v-mid nowrap">
+                                                        10 in stock
+                                                    </td>
+                                                    <td class="fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--x--12 pad--y--8 v-mid nowrap">
+                                                        2
+                                                    </td>
+                                                    <td class="fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--x--12 pad--y--8 v-mid nowrap">
+                                                        USD$ 24.99
+                                                    </td>
+                                                    <td class="v-mid pad--x--12 pad--y--8">
+                                                        <div class="flex items-center gap--24 justify-end">
+                                                            <span class="w--24 h--24 pointer pad--4 br--5 flex items-center justify-center hover--bg--col-light-blue">
+                                                                <img src="../assets/icons/pencil-01.svg" class="w--16 h--16 filter--col--oxford-blue">
+                                                            </span>
+                                                            <span class="w--24 h--24 pointer pad--4 br--5 flex items-center justify-center hover--bg--col-light-blue">
+                                                                <img src="../assets/icons/dots-vertical.svg" class="w--16 h--16 filter--col--oxford-blue">
+                                                            </span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                
+                                                <tr class="hide-child">
+                                                    <td class="v-mid w--p--8 sticky left-0 z--10000">
+                                                        <!-- Media Image -->
+                                                        <div class="w--200 h--112 bb br--col--athens-gray-2 relative w--177-responsive-tablet h--100-responsive-tablet">
+                                                            <!-- Image Item -->
+                                                            <div class="w-100 h-100 overflow-hidden">
+                                                                <img src="../assets/images/merch-media-04.jpg" class="w-100 h-100 fit--cover">
+                                                            </div>
+                                                            <!-- End Image Item -->
+                                                            <!-- Video tag -->
+                                                            <!-- <div
+                                                                class="absolute left-0 top-0 bg--col--trans-dark-black-70 pad--x--4 pad--y--1 flex items-center justify-center gap--3">
+                                                                <span class="fs--12 lh--normal white tracked--0-12">video</span>
+                                                                <span>
+                                                                    <img src="../assets/icons/play-square.svg" alt=""
+                                                                        class="w--16 h--16 filter--col--white">
+                                                                </span>
+                                                            </div> -->
+                                                            <!-- End Video tag -->
+                                                            <!-- Trailer Tag -->
+                                                            <!-- <span class="pad--y--1 pad--x--4 flex items-center justify-center gap--8 bg-black fs--12 fw6 lh--18 white absolute right-0 bottom-0">
+                                                                Trailer
+                                                            </span> -->
+                                                            <!-- End Trailer Tag -->
+                                                            <!-- Play Button -->
+                                                            <!-- <div class="w--32 h--32 flex justify-center items-center pointer bg-black absolute left-0 bottom-0">
+                                                                <img src="../assets/icons/play.svg" alt="" class="w--20 h--20 filter--col--spring-green">
+                                                            </div> -->
+                                                            <!-- End Play Button -->
+                                                        </div>
+                                                        <!-- End Media Image -->
+                                                    </td>
+                                                    <td class="v-mid">
+                                                        <!-- Media Content -->
+                                                        <div class="flex items-center">
+                                                            <!-- Media Description -->
+                                                            <div class="pad--x--12 pad--y--8 flex-auto flex flex-column gap--2 relative">
+                                                                <p class="fs--12 fw6 lh--18 col--ebony--variation-2">Orange (Australis)</p>
+                                                                <!-- Media Tag Type -->
+                                                                <div class="flex items-center gap--8 relative">
+                                                                    <!-- Tag Item -->
+                                                                    <span class="pad--y--4 pad--x--6 bg-white flex items-center justify-center fs--12 fw5 lh--18 col--oxford-blue">
+                                                                        Featured
+                                                                    </span>
+                                                                    <!-- End Tag Item -->
+                                                                    <!-- Tag Item -->
+                                                                    <span class="pad--y--4 pad--x--6 bg-white flex items-center justify-center fs--12 fw5 lh--18 col--oxford-blue">
+                                                                        Food
+                                                                    </span>
+                                                                    <!-- End Tag Item -->
+                                                                </div>
+                                                                
+                                                                <!-- End Media Tag Type -->
+                                                            </div>
+                                                            <!-- Media Description -->
+                                                        </div>
+                                                        <!-- End Media Content -->
+                                                    </td>
+                                                    <td class="v-mid pad--x--12 pad--y--8">
+                                                        <!-- Published Tag -->
+                                                        <div data-status-type="draft" class="flex">
+                                                            <span class="pad--4 bg--blur--10 flex items-center justify-center gap--8 bg--col--mischka flex-none">
+                                                                <img src="../assets/icons/draft-cloud.svg" alt="" class="w--16 h--16 filter--col--black">
+                                                            </span>
+                                                            <span class="pad--y--3 pad--x--6 flex items-center justify-center gap--8 bg-black fs--12 fw5 lh--18 col--mischka">
+                                                                Draft
+                                                            </span>
+                                                        </div>
+                                                        <!-- End Published Tag -->
+                                                    </td>
+                                                    <td class="v-mid pad--x--12 pad--y--8">
+                                                        <div class="flex items-center gap--8 relative">
+                                                            <!-- Tag Item -->
+                                                            <span class="pad--y--4 pad--x--6 bg-black flex items-center justify-center fs--12 fw5 lh--18 white">
+                                                                Featured
+                                                            </span>
+                                                            <!-- End Tag Item -->
+                                                            <!-- Tag Item -->
+                                                            <span class="pad--y--4 pad--x--6 bg-black flex items-center justify-center fs--12 fw5 lh--18 white">
+                                                                Food
+                                                            </span>
+                                                            <!-- End Tag Item -->  
+                                                         </div>
+                                                    </td>
+                                                    <td class="fs--12 fw6 lh--18 col--vermilion min--h--72 pad--x--12 pad--y--8 v-mid nowrap">
+                                                        0 in stock
+                                                    </td>
+                                                    <td class="fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--x--12 pad--y--8 v-mid nowrap">
+                                                        30
+                                                    </td>
+                                                    <td class="fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--x--12 pad--y--8 v-mid nowrap">
+                                                        USD 450.9
+                                                    </td>
+                                                    <td class="v-mid pad--x--12 pad--y--8">
+                                                        <div class="flex items-center gap--24 justify-end">
+                                                            <span class="w--24 h--24 pointer pad--4 br--5 flex items-center justify-center hover--bg--col-light-blue">
+                                                                <img src="../assets/icons/pencil-01.svg" class="w--16 h--16 filter--col--oxford-blue">
+                                                            </span>
+                                                            <span class="w--24 h--24 pointer pad--4 br--5 flex items-center justify-center hover--bg--col-light-blue">
+                                                                <img src="../assets/icons/dots-vertical.svg" class="w--16 h--16 filter--col--oxford-blue">
+                                                            </span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr class="bg--col--athens-gray-3--50 hide-child">
+                                                    <td class="v-mid w--p--8 sticky left-0 z--10000">
+                                                        <!-- Media Image -->
+                                                        <div class="w--200 h--112 bb br--col--athens-gray-2 relative w--177-responsive-tablet h--100-responsive-tablet">
+                                                            <!-- Image Item -->
+                                                            <div class="w-100 h-100 overflow-hidden">
+                                                                <img src="../assets/images/merch-media-05.jpg" class="w-100 h-100 fit--cover">
+                                                            </div>
+                                                            <!-- End Image Item -->
+                                                            <!-- Video tag -->
+                                                            <!-- <div
+                                                                class="absolute left-0 top-0 bg--col--trans-dark-black-70 pad--x--4 pad--y--1 flex items-center justify-center gap--3">
+                                                                <span class="fs--12 lh--normal white tracked--0-12">video</span>
+                                                                <span>
+                                                                    <img src="../assets/icons/play-square.svg" alt=""
+                                                                        class="w--16 h--16 filter--col--white">
+                                                                </span>
+                                                            </div> -->
+                                                            <!-- End Video tag -->
+                                                            <!-- Trailer Tag -->
+                                                            <!-- <span class="pad--y--1 pad--x--4 flex items-center justify-center gap--8 bg-black fs--12 fw6 lh--18 white absolute right-0 bottom-0">
+                                                                Trailer
+                                                            </span> -->
+                                                            <!-- End Trailer Tag -->
+                                                            <!-- Play Button -->
+                                                            <!-- <div class="w--32 h--32 flex justify-center items-center pointer bg-black absolute left-0 bottom-0">
+                                                                <img src="../assets/icons/play.svg" alt="" class="w--20 h--20 filter--col--spring-green">
+                                                            </div> -->
+                                                            <!-- End Play Button -->
+                                                        </div>
+                                                        <!-- End Media Image -->
+                                                    </td>
+                                                    <td class="v-mid">
+                                                        <!-- Media Content -->
+                                                        <div class="flex items-center">
+                                                            <!-- Media Description -->
+                                                            <div class="pad--x--12 pad--y--8 flex-auto flex flex-column gap--2 relative">
+                                                                <p class="fs--12 fw6 lh--18 col--ebony--variation-2">Orange (Australis)</p>
+                                                                <!-- Media Tag Type -->
+                                                                <div class="flex items-center gap--8 relative">
+                                                                    <!-- Tag Item -->
+                                                                    <span class="pad--y--4 pad--x--6 bg-white flex items-center justify-center fs--12 fw5 lh--18 col--oxford-blue">
+                                                                        Featured
+                                                                    </span>
+                                                                    <!-- End Tag Item -->
+                                                                    <!-- Tag Item -->
+                                                                    <span class="pad--y--4 pad--x--6 bg-white flex items-center justify-center fs--12 fw5 lh--18 col--oxford-blue">
+                                                                        Food
+                                                                    </span>
+                                                                    <!-- End Tag Item -->
+                                                                </div>
+                                                                
+                                                                <!-- End Media Tag Type -->
+                                                            </div>
+                                                            <!-- Media Description -->
+                                                        </div>
+                                                        <!-- End Media Content -->
+                                                    </td>
+                                                    <td class="v-mid pad--x--12 pad--y--8">
+                                                        <!-- Published Tag -->
+                                                        <div data-status-type="published" class="flex items-center">
+                                                            <span
+                                                                class="pad--4 bg--blur--10 flex items-center justify-center gap--8 bg--col-brand-green flex-none">
+                                                                <img src="../assets/icons/upload-cloud-01.svg" alt=""
+                                                                    class="w--16 h--16 filter--col--black" />
+                                                            </span>
+                                                            <span
+                                                                class="pad--y--3 pad--x--6 flex items-center justify-center gap--8 bg-black fs--12 fw5 lh--18 col-brand-green">
+                                                                Published
+                                                            </span>
+                                                        </div>
+                                                        <!-- End Published Tag -->
+                                                    </td>
+                                                    <td class="v-mid pad--x--12 pad--y--8">
+                                                        <div class="flex items-center gap--8 relative">
+                                                            <!-- Tag Item -->
+                                                            <span class="pad--y--4 pad--x--6 bg-black flex items-center justify-center fs--12 fw5 lh--18 white">
+                                                                Featured
+                                                            </span>
+                                                            <!-- End Tag Item -->
+                                                            <!-- Tag Item -->
+                                                            <span class="pad--y--4 pad--x--6 bg-black flex items-center justify-center fs--12 fw5 lh--18 white">
+                                                                Food
+                                                            </span>
+                                                            <!-- End Tag Item -->  
+                                                         </div>
+                                                    </td>
+                                                    <td class="fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--x--12 pad--y--8 v-mid nowrap">
+                                                        10 in stock
+                                                    </td>
+                                                    <td class="fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--x--12 pad--y--8 v-mid nowrap">
+                                                        0
+                                                    </td>
+                                                    <td class="fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--x--12 pad--y--8 v-mid nowrap">
+                                                        USD$ 0
+                                                    </td>
+                                                    <td class="v-mid pad--x--12 pad--y--8">
+                                                        <div class="flex items-center gap--24 justify-end">
+                                                            <span class="w--24 h--24 pointer pad--4 br--5 flex items-center justify-center hover--bg--col-light-blue">
+                                                                <img src="../assets/icons/pencil-01.svg" class="w--16 h--16 filter--col--oxford-blue">
+                                                            </span>
+                                                            <span class="w--24 h--24 pointer pad--4 br--5 flex items-center justify-center hover--bg--col-light-blue">
+                                                                <img src="../assets/icons/dots-vertical.svg" class="w--16 h--16 filter--col--oxford-blue">
+                                                            </span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr class="hide-child">
+                                                    <td class="v-mid w--p--8 sticky left-0 z--10000">
+                                                        <!-- Media Image -->
+                                                        <div class="w--200 h--112 bb br--col--athens-gray-2 relative w--177-responsive-tablet h--100-responsive-tablet">
+                                                            <!-- Image Item -->
+                                                            <div class="w-100 h-100 overflow-hidden">
+                                                                <img src="../assets/images/merch-media-06.jpg" class="w-100 h-100 fit--cover">
+                                                            </div>
+                                                            <!-- End Image Item -->
+                                                            <!-- Video tag -->
+                                                            <!-- <div
+                                                                class="absolute left-0 top-0 bg--col--trans-dark-black-70 pad--x--4 pad--y--1 flex items-center justify-center gap--3">
+                                                                <span class="fs--12 lh--normal white tracked--0-12">video</span>
+                                                                <span>
+                                                                    <img src="../assets/icons/play-square.svg" alt=""
+                                                                        class="w--16 h--16 filter--col--white">
+                                                                </span>
+                                                            </div> -->
+                                                            <!-- End Video tag -->
+                                                            <!-- Trailer Tag -->
+                                                            <!-- <span class="pad--y--1 pad--x--4 flex items-center justify-center gap--8 bg-black fs--12 fw6 lh--18 white absolute right-0 bottom-0">
+                                                                Trailer
+                                                            </span> -->
+                                                            <!-- End Trailer Tag -->
+                                                            <!-- Play Button -->
+                                                            <!-- <div class="w--32 h--32 flex justify-center items-center pointer bg-black absolute left-0 bottom-0">
+                                                                <img src="../assets/icons/play.svg" alt="" class="w--20 h--20 filter--col--spring-green">
+                                                            </div> -->
+                                                            <!-- End Play Button -->
+                                                        </div>
+                                                        <!-- End Media Image -->
+                                                    </td>
+                                                    <td class="v-mid">
+                                                        <!-- Media Content -->
+                                                        <div class="flex items-center">
+                                                            <!-- Media Description -->
+                                                            <div class="pad--x--12 pad--y--8 flex-auto flex flex-column gap--2 relative">
+                                                                <p class="fs--12 fw6 lh--18 col--ebony--variation-2">Orange (Australis)</p>
+                                                                <!-- Media Tag Type -->
+                                                                <div class="flex items-center gap--8 relative">
+                                                                    <!-- Tag Item -->
+                                                                    <span class="pad--y--4 pad--x--6 bg-white flex items-center justify-center fs--12 fw5 lh--18 col--oxford-blue">
+                                                                        Featured
+                                                                    </span>
+                                                                    <!-- End Tag Item -->
+                                                                    <!-- Tag Item -->
+                                                                    <span class="pad--y--4 pad--x--6 bg-white flex items-center justify-center fs--12 fw5 lh--18 col--oxford-blue">
+                                                                        Food
+                                                                    </span>
+                                                                    <!-- End Tag Item -->
+                                                                </div>
+                                                                
+                                                                <!-- End Media Tag Type -->
+                                                            </div>
+                                                            <!-- Media Description -->
+                                                        </div>
+                                                        <!-- End Media Content -->
+                                                    </td>
+                                                    <td class="v-mid pad--x--12 pad--y--8">
+                                                        <!-- Published Tag -->
+                                                        <div data-status-type="published" class="flex items-center">
+                                                            <span
+                                                                class="pad--4 bg--blur--10 flex items-center justify-center gap--8 bg--col-brand-green flex-none">
+                                                                <img src="../assets/icons/upload-cloud-01.svg" alt=""
+                                                                    class="w--16 h--16 filter--col--black" />
+                                                            </span>
+                                                            <span
+                                                                class="pad--y--3 pad--x--6 flex items-center justify-center gap--8 bg-black fs--12 fw5 lh--18 col-brand-green">
+                                                                Published
+                                                            </span>
+                                                        </div>
+                                                        <!-- End Published Tag -->
+                                                    </td>
+                                                    <td class="v-mid pad--x--12 pad--y--8">
+                                                        <div class="flex items-center gap--8 relative">
+                                                            <!-- Tag Item -->
+                                                            <span class="pad--y--4 pad--x--6 bg-black flex items-center justify-center fs--12 fw5 lh--18 white">
+                                                                Featured
+                                                            </span>
+                                                            <!-- End Tag Item -->
+                                                            <!-- Tag Item -->
+                                                            <span class="pad--y--4 pad--x--6 bg-black flex items-center justify-center fs--12 fw5 lh--18 white">
+                                                                Food
+                                                            </span>
+                                                            <!-- End Tag Item -->  
+                                                         </div>
+                                                    </td>
+                                                    <td class="fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--x--12 pad--y--8 v-mid nowrap">
+                                                        3 in stock
+                                                    </td>
+                                                    <td class="fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--x--12 pad--y--8 v-mid nowrap">
+                                                        1
+                                                    </td>
+                                                    <td class="fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--x--12 pad--y--8 v-mid nowrap">
+                                                        USD$ 24.99
+                                                    </td>
+                                                    <td class="v-mid pad--x--12 pad--y--8">
+                                                        <div class="flex items-center gap--24 justify-end">
+                                                            <span class="w--24 h--24 pointer pad--4 br--5 flex items-center justify-center hover--bg--col-light-blue">
+                                                                <img src="../assets/icons/pencil-01.svg" class="w--16 h--16 filter--col--oxford-blue">
+                                                            </span>
+                                                            <span class="w--24 h--24 pointer pad--4 br--5 flex items-center justify-center hover--bg--col-light-blue">
+                                                                <img src="../assets/icons/dots-vertical.svg" class="w--16 h--16 filter--col--oxford-blue">
+                                                            </span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- End Media Table View -->
                         </div>
-                        <!-- End Card Section on Right -->
                     </div>
-                    <!-- End Tier Information main Page Structure -->
+                    <!-- End Grid and List Tabs Content -->
 
                 </div> <!-- End Inner Container -->
+
+                
             </main>
             <!-- /main section -->
 
-            <!-- Mobile and Tab Preview Button -->
-            <div class="fixed top-0 right-0 z-1 h--screen-tablet flex items-center justify-end">
-               <button data-button-place="fixed vertical" class="ba bw--2 br--col-brand-green bg--col-brand-green fs--18 fw5 lh--28 col--ebony--variation-2 pad--8 flex justify-center items-center gap--8">
-                    <img src="../assets/icons/preview-vertical.svg" alt="" class="w--24 h--24">Preview
-                </button>
+            <!-- Draft Reviewing popup -->
+            <div class="w-100 h--screen bg-black-50 bg--blur--125 absolute absolute--responsive-tablet absolute--responsive-mobile absolute--responsive-mobile-portrait left-0 top-0 z--10000 h--auto-tablet h--auto-mobile h--auto-mobile-portrait">
+                <!-- Draft Reviewing popup inner -->
+                <div class="flex h-100 flex--wrap-responsive-tablet flex--wrap-responsive-mobile flex--wrap-responsive-mobile-portrait pad--bottom--70-responsive-tablet pad--bottom--70-responsive-mobile pad--bottom--70-responsive-mobile-portrait">
+                    <!-- Close Icon -->
+                    <div class="flex items-center justify-center absolute top-1 right-1 z--10000">
+                        <img src="../assets/icons/close-btn.svg" class="w--32 h--32 filter--col--mischka">
+                    </div>
+                    <!-- /Close Icon -->
+                    <!-- Left Image Gallery -->
+                    <div class="w-50 w--100-responsive-tablet w--100-responsive-mobile w--100-responsive-mobile-portrait flex--max flex flex-column flex--none-responsive-tablet flex--none-responsive-mobile flex--none-responsive-mobile-portrait">
+                        <!-- Big Thumb Image -->
+                        <div class="w-100 max-h--800 overflow-hidden relative">
+                            <img src="../assets/images/big-thumbnail-img.png" alt="" class="w-100 h-100 fit--cover" />
+                            <!-- Zoom Button -->
+                            <button class="w--80 h--80 bg--black-25 bg--blur--10 br-100 absolute left--50 top--50 flex items-center justify-center w--40-responsive-mobile w--40-responsive-mobile-portrait h--40-responsive-mobile h--40-responsive-mobile-portrait br--0-responsive-mobile br--0-responsive-mobile-portrait bottom--0--responsive-mobile bottom--0--responsive-mobile-portrait right--0-responsive-mobile right--0-responsive-mobile-portrait left--auto-responsive-mobile left--auto-responsive-mobile-portrait top--auto-responsive-mobile top--auto-responsive-mobile-portrait">
+                                <img src="../assets/icons/zoom-in.svg" class="w--40 h--40 filter--col--white w--24-responsive-mobile w--24-responsive-mobile-portrait h--24-responsive-mobile h--24-responsive-mobile-portrait">
+                            </button>
+                            <!-- Zoom Button -->
+                        </div>
+                        <!-- /Big Thumb Image -->
+                        <!-- Product Image -->
+                        <div class="pad--top--8 flex gap--8 flex">
+                            <!-- Single Item -->
+                            <div class="flex--max overflow-hidden">
+                                <img src="../assets/images/big-thumbnail-img.png" alt="" class="w-100 h-100 fit--cover" />
+                            </div>
+                            <!-- Single Item -->
+                            <!-- Single Item -->
+                            <div class="flex--max overflow-hidden">
+                                <img src="../assets/images/big-thumbnail-img.png" alt="" class="w-100 h-100 fit--cover" />
+                            </div>
+                            <!-- Single Item -->
+                            <!-- Single Item -->
+                            <div class="flex--max overflow-hidden">
+                                <img src="../assets/images/big-thumbnail-img.png" alt="" class="w-100 h-100 fit--cover" />
+                            </div>
+                            <!-- Single Item -->
+                            <!-- Single Item -->
+                            <div class="flex--max overflow-hidden">
+                                <img src="../assets/images/big-thumbnail-img.png" alt="" class="w-100 h-100 fit--cover" />
+                            </div>
+                            <!-- Single Item -->
+                            <!-- Single Item -->
+                            <div class="flex--max overflow-hidden">
+                                <img src="../assets/images/big-thumbnail-img.png" alt="" class="w-100 h-100 fit--cover" />
+                            </div>
+                            <!-- Single Item -->
+                            <!-- Single Item -->
+                            <div class="flex--max overflow-hidden">
+                                <img src="../assets/images/big-thumbnail-img.png" alt="" class="w-100 h-100 fit--cover" />
+                            </div>
+                            <!-- Single Item -->
+                        </div>
+                        <!-- /Product Image -->
+                    </div>
+                    <!-- /Left Image Gallery -->
+
+                    <!-- Right Content -->
+                    <div class="w-50 w--100-responsive-tablet w--100-responsive-mobile w--100-responsive-mobile-portrait flex--max relative flex--none-responsive-tablet flex--none-responsive-mobile flex--none-responsive-mobile-portrait">
+                        <!-- Inner Wrapper -->
+                        <div class="pad--x--40 pad--x--24-responsive-tablet pad--x--16-responsive-mobile pad--x--16-responsive-mobile-portrait pad--y--24 flex flex-column gap--40">
+                            <!-- Product Title section top -->
+                            <div class="flex flex-column gap--24">
+                                <!-- Title / Tag -->
+                                <div class="flex flex-column gap--16 pad--top--12">
+                                    <!-- Tag -->
+                                    <ul class="flex items-center gap--4">
+                                        <li class="fs--14 lh--20 col--mischka hover--col--brand-green pointer">Seasonal Fruits,</li>
+                                        <li class="fs--14 lh--20 col--mischka hover--col--brand-green pointer">Mostly Eating,</li>
+                                        <li class="fs--14 lh--20 col--mischka hover--col--brand-green pointer">Fried Chicken</li>
+                                    </ul>
+                                    <!-- /Tag -->
+                                    <h2 class="fs--30 fw6 lh--38 text--sh--1 col--desert-storm fs--20-responsive-mobile fs--20-responsive-mobile-portrait lh--30-responsive-mobile lh--30-responsive-mobile-portrait">[Peach] from my farm-Peach from my farm (Autumn harvest)</h2>
+                                </div>
+                                <!-- /Title / Tag -->
+                                <!-- Category Tag -->
+                                <div class="flex items-center gap--8">
+                                    <span class="flex">
+                                        <img src="../assets/icons/tag-01.svg" alt="" class="w--16 h--16 filter--col--white">
+                                    </span>
+                                    <ul class="flex items-center gap--8">
+                                        <li class="pad--x--8 pad--y--4 bg--col--ebony--variation-2 flex items-center justify-center fs--14 fw5 lh--20 col--athens-gray-2">Featured</li>
+                                        <li class="pad--x--8 pad--y--4 bg--col--ebony--variation-2 flex items-center justify-center fs--14 fw5 lh--20 col--athens-gray-2">Best Seller</li>
+                                        <li class="pad--x--8 pad--y--4 bg--col--ebony--variation-2 flex items-center justify-center fs--14 fw5 lh--20 col--athens-gray-2">Seasonal Offers</li>
+                                    </ul>
+                                </div>
+                                <!-- /Category Tag -->
+                                <!-- View and Cart value -->
+                                <div class="flex items-center gap--16">
+                                    <!-- Favourite -->
+                                    <div class="flex items-center gap--8">
+                                        <img src="../assets/icons/heart.svg" alt="" class="w--16 h--16">
+                                        <span class="fs--16 lh--24 col--athens-gray-3">123</span>
+                                    </div>
+                                    <!-- /Favourite -->
+                                    <!-- Preview -->
+                                    <div class="flex items-center gap--8">
+                                        <img src="../assets/icons/eye.svg" alt="" class="w--16 h--16 filter--col--athens-gray">
+                                        <span class="fs--16 lh--24 col--athens-gray-3">2k</span>
+                                    </div>
+                                    <!-- /Preview -->
+                                    <!-- Cart -->
+                                    <div class="flex items-center gap--8">
+                                        <img src="../assets/icons/shopping-cart-03.svg" alt="" class="w--16 h--16 filter--col--athens-gray">
+                                        <span class="fs--16 lh--24 col--athens-gray-3">15</span>
+                                    </div>
+                                    <!-- /Cart -->
+                                </div>
+                                <!-- /View and Cart value -->
+                                <!-- Price Display -->
+                                <div class="flex items-center gap--8 flex--column-responsive-mobile flex--column-responsive-mobile-portrait items--start-responsive-mobile items--start-responsive-mobile-portrait">
+                                    <!-- Price -->
+                                    <div data-style-shadow class="flex gap--2 items-end">
+                                        <span class="fs--20 fw6 lh--30 white text--sh--pink-27">USD$</span>
+                                        <span class="fs--16 fw5 lh--28 strike white text--sh--pink-27">12.99</span>
+                                        <span class="fs--60 fw6 lh--72 white tracked--neg--0-12 text--sh--pink-27">6.99</span>
+                                    </div>
+                                    <!-- /Price -->
+                                    <!-- Label -->
+                                    <span class="pad--y--2 pad--x--6 bg--col-electric-violet-2 fs--12 fw6 lh--18 black flex justify-center items-center">
+                                        -30%
+                                    </span>
+                                    <!-- /Label -->
+                                </div>
+                                <!-- /Price Display -->
+                            </div>
+                            <!-- /Product Title section top -->
+
+                            <!-- Cart Button -->
+                            <div class="w-100 pad--x--20 flex items-start sticky--responsive-tablet sticky--responsive-mobile sticky--responsive-mobile-portrait bottom--0--responsive-tablet bottom--0--responsive-mobile bottom--0--responsive-mobile-portrait">
+                                <!-- Buy Now Button -->
+                                <button data-button-style="skew-left-top" data-button-theme="pink-1" class="pad--x--40 pad--y--5 h--72 flex--max flex items-center justify-center h--50-responsive-mobile h--50-responsive-mobile-portrait">
+                                    <span data-button-label class="fs--30 fw6 lh--38 nowrap ttu col--wild-sand fs--20-responsive-mobile fs--20-responsive-mobile-portrait lh--30-responsive-mobile lh--30-responsive-mobile-portrait">Buy Now</span>
+                                </button>
+                                <!-- /Buy Now Button -->
+                                <!-- Buy Now Button -->
+                                <button data-button-style="skew-left-top" data-button-theme="pink-2" class="pad--x--40 pad--y--5 h--72 flex--max flex items-center justify-center h--50-responsive-mobile h--50-responsive-mobile-portrait">
+                                    <span data-button-label class="fs--30 fw6 lh--38 nowrap col--wild-sand fs--20-responsive-mobile fs--20-responsive-mobile-portrait lh--30-responsive-mobile lh--30-responsive-mobile-portrait">Add to Cart</span>
+                                </button>
+                                <!-- /Buy Now Button -->
+                            </div>
+                            <!-- /Cart Button -->
+
+                            <!-- Produvt Details Listing -->
+                            <div class="flex flex-column flex--max gap--16" data-tab-main-wrapper data-tabs-section="1">
+                                <!-- tab header list (type = [scrollable, stretchable, dropdown]) -->
+                                <div data-tab-header-main data-tabs-container="1" data-responsive-tab-header-type="stretchable" data-tab-select="transparent" class="flex flex-column items-start self-stretch gap--8 relative">
+                                    <ul data-tab-head-list="" data-tabs-menu="notifications-tabs-menu" data-responsive-tab-header-type="stretchable nobg" data-show-default-page-load="all" class="flex gap--16 items-center self-stretch overflow-x-auto tabs-menu">
+                                        <!-- tab head list item -->
+                                        <li data-tab-head-list-item="" data-tab-opactiy-50 data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-first-tab-1" data-attribute-run-once="1" data-target="first-tab" data-flag="all" data-offset="5" data-per_page="5" class="flex active">
+                                            <a href="javascript: void(0)" tab-trigger="1" data-tab-trigger="1" data-is-active="false" data-throw-event="fs-evt-eventname" class="w-100 flex flex-column items-center gap--10 pad--y--8 pad--x--10 mw--80 nowrap transition--all transition--200 transition--ease-in-out">
+                                                <span class="flex items-center gap--2 h--32 pointer-events-none">
+                                                    <span data-tab-label="white" class="fs--16 fw4 lh--24 nowrap white transition--all transition--200 transition--ease-in-out">
+                                                        Product Details
+                                                    </span>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <!-- /tab head list item -->
+
+                                        <!-- tab head list item -->
+                                        <li data-tab-head-list-item="" data-tab-opactiy-50 data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-second-tab-1" data-attribute-run-once="1" data-target="second-tab" data-flag="unread" data-offset="5" data-per_page="5" class="flex">
+                                            <a href="javascript: void(0)" tab-trigger="1" data-tab-trigger="1" data-is-active="false" data-throw-event="fs-evt-eventname" class="w-100 flex flex-column items-center gap--10 pad--y--8 pad--x--10 mw--80 nowrap transition--all transition--200 transition--ease-in-out">
+                                                <span class="flex items-center gap--2 h--32 pointer-events-none">
+                                                    <span data-tab-label="white" class="fs--16 fw4 lh--24 nowrap white transition--all transition--200 transition--ease-in-out">
+                                                        Shipping Policy
+                                                    </span>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <!-- /tab head list item -->
+                                    </ul>
+                                </div>
+                                <!-- /tab header list -->
+
+                                <div class="flex flex-column flex--max">
+                                    <!-- tab main wrapper -->
+                                    <div  class="flex flex-column flex--max">
+                                        <!-- tab content containers wrapper -->
+                                        <div data-tab-contents-containers-main data-tabs-content="1" class="flex flex-column flex--max self-stretch">
+                                            <!-- tab content container (first tab) -->
+                                            <div data-tabbed-content="tabbed-content-first-tab-1" data-target="first-tab" data-is-active="false" class="flex flex-column self-stretch active">
+                                                <div class="flex flex-column gap--16">
+                                                    <p class="fs--14 lh--20 col--desert-storm">Get Jenny’s favourite Mangoes! Buy them while supply last !Get Jenny’s favourite Mangoes! Buy them while supply last !Get Jenny’s favourite Mangoes! Buy them while supply last !</p>
+                                                    <ul data-theme="default">
+                                                        <li class="fs--14 lh--20 col--desert-storm">Get Jenny’s favourite Mangoes! </li>
+                                                        <li class="fs--14 lh--20 col--desert-storm">Buy them while supply last !</li>
+                                                        <li class="fs--14 lh--20 col--desert-storm">Get Jenny’s favourite Mangoes! Buy them while supply last !</li>
+                                                        <li class="fs--14 lh--20 col--desert-storm">Get Jenny’s favourite Mangoes! Buy them while supply last !Get Jenny’s favourite Mangoes! </li>
+                                                        <li class="fs--14 lh--20 col--desert-storm">Buy them while supply last !</li>
+                                                        <li class="fs--14 lh--20 col--desert-storm">Get Jenny’s favourite Mangoes! Buy them while supply last !</li>
+                                                        <li class="fs--14 lh--20 col--desert-storm">Get Jenny’s favourite Mangoes! Buy them while supply last !</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <!-- /tab content container -->
+
+                                            <!-- tab content container (second tab) -->
+                                            <div data-tabbed-content="tabbed-content-second-tab-1" data-target="second-tab" data-is-active="false" class="flex flex-column self-stretch">
+                                                <div class="flex flex-column pad--16">
+                                                    Shipping Policy
+                                                </div>
+                                            </div>
+                                            <!-- tab content container -->
+                                        </div>
+                                        <!-- /tab content containers wrapper -->
+                                    </div>
+                                    <!-- /tab main wrapper -->
+                                </div>
+                            </div>
+                            <!-- /Produvt Details Listing -->
+                        </div>
+                        <!-- /Inner Wrapper -->
+                        <!-- Bottom Fixed settings content -->
+                        <div class="w-100 pad--y--16 pad--x--8 absolute relative--responsive-tablet relative--responsive-mobile relative--responsive-mobile-portrait left-0 bottom-0 flex justify-end">
+                            <!-- Three Dots Settings -->
+                            <div class="flex gap--8">
+                                <button class="w--32 h--32 flex items-center justify-center ba br--col--white-rock br-100">
+                                    <img src="../assets/icons/share-06.svg" alt="" class="w--16 h--16 filter--col--Mercury">
+                                </button> 
+                                <!-- Settings Button --->
+                                <div class="relative">
+                                    <button class="w--32 h--32 flex items-center justify-center ba br--col--white-rock br-100">
+                                        <img src="../assets/icons/dots-vertical.svg" alt="" class="w--16 h--16 filter--col--Mercury">
+                                    </button>
+                                </div>  
+                                <!-- Settings Button --->
+                            </div>
+                            <!-- Three Dots Settings -->
+                        </div>
+                        <!-- /Bottom Fixed settings content -->
+                    </div>
+                    <!-- /Right Content -->
+                </div>
+                <!-- /Draft Reviewing popup inner -->
             </div>
-            <!-- Mobile and Tab Preview Button -->
+            <!-- /Draft Reviewing popup -->
 
         </div>
         <!-- /main wrapper -->
@@ -6783,7 +7457,7 @@
             id="pageElements-js"></script>
 
         <!-- Dashboard Sidebar Custom Script -->
-        <script src="assets/js/dashboard-ui.js"></script>
+        <script src="../assets/js/dashboard-ui.js"></script>
     </body>
 
 </html>

@@ -483,6 +483,10 @@ body.stop-mobile-scrolling {
   padding-bottom: 2rem
 }
 
+.pad--bottom--70-responsive-mobile-portrait {
+  padding-bottom: 4.375rem
+}
+
 .m--top--100-responsive-mobile-portrait {
   margin-top: 6.25rem
 }
@@ -509,9 +513,20 @@ body.stop-mobile-scrolling {
   gap: .5rem
 }
 
+.gap--24-responsive-mobile-portrait {
+  gap: 1.5rem
+}
+
 .flex--wrap-responsive-mobile-portrait {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap
+}
+
+.flex--row-responsive-mobile-portrait {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row
 }
 
 .flex--reverse--column-responsive-mobile-portrait {
