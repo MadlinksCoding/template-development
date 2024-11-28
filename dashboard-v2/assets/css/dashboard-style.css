@@ -3820,6 +3820,11 @@ button[data-color=gray]:not(:disabled):hover span {
   background-color: var(--color-brand-green, #07f468)
 }
 
+[data-button-color=green]:hover,
+[data-button-color=green]:hover:after {
+  background-color: #000
+}
+
 [data-button-color=green]:hover span {
   color: var(--color-brand-green, #07f468)
 }

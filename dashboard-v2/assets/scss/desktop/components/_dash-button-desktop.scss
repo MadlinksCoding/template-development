@@ -95,6 +95,7 @@ button[data-color="gray"]:not(:disabled):hover span { color: #fff !important; }
 
 [data-button-color="green"],
 [data-button-color="green"]:after { background-color: var(--color-brand-green, #07F468); }
+[data-button-color="green"]:hover, [data-button-color="green"]:hover:after {background-color: #000;}
 [data-button-color="green"]:hover span
 { color: var(--color-brand-green, #07F468); }
 [data-button-color="green"]:hover img {
