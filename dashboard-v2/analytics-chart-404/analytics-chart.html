@@ -134,6 +134,9 @@
         /* Transform */
         .transform--3d { transform: translate3d(0, 0, 0); -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); }
 
+        /* Flex */
+        .flex--max { flex: 1 0 0; }
+
         /* Grid */
         .grid--cols-3 { grid-template-columns: repeat(3, 1fr); }
 
@@ -761,40 +764,38 @@
                             <!-- Table Wrapper -->
                             <div data-section="table-wrapper" class="pad--bottom--16 flex flex-column items-start self-stretch flex-auto ml--16-neg mr--16-neg mr--0-responsive-tablet ml--0-responsive-tablet mr--0-responsive-mobile ml--0-responsive-mobile mr--0-responsive-mobile-portrait ml--0-responsive-mobile-portrait">
                                 <div data-table-container="subscriptions" class="w-100 subscriptions-container">
-                                    <table data-table-for="order_received-subscriptions" class="w-100">
-                                        <thead>
-                                            <tr>
-                                                <th class="fs--14 fw4 lh--20 col--pale-sky truncate w--72 min--h--42 pad--10 bb br--col--pale-sky">
-                                                    Order#
-                                                </th>
-                                                <th class="fs--14 fw4 lh--20 col--pale-sky truncate w--250 min--h--42 pad--10 bb br--col--pale-sky">
-                                                    &nbsp;
-                                                </th>
-                                                <th class="fs--14 fw4 lh--20 col--pale-sky truncate w--200 min--h--42 pad--10 bb br--col--pale-sky display--none-responsive-mobile display--none-responsive-mobile-portrait">
-                                                    From
-                                                </th>
-                                                <th class="fs--14 fw4 lh--20 col--pale-sky truncate w--200 min--h--42 pad--10 bb br--col--pale-sky 
-                                                display--none-responsive-mobile display--none-responsive-mobile-portrait display--none-responsive-tablet">
-                                                    Date received
-                                                </th>
-                                                <th class="fs--14 fw4 lh--20 col--pale-sky truncate w--200 min--h--42 pad--10 bb br--col--pale-sky dn dn-responsive-tablet display--none-responsive-mobile display--none-responsive-mobile-portrait">
-                                                    Date
-                                                </th>
-                                                <th class="fs--14 fw4 lh--20 col--pale-sky truncate min--h--42 pad--10 bb br--col--pale-sky text--align-right-tablet text--align-right-mobile text--align-right-mobile-portrait">
-                                                    Total
-                                                </th>
-                                                <th class="fs--14 fw4 lh--20 col--pale-sky truncate tr w--80 w--auto-responsive-tablet min--h--42 pad--10 bb br--col--pale-sky display--none-responsive-mobile display--none-responsive-mobile-portrait">
-                                                    &nbsp;
-                                                </th>
-                                            </tr>
-                                        </thead>
+                                    <div data-table-for="order_received-subscriptions" class="w-100">
+                                        <div class="flex items-center">
+                                            <div class="fs--14 fw4 lh--20 col--pale-sky truncate w--72 min--h--42 pad--10 bb br--col--pale-sky">
+                                                Order#
+                                            </div>
+                                            <div class="fs--14 fw4 lh--20 col--pale-sky truncate w--250 min--h--42 pad--10 bb br--col--pale-sky">
+                                                &nbsp;
+                                            </div>
+                                            <div class="fs--14 fw4 lh--20 col--pale-sky truncate w--200 min--h--42 pad--10 bb br--col--pale-sky display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                From
+                                            </div>
+                                            <div class="fs--14 fw4 lh--20 col--pale-sky truncate w--200 min--h--42 pad--10 bb br--col--pale-sky 
+                                            display--none-responsive-mobile display--none-responsive-mobile-portrait display--none-responsive-tablet">
+                                                Date received
+                                            </div>
+                                            <div class="fs--14 fw4 lh--20 col--pale-sky truncate w--200 min--h--42 pad--10 bb br--col--pale-sky dn dn-responsive-tablet display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                Date
+                                            </div>
+                                            <div class="fs--14 fw4 lh--20 col--pale-sky truncate min--h--42 pad--10 bb br--col--pale-sky text--align-right-tablet text--align-right-mobile text--align-right-mobile-portrait">
+                                                Total
+                                            </div>
+                                            <div class="fs--14 fw4 lh--20 col--pale-sky truncate tr w--80 w--auto-responsive-tablet min--h--42 pad--10 bb br--col--pale-sky display--none-responsive-mobile display--none-responsive-mobile-portrait flex--max">
+                                                &nbsp;
+                                            </div>
+                                        </div>
 
-                                        <tbody>
-                                            <tr class="bg--col--athens-gray-3--50 hide-child">
-                                                <td class="min--h--72 v-mid">
+                                        <div class="flex flex-column">
+                                            <div class="flex items-center pointer bg--col--athens-gray-3--50 hide-child">
+                                                <div class="min--h--72 v-mid">
                                                     <img src="assets/img/thumb-1.png" alt="" class="w--72 h--72">
-                                                </td>
-                                                <td class="min--h--72 pad--10 v-mid">
+                                                </div>
+                                                <div class="min--h--72 w--250 pad--10 v-mid">
                                                     <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer">
                                                         <span class="fs--12 fw6 lh--18 col--ebony-2 truncate display--none-responsive-mobile display--none-responsive-mobile-portrait">
                                                             Tier 1 Subscription
@@ -818,8 +819,8 @@
                                                             </span>
                                                         </div>
                                                     </a>
-                                                </td>
-                                                <td class="min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                </div>
+                                                <div class="w--200 min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
                                                     <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer">
                                                         <span class="flex items-center self-stretch gap--5">
                                                             <img src="assets/img/avatar-mango.png" alt="" class="w--20 h--20">
@@ -828,16 +829,16 @@
                                                             </span>
                                                         </span>
                                                     </a>
-                                                </td>
-                                                <td class="min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                </div>
+                                                <div class="w--200 min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
                                                     <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
                                                         22 Jan 2022
                                                     </span>
-                                                </td>
-                                                <td class="fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 v-mid nowrap text--align-right-mobile text--align-right-mobile-portrait">
+                                                </div>
+                                                <div class="fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 v-mid nowrap text--align-right-mobile text--align-right-mobile-portrait">
                                                     USD$ 9.99
-                                                </td>
-                                                <td class="w--80 w--auto-responsive-tablet min--h--72 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                </div>
+                                                <div class="flex--max flex justify-end w--80 w--auto-responsive-tablet min--h--72 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
                                                     <a href="javascript: void(0)" data-cta="" class="flex justify-center items-center gap--2 pointer w--100 w--auto-responsive-tablet h--72 bg--gradient-white-2 child transition--all transition--200 transition--ease-in-out">
                                                         <span data-text="" class="fs--12 fw5 lh--18 col--blue-ribbon-2 o-70 display--none-responsive-tablet">
                                                             Details
@@ -846,13 +847,13 @@
                                                             <img data-icon="" src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/arrow-up-right.svg" alt="" class="w--16 h--16 filter--col--blue-ribbon-2">
                                                         </span>
                                                     </a>
-                                                </td>
-                                            </tr>
-                                            <tr class="hide-child">
-                                                <td class="min--h--72 v-mid">
+                                                </div>
+                                            </div>
+                                            <div class="flex items-center pointer hide-child">
+                                                <div class="min--h--72 v-mid">
                                                     <img src="assets/img/thumb-2.png" alt="" class="w--72 h--72">
-                                                </td>
-                                                <td class="min--h--72 pad--10 v-mid">
+                                                </div>
+                                                <div class="w--250 min--h--72 pad--10 v-mid">
                                                     <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer">
                                                         <span class="fs--12 fw6 lh--18 col--ebony-2 truncate display--none-responsive-mobile display--none-responsive-mobile-portrait">
                                                             Tier 2 Subscription
@@ -876,8 +877,8 @@
                                                             </span>
                                                         </div>
                                                     </a>
-                                                </td>
-                                                <td class="min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                </div>
+                                                <div class="w--200 min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
                                                     <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer">
                                                         <span class="flex items-center self-stretch gap--5">
                                                             <img src="assets/img/avatar-mango.png" alt="" class="w--20 h--20">
@@ -886,16 +887,16 @@
                                                             </span>
                                                         </span>
                                                     </a>
-                                                </td>
-                                                <td class="min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                </div>
+                                                <div class="w--200 min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
                                                     <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
                                                         22 Jan 2022
                                                     </span>
-                                                </td>
-                                                <td class="fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 v-mid nowrap text--align-right-mobile text--align-right-mobile-portrait">
+                                                </div>
+                                                <div class="fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 v-mid nowrap text--align-right-mobile text--align-right-mobile-portrait">
                                                     USD$ 9.99
-                                                </td>
-                                                <td class="w--80 w--auto-responsive-tablet min--h--72 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                </div>
+                                                <div class="flex--max flex justify-end w--auto-responsive-tablet min--h--72 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
                                                     <a href="javascript: void(0)" data-cta="" class="flex justify-center items-center gap--2 pointer w--100 w--auto-responsive-tablet h--72 bg--gradient-white-2 child transition--all transition--200 transition--ease-in-out">
                                                         <span data-text="" class="fs--12 fw5 lh--18 col--blue-ribbon-2 o-70 display--none-responsive-tablet">
                                                             Details
@@ -904,13 +905,13 @@
                                                             <img data-icon="" src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/arrow-up-right.svg" alt="" class="w--16 h--16 filter--col--blue-ribbon-2">
                                                         </span>
                                                     </a>
-                                                </td>
-                                            </tr>
-                                            <tr class="bg--col--athens-gray-3--50 hide-child">
-                                                <td class="min--h--72 v-mid">
+                                                </div>
+                                            </div>
+                                            <div class="flex items-center pointer bg--col--athens-gray-3--50 hide-child">
+                                                <div class="min--h--72 v-mid">
                                                     <img src="assets/img/thumb-1.png" alt="" class="w--72 h--72">
-                                                </td>
-                                                <td class="min--h--72 pad--10 v-mid">
+                                                </div>
+                                                <div class="w--250 min--h--72 pad--10 v-mid">
                                                     <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer">
                                                         <span class="fs--12 fw6 lh--18 col--ebony-2 truncate display--none-responsive-mobile display--none-responsive-mobile-portrait">
                                                             Tier 3 Subscription
@@ -934,8 +935,8 @@
                                                             </span>
                                                         </div>
                                                     </a>
-                                                </td>
-                                                <td class="min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                </div>
+                                                <div class="w--200 min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
                                                     <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer">
                                                         <span class="flex items-center self-stretch gap--5">
                                                             <img src="assets/img/avatar-mango.png" alt="" class="w--20 h--20">
@@ -944,16 +945,16 @@
                                                             </span>
                                                         </span>
                                                     </a>
-                                                </td>
-                                                <td class="min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                </div>
+                                                <div class="w--200 min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
                                                     <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
                                                         22 Jan 2022
                                                     </span>
-                                                </td>
-                                                <td class="fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 v-mid nowrap text--align-right-mobile text--align-right-mobile-portrait">
+                                                </div>
+                                                <div class="fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 v-mid nowrap text--align-right-mobile text--align-right-mobile-portrait">
                                                     USD$ 9.99
-                                                </td>
-                                                <td class="w--80 w--auto-responsive-tablet min--h--72 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                </div>
+                                                <div class="flex--max flex justify-end w--auto-responsive-tablet min--h--72 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
                                                     <a href="javascript: void(0)" data-cta="" class="flex justify-center items-center gap--2 pointer w--100 w--auto-responsive-tablet h--72 bg--gradient-white-2 child transition--all transition--200 transition--ease-in-out">
                                                         <span data-text="" class="fs--12 fw5 lh--18 col--blue-ribbon-2 o-70 display--none-responsive-tablet">
                                                             Details
@@ -962,13 +963,13 @@
                                                             <img data-icon="" src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/arrow-up-right.svg" alt="" class="w--16 h--16 filter--col--blue-ribbon-2">
                                                         </span>
                                                     </a>
-                                                </td>
-                                            </tr>
-                                            <tr class="hide-child">
-                                                <td class="min--h--72 v-mid">
+                                                </div>
+                                            </div>
+                                            <div class="flex items-center pointer hide-child">
+                                                <div class="min--h--72 v-mid">
                                                     <img src="assets/img/thumb-2.png" alt="" class="w--72 h--72">
-                                                </td>
-                                                <td class="min--h--72 pad--10 v-mid">
+                                                </div>
+                                                <div class="w--250 min--h--72 pad--10 v-mid">
                                                     <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer">
                                                         <span class="fs--12 fw6 lh--18 col--ebony-2 truncate display--none-responsive-mobile display--none-responsive-mobile-portrait">
                                                             Tier 4 Subscription
@@ -992,8 +993,8 @@
                                                             </span>
                                                         </div>
                                                     </a>
-                                                </td>
-                                                <td class="min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                </div>
+                                                <div class="w--200 min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
                                                     <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer">
                                                         <span class="flex items-center self-stretch gap--5">
                                                             <img src="assets/img/avatar-mango.png" alt="" class="w--20 h--20">
@@ -1002,16 +1003,16 @@
                                                             </span>
                                                         </span>
                                                     </a>
-                                                </td>
-                                                <td class="min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                </div>
+                                                <div class="w--200 min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
                                                     <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
                                                         22 Jan 2022
                                                     </span>
-                                                </td>
-                                                <td class="fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 v-mid nowrap text--align-right-mobile text--align-right-mobile-portrait">
+                                                </div>
+                                                <div class="fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 v-mid nowrap text--align-right-mobile text--align-right-mobile-portrait">
                                                     USD$ 9.99
-                                                </td>
-                                                <td class="w--80 w--auto-responsive-tablet min--h--72 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                </div>
+                                                <div class="flex--max flex justify-end w--auto-responsive-tablet min--h--72 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
                                                     <a href="javascript: void(0)" data-cta="" class="flex justify-center items-center gap--2 pointer w--100 w--auto-responsive-tablet h--72 bg--gradient-white-2 child transition--all transition--200 transition--ease-in-out">
                                                         <span data-text="" class="fs--12 fw5 lh--18 col--blue-ribbon-2 o-70 display--none-responsive-tablet">
                                                             Details
@@ -1020,13 +1021,13 @@
                                                             <img data-icon="" src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/arrow-up-right.svg" alt="" class="w--16 h--16 filter--col--blue-ribbon-2">
                                                         </span>
                                                     </a>
-                                                </td>
-                                            </tr>
-                                            <tr class="bg--col--athens-gray-3--50 hide-child">
-                                                <td class="min--h--72 v-mid">
+                                                </div>
+                                            </div>
+                                            <div class="flex items-center pointer bg--col--athens-gray-3--50 hide-child">
+                                                <div class="min--h--72 v-mid">
                                                     <img src="assets/img/thumb-1.png" alt="" class="w--72 h--72">
-                                                </td>
-                                                <td class="min--h--72 pad--10 v-mid">
+                                                </div>
+                                                <div class="w--250 min--h--72 pad--10 v-mid">
                                                     <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer">
                                                         <span class="fs--12 fw6 lh--18 col--ebony-2 truncate display--none-responsive-mobile display--none-responsive-mobile-portrait">
                                                             Tier 5 Subscription
@@ -1050,8 +1051,8 @@
                                                             </span>
                                                         </div>
                                                     </a>
-                                                </td>
-                                                <td class="min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                </div>
+                                                <div class="w--200 min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
                                                     <a href="javascript: void(0)" class="flex flex-column justify-center items-start gap--2 pointer">
                                                         <span class="flex items-center self-stretch gap--5">
                                                             <img src="assets/img/avatar-mango.png" alt="" class="w--20 h--20">
@@ -1060,16 +1061,16 @@
                                                             </span>
                                                         </span>
                                                     </a>
-                                                </td>
-                                                <td class="min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                </div>
+                                                <div class="w--200 min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
                                                     <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
                                                         22 Jan 2022
                                                     </span>
-                                                </td>
-                                                <td class="fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 v-mid nowrap text--align-right-mobile text--align-right-mobile-portrait">
+                                                </div>
+                                                <div class="fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 v-mid nowrap text--align-right-mobile text--align-right-mobile-portrait">
                                                     USD$ 9.99
-                                                </td>
-                                                <td class="w--80 w--auto-responsive-tablet min--h--72 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                </div>
+                                                <div class="flex--max flex justify-end w--auto-responsive-tablet min--h--72 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
                                                     <a href="javascript: void(0)" data-cta="" class="flex justify-center items-center gap--2 pointer w--100 w--auto-responsive-tablet h--72 bg--gradient-white-2 child transition--all transition--200 transition--ease-in-out">
                                                         <span data-text="" class="fs--12 fw5 lh--18 col--blue-ribbon-2 o-70 display--none-responsive-tablet">
                                                             Details
@@ -1078,10 +1079,10 @@
                                                             <img data-icon="" src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/arrow-up-right.svg" alt="" class="w--16 h--16 filter--col--blue-ribbon-2">
                                                         </span>
                                                     </a>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <!-- End Table Wrapper -->
