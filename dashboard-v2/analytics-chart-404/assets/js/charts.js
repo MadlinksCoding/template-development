@@ -1136,7 +1136,7 @@ function DonutChart(renderingEl, data) {
     }));
 
     // Get tooltip settings from data attribute or use default values /* Added by NayHtetSoe 15/11/2024. task link: https://app.clickup.com/t/86eq9wnxg */
-    var tooltipSettings = renderingEl.dataset.chartTooltip ? JSON.parse(renderingEl.dataset.chartTooltip) : { preText: "USD", afterText: "" };
+    var tooltipSettings = renderingEl.dataset.chartTooltip ? JSON.parse(renderingEl.dataset.chartTooltip) : { preText: "USD", totalText: "" };
 
     function escapeHTML(str) {
         return str.replace(/&/g, '&amp;')
@@ -1221,7 +1221,7 @@ function DonutChart(renderingEl, data) {
         var slice = target.dataItem.dataContext;
         return "<div style='font-size: 12px; overflow: hidden; font-family: Poppins, sans-serif; color: #344054;'>" +
             "<span style='color:" + slice.color + "; font-size: 16px;'>●</span> " + escapeHTML(slice.category) + "<br>" +
-            "<strong style='font-size: 12px;'>" + tooltipSettings.preText + " " + slice.value + "" + tooltipSettings.afterText +  "</strong>" +
+            "<strong style='font-size: 12px;'>" + tooltipSettings.preText + " " + slice.value + " " + tooltipSettings.totalText +  "</strong>" +
             "</div>";
     });
 
