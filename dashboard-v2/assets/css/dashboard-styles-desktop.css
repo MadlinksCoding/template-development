@@ -987,6 +987,11 @@ html {
   filter: brightness(0) saturate(100%) invert(99%) sepia(4%) saturate(583%) hue-rotate(226deg) brightness(119%) contrast(80%)
 }
 
+.filter--col--electric-violet {
+  -webkit-filter: brightness(0) saturate(100%) invert(13%) sepia(93%) saturate(6366%) hue-rotate(256deg) brightness(98%) contrast(108%);
+  filter: brightness(0) saturate(100%) invert(13%) sepia(93%) saturate(6366%) hue-rotate(256deg) brightness(98%) contrast(108%)
+}
+
 .filter--blur--2 {
   filter: blur(2px);
   -webkit-filter: blur(2px);
@@ -1523,6 +1528,10 @@ html {
 
 .bw--3 {
   border-width: .188rem
+}
+
+.hover--bw--2:hover {
+  border-width: .125rem
 }
 
 .br--5 {
@@ -4009,6 +4018,29 @@ button[data-color=gray]:not(:disabled):hover span {
   background-color: #b8eb00
 }
 
+[data-color=outline-blue]:hover {
+  background-color: var(--color-electric-violet, #4d20ff)
+}
+
+[data-color=outline-blue]:hover [data-button-icon] {
+  -webkit-filter: brightness(0) saturate(100%) invert(99%) sepia(99%) saturate(0) hue-rotate(176deg) brightness(107%) contrast(100%);
+  filter: brightness(0) saturate(100%) invert(99%) sepia(99%) saturate(0) hue-rotate(176deg) brightness(107%) contrast(100%)
+}
+
+[data-color=blue]:hover {
+  background-color: var(--color-black, #000)
+}
+
+[data-color=orange]:hover {
+  background: var(--color-ebony, #101828);
+  color: var(--color-my-sin, #fdb022)
+}
+
+[data-color=orange]:hover [data-button-icon] {
+  -webkit-filter: brightness(0) saturate(100%) invert(69%) sepia(68%) saturate(753%) hue-rotate(341deg) brightness(104%) contrast(98%);
+  filter: brightness(0) saturate(100%) invert(69%) sepia(68%) saturate(753%) hue-rotate(341deg) brightness(104%) contrast(98%)
+}
+
 ul[data-theme=default] li {
   position: relative;
   padding-left: 1rem
@@ -4095,6 +4127,18 @@ textarea {
 
 [data-card-hover]:hover [data-card-hover-overlay] {
   display: block
+}
+
+[data-card-hover] [data-button-hover-overlay]:after,
+[data-card-hover] [data-button-hover-overlay]:before {
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out
+}
+
+[data-card-hover]:hover [data-button-hover-overlay]:after,
+[data-card-hover]:hover [data-button-hover-overlay]:before {
+  -webkit-box-shadow: none;
+  box-shadow: none
 }
 
 .elm_cWpNRq {
