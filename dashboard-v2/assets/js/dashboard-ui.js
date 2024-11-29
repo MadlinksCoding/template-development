@@ -289,6 +289,14 @@ class DashSideBarHandler {
 			//console.log('sub menu clicked', _self.options);
 		} else {
 			//console.log('sub menu does not exist');
+			// Check window width is 767px or less to close the mobile nav // Nay Added 29/11/2024. Task link: https://app.clickup.com/t/86eqvxwfz
+			if (window.innerWidth <= 767) {
+				// Triiger the click event of the submenu to close the mobile nav
+				_self.options.mobileNavCloseTriggerEl.click();
+				// Call the subMenuBack method to close the submenu
+				_self.subMenuBack();
+
+			}
 		}
 	}
 
