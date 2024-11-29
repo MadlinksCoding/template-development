@@ -8,6 +8,8 @@
 /*[data-card-hover]:hover [data-button-hover-overlay="false"] { opacity: 0; }
 [data-card-hover]:hover + [data-button-overlay-hover-hide] { opacity: 0; }*/
 
+[data-card-hover]:hover [data-button-featured]{ left: 0 !important; top: 0 !important; }
+
 [data-card-hover] [data-button-hover-overlay]:before,
 [data-card-hover] [data-button-hover-overlay]:after{ -webkit-transition: all 0.1s ease-in-out; transition: all 0.1s ease-in-out; }
 

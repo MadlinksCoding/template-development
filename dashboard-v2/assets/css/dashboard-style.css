@@ -4129,6 +4129,11 @@ textarea {
   display: block
 }
 
+[data-card-hover]:hover [data-button-featured] {
+  left: 0 !important;
+  top: 0 !important
+}
+
 [data-card-hover] [data-button-hover-overlay]:after,
 [data-card-hover] [data-button-hover-overlay]:before {
   -webkit-transition: all .1s ease-in-out;
