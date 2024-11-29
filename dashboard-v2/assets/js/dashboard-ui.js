@@ -822,9 +822,6 @@ class DashSidebarMenuAdjuster {
 				
 				// Position the floating panel's parent element to the right of the parent sidebar
 				this.floatingPanel.parentElement.style.left = (parentSidebar.getBoundingClientRect().width - 10) + 'px';
-				
-				// Log the bounding rectangle of the floating panel for debugging
-				console.error('getBoundingClientRect', this.floatingPanel.getBoundingClientRect());
 			} else {
 				// Get the parent sidebar element
 				let parentSidebar = this.floatingPanel.closest('[data-sidebar-main-wrapper]');
