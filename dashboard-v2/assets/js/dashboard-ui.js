@@ -1382,14 +1382,9 @@ class ProfileLinkCopier {
 
 
 
-/**
- * 
- * Initiates JS executions after DOM contents are loaded (equivalant to jQuery $document.on(ready){...})
- * 
- */
-document.addEventListener("DOMContentLoaded", (event) => {
-	//console.log("DOM fully loaded and parsed");
-
+// Initialize the Dashboard UI // NayHtetSoe 02/12/2024. task link https://app.clickup.com/t/86eqwaqk8
+function initDashboardUI() {
+	console.log('Dashboard UI Initialized');
 	// Creates and initializes a new fsDashSideBarHandler
 	const fansocialDashSideBarHandler = new DashSideBarHandler({
 		dashNavElSelector: '[data-dashboard-main-nav]', // dash menu main selector (desktop)
@@ -1432,4 +1427,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
 	document.querySelectorAll('[data-switch]').forEach((element) => {
 		new DashToggleSwitch(element);
 	});
+}
+/**
+ * 
+ * Initiates JS executions after DOM contents are loaded (equivalant to jQuery $document.on(ready){...})
+ * 
+ */
+document.addEventListener("DOMContentLoaded", (event) => {
+	//console.log("DOM fully loaded and parsed");
+	initDashboardUI();
 });
