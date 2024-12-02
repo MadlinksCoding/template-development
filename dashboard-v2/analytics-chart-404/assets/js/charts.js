@@ -245,6 +245,9 @@ function BarChart(renderingEl, data) {
             }
             return visible;
         });
+
+        // Set default paddingRight to chart // NayHtetSoe 02/12/2024. task link: https://app.clickup.com/t/86eq96d7j
+        chart.set("paddingRight", 20);
     }
 
     var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
