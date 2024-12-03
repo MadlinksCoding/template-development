@@ -61,6 +61,7 @@
 [data-id="edit-profile"] .nice-select.v1.filter:not(.has-tags) .multiple-options.active, [data-id="edit-profile"] .nice-select.v1.filter:not(.has-tags) .current.active { background: transparent; border: 0; }
 [data-id="edit-profile"] .nice-select.v1.filter .multiple-options:not(.active) [data-dropdown-arrow] path, .nice-select.v1.filter .current:not(.active) [data-dropdown-arrow] path { fill: none !important;}
 
+
 /* Nice Select Box New Design Style */
 [data-id="weight-type-select"] .nice-select.v1 { border: none;}
 [data-id="weight-type-select"] .nice-select.v1 .nice-select-list { border-radius: 2px; background: rgba(255, 255, 255, 0.70); backdrop-filter: blur(25px); }
@@ -80,3 +81,29 @@
 [data-dropdown-arrow] { width: 1rem !important; height: 1rem !important; }
 [data-id="weight-type-select"] .nice-select.v1.filter:not(.has-tags) .multiple-options.active, [data-id="weight-type-select"] .nice-select.v1.filter:not(.has-tags) .current.active { background: transparent; border: 0; }
 [data-id="weight-type-select"] .nice-select.v1.filter .multiple-options:not(.active) [data-dropdown-arrow] path, .nice-select.v1.filter .current:not(.active) [data-dropdown-arrow] path { fill: none !important;}
+
+
+/* Nice Select Box New Design Style */
+[data-id="profile-visibility"] .nice-select.v1 { border: none;}
+[data-id="profile-visibility"] .nice-select.v1 .nice-select-list { max-height: 26rem;}
+[data-id="profile-visibility"] .nice-select.v1:not(.auto-width) { min-width: 5.75rem; background: transparent; }
+[data-id="profile-visibility"] .nice-select.v1:not(.has-tags) .current { border: none; padding: 0.5rem; justify-content:space-between; gap: 0.5rem; height: 2rem; }
+[data-id="profile-visibility"] .nice-select.v1 .current .elm_aQVICr { max-width: fit-content; }
+[data-id="profile-visibility"] .nice-select.v1:not(.auto-width) .nice-select-dropdown { min-width: 13.75rem; right: 0; left: auto; transform: scale(1) translateY(0px); border-radius: 5px;
+background: rgba(255, 255, 255, 0.90); box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.20); backdrop-filter: blur(50px); overflow:hidden; }
+[data-id="profile-visibility"] .nice-select.v1:not(.has-tags) .option { padding: 0; }
+[data-id="profile-visibility"] .nice-select.v1:not(.has-tags) .option:last-child > .elm_aQVICr { border: 0; }
+[data-id="profile-visibility"] .nice-select.v1:not(.has-tags) .option .elm_aQVICr { padding: 1rem; border-bottom: 1px solid var(--Gray-200, #EAECF0); }
+[data-id="profile-visibility"] .nice-select.v1:not(.has-tags) [data-option-label] { font-size: 1rem; font-weight:500; line-height: 1.5rem; color: var(--Gray-950, #0C111D); text-transform: capitalize; }
+[data-id="profile-visibility"] .nice-select.v1:not(.has-tags) .current [data-option-label] { font-weight: 500; }
+[data-id="profile-visibility"] .nice-select.v1:not(.has-tags) .option:not(.disabled):hover, [data-id="edit-profile"] .nice-select.v1:not(.has-tags) .option.selected { background-color:transparent; }
+[data-id="profile-visibility"] .nice-select.v1:not(.has-tags) .option:not(.disabled):hover .elm_aQVICr { border-radius: 0px; background:var(--Base-White, #FFF);; }
+[data-id="profile-visibility"] .nice-select.v1:not(.has-tags) .option.selected [data-option-label] {color: var(--Gray-900, #101828);}
+[data-id="profile-visibility"] .nice-select.v1.filter:not(.has-tags) .multiple-options.active, [data-id="edit-profile"] .nice-select.v1.filter:not(.has-tags) .current.active { background: transparent; border: 0; }
+[data-id="profile-visibility"] .nice-select.v1:not(.has-tags):not(.auto-width) [data-option-label] { text-wrap: nowrap; }
+[data-dropdown-arrow] { width: 1rem !important; height: 1rem !important; }
+[data-id="profile-visibility"] .nice-select.v1.filter:not(.has-tags) .multiple-options.active, [data-id="edit-profile"] .nice-select.v1.filter:not(.has-tags) .current.active { background: transparent; border: 0; }
+[data-id="profile-visibility"] .nice-select.v1.filter .multiple-options:not(.active) [data-dropdown-arrow] path, .nice-select.v1.filter .current:not(.active) [data-dropdown-arrow] path { fill: none !important}
+[data-id="profile-visibility"] .nice-select.v1 [data-option-description-container] { display: flex; flex-direction: column; gap: 0.25rem; }
+[data-id="profile-visibility"] .nice-select.v1:not(.has-tags) .option.selected { background: 0 0; }
+[data-id="profile-visibility"] .nice-select.v1.filter:not(.has-tags) .current.active { background: 0 0; border: 0; }
