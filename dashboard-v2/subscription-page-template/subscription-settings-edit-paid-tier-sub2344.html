@@ -6046,7 +6046,7 @@
                                         <div
                                             class="w--40 h--40 br--8 bg--col--light-bondi-blue flex items-center justify-center">
                                             <img src="../assets/icons/users-01.svg" alt=""
-                                                class="w--28 h--28 filter--col--turquoise">
+                                                class="w--28 h--28 filter--col--bright-turquoise">
                                         </div>
                                         <div
                                             class="w--22 h--22 br--8 bg--col--bright-turquoise flex items-center justify-center absolute right--9-neg top--1-8">
@@ -6617,52 +6617,52 @@
                                             <div class="flex flex-column justify-center items-start self-stretch">
                                                 <div class="flex items-center gap--8">
                                                     <!-- toggle container -->
-                                                    <div class="flex">
+                                                    <div class="flex items-center gap--8">
                                                         <!-- toggle switch (switch size = ['default', 'small'] / switch theme = ['default', 'light', 'dark']) -->
-                                                        <label data-switch="" data-switch-size="small"
+                                                        <label data-hide-show-section="hide-show-section" data-switch="" data-switch-size="small"
                                                             data-switch-theme="dark" data-switch-for=""
                                                             data-throw-event="fs-evt-eventname">
                                                             <input type="checkbox" value="switch_slide"
-                                                                name="switch_slide" class="dn" checked>
+                                                                name="switch_slide" class="dn">
                                                             <span data-switch-slide="" class="db"></span>
                                                         </label>
                                                         <!-- /toggle switch -->
+                                                        <!-- toggle text -->
+                                                        <div data-switch-label-wrap data-section="hide-show-section" class="flex items-center gap--4">
+                                                            <div class="flex items-center gap--8">
+                                                                <span data-switch-label-text class="fs--16 fw5 lh--24">
+                                                                    Post updates of this tier to X
+                                                                </span>
+                                                                <span class="flex justify-center items-center">
+                                                                    <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
+                                                                    <div data-tooltip data-tooltip-arrow="true"
+                                                                        data-tooltip-position="center right"
+                                                                        data-tooltip-size="medium" data-tooltip-theme="dark"
+                                                                        class="relative z-5 pointer">
+                                                                        <img src="../assets/images/help-circle.svg" alt=""
+                                                                            class="w--16 h--16 filter--col--pale-sky pointer-events-none">
+
+                                                                        <div data-tooltip-text data-tooltip-content>
+                                                                            <span class="fs--12 fw5 lh--18 color-inherit">
+                                                                                Offer discount to leaving subscriber if they
+                                                                                decided to unsubscribe from this tier
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- /tooltip -->
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <!-- /toggle text -->
+
                                                     </div>
                                                     <!-- /toggle container -->
-
-                                                    <!-- toggle text -->
-                                                    <div class="flex items-center gap--4">
-                                                        <div class="flex items-center gap--8">
-                                                            <span class="fs--16 fw5 lh--24 black">
-                                                                Post updates of this tier to X
-                                                            </span>
-                                                            <span class="flex justify-center items-center">
-                                                                <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
-                                                                <div data-tooltip data-tooltip-arrow="true"
-                                                                    data-tooltip-position="center right"
-                                                                    data-tooltip-size="medium" data-tooltip-theme="dark"
-                                                                    class="relative z-5 pointer">
-                                                                    <img src="../assets/images/help-circle.svg" alt=""
-                                                                        class="w--16 h--16 filter--col--pale-sky pointer-events-none">
-
-                                                                    <div data-tooltip-text data-tooltip-content>
-                                                                        <span class="fs--12 fw5 lh--18 color-inherit">
-                                                                            Offer discount to leaving subscriber if they
-                                                                            decided to unsubscribe from this tier
-                                                                        </span>
-                                                                    </div>
-                                                                </div>
-                                                                <!-- /tooltip -->
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                    <!-- /toggle text -->
                                                 </div>
                                             </div>
                                             <!-- /toggle -->
                                             <!-- End Toggle Switch -->
                                             <!-- Input Field -->
-                                            <div class="flex flex-column gap--6">
+                                            <div data-section="hide-show-section" class="flex flex-column gap--6">
                                                 <span class="fs--14 fw6 lh--20 col--ebony--variation-2">Post Message
                                                     (Leave blank to use system default message.)</span>
                                                 <div
@@ -6673,7 +6673,7 @@
                                                 <span class="fs--14 lh--20 col--fiord">66/72 characters</span>
                                             </div>
                                             <!-- Attach Media -->
-                                            <div class="flex flex-column gap--8">
+                                            <div data-section="hide-show-section" class="flex flex-column gap--8">
                                                 <span class="fs--14 fw6 lh--20 col--ebony--variation-2">Attach
                                                     Media</span>
                                                 <!-- radio group -->
@@ -6704,7 +6704,7 @@
                                             </div><!-- End Attach Media -->
                                         </div><!-- End Share options content -->
                                         <!-- Post preview -->
-                                        <div class="flex flex-column gap--8">
+                                        <div data-section="hide-show-section" class="flex flex-column gap--8">
                                             <span class="fs--12 lh--18 col--pale-sky">POST PREVIEW</span>
                                             <div class="relative w-100">
                                                 <img src="../assets/images/post-preview.png" alt="" class="w-100" />
@@ -6738,7 +6738,7 @@
                         <div
                             class="pad--right--30 display--none-responsive-tablet display--none-responsive-mobile display--none-responsive-mobile-portrait">
                             <!-- Followers Single Tier card -->
-                            <div data-id="featured-no-offer" class="w--384 br--2 ba br--col-brand-green relative"
+                            <div data-id="featured-no-offer" class="w--384 br--2 ba br--col-brand-green sticky top--12"
                                 style="background-image: url(../assets/images/tier-card-bg.svg);">
                                 <!-- Single Tier card Inner -->
                                 <div class="flex flex-column gap--16 br--2 relative">
@@ -6905,7 +6905,7 @@
             id="pageElements-js"></script>
 
         <!-- Dashboard Sidebar Custom Script -->
-        <script src="assets/js/dashboard-ui.js"></script>
+        <script src="../assets/js/dashboard-ui.js"></script>
     </body>
 
 </html>
