@@ -6401,36 +6401,110 @@
                                         </span>
                                     </div>
                                     <!-- End Title -->
-                                    <!-- Toggle Switch -->
-                                    <!-- toggle -->
-                                    <div class="flex flex-column justify-center items-start self-stretch">
-                                        <div class="flex items-center gap--8">
-                                            <!-- toggle container -->
-                                            <div class="flex">
-                                                <!-- toggle switch (switch size = ['default', 'small'] / switch theme = ['default', 'light', 'dark']) -->
-                                                <label data-switch="" data-switch-size="small" data-switch-theme="dark"
-                                                    data-switch-for="" data-throw-event="fs-evt-eventname">
-                                                    <input type="checkbox" value="switch_slide" name="switch_slide"
-                                                        class="dn">
-                                                    <span data-switch-slide="" class="db"></span>
-                                                </label>
-                                                <!-- /toggle switch -->
-                                            </div>
-                                            <!-- /toggle container -->
+                                    <div
+                                        class="flex gap--16 flex--column-responsive-mobile flex--column-responsive-mobile-portrait">
+                                        <!-- Share options content -->
+                                        <div class="flex flex-column gap--16 flex-auto">
+                                            <!-- Toggle Switch -->
+                                            <!-- toggle -->
+                                            <div class="flex flex-column justify-center items-start self-stretch">
+                                                <div class="flex items-center gap--8">
+                                                    <!-- toggle container -->
+                                                    <div class="flex items-center gap--8">
+                                                        <!-- toggle switch (switch size = ['default', 'small'] / switch theme = ['default', 'light', 'dark']) -->
+                                                        <label data-hide-show-section="hide-show-section" data-switch="" data-switch-size="small"
+                                                            data-switch-theme="dark" data-switch-for=""
+                                                            data-throw-event="fs-evt-eventname">
+                                                            <input type="checkbox" value="switch_slide"
+                                                                name="switch_slide" class="dn">
+                                                            <span data-switch-slide="" class="db"></span>
+                                                        </label>
+                                                        <!-- /toggle switch -->
+                                                        <!-- toggle text -->
+                                                        <div data-switch-label-wrap data-section="hide-show-section" class="flex items-center gap--4">
+                                                            <div class="flex items-center gap--8">
+                                                                <span data-switch-label-text class="fs--16 fw5 lh--24">
+                                                                    Post updates of this tier to X
+                                                                </span>
+                                                                <span class="flex justify-center items-center">
+                                                                    <!-- tooltip (arrow = [true, false] / position = ['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right', 'center left', 'center right'] / size = ['default', small', 'medium', 'large'] / theme = ['default', 'dark', 'light']) -->
+                                                                    <div data-tooltip data-tooltip-arrow="true"
+                                                                        data-tooltip-position="center right"
+                                                                        data-tooltip-size="medium" data-tooltip-theme="dark"
+                                                                        class="relative z-5 pointer">
+                                                                        <img src="../assets/images/help-circle.svg" alt=""
+                                                                            class="w--16 h--16 filter--col--pale-sky pointer-events-none">
 
-                                            <!-- toggle text -->
-                                            <div class="flex items-center gap--4 o-50">
-                                                <div class="flex items-center">
-                                                    <span class="fs--16 fw5 lh--24 col--pale-sky">
-                                                        Post updates of this tier to X
-                                                    </span>
+                                                                        <div data-tooltip-text data-tooltip-content>
+                                                                            <span class="fs--12 fw5 lh--18 color-inherit">
+                                                                                Offer discount to leaving subscriber if they
+                                                                                decided to unsubscribe from this tier
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- /tooltip -->
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <!-- /toggle text -->
+
+                                                    </div>
+                                                    <!-- /toggle container -->
                                                 </div>
                                             </div>
-                                            <!-- /toggle text -->
+                                            <!-- /toggle -->
+                                            <!-- End Toggle Switch -->
+                                            <!-- Input Field -->
+                                            <div data-section="hide-show-section" class="flex flex-column gap--6">
+                                                <span class="fs--14 fw6 lh--20 col--ebony--variation-2">Post Message
+                                                    (Leave blank to use system default message.)</span>
+                                                <div
+                                                    class="pad--x--14 pad--y--10 gap--8 br--2 br--bottom--left--right bb br--col--mischka-gray bg-white-30 sh--7 relative">
+                                                    <input type="text" placeholder="Custom message..."
+                                                        class="w-100 bn flex-auto fs--16 lh--24 col--pale-sky" />
+                                                </div>
+                                                <span class="fs--14 lh--20 col--fiord">66/72 characters</span>
+                                            </div>
+                                            <!-- Attach Media -->
+                                            <div data-section="hide-show-section" class="flex flex-column gap--8">
+                                                <span class="fs--14 fw6 lh--20 col--ebony--variation-2">Attach
+                                                    Media</span>
+                                                <!-- radio group -->
+                                                <ul class="flex flex-column gap--8">
+                                                    <li data-form-input-type="radio" data-form-input-layout="vertical"
+                                                        data-form-accent-color="green">
+                                                        <input type="radio" id="f-option" name="selector" class="dn"
+                                                            checked>
+                                                        <label for="f-option" class="fs--15 fw5 lh--24 black">Use
+                                                            original thumbnail and preview</label>
+                                                    </li>
+
+                                                    <li data-form-input-type="radio" data-form-input-layout="vertical"
+                                                        data-form-accent-color="green">
+                                                        <input type="radio" id="s-option" name="selector" class="dn">
+                                                        <label for="s-option" class="fs--15 fw5 lh--24 black">Upload a
+                                                            different thumbnail and preview</label>
+                                                    </li>
+
+                                                    <li data-form-input-type="radio" data-form-input-layout="vertical"
+                                                        data-form-accent-color="green">
+                                                        <input type="radio" id="t-option" name="selector" class="dn">
+                                                        <label for="t-option" class="fs--15 fw5 lh--24 black">Do not
+                                                            attach thumbnail and preview</label>
+                                                    </li>
+                                                </ul>
+                                                <!-- End radio group -->
+                                            </div><!-- End Attach Media -->
+                                        </div><!-- End Share options content -->
+                                        <!-- Post preview -->
+                                        <div data-section="hide-show-section" class="flex flex-column gap--8">
+                                            <span class="fs--12 lh--18 col--pale-sky">POST PREVIEW</span>
+                                            <div class="relative w-100">
+                                                <img src="../assets/images/post-preview.png" alt="" class="w-100" />
+                                            </div>
                                         </div>
+                                        <!-- End Post preview -->
                                     </div>
-                                    <!-- /toggle -->
-                                    <!-- End Toggle Switch -->
                                 </div>
                                 <!-- End Sharing Options -->
                                 <!-- Save/Cancel Button Group -->
@@ -6450,7 +6524,7 @@
                         <div
                             class="pad--right--30 display--none-responsive-tablet display--none-responsive-mobile display--none-responsive-mobile-portrait">
                             <!-- Followers Single Tier card -->
-                            <div data-id="featured-no-offer" class="w--384 br--2 ba br--col-brand-green relative"
+                            <div data-id="featured-no-offer" class="w--384 br--2 ba br--col-brand-green sticky top-1"
                                 style="background-image: url(../assets/images/tier-card-bg.svg);">
                                 <!-- Single Tier card Inner -->
                                 <div class="flex flex-column gap--16 br--2 relative">
@@ -6617,7 +6691,7 @@
             id="pageElements-js"></script>
 
         <!-- Dashboard Sidebar Custom Script -->
-        <script src="assets/js/dashboard-ui.js"></script>
+        <script src="../assets/js/dashboard-ui.js"></script>
     </body>
 
 </html>

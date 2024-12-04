@@ -29,3 +29,19 @@
 [data-section="hide-show-section"].active{
   display: flex;
 }
+
+/* Switch toggle label text color change when switch checked */
+[data-section=hide-show-section][data-switch-label-wrap] {
+  display: flex;
+  opacity: 0.5;
+}
+[data-section=hide-show-section][data-switch-label-wrap].active {
+  display: flex;
+  opacity: 1;
+}
+[data-section=hide-show-section][data-switch-label-wrap] [data-switch-label-text]{
+  color: var(--color-pale-sky, #667085);
+}
+[data-section=hide-show-section][data-switch-label-wrap].active [data-switch-label-text]{
+  color: var(--color-black, #000);
+}

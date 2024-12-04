@@ -3142,6 +3142,28 @@ html {
   display: flex
 }
 
+[data-section=hide-show-section][data-switch-label-wrap] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: .5
+}
+
+[data-section=hide-show-section][data-switch-label-wrap].active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 1
+}
+
+[data-section=hide-show-section][data-switch-label-wrap] [data-switch-label-text] {
+  color: var(--color-pale-sky, #667085)
+}
+
+[data-section=hide-show-section][data-switch-label-wrap].active [data-switch-label-text] {
+  color: var(--color-black, #000)
+}
+
 [data-popup][data-popup-max-width="480px"] [data-popup-content-container] {
   max-width: 30rem
 }
