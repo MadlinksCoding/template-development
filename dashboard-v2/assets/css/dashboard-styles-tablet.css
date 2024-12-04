@@ -117,6 +117,10 @@ html {
   background: rgba(255, 255, 255, .7)
 }
 
+.bg-black-70-responsive-tablet {
+  background: rgba(0, 0, 0, .7)
+}
+
 .bg--center-top-responsive-tablet {
   background-position: center top
 }
@@ -153,15 +157,19 @@ html {
   width: 17.625rem
 }
 
+.w--500-responsive-tablet {
+  width: 31.25rem
+}
+
 .w--556-responsive-tablet {
   width: 34.75rem
 }
 
-.h--screen-tablet {
+.h--screen-responsive-tablet {
   height: 100vh
 }
 
-.h--auto-tablet {
+.h--auto-responsive-tablet {
   height: auto
 }
 
@@ -327,25 +335,35 @@ html {
   top: 0
 }
 
+.right--0--responsive-tablet {
+  right: 0
+}
+
+.right--auto--responsive-tablet {
+  right: auto
+}
+
 .bottom--0--responsive-tablet {
   bottom: 0
+}
+
+.neg--left--5-8--responsive-tablet {
+  left: -5.8rem
 }
 
 .z--10000-responsive-tablet {
   z-index: 10000
 }
 
+.bg--blur--25-responsive-tablet {
+  -webkit-backdrop-filter: blur(25px);
+  backdrop-filter: blur(25px)
+}
+
 [data-submenu] [data-submenu-item][data-has-submenu=true]>[data-arrow] {
   opacity: 1;
   -webkit-transform: translateX(0);
   transform: translateX(0)
-}
-
-[data-button-place="fixed vertical"] {
-  -webkit-transform: rotate(-90deg);
-  transform: rotate(-90deg);
-  -webkit-transform-origin: right bottom;
-  transform-origin: right bottom
 }
 
 [data-show-hide-container][data-show-on-desktop=true],

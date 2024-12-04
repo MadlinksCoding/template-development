@@ -10,6 +10,7 @@
 
 /* Background Colors*/
 .bg-white-70-responsive-tablet { background: rgba(255, 255, 255, 0.70); }
+.bg-black-70-responsive-tablet { background: rgba(0, 0, 0, 0.70); }
 
 
 /* Background Gradients*/
@@ -75,6 +76,7 @@
 .w--177-responsive-tablet { width: 11.063rem; }
 .w--257-responsive-tablet { width: 16.063rem; }
 .w--282-responsive-tablet { width: 17.625rem; }
+.w--500-responsive-tablet { width: 31.25rem; }
 .w--556-responsive-tablet { width: 34.75rem; }
 
 
@@ -85,8 +87,8 @@
 
 
 /* Height */
-.h--screen-tablet { height: 100vh }
-.h--auto-tablet { height: auto; }
+.h--screen-responsive-tablet { height: 100vh }
+.h--auto-responsive-tablet { height: auto; }
 
 
 /* Height Percent */
@@ -166,14 +168,15 @@
 
 
 /* Right */
-
+.right--0--responsive-tablet {right: 0;}
+.right--auto--responsive-tablet {right: auto;}
 
 /* Bottom */
 .bottom--0--responsive-tablet {bottom: 0;}
 
 
 /* Left */
-
+.neg--left--5-8--responsive-tablet {left: -5.8rem;}
 
 /* Left (px) */
 
@@ -192,6 +195,7 @@
 
 
 /* Backdrop Filter */
+.bg--blur--25-responsive-tablet { -webkit-backdrop-filter: blur(25px); backdrop-filter: blur(25px); } /* confirmed in use */
 
 
 /* Box Shadow */

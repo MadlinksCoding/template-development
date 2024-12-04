@@ -6097,7 +6097,7 @@
                                 <span
                                     class="fs--12 fw5 lh--18 col--oxford-blue display--none-responsive-mobile display--none-responsive-mobile-portrait">Back</span>
                                 <span
-                                    class="fs--14 fw6 lh--20 col--oxford-blue dn display--flex-responsive-mobile display--flex-responsive-mobile-portrait">New
+                                    class="fs--14 fw6 lh--20 col--oxford-blue nowrap dn display--flex-responsive-mobile display--flex-responsive-mobile-portrait">New
                                     Tier</span>
                             </div>
                             <!-- Save/Cancel Button Group -->
@@ -6106,7 +6106,7 @@
                                     <button
                                         class="mw--100 pad--y--8 flex items-center justify-center fs--18 fw5 lh--28 col--ebony--variation-2 flex--max-responsive-mobile flex--max-responsive-mobile-portrait hover--bg--col--white--100 ttu">Cancel</button>
                                     <button
-                                        class="ba bw--2 br--col-brand-green bg--col-brand-green fs--18 fw5 lh--28 col--ebony--variation-2 ttu pad--8 flex justify-center items-center gap--8 hover--bg--col-ebony hover--col--brand-green hover--br--col-brand-green hover--parent--child--col--brand-green">
+                                        class="ba bw--2 br--col-brand-green bg--col-brand-green fs--18 fw5 lh--28 col--ebony--variation-2 ttu pad--8 flex justify-center items-center gap--8 hover--bg--col-ebony hover--col--brand-green hover--br--col-brand-green hover--parent--child--col--brand-green nowrap">
                                         <img src="../assets/icons/upload-cloud-01.svg" alt=""
                                             class="w--24 h--24 hov--filter--col--brand-green" />
                                         SAVE &amp; PUBLISH
@@ -6651,10 +6651,59 @@
                                             </div><!-- End Attach Media -->
                                         </div><!-- End Share options content -->
                                         <!-- Post preview -->
-                                        <div data-section="hide-show-section" class="flex flex-column gap--8">
-                                            <span class="fs--12 lh--18 col--pale-sky">POST PREVIEW</span>
-                                            <div class="relative w-100">
-                                                <img src="../assets/images/post-preview.png" alt="" class="w-100" />
+                                        <div data-section="hide-show-section" class="w--299 w--282-responsive-tablet w--100-responsive-mobile w--100-responsive-mobile-portrait flex flex-column gap--8">
+                                            <span class="fs--12 lh--18 col--pale-sky tr">POST PREVIEW</span>
+                                            <div class="relative w-100 br--5 bg-white-70 pad--y--16 pad--x--8 gap--8 flex overflow-hidden">
+                                                <!-- User Image -->
+                                                <div class="w--24 h--24 br--6 flex items-center justify-center flex-none">
+                                                    <img src="../assets/images/avatar-3.png" class="w-100 h-100 fit--cover">
+                                                </div>
+                                                <!-- End User Image -->
+                                                <!-- User Content -->
+                                                <div class="flex--max flex flex-column gap--4">
+                                                    <!-- User Info -->
+                                                    <div class="flex items-center gap--8">
+                                                        <!-- User Name -->
+                                                        <div class="flex items-center gap--4">
+                                                            <span class="fs--12 fw6 lh--18 col--ebony--variation-2">Jelly FISH</span>
+                                                            <img src="../assets/icons/verified-tick.svg" alt="w--12 h--12">
+                                                        </div>
+                                                        <!-- End User Name -->
+                                                        <span class="fs--12 lh--18 col--pale-sky">@jellyf1sh</span>
+                                                        <span class="fs--12 lh--18 col--pale-sky">Jul 31</span>
+                                                    </div>
+                                                    <!-- End User Info -->
+                                                    <!-- Content -->
+                                                    <div class="flex flex-column gap--8">
+                                                        <!-- User Description -->
+                                                        <div class="flex flex-column gap--4">
+                                                            <p class="fs--12 fw5 lh--18 col--ebony--variation-2">Watch me eat 10 family size fried chicken bucket...you don’t wanna miss this:</p>
+                                                            <p class="fs--12 fw5 lh--18 col--ebony--variation-2">
+                                                                <a href="#" class="underline truncate w--208 flex fs--12 fw5 lh--18 col--ebony--variation-2">fansocial.app/model/jellyskitchen/media/198386476</a>
+                                                            </p>
+                                                        </div>
+                                                        <!-- Video Content -->
+                                                        <div class="flex gap--2">
+                                                            <div class="w-100 h--70 h--auto-responsive-mobile h--auto-responsive-mobile-portrait flex justify-center items-center br--10 br--top-bottom-right bg--col--link-water overflow-hidden relative">
+                                                                <img src="../assets/images/merch-pop-up-horiz.png" alt="" class="w-100 h-100 fit--cover">
+                                                                <!-- play Button -->
+                                                                <div class="w-100 h-100 flex items-center justify-center absolute left-0 top-0">
+                                                                    <button class="w--32 h--32 bg-black-60 br-100 flex justify-center items-center">
+                                                                        <img src="../assets/icons/play.svg" class="w--18 h--18 filter--col--white">
+                                                                    </button>
+                                                                </div>
+                                                                <!-- /play Button -->
+                                                            </div>
+                                                            <div class="w-100 h--70 h--auto-responsive-mobile h--auto-responsive-mobile-portrait flex justify-center items-center br--10 br--top-bottom-left bg--col--link-water overflow-hidden">
+                                                                <img src="../assets/images/merch-pop-up-horiz.png" alt="" class="w-100 h-100 fit--cover">
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Video Content -->
+                                                    </div>
+                                                    <!-- /Content -->
+                                                    <!-- End User Description -->
+                                                </div>
+                                                <!-- End User Content -->
                                             </div>
                                         </div>
                                         <!-- End Post preview -->

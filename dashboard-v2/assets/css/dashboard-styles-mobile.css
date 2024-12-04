@@ -245,6 +245,10 @@ body.stop-mobile-scrolling {
   background: 0 0
 }
 
+.bg-black-70-responsive-mobile {
+  background: rgba(0, 0, 0, .7)
+}
+
 .bg--center-top-responsive-mobile {
   background-position: center top
 }
@@ -309,15 +313,19 @@ body.stop-mobile-scrolling {
   width: 22.5rem
 }
 
+.w--500-responsive-mobile {
+  width: 31.25rem
+}
+
 .max--w--100-responsive-mobile {
   max-width: 100%
 }
 
-.h--screen-mobile {
+.h--screen-responsive-mobile {
   height: 100vh
 }
 
-.h--auto-mobile {
+.h--auto-responsive-mobile {
   height: auto
 }
 
@@ -520,6 +528,12 @@ body.stop-mobile-scrolling {
   justify-content: center
 }
 
+.items--center-responsive-mobile {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center
+}
+
 .flex--none-responsive-mobile {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 auto;
@@ -550,6 +564,14 @@ body.stop-mobile-scrolling {
   top: auto
 }
 
+.right--0--responsive-mobile {
+  right: 0
+}
+
+.right--auto--responsive-mobile {
+  right: auto
+}
+
 .right--2-responsive-mobile {
   right: .125rem
 }
@@ -566,8 +588,17 @@ body.stop-mobile-scrolling {
   left: auto
 }
 
+.neg--left--5-8--responsive-tablet {
+  left: -5.8rem
+}
+
 .z--9--responsive-mobile {
   z-index: 9
+}
+
+.bg--blur--25-responsive-mobile {
+  -webkit-backdrop-filter: blur(25px);
+  backdrop-filter: blur(25px)
 }
 
 .br--0-responsive-mobile {

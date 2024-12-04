@@ -257,3 +257,6 @@ button[data-color="gray"]:not(:disabled):hover span { color: #fff !important; }
 
 [data-color="orange"]:hover { background: var(--color-ebony, #101828); color: var(--color-my-sin, #FDB022); }
 [data-color="orange"]:hover [data-button-icon] { filter: brightness(0) saturate(100%) invert(69%) sepia(68%) saturate(753%) hue-rotate(341deg) brightness(104%) contrast(98%); }
+
+/* Right side fixed vertical center button */
+[data-button-place="fixed vertical"]{ transform: rotate(-90deg); transform-origin: right bottom; }

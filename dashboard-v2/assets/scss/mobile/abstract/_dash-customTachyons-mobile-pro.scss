@@ -11,6 +11,7 @@
 /* Background Colors*/
 .bg-white-70-responsive-mobile { background: rgba(255, 255, 255, 0.70); }
 .bg--col--none--responsive-mobile { background: transparent; }
+.bg-black-70-responsive-mobile { background: rgba(0, 0, 0, 0.70); }
 
 
 /* Background Gradients*/
@@ -84,6 +85,7 @@
 .w--56-responsive-mobile { width: 3.5rem; }
 .w--120-responsive-mobile { width: 7.5rem; }
 .w--360-responsive-mobile { width: 22.5rem; }
+.w--500-responsive-mobile { width: 31.25rem; }
 
 
 /* Min Width */
@@ -94,8 +96,8 @@
 
 
 /* Height */
-.h--screen-mobile { height: 100vh }
-.h--auto-mobile { height: auto; }
+.h--screen-responsive-mobile { height: 100vh }
+.h--auto-responsive-mobile { height: auto; }
 
 /* Height Percent */
 
@@ -164,6 +166,7 @@
 .items--end-responsive-mobile { align-items: flex-end; }
 .flex--max-responsive-mobile { flex: 1 0 0; }
 .justify--center-responsive-mobile { justify-content: center; }
+.items--center-responsive-mobile { align-items: center; }
 .flex--none-responsive-mobile { flex: 0 0 auto; }
 
 
@@ -190,6 +193,8 @@
 
 
 /* Right */
+.right--0--responsive-mobile {right: 0;}
+.right--auto--responsive-mobile {right: auto;}
 .right--2-responsive-mobile { right: 0.125rem;  /* right 2px */ }
 .right--8-responsive-mobile { right: 0.5rem;  /* right 8px */ }
 
@@ -199,6 +204,7 @@
 
 /* Left */
 .left--auto-responsive-mobile { left: auto;  /* left auto */ }
+.neg--left--5-8--responsive-tablet {left: -5.8rem;}
 
 /* Left (px) */
 
@@ -217,6 +223,7 @@
 
 
 /* Backdrop Filter */
+.bg--blur--25-responsive-mobile { -webkit-backdrop-filter: blur(25px); backdrop-filter: blur(25px); } /* confirmed in use */
 
 
 /* Box Shadow */

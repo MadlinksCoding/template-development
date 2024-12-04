@@ -6097,7 +6097,7 @@
                                 <span
                                     class="fs--12 fw5 lh--18 col--oxford-blue display--none-responsive-mobile display--none-responsive-mobile-portrait">Back</span>
                                 <span
-                                    class="fs--14 fw6 lh--20 col--oxford-blue dn display--flex-responsive-mobile display--flex-responsive-mobile-portrait">New
+                                    class="fs--14 fw6 lh--20 col--oxford-blue nowrap dn display--flex-responsive-mobile display--flex-responsive-mobile-portrait">New
                                     Tier</span>
                             </div>
                             <!-- Save/Cancel Button Group -->
@@ -6107,7 +6107,7 @@
                                         class="mw--100 pad--y--8 flex items-center justify-center fs--18 fw5 lh--28 col--ebony--variation-2 flex--max-responsive-mobile flex--max-responsive-mobile-portrait hover--bg--col--white--100 ttu">Cancel</button>
                                     <button
                                         class="bg-black pad--y--4 pad--x--8 flex justify-center items-center gap--10 hover--bg--col-brand-green hover--parent--child--col--black-ribbon">
-                                        <span class="fs--18 fw5 lh--28 col-brand-green ttu">PUBLISH PREFERENCE</span>
+                                        <span class="fs--18 fw5 lh--28 col-brand-green ttu nowrap">PUBLISH PREFERENCE</span>
                                         <span>
                                             <img src="../assets/icons/arrow-narrow-right.svg" alt=""
                                                 class="w--24 h--24" />
@@ -6681,10 +6681,59 @@
                                             </div><!-- End Attach Media -->
                                         </div><!-- End Share options content -->
                                         <!-- Post preview -->
-                                        <div data-section="hide-show-section" class="flex flex-column gap--8">
-                                            <span class="fs--12 lh--18 col--pale-sky">POST PREVIEW</span>
-                                            <div class="relative w-100">
-                                                <img src="../assets/images/post-preview.png" alt="" class="w-100" />
+                                        <div data-section="hide-show-section" class="w--299 w--282-responsive-tablet w--100-responsive-mobile w--100-responsive-mobile-portrait flex flex-column gap--8">
+                                            <span class="fs--12 lh--18 col--pale-sky tr">POST PREVIEW</span>
+                                            <div class="relative w-100 br--5 bg-white-70 pad--y--16 pad--x--8 gap--8 flex overflow-hidden">
+                                                <!-- User Image -->
+                                                <div class="w--24 h--24 br--6 flex items-center justify-center flex-none">
+                                                    <img src="../assets/images/avatar-3.png" class="w-100 h-100 fit--cover">
+                                                </div>
+                                                <!-- End User Image -->
+                                                <!-- User Content -->
+                                                <div class="flex--max flex flex-column gap--4">
+                                                    <!-- User Info -->
+                                                    <div class="flex items-center gap--8">
+                                                        <!-- User Name -->
+                                                        <div class="flex items-center gap--4">
+                                                            <span class="fs--12 fw6 lh--18 col--ebony--variation-2">Jelly FISH</span>
+                                                            <img src="../assets/icons/verified-tick.svg" alt="w--12 h--12">
+                                                        </div>
+                                                        <!-- End User Name -->
+                                                        <span class="fs--12 lh--18 col--pale-sky">@jellyf1sh</span>
+                                                        <span class="fs--12 lh--18 col--pale-sky">Jul 31</span>
+                                                    </div>
+                                                    <!-- End User Info -->
+                                                    <!-- Content -->
+                                                    <div class="flex flex-column gap--8">
+                                                        <!-- User Description -->
+                                                        <div class="flex flex-column gap--4">
+                                                            <p class="fs--12 fw5 lh--18 col--ebony--variation-2">Watch me eat 10 family size fried chicken bucket...you don’t wanna miss this:</p>
+                                                            <p class="fs--12 fw5 lh--18 col--ebony--variation-2">
+                                                                <a href="#" class="underline truncate w--208 flex fs--12 fw5 lh--18 col--ebony--variation-2">fansocial.app/model/jellyskitchen/media/198386476</a>
+                                                            </p>
+                                                        </div>
+                                                        <!-- Video Content -->
+                                                        <div class="flex gap--2">
+                                                            <div class="w-100 h--70 h--auto-responsive-mobile h--auto-responsive-mobile-portrait flex justify-center items-center br--10 br--top-bottom-right bg--col--link-water overflow-hidden relative">
+                                                                <img src="../assets/images/merch-pop-up-horiz.png" alt="" class="w-100 h-100 fit--cover">
+                                                                <!-- play Button -->
+                                                                <div class="w-100 h-100 flex items-center justify-center absolute left-0 top-0">
+                                                                    <button class="w--32 h--32 bg-black-60 br-100 flex justify-center items-center">
+                                                                        <img src="../assets/icons/play.svg" class="w--18 h--18 filter--col--white">
+                                                                    </button>
+                                                                </div>
+                                                                <!-- /play Button -->
+                                                            </div>
+                                                            <div class="w-100 h--70 h--auto-responsive-mobile h--auto-responsive-mobile-portrait flex justify-center items-center br--10 br--top-bottom-left bg--col--link-water overflow-hidden">
+                                                                <img src="../assets/images/merch-pop-up-horiz.png" alt="" class="w-100 h-100 fit--cover">
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Video Content -->
+                                                    </div>
+                                                    <!-- /Content -->
+                                                    <!-- End User Description -->
+                                                </div>
+                                                <!-- End User Content -->
                                             </div>
                                         </div>
                                         <!-- End Post preview -->
@@ -6713,9 +6762,9 @@
                         <!-- End Tier Information left Page Structure -->
                         <!-- Card Section on Right -->
                         <div
-                            class="pad--right--30 display--none-responsive-tablet display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                            class="pad--right--30 pad--x--0-responsive-tablet pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait w--500-responsive-tablet w--500-responsive-mobile vw--100--responsive-mobile-portrait bg-black-70-responsive-tablet bg-black-70-responsive-mobile bg--blur--25-responsive-tablet bg--blur--25-responsive-mobile h--screen-responsive-tablet h--screen-responsive-mobile h--screen-responsive-mobile-portrait fixed--responsive-tablet fixed--responsive-mobile fixed--responsive-mobile-portrait right--0--responsive-tablet right--0--responsive-mobile right--0-responsive-mobile-portrait top--0--responsive-tablet top--0--responsive-mobile top--0--responsive-mobile-portrait display-flex--responsive-tablet display--flex-responsive-mobile justify--center-responsive-tablet justify--center-responsive-mobile items--center-responsive-tablet items--center-responsive-mobile z--9--responsive-mobile">
                             <!-- Followers Single Tier card -->
-                            <div data-id="featured-no-offer" class="w--384 br--2 ba br--col-brand-green sticky top--12"
+                            <div data-id="featured-no-offer" class="w--384 br--2 ba br--col-brand-green sticky top--12 bg--no-repeat relative--responsive-tablet top--0--responsive-tablet"
                                 style="background-image: url(../assets/images/tier-card-bg.svg);">
                                 <!-- Single Tier card Inner -->
                                 <div class="flex flex-column gap--16 br--2 relative">
@@ -6855,15 +6904,22 @@
                                 </div><!-- End Single Tier card Inner -->
 
                             </div><!-- End Followers Single Tier card -->
+                            <!-- Mobile and Tab Preview Button -->
+                            <div class="fixed top-0 right-0 z-1 h--screen-responsive-tablet h--screen-responsive-mobile h--screen-responsive-mobile-portrait dn items-center justify-end display-flex--responsive-tablet display-flex--responsive-mobile display-flex--responsive-mobile-portrait right--auto--responsive-tablet right--auto--responsive-mobile neg--left--5-8--responsive-tablet neg--left--5-8--responsive-mobile">
+                               <button data-button-place="fixed vertical" data-button-color=black class="sh--13 neg--m--top--121 fs--14 fw4 lh--20 col-brand-green pad--x--8 pad--y--4 flex justify-center items-center gap--8">
+                                    <img src="../assets/icons/close-btn.svg" alt="" class="w--16 h--16 filter--col--brand-green transform--rotate--90">Preview
+                                </button>
+                            </div>
+                            <!-- Mobile and Tab Preview Button -->
                         </div>
                         <!-- End Card Section on Right -->
+                        
                     </div>
                     <!-- End Tier Information main Page Structure -->
 
                 </div> <!-- End Inner Container -->
             </main>
             <!-- /main section -->
-
         </div>
         <!-- /main wrapper -->
 
