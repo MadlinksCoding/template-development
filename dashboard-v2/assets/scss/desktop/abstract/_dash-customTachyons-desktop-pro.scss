@@ -53,6 +53,14 @@
 .bg--col--viking-green { background-color: var(--color-viking-green, #55CFCD); }
 .bg--black-75 { background: rgba(0, 0, 0, 0.75); }
 .bg--black-25 { background: rgba(0, 0, 0, 0.25); }
+.bg--col--zircon { background: var(--color-zircon, #EFF4FF); }
+.bg--col--lavender-blush { background: var(--color-lavender-blush, #FFF1F3); }
+.bg--col--zircon { background: var(--color-zircon, #EFF4FF); }
+.bg--col--radical-red { background: var(--color-radical-red, #F63D68); }
+.bg--col--white-pointer { background: var(--color-white-pointer, #FDF4FF); }
+.bg--col--Heliotrope { background: var(--color-Heliotrope, #D444F1); }
+.bg--col--twilight-blue { background: var(--color-twilight-blue, #ECFDFF); }
+.bg--col--cerulean { background: var(--color-cerulean, #06AED4); }
 
 
 /* Background Data Colors*/
@@ -115,6 +123,10 @@
 .filter--col--Mercury { filter: brightness(0) saturate(100%) invert(99%) sepia(4%) saturate(583%) hue-rotate(226deg) brightness(119%) contrast(80%); } /* #E7E5E4 */
 .filter--col--electric-violet { filter: brightness(0) saturate(100%) invert(13%) sepia(93%) saturate(6366%) hue-rotate(256deg) brightness(98%) contrast(108%); } /* #4D20FF */
 .filter--col--timberwolf { filter: brightness(0) saturate(100%) invert(99%) sepia(1%) saturate(1556%) hue-rotate(317deg) brightness(93%) contrast(80%); } /* #D7D3D0 */
+.filter--col--dodger-blue { filter: brightness(0) saturate(100%) invert(52%) sepia(89%) saturate(3131%) hue-rotate(204deg) brightness(102%) contrast(105%); } /* #528BFF */
+.filter--col--brink-pink { filter: brightness(0) saturate(100%) invert(61%) sepia(29%) saturate(3851%) hue-rotate(309deg) brightness(106%) contrast(98%); } /* #FD6F8E */
+.filter--col--Heliotrope { filter: brightness(0) saturate(100%) invert(81%) sepia(47%) saturate(6873%) hue-rotate(234deg) brightness(101%) contrast(96%); } /* #E478FA */
+.filter--col--bright-turquoise { filter: brightness(0) saturate(100%) invert(65%) sepia(76%) saturate(820%) hue-rotate(149deg) brightness(97%) contrast(93%); } /* #22CCEE */
 
 /* Filter Blur */
 .filter--blur--2 { filter: blur(2px); -webkit-filter: blur(2px); -moz-filter: blur(2px); }
@@ -138,6 +150,7 @@
 .hover--bg--col-ebony:hover { background: var(--color-ebony, #101828); }
 .hover--bg--col-burning-orange:hover { background: var(--color-burning-orange, #FF692E); }
 .hover--bg--col-light-blue:hover { background: rgba(41, 112, 255, 0.20); }
+.hover--bg--col--zircon:hover { background: var(--color-zircon, #EFF4FF); }
 
 
 /* Hover Colors */
@@ -378,6 +391,7 @@
 .sh--12 { box-shadow: 0px 4px 6px -2px rgba(16, 24, 40, 0.08); }
 .sh--13 { box-shadow: 0px 1px 3px 0px rgba(16, 24, 40, 0.10), 0px 1px 2px 0px rgba(16, 24, 40, 0.06); } /* confirmed in use */
 .sh--2000{ box-shadow: 0 0 2000px 2000px rgba(0, 0, 0, 0.5); }
+.sh--14 { box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.25); } /* confirmed in use */
 
 
 /* Drop Shadow */

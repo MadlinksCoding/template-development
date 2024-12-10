@@ -818,6 +818,38 @@ html {
   background: rgba(0, 0, 0, .25)
 }
 
+.bg--col--zircon {
+  background: var(--color-zircon, #eff4ff)
+}
+
+.bg--col--lavender-blush {
+  background: var(--color-lavender-blush, #fff1f3)
+}
+
+.bg--col--zircon {
+  background: var(--color-zircon, #eff4ff)
+}
+
+.bg--col--radical-red {
+  background: var(--color-radical-red, #f63d68)
+}
+
+.bg--col--white-pointer {
+  background: var(--color-white-pointer, #fdf4ff)
+}
+
+.bg--col--Heliotrope {
+  background: var(--color-Heliotrope, #d444f1)
+}
+
+.bg--col--twilight-blue {
+  background: var(--color-twilight-blue, #ecfdff)
+}
+
+.bg--col--cerulean {
+  background: var(--color-cerulean, #06aed4)
+}
+
 [data-bg-color="Persian Rose"] {
   background-color: var(--color-persian-rose, #f72485)
 }
@@ -1001,6 +1033,26 @@ html {
   filter: brightness(0) saturate(100%) invert(99%) sepia(1%) saturate(1556%) hue-rotate(317deg) brightness(93%) contrast(80%)
 }
 
+.filter--col--dodger-blue {
+  -webkit-filter: brightness(0) saturate(100%) invert(52%) sepia(89%) saturate(3131%) hue-rotate(204deg) brightness(102%) contrast(105%);
+  filter: brightness(0) saturate(100%) invert(52%) sepia(89%) saturate(3131%) hue-rotate(204deg) brightness(102%) contrast(105%)
+}
+
+.filter--col--brink-pink {
+  -webkit-filter: brightness(0) saturate(100%) invert(61%) sepia(29%) saturate(3851%) hue-rotate(309deg) brightness(106%) contrast(98%);
+  filter: brightness(0) saturate(100%) invert(61%) sepia(29%) saturate(3851%) hue-rotate(309deg) brightness(106%) contrast(98%)
+}
+
+.filter--col--Heliotrope {
+  -webkit-filter: brightness(0) saturate(100%) invert(81%) sepia(47%) saturate(6873%) hue-rotate(234deg) brightness(101%) contrast(96%);
+  filter: brightness(0) saturate(100%) invert(81%) sepia(47%) saturate(6873%) hue-rotate(234deg) brightness(101%) contrast(96%)
+}
+
+.filter--col--bright-turquoise {
+  -webkit-filter: brightness(0) saturate(100%) invert(65%) sepia(76%) saturate(820%) hue-rotate(149deg) brightness(97%) contrast(93%);
+  filter: brightness(0) saturate(100%) invert(65%) sepia(76%) saturate(820%) hue-rotate(149deg) brightness(97%) contrast(93%)
+}
+
 .filter--blur--2 {
   filter: blur(2px);
   -webkit-filter: blur(2px);
@@ -1050,6 +1102,10 @@ html {
 
 .hover--bg--col-light-blue:hover {
   background: rgba(41, 112, 255, .2)
+}
+
+.hover--bg--col--zircon:hover {
+  background: var(--color-zircon, #eff4ff)
 }
 
 .group:hover .hover--col-black {
@@ -1554,6 +1610,11 @@ html {
 .sh--2000 {
   -webkit-box-shadow: 0 0 2000px 2000px rgba(0, 0, 0, .5);
   box-shadow: 0 0 2000px 2000px rgba(0, 0, 0, .5)
+}
+
+.sh--14 {
+  -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, .25);
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, .25)
 }
 
 .cr--move {
@@ -3191,6 +3252,54 @@ html {
 
 [data-section=hide-show-section][data-switch-label-wrap].active [data-switch-label-text] {
   color: var(--color-black, #000)
+}
+
+[data-item-conteiner=profile] [data-add-button] {
+  opacity: 0
+}
+
+[data-item-conteiner=profile]:hover {
+  background: var(--color-zircon, #eff4ff)
+}
+
+[data-item-conteiner=profile]:hover [data-add-button] {
+  opacity: 1
+}
+
+[data-item-conteiner=subscription] [data-add-button] {
+  opacity: 0
+}
+
+[data-item-conteiner=subscription]:hover {
+  background: var(--color-lavender-blush, #fff1f3)
+}
+
+[data-item-conteiner=subscription]:hover [data-add-button] {
+  opacity: 1
+}
+
+[data-item-conteiner=media] [data-add-button] {
+  opacity: 0
+}
+
+[data-item-conteiner=media]:hover {
+  background: var(--color-white-pointer, #fdf4ff)
+}
+
+[data-item-conteiner=media]:hover [data-add-button] {
+  opacity: 1
+}
+
+[data-item-conteiner=merch] [data-add-button] {
+  opacity: 0
+}
+
+[data-item-conteiner=merch]:hover {
+  background: var(--color-twilight-blue, #ecfdff)
+}
+
+[data-item-conteiner=merch]:hover [data-add-button] {
+  opacity: 1
 }
 
 [data-popup][data-popup-max-width="480px"] [data-popup-content-container] {

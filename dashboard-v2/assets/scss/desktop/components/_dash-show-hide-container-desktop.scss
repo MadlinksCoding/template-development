@@ -45,3 +45,19 @@
 [data-section=hide-show-section][data-switch-label-wrap].active [data-switch-label-text]{
   color: var(--color-black, #000);
 }
+
+[data-item-conteiner="profile"] [data-add-button] { opacity: 0;}
+[data-item-conteiner="profile"]:hover { background: var(--color-zircon, #EFF4FF); }
+[data-item-conteiner="profile"]:hover [data-add-button] { opacity: 1;}
+
+[data-item-conteiner="subscription"] [data-add-button] { opacity: 0;}
+[data-item-conteiner="subscription"]:hover { background: var(--color-lavender-blush, #FFF1F3); }
+[data-item-conteiner="subscription"]:hover [data-add-button] { opacity: 1;}
+
+[data-item-conteiner="media"] [data-add-button] { opacity: 0;}
+[data-item-conteiner="media"]:hover { background: var(--color-white-pointer, #FDF4FF); }
+[data-item-conteiner="media"]:hover [data-add-button] { opacity: 1;}
+
+[data-item-conteiner="merch"] [data-add-button] { opacity: 0;}
+[data-item-conteiner="merch"]:hover { background: var(--color-twilight-blue, #ECFDFF); }
+[data-item-conteiner="merch"]:hover [data-add-button] { opacity: 1;}
