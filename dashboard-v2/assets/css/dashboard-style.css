@@ -3823,7 +3823,7 @@ html {
 [data-conditions-dropdown] .nice-select.v1:not(.has-tags) [data-option-label] {
   font-size: 1rem;
   font-weight: 500;
-  line-height: 1.25rem;
+  line-height: 1.5rem;
   color: var(--Gray-950, #0c111d);
   text-transform: capitalize
 }
@@ -3843,10 +3843,6 @@ html {
   border: 0
 }
 
-[data-conditions-dropdown] .nice-select.v1:not(.has-tags):not(.auto-width) [data-option-label] {
-  text-wrap: nowrap
-}
-
 [data-dropdown-arrow] {
   width: 1rem !important;
   height: 1rem !important
@@ -3857,8 +3853,33 @@ html {
   fill: var(--secondary) !important
 }
 
+[data-conditions-dropdown] .nice-select-icon svg {
+  width: 1rem !important;
+  height: 1rem !important
+}
+
 [data-conditions-dropdown] .nice-select.v1 .current.active .nice-select-icon path {
   fill: revert-layer
+}
+
+[data-icon-theme=subscriptions] .nice-select-icon svg {
+  -webkit-filter: brightness(0) saturate(100%) invert(66%) sepia(43%) saturate(3761%) hue-rotate(306deg) brightness(101%) contrast(98%);
+  filter: brightness(0) saturate(100%) invert(66%) sepia(43%) saturate(3761%) hue-rotate(306deg) brightness(101%) contrast(98%)
+}
+
+[data-icon-theme=merch] .nice-select-icon svg {
+  -webkit-filter: brightness(0) saturate(100%) invert(65%) sepia(51%) saturate(2574%) hue-rotate(156deg) brightness(109%) contrast(87%);
+  filter: brightness(0) saturate(100%) invert(65%) sepia(51%) saturate(2574%) hue-rotate(156deg) brightness(109%) contrast(87%)
+}
+
+[data-icon-theme=media] .nice-select-icon svg {
+  -webkit-filter: brightness(0) saturate(100%) invert(62%) sepia(37%) saturate(4362%) hue-rotate(234deg) brightness(102%) contrast(103%);
+  filter: brightness(0) saturate(100%) invert(62%) sepia(37%) saturate(4362%) hue-rotate(234deg) brightness(102%) contrast(103%)
+}
+
+[data-icon-theme=profile] .nice-select-icon svg {
+  -webkit-filter: brightness(0) saturate(100%) invert(54%) sepia(90%) saturate(3132%) hue-rotate(202deg) brightness(101%) contrast(101%);
+  filter: brightness(0) saturate(100%) invert(54%) sepia(90%) saturate(3132%) hue-rotate(202deg) brightness(101%) contrast(101%)
 }
 
 [data-dropdown-type=subscriptions] .nice-select.v1:not(.has-tags) .option:hover .elm_aQVICr {
@@ -3917,7 +3938,8 @@ html {
 }
 
 [data-conditions-dropdown][data-description-type=large] .nice-select-dropdown [data-option-label] {
-  margin-left: 1.625rem
+  margin-left: 1.25rem;
+  margin-top: .05rem
 }
 
 [data-description-type=large] .nice-select-dropdown [data-option-description] {

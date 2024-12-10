@@ -117,16 +117,29 @@ background: rgba(255, 255, 255, 0.90); box-shadow: 0px 3px 6px 0px rgba(0, 0, 0,
 [data-conditions-dropdown] .nice-select.v1:not(.has-tags) .option { padding: 0; }
 [data-conditions-dropdown] .nice-select.v1:not(.has-tags) .option.selected { background: transparent; }
 [data-conditions-dropdown] .nice-select.v1:not(.has-tags) .option .elm_aQVICr { padding: 1rem 0.75rem; border-bottom: 1px solid var(--Gray-200, #EAECF0); align-items: center; gap: 0.25rem; }
-[data-conditions-dropdown] .nice-select.v1:not(.has-tags) [data-option-label] { font-size: 1rem; font-weight:500; line-height: 1.25rem; color: var(--Gray-950, #0C111D); text-transform: capitalize; }
+[data-conditions-dropdown] .nice-select.v1:not(.has-tags) [data-option-label] { font-size: 1rem; font-weight:500; line-height: 1.5rem; color: var(--Gray-950, #0C111D); text-transform: capitalize; }
 [data-conditions-dropdown] .nice-select.v1:not(.has-tags) .option:not(.disabled):hover, [data-id="order-type-select"] .nice-select.v1:not(.has-tags) .option.selected { background-color:transparent; }
 [data-conditions-dropdown] .nice-select.v1:not(.has-tags) .option.selected [data-option-label] {color: var(--ebony-gray, #0C111D);}
 [data-conditions-dropdown] .nice-select.v1.filter:not(.has-tags) .multiple-options.active, [data-conditions-dropdown] .nice-select.v1.filter:not(.has-tags) .current.active { background: transparent; border: 0; }
-[data-conditions-dropdown] .nice-select.v1:not(.has-tags):not(.auto-width) [data-option-label] { text-wrap: nowrap; }
+/*[data-conditions-dropdown] .nice-select.v1:not(.has-tags):not(.auto-width) [data-option-label] { text-wrap: nowrap; }*/
 [data-dropdown-arrow] { width: 1rem !important; height: 1rem !important; }
 [data-conditions-dropdown] .nice-select.v1.filter .current:not(.active) [data-dropdown-arrow] path, [data-id=courier-select] .nice-select.v1.filter .multiple-options:not(.active) [data-dropdown-arrow] path {
 	fill: var(--secondary) !important;
 }
+[data-conditions-dropdown] .nice-select-icon svg{ width: 1rem !important; height: 1rem !important; }
 [data-conditions-dropdown] .nice-select.v1 .current.active .nice-select-icon path { fill: revert-layer; }
+
+/* All dropdown icon color like subscriptions rose pink */
+[data-icon-theme="subscriptions"] .nice-select-icon svg { filter: brightness(0) saturate(100%) invert(66%) sepia(43%) saturate(3761%) hue-rotate(306deg) brightness(101%) contrast(98%); }
+
+/* All dropdown icon color like merch blue */
+[data-icon-theme="merch"] .nice-select-icon svg { filter: brightness(0) saturate(100%) invert(65%) sepia(51%) saturate(2574%) hue-rotate(156deg) brightness(109%) contrast(87%); }
+
+/* All dropdown icon color like media violet */
+[data-icon-theme="media"] .nice-select-icon svg { filter: brightness(0) saturate(100%) invert(62%) sepia(37%) saturate(4362%) hue-rotate(234deg) brightness(102%) contrast(103%); }
+
+/* All dropdown icon color like profile light blue */
+[data-icon-theme="profile"] .nice-select-icon svg { filter: brightness(0) saturate(100%) invert(54%) sepia(90%) saturate(3132%) hue-rotate(202deg) brightness(101%) contrast(101%); }
 
 /* Color change as per dropdown type*/
 [data-dropdown-type="subscriptions"] .nice-select.v1:not(.has-tags) .option:hover .elm_aQVICr { border-bottom: 1px solid var(--Gray-200, #EAECF0); background: var(--Ros-50, #FFF1F3); }
@@ -143,7 +156,7 @@ background: rgba(255, 255, 255, 0.90); box-shadow: 0px 3px 6px 0px rgba(0, 0, 0,
 /* Size abd description position change as per dropdown description type*/
 [data-description-type="large"] .nice-select.v1:not(.has-tags) .option .elm_aQVICr {  flex-direction: column; display: flex; align-items: flex-start; }
 [data-description-type="large"] .nice-select-dropdown [data-option-description-container] { margin-top: -24px; flex: 0 0 auto !important; }
-[data-conditions-dropdown][data-description-type="large"] .nice-select-dropdown [data-option-label] { margin-left: 1.625rem; }
+[data-conditions-dropdown][data-description-type="large"] .nice-select-dropdown [data-option-label] { margin-left: 1.25rem; margin-top: 0.05rem; }
 [data-description-type="large"] .nice-select-dropdown [data-option-description] { margin-top: 0.25rem; white-space: normal; font-size: 0.75rem; line-height: 1.125rem; }
 
 [data-select-size="large"][data-conditions-dropdown] .nice-select.v1:not(.auto-width) {min-width: 20rem;}
