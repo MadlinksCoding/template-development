@@ -1206,6 +1206,10 @@ html {
   width: 5rem
 }
 
+.w--92 {
+  width: 5.75rem
+}
+
 .w--120 {
   width: 7.5rem
 }
@@ -1228,6 +1232,10 @@ html {
 
 .w--250 {
   width: 15.625rem
+}
+
+.w--258 {
+  width: 16.125rem
 }
 
 .w--272 {
@@ -1312,6 +1320,10 @@ html {
 
 .h--213 {
   height: 13.313rem
+}
+
+.min--h--52 {
+  min-height: 3.25rem
 }
 
 .max-h--140 {
@@ -1494,6 +1506,10 @@ html {
 
 .top--1-8 {
   top: 1.8rem
+}
+
+.top--3-5 {
+  top: 3.5rem
 }
 
 .top--50 {
@@ -3869,8 +3885,7 @@ html {
 
 [data-conditions-dropdown] .nice-select.v1:not(.auto-width) {
   min-width: 11.875rem;
-  border-bottom: 1.5px solid var(--Error-400, #f97066);
-  background: var(--Ros-100, #ffe4e8);
+  height: 100%;
   border-radius: 0
 }
 
@@ -3996,12 +4011,26 @@ html {
   background: var(--Ros-50, #fff1f3)
 }
 
+[data-dropdown-type=subscriptions][data-conditions-dropdown] .nice-select.v1:not(.auto-width) {
+  background: var(--Ros-50, #fff1f3)
+}
+
+[data-dropdown-type=subscriptions][data-conditions-dropdown] .nice-select.v1.open {
+  border-bottom: 1.5px solid var(--Error-400, #f97066);
+  background: var(--Ros-100, #ffe4e8)
+}
+
 [data-dropdown-type=merch] .nice-select.v1:not(.has-tags) .option:hover .elm_aQVICr {
   border-bottom: 1px solid var(--Gray-200, #eaecf0);
   background: var(--Cyan-50, #ecfdff)
 }
 
 [data-dropdown-type=merch][data-conditions-dropdown] .nice-select.v1:not(.auto-width) {
+  background: var(--Cyan-50, #ecfdff);
+  border-bottom: 1.5px solid var(--Cyan-50, #ecfdff)
+}
+
+[data-dropdown-type=merch][data-conditions-dropdown] .nice-select.v1.open {
   border-bottom: 1.5px solid var(--Cyan-400, #2ce);
   background: var(--Cyan-100, #cff9fe)
 }
@@ -4012,6 +4041,11 @@ html {
 }
 
 [data-dropdown-type=media][data-conditions-dropdown] .nice-select.v1:not(.auto-width) {
+  background: var(--Fuchsia-500, #fdf4ff);
+  border-bottom: 1.5px solid var(--Fuchsia-500, #fdf4ff)
+}
+
+[data-dropdown-type=media][data-conditions-dropdown] .nice-select.v1.open {
   border-bottom: 1.5px solid var(--Fuchsia-400, #e478fa);
   background: var(--Fuchsia-100, #fbe8ff)
 }
@@ -4022,6 +4056,10 @@ html {
 }
 
 [data-dropdown-type=profile][data-conditions-dropdown] .nice-select.v1:not(.auto-width) {
+  background: var(--Blue-dark-50, #eff4ff)
+}
+
+[data-dropdown-type=profile][data-conditions-dropdown] .nice-select.v1.open {
   border-bottom: 1.5px solid var(--Blue-dark-400, #528bff);
   background: var(--Blue-dark-100, #d1e0ff)
 }
@@ -4066,11 +4104,19 @@ html {
   font-weight: 400
 }
 
+[data-description-type=small][data-conditions-dropdown] [data-option-description] {
+  white-space: break-spaces
+}
+
 [data-select-icon=false] .current .nice-select-icon {
   display: none
 }
 
 [data-select-theme=default][data-conditions-dropdown] .nice-select.v1:not(.auto-width) {
+  background: 0 0
+}
+
+[data-select-theme=default][data-conditions-dropdown] .nice-select.v1.open {
   border-bottom: 1.5px solid var(--Base-Black, #000);
   background: var(--Base-White, #fff)
 }
