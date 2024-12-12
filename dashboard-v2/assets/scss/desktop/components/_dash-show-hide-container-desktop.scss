@@ -63,3 +63,7 @@
 [data-item-conteiner="merch"] [data-add-button] { opacity: 0;}
 [data-item-conteiner="merch"]:hover { background: var(--color-twilight-blue, #ECFDFF); }
 [data-item-conteiner="merch"]:hover [data-add-button] { opacity: 1;}
+
+[data-child-hide-inner] { opacity: 0; }
+[data-edit-parent-container]:hover [data-child-hide-inner] { opacity: 1; }
+[data-edit-parent-container]:hover [data-description-text] { background: var(--color-zircon, #EFF4FF); border-color: var(--color-dodger-blue, #2970FF); }

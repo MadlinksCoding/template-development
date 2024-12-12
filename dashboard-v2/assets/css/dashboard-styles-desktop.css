@@ -638,6 +638,12 @@ html {
   pointer-events: none
 }
 
+.inter {
+  font-family: Inter, sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal
+}
+
 .col--fiord-gray {
   color: var(--color-fiord-gray, #475467)
 }
@@ -993,6 +999,10 @@ html {
   border-color: var(--white, #fff)
 }
 
+.br--col--dodger-blue {
+  border-color: var(--color-dodger-blue, #2970ff)
+}
+
 .filter--col--gull-gray {
   -webkit-filter: brightness(0) saturate(100%) invert(89%) sepia(55%) saturate(1988%) hue-rotate(178deg) brightness(74%) contrast(83%);
   filter: brightness(0) saturate(100%) invert(89%) sepia(55%) saturate(1988%) hue-rotate(178deg) brightness(74%) contrast(83%)
@@ -1136,6 +1146,10 @@ html {
   color: var(--color-black, #000)
 }
 
+.hover--parent--child--col--brand-green:hover .hover--col--brand-green {
+  color: var(--color-brand-green, #07f468)
+}
+
 .hover--br--col-brand-green:hover {
   border-color: var(--color-brand-green, #07f468)
 }
@@ -1234,6 +1248,10 @@ html {
   width: 15.625rem
 }
 
+.w--253 {
+  width: 15.813rem
+}
+
 .w--258 {
   width: 16.125rem
 }
@@ -1264,6 +1282,10 @@ html {
 
 .w--496 {
   width: 31rem
+}
+
+.w--508 {
+  width: 31.75rem
 }
 
 .w--895 {
@@ -1318,8 +1340,16 @@ html {
   height: 7.5rem
 }
 
+.h--126 {
+  height: 7.875rem
+}
+
 .h--213 {
   height: 13.313rem
+}
+
+.h--255 {
+  height: 15.938rem
 }
 
 .min--h--52 {
@@ -1647,6 +1677,10 @@ html {
 
 .hover--bw--2:hover {
   border-width: .125rem
+}
+
+.br--2 {
+  border-radius: .125rem
 }
 
 .br--5 {
@@ -3316,6 +3350,19 @@ html {
 
 [data-item-conteiner=merch]:hover [data-add-button] {
   opacity: 1
+}
+
+[data-child-hide-inner] {
+  opacity: 0
+}
+
+[data-edit-parent-container]:hover [data-child-hide-inner] {
+  opacity: 1
+}
+
+[data-edit-parent-container]:hover [data-description-text] {
+  background: var(--color-zircon, #eff4ff);
+  border-color: var(--color-dodger-blue, #2970ff)
 }
 
 [data-popup][data-popup-max-width="480px"] [data-popup-content-container] {
