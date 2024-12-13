@@ -494,6 +494,10 @@ html {
   right: .5rem
 }
 
+.right--24 {
+  right: 1.5rem
+}
+
 .right--9 {
   right: .563rem
 }
@@ -508,6 +512,10 @@ html {
 
 .bottom--4 {
   bottom: .25rem
+}
+
+.bottom--24 {
+  bottom: 1.5rem
 }
 
 .left--90 {
@@ -937,6 +945,16 @@ html {
 .bg--gd--Galliano-yellow {
   background: -webkit-gradient(linear, left top, right top, from(#d8af0d), to(#9f8009));
   background: linear-gradient(90deg, #d8af0d 0, #9f8009 100%)
+}
+
+.bg--gradient-white {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, .3)), color-stop(8%, rgba(255, 255, 255, 0)));
+  background: linear-gradient(180deg, rgba(255, 255, 255, .3) 0, rgba(255, 255, 255, 0) 8%)
+}
+
+.bg--gradient-white-2 {
+  background: -webkit-gradient(linear, right top, left top, from(#fff), to(rgba(255, 255, 255, 0))), rgba(242, 244, 247, .5);
+  background: linear-gradient(270deg, #fff 0, rgba(255, 255, 255, 0) 100%), rgba(242, 244, 247, .5)
 }
 
 .bg--no-repeat {
@@ -4660,6 +4678,21 @@ button[data-color=gray]:not(:disabled):hover span {
   box-shadow: none;
   -webkit-transform: skew(20deg, 0) translateX(0);
   transform: skew(20deg, 0) translateX(0);
+  -webkit-transition: all 0s ease-in-out;
+  transition: all 0s ease-in-out
+}
+
+[data-button-style=shadow-btn]:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  -webkit-box-shadow: 4px 4px 0 0 #000;
+  box-shadow: 4px 4px 0 0 #000;
   -webkit-transition: all 0s ease-in-out;
   transition: all 0s ease-in-out
 }

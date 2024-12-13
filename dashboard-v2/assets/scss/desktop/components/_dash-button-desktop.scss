@@ -160,6 +160,22 @@ button[data-color="gray"]:not(:disabled):hover span { color: #fff !important; }
    transition: all 0s ease-in-out;
 }
 
+/* Only shdow effect button */
+[data-button-style="shadow-btn"]:after{
+   content: '';
+   display: block;
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0;
+   right: 0;
+   z-index: -1;
+   -webkit-box-shadow: 4px 4px 0 0 #000;
+   box-shadow: 4px 4px 0 0 #000;
+   -webkit-transition: all 0s ease-in-out;
+   transition: all 0s ease-in-out;
+}
+
 
 /* Cart background effect style */
 [data-button-style="skew-left-top"]{
