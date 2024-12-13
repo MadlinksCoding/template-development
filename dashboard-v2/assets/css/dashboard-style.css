@@ -3360,9 +3360,14 @@ html {
   opacity: 1
 }
 
-[data-edit-parent-container]:hover [data-description-text] {
+[data-edit-parent-container]:hover [data-description-text],
+[data-select-parent-container]:hover [data-image-grid-wrapper] {
   background: var(--color-zircon, #eff4ff);
   border-color: var(--color-dodger-blue, #2970ff)
+}
+
+[data-select-parent-container]:hover [data-child-hide-inner] {
+  opacity: 1
 }
 
 [data-popup][data-popup-max-width="480px"] [data-popup-content-container] {
@@ -4166,6 +4171,119 @@ html {
 [data-select-theme=default][data-conditions-dropdown] .nice-select.v1.open {
   border-bottom: 1.5px solid var(--Base-Black, #000);
   background: var(--Base-White, #fff)
+}
+
+[data-dropdown-color-theme=blue] .nice-select.v1 {
+  border: none;
+  background-color: var(--color-dodger-blue, #2970ff)
+}
+
+[data-dropdown-color-theme=blue] .nice-select.v1:not(.auto-width) {
+  min-width: 11.875rem;
+  height: 100%;
+  border-radius: 0
+}
+
+[data-dropdown-color-theme=blue] .nice-select.v1:not(.has-tags) .current {
+  border: none;
+  padding: .25rem .5rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: .5rem;
+  min-height: 1.125rem;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between
+}
+
+[data-dropdown-color-theme=blue] .nice-select.v1 .current .elm_aQVICr {
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: .5rem
+}
+
+[data-dropdown-color-theme=blue] .nice-select.v1:not(.auto-width) .nice-select-dropdown {
+  min-width: 15.438rem;
+  right: auto;
+  left: 0;
+  top: calc(100% + 0rem);
+  -webkit-transform: scale(1) translateY(0);
+  transform: scale(1) translateY(0);
+  background: #fff;
+  border: 0;
+  border-radius: 0
+}
+
+[data-dropdown-color-theme=blue] .nice-select.v1:not(.has-tags) .option {
+  padding: 0
+}
+
+[data-dropdown-color-theme=blue] .nice-select.v1:not(.has-tags) .option.selected {
+  background: 0 0
+}
+
+[data-dropdown-color-theme=blue] .nice-select.v1:not(.has-tags) .option .elm_aQVICr {
+  padding: .25rem .5rem;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: .5rem
+}
+
+[data-dropdown-color-theme=blue] .nice-select.v1:not(.has-tags) [data-option-label] {
+  font-size: .75rem;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: .3px;
+  text-wrap: nowrap;
+  color: #fff;
+  text-transform: capitalize
+}
+
+[data-dropdown-color-theme=blue] .nice-select.v1:not(.has-tags) .option [data-option-label] {
+  color: var(--color-dodger-blue, #2970ff)
+}
+
+[data-dropdown-color-theme=blue] .nice-select.v1:not(.has-tags) .option.selected,
+[data-dropdown-color-theme=blue] .nice-select.v1:not(.has-tags) .option:not(.disabled):hover {
+  background-color: transparent
+}
+
+[data-dropdown-color-theme=blue] .nice-select.v1:not(.has-tags) .option.selected [data-option-label] {
+  color: var(--ebony-gray, #0c111d)
+}
+
+[data-dropdown-color-theme=blue] .nice-select.v1.filter:not(.has-tags) .current.active,
+[data-dropdown-color-theme=blue] .nice-select.v1.filter:not(.has-tags) .multiple-options.active {
+  background: 0 0;
+  border: 0
+}
+
+[data-dropdown-arrow] {
+  width: 1rem !important;
+  height: 1rem !important
+}
+
+[data-dropdown-color-theme=blue] .nice-select.v1.filter .current:not(.active) [data-dropdown-arrow] path,
+[data-dropdown-color-theme=blue] .nice-select.v1.filter .multiple-options:not(.active) [data-dropdown-arrow] path {
+  fill: #fff !important
+}
+
+[data-dropdown-color-theme=blue] .nice-select-icon svg {
+  width: 1rem !important;
+  height: 1rem !important;
+  -webkit-filter: brightness(0) saturate(100%) invert(99%) sepia(99%) saturate(0) hue-rotate(176deg) brightness(107%) contrast(100%);
+  filter: brightness(0) saturate(100%) invert(99%) sepia(99%) saturate(0) hue-rotate(176deg) brightness(107%) contrast(100%)
+}
+
+[data-dropdown-color-theme=blue] .nice-select.v1:not(.has-tags) .option .nice-select-icon svg {
+  -webkit-filter: brightness(0) saturate(100%) invert(38%) sepia(57%) saturate(4201%) hue-rotate(211deg) brightness(99%) contrast(106%);
+  filter: brightness(0) saturate(100%) invert(38%) sepia(57%) saturate(4201%) hue-rotate(211deg) brightness(99%) contrast(106%)
 }
 
 [data-form-input-type=checkbox] input[type=checkbox] {

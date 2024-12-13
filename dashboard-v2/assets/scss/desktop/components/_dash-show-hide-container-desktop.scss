@@ -66,4 +66,6 @@
 
 [data-child-hide-inner] { opacity: 0; }
 [data-edit-parent-container]:hover [data-child-hide-inner] { opacity: 1; }
-[data-edit-parent-container]:hover [data-description-text] { background: var(--color-zircon, #EFF4FF); border-color: var(--color-dodger-blue, #2970FF); }
+[data-edit-parent-container]:hover [data-description-text], [data-select-parent-container]:hover [data-image-grid-wrapper] { background: var(--color-zircon, #EFF4FF); border-color: var(--color-dodger-blue, #2970FF); }
+
+[data-select-parent-container]:hover [data-child-hide-inner] { opacity: 1; }
