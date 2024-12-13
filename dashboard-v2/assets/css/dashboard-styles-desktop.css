@@ -1090,6 +1090,11 @@ html {
   filter: brightness(0) saturate(100%) invert(21%) sepia(38%) saturate(4085%) hue-rotate(347deg) brightness(99%) contrast(119%)
 }
 
+.hover--parent--child--col--dodger-blue:hover .hov--filter--col--dodger-blue {
+  -webkit-filter: brightness(0) saturate(100%) invert(38%) sepia(57%) saturate(4201%) hue-rotate(211deg) brightness(99%) contrast(106%);
+  filter: brightness(0) saturate(100%) invert(38%) sepia(57%) saturate(4201%) hue-rotate(211deg) brightness(99%) contrast(106%)
+}
+
 .hover--bg--col--white--100:hover {
   background: var(--Base-White, #fff)
 }
@@ -1148,6 +1153,10 @@ html {
 
 .hover--parent--child--col--brand-green:hover .hover--col--brand-green {
   color: var(--color-brand-green, #07f468)
+}
+
+.hover--parent--child--col--dodger-blue:hover .hover--col--dodger-blue {
+  color: var(--color-dodger-blue, #2970ff)
 }
 
 .hover--br--col-brand-green:hover {
@@ -4219,6 +4228,10 @@ html {
   border-radius: 0
 }
 
+[data-dropdown-color-theme=blue] .nice-select.v1:not(.auto-width) .nice-select-dropdown .nice-select-lists {
+  background: #fff
+}
+
 [data-dropdown-color-theme=blue] .nice-select.v1:not(.has-tags) .option {
   padding: 0
 }
@@ -4284,6 +4297,14 @@ html {
 [data-dropdown-color-theme=blue] .nice-select.v1:not(.has-tags) .option .nice-select-icon svg {
   -webkit-filter: brightness(0) saturate(100%) invert(38%) sepia(57%) saturate(4201%) hue-rotate(211deg) brightness(99%) contrast(106%);
   filter: brightness(0) saturate(100%) invert(38%) sepia(57%) saturate(4201%) hue-rotate(211deg) brightness(99%) contrast(106%)
+}
+
+[data-dropdown-color-theme=blue] .nice-select.v1 .current.active [data-option-label] {
+  color: #fff
+}
+
+[data-dropdown-color-theme=blue] .nice-select.v1 .current.active .nice-select-icon path {
+  fill: none !important
 }
 
 [data-form-input-type=checkbox] input[type=checkbox] {
