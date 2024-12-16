@@ -6044,49 +6044,62 @@
                     </div><!-- End Top Page Header Section -->
                     <!-- Page Content Structure -->
                     <div class="pad--y--32 flex flex-column gap--8 h-100">
-                        <!-- Merch group dropdown wrapper -->
-                        <div class="w-100 flex justify-start">
-                            <!-- Field Wrapper -->
-                            <div class="flex flex-column">
-                                <!-- Title -->
-                                <span class="pad--y--8 pad--left--16 flex fs--12 fw5 lh--18 col--ebony--variation-2">Type</span>
-                                <!-- Merch Select Field --> <!-- For theme color change data-dropdown-type="subscriptions" "merch" "media" "profile"  -->
-                                <div data-conditions-dropdown data-dropdown-type="merch" class="relative z--10000">
-                                    <select data-nice-select>
-                                        <option data-icon="profile">Profile</option>
-                                        <option data-icon="subscriptions">Subscription</option>
-                                        <option data-icon="media">Media</option>
-                                        <option data-icon="merch" selected>Merch</option>
-                                    </select>
+                        <!-- Table -->
+                        <div class="flex flex-column">
+                            <!-- Table Header -->
+                            <div class="flex items-center pad--y--8 pad--left--16">
+                                <!-- first -->
+                                <div class="w--180">
+                                    <!-- Title -->
+                                    <span class="flex fs--12 fw5 lh--18 col--ebony--variation-2">Type</span>
                                 </div>
-                                <!-- End Merch Select Field -->
-                            </div>
-                            <!-- /Field Wrapper -->
-
-                            <!-- Field Wrapper -->
-                            <div class="flex flex-column">
-                                <!-- Title -->
-                                <span class="pad--y--8 flex fs--12 fw5 lh--18 col--ebony--variation-2">Metric</span>
-                                <!-- Merch Select Field --> <!-- For theme color change data-dropdown-type="subscriptions" "merch" "media" "profile"
-                                 For data description style change data-description-type="large" "small"
-                                 All dropdown icon color like  data-icon-theme="subscription" "merch" "media" "profile"  -->
-                                <div data-conditions-dropdown data-dropdown-type="merch" data-description-type="large" data-icon-theme="merch" class="relative z--10000">
-                                    <select data-nice-select>
-                                        <option data-icon="sales" data-description="Broadcast your total earnings in frequency of your choice or when target goal is reached.">Sales (USD)</option>
-                                        <option data-icon="sales_qty" data-description="Broadcast your total item sold in frequency of your choice or when target goal is reached." selected>Sales (QTY)</option>
-                                        <option data-icon="preview" data-description="Broadcast your total views in frequency of your choice or when target goal is reached">Views</option>
-                                    </select>
+                                <!-- Second -->
+                                <div class="w--180">
+                                    <!-- Title -->
+                                    <span class="flex fs--12 fw5 lh--18 col--ebony--variation-2">Metric</span>
                                 </div>
-                                <!-- End Merch Select Field -->
+                                <!-- Thrid -->
+                                <div class="w--180">
+                                    <!-- Title -->
+                                    <span class="flex fs--12 fw5 lh--18 col--ebony--variation-2">Conditions</span>
+                                </div>
                             </div>
-                            <!-- /Field Wrapper -->
+                            <!-- /Table Header -->
+                            <!-- Table Body -->
+                            <div class="w-100 flex flex-column">
+                                <!-- Merch group dropdown wrapper -->
+                                <div class="w-100 flex justify-start bg-white-90 bb br--col--mischka">
+                                    <!-- Field Wrapper -->
+                                    <div class="flex flex-column">
+                                        <!-- Merch Select Field --> <!-- For theme color change data-dropdown-type="subscriptions" "merch" "media" "profile"  -->
+                                        <div data-conditions-dropdown data-dropdown-type="merch" class="relative z--10000">
+                                            <select data-nice-select>
+                                                <option data-icon="profile">Profile</option>
+                                                <option data-icon="subscriptions">Subscription</option>
+                                                <option data-icon="media">Media</option>
+                                                <option data-icon="merch" selected>Merch</option>
+                                            </select>
+                                        </div>
+                                        <!-- End Merch Select Field -->
+                                    </div>
+                                    <!-- /Field Wrapper -->
 
-                            <!-- Field Wrapper -->
-                            <div class="flex flex-column flex--max">
-                                <!-- Title -->
-                                <span class="pad--y--8 flex fs--12 fw5 lh--18 col--ebony--variation-2">Conditions</span>
-                                <!-- Group Field Wrapper -->
-                                <div class="flex flex--max bg-white-90 bb br--col--mischka">
+                                    <!-- Field Wrapper -->
+                                    <div class="flex flex-column">
+                                        <!-- Merch Select Field --> <!-- For theme color change data-dropdown-type="subscriptions" "merch" "media" "profile"
+                                         For data description style change data-description-type="large" "small"
+                                         All dropdown icon color like  data-icon-theme="subscription" "merch" "media" "profile"  -->
+                                        <div data-conditions-dropdown data-dropdown-type="merch" data-description-type="large" data-icon-theme="merch" class="relative z--10000">
+                                            <select data-nice-select>
+                                                <option data-icon="sales" data-description="Broadcast your total earnings in frequency of your choice or when target goal is reached.">Sales (USD)</option>
+                                                <option data-icon="sales_qty" data-description="Broadcast your total item sold in frequency of your choice or when target goal is reached." selected>Sales (QTY)</option>
+                                                <option data-icon="preview" data-description="Broadcast your total views in frequency of your choice or when target goal is reached">Views</option>
+                                            </select>
+                                        </div>
+                                        <!-- End Merch Select Field -->
+                                    </div>
+                                    <!-- /Field Wrapper -->
+
                                     <!-- Media every select-wrapper -->
                                     <div class="br br--col--mischka">
                                         <!-- Merch Select Field --> <!-- For theme color change data-dropdown-type="subscriptions" "merch" "media" "profile"
@@ -6171,11 +6184,11 @@
                                     </div>
                                     <!-- /Row Right Option -->
                                 </div>
-                                <!-- /Group Field Wrapper -->
+                                <!-- /Merch group dropdown wrapper -->
                             </div>
-                            <!-- /Field Wrapper -->
+                            <!-- /Table Body -->
                         </div>
-                        <!-- /Merch group dropdown wrapper -->
+                        <!-- /Table -->
 
                         <!-- Add New Post Wrapper -->
                         <div class="absolute right--24 bottom--24 z--10000 flex flex-column items-end gap--8">

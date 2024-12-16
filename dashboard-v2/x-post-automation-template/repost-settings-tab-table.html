@@ -6,7 +6,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE-edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        <title>Template - X Repost Automation</title>
+        <title>Template - X Repost Automation Page Structure</title>
 
         <!-- Poppins Font -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,15 +46,14 @@
 
     <body>
         <!-- main wrapper -->
-        <div data-section="wrapper"
-            class="h--screen-tablet h--screen-mobile h--screen-mobile-portrait flex flex--column-responsive-mobile flex--column-responsive-mobile-portrait">
+        <div data-section="wrapper" class="flex flex--column-responsive-mobile flex--column-responsive-mobile-portrait">
 
             <!-- page sidebar -->
             <section data-sidebar data-section="sidebar"
                 class="flex vh-100 sticky top-0 z-2 bg--col--athens-gray--70 sh--sidebar vw--100--responsive-mobile vw--100--responsive-mobile-portrait h--48-responsive-mobile h--48-responsive-mobile-portrait bg--col--none--responsive-mobile bg--col--none--responsive-mobile-portrait sh--none--responsive-mobile sh--none--responsive-mobile-portrait">
                 <!-- mobile header -->
                 <div data-mobile-header data-mobile-only
-                    class="pad--y--8 pad--x--16 pad--x--8-responsive-mobile pad--x--8-responsive-mobile-portrait flex-column flex--max gap--16 bg--blur--25 dn dn-responsive-mobile">
+                    class="pad--y--8 pad--x--16 flex-column flex--max gap--16 bg--blur--25 dn dn-responsive-mobile">
                     <div class="flex justify-between items-center">
                         <!-- Site Logo -->
                         <div class="relative">
@@ -65,7 +64,7 @@
                             </a>
                             <h1
                                 class="poppins fs--14 lh--20 fw6 col--fiord-gray m--0 dn display--flex-responsive-mobile display--flex-responsive-mobile-portrait">
-                                Rule Combinations</h1>
+                                X Repost Automations</h1>
                         </div>
                         <!-- /Site Logo -->
 
@@ -283,7 +282,7 @@
                                         class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
                                         <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
                                         <a href="javascript: void(0)" data-main-menu-item="true"
-                                            data-main-menu-name="Your orders" data-is-active="false"
+                                            data-main-menu-name="Your orders" data-is-active="true"
                                             data-has-submenu="true"
                                             data-target-submenu-container="dashboard-submenu-your-orders"
                                             class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
@@ -350,7 +349,7 @@
                                         class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
                                         <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
                                         <a href="javascript: void(0)" data-main-menu-item="true"
-                                            data-main-menu-name="Subscriptions" data-is-active="true"
+                                            data-main-menu-name="Subscriptions" data-is-active="false"
                                             data-has-submenu="false" data-target-submenu-container=""
                                             class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
                                             <!-- render_svg_icon( 'logo_bg' ) -->
@@ -6024,392 +6023,874 @@
             </div> <!-- End Background fixed container -->
 
             <!-- main section -->
-            <main data-dashboard-page="" data-section="main" class="h--screen flex flex-column flex--max relative z-1">
+            <main data-dashboard-page="" data-section="main" class="flex flex-column flex--max relative z-1">
                 <!-- Inner Container -->
                 <div data-section="inner-container" data-tabs-section="1"
-                    class="h-100 flex flex-column bg--gradient-white pad--top--24-responsive-tablet pad--x--16-responsive-tablet pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait pad--y--0-responsive-mobile pad--y--0-responsive-mobile-portrait ">
+                    class="flex flex-column gap--24 bg--gradient-white pad--top--24-responsive-tablet pad--x--16-responsive-tablet pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait pad--y--0-responsive-mobile pad--y--0-responsive-mobile-portrait ">
                     <!-- Top Page Header Section -->
                     <div data-section="page-header"
-                        class="pad--40 pad--bottom--0 pad--x--0-responsive-tablet pad--top--0-responsive-tablet flex flex-column gap--24 gap--16-responsive-tablet pad--8-responsive-mobile pad--8-responsive-mobile-portrait">
+                        class="pad--40 pad--bottom--0 pad--x--0-responsive-tablet pad--top--0-responsive-tablet flex flex-column gap--24 pad--8-responsive-mobile pad--8-responsive-mobile-portrait">
                         <!-- Top Page Title Section -->
                         <div data-section="page-title"
                             class="w-100 flex gap--24 items-start justify-between gap--16--responsive-tablet gap--16--responsive-mobile gap--16--responsive-mobile-portrait flex--column-responsive-tablet flex--column-responsive-mobile flex--column-responsive-mobile-portrait display--none-responsive-mobile display--none-responsive-mobile-portrait">
                             <div class="flex flex-column gap--24 gap--16-responsive-tablet">
                                 <h1
                                     class="poppins fs--36 lh--44 fw6 tracked--neg--0-72 col--fiord-gray m--0 fs--30-responsive-tablet lh--38-responsive-tablet">
-                                    Rule Combinations</h1>
+                                    X Repost Automations</h1>
+                                <p class="fs--14 lh--20 col--oxford-blue">Tell fans what you're up to—add an automation command to post on X (Twitter)</p>
                             </div>
                         </div><!-- End Top Page Title Section -->
+                        <!-- Top Page Settings -->
+                        <div
+                            class="flex items-center gap--16 gap--8-responsive-mobile gap--8-responsive-mobile-portrait flex--column-responsive-tablet flex--column-responsive-mobile flex--column-responsive-mobile-portrait items--start-responsive-tablet items--start-responsive-mobile items--start-responsive-mobile-portrait">
+                            <!-- Tab Content Section -->
+                            <div data-tabs-container="1"
+                                class="w--100-responsive-tablet w--100-responsive-mobile w--100-responsive-mobile-portrait"
+                                data-show-default-page-load="views">
+                                <!-- Title -->
+                                <div
+                                    class="flex items-center br--5 ba br--col--mischka-gray bg--col--light-gray-50 w--100-responsive-tablet overflow-hidden">
+                                    <ul data-tabs-menu="dashboard-tabs-menu"
+                                        class="flex items-start w--100-responsive-tablet w--100-responsive-mobile w--100-responsive-mobile-portrait"
+                                        data-show-default-page-load="unread">
+                                        <!-- first tab menu item -->
+                                        <li data-tabbed-scrollable-menu="0"
+                                            data-tabbed-child-id="tabbed-content-first-tab" data-attribute-run-once="1"
+                                            data-target="first-tab" data-flag="unread" data-status="unread"
+                                            data-offset="5" data-per_page="5"
+                                            class="flex justify-center items-center gap--8 flex--max-responsive-tablet flex--max-responsive-mobile flex--max-responsive-mobile-portrait active">
+                                            <a href="#"
+                                                class="w-100 inline-flex justify-center items-center gap--8 gap--4-responsive-mobile gap--4-responsive-mobile-portrait pointer w-100 pad--y--8 pad--x--16 pad--8-responsive-mobile pad--8-responsive-mobile-portrait"
+                                                tab-trigger="1">
+                                                <span data-span-title
+                                                    class="fs--14 fw5 lh--20 col--gull-gray nowrap fs--12-responsive-mobile lh--18-responsive-mobile fs--12-responsive-mobile-portrait lh--18-responsive-mobile-portrait">All</span>
+                                                <small data-span-value
+                                                    class="fs--10 fw5 lh--normal col--gull-gray tracked--0-25 h--24">1</small>
+                                            </a>
+                                        </li>
+
+                                        <!-- second tab menu item -->
+                                        <li data-tabbed-scrollable-menu="0"
+                                            data-tabbed-child-id="tabbed-content-second-tab" data-attribute-run-once="1"
+                                            data-target="second-tab" data-flag="cpr" data-status="unread"
+                                            data-offset="0" data-per_page="5"
+                                            class="flex justify-center items-center gap--8 bl br--col--mischka-gray flex--max-responsive-tablet flex--max-responsive-mobile flex--max-responsive-mobile-portrait">
+                                            <a href="#"
+                                                class="inline-flex justify-center items-center gap--8 gap--4-responsive-mobile gap--4-responsive-mobile-portrait pointer w-100 pad--y--8 pad--x--16 pad--8-responsive-mobile pad--8-responsive-mobile-portrait"
+                                                tab-trigger="1">
+                                                <span data-span-title
+                                                    class="fs--14 fw5 lh--20 col--gull-gray nowrap fs--12-responsive-mobile lh--18-responsive-mobile fs--12-responsive-mobile-portrait lh--18-responsive-mobile-portrait">Published</span>
+                                                <small data-span-value
+                                                    class="fs--10 fw5 lh--normal col--gull-gray tracked--0-25 h--24">1</small>
+                                            </a>
+                                        </li>
+
+                                        <!-- third tab menu item -->
+                                        <li data-tabbed-scrollable-menu="0"
+                                            data-tabbed-child-id="tabbed-content-second-tab" data-attribute-run-once="1"
+                                            data-target="second-tab" data-flag="cpr" data-status="unread"
+                                            data-offset="0" data-per_page="5"
+                                            class="flex justify-center items-center gap--8 bl br--col--mischka-gray flex--max-responsive-tablet flex--max-responsive-mobile flex--max-responsive-mobile-portrait">
+                                            <a href="#"
+                                                class="inline-flex justify-center items-center gap--8 gap--4-responsive-mobile gap--4-responsive-mobile-portrait pointer w-100 pad--y--8 pad--x--16 pad--8-responsive-mobile pad--8-responsive-mobile-portrait"
+                                                tab-trigger="1">
+                                                <span data-span-title
+                                                    class="fs--14 fw5 lh--20 col--gull-gray nowrap fs--12-responsive-mobile lh--18-responsive-mobile fs--12-responsive-mobile-portrait lh--18-responsive-mobile-portrait">Draft</span>
+                                                <small data-span-value
+                                                    class="fs--10 fw5 lh--normal col--gull-gray tracked--0-25 h--24">0</small>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!--End Tab Content Section -->
+                            <!-- Search and Select Content Section -->
+                            <div
+                                class="flex items-center justify-end gap--8 flex--max w--100-responsive-tablet w--100-responsive-mobile w--100-responsive-mobile-portrait">
+                                <!-- Subscription Select Field --> <!-- For theme color change data-dropdown-type="subscriptions" "merch" "media" "profile"  -->
+                                <div data-conditions-dropdown data-dropdown-type="subscriptions" class="relative z--10000">
+                                    <select data-nice-select>
+                                        <option value="ordertype" use-as-placeholder>All Type</option>
+                                        <option data-icon="profile">Profile</option>
+                                        <option data-icon="subscriptions">Subscription</option>
+                                        <option data-icon="media">Media</option>
+                                        <option data-icon="merch">Merch</option>
+                                    </select>
+                                </div>
+                                <!-- End Subscription Select Field -->
+
+                            </div><!-- End Search and Select Content Section -->
+                        </div><!-- End Top Page Settings -->
                     </div><!-- End Top Page Header Section -->
-                    <!-- Page Content Structure -->
-                    <div class="pad--y--32 flex flex-column gap--32 justify-start items-start relative z--11100">
-                        <!-- Media group dropdown wrapper -->
-                        <div class="w-100 flex justify-start bg-white-90 bb br--col--mischka">
-                            <!-- Media Select Field --> <!-- For theme color change data-dropdown-type="subscriptions" "merch" "media" "profile"  -->
-                            <div data-conditions-dropdown data-dropdown-type="media" class="relative z--10000">
-                                <select data-nice-select>
-                                    <option data-icon="profile">Profile</option>
-                                    <option data-icon="subscriptions">Subscription</option>
-                                    <option data-icon="media" selected>Media</option>
-                                    <option data-icon="merch">Merch</option>
-                                </select>
-                            </div>
-                            <!-- End Media Select Field -->
 
-                            <!-- Media Select Field --> <!-- For theme color change data-dropdown-type="subscriptions" "merch" "media" "profile"
-                             For data description style change data-description-type="large" "small"
-                             All dropdown icon color like  data-icon-theme="subscription" "merch" "media" "profile"  -->
-                            <div data-conditions-dropdown data-dropdown-type="media" data-description-type="large" data-icon-theme="media" class="relative z--10000">
-                                <select data-nice-select>
-                                    <option data-icon="sales" data-description="Broadcast your total earnings in frequency of your choice or when target goal is reached.">Sales (USD)</option>
-                                    <option data-icon="sales_qty" data-description="Broadcast your total item sold in frequency of your choice or when target goal is reached." selected>Sales (QTY)</option>
-                                    <option data-icon="preview" data-description="Broadcast your total views in frequency of your choice or when target goal is reached">Views</option>
-                                </select>
-                            </div>
-                            <!-- End Media Select Field -->
-
-                            <!-- Media every select-wrapper -->
-                            <div class="br br--col--mischka">
-                                <!-- Media Select Field --> <!-- For theme color change data-dropdown-type="subscriptions" "merch" "media" "profile"
-                                 For data description style change data-description-type="large" "small"
-                                 For Select size style change data-select-size="large" "default"
-                                 All dropdown icon color like  data-icon-theme="subscription" "merch" "media" "profile"  -->
-                                <div data-conditions-dropdown data-dropdown-type="media" data-description-type="large" data-select-size="large" data-icon-theme="media" data-select-icon="false" data-select-theme="default" class="relative z--10000">
-                                    <select data-nice-select>
-                                        <option data-icon="merch" data-description="Post every time a new sale is made to keep your audience excited and engaged." selected>Every New Sale</option>
-                                        <option data-icon="custom_sales_count" data-description="Post when you reach a set number of sales. Customize the count to fit your goals.">Custom Sales Count</option>
-                                        <option data-icon="growth_comparision" data-description="Post only when your sales increase compared to the previous period to highlight positive trends.">Growth Comparison</option>
-                                        <option data-icon="total_subscribers" data-description="Post the total number of sales for a chosen timeframe.">Total Sales Count</option>
-                                        <option data-icon="custom_goal" data-description="Set a sales goal and post daily progress updates until the goal is reached.">Custom Goal</option>
-                                    </select>
+                    <div data-tabs-content="1" class="h-100">
+                        <!-- first tab content items -->
+                        <div data-tabbed-content="tabbed-content-first-tab" data-target="first-tab"
+                            class="flex flex-column justify-start items-start gap--16 flex-auto mt--8-neg active">
+                            <!-- Table -->
+                            <div class="w-100 flex flex-column">
+                                <!-- Table Header -->
+                                <div class="flex items-center pad--y--8 pad--left--16">
+                                    <!-- first -->
+                                    <div class="w--180">
+                                        <!-- Title -->
+                                        <span class="flex fs--12 fw5 lh--18 col--ebony--variation-2">Type</span>
+                                    </div>
+                                    <!-- Second -->
+                                    <div class="w--180">
+                                        <!-- Title -->
+                                        <span class="flex fs--12 fw5 lh--18 col--ebony--variation-2">Metric</span>
+                                    </div>
+                                    <!-- Thrid -->
+                                    <div class="w--180">
+                                        <!-- Title -->
+                                        <span class="flex fs--12 fw5 lh--18 col--ebony--variation-2">Conditions</span>
+                                    </div>
                                 </div>
-                                <!-- End Media Select Field -->
-                            </div>
-                            <!-- /Media every select-wrapper -->
+                                <!-- /Table Header -->
+                                <!-- Table Body -->
+                                <div class="w-100 flex flex-column">
+                                    <!-- Merch group dropdown wrapper -->
+                                    <div class="w-100 flex justify-start bg-white-90 bb br--col--mischka">
+                                        <!-- Field Wrapper -->
+                                        <div class="flex flex-column">
+                                            <!-- Merch Select Field --> <!-- For theme color change data-dropdown-type="subscriptions" "merch" "media" "profile"  -->
+                                            <div data-conditions-dropdown data-dropdown-type="merch" class="relative z--10000">
+                                                <select data-nice-select>
+                                                    <option data-icon="profile">Profile</option>
+                                                    <option data-icon="subscriptions">Subscription</option>
+                                                    <option data-icon="media">Media</option>
+                                                    <option data-icon="merch" selected>Merch</option>
+                                                </select>
+                                            </div>
+                                            <!-- End Merch Select Field -->
+                                        </div>
+                                        <!-- /Field Wrapper -->
 
-                            <!-- Custom Range Select Field --> <!-- For theme color change data-dropdown-type="subscriptions" "merch" "media" "profile"
-                             For data description style change data-description-type="large" "small"
-                             For Select size style change data-select-size="large" "default"
-                             All dropdown icon color like  data-icon-theme="subscription" "merch" "media" "profile"  -->
-                            <div data-conditions-dropdown data-dropdown-type="media" data-description-type="small" data-select-size="small" data-icon-theme="media" data-select-icon="false" data-select-theme="default" class="relative z--10000">
-                                <select data-nice-select>
-                                    <option use-as-placeholder>Post Frequency</option>
-                                    <option>Daily</option>
-                                    <option>Weekly</option>
-                                    <option>Monthly</option>
-                                    <option>Custom Range</option>
-                                </select>
-                            </div>
-                            <!-- End Custom Range Select Field -->
+                                        <!-- Field Wrapper -->
+                                        <div class="flex flex-column">
+                                            <!-- Merch Select Field --> <!-- For theme color change data-dropdown-type="subscriptions" "merch" "media" "profile"
+                                             For data description style change data-description-type="large" "small"
+                                             All dropdown icon color like  data-icon-theme="subscription" "merch" "media" "profile"  -->
+                                            <div data-conditions-dropdown data-dropdown-type="merch" data-description-type="large" data-icon-theme="merch" class="relative z--10000">
+                                                <select data-nice-select>
+                                                    <option data-icon="sales" data-description="Broadcast your total earnings in frequency of your choice or when target goal is reached.">Sales (USD)</option>
+                                                    <option data-icon="sales_qty" data-description="Broadcast your total item sold in frequency of your choice or when target goal is reached." selected>Sales (QTY)</option>
+                                                    <option data-icon="preview" data-description="Broadcast your total views in frequency of your choice or when target goal is reached">Views</option>
+                                                </select>
+                                            </div>
+                                            <!-- End Merch Select Field -->
+                                        </div>
+                                        <!-- /Field Wrapper -->
 
-                            <!-- Days Input Field -->
-                            <div class="pad--y--16 pad--x--12 flex items-center gap--8 br bl br--col--mischka flex--max">
-                                <!-- Input -->
-                                <div class="flex--max">
-                                    <input type="text" name="" value="7" class="w-100 h--20 fs--14 lh--20 col--ebony--variation-2 tr">
+                                        <!-- Media every select-wrapper -->
+                                        <div class="br br--col--mischka">
+                                            <!-- Merch Select Field --> <!-- For theme color change data-dropdown-type="subscriptions" "merch" "media" "profile"
+                                             For data description style change data-description-type="large" "small"
+                                             For Select size style change data-select-size="large" "default"
+                                             All dropdown icon color like  data-icon-theme="subscription" "merch" "media" "profile"  -->
+                                            <div data-conditions-dropdown data-dropdown-type="merch" data-description-type="large" data-select-size="large" data-icon-theme="merch" data-select-icon="false" data-select-theme="default" class="relative z--10000">
+                                                <select data-nice-select>
+                                                    <option data-icon="merch" data-description="Post every time a new sale is made to keep your audience excited and engaged." selected>Every New Sale</option>
+                                                    <option data-icon="custom_sales_count" data-description="Post when you reach a set number of sales. Customize the count to fit your goals.">Custom Sales Count</option>
+                                                    <option data-icon="growth_comparision" data-description="Post only when your sales increase compared to the previous period to highlight positive trends.">Growth Comparison</option>
+                                                    <option data-icon="total_subscribers" data-description="Post the total number of sales for a chosen timeframe.">Total Sales Count</option>
+                                                    <option data-icon="custom_goal" data-description="Set a sales goal and post daily progress updates until the goal is reached.">Custom Goal</option>
+                                                </select>
+                                            </div>
+                                            <!-- End Merch Select Field -->
+                                        </div>
+                                        <!-- /Media every select-wrapper -->
+
+                                        <!-- Custom Range Select Field --> <!-- For theme color change data-dropdown-type="subscriptions" "merch" "media" "profile"
+                                         For data description style change data-description-type="large" "small"
+                                         For Select size style change data-select-size="large" "default"
+                                         All dropdown icon color like  data-icon-theme="subscription" "merch" "media" "profile"  -->
+                                        <div data-conditions-dropdown data-dropdown-type="media" data-description-type="small" data-select-size="small" data-icon-theme="media" data-select-icon="false" data-select-theme="default" class="relative z--10000">
+                                            <select data-nice-select>
+                                                <option use-as-placeholder>Post Frequency</option>
+                                                <option>Daily</option>
+                                                <option>Weekly</option>
+                                                <option>Monthly</option>
+                                                <option>Custom Range</option>
+                                            </select>
+                                        </div>
+                                        <!-- End Custom Range Select Field -->
+
+                                        <!-- Days Input Field -->
+                                        <div class="pad--y--16 pad--x--12 flex items-center gap--8 br bl br--col--mischka flex--max">
+                                            <!-- Input -->
+                                            <div class="flex--max">
+                                                <input type="text" name="" value="7" class="w-100 h--20 fs--14 lh--20 col--ebony--variation-2 tr">
+                                            </div>
+                                            <!-- /Input -->
+                                            <!-- Text -->
+                                            <span class="fs--16 fw6 lh--20 col--ebony--variation-2">Days</span>
+                                            <!-- /Text -->
+                                        </div>
+                                        <!-- /Days Input Field -->
+
+                                        <!-- Total sold item Input Field -->
+                                        <div class="pad--y--16 pad--x--12 flex items-center gap--8 flex--max br br--col--mischka">
+                                            <!-- Text -->
+                                            <span class="fs--16 fw6 lh--20 col--ebony--variation-2">Total</span>
+                                            <!-- /Text -->
+                                            <!-- Input -->
+                                            <div class="flex--max">
+                                                <input type="text" name="" placeholder="Enter amount" class="w-100 h--20 fs--14 lh--20 col--pale-sky tr">
+                                            </div>
+                                            <!-- /Input -->
+                                            <!-- Text -->
+                                            <span class="fs--16 fw6 lh--20 col--ebony--variation-2 nowrap">items sold</span>
+                                            <!-- /Text -->
+                                        </div>
+                                        <!-- /Total sold item Input Field -->
+
+                                        <!-- Preview Post -->
+                                        <div class="w--120 ba br--col--mischka flex flex-none">
+                                            <!-- Button -->
+                                            <button class="flex--max pad--y--16 pad--x--12 flex justify-center items-center gap--4 hover--parent--child--col--blue-ribbon">
+                                                <img src="../assets/icons/eye.svg" alt="" class="w--16 h--16 filter--col--oxford-blue hov--filter--col--blue-ribbon">
+                                                <span class="fs--12 fw5 lh--20 col--oxford-blue nowrap hover--col--blue-ribbon">Preview Post</span>
+                                            </button>
+                                            <!-- /Button -->
+                                        </div>
+                                        <!-- Preview Post -->
+
+                                        <!-- Three Dot Dropdown Button -->
+                                        <div class="bg-white-70 ba br--col--mischka flex items-center flex-none">
+                                            <button class="pad--x--8 pad--y--16">
+                                                <img src="../assets/icons/dots-vertical.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                            </button>
+                                        </div>
+                                        <!-- Three Dot Dropdown Button -->
+                                    </div>
+                                    <!-- /Merch group dropdown wrapper -->
+                                    <!-- Merch group dropdown wrapper -->
+                                    <div class="w-100 flex justify-start bg-white-90 bb br--col--mischka">
+                                        <!-- Field Wrapper -->
+                                        <div class="flex flex-column">
+                                            <!-- Merch Select Field --> <!-- For theme color change data-dropdown-type="subscriptions" "merch" "media" "profile"  -->
+                                            <div data-conditions-dropdown data-dropdown-type="merch" class="relative z--10000">
+                                                <select data-nice-select>
+                                                    <option data-icon="profile">Profile</option>
+                                                    <option data-icon="subscriptions">Subscription</option>
+                                                    <option data-icon="media">Media</option>
+                                                    <option data-icon="merch" selected>Merch</option>
+                                                </select>
+                                            </div>
+                                            <!-- End Merch Select Field -->
+                                        </div>
+                                        <!-- /Field Wrapper -->
+
+                                        <!-- Field Wrapper -->
+                                        <div class="flex flex-column">
+                                            <!-- Merch Select Field --> <!-- For theme color change data-dropdown-type="subscriptions" "merch" "media" "profile"
+                                             For data description style change data-description-type="large" "small"
+                                             All dropdown icon color like  data-icon-theme="subscription" "merch" "media" "profile"  -->
+                                            <div data-conditions-dropdown data-dropdown-type="merch" data-description-type="large" data-icon-theme="merch" class="relative z--10000">
+                                                <select data-nice-select>
+                                                    <option data-icon="sales" data-description="Broadcast your total earnings in frequency of your choice or when target goal is reached.">Sales (USD)</option>
+                                                    <option data-icon="sales_qty" data-description="Broadcast your total item sold in frequency of your choice or when target goal is reached." selected>Sales (QTY)</option>
+                                                    <option data-icon="preview" data-description="Broadcast your total views in frequency of your choice or when target goal is reached">Views</option>
+                                                </select>
+                                            </div>
+                                            <!-- End Merch Select Field -->
+                                        </div>
+                                        <!-- /Field Wrapper -->
+
+                                        <!-- Media every select-wrapper -->
+                                        <div class="br br--col--mischka">
+                                            <!-- Merch Select Field --> <!-- For theme color change data-dropdown-type="subscriptions" "merch" "media" "profile"
+                                             For data description style change data-description-type="large" "small"
+                                             For Select size style change data-select-size="large" "default"
+                                             All dropdown icon color like  data-icon-theme="subscription" "merch" "media" "profile"  -->
+                                            <div data-conditions-dropdown data-dropdown-type="merch" data-description-type="large" data-select-size="large" data-icon-theme="merch" data-select-icon="false" data-select-theme="default" class="relative z--10000">
+                                                <select data-nice-select>
+                                                    <option data-icon="merch" data-description="Post every time a new sale is made to keep your audience excited and engaged." selected>Every New Sale</option>
+                                                    <option data-icon="custom_sales_count" data-description="Post when you reach a set number of sales. Customize the count to fit your goals.">Custom Sales Count</option>
+                                                    <option data-icon="growth_comparision" data-description="Post only when your sales increase compared to the previous period to highlight positive trends.">Growth Comparison</option>
+                                                    <option data-icon="total_subscribers" data-description="Post the total number of sales for a chosen timeframe.">Total Sales Count</option>
+                                                    <option data-icon="custom_goal" data-description="Set a sales goal and post daily progress updates until the goal is reached.">Custom Goal</option>
+                                                </select>
+                                            </div>
+                                            <!-- End Merch Select Field -->
+                                        </div>
+                                        <!-- /Media every select-wrapper -->
+
+                                        <!-- Custom Range Select Field --> <!-- For theme color change data-dropdown-type="subscriptions" "merch" "media" "profile"
+                                         For data description style change data-description-type="large" "small"
+                                         For Select size style change data-select-size="large" "default"
+                                         All dropdown icon color like  data-icon-theme="subscription" "merch" "media" "profile"  -->
+                                        <div data-conditions-dropdown data-dropdown-type="media" data-description-type="small" data-select-size="small" data-icon-theme="media" data-select-icon="false" data-select-theme="default" class="relative z--10000">
+                                            <select data-nice-select>
+                                                <option use-as-placeholder>Post Frequency</option>
+                                                <option>Daily</option>
+                                                <option>Weekly</option>
+                                                <option>Monthly</option>
+                                                <option>Custom Range</option>
+                                            </select>
+                                        </div>
+                                        <!-- End Custom Range Select Field -->
+
+                                        <!-- Create Blank Space -->
+                                        <div class="pad--16 flex items-center gap--8 bl br--col--mischka-gray flex--max">
+                                            <!-- Text -->
+                                            <span class="fs--14 lh--20 col--pale-sky truncate"></span>
+                                            <!-- /Text -->
+                                        </div>
+                                        <!-- /Create Blank Space -->
+
+                                        <!-- Preview Post -->
+                                        <div class="w--120 ba br--col--mischka flex flex-none ml--auto">
+                                            <!-- Button -->
+                                            <button class="flex--max pad--y--16 pad--x--12 flex justify-center items-center gap--4 hover--parent--child--col--blue-ribbon">
+                                                <img src="../assets/icons/eye.svg" alt="" class="w--16 h--16 filter--col--oxford-blue hov--filter--col--blue-ribbon">
+                                                <span class="fs--12 fw5 lh--20 col--oxford-blue nowrap hover--col--blue-ribbon">Preview Post</span>
+                                            </button>
+                                            <!-- /Button -->
+                                        </div>
+                                        <!-- Preview Post -->
+
+                                        <!-- Three Dot Dropdown Button -->
+                                        <div class="bg-white-70 ba br--col--mischka flex items-center flex-none">
+                                            <button class="pad--x--8 pad--y--16">
+                                                <img src="../assets/icons/dots-vertical.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                            </button>
+                                        </div>
+                                        <!-- Three Dot Dropdown Button -->
+                                    </div>
+                                    <!-- /Merch group dropdown wrapper -->
+                                    <!-- Media group dropdown wrapper -->
+                                    <div class="w-100 flex justify-start bg-white-90 bb br--col--mischka">
+                                        <!-- Media Select Field --> <!-- For theme color change data-dropdown-type="subscriptions" "merch" "media" "profile"  -->
+                                        <div data-conditions-dropdown data-dropdown-type="media" class="relative z--10000">
+                                            <select data-nice-select>
+                                                <option data-icon="profile">Profile</option>
+                                                <option data-icon="subscriptions">Subscription</option>
+                                                <option data-icon="media" selected>Media</option>
+                                                <option data-icon="merch">Merch</option>
+                                            </select>
+                                        </div>
+                                        <!-- End Media Select Field -->
+
+                                        <!-- Media Select Field --> <!-- For theme color change data-dropdown-type="subscriptions" "merch" "media" "profile"
+                                         For data description style change data-description-type="large" "small"
+                                         All dropdown icon color like  data-icon-theme="subscription" "merch" "media" "profile"  -->
+                                        <div data-conditions-dropdown data-dropdown-type="media" data-description-type="large" data-icon-theme="media" class="relative z--10000">
+                                            <select data-nice-select>
+                                                <option data-icon="sales" data-description="Broadcast your total earnings in frequency of your choice or when target goal is reached.">Sales (USD)</option>
+                                                <option data-icon="sales_qty" data-description="Broadcast your total item sold in frequency of your choice or when target goal is reached." selected>Sales (QTY)</option>
+                                                <option data-icon="preview" data-description="Broadcast your total views in frequency of your choice or when target goal is reached">Views</option>
+                                            </select>
+                                        </div>
+                                        <!-- End Media Select Field -->
+
+                                        <!-- Media every select-wrapper -->
+                                        <div class="br br--col--mischka">
+                                            <!-- Media Select Field --> <!-- For theme color change data-dropdown-type="subscriptions" "merch" "media" "profile"
+                                             For data description style change data-description-type="large" "small"
+                                             For Select size style change data-select-size="large" "default"
+                                             All dropdown icon color like  data-icon-theme="subscription" "merch" "media" "profile"  -->
+                                            <div data-conditions-dropdown data-dropdown-type="media" data-description-type="large" data-select-size="large" data-icon-theme="media" data-select-icon="false" data-select-theme="default" class="relative z--10000">
+                                                <select data-nice-select>
+                                                    <option data-icon="merch" data-description="Post every time a new sale is made to keep your audience excited and engaged." selected>Every New Sale</option>
+                                                    <option data-icon="custom_sales_count" data-description="Post when you reach a set number of sales. Customize the count to fit your goals.">Custom Sales Count</option>
+                                                    <option data-icon="growth_comparision" data-description="Post only when your sales increase compared to the previous period to highlight positive trends.">Growth Comparison</option>
+                                                    <option data-icon="total_subscribers" data-description="Post the total number of sales for a chosen timeframe.">Total Sales Count</option>
+                                                    <option data-icon="custom_goal" data-description="Set a sales goal and post daily progress updates until the goal is reached.">Custom Goal</option>
+                                                </select>
+                                            </div>
+                                            <!-- End Media Select Field -->
+                                        </div>
+                                        <!-- /Media every select-wrapper -->
+
+                                        <!-- Custom Range Select Field --> <!-- For theme color change data-dropdown-type="subscriptions" "merch" "media" "profile"
+                                         For data description style change data-description-type="large" "small"
+                                         For Select size style change data-select-size="large" "default"
+                                         All dropdown icon color like  data-icon-theme="subscription" "merch" "media" "profile"  -->
+                                        <div data-conditions-dropdown data-dropdown-type="media" data-description-type="small" data-select-size="small" data-icon-theme="media" data-select-icon="false" data-select-theme="default" class="relative z--10000">
+                                            <select data-nice-select>
+                                                <option use-as-placeholder>Post Frequency</option>
+                                                <option>Daily</option>
+                                                <option>Weekly</option>
+                                                <option>Monthly</option>
+                                                <option>Custom Range</option>
+                                            </select>
+                                        </div>
+                                        <!-- End Custom Range Select Field -->
+
+                                        <!-- Days Input Field -->
+                                        <div class="pad--y--16 pad--x--12 flex items-center gap--8 br bl br--col--mischka flex--max">
+                                            <!-- Input -->
+                                            <div class="flex--max">
+                                                <input type="text" name="" value="7" class="w-100 h--20 fs--14 lh--20 col--ebony--variation-2 tr">
+                                            </div>
+                                            <!-- /Input -->
+                                            <!-- Text -->
+                                            <span class="fs--16 fw6 lh--20 col--ebony--variation-2">Days</span>
+                                            <!-- /Text -->
+                                        </div>
+                                        <!-- /Days Input Field -->
+
+                                        <!-- Total sold item Input Field -->
+                                        <div class="pad--y--16 pad--x--12 flex items-center gap--8 flex--max">
+                                            <!-- Text -->
+                                            <span class="fs--16 fw6 lh--20 col--ebony--variation-2">Total</span>
+                                            <!-- /Text -->
+                                            <!-- Input -->
+                                            <div class="flex--max">
+                                                <input type="text" name="" value="2000" class="w-100 h--20 fs--14 lh--20 col--ebony--variation-2 tr">
+                                            </div>
+                                            <!-- /Input -->
+                                            <!-- Text -->
+                                            <span class="fs--16 fw6 lh--20 col--ebony--variation-2 nowrap">items sold</span>
+                                            <!-- /Text -->
+                                        </div>
+                                        <!-- /Total sold item Input Field -->
+
+                                        <!-- Preview Post -->
+                                        <div class="w--120 ba br--col--mischka flex flex-none">
+                                            <!-- Button -->
+                                            <button class="flex--max pad--y--16 pad--x--12 flex justify-center items-center gap--4 hover--parent--child--col--blue-ribbon">
+                                                <img src="../assets/icons/edit-02-green.svg" alt="" class="w--16 h--16 filter--col--oxford-blue hov--filter--col--blue-ribbon">
+                                                <span class="fs--12 fw5 lh--20 col--oxford-blue nowrap hover--col--blue-ribbon">Edit Draft</span>
+                                            </button>
+                                            <!-- /Button -->
+                                        </div>
+                                        <!-- Preview Post -->
+
+                                        <!-- Three Dot Dropdown Button -->
+                                        <div class="bg-white-70 ba br--col--mischka flex items-center flex-none">
+                                            <button class="pad--x--8 pad--y--16">
+                                                <img src="../assets/icons/dots-vertical.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                            </button>
+                                        </div>
+                                        <!-- Three Dot Dropdown Button -->
+                                    </div>
+                                    <!-- /Media group dropdown wrapper -->
+                                    <!-- Media group dropdown wrapper -->
+                                    <div class="w-100 flex justify-start bg-white-90 bb br--col--mischka">
+                                        <!-- Media Select Field --> <!-- For theme color change data-dropdown-type="subscriptions" "merch" "media" "profile"  -->
+                                        <div data-conditions-dropdown data-dropdown-type="media" class="relative z--10000">
+                                            <select data-nice-select>
+                                                <option data-icon="profile">Profile</option>
+                                                <option data-icon="subscriptions">Subscription</option>
+                                                <option data-icon="media" selected>Media</option>
+                                                <option data-icon="merch">Merch</option>
+                                            </select>
+                                        </div>
+                                        <!-- End Media Select Field -->
+
+                                        <!-- Media Select Field --> <!-- For theme color change data-dropdown-type="subscriptions" "merch" "media" "profile"
+                                         For data description style change data-description-type="large" "small"
+                                         All dropdown icon color like  data-icon-theme="subscription" "merch" "media" "profile"  -->
+                                        <div data-conditions-dropdown data-dropdown-type="media" data-description-type="large" data-icon-theme="media" class="relative z--10000">
+                                            <select data-nice-select>
+                                                <option data-icon="sales" data-description="Broadcast your total earnings in frequency of your choice or when target goal is reached.">Sales (USD)</option>
+                                                <option data-icon="sales_qty" data-description="Broadcast your total item sold in frequency of your choice or when target goal is reached." selected>Sales (QTY)</option>
+                                                <option data-icon="preview" data-description="Broadcast your total views in frequency of your choice or when target goal is reached">Views</option>
+                                            </select>
+                                        </div>
+                                        <!-- End Media Select Field -->
+
+                                        <!-- Media every select-wrapper -->
+                                        <div class="br br--col--mischka">
+                                            <!-- Media Select Field --> <!-- For theme color change data-dropdown-type="subscriptions" "merch" "media" "profile"
+                                             For data description style change data-description-type="large" "small"
+                                             For Select size style change data-select-size="large" "default"
+                                             All dropdown icon color like  data-icon-theme="subscription" "merch" "media" "profile"  -->
+                                            <div data-conditions-dropdown data-dropdown-type="media" data-description-type="large" data-select-size="large" data-icon-theme="media" data-select-icon="false" data-select-theme="default" class="relative z--10000">
+                                                <select data-nice-select>
+                                                    <option data-icon="merch" data-description="Post every time a new sale is made to keep your audience excited and engaged." selected>Every New Sale</option>
+                                                    <option data-icon="custom_sales_count" data-description="Post when you reach a set number of sales. Customize the count to fit your goals.">Custom Sales Count</option>
+                                                    <option data-icon="growth_comparision" data-description="Post only when your sales increase compared to the previous period to highlight positive trends.">Growth Comparison</option>
+                                                    <option data-icon="total_subscribers" data-description="Post the total number of sales for a chosen timeframe.">Total Sales Count</option>
+                                                    <option data-icon="custom_goal" data-description="Set a sales goal and post daily progress updates until the goal is reached.">Custom Goal</option>
+                                                </select>
+                                            </div>
+                                            <!-- End Media Select Field -->
+                                        </div>
+                                        <!-- /Media every select-wrapper -->
+
+                                        <!-- Custom Range Select Field --> <!-- For theme color change data-dropdown-type="subscriptions" "merch" "media" "profile"
+                                         For data description style change data-description-type="large" "small"
+                                         For Select size style change data-select-size="large" "default"
+                                         All dropdown icon color like  data-icon-theme="subscription" "merch" "media" "profile"  -->
+                                        <div data-conditions-dropdown data-dropdown-type="media" data-description-type="small" data-select-size="small" data-icon-theme="media" data-select-icon="false" data-select-theme="default" class="relative z--10000">
+                                            <select data-nice-select>
+                                                <option use-as-placeholder>Post Frequency</option>
+                                                <option>Daily</option>
+                                                <option>Weekly</option>
+                                                <option>Monthly</option>
+                                                <option>Custom Range</option>
+                                            </select>
+                                        </div>
+                                        <!-- End Custom Range Select Field -->
+
+                                        <!-- Days Input Field -->
+                                        <div class="pad--y--16 pad--x--12 flex items-center gap--8 br bl br--col--mischka flex--max">
+                                            <!-- Input -->
+                                            <div class="flex--max">
+                                                <input type="text" name="" value="7" class="w-100 h--20 fs--14 lh--20 col--ebony--variation-2 tr">
+                                            </div>
+                                            <!-- /Input -->
+                                            <!-- Text -->
+                                            <span class="fs--16 fw6 lh--20 col--ebony--variation-2">Days</span>
+                                            <!-- /Text -->
+                                        </div>
+                                        <!-- /Days Input Field -->
+
+                                        <!-- Total sold item Input Field -->
+                                        <div class="pad--y--16 pad--x--12 flex items-center gap--8 flex--max">
+                                            <!-- Text -->
+                                            <span class="fs--16 fw6 lh--20 col--ebony--variation-2">Total</span>
+                                            <!-- /Text -->
+                                            <!-- Input -->
+                                            <div class="flex--max">
+                                                <input type="text" name="" value="2000" class="w-100 h--20 fs--14 lh--20 col--ebony--variation-2 tr">
+                                            </div>
+                                            <!-- /Input -->
+                                            <!-- Text -->
+                                            <span class="fs--16 fw6 lh--20 col--ebony--variation-2 nowrap">items sold</span>
+                                            <!-- /Text -->
+                                        </div>
+                                        <!-- /Total sold item Input Field -->
+
+                                        <!-- Preview Post -->
+                                        <div class="w--120 ba br--col--mischka flex flex-none">
+                                            <!-- Button -->
+                                            <button class="flex--max pad--y--16 pad--x--12 flex justify-center items-center gap--4 hover--parent--child--col--blue-ribbon">
+                                                <img src="../assets/icons/eye.svg" alt="" class="w--16 h--16 filter--col--oxford-blue hov--filter--col--blue-ribbon">
+                                                <span class="fs--12 fw5 lh--20 col--oxford-blue nowrap hover--col--blue-ribbon">Preview Post</span>
+                                            </button>
+                                            <!-- /Button -->
+                                        </div>
+                                        <!-- Preview Post -->
+
+                                        <!-- Three Dot Dropdown Button -->
+                                        <div class="bg-white-70 ba br--col--mischka flex items-center flex-none">
+                                            <button class="pad--x--8 pad--y--16">
+                                                <img src="../assets/icons/dots-vertical.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                            </button>
+                                        </div>
+                                        <!-- Three Dot Dropdown Button -->
+                                    </div>
+                                    <!-- /Media group dropdown wrapper -->
+                                    <!-- Subscriptions group dropdown wrapper -->
+                                    <div class="w-100 flex justify-between bg-white-90 bb br--col--mischka">
+                                        <!-- Subscription Select Field --> <!-- For theme color change data-dropdown-type="subscriptions" "merch" "media" "profile"  -->
+                                        <div data-conditions-dropdown data-dropdown-type="subscriptions" class="relative z--10000">
+                                            <select data-nice-select>
+                                                <option data-icon="profile">Profile</option>
+                                                <option data-icon="subscriptions" selected>Subscription</option>
+                                                <option data-icon="media">Media</option>
+                                                <option data-icon="merch">Merch</option>
+                                            </select>
+                                        </div>
+                                        <!-- End Subscription Select Field -->
+
+                                        <!-- Subscribers Select Field --> <!-- For theme color change data-dropdown-type="subscriptions" "merch" "media" "profile"
+                                         For data description style change data-description-type="large" "small"
+                                          All dropdown icon color like  data-icon-theme="subscription" "merch" "media" "profile"   -->
+                                        <div data-conditions-dropdown data-dropdown-type="subscriptions" data-description-type="large" data-icon-theme="subscriptions" class="relative z--10000">
+                                            <select data-nice-select>
+                                                <option data-icon="sales" data-description="Broadcast your subscription earnings in frequency of your choice or when target goal is reached.">Sales (USD)</option>
+                                                <option data-icon="subscribers" data-description="Broadcast number subscribers in frequency of your choice or when target goal is reached." selected>Subscribers</option>
+                                            </select>
+                                        </div>
+                                        <!-- End Subscribers Select Field -->
+
+                                        <!-- Media every select-wrapper -->
+                                        <div class="br br--col--mischka">
+                                            <!-- Subscribers Select Field --> <!-- For theme color change data-dropdown-type="subscriptions" "merch" "media" "profile"
+                                             For data description style change data-description-type="large" "small"
+                                             For Select size style change data-select-size="large" "default"
+                                             All dropdown icon color like  data-icon-theme="subscription" "merch" "media" "profile"  -->
+                                            <div data-conditions-dropdown data-dropdown-type="subscriptions" data-description-type="large" data-select-size="large" data-icon-theme="subscriptions" data-select-icon="false" data-select-theme="default" class="relative z--10000">
+                                                <select data-nice-select>
+                                                    <option data-icon="add_subscribers" data-description="Post every time someone subscribes to keep your audience engaged." selected>Every New Subscribers</option>
+                                                    <option data-icon="subscribers" data-description="Post every time a recurring subscriber renews their subscription to keep your audience engaged.">Every Recurring Subscribers</option>
+                                                    <option data-icon="add_subscribers" data-description="Post when you reach a set number of new subscribers. Customize the count as needed.">Custom New Subscribers Count</option>
+                                                    <option data-icon="subscribers" data-description="Post when you hit a set number of recurring subscribers. Customize the count to your preference.">Custom Recurring Subscribers Count</option>
+                                                    <option data-icon="growth_comparision" data-description="Post only when the number of subscribers increases compared to the previous period.">Growth Comparison</option>
+                                                    <option data-icon="total_subscribers" data-description="Post the total number of subscribers for a chosen timeframe.">Total Subscribers Count</option>
+                                                    <option data-icon="custom_goal" data-description="Set a subscriber goal and post daily progress updates until the goal is achieved.">Custom Goal</option>
+                                                </select>
+                                            </div>
+                                            <!-- End Subscribers Select Field -->
+                                        </div>
+                                        <!-- /Media every select-wrapper -->
+
+                                        <!-- Days Input Field -->
+                                        <div class="pad--16 flex items-center gap--8 ba br--col--athens-gray-2 flex--max">
+                                            <!-- Text -->
+                                            <span class="fs--14 lh--20 col--pale-sky truncate">Repost every time when you gain a new subscribers</span>
+                                            <!-- /Text -->
+                                        </div>
+                                        <!-- /Days Input Field -->
+
+                                        <!-- Preview Post -->
+                                        <div class="w--120 ba br--col--mischka flex flex--none">
+                                            <!-- Button -->
+                                            <button class="flex--max pad--y--16 pad--x--12 flex justify-center items-center gap--4 hover--parent--child--col--blue-ribbon">
+                                                <img src="../assets/icons/edit-02-green.svg" alt="" class="w--16 h--16 filter--col--oxford-blue hov--filter--col--blue-ribbon">
+                                                <span class="fs--12 fw5 lh--20 col--oxford-blue nowrap hover--col--blue-ribbon">Edit Draft</span>
+                                            </button>
+                                            <!-- /Button -->
+                                        </div>
+                                        <!-- Preview Post -->
+
+                                        <!-- Three Dot Dropdown Button -->
+                                        <div class="bg-white-70 ba br--col--mischka flex items-center flex-none">
+                                            <button class="pad--x--8 pad--y--16">
+                                                <img src="../assets/icons/dots-vertical.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                            </button>
+                                        </div>
+                                        <!-- Three Dot Dropdown Button -->
+                                    </div>
+                                    <!-- /Subscriptions group dropdown wrapper -->
+
+                                    <!-- Profile group dropdown wrapper -->
+                                    <div class="w-100 flex justify-between bg-white-90 bb br--col--mischka">
+                                        <!-- Profile Select Field --> <!-- For theme color change data-dropdown-type="subscriptions" "merch" "media" "profile"  -->
+                                        <div data-conditions-dropdown data-dropdown-type="profile" class="relative z--10000">
+                                            <select data-nice-select>
+                                                <option data-icon="profile" selected>Profile</option>
+                                                <option data-icon="subscriptions">Subscription</option>
+                                                <option data-icon="media">Media</option>
+                                                <option data-icon="merch">Merch</option>
+                                            </select>
+                                        </div>
+                                        <!-- End Profile Select Field -->
+
+                                        <!-- Profile Select Field --> <!-- For theme color change data-dropdown-type="subscriptions" "merch" "media" "profile"
+                                         For data description style change data-description-type="large" "small"
+                                         All dropdown icon color like  data-icon-theme="subscription" "merch" "media" "profile"  -->
+                                        <div data-conditions-dropdown data-dropdown-type="profile" data-description-type="large" data-icon-theme="profile" class="relative z--10000">
+                                            <select data-nice-select>
+                                                <option data-icon="heart_likes" data-description="Broadcast your profile likes in frequency of your choice or when target goal is reached.">Profile Likes</option>
+                                                <option data-icon="heart_likes" data-description="Broadcast your feed likes in frequency of your choice or when target goal is reached.">Feed Likes</option>
+                                                <option data-icon="add_subscribers" data-description="Broadcast  number of profile visits in frequency of your choice or when target goal is reached">Profile Visits</option>
+                                                <option data-icon="subscribers" data-description="Broadcast your profile followers in frequency of your choice or when target goal is reached" selected>Followers</option>
+                                            </select>
+                                        </div>
+                                        <!-- End Profile Select Field -->
+
+                                        <!-- Media every select-wrapper -->
+                                        <div class="br br--col--mischka">
+                                            <!-- Profile Select Field --> <!-- For theme color change data-dropdown-type="subscriptions" "merch" "media" "profile"
+                                             For data description style change data-description-type="large" "small"
+                                             For Select size style change data-select-size="large" "default"
+                                             All dropdown icon color like  data-icon-theme="subscription" "merch" "media" "profile"  -->
+                                            <div data-conditions-dropdown data-dropdown-type="profile" data-description-type="large" data-select-size="large" data-icon-theme="profile" data-select-icon="false" data-select-theme="default" class="relative z--10000">
+                                                <select data-nice-select>
+                                                    <option data-icon="add_subscribers" data-description="Post every time someone follows you to keep your audience engaged." selected>Every New Followers</option>
+                                                    <option data-icon="subscribers" data-description="Post when you reach a set number of new followers. Customize the count as needed.">Custom New Followers Count</option>
+                                                    <option data-icon="growth_comparision" data-description="Post only when the number of followers increases compared to the previous period.">Growth Comparison</option>
+                                                    <option data-icon="total_subscribers" data-description="Post the total number of followers for a chosen timeframe.">Total New Followers Count</option>
+                                                    <option data-icon="custom_goal" data-description="Set a followers goal and post daily progress updates until the goal is achieved.">Custom Goal</option>
+                                                </select>
+                                            </div>
+                                            <!-- End Profile Select Field -->
+                                        </div>
+                                        <!-- /Media every select-wrapper -->
+
+                                        <!-- Days Input Field -->
+                                        <div class="pad--16 flex items-center gap--8 ba br--col--athens-gray-2 flex--max">
+                                            <!-- Text -->
+                                            <span class="fs--14 lh--20 col--pale-sky truncate">Repost every time when you gain a new subscribers</span>
+                                            <!-- /Text -->
+                                        </div>
+                                        <!-- /Days Input Field -->
+
+                                        <!-- Preview Post -->
+                                        <div class="w--120 ba br--col--mischka flex flex--none">
+                                            <!-- Button -->
+                                            <button class="flex--max pad--y--16 pad--x--12 flex justify-center items-center gap--4 hover--parent--child--col--blue-ribbon">
+                                                <img src="../assets/icons/eye.svg" alt="" class="w--16 h--16 filter--col--oxford-blue hov--filter--col--blue-ribbon">
+                                                <span class="fs--12 fw5 lh--20 col--oxford-blue nowrap hover--col--blue-ribbon">Preview Post</span>
+                                            </button>
+                                            <!-- /Button -->
+                                        </div>
+                                        <!-- Preview Post -->
+
+                                        <!-- Three Dot Dropdown Button -->
+                                        <div class="bg-white-70 ba br--col--mischka flex items-center flex-none">
+                                            <button class="pad--x--8 pad--y--16">
+                                                <img src="../assets/icons/dots-vertical.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                                            </button>
+                                        </div>
+                                        <!-- Three Dot Dropdown Button -->
+                                    </div>
+                                    <!-- /Profile group dropdown wrapper -->
                                 </div>
-                                <!-- /Input -->
-                                <!-- Text -->
-                                <span class="fs--16 fw6 lh--20 col--ebony--variation-2">Days</span>
-                                <!-- /Text -->
+                                <!-- /Table Body -->
                             </div>
-                            <!-- /Days Input Field -->
-
-                            <!-- Total sold item Input Field -->
-                            <div class="pad--y--16 pad--x--12 flex items-center gap--8 flex--max">
-                                <!-- Text -->
-                                <span class="fs--16 fw6 lh--20 col--ebony--variation-2">Total</span>
-                                <!-- /Text -->
-                                <!-- Input -->
-                                <div class="flex--max">
-                                    <input type="text" name="" value="2000" class="w-100 h--20 fs--14 lh--20 col--ebony--variation-2 tr">
-                                </div>
-                                <!-- /Input -->
-                                <!-- Text -->
-                                <span class="fs--16 fw6 lh--20 col--ebony--variation-2 nowrap">items sold</span>
-                                <!-- /Text -->
-                            </div>
-                            <!-- /Total sold item Input Field -->
-
-                            <!-- Preview Post -->
-                            <div class="ba br--col--mischka flex flex-none">
-                                <!-- Button -->
-                                <button class="flex--max pad--y--16 pad--x--12 flex justify-center items-center gap--4 hover--parent--child--col--blue-ribbon">
-                                    <img src="../assets/icons/eye.svg" alt="" class="w--16 h--16 filter--col--oxford-blue hov--filter--col--blue-ribbon">
-                                    <span class="fs--12 fw5 lh--20 col--oxford-blue nowrap hover--col--blue-ribbon">Preview Post</span>
-                                </button>
-                                <!-- /Button -->
-                            </div>
-                            <!-- Preview Post -->
-
-                            <!-- Three Dot Dropdown Button -->
-                            <div class="bg-white-70 ba br--col--mischka flex items-center flex-none">
-                                <button class="pad--x--8 pad--y--16">
-                                    <img src="../assets/icons/dots-vertical.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
-                                </button>
-                            </div>
-                            <!-- Three Dot Dropdown Button -->
+                            <!-- /Table -->
                         </div>
-                        <!-- /Media group dropdown wrapper -->
 
-                        <!-- Merch group dropdown wrapper -->
-                        <div class="w-100 flex justify-between bg-white-90 bb br--col--mischka">
-                            <!-- Merch Select Field --> <!-- For theme color change data-dropdown-type="subscriptions" "merch" "media" "profile"  -->
-                            <div data-conditions-dropdown data-dropdown-type="merch" class="relative z--10000">
-                                <select data-nice-select>
-                                    <option data-icon="profile">Profile</option>
-                                    <option data-icon="subscriptions">Subscription</option>
-                                    <option data-icon="media">Media</option>
-                                    <option data-icon="merch" selected>Merch</option>
-                                </select>
-                            </div>
-                            <!-- End Merch Select Field -->
-
-                            <!-- Merch Select Field --> <!-- For theme color change data-dropdown-type="subscriptions" "merch" "media" "profile"
-                             For data description style change data-description-type="large" "small"
-                             All dropdown icon color like  data-icon-theme="subscription" "merch" "media" "profile"  -->
-                            <div data-conditions-dropdown data-dropdown-type="merch" data-description-type="large" data-icon-theme="merch" class="relative z--10000">
-                                <select data-nice-select>
-                                    <option data-icon="sales" data-description="Broadcast your total earnings in frequency of your choice or when target goal is reached.">Sales (USD)</option>
-                                    <option data-icon="sales_qty" data-description="Broadcast your total item sold in frequency of your choice or when target goal is reached." selected>Sales (QTY)</option>
-                                    <option data-icon="preview" data-description="Broadcast your total views in frequency of your choice or when target goal is reached">Views</option>
-                                </select>
-                            </div>
-                            <!-- End Merch Select Field -->
-
-                            <!-- Media every select-wrapper -->
-                            <div class="br br--col--mischka">
-                                <!-- Merch Select Field --> <!-- For theme color change data-dropdown-type="subscriptions" "merch" "media" "profile"
-                                 For data description style change data-description-type="large" "small"
-                                 For Select size style change data-select-size="large" "default"
-                                 All dropdown icon color like  data-icon-theme="subscription" "merch" "media" "profile"  -->
-                                <div data-conditions-dropdown data-dropdown-type="merch" data-description-type="large" data-select-size="large" data-icon-theme="merch" data-select-icon="false" data-select-theme="default" class="relative z--10000">
-                                    <select data-nice-select>
-                                        <option data-icon="merch" data-description="Post every time a new sale is made to keep your audience excited and engaged." selected>Every New Sale</option>
-                                        <option data-icon="custom_sales_count" data-description="Post when you reach a set number of sales. Customize the count to fit your goals.">Custom Sales Count</option>
-                                        <option data-icon="growth_comparision" data-description="Post only when your sales increase compared to the previous period to highlight positive trends.">Growth Comparison</option>
-                                        <option data-icon="total_subscribers" data-description="Post the total number of sales for a chosen timeframe.">Total Sales Count</option>
-                                        <option data-icon="custom_goal" data-description="Set a sales goal and post daily progress updates until the goal is reached.">Custom Goal</option>
-                                    </select>
-                                </div>
-                                <!-- End Merch Select Field -->
-                            </div>
-                            <!-- /Media every select-wrapper -->
-
-                            <!-- Custom Range Select Field --> <!-- For theme color change data-dropdown-type="subscriptions" "merch" "media" "profile"
-                             For data description style change data-description-type="large" "small"
-                             For Select size style change data-select-size="large" "default"
-                             All dropdown icon color like  data-icon-theme="subscription" "merch" "media" "profile"  -->
-                            <div data-conditions-dropdown data-dropdown-type="media" data-description-type="small" data-select-size="small" data-icon-theme="media" data-select-icon="false" data-select-theme="default" class="relative z--10000">
-                                <select data-nice-select>
-                                    <option use-as-placeholder>Post Frequency</option>
-                                    <option>Daily</option>
-                                    <option>Weekly</option>
-                                    <option>Monthly</option>
-                                    <option>Custom Range</option>
-                                </select>
-                            </div>
-                            <!-- End Custom Range Select Field -->
-
-                            <!-- Days Input Field -->
-                            <div class="pad--y--16 pad--x--12 flex items-center gap--8 br bl br--col--mischka flex--max">
-                                <!-- Input -->
-                                <div class="flex--max">
-                                    <input type="text" name="" value="10" class="w-100 h--20 fs--14 lh--20 col--ebony--variation-2 tr">
-                                </div>
-                                <!-- /Input -->
-                                <!-- Text -->
-                                <span class="fs--16 fw6 lh--20 col--ebony--variation-2">Days</span>
-                                <!-- /Text -->
-                            </div>
-                            <!-- /Days Input Field -->
-
-                            <!-- Total sold item Input Field -->
-                            <div class="pad--y--16 pad--x--12 flex items-center gap--8 flex--max">
-                                <!-- Text -->
-                                <span class="fs--16 fw6 lh--20 col--ebony--variation-2">Every</span>
-                                <!-- /Text -->
-                                <!-- Input -->
-                                <div class="flex--max">
-                                    <input type="text" name="" value="2000" class="w-100 h--20 fs--14 lh--20 col--ebony--variation-2 tr">
-                                </div>
-                                <!-- /Input -->
-                                <!-- Text -->
-                                <span class="fs--16 fw6 lh--20 col--ebony--variation-2 nowrap">items sold</span>
-                                <!-- /Text -->
-                            </div>
-                            <!-- /Total sold item Input Field -->
-
-                            <!-- Preview Post -->
-                            <div class="ba br--col--mischka flex flex-none">
-                                <!-- Button -->
-                                <button class="flex--max pad--y--16 pad--x--12 flex justify-center items-center gap--4 hover--parent--child--col--blue-ribbon">
-                                    <img src="../assets/icons/eye.svg" alt="" class="w--16 h--16 filter--col--oxford-blue hov--filter--col--blue-ribbon">
-                                    <span class="fs--12 fw5 lh--20 col--oxford-blue nowrap hover--col--blue-ribbon">Preview Post</span>
-                                </button>
-                                <!-- /Button -->
-                            </div>
-                            <!-- Preview Post -->
-
-                            <!-- Three Dot Dropdown Button -->
-                            <div class="bg-white-70 ba br--col--mischka flex items-center flex-none">
-                                <button class="pad--x--8 pad--y--16">
-                                    <img src="../assets/icons/dots-vertical.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
-                                </button>
-                            </div>
-                            <!-- Three Dot Dropdown Button -->
+                        <!-- second tab content items -->
+                        <div data-tabbed-content="tabbed-content-second-tab" data-target="second-tab"
+                            class="flex-column justify-start items-start gap--16 flex-auto mt--8-neg dn">
+                            <p>Second</p>
                         </div>
-                        <!-- /Merch group dropdown wrapper -->
+                    </div>
 
-                        <!-- Subscriptions group dropdown wrapper -->
-                        <div class="w-100 flex justify-between bg-white-90 bb br--col--mischka">
-                            <!-- Subscription Select Field --> <!-- For theme color change data-dropdown-type="subscriptions" "merch" "media" "profile"  -->
-                            <div data-conditions-dropdown data-dropdown-type="subscriptions" class="relative z--10000">
-                                <select data-nice-select>
-                                    <option data-icon="profile">Profile</option>
-                                    <option data-icon="subscriptions" selected>Subscription</option>
-                                    <option data-icon="media">Media</option>
-                                    <option data-icon="merch">Merch</option>
-                                </select>
-                            </div>
-                            <!-- End Subscription Select Field -->
-
-                            <!-- Subscribers Select Field --> <!-- For theme color change data-dropdown-type="subscriptions" "merch" "media" "profile"
-                             For data description style change data-description-type="large" "small"
-                              All dropdown icon color like  data-icon-theme="subscription" "merch" "media" "profile"   -->
-                            <div data-conditions-dropdown data-dropdown-type="subscriptions" data-description-type="large" data-icon-theme="subscriptions" class="relative z--10000">
-                                <select data-nice-select>
-                                    <option data-icon="sales" data-description="Broadcast your subscription earnings in frequency of your choice or when target goal is reached.">Sales (USD)</option>
-                                    <option data-icon="subscribers" data-description="Broadcast number subscribers in frequency of your choice or when target goal is reached." selected>Subscribers</option>
-                                </select>
-                            </div>
-                            <!-- End Subscribers Select Field -->
-
-                            <!-- Media every select-wrapper -->
-                            <div class="br br--col--mischka">
-                                <!-- Subscribers Select Field --> <!-- For theme color change data-dropdown-type="subscriptions" "merch" "media" "profile"
-                                 For data description style change data-description-type="large" "small"
-                                 For Select size style change data-select-size="large" "default"
-                                 All dropdown icon color like  data-icon-theme="subscription" "merch" "media" "profile"  -->
-                                <div data-conditions-dropdown data-dropdown-type="subscriptions" data-description-type="large" data-select-size="large" data-icon-theme="subscriptions" data-select-icon="false" data-select-theme="default" class="relative z--10000">
-                                    <select data-nice-select>
-                                        <option data-icon="add_subscribers" data-description="Post every time someone subscribes to keep your audience engaged." selected>Every New Subscribers</option>
-                                        <option data-icon="subscribers" data-description="Post every time a recurring subscriber renews their subscription to keep your audience engaged.">Every Recurring Subscribers</option>
-                                        <option data-icon="add_subscribers" data-description="Post when you reach a set number of new subscribers. Customize the count as needed.">Custom New Subscribers Count</option>
-                                        <option data-icon="subscribers" data-description="Post when you hit a set number of recurring subscribers. Customize the count to your preference.">Custom Recurring Subscribers Count</option>
-                                        <option data-icon="growth_comparision" data-description="Post only when the number of subscribers increases compared to the previous period.">Growth Comparison</option>
-                                        <option data-icon="total_subscribers" data-description="Post the total number of subscribers for a chosen timeframe.">Total Subscribers Count</option>
-                                        <option data-icon="custom_goal" data-description="Set a subscriber goal and post daily progress updates until the goal is achieved.">Custom Goal</option>
-                                    </select>
-                                </div>
-                                <!-- End Subscribers Select Field -->
-                            </div>
-                            <!-- /Media every select-wrapper -->
-
-                            <!-- Days Input Field -->
-                            <div class="pad--16 flex items-center gap--8 ba br--col--athens-gray-2 flex--max">
-                                <!-- Text -->
-                                <span class="fs--14 lh--20 col--pale-sky truncate">Repost every time when you gain a new subscribers</span>
-                                <!-- /Text -->
-                            </div>
-                            <!-- /Days Input Field -->
-
-                            <!-- Preview Post -->
-                            <div class="ba br--col--mischka flex flex--none">
-                                <!-- Button -->
-                                <button class="flex--max pad--y--16 pad--x--12 flex justify-center items-center gap--4 hover--parent--child--col--blue-ribbon">
-                                    <img src="../assets/icons/eye.svg" alt="" class="w--16 h--16 filter--col--oxford-blue hov--filter--col--blue-ribbon">
-                                    <span class="fs--12 fw5 lh--20 col--oxford-blue nowrap hover--col--blue-ribbon">Preview Post</span>
-                                </button>
-                                <!-- /Button -->
-                            </div>
-                            <!-- Preview Post -->
-
-                            <!-- Three Dot Dropdown Button -->
-                            <div class="bg-white-70 ba br--col--mischka flex items-center flex-none">
-                                <button class="pad--x--8 pad--y--16">
-                                    <img src="../assets/icons/dots-vertical.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
-                                </button>
-                            </div>
-                            <!-- Three Dot Dropdown Button -->
-                        </div>
-                        <!-- /Subscriptions group dropdown wrapper -->
-
-                        <!-- Profile group dropdown wrapper -->
-                        <div class="w-100 flex justify-between bg-white-90 bb br--col--mischka">
-                            <!-- Profile Select Field --> <!-- For theme color change data-dropdown-type="subscriptions" "merch" "media" "profile"  -->
-                            <div data-conditions-dropdown data-dropdown-type="profile" class="relative z--10000">
-                                <select data-nice-select>
-                                    <option data-icon="profile" selected>Profile</option>
-                                    <option data-icon="subscriptions">Subscription</option>
-                                    <option data-icon="media">Media</option>
-                                    <option data-icon="merch">Merch</option>
-                                </select>
-                            </div>
-                            <!-- End Profile Select Field -->
-
-                            <!-- Profile Select Field --> <!-- For theme color change data-dropdown-type="subscriptions" "merch" "media" "profile"
-                             For data description style change data-description-type="large" "small"
-                             All dropdown icon color like  data-icon-theme="subscription" "merch" "media" "profile"  -->
-                            <div data-conditions-dropdown data-dropdown-type="profile" data-description-type="large" data-icon-theme="profile" class="relative z--10000">
-                                <select data-nice-select>
-                                    <option data-icon="heart_likes" data-description="Broadcast your profile likes in frequency of your choice or when target goal is reached.">Profile Likes</option>
-                                    <option data-icon="heart_likes" data-description="Broadcast your feed likes in frequency of your choice or when target goal is reached.">Feed Likes</option>
-                                    <option data-icon="add_subscribers" data-description="Broadcast  number of profile visits in frequency of your choice or when target goal is reached">Profile Visits</option>
-                                    <option data-icon="subscribers" data-description="Broadcast your profile followers in frequency of your choice or when target goal is reached" selected>Followers</option>
-                                </select>
-                            </div>
-                            <!-- End Profile Select Field -->
-
-                            <!-- Media every select-wrapper -->
-                            <div class="br br--col--mischka">
-                                <!-- Profile Select Field --> <!-- For theme color change data-dropdown-type="subscriptions" "merch" "media" "profile"
-                                 For data description style change data-description-type="large" "small"
-                                 For Select size style change data-select-size="large" "default"
-                                 All dropdown icon color like  data-icon-theme="subscription" "merch" "media" "profile"  -->
-                                <div data-conditions-dropdown data-dropdown-type="profile" data-description-type="large" data-select-size="large" data-icon-theme="profile" data-select-icon="false" data-select-theme="default" class="relative z--10000">
-                                    <select data-nice-select>
-                                        <option data-icon="add_subscribers" data-description="Post every time someone follows you to keep your audience engaged." selected>Every New Followers</option>
-                                        <option data-icon="subscribers" data-description="Post when you reach a set number of new followers. Customize the count as needed.">Custom New Followers Count</option>
-                                        <option data-icon="growth_comparision" data-description="Post only when the number of followers increases compared to the previous period.">Growth Comparison</option>
-                                        <option data-icon="total_subscribers" data-description="Post the total number of followers for a chosen timeframe.">Total New Followers Count</option>
-                                        <option data-icon="custom_goal" data-description="Set a followers goal and post daily progress updates until the goal is achieved.">Custom Goal</option>
-                                    </select>
-                                </div>
-                                <!-- End Profile Select Field -->
-                            </div>
-                            <!-- /Media every select-wrapper -->
-
-                            <!-- Days Input Field -->
-                            <div class="pad--16 flex items-center gap--8 ba br--col--athens-gray-2 flex--max">
-                                <!-- Text -->
-                                <span class="fs--14 lh--20 col--pale-sky truncate">Repost every time when you gain a new subscribers</span>
-                                <!-- /Text -->
-                            </div>
-                            <!-- /Days Input Field -->
-
-                            <!-- Preview Post -->
-                            <div class="ba br--col--mischka flex flex--none">
-                                <!-- Button -->
-                                <button class="flex--max pad--y--16 pad--x--12 flex justify-center items-center gap--4 hover--parent--child--col--blue-ribbon">
-                                    <img src="../assets/icons/eye.svg" alt="" class="w--16 h--16 filter--col--oxford-blue hov--filter--col--blue-ribbon">
-                                    <span class="fs--12 fw5 lh--20 col--oxford-blue nowrap hover--col--blue-ribbon">Preview Post</span>
-                                </button>
-                                <!-- /Button -->
-                            </div>
-                            <!-- Preview Post -->
-
-                            <!-- Three Dot Dropdown Button -->
-                            <div class="bg-white-70 ba br--col--mischka flex items-center flex-none">
-                                <button class="pad--x--8 pad--y--16">
-                                    <img src="../assets/icons/dots-vertical.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
-                                </button>
-                            </div>
-                            <!-- Three Dot Dropdown Button -->
-                        </div>
-                        <!-- /Profile group dropdown wrapper -->
-                    </div> <!-- End Page Content Structure -->
                 </div> <!-- End Inner Container -->
+
+                <!-- Add New Post Wrapper -->
+                <div class="absolute right--24 bottom--24 flex flex-column items-end gap--8">
+                    <!-- Repost Menu wrapper for Merch -->
+                    <div data-child-hide-inner class="w--496 br--8 bg-white-90 sh--14 bg--blur--50 dn">
+                        <!-- Inner -->
+                        <div class="pad--16 flex flex flex-column gap--16">
+                            <!-- Title -->
+                            <h2 class="fs--16 fw6 lh--24 col--ebony--variation-2">I want to post about..</h2>
+                            <!-- /Title -->
+                            <!-- Content Wrapper -->
+                            <div class="flex gap--8">
+                                <!-- Type -->
+                                <div class="w--188 flex flex-column gap--16">
+                                    <!-- Type Item -->
+                                    <div class="pad--16 flex items-center justify-between gap--4 br--5 o-50">
+                                        <!-- Title -->
+                                        <div class="flex items-center justify-start gap--4">
+                                            <img src="../assets/icons/profile-2.svg" alt="" class="w--16 h--16 filter--col--dodger-blue">
+                                            <h3 class="fs--14 fw6 lh--20 col--ebony--variation-2">Profile</h3>
+                                        </div>
+                                    </div>
+                                    <!-- /Type Item -->
+                                    <!-- Type Item -->
+                                    <div class="pad--16 flex items-center justify-between gap--4 br--5 o-50">
+                                        <!-- Title -->
+                                        <div class="flex items-center justify-start gap--4">
+                                            <img src="../assets/icons/subscription-icon.svg" alt="" class="w--16 h--16 filter--col--brink-pink">
+                                            <h3 class="fs--14 fw6 lh--20 col--ebony--variation-2">Subscription</h3>
+                                        </div>
+                                        <!-- /Title -->
+                                    </div>
+                                    <!-- /Type Item -->
+                                    <!-- Type Item -->
+                                    <div class="pad--16 flex items-center justify-between gap--4 br--5 o-50">
+                                        <!-- Title -->
+                                        <div class="flex items-center justify-start gap--4">
+                                            <img src="../assets/icons/media-icon-2.svg" alt="" class="w--16 h--16 filter--col--Heliotrope">
+                                            <h3 class="fs--14 fw6 lh--20 col--ebony--variation-2">Media</h3>
+                                        </div>
+                                        <!-- /Title -->
+                                    </div>
+                                    <!-- /Type Item -->
+                                    <!-- Type Item -->
+                                    <div class="pad--16 flex items-center justify-between gap--4 br--5 bg--col--twilight-blue">
+                                        <!-- Title -->
+                                        <div class="flex items-center justify-start gap--4">
+                                            <img src="../assets/icons/shopping-cart-03.svg" alt="" class="w--16 h--16 filter--col--bright-turquoise">
+                                            <h3 class="fs--14 fw6 lh--20 col--ebony--variation-2">Merch</h3>
+                                        </div>
+                                        <!-- /Title -->
+                                        <img src="../assets/icons/arrow-narrow-right.svg" alt="" class="w--12 h--12 filter--col--oxford-blue">
+                                    </div>
+                                    <!-- /Type Item -->
+                                </div>
+                                <!-- /Type -->
+                                <!-- Metrics Content -->
+                                   <div class="flex flex-column gap--8 flex--max">
+                                        <!-- Item -->
+                                        <div data-item-conteiner="merch" class="pad--16 flex flex-column gap--4 pointer">
+                                            <!-- Title wrapper -->
+                                            <div class="flex items-center justify-between gap--4">
+                                                <!-- Title Inner -->
+                                                <div class="flex items-center gap--4">
+                                                    <img src="../assets/icons/currency-dollar.svg" alt="" class="w--16 h--16 filter--col--bright-turquoise">
+                                                    <h3 class="fs--16 fw5 lh--24 col--ebony--variation-2">Sales (USD)</h3>
+                                                </div>
+                                                <!-- /Title Inner -->
+                                                <!-- Button -->
+                                                <button data-add-button class="pad--y--2 pad--x--8 br--5 bg--col--cerulean fs--12 fw7 lh--18 white">Add</button>
+                                            </div>
+                                            <!-- /Title wrapper -->
+                                            <!-- description -->
+                                            <p class="fs--12 lh--18 col--pale-sky">Broadcast your media earnings in frequency of your choice or when target goal is reached.</p>
+                                            <!-- /Description -->
+                                        </div>
+                                        <!-- /Item -->
+                                        <!-- Item -->
+                                        <div data-item-conteiner="merch" class="pad--16 flex flex-column gap--4 pointer">
+                                            <!-- Title wrapper -->
+                                            <div class="flex items-center justify-between gap--4">
+                                                <!-- Title Inner -->
+                                                <div class="flex items-center gap--4">
+                                                    <img src="../assets/icons/package-plus.svg" alt="" class="w--16 h--16 filter--col--bright-turquoise">
+                                                    <h3 class="fs--16 fw5 lh--24 col--ebony--variation-2">Sales (QTY)</h3>
+                                                </div>
+                                                <!-- /Title Inner -->
+                                                <!-- Button -->
+                                                <button data-add-button class="pad--y--2 pad--x--8 br--5 bg--col--cerulean fs--12 fw7 lh--18 white">Add</button>
+                                            </div>
+                                            <!-- /Title wrapper -->
+                                            <!-- description -->
+                                            <p class="fs--12 lh--18 col--pale-sky">Broadcast your total item sold in frequency of your choice or when target goal is reached.</p>
+                                            <!-- /Description -->
+                                        </div>
+                                        <!-- /Item -->
+                                        <!-- Item -->
+                                        <div data-item-conteiner="merch" class="pad--16 flex flex-column gap--4 pointer">
+                                            <!-- Title wrapper -->
+                                            <div class="flex items-center justify-between gap--4">
+                                                <!-- Title Inner -->
+                                                <div class="flex items-center gap--4">
+                                                    <img src="../assets/icons/heart.svg" alt="" class="w--16 h--16 filter--col--bright-turquoise">
+                                                    <h3 class="fs--16 fw5 lh--24 col--ebony--variation-2">Merch Likes</h3>
+                                                </div>
+                                                <!-- /Title Inner -->
+                                                <!-- Button -->
+                                                <button data-add-button class="pad--y--2 pad--x--8 br--5 bg--col--cerulean fs--12 fw7 lh--18 white">Add</button>
+                                            </div>
+                                            <!-- /Title wrapper -->
+                                            <!-- description -->
+                                            <p class="fs--12 lh--18 col--pale-sky">Broadcast your media likes in frequency of your choice or when target goal is reached.</p>
+                                            <!-- /Description -->
+                                        </div>
+                                        <!-- /Item -->
+                                        <!-- Item -->
+                                        <div data-item-conteiner="merch" class="pad--16 flex flex-column gap--4 pointer">
+                                            <!-- Title wrapper -->
+                                            <div class="flex items-center justify-between gap--4">
+                                                <!-- Title Inner -->
+                                                <div class="flex items-center gap--4">
+                                                    <img src="../assets/icons/eye.svg" alt="" class="w--16 h--16 filter--col--bright-turquoise">
+                                                    <h3 class="fs--16 fw5 lh--24 col--ebony--variation-2">Views</h3>
+                                                </div>
+                                                <!-- /Title Inner -->
+                                                <!-- Button -->
+                                                <button data-add-button class="pad--y--2 pad--x--8 br--5 bg--col--cerulean fs--12 fw7 lh--18 white">Add</button>
+                                            </div>
+                                            <!-- /Title wrapper -->
+                                            <!-- description -->
+                                            <p class="fs--12 lh--18 col--pale-sky">Broadcast your total views in frequency of your choice or when target goal is reached</p>
+                                            <!-- /Description -->
+                                        </div>
+                                        <!-- /Item -->
+                                   </div>
+                                <!-- /Metrics Content -->
+                            </div>
+                            <!-- /Content Wrapper -->
+                        </div>
+                        <!-- /Inner -->
+                    </div>
+                    <!-- /Repost Menu wrapper for Merch -->
+                    <!-- Add New Button -->
+                    <div class="flex">
+                        <button data-button-style="shadow-btn" data-button-color="green" class="h--40 pad--x--8 flex items-center gap--10 justify-center relative">
+                            <span> <img src="../assets/icons/plus-square.svg" class="w--24 h--24 filter--col--black flex-none">
+                            </span>
+                            <span class="flex fs--18 fw5 lh--28 black">Add New</span>
+                        </button>
+                    </div>
+                    <!-- /Add New Button -->
+                </div>
+                <!-- /Add New Post Wrapper -->
             </main>
             <!-- /main section -->
 
@@ -6431,9 +6912,7 @@
             id="pageElements-js"></script>
 
         <!-- Dashboard Sidebar Custom Script -->
-        <script src="assets/js/dashboard-ui.js"></script>
+        <script src="../assets/js/dashboard-ui.js"></script>
     </body>
 
 </html>
-
-
