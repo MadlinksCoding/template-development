@@ -708,6 +708,14 @@ html {
   color: var(--color-dove-gray, #6d6d6d)
 }
 
+.col--text-gray {
+  color: var(--color-text-gray, #8e8e8e)
+}
+
+.col--flamingo {
+  color: var(--color-flamingo, #f04438)
+}
+
 .bg--col--white--25 {
   background: rgba(255, 255, 255, .25)
 }
@@ -1070,6 +1078,11 @@ html {
   filter: brightness(0) saturate(100%) invert(52%) sepia(89%) saturate(3131%) hue-rotate(204deg) brightness(102%) contrast(105%)
 }
 
+.filter--col--dodger-blue-2 {
+  -webkit-filter: brightness(0) saturate(100%) invert(78%) sepia(52%) saturate(6778%) hue-rotate(176deg) brightness(93%) contrast(105%);
+  filter: brightness(0) saturate(100%) invert(78%) sepia(52%) saturate(6778%) hue-rotate(176deg) brightness(93%) contrast(105%)
+}
+
 .filter--col--brink-pink {
   -webkit-filter: brightness(0) saturate(100%) invert(61%) sepia(29%) saturate(3851%) hue-rotate(309deg) brightness(106%) contrast(98%);
   filter: brightness(0) saturate(100%) invert(61%) sepia(29%) saturate(3851%) hue-rotate(309deg) brightness(106%) contrast(98%)
@@ -1208,6 +1221,14 @@ html {
 
 .tracked--0-25 {
   letter-spacing: .016rem
+}
+
+.tracked--neg--0-48 {
+  letter-spacing: -.03rem
+}
+
+.tracked--neg--0-54 {
+  letter-spacing: -.034rem
 }
 
 .text--sh--2 {
