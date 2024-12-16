@@ -704,6 +704,10 @@ html {
   color: var(--color-timberwolf, #d7d3d0)
 }
 
+.col--dove-gray {
+  color: var(--color-dove-gray, #6d6d6d)
+}
+
 .bg--col--white--25 {
   background: rgba(255, 255, 255, .25)
 }
@@ -1081,6 +1085,11 @@ html {
   filter: brightness(0) saturate(100%) invert(65%) sepia(76%) saturate(820%) hue-rotate(149deg) brightness(97%) contrast(93%)
 }
 
+.filter--col--dove-gray {
+  -webkit-filter: brightness(0) saturate(100%) invert(43%) sepia(0) saturate(12%) hue-rotate(212deg) brightness(96%) contrast(83%);
+  filter: brightness(0) saturate(100%) invert(43%) sepia(0) saturate(12%) hue-rotate(212deg) brightness(96%) contrast(83%)
+}
+
 .filter--blur--2 {
   filter: blur(2px);
   -webkit-filter: blur(2px);
@@ -1335,6 +1344,10 @@ html {
   width: 64rem
 }
 
+.max--w--300 {
+  max-width: 18.75rem
+}
+
 .max--w--375 {
   max-width: 23.438rem
 }
@@ -1447,6 +1460,10 @@ html {
 .pad--x--14 {
   padding-left: .875rem;
   padding-right: .875rem
+}
+
+.pad--top--13 {
+  padding-top: .813rem
 }
 
 .pad--top--80 {

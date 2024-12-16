@@ -22,6 +22,7 @@
 .col--athens-gray-3 { color: var(--color-athens-gray3, #F2F4F7); }
 .col--wild-sand { color: var(--color-wild-sand, #F5F5F5); }
 .col--timberwolf { color: var(--color-timberwolf, #D7D3D0); }
+.col--dove-gray { color: var(--color-dove-gray, #6D6D6D); }
 
 /* Background Colors*/
 .bg--col--white--25 { background: rgba(255, 255, 255, 0.25); }
@@ -133,6 +134,7 @@
 .filter--col--brink-pink { filter: brightness(0) saturate(100%) invert(61%) sepia(29%) saturate(3851%) hue-rotate(309deg) brightness(106%) contrast(98%); } /* #FD6F8E */
 .filter--col--Heliotrope { filter: brightness(0) saturate(100%) invert(81%) sepia(47%) saturate(6873%) hue-rotate(234deg) brightness(101%) contrast(96%); } /* #E478FA */
 .filter--col--bright-turquoise { filter: brightness(0) saturate(100%) invert(65%) sepia(76%) saturate(820%) hue-rotate(149deg) brightness(97%) contrast(93%); } /* #22CCEE */
+.filter--col--dove-gray { filter: brightness(0) saturate(100%) invert(43%) sepia(0%) saturate(12%) hue-rotate(212deg) brightness(96%) contrast(83%); } /* #6D6D6D */
 
 /* Filter Blur */
 .filter--blur--2 { filter: blur(2px); -webkit-filter: blur(2px); -moz-filter: blur(2px); }
@@ -246,6 +248,7 @@
 
 
 /* Max Width */
+.max--w--300 { max-width:18.75rem; /* max width 300px */ } /* confirmed in use */ /* pixel conversion correct */
 .max--w--375 { max-width:23.438rem; /* max width 375px */ } /* confirmed in use */ /* pixel conversion correct */
 .max--w--495 { max-width:30.938rem; /* max width 495px */ } /* confirmed in use */ /* pixel conversion correct */
 .max--w--520 { max-width:32.5rem; /* max width 520px */ } /* confirmed in use */ /* pixel conversion correct */
@@ -290,6 +293,7 @@
 .pad--x--16 { padding-left: 1rem; padding-right: 1rem; /* padding left right 16px */ }
 .pad--x--40 { padding-left: 2.5rem; padding-right: 2.5rem; /* padding-left 40px padding-right 40px */ }
 .pad--x--14 { padding-left: 0.875rem; padding-right: 0.875rem; /* padding-left 14px padding-right 14px */ }
+.pad--top--13 { padding-top: 0.813rem; /* padding top 13px */ } /* confirmed in use */ /* pixel conversion correct */
 .pad--top--80 { padding-top: 5rem; /* padding top 80px */ } /* confirmed in use */ /* pixel conversion correct */
 .pad--bottom--0 { padding-bottom: 0; }
 .pad--bottom--9 { padding-bottom: 0.563rem; /* padding bottom 9px */ }
