@@ -6045,9 +6045,9 @@
                     <!-- Page Content Structure -->
                     <div class="pad--y--32 flex flex-column gap--8 justify-center items-center h-100">
                         <!-- Add New Post Wrapper -->
-                        <div class="absolute right--24 bottom--24 z--10000 flex flex-column items-end gap--8">
-                            <!-- Repost Menu wrapper for Merch -->
-                            <div class="w--496 br--8 bg-white-90 sh--14 bg--blur--50">
+                        <div class="absolute right--24 bottom--24 z--10000 flex flex-column items-end gap--8 right--8-responsive-mobile right--8-responsive-mobile-portrait bottom--8--responsive-mobile bottom--8--responsive-mobile-portrait">
+                            <!-- Repost Menu wrapper for Merch for Desktop and Tablet -->
+                            <div class="w--496 br--8 bg-white-90 sh--14 bg--blur--50 display--none-responsive-mobile display--none-responsive-mobile-portrait">
                                 <!-- Inner -->
                                 <div class="pad--16 flex flex flex-column gap--16">
                                     <!-- Title -->
@@ -6184,7 +6184,8 @@
                                 </div>
                                 <!-- /Inner -->
                             </div>
-                            <!-- /Repost Menu wrapper for Merch -->
+                            <!-- /Repost Menu wrapper for Merch for Desktop and Tablet -->
+
                             <!-- Add New Button -->
                             <div class="flex">
                                 <button data-button-style="shadow-btn" data-button-color="green" class="h--40 pad--x--8 flex items-center gap--10 justify-center relative">
@@ -6200,7 +6201,74 @@
                 </div> <!-- End Inner Container -->
             </main>
             <!-- /main section -->
-
+            <!-- New FLow for Mobile -->
+            <div class="w-100 h--screen bg-white sh--14 bg--blur--50 fixed top-0 left-0 z--10010 dn display--flex-responsive-mobile display--flex-responsive-mobile-portrait">
+                <!-- Inner -->
+                <div class="w-100 pad--16 flex flex flex-column gap--16">
+                    <!-- Title Wrapper -->
+                    <div class="flex items-center justify-between gap--8">
+                        <!-- Title -->
+                        <h2 class="fs--16 fw6 lh--24 col--ebony--variation-2">I want to post about..</h2>
+                        <!-- /Title -->
+                        <!-- CLose Button -->
+                        <div class="flex pointer">
+                            <a href="#">
+                                <img src="../assets/icons/close-btn.svg" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                    <!-- /Title Wrapper -->
+                    <!-- Content Wrapper -->
+                    <div class="flex gap--8">
+                        <!-- Type -->
+                        <div class="w-100 flex flex-column gap--16">
+                            <!-- Type Item -->
+                            <div class="pad--16 flex items-center justify-between gap--4 br--5">
+                                <!-- Title -->
+                                <div class="flex items-center justify-start gap--4">
+                                    <img src="../assets/icons/profile-2.svg" alt="" class="w--16 h--16 filter--col--dodger-blue">
+                                    <h3 class="fs--14 fw6 lh--20 col--ebony--variation-2">Profile</h3>
+                                </div>
+                            </div>
+                            <!-- /Type Item -->
+                            <!-- Type Item -->
+                            <div class="pad--16 flex items-center justify-between gap--4 br--5">
+                                <!-- Title -->
+                                <div class="flex items-center justify-start gap--4">
+                                    <img src="../assets/icons/subscription-icon.svg" alt="" class="w--16 h--16 filter--col--brink-pink">
+                                    <h3 class="fs--14 fw6 lh--20 col--ebony--variation-2">Subscription</h3>
+                                </div>
+                                <!-- /Title -->
+                            </div>
+                            <!-- /Type Item -->
+                            <!-- Type Item -->
+                            <div class="pad--16 flex items-center justify-between gap--4 br--5">
+                                <!-- Title -->
+                                <div class="flex items-center justify-start gap--4">
+                                    <img src="../assets/icons/media-icon-2.svg" alt="" class="w--16 h--16 filter--col--Heliotrope">
+                                    <h3 class="fs--14 fw6 lh--20 col--ebony--variation-2">Media</h3>
+                                </div>
+                                <!-- /Title -->
+                            </div>
+                            <!-- /Type Item -->
+                            <!-- Type Item -->
+                            <div class="pad--16 flex items-center justify-between gap--4 br--5 bg--col--twilight-blue">
+                                <!-- Title -->
+                                <div class="flex items-center justify-start gap--4">
+                                    <img src="../assets/icons/shopping-cart-03.svg" alt="" class="w--16 h--16 filter--col--bright-turquoise">
+                                    <h3 class="fs--14 fw6 lh--20 col--ebony--variation-2">Merch</h3>
+                                </div>
+                                <!-- /Title -->
+                            </div>
+                            <!-- /Type Item -->
+                        </div>
+                        <!-- /Type -->
+                    </div>
+                    <!-- /Content Wrapper -->
+                </div>
+                <!-- /Inner -->
+            </div>
+            <!-- /New FLow for Mobile -->
         </div>
         <!-- /main wrapper -->
 
