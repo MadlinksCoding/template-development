@@ -46,7 +46,7 @@
 
     <body>
         <!-- main wrapper -->
-        <div data-section="wrapper" class="flex flex--column-responsive-mobile flex--column-responsive-mobile-portrait">
+        <div data-section="wrapper" class="flex flex--column-responsive-mobile flex--column-responsive-mobile-portrait h--screen">
 
             <!-- page sidebar -->
             <section data-sidebar data-section="sidebar"
@@ -6023,7 +6023,7 @@
             </div> <!-- End Background fixed container -->
 
             <!-- main section -->
-            <main data-dashboard-page="" data-section="main" class="flex flex-column flex--max relative z-1 w--100-responsive-tablet overflow--x--hidden-resposnive-tablet">
+            <main data-dashboard-page="" data-section="main" class="flex flex-column flex--max relative z-1 h--screen w--100-responsive-tablet overflow--x--hidden-resposnive-tablet">
                 <!-- Inner Container -->
                 <div data-section="inner-container" data-tabs-section="1"
                     class="flex flex-column gap--24 bg--gradient-white pad--top--24-responsive-tablet pad--x--16-responsive-tablet pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait pad--y--0-responsive-mobile pad--y--0-responsive-mobile-portrait ">
@@ -6127,7 +6127,7 @@
                         <div data-tabbed-content="tabbed-content-first-tab" data-target="first-tab"
                             class="flex flex-column justify-start items-start gap--16 flex-auto mt--8-neg active">
                             <!-- Table -->
-                            <div class="w-100 flex flex-column">
+                            <div class="w-100 flex flex-column display--none-responsive-mobile display--none-responsive-mobile-portrait">
                                 <!-- Table Header -->
                                 <div class="flex items-center pad--y--8 pad--left--16">
                                     <!-- first -->
@@ -6727,6 +6727,266 @@
                                 <!-- /Table Body -->
                             </div>
                             <!-- /Table -->
+
+                            <!-- Automation Table for Mobile View -->
+                            <div class="w-100 flex flex-column dn display--flex-responsive-mobile display--flex-responsive-mobile-portrait">
+                                <!-- Merch Row Item -->
+                                <div class="w-100 bg-white bl bw--2 br--col--turquoise-2 pad--16 flex flex-column gap--8">
+                                    <!-- Inner option -->
+                                    <div class="flex justify-between items-center">
+                                        <!-- Content -->
+                                        <div class="flex items-center gap--4">
+                                            <!-- Item -->
+                                            <div class="flex items-center justify-start gap--4">
+                                                <img src="../assets/icons/shopping-cart-03.svg" alt="" class="w--16 h--16 filter--col--bright-turquoise">
+                                                <h3 class="fs--14 fw6 lh--20 col--ebony--variation-2">Merch</h3>
+                                            </div>
+                                            <!-- /Item -->
+                                            <!-- Item Separator -->
+                                            <span class="flex fs--12 lh--18 col--pale-sky">/</span>
+                                            <!-- /Item Separator -->
+                                            <!-- Item -->
+                                            <div class="flex items-center justify-start gap--4">
+                                                <img src="../assets/icons/package-plus.svg" alt="" class="w--16 h--16 filter--col--bright-turquoise">
+                                                <h3 class="fs--14 fw6 lh--20 col--ebony--variation-2">Sales (QTY)</h3>
+                                            </div>
+                                            <!-- /Item -->
+                                        </div>
+                                        <!-- /Content -->
+                                        <!-- Three Dots with Dropdown -->
+                                        <div class="relative">
+                                            <!-- Button Dots -->
+                                            <button>
+                                                <img src="../assets/icons/dots-vertical.svg" class="w--20 h--20 filter--col--gull-gray">
+                                            </button>
+                                            <!-- /Button Dots -->
+                                            <!-- Dropdown -->
+                                            <div class="w--150 sh--11 br--8 bg-white-70 bg--blur--2 absolute right-1 top-0 pad--y--4 flex flex-column">
+                                                <!-- Dropdown Item -->
+                                                <div class="pad--x--8 pad--y--1">
+                                                    <div class="pad--x--10 pad--y--9 flex items-center gap--8">
+                                                        <img src="../assets/icons/eye.svg" class="w--16 h--16 filter--col--pale-sky">
+                                                        <span class="fs--14 fw5 lh--20 col--oxford-blue nowrap">Preview post</span>
+                                                    </div>
+                                                </div>
+                                                <!-- Dropdown Item -->
+                                                <!-- Dropdown Item -->
+                                                <div class="pad--x--8 pad--y--1">
+                                                    <div class="pad--x--10 pad--y--9 flex items-center gap--8">
+                                                        <img src="../assets/icons/edit-02-green.svg" class="w--16 h--16 filter--col--pale-sky">
+                                                        <span class="fs--14 fw5 lh--20 col--oxford-blue nowrap">Edit Draft</span>
+                                                    </div>
+                                                </div>
+                                                <!-- Dropdown Item -->
+                                                <!-- Dropdown Item -->
+                                                <div class="pad--x--8 pad--y--1">
+                                                    <div class="pad--x--10 pad--y--9 flex items-center gap--8">
+                                                        <img src="../assets/icons/trash-03.svg" class="w--16 h--16 filter--col--vermilion">
+                                                        <span class="fs--14 fw5 lh--20 col--vermilion nowrap">Delete</span>
+                                                    </div>
+                                                </div>
+                                                <!-- Dropdown Item -->
+                                            </div>
+                                            <!-- /Dropdown -->
+                                        </div>
+                                        <!-- /Three Dots with Dropdown -->
+                                    </div>
+                                    <!-- /Inner Option -->
+
+                                    <!-- Item listing -->
+                                    <div class="flex flex-wrap items-center gap--4">
+                                        <!-- Text -->
+                                        <span class="fs--12 lh--18 col--ebony--variation-2">Custom Sales Count</span>
+                                        <!-- /Text -->
+                                        <!-- Item Separator -->
+                                        <span class="flex fs--12 lh--18 col--pale-sky">/</span>
+                                        <!-- /Item Separator -->
+                                        <!-- Text -->
+                                        <span class="fs--12 lh--18 col--ebony--variation-2">Every 2000 Items Sold</span>
+                                        <!-- /Text -->
+                                        <!-- Item Separator -->
+                                        <span class="flex fs--12 lh--18 col--pale-sky">/</span>
+                                        <!-- /Item Separator -->
+                                        <!-- Text -->
+                                        <span class="fs--12 lh--18 col--ebony--variation-2">Every 10 Days</span>
+                                        <!-- /Text -->
+                                    </div>
+                                    <!-- /Item listing -->
+                                </div>
+                                <!-- /Merch Row Item -->
+
+                                <!-- Subscriptions Row Item -->
+                                <div class="w-100 bg-white bl bw--2 br--col--turquoise-2 pad--16 flex flex-column gap--8">
+                                    <!-- Inner option -->
+                                    <div class="flex justify-between items-center">
+                                        <!-- Content -->
+                                        <div class="flex items-center gap--4">
+                                            <!-- Item -->
+                                            <div class="flex items-center justify-start gap--4">
+                                                <img src="../assets/icons/subscription-icon.svg" alt="" class="w--16 h--16 filter--col--brink-pink">
+                                                <h3 class="fs--14 fw6 lh--20 col--ebony--variation-2">Subscriptions</h3>
+                                            </div>
+                                            <!-- /Item -->
+                                            <!-- Item Separator -->
+                                            <span class="flex fs--12 lh--18 col--pale-sky">/</span>
+                                            <!-- /Item Separator -->
+                                            <!-- Item -->
+                                            <div class="flex items-center justify-start gap--4">
+                                                <img src="../assets/icons/user-group.svg" alt="" class="w--16 h--16 filter--col--brink-pink">
+                                                <h3 class="fs--14 fw6 lh--20 col--ebony--variation-2">Subscriber</h3>
+                                            </div>
+                                            <!-- /Item -->
+                                        </div>
+                                        <!-- /Content -->
+                                        <!-- Three Dots with Dropdown -->
+                                        <div class="relative">
+                                            <!-- Button Dots -->
+                                            <button>
+                                                <img src="../assets/icons/dots-vertical.svg" class="w--20 h--20 filter--col--gull-gray">
+                                            </button>
+                                            <!-- /Button Dots -->
+                                        </div>
+                                        <!-- /Three Dots with Dropdown -->
+                                    </div>
+                                    <!-- /Inner Option -->
+
+                                    <!-- Item listing -->
+                                    <div class="flex flex-wrap items-center gap--4">
+                                        <!-- Text -->
+                                        <span class="fs--12 lh--18 col--ebony--variation-2">Custom Goal</span>
+                                        <!-- /Text -->
+                                        <!-- Item Separator -->
+                                        <span class="flex fs--12 lh--18 col--pale-sky">/</span>
+                                        <!-- /Item Separator -->
+                                        <!-- Text -->
+                                        <span class="fs--12 lh--18 col--ebony--variation-2">2000 New Subscribers</span>
+                                        <!-- /Text -->
+                                        <!-- Item Separator -->
+                                        <span class="flex fs--12 lh--18 col--pale-sky">/</span>
+                                        <!-- /Item Separator -->
+                                        <!-- Text -->
+                                        <span class="fs--12 lh--18 col--ebony--variation-2">Monthly</span>
+                                        <!-- /Text -->
+                                    </div>
+                                    <!-- /Item listing -->
+                                </div>
+                                <!-- /Subscriptions Row Item -->
+
+                                <!-- Media Row Item -->
+                                <div class="w-100 bg-white bl bw--2 br--col--turquoise-2 pad--16 flex flex-column gap--8">
+                                    <!-- Inner option -->
+                                    <div class="flex justify-between items-center">
+                                        <!-- Content -->
+                                        <div class="flex items-center gap--4">
+                                            <!-- Item -->
+                                            <div class="flex items-center justify-start gap--4">
+                                                <img src="../assets/icons/media-icon-2.svg" alt="" class="w--16 h--16 filter--col--Heliotrope">
+                                                <h3 class="fs--14 fw6 lh--20 col--ebony--variation-2">Media</h3>
+                                            </div>
+                                            <!-- /Item -->
+                                            <!-- Item Separator -->
+                                            <span class="flex fs--12 lh--18 col--pale-sky">/</span>
+                                            <!-- /Item Separator -->
+                                            <!-- Item -->
+                                            <div class="flex items-center justify-start gap--4">
+                                                <img src="../assets/icons/package-plus.svg" alt="" class="w--16 h--16 filter--col--Heliotrope">
+                                                <h3 class="fs--14 fw6 lh--20 col--ebony--variation-2">Sales (QTY)</h3>
+                                            </div>
+                                            <!-- /Item -->
+                                        </div>
+                                        <!-- /Content -->
+                                        <!-- Three Dots with Dropdown -->
+                                        <div class="relative">
+                                            <!-- Button Dots -->
+                                            <button>
+                                                <img src="../assets/icons/dots-vertical.svg" class="w--20 h--20 filter--col--gull-gray">
+                                            </button>
+                                            <!-- /Button Dots -->
+                                        </div>
+                                        <!-- /Three Dots with Dropdown -->
+                                    </div>
+                                    <!-- /Inner Option -->
+
+                                    <!-- Item listing -->
+                                    <div class="flex flex-wrap items-center gap--4">
+                                        <!-- Text -->
+                                        <span class="fs--12 lh--18 col--ebony--variation-2">Custom Sales Count</span>
+                                        <!-- /Text -->
+                                        <!-- Item Separator -->
+                                        <span class="flex fs--12 lh--18 col--pale-sky">/</span>
+                                        <!-- /Item Separator -->
+                                        <!-- Text -->
+                                        <span class="fs--12 lh--18 col--ebony--variation-2">Every 2000 Items Sold</span>
+                                        <!-- /Text -->
+                                        <!-- Item Separator -->
+                                        <span class="flex fs--12 lh--18 col--pale-sky">/</span>
+                                        <!-- /Item Separator -->
+                                        <!-- Text -->
+                                        <span class="fs--12 lh--18 col--ebony--variation-2">Every 10 Days</span>
+                                        <!-- /Text -->
+                                    </div>
+                                    <!-- /Item listing -->
+                                </div>
+                                <!-- /Media Row Item -->
+
+                                <!-- Profile Row Item -->
+                                <div class="w-100 bg-white bl bw--2 br--col--turquoise-2 pad--16 flex flex-column gap--8">
+                                    <!-- Inner option -->
+                                    <div class="flex justify-between items-center">
+                                        <!-- Content -->
+                                        <div class="flex items-center gap--4">
+                                            <!-- Item -->
+                                            <div class="flex items-center justify-start gap--4">
+                                                <img src="../assets/icons/profile-2.svg" alt="" class="w--16 h--16 filter--col--dodger-blue">
+                                                <h3 class="fs--14 fw6 lh--20 col--ebony--variation-2">Profile</h3>
+                                            </div>
+                                            <!-- /Item -->
+                                            <!-- Item Separator -->
+                                            <span class="flex fs--12 lh--18 col--pale-sky">/</span>
+                                            <!-- /Item Separator -->
+                                            <!-- Item -->
+                                            <div class="flex items-center justify-start gap--4">
+                                                <img src="../assets/icons/user-group.svg" alt="" class="w--16 h--16 filter--col--dodger-blue">
+                                                <h3 class="fs--14 fw6 lh--20 col--ebony--variation-2">Follower</h3>
+                                            </div>
+                                            <!-- /Item -->
+                                        </div>
+                                        <!-- /Content -->
+                                        <!-- Three Dots with Dropdown -->
+                                        <div class="relative">
+                                            <!-- Button Dots -->
+                                            <button>
+                                                <img src="../assets/icons/dots-vertical.svg" class="w--20 h--20 filter--col--gull-gray">
+                                            </button>
+                                            <!-- /Button Dots -->
+                                        </div>
+                                        <!-- /Three Dots with Dropdown -->
+                                    </div>
+                                    <!-- /Inner Option -->
+
+                                    <!-- Item listing -->
+                                    <div class="flex flex-wrap items-center gap--4">
+                                        <!-- Text -->
+                                        <span class="fs--12 lh--18 col--ebony--variation-2">Custom Followers Count</span>
+                                        <!-- /Text -->
+                                        <!-- Item Separator -->
+                                        <span class="flex fs--12 lh--18 col--pale-sky">/</span>
+                                        <!-- /Item Separator -->
+                                        <!-- Text -->
+                                        <span class="fs--12 lh--18 col--ebony--variation-2">Every 2000 New Followers</span>
+                                        <!-- /Text -->
+                                        <!-- Item Separator -->
+                                        <span class="flex fs--12 lh--18 col--pale-sky">/</span>
+                                        <!-- /Item Separator -->
+                                        <!-- Text -->
+                                        <span class="fs--12 lh--18 col--ebony--variation-2">Every 10 Days</span>
+                                        <!-- /Text -->
+                                    </div>
+                                    <!-- /Item listing -->
+                                </div>
+                                <!-- /Profile Row Item -->
+                            </div>
+                            <!-- /Automation Table for Mobile View -->
                         </div>
 
                         <!-- second tab content items -->
