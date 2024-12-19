@@ -1013,6 +1013,10 @@ html {
   border-color: var(--color-turquoise, #2ed3b7)
 }
 
+.br--col--turquoise-2 {
+  border-color: var(--color-turquoise, #2ce)
+}
+
 .br--col-brand-green {
   border-color: var(--color-brand-green, #07f468)
 }
@@ -1698,6 +1702,11 @@ html {
 
 .neg--z--index--1 {
   z-index: -1
+}
+
+.bg--blur--2 {
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px)
 }
 
 .bg--blur--5 {
@@ -5827,8 +5836,16 @@ textarea {
     height: 3rem
   }
 
+  .h--80-responsive-mobile {
+    height: 5rem
+  }
+
   .h--120-responsive-mobile {
     height: 7.5rem
+  }
+
+  .h--163-responsive-mobile {
+    height: 10.188rem
   }
 
   .h--170-responsive-mobile {
@@ -6695,8 +6712,16 @@ textarea {
     height: 4.375rem
   }
 
+  .h--80-responsive-mobile-portrait {
+    height: 5rem
+  }
+
   .h--120-responsive-mobile-portrait {
     height: 7.5rem
+  }
+
+  .h--163-responsive-mobile-portrait {
+    height: 10.188rem
   }
 
   .h--170-responsive-mobile-portrait {
