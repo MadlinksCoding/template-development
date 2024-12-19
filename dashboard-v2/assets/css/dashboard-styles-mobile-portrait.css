@@ -176,10 +176,6 @@ body.stop-mobile-scrolling {
   grid-template-columns: repeat(1, minmax(0, 1fr))
 }
 
-.grid--cols-2-responsive-mobile-portrait {
-  grid-template-columns: repeat(2, 1fr)
-}
-
 .grid--cols-3--responsive-mobile-portrait {
   grid-template-columns: repeat(3, 1fr)
 }
@@ -393,8 +389,16 @@ body.stop-mobile-scrolling {
   height: 4.375rem
 }
 
+.h--80-responsive-mobile-portrait {
+  height: 5rem
+}
+
 .h--120-responsive-mobile-portrait {
   height: 7.5rem
+}
+
+.h--163-responsive-mobile-portrait {
+  height: 10.188rem
 }
 
 .h--170-responsive-mobile-portrait {
