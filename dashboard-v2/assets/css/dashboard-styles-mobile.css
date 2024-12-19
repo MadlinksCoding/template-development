@@ -801,7 +801,7 @@ body.stop-mobile-scrolling {
   width: 100vw
 }
 
-[data-conditions-dropdown] .nice-select.v1:not(.auto-width) .nice-select-dropdown {
+[data-conditions-dropdown].nice-select-dropdown.v1:not(.auto-width) {
   min-width: 100%;
   top: auto;
   bottom: 0;
@@ -826,7 +826,7 @@ body.stop-mobile-scrolling {
   z-index: -1
 }
 
-[data-conditions-dropdown] .nice-select.v1:not(.has-tags) .option .elm_aQVICr {
+[data-conditions-dropdown] .mlc-ns.v1:not(.has-tags) .option .elm_aQVICr {
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start
