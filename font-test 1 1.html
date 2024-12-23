@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Font Scaling in REM</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.5;
+        }
+
+        /* Apply CSS variables for font sizes */
+        * {
+            font-size: var(--dynamic-font);
+        }
+
+        h1 {
+            font-size: var(--dynamic-h1);
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: var(--dynamic-h2);
+            margin-bottom: 8px;
+        }
+
+        button {
+            font-size: var(--dynamic-font);
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        label, input, p {
+            font-size: var(--dynamic-font);
+        }
+
+        input[type="text"] {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dynamic Heading 1</h1>
+    <h2>Dynamic Heading 2</h2>
+    <p>This is a paragraph that adjusts its font size dynamically based on the screen width.</p>
+
+    <!-- Buttons -->
+    <button>Click Me</button>
+
+    <!-- Checkboxes -->
+    <div>
+        <label><input type="checkbox"> Option 1</label><br>
+        <label><input type="checkbox"> Option 2</label><br>
+        <label><input type="checkbox"> Option 3</label>
+    </div>
+
+    <!-- Input Field -->
+    <div>
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" placeholder="Enter your name">
+    </div>
+
+    <script>
+        // Function to compute font size in rem units with scaling and thresholds
+        function computeFontSize(screenWidth, baseFontSize, baseScreenWidth, minFontSize, maxFontSize) {
+            const scalingFactor = screenWidth / baseScreenWidth;
+            const scaledFontSize = baseFontSize * scalingFactor;
+
+            // Clamp to minimum and maximum font size
+            const finalFontSizePx = Math.max(minFontSize, Math.min(scaledFontSize, maxFontSize));
+
+            // Convert px to rem (1rem = 16px)
+            return (finalFontSizePx / 16).toFixed(2) + 'rem';
+        }
+
+        // Function to apply dynamic font sizes as CSS variables
+        function applyDynamicFontSizes() {
+            const screenWidth = window.innerWidth;
+
+            // Base settings
+            const baseScreenWidth = 1920;  // Reference screen width
+            const rootFontSize = 16;       // Default root font size in px
+
+            // Font size settings
+            const baseFontSize = 16;       // Base font size in px for normal text
+            const baseH1FontSize = 48;     // Base font size for h1
+            const baseH2FontSize = 32;     // Base font size for h2
+            const minFontSize = 12;        // Minimum font size in px
+            const maxFontSize = 72;        // Maximum font size in px
+
+            // Compute dynamic sizes
+            const dynamicFontSize = computeFontSize(screenWidth, baseFontSize, baseScreenWidth, minFontSize, 24);
+            const dynamicH1FontSize = computeFontSize(screenWidth, baseH1FontSize, baseScreenWidth, 24, maxFontSize);
+            const dynamicH2FontSize = computeFontSize(screenWidth, baseH2FontSize, baseScreenWidth, 18, 48);
+
+            // Apply to CSS variables
+            document.documentElement.style.setProperty('--dynamic-font', dynamicFontSize);
+            document.documentElement.style.setProperty('--dynamic-h1', dynamicH1FontSize);
+            document.documentElement.style.setProperty('--dynamic-h2', dynamicH2FontSize);
+        }
+
+        // Apply font sizes on load and window resize
+        window.addEventListener('load', applyDynamicFontSizes);
+        window.addEventListener('resize', applyDynamicFontSizes);
+    </script>
+</body>
+</html>
