@@ -1425,6 +1425,10 @@ html {
   height: 15.938rem
 }
 
+.h--732 {
+  height: 45.75rem
+}
+
 .min--h--40 {
   min-height: 2.5rem
 }
@@ -3516,6 +3520,20 @@ html {
   overflow-y: auto
 }
 
+.nice-select [data-tooltip] {
+  margin-left: auto
+}
+
+.nice-select [data-tooltip] svg {
+  -webkit-filter: brightness(0) saturate(100%) invert(85%) sepia(7%) saturate(375%) hue-rotate(191deg) brightness(83%) contrast(89%);
+  filter: brightness(0) saturate(100%) invert(85%) sepia(7%) saturate(375%) hue-rotate(191deg) brightness(83%) contrast(89%)
+}
+
+.nice-select [data-tooltip-text] {
+  white-space: normal;
+  max-width: 14.5rem
+}
+
 [data-id=order-type-select].nice-select.v1 {
   border: none
 }
@@ -4279,11 +4297,25 @@ html {
 }
 
 [data-description-type=large][data-conditions-dropdown].mlc-ns.v1:not(.has-tags) [data-option-label] {
-  font-weight: 400
+  font-weight: 400;
+  font-size: .875rem;
+  line-height: 1.25rem
+}
+
+[data-description-type=large][data-conditions-dropdown].mlc-ns.v1:not(.has-tags) .nice-select-dropdown [data-option-label] {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-wrap: auto
 }
 
 [data-description-type=small][data-conditions-dropdown][data-option-description] {
   white-space: break-spaces
+}
+
+[data-conditions-dropdown].nice-select-dropdown.h--732,
+[data-conditions-dropdown].nice-select-dropdown.h--732 .nice-select-lists {
+  height: 45.75rem
 }
 
 [data-select-icon=false] .current .nice-select-icon {

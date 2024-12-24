@@ -828,8 +828,12 @@ body.stop-mobile-scrolling {
 }
 
 [data-conditions-dropdown].mlc-ns.v1:not(.has-tags) .option .elm_aQVICr {
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start
+  -webkit-box-align: enter;
+  -ms-flex-align: enter;
+  align-items: enter
+}
+
+[data-conditions-dropdown][data-description-type=large].nice-select-dropdown [data-option-label] {
+  margin-top: .2rem
 }
 /*# sourceMappingURL=../css/map/dashboard-styles-mobile.css.map */
