@@ -125,6 +125,7 @@ background: rgba(255, 255, 255, 0.90); box-shadow: 0px 3px 6px 0px rgba(0, 0, 0,
 [data-conditions-dropdown].mlc-ns.v1:not(.has-tags) .option:not(.disabled):hover, [data-id="order-type-select"].mlc-ns.v1:not(.has-tags) .option.selected { background-color:transparent; }
 [data-conditions-dropdown].mlc-ns.v1:not(.has-tags) .option.selected [data-option-label] {color: var(--ebony-gray, #0C111D);}
 [data-conditions-dropdown].nice-select.v1.filter:not(.has-tags) .multiple-options.active, [data-conditions-dropdown].nice-select.v1.filter:not(.has-tags) .current.active { background: transparent; border: 0; }
+[data-conditions-dropdown].mlc-ns.v1:not(.has-tags) .option.disabled { opacity: 0.5; }
 /*[data-conditions-dropdown].mlc-ns.v1:not(.has-tags):not(.auto-width) [data-option-label] { text-wrap: nowrap; }*/
 [data-dropdown-arrow] { width: 1rem !important; height: 1rem !important; }
 [data-conditions-dropdown].nice-select.v1.filter .current:not(.active) [data-dropdown-arrow] path, [data-id=courier-select] .nice-select.v1.filter .multiple-options:not(.active) [data-dropdown-arrow] path {
