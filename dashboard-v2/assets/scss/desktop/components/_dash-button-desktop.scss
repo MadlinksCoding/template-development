@@ -77,7 +77,7 @@ button[data-color="gray"]:not(:disabled):hover span { color: #fff !important; }
    height: 100%;
    position: absolute;
    top: 0;
-   right: -0.563rem;
+   right: -0.43rem;
    z-index: 1;
    -webkit-box-shadow: 4px 4px 0 0 #000;
    box-shadow: 4px 4px 0 0 #000;
@@ -101,6 +101,20 @@ button[data-color="gray"]:not(:disabled):hover span { color: #fff !important; }
 [data-button-color="green"]:hover img {
    filter: brightness(0) saturate(100%) invert(75%) sepia(23%) saturate(7280%) hue-rotate(93deg) brightness(109%) contrast(95%);
 }
+
+[data-button-color="yellow"],
+[data-button-color="yellow"]:after { background-color: #C2A61C; }
+[data-button-color="yellow"]:hover, [data-button-color="yellow"]:hover:after {background-color: #C2A61C;}
+[data-button-color="yellow"]:hover span
+{ color: #fff; }
+[data-button-color="yellow"]:hover img {
+   filter: brightness(0) saturate(100%) invert(99%) sepia(99%) saturate(0%) hue-rotate(176deg) brightness(107%) contrast(100%);
+}
+[data-layer="shadow-button"][data-button-style="skew-right bottom"]:after { background-image: url("../images/angle-button-bg.svg"); background-position: 103% 0%; background-repeat: no-repeat;}
+
+[data-layer="shadow-button"] { box-shadow: 0px 5px 50px 0px rgba(242, 242, 3, 0.50), 5px 4px 0px 0px #000, 0px 0px 10px 0px rgba(242, 242, 3, 0.05), 0px 0px 10px 0px rgba(255, 185, 9, 0.70), 0px 0px 10px 0px rgba(255, 185, 9, 0.70), 0px 0px 1px 0px #FFF3A1 inset; background-image: url("../images/angle-button-bg.svg"); background-repeat: no-repeat; }
+
+[data-layer="shadow-button"]:hover, [data-button-style="skew-right bottom"]:hover:after { background-image: none; }
 
 [data-button-color="gull-gray"],
 [data-button-color="gull-gray"]:after { background: rgba(52, 64, 84, 0.05); }

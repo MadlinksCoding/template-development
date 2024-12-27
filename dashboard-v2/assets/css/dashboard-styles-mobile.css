@@ -237,6 +237,10 @@ body.stop-mobile-scrolling {
   box-shadow: none
 }
 
+.bg-white-40-responsive-mobile {
+  background: rgba(255, 255, 255, .4)
+}
+
 .bg-white-70-responsive-mobile {
   background: rgba(255, 255, 255, .7)
 }
@@ -257,12 +261,20 @@ body.stop-mobile-scrolling {
   font-size: .75rem
 }
 
+.fs--18-responsive-mobile {
+  font-size: 1.125rem
+}
+
 .fs--20-responsive-mobile {
   font-size: 1.25rem
 }
 
 .lh--18-responsive-mobile {
   line-height: 1.125rem
+}
+
+.lh--28-responsive-mobile {
+  line-height: 1.75rem
 }
 
 .lh--30-responsive-mobile {
@@ -624,9 +636,19 @@ body.stop-mobile-scrolling {
   z-index: 9
 }
 
+.bg--blur--10-responsive-mobile {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px)
+}
+
 .bg--blur--25-responsive-mobile {
   -webkit-backdrop-filter: blur(25px);
   backdrop-filter: blur(25px)
+}
+
+.sh--none-responsive-mobile {
+  -webkit-box-shadow: none;
+  box-shadow: none
 }
 
 .br--0-responsive-mobile {

@@ -31,9 +31,13 @@
         <!-- Dashboard Sidebar Custom Style -->
         <link rel="stylesheet" href="../assets/css/dashboard-styles-desktop.css" />
 
+        <!-- Tablet landscape Stylesheet -->
+        <link rel="stylesheet" href="../assets/css/dashboard-styles-tablet-landscape.css"
+            media="screen and (min-width: 1010px) and (max-width: 1365px)">
+
         <!-- Tablet Stylesheet -->
         <link rel="stylesheet" href="../assets/css/dashboard-styles-tablet.css"
-            media="screen and (min-width: 768px) and (max-width: 1365px)">
+            media="screen and (min-width: 768px) and (max-width: 1009px)">
 
         <!-- Mobile Stylesheet -->
         <link rel="stylesheet" href="../assets/css/dashboard-styles-mobile.css"
@@ -72,7 +76,7 @@
                             </a>
                             <h1
                                 class="poppins fs--14 lh--20 fw6 col--fiord-gray m--0 dn display--flex-responsive-mobile display--flex-responsive-mobile-portrait">
-                                Order Received</h1>
+                                Settings</h1>
                         </div>
                         <!-- /Site Logo -->
 
@@ -6031,12 +6035,12 @@
             </div> <!-- End Background fixed container -->
 
             <!-- main section -->
-            <main data-dashboard-page="" data-section="main" class="flex flex-column flex--max relative z-1">
+            <main data-dashboard-page="" data-section="main" class="flex flex-column flex--max relative">
                 <!-- Inner Container -->
-                <div data-section="inner-container" data-tabs-section="1"
-                    class="flex gap--24 bg--gradient-white pad--x--40 pad--top--24 pad--bottom-40 pad--top--24-responsive-tablet pad--x--16-responsive-tablet pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait pad--y--0-responsive-mobile pad--y--0-responsive-mobile-portrait flex">
+                <div data-section="inner-container"
+                    class="flex gap--24 bg--gradient-white pad--x--40 pad--top--24 pad--bottom-40 flex pad--x--16-responsive-tablet-landscape pad--y-0-responsive-tablet pad--x--0-responsive-tablet pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait pad--y--0-responsive-mobile pad--y--0-responsive-mobile-portrait">
                     <!-- Account Settings Wrapper -->
-                    <div data-layer="Frame 9150" class="Frame9150 flex-none flex flex-column ba justify-start items-end sticky top-0">
+                    <div data-layer="Frame 9150" class="Frame9150 flex flex-column ba justify-start items-end w--100-responsive-tablet w--100-responsive-mobile w--100-responsive-mobile-portrait sh--none-responsive-tablet sh--none-responsive-mobile sh--none-responsive-mobile-portrait display--none-responsive-tablet display--none-responsive-mobile display--none-responsive-mobile-portrait">
                         <!-- User Info -->
                         <div data-layer="Frame 9151" class="Frame9151 self-stretch pad--24 flex flex-column justify-center items-center bb gap--16 br--col--white">
                             <!-- Avatar -->
@@ -6070,7 +6074,7 @@
                             <div data-layer="Frame 9156" class="Frame9156 self-stretch flex flex-column justify-start items-start gap--8">
                               <div data-layer="GENERAL" class="General fs--12 fw5 lh--18 col--pale-sky">GENERAL</div>
                               <!-- Link Item -->
-                              <div data-layer="Frame 8669" class="Frame8669 self-stretch pad--y--4 inline-flex justify-start items-center gap--10">
+                              <div data-layer="Frame 8669" class="Frame8669 self-stretch pad--y--4 inline-flex justify-start items-center gap--10 pointer">
                                 <div data-layer="Account Information" class="AccountInformation flex--max fs--16 fw5 lh--24 col--blue-ribbon-2">Account Information</div>
                                 <div data-layer="arrow-narrow-right" class="ArrowNarrowRight" style="width: 24px; height: 24px; position: relative">
                                   <img src="../assets/icons/arrow-narrow-right.svg" class="w--24 h--24 filter--col--blue-ribbon-2" />
@@ -6078,7 +6082,7 @@
                               </div>
                               <!-- /Link Item -->
                               <!-- Link Item -->
-                              <div data-layer="Frame 9155" class="Frame9155 self-stretch pad--y--4 inline-flex justify-start items-center gap--10d">
+                              <div data-layer="Frame 9155" class="Frame9155 self-stretch pad--y--4 inline-flex justify-start items-center gap--10 pointer">
                                 <div data-layer="Change Password" class="ChangePassword flex--max fs--16 fw5 lh--24 col--ebony--variation-2">Change Password</div>
                                 <div data-layer="arrow-narrow-right" class="ArrowNarrowRight" style="width: 24px; height: 24px; position: relative">
                                   <img src="../assets/icons/arrow-narrow-right.svg" class="w--24 h--24 filter--col--oxford-blue" />
@@ -6086,7 +6090,7 @@
                               </div>
                               <!-- /Link Item -->
                               <!-- Link Item -->
-                              <div data-layer="Frame 9156" class="Frame9156 self-stretch pad--y--4 inline-flex justify-start items-center gap--10">
+                              <div data-layer="Frame 9156" class="Frame9156 self-stretch pad--y--4 inline-flex justify-start items-center gap--10 pointer">
                                 <div data-layer="Privacy & Security" class="PrivacySecurity flex--max fs--16 fw5 lh--24 col--ebony--variation-2">Privacy & Security</div>
                                 <div data-layer="arrow-narrow-right" class="ArrowNarrowRight" style="width: 24px; height: 24px; position: relative">
                                   <img src="../assets/icons/arrow-narrow-right.svg" class="w--24 h--24 filter--col--oxford-blue" />
@@ -6100,17 +6104,17 @@
                               <div data-layer="CALL & LIVE STREAM SETTINGS" class="CallLiveStreamSettings fs--12 fw5 lh--18 col--pale-sky">CALL & LIVE STREAM SETTINGS</div>
                               <!-- Link Item -->
                               <div data-layer="Frame 9152" class="Frame9152 self-stretch pad--y--4 inline-flex justify-start items-center gap--10">
-                                <div data-layer="Live Stream Settings" class="LiveStreamSettings flex--max fs--16 fw5 lh--24 col--ebony--variation-2">Live Stream Settings</div>
+                                <div data-layer="Live Stream Settings" class="LiveStreamSettings flex--max fs--16 fw5 lh--24 col--pale-sky">Live Stream Settings</div>
                                 <div data-layer="arrow-narrow-right" class="ArrowNarrowRight" style="width: 24px; height: 24px; position: relative">
-                                  <img src="../assets/icons/arrow-narrow-right.svg" class="w--24 h--24 filter--col--oxford-blue" />
+                                  <img src="../assets/icons/arrow-narrow-right.svg" class="w--24 h--24 filter--col--pale-sky" />
                                 </div>
                               </div>
                               <!-- /Link Item -->
                               <!-- Link Item -->
                               <div data-layer="Frame 8669" class="Frame8669 self-stretch pad--y--4 inline-flex justify-start items-center gap--10">
-                                <div data-layer="Call Settings" class="CallSettings flex--max fs--16 fw5 lh--24 col--ebony--variation-2">Call Settings</div>
+                                <div data-layer="Call Settings" class="CallSettings flex--max fs--16 fw5 lh--24 col--pale-sky">Call Settings</div>
                                 <div data-layer="arrow-narrow-right" class="ArrowNarrowRight" style="width: 24px; height: 24px; position: relative">
-                                  <img src="../assets/icons/arrow-narrow-right.svg" class="w--24 h--24 filter--col--oxford-blue" />
+                                  <img src="../assets/icons/arrow-narrow-right.svg" class="w--24 h--24 filter--col--pale-sky" />
                                 </div>
                               </div>
                               <!-- /Link Item -->
@@ -6120,7 +6124,7 @@
                             <div data-layer="Frame 9158" class="Frame9158 self-stretch flex flex-column justify-start items-start gap--8">
                               <div data-layer="TRANSACTION" class="Transaction fs--12 fw5 lh--18 col--pale-sky">TRANSACTION</div>
                               <!-- Link Item -->
-                              <div data-layer="Frame 9153" class="Frame9153 self-stretch pad--y--4 inline-flex justify-start items-center gap--10">
+                              <div data-layer="Frame 9153" class="Frame9153 self-stretch pad--y--4 inline-flex justify-start items-center gap--10 pointer">
                                 <div data-layer="Shipping Address" class="ShippingAddress flex--max fs--16 fw5 lh--24 col--ebony--variation-2">Shipping Address</div>
                                 <div data-layer="arrow-narrow-right" class="ArrowNarrowRight" style="width: 24px; height: 24px; position: relative">
                                   <img src="../assets/icons/arrow-narrow-right.svg" class="w--24 h--24 filter--col--oxford-blue" />
@@ -6128,7 +6132,7 @@
                               </div>
                               <!-- /Link Item -->
                               <!-- Link Item -->
-                              <div data-layer="Frame 9152" class="Frame9152 self-stretch pad--y--4 inline-flex justify-start items-center gap--10">
+                              <div data-layer="Frame 9152" class="Frame9152 self-stretch pad--y--4 inline-flex justify-start items-center gap--10 pointer">
                                 <div data-layer="Payout Details" class="PayoutDetails flex--max fs--16 fw5 lh--24 col--ebony--variation-2">Payout Details</div>
                                 <div data-layer="arrow-narrow-right" class="ArrowNarrowRight" style="width: 24px; height: 24px; position: relative">
                                   <img src="../assets/icons/arrow-narrow-right.svg" class="w--24 h--24 filter--col--oxford-blue" />
@@ -6142,14 +6146,14 @@
                               <div data-layer="SOCIAL MEDIA AND SHARING" class="SocialMediaAndSharing fs--12 fw5 lh--18 col--pale-sky">SOCIAL MEDIA AND SHARING</div>
                               <!-- Link Item -->
                               <div data-layer="Frame 9155" class="Frame9155 self-stretch pad--y--4 inline-flex justify-start items-center gap--10">
-                                <div data-layer="Newsletter & Email Settings" class="NewsletterEmailSettings flex--max fs--16 fw5 lh--24 col--ebony--variation-2">Newsletter & Email Settings</div>
+                                <div data-layer="Newsletter & Email Settings" class="NewsletterEmailSettings flex--max fs--16 fw5 lh--24 col--pale-sky">Newsletter & Email Settings</div>
                                 <div data-layer="arrow-narrow-right" class="ArrowNarrowRight" style="width: 24px; height: 24px; position: relative">
-                                  <img src="../assets/icons/arrow-narrow-right.svg" class="w--24 h--24 filter--col--oxford-blue" />
+                                  <img src="../assets/icons/arrow-narrow-right.svg" class="w--24 h--24 filter--col--pale-sky" />
                                 </div>
                               </div>
                               <!-- /Link Item -->
                               <!-- Link Item -->
-                              <div data-layer="Frame 9154" class="Frame9154 self-stretch pad--y--4 inline-flex justify-start items-center gap--10">
+                              <div data-layer="Frame 9154" class="Frame9154 self-stretch pad--y--4 inline-flex justify-start items-center gap--10 pointer">
                                 <div data-layer="X Repost Automation" class="XRepostAutomation flex--max fs--16 fw5 lh--24 col--ebony--variation-2">X Repost Automation</div>
                                 <div data-layer="arrow-narrow-right" class="ArrowNarrowRight" style="width: 24px; height: 24px; position: relative">
                                   <img src="../assets/icons/arrow-narrow-right.svg" class="w--24 h--24 filter--col--oxford-blue" />
@@ -6163,183 +6167,123 @@
                     </div><!-- /Account Settings Wrapper -->
 
                     <!-- Account Information Wrapper -->
-                    <div data-layer="Frame 9162" class="Frame9162 flex--max" style="flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 8px; display: inline-flex">
-                      <div data-layer="Frame 9163" class="Frame9163" style="align-self: stretch; padding-top: 16px; padding-bottom: 16px; justify-content: center; align-items: center; gap: 10px; display: inline-flex">
-                        <div data-layer="Account Information" class="AccountInformation" style="flex: 1 1 0; height: 24px; color: #667085; font-size: 24px; font-family: Poppins; font-weight: 600; line-height: 32px; word-wrap: break-word">Account Information</div>
+                    <div data-layer="Frame 9162" class="Frame9162 flex--max inline-flex flex-column justify-start items-start gap--8 fixed--responsive-mobile fixed--responsive-mobile-portrait top--0--responsive-mobile top--0--responsive-mobile-portrait z--9--responsive-mobile z--9--responsive-mobile-portrait">
+                      <!-- Title -->
+                      <div data-layer="Frame 9163" class="Frame9163 self-stretch pad--y--16 inline-flex justify-center items-center gap--10 pad--top--24-responsive-tablet pad--bottom--8-responsive-tablet pad--x--16-responsive-tablet pad--x--16-responsive-mobile pad--x--16-responsive-mobile-portrait bg-white-40-responsive-mobile bg-white-40-responsive-mobile-portrait bg--blur--10-responsive-mobile bg--blur--10-responsive-mobile-portrait">
+                        <div data-layer="Account Information" class="AccountInformation flex--max fs--24 fw6 lh--32 col--pale-sky fs--18-responsive-mobile fs--18-responsive-mobile-portrait lh--28-responsive-mobile lh--28-responsive-mobile-portrait">Account Information</div>
+                        <!-- Back Button for Tablet/Mobile -->
+                        <div data-layer="Frame 1410098520" class="Frame1410098520 dn gsp--8 items-center justify-end display--flex-responsive-tablet display--flex-responsive-mobile display--flex-responsive-mobile-portrait">
+                          <div data-layer="arrow-left" class="ArrowLeft relative">
+                            <img src="../assets/icons/arrow-left.svg" class="w--16 h--16 filter--col--oxford-blue" />
+                          </div>
+                          <div data-layer="BACK" class="Back fs--18 fw5 lh--28 col--oxford-blue">BACK</div>
+                        </div>
+                        <!-- /Back Button for Tablet/Mobile -->
                       </div>
-                      <div data-layer="Frame 9161" class="Frame9161" style="align-self: stretch; height: 340px; padding: 24px; background: rgba(255, 255, 255, 0.40); flex-direction: column; justify-content: flex-start; align-items: flex-end; gap: 24px; display: flex">
-                        <div data-layer="Input field" class="InputField" style="align-self: stretch; height: 112px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 6px; display: flex">
-                          <div data-layer="Input with label" class="InputWithLabel" style="align-self: stretch; height: 66px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 6px; display: flex">
-                            <div data-layer="Label" class="Label" style="color: #667085; font-size: 14px; font-family: Poppins; font-weight: 500; line-height: 20px; word-wrap: break-word">Username</div>
-                            <div data-layer="Input" class="Input" style="align-self: stretch; padding-left: 12px; padding-right: 12px; padding-top: 8px; padding-bottom: 8px; background: rgba(255, 255, 255, 0.50); box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05); border-bottom: 1px #D0D5DD solid; justify-content: flex-start; align-items: center; gap: 8px; display: inline-flex">
-                              <div data-layer="Content" class="Content" style="flex: 1 1 0; height: 24px; justify-content: flex-start; align-items: center; gap: 8px; display: flex">
-                                <div data-layer="Text" class="Text" style="flex: 1 1 0; color: #667085; font-size: 16px; font-family: Poppins; font-weight: 400; line-height: 24px; word-wrap: break-word">carrot_popxoxo123</div>
+                      <!-- /Title -->
+                      <!-- Field Column -->
+                      <div data-layer="Frame 9161" class="Frame9161 self-stretch pad--24 bg-white-40 flex flex-column justify-start items-end gap--24 pad--x--16-responsive-tablet pad--x--16-responsive-mobile pad--x--16-responsive-mobile-portrait">
+                        <!-- Field Item -->
+                        <div data-layer="Input field" class="InputField self-stretch flex flex-column gap--6">
+                          <div data-layer="Input with label" class="InputWithLabel self-stretch flex flex-column gap--6">
+                            <div data-layer="Label" class="Label fs--14 fw5 lh--20 col--pale-sky">Username</div>
+                            <div data-layer="Input" class="Input self-stretch pad--x--12 pad--y--8 bg-white-50 sh--7 br--2 br--bottom br--left bb br--col--mischka">
+                              <div data-layer="Content" class="Content flex--max h--24 flex justify-start items-center gap--8">
+                                <div data-layer="Text" class="Text flex--max fs--16 lh--24 col--pale-sky">carrot_popxoxo123</div>
                               </div>
                             </div>
                           </div>
-                          <div data-layer="Hint text" class="HintText" style="align-self: stretch; color: #475467; font-size: 14px; font-family: Poppins; font-weight: 400; line-height: 20px; word-wrap: break-word">Usernames cannot be changed after your first month on Fansocial, but special circumstances may allow for exceptions. Please contact us if you need assistance with changing your username.</div>
+                          <div data-layer="Hint text" class="HintText self-stretch fs--14 lh--20 col--fiord">Usernames cannot be changed after your first month on Fansocial, but special circumstances may allow for exceptions. Please contact us if you need assistance with changing your username.</div>
                         </div>
-                        <div data-layer="Input field" class="InputField" style="align-self: stretch; height: 66px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 6px; display: flex">
-                          <div data-layer="Input with label" class="InputWithLabel" style="align-self: stretch; height: 66px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 6px; display: flex">
-                            <div data-layer="Label" class="Label" style="color: #667085; font-size: 14px; font-family: Poppins; font-weight: 500; line-height: 20px; word-wrap: break-word">Email</div>
-                            <div data-layer="Input" class="Input" style="align-self: stretch; padding-left: 12px; padding-right: 12px; padding-top: 8px; padding-bottom: 8px; background: rgba(255, 255, 255, 0.50); box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05); border-bottom: 1px #D0D5DD solid; justify-content: flex-start; align-items: center; gap: 8px; display: inline-flex">
-                              <div data-layer="Content" class="Content" style="flex: 1 1 0; height: 24px; justify-content: flex-start; align-items: center; gap: 8px; display: flex">
-                                <div data-layer="Text" class="Text" style="flex: 1 1 0; color: #667085; font-size: 16px; font-family: Poppins; font-weight: 400; line-height: 24px; word-wrap: break-word">mscarrot_pops@gmail.com</div>
+                        <!-- /Field Item -->
+                        <!-- Field Item -->
+                        <div data-layer="Input field" class="InputField self-stretch flex flex-column gap--6">
+                          <div data-layer="Input with label" class="InputWithLabel self-stretch flex flex-column gap--6">
+                            <div data-layer="Label" class="Label fs--14 fw5 lh--20 col--pale-sky">Email</div>
+                            <div data-layer="Input" class="Input self-stretch pad--x--12 pad--y--8 bg-white-50 sh--7 br--2 br--bottom br--left bb br--col--mischka">
+                              <div data-layer="Content" class="Content flex--max h--24 flex justify-start items-center gap--8">
+                                <div data-layer="Text" class="Text flex--max fs--16 lh--24 col--pale-sky">mscarrot_pops@gmail.com</div>
                               </div>
                             </div>
                           </div>
                         </div>
-                        <div data-layer="Frame 9206" class="Frame9206" style="align-self: stretch; justify-content: flex-start; align-items: flex-start; gap: 24px; display: inline-flex">
-                          <div data-layer="Input field" class="InputField" style="flex: 1 1 0; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 6px; display: inline-flex">
-                            <div data-layer="Input with label" class="InputWithLabel" style="align-self: stretch; height: 66px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 6px; display: flex">
-                              <div data-layer="Label" class="Label" style="color: #667085; font-size: 14px; font-family: Poppins; font-weight: 500; line-height: 20px; word-wrap: break-word">First Name</div>
-                              <div data-layer="Input" class="Input" style="align-self: stretch; padding-left: 12px; padding-right: 12px; padding-top: 8px; padding-bottom: 8px; background: rgba(255, 255, 255, 0.50); box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05); border-bottom: 1px #D0D5DD solid; justify-content: flex-start; align-items: center; gap: 8px; display: inline-flex">
-                                <div data-layer="Content" class="Content" style="flex: 1 1 0; height: 24px; justify-content: flex-start; align-items: center; gap: 8px; display: flex">
-                                  <div data-layer="Text" class="Text" style="flex: 1 1 0; color: #667085; font-size: 16px; font-family: Poppins; font-weight: 400; line-height: 24px; word-wrap: break-word"> </div>
+                        <!-- /Field Item -->
+                        <!-- Field Group -->
+                        <div data-layer="Frame 9206" class="Frame9206 self-stretch inline-flex justify-start items-start gap--24">
+                            <!-- Field Item -->
+                            <div data-layer="Input field" class="InputField flex--max self-stretch flex flex-column gap--6">
+                                <div data-layer="Input with label" class="InputWithLabel self-stretch flex flex-column gap--6">
+                                  <div data-layer="Label" class="Label fs--14 fw5 lh--20 col--pale-sky">First Name</div>
+                                  <div data-layer="Input" class="Input self-stretch pad--x--12 pad--y--8 bg-white-50 sh--7 br--2 br--bottom br--left bb br--col--mischka">
+                                    <div data-layer="Content" class="Content flex--max h--24 flex justify-start items-center gap--8">
+                                      <input type="text" class="w-100 bn flex-auto fs--16 lh--24 col--pale-sky">
+                                    </div>
+                                  </div>
                                 </div>
-                              </div>
                             </div>
-                          </div>
-                          <div data-layer="Input field" class="InputField" style="flex: 1 1 0; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 6px; display: inline-flex">
-                            <div data-layer="Input with label" class="InputWithLabel" style="align-self: stretch; height: 66px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 6px; display: flex">
-                              <div data-layer="Label" class="Label" style="color: #667085; font-size: 14px; font-family: Poppins; font-weight: 500; line-height: 20px; word-wrap: break-word">Last Name</div>
-                              <div data-layer="Input" class="Input" style="align-self: stretch; padding-left: 12px; padding-right: 12px; padding-top: 8px; padding-bottom: 8px; background: rgba(255, 255, 255, 0.50); box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05); border-bottom: 1px #D0D5DD solid; justify-content: flex-start; align-items: center; gap: 8px; display: inline-flex">
-                                <div data-layer="Content" class="Content" style="flex: 1 1 0; height: 24px; justify-content: flex-start; align-items: center; gap: 8px; display: flex">
-                                  <div data-layer="Text" class="Text" style="flex: 1 1 0; color: #667085; font-size: 16px; font-family: Poppins; font-weight: 400; line-height: 24px; word-wrap: break-word"> </div>
+                            <!-- /Field Item -->
+                            <!-- Field Item -->
+                            <div data-layer="Input field" class="InputField flex--max self-stretch flex flex-column gap--6">
+                                <div data-layer="Input with label" class="InputWithLabel self-stretch flex flex-column gap--6">
+                                  <div data-layer="Label" class="Label fs--14 fw5 lh--20 col--pale-sky">Last Name</div>
+                                  <div data-layer="Input" class="Input self-stretch pad--x--12 pad--y--8 bg-white-50 sh--7 br--2 br--bottom br--left bb br--col--mischka">
+                                    <div data-layer="Content" class="Content flex--max h--24 flex justify-start items-center gap--8">
+                                      <input type="text" class="w-100 bn flex-auto fs--16 lh--24 col--pale-sky">
+                                    </div>
+                                  </div>
                                 </div>
-                              </div>
                             </div>
-                          </div>
+                            <!-- /Field Item -->
                         </div>
+                        <!-- Field Group -->
                       </div>
-                      <div data-layer="Frame 9165" class="Frame9165" style="align-self: stretch; height: 170px; padding: 24px; background: rgba(255, 255, 255, 0.40); flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 24px; display: flex">
-                        <div data-layer="Frame 9207" class="Frame9207" style="align-self: stretch; height: 58px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 8px; display: flex">
-                          <div data-layer="Link X Account" class="LinkXAccount" style="align-self: stretch; color: #0C111D; font-size: 20px; font-family: Poppins; font-weight: 600; line-height: 30px; word-wrap: break-word">Link X Account </div>
-                          <div data-layer="Link your Fansocial account to your Twitter(X) account to post product and feed updates automatically." class="LinkYourFansocialAccountToYourTwitterXAccountToPostProductAndFeedUpdatesAutomatically" style="align-self: stretch; color: #344054; font-size: 14px; font-family: Poppins; font-weight: 400; line-height: 20px; word-wrap: break-word">Link your Fansocial account to your Twitter(X) account to post product and feed updates automatically.</div>
+                      <!-- /Field Column -->
+                      <!-- Link Account Wrapper -->
+                      <div data-layer="Frame 9165" class="Frame9165 self-stretch pad--24 bg-white-40 flex flex-column justify-start items-start gap--24 pad--x--16-responsive-tablet pad--x--16-responsive-mobile pad--x--16-responsive-mobile-portrait">
+                        <div data-layer="Frame 9207" class="Frame9207 self-stretch flex flex-column justify-start items-start gap--8">
+                          <div data-layer="Link X Account" class="LinkXAccount self-stretch fs--20 fw6 lh--30 col--ebony--variation-2">Link X Account </div>
+                          <div data-layer="Link your Fansocial account to your Twitter(X) account to post product and feed updates automatically." class="fs--14 lh--20 col--oxford-blue">Link your Fansocial account to your Twitter(X) account to post product and feed updates automatically.</div>
                         </div>
-                        <div data-layer="angle button" class="AngleButton" style="height: 40px; box-shadow: 5px 4px 0px black; justify-content: flex-start; align-items: flex-start; display: inline-flex">
-                          <div data-layer="Frame 8669" class="Frame8669" style="width: 227px; align-self: stretch; padding-left: 8px; padding-right: 8px; padding-top: 4px; padding-bottom: 4px; background: #07F468; justify-content: center; align-items: center; gap: 10px; display: flex">
-                            <div data-layer="social media icon/X" class="SocialMediaIconX" style="width: 24px; height: 24px; position: relative">
-                              <div data-layer="Vector" class="Vector" style="width: 18px; height: 18px; left: 3px; top: 3px; position: absolute; background: black; border: 1px black solid"></div>
-                            </div>
-                            <div data-layer="EDIT" class="Edit" style="color: black; font-size: 18px; font-family: Poppins; font-weight: 500; line-height: 28px; word-wrap: break-word">Link your X account</div>
-                          </div>
-                          <div data-layer="Rectangle 15510" class="Rectangle15510" style="width: 15.62px; height: 40px; background: #07F468; border: 0.50px solid; backdrop-filter: blur(10px)"></div>
-                        </div>
+                        <!-- Button -->
+                        <a href="#" data-button-style="skew-right bottom" data-button-color="green" class="h--40 pad--x--8 flex items-center gap--10 justify-center relative">
+                            <span> <img src="../assets/icons/social-media-icon-x.svg" class="w--24 h--24 filter--col--black">
+                            </span>
+                            <span class="flex pad--y--4 fs--18 fw5 lh--28 black">Link your X account</span>
+                        </a>
+                        <!-- /Button -->
                       </div>
-                      <div data-layer="Frame 9166" class="Frame9166" style="align-self: stretch; height: 168px; padding: 24px; background: rgba(255, 255, 255, 0.40); flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 24px; display: flex">
-                        <div data-layer="Frame 9207" class="Frame9207" style="align-self: stretch; height: 56px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 8px; display: flex">
-                          <div data-layer="Frame 9209" class="Frame9209" style="align-self: stretch; justify-content: space-between; align-items: center; display: inline-flex">
-                            <div data-layer="Promote Yourself on Fansocial X Account" class="PromoteYourselfOnFansocialXAccount" style="color: #9F8009; font-size: 18px; font-family: Poppins; font-weight: 600; line-height: 28px; word-wrap: break-word">Promote Yourself on Fansocial X Account</div>
-                            <div data-layer="Frame 9208" class="Frame9208" style="justify-content: flex-start; align-items: flex-start; gap: 4px; display: flex">
-                              <div data-layer="star-06" class="Star06" style="width: 16px; height: 16px; position: relative">
-                                <div data-layer="Icon" class="Icon" style="width: 13.33px; height: 13.33px; left: 1.33px; top: 1.33px; position: absolute; background: linear-gradient(90deg, #D8AF0D 0%, #9F8009 100%); border: 1.33px #D8AF0D solid"></div>
+                      <!-- /Link Account Wrapper -->
+                      <!-- Promote Account Section -->
+                      <div data-layer="Frame 9166" class="Frame9166 self-stretch pad--24 bg-white-40 flex flex-column justify-start items-start gap--24 pad--x--16-responsive-tablet pad--x--16-responsive-mobile pad--x--16-responsive-mobile-portrait">
+                        <!-- Inner Top -->
+                        <div data-layer="Frame 9207" class="Frame9207 self-stretch flex flex-column justify-start items-start gap--8">
+                          <!-- Title -->
+                          <div data-layer="Frame 9209" class="Frame9209 inline-flex self-stretch justify-between items-center">
+                            <div data-layer="Promote Yourself on Fansocial X Account" class="fs--18 fw6 lh--28 col--buttered-rum">Promote Yourself on Fansocial X Account</div>
+                            <!-- Premium Text -->
+                            <div data-layer="Frame 9208" class="Frame9208 flex justify-start items-start gap--4">
+                              <div data-layer="star-06" class="Star06 relative">
+                                <img src="../assets/icons/star-06-golden-gr.svg" class="w--16 h--16">
                               </div>
-                              <div data-layer="PREMIUM" class="Premium" style="color: #D8AF0D; font-size: 12px; font-family: Poppins; font-weight: 500; line-height: 18px; word-wrap: break-word">PREMIUM</div>
+                              <div data-layer="PREMIUM" class="Premium fs--12 fw5 lh--18 col--galliano">PREMIUM</div>
                             </div>
+                            <!-- /Premium Text -->
                           </div>
-                          <div data-layer="We will automatically post your Fansocial Updates to Fansocial official twitter account." class="WeWillAutomaticallyPostYourFansocialUpdatesToFansocialOfficialTwitterAccount" style="align-self: stretch; color: #344054; font-size: 14px; font-family: Poppins; font-weight: 400; line-height: 20px; word-wrap: break-word">We will automatically post your Fansocial Updates to Fansocial official twitter account.</div>
+                          <!-- /Title -->
+                          <div data-layer="We will automatically post your Fansocial Updates to Fansocial official twitter account." class="self-stretch fs--14 lh--20 col--oxford-blue">We will automatically post your Fansocial Updates to Fansocial official twitter account.</div>
                         </div>
-                        <div data-layer="button" class="Button" style="justify-content: flex-start; align-items: flex-start; display: inline-flex">
-                          <div data-layer="button/normal" class="ButtonNormal" style="width: 260.62px; box-shadow: 0px 0px 1px #FFF3A1 inset; justify-content: flex-start; align-items: flex-start; display: flex">
-                            <div data-layer="Frame 8669" class="Frame8669" style="width: 245px; align-self: stretch; padding-left: 8px; padding-right: 8px; padding-top: 4px; padding-bottom: 4px; background: linear-gradient(0deg,  0%,  100%), linear-gradient(90deg, #D8AF0D 0%, #9F8009 100%), linear-gradient(0deg, #F3D023 0%, #F3D023 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%); justify-content: center; align-items: center; gap: 10px; display: flex">
-                              <div data-layer="star-06" class="Star06" style="width: 24px; height: 24px; position: relative">
-                                <div data-layer="Icon" class="Icon" style="width: 20px; height: 20px; left: 2px; top: 2px; position: absolute; border: 2px white solid"></div>
-                              </div>
-                              <div data-layer="EDIT" class="Edit" style="color: white; font-size: 18px; font-family: Poppins; font-weight: 600; line-height: 28px; word-wrap: break-word">Upgrade To Premium</div>
+                        <!-- /Inner Top -->
+                        <!-- Upgrade Button -->
+                        <button data-layer="shadow-button" data-button-style="skew-right bottom" data-button-color="yellow" class="h--40 pad--x--8 flex items-center gap--10 justify-center relative">
+                            <div data-layer="star-06" class="Star06 relative">
+                                <img src="../assets/icons/star-06.svg" class="w--16 h--16">
                             </div>
-                            <div data-layer="Rectangle 15510" class="Rectangle15510" style="width: 15.62px; height: 40px; background: linear-gradient(0deg, #F3D023 0%, #F3D023 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%); border: 0.50px solid; backdrop-filter: blur(10px)"></div>
-                          </div>
+                            <span data-button-label="" class="fs--18 fw6 lh--28 nowrap white">Upgrade To Premium</span>
+                        </button>
                         </div>
+                        <!-- /Upgrade Button -->
                       </div>
-                      <div data-layer="Frame 9163" class="Frame9163" style="align-self: stretch; padding-top: 16px; padding-bottom: 16px; justify-content: center; align-items: center; gap: 10px; display: inline-flex">
-                        <div data-layer="Account Information" class="AccountInformation" style="flex: 1 1 0; height: 24px; color: #667085; font-size: 24px; font-family: Poppins; font-weight: 600; line-height: 32px; word-wrap: break-word">Account Information</div>
-                      </div>
-                      <div data-layer="Frame 9161" class="Frame9161" style="align-self: stretch; height: 340px; padding: 24px; background: rgba(255, 255, 255, 0.40); flex-direction: column; justify-content: flex-start; align-items: flex-end; gap: 24px; display: flex">
-                        <div data-layer="Input field" class="InputField" style="align-self: stretch; height: 112px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 6px; display: flex">
-                          <div data-layer="Input with label" class="InputWithLabel" style="align-self: stretch; height: 66px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 6px; display: flex">
-                            <div data-layer="Label" class="Label" style="color: #667085; font-size: 14px; font-family: Poppins; font-weight: 500; line-height: 20px; word-wrap: break-word">Username</div>
-                            <div data-layer="Input" class="Input" style="align-self: stretch; padding-left: 12px; padding-right: 12px; padding-top: 8px; padding-bottom: 8px; background: rgba(255, 255, 255, 0.50); box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05); border-bottom: 1px #D0D5DD solid; justify-content: flex-start; align-items: center; gap: 8px; display: inline-flex">
-                              <div data-layer="Content" class="Content" style="flex: 1 1 0; height: 24px; justify-content: flex-start; align-items: center; gap: 8px; display: flex">
-                                <div data-layer="Text" class="Text" style="flex: 1 1 0; color: #667085; font-size: 16px; font-family: Poppins; font-weight: 400; line-height: 24px; word-wrap: break-word">carrot_popxoxo123</div>
-                              </div>
-                            </div>
-                          </div>
-                          <div data-layer="Hint text" class="HintText" style="align-self: stretch; color: #475467; font-size: 14px; font-family: Poppins; font-weight: 400; line-height: 20px; word-wrap: break-word">Usernames cannot be changed after your first month on Fansocial, but special circumstances may allow for exceptions. Please contact us if you need assistance with changing your username.</div>
-                        </div>
-                        <div data-layer="Input field" class="InputField" style="align-self: stretch; height: 66px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 6px; display: flex">
-                          <div data-layer="Input with label" class="InputWithLabel" style="align-self: stretch; height: 66px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 6px; display: flex">
-                            <div data-layer="Label" class="Label" style="color: #667085; font-size: 14px; font-family: Poppins; font-weight: 500; line-height: 20px; word-wrap: break-word">Email</div>
-                            <div data-layer="Input" class="Input" style="align-self: stretch; padding-left: 12px; padding-right: 12px; padding-top: 8px; padding-bottom: 8px; background: rgba(255, 255, 255, 0.50); box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05); border-bottom: 1px #D0D5DD solid; justify-content: flex-start; align-items: center; gap: 8px; display: inline-flex">
-                              <div data-layer="Content" class="Content" style="flex: 1 1 0; height: 24px; justify-content: flex-start; align-items: center; gap: 8px; display: flex">
-                                <div data-layer="Text" class="Text" style="flex: 1 1 0; color: #667085; font-size: 16px; font-family: Poppins; font-weight: 400; line-height: 24px; word-wrap: break-word">mscarrot_pops@gmail.com</div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div data-layer="Frame 9206" class="Frame9206" style="align-self: stretch; justify-content: flex-start; align-items: flex-start; gap: 24px; display: inline-flex">
-                          <div data-layer="Input field" class="InputField" style="flex: 1 1 0; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 6px; display: inline-flex">
-                            <div data-layer="Input with label" class="InputWithLabel" style="align-self: stretch; height: 66px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 6px; display: flex">
-                              <div data-layer="Label" class="Label" style="color: #667085; font-size: 14px; font-family: Poppins; font-weight: 500; line-height: 20px; word-wrap: break-word">First Name</div>
-                              <div data-layer="Input" class="Input" style="align-self: stretch; padding-left: 12px; padding-right: 12px; padding-top: 8px; padding-bottom: 8px; background: rgba(255, 255, 255, 0.50); box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05); border-bottom: 1px #D0D5DD solid; justify-content: flex-start; align-items: center; gap: 8px; display: inline-flex">
-                                <div data-layer="Content" class="Content" style="flex: 1 1 0; height: 24px; justify-content: flex-start; align-items: center; gap: 8px; display: flex">
-                                  <div data-layer="Text" class="Text" style="flex: 1 1 0; color: #667085; font-size: 16px; font-family: Poppins; font-weight: 400; line-height: 24px; word-wrap: break-word"> </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div data-layer="Input field" class="InputField" style="flex: 1 1 0; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 6px; display: inline-flex">
-                            <div data-layer="Input with label" class="InputWithLabel" style="align-self: stretch; height: 66px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 6px; display: flex">
-                              <div data-layer="Label" class="Label" style="color: #667085; font-size: 14px; font-family: Poppins; font-weight: 500; line-height: 20px; word-wrap: break-word">Last Name</div>
-                              <div data-layer="Input" class="Input" style="align-self: stretch; padding-left: 12px; padding-right: 12px; padding-top: 8px; padding-bottom: 8px; background: rgba(255, 255, 255, 0.50); box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05); border-bottom: 1px #D0D5DD solid; justify-content: flex-start; align-items: center; gap: 8px; display: inline-flex">
-                                <div data-layer="Content" class="Content" style="flex: 1 1 0; height: 24px; justify-content: flex-start; align-items: center; gap: 8px; display: flex">
-                                  <div data-layer="Text" class="Text" style="flex: 1 1 0; color: #667085; font-size: 16px; font-family: Poppins; font-weight: 400; line-height: 24px; word-wrap: break-word"> </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div data-layer="Frame 9165" class="Frame9165" style="align-self: stretch; height: 170px; padding: 24px; background: rgba(255, 255, 255, 0.40); flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 24px; display: flex">
-                        <div data-layer="Frame 9207" class="Frame9207" style="align-self: stretch; height: 58px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 8px; display: flex">
-                          <div data-layer="Link X Account" class="LinkXAccount" style="align-self: stretch; color: #0C111D; font-size: 20px; font-family: Poppins; font-weight: 600; line-height: 30px; word-wrap: break-word">Link X Account </div>
-                          <div data-layer="Link your Fansocial account to your Twitter(X) account to post product and feed updates automatically." class="LinkYourFansocialAccountToYourTwitterXAccountToPostProductAndFeedUpdatesAutomatically" style="align-self: stretch; color: #344054; font-size: 14px; font-family: Poppins; font-weight: 400; line-height: 20px; word-wrap: break-word">Link your Fansocial account to your Twitter(X) account to post product and feed updates automatically.</div>
-                        </div>
-                        <div data-layer="angle button" class="AngleButton" style="height: 40px; box-shadow: 5px 4px 0px black; justify-content: flex-start; align-items: flex-start; display: inline-flex">
-                          <div data-layer="Frame 8669" class="Frame8669" style="width: 227px; align-self: stretch; padding-left: 8px; padding-right: 8px; padding-top: 4px; padding-bottom: 4px; background: #07F468; justify-content: center; align-items: center; gap: 10px; display: flex">
-                            <div data-layer="social media icon/X" class="SocialMediaIconX" style="width: 24px; height: 24px; position: relative">
-                              <div data-layer="Vector" class="Vector" style="width: 18px; height: 18px; left: 3px; top: 3px; position: absolute; background: black; border: 1px black solid"></div>
-                            </div>
-                            <div data-layer="EDIT" class="Edit" style="color: black; font-size: 18px; font-family: Poppins; font-weight: 500; line-height: 28px; word-wrap: break-word">Link your X account</div>
-                          </div>
-                          <div data-layer="Rectangle 15510" class="Rectangle15510" style="width: 15.62px; height: 40px; background: #07F468; border: 0.50px solid; backdrop-filter: blur(10px)"></div>
-                        </div>
-                      </div>
-                      <div data-layer="Frame 9166" class="Frame9166" style="align-self: stretch; height: 168px; padding: 24px; background: rgba(255, 255, 255, 0.40); flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 24px; display: flex">
-                        <div data-layer="Frame 9207" class="Frame9207" style="align-self: stretch; height: 56px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 8px; display: flex">
-                          <div data-layer="Frame 9209" class="Frame9209" style="align-self: stretch; justify-content: space-between; align-items: center; display: inline-flex">
-                            <div data-layer="Promote Yourself on Fansocial X Account" class="PromoteYourselfOnFansocialXAccount" style="color: #9F8009; font-size: 18px; font-family: Poppins; font-weight: 600; line-height: 28px; word-wrap: break-word">Promote Yourself on Fansocial X Account</div>
-                            <div data-layer="Frame 9208" class="Frame9208" style="justify-content: flex-start; align-items: flex-start; gap: 4px; display: flex">
-                              <div data-layer="star-06" class="Star06" style="width: 16px; height: 16px; position: relative">
-                                <div data-layer="Icon" class="Icon" style="width: 13.33px; height: 13.33px; left: 1.33px; top: 1.33px; position: absolute; background: linear-gradient(90deg, #D8AF0D 0%, #9F8009 100%); border: 1.33px #D8AF0D solid"></div>
-                              </div>
-                              <div data-layer="PREMIUM" class="Premium" style="color: #D8AF0D; font-size: 12px; font-family: Poppins; font-weight: 500; line-height: 18px; word-wrap: break-word">PREMIUM</div>
-                            </div>
-                          </div>
-                          <div data-layer="We will automatically post your Fansocial Updates to Fansocial official twitter account." class="WeWillAutomaticallyPostYourFansocialUpdatesToFansocialOfficialTwitterAccount" style="align-self: stretch; color: #344054; font-size: 14px; font-family: Poppins; font-weight: 400; line-height: 20px; word-wrap: break-word">We will automatically post your Fansocial Updates to Fansocial official twitter account.</div>
-                        </div>
-                        <div data-layer="button" class="Button" style="justify-content: flex-start; align-items: flex-start; display: inline-flex">
-                          <div data-layer="button/normal" class="ButtonNormal" style="width: 260.62px; box-shadow: 0px 0px 1px #FFF3A1 inset; justify-content: flex-start; align-items: flex-start; display: flex">
-                            <div data-layer="Frame 8669" class="Frame8669" style="width: 245px; align-self: stretch; padding-left: 8px; padding-right: 8px; padding-top: 4px; padding-bottom: 4px; background: linear-gradient(0deg,  0%,  100%), linear-gradient(90deg, #D8AF0D 0%, #9F8009 100%), linear-gradient(0deg, #F3D023 0%, #F3D023 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%); justify-content: center; align-items: center; gap: 10px; display: flex">
-                              <div data-layer="star-06" class="Star06" style="width: 24px; height: 24px; position: relative">
-                                <div data-layer="Icon" class="Icon" style="width: 20px; height: 20px; left: 2px; top: 2px; position: absolute; border: 2px white solid"></div>
-                              </div>
-                              <div data-layer="EDIT" class="Edit" style="color: white; font-size: 18px; font-family: Poppins; font-weight: 600; line-height: 28px; word-wrap: break-word">Upgrade To Premium</div>
-                            </div>
-                            <div data-layer="Rectangle 15510" class="Rectangle15510" style="width: 15.62px; height: 40px; background: linear-gradient(0deg, #F3D023 0%, #F3D023 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%); border: 0.50px solid; backdrop-filter: blur(10px)"></div>
-                          </div>
-                        </div>
-                      </div>
+                      <!-- /Promote Account Section -->
                     </div>
                     <!-- /Account Information Wrapper -->
                 </div> <!-- End Inner Container -->

@@ -265,6 +265,10 @@ body.stop-mobile-scrolling {
   box-shadow: none
 }
 
+.bg-white-40-responsive-mobile-portrait {
+  background: rgba(255, 255, 255, .4)
+}
+
 .bg-white-70-responsive-mobile-portrait {
   background: rgba(255, 255, 255, .7)
 }
@@ -285,12 +289,20 @@ body.stop-mobile-scrolling {
   font-size: .75rem
 }
 
+.fs--18-responsive-mobile-portrait {
+  font-size: 1.125rem
+}
+
 .fs--20-responsive-mobile-portrait {
   font-size: 1.25rem
 }
 
 .lh--18-responsive-mobile-portrait {
   line-height: 1.125rem
+}
+
+.lh--28-responsive-mobile-portrait {
+  line-height: 1.75rem
 }
 
 .lh--30-responsive-mobile-portrait {
@@ -680,6 +692,16 @@ body.stop-mobile-scrolling {
 
 .z--9--responsive-mobile-portrait {
   z-index: 9
+}
+
+.bg--blur--10-responsive-mobile-portrait {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px)
+}
+
+.sh--none-responsive-mobile-portrait {
+  -webkit-box-shadow: none;
+  box-shadow: none
 }
 
 .br--0-responsive-mobile-portrait {

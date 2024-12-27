@@ -28,12 +28,24 @@
         <link rel="stylesheet"
             href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/customTachyons.css" />
 
+        <!-- Normal CSS -->
+        <style>
+            .Frame9150 { width: 26.6875rem; border-color: rgba(255, 255, 255, 0.50); background: linear-gradient(180deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.00) 50%, rgba(255, 255, 255, 0.50) 100%), rgba(255, 255, 255, 0.01); box-shadow: 0px 30px 50px 0px rgba(255, 255, 255, 0.10) inset, 0px 0px 30px 0px rgba(0, 0, 0, 0.05); }
+            .Frame9151 { height: 300px;}
+            .ContrastBorder { opacity: 0.08;border-color: #000 }
+            .AvatarOnlineIndicator { left: 114px; top: 114px; }
+        </style>
+
         <!-- Dashboard Sidebar Custom Style -->
         <link rel="stylesheet" href="../assets/css/dashboard-styles-desktop.css" />
 
+        <!-- Tablet landscape Stylesheet -->
+        <link rel="stylesheet" href="../assets/css/dashboard-styles-tablet-landscape.css"
+            media="screen and (min-width: 1010px) and (max-width: 1365px)">
+
         <!-- Tablet Stylesheet -->
         <link rel="stylesheet" href="../assets/css/dashboard-styles-tablet.css"
-            media="screen and (min-width: 768px) and (max-width: 1365px)">
+            media="screen and (min-width: 768px) and (max-width: 1009px)">
 
         <!-- Mobile Stylesheet -->
         <link rel="stylesheet" href="../assets/css/dashboard-styles-mobile.css"
@@ -42,14 +54,6 @@
         <!-- Mobile Portrait Stylesheet -->
         <link rel="stylesheet" href="../assets/css/dashboard-styles-mobile-portrait.css"
             media="screen and (max-width: 479px)">
-
-        <!-- Normal CSS -->
-        <style>
-            .Frame9150 { width: 26.6875rem; border-color: rgba(255, 255, 255, 0.50); background: linear-gradient(180deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.00) 50%, rgba(255, 255, 255, 0.50) 100%), rgba(255, 255, 255, 0.01); box-shadow: 0px 30px 50px 0px rgba(255, 255, 255, 0.10) inset, 0px 0px 30px 0px rgba(0, 0, 0, 0.05); }
-            .Frame9151 { height: 300px;}
-            .ContrastBorder { opacity: 0.08;border-color: #000 }
-            .AvatarOnlineIndicator { left: 114px; top: 114px; }
-        </style>
     </head>
 
     <body>
@@ -72,7 +76,7 @@
                             </a>
                             <h1
                                 class="poppins fs--14 lh--20 fw6 col--fiord-gray m--0 dn display--flex-responsive-mobile display--flex-responsive-mobile-portrait">
-                                Order Received</h1>
+                                Settings</h1>
                         </div>
                         <!-- /Site Logo -->
 
@@ -6033,10 +6037,10 @@
             <!-- main section -->
             <main data-dashboard-page="" data-section="main" class="flex flex-column flex--max relative z-1">
                 <!-- Inner Container -->
-                <div data-section="inner-container" data-tabs-section="1"
-                    class="flex gap--24 bg--gradient-white pad--x--40 pad--top--24 pad--bottom-40 pad--top--24-responsive-tablet pad--x--16-responsive-tablet pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait pad--y--0-responsive-mobile pad--y--0-responsive-mobile-portrait flex">
+                <div data-section="inner-container"
+                    class="flex gap--24 bg--gradient-white pad--x--40 pad--top--24 pad--bottom-40 flex pad--x--16-responsive-tablet-landscape pad--y-0-responsive-tablet pad--x--0-responsive-tablet pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait pad--y--0-responsive-mobile pad--y--0-responsive-mobile-portrait">
                     <!-- Account Settings Wrapper -->
-                    <div data-layer="Frame 9150" class="Frame9150 flex flex-column ba justify-start items-end">
+                    <div data-layer="Frame 9150" class="Frame9150 flex flex-column ba justify-start items-end w--100-responsive-tablet w--100-responsive-mobile w--100-responsive-mobile-portrait sh--none-responsive-tablet sh--none-responsive-mobile sh--none-responsive-mobile-portrait">
                         <!-- User Info -->
                         <div data-layer="Frame 9151" class="Frame9151 self-stretch pad--24 flex flex-column justify-center items-center bb gap--16 br--col--white">
                             <!-- Avatar -->
@@ -6070,7 +6074,7 @@
                             <div data-layer="Frame 9156" class="Frame9156 self-stretch flex flex-column justify-start items-start gap--8">
                               <div data-layer="GENERAL" class="General fs--12 fw5 lh--18 col--pale-sky">GENERAL</div>
                               <!-- Link Item -->
-                              <div data-layer="Frame 8669" class="Frame8669 self-stretch pad--y--4 inline-flex justify-start items-center gap--10">
+                              <div data-layer="Frame 8669" class="Frame8669 self-stretch pad--y--4 inline-flex justify-start items-center gap--10 pointer">
                                 <div data-layer="Account Information" class="AccountInformation flex--max fs--16 fw5 lh--24 col--blue-ribbon-2">Account Information</div>
                                 <div data-layer="arrow-narrow-right" class="ArrowNarrowRight" style="width: 24px; height: 24px; position: relative">
                                   <img src="../assets/icons/arrow-narrow-right.svg" class="w--24 h--24 filter--col--blue-ribbon-2" />
@@ -6078,7 +6082,7 @@
                               </div>
                               <!-- /Link Item -->
                               <!-- Link Item -->
-                              <div data-layer="Frame 9155" class="Frame9155 self-stretch pad--y--4 inline-flex justify-start items-center gap--10d">
+                              <div data-layer="Frame 9155" class="Frame9155 self-stretch pad--y--4 inline-flex justify-start items-center gap--10 pointer">
                                 <div data-layer="Change Password" class="ChangePassword flex--max fs--16 fw5 lh--24 col--ebony--variation-2">Change Password</div>
                                 <div data-layer="arrow-narrow-right" class="ArrowNarrowRight" style="width: 24px; height: 24px; position: relative">
                                   <img src="../assets/icons/arrow-narrow-right.svg" class="w--24 h--24 filter--col--oxford-blue" />
@@ -6086,7 +6090,7 @@
                               </div>
                               <!-- /Link Item -->
                               <!-- Link Item -->
-                              <div data-layer="Frame 9156" class="Frame9156 self-stretch pad--y--4 inline-flex justify-start items-center gap--10">
+                              <div data-layer="Frame 9156" class="Frame9156 self-stretch pad--y--4 inline-flex justify-start items-center gap--10 pointer">
                                 <div data-layer="Privacy & Security" class="PrivacySecurity flex--max fs--16 fw5 lh--24 col--ebony--variation-2">Privacy & Security</div>
                                 <div data-layer="arrow-narrow-right" class="ArrowNarrowRight" style="width: 24px; height: 24px; position: relative">
                                   <img src="../assets/icons/arrow-narrow-right.svg" class="w--24 h--24 filter--col--oxford-blue" />
@@ -6100,17 +6104,17 @@
                               <div data-layer="CALL & LIVE STREAM SETTINGS" class="CallLiveStreamSettings fs--12 fw5 lh--18 col--pale-sky">CALL & LIVE STREAM SETTINGS</div>
                               <!-- Link Item -->
                               <div data-layer="Frame 9152" class="Frame9152 self-stretch pad--y--4 inline-flex justify-start items-center gap--10">
-                                <div data-layer="Live Stream Settings" class="LiveStreamSettings flex--max fs--16 fw5 lh--24 col--ebony--variation-2">Live Stream Settings</div>
+                                <div data-layer="Live Stream Settings" class="LiveStreamSettings flex--max fs--16 fw5 lh--24 col--pale-sky">Live Stream Settings</div>
                                 <div data-layer="arrow-narrow-right" class="ArrowNarrowRight" style="width: 24px; height: 24px; position: relative">
-                                  <img src="../assets/icons/arrow-narrow-right.svg" class="w--24 h--24 filter--col--oxford-blue" />
+                                  <img src="../assets/icons/arrow-narrow-right.svg" class="w--24 h--24 filter--col--pale-sky" />
                                 </div>
                               </div>
                               <!-- /Link Item -->
                               <!-- Link Item -->
                               <div data-layer="Frame 8669" class="Frame8669 self-stretch pad--y--4 inline-flex justify-start items-center gap--10">
-                                <div data-layer="Call Settings" class="CallSettings flex--max fs--16 fw5 lh--24 col--ebony--variation-2">Call Settings</div>
+                                <div data-layer="Call Settings" class="CallSettings flex--max fs--16 fw5 lh--24 col--pale-sky">Call Settings</div>
                                 <div data-layer="arrow-narrow-right" class="ArrowNarrowRight" style="width: 24px; height: 24px; position: relative">
-                                  <img src="../assets/icons/arrow-narrow-right.svg" class="w--24 h--24 filter--col--oxford-blue" />
+                                  <img src="../assets/icons/arrow-narrow-right.svg" class="w--24 h--24 filter--col--pale-sky" />
                                 </div>
                               </div>
                               <!-- /Link Item -->
@@ -6120,7 +6124,7 @@
                             <div data-layer="Frame 9158" class="Frame9158 self-stretch flex flex-column justify-start items-start gap--8">
                               <div data-layer="TRANSACTION" class="Transaction fs--12 fw5 lh--18 col--pale-sky">TRANSACTION</div>
                               <!-- Link Item -->
-                              <div data-layer="Frame 9153" class="Frame9153 self-stretch pad--y--4 inline-flex justify-start items-center gap--10">
+                              <div data-layer="Frame 9153" class="Frame9153 self-stretch pad--y--4 inline-flex justify-start items-center gap--10 pointer">
                                 <div data-layer="Shipping Address" class="ShippingAddress flex--max fs--16 fw5 lh--24 col--ebony--variation-2">Shipping Address</div>
                                 <div data-layer="arrow-narrow-right" class="ArrowNarrowRight" style="width: 24px; height: 24px; position: relative">
                                   <img src="../assets/icons/arrow-narrow-right.svg" class="w--24 h--24 filter--col--oxford-blue" />
@@ -6128,7 +6132,7 @@
                               </div>
                               <!-- /Link Item -->
                               <!-- Link Item -->
-                              <div data-layer="Frame 9152" class="Frame9152 self-stretch pad--y--4 inline-flex justify-start items-center gap--10">
+                              <div data-layer="Frame 9152" class="Frame9152 self-stretch pad--y--4 inline-flex justify-start items-center gap--10 pointer">
                                 <div data-layer="Payout Details" class="PayoutDetails flex--max fs--16 fw5 lh--24 col--ebony--variation-2">Payout Details</div>
                                 <div data-layer="arrow-narrow-right" class="ArrowNarrowRight" style="width: 24px; height: 24px; position: relative">
                                   <img src="../assets/icons/arrow-narrow-right.svg" class="w--24 h--24 filter--col--oxford-blue" />
@@ -6142,14 +6146,14 @@
                               <div data-layer="SOCIAL MEDIA AND SHARING" class="SocialMediaAndSharing fs--12 fw5 lh--18 col--pale-sky">SOCIAL MEDIA AND SHARING</div>
                               <!-- Link Item -->
                               <div data-layer="Frame 9155" class="Frame9155 self-stretch pad--y--4 inline-flex justify-start items-center gap--10">
-                                <div data-layer="Newsletter & Email Settings" class="NewsletterEmailSettings flex--max fs--16 fw5 lh--24 col--ebony--variation-2">Newsletter & Email Settings</div>
+                                <div data-layer="Newsletter & Email Settings" class="NewsletterEmailSettings flex--max fs--16 fw5 lh--24 col--pale-sky">Newsletter & Email Settings</div>
                                 <div data-layer="arrow-narrow-right" class="ArrowNarrowRight" style="width: 24px; height: 24px; position: relative">
-                                  <img src="../assets/icons/arrow-narrow-right.svg" class="w--24 h--24 filter--col--oxford-blue" />
+                                  <img src="../assets/icons/arrow-narrow-right.svg" class="w--24 h--24 filter--col--pale-sky" />
                                 </div>
                               </div>
                               <!-- /Link Item -->
                               <!-- Link Item -->
-                              <div data-layer="Frame 9154" class="Frame9154 self-stretch pad--y--4 inline-flex justify-start items-center gap--10">
+                              <div data-layer="Frame 9154" class="Frame9154 self-stretch pad--y--4 inline-flex justify-start items-center gap--10 pointer">
                                 <div data-layer="X Repost Automation" class="XRepostAutomation flex--max fs--16 fw5 lh--24 col--ebony--variation-2">X Repost Automation</div>
                                 <div data-layer="arrow-narrow-right" class="ArrowNarrowRight" style="width: 24px; height: 24px; position: relative">
                                   <img src="../assets/icons/arrow-narrow-right.svg" class="w--24 h--24 filter--col--oxford-blue" />

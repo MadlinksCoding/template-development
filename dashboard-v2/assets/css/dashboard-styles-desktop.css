@@ -716,6 +716,14 @@ html {
   color: var(--color-flamingo, #f04438)
 }
 
+.col--buttered-rum {
+  color: var(--color-buttered-rum, #9f8009)
+}
+
+.col--galliano {
+  color: var(--color-galliano, #d8af0d)
+}
+
 .bg--col--white--25 {
   background: rgba(255, 255, 255, .25)
 }
@@ -4701,7 +4709,7 @@ button[data-color=gray]:not(:disabled):hover span {
   height: 100%;
   position: absolute;
   top: 0;
-  right: -.563rem;
+  right: -.43rem;
   z-index: 1;
   -webkit-box-shadow: 4px 4px 0 0 #000;
   box-shadow: 4px 4px 0 0 #000;
@@ -4744,6 +4752,43 @@ button[data-color=gray]:not(:disabled):hover span {
 [data-button-color=green]:hover img {
   -webkit-filter: brightness(0) saturate(100%) invert(75%) sepia(23%) saturate(7280%) hue-rotate(93deg) brightness(109%) contrast(95%);
   filter: brightness(0) saturate(100%) invert(75%) sepia(23%) saturate(7280%) hue-rotate(93deg) brightness(109%) contrast(95%)
+}
+
+[data-button-color=yellow],
+[data-button-color=yellow]:after {
+  background-color: #c2a61c
+}
+
+[data-button-color=yellow]:hover,
+[data-button-color=yellow]:hover:after {
+  background-color: #c2a61c
+}
+
+[data-button-color=yellow]:hover span {
+  color: #fff
+}
+
+[data-button-color=yellow]:hover img {
+  -webkit-filter: brightness(0) saturate(100%) invert(99%) sepia(99%) saturate(0) hue-rotate(176deg) brightness(107%) contrast(100%);
+  filter: brightness(0) saturate(100%) invert(99%) sepia(99%) saturate(0) hue-rotate(176deg) brightness(107%) contrast(100%)
+}
+
+[data-layer=shadow-button][data-button-style="skew-right bottom"]:after {
+  background-image: url(../images/angle-button-bg.svg);
+  background-position: 103% 0;
+  background-repeat: no-repeat
+}
+
+[data-layer=shadow-button] {
+  -webkit-box-shadow: 0 5px 50px 0 rgba(242, 242, 3, .5), 5px 4px 0 0 #000, 0 0 10px 0 rgba(242, 242, 3, .05), 0 0 10px 0 rgba(255, 185, 9, .7), 0 0 10px 0 rgba(255, 185, 9, .7), 0 0 1px 0 #fff3a1 inset;
+  box-shadow: 0 5px 50px 0 rgba(242, 242, 3, .5), 5px 4px 0 0 #000, 0 0 10px 0 rgba(242, 242, 3, .05), 0 0 10px 0 rgba(255, 185, 9, .7), 0 0 10px 0 rgba(255, 185, 9, .7), 0 0 1px 0 #fff3a1 inset;
+  background-image: url(../images/angle-button-bg.svg);
+  background-repeat: no-repeat
+}
+
+[data-button-style="skew-right bottom"]:hover:after,
+[data-layer=shadow-button]:hover {
+  background-image: none
 }
 
 [data-button-color=gull-gray],

@@ -9,6 +9,7 @@
 
 
 /* Background Colors*/
+.bg-white-40-responsive-mobile { background: rgba(255, 255, 255, 0.40); }
 .bg-white-70-responsive-mobile { background: rgba(255, 255, 255, 0.70); }
 .bg--col--none--responsive-mobile { background: transparent; }
 .bg-black-70-responsive-mobile { background: rgba(0, 0, 0, 0.70); }
@@ -53,11 +54,13 @@
 
 /* Font Size */
 .fs--12-responsive-mobile { font-size: 0.75rem; /* font-size 12px */  }
+.fs--18-responsive-mobile { font-size: 1.125rem; /* font-size 18px */  }
 .fs--20-responsive-mobile { font-size: 1.25rem; /* font-size 20px */  }
 
 
 /* Line Height */
 .lh--18-responsive-mobile { line-height: 1.125rem; /* line-height 18px */ } /* confirmed in use */ /* pixel conversion correct */
+.lh--28-responsive-mobile { line-height: 1.75rem; /* line-height 28px */ } /* confirmed in use */ /* pixel conversion correct */
 .lh--30-responsive-mobile { line-height: 1.875rem; /* line-height 30px */ } /* confirmed in use */ /* pixel conversion correct */
 
 
@@ -230,10 +233,12 @@
 
 
 /* Backdrop Filter */
+.bg--blur--10-responsive-mobile { -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
 .bg--blur--25-responsive-mobile { -webkit-backdrop-filter: blur(25px); backdrop-filter: blur(25px); } /* confirmed in use */
 
 
 /* Box Shadow */
+.sh--none-responsive-mobile { box-shadow: none; }
 
 
 /* Drop Shadow */

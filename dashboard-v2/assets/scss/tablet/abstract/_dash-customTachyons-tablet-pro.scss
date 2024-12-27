@@ -123,6 +123,7 @@
 .pad--x--24-responsive-tablet { padding-left: 1.5rem; padding-right: 1.5rem; /* padding left right 16px */ }
 .pad--y-0-responsive-tablet{ padding-top: 0rem; padding-bottom: 0rem; /* padding top 96px padding bottom 96px */ }
 .pad--bottom--70-responsive-tablet { padding-bottom: 4.375rem;}
+.pad--bottom--8-responsive-tablet { padding-bottom: 0.5rem;}
 
 
 /* Margin */
@@ -130,8 +131,7 @@
 
 /* Display */
 .display--none-responsive-tablet { display: none; }
-.display--flex-responsive-tablet { display: none; }
-
+.display--flex-responsive-tablet { display: flex; }
 
 /* Gap */
 .gap--24-responsive-tablet { gap: 1.5rem; /* gap 24px */ } /* confirmed in use */ /* pixel conversion correct */
@@ -203,6 +203,7 @@
 
 
 /* Box Shadow */
+.sh--none-responsive-tablet { box-shadow: none; }
 
 
 /* Drop Shadow */
