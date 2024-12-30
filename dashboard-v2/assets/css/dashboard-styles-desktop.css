@@ -1127,6 +1127,11 @@ html {
   -moz-filter: blur(600px)
 }
 
+.hover--parent--child--col--white-ribbon:hover .hov--filter--col--white-ribbon {
+  -webkit-filter: brightness(0) saturate(100%) invert(99%) sepia(99%) saturate(0) hue-rotate(176deg) brightness(107%) contrast(100%);
+  filter: brightness(0) saturate(100%) invert(99%) sepia(99%) saturate(0) hue-rotate(176deg) brightness(107%) contrast(100%)
+}
+
 .hover--parent--child--col--black-ribbon:hover .hov--filter--col--black-ribbon {
   -webkit-filter: brightness(0) saturate(100%) invert(0) sepia(96%) saturate(7494%) hue-rotate(96deg) brightness(112%) contrast(97%);
   filter: brightness(0) saturate(100%) invert(0) sepia(96%) saturate(7494%) hue-rotate(96deg) brightness(112%) contrast(97%)
