@@ -176,8 +176,10 @@ background: rgba(255, 255, 255, 0.90); box-shadow: 0px 3px 6px 0px rgba(0, 0, 0,
 [data-description-type="large"].nice-select-dropdown [data-option-description] { margin-top: 0.25rem; white-space: normal; font-size: 0.75rem; line-height: 1.125rem; }
 
 [data-select-size="large"][data-conditions-dropdown].nice-select.v1:not(.auto-width) {min-width: 20rem;}
-[data-description-type="large"][data-conditions-dropdown].mlc-ns.v1:not(.has-tags) [data-option-label] { font-weight: 400; font-size: 0.875rem; line-height: 1.25rem; }
-[data-description-type="large"][data-conditions-dropdown].mlc-ns.v1:not(.has-tags) .nice-select-dropdown [data-option-label] { font-weight: 500; font-size: 1rem; line-height: 1.5rem; text-wrap: auto; }
+[data-description-type="large"][data-conditions-dropdown].mlc-ns.v1:not(.has-tags) [data-option-label],
+[data-description-type="small"][data-conditions-dropdown].mlc-ns.v1:not(.has-tags) [data-option-label] { font-weight: 400; font-size: 0.875rem; line-height: 1.25rem; }
+[data-description-type="large"][data-conditions-dropdown].mlc-ns.v1:not(.has-tags) .nice-select-dropdown [data-option-label],
+[data-description-type="small"][data-conditions-dropdown].mlc-ns.v1:not(.has-tags) .nice-select-dropdown [data-option-label] { font-weight: 500; font-size: 1rem; line-height: 1.5rem; text-wrap: auto; }
 [data-description-type="small"][data-conditions-dropdown][data-option-description] { white-space: break-spaces; }
 [data-conditions-dropdown].nice-select-dropdown.h--732, [data-conditions-dropdown].nice-select-dropdown.h--732 .nice-select-lists { height: 45.75rem; /* height 732px */ } /* confirmed in use */ /* pixel conversion correct */
 
