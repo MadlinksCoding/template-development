@@ -1418,6 +1418,10 @@ html {
   height: 3.313rem
 }
 
+.h--66 {
+  height: 4.125rem
+}
+
 .h--80 {
   height: 5rem
 }
@@ -4471,8 +4475,17 @@ html {
   color: #fff
 }
 
+[data-dropdown-color-theme=blue].nice-select.v1 .current.active .nice-select-icon svg {
+  -webkit-filter: brightness(0) saturate(100%) invert(99%) sepia(99%) saturate(0) hue-rotate(176deg) brightness(107%) contrast(100%);
+  filter: brightness(0) saturate(100%) invert(99%) sepia(99%) saturate(0) hue-rotate(176deg) brightness(107%) contrast(100%)
+}
+
 [data-dropdown-color-theme=blue].nice-select.v1 .current.active .nice-select-icon path {
   fill: none !important
+}
+
+[data-dropdown-color-theme=blue].nice-select-dropdown.open.h--66 {
+  height: 4.125rem
 }
 
 [data-form-input-type=checkbox] input[type=checkbox] {
