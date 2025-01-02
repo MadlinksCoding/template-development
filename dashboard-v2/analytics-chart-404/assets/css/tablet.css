@@ -27,9 +27,11 @@ html { font-size: 16px; }
 
 /* Flexbox */
 .dn-responsive-tablet { display: flex; }
+.flex-responsive-tablet { display: flex; }
 .flex--column-responsive-tablet { flex-direction: column; }
 .items--start-responsive-tablet { align-items: flex-start; }
 .flex--1-responsive-tablet { flex: 1; }
+.justify--end-responsive-tablet { justify-content: flex-end; }
 
 /* Display */
 .display--none-responsive-tablet { display: none; }
@@ -47,16 +49,22 @@ html { font-size: 16px; }
 /* Background Style */
 .bg--center-top-responsive-tablet { background-position: center top; }
 
+/* Position */
+.relative-responsive-tablet { position: relative; }
+
 /* Top */
+.top--0-responsive-tablet { top: 0rem; }
 .top--64-responsive-tablet { top: 4rem; }
 
 /* Bottom */
+.bottom--0-responsive-tablet { bottom: 0rem; }
 .bottom--80-responsive-tablet { bottom: 5rem; }
 
 /* Left */
 .left--0-responsive-tablet { left: 0rem; }
 
 /* Right */
+.right--0-responsive-tablet { right: 0rem; }
 .right--8-responsive-tablet { right: 0.5rem; }
 
 /* Text Align */

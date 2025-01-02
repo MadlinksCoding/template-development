@@ -9,6 +9,7 @@ html { font-size: 16px; }
 .w--390-responsive-mobile { width: 24.375rem; }
 
 /* Height */
+.h--100-percent-responsive-mobile { height: 100%; }
 .h--16-responsive-mobile { height: 1rem; }
 .h--327-responsive-mobile { height: 20.45925rem; }
 .h--274-responsive-mobile { height: 17.125rem; }
@@ -26,9 +27,11 @@ html { font-size: 16px; }
 
 /* Flexbox */
 .dn-responsive-mobile { display: flex; }
+.flex-responsive-mobile { display: flex; }
 .flex--column-responsive-mobile { flex-direction: column; }
 .items--start-responsive-mobile { align-items: flex-start; }
 .justify--between-responsive-mobile { justify-content:space-between; }
+.justify--end-responsive-mobile { justify-content:flex-end; }
 .flex--1-responsive-mobile { flex: 1; }
 
 /* Display */
@@ -46,6 +49,8 @@ html { font-size: 16px; }
 .pad--16-responsive-mobile { padding: 1rem; /* padding top bottom left right 16px */ }
 .pad--top--52-responsive-mobile { padding-top: 3.28rem;}
 .pad--bottom--0-responsive-mobile { padding-bottom: 0rem; /* padding bottom 0px */ }
+.pad--top--0-responsive-mobile { padding-top: 0rem; /* padding top 0px */ }
+.pad--top--32-responsive-mobile { padding-top: 2rem; /* padding top 32px */ }
 .pad--top--64-responsive-mobile { padding-top: 4rem; /* padding top 64px */ }
 .pad--bottom--24-responsive-mobile { padding-bottom: 1.5rem; /* padding bottom 24px */ }
 .pad--x--0-responsive-mobile { padding-left: 0rem; padding-right: 0rem; /* padding left right 0px */ }
@@ -72,6 +77,7 @@ html { font-size: 16px; }
 
 /* Position */
 .absolute-responsive-mobile { position: absolute; }
+.relative-responsive-mobile { position: relative; }
 .top--neg-8-responsive-mobile { top: -0.5rem; }
 .right--16-responsive-mobile { right: 1rem; }
 .right--0-responsive-mobile { right: 0rem; }
@@ -80,15 +86,19 @@ html { font-size: 16px; }
 .bg--center-top-responsive-mobile { background-position: center top; }
 
 /* Top */
+.top--0-responsive-mobile { top: 0rem; }
 .top--64-responsive-mobile { top: 4rem; }
 
 /* Bottom */
+.bottom--0-responsive-mobile { bottom: 0rem; }
 .bottom--80-responsive-mobile { bottom: 5rem; }
 
 /* Left */
+.left--0-responsive-mobile { left: 0rem; }
 .left--17-responsive-mobile { left: 1.063rem; }
 
 /* Right */
+.right--0-responsive-mobile { right: 0rem; }
 .right--8-responsive-mobile { right: 0.5rem; }
 
 /* Text Align */
