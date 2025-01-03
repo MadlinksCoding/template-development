@@ -5577,6 +5577,11 @@ textarea {
     z-index: 10010
   }
 
+  .bg--blur--5-responsive-tablet {
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px)
+  }
+
   .bg--blur--25-responsive-tablet {
     -webkit-backdrop-filter: blur(25px);
     backdrop-filter: blur(25px)
@@ -6264,6 +6269,11 @@ textarea {
 
   .z--9--responsive-mobile {
     z-index: 9
+  }
+
+  .bg--blur--5-responsive--mobile {
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px)
   }
 
   .bg--blur--10-responsive-mobile {
@@ -7193,6 +7203,11 @@ textarea {
 
   .z--9--responsive-mobile-portrait {
     z-index: 9
+  }
+
+  .bg--blur--5-responsive--mobile-portrait {
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px)
   }
 
   .bg--blur--10-responsive-mobile-portrait {
