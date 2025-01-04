@@ -1045,6 +1045,18 @@ html {
   border-color: var(--color-dodger-blue, #2970ff)
 }
 
+.br--col--brink-pink {
+  border-color: var(--color-brink-pink, #fd6f8e)
+}
+
+.br--col--heliotrope {
+  border-color: var(--color-heliotrope, #e478fa)
+}
+
+.br--col--dodger-blue-2 {
+  border-color: var(--color-dodger-blue-2, #528bff)
+}
+
 .filter--col--gull-gray {
   -webkit-filter: brightness(0) saturate(100%) invert(89%) sepia(55%) saturate(1988%) hue-rotate(178deg) brightness(74%) contrast(83%);
   filter: brightness(0) saturate(100%) invert(89%) sepia(55%) saturate(1988%) hue-rotate(178deg) brightness(74%) contrast(83%)
@@ -1813,6 +1825,11 @@ html {
 .sh--15 {
   -webkit-box-shadow: 0 10px 10px 0 rgba(0, 0, 0, .2);
   box-shadow: 0 10px 10px 0 rgba(0, 0, 0, .2)
+}
+
+.sh--16 {
+  -webkit-box-shadow: 0 0 12px 0 rgba(0, 0, 0, .2);
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, .2)
 }
 
 .cr--move {
@@ -3644,7 +3661,8 @@ html {
 }
 
 .nice-select-dropdown.open.animation-slide {
-  overflow-y: auto
+  overflow-y: auto;
+  height: auto
 }
 
 .nice-select [data-tooltip] {

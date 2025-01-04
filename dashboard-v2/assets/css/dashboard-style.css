@@ -1045,6 +1045,18 @@ html {
   border-color: var(--color-dodger-blue, #2970ff)
 }
 
+.br--col--brink-pink {
+  border-color: var(--color-brink-pink, #fd6f8e)
+}
+
+.br--col--heliotrope {
+  border-color: var(--color-heliotrope, #e478fa)
+}
+
+.br--col--dodger-blue-2 {
+  border-color: var(--color-dodger-blue-2, #528bff)
+}
+
 .filter--col--gull-gray {
   -webkit-filter: brightness(0) saturate(100%) invert(89%) sepia(55%) saturate(1988%) hue-rotate(178deg) brightness(74%) contrast(83%);
   filter: brightness(0) saturate(100%) invert(89%) sepia(55%) saturate(1988%) hue-rotate(178deg) brightness(74%) contrast(83%)
@@ -1813,6 +1825,11 @@ html {
 .sh--15 {
   -webkit-box-shadow: 0 10px 10px 0 rgba(0, 0, 0, .2);
   box-shadow: 0 10px 10px 0 rgba(0, 0, 0, .2)
+}
+
+.sh--16 {
+  -webkit-box-shadow: 0 0 12px 0 rgba(0, 0, 0, .2);
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, .2)
 }
 
 .cr--move {
@@ -3644,7 +3661,8 @@ html {
 }
 
 .nice-select-dropdown.open.animation-slide {
-  overflow-y: auto
+  overflow-y: auto;
+  height: auto
 }
 
 .nice-select [data-tooltip] {
@@ -6297,6 +6315,12 @@ textarea {
     justify-content: center
   }
 
+  .justify--end-responsive-mobile {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end
+  }
+
   .items--center-responsive-mobile {
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -6570,8 +6594,26 @@ textarea {
   }
 
   .nice-select-dropdown.open.animation-slide {
-    height: auto;
-    max-height: 17.334rem
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    max-height: auto
+  }
+
+  .nice-select-dropdown.v1 .nice-select-lists {
+    width: 100%
+  }
+
+  .nice-select-dropdown.v1 .nice-select-list {
+    background: rgba(255, 255, 255, .9);
+    -webkit-box-shadow: 0 0 12px 0 rgba(0, 0, 0, .2);
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, .2);
+    -webkit-backdrop-filter: blur(50px);
+    backdrop-filter: blur(50px)
   }
 
   [data-conditions-dropdown].nice-select-dropdown.v1:not(.auto-width) {
@@ -6579,7 +6621,10 @@ textarea {
     top: auto;
     bottom: 0;
     position: fixed;
-    z-index: 99999
+    z-index: 99999;
+    background: rgba(255, 255, 255, .6);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px)
   }
 
   [data-dashboard-page][data-conditions-dropdown-open]:before {
@@ -6607,6 +6652,11 @@ textarea {
 
   [data-conditions-dropdown][data-description-type=large].nice-select-dropdown [data-option-label] {
     margin-top: .2rem
+  }
+
+  [data-dropdown-type=merch][data-conditions-dropdown].nice-select.v1:not(.auto-width) {
+    background: var(--Cyan-50, #ecfdff);
+    border-bottom: 1.5px solid var(--Cyan-50, #d0d5dd)
   }
 }
 
@@ -7493,8 +7543,26 @@ textarea {
   }
 
   .nice-select-dropdown.open.animation-slide {
-    height: auto;
-    max-height: 17.334rem
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    max-height: auto
+  }
+
+  .nice-select-dropdown.v1 .nice-select-lists {
+    width: 100%
+  }
+
+  .nice-select-dropdown.v1 .nice-select-list {
+    background: rgba(255, 255, 255, .9);
+    -webkit-box-shadow: 0 0 12px 0 rgba(0, 0, 0, .2);
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, .2);
+    -webkit-backdrop-filter: blur(50px);
+    backdrop-filter: blur(50px)
   }
 
   [data-conditions-dropdown].nice-select-dropdown.v1:not(.auto-width) {
@@ -7502,7 +7570,10 @@ textarea {
     top: auto;
     bottom: 0;
     position: fixed;
-    z-index: 99999
+    z-index: 99999;
+    background: rgba(255, 255, 255, .6);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px)
   }
 
   [data-dashboard-page][data-conditions-dropdown-open]:before {
@@ -7535,6 +7606,11 @@ textarea {
 
   [data-conditions-dropdown][data-description-type=large].nice-select-dropdown [data-option-label] {
     margin-top: .2rem
+  }
+
+  [data-dropdown-type=merch][data-conditions-dropdown].nice-select.v1:not(.auto-width) {
+    background: var(--Cyan-50, #ecfdff);
+    border-bottom: 1.5px solid var(--Cyan-50, #d0d5dd)
   }
 }
 /*# sourceMappingURL=../css/map/dashboard-style.css.map */

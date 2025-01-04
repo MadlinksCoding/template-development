@@ -880,8 +880,26 @@ body.stop-mobile-scrolling {
 }
 
 .nice-select-dropdown.open.animation-slide {
-  height: auto;
-  max-height: 17.334rem
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  max-height: auto
+}
+
+.nice-select-dropdown.v1 .nice-select-lists {
+  width: 100%
+}
+
+.nice-select-dropdown.v1 .nice-select-list {
+  background: rgba(255, 255, 255, .9);
+  -webkit-box-shadow: 0 0 12px 0 rgba(0, 0, 0, .2);
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, .2);
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px)
 }
 
 [data-conditions-dropdown].nice-select-dropdown.v1:not(.auto-width) {
@@ -889,7 +907,10 @@ body.stop-mobile-scrolling {
   top: auto;
   bottom: 0;
   position: fixed;
-  z-index: 99999
+  z-index: 99999;
+  background: rgba(255, 255, 255, .6);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px)
 }
 
 [data-dashboard-page][data-conditions-dropdown-open]:before {
@@ -922,5 +943,10 @@ body.stop-mobile-scrolling {
 
 [data-conditions-dropdown][data-description-type=large].nice-select-dropdown [data-option-label] {
   margin-top: .2rem
+}
+
+[data-dropdown-type=merch][data-conditions-dropdown].nice-select.v1:not(.auto-width) {
+  background: var(--Cyan-50, #ecfdff);
+  border-bottom: 1.5px solid var(--Cyan-50, #d0d5dd)
 }
 /*# sourceMappingURL=../css/map/dashboard-styles-mobile-portrait.css.map */

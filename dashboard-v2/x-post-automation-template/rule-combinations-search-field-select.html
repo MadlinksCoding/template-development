@@ -6152,13 +6152,13 @@
                                 </div>
                                 <!-- /Input -->
                                 <!-- Text -->
-                                <span class="fs--16 fw6 lh--20 col--ebony--variation-2 nowrap">items sold</span>
+                                <span class="fs--16 fw6 lh--20 col--ebony--variation-2 nowrap">Items Sold</span>
                                 <!-- /Text -->
                             </div>
                             <!-- /Total sold item Input Field -->
 
                             <!-- Preview Post -->
-                            <div class="ba br--col--mischka flex flex-none bg--col--ebony--variation-2">
+                            <div class="ba br--col--mischka flex flex-none bg--col--ebony--variation-2 ml-auto">
                                 <!-- Button -->
                                 <button class="flex--max pad--y--16 pad--x--12 flex justify-center items-center gap--4 hover--bg--col-brand-green group hover--parent--child--col--black-ribbon">
                                     <img src="../assets/icons/eye.svg" alt="" class="w--16 h--16 filter--col--spring-green hov--filter--col--black-ribbon">
@@ -6173,7 +6173,185 @@
                 </div> <!-- End Inner Container -->
             </main>
             <!-- /main section -->
+            <!-- New FLow for Mobile -->
+            <div class="w-100 h--screen bg-white-90 sh--14 bg--blur--50 fixed top-0 left-0 z--10010 dn display--flex-responsive-mobile display--flex-responsive-mobile-portrait">
+                <!-- Inner -->
+                <div class="w-100 flex flex flex-column gap--16">
+                    <!-- Title Wrapper -->
+                    <div class="flex items-center justify-between gap--8 pad--16 pad--bottom--0">
+                        <!-- Title -->
+                        <!-- Type Item -->
+                        <div class="w-100 flex items-center justify-between gap--8">
+                            <!-- Title -->
+                            <div class="flex items-center justify-start gap--4">
+                                <h3 class="fs--16 fw6 lh--24 col--ebony--variation-2">New Automation</h3>
+                            </div>
+                            <!-- /Title -->
+                            <!-- Delete Button -->
+                            <button class="pad--y--4 pad--x--8 bg--col--vermilion hover--bg--col-burning-orange flex items-center gap--8">
+                                <img src="../assets/icons/trash-03.svg" alt="" class="w--16 h--16 filter--col--white flex-none">
+                                <span class="fs--12 fw6 lh--normal tracked--0-3 white">Delete</span>
+                            </button>
+                            <!-- Delete Button -->
+                        </div>
+                        <!-- /Type Item -->
+                        <!-- /Title -->
+                    </div>
+                    <!-- /Title Wrapper -->
+                    <!-- Content Wrapper -->
+                    <!-- Table Body -->
+                    <div class="w-100 flex flex-column">
+                        <!-- Merch group dropdown wrapper -->
+                        <div class="w-100 flex justify-start flex--column-responsive-mobile flex--column-responsive-mobile-portrait gap--24">
+                            <!-- Field Wrapper -->
+                            <div class="flex flex-column gap--8">
+                                <!-- Title -->
+                                <span class=" pad--x--16 dn display--flex-responsive-mobile display--flex-responsive-mobile-portrait fs--12 fw5 lh--18 col--ebony--variation-2 ttu">Type</span>
+                                <!-- Merch Select Field --> <!-- For theme color change data-dropdown-type="subscriptions" "merch" "media" "profile"  -->
+                                <div class="bt bb br--col--mischka-gray">
+                                    <select data-dropdown-class="animation-slide" data-nice-select data-conditions-dropdown data-dropdown-type="merch" data-copy-attributes="data-conditions-dropdown,data-dropdown-type">
+                                        <option data-icon="profile">Profile</option>
+                                        <option data-icon="subscriptions">Subscription</option>
+                                        <option data-icon="media">Media</option>
+                                        <option data-icon="merch" selected>Merch</option>
+                                    </select>
+                                </div>
+                                <!-- End Merch Select Field -->
+                            </div>
+                            <!-- /Field Wrapper -->
 
+                            <!-- Field Wrapper -->
+                            <div class="flex flex-column gap--8">
+                                <!-- Title -->
+                                <span class="pad--x--16 dn display--flex-responsive-mobile display--flex-responsive-mobile-portrait fs--12 fw5 lh--18 col--ebony--variation-2 ttu">Metric</span>
+                                <!-- Merch Select Field --> <!-- For theme color change data-dropdown-type="subscriptions" "merch" "media" "profile"
+                                 For data description style change data-description-type="large" "small"
+                                 All dropdown icon color like  data-icon-theme="subscription" "merch" "media" "profile"  -->
+                                <div class="bt bb br--col--mischka-gray">
+                                    <select data-dropdown-class="animation-slide" data-nice-select data-conditions-dropdown data-dropdown-type="merch" data-description-type="large" data-icon-theme="merch" data-copy-attributes="data-conditions-dropdown,data-dropdown-type,data-description-type,data-icon-theme">
+                                        <option data-icon="sales" data-description="Broadcast your total earnings in frequency of your choice or when target goal is reached.">Sales (USD)</option>
+                                        <option data-icon="sales_qty" data-description="Broadcast your total item sold in frequency of your choice or when target goal is reached." selected>Sales (QTY)</option>
+                                        <option data-icon="preview" data-description="Broadcast your total views in frequency of your choice or when target goal is reached">Views</option>
+                                    </select>
+                                </div>
+                                <!-- End Merch Select Field -->
+                            </div>
+                            <!-- /Field Wrapper -->
+
+                            <!-- Field Group -->
+                            <div class="flex flex-column">
+                                <!-- Field Wrapper -->
+                                <div class="flex flex-column gap--8">
+                                    <!-- Title -->
+                                    <span class="pad--x--16 dn display--flex-responsive-mobile display--flex-responsive-mobile-portrait fs--12 fw5 lh--18 col--ebony--variation-2 ttu">Condition</span>
+                                    <!-- Media every select-wrapper -->
+                                    <div class="bt bb br--col--mischka">
+                                        <!-- Merch Select Field --> <!-- For theme color change data-dropdown-type="subscriptions" "merch" "media" "profile"
+                                         For data description style change data-description-type="large" "small"
+                                         For Select size style change data-select-size="large" "default"
+                                         All dropdown icon color like  data-icon-theme="subscription" "merch" "media" "profile"  -->
+                                        <div>
+                                            <select data-dropdown-class="animation-slide" data-nice-select data-conditions-dropdown data-dropdown-type="merch" data-description-type="large" data-select-size="large" data-icon-theme="merch" data-select-icon="false" data-select-theme="default" data-copy-attributes="data-conditions-dropdown,data-dropdown-type,data-description-type,data-select-size,data-icon-theme,data-select-icon,data-select-theme">
+                                                <option data-icon="merch" data-description="Post every time a new sale is made to keep your audience excited and engaged." selected>Every New Sale</option>
+                                                <option data-icon="custom_sales_count" data-description="Post when you reach a set number of sales. Customize the count to fit your goals.">Custom Sales Count</option>
+                                                <option data-icon="growth_comparision" data-description="Post only when your sales increase compared to the previous period to highlight positive trends.">Growth Comparison</option>
+                                                <option data-icon="total_subscribers" data-description="Post the total number of sales for a chosen timeframe.">Total Sales Count</option>
+                                                <option data-icon="custom_goal" data-description="Set a sales goal and post daily progress updates until the goal is reached.">Custom Goal</option>
+                                            </select>
+                                        </div>
+                                        <!-- End Merch Select Field -->
+                                    </div>
+                                    <!-- /Media every select-wrapper -->
+                                </div>
+                                <!-- Field Wrapper -->
+                                <!-- Add Merch Block -->
+                                <div class="bb br--col--mischka-gray flex items-center relative pad--right--12 flex--max">
+                                    <!-- Search Item -->
+                                    <div class="bg-white-50 flex items-center gap--4">
+                                        <!--Image -->
+                                        <div class="w--92 flex-none">
+                                            <img src="../assets/images/merch-media-01.jpg" alt="">
+                                        </div>
+                                        <!-- Description -->
+                                        <div class="pad--y--8 flex--max">
+                                            <p data-line-clamp class="fs--12 fw6 lh--18">Record breaking fried chicken eating ! See my attempt to break world’s record! Watch now!</p>
+                                        </div>
+                                        <!-- Dropdown arrow -->
+                                        <span class="pointer">
+                                            <img src="../assets/icons/solid-arrow.svg" alt="" class="w--10 w--10 filter--col--oxford-blue">
+                                        </span>
+                                    </div>
+                                    <!-- /Search Item -->
+                                </div>
+                                <!-- /Add Merch Block -->
+
+                                <!-- Total sold item Input Field -->
+                                <div class="pad--y--16 pad--x--12 flex items-center gap--8 flex--max br br--col--mischka">
+                                    <!-- Text -->
+                                    <span class="fs--16 fw6 lh--20 col--ebony--variation-2">Every</span>
+                                    <!-- /Text -->
+                                    <!-- Input -->
+                                    <div class="flex--max">
+                                        <input type="text" name="" value="2000" readonly class="w-100 h--20 fs--14 lh--20 col--pale-sky tr">
+                                    </div>
+                                    <!-- /Input -->
+                                    <!-- Text -->
+                                    <span class="fs--16 fw6 lh--20 col--ebony--variation-2 nowrap">Items Sold</span>
+                                    <!-- /Text -->
+                                </div>
+                                <!-- /Total sold item Input Field -->
+
+                                <!-- Field Group -->
+                                <div class="flex bt bb br--col--mischka-gray">
+                                    <!-- Custom Range Select Field --> <!-- For theme color change data-dropdown-type="subscriptions" "merch" "media" "profile"
+                                     For data description style change data-description-type="large" "small"
+                                     For Select size style change data-select-size="large" "default"
+                                     All dropdown icon color like  data-icon-theme="subscription" "merch" "media" "profile"  -->
+                                    <div class="flex--max">
+                                        <select data-dropdown-class="animation-slide" data-nice-select data-conditions-dropdown data-dropdown-type="media" data-description-type="small" data-select-size="small" data-icon-theme="media" data-select-icon="false" data-select-theme="default" data-copy-attributes="data-conditions-dropdown,data-dropdown-type,data-description-type,data-select-size,data-icon-theme,data-select-icon,data-select-theme">
+                                            <option use-as-placeholder>Post Frequency</option>
+                                            <option>Daily</option>
+                                            <option>Weekly</option>
+                                            <option>Monthly</option>
+                                            <option>Custom Range</option>
+                                        </select>
+                                    </div>
+                                    <!-- End Custom Range Select Field -->
+
+                                    <!-- Days Input Field -->
+                                    <div class="pad--y--16 pad--x--12 flex items-center gap--8 br bl br--col--mischka flex--max">
+                                        <!-- Input -->
+                                        <div class="flex--max">
+                                            <input type="text" name="" value="10" class="w-100 h--20 fs--14 lh--20 col--ebony--variation-2 tr">
+                                        </div>
+                                        <!-- /Input -->
+                                        <!-- Text -->
+                                        <span class="fs--16 fw6 lh--20 col--ebony--variation-2">Days</span>
+                                        <!-- /Text -->
+                                    </div>
+                                    <!-- /Days Input Field -->
+                                </div>
+                                <!-- /Field Group -->
+                            </div>
+                            <!-- /Field Group -->
+                        </div>
+                        <!-- /Merch group dropdown wrapper -->
+                    </div>
+                    <!-- /Table Body -->
+                </div>
+                <!-- /Inner -->
+                <!-- Preview Post -->
+                <div class="w-100 fixed bottom-0 left-0 flex flex-none bg--col--ebony--variation-2">
+                    <!-- Button -->
+                    <button class="flex--max pad--y--16 pad--x--12 flex justify-center items-center gap--4 hover--bg--col-brand-green group hover--parent--child--col--black-ribbon">
+                        <img src="../assets/icons/eye.svg" alt="" class="w--16 h--16 filter--col--spring-green hov--filter--col--black-ribbon">
+                        <span class="fs--12 fw5 lh--20 col-brand-green nowrap hover--col-black">Preview and Save</span>
+                    </button>
+                    <!-- /Button -->
+                </div>
+                <!-- Preview Post -->
+            </div>
+            <!-- /New FLow for Mobile -->
         </div>
         <!-- /main wrapper -->
 
