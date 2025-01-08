@@ -6505,7 +6505,7 @@
 
                                                     <li data-form-input-type="radio" data-form-input-layout="vertical"
                                                         data-form-accent-color="green">
-                                                        <input type="radio" id="s-option" name="selector" class="dn">
+                                                        <input type="radio" id="s-option" name="selector" class="dn" checked>
                                                         <label for="s-option" class="fs--15 fw5 lh--24 black">Upload a
                                                             different thumbnail and preview</label>
                                                     </li>
@@ -6519,6 +6519,26 @@
                                                 </ul>
                                                 <!-- End radio group -->
                                             </div><!-- End Attach Media -->
+                                            <!-- File Upload box -->
+                                            <div data-section="hide-show-section"
+                                                class="flex--max pad--x--24 pad--y--16 br--12 bg--col--black--05 hover--bg--col--black--10 ba bw--2 br--col--transparent hover--br--col--ebony--variation-2 w--100-responsive-tablet w--100-responsive-mobile w--100-responsive-mobile-portrait flex--none-responsive-tablet flex--none-responsive-mobile flex--none-responsive-mobile-portrait h--213-responsive-tablet h--213-responsive-mobile h--213-responsive-mobile-portrait">
+                                                <label for="file-upload"
+                                                    class="w-100 h-100 flex flex-column justify-center items-center gap--12 pointer">
+                                                    <span
+                                                        class="w--40 h--40 flex justify-center items-center br--8 sh--7 bg--col-brand-green">
+                                                        <img src="../assets/icons/upload-cloud-02.svg" alt="" class="w--20 h--20" />
+                                                    </span>
+                                                    <span class="flex flex-column gap--4 items-center">
+                                                        <p class="fs--14 lh--20 col--fiord-gray">
+                                                            <span class="fw6 col--ebony--variation-2 pointer">Click to upload</span>
+                                                            <span>or drag and drop image or video files here</span>
+                                                        </p>
+                                                        <span class="fs--12 lh--18 col--fiord">MP4, AVI, QUICKTIME, X-MATROSKA, X-MS-WMV, WEBM, OGG, PNG or JPG (max. 15MB)</span>
+                                                    </span>
+                                                </label>
+                                                <input type="file" id="file-upload" name="" class="dn">
+                                            </div>
+                                            <!-- End File Upload box -->
                                         </div><!-- End Share options content -->
                                         <!-- Post preview -->
                                         <div data-section="hide-show-section" class="w--299 w--282-responsive-tablet w--100-responsive-mobile w--100-responsive-mobile-portrait flex flex-column gap--8">

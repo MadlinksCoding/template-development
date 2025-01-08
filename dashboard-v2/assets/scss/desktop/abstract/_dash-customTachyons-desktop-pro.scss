@@ -118,6 +118,9 @@
 .br--col--vermilion { border-color: var(--color-vermilion, #FF4405); }
 .br--col--white { border-color: var(--white, #fff); }
 .br--col--dodger-blue { border-color: var(--color-dodger-blue, #2970FF); }
+.br--col--brink-pink { border-color: var(--color-brink-pink, #FD6F8E); }
+.br--col--heliotrope { border-color: var(--color-heliotrope, #E478FA); }
+.br--col--dodger-blue-2 { border-color: var(--color-dodger-blue-2, #528BFF); }
 
 
 /* Fill Colors */
@@ -310,9 +313,11 @@
 .pad--x--40 { padding-left: 2.5rem; padding-right: 2.5rem; /* padding-left 40px padding-right 40px */ }
 .pad--x--14 { padding-left: 0.875rem; padding-right: 0.875rem; /* padding-left 14px padding-right 14px */ }
 .pad--top--13 { padding-top: 0.813rem; /* padding top 13px */ } /* confirmed in use */ /* pixel conversion correct */
+.pad--top--40 { padding-top: 2.5rem; /* padding top 40px */ } /* confirmed in use */ /* pixel conversion correct */
 .pad--top--80 { padding-top: 5rem; /* padding top 80px */ } /* confirmed in use */ /* pixel conversion correct */
 .pad--bottom--0 { padding-bottom: 0; }
 .pad--bottom--9 { padding-bottom: 0.563rem; /* padding bottom 9px */ }
+.pad--bottom--64 { padding-bottom: 4rem; /* padding-bottom 64px */ } /* confirmed in use */ /* pixel conversion correct */
 .pad--bottom--68 { padding-bottom: 4.25rem; /* padding bottom 68px */ } /* confirmed in use */ /* pixel conversion correct */
 .pad--bottom--96 { padding-bottom: 6rem; /* padding bottom 96px */ } /* confirmed in use */ /* pixel conversion correct */
 .pad--left--2 { padding-left:0.125rem; /* padding left 2px */ } /* confirmed in use */ /* pixel conversion correct */ 
@@ -437,6 +442,7 @@
 .sh--2000{ box-shadow: 0 0 2000px 2000px rgba(0, 0, 0, 0.5); }
 .sh--14 { box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.25); } /* confirmed in use */
 .sh--15 { box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.20); } /* confirmed in use */
+.sh--16 { box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.20); } /* confirmed in use */
 
 
 /* Drop Shadow */
