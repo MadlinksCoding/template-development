@@ -272,6 +272,11 @@ html {
   filter: invert(46%) sepia(13%) saturate(631%) hue-rotate(182deg) brightness(91%) contrast(89%)
 }
 
+.filter--col--corn {
+  -webkit-filter: brightness(0) saturate(100%) invert(73%) sepia(63%) saturate(1879%) hue-rotate(11deg) brightness(110%) contrast(94%);
+  filter: brightness(0) saturate(100%) invert(73%) sepia(63%) saturate(1879%) hue-rotate(11deg) brightness(110%) contrast(94%)
+}
+
 .hov--filter--col--blue-ribbon:hover {
   -webkit-filter: brightness(0) saturate(100%) invert(37%) sepia(57%) saturate(6169%) hue-rotate(214deg) brightness(91%) contrast(106%);
   filter: brightness(0) saturate(100%) invert(37%) sepia(57%) saturate(6169%) hue-rotate(214deg) brightness(91%) contrast(106%)
@@ -1310,6 +1315,10 @@ html {
   width: .875rem
 }
 
+.w--44 {
+  width: 2.75rem
+}
+
 .w--72 {
   width: 4.5rem
 }
@@ -1438,6 +1447,10 @@ html {
   height: .75rem
 }
 
+.h--44 {
+  height: 2.75rem
+}
+
 .h--53 {
   height: 3.313rem
 }
@@ -1560,6 +1573,10 @@ html {
   padding-bottom: .563rem
 }
 
+.pad--bottom--40 {
+  padding-bottom: 2.5rem
+}
+
 .pad--bottom--64 {
   padding-bottom: 4rem
 }
@@ -1678,6 +1695,10 @@ html {
 
 .top--12 {
   top: .75rem
+}
+
+.top--40 {
+  top: 2.5rem
 }
 
 .top--63 {
@@ -1838,6 +1859,11 @@ html {
 .sh--16 {
   -webkit-box-shadow: 0 0 12px 0 rgba(0, 0, 0, .2);
   box-shadow: 0 0 12px 0 rgba(0, 0, 0, .2)
+}
+
+.sh--17 {
+  -webkit-box-shadow: 0 4px 6px rgba(16, 24, 40, .08);
+  box-shadow: 0 4px 6px rgba(16, 24, 40, .08)
 }
 
 .cr--move {
