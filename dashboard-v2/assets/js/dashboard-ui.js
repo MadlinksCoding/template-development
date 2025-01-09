@@ -1245,12 +1245,13 @@ class DashStatusMessageEditor {
  * 
  */
 class DashToggleSwitch {
-  constructor(element) {
-    this.element = element;
-    this.input = element.querySelector('input[type="checkbox"]');
-
-    this.input.addEventListener('change', this.handleChange.bind(this));
-  }
+	constructor(element) {
+		this.element = element;
+		this.input = element.querySelector('input[type="checkbox"], input[type="radio"]'); // Radio added by MAIA
+		if (this.input) {
+			this.input.addEventListener('change', this.handleChange.bind(this));
+		}
+	}
 
 	/** 
 	 * 
@@ -1258,25 +1259,60 @@ class DashToggleSwitch {
 	 * @description Handle on change event of toggle checkbox
 	 * 
 	 */
-  handleChange() {
-    const isChecked = this.input.checked;
-    if(this.element.dataset.hideShowSection){
-    	document.querySelectorAll(`[data-section="${this.element.dataset.hideShowSection}"]`).forEach(element=>{
-    		if(this.input.checked == true) {
-    			element.classList.add("active");
-    		}
-    		else {
-	            element.classList.remove("active");
-	        }
-    	});
-    }
-		
+	handleChange() {
+		const isChecked = this.input.checked;
+		// if (this.element.dataset.hideShowSection) {
+		// 	document.querySelectorAll(`[data-section="${this.element.dataset.hideShowSection}"]`).forEach(element => {
+		// 		if (this.input.checked == true) {
+		// 			element.classList.add("active");
+		// 		}
+		// 		else {
+		// 			element.classList.remove("active");
+		// 		}
+		// 	});
+		// } // COMMENT OUT BY MAIA to work for radio
+
+		if (this.input.type === "radio" && this.input.name) {
+			// Handle radio group behavior
+			const group = document.querySelectorAll(`input[type="radio"][name="${this.input.name}"]`);
+			group.forEach(radio => {
+				const parentElement = radio.closest('[data-hide-show-section]');
+				if (parentElement) {
+
+					if (radio.checked) {
+						parentElement.classList.add("active");
+					} else {
+						parentElement.classList.remove("active");
+					}
+
+					const sectionName = parentElement.dataset.hideShowSection;
+					document.querySelectorAll(`[data-section="${sectionName}"]`).forEach(section => {
+						if (radio.checked) {
+							section.classList.add("active");
+						} else {
+							section.classList.remove("active");
+						}
+					});
+				}
+			});
+		} else if (this.element.dataset.hideShowSection) {
+			// Handle checkbox behavior (if needed)
+			const sectionName = this.element.dataset.hideShowSection;
+			document.querySelectorAll(`[data-section="${sectionName}"]`).forEach(section => {
+				if (isChecked) {
+					section.classList.add("active");
+				} else {
+					section.classList.remove("active");
+				}
+			});
+		}
+
 		// do any additional stuff if needed
 		//console.log('Switch is on: ', isChecked);
 
 		// throw event
 		this.throwEvent();
-  }
+	}
 
 	/** 
 	 * 
