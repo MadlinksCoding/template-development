@@ -1062,6 +1062,14 @@ html {
   border-color: var(--color-dodger-blue-2, #528bff)
 }
 
+.br--col--light--white {
+  border-color: rgba(186, 188, 203, .5)
+}
+
+.br--col--mystic {
+  border-color: var(--color-mystic, #dee5ec)
+}
+
 .filter--col--gull-gray {
   -webkit-filter: brightness(0) saturate(100%) invert(89%) sepia(55%) saturate(1988%) hue-rotate(178deg) brightness(74%) contrast(83%);
   filter: brightness(0) saturate(100%) invert(89%) sepia(55%) saturate(1988%) hue-rotate(178deg) brightness(74%) contrast(83%)
@@ -1774,6 +1782,10 @@ html {
   left: 50%
 }
 
+.left--percent--105 {
+  left: 105%
+}
+
 .left--neg--6 {
   left: -.375rem
 }
@@ -1864,6 +1876,11 @@ html {
 .sh--17 {
   -webkit-box-shadow: 0 4px 6px rgba(16, 24, 40, .08);
   box-shadow: 0 4px 6px rgba(16, 24, 40, .08)
+}
+
+.sh--18 {
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1)
 }
 
 .cr--move {
@@ -6395,6 +6412,10 @@ textarea {
     top: auto
   }
 
+  .top--100-responsive-mobile {
+    top: 100%
+  }
+
   .right--0--responsive-mobile {
     right: 0
   }
@@ -7050,6 +7071,10 @@ textarea {
     width: 7.5rem
   }
 
+  .w--175-responsive-mobile-portrait {
+    width: 10.938rem
+  }
+
   .w--334-responsive-mobile-portrait {
     width: 20.875rem
   }
@@ -7104,6 +7129,10 @@ textarea {
 
   .h--80-responsive-mobile-portrait {
     height: 5rem
+  }
+
+  .h--88-responsive-mobile-portrait {
+    height: 5.5rem
   }
 
   .h--120-responsive-mobile-portrait {
@@ -7353,6 +7382,10 @@ textarea {
 
   .top--auto-responsive-mobile-portrait {
     top: auto
+  }
+
+  .top--100-responsive-mobile-portrait {
+    top: 100%
   }
 
   .right--auto--responsive-mobile-portrait {
