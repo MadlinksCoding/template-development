@@ -4990,6 +4990,15 @@ button[data-color=gray]:not(:disabled):hover span {
   background-image: none
 }
 
+[data-button-color=wild-strawberry]:hover,
+[data-button-color=wild-strawberry]:hover:after {
+  background: var(--color-gray-900,#101828);
+}
+
+[data-button-color=wild-strawberry]:hover span {
+  color: var(--color-brand-green, #07f468);
+}
+
 [data-button-color=gull-gray],
 [data-button-color=gull-gray]:after {
   background: rgba(52, 64, 84, .05)
