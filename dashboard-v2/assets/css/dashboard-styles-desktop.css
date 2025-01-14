@@ -1693,6 +1693,10 @@ html {
   grid-template-columns: repeat(2, minmax(0, 1fr))
 }
 
+.grid--cols--3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr))
+}
+
 .grid--cols--4 {
   grid-template-columns: repeat(4, minmax(0, 1fr))
 }
@@ -1756,10 +1760,6 @@ html {
 .translate--50-y-neg {
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%)
-}
-
-.translate--50 {
-  transform: translate(-50%, -50%);
 }
 
 .right--9-neg {
@@ -5007,20 +5007,6 @@ button[data-color=gray]:not(:disabled):hover span {
 [data-button-color=wild-strawberry],
 [data-button-color=wild-strawberry]:after {
   background: linear-gradient(135deg, #f093fb 0, #ff439d 100%)
-}
-
-/* Upgrade Button issue */
-[data-button-color=wild-strawberry]:after {
-  background: #ff439d;
-}
-
-[data-button-color=wild-strawberry]:hover,
-[data-button-color=wild-strawberry]:hover:after {
-  background: var(--color-gray-900,#101828);
-}
-
-[data-button-color=wild-strawberry]:hover span {
-  color: var(--color-brand-green, #07f468);
 }
 
 [data-button-color=black],

@@ -1693,6 +1693,10 @@ html {
   grid-template-columns: repeat(2, minmax(0, 1fr))
 }
 
+.grid--cols--3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr))
+}
+
 .grid--cols--4 {
   grid-template-columns: repeat(4, minmax(0, 1fr))
 }
@@ -7362,6 +7366,10 @@ textarea {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto
+  }
+
+  .grid--cols--2-responsive-mobile-portrait {
+    grid-template-columns: repeat(2, minmax(0, 1fr))
   }
 
   .fixed--responsive-mobile-portrait {

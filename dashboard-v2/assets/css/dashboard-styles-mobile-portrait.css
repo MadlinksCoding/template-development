@@ -638,6 +638,10 @@ body.stop-mobile-scrolling {
   flex: 0 0 auto
 }
 
+.grid--cols--2-responsive-mobile-portrait {
+  grid-template-columns: repeat(2, minmax(0, 1fr))
+}
+
 .fixed--responsive-mobile-portrait {
   position: fixed
 }
