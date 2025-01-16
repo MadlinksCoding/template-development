@@ -1411,6 +1411,10 @@ html {
   width: 31.75rem
 }
 
+.w--560 {
+  width: 35rem
+}
+
 .w--598 {
   width: 37.375rem
 }
@@ -3746,6 +3750,10 @@ html {
   border: none
 }
 
+[data-id=order-type-select].nice-select-dropdown.v1 {
+  background-color: transparent
+}
+
 [data-id=order-type-select].nice-select-dropdown.v1 .nice-select-list {
   border-radius: 2px;
   background: rgba(255, 255, 255, .7);
@@ -3805,12 +3813,11 @@ html {
   color: var(--Gray-700, #344054)
 }
 
-[data-id=order-type-select].mlc-ns.v1:not(.has-tags) .option.selected,
-[data-id=order-type-select].mlc-ns.v1:not(.has-tags) .option:not(.disabled):hover {
+[data-id=order-type-select].mlc-ns.v1:not(.has-tags) .option.selected {
   background-color: transparent
 }
 
-[data-id=order-type-select].mlc-ns.v1:not(.has-tags) .option:not(.disabled):hover .elm_aQVICr {
+[data-id=order-type-select].mlc-ns.v1:not(.has-tags) .option:not(.disabled):hover {
   border-radius: 0;
   background: var(--Base-White, #fff)
 }
