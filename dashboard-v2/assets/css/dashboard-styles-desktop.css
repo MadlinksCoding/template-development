@@ -388,14 +388,6 @@ html {
   width: 11.75rem
 }
 
-.w--427{
-  width: 26.6875rem;
-}
-
-.w--560{
-  width: 35rem;
-}
-
 .w--480 {
   width: 30rem
 }
@@ -3809,7 +3801,8 @@ html {
 }
 
 [data-id=order-type-select].nice-select.v1:not(.has-tags) .current [data-option-label] {
-  font-weight: 400
+  font-weight: 400;
+  color: var(--Gray-700, #344054)
 }
 
 [data-id=order-type-select].mlc-ns.v1:not(.has-tags) .option.selected,
