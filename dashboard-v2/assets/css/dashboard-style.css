@@ -753,6 +753,10 @@ html {
   background-color: rgba(249, 250, 251, .9)
 }
 
+.bg--col--athens-gray--100 {
+  background-color: #f9fafb
+}
+
 .bg--col--pale-sky {
   background-color: var(--color-pale-sky, #667085)
 }
@@ -1195,6 +1199,10 @@ html {
 
 .hover--bg--col--black--10:hover {
   background: rgba(0, 0, 0, .1)
+}
+
+.hover--bg--col--black:hover {
+  background: #000
 }
 
 .hover--bg--col-brand-green:hover {
@@ -1760,10 +1768,6 @@ html {
 .translate--50-y-neg {
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%)
-}
-
-.translate--50 {
-	transform: translate(-50%, -50%); 
 }
 
 .right--9-neg {
@@ -5638,6 +5642,10 @@ textarea {
     padding-bottom: .5rem
   }
 
+  .m--left--auto-responsive-tablet {
+    margin-left: auto
+  }
+
   .display--none-responsive-tablet {
     display: none
   }
@@ -6456,12 +6464,16 @@ textarea {
     left: auto
   }
 
-  .neg--left--5-8--responsive-tablet {
+  .neg--left--5-8--responsive-mobile {
     left: -5.8rem
   }
 
-  .neg--left--8-3--responsive-tablet {
+  .neg--left--8-3--responsive-mobile {
     left: -8.3rem
+  }
+
+  .left--0-responsive-mobile {
+    left: 0
   }
 
   .z--9--responsive-mobile {
@@ -6494,6 +6506,12 @@ textarea {
 
   .br--0-responsive-mobile {
     border-radius: 0
+  }
+
+  .transform--translate--x--0-responsive-mobile {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0)
   }
 
   [data-floating-panel-wrapper] {
@@ -7443,6 +7461,10 @@ textarea {
     left: auto
   }
 
+  .left--0-responsive-mobile-portrait {
+    left: 0
+  }
+
   .neg--left--8-3--responsive-mobile-portrait {
     left: -8.3rem
   }
@@ -7476,6 +7498,12 @@ textarea {
 
   .br--0-responsive-mobile-portrait {
     border-radius: 0
+  }
+
+  .transform--translate--x--0-responsive-mobile-portrait {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0)
   }
 
   [data-floating-panel-wrapper] {

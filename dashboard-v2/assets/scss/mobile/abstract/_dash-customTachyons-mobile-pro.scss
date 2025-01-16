@@ -219,8 +219,9 @@
 
 /* Left */
 .left--auto-responsive-mobile { left: auto;  /* left auto */ }
-.neg--left--5-8--responsive-tablet {left: -5.8rem;}
-.neg--left--8-3--responsive-tablet {left: -8.3rem;}
+.neg--left--5-8--responsive-mobile {left: -5.8rem;}
+.neg--left--8-3--responsive-mobile {left: -8.3rem;}
+.left--0-responsive-mobile { left: 0;  /* left 0 */ }
 
 /* Left (px) */
 
@@ -269,6 +270,9 @@
 
 /* Border Radius */
 .br--0-responsive-mobile { border-radius: 0; }
+
+/* Transform */
+.transform--translate--x--0-responsive-mobile { transform: translateX(0%); -webkit-transform: translateX(0%); -moz-transform: translateX(0%); }
 
 
 /* Transition Property */

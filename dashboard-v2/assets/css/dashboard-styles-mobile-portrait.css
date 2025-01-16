@@ -710,6 +710,10 @@ body.stop-mobile-scrolling {
   left: auto
 }
 
+.left--0-responsive-mobile-portrait {
+  left: 0
+}
+
 .neg--left--8-3--responsive-mobile-portrait {
   left: -8.3rem
 }
@@ -743,6 +747,12 @@ body.stop-mobile-scrolling {
 
 .br--0-responsive-mobile-portrait {
   border-radius: 0
+}
+
+.transform--translate--x--0-responsive-mobile-portrait {
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0)
 }
 
 [data-floating-panel-wrapper] {

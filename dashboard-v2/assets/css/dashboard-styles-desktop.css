@@ -753,6 +753,10 @@ html {
   background-color: rgba(249, 250, 251, .9)
 }
 
+.bg--col--athens-gray--100 {
+  background-color: #f9fafb
+}
+
 .bg--col--pale-sky {
   background-color: var(--color-pale-sky, #667085)
 }
@@ -1195,6 +1199,10 @@ html {
 
 .hover--bg--col--black--10:hover {
   background: rgba(0, 0, 0, .1)
+}
+
+.hover--bg--col--black:hover {
+  background: #000
 }
 
 .hover--bg--col-brand-green:hover {
@@ -1760,10 +1768,6 @@ html {
 .translate--50-y-neg {
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%)
-}
-
-.translate--50 {
-	transform: translate(-50%, -50%); 
 }
 
 .right--9-neg {
