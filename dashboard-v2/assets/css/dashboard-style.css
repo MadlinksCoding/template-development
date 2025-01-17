@@ -1144,6 +1144,11 @@ html {
   filter: brightness(0) saturate(100%) invert(43%) sepia(0) saturate(12%) hue-rotate(212deg) brightness(96%) contrast(83%)
 }
 
+.filter--col--pumpkin {
+  -webkit-filter: brightness(0) saturate(100%) invert(61%) sepia(27%) saturate(4880%) hue-rotate(344deg) brightness(100%) contrast(103%);
+  filter: brightness(0) saturate(100%) invert(61%) sepia(27%) saturate(4880%) hue-rotate(344deg) brightness(100%) contrast(103%)
+}
+
 .filter--blur--2 {
   filter: blur(2px);
   -webkit-filter: blur(2px);
@@ -1974,6 +1979,10 @@ html {
 
 .cp--8 {
   clip-path: polygon(0 0, 100% 0, 88% 105%, 0 105%)
+}
+
+[data-orders-table-content][data-section=content-wrapper] {
+  height: calc(100vh - 20vh)
 }
 
 [data-container-bg-fixed]:-moz-read-only {
