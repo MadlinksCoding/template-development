@@ -1990,16 +1990,6 @@ html {
   height: calc(100vh - 20vh)
 }
 
-[data-cover-image]:after {
-  content: '';
-  width: 100%;
-  height: 100%;
-  background-image: url(../images/cover-header-background.png);
-  position: absolute;
-  top: 0;
-  left: 0
-}
-
 [data-container-bg-fixed]:-moz-read-only {
   filter: blur(0);
   -webkit-filter: blur(0);
