@@ -1084,6 +1084,11 @@ html {
   filter: brightness(0) saturate(100%) invert(50%) sepia(94%) saturate(408%) hue-rotate(100deg) brightness(93%) contrast(87%)
 }
 
+.filter--col--brand-green-2 {
+  -webkit-filter: brightness(0) saturate(100%) invert(75%) sepia(67%) saturate(2300%) hue-rotate(86deg) brightness(100%) contrast(98%);
+  filter: brightness(0) saturate(100%) invert(75%) sepia(67%) saturate(2300%) hue-rotate(86deg) brightness(100%) contrast(98%)
+}
+
 .filter--col--turquoise {
   -webkit-filter: brightness(0) saturate(100%) invert(77%) sepia(13%) saturate(2041%) hue-rotate(116deg) brightness(89%) contrast(95%);
   filter: brightness(0) saturate(100%) invert(77%) sepia(13%) saturate(2041%) hue-rotate(116deg) brightness(89%) contrast(95%)
@@ -1983,6 +1988,16 @@ html {
 
 [data-orders-table-content][data-section=content-wrapper] {
   height: calc(100vh - 20vh)
+}
+
+[data-cover-image]:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/cover-header-background.png);
+  position: absolute;
+  top: 0;
+  left: 0
 }
 
 [data-container-bg-fixed]:-moz-read-only {

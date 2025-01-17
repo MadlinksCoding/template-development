@@ -135,6 +135,7 @@
 /* Filter Colors */
 .filter--col--gull-gray { filter: brightness(0) saturate(100%) invert(89%) sepia(55%) saturate(1988%) hue-rotate(178deg) brightness(74%) contrast(83%); } /* confirmed in use */
 .filter--col--brand-green { filter: brightness(0) saturate(100%) invert(50%) sepia(94%) saturate(408%) hue-rotate(100deg) brightness(93%) contrast(87%); } /* #17B26A */
+.filter--col--brand-green-2 { filter: brightness(0) saturate(100%) invert(75%) sepia(67%) saturate(2300%) hue-rotate(86deg) brightness(100%) contrast(98%); } /* #07F468 */
 .filter--col--turquoise { filter: brightness(0) saturate(100%) invert(77%) sepia(13%) saturate(2041%) hue-rotate(116deg) brightness(89%) contrast(95%); } /* #2ED3B7 */
 .filter--col--vermilion { filter: brightness(0) saturate(100%) invert(39%) sepia(92%) saturate(3503%) hue-rotate(354deg) brightness(98%) contrast(113%); } /* #FF4405 */
 .filter--col--athens-gray { filter: brightness(0) saturate(100%) invert(96%) sepia(13%) saturate(39%) hue-rotate(169deg) brightness(99%) contrast(96%); } /* #F2F4F7 */
@@ -516,3 +517,14 @@
 
 /* Order-received Table */
 [data-orders-table-content][data-section="content-wrapper"] { height: calc(100vh - 20vh); }
+
+
+[data-cover-image]:after {
+	content: '';
+	width: 100%;
+	height: 100%;
+	background-image: url(../../assets/images/cover-header-background.png);
+	position: absolute;
+	top: 0;
+	left: 0;
+}
