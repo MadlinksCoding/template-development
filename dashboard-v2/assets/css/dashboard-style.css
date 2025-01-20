@@ -5547,8 +5547,8 @@ textarea {
     right: .5rem
   }
 
-  [data-show-hide-container][data-show-on-mobile=true] {
-    display: none
+  [data-active=true] [data-settings-menu-text] {
+    color: var(--default-paragraph-color)
   }
 
   .bg-white-70-responsive-tablet {

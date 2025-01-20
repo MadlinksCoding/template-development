@@ -132,7 +132,6 @@ html { font-size: 16px; }
 /* Border */
 
 /* Border Width */
-
-[data-show-hide-container][data-show-on-mobile=true] {
-    display: none;
+[data-active="true"] [data-settings-menu-text] {
+    color: var(--default-paragraph-color);
 }
