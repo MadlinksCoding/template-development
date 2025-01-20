@@ -529,3 +529,16 @@
 	top: 0;
 	left: 0;
 }*/
+
+[data-bg="gradient-img"]:before{
+	content: '';
+    position: absolute;
+    background: url(../../assets/images/gradient-opacity-30.svg);
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
+    height: 100%;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+}
