@@ -237,6 +237,10 @@ body.stop-mobile-scrolling {
   box-shadow: none
 }
 
+[data-active=true] [data-settings-menu-text] {
+  color: var(--default-paragraph-color)
+}
+
 .bg-white-40-responsive-mobile {
   background: rgba(255, 255, 255, .4)
 }
