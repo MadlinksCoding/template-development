@@ -1994,10 +1994,6 @@ html {
   clip-path: polygon(0 0, 100% 0, 88% 105%, 0 105%)
 }
 
-[data-orders-table-content][data-section=content-wrapper] {
-  height: 100vh
-}
-
 [data-bg=gradient-img]:before {
   content: '';
   position: absolute;
@@ -6589,6 +6585,10 @@ textarea {
     -moz-transform: translateX(0)
   }
 
+  [data-dashboard-page=your-orders] {
+    height: calc(-48px + 100vh)
+  }
+
   [data-floating-panel-wrapper] {
     display: none !important
   }
@@ -7591,6 +7591,10 @@ textarea {
     transform: translateX(0);
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0)
+  }
+
+  [data-dashboard-page=your-orders] {
+    height: calc(-48px + 100vh)
   }
 
   [data-floating-panel-wrapper] {
