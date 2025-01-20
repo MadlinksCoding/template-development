@@ -392,6 +392,14 @@ html {
   width: 30rem
 }
 
+.w--427 {
+  width: 26.6875rem
+}
+
+.w--311 {
+  width: 19.4375rem
+}
+
 .w--90--px {
   width: 90px
 }
@@ -5409,6 +5417,10 @@ textarea {
 }
 
 @media only screen and (min-width:1010px) and (max-width:1365px) {
+  .w--311--responsive-tablet-landscape {
+    width: 19.4375rem
+  }
+
   .pad--x--16-responsive-tablet-landscape {
     padding-left: 1rem;
     padding-right: 1rem
@@ -5529,6 +5541,10 @@ textarea {
 
   .right--8-responsive-tablet {
     right: .5rem
+  }
+
+  [data-show-hide-container][data-show-on-mobile=true] {
+    display: none
   }
 
   .bg-white-70-responsive-tablet {
