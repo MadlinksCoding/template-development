@@ -2021,6 +2021,11 @@ html {
   display: -webkit-box
 }
 
+[data-password-match],
+[data-validate-password] {
+  padding: .25rem .5rem .5rem .5rem
+}
+
 [data-floating-panel-trigger] [data-floating-panel-trigger-btn][data-is-active=true] {
   background: rgba(251, 91, 162, .2)
 }
@@ -5552,6 +5557,11 @@ textarea {
     filter: brightness(0) saturate(100%) invert(22%) sepia(31%) saturate(534%) hue-rotate(179deg) brightness(93%) contrast(90%)
   }
 
+  [data-password-match],
+  [data-validate-password] {
+    padding: .25rem .5rem .5rem .5rem
+  }
+
   .bg-white-70-responsive-tablet {
     background: rgba(255, 255, 255, .7)
   }
@@ -6122,6 +6132,11 @@ textarea {
   [data-active=true] [data-layer=arrow-narrow-right] img {
     -webkit-filter: brightness(0) saturate(100%) invert(22%) sepia(31%) saturate(534%) hue-rotate(179deg) brightness(93%) contrast(90%);
     filter: brightness(0) saturate(100%) invert(22%) sepia(31%) saturate(534%) hue-rotate(179deg) brightness(93%) contrast(90%)
+  }
+
+  [data-password-match],
+  [data-validate-password] {
+    padding: .125rem .5rem .5rem .5rem
   }
 
   .bg-white-40-responsive-mobile {
@@ -7120,6 +7135,11 @@ textarea {
   [data-active=true] [data-layer=arrow-narrow-right] img {
     -webkit-filter: brightness(0) saturate(100%) invert(22%) sepia(31%) saturate(534%) hue-rotate(179deg) brightness(93%) contrast(90%);
     filter: brightness(0) saturate(100%) invert(22%) sepia(31%) saturate(534%) hue-rotate(179deg) brightness(93%) contrast(90%)
+  }
+
+  [data-password-match],
+  [data-validate-password] {
+    padding: .125rem .5rem .5rem .5rem
   }
 
   .bg-white-40-responsive-mobile-portrait {

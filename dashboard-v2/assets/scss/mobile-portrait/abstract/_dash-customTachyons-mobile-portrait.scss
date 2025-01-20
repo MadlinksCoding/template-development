@@ -183,3 +183,8 @@ body.stop-mobile-scrolling {
   -webkit-filter: brightness(0) saturate(100%) invert(22%) sepia(31%) saturate(534%) hue-rotate(179deg) brightness(93%) contrast(90%);
     filter: brightness(0) saturate(100%) invert(22%) sepia(31%) saturate(534%) hue-rotate(179deg) brightness(93%) contrast(90%);
 }
+
+[data-validate-password], 
+[data-password-match]{
+	padding: 0.125rem 0.5rem 0.5rem 0.5rem; /* Uniform padding for better visual spacing */
+}

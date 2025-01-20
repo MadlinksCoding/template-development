@@ -4,3 +4,7 @@
 /* Text line Clamp */
 [data-line-clamp] { overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 2; display: -webkit-box; }
 
+[data-validate-password], 
+[data-password-match]{
+	padding: 0.25rem 0.5rem 0.5rem 0.5rem; /* Uniform padding for better visual spacing */
+}
