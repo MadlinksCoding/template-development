@@ -708,6 +708,10 @@ body.stop-mobile-scrolling {
   -moz-transform: translateX(0)
 }
 
+[data-dashboard-page=your-orders] {
+  height: calc(-48px + 100vh)
+}
+
 [data-floating-panel-wrapper] {
   display: none !important
 }
