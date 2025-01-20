@@ -113,6 +113,10 @@ html {
   right: .5rem
 }
 
+[data-show-hide-container][data-show-on-mobile=true] {
+  display: none
+}
+
 .bg-white-70-responsive-tablet {
   background: rgba(255, 255, 255, .7)
 }
