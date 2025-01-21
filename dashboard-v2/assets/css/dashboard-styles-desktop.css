@@ -1994,10 +1994,6 @@ html {
   clip-path: polygon(0 0, 100% 0, 88% 105%, 0 105%)
 }
 
-[data-section=inner-container] {
-  background-color: var(--color-athens-gray, #f9fafb)
-}
-
 [data-section=inner-container]:before {
   content: '';
   position: fixed;
@@ -2009,6 +2005,13 @@ html {
   left: 0;
   top: 0;
   pointer-events: none
+}
+
+[data-section=inner-container]:before:-moz-read-only {
+  filter: blur(0);
+  -webkit-filter: blur(0);
+  -moz-filter: blur(0);
+  background-image: url(assets/img/gradient-bg-firefox.svg) !important
 }
 
 [data-container-bg-fixed]:-moz-read-only {
