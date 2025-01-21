@@ -2007,13 +2007,6 @@ html {
   pointer-events: none
 }
 
-[data-section=inner-container]:before:-moz-read-only {
-  filter: blur(0);
-  -webkit-filter: blur(0);
-  -moz-filter: blur(0);
-  background-image: url(assets/img/gradient-bg-firefox.svg) !important
-}
-
 [data-container-bg-fixed]:-moz-read-only {
   filter: blur(0);
   -webkit-filter: blur(0);
