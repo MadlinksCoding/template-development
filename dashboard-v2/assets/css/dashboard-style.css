@@ -1994,7 +1994,7 @@ html {
   clip-path: polygon(0 0, 100% 0, 88% 105%, 0 105%)
 }
 
-[data-bg=gradient-img]:before {
+[data-section=inner-container]:before {
   content: '';
   position: absolute;
   background: url(../images/gradient-opacity-30.svg);
@@ -6630,7 +6630,7 @@ textarea {
     height: calc(-48px + 100vh)
   }
 
-  [data-bg=gradient-img]:before {
+  [data-section=inner-container]:before {
     content: '';
     position: fixed;
     background: url(../images/mobile-gradient-main-bg.svg);
@@ -7673,7 +7673,7 @@ textarea {
     height: calc(-48px + 100vh)
   }
 
-  [data-bg=gradient-img]:before {
+  [data-section=inner-container]:before {
     content: '';
     position: fixed;
     background: url(../images/mobile-gradient-main-bg.svg);
