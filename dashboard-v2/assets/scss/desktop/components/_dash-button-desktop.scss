@@ -110,11 +110,42 @@ button[data-color="gray"]:not(:disabled):hover span { color: #fff !important; }
 [data-button-color="yellow"]:hover img {
    filter: brightness(0) saturate(100%) invert(99%) sepia(99%) saturate(0%) hue-rotate(176deg) brightness(107%) contrast(100%);
 }
-[data-layer="shadow-button"][data-button-style="skew-right bottom"]:after { background-image: url("../images/angle-button-bg.svg"); background-position: 103% 0%; background-repeat: no-repeat;}
+[data-layer="shadow-button"][data-button-style="skew-right bottom"]:after { background-image: url("../images/angle-button-bg.svg"); background-position: 103% 0%; background-repeat: no-repeat; opacity: 0;}
 
 /*[data-layer="shadow-button"] { box-shadow: 0px 5px 50px 0px rgba(242, 242, 3, 0.50), 5px 4px 0px 0px #000, 0px 0px 10px 0px rgba(242, 242, 3, 0.05), 0px 0px 10px 0px rgba(255, 185, 9, 0.70), 0px 0px 10px 0px rgba(255, 185, 9, 0.70), 0px 0px 1px 0px #FFF3A1 inset; background-image: url("../images/angle-button-bg.svg"); background-repeat: no-repeat; }*/
 
-[data-layer="shadow-button"] { background-image: url("../images/upgrade-button-premium.svg"); background-repeat: no-repeat; }
+
+[data-layer="shadow-button"]{
+   clip-path: polygon(0% 0, 93% 0, 99% 100%, 0% 100%);
+    padding-right: 28px;
+        z-index: 2;
+    background-image: url("../images/angle-button-bg.svg"); background-repeat: no-repeat;
+}
+
+[data-upgrade-premium-button] { position: relative; }
+
+[data-upgrade-premium-button]:before {
+    content: "";
+    width: 101%;
+    height: 102%;
+    background: #000;
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    clip-path: polygon(0% 0, 93% 0, 99% 100%, 0% 100%);
+}
+[data-upgrade-premium-button]:after {
+    content: "";
+    width: 94%;
+    height: 104%;
+    box-shadow: 0px 5px 50px 0px rgba(242, 242, 3, 0.50), 5px 4px 0px 0px #00000000, 0px 0px 10px 0px rgba(242, 242, 3, 0.05), 0px 0px 10px 0px rgba(255, 185, 9, 0.70), 0px 0px 10px 0px rgba(255, 185, 9, 0.70), 0px 0px 1px 0px #FFF3A1 inset;
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* transform: skew(27deg, 0deg); */
+    z-index: 1;
+}
+
 
 [data-layer="shadow-button"]:hover, [data-button-style="skew-right bottom"]:hover:after { background-image: none; }
 

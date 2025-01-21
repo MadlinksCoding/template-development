@@ -5031,12 +5031,43 @@ button[data-color=gray]:not(:disabled):hover span {
 [data-layer=shadow-button][data-button-style="skew-right bottom"]:after {
   background-image: url(../images/angle-button-bg.svg);
   background-position: 103% 0;
-  background-repeat: no-repeat
+  background-repeat: no-repeat;
+  opacity: 0
 }
 
 [data-layer=shadow-button] {
-  background-image: url(../images/upgrade-button-premium.svg);
+  clip-path: polygon(0 0, 93% 0, 99% 100%, 0 100%);
+  padding-right: 28px;
+  z-index: 2;
+  background-image: url(../images/angle-button-bg.svg);
   background-repeat: no-repeat
+}
+
+[data-upgrade-premium-button] {
+  position: relative
+}
+
+[data-upgrade-premium-button]:before {
+  content: "";
+  width: 101%;
+  height: 102%;
+  background: #000;
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  clip-path: polygon(0 0, 93% 0, 99% 100%, 0 100%)
+}
+
+[data-upgrade-premium-button]:after {
+  content: "";
+  width: 94%;
+  height: 104%;
+  -webkit-box-shadow: 0 5px 50px 0 rgba(242, 242, 3, .5), 5px 4px 0 0 #00000000, 0 0 10px 0 rgba(242, 242, 3, .05), 0 0 10px 0 rgba(255, 185, 9, .7), 0 0 10px 0 rgba(255, 185, 9, .7), 0 0 1px 0 #fff3a1 inset;
+  box-shadow: 0 5px 50px 0 rgba(242, 242, 3, .5), 5px 4px 0 0 #00000000, 0 0 10px 0 rgba(242, 242, 3, .05), 0 0 10px 0 rgba(255, 185, 9, .7), 0 0 10px 0 rgba(255, 185, 9, .7), 0 0 1px 0 #fff3a1 inset;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1
 }
 
 [data-button-style="skew-right bottom"]:hover:after,
