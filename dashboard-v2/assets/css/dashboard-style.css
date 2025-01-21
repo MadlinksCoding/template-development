@@ -1994,6 +1994,10 @@ html {
   clip-path: polygon(0 0, 100% 0, 88% 105%, 0 105%)
 }
 
+[data-section=inner-container] {
+  background-color: var(--color-athens-gray, #f9fafb)
+}
+
 [data-section=inner-container]:before {
   content: '';
   position: fixed;
