@@ -2026,14 +2026,17 @@ html {
   padding: .25rem .5rem .5rem .5rem
 }
 
+[data-floating-panel-trigger] [data-floating-panel-trigger-btn]:hover,
 [data-floating-panel-trigger] [data-floating-panel-trigger-btn][data-is-active=true] {
   background: rgba(251, 91, 162, .2)
 }
 
+[data-floating-panel-trigger] [data-floating-panel-trigger-btn]:hover [data-sidebar-menu-item-text],
 [data-floating-panel-trigger] [data-floating-panel-trigger-btn][data-is-active=true] [data-sidebar-menu-item-text] {
   color: var(--color-rose)
 }
 
+[data-floating-panel-trigger] [data-floating-panel-trigger-btn]:hover img,
 [data-floating-panel-trigger] [data-floating-panel-trigger-btn][data-is-active=true] img {
   -webkit-filter: brightness(0) saturate(100%) invert(29%) sepia(98%) saturate(5809%) hue-rotate(325deg) brightness(92%) contrast(121%);
   filter: brightness(0) saturate(100%) invert(29%) sepia(98%) saturate(5809%) hue-rotate(325deg) brightness(92%) contrast(121%)
@@ -2108,31 +2111,36 @@ html {
 [data-lang-selection-button]:hover img,
 [data-logout-button]:hover img,
 [data-notifications-panel-trigger]:hover img {
-  -webkit-filter: brightness(0) saturate(100%) invert(22%) sepia(31%) saturate(534%) hue-rotate(179deg) brightness(93%) contrast(90%);
-  filter: brightness(0) saturate(100%) invert(22%) sepia(31%) saturate(534%) hue-rotate(179deg) brightness(93%) contrast(90%)
+  -webkit-filter: brightness(0) saturate(100%) invert(29%) sepia(98%) saturate(5809%) hue-rotate(325deg) brightness(92%) contrast(121%);
+  filter: brightness(0) saturate(100%) invert(29%) sepia(98%) saturate(5809%) hue-rotate(325deg) brightness(92%) contrast(121%)
 }
 
 [data-dashboard-main-nav] [data-main-menu-item]:hover [data-sidebar-menu-item-text] {
   color: var(--color-oxford-blue, #344054)
 }
 
-[data-dashboard-main-nav] .is-current-page[data-sidebar-menu-item]>[data-main-menu-item] {
+[data-dashboard-main-nav] .is-current-page[data-sidebar-menu-item]>[data-main-menu-item],
+[data-dashboard-main-nav] [data-main-menu-item]:hover {
   background: rgba(251, 91, 162, .2)
 }
 
-[data-dashboard-main-nav] .is-current-page[data-sidebar-menu-item]>[data-main-menu-item] [data-sidebar-menu-icon] {
+[data-dashboard-main-nav] .is-current-page[data-sidebar-menu-item]>[data-main-menu-item] [data-sidebar-menu-icon],
+[data-dashboard-main-nav] [data-main-menu-item]:hover [data-sidebar-menu-icon] {
   -webkit-filter: brightness(0) saturate(100%) invert(29%) sepia(98%) saturate(5809%) hue-rotate(325deg) brightness(92%) contrast(121%);
   filter: brightness(0) saturate(100%) invert(29%) sepia(98%) saturate(5809%) hue-rotate(325deg) brightness(92%) contrast(121%)
 }
 
-[data-dashboard-main-nav] .is-current-page[data-sidebar-menu-item]>[data-main-menu-item] [data-sidebar-menu-item-text] {
+[data-dashboard-main-nav] .is-current-page[data-sidebar-menu-item]>[data-main-menu-item] [data-sidebar-menu-item-text],
+[data-dashboard-main-nav] [data-main-menu-item]:hover [data-sidebar-menu-item-text] {
   color: var(--color-rose)
 }
 
+[data-dashboard-main-nav] [data-main-menu-item]:hover,
 [data-dashboard-main-nav] [data-main-menu-item][data-is-active=true] {
   background: rgba(251, 91, 162, .2)
 }
 
+[data-dashboard-main-nav] [data-main-menu-item]:hover [data-sidebar-menu-icon],
 [data-dashboard-main-nav] [data-main-menu-item][data-is-active=true] [data-sidebar-menu-icon] {
   -webkit-filter: brightness(0) saturate(100%) invert(29%) sepia(98%) saturate(5809%) hue-rotate(325deg) brightness(92%) contrast(121%);
   filter: brightness(0) saturate(100%) invert(29%) sepia(98%) saturate(5809%) hue-rotate(325deg) brightness(92%) contrast(121%)
