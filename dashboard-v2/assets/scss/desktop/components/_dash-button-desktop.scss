@@ -122,9 +122,9 @@ button[data-color="gray"]:not(:disabled):hover span { color: #fff !important; }
     background-image: url("../images/angle-button-bg.svg"); background-repeat: no-repeat;
 }
 
-[data-upgrade-premium-button] { position: relative; }
+[data-upgrade-premium-button-section] [data-upgrade-button] { position: relative; }
 
-[data-upgrade-premium-button]:before {
+[data-upgrade-premium-button-section] [data-upgrade-button]:before {
     content: "";
     width: 101%;
     height: 102%;
@@ -134,11 +134,11 @@ button[data-color="gray"]:not(:disabled):hover span { color: #fff !important; }
     top: 3px;
     clip-path: polygon(0% 0, 93% 0, 99% 100%, 0% 100%);
 }
-[data-upgrade-premium-button]:after {
+[data-upgrade-premium-button-section] [data-upgrade-button]:after {
     content: "";
     width: 93%;
     height: 100%;
-    box-shadow: 0px 5px 50px 0px rgba(242, 242, 3, 0.50), 5px 4px 0px 0px #00000000, 0px 0px 10px 0px rgba(242, 242, 3, 0.05), 0px 0px 10px 0px rgba(255, 185, 9, 0.70), 0px 0px 10px 0px rgba(255, 185, 9, 0.70), 0px 0px 1px 0px #FFF3A1 inset;
+    box-shadow: 0px 5px 50px 0px rgba(242, 242, 3, 0.50), 5px 4px 0px 0px #00000000, 0px 0px 10px 0px rgba(242, 242, 3, 0.05), 0px 0px 10px 0px rgba(255, 185, 9, 0.20), 0px 0px 10px 0px rgba(255, 185, 9, 0.20), 0px 0px 1px 0px #FFF3A1 inset;
     position: absolute;
     left: 0;
     top: 0;
