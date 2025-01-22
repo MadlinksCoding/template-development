@@ -2002,19 +2002,6 @@ html {
   clip-path: polygon(0 0, 100% 0, 88% 105%, 0 105%)
 }
 
-[data-section=inner-container]:before {
-  content: '';
-  position: fixed;
-  background: url(../images/gradient-opacity-30.svg);
-  background-size: cover;
-  width: 100%;
-  background-repeat: no-repeat;
-  height: 100%;
-  left: 0;
-  top: 0;
-  pointer-events: none
-}
-
 [data-container-bg-fixed]:-moz-read-only {
   filter: blur(0);
   -webkit-filter: blur(0);
