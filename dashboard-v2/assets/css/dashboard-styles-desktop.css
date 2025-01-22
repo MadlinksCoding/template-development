@@ -2002,6 +2002,23 @@ html {
   clip-path: polygon(0 0, 100% 0, 88% 105%, 0 105%)
 }
 
+[data-dashboard-template-main]:before {
+  content: '';
+  position: fixed;
+  background: url(../images/gradient-main-bg.svg);
+  background-size: cover;
+  width: 100%;
+  background-repeat: no-repeat;
+  height: 100%;
+  left: 0;
+  top: 0;
+  pointer-events: none
+}
+
+[data-dashboard-template-main]:-moz-read-only:before {
+  background-image: url(assets/img/gradient-bg-firefox.svg) !important
+}
+
 [data-container-bg-fixed]:-moz-read-only {
   filter: blur(0);
   -webkit-filter: blur(0);
