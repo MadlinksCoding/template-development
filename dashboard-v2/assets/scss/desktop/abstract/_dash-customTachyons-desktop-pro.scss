@@ -27,6 +27,7 @@
 .col--flamingo { color: var(--color-flamingo, #F04438); }
 .col--buttered-rum { color: var(--color-buttered-rum, #9F8009); }
 .col--galliano { color: var(--color-galliano, #D8AF0D); }
+.col--athens-gray-3 { color: var(--color-athens-gray2); } /* confirmed in use */ 
 
 /* Background Colors*/
 .bg--col--white--25 { background: rgba(255, 255, 255, 0.25); }
@@ -70,6 +71,8 @@
 .bg--col--Heliotrope { background: var(--color-Heliotrope, #D444F1); }
 .bg--col--twilight-blue { background: var(--color-twilight-blue, #ECFDFF); }
 .bg--col--cerulean { background: var(--color-cerulean, #06AED4); }
+.bg--gray-70 { background-color: var(--color-gray-black, rgba(34, 34, 34, 0.7)); }
+.bg--col--violet { background-color: var(--color-violet, #F093FB); }
 
 
 /* Background Data Colors*/
@@ -149,6 +152,8 @@
 .filter--col--bright-turquoise { filter: brightness(0) saturate(100%) invert(65%) sepia(76%) saturate(820%) hue-rotate(149deg) brightness(97%) contrast(93%); } /* #22CCEE */
 .filter--col--dove-gray { filter: brightness(0) saturate(100%) invert(43%) sepia(0%) saturate(12%) hue-rotate(212deg) brightness(96%) contrast(83%); } /* #6D6D6D */
 .filter--col--pumpkin { filter: brightness(0) saturate(100%) invert(61%) sepia(27%) saturate(4880%) hue-rotate(344deg) brightness(100%) contrast(103%); } /* #FF7C1E */
+.filter--col--ash-white { filter: brightness(0) saturate(100%) invert(100%) sepia(11%) saturate(3489%) hue-rotate(341deg) brightness(93%) contrast(95%); } /* #E9E5D3 */
+.filter--col--tooblue { filter: brightness(0) saturate(100%) invert(36%) sepia(95%) saturate(2808%) hue-rotate(191deg) brightness(101%) contrast(95%); } /* #0788F5 */
 
 
 /* Filter Blur */
@@ -221,6 +226,7 @@
 
 /* Text Shadow */
 .text--sh--2 { text-shadow: 0px 4px 8px rgba(16, 24, 40, 0.10), 0px 2px 4px rgba(16, 24, 40, 0.06); } /* confirmed in use */
+.text--sh--3 { text-shadow: 0px 20px 24px rgba(16, 24, 40, 0.08), 0px 8px 8px rgba(16, 24, 40, 0.03); } /* confirmed in use */
 .text--sh--pink-27 {text-shadow: 0px 0px 27px #F600FE;}
 .text--sh--yellow-40 {text-shadow: 0px 0px 40px #FFC300;}
 
@@ -255,6 +261,7 @@
 .w--272 { width: 17rem; /* width 272px */ } /* confirmed in use */ /* pixel conversion correct */
 .w--280 { width: 17.5rem; /* width 280px */ } /* confirmed in use */ /* pixel conversion correct */
 .w--285 { width: 17.813rem; /* width 285px */ } /* confirmed in use */ /* pixel conversion correct */
+.w--306 { width: 19.125rem; /* width 306px */ } /* confirmed in use */ /* pixel conversion correct */
 .w--356 { width: 22.25rem; /* width 356px */ } /* confirmed in use */ /* pixel conversion correct */
 .w--378 { width: 23.625rem; /* width 378px */ } /* confirmed in use */ /* pixel conversion correct */
 .w--464 { width: 29rem; /* width 464px */ } /* confirmed in use */ /* pixel conversion correct */
@@ -291,6 +298,7 @@
 .h--12 { height: 0.75rem; /* height 12px */ } /* confirmed in use */ /* pixel conversion correct */
 .h--44 { height: 2.75rem; /* height 44px */ } /* confirmed in use */ /* pixel conversion correct */
 .h--53 { height: 3.313rem; /* height 53px */ } /* confirmed in use */ /* pixel conversion correct */
+.h--62 { height: 3.875rem; /* height 62px */ } /* confirmed in use */ /* pixel conversion correct */
 .h--66 { height: 4.125rem; /* height 66px */ } /* confirmed in use */ /* pixel conversion correct */
 .h--80 { height: 5rem; /* height 80px */ } /* confirmed in use */ /* pixel conversion correct */
 .h--112 { height: 7rem; /* height 112px */ } /* confirmed in use */ /* pixel conversion correct */
@@ -322,6 +330,7 @@
 .pad--x--16 { padding-left: 1rem; padding-right: 1rem; /* padding left right 16px */ }
 .pad--x--40 { padding-left: 2.5rem; padding-right: 2.5rem; /* padding-left 40px padding-right 40px */ }
 .pad--x--14 { padding-left: 0.875rem; padding-right: 0.875rem; /* padding-left 14px padding-right 14px */ }
+.pad--top--0 { padding-top: 0; }
 .pad--top--13 { padding-top: 0.813rem; /* padding top 13px */ } /* confirmed in use */ /* pixel conversion correct */
 .pad--top--40 { padding-top: 2.5rem; /* padding top 40px */ } /* confirmed in use */ /* pixel conversion correct */
 .pad--top--80 { padding-top: 5rem; /* padding top 80px */ } /* confirmed in use */ /* pixel conversion correct */
@@ -352,6 +361,7 @@
 .m--0 { margin: 0rem; }
 .m--top--132 { margin-top: 8.25rem; }
 .neg--m--top--121 { margin-top: -7.563rem; }
+.neg--m--top--62 { margin-top: -3.875rem; }
 .ml--auto { margin-left: auto; }
 
 
@@ -363,6 +373,7 @@
 .gap--7{ gap: 0.4375rem; }
 .gap--26 { gap: 1.625rem; /* gap 26px */ } /* confirmed in use */ /* pixel conversion correct */
 .gap--44 { gap: 2.75rem; /* gap 44px */ } /* pixel conversion correct */ /* pixel conversion correct */
+.gap--y--8--x--16 { gap: 0.5rem 1rem; }
 
 
 /* Flexbox */
@@ -460,9 +471,11 @@
 .sh--16 { box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.20); } /* confirmed in use */
 .sh--17 { box-shadow: 0px 4px 6px rgba(16, 24, 40, 0.08); }
 .sh--18 { box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.10); } /* confirmed in use */
+.sh--19 { box-shadow: 0px 0px 6px 0px #000; } /* confirmed in use */
 
 
 /* Drop Shadow */
+.drop--sh--2 { filter: drop-shadow(0 0 0.313rem rgba(0, 0, 0, 1)); }
 
 
 /* Text Shadow */
@@ -511,6 +524,8 @@
 .cp--6 { clip-path: polygon(0% 0%, 100% 0, 105% 105%, 16% 105%); }
 .cp--7 { clip-path: polygon(8% 0%, 100% 0, 105% 105%, 0% 105%); }
 .cp--8 { clip-path: polygon(0% 0, 100% 0, 88% 105%, 0 105%); }
+.cp--9 { clip-path: polygon(0% 0%, 0% 0, 0% 101%, 100% 101%); }
+.cp--10 { clip-path: polygon(100% 34%, 0% 0%, 0% 100%, 100% 100%); }
 
 
 /* Pointer Events */
@@ -532,7 +547,7 @@
 
 
 /*[data-bg="gradient-img"]:before*/
-[data-dashboard-template-main]:before{
+[data-dashboard-template-main-background]:before{
 	content: '';
     position: fixed;
     background: url(../../assets/images/gradient-main-bg.svg);
@@ -545,4 +560,15 @@
     pointer-events: none;
 }
 /* Mozila Firefox Specific CSS */
-[data-dashboard-template-main]:-moz-read-only:before { background-image: url(../../assets/images/gradient-bg-firefox.svg) !important; }
+[data-dashboard-template-main-background]:-moz-read-only:before { background-image: url(../../assets/images/gradient-bg-firefox.svg) !important; }
+
+[data-subscription-video-thumbnail]:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.60) -24.72%, rgba(0, 0, 0, 0.00) 41.92%, rgba(0, 0, 0, 0.60) 108.57%);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
