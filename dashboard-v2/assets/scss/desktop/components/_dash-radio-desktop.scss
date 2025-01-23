@@ -5,3 +5,8 @@
 [data-form-input-type=radio][data-form-accent-color=green] input[type=radio]:checked + label:after { content: ""; width: 0.375rem; height: 0.375rem; border-radius: 50%; background: var(--Brand-green, #07F468); position: absolute; left: 0.313rem; top: 50%; transform: translateY(-50%); }
 [data-form-input-type=radio][data-form-input-layout="vertical top"] input[type=radio]  + label:before { top: 0.25rem; transform: translateY(0%); }
 [data-form-input-type=radio][data-form-input-layout="vertical top"] input[type=radio]:checked  + label:after { top: 0.563rem; transform: translateY(0%); }
+[data-form-input-type=radio][data-form-input-type-position="right"] input[type=radio]+label { padding-left: 0; display: flex; }
+[data-form-input-type=radio][data-form-input-type-position="right"] input[type=radio]+label:before { left: auto; right: 0; }
+[data-form-input-type=radio][data-form-accent-color=red] input[type=radio]+label:before { border: 1px solid var(--Gray-300, #D0D5DD);
+background: var(--Gray-200, #EAECF0); }
+[data-form-input-type=radio][data-form-accent-color=red] input[type=radio]:checked + label:before { content: ""; background: var(--brand-pink-2, #F06); border-color: var(--col--white, #Fff); }
