@@ -921,6 +921,10 @@ html {
   background-color: var(--color-violet, #f093fb)
 }
 
+.bg--col--light--vermillion {
+  background: rgba(255, 68, 5, .1)
+}
+
 [data-bg-color="Persian Rose"] {
   background-color: var(--color-persian-rose, #f72485)
 }
@@ -1012,6 +1016,11 @@ html {
 .bg--gradient-white-2 {
   background: -webkit-gradient(linear, right top, left top, from(#fff), to(rgba(255, 255, 255, 0))), rgba(242, 244, 247, .5);
   background: linear-gradient(270deg, #fff 0, rgba(255, 255, 255, 0) 100%), rgba(242, 244, 247, .5)
+}
+
+.bg--gd--vermilion {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, .9))), -webkit-gradient(linear, left bottom, left top, from(rgba(255, 68, 5, .1)), to(rgba(255, 68, 5, .1))), rgba(255, 255, 255, .9);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, .9) 100%), linear-gradient(0deg, rgba(255, 68, 5, .1) 0, rgba(255, 68, 5, .1) 100%), rgba(255, 255, 255, .9)
 }
 
 .bg--no-repeat {
@@ -1200,6 +1209,11 @@ html {
 .filter--col--shuffle--grey {
   -webkit-filter: brightness(0) saturate(100%) invert(40%) sepia(9%) saturate(290%) hue-rotate(177deg) brightness(93%) contrast(97%);
   filter: brightness(0) saturate(100%) invert(40%) sepia(9%) saturate(290%) hue-rotate(177deg) brightness(93%) contrast(97%)
+}
+
+.filter--col--vermillion {
+  -webkit-filter: brightness(0) saturate(100%) invert(42%) sepia(62%) saturate(5849%) hue-rotate(357deg) brightness(101%) contrast(103%);
+  filter: brightness(0) saturate(100%) invert(42%) sepia(62%) saturate(5849%) hue-rotate(357deg) brightness(101%) contrast(103%)
 }
 
 .filter--blur--2 {

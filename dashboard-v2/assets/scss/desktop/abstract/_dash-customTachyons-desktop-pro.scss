@@ -73,6 +73,7 @@
 .bg--col--cerulean { background: var(--color-cerulean, #06AED4); }
 .bg--gray-70 { background-color: var(--color-gray-black, rgba(34, 34, 34, 0.7)); }
 .bg--col--violet { background-color: var(--color-violet, #F093FB); }
+.bg--col--light--vermillion { background: rgba(255, 68, 5, 0.10); }
 
 
 /* Background Data Colors*/
@@ -100,6 +101,7 @@
 .bg--gd--Galliano-yellow { background: linear-gradient(90deg, #D8AF0D 0%, #9F8009 100%); }
 .bg--gradient-white { background: linear-gradient(180deg, rgba(255, 255, 255, 0.30) 0%, rgba(255, 255, 255, 0.00) 8%); }
 .bg--gradient-white-2 { background: linear-gradient(270deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%), rgba(242, 244, 247, 0.50); }
+.bg--gd--vermilion { background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.90) 100%), linear-gradient(0deg, rgba(255, 68, 5, 0.10) 0%, rgba(255, 68, 5, 0.10) 100%), rgba(255, 255, 255, 0.90); }
 
 /* Background Style */
 .bg--no-repeat { background-repeat: no-repeat; }
@@ -156,6 +158,7 @@
 .filter--col--tooblue { filter: brightness(0) saturate(100%) invert(36%) sepia(95%) saturate(2808%) hue-rotate(191deg) brightness(101%) contrast(95%); } /* #0788F5 */
 .filter--col--cream-white { filter: brightness(0) saturate(100%) invert(68%) sepia(3%) saturate(1620%) hue-rotate(317deg) brightness(94%) contrast(101%); } /* #BA9E9B */
 .filter--col--shuffle--grey { filter: brightness(0) saturate(100%) invert(40%) sepia(9%) saturate(290%) hue-rotate(177deg) brightness(93%) contrast(97%); } /* #5F6369 */
+.filter--col--vermillion { filter: brightness(0) saturate(100%) invert(42%) sepia(62%) saturate(5849%) hue-rotate(357deg) brightness(101%) contrast(103%); } /* #FF4405 */
 
 /* Filter Blur */
 .filter--blur--2 { filter: blur(2px); -webkit-filter: blur(2px); -moz-filter: blur(2px); }
