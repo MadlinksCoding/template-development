@@ -74,6 +74,7 @@
 .bg--gray-70 { background-color: var(--color-gray-black, rgba(34, 34, 34, 0.7)); }
 .bg--col--violet { background-color: var(--color-violet, #F093FB); }
 .bg--col--light--vermillion { background: rgba(255, 68, 5, 0.10); }
+.bg--col--mystic {background: var(--color-mystic, #dee5ec); } /* confirmed in use */
 
 
 /* Background Data Colors*/
@@ -89,6 +90,9 @@
 [data-bg-color="Blush Pink"] { background-color: var(--color-blush-pink, #FF76DD); }
 [data-bg-color="Aquamarine"] { background-color: var(--color-aquamarine, #89FAD3); }
 [data-bg-color="Spray"] { background-color: var(--color-spray, #78F0F5); }
+[data-media-step-processing-bar], [data-media-step-processing-bar][data-show-loader=true]:before{
+	background-color: var(--color-ebony-2, #0C111D);
+}
 
 
 /* Background Gradients*/
@@ -321,6 +325,7 @@
 .min--h--40 { min-height: 2.5rem; }
 .min--h--52 { min-height: 3.25rem; }
 .min--h--126 { min-height: 7.875rem; /* min height 126px */ }
+.min--h--390 { min-height: 24.4rem; /* min height 390px */ }
 .min--h--450 { min-height: 28.125rem; /* min height 450px */ }
 .min--h--561 { min-height: 35.063rem; /* min height 561px */ }
 
@@ -374,6 +379,7 @@
 .neg--m--top--121 { margin-top: -7.563rem; }
 .neg--m--top--62 { margin-top: -3.875rem; }
 .ml--auto { margin-left: auto; }
+.mt--auto { margin-top: auto; }
 
 
 /* Display */

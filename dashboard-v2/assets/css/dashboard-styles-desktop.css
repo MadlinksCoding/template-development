@@ -925,6 +925,10 @@ html {
   background: rgba(255, 68, 5, .1)
 }
 
+.bg--col--mystic {
+  background: var(--color-mystic, #dee5ec)
+}
+
 [data-bg-color="Persian Rose"] {
   background-color: var(--color-persian-rose, #f72485)
 }
@@ -971,6 +975,11 @@ html {
 
 [data-bg-color=Spray] {
   background-color: var(--color-spray, #78f0f5)
+}
+
+[data-media-step-processing-bar],
+[data-media-step-processing-bar][data-show-loader=true]:before {
+  background-color: var(--color-ebony-2, #0c111d)
 }
 
 .bg--gd--light-white {
@@ -1615,6 +1624,10 @@ html {
   min-height: 7.875rem
 }
 
+.min--h--390 {
+  min-height: 24.4rem
+}
+
 .min--h--450 {
   min-height: 28.125rem
 }
@@ -1803,6 +1816,10 @@ html {
 
 .ml--auto {
   margin-left: auto
+}
+
+.mt--auto {
+  margin-top: auto
 }
 
 .gap--1 {
