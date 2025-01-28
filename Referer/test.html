@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>Referral Card</title>
+</head>
+<body>
+
+  <div class="card">
+    <img src="../images/test4.jpg" alt="Card Image" class="card-image">
+    <div class="card-content">
+      <div class="gradient-overlay"></div>
+      <div class="content">
+        <h2 class="heading">Maximise your earnings and watch your income grow!</h2>
+        <p class="subtext">
+          Hey <span class="highlight">@username</span>! 🎉 Share your referral link and earn a 
+          <span class="highlight">2% referral bonus</span> from your friends' monthly earnings. 
+          More creators, more cash—start now and watch your earnings grow!
+        </p>
+        <div class="input-container">
+          <input type="text" 
+                 value="https://fs.codelinden.com/sign-up/?action=referrer&id=L1lTVFFFOXVkSGk3TWNWeVo4MXdjQT09" 
+                 readonly
+                 class="input-field">
+          <button class="copy-btn">
+            <div class="copy-icon">
+              <div class="icon-inner">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <g clip-path="url(#clip0_12222_186962)">
+                        <path d="M4.16663 12.5C3.39006 12.5 3.00177 12.5 2.69549 12.3731C2.28711 12.204 1.96265 11.8795 1.79349 11.4711C1.66663 11.1648 1.66663 10.7766 1.66663 9.99999V4.33332C1.66663 3.3999 1.66663 2.93319 1.84828 2.57667C2.00807 2.26307 2.26304 2.0081 2.57664 1.84831C2.93316 1.66666 3.39987 1.66666 4.33329 1.66666H9.99996C10.7765 1.66666 11.1648 1.66666 11.4711 1.79352C11.8795 1.96268 12.2039 2.28714 12.3731 2.69552C12.5 3.0018 12.5 3.39009 12.5 4.16666M10.1666 18.3333H15.6666C16.6 18.3333 17.0668 18.3333 17.4233 18.1517C17.7369 17.9919 17.9918 17.7369 18.1516 17.4233C18.3333 17.0668 18.3333 16.6001 18.3333 15.6667V10.1667C18.3333 9.23324 18.3333 8.76653 18.1516 8.41001C17.9918 8.0964 17.7369 7.84143 17.4233 7.68165C17.0668 7.49999 16.6 7.49999 15.6666 7.49999H10.1666C9.23321 7.49999 8.7665 7.49999 8.40998 7.68165C8.09637 7.84143 7.8414 8.0964 7.68162 8.41001C7.49996 8.76653 7.49996 9.23324 7.49996 10.1667V15.6667C7.49996 16.6001 7.49996 17.0668 7.68162 17.4233C7.8414 17.7369 8.09637 17.9919 8.40998 18.1517C8.7665 18.3333 9.23321 18.3333 10.1666 18.3333Z" stroke="#07F468" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_12222_186962">
+                        <rect width="20" height="20" fill="white"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+              </div>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+<style>
+    body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.card {
+  width: 606px;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.50);
+  background: url('https://via.placeholder.com/606x280') lightgray 50% / cover no-repeat;
+}
+
+.card-image {
+  width: 265px;
+  height: 280px;
+}
+
+.card-content {
+  width: 341px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  backdrop-filter: blur(100px);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.25) 15%, rgba(0, 0, 0, 0.25) 80%, rgba(0, 0, 0, 0.50) 100%);
+}
+
+.gradient-overlay {
+  width: 70px;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.01) 0%, rgba(255, 255, 255, 0.01) 100%), 
+              linear-gradient(180deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.25) 15%, rgba(0, 0, 0, 0.25) 80%, rgba(0, 0, 0, 0.50) 100%);
+}
+
+.content {
+  flex: 1;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.40);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.heading {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: right;
+  line-height: 32px;
+  margin-bottom: 20px;
+}
+
+.subtext {
+  font-size: 14px;
+  font-weight: 400;
+  text-align: right;
+  line-height: 20px;
+  max-width: 357px;
+}
+
+.highlight {
+  color: #07F468;
+  font-weight: 400;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(0, 0, 0, 0.50);
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  padding: 10px;
+  border-radius: 8px;
+  border-bottom: 1px solid #667085;
+}
+
+.input-field {
+  flex: 1;
+  padding: 8px 12px;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 16px;
+  outline: none;
+}
+
+.input-field::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.copy-btn {
+  background: none;
+  border: none;
+  padding: 10px 14px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.copy-icon {
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+
+.icon-inner {
+  width: 16.67px;
+  height: 16.67px;
+  position: absolute;
+  left: 1.67px;
+  top: 1.67px;
+  border: 1.67px solid #07F468;
+}
+
+</style>
+</html>
