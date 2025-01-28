@@ -215,3 +215,10 @@ background: rgba(255, 255, 255, 0.90); box-shadow: 0px 3px 6px 0px rgba(0, 0, 0,
 [data-dropdown-color-theme="blue"].nice-select.v1 .current.active .nice-select-icon svg { filter: brightness(0) saturate(100%) invert(99%) sepia(99%) saturate(0%) hue-rotate(176deg) brightness(107%) contrast(100%); }
 [data-dropdown-color-theme="blue"].nice-select.v1 .current.active .nice-select-icon path { fill: none !important; }
 [data-dropdown-color-theme="blue"].nice-select-dropdown.open.h--66 { height: 4.125rem; /* height 66px */ }
+
+/* Data Nice Select with Search Tags */
+[data-nice-select-with-search-tags] + .nice-select.v1 { border: none; background: transparent; }
+[data-nice-select-with-search-tags] + .mlc-ns.v1 .nice-select-search { color: var(--Gray-500, #667085) !important;
+font-size: 16px !important; font-weight: 400 !important; line-height: 24px !important; }
+[data-nice-select-with-search-tags] + .mlc-ns.v1 .nice-select-search-box { gap: 0.5rem; }
+[data-nice-select-with-search-tags] + .mlc-ns.v1 .nice-select-search-box svg { width: 1.25rem !important; height: 1.25rem !important; filter: brightness(0) saturate(100%) invert(45%) sepia(13%) saturate(594%) hue-rotate(183deg) brightness(92%) contrast(92%); }

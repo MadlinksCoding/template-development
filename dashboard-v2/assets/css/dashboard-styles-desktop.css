@@ -921,6 +921,14 @@ html {
   background-color: var(--color-violet, #f093fb)
 }
 
+.bg--col--light--vermillion {
+  background: rgba(255, 68, 5, .1)
+}
+
+.bg--col--mystic {
+  background: var(--color-mystic, #dee5ec)
+}
+
 [data-bg-color="Persian Rose"] {
   background-color: var(--color-persian-rose, #f72485)
 }
@@ -969,6 +977,11 @@ html {
   background-color: var(--color-spray, #78f0f5)
 }
 
+[data-media-step-processing-bar],
+[data-media-step-processing-bar][data-show-loader=true]:before {
+  background-color: var(--color-ebony-2, #0c111d)
+}
+
 .bg--gd--light-white {
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(242, 244, 247, .5)), to(rgba(242, 244, 247, .5))), rgba(255, 255, 255, .5);
   background: linear-gradient(0deg, rgba(242, 244, 247, .5) 0, rgba(242, 244, 247, .5) 100%), rgba(255, 255, 255, .5)
@@ -1014,6 +1027,11 @@ html {
   background: linear-gradient(270deg, #fff 0, rgba(255, 255, 255, 0) 100%), rgba(242, 244, 247, .5)
 }
 
+.bg--gd--vermilion {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, .9))), -webkit-gradient(linear, left bottom, left top, from(rgba(255, 68, 5, .1)), to(rgba(255, 68, 5, .1))), rgba(255, 255, 255, .9);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, .9) 100%), linear-gradient(0deg, rgba(255, 68, 5, .1) 0, rgba(255, 68, 5, .1) 100%), rgba(255, 255, 255, .9)
+}
+
 .bg--no-repeat {
   background-repeat: no-repeat
 }
@@ -1039,7 +1057,7 @@ html {
 }
 
 .br--col--mischka-gray {
-  color: var(--color-mischka-gray, #d0d5dd)
+  border-color: var(--color-mischka-gray, #d0d5dd)
 }
 
 .br--col--pale-sky {
@@ -1202,6 +1220,16 @@ html {
   filter: brightness(0) saturate(100%) invert(40%) sepia(9%) saturate(290%) hue-rotate(177deg) brightness(93%) contrast(97%)
 }
 
+.filter--col--vermillion {
+  -webkit-filter: brightness(0) saturate(100%) invert(42%) sepia(62%) saturate(5849%) hue-rotate(357deg) brightness(101%) contrast(103%);
+  filter: brightness(0) saturate(100%) invert(42%) sepia(62%) saturate(5849%) hue-rotate(357deg) brightness(101%) contrast(103%)
+}
+
+.filter--col--greytip {
+  -webkit-filter: brightness(0) saturate(100%) invert(75%) sepia(5%) saturate(464%) hue-rotate(183deg) brightness(95%) contrast(91%);
+  filter: brightness(0) saturate(100%) invert(75%) sepia(5%) saturate(464%) hue-rotate(183deg) brightness(95%) contrast(91%)
+}
+
 .filter--blur--2 {
   filter: blur(2px);
   -webkit-filter: blur(2px);
@@ -1281,6 +1309,10 @@ html {
 
 .hover--bg--col--zircon:hover {
   background: var(--color-zircon, #eff4ff)
+}
+
+.hover--parent--child--col--black-bg:hover .hov--bg--col--black {
+  background: #000
 }
 
 .group:hover .hover--col-black {
@@ -1513,8 +1545,8 @@ html {
   max-width: 30.938rem
 }
 
-.max--w--520 {
-  max-width: 32.5rem
+.max--w--767 {
+  max-width: 47.938rem
 }
 
 .h--screen {
@@ -1569,6 +1601,10 @@ html {
   height: 7.875rem
 }
 
+.h--160 {
+  height: 10rem
+}
+
 .h--200 {
   height: 12.5rem
 }
@@ -1593,8 +1629,24 @@ html {
   min-height: 3.25rem
 }
 
+.min--h--94 {
+  min-height: 5.875rem
+}
+
+.min--h--126 {
+  min-height: 7.875rem
+}
+
+.min--h--390 {
+  min-height: 24.4rem
+}
+
 .min--h--450 {
   min-height: 28.125rem
+}
+
+.min--h--561 {
+  min-height: 35.063rem
 }
 
 .max-h--140 {
@@ -1777,6 +1829,10 @@ html {
 
 .ml--auto {
   margin-left: auto
+}
+
+.mt--auto {
+  margin-top: auto
 }
 
 .gap--1 {
@@ -2123,6 +2179,10 @@ html {
 
 [data-custom-oval-shape] {
   clip-path: polygon(54% 6%, 86% 25%, 100% 52%, 100% 74%, 75% 92%, 45% 94%, 16% 76%, 0 35%, 3% 17%, 25% 0)
+}
+
+[gallery-items-wrap] {
+  background: 0 0 !important
 }
 
 [data-container-bg-fixed]:-moz-read-only {
@@ -4846,6 +4906,29 @@ html {
 
 [data-dropdown-color-theme=blue].nice-select-dropdown.open.h--66 {
   height: 4.125rem
+}
+
+[data-nice-select-with-search-tags]+.nice-select.v1 {
+  border: none;
+  background: 0 0
+}
+
+[data-nice-select-with-search-tags]+.mlc-ns.v1 .nice-select-search {
+  color: var(--Gray-500, #667085) !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 24px !important
+}
+
+[data-nice-select-with-search-tags]+.mlc-ns.v1 .nice-select-search-box {
+  gap: .5rem
+}
+
+[data-nice-select-with-search-tags]+.mlc-ns.v1 .nice-select-search-box svg {
+  width: 1.25rem !important;
+  height: 1.25rem !important;
+  -webkit-filter: brightness(0) saturate(100%) invert(45%) sepia(13%) saturate(594%) hue-rotate(183deg) brightness(92%) contrast(92%);
+  filter: brightness(0) saturate(100%) invert(45%) sepia(13%) saturate(594%) hue-rotate(183deg) brightness(92%) contrast(92%)
 }
 
 [data-form-input-type=checkbox] input[type=checkbox] {
