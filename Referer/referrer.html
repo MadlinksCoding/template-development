@@ -232,7 +232,6 @@
 
     /* Image and Maximise */
     .MainContainerReferer {
-        min-width: 37.875rem;
     }
 
     .TotalEarningImage {
@@ -242,9 +241,9 @@
     }
 
     .MaximizeTextandParagraph {
-        width: 60%;
         position: absolute;
         min-width: 23.8125rem;
+        width: 60%;
         top: 0;
         right: 0;
         background: linear-gradient(to right, rgba(77, 48, 67, 1), rgba(77, 48, 67, 1));
@@ -257,6 +256,7 @@
         flex-direction: column;
         align-items: center;
         gap: 1.5rem;
+        width: 100%;
         align-self: stretch;
         background: rgba(255, 255, 255, 0.40);
         box-shadow: 0rem 0.25rem 0.375rem 0rem rgba(16, 24, 40, 0.08);
@@ -740,9 +740,17 @@
             flex-direction: column;
         }
 
+        .ReferralCards{
+            flex-direction: column;
+            align-items: center;
+        }
+
         .min--width {
             min-width: 40.375rem;
-            /* 646px to rem */
+        }
+
+        .display-none-tablet{
+            display: none;
         }
     }
 
@@ -754,14 +762,57 @@
             flex-direction: column;
         }
 
+        .ReferralCards{
+            flex-direction: column;
+        }
+        .mobile-width-95{
+            width: 5.9375rem;
+        }
+
+        .mobile-width-140{
+            width: 8.75rem;
+        }
+
+        .mobile-width-198{
+            width: 12.375rem;
+        }
+
+        .mobile-width-133{
+            width: 8.3125rem;
+        }
 
         .min--width {
             min-width: 40.375rem;
-            /* 646px to rem */
         }
+
+
+        .Referral_Table{
+            width: 100%;
+        }
+
+        .ad--x--8-responsive-tablet{
+            padding-left:0.5rem ;
+            padding-right: 0.5rem;
+        }
+
+        .table-title{
+            flex-direction: column;
+            align-items: self-start;
+            gap:0.5rem;
+        }
+
+
+        .display-none-mobile {
+            display: none;
+        }
+
 
         .f-s-48 {
             font-size: 1.5rem;
+        }
+
+        .AddMediaPanel{
+            width: 100%;
         }
     }
 
@@ -769,8 +820,15 @@
     @media screen and (max-width: 29.9375rem) {
         .min--width {
             min-width: 40.375rem;
-            /* 646px to rem */
         }
+
+        .table-title{
+            flex-direction: row;
+            align-items: self-start;
+        }
+
+
+        
     }
 </style>
 
@@ -6682,13 +6740,12 @@
             <!-- Main Body Inner Wrapper -->
             <div class="h-100">
                 <!-- main section -->
-                <main data-dashboard-page="" data-section="main" class="flex flex-column flex--max relative z-1">
+                <main data-dashboard-page="" data-section="main" class="flex flex-column flex-max relative z-1">
                     <!-- Inner Container -->
                     <div data-section="inner-container" data-tabs-section="1"
-                        class="flex flex-column gap--24 bg--gradient-white pad--top--24-responsive-tablet pad--x--16-responsive-tablet pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait pad--y--0-responsive-mobile pad--y--0-responsive-mobile-portrait ">
+                        class="flex flex-column pad--40  gap--24 bg--gradient-white pad--top--24-responsive-tablet pad--x--16-responsive-tablet pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait pad--y--0-responsive-mobile pad--y--0-responsive-mobile-portrait">
                         <!-- Top Page Header Section -->
-                        <div data-section="page-header"
-                            class="pad--40 pad--bottom-1-5 pad--x--0-responsive-tablet pad--top--0-responsive-tablet flex flex-column gap--24 pad--8-responsive-mobile pad--8-responsive-mobile-portrait">
+                        <div data-section="page-header" class="pad--bottom-1-5 pad--x--0-responsive-tablet pad--top--0-responsive-tablet flex flex-column gap--24 pad--8-responsive-mobile pad--8-responsive-mobile-portrait">
                             <!-- Top Page Title Section -->
                             <div data-section="page-title"
                                 class="w-100 flex gap--24 items-start justify-center justify-between gap--16--responsive-tablet gap--16--responsive-mobile gap--16--responsive-mobile-portrait flex--column-responsive-tablet flex--column-responsive-mobile flex--column-responsive-mobile-portrait display--none-responsive-mobile display--none-responsive-mobile-portrait">
@@ -6700,20 +6757,19 @@
                         <!-- End Top Page Header Section -->
 
                         <!-- Referal Table Content -->
-                        <div data-tabs-content="1" class="h-100 pad--x--40 pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait">
+                        <div data-tabs-content="1" class="h-100">
                             <!-- first tab content items -->
-                            <div class="flex flex-column justify-start items-start gap--16 flex-auto mt--8-neg active"
+                            <div class="flex flex-column justify-start items-start gap--16 mt--8-neg active"
                                 data-tabbed-content="recently-tabbed-content" data-target="grid-tab">
                                 <!-- Tabs Content -->
-                                <div data-tabs-content="2" class="MainContainerReferer w-100 h-100">
-                                    <div class="flex items-start gap--16 h-[280px] flex--column-responsive-tablet min--width flex--column-responsive-mobile">
+                                    <div class="ReferralCards w-100 h-100 flex items-start gap--16 h-[280px] pad--8-responsive-mobile">
                                         <!-- Left Card -->
-                                        <div class="flex-1 w-50 container-height-280 custom-gradient min--width w--100-responsive-tablet">
+                                        <div class="flex-1 w-50 w--100-responsive-mobile container-height-280 custom-gradient w--100-responsive-tablet">
                                             <div class="EarningAndMaximiz container-height-280 flex w-full  relative">
-                                                <div class="TotalEarningImage relative w-full h-full relative">
+                                                <div class="TotalEarningImage w--100-responsive-mobile relative w-full h-full relative">
                                                     <img src="../images/image5.png" class="w-90 h-100 object-cover" alt="Referral" />
                                                 </div>
-                                                <div class="MaximizeTextandParagraph custom-gradient bg-card-left w-60 pa3 pr3 pl0 container-height-280">
+                                                <div class="MaximizeTextandParagraph custom-gradient w--100-responsive-mobile bg-card-left w-60 pa3 pr3 pl0 container-height-280">
                                                     <div>
                                                         <h2 class="clamp-3 tr white fw6 Text-earning">Maximise your
                                                             earnings and watch your income grow!</h2>
@@ -6797,10 +6853,9 @@
                                         </div>
 
                                         <!-- Right Cards -->
-                                        <div
-                                            class="flex-1 w-50 h-100 flex justify-between gap--16 flex-column min--width flex--column-responsive-mobile w--100-responsive-tablet">
+                                        <div class="flex-1 w-50 w--100-responsive-mobile h-100 flex justify-between gap--16 flex-column w--100-responsive-tablet">
                                             <!-- Tope Card -->
-                                            <div class="bg-card-right br2 flex items-stretch h-140 min--width">
+                                            <div class="bg-card-right br2 flex items-stretch h-140 w--100-responsive-tablet  w--100-responsive-mobile">
                                                 <div
                                                     class="flex w-25 icon-bg-color-earning flex items-center justify-center relative">
                                                     <div class="relative">
@@ -6839,7 +6894,7 @@
                                                 </div>
                                             </div>
                                             <!-- Bottom card -->
-                                            <div class="bg-card-right br2 flex items-stretch min--width">
+                                            <div class="bg-card-right br2 flex items-stretch  w--100-responsive-tablet w--100-responsive-mobile">
                                                 <div class="flex-1 pa4 w-75">
                                                     <div>
                                                         <p class="white poppins font-size--16 font-style-normal line-height--24">Your Referral Earning this Month
@@ -6883,19 +6938,18 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
                                 <!-- End Tabs Content -->
                             </div>
                         </div>
                         <!-- End Grid and List Tabs Content -->
 
                         <div data-tabs-content="1"
-                            class="h-100 pad--40 pad--x--0-responsive-tablet pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait">
+                            class="h-100">
                             <div data-section="page-header"
-                                class="Referral_Table d--x--0-responsive-tablet pad--top--0-responsive-tablet flex flex-column gap--24 pad--8-responsive-mobile pad--8-responsive-mobile-portrait">
+                                class="Referral_Table">
                                 <!-- Top Page Title Section -->
                                 <div data-section="table-title"
-                                    class="table-title w-100 flex gap--24 items-center items-start justify-between gap--16--responsive-tablet gap--16--responsive-mobile gap--16--responsive-mobile-portrait flex--column-responsive-mobile flex--column-responsive-mobile-portrait display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                    class="table-title w-100 flex gap--24 pad--x--8-responsive-tablet items-center items-start justify-between gap--16--responsive-tablet gap--16--responsive-mobile gap--16--responsive-mobile-portrait">
                                     <h1 class="poppins font-size--20 line-height--30 fw5 col--fiord">
                                         Your Referrals
                                     </h1>
@@ -6932,28 +6986,28 @@
                                             <!-- Header -->
                                             <div class="flex items-center">
                                                 <!-- Header Item -->
-                                                <div class="w--198 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--42 bb br--col--pale-sky pad--10 pad--right--0-responsive-mobile pad--right--0-responsive-mobile-portrait">
+                                                <div class="w--198 w--100-responsive-mobile-portrait min--h--42 bb br--col--pale-sky pad--10 pad--right--0-responsive-mobile pad--right--0-responsive-mobile-portrait">
                                                     <span class="fs--14 fw4 lh--20 col--pale-sky truncate">From</span>
                                                 </div>
                                                 <!-- /Header Item -->
                                                 <!-- Header Item -->
-                                                <div class="w--187 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--42 pad--10 bb br--col--pale-sky pad--10 pad--right--0-responsive-mobile pad--right--0-responsive-mobile-portrait">
+                                                <div class="w--187 mobile-width-140  w--100-responsive-mobile-portrait min--h--42 pad--10 bb br--col--pale-sky pad--10 pad--right--0-responsive-mobile pad--right--0-responsive-mobile-portrait">
                                                     <span class="fs--14 fw4 lh--20 col--pale-sky truncate">Status</span>
                                                 </div>
                                                 <!-- /Header Item -->
                                                 <!-- Header Item -->
-                                                <div class="w--180 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--42 pad--10 bb br--col--pale-sky pad--10 pad--right--0-responsive-mobile pad--right--0-responsive-mobile-portrait">
+                                                <div class="w--180 mobile-width-95 w--100-responsive-mobile-portrait min--h--42 pad--10 bb br--col--pale-sky pad--10 pad--right--0-responsive-mobile pad--right--0-responsive-mobile-portrait">
                                                     <span class="fs--14 fw4 lh--20 col--pale-sky truncate">Join Date</span>
                                                 </div>
                                                 <!-- /Header Item -->
                                                 <!-- Header Item -->
-                                                <div class="w--200 w--56-responsive-mobile min--h--42 pad--10 bb br--col--pale-sky pad--10 pad--right--0-responsive-mobile pad--right--0-responsive-mobile-portrait">
+                                                <div class="w--200  w--56-responsive-mobile mobile-width-133 min--h--42 pad--10 bb br--col--pale-sky pad--10 pad--right--0-responsive-mobile pad--right--0-responsive-mobile-portrait">
                                                     <span class="fs--14 fw4 lh--20 col--pale-sky truncate min--h--20">&nbsp;</span>
                                                 </div>
                                                 <!-- /Header Item -->
                                                 <!-- Header Item -->
                                                 <div
-                                                    class="w--393 w--56-responsive-mobile min--h--42 pad--10 bb br--col--pale-sky pad--10 pad--right--0-responsive-mobile pad--right--0-responsive-mobile-portrait">
+                                                    class="w--393 w--56-responsive-mobile display-none-mobile display-none-tablet  min--h--42 pad--10 bb br--col--pale-sky pad--10 pad--right--0-responsive-mobile pad--right--0-responsive-mobile-portrait">
                                                     <span class="fs--14 fw4 lh--20 col--pale-sky truncate min--h--20">&nbsp;</span>
                                                 </div>
                                                 <!-- /Header Item -->
@@ -6970,7 +7024,7 @@
                                                 <!-- Item Row -->
                                                 <div class="flex items-center bg--col--athens-gray-3--50 pointer">
                                                     <!-- Item Profile -->
-                                                    <div class="w--198 min--h--72 pad--8  w--100-responsive-mobile w--100-responsive-mobile-portrait flex items-center">
+                                                    <div class="w--198 min--h--72 pad--8 w--100-responsive-mobile-portrait flex items-center">
                                                         <div
                                                             class="pad--8 gap--8 h-full pad--x--10-responsive-mobile flex items-center justify-center">
                                                             <!-- <img src="../images/test5.jpg" alt="" class="w--36 h--36 br-100"> -->
@@ -7038,7 +7092,7 @@
                                                                     </span>
                                                                 </div>
                                                                 <span
-                                                                    class="fs--12 fw4 lh--18 col--oxford-blue truncate display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                                    class="fs--12 fw4 lh--18 col--oxford-blue truncate">
                                                                     @jennya
                                                                 </span>
                                                             </div>
@@ -7046,7 +7100,7 @@
                                                     </div>
                                                     <!-- /Item -->
                                                     <!-- Item Status -->
-                                                    <div class="w--187 min--h--72 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                    <div class="w--187  min--h--72 w--100-responsive-mobile mobile-width-140 w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid">
                                                         <div class="flex flex-column justify-center items-start gap--2 pointer">
                                                             <span class="flex items-center self-stretch gap--5">
                                                                 <div data-layer="order received status"
@@ -7081,14 +7135,14 @@
                                                     </div>
                                                     <!-- /Item -->
                                                     <!-- Item Joining Date -->
-                                                    <div class="w--180 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                    <div class="w--180 w--100-responsive-mobile  w--100-responsive-mobile-portrait mobile-width-95 min--h--72 pad--10 v-mid ">
                                                         <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
                                                             22 Jan 2022
                                                         </span>
                                                     </div>
                                                     <!-- /Item -->
                                                     <!-- Item -->
-                                                    <div class="w--200 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                    <div class="w--200 w--100-responsive-mobile mobile-width-133 w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid ">
                                                         <div class="flex flex-column justify-center items-start gap--2 pointer">
                                                             <span class="flex items-center self-stretch gap--5">
                                                             </span>
@@ -7096,17 +7150,8 @@
                                                     </div>
                                                     <!-- /Item -->
                                                     <!-- Item -->
-                                                    <div class="w--393 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                    <div class="w--393 w--100-responsive-mobile display-none-mobile  display-none-tablet w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid ">
                                                         <div class="flex items-start">
-                                                            <!-- <span
-                                                                    class="bg--col-turbo-yellow pad--4 flex items-center justify-center bg--blur--10">
-                                                                    <img src="../assets/icons/stars-01.svg" alt=""
-                                                                        class="w--16 h--16">
-                                                                </span>
-                                                                <span
-                                                                    class="pad--y--3 pad--x--6 gap--8 flex items-center justify-center bg-black bg--blur--10 fs--12 fw5 lh--18 col-turbo-yellow">
-                                                                    New
-                                                                </span> -->
                                                         </div>
                                                     </div>
                                                     <!-- /Item -->
@@ -7205,7 +7250,7 @@
                                                                     </span>
                                                                 </div>
                                                                 <span
-                                                                    class="fs--12 fw4 lh--18 col--oxford-blue truncate display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                                    class="fs--12 fw4 lh--18 col--oxford-blue truncate">
                                                                     @jennyj
                                                                 </span>
                                                             </div>
@@ -7214,7 +7259,7 @@
                                                     <!-- /Item -->
                                                     <!-- Item Status -->
                                                     <div
-                                                        class="w--187 min--h--72 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                        class="w--187 min--h--72 w--100-responsive-mobile mobile-width-140 w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid  ">
                                                         <div
                                                             class="flex flex-column justify-center items-start gap--2 pointer">
                                                             <span class="flex items-center self-stretch gap--5">
@@ -7252,7 +7297,7 @@
                                                     <!-- /Item -->
                                                     <!-- Item Joining Date -->
                                                     <div
-                                                        class="w--180 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                        class="w--180 w--100-responsive-mobile mobile-width-95 w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid">
                                                         <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
                                                             22 Jan 2022
                                                         </span>
@@ -7260,22 +7305,17 @@
                                                     <!-- /Item -->
                                                     <!-- Item -->
                                                     <div
-                                                        class="w--200 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                        class="w--200 w--100-responsive-mobile mobile-width-133 w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid ">
                                                         <div
                                                             class="flex flex-column justify-center items-start gap--2 pointer">
-                                                            <span class="flex items-center self-stretch gap--5">
-                                                                <!-- <img src="../assets/images/avatar-mango.png" alt=""
-                                                                        class="w--20 h--20">
-                                                                    <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
-                                                                    
-                                                                    </span> -->
+                                                            <span class="flex items-center self-stretch gap--5"> 
                                                             </span>
                                                         </div>
                                                     </div>
                                                     <!-- /Item -->
                                                     <!-- Item -->
                                                     <div
-                                                        class="w--393 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                        class="w--393 display-none-mobile display-none-tablet w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid  ">
                                                         <div class="flex items-start">
                                                         </div>
                                                     </div>
@@ -7351,17 +7391,13 @@
                                                                         </svg>
                                                                     </span>
                                                                 </div>
-                                                                <!-- <span
-                                                                        class="fs--12 fw4 lh--18 col--oxford-blue truncate display--none-responsive-mobile display--none-responsive-mobile-portrait">
-                                                                        @jennya
-                                                                    </span> -->
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <!-- /Item -->
                                                     <!-- Item Status -->
                                                     <div
-                                                        class="w--187 min--h--72 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                        class="w--187 min--h--72 w--100-responsive-mobile mobile-width-140 w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid ">
                                                         <div
                                                             class="flex flex-column justify-center items-start gap--2 pointer">
                                                             <span class="flex items-center self-stretch gap--5">
@@ -7398,8 +7434,7 @@
                                                                         </div>
                                                                         <div data-layer="Frame 7972" class="Frame7972">
                                                                             <div data-layer="Published"
-                                                                                class="Published color-green-text">
-                                                                                Invite sent</div>
+                                                                                class="Published color-green-text">Invite sent</div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -7409,7 +7444,7 @@
                                                     <!-- /Item -->
                                                     <!-- Item Joining Date -->
                                                     <div
-                                                        class="w--180 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                        class="w--180 w--100-responsive-mobile mobile-width-95 w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid ">
                                                         <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
                                                             22 Jan 2022
                                                         </span>
@@ -7417,31 +7452,18 @@
                                                     <!-- /Item -->
                                                     <!-- Item -->
                                                     <div
-                                                        class="w--200 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                        class="w--200 w--100-responsive-mobile mobile-width-133 w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid  ">
                                                         <div
                                                             class="flex flex-column justify-center items-start gap--2 pointer">
-                                                            <span class="flex items-center self-stretch gap--5">
-                                                                <!-- <img src="../assets/images/avatar-mango.png" alt=""
-                                                                        class="w--20 h--20">
-                                                                    <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
-                                                                    
-                                                                    </span> -->
+                                                            <span class="flex items-center self-stretch gap--5"> 
                                                             </span>
                                                         </div>
                                                     </div>
                                                     <!-- /Item -->
                                                     <!-- Item -->
                                                     <div
-                                                        class="w--393 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
-                                                        <div class="flex items-start">
-                                                            <!-- <span
-                                                                    class="bg--col-turbo-yellow pad--4 flex items-center justify-center bg--blur--10">
-                                                                    <img src="../assets/icons/stars-01.svg" alt="" class="w--16 h--16">
-                                                                </span>
-                                                                <span
-                                                                    class="pad--y--3 pad--x--6 gap--8 flex items-center justify-center bg-black bg--blur--10 fs--12 fw5 lh--18 col-turbo-yellow">
-                                                                    New
-                                                                </span> -->
+                                                        class="w--393 w--100-responsive-mobile display-none-mobile display-none-tablet w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                        <div class="flex items-start"> 
                                                         </div>
                                                     </div>
                                                     <!-- /Item -->
@@ -7519,7 +7541,7 @@
                                                                         </span>
                                                                     </div>
                                                                     <span
-                                                                        class="fs--12 fw4 lh--18 col--oxford-blue truncate display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                                        class="fs--12 fw4 lh--18 col--oxford-blue truncate  ">
                                                                         @jennyj
                                                                     </span>
                                                                 </div>
@@ -7532,8 +7554,7 @@
                                                     </div>
                                                     <!-- /Item -->
                                                     <!-- Item Status -->
-                                                    <div
-                                                        class="w--187 min--h--72 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                    <div class="w--187 min--h--72 w--100-responsive-mobile mobile-width-140 w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid">
                                                         <div
                                                             class="flex flex-column justify-center items-start gap--2 pointer">
                                                             <span class="flex items-center self-stretch gap--5">
@@ -7569,7 +7590,7 @@
                                                     <!-- /Item -->
                                                     <!-- Item Joining Date -->
                                                     <div
-                                                        class="w--180 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                        class="w--180 mobile-width-95 w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid">
                                                         <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
                                                             22 Jan 2022
                                                         </span>
@@ -7577,7 +7598,7 @@
                                                     <!-- /Item -->
                                                     <!-- Item -->
                                                     <div
-                                                        class="w--200 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                        class="w--200 mobile-width-133 w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid">
                                                         <div
                                                             class="flex flex-column justify-center items-start gap--2 pointer">
                                                             <span class="flex items-center self-stretch gap--5">
@@ -7591,17 +7612,8 @@
                                                     <!-- /Item -->
                                                     <!-- Item -->
                                                     <div
-                                                        class="w--393 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                        class="w--393 w--100-responsive-mobile display-none-mobile display-none-tablet w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid">
                                                         <div class="flex items-start">
-                                                            <!-- <span
-                                                                    class="bg--col-turbo-yellow pad--4 flex items-center justify-center bg--blur--10">
-                                                                    <img src="../assets/icons/stars-01.svg" alt=""
-                                                                        class="w--16 h--16">
-                                                                </span>
-                                                                <span
-                                                                    class="pad--y--3 pad--x--6 gap--8 flex items-center justify-center bg-black bg--blur--10 fs--12 fw5 lh--18 col-turbo-yellow">
-                                                                    New
-                                                                </span> -->
                                                         </div>
                                                     </div>
                                                     <!-- /Item -->
@@ -7700,17 +7712,13 @@
                                                                         </svg>
                                                                     </span>
                                                                 </div>
-                                                                <!-- <span
-                                                                        class="fs--12 fw4 lh--18 col--oxford-blue truncate display--none-responsive-mobile display--none-responsive-mobile-portrait">
-                                                                        @jennya
-                                                                    </span> -->
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <!-- /Item -->
                                                     <!-- Item Status -->
                                                     <div
-                                                        class="w--187 min--h--72 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                        class="w--187 min--h--72 mobile-width-140 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid">
                                                         <div
                                                             class="flex flex-column justify-center items-start gap--2 pointer">
                                                             <span class="flex items-center self-stretch gap--5">
@@ -7747,7 +7755,7 @@
                                                     <!-- /Item -->
                                                     <!-- Item Joining Date -->
                                                     <div
-                                                        class="w--180 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                        class="w--180 w--100-responsive-mobile mobile-width-95 w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid ">
                                                         <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
                                                             22 Jan 2022
                                                         </span>
@@ -7755,32 +7763,18 @@
                                                     <!-- /Item -->
                                                     <!-- Item -->
                                                     <div
-                                                        class="w--200 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                        class="w--200 w--100-responsive-mobile mobile-width-133 w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid">
                                                         <div
                                                             class="flex flex-column justify-center items-start gap--2 pointer">
                                                             <span class="flex items-center self-stretch gap--5">
-                                                                <!-- <img src="../assets/images/avatar-mango.png" alt=""
-                                                                        class="w--20 h--20">
-                                                                    <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
-                                                                    
-                                                                    </span> -->
                                                             </span>
                                                         </div>
                                                     </div>
                                                     <!-- /Item -->
                                                     <!-- Item -->
                                                     <div
-                                                        class="w--393 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                        class="w--393 w--100-responsive-mobile display-none-mobile display-none-tablet w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid ">
                                                         <div class="flex items-start">
-                                                            <!-- <span
-                                                                    class="bg--col-turbo-yellow pad--4 flex items-center justify-center bg--blur--10">
-                                                                    <img src="../assets/icons/stars-01.svg" alt=""
-                                                                        class="w--16 h--16">
-                                                                </span>
-                                                                <span
-                                                                    class="pad--y--3 pad--x--6 gap--8 flex items-center justify-center bg-black bg--blur--10 fs--12 fw5 lh--18 col-turbo-yellow">
-                                                                    New
-                                                                </span> -->
                                                         </div>
                                                     </div>
                                                     <!-- /Item -->
