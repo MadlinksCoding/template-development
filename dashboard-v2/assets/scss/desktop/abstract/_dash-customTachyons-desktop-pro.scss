@@ -608,6 +608,7 @@
 /* Image Gallery Preview selective item style with input checked */
 [data-gallery-poster-wrap] input, 
 [data-thumbail-items] input { width: 100%; height: 100%; opacity: 0; }
+[data-thumbail-items] [data-img-item] { opacity:0.5; }
 
 [data-gallery-poster-wrap] [data-view-item], 
 [data-thumbail-items] [data-view-item] { opacity: 0; visibility: hidden; }
@@ -618,5 +619,5 @@
 [data-thumbail-items] input:checked + [data-img-item-wrapper]:after{ content: ''; width: 100%; height: 100%; background: #0C111D; border-radius: 2px; padding: 4px; position: absolute; left: 0; top: 0;
 }
 [data-gallery-poster-wrap] input:checked + [data-img-item-wrapper] [data-img-item],
-[data-thumbail-items] input:checked + [data-img-item-wrapper] [data-img-item] { width: 5.875rem; height: 3.125rem; border-radius: 0.125rem; opacity: 1;
+[data-thumbail-items] input:checked + [data-img-item-wrapper] [data-img-item] { width: 5.875rem; height: 3.125rem; border-radius: 0.125rem; opacity: 1; z-index: 1;
 }
