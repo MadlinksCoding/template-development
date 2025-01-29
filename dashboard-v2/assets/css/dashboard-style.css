@@ -1497,6 +1497,10 @@ html {
   width: 23.625rem
 }
 
+.w--410 {
+  width: 25rem
+}
+
 .w--464 {
   width: 29rem
 }
@@ -1615,6 +1619,10 @@ html {
 
 .h--255 {
   height: 15.938rem
+}
+
+.h--410 {
+  height: 25rem
 }
 
 .h--732 {
@@ -5308,7 +5316,8 @@ button[data-color=gray]:not(:disabled):hover span {
 }
 
 [data-upgrade-premium-button-section] [data-upgrade-button] {
-  position: relative
+  position: relative;
+  z-index: 1
 }
 
 [data-upgrade-premium-button-section] [data-upgrade-button]:before {
