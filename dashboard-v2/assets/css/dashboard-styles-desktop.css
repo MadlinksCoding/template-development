@@ -5316,7 +5316,8 @@ button[data-color=gray]:not(:disabled):hover span {
 }
 
 [data-upgrade-premium-button-section] [data-upgrade-button] {
-  position: relative
+  position: relative;
+  z-index: 1
 }
 
 [data-upgrade-premium-button-section] [data-upgrade-button]:before {

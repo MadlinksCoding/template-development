@@ -122,7 +122,7 @@ button[data-color="gray"]:not(:disabled):hover span { color: #fff !important; }
     background-image: url("../images/angle-button-bg.svg"); background-repeat: no-repeat;
 }
 
-[data-upgrade-premium-button-section] [data-upgrade-button] { position: relative; }
+[data-upgrade-premium-button-section] [data-upgrade-button] { position: relative; z-index: 1; }
 
 [data-upgrade-premium-button-section] [data-upgrade-button]:before {
     content: "";
