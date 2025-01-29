@@ -55,14 +55,23 @@
         font-family: 'Poppins', sans-serif;
     }
 
-    .fw6 {
-        font-weight: 600;
-    }
-
     .f-s-48 {
         font-size: 3rem;
-        /* 48px = 3rem */
     }
+
+
+    .lh-60{
+        line-height: 60px;
+    }
+
+    .line-height--30{
+        line-height: 1.875rem;
+    }
+
+    .line-height--24{
+        line-height: 1.5rem;
+    }
+
 
     /* Heading */
     .clamp-3 {
@@ -74,9 +83,7 @@
 
     .Text-earning {
         font-size: 1.5rem;
-        /* 24px = 1.5rem */
         line-height: 2rem;
-        /* 32px = 2rem */
         word-wrap: break-word;
     }
 
@@ -114,14 +121,12 @@
 
     .container-height-280 {
         height: 17.5rem;
-        /* 280px = 17.5rem */
     }
 
     .bg-card-right {
         background: #000000;
         box-shadow: 0.25rem 0.25rem 0.25rem 0px rgba(0, 0, 0, 0.15),
             0.25rem 0.25rem 0px 0px #FFCD29;
-        /* 4px = 0.25rem */
     }
 
     .text-yellow {
@@ -175,29 +180,52 @@
         left: 0;
     }
 
+
+    .font-size--16{
+        font-size: 1rem;
+    }
+
+    .font-size--36{
+        font-size: 2.25rem;
+    }
+    .font-size--20{
+        font-size: 1.25rem;
+    }
+    .line-height--44{
+        line-height: 2.75rem;
+    }
+
+    .letter-spacing---72{
+        letter-spacing: -0.72px;
+    }
+
+    .font-style-normal{
+        font-style: normal;
+    }
+
+
     .min--h--140 {
         min-height: 8.75rem;
-        /* 140px = 8.75rem */
     }
 
     .w--187 {
         width: 11.6875rem;
-        /* 187px = 11.6875rem */
     }
 
     .w--198 {
         width: 12.375rem;
-        /* 198px = 12.375rem */
     }
 
     .w--393 {
         width: 24.5625rem;
-        /* 393px = 24.5625rem */
     }
 
     .min--h--20 {
         min-height: 1.25rem;
-        /* 20px = 1.25rem */
+    }
+
+    .padd--24{
+        padding: 1.5rem;
     }
 
 
@@ -420,7 +448,7 @@
 
     /* Popup Styling */
     .AddMediaPanel {
-        display: block;
+        display: none;
         position: absolute;
         top: 0;
         right: 0;
@@ -647,11 +675,9 @@
         color: var(--Gray-500, #667085);
         font-family: Poppins;
         font-size: 0.75rem;
-        /* 12px */
         font-style: normal;
         font-weight: 500;
         line-height: 1.125rem;
-        /* 18px */
     }
 
     /* Amount Row */
@@ -684,7 +710,6 @@
         justify-content: center;
         align-items: flex-start;
         gap: 0.125rem;
-        /* 2px */
         flex: 1 0 0;
     }
 
@@ -697,15 +722,11 @@
         color: var(--Gray-950, #0C111D);
         text-align: right;
         text-overflow: ellipsis;
-
-        /* Text sm/Semibold */
         font-family: Poppins;
         font-size: 0.875rem;
-        /* 14px */
         font-style: normal;
         font-weight: 600;
         line-height: 1.25rem;
-        /* 20px */
     }
 
 
@@ -717,10 +738,6 @@
             display: flex;
             justify-content: space-between;
             flex-direction: column;
-        }
-
-        .f-s-48 {
-            font-size: 1.5rem;
         }
 
         .min--width {
@@ -737,9 +754,14 @@
             flex-direction: column;
         }
 
+
         .min--width {
             min-width: 40.375rem;
             /* 646px to rem */
+        }
+
+        .f-s-48 {
+            font-size: 1.5rem;
         }
     }
 
@@ -6669,7 +6691,7 @@
                             class="pad--40 pad--bottom-1-5 pad--x--0-responsive-tablet pad--top--0-responsive-tablet flex flex-column gap--24 pad--8-responsive-mobile pad--8-responsive-mobile-portrait">
                             <!-- Top Page Title Section -->
                             <div data-section="page-title"
-                                class="w-100 flex gap--24 items-start justify-between gap--16--responsive-tablet gap--16--responsive-mobile gap--16--responsive-mobile-portrait flex--column-responsive-tablet flex--column-responsive-mobile flex--column-responsive-mobile-portrait display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                class="w-100 flex gap--24 items-start justify-center justify-between gap--16--responsive-tablet gap--16--responsive-mobile gap--16--responsive-mobile-portrait flex--column-responsive-tablet flex--column-responsive-mobile flex--column-responsive-mobile-portrait display--none-responsive-mobile display--none-responsive-mobile-portrait">
                                 <h1 class="poppins fs--30 lh--38 fw5 col--fiord m--0">
                                     Referrals
                                 </h1>
@@ -6678,25 +6700,20 @@
                         <!-- End Top Page Header Section -->
 
                         <!-- Referal Table Content -->
-                        <div data-tabs-content="1"
-                            class="h-100 pad--x--40 pad--x--0-responsive-tablet pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait">
+                        <div data-tabs-content="1" class="h-100 pad--x--40 pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait">
                             <!-- first tab content items -->
-                            <div class="flex flex-column justify-start items-start gap--16 flex-auto    mt--8-neg active"
+                            <div class="flex flex-column justify-start items-start gap--16 flex-auto mt--8-neg active"
                                 data-tabbed-content="recently-tabbed-content" data-target="grid-tab">
                                 <!-- Tabs Content -->
                                 <div data-tabs-content="2" class="MainContainerReferer w-100 h-100">
-                                    <div
-                                        class="flex items-start gap--16 h-[280px] flex--column-responsive-tablet min--width flex--column-responsive-mobile">
+                                    <div class="flex items-start gap--16 h-[280px] flex--column-responsive-tablet min--width flex--column-responsive-mobile">
                                         <!-- Left Card -->
-                                        <div
-                                            class="flex-1 w-50 container-height-280 custom-gradient min--width w--100-responsive-tablet">
+                                        <div class="flex-1 w-50 container-height-280 custom-gradient min--width w--100-responsive-tablet">
                                             <div class="EarningAndMaximiz container-height-280 flex w-full  relative">
                                                 <div class="TotalEarningImage relative w-full h-full relative">
-                                                    <img src="../images/image5.png" class="w-90 h-100 object-cover"
-                                                        alt="Referral" />
+                                                    <img src="../images/image5.png" class="w-90 h-100 object-cover" alt="Referral" />
                                                 </div>
-                                                <div
-                                                    class="MaximizeTextandParagraph custom-gradient bg-card-left w-60 pa3 pr3 pl0 container-height-280">
+                                                <div class="MaximizeTextandParagraph custom-gradient bg-card-left w-60 pa3 pr3 pl0 container-height-280">
                                                     <div>
                                                         <h2 class="clamp-3 tr white fw6 Text-earning">Maximise your
                                                             earnings and watch your income grow!</h2>
@@ -6814,26 +6831,26 @@
                                                         </svg>
                                                     </div>
                                                 </div>
-                                                <div class="flex-1 pa4 w-75 max-h--140 min--h--140">
-                                                    <div class="text-yellow poppins f5 mb2">Total Referral Earning</div>
-                                                    <div
-                                                        class="text-yellow poppins fw6 f-s-48 fs--30-responsive-tablet fs--20-responsive-mobile">
-                                                        4321.09 USD</div>
+                                                <div class="flex-1 padd--24 w-75 max-h--140 min--h--140">
+                                                    <div class="text-yellow poppins font-size--16 lh--24 fw6">Total Referral Earning</div>
+                                                    <div class="text-yellow poppins fw6 f-s-48 lh-60">
+                                                        4321.09 USD
+                                                    </div>
                                                 </div>
                                             </div>
                                             <!-- Bottom card -->
                                             <div class="bg-card-right br2 flex items-stretch min--width">
                                                 <div class="flex-1 pa4 w-75">
                                                     <div>
-                                                        <p class="white poppins f6 mb2">Your Referral Earning this Month
+                                                        <p class="white poppins font-size--16 font-style-normal line-height--24">Your Referral Earning this Month
                                                         </p>
-                                                        <p class="white poppins f3 fw6">543.21 USD</p>
+                                                        <p class="white poppins font-size--36 line-height--44 letter-spacing---72 fw6 font-style-normal">543.21 USD</p>
                                                     </div>
                                                 </div>
                                                 <div
                                                     class="flex flex-column w-25 icon-bg-color-detail items-center justify-center gap-2 relative">
-                                                    <div class="relative">
-                                                        <div class="w2 h2">
+                                                    <div class="relative flex flex-column justify-center items-center">
+                                                        <div class="w2 h2 flex justify-center items-center">
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="32"
                                                                 height="32" viewBox="0 0 32 32" fill="none">
                                                                 <path
@@ -6842,7 +6859,7 @@
                                                                     stroke-linecap="round" stroke-linejoin="round" />
                                                             </svg>
                                                         </div>
-                                                        <span class="white poppins">Details</span>
+                                                        <span class="white poppins font-style-normal font-size--16 fw6">Details</span>
                                                     </div>
                                                     <div class="Icon icon-referer-earning absolute">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="124"
@@ -6875,11 +6892,11 @@
                         <div data-tabs-content="1"
                             class="h-100 pad--40 pad--x--0-responsive-tablet pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait">
                             <div data-section="page-header"
-                                class="Referral_Table pad--x--0-responsive-tablet pad--top--0-responsive-tablet flex flex-column gap--24 pad--8-responsive-mobile pad--8-responsive-mobile-portrait">
+                                class="Referral_Table d--x--0-responsive-tablet pad--top--0-responsive-tablet flex flex-column gap--24 pad--8-responsive-mobile pad--8-responsive-mobile-portrait">
                                 <!-- Top Page Title Section -->
                                 <div data-section="table-title"
-                                    class="table-title w-100 flex gap--24 items-start justify-between gap--16--responsive-tablet gap--16--responsive-mobile gap--16--responsive-mobile-portrait flex--column-responsive-mobile flex--column-responsive-mobile-portrait display--none-responsive-mobile display--none-responsive-mobile-portrait">
-                                    <h1 class="poppins fs--30 fw5 col--fiord m--0">
+                                    class="table-title w-100 flex gap--24 items-center items-start justify-between gap--16--responsive-tablet gap--16--responsive-mobile gap--16--responsive-mobile-portrait flex--column-responsive-mobile flex--column-responsive-mobile-portrait display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                    <h1 class="poppins font-size--20 line-height--30 fw5 col--fiord">
                                         Your Referrals
                                     </h1>
                                     <div data-layer="Input field" class="InputField">
@@ -6897,60 +6914,53 @@
                                                             </svg>
                                                         </div>
                                                     </div>
-                                                    <div data-layer="Text" class="Text">Search by username</div>
+                                                    <input data-layer="Text" placeholder="Search by username" class="Text">
+                                                    <!-- Search by username</div> -->
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
+                                <!-- Table Referrals  -->
                                 <div data-tabbed-content="tabbed-content-first-tab" data-target="first-tab"
                                     class="h-100 flex flex-column justify-start items-start gap--16 flex-auto mt--8-neg active">
                                     <!-- Order Data Section -->
                                     <div class="flex flex-column gap--16 flex-auto w-100">
+
                                         <!-- Flexbox Table Data -->
                                         <div data-section="content-wrapper" class="w-100">
                                             <!-- Header -->
                                             <div class="flex items-center">
                                                 <!-- Header Item -->
-                                                <div
-                                                    class="w--198 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--42 pad--10 bb br--col--pale-sky pad--10 pad--right--0-responsive-mobile pad--right--0-responsive-mobile-portrait">
+                                                <div class="w--198 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--42 bb br--col--pale-sky pad--10 pad--right--0-responsive-mobile pad--right--0-responsive-mobile-portrait">
                                                     <span class="fs--14 fw4 lh--20 col--pale-sky truncate">From</span>
                                                 </div>
                                                 <!-- /Header Item -->
                                                 <!-- Header Item -->
-                                                <div
-                                                    class="w--187 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--42 pad--10 bb br--col--pale-sky pad--10 pad--right--0-responsive-mobile pad--right--0-responsive-mobile-portrait">
-                                                    <span class="fs--14 fw4 lh--20 col--pale-sky truncate">Status
-                                                    </span>
+                                                <div class="w--187 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--42 pad--10 bb br--col--pale-sky pad--10 pad--right--0-responsive-mobile pad--right--0-responsive-mobile-portrait">
+                                                    <span class="fs--14 fw4 lh--20 col--pale-sky truncate">Status</span>
+                                                </div>
+                                                <!-- /Header Item -->
+                                                <!-- Header Item -->
+                                                <div class="w--180 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--42 pad--10 bb br--col--pale-sky pad--10 pad--right--0-responsive-mobile pad--right--0-responsive-mobile-portrait">
+                                                    <span class="fs--14 fw4 lh--20 col--pale-sky truncate">Join Date</span>
+                                                </div>
+                                                <!-- /Header Item -->
+                                                <!-- Header Item -->
+                                                <div class="w--200 w--56-responsive-mobile min--h--42 pad--10 bb br--col--pale-sky pad--10 pad--right--0-responsive-mobile pad--right--0-responsive-mobile-portrait">
+                                                    <span class="fs--14 fw4 lh--20 col--pale-sky truncate min--h--20">&nbsp;</span>
                                                 </div>
                                                 <!-- /Header Item -->
                                                 <!-- Header Item -->
                                                 <div
-                                                    class="w--180 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--42 pad--10 bb br--col--pale-sky pad--10 pad--right--0-responsive-mobile pad--right--0-responsive-mobile-portrait">
-                                                    <span class="fs--14 fw4 lh--20 col--pale-sky truncate">Join
-                                                        Date</span>
+                                                    class="w--393 w--56-responsive-mobile min--h--42 pad--10 bb br--col--pale-sky pad--10 pad--right--0-responsive-mobile pad--right--0-responsive-mobile-portrait">
+                                                    <span class="fs--14 fw4 lh--20 col--pale-sky truncate min--h--20">&nbsp;</span>
                                                 </div>
                                                 <!-- /Header Item -->
                                                 <!-- Header Item -->
                                                 <div
-                                                    class="w--200 w--56-responsive-mobile min--h--42 pad--10 bb br--col--pale-sky pad--10 pad--right--0-responsive-mobile pad--right--0-responsive-mobile-portrait flex--max">
-                                                    <span
-                                                        class="fs--14 fw4 lh--20 col--pale-sky truncate min--h--20">&nbsp;</span>
-                                                </div>
-                                                <!-- /Header Item -->
-                                                <!-- Header Item -->
-                                                <div
-                                                    class="w--393 w--56-responsive-mobile min--h--42 pad--10 bb br--col--pale-sky pad--10 pad--right--0-responsive-mobile pad--right--0-responsive-mobile-portrait flex--max">
-                                                    <span
-                                                        class="fs--14 fw4 lh--20 col--pale-sky truncate min--h--20">&nbsp;</span>
-                                                </div>
-                                                <!-- /Header Item -->
-                                                <!-- Header Item -->
-                                                <div
-                                                    class="w--80 w--56-responsive-mobile min--h--42 bb br--col--pale-sky pad--10 pad--right--0-responsive-mobile pad--right--0-responsive-mobile-portrait flex--max">
-                                                    <span
-                                                        class="fs--14 fw4 lh--20 col--pale-sky truncate min--h--20">&nbsp;</span>
+                                                    class="w--80 w--56-responsive-mobile min--h--42 bb br--col--pale-sky pad--10 pad--right--0-responsive-mobile pad--right--0-responsive-mobile-portrait">
+                                                    <span class="fs--14 fw4 lh--20 col--pale-sky truncate min--h--20">&nbsp;</span>
                                                 </div>
                                                 <!-- /Header Item -->
                                             </div>
@@ -6960,8 +6970,7 @@
                                                 <!-- Item Row -->
                                                 <div class="flex items-center bg--col--athens-gray-3--50 pointer">
                                                     <!-- Item Profile -->
-                                                    <div
-                                                        class="w--198 min--h--72 pad--8  w--100-responsive-mobile w--100-responsive-mobile-portrait flex items-center">
+                                                    <div class="w--198 min--h--72 pad--8  w--100-responsive-mobile w--100-responsive-mobile-portrait flex items-center">
                                                         <div
                                                             class="pad--8 gap--8 h-full pad--x--10-responsive-mobile flex items-center justify-center">
                                                             <!-- <img src="../images/test5.jpg" alt="" class="w--36 h--36 br-100"> -->
@@ -7037,10 +7046,8 @@
                                                     </div>
                                                     <!-- /Item -->
                                                     <!-- Item Status -->
-                                                    <div
-                                                        class="w--187 min--h--72 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
-                                                        <div
-                                                            class="flex flex-column justify-center items-start gap--2 pointer">
+                                                    <div class="w--187 min--h--72 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                        <div class="flex flex-column justify-center items-start gap--2 pointer">
                                                             <span class="flex items-center self-stretch gap--5">
                                                                 <div data-layer="order received status"
                                                                     class="OrderReceivedStatus">
@@ -7074,31 +7081,22 @@
                                                     </div>
                                                     <!-- /Item -->
                                                     <!-- Item Joining Date -->
-                                                    <div
-                                                        class="w--180 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                    <div class="w--180 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
                                                         <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
                                                             22 Jan 2022
                                                         </span>
                                                     </div>
                                                     <!-- /Item -->
                                                     <!-- Item -->
-                                                    <div
-                                                        class="w--200 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
-                                                        <div
-                                                            class="flex flex-column justify-center items-start gap--2 pointer">
+                                                    <div class="w--200 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                        <div class="flex flex-column justify-center items-start gap--2 pointer">
                                                             <span class="flex items-center self-stretch gap--5">
-                                                                <!-- <img src="../assets/images/avatar-mango.png" alt=""
-                                                                        class="w--20 h--20">
-                                                                    <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
-                                                                    
-                                                                    </span> -->
                                                             </span>
                                                         </div>
                                                     </div>
                                                     <!-- /Item -->
                                                     <!-- Item -->
-                                                    <div
-                                                        class="w--393 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                    <div class="w--393 w--100-responsive-mobile w--100-responsive-mobile-portrait min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
                                                         <div class="flex items-start">
                                                             <!-- <span
                                                                     class="bg--col-turbo-yellow pad--4 flex items-center justify-center bg--blur--10">
@@ -7113,8 +7111,7 @@
                                                     </div>
                                                     <!-- /Item -->
                                                     <!-- Item -->
-                                                    <div
-                                                        class="w--80 flex--max fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 pad--y--8-responsive-mobile pad--y--8-responsive-mobile-portrait v-mid nowrap">
+                                                    <div class="w--80 flex--max fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 pad--y--8-responsive-mobile pad--y--8-responsive-mobile-portrait v-mid nowrap">
                                                         <!-- USD$ 9.99 -->
                                                         <div class="link-container">
                                                             <div class="link-text poppins">Profile</div>
@@ -7818,7 +7815,6 @@
                                     </div>
                                     <!-- End Order Data Section -->
                                 </div>
-
                             </div>
                         </div>
 
