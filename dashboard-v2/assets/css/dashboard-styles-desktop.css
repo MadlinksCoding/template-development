@@ -1581,6 +1581,10 @@ html {
   height: 3.313rem
 }
 
+.h--57 {
+  height: 3.563rem
+}
+
 .h--62 {
   height: 3.875rem
 }
@@ -1633,6 +1637,10 @@ html {
   min-height: 2.5rem
 }
 
+.min--h--48 {
+  min-height: 3rem
+}
+
 .min--h--52 {
   min-height: 3.25rem
 }
@@ -1659,6 +1667,10 @@ html {
 
 .max-h--140 {
   max-height: 8.75rem
+}
+
+.max-h--240 {
+  max-height: 15rem
 }
 
 .max-h--275 {
@@ -2118,6 +2130,10 @@ html {
   border-top-right-radius: 0 !important
 }
 
+.br--top-right {
+  border-top-right-radius: 0 !important
+}
+
 .transform--3d {
   transform: translate3d(0, 0, 0);
   -webkit-transform: translate3d(0, 0, 0);
@@ -2191,6 +2207,56 @@ html {
 
 [gallery-items-wrap] {
   background: 0 0 !important
+}
+
+[data-gallery-poster-wrap] input,
+[data-thumbail-items] input {
+  width: 100%;
+  height: 100%;
+  opacity: 0
+}
+
+[data-gallery-poster-wrap] [data-view-item],
+[data-thumbail-items] [data-view-item] {
+  opacity: 0;
+  visibility: hidden
+}
+
+[data-gallery-poster-wrap] input:checked+[data-img-item-wrapper],
+[data-thumbail-items] input:checked+[data-img-item-wrapper] {
+  position: relative;
+  width: 6.25rem;
+  height: 3.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center
+}
+
+[data-gallery-poster-wrap] input:checked+[data-img-item-wrapper]:after,
+[data-thumbail-items] input:checked+[data-img-item-wrapper]:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: #0c111d;
+  border-radius: 2px;
+  padding: 4px;
+  position: absolute;
+  left: 0;
+  top: 0
+}
+
+[data-gallery-poster-wrap] input:checked+[data-img-item-wrapper] [data-img-item],
+[data-thumbail-items] input:checked+[data-img-item-wrapper] [data-img-item] {
+  width: 5.875rem;
+  height: 3.125rem;
+  border-radius: .125rem;
+  opacity: 1
 }
 
 [data-container-bg-fixed]:-moz-read-only {
@@ -5395,7 +5461,7 @@ button[data-color=gray]:not(:disabled):hover span {
 
 [data-button-style="skew-left shadow-none"] {
   clip-path: polygon(8% 0, 100% 0, 105% 105%, 0 105%);
-  padding-left: 1.8rem
+  padding-left: 1.4rem
 }
 
 [data-button-style="skew-right bottom shadow-none"]:after {
