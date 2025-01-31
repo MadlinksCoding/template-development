@@ -27,8 +27,7 @@
         href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/customTachyons.css" />
 
     <!-- Dashboard Sidebar Custom Style -->
-    <link rel="stylesheet"
-        href="https://madlinkscoding.github.io/template-development/dashboard-v2/assets/css/dashboard-styles-desktop.css" />
+    <link rel="stylesheet" href="../dashboard-v2/assets/css/dashboard-styles-desktop.css" />
 
     <!-- Tablet Stylesheet -->
     <link rel="stylesheet"
@@ -241,11 +240,11 @@
     }
 
     .min--h--140 {
-        min-height: 8.75rem;
+        min-height: 8.75rem !important;
     }
 
     .w--187 {
-        width: 11.6875rem;
+        width: 11.6875rem !important;
     }
 
     .w--30{
@@ -253,19 +252,19 @@
     }
 
     .w--198 {
-        width: 12.375rem;
+        width: 12.375rem !important;
     }
 
     .w--393 {
-        width: 24.5625rem;
+        width: 24.5625rem !important;
     }
 
     .w--399{
-        width: 24.9375rem;
+        width: 24.9375rem !important;
     }
 
     .min--h--20 {
-        min-height: 1.25rem;
+        min-height: 1.25rem !important;
     }
 
     .padd--24 {
@@ -279,6 +278,7 @@
     .padding--top-40{
         padding-top: 40px;
     }
+
 
 
     
@@ -297,23 +297,6 @@
 
 
 
-    /* Image and Maximise */
-    .MainContainerReferer {}
-
-    .TotalEarningImage {
-        width: 50%;
-        max-height: 17.5rem;
-        min-height: 17.5rem;
-    }
-
-    .MaximizeTextandParagraph {
-        position: absolute;
-        min-width: 23.8125rem;
-        width: 60%;
-        top: 0;
-        right: 0;
-        background: linear-gradient(to right, rgba(77, 48, 67, 1), rgba(77, 48, 67, 1));
-    }
 
     /* Card Maximize */
     .Card {
@@ -977,6 +960,10 @@
     }
 
 
+    .ReferralCards{
+        display: flex;
+    }
+
 
 
     /* Tablet Styles */
@@ -1009,31 +996,35 @@
 
 
         .Frame9036 .Text {
-            font-size: 1.25rem;
-            line-height: 1.875rem;
+            font-size: 1.25rem !important;
+            line-height: 1.875rem !important;
         }
         .mobile-width-95 {
-            width: 5.9375rem;
+            width: 5.9375rem !important;
         }
 
         .mobile-width-140 {
-            width: 8.75rem;
+            width: 8.75rem !important;
         }
 
         .mobile-width-198 {
-            width: 12.375rem;
+            width: 12.375rem !important;
         }
 
         .mobile-width-133 {
-            width: 8.3125rem;
+            width: 8.3125rem !important;
         }
 
         .min--width {
-            min-width: 40.375rem;
+            min-width: 40.375rem !important;
         }
 
         .mar-top-0 {
-            margin-top: 0rem;
+            margin-top: 0rem !important;
+        }
+
+        .AttributionCard{
+            overflow: hidden;
         }
 
 
@@ -7147,7 +7138,7 @@
                 <main data-dashboard-page="" data-section="main" class="flex flex-column flex-max relative z-1">
                     <!-- Inner Container -->
                     <div data-section="inner-container" data-tabs-section="1"
-                        class="flex flex-column pad--x--40 padding--bottom-24 pad--top--40 gap--24 bg--gradient-white pad--top--24-responsive-tablet pad--x--16-responsive-tablet pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait pad--y--0-responsive-mobile pad--y--0-responsive-mobile-portrait">
+                        class="flex flex-column pad--x--40 padding--bottom-24  pad--top--40 pad--bottom--40 gap--24 bg--gradient-white pad--top--24-responsive-tablet pad--x--16-responsive-tablet pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait pad--y--0-responsive-mobile pad--y--0-responsive-mobile-portrait">
                         <!-- Top Page Header Section -->
                         <div data-section="page-header" class="pad--x--0-responsive-tablet pad--top--0-responsive-tablet flex flex-column">
                             <!-- Top Page Title Section -->
@@ -7167,12 +7158,12 @@
                                 data-tabbed-content="recently-tabbed-content" data-target="grid-tab">
                                 <!-- Tabs Content -->
                                 <div
-                                    class="ReferralCards w-100 h-100 flex items-start gap--16 pad--8-responsive-mobile">
+                                    class="ReferralCards flex--column-responsive-mobile w-100 h-100 flex items-start gap--16 pad--8-responsive-mobile">
                                     <!-- Left Card -->
                                     <div
                                         class="LeftCard OuterCard flex-1 w-50 w--100-responsive-mobile h-[280px] custom-gradient w--100-responsive-tablet">
                                         <div data-layer="card" class="Card">
-                                            <div class="Image relative">
+                                            <div class="Image relative fit--cover">
                                                 <img data-layer="Image" class="relative" src="" />
                                                 <div data-layer="Rectangle 15544" class="Rectangle15544">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="70" height="280"
@@ -7328,8 +7319,7 @@
                                                         543.21 USD</p>
                                                 </div>
                                             </div>
-                                            <div
-                                                class="flex flex-column w-25 icon-bg-color-detail items-center justify-center gap-2 relative">
+                                            <div class="flex flex-column w-25 icon-bg-color-detail items-center justify-center gap-2 relative">
                                                 <div class="relative flex flex-column justify-center items-center">
                                                     <div class="w2 h2 flex justify-center items-center">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
@@ -7403,48 +7393,48 @@
                                 <div data-tabbed-content="tabbed-content-first-tab" data-target="first-tab"
                                     class="Referral_Table_Content h-100 flex flex-column justify-start items-start gap--16 flex-auto mt--8-neg active">
                                     <!-- Order Data Section -->
-                                    <div class="flex flex-column gap--16 flex-auto w-100">
+                                    <div class="flex flex-column gap--16 w-100">
 
                                         <!-- Flexbox Table Data -->
                                         <div data-section="content-wrapper" class="w-100">
                                             <!-- Header -->
                                             <div class="flex items-center">
                                                 <!-- Header Item -->
-                                                <div
-                                                    class="w--198 min--h--42 bb br--col--pale-sky padding-right-40 gap--10 pad--10 pad--right--0-responsive-mobile pad--right--0-responsive-mobile-portrait">
+                                                <div class="w--198 min--h--42 bb br--col--pale-sky padding-right-40 gap--10 pad--10">
                                                     <span class="fs--14 fw4 lh--20 col--pale-sky truncate">From</span>
                                                 </div>
                                                 <!-- /Header Item -->
                                                 <!-- Header Item -->
                                                 <div
-                                                    class="w--187 mobile-width-140 min--h--42 padding-right-40 gap--10 pad--10 bb br--col--pale-sky pad--10 pad--right--0-responsive-mobile pad--right--0-responsive-mobile-portrait">
+                                                    class="w--187 mobile-width-140 min--h--42 padding-right-40 gap--10 pad--10 bb br--col--pale-sky pad--10 ">
                                                     <span class="fs--14 fw4 lh--20 col--pale-sky truncate">Status</span>
                                                 </div>
                                                 <!-- /Header Item -->
                                                 <!-- Header Item -->
                                                 <div
-                                                    class="w--180 mobile-width-95 min--h--42 padding-right-40 gap--10 pad--10 bb br--col--pale-sky pad--10 pad--right--0-responsive-mobile pad--right--0-responsive-mobile-portrait">
-                                                    <span class="fs--14 fw4 lh--20 col--pale-sky truncate">Join
-                                                        Date</span>
+                                                    class="w--180 mobile-width-95 min--h--42 padding-right-40 gap--10 pad--10 bb br--col--pale-sky pad--10">
+                                                    <span class="fs--14 fw4 lh--20 col--pale-sky truncate">
+                                                        Join Date
+                                                    </span>
                                                 </div>
                                                 <!-- /Header Item -->
                                                 <!-- Header Item -->
                                                 <div
-                                                    class="w--200 mobile-width-133 min--h--42 padding-right-40 gap--10 pad--10 bb br--col--pale-sky pad--10 pad--right--0-responsive-mobile pad--right--0-responsive-mobile-portrait">
+                                                    class="w--200 mobile-width-133 min--h--42 padding-right-40 gap--10 pad--10 bb br--col--pale-sky pad--10">
                                                     <span
                                                         class="fs--14 fw4 lh--20 col--pale-sky truncate min--h--20">&nbsp;</span>
                                                 </div>
                                                 <!-- /Header Item -->
                                                 <!-- Header Item -->
                                                 <div
-                                                    class="w--399 display-none-mobile display-none-tablet  min--h--42 pad--10 bb br--col--pale-sky pad--10 padding-right-40 gap--10 pad--right--0-responsive-mobile pad--right--0-responsive-mobile-portrait">
+                                                    class="w--399 display-none-mobile display-none-tablet  min--h--42 pad--10 bb br--col--pale-sky pad--10 padding-right-40 gap--10 ">
                                                     <span
                                                         class="fs--14 fw4 lh--20 col--pale-sky truncate min--h--20">&nbsp;</span>
                                                 </div>
                                                 <!-- /Header Item -->
                                                 <!-- Header Item -->
                                                 <div
-                                                    class="w--80 min--h--42 bb br--col--pale-sky padding-right-40  w--100-responsive-tablet w--100-responsive-mobile w--100-responsive-mobile-portrait gap--10 pad--10 pad--right--0-responsive-mobile pad--right--0-responsive-mobile-portrait">
+                                                    class="w--80 min--h--42 bb br--col--pale-sky padding-right-40  w--100-responsive-tablet w--100-responsive-mobile w--100-responsive-mobile-portrait gap--10 pad--10">
                                                     <span
                                                         class="fs--14 fw4 lh--20 col--pale-sky">&nbsp;</span>
                                                 </div>
@@ -7456,8 +7446,7 @@
                                                 <!-- Item Row -->
                                                 <div class="flex items-center bg--col--athens-gray-3--50 pointer">
                                                     <!-- Item Profile -->
-                                                    <div
-                                                        class="w--198 min--h--72 pad--8 flex items-center">
+                                                    <div class="w--198 min--h--72 pad--8 flex items-center">
                                                         <div
                                                             class="pad--8 gap--8 h-full pad--x--10-responsive-mobile flex items-center justify-center">
                                                             <!-- <img src="../images/test5.jpg" alt="" class="w--36 h--36 br-100"> -->
@@ -7468,7 +7457,7 @@
                                                                     <pattern id="pattern0_12722_1368" patternContentUnits="objectBoundingBox" width="1" height="1">
                                                                         <use xlink:href="#image0_12722_1368" transform="matrix(0.00322472 0 0 0.00317496 -0.861194 -0.0153386)"/>
                                                                     </pattern>
-                                                                    <image id="image0_12722_1368" width="1290" height="877" xlink:href="https://madlinkscoding.github.io/template-development/images/Vectorr1.png" />
+                                                                    <image id="image0_12722_1368" width="100%" height="100%" xlink:href="https://madlinkscoding.github.io/template-development/images/Vector.png" style="object-fit: cover;" />
                                                                     
                                                                 </svg>
                                                             </div>
@@ -7511,8 +7500,7 @@
                                                     </div>
                                                     <!-- /Item -->
                                                     <!-- Item Status -->
-                                                    <div
-                                                        class="w--187  min--h--72 mobile-width-140 min--h--72 pad--10 v-mid">
+                                                    <div class="w--187  min--h--72 mobile-width-140 min--h--72 pad--10 v-mid">
                                                         <div
                                                             class="flex flex-column justify-center items-start gap--2 pointer">
                                                             <span class="flex items-center self-stretch gap--5">
@@ -7548,16 +7536,14 @@
                                                     </div>
                                                     <!-- /Item -->
                                                     <!-- Item Joining Date -->
-                                                    <div
-                                                        class="w--180 mobile-width-95 min--h--72 pad--10 v-mid ">
+                                                    <div class="w--180 mobile-width-95 min--h--72 pad--10 v-mid ">
                                                         <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
                                                             22 Jan 2022
                                                         </span>
                                                     </div>
                                                     <!-- /Item -->
                                                     <!-- Item -->
-                                                    <div
-                                                        class="w--200 mobile-width-133 min--h--72 pad--10 v-mid ">
+                                                    <div class="w--200 mobile-width-133 min--h--72 pad--10 v-mid ">
                                                         <div
                                                             class="flex flex-column justify-center items-start gap--2 pointer">
                                                             <span class="flex items-center self-stretch gap--5">
@@ -7566,15 +7552,13 @@
                                                     </div>
                                                     <!-- /Item -->
                                                     <!-- Item -->
-                                                    <div
-                                                        class="w--399 display-none-mobile  display-none-tablet min--h--72 pad--10 v-mid ">
+                                                    <div class="w--399 display-none-mobile  display-none-tablet min--h--72 pad--10 v-mid ">
                                                         <div class="flex items-start">
                                                         </div>
                                                     </div>
                                                     <!-- /Item -->
                                                     <!-- Item -->
-                                                    <div
-                                                        class="w--80 flex--max fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 pad--y--8-responsive-mobile pad--y--8-responsive-mobile-portrait v-mid nowrap">
+                                                    <div class="w--80 flex--max fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 v-mid nowrap">
                                                         <!-- USD$ 9.99 -->
                                                         <div class="link-container">
                                                             <div class="link-text poppins">Profile</div>
@@ -7600,8 +7584,7 @@
                                                 <div class="flex items-center bg--col--athens-gray-3--50 pointer">
                                                     <!-- Item Profile -->
                                                     <div class="w--198 min--h--72 pad--8  flex items-center">
-                                                        <div
-                                                            class="pad--8 gap--8 h-full pad--x--10-responsive-mobile flex items-center justify-center">
+                                                        <div class="pad--8 gap--8 h-full flex items-center justify-center">
                                                             <!-- <img src="../images/test5.jpg" alt="" class="w--36 h--36 br-100"> -->
                                                             <div>
                                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38" height="36" viewBox="0 0 38 36" fill="none">
@@ -7620,7 +7603,7 @@
                                                                 </svg>
                                                             </div>
                                                             <div
-                                                                class="flex--max min--h--72 pad--6-responsive-mobile pad--6-responsive-mobile-portrait flex flex-column justify-center items-start gap--2 gap--2 gap--0-responsive-mobile gap--0-responsive-mobile-portrait pointer">
+                                                                class="flex--max min--h--72 flex flex-column justify-center items-start gap--2 gap--2 gap--0-responsive-mobile gap--0-responsive-mobile-portrait pointer">
                                                                 <div
                                                                     class="flex gap--4 flex-row flex-start items-center self-stretch">
                                                                     <span
@@ -7658,8 +7641,7 @@
                                                     </div>
                                                     <!-- /Item -->
                                                     <!-- Item Status -->
-                                                    <div
-                                                        class="w--187 min--h--72 mobile-width-140 min--h--72 pad--10 v-mid  ">
+                                                    <div class="w--187 min--h--72 mobile-width-140 min--h--72 pad--10 v-mid">
                                                         <div
                                                             class="flex flex-column justify-center items-start gap--2 pointer">
                                                             <span class="flex items-center self-stretch gap--5">
@@ -7696,16 +7678,14 @@
                                                     </div>
                                                     <!-- /Item -->
                                                     <!-- Item Joining Date -->
-                                                    <div
-                                                        class="w--180  mobile-width-95 min--h--72 pad--10 v-mid">
+                                                    <div class="w--180 mobile-width-95 min--h--72 pad--10 v-mid">
                                                         <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
                                                             22 Jan 2022
                                                         </span>
                                                     </div>
                                                     <!-- /Item -->
                                                     <!-- Item -->
-                                                    <div
-                                                        class="w--200 mobile-width-133  min--h--72 pad--10 v-mid ">
+                                                    <div class="w--200 mobile-width-133  min--h--72 pad--10 v-mid ">
                                                         <div
                                                             class="flex flex-column justify-center items-start gap--2 pointer">
                                                             <span class="flex items-center self-stretch gap--5">
@@ -7714,15 +7694,13 @@
                                                     </div>
                                                     <!-- /Item -->
                                                     <!-- Item -->
-                                                    <div
-                                                        class="w--399 display-none-mobile display-none-tablet min--h--72 pad--10 v-mid  ">
+                                                    <div class="w--399 display-none-mobile display-none-tablet min--h--72 pad--10 v-mid">
                                                         <div class="flex items-start">
                                                         </div>
                                                     </div>
                                                     <!-- /Item -->
                                                     <!-- Item -->
-                                                    <div
-                                                        class="w--80 flex--max fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 pad--y--8-responsive-mobile pad--y--8-responsive-mobile-portrait v-mid nowrap">
+                                                    <div class="w--80 flex--max fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 v-mid nowrap">
                                                         <!-- USD$ 9.99 -->
                                                         <div class="link-container">
                                                             <div class="link-text poppins">Profile</div>
@@ -7747,10 +7725,8 @@
                                                 <!-- Item Row -->
                                                 <div class="flex items-center bg--col--athens-gray-3--50 pointer">
                                                     <!-- Item Profile -->
-                                                    <div
-                                                        class="w--198 min--h--72 pad--8 flex items-center">
-                                                        <div
-                                                            class="pad--8 gap--8 h-full pad--x--10-responsive-mobile flex items-center justify-center">
+                                                    <div class="w--198 min--h--72 pad--8 flex items-center">
+                                                        <div class="pad--8 gap--8 h-full  flex items-center justify-center">
                                                             <!-- <img src="../images/test5.jpg" alt="" class="w--36 h--36 br-100">
                                                                 -->
                                                             <div>
@@ -7758,8 +7734,7 @@
                                                                     <path d="M20.018 35.9587C9.13196 34.941 -3.47487 14.7767 1.17036 5.75361C5.72393 -3.29415 27.4379 -1.22531 33.7704 8.84014C40.0447 18.9391 30.9041 36.9764 20.018 35.9587Z" fill="#D9D9D9"/>
                                                                 </svg>
                                                             </div>
-                                                            <div
-                                                                class="flex--max min--h--72 pad--6-responsive-mobile pad--6-responsive-mobile-portrait flex flex-column justify-center items-start gap--2 gap--2 gap--0-responsive-mobile gap--0-responsive-mobile-portrait pointer">
+                                                            <div class="flex--max min--h--72 pad--6-responsive-mobile pad--6-responsive-mobile-portrait flex flex-column justify-center items-start gap--2 gap--0-responsive-mobile gap--0-responsive-mobile-portrait pointer">
                                                                 <div
                                                                     class="flex gap--4 flex-row flex-start items-center self-stretch">
                                                                     <span
@@ -8061,15 +8036,9 @@
                                                                         <image id="image0_12722_2177" width="1290" height="877" xlink:href="https://madlinkscoding.github.io/template-development/images/vector5.png" />
                                                                     </defs>
                                                                 </svg>
-
-<!-- id="image0_12722_2177"  -->
-<!--width="1290" height="877"  -->
-<!-- width="4096" height="2303" -->
-
-
                                                             </div>
                                                             <div
-                                                                class="flex--max min--h--72 pad--6-responsive-mobile pad--6-responsive-mobile-portrait flex flex-column justify-center items-start gap--2 gap--2 gap--0-responsive-mobile gap--0-responsive-mobile-portrait pointer">
+                                                                class="flex--max min--h--72 flex flex-column justify-center items-start gap--2 gap--2 gap--0-responsive-mobile gap--0-responsive-mobile-portrait pointer">
                                                                 <div
                                                                     class="flex gap--4 flex-row flex-start items-center self-stretch">
                                                                     <span
@@ -8276,8 +8245,7 @@
                                                                     <pattern id="pattern0_12722_1368" patternContentUnits="objectBoundingBox" width="1" height="1">
                                                                         <use xlink:href="#image0_12722_1368" transform="matrix(0.00322472 0 0 0.00317496 -0.861194 -0.0153386)"/>
                                                                     </pattern>
-                                                                    <image id="image0_12722_1368" width="1290" height="877" xlink:href="https://madlinkscoding.github.io/template-development/images/Vectorr1.png" />
-                                                                    
+                                                                    <image id="image0_12722_1368" width="100%" height="100%" xlink:href="https://madlinkscoding.github.io/template-development/images/Vector.png" style="object-fit: cover;" />
                                                                 </svg>
                                         </div>
                                         <div data-layer="list" class="List">
