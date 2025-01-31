@@ -91,15 +91,11 @@
         word-wrap: break-word;
     }
 
-    /* Card */
     .main-card-background {
         background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), rgba(0, 0, 0, 0.4);
         background-size: cover;
-        /* Ensures it covers the whole element */
         background-repeat: no-repeat;
-        /* Prevents tiling */
         background-attachment: fixed;
-        /* Keeps it fixed while scrolling */
 
     }
 
@@ -120,11 +116,8 @@
                 rgba(0, 0, 0, 0.50) 100%),
             rgba(255, 255, 255, 0.01);
         background-size: cover;
-        /* Ensures it covers the whole element */
         background-repeat: no-repeat;
-        /* Prevents tiling */
         background-attachment: fixed;
-        /* Keeps it fixed while scrolling */
 
     }
 
@@ -136,12 +129,8 @@
                 rgba(0, 0, 0, 0.50) 100%),
             rgba(255, 255, 255, 0.01);
         background-size: cover;
-        /* Ensures it covers the whole element */
         background-repeat: no-repeat;
-        /* Prevents tiling */
         background-attachment: fixed;
-        /* Keeps it fixed while scrolling */
-
     }
 
     .container-height-280 {
@@ -251,7 +240,6 @@
         font-style: normal;
     }
 
-
     .min--h--140 {
         min-height: 8.75rem;
     }
@@ -260,12 +248,20 @@
         width: 11.6875rem;
     }
 
+    .w--30{
+        width: 1.875rem;
+    }
+
     .w--198 {
         width: 12.375rem;
     }
 
     .w--393 {
         width: 24.5625rem;
+    }
+
+    .w--399{
+        width: 24.9375rem;
     }
 
     .min--h--20 {
@@ -280,9 +276,23 @@
         padding-bottom: 1.5rem;
     }
 
-    .pad--y--24 {
-        padding-top: 1.5rem;
-        padding-bottom: 1.5rem
+    .padding--top-40{
+        padding-top: 40px;
+    }
+
+
+    
+
+    .padd--40{
+        padding: 40px;
+    }
+
+    .padding-right-40{
+        padding-right: 2.5rem;
+    }
+
+    .gap--10{
+        gap: 0.625rem;
     }
 
 
@@ -758,11 +768,8 @@
     /* DropDown */
     .AnalyticsDropdowns {
         padding-left: 1rem;
-        /* 16px */
         padding-right: 1rem;
-        /* 16px */
         gap: 0.5rem;
-        /* 8px */
     }
 
     .AnalyticsDropdown {
@@ -780,13 +787,10 @@
     .AnalyticsDropdown .ButtonsButton {
         display: flex;
         padding: 0.625rem 0.875rem;
-        /* 10px 14px */
         justify-content: center;
         align-items: center;
         gap: 0.25rem;
-        /* 4px */
         border-radius: 0.5rem;
-        /* 8px */
         background: rgba(255, 255, 255, 0.50);
     }
 
@@ -801,18 +805,14 @@
         color: var(--Gray-700, #344054);
         font-family: Poppins;
         font-size: 0.875rem;
-        /* 14px */
         font-style: normal;
         font-weight: 600;
         line-height: 1.25rem;
-        /* 20px */
     }
 
     .ChevronDown {
         width: 1.25rem;
-        /* 20px */
         height: 1.25rem;
-        /* 20px */
     }
 
     .ChevronDown .Icon {
@@ -825,9 +825,7 @@
     .AddMediaPanel .TableMerch {
         display: flex;
         width: 27rem;
-        /* 432px */
         height: 45.0625rem;
-        /* 721px */
         align-items: center;
         flex-shrink: 0;
     }
@@ -944,9 +942,7 @@
     .Frame8970 .TableCell {
         display: flex;
         min-height: 4.5rem;
-        /* 72px */
         padding: 0.5rem 1.5rem 0.5rem 0.75rem;
-        /* 8px 24px 8px 12px */
         justify-content: flex-end;
         align-items: center;
         gap: 0.625rem;
@@ -993,6 +989,11 @@
 
         .min--width {
             min-width: 40.375rem;
+        }
+
+        .pad--y--24 {
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem
         }
 
         .display-none-tablet {
@@ -7146,13 +7147,12 @@
                 <main data-dashboard-page="" data-section="main" class="flex flex-column flex-max relative z-1">
                     <!-- Inner Container -->
                     <div data-section="inner-container" data-tabs-section="1"
-                        class="flex flex-column pad--x--16 padding--bottom-24 gap--24 bg--gradient-white pad--top--24-responsive-tablet pad--x--16-responsive-tablet pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait pad--y--0-responsive-mobile pad--y--0-responsive-mobile-portrait">
+                        class="flex flex-column pad--x--40 padding--bottom-24 pad--top--40 gap--24 bg--gradient-white pad--top--24-responsive-tablet pad--x--16-responsive-tablet pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait pad--y--0-responsive-mobile pad--y--0-responsive-mobile-portrait">
                         <!-- Top Page Header Section -->
-                        <div data-section="page-header"
-                            class="pad--x--0-responsive-tablet pad--top--0-responsive-tablet flex flex-column">
+                        <div data-section="page-header" class="pad--x--0-responsive-tablet pad--top--0-responsive-tablet flex flex-column">
                             <!-- Top Page Title Section -->
                             <div data-section="page-title"
-                                class="w-100 flex pad--y--24 gap--24 items-start  justify-center justify-between gap--16--responsive-tablet gap--16--responsive-mobile gap--16--responsive-mobile-portrait flex--column-responsive-tablet flex--column-responsive-mobile flex--column-responsive-mobile-portrait display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                class="w-100 flex gap--24 padding--bottom-24 items-start  justify-center justify-between gap--16--responsive-tablet gap--16--responsive-mobile gap--16--responsive-mobile-portrait flex--column-responsive-tablet flex--column-responsive-mobile flex--column-responsive-mobile-portrait display--none-responsive-mobile display--none-responsive-mobile-portrait">
                                 <h1 class="poppins fs--30 lh--38 fw5 col--fiord m--0">
                                     Referrals
                                 </h1>
@@ -7411,42 +7411,42 @@
                                             <div class="flex items-center">
                                                 <!-- Header Item -->
                                                 <div
-                                                    class="w--198 min--h--42 bb br--col--pale-sky pad--10 pad--right--0-responsive-mobile pad--right--0-responsive-mobile-portrait">
+                                                    class="w--198 min--h--42 bb br--col--pale-sky padding-right-40 gap--10 pad--10 pad--right--0-responsive-mobile pad--right--0-responsive-mobile-portrait">
                                                     <span class="fs--14 fw4 lh--20 col--pale-sky truncate">From</span>
                                                 </div>
                                                 <!-- /Header Item -->
                                                 <!-- Header Item -->
                                                 <div
-                                                    class="w--187 mobile-width-140 min--h--42 pad--10 bb br--col--pale-sky pad--10 pad--right--0-responsive-mobile pad--right--0-responsive-mobile-portrait">
+                                                    class="w--187 mobile-width-140 min--h--42 padding-right-40 gap--10 pad--10 bb br--col--pale-sky pad--10 pad--right--0-responsive-mobile pad--right--0-responsive-mobile-portrait">
                                                     <span class="fs--14 fw4 lh--20 col--pale-sky truncate">Status</span>
                                                 </div>
                                                 <!-- /Header Item -->
                                                 <!-- Header Item -->
                                                 <div
-                                                    class="w--180 mobile-width-95 min--h--42 pad--10 bb br--col--pale-sky pad--10 pad--right--0-responsive-mobile pad--right--0-responsive-mobile-portrait">
+                                                    class="w--180 mobile-width-95 min--h--42 padding-right-40 gap--10 pad--10 bb br--col--pale-sky pad--10 pad--right--0-responsive-mobile pad--right--0-responsive-mobile-portrait">
                                                     <span class="fs--14 fw4 lh--20 col--pale-sky truncate">Join
                                                         Date</span>
                                                 </div>
                                                 <!-- /Header Item -->
                                                 <!-- Header Item -->
                                                 <div
-                                                    class="w--200 mobile-width-133 min--h--42 pad--10 bb br--col--pale-sky pad--10 pad--right--0-responsive-mobile pad--right--0-responsive-mobile-portrait">
+                                                    class="w--200 mobile-width-133 min--h--42 padding-right-40 gap--10 pad--10 bb br--col--pale-sky pad--10 pad--right--0-responsive-mobile pad--right--0-responsive-mobile-portrait">
                                                     <span
                                                         class="fs--14 fw4 lh--20 col--pale-sky truncate min--h--20">&nbsp;</span>
                                                 </div>
                                                 <!-- /Header Item -->
                                                 <!-- Header Item -->
                                                 <div
-                                                    class="w--393 display-none-mobile display-none-tablet  min--h--42 pad--10 bb br--col--pale-sky pad--10 pad--right--0-responsive-mobile pad--right--0-responsive-mobile-portrait">
+                                                    class="w--399 display-none-mobile display-none-tablet  min--h--42 pad--10 bb br--col--pale-sky pad--10 padding-right-40 gap--10 pad--right--0-responsive-mobile pad--right--0-responsive-mobile-portrait">
                                                     <span
                                                         class="fs--14 fw4 lh--20 col--pale-sky truncate min--h--20">&nbsp;</span>
                                                 </div>
                                                 <!-- /Header Item -->
                                                 <!-- Header Item -->
                                                 <div
-                                                    class="w--80 w--56-responsive-mobile min--h--42 bb br--col--pale-sky pad--10 pad--right--0-responsive-mobile pad--right--0-responsive-mobile-portrait">
+                                                    class="w--80 min--h--42 bb br--col--pale-sky padding-right-40  w--100-responsive-tablet w--100-responsive-mobile w--100-responsive-mobile-portrait gap--10 pad--10 pad--right--0-responsive-mobile pad--right--0-responsive-mobile-portrait">
                                                     <span
-                                                        class="fs--14 fw4 lh--20 col--pale-sky truncate min--h--20">&nbsp;</span>
+                                                        class="fs--14 fw4 lh--20 col--pale-sky">&nbsp;</span>
                                                 </div>
                                                 <!-- /Header Item -->
                                             </div>
@@ -7567,7 +7567,7 @@
                                                     <!-- /Item -->
                                                     <!-- Item -->
                                                     <div
-                                                        class="w--393 display-none-mobile  display-none-tablet min--h--72 pad--10 v-mid ">
+                                                        class="w--399 display-none-mobile  display-none-tablet min--h--72 pad--10 v-mid ">
                                                         <div class="flex items-start">
                                                         </div>
                                                     </div>
@@ -7715,7 +7715,7 @@
                                                     <!-- /Item -->
                                                     <!-- Item -->
                                                     <div
-                                                        class="w--393 display-none-mobile display-none-tablet min--h--72 pad--10 v-mid  ">
+                                                        class="w--399 display-none-mobile display-none-tablet min--h--72 pad--10 v-mid  ">
                                                         <div class="flex items-start">
                                                         </div>
                                                     </div>
@@ -7859,7 +7859,7 @@
                                                     </div>
                                                     <!-- /Item -->
                                                     <!-- Item -->
-                                                    <div class="w--393 display-none-mobile display-none-tablet min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                                    <div class="w--399 display-none-mobile display-none-tablet min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait">
                                                         <div class="flex items-start">
                                                         </div>
                                                     </div>
@@ -8009,7 +8009,7 @@
                                                     <!-- /Item -->
                                                     <!-- Item -->
                                                     <div
-                                                        class="w--393 display-none-mobile display-none-tablet min--h--72 pad--10 v-mid">
+                                                        class="w--399 display-none-mobile display-none-tablet min--h--72 pad--10 v-mid">
                                                         <div class="flex items-start">
                                                         </div>
                                                     </div>
@@ -8159,7 +8159,7 @@
                                                     <!-- /Item -->
                                                     <!-- Item -->
                                                     <div
-                                                        class="w--393 display-none-mobile display-none-tablet min--h--72 pad--10 v-mid ">
+                                                        class="w--399 display-none-mobile display-none-tablet min--h--72 pad--10 v-mid ">
                                                         <div class="flex items-start">
                                                         </div>
                                                     </div>
