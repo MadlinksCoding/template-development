@@ -106,11 +106,15 @@
 .bg--gradient-white { background: linear-gradient(180deg, rgba(255, 255, 255, 0.30) 0%, rgba(255, 255, 255, 0.00) 8%); }
 .bg--gradient-white-2 { background: linear-gradient(270deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%), rgba(242, 244, 247, 0.50); }
 .bg--gd--vermilion { background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.90) 100%), linear-gradient(0deg, rgba(255, 68, 5, 0.10) 0%, rgba(255, 68, 5, 0.10) 100%), rgba(255, 255, 255, 0.90); }
+.bg--gd-white-3 { background: linear-gradient(0deg, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.10) 100%), linear-gradient(0deg, rgba(255, 255, 255, 0.68) -3.06%, rgba(255, 255, 255, 0.00) 144.5%); }
+.bg--gd-black--1 { background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.40) 100%), rgba(0, 0, 0, 0.75); }
+.bg--gd--black--yellow-1 { background: linear-gradient(0deg, rgba(255, 205, 41, 0.25) 0%, rgba(255, 205, 41, 0.25) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.80) 0%, rgba(0, 0, 0, 0.80) 100%), }
 
 /* Background Style */
 .bg--no-repeat { background-repeat: no-repeat; }
 .bg--right-top { background-position: right top; }
 .bg--size-auto { background-size: auto; }
+.bg--size-contain { background-size: contain; }
 .bg--size-cover { background-size: cover; }
 .bg--fixed { background-attachment: fixed; }
 
@@ -240,6 +244,7 @@
 .text--sh--3 { text-shadow: 0px 20px 24px rgba(16, 24, 40, 0.08), 0px 8px 8px rgba(16, 24, 40, 0.03); } /* confirmed in use */
 .text--sh--pink-27 {text-shadow: 0px 0px 27px #F600FE;}
 .text--sh--yellow-40 {text-shadow: 0px 0px 40px #FFC300;}
+.text--sh--black--40 {text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.40);}
 
 
 /* Word Break */
@@ -259,6 +264,7 @@
 .w--14 { width: 0.875rem; /* width 14px */ } /* confirmed in use */ /* pixel conversion correct */
 .w--44 { width: 2.75rem; /* width 44px */ } /* confirmed in use */ /* pixel conversion correct */
 .w--72 { width: 4.5rem; /* width 72px */ } /* confirmed in use */ /* pixel conversion correct */
+.w--76 { width: 4.75rem; /* width 76px */ } /* confirmed in use */ /* pixel conversion correct */
 .w--80 { width: 5rem; /* width 80px */ } /* confirmed in use */ /* pixel conversion correct */
 .w--92 { width: 5.75rem; /* width 92px */ } /* confirmed in use */ /* pixel conversion correct */
 .w--120 { width: 7.5rem; /* width 120px */ } /* confirmed in use */ /* pixel conversion correct */
@@ -273,6 +279,7 @@
 .w--280 { width: 17.5rem; /* width 280px */ } /* confirmed in use */ /* pixel conversion correct */
 .w--285 { width: 17.813rem; /* width 285px */ } /* confirmed in use */ /* pixel conversion correct */
 .w--306 { width: 19.125rem; /* width 306px */ } /* confirmed in use */ /* pixel conversion correct */
+.w--324 { width: 20.25rem; }
 .w--356 { width: 22.25rem; /* width 356px */ } /* confirmed in use */ /* pixel conversion correct */
 .w--378 { width: 23.625rem; /* width 378px */ } /* confirmed in use */ /* pixel conversion correct */
 .w--410 { width: 25rem; }
@@ -291,6 +298,7 @@
 
 
 /* Max Width */
+.max--w--175 { max-width:10.938rem; /* max width 175px */ } /* confirmed in use */ /* pixel conversion correct */
 .max--w--300 { max-width:18.75rem; /* max width 300px */ } /* confirmed in use */ /* pixel conversion correct */
 .max--w--375 { max-width:23.438rem; /* max width 375px */ } /* confirmed in use */ /* pixel conversion correct */
 .max--w--495 { max-width:30.938rem; /* max width 495px */ } /* confirmed in use */ /* pixel conversion correct */
@@ -322,6 +330,7 @@
 .h--200 { height: 12.5rem; /* height 200px */ } /* confirmed in use */ /* pixel conversion correct */
 .h--213 { height: 13.313rem; /* height 213px */ } /* confirmed in use */ /* pixel conversion correct */
 .h--255 { height: 15.938rem; /* height 255px */ } /* confirmed in use */ /* pixel conversion correct */
+.h--324 { height: 20.25rem; }
 .h--410 { height: 25rem; }
 .h--732 { height: 45.75rem; /* height 732px */ } /* confirmed in use */ /* pixel conversion correct */
 
@@ -366,6 +375,7 @@
 .pad--bottom--96 { padding-bottom: 6rem; /* padding bottom 96px */ } /* confirmed in use */ /* pixel conversion correct */
 .pad--left--2 { padding-left:0.125rem; /* padding left 2px */ } /* confirmed in use */ /* pixel conversion correct */ 
 .pad--left--3 { padding-left: 0.188rem; /* padding left 3px */ } /* confirmed in use */ /* pixel conversion correct */ 
+.pad--left--9 { padding-left: 0.563rem; /* padding left 9px */ } /* confirmed in use */ /* pixel conversion correct */ 
 .pad--left--16 { padding-left: 1rem; /*  left 16px */ } /* confirmed in use */ /* pixel conversion correct */
 .pad--left--32 { padding-left: 2rem; /*  left 32px */ } /* confirmed in use */ /* pixel conversion correct */
 .pad--left--40 { padding-left: 2.5rem; /*  left 40px */ } /* confirmed in use */ /* pixel conversion correct */
@@ -375,6 +385,7 @@
 .pad--right--4 { padding-right: 0.25rem; /* padding right 4px */ } /* confirmed in use */ /* pixel conversion correct */
 .pad--right--30 { padding-right: 1.875rem; /* padding right 30px */ } /* confirmed in use */ /* pixel conversion correct */
 .pad--right--40 { padding-right: 2.5rem; /* padding right 40px */ } /* confirmed in use */ /* pixel conversion correct */
+.pad--y--2 { padding-top: 0.125rem; padding-bottom: 0.125rem; /* padding top bottom 2px */ } /* confirmed in use */ /* pixel conversion correct */
 .pad--y--4 { padding-top: 0.25rem; padding-bottom: 0.25rem; /* padding top bottom 4px */ }
 .pad--y--16 { padding-top: 1rem; padding-bottom: 1rem; /* padding top bottom 16px */ }
 .pad--y--9 { padding-top: 0.563rem; padding-bottom: 0.563rem; /* padding top bottom 9px */ }
@@ -478,6 +489,7 @@
 
 /* Backdrop Filter */
 .bg--blur--2 { -webkit-backdrop-filter: blur(2px); backdrop-filter: blur(2px); } /* confirmed in use */
+.bg--blur--3 { -webkit-backdrop-filter: blur(3px); backdrop-filter: blur(3px); } /* confirmed in use */
 .bg--blur--5 { -webkit-backdrop-filter: blur(5px); backdrop-filter: blur(5px); } /* confirmed in use */
 .bg--blur--15 { -webkit-backdrop-filter: blur(15px); backdrop-filter: blur(15px); } /* confirmed in use */
 .bg--blur--125 { -webkit-backdrop-filter: blur(125px); backdrop-filter: blur(125px); } /* confirmed in use */
@@ -498,6 +510,7 @@
 .sh--17 { box-shadow: 0px 4px 6px rgba(16, 24, 40, 0.08); }
 .sh--18 { box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.10); } /* confirmed in use */
 .sh--19 { box-shadow: 0px 0px 6px 0px #000; } /* confirmed in use */
+.sh--black--yellow { box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.15), 4px 4px 0px 0px #FFCD29; }
 
 
 /* Drop Shadow */
@@ -508,6 +521,9 @@
 
 
 /* Overflow */
+.of--visible--important {
+    overflow: visible !important;
+}
 
 
 /* Cursor Style */ 
@@ -553,6 +569,7 @@
 .cp--8 { clip-path: polygon(0% 0, 100% 0, 88% 105%, 0 105%); }
 .cp--9 { clip-path: polygon(0% 0%, 0% 0, 0% 101%, 100% 101%); }
 .cp--10 { clip-path: polygon(100% 34%, 0% 0%, 0% 100%, 100% 100%); }
+.cp--11 { clip-path: polygon(0% 0, 100% 0, 80% 105%, 0 105%); }
 
 
 /* Pointer Events */
@@ -621,3 +638,15 @@
 [data-gallery-poster-wrap] input:checked + [data-img-item-wrapper] [data-img-item],
 [data-thumbail-items] input:checked + [data-img-item-wrapper] [data-img-item] { width: 5.875rem; height: 3.125rem; border-radius: 0.125rem; opacity: 1; z-index: 1;
 }
+
+
+[data-bg-img-wrapper] { background-image:url(../../assets/images/mode-img-1-streched.png); background-repeat: no-repeat; }
+.bg--img--gr--1 { background-image:url(../../assets/images/model-img-1.png); background-repeat: no-repeat; }
+[data-exclusive-merch-thumbnail-wrap] [data-exclusive-merch-descriotion],
+[data-exclusive-merch-thumbnail-wrap] [data-exclusive-merch-thumbnail-price-off] { display: none; }
+[data-exclusive-merch-thumbnail-wrap-inner]{ transition: all 0.3s ease-in-out; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+[data-exclusive-merch-thumbnail-wrap]:hover [data-exclusive-merch-descriotion],
+[data-exclusive-merch-thumbnail-wrap]:hover [data-exclusive-merch-thumbnail-price-off] { display: flex; }
+[data-exclusive-merch-thumbnail-wrap]:hover [data-exclusive-merch-thumbnail-wrap-inner]{ width: 22.813rem; height: 22.813rem; box-shadow: 0px 0px 40px 0px rgba(255, 205, 41, 0.50); }
+[data-exclusive-merch-thumbnail-wrap]:hover [data-exclusive-merch-content] { height: 100%; background: linear-gradient(0deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%), linear-gradient(0deg, rgba(255, 205, 41, 0.90) -3.06%, rgba(255, 205, 41, 0.00) 117.35%); }
+[data-exclusive-merch-thumbnail-wrap]:hover [data-exclusive-merch-thumbnail-wrap-inner] { width: 25.813rem; height: 22.813rem; z-index:9; }

@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <!-- Meta Tags -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>Template - Fan Profile Membership</title>
+
+        <!-- Poppins Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet">
+
+        <!-- Nice Select CSS -->
+        <link rel="stylesheet" type="text/css"
+            href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/FINAL/css/nice-select.css">
+
+        <!-- Tachyons Styles -->
+        <link rel="stylesheet"
+            href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/main.css" />
+        <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" />
+        <link rel="stylesheet"
+            href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/theme.css" />
+        <link rel="stylesheet"
+            href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/customTachyons.css" />
+
+        <!-- Splide JS CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css" rel="stylesheet">
+
+        <!-- Dashboard Sidebar Custom Style -->
+        <link rel="stylesheet" href="../assets/css/dashboard-styles-desktop.css" />
+
+        <!-- Tablet Stylesheet -->
+        <link rel="stylesheet" href="../assets/css/dashboard-styles-tablet.css"
+            media="screen and (min-width: 768px) and (max-width: 1365px)">
+
+        <!-- Mobile Stylesheet -->
+        <link rel="stylesheet" href="../assets/css/dashboard-styles-mobile.css"
+            media="screen and (min-width: 480px) and (max-width: 767px)">
+
+        <!-- Mobile Portrait Stylesheet -->
+        <link rel="stylesheet" href="../assets/css/dashboard-styles-mobile-portrait.css"
+            media="screen and (max-width: 479px)">
+    </head>
+
+    <body>
+        <!-- Inner wrapper -->
+        <div data-section="inner-wrapper" class="flex flex--column-responsive-mobile flex--column-responsive-mobile-portrait bg--size-cover bg--fixed h-100 min--h--screen" style="background-image: url(../assets/images/fan-ng-image.png);">
+            <!-- Inner Body Wrapper -->
+            <div data-inner-body-wrapper class="relative w-100 bg-black-40">
+                <!-- Inner Body Content -->
+                <div class="h-100 bg-black-20 bg--blur--200 pad--40 flex flex-column gap--40">
+                    <!-- Top Page Header Section -->
+                    <div data-section="page-header"
+                        class="flex flex-column gap--24 pad--8-responsive-mobile pad--8-responsive-mobile-portrait">
+                        <!-- Top Page Title Section -->
+                        <div data-section="page-title"
+                            class="w-100 flex gap--24 items-center justify-start gap--16--responsive-tablet gap--16--responsive-mobile gap--16--responsive-mobile-portrait flex--column-responsive-tablet flex--column-responsive-mobile flex--column-responsive-mobile-portrait display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                            <h1
+                                class="poppins fs--18 lh--28 fw5 col--gull-gray m--0">
+                                YOUR BENEFITS</h1>
+                            <!-- Link -->
+                            <a href="#" class="flex items-center gap--4">
+                                <span class="fs--12 fw5 lh--18 col-brand-green">Manage Membership</span>
+                                <img src="../assets/icons/arrow-narrow-right.svg" alt="" class="w--16 h--16 filter--col--spring-green">
+                            </a>
+                            <!-- /Link -->
+                        </div><!-- End Top Page Title Section -->
+                        <!-- Benefits tag -->
+                        <div class="flex gap--16 items-center flex--max">
+                            <!-- Tag Item -->
+                            <div data-bg-img-wrapper class="flex sh--black--yellow h--56 bg--size-cover">
+                                <div class="flex--max flex bg--gd-black--1 bg--blur--5">
+                                    <div class="w--76 bg--img--gr--1 bg--size-contain cp--11">
+                                        <div class="pad--y--4 pad--right--12 flex items-center justify-center w-100 h-100 bg--gd--black--yellow-1">
+                                            <img src="../assets/images/hero-button.svg" alt="" class="">
+                                        </div>
+                                    </div>
+                                    <div class="pad---y--4 pad--right--12 pad--left--10 flex items-center">
+                                        <span data-line-clamp class="fs--14 fw5 lh--20 white text--sh--black--40 nowrap">100 free tokens <br />every month</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /Tag Item -->
+                            <!-- Tag Item -->
+                            <div data-bg-img-wrapper class="flex sh--black--yellow h--56 bg--size-cover">
+                                <div class="flex--max flex bg--gd-black--1 bg--blur--5">
+                                    <div class="w--76 bg--img--gr--1 bg--size-contain cp--11">
+                                        <div class="pad--y--4 pad--right--12 flex items-center justify-center w-100 h-100 bg--gd--black--yellow-1">
+                                            <img src="../assets/images/lightning-01.svg" alt="" class="">
+                                        </div>
+                                    </div>
+                                    <div class="pad---y--4 pad--right--12 pad--left--10 flex items-center">
+                                        <span data-line-clamp class="fs--14 fw5 lh--20 white text--sh--black--40 nowrap">10% off all merch</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /Tag Item -->
+                            <!-- Tag Item -->
+                            <div data-bg-img-wrapper class="flex sh--black--yellow h--56 bg--size-cover">
+                                <div class="flex--max flex bg--gd-black--1 bg--blur--5">
+                                    <div class="w--76 bg--img--gr--1 bg--size-contain cp--11">
+                                        <div class="pad--y--4 pad--right--12 flex items-center justify-center w-100 h-100 bg--gd--black--yellow-1">
+                                            <img src="../assets/images/lightning-01.svg" alt="" class="">
+                                        </div>
+                                    </div>
+                                    <div class="pad---y--4 pad--right--12 pad--left--10 flex items-center">
+                                        <span data-line-clamp class="fs--14 fw5 lh--20 white text--sh--black--40 nowrap">10% off all ppv</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /Tag Item -->
+                            <!-- Tag Item -->
+                            <div data-bg-img-wrapper class="flex sh--black--yellow h--56 bg--size-cover">
+                                <div class="flex--max flex bg--gd-black--1 bg--blur--5">
+                                    <div class="w--76 bg--img--gr--1 bg--size-contain cp--11">
+                                        <div class="pad--y--4 pad--right--12 flex items-center justify-center w-100 h-100 bg--gd--black--yellow-1">
+                                            <img src="../assets/images/lightning-01.svg" alt="" class="">
+                                        </div>
+                                    </div>
+                                    <div class="pad---y--4 pad--right--12 pad--left--10 flex items-center">
+                                        <span data-line-clamp class="fs--14 fw5 lh--20 white text--sh--black--40 nowrap">10% off custom request</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /Tag Item -->
+                        </div>
+                        <!-- /Benefits tag -->
+                    </div><!-- End Top Page Header Section -->
+
+                    <!-- Grid Content -->
+                    <div class="flex flex-column justify-start items-start gap--16 flex-auto splide" id="splide-video">
+                        <h2 class="poppins fs--18 lh--28 fw5 col--gull-gray m--0">
+                            MEMBER MEDIA</h2>
+                        <!-- Best Sellar -->
+                        <div class="flex flex-column gap--8 splide__track" >
+                            <!-- Media Grid View -->
+                            <div
+                                class="w-100 splide__list">
+                                <!-- Media Grid Item -->
+                                <div class="splide__slide w-100 flex--max flex flex-column gap--8">
+                                    <!-- Video -->
+                                    <div data-subscription-video-thumbnail class="w-100 pointer relative">
+                                        <div class="relative aspect--ratio--16-9 w-100 h--186">
+                                            <img src="../assets/images/grid-thumb-1.svg" alt="" class="w-100 h-100 fit--cover" />
+                                        </div>
+                                        <!-- Top Tag Section -->
+                                        <div class="w-100 absolute top-0 left-0 pad--4 flex justify-between items-center z--10000">
+                                            <!-- Video tag -->
+                                            <div
+                                                class="pad--x--4 pad--y--1 flex items-center justify-center gap--3 br--4 drop--sh--2">
+                                                <span class="fs--12 lh--normal white tracked--0-12 ttc">video</span>
+                                                <span>
+                                                    <img src="../assets/icons/play-square.svg" alt=""
+                                                        class="w--16 h--16 filter--col--white">
+                                                </span>
+                                            </div>
+                                            <!-- End Video tag -->
+                                            <!-- Time Tag -->
+                                            <span class="flex items-center justify-center gap--4 pad--x--10 drop--sh--2">
+                                                <img src="../assets/icons/clock.svg" alt="" class="w--12 h--12 filter--col--white">
+                                                <p class="white fs--12 lh--normal tracked--0-12">5:20</p>
+                                            </span>
+                                            <!-- /Time Tag -->
+                                        </div>
+                                        <!-- /Top Tag Section -->
+                                        <!-- Paly Tag -->
+                                        <div class="w-100 flex absolute bottom-0 left-0 z--10010">
+                                            <div class="bg--col--sunset-orange pad--y--4 pad--x--10 flex justify-center items-center gap--4">
+                                                <img src="../assets/icons/play.svg" alt="" class="w--10 h--10 filter--col--white">
+                                                <span class="fs--12 lh--18 white">Play</span>
+                                            </div>
+                                        </div>
+                                        <!-- /Play tag -->
+                                        <!-- Video Icon in Center -->
+                                        <div class="w-100 h-100 absolute left-0 top-0 flex justify-center items-center z--10000 pointer">
+                                            <div class="w--80 h--80 br-100 bg-black-10 bg--blur--5 flex items-center justify-center">
+                                                <img src="../assets/icons/play.svg" alt="" class="w--36 h--36 o-60 filter--col--cream-white">
+                                            </div>
+                                        </div>
+                                        <!-- /Video Icon in Center -->
+                                        <!-- logo -->
+                                        <div class="absolute right-0 bottom-0 z--10000">
+                                            <img src="../assets/images/logo-transparent.svg" alt="" class="flex w--64 h--64 filter--col--ash-white pointer-events-none">
+                                        </div>
+                                    </div>
+                                    <!-- /Video -->
+                                    <!-- Video info -->
+                                    <div class="flex flex-column gap--4">
+                                        <!-- Title -->
+                                        <div class="flex items-start gap--4">
+                                            <span data-line-clamp class="fs--14 fw5 lh--20 col--athens-gray">Record breaking fried chicken eating! Watch me break world’s record! Watch now!</span>
+                                        </div>
+                                        <!-- /Title -->
+                                    </div>
+                                    <!-- /Video info -->
+                                </div>
+                                <!-- End Media Grid Item -->
+                                <!-- Media Grid Item -->
+                                <div class="splide__slide w-100 flex--max flex flex-column gap--8">
+                                    <!-- Video -->
+                                    <div data-subscription-video-thumbnail class="w-100 pointer relative">
+                                        <div class="relative aspect--ratio--16-9 w-100 h--186">
+                                            <img src="../assets/images/grid-thumb-2.svg" alt="" class="w-100 h-100 fit--cover" />
+                                        </div>
+                                        <!-- Top Tag Section -->
+                                        <div class="w-100 absolute top-0 left-0 pad--4 flex justify-between items-center z--10000">
+                                            <!-- Video tag -->
+                                            <div
+                                                class="pad--x--4 pad--y--1 flex items-center justify-center gap--3 br--4 drop--sh--2">
+                                                <span class="fs--12 lh--normal white tracked--0-12 ttc">video</span>
+                                                <span>
+                                                    <img src="../assets/icons/play-square.svg" alt=""
+                                                        class="w--16 h--16 filter--col--white">
+                                                </span>
+                                            </div>
+                                            <!-- End Video tag -->
+                                            <!-- Time Tag -->
+                                            <span class="flex items-center justify-center gap--4 pad--x--10 drop--sh--2">
+                                                <img src="../assets/icons/clock.svg" alt="" class="w--12 h--12 filter--col--white">
+                                                <p class="white fs--12 lh--normal tracked--0-12">5:20</p>
+                                            </span>
+                                            <!-- /Time Tag -->
+                                        </div>
+                                        <!-- /Top Tag Section -->
+                                        <!-- Paly Tag -->
+                                        <div class="w-100 flex absolute bottom-0 left-0 z--10010">
+                                            <div class="bg--col--sunset-orange pad--y--4 pad--x--10 flex justify-center items-center gap--4">
+                                                <img src="../assets/icons/play.svg" alt="" class="w--10 h--10 filter--col--white">
+                                                <span class="fs--12 lh--18 white">Play</span>
+                                            </div>
+                                        </div>
+                                        <!-- /Play tag -->
+                                        <!-- Video Icon in Center -->
+                                        <div class="w-100 h-100 absolute left-0 top-0 flex justify-center items-center z--10000 pointer">
+                                            <div class="w--80 h--80 br-100 bg-black-10 bg--blur--5 flex items-center justify-center">
+                                                <img src="../assets/icons/play.svg" alt="" class="w--36 h--36 o-60 filter--col--cream-white">
+                                            </div>
+                                        </div>
+                                        <!-- /Video Icon in Center -->
+                                        <!-- logo -->
+                                        <div class="absolute right-0 bottom-0 z--10000">
+                                            <img src="../assets/images/logo-transparent.svg" alt="" class="flex w--64 h--64 filter--col--ash-white pointer-events-none">
+                                        </div>
+                                    </div>
+                                    <!-- /Video -->
+                                    <!-- Video info -->
+                                    <div class="flex flex-column gap--4">
+                                        <!-- Title -->
+                                        <div class="flex items-start gap--4">
+                                            <span data-line-clamp class="fs--14 fw5 lh--20 col--athens-gray">Record breaking fried chicken eating! Watch me break world’s record! Watch now!</span>
+                                        </div>
+                                        <!-- /Title -->
+                                    </div>
+                                    <!-- /Video info -->
+                                </div>
+                                <!-- End Media Grid Item -->
+                                <!-- Media Grid Item -->
+                                <div class="splide__slide w-100 flex--max flex flex-column gap--8">
+                                    <!-- Video -->
+                                    <div data-subscription-video-thumbnail class="w-100 pointer relative">
+                                        <div class="relative aspect--ratio--16-9 w-100 h--186">
+                                            <img src="../assets/images/grid-thumb-3.svg" alt="" class="w-100 h-100 fit--cover" />
+                                        </div>
+                                        <!-- Top Tag Section -->
+                                        <div class="w-100 absolute top-0 left-0 pad--4 flex justify-between items-center z--10000">
+                                            <!-- Video tag -->
+                                            <div
+                                                class="pad--x--4 pad--y--1 flex items-center justify-center gap--3 br--4 drop--sh--2">
+                                                <span class="fs--12 lh--normal white tracked--0-12 ttc">Audio</span>
+                                                <span>
+                                                    <img src="../assets/icons/recording-02.svg" alt=""
+                                                        class="w--16 h--16 filter--col--white">
+                                                </span>
+                                            </div>
+                                            <!-- End Video tag -->
+                                            <!-- Time Tag -->
+                                            <span class="flex items-center justify-center gap--4 pad--x--10 drop--sh--2">
+                                                <img src="../assets/icons/clock.svg" alt="" class="w--12 h--12 filter--col--white">
+                                                <p class="white fs--12 lh--normal tracked--0-12">5:20</p>
+                                            </span>
+                                            <!-- /Time Tag -->
+                                        </div>
+                                        <!-- /Top Tag Section -->
+                                        <!-- Paly Tag -->
+                                        <div class="w-100 flex absolute bottom-0 left-0 z--10010">
+                                            <div class="bg--col--sunset-orange pad--y--4 pad--x--10 flex justify-center items-center gap--4">
+                                                <img src="../assets/icons/play.svg" alt="" class="w--10 h--10 filter--col--white">
+                                                <span class="fs--12 lh--18 white">Play</span>
+                                            </div>
+                                        </div>
+                                        <!-- /Play tag -->
+                                        <!-- Video Icon in Center -->
+                                        <div class="w-100 h-100 absolute left-0 top-0 flex justify-center items-center z--10000 pointer">
+                                            <div class="w--80 h--80 br-100 bg-black-10 bg--blur--5 flex items-center justify-center">
+                                                <img src="../assets/icons/play.svg" alt="" class="w--36 h--36 o-60 filter--col--cream-white">
+                                            </div>
+                                        </div>
+                                        <!-- /Video Icon in Center -->
+                                        <!-- logo -->
+                                        <div class="absolute right-0 bottom-0 z--10000">
+                                            <img src="../assets/images/logo-transparent.svg" alt="" class="flex w--64 h--64 filter--col--ash-white pointer-events-none">
+                                        </div>
+                                    </div>
+                                    <!-- /Video -->
+                                    <!-- Video info -->
+                                    <div class="flex flex-column gap--4">
+                                        <!-- Title -->
+                                        <div class="flex items-start gap--4">
+                                            <span data-line-clamp class="fs--14 fw5 lh--20 col--athens-gray">Record breaking fried chicken eating! Watch me break world’s record! Watch now!</span>
+                                        </div>
+                                        <!-- /Title -->
+                                    </div>
+                                    <!-- /Video info -->
+                                </div>
+                                <!-- End Media Grid Item -->
+                                <!-- Media Grid Item -->
+                                <div class="splide__slide w-100 flex--max flex flex-column gap--8">
+                                    <!-- Video -->
+                                    <div data-subscription-video-thumbnail class="w-100 pointer relative">
+                                        <div class="relative aspect--ratio--16-9 w-100 h--186">
+                                            <img src="../assets/images/grid-thumb-4.svg" alt="" class="w-100 h-100 fit--cover" />
+                                        </div>
+                                        <!-- Top Tag Section -->
+                                        <div class="w-100 absolute top-0 left-0 pad--4 flex justify-between items-center z--10000">
+                                            <!-- Video tag -->
+                                            <div
+                                                class="pad--x--4 pad--y--1 flex items-center justify-center gap--3 br--4 drop--sh--2">
+                                                <span class="fs--12 lh--normal white tracked--0-12 ttc">video</span>
+                                                <span>
+                                                    <img src="../assets/icons/play-square.svg" alt=""
+                                                        class="w--16 h--16 filter--col--white">
+                                                </span>
+                                            </div>
+                                            <!-- End Video tag -->
+                                            <!-- Time Tag -->
+                                            <span class="flex items-center justify-center gap--4 pad--x--10 drop--sh--2">
+                                                <img src="../assets/icons/clock.svg" alt="" class="w--12 h--12 filter--col--white">
+                                                <p class="white fs--12 lh--normal tracked--0-12">5:20</p>
+                                            </span>
+                                            <!-- /Time Tag -->
+                                        </div>
+                                        <!-- /Top Tag Section -->
+                                        <!-- Paly Tag -->
+                                        <div class="w-100 flex absolute bottom-0 left-0 z--10010">
+                                            <div class="bg--col--sunset-orange pad--y--4 pad--x--10 flex justify-center items-center gap--4">
+                                                <img src="../assets/icons/play.svg" alt="" class="w--10 h--10 filter--col--white">
+                                                <span class="fs--12 lh--18 white">Play</span>
+                                            </div>
+                                        </div>
+                                        <!-- /Play tag -->
+                                        <!-- Video Icon in Center -->
+                                        <div class="w-100 h-100 absolute left-0 top-0 flex justify-center items-center z--10000 pointer">
+                                            <div class="w--80 h--80 br-100 bg-black-10 bg--blur--5 flex items-center justify-center">
+                                                <img src="../assets/icons/play.svg" alt="" class="w--36 h--36 o-60 filter--col--cream-white">
+                                            </div>
+                                        </div>
+                                        <!-- /Video Icon in Center -->
+                                        <!-- logo -->
+                                        <div class="absolute right-0 bottom-0 z--10000">
+                                            <img src="../assets/images/logo-transparent.svg" alt="" class="flex w--64 h--64 filter--col--ash-white pointer-events-none">
+                                        </div>
+                                    </div>
+                                    <!-- /Video -->
+                                    <!-- Video info -->
+                                    <div class="flex flex-column gap--4">
+                                        <!-- Title -->
+                                        <div class="flex items-start gap--4">
+                                            <span data-line-clamp class="fs--14 fw5 lh--20 col--athens-gray">Record breaking fried chicken eating! Watch me break world’s record! Watch now!</span>
+                                        </div>
+                                        <!-- /Title -->
+                                    </div>
+                                    <!-- /Video info -->
+                                </div>
+                                <!-- End Media Grid Item -->
+                                <!-- Media Grid Item -->
+                                <div class="splide__slide w-100 flex--max flex flex-column gap--8">
+                                    <!-- Video -->
+                                    <div data-subscription-video-thumbnail class="w-100 pointer relative">
+                                        <div class="relative aspect--ratio--16-9 w-100 h--186">
+                                            <img src="../assets/images/grid-thumb-1.svg" alt="" class="w-100 h-100 fit--cover" />
+                                        </div>
+                                        <!-- Top Tag Section -->
+                                        <div class="w-100 absolute top-0 left-0 pad--4 flex justify-between items-center z--10000">
+                                            <!-- Video tag -->
+                                            <div
+                                                class="pad--x--4 pad--y--1 flex items-center justify-center gap--3 br--4 drop--sh--2">
+                                                <span class="fs--12 lh--normal white tracked--0-12 ttc">video</span>
+                                                <span>
+                                                    <img src="../assets/icons/play-square.svg" alt=""
+                                                        class="w--16 h--16 filter--col--white">
+                                                </span>
+                                            </div>
+                                            <!-- End Video tag -->
+                                            <!-- Time Tag -->
+                                            <span class="flex items-center justify-center gap--4 pad--x--10 drop--sh--2">
+                                                <img src="../assets/icons/clock.svg" alt="" class="w--12 h--12 filter--col--white">
+                                                <p class="white fs--12 lh--normal tracked--0-12">5:20</p>
+                                            </span>
+                                            <!-- /Time Tag -->
+                                        </div>
+                                        <!-- /Top Tag Section -->
+                                        <!-- Paly Tag -->
+                                        <div class="w-100 flex absolute bottom-0 left-0 z--10010">
+                                            <div class="bg--col--sunset-orange pad--y--4 pad--x--10 flex justify-center items-center gap--4">
+                                                <img src="../assets/icons/play.svg" alt="" class="w--10 h--10 filter--col--white">
+                                                <span class="fs--12 lh--18 white">Play</span>
+                                            </div>
+                                        </div>
+                                        <!-- /Play tag -->
+                                        <!-- Video Icon in Center -->
+                                        <div class="w-100 h-100 absolute left-0 top-0 flex justify-center items-center z--10000 pointer">
+                                            <div class="w--80 h--80 br-100 bg-black-10 bg--blur--5 flex items-center justify-center">
+                                                <img src="../assets/icons/play.svg" alt="" class="w--36 h--36 o-60 filter--col--cream-white">
+                                            </div>
+                                        </div>
+                                        <!-- /Video Icon in Center -->
+                                        <!-- logo -->
+                                        <div class="absolute right-0 bottom-0 z--10000">
+                                            <img src="../assets/images/logo-transparent.svg" alt="" class="flex w--64 h--64 filter--col--ash-white pointer-events-none">
+                                        </div>
+                                    </div>
+                                    <!-- /Video -->
+                                    <!-- Video info -->
+                                    <div class="flex flex-column gap--4">
+                                        <!-- Title -->
+                                        <div class="flex items-start gap--4">
+                                            <span data-line-clamp class="fs--14 fw5 lh--20 col--athens-gray">Record breaking fried chicken eating! Watch me break world’s record! Watch now!</span>
+                                        </div>
+                                        <!-- /Title -->
+                                    </div>
+                                    <!-- /Video info -->
+                                </div>
+                                <!-- End Media Grid Item -->
+                                <!-- Media Grid Item -->
+                                <div class="splide__slide w-100 flex--max flex flex-column gap--8">
+                                    <!-- Video -->
+                                    <div data-subscription-video-thumbnail class="w-100 pointer relative">
+                                        <div class="relative aspect--ratio--16-9 w-100 h--186">
+                                            <img src="../assets/images/grid-thumb-2.svg" alt="" class="w-100 h-100 fit--cover" />
+                                        </div>
+                                        <!-- Top Tag Section -->
+                                        <div class="w-100 absolute top-0 left-0 pad--4 flex justify-between items-center z--10000">
+                                            <!-- Video tag -->
+                                            <div
+                                                class="pad--x--4 pad--y--1 flex items-center justify-center gap--3 br--4 drop--sh--2">
+                                                <span class="fs--12 lh--normal white tracked--0-12 ttc">video</span>
+                                                <span>
+                                                    <img src="../assets/icons/play-square.svg" alt=""
+                                                        class="w--16 h--16 filter--col--white">
+                                                </span>
+                                            </div>
+                                            <!-- End Video tag -->
+                                            <!-- Time Tag -->
+                                            <span class="flex items-center justify-center gap--4 pad--x--10 drop--sh--2">
+                                                <img src="../assets/icons/clock.svg" alt="" class="w--12 h--12 filter--col--white">
+                                                <p class="white fs--12 lh--normal tracked--0-12">5:20</p>
+                                            </span>
+                                            <!-- /Time Tag -->
+                                        </div>
+                                        <!-- /Top Tag Section -->
+                                        <!-- Paly Tag -->
+                                        <div class="w-100 flex absolute bottom-0 left-0 z--10010">
+                                            <div class="bg--col--sunset-orange pad--y--4 pad--x--10 flex justify-center items-center gap--4">
+                                                <img src="../assets/icons/play.svg" alt="" class="w--10 h--10 filter--col--white">
+                                                <span class="fs--12 lh--18 white">Play</span>
+                                            </div>
+                                        </div>
+                                        <!-- /Play tag -->
+                                        <!-- Video Icon in Center -->
+                                        <div class="w-100 h-100 absolute left-0 top-0 flex justify-center items-center z--10000 pointer">
+                                            <div class="w--80 h--80 br-100 bg-black-10 bg--blur--5 flex items-center justify-center">
+                                                <img src="../assets/icons/play.svg" alt="" class="w--36 h--36 o-60 filter--col--cream-white">
+                                            </div>
+                                        </div>
+                                        <!-- /Video Icon in Center -->
+                                        <!-- logo -->
+                                        <div class="absolute right-0 bottom-0 z--10000">
+                                            <img src="../assets/images/logo-transparent.svg" alt="" class="flex w--64 h--64 filter--col--ash-white pointer-events-none">
+                                        </div>
+                                    </div>
+                                    <!-- /Video -->
+                                    <!-- Video info -->
+                                    <div class="flex flex-column gap--4">
+                                        <!-- Title -->
+                                        <div class="flex items-start gap--4">
+                                            <span data-line-clamp class="fs--14 fw5 lh--20 col--athens-gray">Record breaking fried chicken eating! Watch me break world’s record! Watch now!</span>
+                                        </div>
+                                        <!-- /Title -->
+                                    </div>
+                                    <!-- /Video info -->
+                                </div>
+                                <!-- End Media Grid Item -->
+                                <!-- Media Grid Item -->
+                                <div class="splide__slide w-100 flex--max flex flex-column gap--8">
+                                    <!-- Video -->
+                                    <div data-subscription-video-thumbnail class="w-100 pointer relative">
+                                        <div class="relative aspect--ratio--16-9 w-100 h--186">
+                                            <img src="../assets/images/grid-thumb-3.svg" alt="" class="w-100 h-100 fit--cover" />
+                                        </div>
+                                        <!-- Top Tag Section -->
+                                        <div class="w-100 absolute top-0 left-0 pad--4 flex justify-between items-center z--10000">
+                                            <!-- Video tag -->
+                                            <div
+                                                class="pad--x--4 pad--y--1 flex items-center justify-center gap--3 br--4 drop--sh--2">
+                                                <span class="fs--12 lh--normal white tracked--0-12 ttc">Audio</span>
+                                                <span>
+                                                    <img src="../assets/icons/recording-02.svg" alt=""
+                                                        class="w--16 h--16 filter--col--white">
+                                                </span>
+                                            </div>
+                                            <!-- End Video tag -->
+                                            <!-- Time Tag -->
+                                            <span class="flex items-center justify-center gap--4 pad--x--10 drop--sh--2">
+                                                <img src="../assets/icons/clock.svg" alt="" class="w--12 h--12 filter--col--white">
+                                                <p class="white fs--12 lh--normal tracked--0-12">5:20</p>
+                                            </span>
+                                            <!-- /Time Tag -->
+                                        </div>
+                                        <!-- /Top Tag Section -->
+                                        <!-- Paly Tag -->
+                                        <div class="w-100 flex absolute bottom-0 left-0 z--10010">
+                                            <div class="bg--col--sunset-orange pad--y--4 pad--x--10 flex justify-center items-center gap--4">
+                                                <img src="../assets/icons/play.svg" alt="" class="w--10 h--10 filter--col--white">
+                                                <span class="fs--12 lh--18 white">Play</span>
+                                            </div>
+                                        </div>
+                                        <!-- /Play tag -->
+                                        <!-- Video Icon in Center -->
+                                        <div class="w-100 h-100 absolute left-0 top-0 flex justify-center items-center z--10000 pointer">
+                                            <div class="w--80 h--80 br-100 bg-black-10 bg--blur--5 flex items-center justify-center">
+                                                <img src="../assets/icons/play.svg" alt="" class="w--36 h--36 o-60 filter--col--cream-white">
+                                            </div>
+                                        </div>
+                                        <!-- /Video Icon in Center -->
+                                        <!-- logo -->
+                                        <div class="absolute right-0 bottom-0 z--10000">
+                                            <img src="../assets/images/logo-transparent.svg" alt="" class="flex w--64 h--64 filter--col--ash-white pointer-events-none">
+                                        </div>
+                                    </div>
+                                    <!-- /Video -->
+                                    <!-- Video info -->
+                                    <div class="flex flex-column gap--4">
+                                        <!-- Title -->
+                                        <div class="flex items-start gap--4">
+                                            <span data-line-clamp class="fs--14 fw5 lh--20 col--athens-gray">Record breaking fried chicken eating! Watch me break world’s record! Watch now!</span>
+                                        </div>
+                                        <!-- /Title -->
+                                    </div>
+                                    <!-- /Video info -->
+                                </div>
+                                <!-- End Media Grid Item -->
+                                <!-- Media Grid Item -->
+                                <div class="splide__slide w-100 flex--max flex flex-column gap--8">
+                                    <!-- Video -->
+                                    <div data-subscription-video-thumbnail class="w-100 pointer relative">
+                                        <div class="relative aspect--ratio--16-9 w-100 h--186">
+                                            <img src="../assets/images/grid-thumb-4.svg" alt="" class="w-100 h-100 fit--cover" />
+                                        </div>
+                                        <!-- Top Tag Section -->
+                                        <div class="w-100 absolute top-0 left-0 pad--4 flex justify-between items-center z--10000">
+                                            <!-- Video tag -->
+                                            <div
+                                                class="pad--x--4 pad--y--1 flex items-center justify-center gap--3 br--4 drop--sh--2">
+                                                <span class="fs--12 lh--normal white tracked--0-12 ttc">video</span>
+                                                <span>
+                                                    <img src="../assets/icons/play-square.svg" alt=""
+                                                        class="w--16 h--16 filter--col--white">
+                                                </span>
+                                            </div>
+                                            <!-- End Video tag -->
+                                            <!-- Time Tag -->
+                                            <span class="flex items-center justify-center gap--4 pad--x--10 drop--sh--2">
+                                                <img src="../assets/icons/clock.svg" alt="" class="w--12 h--12 filter--col--white">
+                                                <p class="white fs--12 lh--normal tracked--0-12">5:20</p>
+                                            </span>
+                                            <!-- /Time Tag -->
+                                        </div>
+                                        <!-- /Top Tag Section -->
+                                        <!-- Paly Tag -->
+                                        <div class="w-100 flex absolute bottom-0 left-0 z--10010">
+                                            <div class="bg--col--sunset-orange pad--y--4 pad--x--10 flex justify-center items-center gap--4">
+                                                <img src="../assets/icons/play.svg" alt="" class="w--10 h--10 filter--col--white">
+                                                <span class="fs--12 lh--18 white">Play</span>
+                                            </div>
+                                        </div>
+                                        <!-- /Play tag -->
+                                        <!-- Video Icon in Center -->
+                                        <div class="w-100 h-100 absolute left-0 top-0 flex justify-center items-center z--10000 pointer">
+                                            <div class="w--80 h--80 br-100 bg-black-10 bg--blur--5 flex items-center justify-center">
+                                                <img src="../assets/icons/play.svg" alt="" class="w--36 h--36 o-60 filter--col--cream-white">
+                                            </div>
+                                        </div>
+                                        <!-- /Video Icon in Center -->
+                                        <!-- logo -->
+                                        <div class="absolute right-0 bottom-0 z--10000">
+                                            <img src="../assets/images/logo-transparent.svg" alt="" class="flex w--64 h--64 filter--col--ash-white pointer-events-none">
+                                        </div>
+                                    </div>
+                                    <!-- /Video -->
+                                    <!-- Video info -->
+                                    <div class="flex flex-column gap--4">
+                                        <!-- Title -->
+                                        <div class="flex items-start gap--4">
+                                            <span data-line-clamp class="fs--14 fw5 lh--20 col--athens-gray">Record breaking fried chicken eating! Watch me break world’s record! Watch now!</span>
+                                        </div>
+                                        <!-- /Title -->
+                                    </div>
+                                    <!-- /Video info -->
+                                </div>
+                                <!-- End Media Grid Item -->
+                            </div>
+                            <!-- End Media Grid View -->
+                        </div>
+                        <!-- /Best Sellar -->
+                    </div>
+                    <!-- End Grid Content -->
+
+                    <!-- Grid Content -->
+                    <div class="flex flex-column justify-start items-start gap--16 flex-auto mt--8-neg splide" id="splide-merch">
+                        <h2 class="poppins fs--18 lh--28 fw5 col--gull-gray m--0">
+                            EXCLUSIVE MERCH</h2>
+                        <!-- Best Sellar -->
+                        <div class="flex flex-column gap--8 splide__track of--visible--important">
+                            <!-- Media Grid View -->
+                            <div
+                                class="w-100 splide__list">
+                                <!-- Merch Thumbnail Item -->
+                                <div data-exclusive-merch-thumbnail-wrap class="splide__slide w--324 h--324 flex--max flex flex-column gap--8 relative">
+                                    <!-- Inner Section -->
+                                    <div data-exclusive-merch-thumbnail-wrap-inner class="w-100 h-100 flex--max">
+                                        <!-- Image section -->
+                                        <div data-exclusive-merch-thumbnail class="w-100 h-100 pointer relative br--8 overflow-hidden">
+                                            <!-- Price Off tag -->
+                                            <div data-exclusive-merch-thumbnail-price-off class="w-100 flex justify-end absolute top-0 right-0 z--10000">
+                                                <div class="bg--col--sunglow-yellow pad--y--2 pad--right--8 pad--left--16 cp--6">
+                                                    <span class="fs--14 fw6 lh--20 black">10% OFF</span>
+                                                </div>
+                                            </div>
+                                            <!-- Price Off tag -->
+                                            <!-- Image -->
+                                            <div class="relative aspect--ratio--16-9 w-100 h-100 br--8">
+                                                <img src="../assets/images/grid-thumb-1.svg" alt="" class="w-100 h-100 br--8 fit--cover" />
+                                            </div>
+                                            <!-- /Image -->
+                                            <!-- image info -->
+                                            <div data-exclusive-merch-content class="flex flex-column justify-end gap--8 bg--gd-white-3 bg--blur--3 pad--16 absolute bottom-0 left-0 w-100">
+                                                <!-- Inner -->
+                                                <div class="flex flex-column justify-end gap--8">
+                                                    <!-- Title -->
+                                                    <div class="flex items-end gap--4">
+                                                        <span data-line-clamp class="fs--18 fw6 lh--28 col--desert-storm">My top (washed) Get Jenny’s favourite Mangoes!</span>
+                                                    </div>
+                                                    <!-- /Title -->
+                                                    <!-- price section -->
+                                                    <div class="flex items-end gap--4 flex--max">
+                                                        <span class="fs--16 fw6 lh--24 sh--18 white">USD</span>
+                                                        <span class="fs--16 fw6 lh--24 sh--18 white">$25</span>
+                                                        <span class="fs--30 fw6 lh--38 sh--18 white">$25</span>
+                                                    </div>
+                                                    <!-- /price section -->
+                                                    <!-- Description -->
+                                                    <p data-exclusive-merch-descriotion class="fs--14 lh--20 white">Get Jenny’s favourite Mangoes! Buy them while supply last !Get Jenny’s favourite Mangoes! Buy them while supply last !Get Jenny’s favourite Mangoes! Buy them while supply last !</p>
+                                                    <!-- /Description -->
+                                                </div>
+                                                <!-- /Inner -->
+                                            </div>
+                                            <!-- /image info -->
+                                        </div>
+                                        <!-- /Image section -->
+                                    </div>
+                                    <!-- Inner Section -->
+                                </div>
+                                <!-- End Merch Thumbnail Item -->
+                                <!-- Merch Thumbnail Item -->
+                                <div data-exclusive-merch-thumbnail-wrap class="splide__slide w--324 h--324 flex--max flex flex-column gap--8 relative">
+                                    <!-- Inner Section -->
+                                    <div data-exclusive-merch-thumbnail-wrap-inner class="w-100 h-100 flex--max">
+                                        <!-- Image section -->
+                                        <div data-exclusive-merch-thumbnail class="w-100 h-100 pointer relative br--8 overflow-hidden">
+                                            <!-- Price Off tag -->
+                                            <div data-exclusive-merch-thumbnail-price-off class="w-100 flex justify-end absolute top-0 right-0 z--10000">
+                                                <div class="bg--col--sunglow-yellow pad--y--2 pad--right--8 pad--left--16 cp--6">
+                                                    <span class="fs--14 fw6 lh--20 black">10% OFF</span>
+                                                </div>
+                                            </div>
+                                            <!-- Price Off tag -->
+                                            <!-- Image -->
+                                            <div class="relative aspect--ratio--16-9 w-100 h-100 br--8">
+                                                <img src="../assets/images/grid-thumb-1.svg" alt="" class="w-100 h-100 br--8 fit--cover" />
+                                            </div>
+                                            <!-- /Image -->
+                                            <!-- image info -->
+                                            <div data-exclusive-merch-content class="flex flex-column justify-end gap--8 bg--gd-white-3 bg--blur--3 pad--16 absolute bottom-0 left-0 w-100">
+                                                <!-- Inner -->
+                                                <div class="flex flex-column justify-end gap--8">
+                                                    <!-- Title -->
+                                                    <div class="flex items-end gap--4">
+                                                        <span data-line-clamp class="fs--18 fw6 lh--28 col--desert-storm">My top (washed) Get Jenny’s favourite Mangoes!</span>
+                                                    </div>
+                                                    <!-- /Title -->
+                                                    <!-- price section -->
+                                                    <div class="flex items-end gap--4 flex--max">
+                                                        <span class="fs--16 fw6 lh--24 sh--18 white">USD</span>
+                                                        <span class="fs--16 fw6 lh--24 sh--18 white">$25</span>
+                                                        <span class="fs--30 fw6 lh--38 sh--18 white">$25</span>
+                                                    </div>
+                                                    <!-- /price section -->
+                                                    <!-- Description -->
+                                                    <p data-exclusive-merch-descriotion class="fs--14 lh--20 white">Get Jenny’s favourite Mangoes! Buy them while supply last !Get Jenny’s favourite Mangoes! Buy them while supply last !Get Jenny’s favourite Mangoes! Buy them while supply last !</p>
+                                                    <!-- /Description -->
+                                                </div>
+                                                <!-- /Inner -->
+                                            </div>
+                                            <!-- /image info -->
+                                        </div>
+                                        <!-- /Image section -->
+                                    </div>
+                                    <!-- Inner Section -->
+                                </div>
+                                <!-- End Merch Thumbnail Item -->
+                                <!-- Merch Thumbnail Item -->
+                                <div data-exclusive-merch-thumbnail-wrap class="splide__slide w--324 h--324 flex--max flex flex-column gap--8 relative">
+                                    <!-- Inner Section -->
+                                    <div data-exclusive-merch-thumbnail-wrap-inner class="w-100 h-100 flex--max">
+                                        <!-- Image section -->
+                                        <div data-exclusive-merch-thumbnail class="w-100 h-100 pointer relative br--8 overflow-hidden">
+                                            <!-- Price Off tag -->
+                                            <div data-exclusive-merch-thumbnail-price-off class="w-100 flex justify-end absolute top-0 right-0 z--10000">
+                                                <div class="bg--col--sunglow-yellow pad--y--2 pad--right--8 pad--left--16 cp--6">
+                                                    <span class="fs--14 fw6 lh--20 black">10% OFF</span>
+                                                </div>
+                                            </div>
+                                            <!-- Price Off tag -->
+                                            <!-- Image -->
+                                            <div class="relative aspect--ratio--16-9 w-100 h-100 br--8">
+                                                <img src="../assets/images/grid-thumb-1.svg" alt="" class="w-100 h-100 br--8 fit--cover" />
+                                            </div>
+                                            <!-- /Image -->
+                                            <!-- image info -->
+                                            <div data-exclusive-merch-content class="flex flex-column justify-end gap--8 bg--gd-white-3 bg--blur--3 pad--16 absolute bottom-0 left-0 w-100">
+                                                <!-- Inner -->
+                                                <div class="flex flex-column justify-end gap--8">
+                                                    <!-- Title -->
+                                                    <div class="flex items-end gap--4">
+                                                        <span data-line-clamp class="fs--18 fw6 lh--28 col--desert-storm">My top (washed) Get Jenny’s favourite Mangoes!</span>
+                                                    </div>
+                                                    <!-- /Title -->
+                                                    <!-- price section -->
+                                                    <div class="flex items-end gap--4 flex--max">
+                                                        <span class="fs--16 fw6 lh--24 sh--18 white">USD</span>
+                                                        <span class="fs--16 fw6 lh--24 sh--18 white">$25</span>
+                                                        <span class="fs--30 fw6 lh--38 sh--18 white">$25</span>
+                                                    </div>
+                                                    <!-- /price section -->
+                                                    <!-- Description -->
+                                                    <p data-exclusive-merch-descriotion class="fs--14 lh--20 white">Get Jenny’s favourite Mangoes! Buy them while supply last !Get Jenny’s favourite Mangoes! Buy them while supply last !Get Jenny’s favourite Mangoes! Buy them while supply last !</p>
+                                                    <!-- /Description -->
+                                                </div>
+                                                <!-- /Inner -->
+                                            </div>
+                                            <!-- /image info -->
+                                        </div>
+                                        <!-- /Image section -->
+                                    </div>
+                                    <!-- Inner Section -->
+                                </div>
+                                <!-- End Merch Thumbnail Item -->
+                                <!-- Merch Thumbnail Item -->
+                                <div data-exclusive-merch-thumbnail-wrap class="splide__slide w--324 h--324 flex--max flex flex-column gap--8 relative">
+                                    <!-- Inner Section -->
+                                    <div data-exclusive-merch-thumbnail-wrap-inner class="w-100 h-100 flex--max">
+                                        <!-- Image section -->
+                                        <div data-exclusive-merch-thumbnail class="w-100 h-100 pointer relative br--8 overflow-hidden">
+                                            <!-- Price Off tag -->
+                                            <div data-exclusive-merch-thumbnail-price-off class="w-100 flex justify-end absolute top-0 right-0 z--10000">
+                                                <div class="bg--col--sunglow-yellow pad--y--2 pad--right--8 pad--left--16 cp--6">
+                                                    <span class="fs--14 fw6 lh--20 black">10% OFF</span>
+                                                </div>
+                                            </div>
+                                            <!-- Price Off tag -->
+                                            <!-- Image -->
+                                            <div class="relative aspect--ratio--16-9 w-100 h-100 br--8">
+                                                <img src="../assets/images/grid-thumb-1.svg" alt="" class="w-100 h-100 br--8 fit--cover" />
+                                            </div>
+                                            <!-- /Image -->
+                                            <!-- image info -->
+                                            <div data-exclusive-merch-content class="flex flex-column justify-end gap--8 bg--gd-white-3 bg--blur--3 pad--16 absolute bottom-0 left-0 w-100">
+                                                <!-- Inner -->
+                                                <div class="flex flex-column justify-end gap--8">
+                                                    <!-- Title -->
+                                                    <div class="flex items-end gap--4">
+                                                        <span data-line-clamp class="fs--18 fw6 lh--28 col--desert-storm">My top (washed) Get Jenny’s favourite Mangoes!</span>
+                                                    </div>
+                                                    <!-- /Title -->
+                                                    <!-- price section -->
+                                                    <div class="flex items-end gap--4 flex--max">
+                                                        <span class="fs--16 fw6 lh--24 sh--18 white">USD</span>
+                                                        <span class="fs--16 fw6 lh--24 sh--18 white">$25</span>
+                                                        <span class="fs--30 fw6 lh--38 sh--18 white">$25</span>
+                                                    </div>
+                                                    <!-- /price section -->
+                                                    <!-- Description -->
+                                                    <p data-exclusive-merch-descriotion class="fs--14 lh--20 white">Get Jenny’s favourite Mangoes! Buy them while supply last !Get Jenny’s favourite Mangoes! Buy them while supply last !Get Jenny’s favourite Mangoes! Buy them while supply last !</p>
+                                                    <!-- /Description -->
+                                                </div>
+                                                <!-- /Inner -->
+                                            </div>
+                                            <!-- /image info -->
+                                        </div>
+                                        <!-- /Image section -->
+                                    </div>
+                                    <!-- Inner Section -->
+                                </div>
+                                <!-- End Merch Thumbnail Item -->
+                                <!-- Merch Thumbnail Item -->
+                                <div data-exclusive-merch-thumbnail-wrap class="splide__slide w--324 h--324 flex--max flex flex-column gap--8 relative">
+                                    <!-- Inner Section -->
+                                    <div data-exclusive-merch-thumbnail-wrap-inner class="w-100 h-100 flex--max">
+                                        <!-- Image section -->
+                                        <div data-exclusive-merch-thumbnail class="w-100 h-100 pointer relative br--8 overflow-hidden">
+                                            <!-- Price Off tag -->
+                                            <div data-exclusive-merch-thumbnail-price-off class="w-100 flex justify-end absolute top-0 right-0 z--10000">
+                                                <div class="bg--col--sunglow-yellow pad--y--2 pad--right--8 pad--left--16 cp--6">
+                                                    <span class="fs--14 fw6 lh--20 black">10% OFF</span>
+                                                </div>
+                                            </div>
+                                            <!-- Price Off tag -->
+                                            <!-- Image -->
+                                            <div class="relative aspect--ratio--16-9 w-100 h-100 br--8">
+                                                <img src="../assets/images/grid-thumb-1.svg" alt="" class="w-100 h-100 br--8 fit--cover" />
+                                            </div>
+                                            <!-- /Image -->
+                                            <!-- image info -->
+                                            <div data-exclusive-merch-content class="flex flex-column justify-end gap--8 bg--gd-white-3 bg--blur--3 pad--16 absolute bottom-0 left-0 w-100">
+                                                <!-- Inner -->
+                                                <div class="flex flex-column justify-end gap--8">
+                                                    <!-- Title -->
+                                                    <div class="flex items-end gap--4">
+                                                        <span data-line-clamp class="fs--18 fw6 lh--28 col--desert-storm">My top (washed) Get Jenny’s favourite Mangoes!</span>
+                                                    </div>
+                                                    <!-- /Title -->
+                                                    <!-- price section -->
+                                                    <div class="flex items-end gap--4 flex--max">
+                                                        <span class="fs--16 fw6 lh--24 sh--18 white">USD</span>
+                                                        <span class="fs--16 fw6 lh--24 sh--18 white">$25</span>
+                                                        <span class="fs--30 fw6 lh--38 sh--18 white">$25</span>
+                                                    </div>
+                                                    <!-- /price section -->
+                                                    <!-- Description -->
+                                                    <p data-exclusive-merch-descriotion class="fs--14 lh--20 white">Get Jenny’s favourite Mangoes! Buy them while supply last !Get Jenny’s favourite Mangoes! Buy them while supply last !Get Jenny’s favourite Mangoes! Buy them while supply last !</p>
+                                                    <!-- /Description -->
+                                                </div>
+                                                <!-- /Inner -->
+                                            </div>
+                                            <!-- /image info -->
+                                        </div>
+                                        <!-- /Image section -->
+                                    </div>
+                                    <!-- Inner Section -->
+                                </div>
+                                <!-- End Merch Thumbnail Item -->
+                                <!-- Merch Thumbnail Item -->
+                                <div data-exclusive-merch-thumbnail-wrap class="splide__slide w--324 h--324 flex--max flex flex-column gap--8 relative">
+                                    <!-- Inner Section -->
+                                    <div data-exclusive-merch-thumbnail-wrap-inner class="w-100 h-100 flex--max">
+                                        <!-- Image section -->
+                                        <div data-exclusive-merch-thumbnail class="w-100 h-100 pointer relative br--8 overflow-hidden">
+                                            <!-- Price Off tag -->
+                                            <div data-exclusive-merch-thumbnail-price-off class="w-100 flex justify-end absolute top-0 right-0 z--10000">
+                                                <div class="bg--col--sunglow-yellow pad--y--2 pad--right--8 pad--left--16 cp--6">
+                                                    <span class="fs--14 fw6 lh--20 black">10% OFF</span>
+                                                </div>
+                                            </div>
+                                            <!-- Price Off tag -->
+                                            <!-- Image -->
+                                            <div class="relative aspect--ratio--16-9 w-100 h-100 br--8">
+                                                <img src="../assets/images/grid-thumb-1.svg" alt="" class="w-100 h-100 br--8 fit--cover" />
+                                            </div>
+                                            <!-- /Image -->
+                                            <!-- image info -->
+                                            <div data-exclusive-merch-content class="flex flex-column justify-end gap--8 bg--gd-white-3 bg--blur--3 pad--16 absolute bottom-0 left-0 w-100">
+                                                <!-- Inner -->
+                                                <div class="flex flex-column justify-end gap--8">
+                                                    <!-- Title -->
+                                                    <div class="flex items-end gap--4">
+                                                        <span data-line-clamp class="fs--18 fw6 lh--28 col--desert-storm">My top (washed) Get Jenny’s favourite Mangoes!</span>
+                                                    </div>
+                                                    <!-- /Title -->
+                                                    <!-- price section -->
+                                                    <div class="flex items-end gap--4 flex--max">
+                                                        <span class="fs--16 fw6 lh--24 sh--18 white">USD</span>
+                                                        <span class="fs--16 fw6 lh--24 sh--18 white">$25</span>
+                                                        <span class="fs--30 fw6 lh--38 sh--18 white">$25</span>
+                                                    </div>
+                                                    <!-- /price section -->
+                                                    <!-- Description -->
+                                                    <p data-exclusive-merch-descriotion class="fs--14 lh--20 white">Get Jenny’s favourite Mangoes! Buy them while supply last !Get Jenny’s favourite Mangoes! Buy them while supply last !Get Jenny’s favourite Mangoes! Buy them while supply last !</p>
+                                                    <!-- /Description -->
+                                                </div>
+                                                <!-- /Inner -->
+                                            </div>
+                                            <!-- /image info -->
+                                        </div>
+                                        <!-- /Image section -->
+                                    </div>
+                                    <!-- Inner Section -->
+                                </div>
+                                <!-- End Merch Thumbnail Item -->
+                            </div>
+                            <!-- End Media Grid View -->
+                        </div>
+                        <!-- /Best Sellar -->
+                    </div>
+                    <!-- End Grid Content -->
+                </div>
+                <!-- /Inner Body Content -->
+            </div>
+            <!-- /Inner Body Wrapper -->
+        </div>
+        <!-- /Inner wrapper -->
+
+        <!-- Splide JS Plugin File -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.6/dist/js/splide.min.js"></script>
+
+    <script type="text/javascript">
+
+        // Video Carousel Script
+        var SplideVideo = new Splide('#splide-video', {
+            type: 'slide',
+            focus    : 'left',
+            trimSpace: 'move',
+            rewind    : false,
+            Speed: 4000,
+            perPage: 4.5, // Adjust the number of slides per page as needed
+            arrows: false,
+            pagination: false,
+            interval: 3000,
+            perMove: 1,
+            fixedWidth: 323,
+            //drag: false,
+            gap       : 8,
+            lazyLoad: true,
+            breakpoints: {
+                640: { perPage: 1 },
+                768: { perPage: 2 },
+            }
+        }).mount();
+
+        // Merch Carousel Script
+        var SplideVideo = new Splide('#splide-merch', {
+            type: 'slide',
+            focus    : 'left',
+            trimSpace: 'move',
+            rewind    : false,
+            Speed: 4000,
+            perPage: 4.5, // Adjust the number of slides per page as needed
+            arrows: false,
+            pagination: false,
+            interval: 3000,
+            perMove: 1,
+            fixedWidth: 323,
+            //drag: false,
+            gap       : 8,
+            lazyLoad: true,
+            breakpoints: {
+                640: { perPage: 1 },
+                768: { perPage: 2 },
+            }
+        }).mount();
+    </script>
+    </body>
+
+</html>
