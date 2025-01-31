@@ -47,6 +47,9 @@
 </head>
 <style>
     /* Top Bar */
+    html{
+        font-size: 16px;
+    }
     .pad--bottom-1-5 {
         padding-bottom: 1.5rem;
     }
@@ -125,8 +128,7 @@
 
     .bg-card-right {
         background: #000000;
-        box-shadow: 0.25rem 0.25rem 0.25rem 0px rgba(0, 0, 0, 0.15),
-            0.25rem 0.25rem 0px 0px #FFCD29;
+        box-shadow: 0.25rem 0.25rem 0.25rem 0rem rgba(0, 0, 0, 0.15), 4px 4px 0px 0px #FFCD29;
     }
 
     .text-yellow {
@@ -256,26 +258,49 @@
         width: 100%;
         align-items: center;
         gap: -6.875rem;
+        height: 17.5rem;
         max-height: 17.5rem;
         align-self: stretch;
         background: url(../images/referralImage.png) lightgray 50% / cover no-repeat;
         box-shadow: 0 0 0.9375rem 0 rgba(0, 0, 0, 0.50);
     }
 
+    .LeftCard {
+        height: 100%;
+    }
+
+    .RightCard {
+        height: 17.5rem;
+    }
+
     .Card .Image {
         flex: 1 0 0;
         align-self: stretch;
+        width: 50%;
+        /* background-color: linear-gradient(180deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.25) 15%, rgba(0, 0, 0, 0.25) 80%, rgba(0, 0, 0, 0.50) 100%), rgba(255, 255, 255, 0.01); */
         background: url(../images/referralImage.png) lightgray -2.442rem -0.374rem / 163.844% 102.139% no-repeat;
     }
 
+    
     .Frame8923 {
         display: flex;
-        width: 28.1875rem;
+        width: 100%;
+        max-width: 28.1875rem;
         justify-content: flex-end;
         align-items: center;
         flex-shrink: 0;
         align-self: stretch;
         backdrop-filter: blur(3.125rem);
+    }
+
+    .Rectangle15544 {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 70px;
+        flex-shrink: 0;
+        align-self: stretch;
+        fill: linear-gradient(180deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.25) 15%, rgba(0, 0, 0, 0.25) 80%, rgba(0, 0, 0, 0.50) 100%), rgba(255, 255, 255, 0.01);
     }
 
     .Rectangle15545 {
@@ -300,6 +325,7 @@
         align-items: flex-end;
         flex: 1 0 0;
         align-self: stretch;
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.40);
     }
 
     .Frame9036 {
@@ -421,7 +447,7 @@
         display: flex;
         padding: 1rem;
         flex-direction: column;
-        align-items: center;
+        /* align-items: center; */
         gap: 1.5rem;
         width: 100%;
         align-self: stretch;
@@ -615,7 +641,7 @@
 
     /* Popup Styling */
     .AddMediaPanel {
-        display: none;
+        display: block;
         position: absolute;
         top: 0;
         right: 0;
@@ -754,20 +780,15 @@
     .TableHeader {
         display: flex;
         min-height: 2.625rem;
-        /* 42px */
         padding: 0.625rem 0.625rem 0.625rem 1.5rem;
-        /* 10px 10px 10px 24px */
         align-items: center;
         gap: 0.625rem;
-        /* 10px */
         align-self: stretch;
         border-bottom: 1px solid var(--Gray-500, #667085);
     }
 
     .TableHeader .Title {
         display: -webkit-box;
-        width: 10.75rem;
-        /* 172px */
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 1;
         overflow: hidden;
@@ -912,6 +933,7 @@
             align-items: center;
         }
 
+
         .min--width {
             min-width: 40.375rem;
         }
@@ -953,6 +975,10 @@
             min-width: 40.375rem;
         }
 
+        .mar-top-0{
+            margin-top: 0rem;
+        }
+
 
         .Referral_Table {
             width: 100%;
@@ -969,7 +995,6 @@
             gap: 0.5rem;
         }
 
-
         .display-none-mobile {
             display: none;
         }
@@ -979,9 +1004,33 @@
             font-size: 1.5rem;
         }
 
+        /* Styling for PoppUp */
+
         .AddMediaPanel {
             width: 100%;
         }
+
+        
+        .AddMediaPanel .Frame8937{
+            width: 100%;
+        }
+
+        .AddMediaPanel .TableMerch{
+            width: 100%;
+        }
+
+        .amount-alignment{
+            justify-content: flex-end;
+        }
+
+        .amount-alignment .Title{
+            justify-content: flex-end;
+            /* width:0rem; */
+        }
+
+        /* .TableHeader{
+            justify-content: flex-end;
+        } */
     }
 
     /* Mobile Portrait Styles */
@@ -990,25 +1039,81 @@
             min-width: 40.375rem;
         }
 
+        .f-s-m-24{
+            font-size: 1.5rem;
+        }
+
         .table-title {
-            flex-direction: row;
+            flex-direction: column;
             align-items: self-start;
         }
 
+        .LeftCard {
+            min-height: 500px;
+            height: 100%;
+            flex:1;
+        }
+
         .ReferralCards {
+            display: flex;
             flex-direction: column;
+            justify-content: space-between;
+            padding: 0 0.5rem;
+            gap: 1rem;
         }
 
         .Card {
-            flex-direction: row;
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: -62px;
+            box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.50);
+        }
+
+        .OuterCard{
+            width: 100%;
+        }
+
+        .Card .Image{
+            width: 100%;
+        }
+
+        .Card .Image img{
+            height: 230px;
+        }
+
+        .Frame8923 {
+            height: 100%;
+        }
+
+        .Frame1410098646{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            align-self: stretch;
+            backdrop-filter: blur(50px);
         }
 
         .Rectangle15545 {
             display: block;
+            position: absolute;
+            height: 62px;
+            align-self: stretch;
+            left: 0 !important;
+            bottom: 0;
+            width: 100% !important;
+            fill: linear-gradient(270deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.25) 15%, rgba(0, 0, 0, 0.25) 80%, rgba(0, 0, 0, 0.50) 100%), rgba(255, 255, 255, 0.01);
         }
 
         .Rectangle15544 {
             display: none;
+        }
+
+
+        .Referral_Table_Content{
+            
         }
 
 
@@ -6929,7 +7034,7 @@
                         class="flex flex-column pad--40  gap--24 bg--gradient-white pad--top--24-responsive-tablet pad--x--16-responsive-tablet pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait pad--y--0-responsive-mobile pad--y--0-responsive-mobile-portrait">
                         <!-- Top Page Header Section -->
                         <div data-section="page-header"
-                            class="pad--bottom-1-5 pad--x--0-responsive-tablet pad--top--0-responsive-tablet flex flex-column gap--24 pad--8-responsive-mobile pad--8-responsive-mobile-portrait">
+                            class="pad--bottom-1-5 pad--x--0-responsive-tablet pad--top--0-responsive-tablet flex flex-column">
                             <!-- Top Page Title Section -->
                             <div data-section="page-title"
                                 class="w-100 flex gap--24 items-start justify-center justify-between gap--16--responsive-tablet gap--16--responsive-mobile gap--16--responsive-mobile-portrait flex--column-responsive-tablet flex--column-responsive-mobile flex--column-responsive-mobile-portrait display--none-responsive-mobile display--none-responsive-mobile-portrait">
@@ -6943,37 +7048,16 @@
                         <!-- Referal Table Content -->
                         <div data-tabs-content="1" class="h-100">
                             <!-- first tab content items -->
-                            <div class="flex flex-column justify-start items-start gap--16 mt--8-neg active"
+                            <div class="flex flex-column justify-start items-start gap--16 mt--8-neg mar-top-0 active"
                                 data-tabbed-content="recently-tabbed-content" data-target="grid-tab">
                                 <!-- Tabs Content -->
                                 <div
-                                    class="ReferralCards w-100 h-100 flex items-start gap--16 h-[280px] pad--8-responsive-mobile">
+                                    class="ReferralCards w-100 h-100 flex items-start gap--16 pad--8-responsive-mobile">
                                     <!-- Left Card -->
-                                    <div
-                                        class="flex-1 w-50 w--100-responsive-mobile container-height-280 custom-gradient w--100-responsive-tablet">
+                                    <div class="LeftCard OuterCard flex-1 w-50 w--100-responsive-mobile h-[280px] custom-gradient w--100-responsive-tablet">
                                         <div data-layer="card" class="Card">
-                                            <div class="Image">
-                                                <img data-layer="Image" class="" src="" />
-                                            </div>
-                                            <div data-layer="Frame 8923" class="Frame8923">
-                                                <div data-layer="Rectangle 15544" class="Rectangle15544">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="70" height="280"
-                                                        viewBox="0 0 70 280" fill="none">
-                                                        <path d="M70 0V280H0L70 0Z" fill="white" fill-opacity="0.01" />
-                                                        <path d="M70 0V280H0L70 0Z"
-                                                            fill="url(#paint0_linear_11684_404018)"
-                                                            fill-opacity="0.5" />
-                                                        <defs>
-                                                            <linearGradient id="paint0_linear_11684_404018" x1="35"
-                                                                y1="0" x2="35" y2="280" gradientUnits="userSpaceOnUse">
-                                                                <stop />
-                                                                <stop offset="0.15" stop-opacity="0.5" />
-                                                                <stop offset="0.8" stop-opacity="0.5" />
-                                                                <stop offset="1" />
-                                                            </linearGradient>
-                                                        </defs>
-                                                    </svg>
-                                                </div>
+                                            <div class="Image relative">
+                                                <img data-layer="Image" class="relative" src="" />
                                                 <div data-layer="Rectangle 15545" class="Rectangle15545">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="359" height="62"
                                                         viewBox="0 0 359 62" fill="none">
@@ -6993,6 +7077,26 @@
                                                         </defs>
                                                     </svg>
                                                 </div>
+                                                <div data-layer="Rectangle 15544" class="Rectangle15544">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="70" height="280"
+                                                        viewBox="0 0 70 280" fill="none">
+                                                        <path d="M70 0V280H0L70 0Z" fill="white" fill-opacity="0.01" />
+                                                        <path d="M70 0V280H0L70 0Z"
+                                                            fill="url(#paint0_linear_11684_404018)"
+                                                            fill-opacity="0.5" />
+                                                        <defs>
+                                                            <linearGradient id="paint0_linear_11684_404018" x1="35"
+                                                                y1="0" x2="35" y2="280" gradientUnits="userSpaceOnUse">
+                                                                <stop />
+                                                                <stop offset="0.15" stop-opacity="0.5" />
+                                                                <stop offset="0.8" stop-opacity="0.5" />
+                                                                <stop offset="1" />
+                                                            </linearGradient>
+                                                        </defs>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div data-layer="Frame 8923" class="Frame8923">
                                                 <div data-layer="Bottom panel" class="BottomPanel">
                                                     <div data-layer="Attribution card" class="AttributionCard">
                                                         <div data-layer="Frame 9036" class="Frame9036">
@@ -7051,11 +7155,9 @@
                                     </div>
 
                                     <!-- Right Cards -->
-                                    <div
-                                        class="flex-1 w-50 w--100-responsive-mobile h-100 flex justify-between gap--16 flex-column w--100-responsive-tablet">
+                                    <div class="RightCard OuterCard flex-1 w-50 w--100-responsive-mobile h-100 flex justify-between gap--16 flex-column w--100-responsive-tablet">
                                         <!-- Tope Card -->
-                                        <div
-                                            class="bg-card-right br2 flex items-stretch h-140 w--100-responsive-tablet  w--100-responsive-mobile">
+                                        <div class="bg-card-right br2 flex items-stretch h-140 w--100-responsive-tablet  w--100-responsive-mobile">
                                             <div
                                                 class="flex w-25 icon-bg-color-earning flex items-center justify-center relative">
                                                 <div class="relative">
@@ -7086,15 +7188,15 @@
                                             </div>
                                             <div class="flex-1 padd--24 w-75 max-h--140 min--h--140">
                                                 <div class="text-yellow poppins font-size--16 lh--24 fw6">Total Referral
-                                                    Earning</div>
-                                                <div class="text-yellow poppins fw6 f-s-48 lh-60">
+                                                    Earning
+                                                </div>
+                                                <div class="text-yellow poppins fw6 f-s-48 f-s-m-24 lh-60">
                                                     4321.09 USD
                                                 </div>
                                             </div>
                                         </div>
                                         <!-- Bottom card -->
-                                        <div
-                                            class="bg-card-right br2 flex items-stretch  w--100-responsive-tablet w--100-responsive-mobile">
+                                        <div class="bg-card-right br2 flex items-stretch  w--100-responsive-tablet w--100-responsive-mobile">
                                             <div class="flex-1 pa4 w-75">
                                                 <div>
                                                     <p
@@ -7179,7 +7281,7 @@
                                 </div>
                                 <!-- Table Referrals  -->
                                 <div data-tabbed-content="tabbed-content-first-tab" data-target="first-tab"
-                                    class="h-100 flex flex-column justify-start items-start gap--16 flex-auto mt--8-neg active">
+                                    class="Referral_Table_Content h-100 flex flex-column justify-start items-start gap--16 flex-auto mt--8-neg active">
                                     <!-- Order Data Section -->
                                     <div class="flex flex-column gap--16 flex-auto w-100">
 
@@ -8282,7 +8384,7 @@
                                 </div>
                             </div>
                             <div data-layer="Sub-date recieved" class="SubDateRecieved">
-                                <div data-layer="table/header" class="TableHeader">
+                                <div data-layer="table/header" class="TableHeader amount-alignment">
                                     <div data-layer="Title" class="Title">Amount</div>
                                 </div>
                                 <div data-layer="Frame 8970" class="Frame8970">
