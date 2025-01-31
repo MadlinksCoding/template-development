@@ -1249,6 +1249,16 @@ html {
   filter: brightness(0) saturate(100%) invert(75%) sepia(5%) saturate(464%) hue-rotate(183deg) brightness(95%) contrast(91%)
 }
 
+.filter--col--brilliant-rose {
+  -webkit-filter: brightness(0) saturate(100%) invert(50%) sepia(57%) saturate(2062%) hue-rotate(302deg) brightness(101%) contrast(97%);
+  filter: brightness(0) saturate(100%) invert(50%) sepia(57%) saturate(2062%) hue-rotate(302deg) brightness(101%) contrast(97%)
+}
+
+.filter--col--led-pink {
+  -webkit-filter: brightness(0) saturate(100%) invert(21%) sepia(98%) saturate(5598%) hue-rotate(328deg) brightness(98%) contrast(117%);
+  filter: brightness(0) saturate(100%) invert(21%) sepia(98%) saturate(5598%) hue-rotate(328deg) brightness(98%) contrast(117%)
+}
+
 .filter--blur--2 {
   filter: blur(2px);
   -webkit-filter: blur(2px);
@@ -1422,6 +1432,10 @@ html {
   text-shadow: 0 0 4px rgba(0, 0, 0, .4)
 }
 
+.text--sh--black--6--100 {
+  text-shadow: 0 0 6px #000
+}
+
 .w--max-content {
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -1568,6 +1582,10 @@ html {
   width: 64rem
 }
 
+.mw--104 {
+  min-width: 6.5rem
+}
+
 .max--w--175 {
   max-width: 10.938rem
 }
@@ -1658,6 +1676,10 @@ html {
 
 .h--255 {
   height: 15.938rem
+}
+
+.h--316 {
+  height: 19.75rem
 }
 
 .h--324 {
@@ -2040,19 +2062,9 @@ html {
   z-index: -1
 }
 
-.bg--blur--2 {
-  -webkit-backdrop-filter: blur(2px);
-  backdrop-filter: blur(2px)
-}
-
 .bg--blur--3 {
   -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px)
-}
-
-.bg--blur--5 {
-  -webkit-backdrop-filter: blur(5px);
-  backdrop-filter: blur(5px)
 }
 
 .bg--blur--15 {
@@ -2379,6 +2391,19 @@ html {
   width: 25.813rem;
   height: 22.813rem;
   z-index: 9
+}
+
+[data-cover-image-fan]:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(25%, rgba(221, 216, 223, 0)), to(#ddd8df));
+  background: linear-gradient(180deg, rgba(221, 216, 223, 0) 25%, #ddd8df 100%)
 }
 
 [data-container-bg-fixed]:-moz-read-only {
