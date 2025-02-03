@@ -345,11 +345,12 @@
         width: 70px;
         flex-shrink: 0;
         align-self: stretch;
-        fill: linear-gradient(180deg,
+        /* fill: linear-gradient(180deg,
                 rgba(0, 0, 0, 0.50) 0%,
                 rgba(0, 0, 0, 0.25) 15%,
                 rgba(0, 0, 0, 0.25) 80%,
-                rgba(0, 0, 0, 0.50) 100%), rgba(255, 255, 255, 0.01);
+                rgba(0, 0, 0, 0.50) 100%), rgba(255, 255, 255, 0.01); */
+                z-index: 2;
     }
 
 
@@ -367,6 +368,7 @@
         background: linear-gradient(180deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.25) 15%, rgba(0, 0, 0, 0.25) 80%, rgba(0, 0, 0, 0.50) 100%), rgba(255, 255, 255, 0.01);
         /* background: #a57899; */
         position: relative;
+        z-index: 2;
     }
 
     .BottomPanel .AttributionCard {
