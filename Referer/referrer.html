@@ -27,7 +27,7 @@
         href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/customTachyons.css" />
 
     <!-- Dashboard Sidebar Custom Style -->
-    <link rel="stylesheet" href="../dashboard-v2/assets/css/dashboard-styles-desktop.css" />
+    <link rel="stylesheet" href="https://madlinkscoding.github.io/template-development/dashboard-v2/assets/css/dashboard-styles-desktop.css" />
 
     <!-- Tablet Stylesheet -->
     <link rel="stylesheet"
@@ -305,7 +305,7 @@
         align-self: stretch;
         /* background: url(../images/referralImage.png) lightgray 50% / cover no-repeat; */
         background: #a57899;
-        /* box-shadow: 0 0 0.9375rem 0 rgba(0, 0, 0, 0.50); */
+        box-shadow: 0 0 0.9375rem 0 rgba(0, 0, 0, 0.50);
     }
 
     .LeftCard {
@@ -341,6 +341,7 @@
         position: absolute;
         top: 0;
         right: 0;
+        bottom:0;
         width: 70px;
         flex-shrink: 0;
         align-self: stretch;
@@ -376,7 +377,6 @@
         align-items: flex-end;
         flex: 1 0 0;
         align-self: stretch;
-        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.40);
         position: relative;
     }
 
@@ -968,8 +968,9 @@
     @media screen and (min-width: 48rem) and (max-width: 85.3125rem) {
         .ReferralCards {
             flex-direction: column;
-            align-items: center;
+            /* align-items: center; */
         }
+        .w--100
 
 
         .min--width {
@@ -987,13 +988,12 @@
     }
 
     /* Mobile Styles */
-    @media screen and (min-width: 30rem) and (max-width: 48rem) {
+    @media screen and (min-width: 30rem) and (max-width: 47.9375rem) {
         .ReferralCards {
             flex-direction: column;
         }
 
         .Frame8923{
-            /* width: 100%; */
             backdrop-filter:none;
         }
 
@@ -1089,6 +1089,15 @@
             min-width: 40.375rem;
         }
 
+        .Card {
+            display: flex;
+            width: 100%;
+            flex-direction: column !important;
+            align-items: flex-start;
+            gap: -62px;
+            /* box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.50); */
+        }
+
         .f-s-m-24 {
             font-size: 1.5rem;
         }
@@ -1111,16 +1120,6 @@
             padding: 0 0.5rem;
             gap: 1rem;
         }
-
-        .Card {
-            display: flex;
-            width: 100%;
-            flex-direction: column !important;
-            align-items: flex-start;
-            gap: -62px;
-            /* box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.50); */
-        }
-
         
 
         .BottomPanel {
@@ -7162,18 +7161,16 @@
                             <div class="flex flex-column justify-start items-start gap--16 mt--8-neg mar-top-0 active"
                                 data-tabbed-content="recently-tabbed-content" data-target="grid-tab">
                                 <!-- Tabs Content -->
-                                <div
-                                    class="ReferralCards flex--column-responsive-mobile w-100 h-100 flex items-start gap--16 pad--8-responsive-mobile">
+                                <div class="ReferralCards w-100 h-100 flex items-start gap--16 pad--8-responsive-mobile">
                                     <!-- Left Card -->
-                                    <div
-                                        class="LeftCard OuterCard flex-1 w-50 w--100-responsive-mobile h-[280px] custom-gradient w--100-responsive-tablet">
+                                    <div class="LeftCard OuterCard flex-1 w-50 w--100-responsive-mobile h-[280px] custom-gradient w--100-responsive-tablet">
                                         <div data-layer="card" class="Card">
                                             <div class="Image relative fit--cover">
                                                 <img data-layer="Image" class="relative" src="" />
                                                 <div data-layer="Rectangle 15544" class="Rectangle15544">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="70" height="280"
-                                                        viewBox="0 0 70 280" fill="none">
-                                                        <path d="M70 0V280H0L70 0Z" fill="#a57899" fill-opacity="0.8" />
+                                                        viewBox="0 0 69 280" fill="none">
+                                                        <path d="M70 0V280H0L70 0Z" fill="#a57899" fill-opacity="0.9" />
                                                         <path d="M70 0V280H0L70 0Z"
                                                             fill="url(#paint0_linear_11684_404018)"
                                                             fill-opacity="0.5" />
