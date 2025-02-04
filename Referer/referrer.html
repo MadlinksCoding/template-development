@@ -965,147 +965,17 @@
     }
 
 
-
-    /* Tablet Styles */
-    @media screen and (min-width: 768px) and (max-width: 1365px)  {
-        .ReferralCards {
-            flex-direction: column;
-            /* align-items: center; */
-        }
-        .w--100
-
-
-        .min--width {
-            min-width: 40.375rem;
-        }
-
-        .pad--y--24 {
-            padding-top: 1.5rem;
-            padding-bottom: 1.5rem
-        }
-
-        .display-none-tablet {
-            display: none;
-        }
-    }
-
-    /* Mobile Styles */
-    @media screen and (min-width: 480px) and (max-width: 767px) {
-        .ReferralCards {
-            flex-direction: column;
-        }
-
-        .Frame8923{
-            backdrop-filter:none;
-        }
-
-        .Frame9036 .Text {
-            font-size: 1.25rem !important;
-            line-height: 1.875rem !important;
-        }
-        .mobile-width-95 {
-            width: 5.9375rem !important;
-        }
-
-        .mobile-width-140 {
-            width: 8.75rem !important;
-        }
-
-        .mobile-width-198 {
-            width: 12.375rem !important;
-        }
-
-        .mobile-width-133 {
-            width: 8.3125rem !important;
-        }
-
-        .min--width {
-            min-width: 40.375rem !important;
-        }
-
-        .mar-top-0 {
-            margin-top: 0rem !important;
-        }
-
-        .AttributionCard{
-            /* overflow: hidden; */
-        }
-
-
-        .Referral_Table {
-            width: 100%;
-        }
-
-        .ad--x--8-responsive-tablet {
-            padding-left: 0.5rem;
-            padding-right: 0.5rem;
-        }
-
-        .table-title {
-            flex-direction: column;
-            align-items: self-start;
-            gap: 0.5rem;
-        }
-
-        .display-none-mobile {
-            display: none;
-        }
-
-
-        .f-s-48 {
-            font-size: 1.5rem;
-        }
-
-        /* Styling for PoppUp */
-
-        .AddMediaPanel {
-            width: 100%;
-        }
-
-
-        .AddMediaPanel .Frame8937 {
-            width: 100%;
-        }
-
-        .AddMediaPanel .TableMerch {
-            width: 100%;
-        }
-
-        .amount-alignment {
-            justify-content: flex-end;
-        }
-
-        .amount-alignment .Title {
-            justify-content: flex-end;
-            /* width:0rem; */
-        }
-
-        /* .TableHeader{
-            justify-content: flex-end;
-        } */
-    }
-
-    /* For Copy URL */
-    @media screen and (min-width: 478px) and (max-width: 635px) {
-        .Frame9036 .Text {
-            font-weight: 500;
-            line-height: 1.5rem;
-            font-size: 1rem;
-        }
-        .Frame9036 .Text_Descripton {
-            max-height: 80px;
-            overflow: hidden;
-        }
-
-         .AttributionCard .Frame9036 .InputField {
-            bottom: 1rem; 
-            right: 1rem; 
-        }
-    }
-
+    /* Responsive Styling... */
 
     /* Mobile Portrait Styles */
-    @media screen and (max-width: 479px) {
+    @media screen and (max-width: 479.98px) {
+            /* [data-sidebar-main-wrapper][data-is-active=false]{
+                visibility: hidden;
+                display: none;
+                padding: 0.5rem;
+            } */
+
+
         .min--width {
             min-width: 40.375rem;
         }
@@ -1258,6 +1128,155 @@
 
 
     }
+
+    /* Mobile Styles */
+    @media screen and (min-width: 480px) and (max-width: 767.98px) {
+        .ReferralCards {
+            flex-direction: column;
+        }
+
+        .Frame8923{
+            backdrop-filter:none;
+        }
+
+        .Frame9036 .Text {
+            font-size: 1.25rem !important;
+            line-height: 1.875rem !important;
+        }
+        .mobile-width-95 {
+            width: 5.9375rem !important;
+        }
+
+        .mobile-width-140 {
+            width: 8.75rem !important;
+        }
+
+        .LeftCard{
+            width: 100%;
+        }
+
+        .RightCard{
+            width: 100%;
+        }
+
+        .mobile-width-198 {
+            width: 12.375rem !important;
+        }
+
+        .mobile-width-133 {
+            width: 8.3125rem !important;
+        }
+
+        .min--width {
+            min-width: 40.375rem !important;
+        }
+
+        .mar-top-0 {
+            margin-top: 0rem !important;
+        }
+
+        .AttributionCard{
+            /* overflow: hidden; */
+        }
+
+
+        .Referral_Table {
+            width: 100%;
+        }
+
+        .ad--x--8-responsive-tablet {
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+        }
+
+        .table-title {
+            flex-direction: column;
+            align-items: self-start;
+            gap: 0.5rem;
+        }
+
+        .display-none-mobile {
+            display: none;
+        }
+
+
+        .f-s-48 {
+            font-size: 1.5rem;
+        }
+
+        /* Styling for PoppUp */
+
+        .AddMediaPanel {
+            width: 100%;
+        }
+
+
+        .AddMediaPanel .Frame8937 {
+            width: 100%;
+        }
+
+        .AddMediaPanel .TableMerch {
+            width: 100%;
+        }
+
+        .amount-alignment {
+            justify-content: flex-end;
+        }
+
+        .amount-alignment .Title {
+            justify-content: flex-end;
+            /* width:0rem; */
+        }
+
+        /* .TableHeader{
+            justify-content: flex-end;
+        } */
+    }
+
+     /* For Copy URL */
+    @media screen and (min-width: 480px) and (max-width: 635px) {
+        .Frame9036 .Text {
+            font-weight: 500;
+            line-height: 1.5rem;
+            font-size: 1rem;
+        }
+        .Frame9036 .Text_Descripton {
+            max-height: 80px;
+            overflow: hidden;
+        }
+
+         .AttributionCard .Frame9036 .InputField {
+            bottom: 1rem; 
+            right: 1rem; 
+        }
+    }
+
+
+    /* Tablet Styles */
+    @media screen and (min-width: 768px) and (max-width: 1365.98px)  {
+        .ReferralCards {
+            flex-direction: column;
+            /* align-items: center; */
+        }
+        .w--100
+
+
+        .min--width {
+            min-width: 40.375rem;
+        }
+
+        .pad--y--24 {
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem
+        }
+
+        .display-none-tablet {
+            display: none;
+        }
+    }
+
+
+
 </style>
 
 <body>
@@ -7164,7 +7183,7 @@
 
         <!-- Main Body Wrapper -->
         <div data-dashboard-template-main data-dashboard-template-main-background
-            class="relative w-100 bg--col--athens-gray-2">
+            class="relative w-100 ">
             <!-- Main Body Inner Wrapper -->
             <div class="h-100">
                 <!-- main section -->
