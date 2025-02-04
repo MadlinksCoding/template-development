@@ -719,7 +719,7 @@
 
     /* Popup Styling */
     .AddMediaPanel {
-        display: block;
+        display: none;
         position: absolute;
         top: 0;
         right: 0;
@@ -986,7 +986,6 @@
     }
 
 /* global use of classes */
-
     .gap--32{
         gap: 2rem;
     }
@@ -1299,6 +1298,7 @@
     /* Tablet Styles */
     @media screen and (min-width: 768px) and (max-width: 1365.98px)  {
         .ReferralCards {
+            display:flex;
             flex-direction: column;
             /* align-items: center; */
         }
@@ -7239,11 +7239,11 @@
                 <!-- main section -->
                 <main data-dashboard-page="" data-section="main" class="flex flex-column flex-max relative z-1">
                     <!-- Inner Container -->
-                     <!-- Top Page Header Section -->
+                    <!-- Top Page Header Section -->
                         <div data-section="page-header" class="pad--x--0-responsive-tablet pad--top--0-responsive-tablet flex flex-column">
                             <!-- Top Page Title Section -->
                             <div data-section="page-title"
-                                class="w-100 flex pad--x--40 padding--top-40 padding--bottom-24 items-start  justify-center justify-between gap--16--responsive-tablet gap--16--responsive-mobile gap--16--responsive-mobile-portrait flex--column-responsive-tablet flex--column-responsive-mobile flex--column-responsive-mobile-portrait display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                class="w-100 flex pad--x--40 padding--top-40 pad--x--16-responsive-tablet padding--bottom-24 items-start  justify-center justify-between gap--16--responsive-tablet gap--16--responsive-mobile gap--16--responsive-mobile-portrait flex--column-responsive-tablet flex--column-responsive-mobile flex--column-responsive-mobile-portrait display--none-responsive-mobile display--none-responsive-mobile-portrait">
                                 <h1 class="poppins fs--30 lh--38 fw5 col--fiord m--0">
                                     Referrals
                                 </h1>
