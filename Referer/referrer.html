@@ -32,12 +32,12 @@
     <!-- Tablet Stylesheet -->
     <link rel="stylesheet"
         href="https://madlinkscoding.github.io/template-development/dashboard-v2/assets/css/dashboard-styles-tablet.css"
-        media="screen and (min-width: 768px) and (max-width: 1365.98px)">
+        media="screen and (min-width: 768.2px) and (max-width: 1365.98px)">
 
     <!-- Mobile Stylesheet -->
     <link rel="stylesheet"
         href="https://madlinkscoding.github.io/template-development/dashboard-v2/assets/css/dashboard-styles-mobile.css"
-        media="screen and (min-width: 480px) and (max-width: 767.98px)">
+        media="screen and (min-width: 480px) and (max-width: 768px)">
 
     <!-- Mobile Portrait Stylesheet -->
     <link rel="stylesheet"
@@ -364,7 +364,7 @@
                 rgba(0, 0, 0, 0.25) 15%,
                 rgba(0, 0, 0, 0.25) 80%,
                 rgba(0, 0, 0, 0.50) 100%), rgba(255, 255, 255, 0.01); */
-                z-index: 2;
+                z-index: 1;
     }
 
 
@@ -382,7 +382,7 @@
         background: linear-gradient(180deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.25) 15%, rgba(0, 0, 0, 0.25) 80%, rgba(0, 0, 0, 0.50) 100%), rgba(255, 255, 255, 0.01);
         /* background: #a57899; */
         position: relative;
-        z-index: 2;
+        z-index: 1;
     }
 
     .BottomPanel .AttributionCard {
@@ -1180,16 +1180,6 @@
 
     /* Mobile Styles */
     @media screen and (min-width: 480px) and (max-width: 767.98px) {
-        /* [data-sidebar-main-wrapper][data-is-active=false]{
-                visibility: hidden;
-                display: none;
-                padding: 0.5rem;
-            } */
-
-        /* [data-mobile-header]{
-            display: flex;
-            flex-direction: column;
-        } */
         .ReferralCards {
             display: flex;
             flex-direction: column;
@@ -8270,7 +8260,10 @@
 
                     </div>
                     <!-- End Inner Container -->
+                </main>
+                <!-- /main section -->
 
+                
                     <!-- popup container started Here -->
                     <div data-layer="add media panel" class="AddMediaPanel">
                         <div data-layer="Frame 8937" class="Frame8937">
@@ -8493,10 +8486,6 @@
                             </div>
                         </div>
                     </div>
-
-
-                </main>
-                <!-- /main section -->
             </div>
             <!-- /Main Body Inner Wrapper -->
         </div>
