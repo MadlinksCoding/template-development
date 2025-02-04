@@ -32,17 +32,17 @@
     <!-- Tablet Stylesheet -->
     <link rel="stylesheet"
         href="https://madlinkscoding.github.io/template-development/dashboard-v2/assets/css/dashboard-styles-tablet.css"
-        media="screen and (min-width: 768px) and (max-width: 1365px)">
+        media="screen and (min-width: 768px) and (max-width: 1365.98px)">
 
     <!-- Mobile Stylesheet -->
     <link rel="stylesheet"
         href="https://madlinkscoding.github.io/template-development/dashboard-v2/assets/css/dashboard-styles-mobile.css"
-        media="screen and (min-width: 480px) and (max-width: 767px)">
+        media="screen and (min-width: 480px) and (max-width: 767.98px)">
 
     <!-- Mobile Portrait Stylesheet -->
     <link rel="stylesheet"
         href="https://madlinkscoding.github.io/template-development/dashboard-v2/assets/css/dashboard-styles-mobile-portrait.css"
-        media="screen and (max-width: 479px)">
+        media="screen and (max-width: 479.98px)">
 </head>
 <style>
     /* Top Bar */
@@ -61,7 +61,6 @@
     .f-s-48 {
         font-size: 3rem;
     }
-
 
     .lh-60 {
         line-height: 60px;
@@ -270,11 +269,6 @@
     .padding--bottom-24{
         padding-bottom: 1.5rem;
     }
-
-    .padding--top-40{
-        padding-top: 40px;
-    }
-
 
 
     
@@ -720,14 +714,15 @@
     /* Popup Styling */
     .AddMediaPanel {
         display: block;
-        position: absolute;
+        position: fixed; 
+        /* position: absolute; */
         top: 0;
         right: 0;
-        height: 100%;
+        height: 100vh;
         background: rgba(249, 250, 251, 0.90);
         width: 27rem;
         backdrop-filter: blur(50px);
-        z-index: 9999;
+        z-index: 2;
     }
 
     .AddMediaPanel .Frame8937 {
@@ -832,6 +827,13 @@
         height: 45.0625rem;
         align-items: center;
         flex-shrink: 0;
+        
+        overflow-y: auto;
+        overscroll-behavior: contain;
+    }
+
+    .selected_row{
+        background: rgba(255, 255, 255, 0.10) !important;   
     }
 
     .TableMerch .SubDateRecieved {
@@ -853,6 +855,19 @@
         align-self: stretch;
         border-bottom: 1px solid var(--Gray-500, #667085);
     }
+
+    .amount-alignment {
+        justify-content: flex-end;
+    }
+
+    .padding-right-24 {
+        padding-right: 1.5rem;
+    }
+
+    .padding-left-10{
+        padding-left: 0.625rem;
+    }
+
 
     .TableHeader .Title {
         display: -webkit-box;
@@ -876,6 +891,8 @@
         align-self: stretch;
         background: rgba(255, 255, 255, 0.40);
     }
+
+    
 
     .Frame8969 .ModelDisplay {
         display: flex;
@@ -1163,11 +1180,11 @@
 
     /* Mobile Styles */
     @media screen and (min-width: 480px) and (max-width: 767.98px) {
-        [data-sidebar-main-wrapper][data-is-active=false]{
+        /* [data-sidebar-main-wrapper][data-is-active=false]{
                 visibility: hidden;
                 display: none;
                 padding: 0.5rem;
-            }
+            } */
 
         /* [data-mobile-header]{
             display: flex;
@@ -1268,7 +1285,6 @@
 
         .amount-alignment .Title {
             justify-content: flex-end;
-            /* width:0rem; */
         }
 
         /* .TableHeader{
@@ -7240,15 +7256,17 @@
                 <main data-dashboard-page="" data-section="main" class="flex flex-column flex-max">
                     <!-- Inner Container -->
                     <!-- Top Page Header Section -->
-                        <div data-section="page-header" class="pad--x--0-responsive-tablet pad--top--0-responsive-tablet flex flex-column">
-                            <!-- Top Page Title Section -->
-                            <div data-section="page-title"
-                                class="w-100 flex pad--x--40 padding--top-40 pad--x--16-responsive-tablet padding--bottom-24 items-start  justify-center justify-between gap--16--responsive-tablet gap--16--responsive-mobile gap--16--responsive-mobile-portrait flex--column-responsive-tablet flex--column-responsive-mobile flex--column-responsive-mobile-portrait display--none-responsive-mobile display--none-responsive-mobile-portrait">
-                                <h1 class="poppins fs--30 lh--38 fw5 col--fiord m--0">
-                                    Referrals
-                                </h1>
-                            </div>
+                    <div data-section="page-header" class="pad--top--0-responsive-tablet flex flex-column">
+                        <!-- Top Page Title Section -->
+                        <div data-section="page-title"
+                            class="w-100 flex pad--x--40 pad--top--40 pad--top--24-responsive-tablet pad--x--16-responsive-tablet padding--bottom-24  items-start  justify-center justify-between gap--16--responsive-tablet gap--16--responsive-mobile gap--16--responsive-mobile-portrait flex--column-responsive-tablet flex--column-responsive-mobile flex--column-responsive-mobile-portrait display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                            <h1 class="poppins fs--30 lh--38 fw5 col--fiord m--0">
+                                Referrals
+                            </h1>
                         </div>
+                    </div>
+
+                    <!-- Page Content Section -->
                     <div data-section="inner-container" data-tabs-section="1"
                         class="flex flex-column pad--x--40 pad--bottom--40 gap--32 bg--gradient-white pad--top--24-responsive-tablet pad--x--16-responsive-tablet pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait pad--y--0-responsive-mobile pad--y--0-responsive-mobile-portrait">
                         
@@ -7257,10 +7275,10 @@
                         <!-- Referal Table Content -->
                         <div data-tabs-content="1" class="h-100">
                             <!-- first tab content items -->
-                            <div class="flex flex-column justify-start items-start gap--16 mt--8-neg mar-top-0 active"
+                            <div class="flex flex-column justify-start items-start gap--16 mt--8-neg mar-top-0 active border-box"
                                 data-tabbed-content="recently-tabbed-content" data-target="grid-tab">
                                 <!-- Tabs Content -->
-                                <div class="ReferralCards w-100 h-100 flex items-start gap--16 pad--8-responsive-mobile">
+                                <div class="ReferralCards w-100 h-100 flex items-start gap--16 pad--8-responsive-mobile w--100-responsive-tablet">
                                     <!-- Left Card -->
                                     <div class="LeftCard OuterCard flex-1 w-50 w--100-responsive-mobile h-[280px] custom-gradient w--100-responsive-tablet">
                                         <div data-layer="card" class="Card">
@@ -7367,8 +7385,7 @@
                                     <div class="RightCard OuterCard flex-1 w-50 w--100-responsive-mobile h-100 flex justify-between gap--16 flex-column w--100-responsive-tablet">
                                         <!-- Tope Card -->
                                         <div class="bg-card-right min--h-140 flex items-stretch h-140 w--100-responsive-tablet  w--100-responsive-mobile">
-                                            <div
-                                                class="flex w-25 icon-bg-color-earning flex items-center justify-center relative">
+                                            <div class="flex w-25 icon-bg-color-earning flex items-center justify-center relative">
                                                 <div class="relative">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56"
                                                         viewBox="0 0 56 56" fill="none">
@@ -7408,8 +7425,7 @@
                                         <div class="bg-card-right h--124 flex items-stretch h-[124px]  w--100-responsive-tablet w--100-responsive-mobile">
                                             <div class="bg-card-right-bottom flex-1 w-75">
                                                 <div>
-                                                    <p
-                                                        class="white poppins font-size--16 font-style-normal line-height--24">
+                                                    <p class="white poppins font-size--16 font-style-normal line-height--24">
                                                         Your Referral Earning this Month
                                                     </p>
                                                     <p
@@ -8328,7 +8344,7 @@
                                                                         <use xlink:href="#image0_12722_1368" transform="matrix(0.00322472 0 0 0.00317496 -0.861194 -0.0153386)"/>
                                                                     </pattern>
                                                                     <image id="image0_12722_1368" width="100%" height="100%" xlink:href="https://madlinkscoding.github.io/template-development/images/Vector.png" style="object-fit: cover;" />
-                                                                </svg>
+                                            </svg>
                                         </div>
                                         <div data-layer="list" class="List">
                                             <div data-layer="Frame 9133" class="Frame9133">
@@ -8356,10 +8372,10 @@
                                                     <div data-layer="Vector" class="Vector"></div>
                                                 </div>
                                             </div>
-                                            <div data-layer="@sammisjelly187" class="Sammisjelly187">@jennya</div>
+                                            <div data-layer="@sammisjelly187" class="Sammisjelly187 Poppins">@jennya</div>
                                         </div>
                                     </div>
-                                    <div data-layer="model display" class="ModelDisplay">
+                                    <div data-layer="model display" class="ModelDisplay selected_row">
                                         <div data-layer="Frame 1410098583" class="Frame1410098583">
                                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38" height="36" viewBox="0 0 38 36" fill="none">
                                                                     <path d="M37.8202 20.0051C37.8202 28.9823 28.7518 36 19.3645 36C9.93159 36 0.179688 28.9823 0.179688 20.0051C0.179688 10.9823 9.93159 0 19.3645 0C28.7518 0 37.8202 10.9823 37.8202 20.0051Z" fill="#FF0066"/>
@@ -8372,9 +8388,9 @@
                                                                         <pattern id="pattern1_12722_169" patternContentUnits="objectBoundingBox" width="1" height="1">
                                                                         <use xlink:href="#image1_12722_169" transform="matrix(0.00118537 0 0 0.00123938 -2.037 -0.127255)"/>
                                                                         </pattern>
-                                                                        <image id="image0_12722_169" width="1290" height="877" xlink:href="https://madlinkscoding.github.io/template-development/images/Vector2.png" />
+                                                                        <image id="image0_12722_169" width="100%" height="100%" xlink:href="https://madlinkscoding.github.io/template-development/images/Vector2.png" />
                                                                     </defs>
-                                                                </svg>
+                                            </svg>
                                         </div>
                                         <div data-layer="list" class="List">
                                             <div data-layer="Frame 9133" class="Frame9133">
@@ -8402,7 +8418,7 @@
                                                     <div data-layer="Vector" class="Vector"></div>
                                                 </div>
                                             </div>
-                                            <div data-layer="@sammisjelly187" class="Sammisjelly187">@jennyj</div>
+                                            <div data-layer="@sammisjelly187" class="Sammisjelly187 Poppins">@jennyj</div>
                                         </div>
                                     </div>
                                     <div data-layer="model display" class="ModelDisplay">
@@ -8418,7 +8434,7 @@
                                                                         <pattern id="pattern1_12722_2177" patternContentUnits="objectBoundingBox" width="1" height="1">
                                                                         <use xlink:href="#image1_12722_2177" transform="matrix(0.0010376 0 0 0.00102723 -1.96875 -0.110507)"/>
                                                                         </pattern>
-                                                                        <image id="image0_12722_2177" width="1290" height="877" xlink:href="https://madlinkscoding.github.io/template-development/images/vector5.png" />
+                                                                        <image id="image0_12722_2177" width="100%" height="100%" xlink:href="https://madlinkscoding.github.io/template-development/images/vector5.png" />
                                                                     </defs>
                                                                 </svg>
                                         </div>
@@ -8454,7 +8470,7 @@
                                 </div>
                             </div>
                             <div data-layer="Sub-date recieved" class="SubDateRecieved">
-                                <div data-layer="table/header" class="TableHeader amount-alignment">
+                                <div data-layer="table/header" class="TableHeader amount-alignment padding-right-24 padding-left-10">
                                     <div data-layer="Title" class="Title">Amount</div>
                                 </div>
                                 <div data-layer="Frame 8970" class="Frame8970">
@@ -8463,7 +8479,7 @@
                                             <div data-layer="Title" class="Title">USD$ 123.12</div>
                                         </div>
                                     </div>
-                                    <div data-layer="table/cell" class="TableCell">
+                                    <div data-layer="table/cell" class="TableCell selected_row">
                                         <div data-layer="Frame 8860" class="Frame8860">
                                             <div data-layer="Title" class="Title">USD$ 123.12</div>
                                         </div>
@@ -8494,8 +8510,7 @@
     </script>
     <!-- End SVG Image Render -->
     <!-- Nice Select JS -->
-    <script type="text/javascript"
-        src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/FINAL/js/nice-select.js"></script>
+    <script type="text/javascript" src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/FINAL/js/nice-select.js"></script>
 
     <!-- Tab Element Script -->
     <script src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/FINAL/js/pageElements.js?ver=2905361574"
