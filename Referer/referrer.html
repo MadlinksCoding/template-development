@@ -727,6 +727,7 @@
         background: rgba(249, 250, 251, 0.90);
         width: 27rem;
         backdrop-filter: blur(50px);
+        z-index: 9999;
     }
 
     .AddMediaPanel .Frame8937 {
@@ -1163,6 +1164,16 @@
 
     /* Mobile Styles */
     @media screen and (min-width: 480px) and (max-width: 767.98px) {
+        [data-sidebar-main-wrapper][data-is-active=false]{
+                visibility: hidden;
+                display: none;
+                padding: 0.5rem;
+            }
+
+        /* [data-mobile-header]{
+            display: flex;
+            flex-direction: column;
+        } */
         .ReferralCards {
             display: flex;
             flex-direction: column;
