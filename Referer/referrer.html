@@ -316,13 +316,33 @@
         height: 17.5rem;
     }
 
-    .Card .Image {
+    /* .Card .Image {
+    flex: 1 0 0;
+    align-self: stretch;
+    width: 100%;
+    background: 
+        linear-gradient(180deg, 
+            rgba(0, 0, 0, 0.50) 0%, 
+            rgba(0, 0, 0, 0.25) 15%, 
+            rgba(0, 0, 0, 0.25) 80%, 
+            rgba(0, 0, 0, 0.50) 100%
+        ),
+        url(../images/referral_image.png) center/cover no-repeat;
+    } */
+
+
+    .Card .Image{
         flex: 1 0 0;
         align-self: stretch;
-        width: 50%;
-        /* background-color: linear-gradient(180deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.25) 15%, rgba(0, 0, 0, 0.25) 80%, rgba(0, 0, 0, 0.50) 100%), rgba(255, 255, 255, 0.01); */
-        background: url(../images/referralImage.png) lightgray 50% / cover no-repeat;
+        width: 100%;
+        height: 280px;
         object-fit: cover;
+    }
+
+    .Card .Image img {
+        width: 100%;
+        height: 100%;
+        /* object-fit: cover; */
     }
 
 
@@ -964,6 +984,18 @@
         display: flex;
     }
 
+/* global use of classes */
+
+    .gap--32{
+        gap: 2rem;
+    }
+
+    .pad--top-24{
+        padding-top: 1.5rem;
+    }
+
+
+
 
     /* Responsive Styling... */
 
@@ -1132,6 +1164,7 @@
     /* Mobile Styles */
     @media screen and (min-width: 480px) and (max-width: 767.98px) {
         .ReferralCards {
+            display: flex;
             flex-direction: column;
         }
 
@@ -7189,18 +7222,19 @@
                 <!-- main section -->
                 <main data-dashboard-page="" data-section="main" class="flex flex-column flex-max relative z-1">
                     <!-- Inner Container -->
-                    <div data-section="inner-container" data-tabs-section="1"
-                        class="flex flex-column pad--x--40 padding--bottom-24  pad--top--40 pad--bottom--40 gap--24 bg--gradient-white pad--top--24-responsive-tablet pad--x--16-responsive-tablet pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait pad--y--0-responsive-mobile pad--y--0-responsive-mobile-portrait">
-                        <!-- Top Page Header Section -->
+                     <!-- Top Page Header Section -->
                         <div data-section="page-header" class="pad--x--0-responsive-tablet pad--top--0-responsive-tablet flex flex-column">
                             <!-- Top Page Title Section -->
                             <div data-section="page-title"
-                                class="w-100 flex gap--24 padding--bottom-24 items-start  justify-center justify-between gap--16--responsive-tablet gap--16--responsive-mobile gap--16--responsive-mobile-portrait flex--column-responsive-tablet flex--column-responsive-mobile flex--column-responsive-mobile-portrait display--none-responsive-mobile display--none-responsive-mobile-portrait">
+                                class="w-100 flex pad--x--40 padding--top-40 padding--bottom-24 items-start  justify-center justify-between gap--16--responsive-tablet gap--16--responsive-mobile gap--16--responsive-mobile-portrait flex--column-responsive-tablet flex--column-responsive-mobile flex--column-responsive-mobile-portrait display--none-responsive-mobile display--none-responsive-mobile-portrait">
                                 <h1 class="poppins fs--30 lh--38 fw5 col--fiord m--0">
                                     Referrals
                                 </h1>
                             </div>
                         </div>
+                    <div data-section="inner-container" data-tabs-section="1"
+                        class="flex flex-column pad--x--40 pad--top-24 pad--bottom--40 gap--32 bg--gradient-white pad--top--24-responsive-tablet pad--x--16-responsive-tablet pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait pad--y--0-responsive-mobile pad--y--0-responsive-mobile-portrait">
+                        
                         <!-- End Top Page Header Section -->
 
                         <!-- Referal Table Content -->
@@ -7214,7 +7248,7 @@
                                     <div class="LeftCard OuterCard flex-1 w-50 w--100-responsive-mobile h-[280px] custom-gradient w--100-responsive-tablet">
                                         <div data-layer="card" class="Card">
                                             <div class="Image relative fit--cover">
-                                                <img data-layer="Image" class="relative" src="" />
+                                                <img data-layer="Image" class="relative" src="../images/referral_image.png" />
                                                 <div data-layer="Rectangle 15544" class="Rectangle15544">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="70" height="280"
                                                         viewBox="0 0 70 280" fill="none">
