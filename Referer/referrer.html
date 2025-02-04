@@ -27,7 +27,8 @@
         href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/customTachyons.css" />
 
     <!-- Dashboard Sidebar Custom Style -->
-    <link rel="stylesheet" href="https://madlinkscoding.github.io/template-development/dashboard-v2/assets/css/dashboard-styles-desktop.css" />
+    <link rel="stylesheet"
+        href="https://madlinkscoding.github.io/template-development/dashboard-v2/assets/css/dashboard-styles-desktop.css" />
 
     <!-- Tablet Stylesheet -->
     <link rel="stylesheet"
@@ -137,17 +138,17 @@
     }
 
     .bg-card-right {
-        background:  #000000; 
+        background: #000000;
         box-shadow: 0.25rem 0.25rem 0.25rem 0rem rgba(0, 0, 0, 0.15), 4px 4px 0px 0px #FFCD29;
     }
 
 
-    .min--h-140{
+    .min--h-140 {
         min-height: 8.75rem;
     }
 
-    .h--124{
-        height: 124px; 
+    .h--124 {
+        height: 124px;
     }
 
 
@@ -160,6 +161,16 @@
         gap: 0.5rem;
         align-self: stretch;
     }
+
+    .card-bg--color {
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.40) 100%), rgba(0, 0, 0, 0.75);
+    }
+
+    .card-bg {
+        background: var(--Gray-700, #344054);
+        box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.15), 4px 4px 0px 0px #FFCD29;
+    }
+
 
     .text-yellow {
         color: #FFCD29;
@@ -230,6 +241,10 @@
         letter-spacing: -0.72px;
     }
 
+    .ls--96 {
+        letter-spacing: -0.96px;
+    }
+
     .font-style-normal {
         font-style: normal;
     }
@@ -242,7 +257,7 @@
         width: 11.6875rem !important;
     }
 
-    .w--30{
+    .w--30 {
         width: 1.875rem;
     }
 
@@ -254,7 +269,7 @@
         width: 24.5625rem !important;
     }
 
-    .w--399{
+    .w--399 {
         width: 24.9375rem !important;
     }
 
@@ -266,22 +281,22 @@
         padding: 1.5rem;
     }
 
-    .padding--bottom-24{
+    .padding--bottom-24 {
         padding-bottom: 1.5rem;
     }
 
 
-    
 
-    .padd--40{
+
+    .padd--40 {
         padding: 40px;
     }
 
-    .padding-right-40{
+    .padding-right-40 {
         padding-right: 2.5rem;
     }
 
-    .gap--10{
+    .gap--10 {
         gap: 0.625rem;
     }
 
@@ -306,10 +321,6 @@
         height: 100%;
     }
 
-    .RightCard {
-        height: 17.5rem;
-    }
-
     /* .Card .Image {
     flex: 1 0 0;
     align-self: stretch;
@@ -325,7 +336,239 @@
     } */
 
 
-    .Card .Image{
+    /* Earning Cards Styling */
+    .RightCard {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 1rem;
+        flex: 1 0 0;
+        height: 17.5rem;
+    }
+
+    .RightCard .Frame1410098669 {
+        display: flex;
+        align-items: center;
+        gap: -1.25rem;
+        align-self: stretch;
+        background: var(--Gray-700, #344054);
+        box-shadow: 0.25rem 0.25rem 0.25rem 0px rgba(0, 0, 0, 0.15), 0.25rem 0.25rem 0px 0px #FFCD29;
+        position: relative;
+        max-height: 8.75rem;
+        height: 8.75rem;
+    }
+
+    .RightCard .Frame1410098669 .Frame14100986680 {
+        align-self: stretch;
+        background: linear-gradient(0deg, rgba(255, 205, 41, 0.25) 0%, rgba(255, 205, 41, 0.25) 100%), rgba(0, 0, 0, 0.80);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 25%;
+        height: 8.75rem;
+    }
+
+    .RightCard .Frame1410098669 .Frame14100986680 .Rectangle15547 {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .RightCard .Frame1410098669 .Frame14100986680 .Rectangle15549{
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: none;
+    }
+
+    .Frame1410098669 .Frame14100986680 .CoinsStacked03 {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    .CoinsStacked03 .Icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .RightCard .Frame1410098669 .Frame8922 {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex: 1 0 0;
+    }
+
+    .Frame1410098669 .Frame8922 .Rectangle15544 {
+        width: 2rem;
+        align-self: stretch;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    .Frame1410098669 .Frame8922 .BottomPanel {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        flex: 1 0 0;
+        height: 8.75rem;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.40) 100%), rgba(0, 0, 0, 0.75);
+    }
+
+    .Frame1410098669 .Frame8922 .BottomPanel .Frame8281 {
+        display: flex;
+        padding: 1.5rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        align-self: stretch;
+    }
+
+    .Frame1410098669 .Frame8922 .BottomPanel .Frame8281 .TotalReferralEarning {
+        align-self: stretch;
+        color: #FFCD29;
+        font-family: Poppins;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 1.5rem;
+    }
+
+    .Frame8281 .Usd09 {
+        color: #FFCD29;
+        font-family: Poppins;
+        font-size: 3rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 3.75rem;
+        letter-spacing: -0.06rem;
+    }
+
+    .RightCard .Frame1410098670 {
+        display: flex;
+        align-items: center;
+        gap: -1.25rem;
+        align-self: stretch;
+        background: var(--Gray-700, #344054);
+        box-shadow: 0.25rem 0.25rem 0.25rem 0px rgba(0, 0, 0, 0.15), 0.25rem 0.25rem 0px 0px #FFCD29;
+        height: 7.75rem;
+        max-height: 7.75rem;
+        min-height: 7.75rem;
+    }
+
+    .RightCard .Frame1410098670 .Frame8924 {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex: 1 0 0;
+        height: 100%;
+    }
+
+    .RightCard .Frame1410098670 .Frame8924 .BottomPanel {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        flex: 1 0 0;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.40) 100%), rgba(0, 0, 0, 0.75);
+        height: 100%;
+    }
+
+    .RightCard .Frame1410098670 .Frame8924 .BottomPanel .Frame8282 {
+        display: flex;
+        padding: 1.5rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        align-self: stretch;
+    }
+
+    .Frame8924 .BottomPanel .Frame8282 .YourReferralEarningThisMonth {
+        align-self: stretch;
+        color: var(--Base-White, #FFF);
+        font-family: Poppins;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 1.5rem;
+    }
+
+    .Frame8282 .Usd21 {
+        color: var(--Base-White, #FFF);
+        font-family: Poppins;
+        font-size: 2.25rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 2.75rem;
+        letter-spacing: -0.045rem;
+    }
+
+    .Frame1410098670 .Frame1410098668 {
+        align-self: stretch;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(0deg, rgba(255, 205, 41, 0.25) 0%, rgba(255, 205, 41, 0.25) 100%), rgba(0, 0, 0, 0.40);
+        width: 25%;
+        height: 100%;
+    }
+
+    .Frame1410098668 .Rectangle15548 {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    .Frame1410098668 .Rectangle15550{
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: none;
+    }
+
+    .Frame1410098668 .Frame1410098672 {
+        display: flex;
+        width: 3.0625rem;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.375rem;
+    }
+
+    .Frame1410098672 .ArrowUpRight {
+        width: 2rem;
+        height: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Frame1410098672 .ArrowUpRight .Icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Frame1410098672 .Details {
+        color: #FFF;
+        font-family: Poppins;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 1.5rem;
+    }
+
+
+    /* Cards styling ends */
+
+
+
+/*  */
+
+    .Card .Image {
         flex: 1 0 0;
         align-self: stretch;
         width: 100%;
@@ -343,19 +586,17 @@
     .Frame8923 {
         display: flex;
         width: 60%;
-        /* max-width: 23.1875rem; */
         justify-content: flex-end;
         align-items: center;
         flex-shrink: 0;
         align-self: stretch;
-        /* backdrop-filter: blur(3.125rem); */
     }
 
     .Rectangle15544 {
         position: absolute;
         top: 0;
         right: 0;
-        bottom:0;
+        bottom: 0;
         width: 70px;
         flex-shrink: 0;
         align-self: stretch;
@@ -364,15 +605,15 @@
                 rgba(0, 0, 0, 0.25) 15%,
                 rgba(0, 0, 0, 0.25) 80%,
                 rgba(0, 0, 0, 0.50) 100%), rgba(255, 255, 255, 0.01); */
-                z-index: 1;
+        z-index: 1;
     }
 
 
     .Rectangle15545 {
         display: none;
-        }
+    }
 
-    .BottomPanel {
+    .Frame8923 .BottomPanel {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -385,7 +626,7 @@
         z-index: 1;
     }
 
-    .BottomPanel .AttributionCard {
+    .Frame8923 .BottomPanel .AttributionCard {
         display: flex;
         padding: 1.5rem 1.5rem 1.5rem 0;
         flex-direction: column;
@@ -493,12 +734,21 @@
 
     .AttributionCard .Frame9036 .InputField .InputWithLabel .Input .ButtonsButton {
         display: flex;
+        flex: 1;
         padding: 0.625rem 0.875rem;
         justify-content: center;
         align-items: center;
         gap: 0.25rem;
-        border-radius: 0 0.5rem 0 0;
+        border-radius: 0 0.125rem 0 0;
+        height: 100%;
+        width:100%;
     }
+
+    .AttributionCard .Frame9036 .InputField .InputWithLabel .Input .ButtonsButton:hover{
+        background: var(--Gray-50, #F9FAFB);
+        /* height: 100%; */
+    }
+
 
     .Input .ButtonsButton .Copy01 {
         width: 1.25rem;
@@ -509,6 +759,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        height: 100%;
+        width: 100%;
     }
 
 
@@ -714,7 +966,7 @@
     /* Popup Styling */
     .AddMediaPanel {
         display: none;
-        position: fixed; 
+        position: fixed;
         /* position: absolute; */
         top: 0;
         right: 0;
@@ -732,7 +984,7 @@
         padding-bottom: 0.5rem;
         flex-direction: column;
         align-items: flex-start;
-        
+
     }
 
     .Frame8937 .Frame8906 {
@@ -828,13 +1080,13 @@
         height: 45.0625rem;
         align-items: center;
         flex-shrink: 0;
-        
+
         overflow-y: auto;
         overscroll-behavior: contain;
     }
 
-    .selected_row{
-        background: rgba(255, 255, 255, 0.10) !important;   
+    .selected_row {
+        background: rgba(255, 255, 255, 0.10) !important;
     }
 
     .TableMerch .SubDateRecieved {
@@ -865,7 +1117,7 @@
         padding-right: 1.5rem;
     }
 
-    .padding-left-10{
+    .padding-left-10 {
         padding-left: 0.625rem;
     }
 
@@ -893,7 +1145,7 @@
         background: rgba(255, 255, 255, 0.40);
     }
 
-    
+
 
     .Frame8969 .ModelDisplay {
         display: flex;
@@ -999,16 +1251,16 @@
     }
 
 
-    .ReferralCards{
+    .ReferralCards {
         display: flex;
     }
 
-/* global use of classes */
-    .gap--32{
+    /* global use of classes */
+    .gap--32 {
         gap: 2rem;
     }
 
-    .pad--top-24{
+    .pad--top-24 {
         padding-top: 1.5rem;
     }
 
@@ -1019,7 +1271,7 @@
 
     /* Mobile Portrait Styles */
     @media screen and (max-width: 479.98px) {
-            /* [data-sidebar-main-wrapper][data-is-active=false]{
+        /* [data-sidebar-main-wrapper][data-is-active=false]{
                 visibility: hidden;
                 display: none;
                 padding: 0.5rem;
@@ -1054,6 +1306,9 @@
             flex: 1;
         }
 
+        
+
+
         .ReferralCards {
             display: flex;
             flex-direction: column !important;
@@ -1062,16 +1317,76 @@
             gap: 1rem;
         }
 
+        .Frame1410098669 .Frame8922 .BottomPanel{
+            height: 5.75rem;
+        }
+
+        .RightCard .Frame1410098669 .Frame14100986680{
+            height: 5.75rem;
+        }
+        .RightCard .Frame1410098669 {
+            height: 5.75rem;
+        }
+
+        .Rectangle15547 {
+            display: none;
+        }
+        .RightCard .Frame1410098669 .Frame14100986680 .Rectangle15549{
+            display: block;
+        }
+
+
+        .Frame8281 .Usd09 {
+            color: #FFCD29;
+            font-family: Poppins;
+            font-size: 1.5rem; 
+            font-style: normal;
+            font-weight: 600;
+            line-height: 2rem;
+        }
+
+        .RightCard .Frame1410098670 {
+            height: 7rem;
+        }
+        .Frame1410098670 .Rectangle15548 {
+            display: none;
+        }
+
+        .Frame1410098668 .Rectangle15550{
+            display: block;
+        }
+
         
-        
-        .Frame8923{
+
+        .Frame1410098669 .Frame14100986680 .CoinsStacked03 {
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+
+        .Frame8282 .Usd21{
+            color: var(--Base-White, #FFF);
+            font-family: Poppins;
+            font-size: 1.5rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 2rem;
+        }
+
+        .Frame1410098672 .ArrowUpRight {
+            width: 1.875rem;
+            height: 1.875rem;
+        }
+
+
+
+        .Frame8923 {
             width: 100%;
-            backdrop-filter:none;
+            backdrop-filter: none;
             height: 100%;
             max-height: 270px;
         }
 
-        .BottomPanel {
+        .Frame8923 .BottomPanel {
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
@@ -1083,7 +1398,7 @@
             position: relative;
         }
 
-        .BottomPanel .AttributionCard {
+        .Frame8923 .BottomPanel .AttributionCard {
             display: flex;
             flex-direction: column;
             padding: 0.5rem 1rem 1rem 1rem !important;
@@ -1103,10 +1418,10 @@
 
         .AttributionCard .Frame9036 .InputField {
             display: flex;
-            width: 20.44rem; 
+            width: 20.44rem;
             flex-direction: column;
-            bottom: 1rem; 
-            right: 1rem; 
+            bottom: 1rem;
+            right: 1rem;
         }
 
 
@@ -1130,7 +1445,7 @@
             align-items: flex-end;
             align-self: stretch;
             backdrop-filter: blur(50px);
-            gap:0;
+            gap: 0;
             margin: 0;
         }
 
@@ -1138,7 +1453,7 @@
             display: block;
             position: absolute;
             height: 62px;
-            align-self: stretch;    
+            align-self: stretch;
             left: 0 !important;
             bottom: 0;
             width: 100% !important;
@@ -1149,29 +1464,29 @@
             display: none;
         }
 
-        
+
         .Referral_Table_Content {
             width: fit-content;
         }
 
         .Referral_Table {
-            width: fit-content;
+            width: 100%;
             padding: 0px;
         }
 
-        .table-title{
+        .table-title {
             padding-left: 0.5rem;
             padding-right: 0.5rem;
-            gap:0.5rem;
+            gap: 0.5rem;
         }
 
-        .table-title .InputField {
-            width: 22.44rem;
+        .Referral_Table .table-title .InputField {
+            width: 100%;
         }
 
         .table-title .table-title-heading {
-            font-size: 1.125rem; 
-            line-height: 1.75rem; 
+            font-size: 1.125rem;
+            line-height: 1.75rem;
             margin: 0rem;
         }
 
@@ -1210,14 +1525,15 @@
             flex-direction: column;
         }
 
-        .Frame8923{
-            backdrop-filter:none;
+        .Frame8923 {
+            backdrop-filter: none;
         }
 
         .Frame9036 .Text {
             font-size: 1.25rem !important;
             line-height: 1.875rem !important;
         }
+
         .mobile-width-95 {
             width: 5.9375rem !important;
         }
@@ -1226,11 +1542,11 @@
             width: 8.75rem !important;
         }
 
-        .LeftCard{
+        .LeftCard {
             width: 100%;
         }
 
-        .RightCard{
+        .RightCard {
             width: 100%;
         }
 
@@ -1250,8 +1566,16 @@
             margin-top: 0rem !important;
         }
 
-        .AttributionCard{
+        .AttributionCard {
             /* overflow: hidden; */
+        }
+
+        .Referral_Table .table-title {
+            width: 100%;
+        }
+
+        .Referral_Table .table-title .InputField {
+            width: 100%;
         }
 
 
@@ -1308,37 +1632,38 @@
         } */
     }
 
-     /* For Copy URL */
+    /* For Copy URL */
     @media screen and (min-width: 480px) and (max-width: 635px) {
         .Frame9036 .Text {
             font-weight: 500;
             line-height: 1.5rem;
             font-size: 1rem;
         }
+
         .Frame9036 .Text_Descripton {
             max-height: 80px;
             overflow: hidden;
         }
 
-         .AttributionCard .Frame9036 .InputField {
-            bottom: 1rem; 
-            right: 1rem; 
+        .AttributionCard .Frame9036 .InputField {
+            bottom: 1rem;
+            right: 1rem;
         }
     }
 
 
     /* Tablet Styles */
-    @media screen and (min-width: 768px) and (max-width: 1365.98px)  {
+    @media screen and (min-width: 768px) and (max-width: 1365.98px) {
         .ReferralCards {
-            display:flex;
+            display: flex;
             flex-direction: column;
-            /* align-items: center; */
         }
-        .LeftCard{
+
+        .LeftCard {
             width: 100%;
         }
 
-        .RightCard{
+        .RightCard {
             width: 100%;
         }
 
@@ -1356,9 +1681,6 @@
             display: none;
         }
     }
-
-
-
 </style>
 
 <body>
@@ -7264,8 +7586,7 @@
         <!-- /page sidebar -->
 
         <!-- Main Body Wrapper -->
-        <div data-dashboard-template-main data-dashboard-template-main-background
-            class="relative w-100 ">
+        <div data-dashboard-template-main class="relative w-100 ">
             <!-- Main Body Inner Wrapper -->
             <div class="h-100">
                 <!-- main section -->
@@ -7285,7 +7606,7 @@
                     <!-- Page Content Section -->
                     <div data-section="inner-container" data-tabs-section="1"
                         class="flex flex-column pad--x--40 pad--bottom--40 gap--32 bg--gradient-white pad--top--24-responsive-tablet pad--x--16-responsive-tablet pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait pad--y--0-responsive-mobile pad--y--0-responsive-mobile-portrait">
-                        
+
                         <!-- End Top Page Header Section -->
 
                         <!-- Referal Table Content -->
@@ -7299,7 +7620,8 @@
                                     <div class="LeftCard OuterCard flex-1 w-50 w--100-responsive-mobile h-[280px] custom-gradient w--100-responsive-tablet">
                                         <div data-layer="card" class="Card">
                                             <div class="Image relative fit--cover">
-                                                <img data-layer="Image" class="relative" src="../images/referral_image.png" />
+                                                <img data-layer="Image" class="relative"
+                                                    src="../images/referral_image.png" />
                                                 <div data-layer="Rectangle 15544" class="Rectangle15544">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="70" height="280"
                                                         viewBox="0 0 70 280" fill="none">
@@ -7342,7 +7664,7 @@
                                                 <div data-layer="Bottom panel" class="BottomPanel">
                                                     <div data-layer="Attribution card" class="AttributionCard">
                                                         <div data-layer="Frame 9036" class="Frame9036">
-                                                            <div data-layer="Text" class="Text">Maximise your earnings
+                                                            <div data-layer="Text" class="Text">Maximize your earnings
                                                                 and watch your income grow!</div>
                                                             <div data-layer="Text" class="Text_Descripton">
                                                                 Hey <span class="userName">@username</span>! 🎉 Share
@@ -7354,15 +7676,15 @@
                                                             </div>
                                                             <!-- Input Field -->
                                                             <div data-layer="Input field" class="InputField">
-                                                                <div data-layer="Input with label" class="InputWithLabel">
+                                                                <div data-layer="Input with label"
+                                                                    class="InputWithLabel">
                                                                     <div data-layer="Input" class="Input">
                                                                         <div data-layer="Text input" class="TextInput">
                                                                             <div data-layer="Text" class="Text">
                                                                                 https://fs.codelinden.com/sign-up/?adskjf..
                                                                             </div>
                                                                         </div>
-                                                                        <div data-layer="Buttons/Button"
-                                                                            class="ButtonsButton">
+                                                                        <div data-layer="Buttons/Button" class="ButtonsButton">
                                                                             <div data-layer="copy-01" class="Copy01">
                                                                                 <div data-layer="Icon" class="Icon">
                                                                                     <svg xmlns="http://www.w3.org/2000/svg"
@@ -7378,8 +7700,10 @@
                                                                                                 stroke-linejoin="round" />
                                                                                         </g>
                                                                                         <defs>
-                                                                                            <clipPath id="clip0_12498_499">
-                                                                                                <rect width="20" height="20"
+                                                                                            <clipPath
+                                                                                                id="clip0_12498_499">
+                                                                                                <rect width="20"
+                                                                                                    height="20"
                                                                                                     fill="white" />
                                                                                             </clipPath>
                                                                                         </defs>
@@ -7398,23 +7722,13 @@
                                     </div>
 
                                     <!-- Right Cards -->
-                                    <div class="RightCard OuterCard flex-1 w-50 w--100-responsive-mobile h-100 flex justify-between gap--16 flex-column w--100-responsive-tablet">
-                                        <!-- Tope Card -->
-                                        <div class="bg-card-right min--h-140 flex items-stretch h-140 w--100-responsive-tablet  w--100-responsive-mobile">
-                                            <div class="flex w-25 icon-bg-color-earning flex items-center justify-center relative">
-                                                <div class="relative">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56"
-                                                        viewBox="0 0 56 56" fill="none">
-                                                        <path
-                                                            d="M30.3333 11.6667C30.3333 14.244 24.5876 16.3333 17.5 16.3333C10.4123 16.3333 4.66663 14.244 4.66663 11.6667M30.3333 11.6667C30.3333 9.08934 24.5876 7 17.5 7C10.4123 7 4.66663 9.08934 4.66663 11.6667M30.3333 11.6667V15.1667M4.66663 11.6667V39.6667C4.66663 42.244 10.4123 44.3333 17.5 44.3333M17.5 25.6667C17.1067 25.6667 16.7175 25.6602 16.3333 25.6476C9.79237 25.4333 4.66663 23.4343 4.66663 21M17.5 35C10.4123 35 4.66663 32.9107 4.66663 30.3333M51.3333 26.8333C51.3333 29.4107 45.5876 31.5 38.5 31.5C31.4123 31.5 25.6666 29.4107 25.6666 26.8333M51.3333 26.8333C51.3333 24.256 45.5876 22.1667 38.5 22.1667C31.4123 22.1667 25.6666 24.256 25.6666 26.8333M51.3333 26.8333V44.3333C51.3333 46.9107 45.5876 49 38.5 49C31.4123 49 25.6666 46.9107 25.6666 44.3333V26.8333M51.3333 35.5833C51.3333 38.1607 45.5876 40.25 38.5 40.25C31.4123 40.25 25.6666 38.1607 25.6666 35.5833"
-                                                            stroke="white" stroke-width="2.8" stroke-linecap="round"
-                                                            stroke-linejoin="round" />
-                                                    </svg>
-                                                </div>
-                                                <div class="ICon absolute icon-total-earning">
+                                    <div class="RightCard OuterCard h-100 w-50 w--100-responsive-tablet w--100-responsive-mobile h-[280px]">
+                                        <div data-layer="Frame 1410098669" class="Frame1410098669">
+                                            <div data-layer="Frame 1410098668" class="Frame14100986680">
+                                                <div data-layer="Rectangle 15547" class="Rectangle15547">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="140"
                                                         viewBox="0 0 32 140" fill="none">
-                                                        <path d="M32 0V140H0L32 0Z" fill="#000000" fill-opacity="1" />
+                                                        <path d="M32 0V140H0L32 0Z" fill="black" fill-opacity="0.75" />
                                                         <path d="M32 0V140H0L32 0Z"
                                                             fill="url(#paint0_linear_11684_396776)"
                                                             fill-opacity="0.4" />
@@ -7427,45 +7741,56 @@
                                                         </defs>
                                                     </svg>
                                                 </div>
-                                            </div>
-                                            <div class="flex-1 padd--24 w-75 max-h--140 min--h--140">
-                                                <div class="text-yellow poppins font-size--16 lh--24 fw6">Total Referral
-                                                    Earning
+                                                <div data-layer="Rectangle 15547" class="Rectangle15549">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="92" viewBox="0 0 32 92" fill="none">
+                                                        <path d="M32 0V92H0L32 0Z" fill="black" fill-opacity="0.75"/>
+                                                        <path d="M32 0V92H0L32 0Z" fill="url(#paint0_linear_11838_988581)" fill-opacity="0.4"/>
+                                                        <defs>
+                                                            <linearGradient id="paint0_linear_11838_988581" x1="16" y1="0" x2="16" y2="92" gradientUnits="userSpaceOnUse">
+                                                            <stop stop-opacity="0"/>
+                                                            <stop offset="1"/>
+                                                            </linearGradient>
+                                                        </defs>
+                                                    </svg>
                                                 </div>
-                                                <div class="text-yellow poppins fw6 f-s-48 f-s-m-24 lh-60">
-                                                    4321.09 USD
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Bottom card -->
-                                        <div class="bg-card-right h--124 flex items-stretch h-[124px]  w--100-responsive-tablet w--100-responsive-mobile">
-                                            <div class="bg-card-right-bottom flex-1 w-75">
-                                                <div>
-                                                    <p class="white poppins font-size--16 font-style-normal line-height--24">
-                                                        Your Referral Earning this Month
-                                                    </p>
-                                                    <p
-                                                        class="white poppins font-size--36 line-height--44 letter-spacing---72 fw6 font-style-normal">
-                                                        543.21 USD</p>
-                                                </div>
-                                            </div>
-                                            <div class="flex flex-column w-25 icon-bg-color-detail items-center justify-center gap-2 relative">
-                                                <div class="relative flex flex-column justify-center items-center">
-                                                    <div class="w2 h2 flex justify-center items-center">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
-                                                            viewBox="0 0 32 32" fill="none">
+                                                <div data-layer="coins-stacked-03" class="CoinsStacked03">
+                                                    <div data-layer="Icon" class="Icon">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56"
+                                                            viewBox="0 0 56 56" fill="none">
                                                             <path
-                                                                d="M9.33334 22.6667L22.6667 9.33334M22.6667 9.33334H9.33334M22.6667 9.33334V22.6667"
-                                                                stroke="white" stroke-width="3" stroke-linecap="round"
+                                                                d="M30.3333 11.6667C30.3333 14.244 24.5876 16.3333 17.5 16.3333C10.4123 16.3333 4.66663 14.244 4.66663 11.6667M30.3333 11.6667C30.3333 9.08934 24.5876 7 17.5 7C10.4123 7 4.66663 9.08934 4.66663 11.6667M30.3333 11.6667V15.1667M4.66663 11.6667V39.6667C4.66663 42.244 10.4123 44.3333 17.5 44.3333M17.5 25.6667C17.1067 25.6667 16.7175 25.6602 16.3333 25.6476C9.79237 25.4333 4.66663 23.4343 4.66663 21M17.5 35C10.4123 35 4.66663 32.9107 4.66663 30.3333M51.3333 26.8333C51.3333 29.4107 45.5876 31.5 38.5 31.5C31.4123 31.5 25.6666 29.4107 25.6666 26.8333M51.3333 26.8333C51.3333 24.256 45.5876 22.1667 38.5 22.1667C31.4123 22.1667 25.6666 24.256 25.6666 26.8333M51.3333 26.8333V44.3333C51.3333 46.9107 45.5876 49 38.5 49C31.4123 49 25.6666 46.9107 25.6666 44.3333V26.8333M51.3333 35.5833C51.3333 38.1607 45.5876 40.25 38.5 40.25C31.4123 40.25 25.6666 38.1607 25.6666 35.5833"
+                                                                stroke="white" stroke-width="2.8" stroke-linecap="round"
                                                                 stroke-linejoin="round" />
                                                         </svg>
                                                     </div>
-                                                    <span class="white poppins font-style-normal font-size--16 fw6">Details</span>
                                                 </div>
-                                                <div class="Icon icon-referer-earning absolute">
+                                            </div>
+                                            <div data-layer="Frame 8923" class="Frame8922">
+                                                <div data-layer="Bottom panel" class="BottomPanel">
+                                                    <div data-layer="Frame 8281" class="Frame8281">
+                                                        <div data-layer="Total Referral Earning"
+                                                            class="TotalReferralEarning">Total Referral Earning</div>
+                                                        <div data-layer="4321.09 USD" class="Usd09">4321.09 USD</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div data-layer="Frame 1410098670" class="Frame1410098670">
+                                            <div data-layer="Frame 8923" class="Frame8924">
+                                                <div data-layer="Bottom panel" class="BottomPanel">
+                                                    <div data-layer="Frame 8281" class="Frame8282">
+                                                        <div data-layer="Your Referral Earning this Month"
+                                                            class="YourReferralEarningThisMonth">Your Referral Earning
+                                                            this Month</div>
+                                                        <div data-layer="543.21 USD" class="Usd21">543.21 USD</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div data-layer="Frame 1410098668" class="Frame1410098668">
+                                                <div data-layer="Rectangle 15547" class="Rectangle15548">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="124"
                                                         viewBox="0 0 20 124" fill="none">
-                                                        <path d="M0 124V0H20L0 124Z" fill="#000000" fill-opacity="1" />
+                                                        <path d="M0 124V0H20L0 124Z" fill="black" fill-opacity="0.75" />
                                                         <path d="M0 124V0H20L0 124Z"
                                                             fill="url(#paint0_linear_11684_396789)"
                                                             fill-opacity="0.4" />
@@ -7478,8 +7803,31 @@
                                                         </defs>
                                                     </svg>
                                                 </div>
+                                                <div data-layer="Rectangle 15547" class="Rectangle15550">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="112" viewBox="0 0 20 112" fill="none">
+                                                        <path d="M0 112V0H20L0 112Z" fill="black" fill-opacity="0.75"/>
+                                                        <path d="M0 112V0H20L0 112Z" fill="url(#paint0_linear_11838_988594)" fill-opacity="0.4"/>
+                                                        <defs>
+                                                            <linearGradient id="paint0_linear_11838_988594" x1="10" y1="112" x2="10" y2="0" gradientUnits="userSpaceOnUse">
+                                                            <stop stop-opacity="0"/>
+                                                            <stop offset="1"/>
+                                                            </linearGradient>
+                                                        </defs>
+                                                    </svg>
+                                                </div>
+                                                <div data-layer="Frame 1410098672" class="Frame1410098672">
+                                                    <div data-layer="arrow-up-right" class="ArrowUpRight">
+                                                        <div data-layer="Icon" class="Icon">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="white">
+                                                                <path d="M9.33334 22.6667L22.6667 9.33334M22.6667 9.33334H9.33334M22.6667 9.33334V22.6667" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                    <div data-layer="Details" class="Details">Details</div>
+                                                </div>
                                             </div>
                                         </div>
+
                                     </div>
                                 </div>
                                 <!-- End Tabs Content -->
@@ -7492,7 +7840,8 @@
                                 <!-- Top Page Title Section -->
                                 <div data-section="table-title"
                                     class="table-title w-100 flex gap--24 items-center items-start justify-between pad--top--16-responsive-mobile pad--top--16-responsive-mobile-portrait gap--16--responsive-tablet gap--8--responsive-mobile gap--8--responsive-mobile-portrait">
-                                    <h1 class="table-title-heading poppins font-size--20 line-height--30 fw5 col--fiord">
+                                    <h1
+                                        class="table-title-heading poppins font-size--20 line-height--30 fw5 col--fiord">
                                         Your Referrals
                                     </h1>
                                     <div data-layer="Input field" class="InputField">
@@ -7529,7 +7878,8 @@
                                             <!-- Header -->
                                             <div class="flex items-center">
                                                 <!-- Header Item -->
-                                                <div class="w--198 flex-none min--h--42 bb br--col--pale-sky padding-right-40 gap--10 pad--10">
+                                                <div
+                                                    class="w--198 flex-none min--h--42 bb br--col--pale-sky padding-right-40 gap--10 pad--10">
                                                     <span class="fs--14 fw4 lh--20 col--pale-sky truncate">From</span>
                                                 </div>
                                                 <!-- /Header Item -->
@@ -7564,8 +7914,7 @@
                                                 <!-- Header Item -->
                                                 <div
                                                     class="w--80 flex-none min--h--42 bb br--col--pale-sky padding-right-40  w--100-responsive-tablet w--100-responsive-mobile w--100-responsive-mobile-portrait gap--10 pad--10">
-                                                    <span
-                                                        class="fs--14 fw4 lh--20 col--pale-sky">&nbsp;</span>
+                                                    <span class="fs--14 fw4 lh--20 col--pale-sky">&nbsp;</span>
                                                 </div>
                                                 <!-- /Header Item -->
                                             </div>
@@ -7573,21 +7922,35 @@
                                             <!-- Body -->
                                             <div class="flex flex-column">
                                                 <!-- Item Row -->
-                                                <div class="flex items-center bg--col--athens-gray-3--50 pointer nowrap">
+                                                <div
+                                                    class="flex items-center bg--col--athens-gray-3--50 pointer nowrap">
                                                     <!-- Item Profile -->
                                                     <div class="w--198 min--h--72 pad--8 flex items-center flex-none">
                                                         <div
                                                             class="pad--8 gap--8 h-full pad--x--10-responsive-mobile flex items-center justify-center">
                                                             <!-- <img src="../images/test5.jpg" alt="" class="w--36 h--36 br-100"> -->
                                                             <div>
-                                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36" height="36" viewBox="0 0 36 36" fill="none">
-                                                                    <path d="M35.7201 21.5975C35.4796 10.6899 16.3037 -3.28893 6.99314 0.694413C-2.33554 4.58476 -1.81708 26.3443 7.75212 33.3615C17.3588 40.3232 35.9606 32.505 35.7201 21.5975Z" fill="#FF0066"/>
-                                                                    <path d="M35.7201 21.5975C35.4796 10.6899 16.3037 -3.28893 6.99314 0.694413C-2.33554 4.58476 -1.81708 26.3443 7.75212 33.3615C17.3588 40.3232 35.9606 32.505 35.7201 21.5975Z" fill="url(#pattern0_12722_1368)"/>
-                                                                    <pattern id="pattern0_12722_1368" patternContentUnits="objectBoundingBox" width="1" height="1">
-                                                                        <use xlink:href="#image0_12722_1368" transform="matrix(0.00322472 0 0 0.00317496 -0.861194 -0.0153386)"/>
+                                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                                    width="36" height="36" viewBox="0 0 36 36"
+                                                                    fill="none">
+                                                                    <path
+                                                                        d="M35.7201 21.5975C35.4796 10.6899 16.3037 -3.28893 6.99314 0.694413C-2.33554 4.58476 -1.81708 26.3443 7.75212 33.3615C17.3588 40.3232 35.9606 32.505 35.7201 21.5975Z"
+                                                                        fill="#FF0066" />
+                                                                    <path
+                                                                        d="M35.7201 21.5975C35.4796 10.6899 16.3037 -3.28893 6.99314 0.694413C-2.33554 4.58476 -1.81708 26.3443 7.75212 33.3615C17.3588 40.3232 35.9606 32.505 35.7201 21.5975Z"
+                                                                        fill="url(#pattern0_12722_1368)" />
+                                                                    <pattern id="pattern0_12722_1368"
+                                                                        patternContentUnits="objectBoundingBox"
+                                                                        width="1" height="1">
+                                                                        <use xlink:href="#image0_12722_1368"
+                                                                            transform="matrix(0.00322472 0 0 0.00317496 -0.861194 -0.0153386)" />
                                                                     </pattern>
-                                                                    <image id="image0_12722_1368" width="100%" height="100%" xlink:href="https://madlinkscoding.github.io/template-development/images/Vector.png" style="object-fit: cover;" />
-                                                                    
+                                                                    <image id="image0_12722_1368" width="100%"
+                                                                        height="100%"
+                                                                        xlink:href="https://madlinkscoding.github.io/template-development/images/Vector.png"
+                                                                        style="object-fit: cover;" />
+
                                                                 </svg>
                                                             </div>
                                                             <div
@@ -7629,7 +7992,8 @@
                                                     </div>
                                                     <!-- /Item -->
                                                     <!-- Item Status -->
-                                                    <div class="w--187  min--h--72 mobile-width-140 min--h--72 pad--10 v-mid flex-none">
+                                                    <div
+                                                        class="w--187  min--h--72 mobile-width-140 min--h--72 pad--10 v-mid flex-none">
                                                         <div
                                                             class="flex flex-column justify-center items-start gap--2 pointer">
                                                             <span class="flex items-center self-stretch gap--5">
@@ -7665,14 +8029,16 @@
                                                     </div>
                                                     <!-- /Item -->
                                                     <!-- Item Joining Date -->
-                                                    <div class="w--180 mobile-width-95 min--h--72 pad--10 v-mid flex-none">
+                                                    <div
+                                                        class="w--180 mobile-width-95 min--h--72 pad--10 v-mid flex-none">
                                                         <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
                                                             22 Jan 2022
                                                         </span>
                                                     </div>
                                                     <!-- /Item -->
                                                     <!-- Item -->
-                                                    <div class="w--200 mobile-width-133 min--h--72 pad--10 v-mid flex-none">
+                                                    <div
+                                                        class="w--200 mobile-width-133 min--h--72 pad--10 v-mid flex-none">
                                                         <div
                                                             class="flex flex-column justify-center items-start gap--2 pointer">
                                                             <span class="flex items-center self-stretch gap--5">
@@ -7681,13 +8047,15 @@
                                                     </div>
                                                     <!-- /Item -->
                                                     <!-- Item -->
-                                                    <div class="w--399 display-none-mobile  display-none-tablet min--h--72 pad--10 v-mid flex-none">
+                                                    <div
+                                                        class="w--399 display-none-mobile  display-none-tablet min--h--72 pad--10 v-mid flex-none">
                                                         <div class="flex items-start">
                                                         </div>
                                                     </div>
                                                     <!-- /Item -->
                                                     <!-- Item -->
-                                                    <div class="w--80 flex--max fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 v-mid flex-none">
+                                                    <div
+                                                        class="w--80 flex--max fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 v-mid flex-none">
                                                         <!-- USD$ 9.99 -->
                                                         <div class="link-container">
                                                             <div class="link-text poppins">Profile</div>
@@ -7710,24 +8078,43 @@
                                                 </div>
                                                 <!-- /Item Row -->
                                                 <!-- Item Row -->
-                                                <div class="flex items-center bg--col--athens-gray-3--50 pointer nowrap">
+                                                <div
+                                                    class="flex items-center bg--col--athens-gray-3--50 pointer nowrap">
                                                     <!-- Item Profile -->
                                                     <div class="w--198 min--h--72 pad--8  flex items-center flex-none">
-                                                        <div class="pad--8 gap--8 h-full flex items-center justify-center">
+                                                        <div
+                                                            class="pad--8 gap--8 h-full flex items-center justify-center">
                                                             <!-- <img src="../images/test5.jpg" alt="" class="w--36 h--36 br-100"> -->
                                                             <div>
-                                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38" height="36" viewBox="0 0 38 36" fill="none">
-                                                                    <path d="M37.8202 20.0051C37.8202 28.9823 28.7518 36 19.3645 36C9.93159 36 0.179688 28.9823 0.179688 20.0051C0.179688 10.9823 9.93159 0 19.3645 0C28.7518 0 37.8202 10.9823 37.8202 20.0051Z" fill="#FF0066"/>
-                                                                    <path d="M37.8202 20.0051C37.8202 28.9823 28.7518 36 19.3645 36C9.93159 36 0.179688 28.9823 0.179688 20.0051C0.179688 10.9823 9.93159 0 19.3645 0C28.7518 0 37.8202 10.9823 37.8202 20.0051Z" fill="url(#pattern0_12722_169)"/>
-                                                                    <path d="M37.8202 20.0051C37.8202 28.9823 28.7518 36 19.3645 36C9.93159 36 0.179688 28.9823 0.179688 20.0051C0.179688 10.9823 9.93159 0 19.3645 0C28.7518 0 37.8202 10.9823 37.8202 20.0051Z" fill="url(#pattern1_12722_169)"/>
+                                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                                    width="38" height="36" viewBox="0 0 38 36"
+                                                                    fill="none">
+                                                                    <path
+                                                                        d="M37.8202 20.0051C37.8202 28.9823 28.7518 36 19.3645 36C9.93159 36 0.179688 28.9823 0.179688 20.0051C0.179688 10.9823 9.93159 0 19.3645 0C28.7518 0 37.8202 10.9823 37.8202 20.0051Z"
+                                                                        fill="#FF0066" />
+                                                                    <path
+                                                                        d="M37.8202 20.0051C37.8202 28.9823 28.7518 36 19.3645 36C9.93159 36 0.179688 28.9823 0.179688 20.0051C0.179688 10.9823 9.93159 0 19.3645 0C28.7518 0 37.8202 10.9823 37.8202 20.0051Z"
+                                                                        fill="url(#pattern0_12722_169)" />
+                                                                    <path
+                                                                        d="M37.8202 20.0051C37.8202 28.9823 28.7518 36 19.3645 36C9.93159 36 0.179688 28.9823 0.179688 20.0051C0.179688 10.9823 9.93159 0 19.3645 0C28.7518 0 37.8202 10.9823 37.8202 20.0051Z"
+                                                                        fill="url(#pattern1_12722_169)" />
                                                                     <defs>
-                                                                        <pattern id="pattern0_12722_169" patternContentUnits="objectBoundingBox" width="1" height="1">
-                                                                        <use xlink:href="#image0_12722_169" transform="matrix(0.00109055 0 0 0.00114025 -0.203408 0)"/>
+                                                                        <pattern id="pattern0_12722_169"
+                                                                            patternContentUnits="objectBoundingBox"
+                                                                            width="1" height="1">
+                                                                            <use xlink:href="#image0_12722_169"
+                                                                                transform="matrix(0.00109055 0 0 0.00114025 -0.203408 0)" />
                                                                         </pattern>
-                                                                        <pattern id="pattern1_12722_169" patternContentUnits="objectBoundingBox" width="1" height="1">
-                                                                        <use xlink:href="#image1_12722_169" transform="matrix(0.00118537 0 0 0.00123938 -2.037 -0.127255)"/>
+                                                                        <pattern id="pattern1_12722_169"
+                                                                            patternContentUnits="objectBoundingBox"
+                                                                            width="1" height="1">
+                                                                            <use xlink:href="#image1_12722_169"
+                                                                                transform="matrix(0.00118537 0 0 0.00123938 -2.037 -0.127255)" />
                                                                         </pattern>
-                                                                        <image id="image0_12722_169" width="1290" height="877" xlink:href="https://madlinkscoding.github.io/template-development/images/Vector2.png" />
+                                                                        <image id="image0_12722_169" width="1290"
+                                                                            height="877"
+                                                                            xlink:href="https://madlinkscoding.github.io/template-development/images/Vector2.png" />
                                                                     </defs>
                                                                 </svg>
                                                             </div>
@@ -7770,7 +8157,8 @@
                                                     </div>
                                                     <!-- /Item -->
                                                     <!-- Item Status -->
-                                                    <div class="w--187 min--h--72 mobile-width-140 min--h--72 pad--10 v-mid flex-none">
+                                                    <div
+                                                        class="w--187 min--h--72 mobile-width-140 min--h--72 pad--10 v-mid flex-none">
                                                         <div
                                                             class="flex flex-column justify-center items-start gap--2 pointer">
                                                             <span class="flex items-center self-stretch gap--5">
@@ -7807,14 +8195,16 @@
                                                     </div>
                                                     <!-- /Item -->
                                                     <!-- Item Joining Date -->
-                                                    <div class="w--180 mobile-width-95 min--h--72 pad--10 v-mid flex-none">
+                                                    <div
+                                                        class="w--180 mobile-width-95 min--h--72 pad--10 v-mid flex-none">
                                                         <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
                                                             22 Jan 2022
                                                         </span>
                                                     </div>
                                                     <!-- /Item -->
                                                     <!-- Item -->
-                                                    <div class="w--200 mobile-width-133  min--h--72 pad--10 v-mid flex-none">
+                                                    <div
+                                                        class="w--200 mobile-width-133  min--h--72 pad--10 v-mid flex-none">
                                                         <div
                                                             class="flex flex-column justify-center items-start gap--2 pointer">
                                                             <span class="flex items-center self-stretch gap--5">
@@ -7823,13 +8213,15 @@
                                                     </div>
                                                     <!-- /Item -->
                                                     <!-- Item -->
-                                                    <div class="w--399 display-none-mobile display-none-tablet min--h--72 pad--10 v-mid flex-none">
+                                                    <div
+                                                        class="w--399 display-none-mobile display-none-tablet min--h--72 pad--10 v-mid flex-none">
                                                         <div class="flex items-start">
                                                         </div>
                                                     </div>
                                                     <!-- /Item -->
                                                     <!-- Item -->
-                                                    <div class="w--80 flex--max fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 v-mid flex-none">
+                                                    <div
+                                                        class="w--80 flex--max fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 v-mid flex-none">
                                                         <!-- USD$ 9.99 -->
                                                         <div class="link-container">
                                                             <div class="link-text poppins">Profile</div>
@@ -7852,18 +8244,24 @@
                                                 </div>
                                                 <!-- /Item Row -->
                                                 <!-- Item Row -->
-                                                <div class="flex items-center bg--col--athens-gray-3--50 pointer nowrap">
+                                                <div
+                                                    class="flex items-center bg--col--athens-gray-3--50 pointer nowrap">
                                                     <!-- Item Profile -->
                                                     <div class="w--198 min--h--72 pad--8 flex items-center flex-none">
-                                                        <div class="pad--8 gap--8 h-full  flex items-center justify-center">
+                                                        <div
+                                                            class="pad--8 gap--8 h-full  flex items-center justify-center">
                                                             <!-- <img src="../images/test5.jpg" alt="" class="w--36 h--36 br-100">
                                                                 -->
                                                             <div>
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
-                                                                    <path d="M20.018 35.9587C9.13196 34.941 -3.47487 14.7767 1.17036 5.75361C5.72393 -3.29415 27.4379 -1.22531 33.7704 8.84014C40.0447 18.9391 30.9041 36.9764 20.018 35.9587Z" fill="#D9D9D9"/>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="36"
+                                                                    height="36" viewBox="0 0 36 36" fill="none">
+                                                                    <path
+                                                                        d="M20.018 35.9587C9.13196 34.941 -3.47487 14.7767 1.17036 5.75361C5.72393 -3.29415 27.4379 -1.22531 33.7704 8.84014C40.0447 18.9391 30.9041 36.9764 20.018 35.9587Z"
+                                                                        fill="#D9D9D9" />
                                                                 </svg>
                                                             </div>
-                                                            <div class="flex--max min--h--72 pad--6-responsive-mobile pad--6-responsive-mobile-portrait flex flex-column justify-center items-start gap--2 gap--0-responsive-mobile gap--0-responsive-mobile-portrait pointer">
+                                                            <div
+                                                                class="flex--max min--h--72 pad--6-responsive-mobile pad--6-responsive-mobile-portrait flex flex-column justify-center items-start gap--2 gap--0-responsive-mobile gap--0-responsive-mobile-portrait pointer">
                                                                 <div
                                                                     class="flex gap--4 flex-row flex-start items-center self-stretch">
                                                                     <span
@@ -7897,7 +8295,8 @@
                                                     </div>
                                                     <!-- /Item -->
                                                     <!-- Item Status -->
-                                                    <div class="w--187 min--h--72 mobile-width-140 min--h--72 pad--10 v-mid flex-none">
+                                                    <div
+                                                        class="w--187 min--h--72 mobile-width-140 min--h--72 pad--10 v-mid flex-none">
                                                         <div
                                                             class="flex flex-column justify-center items-start gap--2 pointer">
                                                             <span class="flex items-center self-stretch gap--5">
@@ -7944,14 +8343,16 @@
                                                     </div>
                                                     <!-- /Item -->
                                                     <!-- Item Joining Date -->
-                                                    <div class="w--180 mobile-width-95 min--h--72 pad--10 v-mid flex-none">
+                                                    <div
+                                                        class="w--180 mobile-width-95 min--h--72 pad--10 v-mid flex-none">
                                                         <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
                                                             22 Jan 2022
                                                         </span>
                                                     </div>
                                                     <!-- /Item -->
                                                     <!-- Item -->
-                                                    <div class="w--200 mobile-width-133 min--h--72 pad--10 v-mid flex-none">
+                                                    <div
+                                                        class="w--200 mobile-width-133 min--h--72 pad--10 v-mid flex-none">
                                                         <div
                                                             class="flex flex-column justify-center items-start gap--2 pointer">
                                                             <span class="flex items-center self-stretch gap--5">
@@ -7960,13 +8361,15 @@
                                                     </div>
                                                     <!-- /Item -->
                                                     <!-- Item -->
-                                                    <div class="w--399 display-none-mobile display-none-tablet min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait flex-none">
+                                                    <div
+                                                        class="w--399 display-none-mobile display-none-tablet min--h--72 pad--10 v-mid display--none-responsive-mobile display--none-responsive-mobile-portrait flex-none">
                                                         <div class="flex items-start">
                                                         </div>
                                                     </div>
                                                     <!-- /Item -->
                                                     <!-- Item -->
-                                                    <div class="w--80 flex--max fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 pad--y--8-responsive-mobile pad--y--8-responsive-mobile-portrait v-mid nowrap flex-none">
+                                                    <div
+                                                        class="w--80 flex--max fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 pad--y--8-responsive-mobile pad--y--8-responsive-mobile-portrait v-mid nowrap flex-none">
                                                         <!-- USD$ 9.99 -->
                                                         <div class="link-container">
                                                             <div class="link-text poppins">Profile</div>
@@ -7989,25 +8392,43 @@
                                                 </div>
                                                 <!-- /Item Row -->
                                                 <!-- Item Row -->
-                                                <div class="flex items-center bg--col--athens-gray-3--50 pointer nowrap">
+                                                <div
+                                                    class="flex items-center bg--col--athens-gray-3--50 pointer nowrap">
                                                     <!-- Item Profile -->
                                                     <div class="w--198 min--h--72 pad--8  flex items-center flex-none">
                                                         <div
                                                             class="pad--8 gap--8 h-full pad--x--10-responsive-mobile flex items-center justify-center">
                                                             <!-- <img src="../images/test5.jpg" alt="" class="w--36 h--36 br-100"> -->
                                                             <div>
-                                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38" height="36" viewBox="0 0 38 36" fill="none">
-                                                                    <path d="M37.8202 20.0051C37.8202 28.9823 28.7518 36 19.3645 36C9.93159 36 0.179688 28.9823 0.179688 20.0051C0.179688 10.9823 9.93159 0 19.3645 0C28.7518 0 37.8202 10.9823 37.8202 20.0051Z" fill="#FF0066"/>
-                                                                    <path d="M37.8202 20.0051C37.8202 28.9823 28.7518 36 19.3645 36C9.93159 36 0.179688 28.9823 0.179688 20.0051C0.179688 10.9823 9.93159 0 19.3645 0C28.7518 0 37.8202 10.9823 37.8202 20.0051Z" fill="url(#pattern0_12722_169)"/>
-                                                                    <path d="M37.8202 20.0051C37.8202 28.9823 28.7518 36 19.3645 36C9.93159 36 0.179688 28.9823 0.179688 20.0051C0.179688 10.9823 9.93159 0 19.3645 0C28.7518 0 37.8202 10.9823 37.8202 20.0051Z" fill="url(#pattern1_12722_169)"/>
+                                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                                    width="38" height="36" viewBox="0 0 38 36"
+                                                                    fill="none">
+                                                                    <path
+                                                                        d="M37.8202 20.0051C37.8202 28.9823 28.7518 36 19.3645 36C9.93159 36 0.179688 28.9823 0.179688 20.0051C0.179688 10.9823 9.93159 0 19.3645 0C28.7518 0 37.8202 10.9823 37.8202 20.0051Z"
+                                                                        fill="#FF0066" />
+                                                                    <path
+                                                                        d="M37.8202 20.0051C37.8202 28.9823 28.7518 36 19.3645 36C9.93159 36 0.179688 28.9823 0.179688 20.0051C0.179688 10.9823 9.93159 0 19.3645 0C28.7518 0 37.8202 10.9823 37.8202 20.0051Z"
+                                                                        fill="url(#pattern0_12722_169)" />
+                                                                    <path
+                                                                        d="M37.8202 20.0051C37.8202 28.9823 28.7518 36 19.3645 36C9.93159 36 0.179688 28.9823 0.179688 20.0051C0.179688 10.9823 9.93159 0 19.3645 0C28.7518 0 37.8202 10.9823 37.8202 20.0051Z"
+                                                                        fill="url(#pattern1_12722_169)" />
                                                                     <defs>
-                                                                        <pattern id="pattern0_12722_169" patternContentUnits="objectBoundingBox" width="1" height="1">
-                                                                        <use xlink:href="#image0_12722_169" transform="matrix(0.00109055 0 0 0.00114025 -0.203408 0)"/>
+                                                                        <pattern id="pattern0_12722_169"
+                                                                            patternContentUnits="objectBoundingBox"
+                                                                            width="1" height="1">
+                                                                            <use xlink:href="#image0_12722_169"
+                                                                                transform="matrix(0.00109055 0 0 0.00114025 -0.203408 0)" />
                                                                         </pattern>
-                                                                        <pattern id="pattern1_12722_169" patternContentUnits="objectBoundingBox" width="1" height="1">
-                                                                        <use xlink:href="#image1_12722_169" transform="matrix(0.00118537 0 0 0.00123938 -2.037 -0.127255)"/>
+                                                                        <pattern id="pattern1_12722_169"
+                                                                            patternContentUnits="objectBoundingBox"
+                                                                            width="1" height="1">
+                                                                            <use xlink:href="#image1_12722_169"
+                                                                                transform="matrix(0.00118537 0 0 0.00123938 -2.037 -0.127255)" />
                                                                         </pattern>
-                                                                        <image id="image0_12722_169" width="1290" height="877" xlink:href="https://madlinkscoding.github.io/template-development/images/Vector2.png" />
+                                                                        <image id="image0_12722_169" width="1290"
+                                                                            height="877"
+                                                                            xlink:href="https://madlinkscoding.github.io/template-development/images/Vector2.png" />
                                                                     </defs>
                                                                 </svg>
                                                             </div>
@@ -8050,7 +8471,8 @@
                                                     </div>
                                                     <!-- /Item -->
                                                     <!-- Item Status -->
-                                                    <div class="w--187 min--h--72  mobile-width-140  min--h--72 pad--10 v-mid flex-none">
+                                                    <div
+                                                        class="w--187 min--h--72  mobile-width-140  min--h--72 pad--10 v-mid flex-none">
                                                         <div
                                                             class="flex flex-column justify-center items-start gap--2 pointer">
                                                             <span class="flex items-center self-stretch gap--5">
@@ -8085,14 +8507,16 @@
                                                     </div>
                                                     <!-- /Item -->
                                                     <!-- Item Joining Date -->
-                                                    <div class="w--180 mobile-width-95 min--h--72 pad--10 v-mid flex-none">
+                                                    <div
+                                                        class="w--180 mobile-width-95 min--h--72 pad--10 v-mid flex-none">
                                                         <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
                                                             22 Jan 2022
                                                         </span>
                                                     </div>
                                                     <!-- /Item -->
                                                     <!-- Item -->
-                                                    <div class="w--200 mobile-width-133  min--h--72 pad--10 v-mid flex-none">
+                                                    <div
+                                                        class="w--200 mobile-width-133  min--h--72 pad--10 v-mid flex-none">
                                                         <div
                                                             class="flex flex-column justify-center items-start gap--2 pointer">
                                                             <span class="flex items-center self-stretch gap--5">
@@ -8105,13 +8529,15 @@
                                                     </div>
                                                     <!-- /Item -->
                                                     <!-- Item -->
-                                                    <div class="w--399 display-none-mobile display-none-tablet min--h--72 pad--10 v-mid flex-none">
+                                                    <div
+                                                        class="w--399 display-none-mobile display-none-tablet min--h--72 pad--10 v-mid flex-none">
                                                         <div class="flex items-start">
                                                         </div>
                                                     </div>
                                                     <!-- /Item -->
                                                     <!-- Item -->
-                                                    <div class="w--80 flex--max fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 pad--y--8-responsive-mobile pad--y--8-responsive-mobile-portrait v-mid flex-none nowrap">
+                                                    <div
+                                                        class="w--80 flex--max fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 pad--y--8-responsive-mobile pad--y--8-responsive-mobile-portrait v-mid flex-none nowrap">
                                                         <!-- USD$ 9.99 -->
                                                         <div class="link-container">
                                                             <div class="link-text poppins">Profile</div>
@@ -8134,25 +8560,43 @@
                                                 </div>
                                                 <!-- /Item Row -->
                                                 <!-- Item Row -->
-                                                <div class="flex items-center bg--col--athens-gray-3--50 pointer nowrap flex-none">
+                                                <div
+                                                    class="flex items-center bg--col--athens-gray-3--50 pointer nowrap flex-none">
                                                     <!-- Item Profile -->
                                                     <div class="w--198 min--h--72 pad--8 flex items-center flex-none">
                                                         <div
                                                             class="pad--8 gap--8 h-full pad--x--10-responsive-mobile flex items-center justify-center">
                                                             <!-- <img src="../images/test5.jpg" alt="" class="w--36 h--36 br-100"> -->
                                                             <div>
-                                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36" height="36" viewBox="0 0 36 36" fill="none">
-                                                                    <path d="M20.018 35.9587C9.13196 34.941 -3.47487 14.7767 1.17036 5.75361C5.72393 -3.29415 27.4379 -1.22531 33.7704 8.84014C40.0447 18.9391 30.9041 36.9764 20.018 35.9587Z" fill="#FF0066"/>
-                                                                    <path d="M20.018 35.9587C9.13196 34.941 -3.47487 14.7767 1.17036 5.75361C5.72393 -3.29415 27.4379 -1.22531 33.7704 8.84014C40.0447 18.9391 30.9041 36.9764 20.018 35.9587Z" fill="url(#pattern0_12722_2177)"/>
-                                                                    <path d="M20.018 35.9587C9.13196 34.941 -3.47487 14.7767 1.17036 5.75361C5.72393 -3.29415 27.4379 -1.22531 33.7704 8.84014C40.0447 18.9391 30.9041 36.9764 20.018 35.9587Z" fill="url(#pattern1_12722_2177)"/>
+                                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                                    width="36" height="36" viewBox="0 0 36 36"
+                                                                    fill="none">
+                                                                    <path
+                                                                        d="M20.018 35.9587C9.13196 34.941 -3.47487 14.7767 1.17036 5.75361C5.72393 -3.29415 27.4379 -1.22531 33.7704 8.84014C40.0447 18.9391 30.9041 36.9764 20.018 35.9587Z"
+                                                                        fill="#FF0066" />
+                                                                    <path
+                                                                        d="M20.018 35.9587C9.13196 34.941 -3.47487 14.7767 1.17036 5.75361C5.72393 -3.29415 27.4379 -1.22531 33.7704 8.84014C40.0447 18.9391 30.9041 36.9764 20.018 35.9587Z"
+                                                                        fill="url(#pattern0_12722_2177)" />
+                                                                    <path
+                                                                        d="M20.018 35.9587C9.13196 34.941 -3.47487 14.7767 1.17036 5.75361C5.72393 -3.29415 27.4379 -1.22531 33.7704 8.84014C40.0447 18.9391 30.9041 36.9764 20.018 35.9587Z"
+                                                                        fill="url(#pattern1_12722_2177)" />
                                                                     <defs>
-                                                                        <pattern id="pattern0_12722_2177" patternContentUnits="objectBoundingBox" width="1" height="1">
-                                                                        <use xlink:href="#image0_12722_2177" transform="matrix(0.00115176 0 0 0.00114025 -0.242885 0)"/>
+                                                                        <pattern id="pattern0_12722_2177"
+                                                                            patternContentUnits="objectBoundingBox"
+                                                                            width="1" height="1">
+                                                                            <use xlink:href="#image0_12722_2177"
+                                                                                transform="matrix(0.00115176 0 0 0.00114025 -0.242885 0)" />
                                                                         </pattern>
-                                                                        <pattern id="pattern1_12722_2177" patternContentUnits="objectBoundingBox" width="1" height="1">
-                                                                        <use xlink:href="#image1_12722_2177" transform="matrix(0.0010376 0 0 0.00102723 -1.96875 -0.110507)"/>
+                                                                        <pattern id="pattern1_12722_2177"
+                                                                            patternContentUnits="objectBoundingBox"
+                                                                            width="1" height="1">
+                                                                            <use xlink:href="#image1_12722_2177"
+                                                                                transform="matrix(0.0010376 0 0 0.00102723 -1.96875 -0.110507)" />
                                                                         </pattern>
-                                                                        <image id="image0_12722_2177" width="1290" height="877" xlink:href="https://madlinkscoding.github.io/template-development/images/vector5.png" />
+                                                                        <image id="image0_12722_2177" width="1290"
+                                                                            height="877"
+                                                                            xlink:href="https://madlinkscoding.github.io/template-development/images/vector5.png" />
                                                                     </defs>
                                                                 </svg>
                                                             </div>
@@ -8191,7 +8635,8 @@
                                                     </div>
                                                     <!-- /Item -->
                                                     <!-- Item Status -->
-                                                    <div class="w--187 min--h--72 mobile-width-140 min--h--72 pad--10 v-mid flex-none">
+                                                    <div
+                                                        class="w--187 min--h--72 mobile-width-140 min--h--72 pad--10 v-mid flex-none">
                                                         <div
                                                             class="flex flex-column justify-center items-start gap--2 pointer">
                                                             <span class="flex items-center self-stretch gap--5">
@@ -8227,14 +8672,16 @@
                                                     </div>
                                                     <!-- /Item -->
                                                     <!-- Item Joining Date -->
-                                                    <div class="w--180 mobile-width-95 min--h--72 pad--10 v-mid flex-none">
+                                                    <div
+                                                        class="w--180 mobile-width-95 min--h--72 pad--10 v-mid flex-none">
                                                         <span class="fs--12 fw4 lh--18 col--oxford-blue truncate">
                                                             22 Jan 2022
                                                         </span>
                                                     </div>
                                                     <!-- /Item -->
                                                     <!-- Item -->
-                                                    <div class="w--200 mobile-width-133 min--h--72 pad--10 v-mid flex-none">
+                                                    <div
+                                                        class="w--200 mobile-width-133 min--h--72 pad--10 v-mid flex-none">
                                                         <div
                                                             class="flex flex-column justify-center items-start gap--2 pointer">
                                                             <span class="flex items-center self-stretch gap--5">
@@ -8243,13 +8690,15 @@
                                                     </div>
                                                     <!-- /Item -->
                                                     <!-- Item -->
-                                                    <div class="w--399 display-none-mobile display-none-tablet min--h--72 pad--10 v-mid flex-none">
+                                                    <div
+                                                        class="w--399 display-none-mobile display-none-tablet min--h--72 pad--10 v-mid flex-none">
                                                         <div class="flex items-start">
                                                         </div>
                                                     </div>
                                                     <!-- /Item -->
                                                     <!-- Item -->
-                                                    <div class="w--80 flex--max flex-none fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 pad--y--8-responsive-mobile pad--y--8-responsive-mobile-portrait v-mid nowrap">
+                                                    <div
+                                                        class="w--80 flex--max flex-none fs--12 fw6 lh--18 col--ebony-2 min--h--72 pad--10 pad--y--8-responsive-mobile pad--y--8-responsive-mobile-portrait v-mid nowrap">
                                                         <!-- USD$ 9.99 -->
                                                         <div class="link-container">
                                                             <div class="link-text poppins">Profile</div>
@@ -8289,7 +8738,7 @@
                 </main>
                 <!-- /main section -->
 
-                
+
                 <!-- popup container started Here -->
                 <div data-layer="add media panel" class="AddMediaPanel">
                     <div data-layer="Frame 8937" class="Frame8937">
@@ -8299,8 +8748,8 @@
                             </div>
                             <div data-layer="x" class="X">
                                 <div data-layer="Icon" class="Icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                        viewBox="0 0 24 24" fill="none">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
                                         <path d="M17 7L7 17M7 7L17 17" stroke="#98A2B3" stroke-width="2"
                                             stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
@@ -8356,13 +8805,23 @@
                             <div data-layer="Frame 8969" class="Frame8969">
                                 <div data-layer="model display" class="ModelDisplay">
                                     <div data-layer="Frame 1410098582" class="Frame1410098582">
-                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36" height="36" viewBox="0 0 36 36" fill="none">
-                                                                <path d="M35.7201 21.5975C35.4796 10.6899 16.3037 -3.28893 6.99314 0.694413C-2.33554 4.58476 -1.81708 26.3443 7.75212 33.3615C17.3588 40.3232 35.9606 32.505 35.7201 21.5975Z" fill="#FF0066"/>
-                                                                <path d="M35.7201 21.5975C35.4796 10.6899 16.3037 -3.28893 6.99314 0.694413C-2.33554 4.58476 -1.81708 26.3443 7.75212 33.3615C17.3588 40.3232 35.9606 32.505 35.7201 21.5975Z" fill="url(#pattern0_12722_1368)"/>
-                                                                <pattern id="pattern0_12722_1368" patternContentUnits="objectBoundingBox" width="1" height="1">
-                                                                    <use xlink:href="#image0_12722_1368" transform="matrix(0.00322472 0 0 0.00317496 -0.861194 -0.0153386)"/>
-                                                                </pattern>
-                                                                <image id="image0_12722_1368" width="100%" height="100%" xlink:href="https://madlinkscoding.github.io/template-development/images/Vector.png" style="object-fit: cover;" />
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="36" height="36"
+                                            viewBox="0 0 36 36" fill="none">
+                                            <path
+                                                d="M35.7201 21.5975C35.4796 10.6899 16.3037 -3.28893 6.99314 0.694413C-2.33554 4.58476 -1.81708 26.3443 7.75212 33.3615C17.3588 40.3232 35.9606 32.505 35.7201 21.5975Z"
+                                                fill="#FF0066" />
+                                            <path
+                                                d="M35.7201 21.5975C35.4796 10.6899 16.3037 -3.28893 6.99314 0.694413C-2.33554 4.58476 -1.81708 26.3443 7.75212 33.3615C17.3588 40.3232 35.9606 32.505 35.7201 21.5975Z"
+                                                fill="url(#pattern0_12722_1368)" />
+                                            <pattern id="pattern0_12722_1368" patternContentUnits="objectBoundingBox"
+                                                width="1" height="1">
+                                                <use xlink:href="#image0_12722_1368"
+                                                    transform="matrix(0.00322472 0 0 0.00317496 -0.861194 -0.0153386)" />
+                                            </pattern>
+                                            <image id="image0_12722_1368" width="100%" height="100%"
+                                                xlink:href="https://madlinkscoding.github.io/template-development/images/Vector.png"
+                                                style="object-fit: cover;" />
                                         </svg>
                                     </div>
                                     <div data-layer="list" class="List">
@@ -8396,19 +8855,32 @@
                                 </div>
                                 <div data-layer="model display" class="ModelDisplay selected_row">
                                     <div data-layer="Frame 1410098583" class="Frame1410098583">
-                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38" height="36" viewBox="0 0 38 36" fill="none">
-                                                                <path d="M37.8202 20.0051C37.8202 28.9823 28.7518 36 19.3645 36C9.93159 36 0.179688 28.9823 0.179688 20.0051C0.179688 10.9823 9.93159 0 19.3645 0C28.7518 0 37.8202 10.9823 37.8202 20.0051Z" fill="#FF0066"/>
-                                                                <path d="M37.8202 20.0051C37.8202 28.9823 28.7518 36 19.3645 36C9.93159 36 0.179688 28.9823 0.179688 20.0051C0.179688 10.9823 9.93159 0 19.3645 0C28.7518 0 37.8202 10.9823 37.8202 20.0051Z" fill="url(#pattern0_12722_169)"/>
-                                                                <path d="M37.8202 20.0051C37.8202 28.9823 28.7518 36 19.3645 36C9.93159 36 0.179688 28.9823 0.179688 20.0051C0.179688 10.9823 9.93159 0 19.3645 0C28.7518 0 37.8202 10.9823 37.8202 20.0051Z" fill="url(#pattern1_12722_169)"/>
-                                                                <defs>
-                                                                    <pattern id="pattern0_12722_169" patternContentUnits="objectBoundingBox" width="1" height="1">
-                                                                    <use xlink:href="#image0_12722_169" transform="matrix(0.00109055 0 0 0.00114025 -0.203408 0)"/>
-                                                                    </pattern>
-                                                                    <pattern id="pattern1_12722_169" patternContentUnits="objectBoundingBox" width="1" height="1">
-                                                                    <use xlink:href="#image1_12722_169" transform="matrix(0.00118537 0 0 0.00123938 -2.037 -0.127255)"/>
-                                                                    </pattern>
-                                                                    <image id="image0_12722_169" width="100%" height="100%" xlink:href="https://madlinkscoding.github.io/template-development/images/Vector2.png" />
-                                                                </defs>
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="38" height="36"
+                                            viewBox="0 0 38 36" fill="none">
+                                            <path
+                                                d="M37.8202 20.0051C37.8202 28.9823 28.7518 36 19.3645 36C9.93159 36 0.179688 28.9823 0.179688 20.0051C0.179688 10.9823 9.93159 0 19.3645 0C28.7518 0 37.8202 10.9823 37.8202 20.0051Z"
+                                                fill="#FF0066" />
+                                            <path
+                                                d="M37.8202 20.0051C37.8202 28.9823 28.7518 36 19.3645 36C9.93159 36 0.179688 28.9823 0.179688 20.0051C0.179688 10.9823 9.93159 0 19.3645 0C28.7518 0 37.8202 10.9823 37.8202 20.0051Z"
+                                                fill="url(#pattern0_12722_169)" />
+                                            <path
+                                                d="M37.8202 20.0051C37.8202 28.9823 28.7518 36 19.3645 36C9.93159 36 0.179688 28.9823 0.179688 20.0051C0.179688 10.9823 9.93159 0 19.3645 0C28.7518 0 37.8202 10.9823 37.8202 20.0051Z"
+                                                fill="url(#pattern1_12722_169)" />
+                                            <defs>
+                                                <pattern id="pattern0_12722_169" patternContentUnits="objectBoundingBox"
+                                                    width="1" height="1">
+                                                    <use xlink:href="#image0_12722_169"
+                                                        transform="matrix(0.00109055 0 0 0.00114025 -0.203408 0)" />
+                                                </pattern>
+                                                <pattern id="pattern1_12722_169" patternContentUnits="objectBoundingBox"
+                                                    width="1" height="1">
+                                                    <use xlink:href="#image1_12722_169"
+                                                        transform="matrix(0.00118537 0 0 0.00123938 -2.037 -0.127255)" />
+                                                </pattern>
+                                                <image id="image0_12722_169" width="100%" height="100%"
+                                                    xlink:href="https://madlinkscoding.github.io/template-development/images/Vector2.png" />
+                                            </defs>
                                         </svg>
                                     </div>
                                     <div data-layer="list" class="List">
@@ -8442,20 +8914,33 @@
                                 </div>
                                 <div data-layer="model display" class="ModelDisplay">
                                     <div data-layer="Frame 1410098583" class="Frame1410098583">
-                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36" height="36" viewBox="0 0 36 36" fill="none">
-                                                                <path d="M20.018 35.9587C9.13196 34.941 -3.47487 14.7767 1.17036 5.75361C5.72393 -3.29415 27.4379 -1.22531 33.7704 8.84014C40.0447 18.9391 30.9041 36.9764 20.018 35.9587Z" fill="#FF0066"/>
-                                                                <path d="M20.018 35.9587C9.13196 34.941 -3.47487 14.7767 1.17036 5.75361C5.72393 -3.29415 27.4379 -1.22531 33.7704 8.84014C40.0447 18.9391 30.9041 36.9764 20.018 35.9587Z" fill="url(#pattern0_12722_2177)"/>
-                                                                <path d="M20.018 35.9587C9.13196 34.941 -3.47487 14.7767 1.17036 5.75361C5.72393 -3.29415 27.4379 -1.22531 33.7704 8.84014C40.0447 18.9391 30.9041 36.9764 20.018 35.9587Z" fill="url(#pattern1_12722_2177)"/>
-                                                                <defs>
-                                                                    <pattern id="pattern0_12722_2177" patternContentUnits="objectBoundingBox" width="1" height="1">
-                                                                    <use xlink:href="#image0_12722_2177" transform="matrix(0.00115176 0 0 0.00114025 -0.242885 0)"/>
-                                                                    </pattern>
-                                                                    <pattern id="pattern1_12722_2177" patternContentUnits="objectBoundingBox" width="1" height="1">
-                                                                    <use xlink:href="#image1_12722_2177" transform="matrix(0.0010376 0 0 0.00102723 -1.96875 -0.110507)"/>
-                                                                    </pattern>
-                                                                    <image id="image0_12722_2177" width="100%" height="100%" xlink:href="https://madlinkscoding.github.io/template-development/images/vector5.png" />
-                                                                </defs>
-                                                            </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="36" height="36"
+                                            viewBox="0 0 36 36" fill="none">
+                                            <path
+                                                d="M20.018 35.9587C9.13196 34.941 -3.47487 14.7767 1.17036 5.75361C5.72393 -3.29415 27.4379 -1.22531 33.7704 8.84014C40.0447 18.9391 30.9041 36.9764 20.018 35.9587Z"
+                                                fill="#FF0066" />
+                                            <path
+                                                d="M20.018 35.9587C9.13196 34.941 -3.47487 14.7767 1.17036 5.75361C5.72393 -3.29415 27.4379 -1.22531 33.7704 8.84014C40.0447 18.9391 30.9041 36.9764 20.018 35.9587Z"
+                                                fill="url(#pattern0_12722_2177)" />
+                                            <path
+                                                d="M20.018 35.9587C9.13196 34.941 -3.47487 14.7767 1.17036 5.75361C5.72393 -3.29415 27.4379 -1.22531 33.7704 8.84014C40.0447 18.9391 30.9041 36.9764 20.018 35.9587Z"
+                                                fill="url(#pattern1_12722_2177)" />
+                                            <defs>
+                                                <pattern id="pattern0_12722_2177"
+                                                    patternContentUnits="objectBoundingBox" width="1" height="1">
+                                                    <use xlink:href="#image0_12722_2177"
+                                                        transform="matrix(0.00115176 0 0 0.00114025 -0.242885 0)" />
+                                                </pattern>
+                                                <pattern id="pattern1_12722_2177"
+                                                    patternContentUnits="objectBoundingBox" width="1" height="1">
+                                                    <use xlink:href="#image1_12722_2177"
+                                                        transform="matrix(0.0010376 0 0 0.00102723 -1.96875 -0.110507)" />
+                                                </pattern>
+                                                <image id="image0_12722_2177" width="100%" height="100%"
+                                                    xlink:href="https://madlinkscoding.github.io/template-development/images/vector5.png" />
+                                            </defs>
+                                        </svg>
                                     </div>
                                     <div data-layer="list" class="List">
                                         <div data-layer="Frame 9133" class="Frame9133">
@@ -8489,7 +8974,8 @@
                             </div>
                         </div>
                         <div data-layer="Sub-date recieved" class="SubDateRecieved">
-                            <div data-layer="table/header" class="TableHeader amount-alignment padding-right-24 padding-left-10">
+                            <div data-layer="table/header"
+                                class="TableHeader amount-alignment padding-right-24 padding-left-10">
                                 <div data-layer="Title" class="Title">Amount</div>
                             </div>
                             <div data-layer="Frame 8970" class="Frame8970">
@@ -8525,7 +9011,8 @@
     </script>
     <!-- End SVG Image Render -->
     <!-- Nice Select JS -->
-    <script type="text/javascript" src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/FINAL/js/nice-select.js"></script>
+    <script type="text/javascript"
+        src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/FINAL/js/nice-select.js"></script>
 
     <!-- Tab Element Script -->
     <script src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/FINAL/js/pageElements.js?ver=2905361574"
