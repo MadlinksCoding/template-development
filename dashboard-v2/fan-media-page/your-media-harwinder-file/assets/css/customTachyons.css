@@ -1,0 +1,566 @@
+/**
+ * Custom Tachyons Stylesheet: Enhances Tachyons functionality for rapid, consistent, and performant UI development.
+ * Tachyons: A functional CSS framework for creating scalable, responsive interfaces with minimal code.
+ * Tachyons Guidelines: https://knowledge.madlinkscoding.com/guide-customtachyons/
+ */
+
+/* Colors */
+.col--mercury { color: var(--color-mercury); } /* confirmed in use */
+.col--desert-storm { color: var(--color-desert-storm); } /* confirmed in use */
+.col--athens-gray { color: var(--color-athens-gray); } /* confirmed in use */
+.col--chartreuse { color: var(--color-chartreuse); } /* confirmed in use */ 
+.col--ebony { color: var(--color-ebony); } /* confirmed in use */
+.col--white-rock { color: var(--color-white-rock); }
+.col--outer-space { color: var(--color-outer-space); } /* confirmed in use */
+.col--shuttle-gray { color: var(--color-shuttle-gray); } /* confirmed in use */ 
+.col--blue { color: var(--color-blue); } /* confirmed in use */
+.col--spring-green { color: var(--color-spring-green); } /* confirmed in use */
+.col--mine-shaft { color: var(--color-mine-shaft, #333333); } /* confirmed in use */
+.col--mine-shaft-0-70 { color: rgba(51, 51, 51, 0.70); } /* confirmed in use */
+.col--mantis { color: var(--color-mantis, #83bf6e); } /* confirmed in use */
+.col--red-ribbon { color: var(--color-red-ribbon, #f01b28); } /* confirmed in use */
+.col--gray-chateau { color: var(--color-gray-chateau, #9A9FA5);  } /* confirmed in use */
+.col--pale-sky { color: var(--color-pale-sky, #6F767E); } /* confirmed in use */
+.col--rose { color: var(--color-rose, #F06); } /* confirmed in use */
+.col--blue { color: var(--color-blue, #30f); } /* confirmed in use */
+.col--cinnabar{ color: var(--color-cinnabar, #E54335); } /* confirmed in use */
+.col--pomegranate { color: var(--color-pomegranate, #F24822)} /* confirmed in use */
+.col--brilliant-rose { color: var(--color-brilliant-rose, #FB5BA2)} /* confirmed in use */
+.col--pampas { color: var(--color-pampas, #FDFDFC)} /* confirmed in use */
+.col--sunset-orange { color: var(--color-sunset-orange,#FF4848); } /* confirmed in use */
+.col--ebony { color: var(--color-ebony,#101828); } /* confirmed in use */
+.col--sandstone { color: var(--color-sandstone,#79716b); } /* confirmed in use */
+.col--lavender-rose { color: var(--color-lavender-rose,#ff8ddf); } /* confirmed in use */
+
+/* Background Colors*/
+.bg--col--mercury { background-color: var(--color-mercury); } /* confirmed in use */
+.bg--col--desert-storm { background-color: var(--color-desert-storm); } /* confirmed in use */
+.bg--col--chartreuse { background-color: var(--color-chartreuse,#9FFF02); } /* confirmed in use */
+.bg--col--sunset-orange { background-color: var(--color-sunset-orange,#FF4848); } /* confirmed in use */
+.bg--col--lemon { background-color: var(--color-lemon); } /* confirmed in use */
+.bg--col--japanese-laurel { background-color: var(--color-japanese-laurel); } /* confirmed in use */  
+.bg--col--blue { background-color: var(--color-blue); } /* confirmed in use */
+.bg--col--blue-05 { background-color: var(--color-blue-05); } /* confirmed in use */
+.bg--col--catskill-white { background-color: var(--color-catskill-white); } /* confirmed in use */
+.bg--col--white-0-20 { background: rgba(255, 255, 255, 0.20); }
+.bg--col--white-51 { background: rgba(51, 0, 255, 0.05); } /* confirmed in use */
+.bg--col--black-squeeze { background-color: var(--color-black-squeeze); } /* confirmed in use */
+.bg--col--brilliant-rose { background-color: var(--color-brilliant-rose, #FB5BA2); } /* confirmed in use */
+.bg--col--brilliant-rose--10 { background: rgba(251, 91, 162, 0.1); } /* confirmed in use */
+.bg--col--rose--20 { background-color: rgba(255, 0, 102, 0.2); /* background-color rgba(--color-rose, 20%) */ } /* confirmed in use */
+.bg--col--flush-orange { background-color: var(--color-flush-orange, #FF7A00); } /* confirmed in use */
+.bg--col--feta { background-color: var(--color-feta, #eafae5); } /* confirmed in use */
+.bg--col--blue-gem { background-color: var(--color-blue-gem, #2C0DA7); } /* confirmed in use */
+.bg--col--shamrock { background-color: var(--color-shamrock, #23D997); } /* confirmed in use */
+.bg--col--mystic {background-color: var(--color-mystic, #dee5ec); } /* confirmed in use */
+.bg--col--shuttle-gray { background-color: var(--color-shuttle-gray, #5f6369); } /* confirmed in use */
+.bg--col--rose-0-5 { background-color: rgba(255, 0, 102, 0.05); } /* confirmed in use */
+.bg--col--outer-space-0-7 { background: rgba(48, 52, 55, 0.70); } /* confirmed in use */
+.bg--col--cinnabar{ background: var(--color-cinnabar, #E54335); } /* confirmed in use */
+.bg--col--pomegranate{ background: var(--color-pomegranate, #F24822); } /* confirmed in use */
+.bg--col--periwinkle-gray { background-color: var(--color-periwinkle-gray, #B9CEE2); }
+.bg--col--black-0-20 { background: rgba(0, 0, 0, 0.20); } /* confirmed in use */ 
+.bg--col--athens-gray2 { background: var(--color-athens-gray2); } /* confirmed in use */ 
+.bg--col--wewak-70 { background: var(--color-wewak-70); } /* confirmed in use */ 
+.bg--col--sandstone { background: var(--color-sandstone, #79716b); } /* confirmed in use */ 
+.bg--col--white-rock { background: var(--color-white-rock); } /* confirmed in use */ 
+
+/* Background Gradients*/
+.bg--gd--blue-pink { background: linear-gradient(0deg, rgba(51, 0, 255, 0.15) 0%, rgba(51, 0, 255, 0.15) 100%), #FFF; }
+.bg--gd-yellow-green { background: linear-gradient(90deg, rgba(255, 208, 242, 0.50) -3.49%, rgba(255, 230, 140, 0.50) 39.26%, rgba(175, 255, 226, 0.50) 77.27%, rgba(193, 201, 255, 0.50) 114.09%), #FFF; }
+
+/* Border Colors */
+.br--col--mercury { border-color: var(--color-mercury); } /* confirmed in use */
+.br--col--desert-storm { border-color: var(--color-desert-storm); } /* confirmed in use */
+.br--col--athens-gray { border-color: var(--color-athens-gray); } /* confirmed in use */
+.br--col--chartreuse { border-color: var(--color-chartreuse) } /* confirmed in use */ 
+.br--col--ebony { border-color: var(--color-ebony); } 
+.br--col--white-rock { border-color: var(--color-white-rock); } /* confirmed in use */ 
+.br--col--mystic { border-color: var(--color-mystic); } /* confirmed in use */
+.br--col--gallery { border-color: var(--color-gallery, #EFEFEF); } /* confirmed in use */ 
+.br--col--gray-suit-0-50 { border-color: rgba(186, 188, 203, 0.50); } /* confirmed in use */
+.br--col--link-water { border-color: var(--color-link-water, #F2F6FC); } /* confirmed in use */ 
+.br--col--brilliant-rose { border-color: var(--color-brilliant-rose, #FB5BA2); } /* confirmed in use */ 
+.br--col--sandstone { border-color: var(--color-sandstone, #79716b); } /* confirmed in use */ 
+
+/* Fill Colors */
+.fill--col--black path { fill: black; } /* confirmed in use */ /* confirmed in use */
+.fill--col--white path { fill: white; } /* confirmed in use */
+.fill--col--mercury path { fill: var(--color-mercury); } /* confirmed in use */
+.fill--col--desert-storm path { fill: var(--color-desert-storm); } /* confirmed in use */ 
+.fill--col--chartreuse path { fill: var(--color-chartreuse,#9FFF02); } /* confirmed in use */ 
+.fill--col--sunset-orange path { fill: var(--color-sunset-orange,#FF4848); } /* confirmed in use */ 
+.fill--col--mystic path { fill: var(--color-mystic); }  /* confirmed in use */
+.fill--col--shuttle-gray path { fill: var(--color-shuttle-gray); } /* confirmed in use */
+
+/* Stroke Colors */
+.stroke--col--black path { stroke: black; } /* confirmed in use */
+.stroke--col--white path { stroke: white; } /* confirmed in use */
+.stroke--col--mercury path { stroke: var(--color-mercury); } /* confirmed in use */ 
+.stroke--col--desert-storm path { stroke: var(--color-desert-storm); } /* confirmed in use */ 
+.stroke--col--chartreuse path { stroke: var(--color-chartreuse,#9FFF02); } /* confirmed in use */ 
+.stroke--col--sunset-orange path { stroke: var(--color-sunset-orange,#FF4848); } /* confirmed in use */ 
+
+/* Filter Colors */
+.filter--col--white { filter: brightness(0) saturate(100%) invert(99%) sepia(99%) saturate(0%) hue-rotate(176deg) brightness(107%) contrast(100%); } /* confirmed in use */
+.filter--col--rose { filter: brightness(0) saturate(100%) invert(29%) sepia(98%) saturate(5809%) hue-rotate(325deg) brightness(92%) contrast(121%); } /* confirmed in use */
+.filter--col--briliant-rose { filter: brightness(0) saturate(100%) invert(55%) sepia(10%) saturate(5098%) hue-rotate(296deg) brightness(98%) contrast(101%); } /* confirmed in use */
+.filter--col--periwinkle-gray { filter: brightness(0) saturate(100%) invert(87%) sepia(19%) saturate(386%) hue-rotate(179deg) brightness(91%) contrast(95%); } /* confirmed in use */
+.filter--col--aero-blue { filter: brightness(0) saturate(100%) invert(91%) sepia(24%) saturate(460%) hue-rotate(90deg) brightness(99%) contrast(105%); } /* confirmed in use */
+.filter--col--blue { filter: brightness(0) saturate(100%) invert(10%) sepia(97%) saturate(7275%) hue-rotate(258deg) brightness(92%) contrast(136%); } /* confirmed in use */
+.filter--col--shuttle-gray { filter: brightness(0) saturate(100%) invert(38%) sepia(6%) saturate(413%) hue-rotate(177deg) brightness(100%) contrast(94%); } /* confirmed in use */
+.filter--col--outer-space { filter: brightness(0) saturate(100%) invert(16%) sepia(5%) saturate(978%) hue-rotate(163deg) brightness(95%) contrast(87%); } /* confirmed in use */
+.filter--col--black { filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(0%) hue-rotate(335deg) brightness(93%) contrast(107%); } /* confirmed in use */
+.filter--col--mystic { filter: brightness(0) saturate(100%) invert(99%) sepia(26%) saturate(953%) hue-rotate(174deg) brightness(99%) contrast(86%); } /* confirmed in use */
+.filter--col--cornflower-blue { filter: brightness(0) saturate(100%) invert(38%) sepia(50%) saturate(2696%) hue-rotate(225deg) brightness(100%) contrast(105%); } /* confirmed in use */
+.filter--col--blue { filter: brightness(0) saturate(100%) invert(9%) sepia(100%) saturate(6553%) hue-rotate(258deg) brightness(97%) contrast(138%); } /* confirmed in use */
+.filter--col--flush-orange { filter: brightness(0) saturate(100%) invert(67%) sepia(67%) saturate(5471%) hue-rotate(1deg) brightness(102%) contrast(102%); } /* confirmed in use */
+.filter--col--red-ribbon { filter: brightness(0) saturate(100%) invert(25%) sepia(64%) saturate(5209%) hue-rotate(344deg) brightness(92%) contrast(106%); } /* confirmed in use */
+.filter--col--pomegranate { filter: brightness(0) saturate(100%) invert(34%) sepia(82%) saturate(1870%) hue-rotate(346deg) brightness(95%) contrast(100%); } /* confirmed in use */
+.filter--col--cinnabar { filter: brightness(0) saturate(100%) invert(43%) sepia(81%) saturate(6051%) hue-rotate(348deg) brightness(99%) contrast(81%); } /* confirmed in use */
+.filter--col--chartreuse { filter: brightness(0) saturate(100%) invert(81%) sepia(97%) saturate(1689%) hue-rotate(23deg) brightness(97%) contrast(108%); } /* confirmed in use */
+.filter--col--desert-storm { filter: brightness(0) saturate(100%) invert(100%) sepia(98%) saturate(150%) hue-rotate(309deg) brightness(105%) contrast(92%); } /* confirmed in use */
+.filter--col--mercury { filter: brightness(0) saturate(100%) invert(93%) sepia(12%) saturate(27%) hue-rotate(335deg) brightness(101%) contrast(87%); } /* confirmed in use */
+.filter--col--sunset-orange { filter: brightness(0) saturate(100%) invert(58%) sepia(46%) saturate(6746%) hue-rotate(329deg) brightness(98%) contrast(119%); } /* confirmed in use */
+.filter--col--dune { filter: brightness(0) saturate(100%) invert(10%) sepia(5%) saturate(1065%) hue-rotate(325deg) brightness(96%) contrast(87%); } /* confirmed in use */
+
+/* Hover Filter Colors */
+.hov--filter--col--black:hover { filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(335deg) brightness(93%) contrast(107%); } /* confirmed in use */
+.hov--filter--col--chartreuse:hover { filter: brightness(0) saturate(100%) invert(81%) sepia(97%) saturate(1689%) hue-rotate(23deg) brightness(97%) contrast(108%); } /* confirmed in use */
+
+/* Hover Fill Colors */
+.hov--fill--col--chartreuse:hover path { fill: var(--color-chartreuse,#9FFF02); } /* confirmed in use */ 
+
+/* Caret Colors */
+.caret-transparent { caret-color: transparent; } /* confirmed in use */
+
+/* Hover Background Colors */
+.hover--bg--col--blue-gem:hover { background-color: var(--color-blue-gem); } /* confirmed in use */
+.hover--bg--col--white-0-8:hover {background: linear-gradient(0deg, rgba(51, 0, 255, 0.15)0%, rgba(51, 0, 255, 0.15)100%), rgba(255, 255, 255, 0.50);} /* confirmed in use */
+.hover--bg--col--tall-poppy:hover { background: #BF382B !important; }
+.hover--bg--col--white-0-7:hover {background: linear-gradient(0deg, rgba(51, 0, 255, 0.10)0%, rgba(51, 0, 255, 0.10)100%), rgba(255, 255, 255, 0.50);}
+
+/* Hover Colors */
+.group:hover .hover--white { color: var(--color-white, #fff) } /* confirmed in use */
+.hover--col--blue:hover { color: var(--color-blue) } /* confirmed in use */
+.hover--col--white-rock:hover { color: var(--color-white-rock); } /* confirmed in use */
+.hover--col--white:hover { color: white !important; } /* confirmed in use */
+
+/* Font */
+.poppins { font-family: 'Poppins', sans-serif; }
+
+/* Font Size */
+.fs--10 { font-size: 0.625rem; /* font-size 10px */  } /* confirmed in use */ /* pixel conversion correct */
+.fs--12 { font-size: 0.75rem; /* font-size 12px */  } /* confirmed in use */ /* pixel conversion correct */
+.fs--13-6 { font-size: .85rem /* font-size 13.6px */  } /* confirmed in use */ /* pixel conversion correct */
+.fs--14 { font-size: 0.875rem; /* font-size 14px */  } /* confirmed in use */ /* pixel conversion correct */
+.fs--15 { font-size: 0.938rem; /* font-size 15px */ } /* confirmed in use */ /* pixel conversion correct */
+.fs--16 { font-size: 1rem; /* font-size 16px */  } /* confirmed in use */ /* pixel conversion correct */
+.fs--18 { font-size: 1.125rem; /* font-size 18px */  } /* confirmed in use */ /* pixel conversion correct */
+.fs--20 { font-size: 1.25rem; /* font-size 20px */  } /* confirmed in use */ /* pixel conversion correct */
+.fs--24 { font-size: 1.5rem; /* font-size 24px */  } /* confirmed in use */ /* pixel conversion correct */
+.fs--28 { font-size: 1.75rem; /* font-size 28px */ } /* confirmed in use */ /* pixel conversion correct */
+.fs--32 { font-size: 2rem; /* font-size 32px */ } /* confirmed in use */ /* pixel conversion correct */
+.fs--36 { font-size: 2.25rem; /* font-size 36px */ } /* confirmed in use */ /* pixel conversion correct */
+.fs--40 { font-size: 2.5rem; /* font-size 40px */ } /* confirmed in use */ /* pixel conversion correct */
+.fs--48 { font-size: 3rem; /* font-size 48px */ } /* pixel conversion correct */
+.fs--60 { font-size:3.75rem; /* font-size 60px */ } /* confirmed in use *//* pixel conversion correct */
+
+/* Line Height */
+.lh--normal { line-height: normal; } /* confirmed in use */
+.lh--18 { line-height:1.125rem; /* line height 18px */ } /* confirmed in use */ /* pixel conversion correct */
+.lh--16 { line-height: 1rem; /* line-height 16px */ } /* confirmed in use */ /* pixel conversion correct */
+.lh--19-2 { line-height:1.2rem; /* line height 19.2px */ } /* confirmed in use */ /* pixel conversion correct */
+.lh--20 { line-height: 1.25rem; /* line-height 20px */ } /* confirmed in use */ /* pixel conversion correct */
+.lh--24 { line-height: 1.5rem; /* line-height 24px */ } /* confirmed in use */ /* pixel conversion correct */
+.lh--28 { line-height: 1.75rem; /* line-height 28px */ } /* confirmed in use */ /* pixel conversion correct */
+.lh--30 { line-height:1.875rem; /* line height 30px */ } /* confirmed in use */ /* pixel conversion correct */
+.lh--32 { line-height:2rem; /* line height 32px */ } /* pixel conversion correct */
+.lh--40 { line-height: 2.5rem; /* line-height 40px */ } /* confirmed in use */ /* pixel conversion correct */
+.lh--44 { line-height:2.75rem; /* line height 44px */ } /* confirmed in use */ /* pixel conversion correct */
+.lh--60 { line-height:3.75rem; /* line height 60px */ } /* pixel conversion correct */
+.lh--72 { line-height:4.5rem; /* line height 72px */ } /* confirmed in use */ /* pixel conversion correct */
+
+/* Letter Spacing */ 
+.tracked--0-07 { letter-spacing: 0.004rem; /* letter spacing 0.07px */ } /* confirmed in use */ /* pixel conversion correct */
+.tracked--0-08 { letter-spacing: 0.005rem; /* letter spacing 0.08px */ } /* confirmed in use */ /* pixel conversion correct */
+.tracked--0-12 { letter-spacing: 0.0075rem; /* letter spacing 0.12px */ } /* confirmed in use */ /* pixel conversion correct */
+.tracked--0-14 { letter-spacing: 0.009rem; /* letter-spacing 0.14px */ } /* confirmed in use */ /* pixel conversion correct */
+.tracked--0-16 { letter-spacing: 0.01rem; /* letter spacing 0.16px */ } /* confirmed in use */ /* pixel conversion correct */
+.tracked--0-18 { letter-spacing: 0.011rem; /* letter spacing 0.18px */ } /* confirmed in use */ /* pixel conversion correct */
+.tracked--0-2 { letter-spacing: 0.0125rem; /* letter spacing 0.2px */ } /* confirmed in use */ /* pixel conversion correct */
+.tracked--0-208 { letter-spacing: 0.013rem; /* letter spacing 0.208px */ } /* confirmed in use */ /* pixel conversion correct */
+.tracked--0-24 { letter-spacing: 0.015rem; /* letter spacing 0.24px */ } /* confirmed in use */ /* pixel conversion correct */
+.tracked--0-3 { letter-spacing: 0.019rem; /* letter-spacing 0.3px */ } /* confirmed in use */ /* pixel conversion correct */
+.tracked--0-35 { letter-spacing: 0.022rem; /* letter-spacing 0.35px */ } /* confirmed in use */ /* pixel conversion correct */
+.tracked--0-36 { letter-spacing: 0.0225rem; /* letter spacing 0.36px */ } /* pixel conversion correct */
+.tracked--0-4 { letter-spacing: 0.025rem; /* letter spacing 0.4px */ } /* pixel conversion correct */
+.tracked--0-48 { letter-spacing: 0.03rem; /* letter spacing 0.48px */ } /* pixel conversion correct */
+.tracked--0-6 { letter-spacing: 0.038rem; /* letter-spacing 0.6px */ } /* confirmed in use */ /* pixel conversion correct */
+.tracked--neg--0-16 { letter-spacing: -0.01; /* letter spacing -0.16px */ } /* confirmed in use */ /* pixel conversion correct */
+.tracked--neg--0-12 { letter-spacing: -0.008rem; /* letter-spacing -0.12px */ } /* confirmed in use */ /* pixel conversion correct */
+.tracked--neg--0-14 { letter-spacing: -0.009rem; /* letter-spacing -0.14px */ } /* confirmed in use */ /* pixel conversion correct */
+.tracked--neg--0-15 { letter-spacing: -0.009rem; /* letter-spacing -0.15px */ } /* confirmed in use */ /* pixel conversion correct */
+.tracked--neg--0-24 { letter-spacing: -0.015rem; /* letter-spacing -0.24px */ } /* confirmed in use */ /* pixel conversion correct */
+.tracked--neg--0-36 { letter-spacing: -0.023rem; /* letter-spacing -0.36px */ } /* confirmed in use */ /* pixel conversion correct */
+.tracked--neg--0-4 { letter-spacing: -0.025rem; /* letter-spacing -0.4px */ } /* confirmed in use */ /* pixel conversion correct */
+.tracked--neg--0-96 { letter-spacing: -0.06rem; /* letter-spacing -0.96px */ } /* confirmed in use */ /* pixel conversion correct */
+
+/* Word Break */
+.wb { word-wrap: break-word; } /* confirmed in use */
+
+/* Width */
+.w--inhert { width: inherit; /* width of parent/container */ }
+.w--8 { width: 0.5rem; /* width 8px */ } /* confirmed in use */ /* pixel conversion correct */
+.w--13 { width: 0.8125rem; /* width 13px */ } /* confirmed in use */ /* pixel conversion correct */
+.w--13-008 { width: 0.813rem; /* width 13.008px */ } /* confirmed in use */ /* pixel conversion correct */
+.w--16 { width: 1rem; /* width 16px */ } /* confirmed in use */ /* pixel conversion correct */
+.w--20 { width: 1.25rem; /* width 20px */ } /* confirmed in use */ /* pixel conversion correct */
+.w--22 { width: 1.375rem; /* width 22px */ } /* confirmed in use */ /* pixel conversion correct */
+.w--24 { width: 1.5rem; /* width 24px */ } /* confirmed in use */ /* pixel conversion correct */
+.w--32 { width: 2rem; /* width 32px */ } /* confirmed in use */ /* pixel conversion correct */
+.w--40 { width: 2.5rem; /* width 40px */ } /* confirmed in use */ /* pixel conversion correct */
+.w--46 { width: 2.875rem; /* width 46px */ } /* confirmed in use */ /* pixel conversion correct */
+.w--48 { width: 3rem; /* width 48px */ } /* confirmed in use */ /* pixel conversion correct */
+.w--64 { width: 4rem; /* width 64px */ } /* confirmed in use */ /* pixel conversion correct */
+.w--65 { width: 4.0625rem; /* width 65px */ } /* pixel conversion correct */
+.w--74 { width: 4.625rem; /* width 74px */ } /* confirmed in use */ /* pixel conversion correct */
+.w--100 { width: 6.25rem; /* width 100px */ } /* confirmed in use */ /* pixel conversion correct */
+.w--110 { width: 6.875rem; /* width 110px */ } /* confirmed in use */ /* pixel conversion correct */
+.w--128 { width: 8rem; /* width 128px */ } /* confirmed in use */ /* pixel conversion correct */
+.w--150 { width: 9.375rem; /* width 150px */ } /* confirmed in use */ /* pixel conversion correct */
+.w--161 { width: 10.0625rem; /* width 161px */ } /* confirmed in use */ /* pixel conversion correct */
+.w--188 { width: 11.75rem; /* width 188px */ } /* pixel conversion correct */
+.w--192 { width: 12rem; /* width 192px */ } /* confirmed in use */ /* pixel conversion correct */
+.w--195 { width: 12.1875rem; /* width 195px */ } /* confirmed in use */ /* pixel conversion correct */
+.w--208 { width: 13rem; /* width 208px */ } /* pixel conversion correct */
+.w--224 { width: 14rem; /* width 208px */ } /* pixel conversion correct */ 
+.w--229 { width: 14.3125rem; /* width 229px */ } /* confirmed in use */ /* pixel conversion correct */
+.w--230 { width: 14.375rem; /* width 230px */ } /* confirmed in use */ /* pixel conversion correct */
+.w--240 { width: 15rem; /* width 240px */ } /* confirmed in use */ /* pixel conversion correct */
+.w--299 { width: 18.6875rem; /* width 299px */ } /* confirmed in use */ /* pixel conversion correct */
+.w--323 { width: 20.1875rem; /* width 323px */ } /* confirmed in use */ /* pixel conversion correct */
+.w--352 { width: 22rem; /* width 352px */ } /* confirmed in use */ /* pixel conversion correct */
+.w--360 { width: 22.5rem; /* width 360px */ } /* confirmed in use */ /* pixel conversion correct */
+.w--384 { width: 24rem; /* width 384px */ } /* confirmed in use */ /* pixel conversion correct */
+.w--386 { width: 24.125rem; /* width 386px */ } /* confirmed in use */ /* pixel conversion correct */
+.w--400 { width: 25rem; /* width 400px */ } /* confirmed in use */ /* pixel conversion correct */
+.w--400--important { width: 25rem !important; /* width 400px */ } /* confirmed in use */ /* pixel conversion correct */
+.w--519 { width: 32.4375rem; /* width 519px */ } /* pixel conversion correct */
+.w--562 { width: 35.125rem; /* width 562px */ } /* pixel conversion correct */
+.w--648 { width: 40.5rem; /* width 648px */ } /* pixel conversion correct */
+.w--683 { width: 42.6875rem; /* width 683px */ } /* confirmed in use */ /* pixel conversion correct */
+.w--720 { width: 45rem; /* width 720px */ } /* confirmed in use */ /* pixel conversion correct */
+
+/* Min Width */
+.mw--20 { min-width: 1.25rem; /* min width 20px */ } /* confirmed in use */ /* pixel conversion correct */
+.mw--24 { min-width: 1.5rem; /* min width 24px */ } /* rehan fixed - please check your template */ /* confirmed in use */ /* pixel conversion correct */
+.mw--40 { min-width: 2.5rem; /* min width 40px */ } /* rehan fixed - please check your template */ /* pixel conversion correct */
+.mw--75 { min-width: 4.688rem; /* min width 75px */ } /* confirmed in use */ /* pixel conversion correct */
+.mw--85 { min-width: 5.3125rem; /* min width 85px */ } /* confirmed in use */ /* pixel conversion correct */
+.mw--100 { min-width: 6.25rem; /* min width 100px */ } /* confirmed in use */ /* pixel conversion correct */
+.mw--120 { min-width: 7.5rem; /* min width 120px */ } /* confirmed in use */ /* pixel conversion correct */
+
+/* Max Width */
+.max--w--420 { max-width:26.25rem; /* max width 420px */ } /* confirmed in use */ /* pixel conversion correct */
+.max--w--562 { max-width: 35.125rem; /* max width 562px */ } /* confirmed in use */ /* pixel conversion correct */
+.max--w--950 { max-width: 59.375rem; /* max width 950px */ } /* confirmed in use */ /* pixel conversion correct */
+.max--w--1024 { max-width: 64rem; /* max width 1024px */ } /* confirmed in use */ /* pixel conversion correct */
+
+/* Width Percent */
+.pw--10 { width: 10%; /* width 10% */ } /* confirmed in use */ 
+.pw--15 { width: 15%; /* width 15% */ } /* confirmed in use */ 
+.pw--25 { width: 25%; /* width 25% */ } /* confirmed in use */ 
+
+/* Height */
+.h--8 { height: 0.5rem; /* height 8px */ } /* confirmed in use */ /* pixel conversion correct */
+.h--13 { height: 0.8125rem; /* height 13px */ } /* confirmed in use */ /* pixel conversion correct */
+.h--13-008 { height: 0.813rem; /* height 13.008px */ } /* confirmed in use */ /* pixel conversion correct */
+.h--16 { height: 1rem; /* height 16px */ } /* confirmed in use */ /* pixel conversion correct */
+.h--18 { height: 1.125rem; /* height 18px */} /* confirmed in use */ /* pixel conversion correct */
+.h--20 { height: 1.25rem; /* height 20px */ } /* confirmed in use */ /* pixel conversion correct */
+.h--22 { height: 1.375rem; /* height 22px */ } /* confirmed in use */ /* pixel conversion correct */
+.h--24 { height: 1.5rem; /* height 24px */ } /* confirmed in use */ /* pixel conversion correct */
+.h--32 { height: 2rem; /* height 32px */} /* confirmed in use */ /* pixel conversion correct */
+.h--36 { height: 2.25rem; /* height 36px */} /* confirmed in use */ /* pixel conversion correct */
+.h--40 { height: 2.5rem; /* height 40px */} /* confirmed in use */ /* pixel conversion correct */
+.h--48 { height: 3rem; /* height 48px */ } /* confirmed in use */ /* pixel conversion correct */
+.h--64 { height: 4rem; /* height 64px */ } /* confirmed in use */ /* pixel conversion correct */
+.h--68 { height: 4.25rem; /* height 68px */ } /* confirmed in use */ /* pixel conversion correct */
+.h--70 { height: 4.375rem; /* height 70px */ } /* confirmed in use */ /* pixel conversion correct */
+.h--72 { height: 4.5rem; /* height 72px */ } /* confirmed in use */ /* pixel conversion correct */
+.h--74 { height: 4.625rem; /* height 74px */ } /* confirmed in use */ /* pixel conversion correct */
+.h--76 { height: 4.75rem; /* height 76px */ } /* confirmed in use */ /* pixel conversion correct */
+.h--100 { height: 6.25rem; /* height 100px */ } /* confirmed in use */ /* pixel conversion correct */
+.h--128 { height: 8rem; /* height 128px */ } /* confirmed in use */ /* pixel conversion correct */
+.h--161 { height: 10.0625rem; /* height 161px */ } /* confirmed in use */ /* pixel conversion correct */
+.h--176 { height: 11rem; /* height 176px */ } /* confirmed in use */ /* pixel conversion correct */
+.h--186 { height: 11.625rem; /* height 186px */ } /* confirmed in use */ /* pixel conversion correct */
+.h--195 { height: 12.1875rem; /* height 195px */ } /* confirmed in use */ /* pixel conversion correct */
+.h--216 { height: 13.5rem; /* height 216px */ } /* confirmed in use */ /* pixel conversion correct */
+.h--230 { height: 14.375rem; /* height 230px */ } /* confirmed in use */ /* pixel conversion correct */
+.h--245 { height: 15.313rem; /* height 245px */ } /* confirmed in use */ /* pixel conversion correct */
+.h--340 { height: 21.25rem; /* height 340px */ } /* confirmed in use */ /* pixel conversion correct */
+.h--464 { height: 29rem; /* height 464px */ } /* pixel conversion correct */
+.h--490 {height: 30.625rem;/* height 490px */} /* confirmed in use */ /* pixel conversion correct */
+.h--520 { height: 32.5rem; /* height 520px */ } /* confirmed in use */ /* pixel conversion correct */
+.h--568 { height: 35.5rem; /* height 568px */ } /* pixel conversion correct */
+.h--579 { height: 37.313rem; /* height 579px */ } /* pixel conversion correct */
+
+/* Min Height */
+.mh--22 { min-height: 1.375rem; /* min height 22px */ } /* confirmed in use */ /* pixel conversion correct */
+.mh--24 { min-height: 1.5rem; /* min height 24px */ } /* confirmed in use */ /* pixel conversion correct */
+.mh--40 { min-height: 2.5rem; /* min height 40px */ } /* confirmed in use */ /* pixel conversion correct */
+.mh--250 { min-height: 15.625rem; /* min height 250px */ } /* confirmed in use */ /* pixel conversion correct */
+.mh--305 { min-height: 19.0625rem; /* min height 305px */ } /* confirmed in use */ /* pixel conversion correct */
+.mh--395 { min-height: 24.6875rem; /* min height 395px */ } /* confirmed in use */ /* pixel conversion correct */
+
+/* Max Height */
+.max-h--250 { max-height: 15.625rem; /* max height 250px */ } /* pixel conversion correct */
+
+/* Padding */
+.pad--3 { padding: 0.188rem; /* padding 3px */ } /* confirmed in use */ /* pixel conversion correct */
+.pad--4 { padding: 0.25rem; /* padding 4px */ } /* confirmed in use */ /* pixel conversion correct */
+.pad--5 { padding: 0.3125rem; /* padding 5px */ } /* confirmed in use */ /* pixel conversion correct */
+.pad--8 { padding: 0.5rem; /* padding 8px */ } /* confirmed in use */ /* pixel conversion correct */
+.pad--20 { padding: 1.25rem; /* padding 20px */ } /* confirmed in use */ /* pixel conversion correct */
+.pad--24 { padding: 1.5rem; /* padding 24px */ } /* confirmed in use */ /* pixel conversion correct */
+.pad--40 { padding: 2.5rem; /* padding 40px */ } /* confirmed in use */ /* pixel conversion correct */
+.pad--x--4 { padding-left: 0.25rem; padding-right: 0.25rem; /* padding left right 4px */ } /* confirmed in use */ /* pixel conversion correct */
+.pad--x--5 { padding-left: 0.313rem; padding-right: 0.313rem; /* padding left right 5px */ } /* confirmed in use */ /* pixel conversion correct */
+.pad--x--8 { padding-left: 0.5rem; padding-right: 0.5rem; /* padding left right 8px */ } /* confirmed in use */ /* pixel conversion correct */
+.pad--x--10 { padding-left: 0.625rem; padding-right: 0.625rem; /* padding left right 10px */ } /* confirmed in use */ /* pixel conversion correct */
+.pad--x--16 { padding-left: 1rem; padding-right: 1rem; /* padding left right 16px */ } /* confirmed in use */ /* pixel conversion correct */
+.pad--x--20 { padding-left: 1.25rem; padding-right: 1.25rem; /* padding-left 20px. padding-right 20px */ } /* confirmed in use */ /* pixel conversion correct */
+.pad--x--24 { padding-left: 1.5rem; padding-right: 1.5rem; /* padding left right 24px */ } /* confirmed in use */ /* pixel conversion correct */
+.pad--x--46 { padding-left: 2.875rem; padding-right: 2.875rem; /* padding-left 46px; padding-right 46px */ } /* confirmed in use */
+.pad--left--5 { padding-left: 0.313rem; /* padding left 5px */ } /* confirmed in use */ /* pixel conversion correct */ 
+.pad--left--8 { padding-left: 0.5rem; /* padding left 8px */ } /* confirmed in use */ /* pixel conversion correct */ 
+.pad--left--10 { padding-left: 0.625rem; /* padding left 10px */ } /* confirmed in use */ /* pixel conversion correct */ 
+.pad--left--15-008 { padding-left: 0.938rem; /* padding left 15.008px */ } /* confirmed in use */ /* pixel conversion correct */
+.pad--left--15{ padding-left: 0.9375rem; /* padding left 15px */ } /* confirmed in use */ /* pixel conversion correct */
+.pad--left--24 { padding-left: 1.5rem; /* padding left 24px */ } /* confirmed in use */ /* pixel conversion correct */
+.pad--left--30 { padding-left: 1.875rem; /* padding left 30px */ } /* confirmed in use */ /* pixel conversion correct */
+.pad--left--48 { padding-left: 3rem; /* padding left 48px */ } /* confirmed in use */ /* pixel conversion correct */ 
+.pad--right--0 { padding-right: 0rem; /* padding right 0px */ } /* confirmed in use */ /* pixel conversion correct */
+.pad--right--8 { padding-right: 0.5rem; /* padding right 8px */ } /* confirmed in use */ /* pixel conversion correct */
+.pad--right--10 { padding-right: 0.625rem; /* padding right 10px */ } /* confirmed in use */ /* pixel conversion correct */
+.pad--right--12 { padding-right: .75rem /* padding right 12px */ } /* confirmed in use */ /* pixel conversion correct */
+.pad--right--15 { padding-right: 0.9375rem; /* padding right 15px */ } /* confirmed in use */ /* pixel conversion correct */
+.pad--right--15-008 { padding-right: 0.938rem; /* padding right 15.008px */ } /* confirmed in use */ /* pixel conversion correct */
+.pad--right--24 { padding-right: 1.5rem; /* padding right 24px */ } /* confirmed in use */ /* pixel conversion correct */
+.pad--right--48 { padding-right: 3rem; /* padding right 48px */ } /* confirmed in use */ /* pixel conversion correct */
+.pad--y--1 { padding-top: 0.0625rem; padding-bottom: 0.0625rem; /* padding top bottom 1px */ } /* pixel conversion correct */
+.pad--y--2 { padding-top: 0.125rem; padding-bottom: 0.125rem;  /* padding top bottom 2px */ } /* pixel conversion correct */
+.pad--y--3 { padding-top: 0.188rem; padding-bottom: 0.188rem; /* padding-top 3px, padding-bottom 3px */ } /* confirmed in use */ /* pixel conversion correct */
+.pad--y--8 { padding-top: 0.5rem; padding-bottom: 0.5rem; /* padding top bottom 8px */ } /* confirmed in use */ /* pixel conversion correct */
+.pad--y--12 { padding-top: 0.75rem; padding-bottom: 0.75rem; /* padding top bottom 12px */ } /* confirmed in use */ /* pixel conversion correct */
+.pad--y--24 { padding-top: 1.5rem; padding-bottom: 1.5rem; /* padding top bottom 24px */ } /* confirmed in use */
+.pad--y--32 { padding-top: 2rem; padding-bottom: 2rem; /* padding-top 32px. padding-bottom 32px */ } /* confirmed in use */
+.pad--top--2 { padding-top: 0.125rem; /* padding top 2px */ } /* confirmed in use */ /* pixel conversion correct */
+.pad--top--4 { padding-top: 0.25rem; /* padding top 4px */ } /* confirmed in use */ /* pixel conversion correct */
+.pad--top--5 { padding-top: 0.3125rem; /* padding top 5px */ } /* confirmed in use */ /* pixel conversion correct */
+.pad--top--8 { padding-top: .5rem /* padding top 8px */ } /* confirmed in use */ /* pixel conversion correct */
+.pad--top--10 { padding-top: 0.625rem; /* padding top 10px */ } /* confirmed in use */ /* pixel conversion correct */
+.pad--top--24 { padding-top: 1.5rem; /* padding top 24px */ } /* confirmed in use */ /* pixel conversion correct */
+.pad--top--27 {padding-top: 1.6875rem;/* padding-top 27px */} /* confirmed in use */ /* pixel conversion correct */
+.pad--top--28 {padding-top: 1.75rem;/* padding-top 28px */} /* confirmed in use */ /* pixel conversion correct */
+.pad--top--30 { padding-top: 1.875rem; /* padding-top 30px */} /* confirmed in use */ /* pixel conversion correct */
+.pad--top--32 {padding-top: 2rem; /* padding-top 32px */} /* confirmed in use */ /* pixel conversion correct */
+.pad--top--48 { padding-top: 3rem; /* padding-top 48px */ } /* confirmed in use */ /* pixel conversion correct */
+.pad--top--64 { padding-top: 4rem; /* padding-top 64px */ } /* confirmed in use */ /* pixel conversion correct */
+.pad--bottom--2 { padding-bottom: 0.125rem; /* padding bottom 2px */ } /* confirmed in use */ /* pixel conversion correct */
+.pad--bottom--4 { padding-bottom: 0.25rem; /* padding top 4px */ } /* confirmed in use */ /* pixel conversion correct */
+.pad--bottom--5 { padding-bottom: 0.313rem; /* padding-bottom 5px */ } /* confirmed in use */ /* pixel conversion correct */
+.pad--bottom--8 { padding-bottom: .5rem /* padding-bottom 8px */ } /* confirmed in use */ /* pixel conversion correct */
+.pad--bottom--10 { padding-bottom: 0.625rem; /* padding bottom 10px */ } /* confirmed in use */ /* pixel conversion correct */
+.pad--bottom--16 { padding-bottom: 1rem /* padding bottom 16px */ } /* confirmed in use */ /* pixel conversion correct */
+.pad--bottom--24 { padding-bottom: 1.5rem; /* padding bottom 24px */ } /* confirmed in use */ /* pixel conversion correct */
+.pad--bottom--32 { padding-bottom: 2rem; /* padding bottom 32px */ } /* confirmed in use */ /* pixel conversion correct */
+.pad--bottom--48 { padding-bottom: 3rem; /* padding bottom 48px */ } /* confirmed in use */ /* pixel conversion correct */
+
+/* Margin */
+.mt--auto { margin-top: auto; } /* confirmed in use */
+.mb--4 { margin-bottom: .25rem /* margin bottom 4px */ } /* confirmed in use */ /* pixel conversion correct */
+.mt--2-4 { margin-top: .15rem; /* margin top 2.4px */ } /* confirmed in use */ /* pixel conversion correct */
+.mt--4 { margin-top: .25rem /* margin top 4px */ } /* confirmed in use */ /* pixel conversion correct */
+.mt--4-8 { margin-top: .30rem; /* margin top 4.8px */ } /* confirmed in use */ /* pixel conversion correct */
+.my--0 { margin-top: 0px; margin-bottom: 0px; /* margin top bottom 0px */ } /* confirmed in use */ /* pixel conversion correct */
+.mx--48 { margin-left: 3rem; margin-right: 3rem; /* margin left right 48px */ } /* confirmed in use */ /* pixel conversion correct */
+
+/* Gap */
+.gap--1 { gap: 0.063rem; /* gap 1px */ } /* confirmed in use */ /* pixel conversion correct */
+.gap--2 { gap:0.125rem; /* gap 2px */ } /* confirmed in use */ /* pixel conversion correct */
+.gap--3 { gap: 0.1875rem; /* gap 3px */ } /* confirmed in use */ /* pixel conversion correct */
+.gap--4 { gap: 0.25rem; /* gap 4px */ } /* confirmed in use */ /* pixel conversion correct */
+.gap--5 { gap: 0.3125rem; /* gap 5px */ } /* confirmed in use */ /* pixel conversion correct */
+.gap--6 { gap: 0.375rem; /* gap 6px */ } /* confirmed in use */ /* pixel conversion correct */
+.gap--8 { gap: 0.5rem; } /* gap 8px */ /* confirmed in use */ /* pixel conversion correct */
+.gap--9 { gap: 0.5625rem; /* gap 9px */ } /* confirmed in use */ /* pixel conversion correct */
+.gap--10 { gap: 0.625rem; /* gap 10px */ } /* confirmed in use */ /* pixel conversion correct */
+.gap--14 { gap: 0.875rem; /* gap 14px */ } /* confirmed in use */ /* pixel conversion correct */
+.gap--15 { gap: 0.938rem; /* gap 15px */ } /* confirmed in use */ /* pixel conversion correct */
+.gap--16 { gap: 1rem; /* gap 16px */ } /* confirmed in use */ /* pixel conversion correct */
+.gap--20 { gap: 1.25rem; /* gap 20px */ } /* confirmed in use */ /* pixel conversion correct */
+.gap--23 { gap: 1.438rem; /* gap 23px */ }  /* confirmed in use */ /* pixel conversion correct */
+.gap--24 { gap: 1.5rem; /* gap 24px */ } /* confirmed in use */ /* pixel conversion correct */
+.gap--32 { gap: 2rem; /* gap 32px */ } /* confirmed in use */ /* pixel conversion correct */
+.gap--36 { gap: 2.25rem; /* gap 36px */ } /* confirmed in use */ /* pixel conversion correct */
+.gap--40 {gap: 2.5rem;/* gap 40px */} /* confirmed in use */ /* pixel conversion correct */
+.gap--48 { gap: 3rem; /* gap 48px */ } /* pixel conversion correct */ /* pixel conversion correct */
+.gap--64 { gap: 4rem; /* gap 64px */ } /* pixel conversion correct */ /* pixel conversion correct */
+.gap--80 { gap: 5rem; /* gap 80px */ } /* confirmed in use */ /* pixel conversion correct */
+
+/* Position */
+.sticky { position: sticky; } /* confirmed in use */
+
+/* Bottom */
+.bottom--neg-4 { bottom: -0.25rem; /* bottom -4px */ } /* confirmed in use */ /* pixel conversion correct */
+.bottom--neg-32 { bottom: -2rem; /* bottom -32px */ } /* confirmed in use */ /* pixel conversion correct */
+.bottom--neg-64 { bottom: -4rem;  /* bottom -64px */ } /* confirmed in use */ /* pixel conversion correct */
+
+/* Left */
+.left--p-20 { left: 20%; } /* confirmed in use */
+.left--24 { left: 1.5rem;  /* left 24px */ } /* confirmed in use */ /* pixel conversion correct */
+.left--neg-16 { left: 1rem;  /* left -16px */ } /* confirmed in use */ /* pixel conversion correct */
+.left--neg-56 { left: 3.5rem;  /* left -56px */ } /* confirmed in use */ /* pixel conversion correct */
+
+/* Right */
+.right--p-20 { right: 20%; } /* confirmed in use */
+.right--neg-4 { right: -0.25rem; /* right -4px */ } /* confirmed in use */ /* pixel conversion correct */
+
+/* Top */
+.top--p-50 { top: 50%; } /* confirmed in use */
+.top--20 { top: 1.3rem; /* top 20px */ } /* confirmed in use */ /* pixel conversion correct */
+.top--48 { top: 3rem;  /* top 48px */ } /* confirmed in use */ /* pixel conversion correct */
+
+/* Z-Index */
+.z--10000 { z-index: 10000; } /* confirmed in use */
+.z--10010 { z-index: 10010; } /* confirmed in use */
+.z--10100 { z-index: 10100; } /* confirmed in use */
+.z--11100 { z-index: 11000; }
+
+/* Flexbox */
+.flex--max { flex: 1 0 0; } /* confirmed in use */
+
+/* Opacity */
+.o--08 { opacity: 0.08; }
+.o--70 { opacity: 0.70; }
+
+/* Object Fit */
+.fit--cover { object-fit: cover; } /* confirmed in use */
+.fit--contain { object-fit: contain; }
+
+/* Backdrop Filter */
+.bg--blur--2 { -webkit-backdrop-filter: blur(2px); backdrop-filter: blur(2px); } /* confirmed in use */
+.bg--blur--5 { -webkit-backdrop-filter: blur(5px); backdrop-filter: blur(5px); } /* confirmed in use */
+.bg--blur--10 { -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); } /* confirmed in use */
+.bg--blur--20 { -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px); }
+.bg--blur--25 { -webkit-backdrop-filter: blur(25px); backdrop-filter: blur(25px); } /* confirmed in use */
+.bg--blur--50 { -webkit-backdrop-filter: blur(50px); backdrop-filter: blur(50px); } /* confirmed in use */
+.bg--blur--100 { -webkit-backdrop-filter: blur(100px); backdrop-filter: blur(100px); }
+.bg--blur--200 { -webkit-backdrop-filter: blur(200px); backdrop-filter: blur(200px); } /* confirmed in use */
+
+/* Box Shadow */
+.sh--1 { box-shadow: 0 0 10px -34px rgba(0, 0, 0, 0.10); } /* confirmed in use */
+.sh--2 { box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.20); } /* confirmed in use */
+.sh--3 { box-shadow: 0 0 10px -34px rgba(0, 0, 0, 0.10); } /* confirmed in use */
+.sh--4 { box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.10); } /* confirmed in use */
+.sh--2000 { box-shadow: 0 0 2000px 2000px rgba(0, 0, 0, 0.5); } /* confirmed in use */
+
+/* Drop Shadow */
+.drop--sh--1 { filter: drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.50)); } /* confirmed in use */
+
+/* Text Shadow */
+.text--sh--1 { text-shadow: 0 0 10px rgba(0, 0, 0, 0.10); } /* confirmed in use */
+
+/* Overflow */
+.bg--no-repaet { background-repeat: no-repeat; } /* confirmed in use */
+.bg--contain { background-size: contain; } /* confirmed in use */
+.bg--55 { background-size: 55%; } /* confirmed in use */
+.bg--pos--center { background-position: center; } /* confirmed in use */
+
+/* Overflow */
+.of--visible { overflow: visible; } /* confirmed in use */
+.of--hidden { overflow: hidden; } /* confirmed in use */
+
+/* Cursor Style */ 
+.c--pointer { cursor: pointer; }
+
+/* Border */
+.br--none { border: none; }
+.bw--0-50 { border-width: 0.03125rem;  /* border .50px */ } /* confirmed in use */ /* pixel conversion correct */
+
+/* Border Width */
+.bw--0-50{ border-width: 0.03125rem; /* border withdt 0.50px */ } /* pixel conversion correct */
+
+/* Border Radius */
+.br--0 { border-radius: 0px; /* border-radius 0px */ } /* confirmed in use */ /* pixel conversion correct */
+.br--4 { border-radius: 0.25rem; /* border-radius 4px */ } /* confirmed in use */ /* pixel conversion correct */
+.br--7 { border-radius: 0.438rem; /* border-radius 7px */ } /* confirmed in use */ /* pixel conversion correct */
+.br--8 { border-radius: 0.5rem; /* border-radius 8px */ } /* confirmed in use */ /* pixel conversion correct */
+.br--10 { border-radius: 0.625rem; /* border-radius 10px */ } /* confirmed in use */ /* pixel conversion correct */
+.br--12 { border-radius: 0.75rem; /* border-radius 12px */ } /* confirmed in use */ /* pixel conversion correct */
+.br--15 { border-radius: 0.9375rem; /* border-radius 15px */ } /* confirmed in use */ /* pixel conversion correct */
+.br--20 { border-radius: 1.25rem; /* border-radius 20px */ } /* confirmed in use */ /* pixel conversion correct */
+.br--24 { border-radius: 1.5rem; /* border-radius 24px */ } /* confirmed in use */ /* pixel conversion correct */
+.br--30 { border-radius: 1.875rem; /* border-radius 30px */ } /* confirmed in use */ /* pixel conversion correct */
+.br--30-71 { border-radius: 1.919rem; /* border-radius 30.71 */ }  /* confirmed in use */ /* pixel conversion correct */
+.br--50 { border-radius: 3.125rem; /* border-radius 50px */ } /* confirmed in use */ /* pixel conversion correct */
+.br--80 { border-radius: 5rem; /* border-radius 80px */ } /* confirmed in use */ /* pixel conversion correct */
+.br--top--24 { border-radius: 1.5rem 1.5rem 0rem 0rem; /* border-radius top 24px */ } /* confirmed in use */ /* pixel conversion correct */
+.br--bottom--24 { border-radius: 0rem 0rem 1.5rem 1.5rem; /* border-radius bottom 24px */ } /* confirmed in use */ /* pixel conversion correct */
+
+/* Grid */
+.grid { display: grid; }
+
+
+/*Old/Incorrect Colors Tachyons*/
+.col--iron-gray { color: var(--color-iron-gray); } /* confirmed in use */ /* should be .col--mercury */
+.col--wild-sand-gray { color: var(--color-wild-sand-gray); } /* confirmed in use */ /* should be .col--desert-storm */
+.col--light-athens-gray { color: var(--color-light-athens-gray); } /* confirmed in use */ /* should be .col--athens-gray */
+.col--light-warm-green { color: var(--color-light-warm-green); } /* confirmed in use */ /* should be .col--chartreuse */
+.col--dark-cold-azure { color: var(--dark-cold-azure); } /* confirmed in use */ /* should be .col--shuttle-gray */
+.color-very-dark-ebony { color: var(--color-very-dark-ebony); }
+
+/* Old/Incorrect Background Colors*/
+.bg--col--iron-gray { background-color: var(--color-iron-gray); } /* confirmed in use */ /* should be .bg--col--mercury */
+.bg--col--wild-sand-gray { background-color: var(--color-wild-sand-gray); } /* should be .bg--col--desert-storm */
+.bg--col--light-warm-green { background-color: var(--color-light-warm-green,#9FFF02); } /* confirmed in use */ /* should be .bg--col--chartreuse */
+.bg--col--light-warm-red { background-color: var(--color-light-warm-red,#FF4848); } /* confirmed in use */ /* should be .bg--col--sunset-orange */
+.bg--col--green { background-color: var(--color-green); } /* confirmed in use */ /* should be .bg--col--japanese-laurel */
+
+/* Old/Incorrect Border Colors */
+.br--col--iron-gray { border-color: var(--color-iron-gray); } /* confirmed in use */ /* should be .br--col--mercury */
+.br--col--wild-sand-gray { border-color: var(--color-wild-sand-gray); } /* should be .br--col--desert-storm */
+.br--col--light-athens-gray { border-color: var(--color-light-athens-gray); } /* should be .br--col--athens-gray */
+.br--col--light-warm-green { border-color: var(--color-light-warm-green); } /* confirmed in use */ /* should be .br--col--chartreuse */
+.br--col--light-cold-azure { border-color: var(--light-cold-azure); } /* confirmed in use */ /* should be .br--col--mystic */
+
+/* Old/Incorrect Fill Colors */
+.fill--col--iron-gray path { fill: var(--color-iron-gray); } /* confirmed in use */ /* should be .fill--col--mercury */
+.fill--col--wild-sand-gray path { fill: var(--color-wild-sand-gray); } /* confirmed in use */ /* should be .fill--col--desert-storm */
+.fill--col--light-warm-green path { fill: var(--color-light-warm-green,#9FFF02); } /* confirmed in use */ /* should be .fill--col--chartreuse */
+.fill--col--light-warm-red path { fill: var(--color-light-warm-red,#FF4848); } /* should be .fill--col--sunset-orange */
+
+/* Old/Incorrect Stroke Colors */
+.stroke--col--iron-gray path { stroke: var(--color-iron-gray); } /* should be .stroke--col--mercury */
+.stroke--col--wild-sand-gray path { stroke: var(--color-wild-sand-gray); } /* confirmed in use */ /* should be .stroke--col--desert-storm */
+.stroke--col--light-warm-green path { stroke: var(--color-light-warm-green,#9FFF02); } /* confirmed in use */ /* confirmed in use */ /* should be .stroke--col--chartreuse */
+.stroke--col--light-warm-red path { stroke: var(--color-light-warm-red,#FF4848); } /* should be .stroke--col--sunset-orange */
+
+/* Old/Incorrect Min Height */
+.mh--305 { min-height: 24.6875rem; }
+
+/* Old/Incorrect Bottom */
+.bottom---64 { bottom: -4rem; } /* confirmed in use */ /* name should be .bottom--neg-64 */
+
+/* Old/Incorrect Border */
+.bw--half-one { border-width: 0.03125rem; } /* confirmed in use */ /* name should be .bw--0-50 */
+
+/* Old/Incorrect Letter Spacing */
+.tracked--50 { letter-spacing: 0.005rem; /* letter spacing 0.08px */ } /* confirmed in use */
+.tracked--75 { letter-spacing: 0.0075rem; /* letter spacing 0.12px */ } /* confirmed in use */
+.tracked--100 { letter-spacing: 0.01rem; /* letter spacing 0.16px */ } /* confirmed in use */
+.tracked--125 { letter-spacing: 0.0125rem; /* letter spacing 0.2px */ } /* confirmed in use */
+.tracked--150 { letter-spacing: 0.015rem; /* letter spacing 0.24px */ } /* confirmed in use */
