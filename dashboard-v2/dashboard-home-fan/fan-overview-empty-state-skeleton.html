@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Meta Tags -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE-edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Template - Fan Overview Empty State</title>
+
+  <!-- Poppins Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Nice Select CSS -->
+  <link rel="stylesheet" type="text/css"
+    href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/FINAL/css/nice-select.css">
+
+  <!-- Tachyons Styles -->
+  <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/main.css" />
+  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" />
+  <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/theme.css" />
+  <link rel="stylesheet"
+    href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/customTachyons.css" />
+
+  <!-- Normal CSS -->
+
+  <!-- Dashboard Sidebar Custom Style -->
+  <link rel="stylesheet" href="../assets/css/dashboard-styles-desktop.css" />
+
+  <!-- Tablet Stylesheet -->
+  <link rel="stylesheet" href="../assets/css/dashboard-styles-tablet.css"
+    media="screen and (min-width: 768px) and (max-width: 1365px)">
+
+  <!-- Mobile Stylesheet -->
+  <link rel="stylesheet" href="../assets/css/dashboard-styles-mobile.css"
+    media="screen and (min-width: 480px) and (max-width: 767px)">
+
+  <!-- Mobile Portrait Stylesheet -->
+  <link rel="stylesheet" href="../assets/css/dashboard-styles-mobile-portrait.css"
+    media="screen and (max-width: 479px)">
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+  <!-- main wrapper -->
+  <div data-section="wrapper"
+    class="h--screen-tablet h--screen-mobile h--screen-mobile-portrait flex flex--column-responsive-mobile flex--column-responsive-mobile-portrait">
+
+    <!-- page sidebar -->
+    <section data-sidebar data-section="sidebar"
+      class="flex vh-100 sticky top-0 z-2 bg--col--athens-gray--70 sh--sidebar vw--100--responsive-mobile vw--100--responsive-mobile-portrait h--48-responsive-mobile h--48-responsive-mobile-portrait bg--col--none--responsive-mobile bg--col--none--responsive-mobile-portrait sh--none--responsive-mobile sh--none--responsive-mobile-portrait">
+
+
+      <!-- sidebar main wrapper (to contain all sidebar UI elements, except submenu containers) -->
+      <div data-sidebar-main-wrapper data-mobile-nav-main-wrapper data-is-active="false"
+        class="flex flex-column justify-center items-center gap--6 w--90 w--90--px vh-100 pa0 pad--y--12 transition--all transition--150 transition--ease-in-out vw--100--responsive-mobile vw--100--responsive-mobile-portrait fixed--responsive-mobile fixed--responsive-mobile-portrait top--0--responsive-mobile top--0--responsive-mobile-portrait left--0--responsive-mobile left--0--responsive-mobile-portrait bg--col--white--70--responsive-mobile bg--col--white--70--responsive-mobile-portrait bg--blur--25--responsive-mobile bg--blur--25--responsive-mobile-portrait gap--16--responsive-mobile gap--16--responsive-mobile-portrait pad--y--8--responsive-mobile pad--y--8--responsive-mobile-portrait pad--x--16-responsive-mobile pad--x--16-responsive-mobile-portrait">
+        <!-- site logo -->
+        <div data-layer="logo_bg" class="LogoBg db w--36 h--36 relative br--6 o-80"></div>
+        <!-- /site logo -->
+
+        <!-- profile & controls (profile, notifications and logout) -->
+        <div data-sidebar-top-controls data-desktop-only
+          class="flex flex-column items-center self-stretch gap--8 pv2 ph1 bb br--col--mischka display-none--responsive-mobile display-none--responsive-mobile-portrait">
+          <!-- avatar -->
+          <div class="flex w--40 h--40 br--20">
+            <div data-layer="logo_bg" class="LogoBg db"
+              style="width: 36px; height: 36px; position: relative; opacity: 0.80; background: #E6E6E6; border-radius: 39px">
+            </div>
+          </div>
+          <!-- /avatar -->
+
+          <!-- cta controls -->
+          <div class="flex justify-center items-center self-stretch gap--8 pv0 ph1">
+            <!-- log out -->
+            <div data-layer="logo_bg" class="LogoBg db w--32 h--32 o-80 br--6"></div>
+            <!-- /log out -->
+
+            <!-- notification -->
+            <div data-layer="logo_bg" class="LogoBg db w--32 h--32 o-80 br--6"
+              style="width: 32px; height: 32px; position: relative; opacity: 0.80; background: #E6E6E6; border-radius: 6px">
+            </div>
+            <!-- /notification -->
+          </div>
+          <!-- /cta controls -->
+        </div>
+        <!-- /profile & controls -->
+
+        <!-- main navigation -->
+        <div data-sidebar-nav-wrapper class="flex flex-column flex--max items-center self-stretch gap--4 pv1 ph2">
+          <nav data-dashboard-main-nav class="flex flex-column items-center self-stretch gap--4">
+            <!-- container to show normal menu items (only desktop version, when viewport height is fine to show items, keep appending elements) -->
+            <div data-menu-panel-wrapper class="flex flex-column self-stretch relative z-5">
+              <div data-menu-panel
+                class="flex flex-column items-center self-stretch gap--4 display-grid--responsive-mobile display-grid--responsive-mobile-portrait grid--cols-4--responsive-mobile grid--cols-4--responsive-mobile-portrait gap--16--responsive-mobile gap--16--responsive-mobile-portrait">
+                <!-- menu item (Subscriptions) [if active page item, then "current-page" class should be added to the div] -->
+                <div data-sidebar-menu-item data-current-page-detector data-page="dashboard/subscription-settings"
+                  class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
+                  <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
+                  <div
+                    class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 transition--all transition--200 transition--ease-in-out">
+                    <!-- render_svg_icon( 'logo_bg' ) -->
+                    <div data-layer="logo_bg_2" class="logo_bg_2 db w--44 h--44 o-80 br--6"></div>
+                  </div>
+                </div>
+                <!-- /menu item -->
+
+                <!-- menu item (Subscriptions) [if active page item, then "current-page" class should be added to the div] -->
+                <div data-sidebar-menu-item data-current-page-detector data-page="dashboard/subscription-settings"
+                  class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
+                  <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
+                  <div
+                    class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 transition--all transition--200 transition--ease-in-out">
+                    <!-- render_svg_icon( 'logo_bg' ) -->
+                    <div data-layer="logo_bg" class="LogoBg db db w--44 h--44 o-80 br--6"></div>
+                  </div>
+                </div>
+                <!-- /menu item -->
+
+                <!-- menu item (Subscriptions) [if active page item, then "current-page" class should be added to the div] -->
+                <div data-sidebar-menu-item data-current-page-detector data-page="dashboard/subscription-settings"
+                  class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
+                  <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
+                  <div
+                    class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 transition--all transition--200 transition--ease-in-out">
+                    <!-- render_svg_icon( 'logo_bg' ) -->
+                    <div data-layer="logo_bg" class="LogoBg db db w--44 h--44 o-80 br--6"></div>
+                  </div>
+                </div>
+                <!-- /menu item -->
+
+                <!-- menu item (Subscriptions) [if active page item, then "current-page" class should be added to the div] -->
+                <div data-sidebar-menu-item data-current-page-detector data-page="dashboard/subscription-settings"
+                  class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
+                  <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
+                  <div
+                    class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 transition--all transition--200 transition--ease-in-out">
+                    <!-- render_svg_icon( 'logo_bg' ) -->
+                    <div data-layer="logo_bg" class="LogoBg db db w--44 h--44 o-80 br--6"></div>
+                  </div>
+                </div>
+                <!-- /menu item -->
+
+                <!-- menu item (Subscriptions) [if active page item, then "current-page" class should be added to the div] -->
+                <div data-sidebar-menu-item data-current-page-detector data-page="dashboard/subscription-settings"
+                  class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
+                  <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
+                  <div
+                    class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 transition--all transition--200 transition--ease-in-out">
+                    <!-- render_svg_icon( 'logo_bg' ) -->
+                    <div data-layer="logo_bg" class="LogoBg db db w--44 h--44 o-80 br--6"></div>
+                  </div>
+                </div>
+                <!-- /menu item -->
+
+                <!-- menu item (Subscriptions) [if active page item, then "current-page" class should be added to the div] -->
+                <div data-sidebar-menu-item data-current-page-detector data-page="dashboard/subscription-settings"
+                  class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
+                  <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
+                  <div
+                    class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 transition--all transition--200 transition--ease-in-out">
+                    <!-- render_svg_icon( 'logo_bg' ) -->
+                    <div data-layer="logo_bg" class="LogoBg db db w--44 h--44 o-80 br--6"></div>
+                  </div>
+                </div>
+                <!-- /menu item -->
+
+                <!-- menu item (Subscriptions) [if active page item, then "current-page" class should be added to the div] -->
+                <div data-sidebar-menu-item data-current-page-detector data-page="dashboard/subscription-settings"
+                  class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
+                  <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
+                  <div
+                    class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 transition--all transition--200 transition--ease-in-out">
+                    <!-- render_svg_icon( 'logo_bg' ) -->
+                    <div data-layer="logo_bg" class="LogoBg db db w--44 h--44 o-80 br--6"></div>
+                  </div>
+                </div>
+                <!-- /menu item -->
+              </div>
+            </div>
+            <!-- container to show normal menu items -->
+          </nav>
+        </div>
+        <!-- /main navigation -->
+
+        <!-- sidebar bottom controls (language choice & help - desktop only) -->
+        <div data-sidebar-bottom-controls
+          class="flex flex-column items-center self-stretch gap--8 pv2 display-none--responsive-mobile display-none--responsive-mobile-portrait">
+          <!-- cta controls -->
+          <div class="flex justify-center items-center self-stretch gap--8 pv0 ph1">
+            <!-- language -->
+            <a data-lang-selection-button href="javascript: void(0)" title=""
+              class="flex justify-center items-center gap--12 w--32 h--32 br--6 hover--bg--col--brilliant-rose--10 pointer transition--all transition--200 transition--ease-in-out">
+              <div data-layer="logo_bg" class="LogoBg db db w--32 h--32 o-80 br--6"></div>
+            </a>
+            <!-- /language -->
+
+            <!-- help -->
+            <a data-help-button href="javascript: void(0)" title=""
+              class="flex justify-center items-center gap--2 w--32 h--32 br--6 hover--bg--col--brilliant-rose--10 pointer transition--all transition--200 transition--ease-in-out relative">
+              <!-- render_svg_icon( 'question_circle_1' ) -->
+              <div data-layer="logo_bg" class="LogoBg db db w--32 h--32 o-80 br--6"></div>
+            </a>
+            <!-- /help -->
+          </div>
+          <!-- /cta controls -->
+        </div>
+        <!-- /sidebar bottom controls -->
+      </div>
+      <!-- /sidebar main wrapper -->
+
+
+    </section>
+    <!-- /page sidebar -->
+
+    <!-- Background fixed container -->
+    <div data-container-bg-fixed
+      class="w-100 h-100 top-0 right-0 filter--blur--500 bg--no-repeat bg--right-top bg--center-top-responsive-tablet bg--center-top-responsive-mobile bg--center-top-responsive-mobile-portrait bg--size-auto fixed transform--3d"
+      style="background-image: url(../assets/images/gradient-bg.svg);">
+    </div> <!-- End Background fixed container -->
+
+    <!-- Page content area -->
+    <div class="relative w-100 flex flex-column">
+      <!-- Top Page Title Section -->
+      <div class="relative flex topPageMain">
+        <!-- Top mobile Seciton -->
+        <div class="top-section-mobile">
+          <div class="top-section-mobile-1">
+            <div>
+              <div class="tokenBalanceText text-t">Token Balance</div>
+              <div class="balanceBoxes">
+                <span class="balanceBox bg-white"></span>
+                <span class="balanceBox bg-white"></span>
+                <span class="balanceBox bg-white"></span>
+                <span class="balanceBox bg-white"></span>
+              </div>
+            </div>
+            <div>
+              <div class="basicMember text-t">Basic Member</div>
+              <div class="flex mobileTopUpBtn">
+                <div data-layer="angle button" class="AngleButton w-100"
+                  style="box-shadow: 2px 3px 0px #07F468; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+                  <div data-layer="Frame 8669" class="Frame8669 w-100 topUpBtnDiv"
+                    style="padding-left: 8px; padding-right: 8px; padding-top: 4px; padding-bottom: 4px; background: black; justify-content: center; align-items: center; gap: 10px; display: flex">
+                    <div data-layer="EDIT" class="Edit"
+                      style="color: #07F468; font-size: 16px; font-family: Poppins; font-weight: 500; line-height: 24px; word-wrap: break-word">
+                      TOP UP</div>
+                    <div data-layer="coins-stacked-01" class="CoinsStacked01"
+                      style="width: 20px; height: 20px; position: relative">
+                      <img src="../assets/icons/coins-stacked-01.svg" alt="coins stacked" class="filter--col--spring-green">
+                    </div>
+                  </div>
+                </div>
+                <!-- <img src="../assets/icons/rectangle-right-inverted.svg" class="h--30"> -->
+              </div>
+            </div>
+          </div>
+          <div class="top-section-mobile-2">
+            <div data-layer="INITIAL" class="top-blur-text-mobile">CP</div>
+          </div>
+        </div>
+        <!-- /Top mobile Seciton -->
+
+        <div class="pad--x--40 pad--top--40 pad--bottom--40 top-page-title-pad">
+          <div data-section="page-title" class="top-page-title">
+            <h1
+              class="poppins fs--36 lh--44 fw6 tracked--neg--0-72 col--midnight-adition m--0 fs--30-responsive-tablet lh--38-responsive-tablet"
+              style="color: #0C111D;">
+              Welcome back, Mango!</h1>
+            <!-- New Quote Section -->
+            <div data-new-quote-section="" class="flex flex-column gap--10 flex-auto heroQuoteSection">
+              <p class="fs--14 lh--20 " style="color: #344054;">“Those who flow as life flows know they need no other
+                force.” ~ Lao Tzu</p>
+              <button class="flex items-center gap--2 hover--parent--child--col--blue-ribbon newQuoteBtn">
+                <span><img src="../assets/icons/refresh-ccw-04.svg" alt="circle"
+                    class="hov--filter--col--blue-ribbon"></span>
+                <span class="fs--12 fw5 lh--18 col--oxford-blue hover--col--blue-ribbon" style="color: #344054;">New
+                  Quote</span>
+              </button>
+            </div>
+            <!-- New Quote Section -->
+          </div>
+        </div>
+        <!-- Top Up mask Group -->
+        <div>
+          <div class="top-right-section">
+            <div class="top-right-inner">
+              <div data-layer="INITIAL" class="top-blur-text">CP</div>
+              <div class="top-right-inner-mid">
+                <div class="top-right-inner-head">@mangoes1234</div>
+                <div class="top-right-inner-help">Standard Member</div>
+              </div>
+              <div class="top-right-inner-end">
+                <div class="tokenBalance">Token Balance</div>
+                <div class="balanceBoxes">
+                  <span class="balanceBox"></span>
+                  <span class="balanceBox"></span>
+                  <span class="balanceBox"></span>
+                  <span class="balanceBox"></span>
+                </div>
+                <div class="topUpBtn flex">
+                  <img src="../assets/icons/Rectangle 15510-inverted-left.svg" class="h--30">
+                  <div data-layer="angle button" class="AngleButton w-100"
+                    style="box-shadow: 2px 3px 0px #07F468; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+                    <div data-layer="Frame 8669" class="Frame8669 w-100 topUpBtnDiv"
+                      style="padding-left: 8px; padding-right: 8px; padding-top: 4px; padding-bottom: 4px; background: black; justify-content: center; align-items: center; gap: 10px; display: flex">
+                      <div data-layer="EDIT" class="Edit"
+                        style="color: #07F468; font-size: 16px; font-family: Poppins; font-weight: 500; line-height: 24px; word-wrap: break-word">
+                        TOP UP</div>
+                      <div data-layer="coins-stacked-01" class="CoinsStacked01"
+                        style="width: 20px; height: 20px; position: relative">
+                        <img src="../assets/icons/coins-stacked-01.svg" class="filter--col--spring-green" alt="coins stacked">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /Top Up Mask Group -->
+      </div>
+      <!-- End Top Page Title Section -->
+
+      <!-- main section -->
+      <main data-dashboard-page="" data-section="main" class="flex flex-column flex--max relative">
+        <!-- Inner Container -->
+        <div data-layer="Frame 1410098710" class="Frame1410098710 flex flex-column justify-start items-start gap--32">
+          <!-- Trending Creators Section -->
+          <div data-layer="image"
+            class="Image w-100 self-stretch pad--y--32 pad--left--40 bg-black flex flex-column justify-start items-center gap--24 ourTrendingCreatorFirst">
+            <!-- Section Title -->
+            <div data-layer="Frame 1410098786"
+              class="Frame1410098786 w-100 flex flex-column justify-start items-start gap--24">
+              <!-- Top Block -->
+              <div data-layer="Frame 1410098785" class="Frame1410098785 w-100 flex justify-between items-center">
+                <!-- Title -->
+                <div data-layer="Frame 1410098701" class="Frame1410098701 flex justify-start items-center gap--8">
+                  <!-- Icon -->
+                  <div data-layer="line-chart-up-02" class="LineChartUp02 w--24 h--24 relative"
+                    style="width: 24px; height: 24px; position: relative">
+                    <div data-layer="Icon" class="Icon">
+                      <img src="../assets/icons/line-chart-up.svg" alt="" class="w--24 h--24 filter--col--corn">
+                    </div>
+                  </div>
+                  <!-- /Icon -->
+                  <div data-layer="OUR TRENDING CREATORS" class="OurTrendingCreators fs--24 fw7 lh--32">OUR TRENDING
+                    CREATORS</div>
+                  <!-- Sub Text -->
+                  <div data-layer="angle button" class="AngleButton fles justify-start items-start">
+                    <div data-layer="Frame 8669"
+                      class="Frame8669 pad--x--8 pad--y--4 flex justify-center items-center gap--5">
+                      <div data-layer="EDIT" class="Edit fs--14 fw5 lh--20 white pointer">View All</div>
+                      <div data-layer="count"
+                        class="Count self-stretch flex flex-column justify-start items-center gap--10">
+                        <div data-layer="5" class="fs--10 fw5 white tracked--0-25">20</div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /Sub Text -->
+                </div>
+                <!-- /Title -->
+                <!-- Carousel Navigation -->
+                <div data-layer="Frame 8782"
+                  class="Frame8782 flex justify-start items-center gap--8 pad--right--40 carouselArrows">
+                  <!-- Arrow Left -->
+                  <div data-layer="Frame 1410098639"
+                    class="Frame1410098639 pad--5 bg-black flex justify-center items-center gap--10">
+                    <div data-layer="arrow-left" class="ArrowLeft w--40 h--40 relative">
+                      <img src="../assets/icons/arrow-left.svg" alt="" class="w--40 h--40 filter--col--white">
+                    </div>
+                  </div>
+                  <!-- /Arrow Left -->
+                  <!-- Arrow Right -->
+                  <div data-layer="Frame 1410098640"
+                    class="Frame1410098640 pad--5 flex justify-center items-center gap--10">
+                    <div data-layer="arrow-narrow-right" class="ArrowNarrowRight w--40 h--40 relative">
+                      <img src="../assets/icons/arrow-right.svg" alt="" class="w--40 h--40 filter--col--black">
+                    </div>
+                  </div>
+                  <!-- Arrow Right -->
+                </div>
+                <!-- /Carousel Navigation -->
+              </div>
+              <!-- /Top Block -->
+              <div data-layer="Subscribe to some of our popular creator’s channel and start having fun!"
+                class="SubscribeToSomeOfOurPopularCreatorSChannelAndStartHavingFun fs--18 fw5 lh--28 white">Subscribe to
+                some of our popular creator’s channel and start having fun!</div>
+            </div>
+            <!-- /Section Title -->
+            <!-- Carousel Content -->
+            <div data-layer="Frame 1410098738"
+              class="Frame1410098738 w-100 flex justify-start items-center gap--16 overflow-x-auto">
+              <!-- Carousel List -->
+              <div class="w-100 flex justify-start items-center gap--16 ourTrendingCreatorCarousel">
+                <!-- Carousel Item -->
+                <div data-layer="Rectangle" class="Rectangle-1 db br--4 flex--max" style=" border-radius: 4px"></div>
+                <!-- /Carousel Item -->
+                <!-- Carousel Item -->
+                <div data-layer="Rectangle" class="Rectangle-1 db br--4 flex--max" style=" border-radius: 4px"></div>
+                <!-- /Carousel Item -->
+                <!-- Carousel Item -->
+                <div data-layer="Rectangle" class="Rectangle-1 db br--4 flex--max" style=" border-radius: 4px"></div>
+                <!-- /Carousel Item -->
+                <!-- Carousel Item -->
+                <div data-layer="Rectangle" class="Rectangle-1 db br--4 flex--max" style=" border-radius: 4px"></div>
+                <!-- /Carousel Item -->
+                <!-- Carousel Item -->
+                <div data-layer="Rectangle" class="Rectangle-1 db br--4 flex--max" style=" border-radius: 4px"></div>
+                <!-- /Carousel Item -->
+              </div>
+              <!-- /Carousel List -->
+            </div>
+            <!-- /Carousel Content -->
+          </div>
+          <!-- /Trending Creators Section -->
+          <!-- Trending Media Section -->
+          <div data-layer="image"
+            class="Image w-100 self-stretch pad--left--40 flex flex-column justify-start items-center gap--24 trendingMediaMain">
+            <!-- Top Block -->
+            <div data-layer="Frame 1410098786"
+              class="Frame1410098786 w-100 flex flex-column justify-start items-start gap--24">
+              <!-- Top Block Inner -->
+              <div data-layer="Frame 1410098549" class="Frame1410098549 w-100 flex justify-between items-center">
+                <!-- Left Block -->
+                <div data-layer="Frame 7845" class="Frame7845 flex justify-start items-center gap--8">
+                  <!-- Title -->
+                  <div data-layer="Frame 8692" class="Frame8692 flex justify-start items-center gap--8">
+                    <!-- Icon -->
+                    <div data-layer="line-chart-up-02" class="LineChartUp02 w--20 h--20 relative">
+                      <img src="../assets/icons/line-chart-up.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                    </div>
+                    <!-- /Icon -->
+                    <!-- Title -->
+                    <div data-layer="TRENDING MEDIA" class="TrendingMedia col--pale-sky fs--20 fw5 lh--30">TRENDING
+                      MEDIA</div>
+                    <!-- View All Text -->
+                    <div data-layer="angle button" class="AngleButton flex justify-start items-start">
+                      <div data-layer="Frame 8669"
+                        class="Frame8669 pad--x--8 pad--y--4 flex justify-center items-center gap--5">
+                        <div data-layer="EDIT" class="Edit fs--14 fw5 lh--20 col--dodger-blue">View All</div>
+                        <div data-layer="count"
+                          class="Count self-stretch flex flex-column justify-start items-center gap--10">
+                          <div data-layer="5" class="col--dodger-blue fs--10 fw5 tracked--0-25">234</div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /View All Text -->
+                  </div>
+                  <!-- /Title -->
+                </div>
+                <!-- /Left Block -->
+                <!-- Carousel Arrow -->
+                <div data-layer="Frame 8782"
+                  class="Frame8782 flex justify-start items-center gap--8 pad--right--40 carouselArrows">
+                  <div data-layer="arrow-circle-left" class="ArrowCircleLeft w--32 h--32 relative">
+                    <img src="../assets/icons/arrow-circle-left.svg" alt="" class="w--32 h--32 filter--col--pale-sky">
+                  </div>
+                  <div data-layer="arrow-circle-right" class="ArrowCircleRight w--32 h--32 relative">
+                    <img src="../assets/icons/arrow-circle-right.svg" alt="" class="w--32 h--32 filter--col--pale-sky">
+                  </div>
+                </div>
+                <!-- /Carousel Arrow -->
+              </div>
+              <!-- /Top Block Inner -->
+              <!-- Description -->
+              <div data-layer="Explore our expanding media library with hundreds of upload every week"
+                class="ExploreOurExpandingMediaLibraryWithHundredsOfUploadEveryWeek col--pale-sky fs--18 fw5 lh--28">
+                Explore our expanding media library with hundreds of upload every week</div>
+              <!-- /Description -->
+            </div>
+            <!-- /Top Block -->
+            <!-- Carousel Content -->
+            <div data-layer="Frame 1410098548"
+              class="Frame1410098548 w-100 flex flex-column justify-center items-start gap--16  overflow-x-auto">
+              <!-- List One -->
+              <div data-layer="Frame 1410098655"
+                class="w-100 Frame1410098655 flex justify-start items-center gap--16 trendingMediaCarousel">
+                <!-- Carousel Item -->
+                <div data-layer="Rectangle" class="Rectangle-2 db br--4 flex--max" style=" border-radius: 4px"></div>
+                <!-- /Carousel Item -->
+                <!-- Carousel Item -->
+                <div data-layer="Rectangle" class="Rectangle-2 db br--4 flex--max" style=" border-radius: 4px"></div>
+                <!-- /Carousel Item -->
+                <!-- Carousel Item -->
+                <div data-layer="Rectangle" class="Rectangle-2 db br--4 flex--max" style=" border-radius: 4px"></div>
+                <!-- /Carousel Item -->
+                <!-- Carousel Item -->
+                <div data-layer="Rectangle" class="Rectangle-2 db br--4 flex--max" style=" border-radius: 4px"></div>
+                <!-- /Carousel Item -->
+                <!-- Carousel Item -->
+                <div data-layer="Rectangle" class="Rectangle-2 db br--4 flex--max" style=" border-radius: 4px"></div>
+                <!-- /Carousel Item -->
+                <!-- Carousel Item -->
+                <div data-layer="Rectangle" class="Rectangle-2 db br--4 flex--max" style=" border-radius: 4px"></div>
+                <!-- /Carousel Item -->
+              </div>
+              <!-- /List One -->
+              <!-- List Two -->
+              <div data-layer="Frame 1410098655"
+                class="w-100 Frame1410098655 flex justify-start items-center gap--16 trendingMediaCarousel">
+                <!-- Carousel Item -->
+                <div data-layer="Rectangle" class="Rectangle-2 db br--4 flex--max" style=" border-radius: 4px"></div>
+                <!-- /Carousel Item -->
+                <!-- Carousel Item -->
+                <div data-layer="Rectangle" class="Rectangle-2 db br--4 flex--max" style=" border-radius: 4px"></div>
+                <!-- /Carousel Item -->
+                <!-- Carousel Item -->
+                <div data-layer="Rectangle" class="Rectangle-2 db br--4 flex--max" style=" border-radius: 4px"></div>
+                <!-- /Carousel Item -->
+                <!-- Carousel Item -->
+                <div data-layer="Rectangle" class="Rectangle-2 db br--4 flex--max" style=" border-radius: 4px"></div>
+                <!-- /Carousel Item -->
+                <!-- Carousel Item -->
+                <div data-layer="Rectangle" class="Rectangle-2 db br--4 flex--max" style=" border-radius: 4px"></div>
+                <!-- /Carousel Item -->
+                <!-- Carousel Item -->
+                <div data-layer="Rectangle" class="Rectangle-2 db br--4 flex--max" style=" border-radius: 4px"></div>
+                <!-- /Carousel Item -->
+              </div>
+              <!-- /List Two -->
+            </div>
+            <!-- /Carousel Content -->
+          </div>
+          <!-- /Trending Media Section -->
+          <!-- Community Playlist Section -->
+          <div data-layer="image"
+            class="Image w-100 self-stretch pad--left--40 flex flex-column justify-start items-center gap--24 communityPlaylistMain">
+            <!-- Top Block -->
+            <div data-layer="Frame 1410098786"
+              class="Frame1410098786 w-100 flex flex-column justify-start items-start gap--24">
+              <!-- Top Block Inner -->
+              <div data-layer="Frame 1410098549" class="Frame1410098549 w-100 flex justify-between items-center">
+                <!-- Left Block -->
+                <div data-layer="Frame 7845" class="Frame7845 flex justify-start items-center gap--8">
+                  <!-- Title -->
+                  <div data-layer="Frame 8692" class="Frame8692 flex justify-start items-center gap--8">
+                    <!-- Icon -->
+                    <div data-layer="line-chart-up-02" class="LineChartUp02 w--20 h--20 relative">
+                      <img src="../assets/icons/list.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                    </div>
+                    <!-- /Icon -->
+                    <!-- Title -->
+                    <div data-layer="TRENDING MEDIA" class="TrendingMedia col--pale-sky fs--20 fw5 lh--30">COMMUNITY
+                      PLAYLIST</div>
+                    <!-- View All Text -->
+                    <div data-layer="angle button" class="AngleButton flex justify-start items-start">
+                      <div data-layer="Frame 8669"
+                        class="Frame8669 pad--x--8 pad--y--4 flex justify-center items-center gap--5">
+                        <div data-layer="EDIT" class="Edit fs--14 fw5 lh--20 col--dodger-blue">View All</div>
+                        <div data-layer="count"
+                          class="Count self-stretch flex flex-column justify-start items-center gap--10">
+                          <div data-layer="5" class="col--dodger-blue fs--10 fw5 tracked--0-25">234</div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /View All Text -->
+                  </div>
+                  <!-- /Title -->
+                </div>
+                <!-- /Left Block -->
+                <!-- Carousel Arrow -->
+                <div data-layer="Frame 8782"
+                  class="Frame8782 flex justify-start items-center gap--8 pad--right--40 carouselArrows">
+                  <div data-layer="arrow-circle-left" class="ArrowCircleLeft w--32 h--32 relative">
+                    <img src="../assets/icons/arrow-circle-left.svg" alt="" class="w--32 h--32 filter--col--pale-sky">
+                  </div>
+                  <div data-layer="arrow-circle-right" class="ArrowCircleRight w--32 h--32 relative">
+                    <img src="../assets/icons/arrow-circle-right.svg" alt="" class="w--32 h--32 filter--col--pale-sky">
+                  </div>
+                </div>
+                <!-- /Carousel Arrow -->
+              </div>
+              <!-- /Top Block Inner -->
+            </div>
+            <!-- /Top Block -->
+            <!-- Carousel Content -->
+            <div data-layer="Frame 1410098548"
+              class="Frame1410098548 w-100 flex flex-column justify-center items-start gap--16 overflow-x-auto">
+              <!-- List One -->
+              <div data-layer="Frame 1410098655"
+                class="w-100 Frame1410098655 flex justify-start items-center gap--16 communityPlaylistCarousel">
+                <!-- Carousel Item -->
+                <div data-layer="Rectangle" class="Rectangle-3 db br--4 flex--max" style=" border-radius: 4px"></div>
+                <!-- /Carousel Item -->
+                <!-- Carousel Item -->
+                <div data-layer="Rectangle" class="Rectangle-3 db br--4 flex--max" style=" border-radius: 4px"></div>
+                <!-- /Carousel Item -->
+                <!-- Carousel Item -->
+                <div data-layer="Rectangle" class="Rectangle-3 db br--4 flex--max" style=" border-radius: 4px"></div>
+                <!-- /Carousel Item -->
+                <!-- Carousel Item -->
+                <div data-layer="Rectangle" class="Rectangle-3 db br--4 flex--max" style=" border-radius: 4px"></div>
+                <!-- /Carousel Item -->
+                <!-- Carousel Item -->
+                <div data-layer="Rectangle" class="Rectangle-3 db br--4 flex--max" style=" border-radius: 4px"></div>
+                <!-- /Carousel Item -->
+                <!-- Carousel Item -->
+                <div data-layer="Rectangle" class="Rectangle-3 db br--4 flex--max" style=" border-radius: 4px"></div>
+                <!-- /Carousel Item -->
+              </div>
+              <!-- /List One -->
+            </div>
+            <!-- /Carousel Content -->
+          </div>
+          <!-- /Community Playlist Section -->
+          <div data-layer="image"
+            class="Image self-stretch flex flex-column justify-start items-center gap--16 pad--bottom--40">
+
+            <!-- Your Playlist Section -->
+            <div data-layer="image"
+              class="Image w-100 self-stretch pad--left--40 flex flex-column justify-start items-center gap--24 yourPlaylist">
+              <!-- Top Block -->
+              <div data-layer="Frame 1410098786"
+                class="Frame1410098786 w-100 flex flex-column justify-start items-start gap--8">
+                <!-- Top Block Inner -->
+                <div data-layer="Frame 1410098549" class="Frame1410098549 w-100 flex justify-between items-center">
+                  <!-- Left Block -->
+                  <div data-layer="Frame 7845" class="Frame7845 flex justify-start items-center gap--8">
+                    <!-- Title -->
+                    <div data-layer="Frame 8692" class="Frame8692 flex justify-start items-center gap--8">
+                      <!-- Icon -->
+                      <div data-layer="line-chart-up-02" class="LineChartUp02 w--20 h--20 relative">
+                        <img src="../assets/icons/play-icon.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                      </div>
+                      <!-- /Icon -->
+                      <!-- Title -->
+                      <div data-layer="TRENDING MEDIA" class="TrendingMedia col--pale-sky fs--20 fw5 lh--30">YOUR
+                        PLAYLIST</div>
+                    </div>
+                    <!-- /Title -->
+                  </div>
+                  <!-- /Left Block -->
+                </div>
+                <!-- /Top Block Inner -->
+                <!-- Content -->
+                <div data-layer="text-content" class="fs--16 lh--24 col--pale-sky">You have no added playlists yet.
+                </div>
+                <!-- /Content -->
+              </div>
+              <!-- /Top Block -->
+            </div>
+            <!-- /Your Playlist Section -->
+
+            <!-- Trending Creators Section -->
+            <div data-layer="image"
+              class="Image w-100 self-stretch pad--y--32 pad--left--40 bg-black flex flex-column justify-start items-center gap--24 fanSocialSection">
+              <!-- Section Title -->
+              <div data-layer="Frame 1410098786"
+                class="Frame1410098786 w-100 flex flex-column justify-start items-start gap--24">
+                <!-- Top Block -->
+                <div data-layer="Frame 1410098785" class="Frame1410098785 w-100 flex justify-between items-center">
+                  <!-- Title -->
+                  <div data-layer="Frame 1410098701" class="Frame1410098701 flex justify-start items-center gap--8">
+                    <!-- Icon -->
+                    <div data-layer="line-chart-up-02" class="LineChartUp02 w--24 h--24 relative"
+                      style="width: 24px; height: 24px; position: relative">
+                      <div data-layer="Icon" class="Icon">
+                        <img src="../assets/icons/stars-02.svg" alt="" class="w--24 h--24 filter--col--corn">
+                      </div>
+                    </div>
+                    <!-- /Icon -->
+                    <div data-layer="OUR TRENDING CREATORS" class="OurTrendingCreators fs--24 fw7 lh--32">NEW TO
+                      FANSOCIAL</div>
+                    <!-- Sub Text -->
+                    <div data-layer="angle button" class="AngleButton fles justify-start items-start viewAllBtn">
+                      <div data-layer="Frame 8669"
+                        class="Frame8669 pad--x--8 pad--y--4 flex justify-center items-center gap--5">
+                        <div data-layer="EDIT" class="Edit fs--14 fw5 lh--20 white pointer">View All</div>
+                        <div data-layer="count"
+                          class="Count self-stretch flex flex-column justify-start items-center gap--10">
+                          <div data-layer="5" class="fs--10 fw5 white tracked--0-25">20</div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /Sub Text -->
+                  </div>
+                  <!-- /Title -->
+                  <!-- Carousel Navigation -->
+                  <div data-layer="Frame 8782"
+                    class="Frame8782 flex justify-start items-center gap--8 pad--right--40 carouselNavigation">
+                    <!-- Arrow Left -->
+                    <div data-layer="Frame 1410098639"
+                      class="Frame1410098639 pad--5 bg-black flex justify-center items-center gap--10">
+                      <div data-layer="arrow-left" class="ArrowLeft w--40 h--40 relative">
+                        <img src="../assets/icons/arrow-left.svg" alt="" class="w--40 h--40 filter--col--white">
+                      </div>
+                    </div>
+                    <!-- /Arrow Left -->
+                    <!-- Arrow Right -->
+                    <div data-layer="Frame 1410098640"
+                      class="Frame1410098640 pad--5 flex justify-center items-center gap--10">
+                      <div data-layer="arrow-narrow-right" class="ArrowNarrowRight w--40 h--40 relative">
+                        <img src="../assets/icons/arrow-right.svg" alt="" class="w--40 h--40 filter--col--black">
+                      </div>
+                    </div>
+                    <!-- Arrow Right -->
+                  </div>
+                  <!-- /Carousel Navigation -->
+                </div>
+                <!-- /Top Block -->
+                <div data-layer="Subscribe to some of our popular creator’s channel and start having fun!"
+                  class="SubscribeToSomeOfOurPopularCreatorSChannelAndStartHavingFun fs--18 fw5 lh--28 white">Check out
+                  our growing community of content creators.</div>
+              </div>
+              <!-- /Section Title -->
+              <!-- Carousel Content -->
+              <div data-layer="Frame 1410098738"
+                class="Frame1410098738 w-100 flex justify-start items-center gap--16 overflow-x-auto">
+                <!-- Carousel List -->
+                <div class="w-100 flex justify-start items-center gap--16 fanSocialSliderDiv">
+                  <!-- Carousel Item -->
+                  <div data-layer="Rectangle" class="Rectangle-4 db br--4 flex--max" style=" border-radius: 4px"></div>
+                  <!-- /Carousel Item -->
+                  <!-- Carousel Item -->
+                  <div data-layer="Rectangle" class="Rectangle-4 db br--4 flex--max" style=" border-radius: 4px"></div>
+                  <!-- /Carousel Item -->
+                  <!-- Carousel Item -->
+                  <div data-layer="Rectangle" class="Rectangle-4 db br--4 flex--max" style=" border-radius: 4px"></div>
+                  <!-- /Carousel Item -->
+                  <!-- Carousel Item -->
+                  <div data-layer="Rectangle" class="Rectangle-4 db br--4 flex--max" style=" border-radius: 4px"></div>
+                  <!-- /Carousel Item -->
+                </div>
+                <!-- /Carousel List -->
+              </div>
+              <!-- /Carousel Content -->
+            </div>
+            <!-- /Trending Creators Section -->
+
+            <!-- Chats and Tokens Section -->
+            <div data-layer="Frame 8791" class="Frame8791 w-100 flex justify-start items-start gap--16 pad--x--40 padding-r-7_9">
+              <!-- Recent Chats Section -->
+              <div data-layer="Frame 8723"
+                class="Frame8723 flex--max self-stretch bg-white sh--17 bg--blur--50 flex flex-column justify-center items-start gap--4">
+                <!-- Section Title -->
+                <div data-layer="Frame 7845"
+                  class="Frame7845 self-stretch pad--16 pad--bottom--0 flex justify-start items-center gap--8">
+                  <!-- Title Inner -->
+                  <div data-layer="Frame 8692" class="Frame8692 flex--max flex justify-start items-center gap--8">
+                    <!-- Icon -->
+                    <div data-layer="message-text-circle-01" class="MessageTextCircle01 w--20 h--20 relative">
+                      <img src="../assets/icons/message-text-circle-01.svg" alt=""
+                        class="w--20 h--20 filter--col--pale-sky">
+                    </div>
+                    <!-- /Icon -->
+                    <div data-layer="RECENT CHATS" class="RecentChats col--pale-sky fs--20 fw5 lh--30 ttu">RECENT CHATS
+                    </div>
+                  </div>
+                  <!-- /Title Inner -->
+                </div>
+                <!-- /Section Title -->
+                <div data-layer="Frame 8775"
+                  class="Frame8775 self-stretch flex--max pad--16 flex flex-column justify-center items-center gap--8">
+                  <div data-layer="Rectangle" class="Rectangle-5 br--4 db"></div>
+                </div>
+              </div>
+              <!-- Recent Chats Section -->
+              <!-- Token Balance Section -->
+              <div data-layer="Frame 8723"
+                class="Frame8723 flex--max self-stretch bg-white sh--17 bg--blur--50 flex flex-column justify-center items-start gap--4">
+                <!-- Section Title -->
+                <div data-layer="Frame 7845"
+                  class="Frame7845 self-stretch pad--16 pad--bottom--0 flex justify-start items-center gap--8">
+                  <!-- Title Inner -->
+                  <div data-layer="Frame 8692" class="Frame8692 flex--max flex justify-start items-center gap--8">
+                    <!-- Icon -->
+                    <div data-layer="message-text-circle-01" class="MessageTextCircle01 w--20 h--20 relative">
+                      <img src="../assets/icons/coins-stacked-01.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                    </div>
+                    <!-- /Icon -->
+                    <div data-layer="RECENT CHATS" class="RecentChats col--pale-sky fs--20 fw5 lh--30 ttu">Token Balance
+                    </div>
+                  </div>
+                  <!-- /Title Inner -->
+                </div>
+                <!-- /Section Title -->
+                <div data-layer="Frame 8775"
+                  class="Frame8775 self-stretch flex--max pad--16 flex flex-column justify-center items-center gap--8">
+                  <div data-layer="Rectangle" class="Rectangle-5 br--4 db"></div>
+                </div>
+              </div>
+              <!-- Token Balance Section -->
+            </div>
+            <!-- /Chats and Tokens Section -->
+
+            <!-- Latest Order Wrap -->
+            <div class="pad--x--40 w-100 flex flex-column orderWrapDiv padding-r-7_9">
+              <!-- Latest Order Section -->
+              <div data-layer="Frame 8723"
+                class="Frame8723 flex--max self-stretch bg-white sh--17 bg--blur--50 flex flex-column justify-center items-start gap--4">
+                <!-- Section Title -->
+                <div data-layer="Frame 7845"
+                  class="Frame7845 self-stretch pad--16 pad--bottom--0 flex justify-start items-center gap--8">
+                  <!-- Title Inner -->
+                  <div data-layer="Frame 8692" class="Frame8692 flex--max flex justify-start items-center gap--8">
+                    <!-- Icon -->
+                    <div data-layer="message-text-circle-01" class="MessageTextCircle01 w--20 h--20 relative">
+                      <img src="../assets/icons/shopping-cart-03.svg" alt="" class="w--20 h--20 filter--col--pale-sky">
+                    </div>
+                    <!-- /Icon -->
+                    <div data-layer="RECENT CHATS" class="RecentChats col--pale-sky fs--20 fw5 lh--30 ttu">Latest Order
+                    </div>
+                  </div>
+                  <!-- /Title Inner -->
+                </div>
+                <!-- /Section Title -->
+                <div data-layer="Frame 8775"
+                  class="Frame8775 self-stretch flex--max pad--16 flex flex-column justify-center items-center gap--8">
+                  <div data-layer="Rectangle" class="Rectangle-6 br--4 db"></div>
+                </div>
+              </div>
+              <!-- Latest Order Section -->
+            </div>
+            <!-- Latest Order Wrap -->
+          </div>
+        </div><!-- End Inner Container -->
+      </main>
+      <!-- /main section -->
+    </div>
+    <!-- /Page content area -->
+
+    <!-- Top Up mask Group -->
+
+    <!-- /Top Up Mask Group -->
+  </div>
+  <!-- /main wrapper -->
+
+
+  <!-- Nice Select JS -->
+  <script type="text/javascript"
+    src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/FINAL/js/nice-select.js"></script>
+
+  <!-- Tab Element Script -->
+  <script src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/FINAL/js/pageElements.js?ver=2905361574"
+    id="pageElements-js"></script>
+
+  <!-- Dashboard Sidebar Custom Script -->
+  <script src="assets/js/dashboard-ui.js"></script>
+</body>
+
+</html>
