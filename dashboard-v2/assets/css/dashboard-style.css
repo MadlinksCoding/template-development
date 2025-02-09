@@ -749,6 +749,10 @@ html {
   color: var(--color-athens-gray2)
 }
 
+.bg--col--athens-gray-3 {
+  background: var(--color-athens-gray3, #f2f4f7)
+}
+
 .bg--col--white--25 {
   background: rgba(255, 255, 255, .25)
 }
@@ -1079,6 +1083,10 @@ html {
 
 .bg--fixed {
   background-attachment: fixed
+}
+
+.bg--right--18-top-0 {
+  background-position: 18% 0
 }
 
 .br--col--transparent {
@@ -1678,6 +1686,10 @@ html {
   height: 5rem
 }
 
+.h--92 {
+  height: 5.75rem
+}
+
 .h--112 {
   height: 7rem
 }
@@ -1696,6 +1708,10 @@ html {
 
 .h--180 {
   height: 11.25rem
+}
+
+.h--192 {
+  height: 12rem
 }
 
 .h--200 {
@@ -2205,6 +2221,11 @@ html {
   box-shadow: 4px 4px 0 0 #14e04d
 }
 
+.sh--pink--4 {
+  -webkit-box-shadow: 4px 4px 0 0 #e00078;
+  box-shadow: 4px 4px 0 0 #e00078
+}
+
 .sh--light-blue--4 {
   -webkit-box-shadow: 4px 4px 0 0 #528bff;
   box-shadow: 4px 4px 0 0 #528bff
@@ -2323,6 +2344,10 @@ html {
 
 .cp--13 {
   clip-path: polygon(100% 20%, 0 0, 0 100%, 100% 100%)
+}
+
+.cp--14 {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 8% 100%)
 }
 
 [data-container-bg-fixed]:-moz-read-only {

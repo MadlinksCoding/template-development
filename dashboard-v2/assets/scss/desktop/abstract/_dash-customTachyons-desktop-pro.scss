@@ -27,9 +27,11 @@
 .col--flamingo { color: var(--color-flamingo, #F04438); }
 .col--buttered-rum { color: var(--color-buttered-rum, #9F8009); }
 .col--galliano { color: var(--color-galliano, #D8AF0D); }
-.col--athens-gray-3 { color: var(--color-athens-gray2); } /* confirmed in use */ 
+.col--athens-gray-3 { color: var(--color-athens-gray2); } /* confirmed in use */
+
 
 /* Background Colors*/
+.bg--col--athens-gray-3 { background: var(--color-athens-gray3, #F2F4F7); }
 .bg--col--white--25 { background: rgba(255, 255, 255, 0.25); }
 .bg--col--light-gray-50 { background: rgba(249, 250, 251, 0.50); }
 .bg--col-brand-green { background: var(--color-brand-green, #07F468); }
@@ -119,6 +121,7 @@
 .bg--size-contain { background-size: contain; }
 .bg--size-cover { background-size: cover; }
 .bg--fixed { background-attachment: fixed; }
+.bg--right--18-top-0 { background-position: 18% 0%; }
 
 
 /* Border Colors */
@@ -332,11 +335,13 @@
 .h--62 { height: 3.875rem; /* height 62px */ } /* confirmed in use */ /* pixel conversion correct */
 .h--66 { height: 4.125rem; /* height 66px */ } /* confirmed in use */ /* pixel conversion correct */
 .h--80 { height: 5rem; /* height 80px */ } /* confirmed in use */ /* pixel conversion correct */
+.h--92 { height: 5.75rem; /* height 92px */ } /* confirmed in use */ /* pixel conversion correct */
 .h--112 { height: 7rem; /* height 112px */ } /* confirmed in use */ /* pixel conversion correct */
 .h--120 { height: 7.5rem; /* height 120px */ } /* confirmed in use */ /* pixel conversion correct */
 .h--126 { height: 7.875rem; /* height 126px */ } /* confirmed in use */ /* pixel conversion correct */
 .h--160 { height: 10rem; }
 .h--180 { height: 11.25rem; }
+.h--192 { height: 12rem; }
 .h--200 { height: 12.5rem; /* height 200px */ } /* confirmed in use */ /* pixel conversion correct */
 .h--213 { height: 13.313rem; /* height 213px */ } /* confirmed in use */ /* pixel conversion correct */
 .h--255 { height: 15.938rem; /* height 255px */ } /* confirmed in use */ /* pixel conversion correct */
@@ -525,6 +530,7 @@
 .sh--19 { box-shadow: 0px 0px 6px 0px #000; } /* confirmed in use */
 .sh--black--yellow { box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.15), 4px 4px 0px 0px #FFCD29; }
 .sh--green--4 { box-shadow: 4px 4px 0px 0px #14E04D; }
+.sh--pink--4 { box-shadow: 4px 4px 0px 0px #E00078; }
 .sh--light-blue--4 { box-shadow: 4px 4px 0px 0px #528BFF; }
 
 
@@ -589,6 +595,7 @@
 .cp--11 { clip-path: polygon(0% 0, 100% 0, 80% 105%, 0 105%); }
 .cp--12 { clip-path: polygon(21% 0, 100% 0, 105% 105%, 0 105%); }
 .cp--13 { clip-path: polygon(100% 20%, 0% 0%, 0% 100%, 100% 100%); }
+.cp--14 { clip-path: polygon(0% 0, 100% 0, 100% 100%, 8% 100%); }
 
 
 /* Pointer Events */
