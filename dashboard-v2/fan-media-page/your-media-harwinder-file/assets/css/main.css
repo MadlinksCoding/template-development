@@ -1,0 +1,730 @@
+/*
+* GLOBAL CSS VARIABLES
+*/
+
+:root {
+	/* Default Colours */
+	--default-heading-font-color: #221f1f;
+	--default-strong-color: #333333;
+	--default-hr-color: #000000;
+    --color-brilliant-rose : #fb5ba2; /* new class, below is the old class */
+	--theme-color-rose-0: #fb5ba2; /* should be --color-brilliant-rose */
+    --color-rose: #ff0066; /* new class, below is the old class */
+	--theme-color-rose-1: #ff0066; /* should be --color-rose */
+	--theme-color-lemon: #ff0066; /* duplicate */
+    --color-alizarin-crimson: #d61f27; /* new class, below is the old class */
+	--theme-color-crimson: #d61f27; /* should be --color-alizarin-crimson */
+    --color-blue-ribbon: #1c39ff; /* new class, below is the old class */
+	--theme-color-blue: #1c39ff; /* should be --color-blue-ribbon */
+	
+	/* Fonts */
+	--default-font-size: 15px;
+	--default-font-family: "Poppins", "Inter", "Montserrat", "Open Sans", arial, sans-serif;
+	--default-heading-font-family: "Poppins", "Inter", "Montserrat", "Open Sans", arial, sans-serif;
+	--default-font-weight: 400;
+	--default-paragraph-color: #000000;
+	--default-strong-font-weight: 900;
+	--default-heading-line-height: 1.9rem;
+	--default-heading-font-weight: 800;
+	--link-color: var(--color-blue-ribbon, #1c39ff); /* should be --color-blue-ribbon */
+	--link-hover-color: #071fbd;
+
+    /* Default Button */
+    --button-background-color: var(--color-brilliant-rose); /* needs to be renamed to --color-brilliant-rose */
+    --button-border-color: var(--color-brilliant-rose);  /* needs to be renamed to --color-brilliant-rose */
+    --button-border-width: 1px;
+    --button-hover-border-width: 1px;
+    --button-hover-background-color: var(--color-rose); /* needs to be renamed to --color-rose */
+    --button-hover-border-color: var(--color-rose); /* needs to be renamed to --color-rose */
+    --button-hover-box-shadow: none;
+    --button-hover-text-color: #000;
+    --button-text-color: #ffffff;
+    --button-box-shadow: none;
+    --button-text-shadow: none;
+    --button-text-decoration: none;
+    --button-border-radius: 8px; /* default 5px */
+    --button-icon-gap: 8px;
+    --button-font-size: 15px;
+    --button-font-weight: 500;
+    --button-padding: 10px 24px; /* default 10px 24px */
+
+    /* Save Button */
+    --save-button-background-color: var(--color-rose); /* needs to be renamed to --color-rose */
+    --save-button-border-color: var(--color-rose); /* needs to be renamed to --color-rose */
+    --save-button-border-width: 0rem;
+    --save-button-hover-border-width: 0rem;
+    --save-button-hover-background-color: var(--color-brilliant-rose); /* needs to be renamed to --color-brilliant-rose */
+    --save-button-hover-border-color: var(--color-brilliant-rose); /* needs to be renamed to --color-brilliant-rose */
+    --save-button-text-color: #ffffff;
+    --save-button-hover-text-color: #ffffff; 
+}
+
+/*
+* RESET CSS
+*/
+
+/* Reset CSS: Reset CSS: Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Reset CSS: Remove default margin */
+* {
+	margin: 0;
+	margin-block-end: 0;
+}
+
+/* Reset CSS: Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property  */ 
+/* Nay Added(input[type="checkbox"], input[type="radio"]) this part to show native checkbox and radio box */
+*:where(:not(html, iframe, canvas, img, svg, video, audio, input[type="checkbox"], input[type="radio"], button.button, select, div):not(svg *, symbol *)) {
+	all: unset;
+	display: revert;
+}
+
+/* Reset CSS: Reset default styles for common elements */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	font-size: var(--default-font-size);
+	font-family: var(--default-font-family);
+	font-weight: var(--default-font-weight);
+	color: var(--default-paragraph-color);
+	vertical-align: baseline;
+}
+
+/* Reset CSS: Prevent font size inflation */
+html {
+	text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Reset CSS: Set core body defaults and Typographic body tweaks */
+body {
+	line-height: 1.3;
+	-webkit-font-smoothing: antialiased;
+	min-height: 100vh;
+	overflow-x: hidden; 
+}
+
+/* Reset CSS: Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+
+/* Reset CSS: Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-wrap: balance;
+}
+
+/* Reset CSS: Set shorter line heights on headings and interactive elements */
+button,
+input,
+label {
+	line-height: 1.1;
+} 
+
+/* Reset CSS: Reapply the pointer cursor for anchor tags */
+a, 
+button {
+	cursor: pointer;
+}
+
+/* Reset CSS: Remove built-in form typography styles */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+	font-family: inherit;
+	font-size: inherit;
+	background: transparent;
+	outline: 0;
+	margin: 0;
+}
+
+/* Reset CSS: Safari - solving issue when using user-select:none on the <body> text input doesn't working */
+input,
+textarea {
+	--webkit-user-select: auto;
+}
+
+/* Reset CSS: revert the 'white-space' property for textarea elements on Safari */
+textarea {
+	white-space: revert;
+}
+
+/* Reset CSS: Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]):not([custom-height]) {
+	min-height: 10em;
+}
+
+/* Default css for textareas that will auto resize with content */
+textarea[auto-resize] {
+    resize: none;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+/* Reset CSS: Anything that has been anchored to should have extra scroll margin */
+:target {
+	scroll-margin-block: 5ex;
+}
+
+/* Reset CSS: Set styles for images */
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+	border-style: none;
+	max-inline-size: 100%;
+	max-block-size: 100%;
+}
+
+/* Reset CSS: removes spacing between cells in tables */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Reset CSS: Remove default quotation styles */
+blockquote,
+q {
+	quotes: none;
+}
+
+/* Reset CSS: Hide default quotation marks */
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
+	content: none;
+}
+
+/* Reset CSS: Define styling for bold and strong elements */
+b,
+strong,
+.strong {
+	font-weight: var(--default-strong-font-weight);
+	color: var(--default-strong-color);
+}
+
+/* Reset CSS: Define styling for italic elements */
+em {
+    font-family: italic;
+}
+
+/* Reset CSS: Improve media defaults */
+/* Nay removed svg */
+img,
+audio,
+picture,
+video,
+canvas{
+	display: block;
+	max-width: 100%;
+}
+
+/* Reset CSS: Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol,
+menu  {
+	list-style: none;
+}
+
+/* Reset CSS: Hide empty paragraphs, spans, and divs */
+p:not(.db):empty,
+span:not(.db):empty,
+div:not(.db):empty {
+	display: none;
+}
+
+/* Hide flex containers with [hidden] attribute */
+.flex[hidden] {
+	display: none;
+}
+
+
+/* Reset CSS: Define styling for horizontal rule */
+hr {
+	background-color: var(--default-hr-color);
+	border: 0;
+	height: 1px;
+}
+
+/* Reset CSS: Hide audio elements without controls */
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+
+/* Reset CSS: Style deleted text with a line-through */
+del {
+	text-decoration: line-through;
+}
+
+/* Reset CSS: Reset styles for sub and sup elements */
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+}
+
+/* Reset CSS: Adjust sup element positioning */
+sup {
+	top: -0.3em;
+}
+
+/* Reset CSS: Adjust sub element positioning */
+sub {
+	bottom: -0.3em;
+}
+
+/* Reset CSS: Styles for fieldset element */
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	min-width: 0;
+	outline: 0;
+}
+
+/* Reset CSS: Set styles for legend element */
+legend {
+	display: table;
+	max-width: 100%;
+	white-space: normal;
+	padding: 0;
+}
+
+/* Reset CSS: Set appearance for all cross-device elements */
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="file"],
+/* input[type="checkbox"],
+input[type="radio"], */ /* Nay Commented this part to show native checkbox and radio box */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="url"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="range"],
+input[type="color"],
+button,
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+/*
+* LAYOUT
+*/
+
+/* Truncating text to one line */
+.truncate-text {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 1;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+/* Truncating text to two lines */
+.truncate-text-line-2 {
+	-webkit-line-clamp: 2;
+}
+
+/* Truncating text to three lines */
+.truncate-text-line-3 {
+	-webkit-line-clamp: 3;
+}
+
+/* Truncating text to four lines */
+.truncate-text-line-4 {
+	-webkit-line-clamp: 4;
+}
+
+/*
+* FONTS
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: var(--default-heading-font-color);
+	font-family: var(--default-heading-font-family);
+	font-weight: var(--default-heading-font-weight);
+	line-height: var(--default-heading-line-height);
+	text-decoration: none;
+}
+
+/* Base font size for devices */
+html {
+    font-size: 16px;
+}
+
+/* CSS for screen widths up to 1399 pixels */
+@media only screen and (max-width: 1399px) {
+  /* Add your styles here */
+    html {
+        font-size: 13px;
+    }
+}
+
+/* Heading styles */
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2.0rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1.25rem;
+}
+
+h6 {
+    font-size: 1.0rem;
+}
+
+/*
+* PARAGRAPH
+*/
+
+/* Margin-bottom for paragraphs */
+p {
+	margin-bottom: var(--default-margin-bottom);
+}
+
+/*
+* HYPERLINKS
+*/
+
+/* Style for anchor links */
+a {
+	text-decoration: none;
+	color: var(--link-color);
+	transition: color 0.2s ease-in-out;
+}
+
+/* Style for hover and active state for anchor links */
+a:hover,
+a:active {
+	color: var(--link-hover-color);
+}
+
+/*
+* IMAGES
+*/
+
+/* Style for greyscale filter to image */
+.img--greyscale {
+	filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);
+}
+
+/* Style for centering background image. */
+.img--center {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/*
+* INPUT
+*/
+
+/* Fix for safari 8 font size */
+label input {
+	font-size: inherit; 
+}
+
+/*
+* BUTTON
+*/
+
+/* Button with class .button */
+.button {
+	background: var(--button-background-color); /* Nay Changed background-color to background */
+	border: var(--button-border-width) solid var(--button-border-color);
+	color: var(--button-text-color);
+	font-size: var(--button-font-size);
+	font-weight: var(--button-font-weight);
+	padding: var(--button-padding);
+	border-radius: var(--button-border-radius);
+	text-decoration: var(--button-text-decoration);
+	text-shadow: var(--button-text-shadow);
+	box-shadow: var(--button-box-shadow);
+	cursor: pointer;
+	transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* Button hover with class .button */
+.button:not(:disabled):hover {
+	background: var(--button-hover-background-color);/* Nay Changed background-color to background */
+	color: var(--button-hover-text-color);
+	border-color: var(--button-hover-border-color);
+    box-shadow: var(--button-hover-box-shadow);
+}
+
+/*
+* IFRAME, EMBED, OBJECT
+*/
+
+/* Fix for widths for iframe, embed and object */
+iframe,
+embed,
+object {
+	width: 100%;
+}
+
+/* overwrite simplebar's style */
+div.simplebar-placeholder:empty {
+	display: block;
+}
+
+/* notification count with pink background (chip) */
+.lQyfVu {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: var(--color-brilliant-rose, #fb5ba2);
+	min-width: 20px;
+	width: max-content;
+	height: 18px;
+	padding: 0.25rem;
+	border-radius: 7px;
+	position: relative;
+}
+.elm_efVkKy {
+	background: var(--color-brilliant-rose, #fb5ba2);
+	min-width: 20px;
+	width: max-content;
+	height: 18px;
+	padding: 0.25rem;
+	border-radius: 7px;
+}
+.common_elm_YXaNdF .elm_efVkKy {
+	top: -2px;
+	right: -2px;
+}
+
+/* 
+
+ div[data-tabbed-content] {
+	display: none;
+}
+
+ span[data-read-more-content] {
+	display: none;
+}
+
+ .accordion-content {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.5s ease-out;
+}
+
+.accordion-trigger {
+	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.open .accordion-content {
+	max-height: 100px;  
+}
+
+
+
+
+ */
+
+/* icon path fill - audit then use variables from root */
+.common_elm_FSMoIG path,
+.common_elm_FSMoIG circle {
+	fill: var(--color-blue, #3300ff);
+}
+.common_elm_PdkEBD path {
+	fill: #6c69ff;
+}
+.common_elm_keDKdS path {
+	fill: var(--color-outer-space, #303437);
+}
+.common_elm_qEZSJD path,
+.common_elm_qEZSJD circle {
+	fill: var(--color-shuttle-gray, #5f6369);
+}
+.common_elm_hQwnHR path,
+.common_elm_hQwnHR circle {
+	fill: var(--color-rose, #ff0066) !important;
+}
+.common_elm_wvkNnj path,
+.common_elm_wvkNnj circle {
+	fill:  var(--color-brilliant-rose, #fb5ba2);
+}
+/* profile subscription popup svg color */
+[data-profile-subscription-popup] .common_elm_wvkNnj path {
+	fill: var(--color-rose, #f06);
+}
+.common_elm_wPflhb path {
+	fill: #ffffff;
+}
+.common_elm_zbxGeM path{
+	fill: var(--color-mystic, #DEE5EC);
+}
+.common_elm_GRbGNf path {
+	fill: #b9cee2;
+}
+.common_elm_SKjJTT path {
+	fill: var(--color-botticelli, #bfcedd);
+}
+.common_elm_AiXwMP path {
+	fill: #333333;
+}
+.common_elm_JQXjfi circle {
+	fill: #afffe2;
+}
+.common_elm_eKDdEE path {
+	fill: #f24822;
+}
+
+
+
+/* hide-scrollbar */
+.hide--scrollbar{
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+.hide--scrollbar::-webkit-scrollbar{
+	display: none;
+}
+
+/* hide nice selects until they are rendered by JS */
+select[data-nice-select] {
+	display: none;
+}
+
+/* override lightgallery css issues caused by global styling in fansocial stylesheets */
+.lg-close:hover {
+	background: 0 0 !important;
+	color: #ffffff !important;
+	border: none !important;
+}
+
+/* Truncate Text */
+.truncate-text-line-1 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.truncate-text-line-2 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+/* SVG icon color */
+.common_elm_SpBYeI path{
+    fill: var(--light-warm-green);
+}
+.common_elm_ODPNBT path{
+    fill: var(--wild-sand-gray);
+}
+
+/* Spinning Animation for the SVG Loader (copied from theme's style.css) */
+.elm_BwJGKO{
+    transform-origin:center; animation: elm_SbUAkr .75s infinite linear
+}
+@keyframes elm_SbUAkr{
+    100%{
+        transform:rotate(360deg)
+    }
+}
+
+/* Nay Code here */
+
+/* Rehan - Customize the checkbox because Safari is applying is own styling */
+/* To have a uniform checkbox across all browers, we will do away with the default stylings applied by browsers and write our own */
+
+/* Reset the default appearance */
+input[type="checkbox"] {
+    -webkit-appearance: none; /* Safari and Chrome */
+    -moz-appearance: none; /* Firefox */
+    appearance: none; /* Standard */
+    width: 0.75rem;
+    height: 0.75rem;;
+    border: 1px solid #999; /* Border color */
+    border-radius: 2px; /* Border radius for rounded corners */
+    background-color: transparent; /* Background color */
+}
+
+/* Custom styles for the active state */
+input[type="checkbox"]:checked {
+    border-color: var(--input-accent-color, #30f); /* Background color for checked state */
+}
+
+/* Custom styles for the checked state */
+input[type="checkbox"]:checked {
+    background-color: var(--input-accent-color, #30f); /* Background color for checked state */
+    border-color: var(--input-accent-color, #30f); /* Border color for checked state */
+    position: relative;
+}
+
+/* Optional: Custom checkmark */
+input[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute;
+    left: 0.2rem;
+    width: 0.25rem;
+    height: 0.5rem;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}

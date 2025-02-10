@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Princess Carrot Pop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* styles.css */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom right, #f3f4f6, #e0e7ff);
+            color: #333;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            justify-content: space-between;
+        }
+
+        .header {
+            padding: 24px 40px;
+            background: rgba(255, 255, 255, 0.50);
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .header-top-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .back-button {
+            background: none;
+            border: none;
+            font-size: 1rem;
+            color: #FB5BA2;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .profile-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-left: 1rem;
+        }
+
+        .profile-info-left-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .profile-pic {
+            color: white;
+            font-weight: bold;
+            font-size: 1.5rem;
+            width: 65px;
+            height: 65px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url('./assets/icons/profile-icons.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .profile-details {
+            margin-left: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .model-name-section {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+
+        .model-name-section h1 {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .profile-details h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .verified {
+            color: #1da1f2;
+        }
+
+        .model-id {
+            margin: 0;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 18px;
+            color: #101828;
+        }
+
+        .stats {
+            gap: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .upper-stats {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-size: 14px;
+        }
+
+        .lower-stats {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-size: 14px;
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .icon {
+            font-size: 0.8rem;
+        }
+
+        .profile-button {
+            background: #07F468;
+            color: white;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .profile-arrow {
+            background: #07F468;
+            display: flex;
+            padding: 4px;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .profile-text {
+            background-color: #000;
+            color: #07F468;
+            display: flex;
+            padding: 4px;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+
+            span {
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 20px;
+            }
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            position: relative;
+        }
+
+        .share-report-section {
+            position: absolute;
+            right: 11px;
+            top: 11px;
+            background: #FCFCFB;
+            border-radius: 5px;
+        }
+
+        .action-icons {
+            display: flex;
+            padding: 4px 0px;
+            flex-direction: column;
+            align-items: flex-start;
+            align-self: stretch;
+            background: transparent;
+        }
+
+        .share-button,
+        .report-button {
+            background: transparent;
+            display: flex;
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+            align-self: stretch;
+            border: 6px solid transparent;
+            outline: none;
+            gap: 24px;
+            cursor: pointer;
+            margin: 1px 6px 0 6px;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .action-button {
+            background: #f3f4f6;
+            border: 1px solid #ddd;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            border-radius: 24px;
+            border: 0.5px solid rgba(233, 229, 211, 0.50);
+            background: rgba(0, 0, 0, 0.25);
+            /* bg-blur-10 */
+            backdrop-filter: blur(5px);
+        }
+
+        .action-button.selected {
+            background: #07F468;
+            color: white;
+        }
+
+        .empty-state {
+            text-align: -webkit-center;
+        }
+
+        .empty-icon {
+            margin: 0 auto 1rem;
+            height: 160px;
+            width: 160px;
+            border-radius: 10px;
+            background-image: url('path-to-placeholder-image.svg');
+            background-size: cover;
+        }
+
+        .discover-button {
+            background: #000;
+            color: #07F468;
+            padding: 8px 18px;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+
+        .profile-info-right-section {
+            align-self: end;
+        }
+
+        @media (max-width: 768px) {
+            .profile-details h1 {
+                font-size: 1rem;
+            }
+
+            .stats {
+                flex-direction: column;
+            }
+        }
+
+        [data-dashboard-template-main-background]:before {
+            content: '';
+            position: fixed;
+            background: url(./assets/icons/gradient-main-bg.svg);
+            background-size: cover;
+            width: 100%;
+            background-repeat: no-repeat;
+            height: 100%;
+            left: 0;
+            top: 0;
+            pointer-events: none;
+        }
+
+        @media (max-width: 576px) {
+            .header {
+                padding: 16px;
+            }
+
+            .profile-info {
+                flex-direction: column;
+                gap: 8px;
+                margin-left: 0;
+            }
+
+            .profile-pic {
+                display: none;
+            }
+
+            .profile-info-left-section {
+                align-self: flex-start;
+            }
+
+            .profile-info-right-section {
+                align-self: flex-start;
+            }
+
+            .profile-details {
+                margin-left: 0;
+            }
+
+            .back-text {
+                display: none;
+            }
+
+            .back-button {
+                padding-left: 0;
+            }
+
+            .back-button svg path {
+                stroke: #fff;
+            }
+
+            .header-top-section {
+                position: relative;
+            }
+
+            .profile-button {
+                position: absolute;
+                top: 120px;
+                right: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" data-dashboard-template-main-background>
+        <header class="header">
+            <div class="header-top-section">
+                <button class="back-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M15 18L9 12L15 6" stroke="#FB5BA2" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    <span class="back-text">Back</span>
+                </button>
+                <div class="profile-button">
+                    <span class="profile-arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M4.6665 11.3337L11.3332 4.66699M11.3332 4.66699H4.6665M11.3332 4.66699V11.3337"
+                                stroke="black" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                    <div class="profile-text">
+                        <span>
+                            PROFILE
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="profile-info">
+                <div class="profile-info-left-section">
+                    <div class="profile-pic">CP</div>
+                    <div class="profile-details">
+                        <div class="model-name-section">
+                            <h1>Princess Carrot Pop
+                                <span class="verified">
+                                    <img src="assets/icons/verified-tic-icon.svg" alt="verified" />
+                                </span>
+                            </h1>
+                            <p class="model-id">@sammisjelly187</p>
+                        </div>
+                        <div class="upper-stats">
+                            <span class="stat">
+                                <img class="icon" src="assets/icons/user-icon.svg" alt="user" />
+                                15.2K
+                            </span>
+                            <span class="stat">
+                                <img class="icon" src="assets/icons/like-icon.svg" alt="like" />
+                                99K
+                            </span>
+                        </div>
+                        <div class="lower-stats">
+                            <span class="stat">
+                                <img class="icon" src="assets/icons/play-square.svg" alt="play" />
+                                0
+                            </span>
+                            <span class="stat">
+                                <img class="icon" src="assets/icons/image-icon.svg" alt="user" />
+                                0
+                            </span>
+                            <span class="stat">
+                                <img class="icon" src="assets/icons/image-gallery-icon.svg" alt="user" />
+                                0
+                            </span>
+                            <span class="stat">
+                                <img class="icon" src="assets/icons/recording-icon.svg" alt="user" />
+                                0
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-info-right-section">
+                    <div class="action-buttons">
+                        <button class="action-button selected">
+                            <img src="assets/icons/user-check.svg" />
+                        </button>
+                        <button class="action-button">
+                            <img src="assets/icons/heart.svg" />
+                        </button>
+                        <button class="action-button">
+                            <img src="assets/icons/link.svg" />
+                        </button>
+                        <button class="action-button">
+                            <img src="assets/icons/dots-vertical.svg" />
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main-content">
+            <div class="empty-state">
+                <div class="empty-icon">
+                    <img src="assets/icons/empty-image.svg" />
+                </div>
+                <p>Nothing to see here—for now, at least!</p>
+                <button class="discover-button">Discover <img src="assets/icons/arrow-icon.svg" /></button>
+            </div>
+            <div class="share-report-section">
+                <div class="action-icons">
+                    <button class="share-button">
+                        <img src="assets/icons/share.svg" />
+                        Share
+                    </button>
+                    <button class="report-button">
+                        <img src="assets/icons/report.svg" />
+                        Report
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

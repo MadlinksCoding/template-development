@@ -30,7 +30,7 @@
 
         <!-- Normal CSS -->
         <style>
-            .Onboarding { background: linear-gradient(0deg, #EAECF0 0%, #EAECF0 100%); -moz-background: linear-gradient(0deg, #EAECF0 0%, #EAECF0 100%); -webkit-background: linear-gradient(0deg, #EAECF0 0%, #EAECF0 100%);}
+/*            .Onboarding { background: linear-gradient(0deg, #EAECF0 0%, #EAECF0 100%); -moz-background: linear-gradient(0deg, #EAECF0 0%, #EAECF0 100%); -webkit-background: linear-gradient(0deg, #EAECF0 0%, #EAECF0 100%);}*/
             .Image { background: linear-gradient(180deg, #FFF 0.03%, rgba(255, 255, 255, 0.80) 15.03%); -moz-background: linear-gradient(180deg, #FFF 0.03%, rgba(255, 255, 255, 0.80) 15.03%); -webkit-background: linear-gradient(180deg, #FFF 0.03%, rgba(255, 255, 255, 0.80) 15.03%); }
             .Icon { background: #E6E6E6; }
             .MangoWelcomeToFansocial { font-size: 30px; line-height: 38px; }
@@ -62,11 +62,11 @@
 
     <body>
         <!-- main wrapper -->
-        <div data-section="wrapper" class="w-100 flex flex--column-responsive-mobile flex--column-responsive-mobile-portrait">
+        <div data-section="wrapper" class="w-100 flex flex--column-responsive-mobile flex--column-responsive-mobile-portrait bg--no-repeat bg--size-cover" style="background-image: url(../assets/images/fan-overview-empty-state-bg.png);">
             <!-- Main Inner -->
-            <div data-layer="ONBOARDING" class="Onboarding w-100 flex justify-center items-center">
+            <div data-layer="ONBOARDING" class="Onboarding w-100 flex justify-center items-center bg-white-60 bg--blur--10">
                 <!-- Image Inner Group -->
-                <div data-layer="image" class="Image flex--max self-stretch bg--blur--100 flex flex-column justify-start items-center">
+                <div data-layer="image" class="Image flex--max self-stretch bg--blur--50 flex flex-column justify-start items-center">
                     <!-- Page Inner Content -->
                     <div data-layer="Frame 1410098716" class="Frame1410098716 self-stretch pad--x--40 pad--bottom--64 flex flex-column justify-start items-start gap--64">
                       <!-- Page Sectio Top -->
@@ -74,7 +74,9 @@
                         <!-- Inner Block -->
                         <div data-layer="Frame 8941" class="Frame8941 self-stretch pad--top--40 flex flex-column justify-center items-center gap--8">
                           <!-- Icon -->
-                          <div data-layer="icon" class="Icon db w--64 h--64 relative br-100"></div>
+                          <div data-layer="icon" class="Icon db w--64 h--64 relative br-100 overflow-hidden">
+                              <img src="../assets/images/avatar-cartoon.svg" alt="" class="w-100 h-100 fit--cover">
+                          </div>
                           <!-- /Icon -->
                           <!-- Title -->
                           <div data-layer="@MANGO WELCOME TO FANSOCIAL!" class="MangoWelcomeToFansocial tc flex flex-column">
@@ -107,47 +109,758 @@
                         <div data-layer="Frame 1410098651" class="Frame1410098651 self-stretch flex justify-center items-center gap--16">
                           <!-- Carousel Item -->
                           <div data-layer="Frame 1410098765" class="Frame1410098765 flex justify-start items-center">
-                            <div data-layer="Rectangle" class="Rectangle db br--4"></div>
+                            <div data-layer="Rectangle" class="Rectangle db br--4">
+                                <!-- Profile Card -->
+                                <div class="w-100 flex--max flex flex-column relative">
+                                    <!-- Last Status -->
+                                    <div class="absolute pad--8 left-0 top-0 w-100">
+                                        <div class="flex items-center gap--4 drop--sh--2">
+                                            <span class="db w--8 h--8 br-100 bg--col--turquoise flex-none"></span>
+                                            <span class="fs--12 lh--18 white">Updated yesterday</span>
+                                        </div>
+                                    </div>
+                                    <img src="../assets/images/profile-bg.png" alt="" class="w-100 h--230 br--4 fit--cover">
+                                    <!-- Content Wrapper -->
+                                    <div class="flex flex-column justify-center items-end neg--m--top--62 bg--blur--50 cp--10">
+                                        <!-- Top -->
+                                        <div class="db w-100 h--32 bg-black-70"></div>
+                                        <!-- /Top -->
+                                        <!-- Bottom -->
+                                        <div class="w-100 flex--max bg-black-70 pad--12 pad--top--0 flex flex-column justify-end items-start gap--4 br--4 br--top-right br--top-left">
+                                            <!-- Inner -->
+                                            <div class="flex flex--max flex-column gap--4">
+                                                <!-- Followers Wrap -->
+                                                <div class="flex items-start gap--8 flex--max">
+                                                    <!-- Followers -->
+                                                    <div class="flex items-center gap--4">
+                                                        <img src="../assets/icons/user-02-green.svg" alt="" class="w--16 h--16 filter--col--white">
+                                                        <span class="fs--12 lh--18 white">15.2K</span>
+                                                    </div>
+                                                    <!-- /Followers -->
+                                                    <!-- Likes -->
+                                                    <div class="flex items-center gap--4">
+                                                        <img src="../assets/icons/heart.svg" alt="" class="w--16 h--16 filter--col--white">
+                                                        <span class="fs--12 lh--18 white">99K</span>
+                                                    </div>
+                                                    <!-- /Likes -->
+                                                </div>
+                                                <!-- /Followers Wrap -->
+                                                <!-- Title -->
+                                                <span data-line-clamp class="fs--14 fw6 lh--20 white">Princess Carrot Pop Gymroom </span>
+                                                <!-- @user -->
+                                                <div class="">
+                                                    <span class="fs--12 fw5 lh0018 white text--sh--3">@heyjenny1234</span> 
+                                                </div>
+                                                <!-- @User -->
+                                            </div>
+                                            <!-- /Inner -->
+                                            <!-- Media Count -->
+                                            <div class="pad--top--4 flex items-center gap--4">
+                                                <!-- Item -->
+                                                <div class="flex items-center gap--4">
+                                                    <img src="../assets/icons/play-square.svg" alt="" class="w--16 h--16 filter--col--athens-gray2">
+                                                    <span class="fs--12 lh--normal col--athens-gray-3 tracked--0-07">120</span>
+                                                </div>
+                                                <!-- /Item -->
+                                                <!-- Item -->
+                                                <div class="flex items-center gap--4">
+                                                    <img src="../assets/icons/image-03.svg" alt="" class="w--16 h--16 filter--col--athens-gray2">
+                                                    <span class="fs--12 lh--normal col--athens-gray-3 tracked--0-07">20</span>
+                                                </div>
+                                                <!-- /Item -->
+                                                <!-- Item -->
+                                                <div class="flex items-center gap--4">
+                                                    <img src="../assets/icons/image-gallery.svg" alt="" class="w--16 h--16 filter--col--athens-gray2">
+                                                    <span class="fs--12 lh--normal col--athens-gray-3 tracked--0-07">10</span>
+                                                </div>
+                                                <!-- /Item -->
+                                                <!-- Item -->
+                                                <div class="flex items-center gap--4">
+                                                    <img src="../assets/icons/recording-02.svg" alt="" class="w--16 h--16 filter--col--athens-gray2">
+                                                    <span class="fs--12 lh--normal col--athens-gray-3 tracked--0-07">30</span>
+                                                </div>
+                                                <!-- /Item -->
+                                            </div>
+                                            <!-- /Media Count -->
+                                        </div>
+                                        <!-- /Bottom -->
+                                    </div>
+                                    <!-- /Content Wrapper -->
+                                </div>
+                                <!-- /Profile Card -->
+                            </div>
                           </div>
                           <!-- /Carousel Item -->
                           <!-- Carousel Item -->
                           <div data-layer="Frame 1410098765" class="Frame1410098765 flex justify-start items-center">
-                            <div data-layer="Rectangle" class="Rectangle db br--4"></div>
+                            <div data-layer="Rectangle" class="Rectangle db br--4">
+                                <!-- Profile Card -->
+                                <div class="w-100 flex--max flex flex-column relative">
+                                    <!-- Last Status -->
+                                    <div class="absolute pad--8 left-0 top-0 w-100">
+                                        <div class="flex items-center gap--4 drop--sh--2">
+                                            <span class="db w--8 h--8 br-100 bg--col--turquoise flex-none"></span>
+                                            <span class="fs--12 lh--18 white">Updated yesterday</span>
+                                        </div>
+                                    </div>
+                                    <img src="../assets/images/profile-bg.png" alt="" class="w-100 h--230 br--4 fit--cover">
+                                    <!-- Content Wrapper -->
+                                    <div class="flex flex-column justify-center items-end neg--m--top--62 bg--blur--50 cp--10">
+                                        <!-- Top -->
+                                        <div class="db w-100 h--32 bg-black-70"></div>
+                                        <!-- /Top -->
+                                        <!-- Bottom -->
+                                        <div class="w-100 flex--max bg-black-70 pad--12 pad--top--0 flex flex-column justify-end items-start gap--4 br--4 br--top-right br--top-left">
+                                            <!-- Inner -->
+                                            <div class="flex flex--max flex-column gap--4">
+                                                <!-- Followers Wrap -->
+                                                <div class="flex items-start gap--8 flex--max">
+                                                    <!-- Followers -->
+                                                    <div class="flex items-center gap--4">
+                                                        <img src="../assets/icons/user-02-green.svg" alt="" class="w--16 h--16 filter--col--white">
+                                                        <span class="fs--12 lh--18 white">15.2K</span>
+                                                    </div>
+                                                    <!-- /Followers -->
+                                                    <!-- Likes -->
+                                                    <div class="flex items-center gap--4">
+                                                        <img src="../assets/icons/heart.svg" alt="" class="w--16 h--16 filter--col--white">
+                                                        <span class="fs--12 lh--18 white">99K</span>
+                                                    </div>
+                                                    <!-- /Likes -->
+                                                </div>
+                                                <!-- /Followers Wrap -->
+                                                <!-- Title -->
+                                                <span data-line-clamp class="fs--14 fw6 lh--20 white">Princess Carrot Pop Gymroom </span>
+                                                <!-- @user -->
+                                                <div class="">
+                                                    <span class="fs--12 fw5 lh0018 white text--sh--3">@heyjenny1234</span> 
+                                                </div>
+                                                <!-- @User -->
+                                            </div>
+                                            <!-- /Inner -->
+                                            <!-- Media Count -->
+                                            <div class="pad--top--4 flex items-center gap--4">
+                                                <!-- Item -->
+                                                <div class="flex items-center gap--4">
+                                                    <img src="../assets/icons/play-square.svg" alt="" class="w--16 h--16 filter--col--athens-gray2">
+                                                    <span class="fs--12 lh--normal col--athens-gray-3 tracked--0-07">120</span>
+                                                </div>
+                                                <!-- /Item -->
+                                                <!-- Item -->
+                                                <div class="flex items-center gap--4">
+                                                    <img src="../assets/icons/image-03.svg" alt="" class="w--16 h--16 filter--col--athens-gray2">
+                                                    <span class="fs--12 lh--normal col--athens-gray-3 tracked--0-07">20</span>
+                                                </div>
+                                                <!-- /Item -->
+                                                <!-- Item -->
+                                                <div class="flex items-center gap--4">
+                                                    <img src="../assets/icons/image-gallery.svg" alt="" class="w--16 h--16 filter--col--athens-gray2">
+                                                    <span class="fs--12 lh--normal col--athens-gray-3 tracked--0-07">10</span>
+                                                </div>
+                                                <!-- /Item -->
+                                                <!-- Item -->
+                                                <div class="flex items-center gap--4">
+                                                    <img src="../assets/icons/recording-02.svg" alt="" class="w--16 h--16 filter--col--athens-gray2">
+                                                    <span class="fs--12 lh--normal col--athens-gray-3 tracked--0-07">30</span>
+                                                </div>
+                                                <!-- /Item -->
+                                            </div>
+                                            <!-- /Media Count -->
+                                        </div>
+                                        <!-- /Bottom -->
+                                    </div>
+                                    <!-- /Content Wrapper -->
+                                </div>
+                                <!-- /Profile Card -->
+                            </div>
                           </div>
                           <!-- /Carousel Item -->
                           <!-- Carousel Item -->
                           <div data-layer="Frame 1410098765" class="Frame1410098765 flex justify-start items-center">
-                            <div data-layer="Rectangle" class="Rectangle db br--4"></div>
+                            <div data-layer="Rectangle" class="Rectangle db br--4">
+                                <!-- Profile Card -->
+                                <div class="w-100 flex--max flex flex-column relative">
+                                    <!-- Last Status -->
+                                    <div class="absolute pad--8 left-0 top-0 w-100">
+                                        <div class="flex items-center gap--4 drop--sh--2">
+                                            <span class="db w--8 h--8 br-100 bg--col--turquoise flex-none"></span>
+                                            <span class="fs--12 lh--18 white">Updated yesterday</span>
+                                        </div>
+                                    </div>
+                                    <img src="../assets/images/profile-bg.png" alt="" class="w-100 h--230 br--4 fit--cover">
+                                    <!-- Content Wrapper -->
+                                    <div class="flex flex-column justify-center items-end neg--m--top--62 bg--blur--50 cp--10">
+                                        <!-- Top -->
+                                        <div class="db w-100 h--32 bg-black-70"></div>
+                                        <!-- /Top -->
+                                        <!-- Bottom -->
+                                        <div class="w-100 flex--max bg-black-70 pad--12 pad--top--0 flex flex-column justify-end items-start gap--4 br--4 br--top-right br--top-left">
+                                            <!-- Inner -->
+                                            <div class="flex flex--max flex-column gap--4">
+                                                <!-- Followers Wrap -->
+                                                <div class="flex items-start gap--8 flex--max">
+                                                    <!-- Followers -->
+                                                    <div class="flex items-center gap--4">
+                                                        <img src="../assets/icons/user-02-green.svg" alt="" class="w--16 h--16 filter--col--white">
+                                                        <span class="fs--12 lh--18 white">15.2K</span>
+                                                    </div>
+                                                    <!-- /Followers -->
+                                                    <!-- Likes -->
+                                                    <div class="flex items-center gap--4">
+                                                        <img src="../assets/icons/heart.svg" alt="" class="w--16 h--16 filter--col--white">
+                                                        <span class="fs--12 lh--18 white">99K</span>
+                                                    </div>
+                                                    <!-- /Likes -->
+                                                </div>
+                                                <!-- /Followers Wrap -->
+                                                <!-- Title -->
+                                                <span data-line-clamp class="fs--14 fw6 lh--20 white">Princess Carrot Pop Gymroom </span>
+                                                <!-- @user -->
+                                                <div class="">
+                                                    <span class="fs--12 fw5 lh0018 white text--sh--3">@heyjenny1234</span> 
+                                                </div>
+                                                <!-- @User -->
+                                            </div>
+                                            <!-- /Inner -->
+                                            <!-- Media Count -->
+                                            <div class="pad--top--4 flex items-center gap--4">
+                                                <!-- Item -->
+                                                <div class="flex items-center gap--4">
+                                                    <img src="../assets/icons/play-square.svg" alt="" class="w--16 h--16 filter--col--athens-gray2">
+                                                    <span class="fs--12 lh--normal col--athens-gray-3 tracked--0-07">120</span>
+                                                </div>
+                                                <!-- /Item -->
+                                                <!-- Item -->
+                                                <div class="flex items-center gap--4">
+                                                    <img src="../assets/icons/image-03.svg" alt="" class="w--16 h--16 filter--col--athens-gray2">
+                                                    <span class="fs--12 lh--normal col--athens-gray-3 tracked--0-07">20</span>
+                                                </div>
+                                                <!-- /Item -->
+                                                <!-- Item -->
+                                                <div class="flex items-center gap--4">
+                                                    <img src="../assets/icons/image-gallery.svg" alt="" class="w--16 h--16 filter--col--athens-gray2">
+                                                    <span class="fs--12 lh--normal col--athens-gray-3 tracked--0-07">10</span>
+                                                </div>
+                                                <!-- /Item -->
+                                                <!-- Item -->
+                                                <div class="flex items-center gap--4">
+                                                    <img src="../assets/icons/recording-02.svg" alt="" class="w--16 h--16 filter--col--athens-gray2">
+                                                    <span class="fs--12 lh--normal col--athens-gray-3 tracked--0-07">30</span>
+                                                </div>
+                                                <!-- /Item -->
+                                            </div>
+                                            <!-- /Media Count -->
+                                        </div>
+                                        <!-- /Bottom -->
+                                    </div>
+                                    <!-- /Content Wrapper -->
+                                </div>
+                                <!-- /Profile Card -->
+                            </div>
                           </div>
                           <!-- /Carousel Item -->
                           <!-- Carousel Item -->
                           <div data-layer="Frame 1410098765" class="Frame1410098765 flex justify-start items-center">
-                            <div data-layer="Rectangle" class="Rectangle db br--4"></div>
+                            <div data-layer="Rectangle" class="Rectangle db br--4">
+                                <!-- Profile Card -->
+                                <div class="w-100 flex--max flex flex-column relative">
+                                    <!-- Last Status -->
+                                    <div class="absolute pad--8 left-0 top-0 w-100">
+                                        <div class="flex items-center gap--4 drop--sh--2">
+                                            <span class="db w--8 h--8 br-100 bg--col--turquoise flex-none"></span>
+                                            <span class="fs--12 lh--18 white">Updated yesterday</span>
+                                        </div>
+                                    </div>
+                                    <img src="../assets/images/profile-bg.png" alt="" class="w-100 h--230 br--4 fit--cover">
+                                    <!-- Content Wrapper -->
+                                    <div class="flex flex-column justify-center items-end neg--m--top--62 bg--blur--50 cp--10">
+                                        <!-- Top -->
+                                        <div class="db w-100 h--32 bg-black-70"></div>
+                                        <!-- /Top -->
+                                        <!-- Bottom -->
+                                        <div class="w-100 flex--max bg-black-70 pad--12 pad--top--0 flex flex-column justify-end items-start gap--4 br--4 br--top-right br--top-left">
+                                            <!-- Inner -->
+                                            <div class="flex flex--max flex-column gap--4">
+                                                <!-- Followers Wrap -->
+                                                <div class="flex items-start gap--8 flex--max">
+                                                    <!-- Followers -->
+                                                    <div class="flex items-center gap--4">
+                                                        <img src="../assets/icons/user-02-green.svg" alt="" class="w--16 h--16 filter--col--white">
+                                                        <span class="fs--12 lh--18 white">15.2K</span>
+                                                    </div>
+                                                    <!-- /Followers -->
+                                                    <!-- Likes -->
+                                                    <div class="flex items-center gap--4">
+                                                        <img src="../assets/icons/heart.svg" alt="" class="w--16 h--16 filter--col--white">
+                                                        <span class="fs--12 lh--18 white">99K</span>
+                                                    </div>
+                                                    <!-- /Likes -->
+                                                </div>
+                                                <!-- /Followers Wrap -->
+                                                <!-- Title -->
+                                                <span data-line-clamp class="fs--14 fw6 lh--20 white">Princess Carrot Pop Gymroom </span>
+                                                <!-- @user -->
+                                                <div class="">
+                                                    <span class="fs--12 fw5 lh0018 white text--sh--3">@heyjenny1234</span> 
+                                                </div>
+                                                <!-- @User -->
+                                            </div>
+                                            <!-- /Inner -->
+                                            <!-- Media Count -->
+                                            <div class="pad--top--4 flex items-center gap--4">
+                                                <!-- Item -->
+                                                <div class="flex items-center gap--4">
+                                                    <img src="../assets/icons/play-square.svg" alt="" class="w--16 h--16 filter--col--athens-gray2">
+                                                    <span class="fs--12 lh--normal col--athens-gray-3 tracked--0-07">120</span>
+                                                </div>
+                                                <!-- /Item -->
+                                                <!-- Item -->
+                                                <div class="flex items-center gap--4">
+                                                    <img src="../assets/icons/image-03.svg" alt="" class="w--16 h--16 filter--col--athens-gray2">
+                                                    <span class="fs--12 lh--normal col--athens-gray-3 tracked--0-07">20</span>
+                                                </div>
+                                                <!-- /Item -->
+                                                <!-- Item -->
+                                                <div class="flex items-center gap--4">
+                                                    <img src="../assets/icons/image-gallery.svg" alt="" class="w--16 h--16 filter--col--athens-gray2">
+                                                    <span class="fs--12 lh--normal col--athens-gray-3 tracked--0-07">10</span>
+                                                </div>
+                                                <!-- /Item -->
+                                                <!-- Item -->
+                                                <div class="flex items-center gap--4">
+                                                    <img src="../assets/icons/recording-02.svg" alt="" class="w--16 h--16 filter--col--athens-gray2">
+                                                    <span class="fs--12 lh--normal col--athens-gray-3 tracked--0-07">30</span>
+                                                </div>
+                                                <!-- /Item -->
+                                            </div>
+                                            <!-- /Media Count -->
+                                        </div>
+                                        <!-- /Bottom -->
+                                    </div>
+                                    <!-- /Content Wrapper -->
+                                </div>
+                                <!-- /Profile Card -->
+                            </div>
                           </div>
                           <!-- /Carousel Item -->
                           <!-- Carousel Item -->
                           <div data-layer="Frame 1410098765" class="Frame1410098765 flex justify-start items-center">
-                            <div data-layer="Rectangle" class="Rectangle db br--4"></div>
+                            <div data-layer="Rectangle" class="Rectangle db br--4">
+                                <!-- Profile Card -->
+                                <div class="w-100 flex--max flex flex-column relative">
+                                    <!-- Last Status -->
+                                    <div class="absolute pad--8 left-0 top-0 w-100">
+                                        <div class="flex items-center gap--4 drop--sh--2">
+                                            <span class="db w--8 h--8 br-100 bg--col--turquoise flex-none"></span>
+                                            <span class="fs--12 lh--18 white">Updated yesterday</span>
+                                        </div>
+                                    </div>
+                                    <img src="../assets/images/profile-bg.png" alt="" class="w-100 h--230 br--4 fit--cover">
+                                    <!-- Content Wrapper -->
+                                    <div class="flex flex-column justify-center items-end neg--m--top--62 bg--blur--50 cp--10">
+                                        <!-- Top -->
+                                        <div class="db w-100 h--32 bg-black-70"></div>
+                                        <!-- /Top -->
+                                        <!-- Bottom -->
+                                        <div class="w-100 flex--max bg-black-70 pad--12 pad--top--0 flex flex-column justify-end items-start gap--4 br--4 br--top-right br--top-left">
+                                            <!-- Inner -->
+                                            <div class="flex flex--max flex-column gap--4">
+                                                <!-- Followers Wrap -->
+                                                <div class="flex items-start gap--8 flex--max">
+                                                    <!-- Followers -->
+                                                    <div class="flex items-center gap--4">
+                                                        <img src="../assets/icons/user-02-green.svg" alt="" class="w--16 h--16 filter--col--white">
+                                                        <span class="fs--12 lh--18 white">15.2K</span>
+                                                    </div>
+                                                    <!-- /Followers -->
+                                                    <!-- Likes -->
+                                                    <div class="flex items-center gap--4">
+                                                        <img src="../assets/icons/heart.svg" alt="" class="w--16 h--16 filter--col--white">
+                                                        <span class="fs--12 lh--18 white">99K</span>
+                                                    </div>
+                                                    <!-- /Likes -->
+                                                </div>
+                                                <!-- /Followers Wrap -->
+                                                <!-- Title -->
+                                                <span data-line-clamp class="fs--14 fw6 lh--20 white">Princess Carrot Pop Gymroom </span>
+                                                <!-- @user -->
+                                                <div class="">
+                                                    <span class="fs--12 fw5 lh0018 white text--sh--3">@heyjenny1234</span> 
+                                                </div>
+                                                <!-- @User -->
+                                            </div>
+                                            <!-- /Inner -->
+                                            <!-- Media Count -->
+                                            <div class="pad--top--4 flex items-center gap--4">
+                                                <!-- Item -->
+                                                <div class="flex items-center gap--4">
+                                                    <img src="../assets/icons/play-square.svg" alt="" class="w--16 h--16 filter--col--athens-gray2">
+                                                    <span class="fs--12 lh--normal col--athens-gray-3 tracked--0-07">120</span>
+                                                </div>
+                                                <!-- /Item -->
+                                                <!-- Item -->
+                                                <div class="flex items-center gap--4">
+                                                    <img src="../assets/icons/image-03.svg" alt="" class="w--16 h--16 filter--col--athens-gray2">
+                                                    <span class="fs--12 lh--normal col--athens-gray-3 tracked--0-07">20</span>
+                                                </div>
+                                                <!-- /Item -->
+                                                <!-- Item -->
+                                                <div class="flex items-center gap--4">
+                                                    <img src="../assets/icons/image-gallery.svg" alt="" class="w--16 h--16 filter--col--athens-gray2">
+                                                    <span class="fs--12 lh--normal col--athens-gray-3 tracked--0-07">10</span>
+                                                </div>
+                                                <!-- /Item -->
+                                                <!-- Item -->
+                                                <div class="flex items-center gap--4">
+                                                    <img src="../assets/icons/recording-02.svg" alt="" class="w--16 h--16 filter--col--athens-gray2">
+                                                    <span class="fs--12 lh--normal col--athens-gray-3 tracked--0-07">30</span>
+                                                </div>
+                                                <!-- /Item -->
+                                            </div>
+                                            <!-- /Media Count -->
+                                        </div>
+                                        <!-- /Bottom -->
+                                    </div>
+                                    <!-- /Content Wrapper -->
+                                </div>
+                                <!-- /Profile Card -->
+                            </div>
                           </div>
                           <!-- /Carousel Item -->
                           <!-- Carousel Item -->
                           <div data-layer="Frame 1410098765" class="Frame1410098765 flex justify-start items-center">
-                            <div data-layer="Rectangle" class="Rectangle db br--4"></div>
+                            <div data-layer="Rectangle" class="Rectangle db br--4">
+                                <!-- Profile Card -->
+                                <div class="w-100 flex--max flex flex-column relative">
+                                    <!-- Last Status -->
+                                    <div class="absolute pad--8 left-0 top-0 w-100">
+                                        <div class="flex items-center gap--4 drop--sh--2">
+                                            <span class="db w--8 h--8 br-100 bg--col--turquoise flex-none"></span>
+                                            <span class="fs--12 lh--18 white">Updated yesterday</span>
+                                        </div>
+                                    </div>
+                                    <img src="../assets/images/profile-bg.png" alt="" class="w-100 h--230 br--4 fit--cover">
+                                    <!-- Content Wrapper -->
+                                    <div class="flex flex-column justify-center items-end neg--m--top--62 bg--blur--50 cp--10">
+                                        <!-- Top -->
+                                        <div class="db w-100 h--32 bg-black-70"></div>
+                                        <!-- /Top -->
+                                        <!-- Bottom -->
+                                        <div class="w-100 flex--max bg-black-70 pad--12 pad--top--0 flex flex-column justify-end items-start gap--4 br--4 br--top-right br--top-left">
+                                            <!-- Inner -->
+                                            <div class="flex flex--max flex-column gap--4">
+                                                <!-- Followers Wrap -->
+                                                <div class="flex items-start gap--8 flex--max">
+                                                    <!-- Followers -->
+                                                    <div class="flex items-center gap--4">
+                                                        <img src="../assets/icons/user-02-green.svg" alt="" class="w--16 h--16 filter--col--white">
+                                                        <span class="fs--12 lh--18 white">15.2K</span>
+                                                    </div>
+                                                    <!-- /Followers -->
+                                                    <!-- Likes -->
+                                                    <div class="flex items-center gap--4">
+                                                        <img src="../assets/icons/heart.svg" alt="" class="w--16 h--16 filter--col--white">
+                                                        <span class="fs--12 lh--18 white">99K</span>
+                                                    </div>
+                                                    <!-- /Likes -->
+                                                </div>
+                                                <!-- /Followers Wrap -->
+                                                <!-- Title -->
+                                                <span data-line-clamp class="fs--14 fw6 lh--20 white">Princess Carrot Pop Gymroom </span>
+                                                <!-- @user -->
+                                                <div class="">
+                                                    <span class="fs--12 fw5 lh0018 white text--sh--3">@heyjenny1234</span> 
+                                                </div>
+                                                <!-- @User -->
+                                            </div>
+                                            <!-- /Inner -->
+                                            <!-- Media Count -->
+                                            <div class="pad--top--4 flex items-center gap--4">
+                                                <!-- Item -->
+                                                <div class="flex items-center gap--4">
+                                                    <img src="../assets/icons/play-square.svg" alt="" class="w--16 h--16 filter--col--athens-gray2">
+                                                    <span class="fs--12 lh--normal col--athens-gray-3 tracked--0-07">120</span>
+                                                </div>
+                                                <!-- /Item -->
+                                                <!-- Item -->
+                                                <div class="flex items-center gap--4">
+                                                    <img src="../assets/icons/image-03.svg" alt="" class="w--16 h--16 filter--col--athens-gray2">
+                                                    <span class="fs--12 lh--normal col--athens-gray-3 tracked--0-07">20</span>
+                                                </div>
+                                                <!-- /Item -->
+                                                <!-- Item -->
+                                                <div class="flex items-center gap--4">
+                                                    <img src="../assets/icons/image-gallery.svg" alt="" class="w--16 h--16 filter--col--athens-gray2">
+                                                    <span class="fs--12 lh--normal col--athens-gray-3 tracked--0-07">10</span>
+                                                </div>
+                                                <!-- /Item -->
+                                                <!-- Item -->
+                                                <div class="flex items-center gap--4">
+                                                    <img src="../assets/icons/recording-02.svg" alt="" class="w--16 h--16 filter--col--athens-gray2">
+                                                    <span class="fs--12 lh--normal col--athens-gray-3 tracked--0-07">30</span>
+                                                </div>
+                                                <!-- /Item -->
+                                            </div>
+                                            <!-- /Media Count -->
+                                        </div>
+                                        <!-- /Bottom -->
+                                    </div>
+                                    <!-- /Content Wrapper -->
+                                </div>
+                                <!-- /Profile Card -->
+                            </div>
                           </div>
                           <!-- /Carousel Item -->
                           <!-- Carousel Item -->
                           <div data-layer="Frame 1410098765" class="Frame1410098765 flex justify-start items-center">
-                            <div data-layer="Rectangle" class="Rectangle db br--4"></div>
+                            <div data-layer="Rectangle" class="Rectangle db br--4">
+                                <!-- Profile Card -->
+                                <div class="w-100 flex--max flex flex-column relative">
+                                    <!-- Last Status -->
+                                    <div class="absolute pad--8 left-0 top-0 w-100">
+                                        <div class="flex items-center gap--4 drop--sh--2">
+                                            <span class="db w--8 h--8 br-100 bg--col--turquoise flex-none"></span>
+                                            <span class="fs--12 lh--18 white">Updated yesterday</span>
+                                        </div>
+                                    </div>
+                                    <img src="../assets/images/profile-bg.png" alt="" class="w-100 h--230 br--4 fit--cover">
+                                    <!-- Content Wrapper -->
+                                    <div class="flex flex-column justify-center items-end neg--m--top--62 bg--blur--50 cp--10">
+                                        <!-- Top -->
+                                        <div class="db w-100 h--32 bg-black-70"></div>
+                                        <!-- /Top -->
+                                        <!-- Bottom -->
+                                        <div class="w-100 flex--max bg-black-70 pad--12 pad--top--0 flex flex-column justify-end items-start gap--4 br--4 br--top-right br--top-left">
+                                            <!-- Inner -->
+                                            <div class="flex flex--max flex-column gap--4">
+                                                <!-- Followers Wrap -->
+                                                <div class="flex items-start gap--8 flex--max">
+                                                    <!-- Followers -->
+                                                    <div class="flex items-center gap--4">
+                                                        <img src="../assets/icons/user-02-green.svg" alt="" class="w--16 h--16 filter--col--white">
+                                                        <span class="fs--12 lh--18 white">15.2K</span>
+                                                    </div>
+                                                    <!-- /Followers -->
+                                                    <!-- Likes -->
+                                                    <div class="flex items-center gap--4">
+                                                        <img src="../assets/icons/heart.svg" alt="" class="w--16 h--16 filter--col--white">
+                                                        <span class="fs--12 lh--18 white">99K</span>
+                                                    </div>
+                                                    <!-- /Likes -->
+                                                </div>
+                                                <!-- /Followers Wrap -->
+                                                <!-- Title -->
+                                                <span data-line-clamp class="fs--14 fw6 lh--20 white">Princess Carrot Pop Gymroom </span>
+                                                <!-- @user -->
+                                                <div class="">
+                                                    <span class="fs--12 fw5 lh0018 white text--sh--3">@heyjenny1234</span> 
+                                                </div>
+                                                <!-- @User -->
+                                            </div>
+                                            <!-- /Inner -->
+                                            <!-- Media Count -->
+                                            <div class="pad--top--4 flex items-center gap--4">
+                                                <!-- Item -->
+                                                <div class="flex items-center gap--4">
+                                                    <img src="../assets/icons/play-square.svg" alt="" class="w--16 h--16 filter--col--athens-gray2">
+                                                    <span class="fs--12 lh--normal col--athens-gray-3 tracked--0-07">120</span>
+                                                </div>
+                                                <!-- /Item -->
+                                                <!-- Item -->
+                                                <div class="flex items-center gap--4">
+                                                    <img src="../assets/icons/image-03.svg" alt="" class="w--16 h--16 filter--col--athens-gray2">
+                                                    <span class="fs--12 lh--normal col--athens-gray-3 tracked--0-07">20</span>
+                                                </div>
+                                                <!-- /Item -->
+                                                <!-- Item -->
+                                                <div class="flex items-center gap--4">
+                                                    <img src="../assets/icons/image-gallery.svg" alt="" class="w--16 h--16 filter--col--athens-gray2">
+                                                    <span class="fs--12 lh--normal col--athens-gray-3 tracked--0-07">10</span>
+                                                </div>
+                                                <!-- /Item -->
+                                                <!-- Item -->
+                                                <div class="flex items-center gap--4">
+                                                    <img src="../assets/icons/recording-02.svg" alt="" class="w--16 h--16 filter--col--athens-gray2">
+                                                    <span class="fs--12 lh--normal col--athens-gray-3 tracked--0-07">30</span>
+                                                </div>
+                                                <!-- /Item -->
+                                            </div>
+                                            <!-- /Media Count -->
+                                        </div>
+                                        <!-- /Bottom -->
+                                    </div>
+                                    <!-- /Content Wrapper -->
+                                </div>
+                                <!-- /Profile Card -->
+                            </div>
                           </div>
                           <!-- /Carousel Item -->
                           <!-- Carousel Item -->
                           <div data-layer="Frame 1410098765" class="Frame1410098765 flex justify-start items-center">
-                            <div data-layer="Rectangle" class="Rectangle db br--4"></div>
+                            <div data-layer="Rectangle" class="Rectangle db br--4">
+                                <!-- Profile Card -->
+                                <div class="w-100 flex--max flex flex-column relative">
+                                    <!-- Last Status -->
+                                    <div class="absolute pad--8 left-0 top-0 w-100">
+                                        <div class="flex items-center gap--4 drop--sh--2">
+                                            <span class="db w--8 h--8 br-100 bg--col--turquoise flex-none"></span>
+                                            <span class="fs--12 lh--18 white">Updated yesterday</span>
+                                        </div>
+                                    </div>
+                                    <img src="../assets/images/profile-bg.png" alt="" class="w-100 h--230 br--4 fit--cover">
+                                    <!-- Content Wrapper -->
+                                    <div class="flex flex-column justify-center items-end neg--m--top--62 bg--blur--50 cp--10">
+                                        <!-- Top -->
+                                        <div class="db w-100 h--32 bg-black-70"></div>
+                                        <!-- /Top -->
+                                        <!-- Bottom -->
+                                        <div class="w-100 flex--max bg-black-70 pad--12 pad--top--0 flex flex-column justify-end items-start gap--4 br--4 br--top-right br--top-left">
+                                            <!-- Inner -->
+                                            <div class="flex flex--max flex-column gap--4">
+                                                <!-- Followers Wrap -->
+                                                <div class="flex items-start gap--8 flex--max">
+                                                    <!-- Followers -->
+                                                    <div class="flex items-center gap--4">
+                                                        <img src="../assets/icons/user-02-green.svg" alt="" class="w--16 h--16 filter--col--white">
+                                                        <span class="fs--12 lh--18 white">15.2K</span>
+                                                    </div>
+                                                    <!-- /Followers -->
+                                                    <!-- Likes -->
+                                                    <div class="flex items-center gap--4">
+                                                        <img src="../assets/icons/heart.svg" alt="" class="w--16 h--16 filter--col--white">
+                                                        <span class="fs--12 lh--18 white">99K</span>
+                                                    </div>
+                                                    <!-- /Likes -->
+                                                </div>
+                                                <!-- /Followers Wrap -->
+                                                <!-- Title -->
+                                                <span data-line-clamp class="fs--14 fw6 lh--20 white">Princess Carrot Pop Gymroom </span>
+                                                <!-- @user -->
+                                                <div class="">
+                                                    <span class="fs--12 fw5 lh0018 white text--sh--3">@heyjenny1234</span> 
+                                                </div>
+                                                <!-- @User -->
+                                            </div>
+                                            <!-- /Inner -->
+                                            <!-- Media Count -->
+                                            <div class="pad--top--4 flex items-center gap--4">
+                                                <!-- Item -->
+                                                <div class="flex items-center gap--4">
+                                                    <img src="../assets/icons/play-square.svg" alt="" class="w--16 h--16 filter--col--athens-gray2">
+                                                    <span class="fs--12 lh--normal col--athens-gray-3 tracked--0-07">120</span>
+                                                </div>
+                                                <!-- /Item -->
+                                                <!-- Item -->
+                                                <div class="flex items-center gap--4">
+                                                    <img src="../assets/icons/image-03.svg" alt="" class="w--16 h--16 filter--col--athens-gray2">
+                                                    <span class="fs--12 lh--normal col--athens-gray-3 tracked--0-07">20</span>
+                                                </div>
+                                                <!-- /Item -->
+                                                <!-- Item -->
+                                                <div class="flex items-center gap--4">
+                                                    <img src="../assets/icons/image-gallery.svg" alt="" class="w--16 h--16 filter--col--athens-gray2">
+                                                    <span class="fs--12 lh--normal col--athens-gray-3 tracked--0-07">10</span>
+                                                </div>
+                                                <!-- /Item -->
+                                                <!-- Item -->
+                                                <div class="flex items-center gap--4">
+                                                    <img src="../assets/icons/recording-02.svg" alt="" class="w--16 h--16 filter--col--athens-gray2">
+                                                    <span class="fs--12 lh--normal col--athens-gray-3 tracked--0-07">30</span>
+                                                </div>
+                                                <!-- /Item -->
+                                            </div>
+                                            <!-- /Media Count -->
+                                        </div>
+                                        <!-- /Bottom -->
+                                    </div>
+                                    <!-- /Content Wrapper -->
+                                </div>
+                                <!-- /Profile Card -->
+                            </div>
                           </div>
                           <!-- /Carousel Item -->
                           <!-- Carousel Item -->
                           <div data-layer="Frame 1410098765" class="Frame1410098765 flex justify-start items-center">
-                            <div data-layer="Rectangle" class="Rectangle db br--4"></div>
+                            <div data-layer="Rectangle" class="Rectangle db br--4">
+                                <!-- Profile Card -->
+                                <div class="w-100 flex--max flex flex-column relative">
+                                    <!-- Last Status -->
+                                    <div class="absolute pad--8 left-0 top-0 w-100">
+                                        <div class="flex items-center gap--4 drop--sh--2">
+                                            <span class="db w--8 h--8 br-100 bg--col--turquoise flex-none"></span>
+                                            <span class="fs--12 lh--18 white">Updated yesterday</span>
+                                        </div>
+                                    </div>
+                                    <img src="../assets/images/profile-bg.png" alt="" class="w-100 h--230 br--4 fit--cover">
+                                    <!-- Content Wrapper -->
+                                    <div class="flex flex-column justify-center items-end neg--m--top--62 bg--blur--50 cp--10">
+                                        <!-- Top -->
+                                        <div class="db w-100 h--32 bg-black-70"></div>
+                                        <!-- /Top -->
+                                        <!-- Bottom -->
+                                        <div class="w-100 flex--max bg-black-70 pad--12 pad--top--0 flex flex-column justify-end items-start gap--4 br--4 br--top-right br--top-left">
+                                            <!-- Inner -->
+                                            <div class="flex flex--max flex-column gap--4">
+                                                <!-- Followers Wrap -->
+                                                <div class="flex items-start gap--8 flex--max">
+                                                    <!-- Followers -->
+                                                    <div class="flex items-center gap--4">
+                                                        <img src="../assets/icons/user-02-green.svg" alt="" class="w--16 h--16 filter--col--white">
+                                                        <span class="fs--12 lh--18 white">15.2K</span>
+                                                    </div>
+                                                    <!-- /Followers -->
+                                                    <!-- Likes -->
+                                                    <div class="flex items-center gap--4">
+                                                        <img src="../assets/icons/heart.svg" alt="" class="w--16 h--16 filter--col--white">
+                                                        <span class="fs--12 lh--18 white">99K</span>
+                                                    </div>
+                                                    <!-- /Likes -->
+                                                </div>
+                                                <!-- /Followers Wrap -->
+                                                <!-- Title -->
+                                                <span data-line-clamp class="fs--14 fw6 lh--20 white">Princess Carrot Pop Gymroom </span>
+                                                <!-- @user -->
+                                                <div class="">
+                                                    <span class="fs--12 fw5 lh0018 white text--sh--3">@heyjenny1234</span> 
+                                                </div>
+                                                <!-- @User -->
+                                            </div>
+                                            <!-- /Inner -->
+                                            <!-- Media Count -->
+                                            <div class="pad--top--4 flex items-center gap--4">
+                                                <!-- Item -->
+                                                <div class="flex items-center gap--4">
+                                                    <img src="../assets/icons/play-square.svg" alt="" class="w--16 h--16 filter--col--athens-gray2">
+                                                    <span class="fs--12 lh--normal col--athens-gray-3 tracked--0-07">120</span>
+                                                </div>
+                                                <!-- /Item -->
+                                                <!-- Item -->
+                                                <div class="flex items-center gap--4">
+                                                    <img src="../assets/icons/image-03.svg" alt="" class="w--16 h--16 filter--col--athens-gray2">
+                                                    <span class="fs--12 lh--normal col--athens-gray-3 tracked--0-07">20</span>
+                                                </div>
+                                                <!-- /Item -->
+                                                <!-- Item -->
+                                                <div class="flex items-center gap--4">
+                                                    <img src="../assets/icons/image-gallery.svg" alt="" class="w--16 h--16 filter--col--athens-gray2">
+                                                    <span class="fs--12 lh--normal col--athens-gray-3 tracked--0-07">10</span>
+                                                </div>
+                                                <!-- /Item -->
+                                                <!-- Item -->
+                                                <div class="flex items-center gap--4">
+                                                    <img src="../assets/icons/recording-02.svg" alt="" class="w--16 h--16 filter--col--athens-gray2">
+                                                    <span class="fs--12 lh--normal col--athens-gray-3 tracked--0-07">30</span>
+                                                </div>
+                                                <!-- /Item -->
+                                            </div>
+                                            <!-- /Media Count -->
+                                        </div>
+                                        <!-- /Bottom -->
+                                    </div>
+                                    <!-- /Content Wrapper -->
+                                </div>
+                                <!-- /Profile Card -->
+                            </div>
                           </div>
                           <!-- /Carousel Item -->
                         </div>
@@ -173,32 +886,374 @@
                             <div data-layer="Frame 1410098653" class="Frame1410098653 flex justify-start items-center gap--16">
                                 <!-- Carousel Item -->
                                 <div data-layer="Frame 1410098762" class="Frame1410098762 flex justify-start items-center" style="justify-content: flex-start; align-items: center; display: flex">
-                                    <div data-layer="Rectangle" class="Rectangle-2 db br--4"></div>
+                                    <div data-layer="Rectangle" class="Rectangle-2 db br--4">
+                                        <!-- Media Grid Item -->
+                                        <div class="w-100 flex--max flex flex-column gap--8">
+                                            <!-- Video -->
+                                            <div data-subscription-video-thumbnail class="w-100 pointer relative">
+                                                <div class="relative aspect--ratio--16-9 w-100 h-100">
+                                                    <img src="../assets/images/grid-thumb-2.svg" alt="" class="w-100 h-100 fit--cover" />
+                                                </div>
+                                                <!-- Subscribe Tag Tag -->
+                                                <div class="flex absolute top-0 left-0 z--10000">
+                                                    <span class="dim bg--gray-70 flex items-center justify-center gap--4 pad--x--10 pad--y--4">
+                                                        <p class="col--heliotrope fs--12 lh--14">Buy Now</p>
+                                                    </span>
+                                                    <span class="bg--col--violet black pad--x--10 pad--y--4 fs--12 lh--14 fw5">10% OFF</span>
+                                                </div>
+                                                <!-- End Subscribe Tag -->
+                                                <!-- Bottom Option Section -->
+                                                <div class="w-100 absolute left-0 bottom-0 z--10000 flex items-end justify-between gap--8">
+                                                    <!-- Title and User Info -->
+                                                    <div class="flex flex-column gap--8 pad--8">
+                                                        <h3 class="fs--16 fw5 lh--24 col--athens-gray">Jenny + Mini special Live</h3>
+                                                        <!-- Users name -->
+                                                        <div class="flex items-center gap--4">
+                                                            <!-- Image List -->
+                                                            <div class="relative flex items-center">
+                                                                <!-- Imags -->
+                                                                <span class="w--20 h--20 br-100 flex items-center justify-center overflow-hidden o-80 relative z--10000">
+                                                                    <img src="../assets/images/avatar.png" alt="" class="w-100 h-100 fit--cover">
+                                                                </span>
+                                                                <!-- /Imags -->
+                                                                <!-- Imags -->
+                                                                <span class="w--20 h--20 br-100 flex items-center justify-center overflow-hidden o-80 neg--m--left--13">
+                                                                    <img src="../assets/images/avatar-cartoon.svg" alt="" class="w-100 h-100 fit--cover">
+                                                                </span>
+                                                                <!-- /Imags -->
+                                                            </div>
+                                                            <!-- /Image List -->
+                                                            <span class="fs--12 lh--18 col--athens-gray">Jenny</span>
+                                                            <span class="fs--12 lh--18 col--athens-gray">,</span>
+                                                            <span class="fs--12 lh--18 col--athens-gray">Mini123</span>
+                                                        </div>
+                                                        <!-- /Users name -->
+                                                    </div>
+                                                    <!-- Title and User Info -->
+                                                    <!-- Play icon Option -->
+                                                    <div class="h--40 w--44 bg-black flex items-center justify-center pointer">
+                                                        <img src="../assets/icons/play-icon.svg" alt="" class="w--24 h--24 filter--col--brand-green-2 flex-none">
+                                                    </div>
+                                                    <!-- /Play icon Option -->
+                                                </div>
+                                                <!-- /Bottom Option Section -->
+                                            </div>
+                                            <!-- /Video -->
+                                        </div>
+                                        <!-- End Media Grid Item -->
+                                    </div>
                                 </div>
                                 <!-- /Carousel Item -->
                                 <!-- Carousel Item -->
                                 <div data-layer="Frame 1410098762" class="Frame1410098762 flex justify-start items-center" style="justify-content: flex-start; align-items: center; display: flex">
-                                    <div data-layer="Rectangle" class="Rectangle-2 db br--4"></div>
+                                    <div data-layer="Rectangle" class="Rectangle-2 db br--4">
+                                        <!-- Media Grid Item -->
+                                        <div class="w-100 flex--max flex flex-column gap--8">
+                                            <!-- Video -->
+                                            <div data-subscription-video-thumbnail class="w-100 pointer relative">
+                                                <div class="relative aspect--ratio--16-9 w-100 h-100">
+                                                    <img src="../assets/images/grid-thumb-2.svg" alt="" class="w-100 h-100 fit--cover" />
+                                                </div>
+                                                <!-- Subscribe Tag Tag -->
+                                                <div class="flex absolute top-0 left-0 z--10000">
+                                                    <span class="dim bg--gray-70 flex items-center justify-center gap--4 pad--x--10 pad--y--4">
+                                                        <p class="col--heliotrope fs--12 lh--14">Buy Now</p>
+                                                    </span>
+                                                    <span class="bg--col--violet black pad--x--10 pad--y--4 fs--12 lh--14 fw5">10% OFF</span>
+                                                </div>
+                                                <!-- End Subscribe Tag -->
+                                                <!-- Bottom Option Section -->
+                                                <div class="w-100 absolute left-0 bottom-0 z--10000 flex items-end justify-between gap--8">
+                                                    <!-- Title and User Info -->
+                                                    <div class="flex flex-column gap--8 pad--8">
+                                                        <h3 class="fs--16 fw5 lh--24 col--athens-gray">Jenny + Mini special Live</h3>
+                                                        <!-- Users name -->
+                                                        <div class="flex items-center gap--4">
+                                                            <!-- Image List -->
+                                                            <div class="relative flex items-center">
+                                                                <!-- Imags -->
+                                                                <span class="w--20 h--20 br-100 flex items-center justify-center overflow-hidden o-80 relative z--10000">
+                                                                    <img src="../assets/images/avatar.png" alt="" class="w-100 h-100 fit--cover">
+                                                                </span>
+                                                                <!-- /Imags -->
+                                                                <!-- Imags -->
+                                                                <span class="w--20 h--20 br-100 flex items-center justify-center overflow-hidden o-80 neg--m--left--13">
+                                                                    <img src="../assets/images/avatar-cartoon.svg" alt="" class="w-100 h-100 fit--cover">
+                                                                </span>
+                                                                <!-- /Imags -->
+                                                            </div>
+                                                            <!-- /Image List -->
+                                                            <span class="fs--12 lh--18 col--athens-gray">Jenny</span>
+                                                            <span class="fs--12 lh--18 col--athens-gray">,</span>
+                                                            <span class="fs--12 lh--18 col--athens-gray">Mini123</span>
+                                                        </div>
+                                                        <!-- /Users name -->
+                                                    </div>
+                                                    <!-- Title and User Info -->
+                                                    <!-- Play icon Option -->
+                                                    <div class="h--40 w--44 bg-black flex items-center justify-center pointer">
+                                                        <img src="../assets/icons/play-icon.svg" alt="" class="w--24 h--24 filter--col--brand-green-2 flex-none">
+                                                    </div>
+                                                    <!-- /Play icon Option -->
+                                                </div>
+                                                <!-- /Bottom Option Section -->
+                                            </div>
+                                            <!-- /Video -->
+                                        </div>
+                                        <!-- End Media Grid Item -->
+                                    </div>
                                 </div>
                                 <!-- /Carousel Item -->
                                 <!-- Carousel Item -->
                                 <div data-layer="Frame 1410098762" class="Frame1410098762 flex justify-start items-center" style="justify-content: flex-start; align-items: center; display: flex">
-                                    <div data-layer="Rectangle" class="Rectangle-2 db br--4"></div>
+                                    <div data-layer="Rectangle" class="Rectangle-2 db br--4">
+                                        <!-- Media Grid Item -->
+                                        <div class="w-100 flex--max flex flex-column gap--8">
+                                            <!-- Video -->
+                                            <div data-subscription-video-thumbnail class="w-100 pointer relative">
+                                                <div class="relative aspect--ratio--16-9 w-100 h-100">
+                                                    <img src="../assets/images/grid-thumb-2.svg" alt="" class="w-100 h-100 fit--cover" />
+                                                </div>
+                                                <!-- Subscribe Tag Tag -->
+                                                <div class="flex absolute top-0 left-0 z--10000">
+                                                    <span class="dim bg--gray-70 flex items-center justify-center gap--4 pad--x--10 pad--y--4">
+                                                        <p class="col--heliotrope fs--12 lh--14">Buy Now</p>
+                                                    </span>
+                                                    <span class="bg--col--violet black pad--x--10 pad--y--4 fs--12 lh--14 fw5">10% OFF</span>
+                                                </div>
+                                                <!-- End Subscribe Tag -->
+                                                <!-- Bottom Option Section -->
+                                                <div class="w-100 absolute left-0 bottom-0 z--10000 flex items-end justify-between gap--8">
+                                                    <!-- Title and User Info -->
+                                                    <div class="flex flex-column gap--8 pad--8">
+                                                        <h3 class="fs--16 fw5 lh--24 col--athens-gray">Jenny + Mini special Live</h3>
+                                                        <!-- Users name -->
+                                                        <div class="flex items-center gap--4">
+                                                            <!-- Image List -->
+                                                            <div class="relative flex items-center">
+                                                                <!-- Imags -->
+                                                                <span class="w--20 h--20 br-100 flex items-center justify-center overflow-hidden o-80 relative z--10000">
+                                                                    <img src="../assets/images/avatar.png" alt="" class="w-100 h-100 fit--cover">
+                                                                </span>
+                                                                <!-- /Imags -->
+                                                                <!-- Imags -->
+                                                                <span class="w--20 h--20 br-100 flex items-center justify-center overflow-hidden o-80 neg--m--left--13">
+                                                                    <img src="../assets/images/avatar-cartoon.svg" alt="" class="w-100 h-100 fit--cover">
+                                                                </span>
+                                                                <!-- /Imags -->
+                                                            </div>
+                                                            <!-- /Image List -->
+                                                            <span class="fs--12 lh--18 col--athens-gray">Jenny</span>
+                                                            <span class="fs--12 lh--18 col--athens-gray">,</span>
+                                                            <span class="fs--12 lh--18 col--athens-gray">Mini123</span>
+                                                        </div>
+                                                        <!-- /Users name -->
+                                                    </div>
+                                                    <!-- Title and User Info -->
+                                                    <!-- Play icon Option -->
+                                                    <div class="h--40 w--44 bg-black flex items-center justify-center pointer">
+                                                        <img src="../assets/icons/play-icon.svg" alt="" class="w--24 h--24 filter--col--brand-green-2 flex-none">
+                                                    </div>
+                                                    <!-- /Play icon Option -->
+                                                </div>
+                                                <!-- /Bottom Option Section -->
+                                            </div>
+                                            <!-- /Video -->
+                                        </div>
+                                        <!-- End Media Grid Item -->
+                                    </div>
                                 </div>
                                 <!-- /Carousel Item -->
                                 <!-- Carousel Item -->
                                 <div data-layer="Frame 1410098762" class="Frame1410098762 flex justify-start items-center" style="justify-content: flex-start; align-items: center; display: flex">
-                                    <div data-layer="Rectangle" class="Rectangle-2 db br--4"></div>
+                                    <div data-layer="Rectangle" class="Rectangle-2 db br--4">
+                                        <!-- Media Grid Item -->
+                                        <div class="w-100 flex--max flex flex-column gap--8">
+                                            <!-- Video -->
+                                            <div data-subscription-video-thumbnail class="w-100 pointer relative">
+                                                <div class="relative aspect--ratio--16-9 w-100 h-100">
+                                                    <img src="../assets/images/grid-thumb-2.svg" alt="" class="w-100 h-100 fit--cover" />
+                                                </div>
+                                                <!-- Subscribe Tag Tag -->
+                                                <div class="flex absolute top-0 left-0 z--10000">
+                                                    <span class="dim bg--gray-70 flex items-center justify-center gap--4 pad--x--10 pad--y--4">
+                                                        <p class="col--heliotrope fs--12 lh--14">Buy Now</p>
+                                                    </span>
+                                                    <span class="bg--col--violet black pad--x--10 pad--y--4 fs--12 lh--14 fw5">10% OFF</span>
+                                                </div>
+                                                <!-- End Subscribe Tag -->
+                                                <!-- Hott Tag -->
+                                                <div class="pad--y--2 pad--x--4 bg--col--lemon absolute right-0 top-0 flex items-center justify-center gap--6 bg--blur--10 z--10000">
+                                                    <img src="../assets/icons/flame.svg" alt="" class="w--16 h--16">
+                                                    <span class="fs--14 fw6 lh--20 black">HOTTT</span>
+                                                </div>
+                                                <!-- Hott Tag -->
+                                                <!-- Bottom Option Section -->
+                                                <div class="w-100 absolute left-0 bottom-0 z--10000 flex items-end justify-between gap--8">
+                                                    <!-- Title and User Info -->
+                                                    <div class="flex flex-column gap--8 pad--8">
+                                                        <h3 class="fs--16 fw5 lh--24 col--athens-gray">Jenny + Mini special Live</h3>
+                                                        <!-- Users name -->
+                                                        <div class="flex items-center gap--4">
+                                                            <!-- Image List -->
+                                                            <div class="relative flex items-center">
+                                                                <!-- Imags -->
+                                                                <span class="w--20 h--20 br-100 flex items-center justify-center overflow-hidden o-80 relative z--10000">
+                                                                    <img src="../assets/images/avatar.png" alt="" class="w-100 h-100 fit--cover">
+                                                                </span>
+                                                                <!-- /Imags -->
+                                                                <!-- Imags -->
+                                                                <span class="w--20 h--20 br-100 flex items-center justify-center overflow-hidden o-80 neg--m--left--13">
+                                                                    <img src="../assets/images/avatar-cartoon.svg" alt="" class="w-100 h-100 fit--cover">
+                                                                </span>
+                                                                <!-- /Imags -->
+                                                            </div>
+                                                            <!-- /Image List -->
+                                                            <span class="fs--12 lh--18 col--athens-gray">Jenny</span>
+                                                            <span class="fs--12 lh--18 col--athens-gray">,</span>
+                                                            <span class="fs--12 lh--18 col--athens-gray">Mini123</span>
+                                                        </div>
+                                                        <!-- /Users name -->
+                                                    </div>
+                                                    <!-- Title and User Info -->
+                                                    <!-- Play icon Option -->
+                                                    <div class="h--40 w--44 bg-black flex items-center justify-center pointer">
+                                                        <img src="../assets/icons/play-icon.svg" alt="" class="w--24 h--24 filter--col--brand-green-2 flex-none">
+                                                    </div>
+                                                    <!-- /Play icon Option -->
+                                                </div>
+                                                <!-- /Bottom Option Section -->
+                                            </div>
+                                            <!-- /Video -->
+                                        </div>
+                                        <!-- End Media Grid Item -->
+                                    </div>
                                 </div>
                                 <!-- /Carousel Item -->
                                 <!-- Carousel Item -->
                                 <div data-layer="Frame 1410098762" class="Frame1410098762 flex justify-start items-center" style="justify-content: flex-start; align-items: center; display: flex">
-                                    <div data-layer="Rectangle" class="Rectangle-2 db br--4"></div>
+                                    <div data-layer="Rectangle" class="Rectangle-2 db br--4">
+                                        <!-- Media Grid Item -->
+                                        <div class="w-100 flex--max flex flex-column gap--8">
+                                            <!-- Video -->
+                                            <div data-subscription-video-thumbnail class="w-100 pointer relative">
+                                                <div class="relative aspect--ratio--16-9 w-100 h-100">
+                                                    <img src="../assets/images/grid-thumb-2.svg" alt="" class="w-100 h-100 fit--cover" />
+                                                </div>
+                                                <!-- Subscribe Tag Tag -->
+                                                <div class="flex absolute top-0 left-0 z--10000">
+                                                    <span class="dim bg--gray-70 flex items-center justify-center gap--4 pad--x--10 pad--y--4">
+                                                        <p class="col--heliotrope fs--12 lh--14">Buy Now</p>
+                                                    </span>
+                                                    <span class="bg--col--violet black pad--x--10 pad--y--4 fs--12 lh--14 fw5">10% OFF</span>
+                                                </div>
+                                                <!-- End Subscribe Tag -->
+                                                <!-- Bottom Option Section -->
+                                                <div class="w-100 absolute left-0 bottom-0 z--10000 flex items-end justify-between gap--8">
+                                                    <!-- Title and User Info -->
+                                                    <div class="flex flex-column gap--8 pad--8">
+                                                        <h3 class="fs--16 fw5 lh--24 col--athens-gray">Jenny + Mini special Live</h3>
+                                                        <!-- Users name -->
+                                                        <div class="flex items-center gap--4">
+                                                            <!-- Image List -->
+                                                            <div class="relative flex items-center">
+                                                                <!-- Imags -->
+                                                                <span class="w--20 h--20 br-100 flex items-center justify-center overflow-hidden o-80 relative z--10000">
+                                                                    <img src="../assets/images/avatar.png" alt="" class="w-100 h-100 fit--cover">
+                                                                </span>
+                                                                <!-- /Imags -->
+                                                                <!-- Imags -->
+                                                                <span class="w--20 h--20 br-100 flex items-center justify-center overflow-hidden o-80 neg--m--left--13">
+                                                                    <img src="../assets/images/avatar-cartoon.svg" alt="" class="w-100 h-100 fit--cover">
+                                                                </span>
+                                                                <!-- /Imags -->
+                                                            </div>
+                                                            <!-- /Image List -->
+                                                            <span class="fs--12 lh--18 col--athens-gray">Jenny</span>
+                                                            <span class="fs--12 lh--18 col--athens-gray">,</span>
+                                                            <span class="fs--12 lh--18 col--athens-gray">Mini123</span>
+                                                        </div>
+                                                        <!-- /Users name -->
+                                                    </div>
+                                                    <!-- Title and User Info -->
+                                                    <!-- Play icon Option -->
+                                                    <div class="h--40 w--44 bg-black flex items-center justify-center pointer">
+                                                        <img src="../assets/icons/play-icon.svg" alt="" class="w--24 h--24 filter--col--brand-green-2 flex-none">
+                                                    </div>
+                                                    <!-- /Play icon Option -->
+                                                </div>
+                                                <!-- /Bottom Option Section -->
+                                            </div>
+                                            <!-- /Video -->
+                                        </div>
+                                        <!-- End Media Grid Item -->
+                                    </div>
                                 </div>
                                 <!-- /Carousel Item -->
                                 <!-- Carousel Item -->
                                 <div data-layer="Frame 1410098762" class="Frame1410098762 flex justify-start items-center" style="justify-content: flex-start; align-items: center; display: flex">
-                                    <div data-layer="Rectangle" class="Rectangle-2 db br--4"></div>
+                                    <div data-layer="Rectangle" class="Rectangle-2 db br--4">
+                                        <!-- Media Grid Item -->
+                                        <div class="w-100 flex--max flex flex-column gap--8">
+                                            <!-- Video -->
+                                            <div data-subscription-video-thumbnail class="w-100 pointer relative">
+                                                <div class="relative aspect--ratio--16-9 w-100 h-100">
+                                                    <img src="../assets/images/grid-thumb-2.svg" alt="" class="w-100 h-100 fit--cover" />
+                                                </div>
+                                                <!-- Subscribe Tag Tag -->
+                                                <div class="flex absolute top-0 left-0 z--10000">
+                                                    <span class="dim bg--gray-70 flex items-center justify-center gap--4 pad--x--10 pad--y--4">
+                                                        <p class="col--heliotrope fs--12 lh--14">Buy Now</p>
+                                                    </span>
+                                                    <span class="bg--col--violet black pad--x--10 pad--y--4 fs--12 lh--14 fw5">10% OFF</span>
+                                                </div>
+                                                <!-- End Subscribe Tag -->
+                                                <!-- Hott Tag -->
+                                                <div class="pad--y--2 pad--x--4 bg--col--lemon absolute right-0 top-0 flex items-center justify-center gap--6 bg--blur--10 z--10000">
+                                                    <img src="../assets/icons/flame.svg" alt="" class="w--16 h--16">
+                                                    <span class="fs--14 fw6 lh--20 black">HOTTT</span>
+                                                </div>
+                                                <!-- Hott Tag -->
+                                                <!-- Bottom Option Section -->
+                                                <div class="w-100 absolute left-0 bottom-0 z--10000 flex items-end justify-between gap--8">
+                                                    <!-- Title and User Info -->
+                                                    <div class="flex flex-column gap--8 pad--8">
+                                                        <h3 class="fs--16 fw5 lh--24 col--athens-gray">Jenny + Mini special Live</h3>
+                                                        <!-- Users name -->
+                                                        <div class="flex items-center gap--4">
+                                                            <!-- Image List -->
+                                                            <div class="relative flex items-center">
+                                                                <!-- Imags -->
+                                                                <span class="w--20 h--20 br-100 flex items-center justify-center overflow-hidden o-80 relative z--10000">
+                                                                    <img src="../assets/images/avatar.png" alt="" class="w-100 h-100 fit--cover">
+                                                                </span>
+                                                                <!-- /Imags -->
+                                                                <!-- Imags -->
+                                                                <span class="w--20 h--20 br-100 flex items-center justify-center overflow-hidden o-80 neg--m--left--13">
+                                                                    <img src="../assets/images/avatar-cartoon.svg" alt="" class="w-100 h-100 fit--cover">
+                                                                </span>
+                                                                <!-- /Imags -->
+                                                            </div>
+                                                            <!-- /Image List -->
+                                                            <span class="fs--12 lh--18 col--athens-gray">Jenny</span>
+                                                            <span class="fs--12 lh--18 col--athens-gray">,</span>
+                                                            <span class="fs--12 lh--18 col--athens-gray">Mini123</span>
+                                                        </div>
+                                                        <!-- /Users name -->
+                                                    </div>
+                                                    <!-- Title and User Info -->
+                                                    <!-- Play icon Option -->
+                                                    <div class="h--40 w--44 bg-black flex items-center justify-center pointer">
+                                                        <img src="../assets/icons/play-icon.svg" alt="" class="w--24 h--24 filter--col--brand-green-2 flex-none">
+                                                    </div>
+                                                    <!-- /Play icon Option -->
+                                                </div>
+                                                <!-- /Bottom Option Section -->
+                                            </div>
+                                            <!-- /Video -->
+                                        </div>
+                                        <!-- End Media Grid Item -->
+                                    </div>
                                 </div>
                                 <!-- /Carousel Item -->
                             </div>
@@ -207,32 +1262,380 @@
                             <div data-layer="Frame 1410098653" class="Frame1410098653 flex justify-start items-center gap--16">
                                 <!-- Carousel Item -->
                                 <div data-layer="Frame 1410098762" class="Frame1410098762 flex justify-start items-center" style="justify-content: flex-start; align-items: center; display: flex">
-                                    <div data-layer="Rectangle" class="Rectangle-2 db br--4"></div>
+                                    <div data-layer="Rectangle" class="Rectangle-2 db br--4">
+                                        <!-- Media Grid Item -->
+                                        <div class="w-100 flex--max flex flex-column gap--8">
+                                            <!-- Video -->
+                                            <div data-subscription-video-thumbnail class="w-100 pointer relative">
+                                                <div class="relative aspect--ratio--16-9 w-100 h-100">
+                                                    <img src="../assets/images/grid-thumb-2.svg" alt="" class="w-100 h-100 fit--cover" />
+                                                </div>
+                                                <!-- Subscribe Tag Tag -->
+                                                <div class="flex absolute top-0 left-0 z--10000">
+                                                    <span class="dim bg--gray-70 flex items-center justify-center gap--4 pad--x--10 pad--y--4">
+                                                        <p class="col--heliotrope fs--12 lh--14">Buy Now</p>
+                                                    </span>
+                                                    <span class="bg--col--violet black pad--x--10 pad--y--4 fs--12 lh--14 fw5">10% OFF</span>
+                                                </div>
+                                                <!-- End Subscribe Tag -->
+                                                <!-- Bottom Option Section -->
+                                                <div class="w-100 absolute left-0 bottom-0 z--10000 flex items-end justify-between gap--8">
+                                                    <!-- Title and User Info -->
+                                                    <div class="flex flex-column gap--8 pad--8">
+                                                        <h3 class="fs--16 fw5 lh--24 col--athens-gray">Jenny + Mini special Live</h3>
+                                                        <!-- Users name -->
+                                                        <div class="flex items-center gap--4">
+                                                            <!-- Image List -->
+                                                            <div class="relative flex items-center">
+                                                                <!-- Imags -->
+                                                                <span class="w--20 h--20 br-100 flex items-center justify-center overflow-hidden o-80 relative z--10000">
+                                                                    <img src="../assets/images/avatar.png" alt="" class="w-100 h-100 fit--cover">
+                                                                </span>
+                                                                <!-- /Imags -->
+                                                                <!-- Imags -->
+                                                                <span class="w--20 h--20 br-100 flex items-center justify-center overflow-hidden o-80 neg--m--left--13">
+                                                                    <img src="../assets/images/avatar-cartoon.svg" alt="" class="w-100 h-100 fit--cover">
+                                                                </span>
+                                                                <!-- /Imags -->
+                                                            </div>
+                                                            <!-- /Image List -->
+                                                            <span class="fs--12 lh--18 col--athens-gray">Jenny</span>
+                                                            <span class="fs--12 lh--18 col--athens-gray">,</span>
+                                                            <span class="fs--12 lh--18 col--athens-gray">Mini123</span>
+                                                        </div>
+                                                        <!-- /Users name -->
+                                                    </div>
+                                                    <!-- Title and User Info -->
+                                                    <!-- Play icon Option -->
+                                                    <div class="h--40 w--44 bg-black flex items-center justify-center pointer">
+                                                        <img src="../assets/icons/play-icon.svg" alt="" class="w--24 h--24 filter--col--brand-green-2 flex-none">
+                                                    </div>
+                                                    <!-- /Play icon Option -->
+                                                </div>
+                                                <!-- /Bottom Option Section -->
+                                            </div>
+                                            <!-- /Video -->
+                                        </div>
+                                        <!-- End Media Grid Item -->
+                                    </div>
                                 </div>
                                 <!-- /Carousel Item -->
                                 <!-- Carousel Item -->
                                 <div data-layer="Frame 1410098762" class="Frame1410098762 flex justify-start items-center" style="justify-content: flex-start; align-items: center; display: flex">
-                                    <div data-layer="Rectangle" class="Rectangle-2 db br--4"></div>
+                                    <div data-layer="Rectangle" class="Rectangle-2 db br--4">
+                                        <!-- Media Grid Item -->
+                                        <div class="w-100 flex--max flex flex-column gap--8">
+                                            <!-- Video -->
+                                            <div data-subscription-video-thumbnail class="w-100 pointer relative">
+                                                <div class="relative aspect--ratio--16-9 w-100 h-100">
+                                                    <img src="../assets/images/grid-thumb-2.svg" alt="" class="w-100 h-100 fit--cover" />
+                                                </div>
+                                                <!-- Subscribe Tag Tag -->
+                                                <div class="flex absolute top-0 left-0 z--10000">
+                                                    <span class="dim bg--gray-70 flex items-center justify-center gap--4 pad--x--10 pad--y--4">
+                                                        <p class="col--heliotrope fs--12 lh--14">Buy Now</p>
+                                                    </span>
+                                                    <span class="bg--col--violet black pad--x--10 pad--y--4 fs--12 lh--14 fw5">10% OFF</span>
+                                                </div>
+                                                <!-- End Subscribe Tag -->
+                                                <!-- Bottom Option Section -->
+                                                <div class="w-100 absolute left-0 bottom-0 z--10000 flex items-end justify-between gap--8">
+                                                    <!-- Title and User Info -->
+                                                    <div class="flex flex-column gap--8 pad--8">
+                                                        <h3 class="fs--16 fw5 lh--24 col--athens-gray">Jenny + Mini special Live</h3>
+                                                        <!-- Users name -->
+                                                        <div class="flex items-center gap--4">
+                                                            <!-- Image List -->
+                                                            <div class="relative flex items-center">
+                                                                <!-- Imags -->
+                                                                <span class="w--20 h--20 br-100 flex items-center justify-center overflow-hidden o-80 relative z--10000">
+                                                                    <img src="../assets/images/avatar.png" alt="" class="w-100 h-100 fit--cover">
+                                                                </span>
+                                                                <!-- /Imags -->
+                                                                <!-- Imags -->
+                                                                <span class="w--20 h--20 br-100 flex items-center justify-center overflow-hidden o-80 neg--m--left--13">
+                                                                    <img src="../assets/images/avatar-cartoon.svg" alt="" class="w-100 h-100 fit--cover">
+                                                                </span>
+                                                                <!-- /Imags -->
+                                                            </div>
+                                                            <!-- /Image List -->
+                                                            <span class="fs--12 lh--18 col--athens-gray">Jenny</span>
+                                                            <span class="fs--12 lh--18 col--athens-gray">,</span>
+                                                            <span class="fs--12 lh--18 col--athens-gray">Mini123</span>
+                                                        </div>
+                                                        <!-- /Users name -->
+                                                    </div>
+                                                    <!-- Title and User Info -->
+                                                    <!-- Play icon Option -->
+                                                    <div class="h--40 w--44 bg-black flex items-center justify-center pointer">
+                                                        <img src="../assets/icons/play-icon.svg" alt="" class="w--24 h--24 filter--col--brand-green-2 flex-none">
+                                                    </div>
+                                                    <!-- /Play icon Option -->
+                                                </div>
+                                                <!-- /Bottom Option Section -->
+                                            </div>
+                                            <!-- /Video -->
+                                        </div>
+                                        <!-- End Media Grid Item -->
+                                    </div>
                                 </div>
                                 <!-- /Carousel Item -->
                                 <!-- Carousel Item -->
                                 <div data-layer="Frame 1410098762" class="Frame1410098762 flex justify-start items-center" style="justify-content: flex-start; align-items: center; display: flex">
-                                    <div data-layer="Rectangle" class="Rectangle-2 db br--4"></div>
+                                    <div data-layer="Rectangle" class="Rectangle-2 db br--4">
+                                        <!-- Media Grid Item -->
+                                        <div class="w-100 flex--max flex flex-column gap--8">
+                                            <!-- Video -->
+                                            <div data-subscription-video-thumbnail class="w-100 pointer relative">
+                                                <div class="relative aspect--ratio--16-9 w-100 h-100">
+                                                    <img src="../assets/images/grid-thumb-2.svg" alt="" class="w-100 h-100 fit--cover" />
+                                                </div>
+                                                <!-- Subscribe Tag Tag -->
+                                                <div class="flex absolute top-0 left-0 z--10000">
+                                                    <span class="dim bg--gray-70 flex items-center justify-center gap--4 pad--x--10 pad--y--4">
+                                                        <p class="col--heliotrope fs--12 lh--14">Buy Now</p>
+                                                    </span>
+                                                    <span class="bg--col--violet black pad--x--10 pad--y--4 fs--12 lh--14 fw5">10% OFF</span>
+                                                </div>
+                                                <!-- End Subscribe Tag -->
+                                                <!-- Hott Tag -->
+                                                <div class="pad--y--2 pad--x--4 bg--col--lemon absolute right-0 top-0 flex items-center justify-center gap--6 bg--blur--10 z--10000">
+                                                    <img src="../assets/icons/flame.svg" alt="" class="w--16 h--16">
+                                                    <span class="fs--14 fw6 lh--20 black">HOTTT</span>
+                                                </div>
+                                                <!-- Hott Tag -->
+                                                <!-- Bottom Option Section -->
+                                                <div class="w-100 absolute left-0 bottom-0 z--10000 flex items-end justify-between gap--8">
+                                                    <!-- Title and User Info -->
+                                                    <div class="flex flex-column gap--8 pad--8">
+                                                        <h3 class="fs--16 fw5 lh--24 col--athens-gray">Jenny + Mini special Live</h3>
+                                                        <!-- Users name -->
+                                                        <div class="flex items-center gap--4">
+                                                            <!-- Image List -->
+                                                            <div class="relative flex items-center">
+                                                                <!-- Imags -->
+                                                                <span class="w--20 h--20 br-100 flex items-center justify-center overflow-hidden o-80 relative z--10000">
+                                                                    <img src="../assets/images/avatar.png" alt="" class="w-100 h-100 fit--cover">
+                                                                </span>
+                                                                <!-- /Imags -->
+                                                                <!-- Imags -->
+                                                                <span class="w--20 h--20 br-100 flex items-center justify-center overflow-hidden o-80 neg--m--left--13">
+                                                                    <img src="../assets/images/avatar-cartoon.svg" alt="" class="w-100 h-100 fit--cover">
+                                                                </span>
+                                                                <!-- /Imags -->
+                                                            </div>
+                                                            <!-- /Image List -->
+                                                            <span class="fs--12 lh--18 col--athens-gray">Jenny</span>
+                                                            <span class="fs--12 lh--18 col--athens-gray">,</span>
+                                                            <span class="fs--12 lh--18 col--athens-gray">Mini123</span>
+                                                        </div>
+                                                        <!-- /Users name -->
+                                                    </div>
+                                                    <!-- Title and User Info -->
+                                                    <!-- Play icon Option -->
+                                                    <div class="h--40 w--44 bg-black flex items-center justify-center pointer">
+                                                        <img src="../assets/icons/play-icon.svg" alt="" class="w--24 h--24 filter--col--brand-green-2 flex-none">
+                                                    </div>
+                                                    <!-- /Play icon Option -->
+                                                </div>
+                                                <!-- /Bottom Option Section -->
+                                            </div>
+                                            <!-- /Video -->
+                                        </div>
+                                        <!-- End Media Grid Item -->
+                                    </div>
                                 </div>
                                 <!-- /Carousel Item -->
                                 <!-- Carousel Item -->
                                 <div data-layer="Frame 1410098762" class="Frame1410098762 flex justify-start items-center" style="justify-content: flex-start; align-items: center; display: flex">
-                                    <div data-layer="Rectangle" class="Rectangle-2 db br--4"></div>
+                                    <div data-layer="Rectangle" class="Rectangle-2 db br--4">
+                                        <!-- Media Grid Item -->
+                                        <div class="w-100 flex--max flex flex-column gap--8">
+                                            <!-- Video -->
+                                            <div data-subscription-video-thumbnail class="w-100 pointer relative">
+                                                <div class="relative aspect--ratio--16-9 w-100 h-100">
+                                                    <img src="../assets/images/grid-thumb-2.svg" alt="" class="w-100 h-100 fit--cover" />
+                                                </div>
+                                                <!-- Subscribe Tag Tag -->
+                                                <div class="flex absolute top-0 left-0 z--10000">
+                                                    <span class="dim bg--gray-70 flex items-center justify-center gap--4 pad--x--10 pad--y--4">
+                                                        <p class="col--heliotrope fs--12 lh--14">Buy Now</p>
+                                                    </span>
+                                                    <span class="bg--col--violet black pad--x--10 pad--y--4 fs--12 lh--14 fw5">10% OFF</span>
+                                                </div>
+                                                <!-- End Subscribe Tag -->
+                                                <!-- Hott Tag -->
+                                                <div class="pad--y--2 pad--x--4 bg--col--lemon absolute right-0 top-0 flex items-center justify-center gap--6 bg--blur--10 z--10000">
+                                                    <img src="../assets/icons/flame.svg" alt="" class="w--16 h--16">
+                                                    <span class="fs--14 fw6 lh--20 black">HOTTT</span>
+                                                </div>
+                                                <!-- Hott Tag -->
+                                                <!-- Bottom Option Section -->
+                                                <div class="w-100 absolute left-0 bottom-0 z--10000 flex items-end justify-between gap--8">
+                                                    <!-- Title and User Info -->
+                                                    <div class="flex flex-column gap--8 pad--8">
+                                                        <h3 class="fs--16 fw5 lh--24 col--athens-gray">Jenny + Mini special Live</h3>
+                                                        <!-- Users name -->
+                                                        <div class="flex items-center gap--4">
+                                                            <!-- Image List -->
+                                                            <div class="relative flex items-center">
+                                                                <!-- Imags -->
+                                                                <span class="w--20 h--20 br-100 flex items-center justify-center overflow-hidden o-80 relative z--10000">
+                                                                    <img src="../assets/images/avatar.png" alt="" class="w-100 h-100 fit--cover">
+                                                                </span>
+                                                                <!-- /Imags -->
+                                                                <!-- Imags -->
+                                                                <span class="w--20 h--20 br-100 flex items-center justify-center overflow-hidden o-80 neg--m--left--13">
+                                                                    <img src="../assets/images/avatar-cartoon.svg" alt="" class="w-100 h-100 fit--cover">
+                                                                </span>
+                                                                <!-- /Imags -->
+                                                            </div>
+                                                            <!-- /Image List -->
+                                                            <span class="fs--12 lh--18 col--athens-gray">Jenny</span>
+                                                            <span class="fs--12 lh--18 col--athens-gray">,</span>
+                                                            <span class="fs--12 lh--18 col--athens-gray">Mini123</span>
+                                                        </div>
+                                                        <!-- /Users name -->
+                                                    </div>
+                                                    <!-- Title and User Info -->
+                                                    <!-- Play icon Option -->
+                                                    <div class="h--40 w--44 bg-black flex items-center justify-center pointer">
+                                                        <img src="../assets/icons/play-icon.svg" alt="" class="w--24 h--24 filter--col--brand-green-2 flex-none">
+                                                    </div>
+                                                    <!-- /Play icon Option -->
+                                                </div>
+                                                <!-- /Bottom Option Section -->
+                                            </div>
+                                            <!-- /Video -->
+                                        </div>
+                                        <!-- End Media Grid Item -->
+                                    </div>
                                 </div>
                                 <!-- /Carousel Item -->
                                 <!-- Carousel Item -->
                                 <div data-layer="Frame 1410098762" class="Frame1410098762 flex justify-start items-center" style="justify-content: flex-start; align-items: center; display: flex">
-                                    <div data-layer="Rectangle" class="Rectangle-2 db br--4"></div>
+                                    <div data-layer="Rectangle" class="Rectangle-2 db br--4">
+                                        <!-- Media Grid Item -->
+                                        <div class="w-100 flex--max flex flex-column gap--8">
+                                            <!-- Video -->
+                                            <div data-subscription-video-thumbnail class="w-100 pointer relative">
+                                                <div class="relative aspect--ratio--16-9 w-100 h-100">
+                                                    <img src="../assets/images/grid-thumb-2.svg" alt="" class="w-100 h-100 fit--cover" />
+                                                </div>
+                                                <!-- Subscribe Tag Tag -->
+                                                <div class="flex absolute top-0 left-0 z--10000">
+                                                    <span class="dim bg--gray-70 flex items-center justify-center gap--4 pad--x--10 pad--y--4">
+                                                        <p class="col--heliotrope fs--12 lh--14">Buy Now</p>
+                                                    </span>
+                                                    <span class="bg--col--violet black pad--x--10 pad--y--4 fs--12 lh--14 fw5">10% OFF</span>
+                                                </div>
+                                                <!-- End Subscribe Tag -->
+                                                <!-- Hott Tag -->
+                                                <div class="pad--y--2 pad--x--4 bg--col--lemon absolute right-0 top-0 flex items-center justify-center gap--6 bg--blur--10 z--10000">
+                                                    <img src="../assets/icons/flame.svg" alt="" class="w--16 h--16">
+                                                    <span class="fs--14 fw6 lh--20 black">HOTTT</span>
+                                                </div>
+                                                <!-- Hott Tag -->
+                                                <!-- Bottom Option Section -->
+                                                <div class="w-100 absolute left-0 bottom-0 z--10000 flex items-end justify-between gap--8">
+                                                    <!-- Title and User Info -->
+                                                    <div class="flex flex-column gap--8 pad--8">
+                                                        <h3 class="fs--16 fw5 lh--24 col--athens-gray">Jenny + Mini special Live</h3>
+                                                        <!-- Users name -->
+                                                        <div class="flex items-center gap--4">
+                                                            <!-- Image List -->
+                                                            <div class="relative flex items-center">
+                                                                <!-- Imags -->
+                                                                <span class="w--20 h--20 br-100 flex items-center justify-center overflow-hidden o-80 relative z--10000">
+                                                                    <img src="../assets/images/avatar.png" alt="" class="w-100 h-100 fit--cover">
+                                                                </span>
+                                                                <!-- /Imags -->
+                                                                <!-- Imags -->
+                                                                <span class="w--20 h--20 br-100 flex items-center justify-center overflow-hidden o-80 neg--m--left--13">
+                                                                    <img src="../assets/images/avatar-cartoon.svg" alt="" class="w-100 h-100 fit--cover">
+                                                                </span>
+                                                                <!-- /Imags -->
+                                                            </div>
+                                                            <!-- /Image List -->
+                                                            <span class="fs--12 lh--18 col--athens-gray">Jenny</span>
+                                                            <span class="fs--12 lh--18 col--athens-gray">,</span>
+                                                            <span class="fs--12 lh--18 col--athens-gray">Mini123</span>
+                                                        </div>
+                                                        <!-- /Users name -->
+                                                    </div>
+                                                    <!-- Title and User Info -->
+                                                    <!-- Play icon Option -->
+                                                    <div class="h--40 w--44 bg-black flex items-center justify-center pointer">
+                                                        <img src="../assets/icons/play-icon.svg" alt="" class="w--24 h--24 filter--col--brand-green-2 flex-none">
+                                                    </div>
+                                                    <!-- /Play icon Option -->
+                                                </div>
+                                                <!-- /Bottom Option Section -->
+                                            </div>
+                                            <!-- /Video -->
+                                        </div>
+                                        <!-- End Media Grid Item -->
+                                    </div>
                                 </div>
                                 <!-- /Carousel Item -->
                                 <!-- Carousel Item -->
                                 <div data-layer="Frame 1410098762" class="Frame1410098762 flex justify-start items-center" style="justify-content: flex-start; align-items: center; display: flex">
-                                    <div data-layer="Rectangle" class="Rectangle-2 db br--4"></div>
+                                    <div data-layer="Rectangle" class="Rectangle-2 db br--4">
+                                        <!-- Media Grid Item -->
+                                        <div class="w-100 flex--max flex flex-column gap--8">
+                                            <!-- Video -->
+                                            <div data-subscription-video-thumbnail class="w-100 pointer relative">
+                                                <div class="relative aspect--ratio--16-9 w-100 h-100">
+                                                    <img src="../assets/images/grid-thumb-2.svg" alt="" class="w-100 h-100 fit--cover" />
+                                                </div>
+                                                <!-- Subscribe Tag Tag -->
+                                                <div class="flex absolute top-0 left-0 z--10000">
+                                                    <span class="dim bg--gray-70 flex items-center justify-center gap--4 pad--x--10 pad--y--4">
+                                                        <p class="col--heliotrope fs--12 lh--14">Buy Now</p>
+                                                    </span>
+                                                    <span class="bg--col--violet black pad--x--10 pad--y--4 fs--12 lh--14 fw5">10% OFF</span>
+                                                </div>
+                                                <!-- End Subscribe Tag -->
+                                                <!-- Bottom Option Section -->
+                                                <div class="w-100 absolute left-0 bottom-0 z--10000 flex items-end justify-between gap--8">
+                                                    <!-- Title and User Info -->
+                                                    <div class="flex flex-column gap--8 pad--8">
+                                                        <h3 class="fs--16 fw5 lh--24 col--athens-gray">Jenny + Mini special Live</h3>
+                                                        <!-- Users name -->
+                                                        <div class="flex items-center gap--4">
+                                                            <!-- Image List -->
+                                                            <div class="relative flex items-center">
+                                                                <!-- Imags -->
+                                                                <span class="w--20 h--20 br-100 flex items-center justify-center overflow-hidden o-80 relative z--10000">
+                                                                    <img src="../assets/images/avatar.png" alt="" class="w-100 h-100 fit--cover">
+                                                                </span>
+                                                                <!-- /Imags -->
+                                                                <!-- Imags -->
+                                                                <span class="w--20 h--20 br-100 flex items-center justify-center overflow-hidden o-80 neg--m--left--13">
+                                                                    <img src="../assets/images/avatar-cartoon.svg" alt="" class="w-100 h-100 fit--cover">
+                                                                </span>
+                                                                <!-- /Imags -->
+                                                            </div>
+                                                            <!-- /Image List -->
+                                                            <span class="fs--12 lh--18 col--athens-gray">Jenny</span>
+                                                            <span class="fs--12 lh--18 col--athens-gray">,</span>
+                                                            <span class="fs--12 lh--18 col--athens-gray">Mini123</span>
+                                                        </div>
+                                                        <!-- /Users name -->
+                                                    </div>
+                                                    <!-- Title and User Info -->
+                                                    <!-- Play icon Option -->
+                                                    <div class="h--40 w--44 bg-black flex items-center justify-center pointer">
+                                                        <img src="../assets/icons/play-icon.svg" alt="" class="w--24 h--24 filter--col--brand-green-2 flex-none">
+                                                    </div>
+                                                    <!-- /Play icon Option -->
+                                                </div>
+                                                <!-- /Bottom Option Section -->
+                                            </div>
+                                            <!-- /Video -->
+                                        </div>
+                                        <!-- End Media Grid Item -->
+                                    </div>
                                 </div>
                                 <!-- /Carousel Item -->
                             </div>
@@ -258,42 +1661,274 @@
                         <div data-layer="Frame 1410098520" class="Frame1410098520 flex self-stretch justify-center items-center gap--16">
                             <!-- Carousel Item -->
                             <div data-layer="Frame 1410098764" class="Frame1410098764 flex justify-start items-center">
-                                <div data-layer="Rectangle" class="Rectangle-3 db br--4"></div>
+                                <div data-layer="Rectangle" class="Rectangle-3 db br--4">
+                                    <!-- Media Grid Item -->
+                                    <div data-trending-playlist class="w-100 h-100 flex--max flex flex-column gap--8 sh--green--4">
+                                        <!-- Image -->
+                                        <div class="w-100 h-100 pointer relative">
+                                            <div data-trending-playlist-img class="relative aspect--ratio--16-9 w-100 h-100">
+                                                <img src="../assets/images/play-list-thumb.png" alt="" class="w-100 h-100 fit--cover" />
+                                            </div>
+                                            <!-- Count Tag -->
+                                            <div class="absolute right-0 top-0 z--10000 flex items-center gap--4 pad--8 drop--sh--3">
+                                                <span>
+                                                    <img src="../assets/icons/list.svg" alt="" class="w--16 h--16 filter--col--white">
+                                                </span>
+                                                <span class="fs--12 fw7 lh--18 white">40</span>
+                                            </div>
+                                            <!-- /Count Tag -->
+                                            <!-- Bottom Option Section -->
+                                            <div class="w-100 absolute left-0 bottom-0 z--10000 flex items-end justify-between gap--8 bg--gd--black--70--100 h--64">
+                                                <!-- Title and User Info -->
+                                                <div class="w-100 flex flex-column gap--8 pad--8">
+                                                    <h3 class="w-100 fs--16 fw5 lh--24 white truncate text--sh--black--5--60">Outdoor nice views</h3>
+                                                </div>
+                                                <!-- Title and User Info -->
+                                            </div>
+                                            <!-- /Bottom Option Section -->
+                                        </div>
+                                        <!-- /Image -->
+                                    </div>
+                                    <!-- End Media Grid Item -->
+                                </div>
                             </div>
                             <!-- Carousel Item -->
                             <!-- Carousel Item -->
                             <div data-layer="Frame 1410098764" class="Frame1410098764 flex justify-start items-center">
-                                <div data-layer="Rectangle" class="Rectangle-3 db br--4"></div>
+                                <div data-layer="Rectangle" class="Rectangle-3 db br--4">
+                                    <!-- Media Grid Item -->
+                                    <div data-trending-playlist class="w-100 h-100 flex--max flex flex-column gap--8 sh--green--4">
+                                        <!-- Image -->
+                                        <div class="w-100 h-100 pointer relative">
+                                            <div data-trending-playlist-img class="relative aspect--ratio--16-9 w-100 h-100">
+                                                <img src="../assets/images/play-list-thumb.png" alt="" class="w-100 h-100 fit--cover" />
+                                            </div>
+                                            <!-- Count Tag -->
+                                            <div class="absolute right-0 top-0 z--10000 flex items-center gap--4 pad--8 drop--sh--3">
+                                                <span>
+                                                    <img src="../assets/icons/list.svg" alt="" class="w--16 h--16 filter--col--white">
+                                                </span>
+                                                <span class="fs--12 fw7 lh--18 white">40</span>
+                                            </div>
+                                            <!-- /Count Tag -->
+                                            <!-- Bottom Option Section -->
+                                            <div class="w-100 absolute left-0 bottom-0 z--10000 flex items-end justify-between gap--8 bg--gd--black--70--100 h--64">
+                                                <!-- Title and User Info -->
+                                                <div class="w-100 flex flex-column gap--8 pad--8">
+                                                    <h3 class="w-100 fs--16 fw5 lh--24 white truncate text--sh--black--5--60">Outdoor nice views</h3>
+                                                </div>
+                                                <!-- Title and User Info -->
+                                            </div>
+                                            <!-- /Bottom Option Section -->
+                                        </div>
+                                        <!-- /Image -->
+                                    </div>
+                                    <!-- End Media Grid Item -->
+                                </div>
                             </div>
                             <!-- Carousel Item -->
                             <!-- Carousel Item -->
                             <div data-layer="Frame 1410098764" class="Frame1410098764 flex justify-start items-center">
-                                <div data-layer="Rectangle" class="Rectangle-3 db br--4"></div>
+                                <div data-layer="Rectangle" class="Rectangle-3 db br--4">
+                                    <!-- Media Grid Item -->
+                                    <div data-trending-playlist class="w-100 h-100 flex--max flex flex-column gap--8 sh--green--4">
+                                        <!-- Image -->
+                                        <div class="w-100 h-100 pointer relative">
+                                            <div data-trending-playlist-img class="relative aspect--ratio--16-9 w-100 h-100">
+                                                <img src="../assets/images/play-list-thumb.png" alt="" class="w-100 h-100 fit--cover" />
+                                            </div>
+                                            <!-- Count Tag -->
+                                            <div class="absolute right-0 top-0 z--10000 flex items-center gap--4 pad--8 drop--sh--3">
+                                                <span>
+                                                    <img src="../assets/icons/list.svg" alt="" class="w--16 h--16 filter--col--white">
+                                                </span>
+                                                <span class="fs--12 fw7 lh--18 white">40</span>
+                                            </div>
+                                            <!-- /Count Tag -->
+                                            <!-- Bottom Option Section -->
+                                            <div class="w-100 absolute left-0 bottom-0 z--10000 flex items-end justify-between gap--8 bg--gd--black--70--100 h--64">
+                                                <!-- Title and User Info -->
+                                                <div class="w-100 flex flex-column gap--8 pad--8">
+                                                    <h3 class="w-100 fs--16 fw5 lh--24 white truncate text--sh--black--5--60">Outdoor nice views</h3>
+                                                </div>
+                                                <!-- Title and User Info -->
+                                            </div>
+                                            <!-- /Bottom Option Section -->
+                                        </div>
+                                        <!-- /Image -->
+                                    </div>
+                                    <!-- End Media Grid Item -->
+                                </div>
                             </div>
                             <!-- Carousel Item -->
                             <!-- Carousel Item -->
                             <div data-layer="Frame 1410098764" class="Frame1410098764 flex justify-start items-center">
-                                <div data-layer="Rectangle" class="Rectangle-3 db br--4"></div>
+                                <div data-layer="Rectangle" class="Rectangle-3 db br--4">
+                                    <!-- Media Grid Item -->
+                                    <div data-trending-playlist class="w-100 h-100 flex--max flex flex-column gap--8 sh--green--4">
+                                        <!-- Image -->
+                                        <div class="w-100 h-100 pointer relative">
+                                            <div data-trending-playlist-img class="relative aspect--ratio--16-9 w-100 h-100">
+                                                <img src="../assets/images/play-list-thumb.png" alt="" class="w-100 h-100 fit--cover" />
+                                            </div>
+                                            <!-- Count Tag -->
+                                            <div class="absolute right-0 top-0 z--10000 flex items-center gap--4 pad--8 drop--sh--3">
+                                                <span>
+                                                    <img src="../assets/icons/list.svg" alt="" class="w--16 h--16 filter--col--white">
+                                                </span>
+                                                <span class="fs--12 fw7 lh--18 white">40</span>
+                                            </div>
+                                            <!-- /Count Tag -->
+                                            <!-- Bottom Option Section -->
+                                            <div class="w-100 absolute left-0 bottom-0 z--10000 flex items-end justify-between gap--8 bg--gd--black--70--100 h--64">
+                                                <!-- Title and User Info -->
+                                                <div class="w-100 flex flex-column gap--8 pad--8">
+                                                    <h3 class="w-100 fs--16 fw5 lh--24 white truncate text--sh--black--5--60">Outdoor nice views</h3>
+                                                </div>
+                                                <!-- Title and User Info -->
+                                            </div>
+                                            <!-- /Bottom Option Section -->
+                                        </div>
+                                        <!-- /Image -->
+                                    </div>
+                                    <!-- End Media Grid Item -->
+                                </div>
                             </div>
                             <!-- Carousel Item -->
                             <!-- Carousel Item -->
                             <div data-layer="Frame 1410098764" class="Frame1410098764 flex justify-start items-center">
-                                <div data-layer="Rectangle" class="Rectangle-3 db br--4"></div>
+                                <div data-layer="Rectangle" class="Rectangle-3 db br--4">
+                                    <!-- Media Grid Item -->
+                                    <div data-trending-playlist class="w-100 h-100 flex--max flex flex-column gap--8 sh--green--4">
+                                        <!-- Image -->
+                                        <div class="w-100 h-100 pointer relative">
+                                            <div data-trending-playlist-img class="relative aspect--ratio--16-9 w-100 h-100">
+                                                <img src="../assets/images/play-list-thumb.png" alt="" class="w-100 h-100 fit--cover" />
+                                            </div>
+                                            <!-- Count Tag -->
+                                            <div class="absolute right-0 top-0 z--10000 flex items-center gap--4 pad--8 drop--sh--3">
+                                                <span>
+                                                    <img src="../assets/icons/list.svg" alt="" class="w--16 h--16 filter--col--white">
+                                                </span>
+                                                <span class="fs--12 fw7 lh--18 white">40</span>
+                                            </div>
+                                            <!-- /Count Tag -->
+                                            <!-- Bottom Option Section -->
+                                            <div class="w-100 absolute left-0 bottom-0 z--10000 flex items-end justify-between gap--8 bg--gd--black--70--100 h--64">
+                                                <!-- Title and User Info -->
+                                                <div class="w-100 flex flex-column gap--8 pad--8">
+                                                    <h3 class="w-100 fs--16 fw5 lh--24 white truncate text--sh--black--5--60">Outdoor nice views</h3>
+                                                </div>
+                                                <!-- Title and User Info -->
+                                            </div>
+                                            <!-- /Bottom Option Section -->
+                                        </div>
+                                        <!-- /Image -->
+                                    </div>
+                                    <!-- End Media Grid Item -->
+                                </div>
                             </div>
                             <!-- Carousel Item -->
                             <!-- Carousel Item -->
                             <div data-layer="Frame 1410098764" class="Frame1410098764 flex justify-start items-center">
-                                <div data-layer="Rectangle" class="Rectangle-3 db br--4"></div>
+                                <div data-layer="Rectangle" class="Rectangle-3 db br--4">
+                                    <!-- Media Grid Item -->
+                                    <div data-trending-playlist class="w-100 h-100 flex--max flex flex-column gap--8 sh--green--4">
+                                        <!-- Image -->
+                                        <div class="w-100 h-100 pointer relative">
+                                            <div data-trending-playlist-img class="relative aspect--ratio--16-9 w-100 h-100">
+                                                <img src="../assets/images/play-list-thumb.png" alt="" class="w-100 h-100 fit--cover" />
+                                            </div>
+                                            <!-- Count Tag -->
+                                            <div class="absolute right-0 top-0 z--10000 flex items-center gap--4 pad--8 drop--sh--3">
+                                                <span>
+                                                    <img src="../assets/icons/list.svg" alt="" class="w--16 h--16 filter--col--white">
+                                                </span>
+                                                <span class="fs--12 fw7 lh--18 white">40</span>
+                                            </div>
+                                            <!-- /Count Tag -->
+                                            <!-- Bottom Option Section -->
+                                            <div class="w-100 absolute left-0 bottom-0 z--10000 flex items-end justify-between gap--8 bg--gd--black--70--100 h--64">
+                                                <!-- Title and User Info -->
+                                                <div class="w-100 flex flex-column gap--8 pad--8">
+                                                    <h3 class="w-100 fs--16 fw5 lh--24 white truncate text--sh--black--5--60">Outdoor nice views</h3>
+                                                </div>
+                                                <!-- Title and User Info -->
+                                            </div>
+                                            <!-- /Bottom Option Section -->
+                                        </div>
+                                        <!-- /Image -->
+                                    </div>
+                                    <!-- End Media Grid Item -->
+                                </div>
                             </div>
                             <!-- Carousel Item -->
                             <!-- Carousel Item -->
                             <div data-layer="Frame 1410098764" class="Frame1410098764 flex justify-start items-center">
-                                <div data-layer="Rectangle" class="Rectangle-3 db br--4"></div>
+                                <div data-layer="Rectangle" class="Rectangle-3 db br--4">
+                                    <!-- Media Grid Item -->
+                                    <div data-trending-playlist class="w-100 h-100 flex--max flex flex-column gap--8 sh--green--4">
+                                        <!-- Image -->
+                                        <div class="w-100 h-100 pointer relative">
+                                            <div data-trending-playlist-img class="relative aspect--ratio--16-9 w-100 h-100">
+                                                <img src="../assets/images/play-list-thumb.png" alt="" class="w-100 h-100 fit--cover" />
+                                            </div>
+                                            <!-- Count Tag -->
+                                            <div class="absolute right-0 top-0 z--10000 flex items-center gap--4 pad--8 drop--sh--3">
+                                                <span>
+                                                    <img src="../assets/icons/list.svg" alt="" class="w--16 h--16 filter--col--white">
+                                                </span>
+                                                <span class="fs--12 fw7 lh--18 white">40</span>
+                                            </div>
+                                            <!-- /Count Tag -->
+                                            <!-- Bottom Option Section -->
+                                            <div class="w-100 absolute left-0 bottom-0 z--10000 flex items-end justify-between gap--8 bg--gd--black--70--100 h--64">
+                                                <!-- Title and User Info -->
+                                                <div class="w-100 flex flex-column gap--8 pad--8">
+                                                    <h3 class="w-100 fs--16 fw5 lh--24 white truncate text--sh--black--5--60">Outdoor nice views</h3>
+                                                </div>
+                                                <!-- Title and User Info -->
+                                            </div>
+                                            <!-- /Bottom Option Section -->
+                                        </div>
+                                        <!-- /Image -->
+                                    </div>
+                                    <!-- End Media Grid Item -->
+                                </div>
                             </div>
                             <!-- Carousel Item -->
                             <!-- Carousel Item -->
                             <div data-layer="Frame 1410098764" class="Frame1410098764 flex justify-start items-center">
-                                <div data-layer="Rectangle" class="Rectangle-3 db br--4"></div>
+                                <div data-layer="Rectangle" class="Rectangle-3 db br--4">
+                                    <!-- Media Grid Item -->
+                                    <div data-trending-playlist class="w-100 h-100 flex--max flex flex-column gap--8 sh--green--4">
+                                        <!-- Image -->
+                                        <div class="w-100 h-100 pointer relative">
+                                            <div data-trending-playlist-img class="relative aspect--ratio--16-9 w-100 h-100">
+                                                <img src="../assets/images/play-list-thumb.png" alt="" class="w-100 h-100 fit--cover" />
+                                            </div>
+                                            <!-- Count Tag -->
+                                            <div class="absolute right-0 top-0 z--10000 flex items-center gap--4 pad--8 drop--sh--3">
+                                                <span>
+                                                    <img src="../assets/icons/list.svg" alt="" class="w--16 h--16 filter--col--white">
+                                                </span>
+                                                <span class="fs--12 fw7 lh--18 white">40</span>
+                                            </div>
+                                            <!-- /Count Tag -->
+                                            <!-- Bottom Option Section -->
+                                            <div class="w-100 absolute left-0 bottom-0 z--10000 flex items-end justify-between gap--8 bg--gd--black--70--100 h--64">
+                                                <!-- Title and User Info -->
+                                                <div class="w-100 flex flex-column gap--8 pad--8">
+                                                    <h3 class="w-100 fs--16 fw5 lh--24 white truncate text--sh--black--5--60">Outdoor nice views</h3>
+                                                </div>
+                                                <!-- Title and User Info -->
+                                            </div>
+                                            <!-- /Bottom Option Section -->
+                                        </div>
+                                        <!-- /Image -->
+                                    </div>
+                                    <!-- End Media Grid Item -->
+                                </div>
                             </div>
                             <!-- Carousel Item -->
                         </div>
@@ -318,107 +1953,401 @@
                         <div data-layer="Frame 1410098521" class="Frame1410098521 flex flex-wrap justify-start items-start gap--16">
                             <!-- Carousel Item -->
                             <div data-layer="Frame 1410098770" class="Frame1410098770 flex justify-start items-center">
-                                <div data-layer="Rectangle" class="Rectangle-4 db br--4"></div>
+                                <div data-layer="Rectangle" class="Rectangle-4 db br--4">
+                                    <!-- Media Grid Item -->
+                                    <div data-popular-tags-bg class="w-100 h-100 flex--max flex flex-column gap--8 sh--10 bg--no-repeat bg--size-cover">
+                                        <!-- Image -->
+                                        <div class="w-70 h-100 pointer relative flex items-center pad--16 pad--right--0 bg--blur--5">
+                                            <!-- Title and User Info -->
+                                            <div class="w-100 flex flex-column gap--8">
+                                                <h3 class="w-100 fs--18 fw5 lh--28 white truncate text--sh--black--5--60">Big Feet</h3>
+                                            </div>
+                                            <!-- Title and User Info -->
+                                        </div>
+                                        <!-- /Image -->
+                                    </div>
+                                    <!-- End Media Grid Item -->
+                                </div>
                             </div>
                             <!-- Carousel Item -->
                             <!-- Carousel Item -->
                             <div data-layer="Frame 1410098770" class="Frame1410098770 flex justify-start items-center">
-                                <div data-layer="Rectangle" class="Rectangle-4 db br--4"></div>
+                                <div data-layer="Rectangle" class="Rectangle-4 db br--4">
+                                    <!-- Media Grid Item -->
+                                    <div data-popular-tags-bg class="w-100 h-100 flex--max flex flex-column gap--8 sh--10 bg--no-repeat bg--size-cover">
+                                        <!-- Image -->
+                                        <div class="w-70 h-100 pointer relative flex items-center pad--16 pad--right--0 bg--blur--5">
+                                            <!-- Title and User Info -->
+                                            <div class="w-100 flex flex-column gap--8">
+                                                <h3 class="w-100 fs--18 fw5 lh--28 white truncate text--sh--black--5--60">Big Feet</h3>
+                                            </div>
+                                            <!-- Title and User Info -->
+                                        </div>
+                                        <!-- /Image -->
+                                    </div>
+                                    <!-- End Media Grid Item -->
+                                </div>
                             </div>
                             <!-- Carousel Item -->
                             <!-- Carousel Item -->
                             <div data-layer="Frame 1410098770" class="Frame1410098770 flex justify-start items-center">
-                                <div data-layer="Rectangle" class="Rectangle-4 db br--4"></div>
+                                <div data-layer="Rectangle" class="Rectangle-4 db br--4">
+                                    <!-- Media Grid Item -->
+                                    <div data-popular-tags-bg class="w-100 h-100 flex--max flex flex-column gap--8 sh--10 bg--no-repeat bg--size-cover">
+                                        <!-- Image -->
+                                        <div class="w-70 h-100 pointer relative flex items-center pad--16 pad--right--0 bg--blur--5">
+                                            <!-- Title and User Info -->
+                                            <div class="w-100 flex flex-column gap--8">
+                                                <h3 class="w-100 fs--18 fw5 lh--28 white truncate text--sh--black--5--60">Big Feet</h3>
+                                            </div>
+                                            <!-- Title and User Info -->
+                                        </div>
+                                        <!-- /Image -->
+                                    </div>
+                                    <!-- End Media Grid Item -->
+                                </div>
                             </div>
                             <!-- Carousel Item -->
                             <!-- Carousel Item -->
                             <div data-layer="Frame 1410098770" class="Frame1410098770 flex justify-start items-center">
-                                <div data-layer="Rectangle" class="Rectangle-4 db br--4"></div>
+                                <div data-layer="Rectangle" class="Rectangle-4 db br--4">
+                                    <!-- Media Grid Item -->
+                                    <div data-popular-tags-bg class="w-100 h-100 flex--max flex flex-column gap--8 sh--10 bg--no-repeat bg--size-cover">
+                                        <!-- Image -->
+                                        <div class="w-70 h-100 pointer relative flex items-center pad--16 pad--right--0 bg--blur--5">
+                                            <!-- Title and User Info -->
+                                            <div class="w-100 flex flex-column gap--8">
+                                                <h3 class="w-100 fs--18 fw5 lh--28 white truncate text--sh--black--5--60">Big Feet</h3>
+                                            </div>
+                                            <!-- Title and User Info -->
+                                        </div>
+                                        <!-- /Image -->
+                                    </div>
+                                    <!-- End Media Grid Item -->
+                                </div>
                             </div>
                             <!-- Carousel Item -->
                             <!-- Carousel Item -->
                             <div data-layer="Frame 1410098770" class="Frame1410098770 flex justify-start items-center">
-                                <div data-layer="Rectangle" class="Rectangle-4 db br--4"></div>
+                                <div data-layer="Rectangle" class="Rectangle-4 db br--4">
+                                    <!-- Media Grid Item -->
+                                    <div data-popular-tags-bg class="w-100 h-100 flex--max flex flex-column gap--8 sh--10 bg--no-repeat bg--size-cover">
+                                        <!-- Image -->
+                                        <div class="w-70 h-100 pointer relative flex items-center pad--16 pad--right--0 bg--blur--5">
+                                            <!-- Title and User Info -->
+                                            <div class="w-100 flex flex-column gap--8">
+                                                <h3 class="w-100 fs--18 fw5 lh--28 white truncate text--sh--black--5--60">Big Feet</h3>
+                                            </div>
+                                            <!-- Title and User Info -->
+                                        </div>
+                                        <!-- /Image -->
+                                    </div>
+                                    <!-- End Media Grid Item -->
+                                </div>
                             </div>
                             <!-- Carousel Item -->
                             <!-- Carousel Item -->
                             <div data-layer="Frame 1410098770" class="Frame1410098770 flex justify-start items-center">
-                                <div data-layer="Rectangle" class="Rectangle-4 db br--4"></div>
+                                <div data-layer="Rectangle" class="Rectangle-4 db br--4">
+                                    <!-- Media Grid Item -->
+                                    <div data-popular-tags-bg class="w-100 h-100 flex--max flex flex-column gap--8 sh--10 bg--no-repeat bg--size-cover">
+                                        <!-- Image -->
+                                        <div class="w-70 h-100 pointer relative flex items-center pad--16 pad--right--0 bg--blur--5">
+                                            <!-- Title and User Info -->
+                                            <div class="w-100 flex flex-column gap--8">
+                                                <h3 class="w-100 fs--18 fw5 lh--28 white truncate text--sh--black--5--60">Big Feet</h3>
+                                            </div>
+                                            <!-- Title and User Info -->
+                                        </div>
+                                        <!-- /Image -->
+                                    </div>
+                                    <!-- End Media Grid Item -->
+                                </div>
                             </div>
                             <!-- Carousel Item -->
                             <!-- Carousel Item -->
                             <div data-layer="Frame 1410098770" class="Frame1410098770 flex justify-start items-center">
-                                <div data-layer="Rectangle" class="Rectangle-4 db br--4"></div>
+                                <div data-layer="Rectangle" class="Rectangle-4 db br--4">
+                                    <!-- Media Grid Item -->
+                                    <div data-popular-tags-bg class="w-100 h-100 flex--max flex flex-column gap--8 sh--10 bg--no-repeat bg--size-cover">
+                                        <!-- Image -->
+                                        <div class="w-70 h-100 pointer relative flex items-center pad--16 pad--right--0 bg--blur--5">
+                                            <!-- Title and User Info -->
+                                            <div class="w-100 flex flex-column gap--8">
+                                                <h3 class="w-100 fs--18 fw5 lh--28 white truncate text--sh--black--5--60">Big Feet</h3>
+                                            </div>
+                                            <!-- Title and User Info -->
+                                        </div>
+                                        <!-- /Image -->
+                                    </div>
+                                    <!-- End Media Grid Item -->
+                                </div>
                             </div>
                             <!-- Carousel Item -->
                             <!-- Carousel Item -->
                             <div data-layer="Frame 1410098770" class="Frame1410098770 flex justify-start items-center">
-                                <div data-layer="Rectangle" class="Rectangle-4 db br--4"></div>
+                                <div data-layer="Rectangle" class="Rectangle-4 db br--4">
+                                    <!-- Media Grid Item -->
+                                    <div data-popular-tags-bg class="w-100 h-100 flex--max flex flex-column gap--8 sh--10 bg--no-repeat bg--size-cover">
+                                        <!-- Image -->
+                                        <div class="w-70 h-100 pointer relative flex items-center pad--16 pad--right--0 bg--blur--5">
+                                            <!-- Title and User Info -->
+                                            <div class="w-100 flex flex-column gap--8">
+                                                <h3 class="w-100 fs--18 fw5 lh--28 white truncate text--sh--black--5--60">Big Feet</h3>
+                                            </div>
+                                            <!-- Title and User Info -->
+                                        </div>
+                                        <!-- /Image -->
+                                    </div>
+                                    <!-- End Media Grid Item -->
+                                </div>
                             </div>
                             <!-- Carousel Item -->
                             <!-- Carousel Item -->
                             <div data-layer="Frame 1410098770" class="Frame1410098770 flex justify-start items-center">
-                                <div data-layer="Rectangle" class="Rectangle-4 db br--4"></div>
+                                <div data-layer="Rectangle" class="Rectangle-4 db br--4">
+                                    <!-- Media Grid Item -->
+                                    <div data-popular-tags-bg class="w-100 h-100 flex--max flex flex-column gap--8 sh--10 bg--no-repeat bg--size-cover">
+                                        <!-- Image -->
+                                        <div class="w-70 h-100 pointer relative flex items-center pad--16 pad--right--0 bg--blur--5">
+                                            <!-- Title and User Info -->
+                                            <div class="w-100 flex flex-column gap--8">
+                                                <h3 class="w-100 fs--18 fw5 lh--28 white truncate text--sh--black--5--60">Big Feet</h3>
+                                            </div>
+                                            <!-- Title and User Info -->
+                                        </div>
+                                        <!-- /Image -->
+                                    </div>
+                                    <!-- End Media Grid Item -->
+                                </div>
                             </div>
                             <!-- Carousel Item -->
                             <!-- Carousel Item -->
                             <div data-layer="Frame 1410098770" class="Frame1410098770 flex justify-start items-center">
-                                <div data-layer="Rectangle" class="Rectangle-4 db br--4"></div>
+                                <div data-layer="Rectangle" class="Rectangle-4 db br--4">
+                                    <!-- Media Grid Item -->
+                                    <div data-popular-tags-bg class="w-100 h-100 flex--max flex flex-column gap--8 sh--10 bg--no-repeat bg--size-cover">
+                                        <!-- Image -->
+                                        <div class="w-70 h-100 pointer relative flex items-center pad--16 pad--right--0 bg--blur--5">
+                                            <!-- Title and User Info -->
+                                            <div class="w-100 flex flex-column gap--8">
+                                                <h3 class="w-100 fs--18 fw5 lh--28 white truncate text--sh--black--5--60">Big Feet</h3>
+                                            </div>
+                                            <!-- Title and User Info -->
+                                        </div>
+                                        <!-- /Image -->
+                                    </div>
+                                    <!-- End Media Grid Item -->
+                                </div>
                             </div>
                             <!-- Carousel Item -->
                             <!-- Carousel Item -->
                             <div data-layer="Frame 1410098770" class="Frame1410098770 flex justify-start items-center">
-                                <div data-layer="Rectangle" class="Rectangle-4 db br--4"></div>
+                                <div data-layer="Rectangle" class="Rectangle-4 db br--4">
+                                    <!-- Media Grid Item -->
+                                    <div data-popular-tags-bg class="w-100 h-100 flex--max flex flex-column gap--8 sh--10 bg--no-repeat bg--size-cover">
+                                        <!-- Image -->
+                                        <div class="w-70 h-100 pointer relative flex items-center pad--16 pad--right--0 bg--blur--5">
+                                            <!-- Title and User Info -->
+                                            <div class="w-100 flex flex-column gap--8">
+                                                <h3 class="w-100 fs--18 fw5 lh--28 white truncate text--sh--black--5--60">Big Feet</h3>
+                                            </div>
+                                            <!-- Title and User Info -->
+                                        </div>
+                                        <!-- /Image -->
+                                    </div>
+                                    <!-- End Media Grid Item -->
+                                </div>
                             </div>
                             <!-- Carousel Item -->
                             <!-- Carousel Item -->
                             <div data-layer="Frame 1410098770" class="Frame1410098770 flex justify-start items-center">
-                                <div data-layer="Rectangle" class="Rectangle-4 db br--4"></div>
+                                <div data-layer="Rectangle" class="Rectangle-4 db br--4">
+                                    <!-- Media Grid Item -->
+                                    <div data-popular-tags-bg class="w-100 h-100 flex--max flex flex-column gap--8 sh--10 bg--no-repeat bg--size-cover">
+                                        <!-- Image -->
+                                        <div class="w-70 h-100 pointer relative flex items-center pad--16 pad--right--0 bg--blur--5">
+                                            <!-- Title and User Info -->
+                                            <div class="w-100 flex flex-column gap--8">
+                                                <h3 class="w-100 fs--18 fw5 lh--28 white truncate text--sh--black--5--60">Big Feet</h3>
+                                            </div>
+                                            <!-- Title and User Info -->
+                                        </div>
+                                        <!-- /Image -->
+                                    </div>
+                                    <!-- End Media Grid Item -->
+                                </div>
                             </div>
                             <!-- Carousel Item -->
                             <!-- Carousel Item -->
                             <div data-layer="Frame 1410098770" class="Frame1410098770 flex justify-start items-center">
-                                <div data-layer="Rectangle" class="Rectangle-4 db br--4"></div>
+                                <div data-layer="Rectangle" class="Rectangle-4 db br--4">
+                                    <!-- Media Grid Item -->
+                                    <div data-popular-tags-bg class="w-100 h-100 flex--max flex flex-column gap--8 sh--10 bg--no-repeat bg--size-cover">
+                                        <!-- Image -->
+                                        <div class="w-70 h-100 pointer relative flex items-center pad--16 pad--right--0 bg--blur--5">
+                                            <!-- Title and User Info -->
+                                            <div class="w-100 flex flex-column gap--8">
+                                                <h3 class="w-100 fs--18 fw5 lh--28 white truncate text--sh--black--5--60">Big Feet</h3>
+                                            </div>
+                                            <!-- Title and User Info -->
+                                        </div>
+                                        <!-- /Image -->
+                                    </div>
+                                    <!-- End Media Grid Item -->
+                                </div>
                             </div>
                             <!-- Carousel Item -->
                             <!-- Carousel Item -->
                             <div data-layer="Frame 1410098770" class="Frame1410098770 flex justify-start items-center">
-                                <div data-layer="Rectangle" class="Rectangle-4 db br--4"></div>
+                                <div data-layer="Rectangle" class="Rectangle-4 db br--4">
+                                    <!-- Media Grid Item -->
+                                    <div data-popular-tags-bg class="w-100 h-100 flex--max flex flex-column gap--8 sh--10 bg--no-repeat bg--size-cover">
+                                        <!-- Image -->
+                                        <div class="w-70 h-100 pointer relative flex items-center pad--16 pad--right--0 bg--blur--5">
+                                            <!-- Title and User Info -->
+                                            <div class="w-100 flex flex-column gap--8">
+                                                <h3 class="w-100 fs--18 fw5 lh--28 white truncate text--sh--black--5--60">Big Feet</h3>
+                                            </div>
+                                            <!-- Title and User Info -->
+                                        </div>
+                                        <!-- /Image -->
+                                    </div>
+                                    <!-- End Media Grid Item -->
+                                </div>
                             </div>
                             <!-- Carousel Item -->
                             <!-- Carousel Item -->
                             <div data-layer="Frame 1410098770" class="Frame1410098770 flex justify-start items-center">
-                                <div data-layer="Rectangle" class="Rectangle-4 db br--4"></div>
+                                <div data-layer="Rectangle" class="Rectangle-4 db br--4">
+                                    <!-- Media Grid Item -->
+                                    <div data-popular-tags-bg class="w-100 h-100 flex--max flex flex-column gap--8 sh--10 bg--no-repeat bg--size-cover">
+                                        <!-- Image -->
+                                        <div class="w-70 h-100 pointer relative flex items-center pad--16 pad--right--0 bg--blur--5">
+                                            <!-- Title and User Info -->
+                                            <div class="w-100 flex flex-column gap--8">
+                                                <h3 class="w-100 fs--18 fw5 lh--28 white truncate text--sh--black--5--60">Big Feet</h3>
+                                            </div>
+                                            <!-- Title and User Info -->
+                                        </div>
+                                        <!-- /Image -->
+                                    </div>
+                                    <!-- End Media Grid Item -->
+                                </div>
                             </div>
                             <!-- Carousel Item -->
                             <!-- Carousel Item -->
                             <div data-layer="Frame 1410098770" class="Frame1410098770 flex justify-start items-center">
-                                <div data-layer="Rectangle" class="Rectangle-4 db br--4"></div>
+                                <div data-layer="Rectangle" class="Rectangle-4 db br--4">
+                                    <!-- Media Grid Item -->
+                                    <div data-popular-tags-bg class="w-100 h-100 flex--max flex flex-column gap--8 sh--10 bg--no-repeat bg--size-cover">
+                                        <!-- Image -->
+                                        <div class="w-70 h-100 pointer relative flex items-center pad--16 pad--right--0 bg--blur--5">
+                                            <!-- Title and User Info -->
+                                            <div class="w-100 flex flex-column gap--8">
+                                                <h3 class="w-100 fs--18 fw5 lh--28 white truncate text--sh--black--5--60">Big Feet</h3>
+                                            </div>
+                                            <!-- Title and User Info -->
+                                        </div>
+                                        <!-- /Image -->
+                                    </div>
+                                    <!-- End Media Grid Item -->
+                                </div>
                             </div>
                             <!-- Carousel Item -->
                             <!-- Carousel Item -->
                             <div data-layer="Frame 1410098770" class="Frame1410098770 flex justify-start items-center">
-                                <div data-layer="Rectangle" class="Rectangle-4 db br--4"></div>
+                                <div data-layer="Rectangle" class="Rectangle-4 db br--4">
+                                    <!-- Media Grid Item -->
+                                    <div data-popular-tags-bg class="w-100 h-100 flex--max flex flex-column gap--8 sh--10 bg--no-repeat bg--size-cover">
+                                        <!-- Image -->
+                                        <div class="w-70 h-100 pointer relative flex items-center pad--16 pad--right--0 bg--blur--5">
+                                            <!-- Title and User Info -->
+                                            <div class="w-100 flex flex-column gap--8">
+                                                <h3 class="w-100 fs--18 fw5 lh--28 white truncate text--sh--black--5--60">Big Feet</h3>
+                                            </div>
+                                            <!-- Title and User Info -->
+                                        </div>
+                                        <!-- /Image -->
+                                    </div>
+                                    <!-- End Media Grid Item -->
+                                </div>
                             </div>
                             <!-- Carousel Item -->
                             <!-- Carousel Item -->
                             <div data-layer="Frame 1410098770" class="Frame1410098770 flex justify-start items-center">
-                                <div data-layer="Rectangle" class="Rectangle-4 db br--4"></div>
+                                <div data-layer="Rectangle" class="Rectangle-4 db br--4">
+                                    <!-- Media Grid Item -->
+                                    <div data-popular-tags-bg class="w-100 h-100 flex--max flex flex-column gap--8 sh--10 bg--no-repeat bg--size-cover">
+                                        <!-- Image -->
+                                        <div class="w-70 h-100 pointer relative flex items-center pad--16 pad--right--0 bg--blur--5">
+                                            <!-- Title and User Info -->
+                                            <div class="w-100 flex flex-column gap--8">
+                                                <h3 class="w-100 fs--18 fw5 lh--28 white truncate text--sh--black--5--60">Big Feet</h3>
+                                            </div>
+                                            <!-- Title and User Info -->
+                                        </div>
+                                        <!-- /Image -->
+                                    </div>
+                                    <!-- End Media Grid Item -->
+                                </div>
                             </div>
                             <!-- Carousel Item -->
                             <!-- Carousel Item -->
                             <div data-layer="Frame 1410098770" class="Frame1410098770 flex justify-start items-center">
-                                <div data-layer="Rectangle" class="Rectangle-4 db br--4"></div>
+                                <div data-layer="Rectangle" class="Rectangle-4 db br--4">
+                                    <!-- Media Grid Item -->
+                                    <div data-popular-tags-bg class="w-100 h-100 flex--max flex flex-column gap--8 sh--10 bg--no-repeat bg--size-cover">
+                                        <!-- Image -->
+                                        <div class="w-70 h-100 pointer relative flex items-center pad--16 pad--right--0 bg--blur--5">
+                                            <!-- Title and User Info -->
+                                            <div class="w-100 flex flex-column gap--8">
+                                                <h3 class="w-100 fs--18 fw5 lh--28 white truncate text--sh--black--5--60">Big Feet</h3>
+                                            </div>
+                                            <!-- Title and User Info -->
+                                        </div>
+                                        <!-- /Image -->
+                                    </div>
+                                    <!-- End Media Grid Item -->
+                                </div>
                             </div>
                             <!-- Carousel Item -->
                             <!-- Carousel Item -->
                             <div data-layer="Frame 1410098770" class="Frame1410098770 flex justify-start items-center">
-                                <div data-layer="Rectangle" class="Rectangle-4 db br--4"></div>
+                                <div data-layer="Rectangle" class="Rectangle-4 db br--4">
+                                    <!-- Media Grid Item -->
+                                    <div data-popular-tags-bg class="w-100 h-100 flex--max flex flex-column gap--8 sh--10 bg--no-repeat bg--size-cover">
+                                        <!-- Image -->
+                                        <div class="w-70 h-100 pointer relative flex items-center pad--16 pad--right--0 bg--blur--5">
+                                            <!-- Title and User Info -->
+                                            <div class="w-100 flex flex-column gap--8">
+                                                <h3 class="w-100 fs--18 fw5 lh--28 white truncate text--sh--black--5--60">Big Feet</h3>
+                                            </div>
+                                            <!-- Title and User Info -->
+                                        </div>
+                                        <!-- /Image -->
+                                    </div>
+                                    <!-- End Media Grid Item -->
+                                </div>
                             </div>
                             <!-- Carousel Item -->
                             <!-- Carousel Item -->
                             <div data-layer="Frame 1410098770" class="Frame1410098770 flex justify-start items-center">
-                                <div data-layer="Rectangle" class="Rectangle-4 db br--4"></div>
+                                <div data-layer="Rectangle" class="Rectangle-4 db br--4">
+                                    <!-- Media Grid Item -->
+                                    <div data-popular-tags-bg class="w-100 h-100 flex--max flex flex-column gap--8 sh--10 bg--no-repeat bg--size-cover">
+                                        <!-- Image -->
+                                        <div class="w-70 h-100 pointer relative flex items-center pad--16 pad--right--0 bg--blur--5">
+                                            <!-- Title and User Info -->
+                                            <div class="w-100 flex flex-column gap--8">
+                                                <h3 class="w-100 fs--18 fw5 lh--28 white truncate text--sh--black--5--60">Big Feet</h3>
+                                            </div>
+                                            <!-- Title and User Info -->
+                                        </div>
+                                        <!-- /Image -->
+                                    </div>
+                                    <!-- End Media Grid Item -->
+                                </div>
                             </div>
                             <!-- Carousel Item -->
                         </div>
