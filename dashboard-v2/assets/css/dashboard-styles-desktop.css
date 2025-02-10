@@ -295,6 +295,13 @@ html {
   filter: brightness(0) saturate(100%) invert(37%) sepia(57%) saturate(6169%) hue-rotate(214deg) brightness(91%) contrast(106%)
 }
 
+/* Ensure text and SVG both change to Blue Ribbon on hover */
+.hover--parent--child--col--blue-ribbon:hover .hover--col--blue-ribbon {
+  color: var(--color-blue-ribbon, #155eef);
+  -webkit-filter: brightness(0) saturate(100%) invert(37%) sepia(57%) saturate(6169%) hue-rotate(214deg) brightness(91%) contrast(106%);
+  filter: brightness(0) saturate(100%) invert(37%) sepia(57%) saturate(6169%) hue-rotate(214deg) brightness(91%) contrast(106%);
+}
+
 .hover--bg--col--white--10:hover {
   background: rgba(255, 255, 255, .1)
 }

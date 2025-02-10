@@ -161,6 +161,202 @@
     z-index: 4;
 } */
 
+/* Top Section On Mobile View */
+.Frame1410098778 {
+    width: 100%;
+    height: 6.25rem;
+    background: #FFF;
+}
+
+.Frame1410098778 .Frame1410098781 {
+    display: flex;
+    width: 75%;
+    height: 6.25rem;
+    justify-content: flex-end;
+    align-items: center;
+    flex-shrink: 0;
+    backdrop-filter: blur(0.3125rem);
+}
+
+.BottomPanel {
+    display: flex;
+    padding-left: 0.5rem;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex: 1 0 0;
+    align-self: stretch;
+    /* backdrop-filter: blur(1.5625rem); */
+}
+
+.Frame1410098781 .Rectangle46229094 {
+    height: 100px;
+    min-height: 100px !important;
+    position: absolute;
+    fill: rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(0.3125rem);
+    z-index: -1;
+}
+
+.Frame1410098781 .Rectangle46229094 svg
+    {
+        height: 100px;
+        min-height: 100px;
+    }
+
+.BottomPanel .Frame1410098749 {
+    display: flex;
+    width: 100%;
+    height: 6.25rem;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 0.25rem;
+}
+
+
+
+/* token balance and Basic Member */
+.BottomPanel .Frame1410098749 .Frame1410098779 {
+    display: flex;
+    width: 100%;
+    /* width: 37rem; */
+    padding-right: 2.25rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.BottomPanel .Frame1410098749 .Frame1410098779 .Model {
+    color: var(--Base-Black, #000);
+    font-family: Poppins;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.75rem;
+}
+
+.BottomPanel .Frame1410098749 .Frame1410098779 .Frame1410098752 {
+    display: flex;
+    padding: 0rem 0.25rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+}
+
+.BottomPanel .Frame1410098749 .Frame1410098779 .Frame1410098752 .BasicMember {
+    color: var(--Base-Black, #000);
+    font-family: Poppins;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.25rem;
+}
+
+/* 1234 */
+.BottomPanel .Frame1410098749 .Frame1410098751 {
+    display: flex;
+    height: 3.4375rem;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-shrink: 0;
+    align-self: stretch;
+}
+
+.BottomPanel .Frame1410098749 .Frame1410098751 .Model {
+    flex: 1 0 0;
+    align-self: stretch;
+    color: var(--Base-Black, #000);
+    font-family: Poppins;
+    font-size: 2.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.75rem;
+    letter-spacing: -0.045rem;
+}
+
+.BottomPanel .Frame1410098749 .Frame1410098751 .Frame1410098782 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 0.625rem;
+}
+
+.BottomPanel .Frame1410098749 .Frame1410098751 .Frame1410098782 .AngleButton {
+    display: flex;
+    height: 2rem;
+    align-items: flex-start;
+    flex-direction: row;
+    align-self: stretch;
+    box-shadow: 0rem 0.1875rem 0rem 0rem #07F468;
+}
+
+.BottomPanel .Frame1410098749 .Frame1410098751 .Frame1410098782 .AngleButton .Frame8669 {
+    display: flex;
+    height: 2rem;
+    padding: 0.125rem 0.25rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    background: var(--Base-Black, #000);
+}
+
+.BottomPanel .Frame1410098749 .Frame1410098751 .Frame1410098782 .AngleButton .Frame8669 .Edit {
+    color: var(--Brand-green, #07F468);
+    font-family: Poppins;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5rem;
+}
+
+.BottomPanel .Frame1410098749 .Frame1410098751 .Frame1410098782 .AngleButton .Frame8669 .CoinsStacked01 {
+    width: 1.25rem;
+    height: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.BottomPanel .Frame1410098749 .Frame1410098751 .Frame1410098782 .AngleButton .Rectangle15510 {
+    width: 0.78125rem;
+    align-self: stretch;
+    fill: var(--Base-Black, #000);
+    backdrop-filter: blur(5px);
+}
+
+.AngleButton .Rectangle15510 svg g path {
+    box-shadow: 0.3125rem 0rem 0rem 0rem #07F468;
+}
+
+
+
+/* CP styling */
+.Frame1410098778 .Frame1410098780 {
+    display: inline-flex;
+    width: 25%;
+    height: 6.25rem;
+    padding: 0rem 0.625rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    flex-shrink: 0;
+}
+
+.Frame1410098778 .Frame1410098780 .Initial {
+    color: rgba(153, 153, 153, 0.40);
+    text-align: center;
+    font-family: Poppins;
+    font-size: 5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 5.7144rem;
+    filter: blur(0.125rem);
+}
+
+
+
+
 .top-blur-text {
     width: 257.07px;
     height: 100%;
@@ -181,7 +377,7 @@
     right: 0;
     height: 170px;
     top: 0;
-    position: relative;
+    position: absolute;
     width: 765px;
     background-image: url(../images/left-slope-rectangle.svg);
     background-position: center;
