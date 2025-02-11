@@ -161,6 +161,73 @@
     z-index: 4;
 } */
 
+
+/* Desktop View */
+.top-right-inner-end .topUpBtn .AngleButton{
+    box-shadow: 2px 3px 0px #07F468;
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    display: inline-flex"
+}
+
+
+
+.top-right-inner-end .topUpBtn .AngleButton .Frame8669 {
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-top: 4px; 
+        padding-bottom: 4px; 
+        background: black; 
+        justify-content: center; 
+        align-items: center; 
+        gap: 10px; 
+        display: flex;
+    }
+
+.top-right-inner-end .topUpBtn .AngleButton .Frame8669 .Edit {
+    color: #07F468;
+    font-size: 16px; 
+    font-family: Poppins;
+    font-weight: 500; 
+    line-height: 24px; 
+    word-wrap: "break-word";
+}
+
+.top-right-inner-end .topUpBtn .AngleButton .Frame8669 .CoinsStacked01{
+    width: 20px;
+    height: 20px; 
+    position: relative;
+}
+
+.top-right-inner-end .topUpBtn:hover .darkColor{
+    -webkit-filter: brightness(0) saturate(100%) invert(75%) sepia(23%) saturate(7280%) hue-rotate(93deg) brightness(109%) contrast(95%);
+    filter: brightness(0) saturate(100%) invert(75%) sepia(23%) saturate(7280%) hue-rotate(93deg) brightness(109%) contrast(95%)
+}
+
+.top-right-inner-end .topUpBtn:hover .Frame8669 .CoinsStacked01 .filter--col--spring-green{
+    -webkit-filter: brightness(0);
+    filter: brightness(0);
+}
+
+
+
+.top-right-inner-end .topUpBtn:hover .AngleButton{
+    box-shadow: 2px 3px 0px black;
+}
+.top-right-inner-end .topUpBtn:hover .AngleButton .Frame8669 {
+    background: #07F468;
+}
+
+.top-right-inner-end .topUpBtn:hover .AngleButton .Frame8669 .Edit {
+    color: black;
+}
+
+/* Change stroke color of the SVG icon on hover */
+/* .top-right-inner-end .topUpBtn:hover .AngleButton .topUpBtnDiv .CoinsStacked01 img svg path{
+    stroke: black;
+} */
+
+
 /* Top Section On Mobile View */
 .Frame1410098778 {
     width: 100%;
@@ -319,7 +386,6 @@
 }
 
 .BottomPanel .Frame1410098749 .Frame1410098751 .Frame1410098782 .AngleButton .Rectangle15510 {
-    /* width: 0.78125rem; */
     align-self: stretch;
     fill: var(--Base-Black, #000);
     backdrop-filter: blur(5px);
@@ -329,6 +395,28 @@
     box-shadow: 0.3125rem 0rem 0rem 0rem #07F468;
 }
 
+.BottomPanel .Frame1410098749 .Frame1410098751 .Frame1410098782 .AngleButton:hover {
+    box-shadow: 0rem 0.3125rem 0rem 0rem #000;
+}
+
+/* Hover Effect */
+.BottomPanel .Frame1410098749 .Frame1410098751 .Frame1410098782 .AngleButton:hover .Frame86690 {
+    background: var(--Brand-green, #07F468);
+}
+
+/* Change Text Color on Hover */
+.BottomPanel .Frame1410098749 .Frame1410098751 .Frame1410098782 .AngleButton:hover .Frame86690 .Edit {
+    color: var(--Base-Black, #000);
+}
+
+/* icon stroke */
+.BottomPanel .Frame1410098749 .Frame1410098751 .Frame1410098782 .AngleButton:hover .Frame86690 .CoinsStacked01 svg path {
+    stroke: var(--Base-Black, #000);
+}
+/* Icon filled with */
+.BottomPanel .Frame1410098749 .Frame1410098751 .Frame1410098782 .AngleButton:hover .Rectangle15510 svg path {
+    fill: var(--Brand-green, #07F468);
+}
 
 
 /* CP styling */
@@ -1032,11 +1120,11 @@
 
     .top-right-section::before {
         width: 5px;
-        height: 232px;
+        height: 235px;
         /* left: 114px;
         top: -30px; */
-        left: 11.4%;
-        top: -18%;
+        left: 12%;
+        top: -19.5%;
     }
 
     .top-right-section::after {
@@ -1053,6 +1141,12 @@
 @media (min-width: 867px) and (max-width: 1024px) {
     .top-right-section::after {
         width: 79%;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1100px) {
+    .top-right-section::after {
+        width: 80%;
     }
 }
 
@@ -1219,4 +1313,10 @@
     }
 }
 
+@media (max-width:375px) {
+    .BottomPanel .Frame1410098749 .Frame1410098751 .Frame1410098782 .AngleButton .Rectangle15510 svg {
+        height: 28px;
+    }
+    
+}
 /* End: Media Queries */
