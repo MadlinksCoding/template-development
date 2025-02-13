@@ -163,7 +163,7 @@
                             <div data-menu-panel-wrapper class="flex flex-column self-stretch relative z-5">
                                 <div data-menu-panel class="flex flex-column items-center self-stretch gap--4 display-grid--responsive-mobile display-grid--responsive-mobile-portrait grid--cols-6--responsive-mobile grid--cols-3--responsive-mobile-portrait gap--16--responsive-mobile gap--16--responsive-mobile-portrait">
                                     <!-- menu item (Push Menu Demo) (this item is added only to show a demo of multi level push menu system in corresponding submenu, not part of actual sidebar menu) -->
-                                    <div data-sidebar-menu-item data-current-page-detector data-page="dashboard/some-page" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
+                                    <div  data-sidebar-menu-item data-current-page-detector data-page="dashboard/some-page" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
                                         <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
                                         <a href="javascript: void(0)" data-main-menu-item="true" data-main-menu-name="Multi Level Push Menu" data-is-active="false" data-has-submenu="true" data-target-submenu-container="dashboard-submenu-multi-level-push-menu-demo" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
                                             <!-- render_svg_icon( 'likes' ) -->
@@ -190,9 +190,9 @@
                                     <!-- /menu item -->
 
                                     <!-- menu item (Earnings) [if active page item, then "current-page" class should be added to the div] -->
-                                    <div data-sidebar-menu-item data-current-page-detector data-page="dashboard/payout" class="flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
+                                    <div data-sidebar-menu-item data-current-page-detector data-page="dashboard/payout" class="dn flex flex-column justify-center items-center self-stretch br--6 transition--all transition--200 transition--ease-in-out">
                                         <!-- (if the item has submenu, then "data-has-submenu" property should be true, and "data-target-submenu-container" should have target submenu container data id) -->
-                                        <a href="javascript: void(0)" data-main-menu-item="true" data-main-menu-name="Earnings" data-is-active="false" data-has-submenu="false"  data-target-submenu-container="" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
+                                        <a data-mobile-nav-close  href="javascript: void(0)" data-main-menu-item="true" data-main-menu-name="Earnings" data-is-active="false" data-has-submenu="false"  data-target-submenu-container="" class="flex flex-column justify-center items-center self-stretch gap--2 pa2 br--6 hover--bg--col--brilliant-rose--10 transition--all transition--200 transition--ease-in-out">
                                             <!-- render_svg_icon( 'money-1' ) -->
                                             <img data-sidebar-menu-icon src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/svg/money-1.svg" alt="" class="w--24 h--24 filter--col--pale-sky pointer-events-none">
 
@@ -4686,5 +4686,16 @@
         <!-- Dashboard Sidebar Custom Script -->
         <script src="../assets/js/dashboard-ui.js"></script>
         <script src="../assets/js/tabs-ui.js"></script>
+
+        <style>
+            [data-main-menu-item][data-is-active="true"] ~ [data-sidebar-nav-wrapper] {
+            display: none;
+            }
+
+            [data-sidebar-main-wrapper][data-has-submenu=false] ~[data-mobile-nav-main-wrapper]{
+                display: none  ;
+            }
+        </style>
+
     </body>
 </html>
