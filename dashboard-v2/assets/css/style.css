@@ -352,14 +352,14 @@
 .BottomPanel .Frame1410098749 .Frame1410098751 .Frame1410098782 .AngleButton {
     display: flex;
     height: 2rem;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: row;
     align-self: stretch;
     box-shadow: 0rem 0.1875rem 0rem 0rem #07F468;
 }
 
 .BottomPanel .Frame1410098749 .Frame1410098751 .Frame1410098782 .AngleButton .Frame86690 {
-    display: flex;
+    display: inline-flex;
     height: 2rem;
     padding: 0.125rem 0.25rem;
     justify-content: center;
@@ -386,9 +386,11 @@
 }
 
 .BottomPanel .Frame1410098749 .Frame1410098751 .Frame1410098782 .AngleButton .Rectangle15510 {
+    width: 12.5px;
     align-self: stretch;
     fill: var(--Base-Black, #000);
     backdrop-filter: blur(5px);
+    position: relative;
 }
 
 .AngleButton .Rectangle15510 svg g path {

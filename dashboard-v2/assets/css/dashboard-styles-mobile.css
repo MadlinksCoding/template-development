@@ -387,6 +387,10 @@ body.stop-mobile-scrolling {
   height: auto
 }
 
+.h--100-screen-mobile{
+  height: 100%;
+}
+
 .h--18-responsive-mobile {
   height: 1.125rem
 }
@@ -793,7 +797,7 @@ body.stop-mobile-scrolling {
 }
 
 [data-sidebar-main-wrapper][data-is-active=true] {
-  height: auto;
+  height: 100%;
   -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, .08);
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, .08);
   opacity: 1;
