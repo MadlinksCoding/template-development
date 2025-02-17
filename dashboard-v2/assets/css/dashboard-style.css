@@ -6141,6 +6141,14 @@ textarea {
   padding: .5rem
 }
 
+[data-gallery-poster-wrap] [data-img-item-wrapper],
+[data-gallery-poster-wrap] input:checked+[data-img-item-wrapper],
+[data-thumbail-items] [data-img-item-wrapper],
+[data-thumbail-items] input:checked+[data-img-item-wrapper] {
+  width: 6.42238rem;
+  height: 3.6125rem
+}
+
 @media only screen and (min-width:1010px) and (max-width:1365px) {
   .w--311--responsive-tablet-landscape {
     width: 19.4375rem
