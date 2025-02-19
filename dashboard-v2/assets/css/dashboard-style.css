@@ -5561,7 +5561,7 @@ html {
   border-radius: 50%;
   background: var(--Brand-green, #07f468);
   position: absolute;
-  left: .4rem;
+  left: .45rem;
   top: 50%;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%)
@@ -5948,6 +5948,12 @@ button[data-color=gray]:not(:disabled):hover span {
   background-color: #e00078
 }
 
+[data-button-theme=pink-1]:hover,
+[data-button-theme=pink-1]:hover:after {
+  -webkit-box-shadow: 0 0 1px 0 rgba(255, 151, 243, .9) inset, 0 0 10px 0 rgba(232, 3, 174, .05), 0 0 35px 0 rgba(232, 3, 174, .25), 0 5px 50px 0 rgba(232, 3, 174, .5), 0 0 40px 0 rgba(232, 3, 174, .5) inset, 0 0 50px 0 rgba(246, 0, 254, .7);
+  box-shadow: 0 0 1px 0 rgba(255, 151, 243, .9) inset, 0 0 10px 0 rgba(232, 3, 174, .05), 0 0 35px 0 rgba(232, 3, 174, .25), 0 5px 50px 0 rgba(232, 3, 174, .5), 0 0 40px 0 rgba(232, 3, 174, .5) inset, 0 0 50px 0 rgba(246, 0, 254, .7)
+}
+
 [data-button-theme=pink-2] {
   border: 3px solid #ffabf7;
   -webkit-box-shadow: 0 0 1px 0 rgba(255, 151, 243, .9) inset, 0 0 10px 0 rgba(232, 3, 174, .05), 0 0 35px 0 rgba(232, 3, 174, .25), 0 5px 50px 0 rgba(232, 3, 174, .5), 0 0 40px 0 rgba(232, 3, 174, .5) inset, 0 0 10px 0 rgba(246, 0, 254, .7);
@@ -5961,6 +5967,12 @@ button[data-color=gray]:not(:disabled):hover span {
 
 [data-button-theme=pink-2]:before {
   background-color: #c80a8b
+}
+
+[data-button-theme=pink-2]:hover,
+[data-button-theme=pink-2]:hover:after {
+  -webkit-box-shadow: 0 0 1px 0 rgba(255, 151, 243, .9) inset, 0 0 10px 0 rgba(232, 3, 174, .05), 0 0 35px 0 rgba(232, 3, 174, .25), 0 5px 50px 0 rgba(232, 3, 174, .5), 0 0 40px 0 rgba(232, 3, 174, .5) inset, 0 0 10px 0 rgba(246, 0, 254, .7);
+  box-shadow: 0 0 1px 0 rgba(255, 151, 243, .9) inset, 0 0 10px 0 rgba(232, 3, 174, .05), 0 0 35px 0 rgba(232, 3, 174, .25), 0 5px 50px 0 rgba(232, 3, 174, .5), 0 0 40px 0 rgba(232, 3, 174, .5) inset, 0 0 10px 0 rgba(246, 0, 254, .7)
 }
 
 [data-button-theme=blue] {

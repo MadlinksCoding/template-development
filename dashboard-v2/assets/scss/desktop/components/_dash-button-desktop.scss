@@ -265,6 +265,11 @@ button[data-color="gray"]:not(:disabled):hover span { color: #fff !important; }
    background-color: rgba(224, 0, 120, 1);
 }
 
+[data-button-theme="pink-1"]:hover, 
+[data-button-theme="pink-1"]:hover:after{
+   box-shadow: 0px 0px 1px 0px rgba(255, 151, 243, 0.90) inset, 0px 0px 10px 0px rgba(232, 3, 174, 0.05), 0px 0px 35px 0px rgba(232, 3, 174, 0.25), 0px 5px 50px 0px rgba(232, 3, 174, 0.50), 0px 0px 40px 0px rgba(232, 3, 174, 0.50) inset, 0px 0px 50px 0px rgba(246, 0, 254, 0.70);
+}
+
 [data-button-theme="pink-2"]{
    border: 3px solid #FFABF7;
    box-shadow: 0px 0px 1px 0px rgba(255, 151, 243, 0.90) inset, 0px 0px 10px 0px rgba(232, 3, 174, 0.05), 0px 0px 35px 0px rgba(232, 3, 174, 0.25), 0px 5px 50px 0px rgba(232, 3, 174, 0.50), 0px 0px 40px 0px rgba(232, 3, 174, 0.50) inset, 0px 0px 10px 0px rgba(246, 0, 254, 0.70);
@@ -274,6 +279,11 @@ button[data-color="gray"]:not(:disabled):hover span { color: #fff !important; }
 }
 [data-button-theme="pink-2"]:before{
    background-color: rgba(200, 10, 139, 1);
+}
+
+[data-button-theme="pink-2"]:hover, 
+[data-button-theme="pink-2"]:hover:after{
+   box-shadow: 0px 0px 1px 0px rgba(255, 151, 243, 0.90) inset, 0px 0px 10px 0px rgba(232, 3, 174, 0.05), 0px 0px 35px 0px rgba(232, 3, 174, 0.25), 0px 5px 50px 0px rgba(232, 3, 174, 0.50), 0px 0px 40px 0px rgba(232, 3, 174, 0.50) inset, 0px 0px 10px 0px rgba(246, 0, 254, 0.70);
 }
 
 /* Blue Avaibility buttons */
