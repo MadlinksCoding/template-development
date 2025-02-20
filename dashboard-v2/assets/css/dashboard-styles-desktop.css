@@ -4630,6 +4630,11 @@ html {
   font-weight: 500
 }
 
+[data-id=translate-select].mlc-ns.v1:not(.has-tags) .option.selected .elm_aQVICr {
+  border-bottom: 1px solid var(--Gray-200, #eaecf0);
+  background: var(--Base-White, #fff)
+}
+
 [data-id=translate-select].nice-select.v1.filter:not(.has-tags) .current.active,
 [data-id=translate-select].nice-select.v1.filter:not(.has-tags) .multiple-options.active {
   background: 0 0;
