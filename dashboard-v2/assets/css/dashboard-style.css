@@ -4565,8 +4565,7 @@ html {
 
 [data-id=translate-select].nice-select.v1:not(.auto-width) {
   min-width: 5.75rem;
-  background: 0 0;
-  height: 2.75rem
+  background: 0 0
 }
 
 [data-id=translate-select].nice-select.v1:not(.has-tags) .current {
@@ -4605,10 +4604,10 @@ html {
 }
 
 [data-id=translate-select].mlc-ns.v1:not(.has-tags) [data-option-label] {
-  font-size: 1rem;
+  font-size: .875rem;
   font-weight: 400;
-  line-height: 1.5rem;
-  color: var(--Gray-900, #101828);
+  line-height: 1.25rem;
+  color: var(--Gray-950, #0c111d);
   text-transform: capitalize
 }
 
@@ -4627,7 +4626,8 @@ html {
 }
 
 [data-id=translate-select].mlc-ns.v1:not(.has-tags) .option.selected [data-option-label] {
-  color: var(--Gray-900, #101828)
+  color: var(--Gray-950, #0c111d);
+  font-weight: 500
 }
 
 [data-id=translate-select].nice-select.v1.filter:not(.has-tags) .current.active,
