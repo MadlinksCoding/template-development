@@ -28,6 +28,19 @@
   top: 50%;
   left: 50%;
 }
+@keyframes rotate 
+{
+  from {transform: rotate(105deg);}
+  to {transform: rotate(465deg);}
+}
+.rotating {
+     
+     animation-name: rotate;
+     animation-duration: 1200ms;
+     animation-iteration-count: infinite;
+     animation-timing-function: cubic-bezier(0.4, 0.4, 0.2, 0.4);
+     transform-origin: 300px 300px;
+ }
 /* Purple and Black Theme */
 [data-spinner-theme="purple_black"] {
    

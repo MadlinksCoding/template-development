@@ -6299,6 +6299,43 @@ textarea {
   left: 50%
 }
 
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(105deg);
+    transform: rotate(105deg)
+  }
+
+  to {
+    -webkit-transform: rotate(465deg);
+    transform: rotate(465deg)
+  }
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(105deg);
+    transform: rotate(105deg)
+  }
+
+  to {
+    -webkit-transform: rotate(465deg);
+    transform: rotate(465deg)
+  }
+}
+
+.rotating {
+  -webkit-animation-name: rotate;
+  animation-name: rotate;
+  -webkit-animation-duration: 1.2s;
+  animation-duration: 1.2s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: cubic-bezier(.4, .4, .2, .4);
+  animation-timing-function: cubic-bezier(.4, .4, .2, .4);
+  -webkit-transform-origin: 300px 300px;
+  transform-origin: 300px 300px
+}
+
 .css-scroll[data-tier-card-slider-wrapper] {
   display: block;
   padding: .5rem
