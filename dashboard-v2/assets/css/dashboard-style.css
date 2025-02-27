@@ -6292,11 +6292,8 @@ textarea {
 }
 
 [data-spinner-gradient] svg {
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%
+  width: 1.5rem;
+  height: 1.5rem
 }
 
 @-webkit-keyframes rotate {
@@ -6323,7 +6320,7 @@ textarea {
   }
 }
 
-.rotating {
+[data-spinner-gradient] .rotating {
   -webkit-animation-name: rotate;
   animation-name: rotate;
   -webkit-animation-duration: 1.2s;
@@ -6336,15 +6333,15 @@ textarea {
   transform-origin: 300px 300px
 }
 
-.stop1 {
+[data-spinner-gradient] .stop1 {
   stop-color: #09f469
 }
 
-.stop2 {
+[data-spinner-gradient] .stop2 {
   stop-color: rgba(9, 244, 105, .5)
 }
 
-.stop3 {
+[data-spinner-gradient] .stop3 {
   stop-color: rgba(9, 244, 105, .65)
 }
 
