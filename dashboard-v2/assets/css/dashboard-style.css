@@ -6333,28 +6333,16 @@ textarea {
   transform-origin: 300px 300px
 }
 
-[data-spinner-gradient] .stop1 {
+[data-spinner-gradient] svg .stop1 {
   stop-color: #09f469
 }
 
-[data-spinner-gradient] .stop2 {
+[data-spinner-gradient] svg .stop2 {
   stop-color: rgba(9, 244, 105, .5)
 }
 
-[data-spinner-gradient] .stop3 {
-  stop-color: rgba(9, 244, 105, .65)
-}
-
-[data-spinner-theme=black] .stop1 {
-  stop-color: #000
-}
-
-[data-spinner-theme=black] .stop2 {
-  stop-color: rgba(0, 0, 0, .5)
-}
-
-[data-spinner-theme=black] .stop3 {
-  stop-color: rgba(0, 0, 0, .65)
+[data-spinner-gradient] svg .stop3 {
+  stop-color: rgba(9, 244, 105, .6)
 }
 
 .css-scroll[data-tier-card-slider-wrapper] {
