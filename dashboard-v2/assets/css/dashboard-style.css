@@ -7655,20 +7655,6 @@ textarea {
     height: calc(-48px + 100vh)
   }
 
-  [data-section=inner-container]:before {
-    content: '';
-    position: fixed;
-    background: url(../images/mobile-gradient-main-bg.svg);
-    background-size: cover;
-    width: 100%;
-    background-repeat: no-repeat;
-    height: 100%;
-    left: 0;
-    top: 0;
-    pointer-events: none;
-    z-index: -1
-  }
-
   [data-floating-panel-wrapper] {
     display: none !important
   }
@@ -8725,20 +8711,6 @@ textarea {
 
   [data-dashboard-page=your-orders] {
     height: calc(-48px + 100vh)
-  }
-
-  [data-section=inner-container]:before {
-    content: '';
-    position: fixed;
-    background: url(../images/mobile-gradient-main-bg.svg);
-    background-size: cover;
-    width: 100%;
-    background-repeat: no-repeat;
-    height: 100%;
-    left: 0;
-    top: 0;
-    pointer-events: none;
-    z-index: -1
   }
 
   [data-floating-panel-wrapper] {
