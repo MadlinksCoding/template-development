@@ -311,9 +311,15 @@
 
 /* Orders Received Pages */
 [data-dashboard-page="your-orders"] { height: calc(-48px + 100vh); }
+[data-dashboard-template-main] {
+    background: 0 0 !important;
+}
+[data-section="wrapper"] {
+    background: #EAECF0;
+}
 
 /*[data-bg="gradient-img"]:before*/
-/*[data-section="inner-container"]:before{
+[data-section="inner-container"]:before{
 	content: '';
     position: fixed;
     background: url(../../assets/images/mobile-gradient-main-bg.svg);
@@ -325,4 +331,4 @@
     top: 0;
     pointer-events: none;
     z-index: -1;
-}*/
+}
