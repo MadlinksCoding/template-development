@@ -869,6 +869,12 @@ body.stop-mobile-scrolling {
   z-index: -1
 }
 
+[data-smaller-on-mobile] {
+  width: 2.75rem;
+  overflow: hidden;
+  text-overflow: ellipsis
+}
+
 [data-floating-panel-wrapper] {
   display: none !important
 }

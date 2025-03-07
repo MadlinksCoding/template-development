@@ -348,3 +348,9 @@ margin-left: -40px;
     pointer-events: none;
     z-index: -1;
 }
+
+[data-smaller-on-mobile] {
+  width: 2.75rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
