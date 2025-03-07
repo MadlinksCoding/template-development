@@ -601,6 +601,10 @@ body.stop-mobile-scrolling {
   margin-top: 6.25rem
 }
 
+.m-right--40-responsive-mobile-portrait {
+  margin-right: -40px
+}
+
 .display--none-responsive-mobile-portrait {
   display: none
 }
@@ -704,6 +708,12 @@ body.stop-mobile-scrolling {
   grid-template-columns: repeat(2, minmax(0, 1fr))
 }
 
+.order--3-responsive-mobile-portrait {
+  -webkit-box-ordinal-group: 4;
+  -ms-flex-order: 3;
+  order: 3
+}
+
 .fixed--responsive-mobile-portrait {
   position: fixed
 }
@@ -801,6 +811,10 @@ body.stop-mobile-scrolling {
 .sh--none-responsive-mobile-portrait {
   -webkit-box-shadow: none;
   box-shadow: none
+}
+
+.text--align-right-mobile-portrait {
+  text-align: right
 }
 
 .overflow--y--auto-responsive-mobile-portrait {
