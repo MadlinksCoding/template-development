@@ -226,6 +226,16 @@ html {
   width: 120px
 }
 
+.w--vw--calc--90-responsive-tablet {
+  width: calc(100vw - 90px)
+}
+
+.w--fit--content-responsive-tablet {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content
+}
+
 .h--screen-responsive-tablet {
   height: 100vh
 }

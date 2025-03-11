@@ -1426,6 +1426,10 @@ html {
   background: var(--color-sandstone, #79716b)
 }
 
+.hover--col--white--100:hover {
+  color: var(--Base-White, #fff)
+}
+
 .group:hover .hover--col-black {
   color: #000
 }
@@ -6641,6 +6645,16 @@ textarea {
 
   .w--120-responsive-tablet {
     width: 120px
+  }
+
+  .w--vw--calc--90-responsive-tablet {
+    width: calc(100vw - 90px)
+  }
+
+  .w--fit--content-responsive-tablet {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content
   }
 
   .h--screen-responsive-tablet {
