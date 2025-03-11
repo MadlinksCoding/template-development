@@ -1007,6 +1007,21 @@ body.stop-mobile-scrolling {
   transform: translateX(0)
 }
 
+.upload-media-button-container {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  margin-bottom: -50px
+}
+
+.upload-media-button {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1001
+}
+
 [data-show-hide-container][data-show-on-desktop=true],
 [data-show-hide-container][data-show-on-desktop=true][data-show-on-tablet=true] {
   display: none
