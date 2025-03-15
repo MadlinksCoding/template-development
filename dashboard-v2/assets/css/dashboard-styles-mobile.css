@@ -804,6 +804,14 @@ body.stop-mobile-scrolling {
   z-index: -1
 }
 
+[data-stat-table-rows-container] [data-stat-table-row]:nth-child(n+6) {
+  display: none !important
+}
+
+#loadMoreWrapper {
+  display: block
+}
+
 [data-floating-panel-wrapper] {
   display: none !important
 }
@@ -946,7 +954,7 @@ body.stop-mobile-scrolling {
   position: sticky;
   bottom: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 1;
   margin-bottom: -50px
 }
 
@@ -954,7 +962,7 @@ body.stop-mobile-scrolling {
   position: fixed;
   bottom: 0;
   left: 0;
-  z-index: 1001
+  z-index: 1
 }
 
 [data-show-hide-container][data-show-on-desktop=true],

@@ -355,3 +355,11 @@ margin-left: -40px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+/* Analytics page */
+[data-stat-table-rows-container] [data-stat-table-row]:nth-child(n+6) {
+  display: none !important;
+}
+#loadMoreWrapper {
+    display: block;
+}

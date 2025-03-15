@@ -123,3 +123,11 @@
   overflow-y: auto;
   max-height: 100vh; /* Ensure it doesn't exceed the viewport height */
 }
+
+/* Responsive depends on screen height */
+@media (min-height: 863px) and (max-height: 990px) {
+[data-floating-panel-wrapper][data-is-floating=true] [data-floating-panel][data-is-active=true] {
+      -webkit-transform: scale(1) translateY(4.7rem);
+      transform: scale(1) translateY(4.7rem);
+   }
+}
