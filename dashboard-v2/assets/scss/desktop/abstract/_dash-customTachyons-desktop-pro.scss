@@ -184,6 +184,7 @@
 .filter--col--greytip { filter: brightness(0) saturate(100%) invert(75%) sepia(5%) saturate(464%) hue-rotate(183deg) brightness(95%) contrast(91%); } /* #AEB3BE */
 .filter--col--brilliant-rose { filter: brightness(0) saturate(100%) invert(50%) sepia(57%) saturate(2062%) hue-rotate(302deg) brightness(101%) contrast(97%); } /* #FB5BA2 */
 .filter--col--led-pink { filter: brightness(0) saturate(100%) invert(21%) sepia(98%) saturate(5598%) hue-rotate(328deg) brightness(98%) contrast(117%); } /* #FF0066 */
+.filter--col--cyan-ish { filter: brightness(0) saturate(100%) invert(22%) sepia(9%) saturate(1863%) hue-rotate(179deg) brightness(91%) contrast(87%); }
 
 /* Filter Blur */
 .filter--blur--2 { filter: blur(2px); -webkit-filter: blur(2px); -moz-filter: blur(2px); }
@@ -601,6 +602,20 @@
 .br--top-bottom-right {border-bottom-right-radius: 0 !important; border-top-right-radius: 0 !important;}
 .br--top-right {border-top-right-radius: 0 !important;}
 .br--top-left {border-top-left-radius: 0 !important;}
+
+/* Unique border-radius for each image */
+.br--shape--1 {
+  border-radius: 25% 75% 50% 51% / 45% 65% 36% 55% ; 
+}
+.br--shape--2 {
+  border-radius: 59% 41% 42% 58% / 59% 54% 46% 41% ; 
+}
+.br--shape--3 {
+  border-radius: 25% 62% 38% 60% / 21% 39% 61% 75% ;
+}
+.br--shape--4 {
+  border-radius: 37% 63% 69% 31% / 62% 54% 46% 33%;
+}
 
 /* Transform */
 .transform--3d { transform: translate3d(0, 0, 0); -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); }

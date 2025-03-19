@@ -411,7 +411,7 @@ body.stop-mobile-scrolling {
 }
 
 .w--150-responsive-mobile-portrait {
-  width: 150px
+  width: 9.375rem
 }
 
 .max--w--100-responsive-mobile-portrait {
@@ -880,11 +880,19 @@ body.stop-mobile-scrolling {
 }
 
 [data-stat-table-rows-container] [data-stat-table-row]:nth-child(n+6) {
-  display: none !important
+  display: none
 }
 
-#loadMoreWrapper {
-  display: block
+#loadMoreTags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex
+}
+
+#loadMoreCountries {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex
 }
 
 [data-floating-panel-wrapper] {

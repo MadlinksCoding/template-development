@@ -1331,6 +1331,11 @@ html {
   filter: brightness(0) saturate(100%) invert(21%) sepia(98%) saturate(5598%) hue-rotate(328deg) brightness(98%) contrast(117%)
 }
 
+.filter--col--cyan-ish {
+  -webkit-filter: brightness(0) saturate(100%) invert(22%) sepia(9%) saturate(1863%) hue-rotate(179deg) brightness(91%) contrast(87%);
+  filter: brightness(0) saturate(100%) invert(22%) sepia(9%) saturate(1863%) hue-rotate(179deg) brightness(91%) contrast(87%)
+}
+
 .filter--blur--2 {
   filter: blur(2px);
   -webkit-filter: blur(2px);
@@ -2428,6 +2433,22 @@ html {
   border-top-left-radius: 0 !important
 }
 
+.br--shape--1 {
+  border-radius: 25% 75% 50% 51%/45% 65% 36% 55%
+}
+
+.br--shape--2 {
+  border-radius: 59% 41% 42% 58%/59% 54% 46% 41%
+}
+
+.br--shape--3 {
+  border-radius: 25% 62% 38% 60%/21% 39% 61% 75%
+}
+
+.br--shape--4 {
+  border-radius: 37% 63% 69% 31%/62% 54% 46% 33%
+}
+
 .transform--3d {
   transform: translate3d(0, 0, 0);
   -webkit-transform: translate3d(0, 0, 0);
@@ -2702,6 +2723,14 @@ html {
 
 [data-popular-tags-bg] {
   background-image: url(../images/popular-tags-bg.svg)
+}
+
+#loadMoreTags {
+  display: none
+}
+
+#loadMoreCountries {
+  display: none
 }
 
 [data-floating-panel-trigger] [data-floating-panel-trigger-btn]:hover,

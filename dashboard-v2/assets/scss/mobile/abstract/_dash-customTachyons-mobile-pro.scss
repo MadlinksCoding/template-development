@@ -100,6 +100,7 @@ width: -webkit-fill-available;
 .w--360-responsive-mobile { width: 22.5rem; }
 .w--500-responsive-mobile { width: 31.25rem; }
 .w--75--responsive-mobile { width: 4.6875rem; }
+.w--150-respinsive-mobile { width: 9.375rem; }
 
 
 /* Min Width */
@@ -334,9 +335,12 @@ margin-right: -40px;
 
 /* Analytics page */
 [data-stat-table-rows-container] [data-stat-table-row]:nth-child(n+6) {
-  display: none !important;
+  display: none;
 }
-#loadMoreWrapper {
-    display: block;
+#loadMoreTags {
+  display: flex;
+}
+#loadMoreCountries{
+  display: flex;
 }
 

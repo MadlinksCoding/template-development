@@ -383,6 +383,10 @@ body.stop-mobile-scrolling {
   width: 4.6875rem
 }
 
+.w--150-respinsive-mobile {
+  width: 9.375rem
+}
+
 .min-w--20-responsive-mobile {
   min-width: 1.25rem
 }
@@ -805,11 +809,19 @@ body.stop-mobile-scrolling {
 }
 
 [data-stat-table-rows-container] [data-stat-table-row]:nth-child(n+6) {
-  display: none !important
+  display: none
 }
 
-#loadMoreWrapper {
-  display: block
+#loadMoreTags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex
+}
+
+#loadMoreCountries {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex
 }
 
 [data-floating-panel-wrapper] {
