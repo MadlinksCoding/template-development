@@ -2,6 +2,7 @@
 [data-container-bg-fixed]:-moz-read-only { filter: blur(0px); -webkit-filter: blur(0px); -moz-filter: blur(0px); background-image: url(assets/img/gradient-bg-firefox.svg) !important; }
 
 /* Text line Clamp */
+[data-line-clamp-1] { overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 1; display: -webkit-box; }
 [data-line-clamp] { overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 2; display: -webkit-box; }
 [data-line-clamp-3] { overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 3; display: -webkit-box; }
 

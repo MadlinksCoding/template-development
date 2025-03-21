@@ -2524,6 +2524,13 @@ html {
   background-image: url(assets/img/gradient-bg-firefox.svg) !important
 }
 
+[data-line-clamp-1] {
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  display: -webkit-box
+}
+
 [data-line-clamp] {
   overflow: hidden;
   -webkit-box-orient: vertical;
@@ -5743,7 +5750,7 @@ html {
 }
 
 [data-form-input-type=radio][data-form-input-layout="vertical top"] input[type=radio]:checked+label:after {
-  top: .7rem;
+  top: .563rem;
   -webkit-transform: translateY(0);
   transform: translateY(0)
 }
