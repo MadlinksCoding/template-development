@@ -186,6 +186,8 @@
 .filter--col--brilliant-rose { filter: brightness(0) saturate(100%) invert(50%) sepia(57%) saturate(2062%) hue-rotate(302deg) brightness(101%) contrast(97%); } /* #FB5BA2 */
 .filter--col--led-pink { filter: brightness(0) saturate(100%) invert(21%) sepia(98%) saturate(5598%) hue-rotate(328deg) brightness(98%) contrast(117%); } /* #FF0066 */
 .filter--col--cyan-ish { filter: brightness(0) saturate(100%) invert(22%) sepia(9%) saturate(1863%) hue-rotate(179deg) brightness(91%) contrast(87%); }
+.filter--col--white { filter: brightness(0) invert(1); } /* #FFFFFF */
+.filter--col--black { filter: brightness(0)} /* #000000 */
 
 /* Filter Blur */
 .filter--blur--2 { filter: blur(2px); -webkit-filter: blur(2px); -moz-filter: blur(2px); }
@@ -208,13 +210,21 @@
 
 
 /* Hover Background Colors */
+.hover--bg--col--white--100[data-button-loader="1"],
 .hover--bg--col--white--100:hover { background: var(--Base-White, #FFF);; }
+.hover--bg--col--black--10[data-button-loader="1"],
 .hover--bg--col--black--10:hover { background: rgba(0, 0, 0, 0.10); }
+.hover--bg--col--black[data-button-loader="1"],
 .hover--bg--col--black:hover { background: rgba(0, 0, 0, 1); }
+.hover--bg--col-brand-green[data-button-loader="1"],
 .hover--bg--col-brand-green:hover { background: var(--color-brand-green, #07F468); }
+.hover--bg--col-ebony[data-button-loader="1"],
 .hover--bg--col-ebony:hover { background: var(--color-ebony, #101828); }
+.hover--bg--col-burning-orange[data-button-loader="1"],
 .hover--bg--col-burning-orange:hover { background: var(--color-burning-orange, #FF692E); }
+.hover--bg--col-light-blue[data-button-loader="1"],
 .hover--bg--col-light-blue:hover { background: rgba(41, 112, 255, 0.20); }
+.hover--bg--col--zircon[data-button-loader="1"],
 .hover--bg--col--zircon:hover { background: var(--color-zircon, #EFF4FF); }
 
 .hover--parent--child--col--black-bg:hover .hov--bg--col--black { background: rgba(0, 0, 0, 1); }
