@@ -21,10 +21,10 @@
 }
 
 /* Button Spinner Different color theme */
-[data-spinner-gradient] svg {
-  width: 1.5rem;
-  height: 1.5rem;
-}
+// [data-spinner-gradient] svg {
+//   width: 1.5rem;
+//   height: 1.5rem;
+// }
 @keyframes rotate 
 {
   from {transform: rotate(105deg);}
@@ -37,14 +37,14 @@
      animation-timing-function: cubic-bezier(0.4, 0.4, 0.2, 0.4);
      transform-origin: 300px 300px;
  }
-[data-spinner-gradient] svg .stop1 {
+[data-spinner-gradient] .stop1 {
     stop-color: rgba(9, 244, 105, 1);
 }
 
-[data-spinner-gradient] svg .stop2 {
+[data-spinner-gradient] .stop2 {
     stop-color: rgba(9, 244, 105, 0.5);
 }
-[data-spinner-gradient] svg .stop3 {
+[data-spinner-gradient] .stop3 {
     stop-color: rgba(9, 244, 105, 0.60);
 }
 
