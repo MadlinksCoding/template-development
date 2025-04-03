@@ -260,7 +260,6 @@ body.stop-mobile-scrolling {
 }
 
 .bg--blur--25--responsive-mobile-portrait {
-  -webkit-backdrop-filter: blur(25px);
   backdrop-filter: blur(25px)
 }
 
@@ -601,8 +600,20 @@ body.stop-mobile-scrolling {
   padding-right: 2rem
 }
 
+.pad--bottom--0-responsive-mobile-portrait {
+  padding-bottom: 0
+}
+
 .pad--bottom--8-responsive-mobile-portrait {
   padding-bottom: .5rem
+}
+
+.pad--bottom--16-responsive-mobile-portrait {
+  padding-bottom: 1rem
+}
+
+.pad--bottom--24-responsive-mobile-portrait {
+  padding-bottom: 1.5rem
 }
 
 .pad--bottom--32-responsive-mobile-portrait {
@@ -798,6 +809,22 @@ body.stop-mobile-scrolling {
   right: .5rem
 }
 
+.right--12-responsive-mobile-portrait {
+  right: .75rem
+}
+
+.right--24-responsive-mobile-portrait {
+  right: 1.5rem
+}
+
+.right--32-responsive-mobile-portrait {
+  right: 2rem
+}
+
+.right--40-responsive-mobile-portrait {
+  right: 2.5rem
+}
+
 .bottom--0--responsive-mobile-portrait {
   bottom: 0
 }
@@ -827,12 +854,10 @@ body.stop-mobile-scrolling {
 }
 
 .bg--blur--5-responsive--mobile-portrait {
-  -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px)
 }
 
 .bg--blur--10-responsive-mobile-portrait {
-  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px)
 }
 
@@ -1091,7 +1116,6 @@ body.stop-mobile-scrolling {
   justify-content: flex-end;
   max-height: auto;
   background: rgba(255, 255, 255, .6);
-  -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px)
 }
 
@@ -1103,7 +1127,6 @@ body.stop-mobile-scrolling {
   background: rgba(255, 255, 255, .9);
   -webkit-box-shadow: 0 0 12px 0 rgba(0, 0, 0, .2);
   box-shadow: 0 0 12px 0 rgba(0, 0, 0, .2);
-  -webkit-backdrop-filter: blur(50px);
   backdrop-filter: blur(50px)
 }
 
@@ -1114,7 +1137,6 @@ body.stop-mobile-scrolling {
   position: fixed;
   z-index: 99999;
   background: rgba(255, 255, 255, .6);
-  -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px)
 }
 
@@ -1124,7 +1146,6 @@ body.stop-mobile-scrolling {
   height: 100vh;
   position: absolute;
   background: rgba(255, 255, 255, .6);
-  -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
   top: -9%;
   bottom: auto;
@@ -1162,7 +1183,6 @@ body.stop-mobile-scrolling {
 [data-id=courier-select-mobile].nice-select-dropdown.v1 .nice-select-list {
   border-radius: 2px;
   background: #ececec;
-  -webkit-backdrop-filter: blur(25px);
   backdrop-filter: blur(25px)
 }
 

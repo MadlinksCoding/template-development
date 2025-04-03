@@ -2019,6 +2019,10 @@ html {
   padding-left: 4.375rem
 }
 
+.pad--right--0 {
+  padding-right: 0
+}
+
 .pad--right--12 {
   padding-right: .75rem
 }
@@ -2250,22 +2254,18 @@ html {
 }
 
 .bg--blur--3 {
-  -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px)
 }
 
 .bg--blur--15 {
-  -webkit-backdrop-filter: blur(15px);
   backdrop-filter: blur(15px)
 }
 
 .bg--blur--30 {
-  -webkit-backdrop-filter: blur(30px);
   backdrop-filter: blur(30px)
 }
 
 .bg--blur--125 {
-  -webkit-backdrop-filter: blur(125px);
   backdrop-filter: blur(125px)
 }
 
@@ -3757,7 +3757,6 @@ html {
   line-height: 1.125rem;
   padding: .5rem .75rem;
   border-radius: 8px;
-  -webkit-backdrop-filter: blur(25px);
   backdrop-filter: blur(25px);
   opacity: 0;
   visibility: hidden;
@@ -4550,7 +4549,6 @@ html {
 [data-id=order-type-select].nice-select-dropdown.v1 .nice-select-list {
   border-radius: 2px;
   background: rgba(255, 255, 255, .5);
-  -webkit-backdrop-filter: blur(25px);
   backdrop-filter: blur(25px)
 }
 
@@ -4646,7 +4644,6 @@ html {
 [data-id=translate-select].nice-select-dropdown.v1 .nice-select-list {
   border-radius: 2px;
   background: #ececec;
-  -webkit-backdrop-filter: blur(25px);
   backdrop-filter: blur(25px)
 }
 
@@ -4755,7 +4752,6 @@ html {
 [data-id=courier-select].nice-select-dropdown.v1 .nice-select-list {
   border-radius: 2px;
   background: #ececec;
-  -webkit-backdrop-filter: blur(25px);
   backdrop-filter: blur(25px)
 }
 
@@ -4859,7 +4855,6 @@ html {
 [data-id=edit-profile].nice-select-dropdown.v1 .nice-select-list {
   border-radius: 2px;
   background: #ececec;
-  -webkit-backdrop-filter: blur(25px);
   backdrop-filter: blur(25px)
 }
 
@@ -4961,7 +4956,6 @@ html {
 [data-id=weight-type-select].nice-select-dropdown.v1 .nice-select-list {
   border-radius: 2px;
   background: #ececec;
-  -webkit-backdrop-filter: blur(25px);
   backdrop-filter: blur(25px)
 }
 
@@ -5096,7 +5090,6 @@ html {
   background: rgba(255, 255, 255, .9);
   -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .2);
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .2);
-  -webkit-backdrop-filter: blur(50px);
   backdrop-filter: blur(50px);
   overflow: hidden
 }
@@ -5228,7 +5221,6 @@ html {
   background: rgba(255, 255, 255, .9);
   -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .2);
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .2);
-  -webkit-backdrop-filter: blur(50px);
   backdrop-filter: blur(50px);
   border: 0;
   border-radius: 0
@@ -7020,12 +7012,10 @@ textarea {
   }
 
   .bg--blur--5-responsive-tablet {
-    -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px)
   }
 
   .bg--blur--25-responsive-tablet {
-    -webkit-backdrop-filter: blur(25px);
     backdrop-filter: blur(25px)
   }
 
@@ -7310,7 +7300,6 @@ textarea {
   }
 
   .bg--blur--25--responsive-mobile {
-    -webkit-backdrop-filter: blur(25px);
     backdrop-filter: blur(25px)
   }
 
@@ -7620,6 +7609,10 @@ textarea {
     padding-bottom: 0
   }
 
+  .pad--bottom--16-responsive-mobile {
+    padding-bottom: 1rem
+  }
+
   .pad--bottom--24-responsive-mobile {
     padding-bottom: 1.5rem
   }
@@ -7806,6 +7799,22 @@ textarea {
     right: .5rem
   }
 
+  .right--12-responsive-mobile {
+    right: .75rem
+  }
+
+  .right--24-responsive-mobile {
+    right: 1.5rem
+  }
+
+  .right--32-responsive-mobile {
+    right: 2rem
+  }
+
+  .right--40-responsive-mobile {
+    right: 2.5rem
+  }
+
   .bottom--0--responsive-mobile {
     bottom: 0
   }
@@ -7835,17 +7844,14 @@ textarea {
   }
 
   .bg--blur--5-responsive--mobile {
-    -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px)
   }
 
   .bg--blur--10-responsive-mobile {
-    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px)
   }
 
   .bg--blur--25-responsive-mobile {
-    -webkit-backdrop-filter: blur(25px);
     backdrop-filter: blur(25px)
   }
 
@@ -8099,7 +8105,6 @@ textarea {
     justify-content: flex-end;
     max-height: auto;
     background: rgba(255, 255, 255, .6);
-    -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px)
   }
 
@@ -8111,7 +8116,6 @@ textarea {
     background: rgba(255, 255, 255, .9);
     -webkit-box-shadow: 0 0 12px 0 rgba(0, 0, 0, .2);
     box-shadow: 0 0 12px 0 rgba(0, 0, 0, .2);
-    -webkit-backdrop-filter: blur(50px);
     backdrop-filter: blur(50px)
   }
 
@@ -8122,7 +8126,6 @@ textarea {
     position: fixed;
     z-index: 99999;
     background: rgba(255, 255, 255, .6);
-    -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px)
   }
 
@@ -8132,7 +8135,6 @@ textarea {
     height: 100vh;
     position: absolute;
     background: rgba(255, 255, 255, .6);
-    -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     top: -9%;
     bottom: auto;
@@ -8165,7 +8167,6 @@ textarea {
   [data-id=courier-select-mobile].nice-select-dropdown.v1 .nice-select-list {
     border-radius: 2px;
     background: #ececec;
-    -webkit-backdrop-filter: blur(25px);
     backdrop-filter: blur(25px)
   }
 
@@ -8526,7 +8527,6 @@ textarea {
   }
 
   .bg--blur--25--responsive-mobile-portrait {
-    -webkit-backdrop-filter: blur(25px);
     backdrop-filter: blur(25px)
   }
 
@@ -8867,8 +8867,20 @@ textarea {
     padding-right: 2rem
   }
 
+  .pad--bottom--0-responsive-mobile-portrait {
+    padding-bottom: 0
+  }
+
   .pad--bottom--8-responsive-mobile-portrait {
     padding-bottom: .5rem
+  }
+
+  .pad--bottom--16-responsive-mobile-portrait {
+    padding-bottom: 1rem
+  }
+
+  .pad--bottom--24-responsive-mobile-portrait {
+    padding-bottom: 1.5rem
   }
 
   .pad--bottom--32-responsive-mobile-portrait {
@@ -9064,6 +9076,22 @@ textarea {
     right: .5rem
   }
 
+  .right--12-responsive-mobile-portrait {
+    right: .75rem
+  }
+
+  .right--24-responsive-mobile-portrait {
+    right: 1.5rem
+  }
+
+  .right--32-responsive-mobile-portrait {
+    right: 2rem
+  }
+
+  .right--40-responsive-mobile-portrait {
+    right: 2.5rem
+  }
+
   .bottom--0--responsive-mobile-portrait {
     bottom: 0
   }
@@ -9093,12 +9121,10 @@ textarea {
   }
 
   .bg--blur--5-responsive--mobile-portrait {
-    -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px)
   }
 
   .bg--blur--10-responsive-mobile-portrait {
-    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px)
   }
 
@@ -9357,7 +9383,6 @@ textarea {
     justify-content: flex-end;
     max-height: auto;
     background: rgba(255, 255, 255, .6);
-    -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px)
   }
 
@@ -9369,7 +9394,6 @@ textarea {
     background: rgba(255, 255, 255, .9);
     -webkit-box-shadow: 0 0 12px 0 rgba(0, 0, 0, .2);
     box-shadow: 0 0 12px 0 rgba(0, 0, 0, .2);
-    -webkit-backdrop-filter: blur(50px);
     backdrop-filter: blur(50px)
   }
 
@@ -9380,7 +9404,6 @@ textarea {
     position: fixed;
     z-index: 99999;
     background: rgba(255, 255, 255, .6);
-    -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px)
   }
 
@@ -9390,7 +9413,6 @@ textarea {
     height: 100vh;
     position: absolute;
     background: rgba(255, 255, 255, .6);
-    -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     top: -9%;
     bottom: auto;
@@ -9428,7 +9450,6 @@ textarea {
   [data-id=courier-select-mobile].nice-select-dropdown.v1 .nice-select-list {
     border-radius: 2px;
     background: #ececec;
-    -webkit-backdrop-filter: blur(25px);
     backdrop-filter: blur(25px)
   }
 
