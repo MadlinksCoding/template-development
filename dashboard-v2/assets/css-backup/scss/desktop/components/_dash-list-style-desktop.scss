@@ -1,0 +1,6 @@
+/* List style */
+/* Default */
+ul[data-theme="default"] li { position: relative; padding-left: 1rem; }
+ul[data-theme="default"] li:before{ content:""; width: 0.25rem; height: 0.25rem; border-radius: 50%; background: #fff; position: absolute; left: 0.188rem; top: 0.438rem; }
+ul[data-theme="default black"] li { position: relative; padding-left: 1rem; }
+ul[data-theme="default black"] li:before{ content:""; width: 0.25rem; height: 0.25rem; border-radius: 50%; background: #101828; position: absolute; left: 0.188rem; top: 0.438rem; }

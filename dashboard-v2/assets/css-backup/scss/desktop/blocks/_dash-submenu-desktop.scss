@@ -1,0 +1,74 @@
+/**
+ * Template name: <Dashboard Submenu>
+ */
+
+/* Dashboard Submenu : Custom Styles */
+[data-submenu-container][hidden] { display: flex; opacity: 0; visibility: hidden; pointer-events: none; transform: translateX(-36rem); }
+[data-submenu-container] { opacity: 1; visibility: visible; pointer-events: all; transform: translateX(0rem); }
+[data-submenu] [data-submenu-item] { position: relative; padding-right: 1.5rem; }
+[data-submenu] [data-submenu-item] span { position: relative; z-index: 2; }
+[data-submenu] [data-submenu-item] [data-arrow] { transform: translateX(-1rem); opacity: 0; pointer-events: none; }
+
+[data-submenu] [data-submenu-item]:before {
+  content: '';
+  display: block;
+  width: calc(100% - 1.25rem);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: var(--color-black, #000000);
+  box-shadow: 4px 4px 0px 0px var(--color-spring-green);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0s ease-in-out;
+}
+
+[data-submenu] [data-submenu-item]:after {
+  content: '';
+  display: block;
+  width: 1rem;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: calc(100% - 1.25rem);
+  z-index: 1;
+  background-color: var(--color-black, #000000);
+  box-shadow: 4px 4px 0px 0px var(--color-spring-green);
+  transform: skew(-20deg, 0) translateX(-0.438rem);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0s ease-in-out;
+}
+
+/* Dashboard Submenu (Hover) : Custom Styles */
+[data-submenu] [data-submenu-item]:hover { /*background-color: var(--color-black, #000000);*/ background: none; }
+[data-submenu] [data-submenu-item]:hover span { color: var(--color-spring-green) }
+[data-submenu] [data-submenu-item]:hover [data-arrow] { filter: brightness(0) saturate(100%) invert(75%) sepia(23%) saturate(7280%) hue-rotate(93deg) brightness(109%) contrast(95%); } /* #07F468 */
+[data-submenu] [data-submenu-item][data-has-submenu="true"]:hover [data-arrow] { transform: translateX(0rem); opacity: 1; pointer-events: none; }
+
+
+[data-submenu] [data-submenu-item]:hover:before,
+[data-submenu] .is-current-page[data-sidebar-menu-item] > [data-submenu-item]:after,
+[data-submenu] [data-submenu-item]:hover:after {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Dashboard Sidebar Sub Menu (Active) : Custom Styles */
+[data-submenu] .is-current-page[data-sidebar-menu-item] > [data-submenu-item] { /*background-color: var(--color-black, #000000);*/ background: none; }
+[data-submenu] .is-current-page[data-sidebar-menu-item] > [data-submenu-item] span { color: var(--color-spring-green) }
+[data-submenu] .is-current-page[data-sidebar-menu-item] > [data-submenu-item] [data-arrow] { filter: brightness(0) saturate(100%) invert(75%) sepia(23%) saturate(7280%) hue-rotate(93deg) brightness(109%) contrast(95%); } /* #07F468 */
+[data-submenu] .is-current-page[data-sidebar-menu-item] > [data-submenu-item][data-has-submenu="true"] [data-arrow] { transform: translateX(0rem); opacity: 1; pointer-events: none; }
+
+[data-submenu] .is-current-page[data-sidebar-menu-item] > [data-submenu-item]::before,
+[data-submenu] .is-current-page[data-sidebar-menu-item] > [data-submenu-item]::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+[data-submenu] .is-current-page[data-sidebar-menu-item] > [data-submenu-item] { 
+  //background: rgba(251, 91, 162, .1); 
+  //filter: brightness(0) saturate(100%) invert(29%) sepia(98%) saturate(5809%) hue-rotate(325deg) brightness(92%) contrast(121%); 
+}

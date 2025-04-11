@@ -1,0 +1,88 @@
+/**
+ * Template name: <Dashboard Status Dropdown (Global)>
+ */
+
+/* Dashboard Status : Custom Styles */
+[data-status-dropdown-main] {
+  overflow: hidden;
+  border-radius: 0.9375rem; /* 15px */
+}
+
+[data-status-dropdown-main] [data-current-status] {
+  outline: none;
+  // outline: 1px solid var(--color-athens-gray2);
+  // outline-offset: -1px;
+  box-shadow: 0px 0px 0px 1px var(--color-athens-gray2);
+  background-color: var(--color-athens-gray2);
+}
+
+[data-status-dropdown-main] [data-current-status] [data-current-status-text] {
+  color: var(--color-pale-sky, #667085);
+}
+
+/* Dashboard Status (Active : ONLINE) : Custom Styles */
+[data-status-dropdown-main] [data-current-status][data-current-status="online"] {
+  //outline: 1px solid var(--color-spring-green);
+  box-shadow: 0px 0px 0px 1px var(--color-spring-green);
+  background-color: var(--color-spring-green);
+}
+
+[data-status-dropdown-main] [data-current-status][data-current-status="online"] [data-current-status-text] {
+  color: var(--color-black, #000000);
+}
+
+/* Dashboard Status (Active : AWAY) : Custom Styles */
+[data-status-dropdown-main] [data-current-status][data-current-status="away"] {
+  //outline: 1px solid var(--color-lightning-yellow, #FAC515);
+  box-shadow: 0px 0px 0px 1px var(--color-lightning-yellow, #FAC515);
+  background-color: var(--color-lightning-yellow, #FAC515);
+}
+
+[data-status-dropdown-main] [data-current-status][data-current-status="away"] [data-current-status-text] {
+  color: var(--color-black, #000000);
+}
+
+/* Dashboard Status (Active : INVISIBLE) : Custom Styles */
+[data-status-dropdown-main] [data-current-status][data-current-status="invisible"] {
+  // outline: 1px solid var(--color-athens-gray2);
+  box-shadow: 0px 0px 0px 1px var(--color-athens-gray2);
+  background-color: var(--color-white, #FFFFFF);
+}
+
+[data-status-dropdown-main] [data-current-status][data-current-status="invisible"] [data-current-status-text] {
+  color: var(--color-pale-sky, #667085);
+}
+
+/* Dashboard Status Dropdown : Custom Styles */
+[data-status-dropdown-main] [data-status-dropdown] {
+  width: 10.875rem; /* 174px */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-0.5rem);
+  pointer-events: none;
+}
+
+[data-status-dropdown-main][data-dropdown-type="small"] [data-status-dropdown] {
+  width: 7.5rem; /* 120px */
+}
+
+[data-status-dropdown-main][data-dropdown-type="small"] [data-status-dropdown] [data-status-desc] {
+  display: none;
+}
+
+/* Dashboard Status Dropdown (Open) : Custom Styles */
+[data-status-dropdown-main]:hover,
+[data-status-dropdown-main][data-is-open="true"] {
+  overflow: visible;
+}
+
+[data-status-dropdown-main][data-is-open="true"] [data-status-dropdown-arrow] {
+  transform: rotate(-180deg);
+}
+
+[data-status-dropdown-main][data-is-open="true"] [data-status-dropdown] {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0rem);
+  pointer-events: all;
+}

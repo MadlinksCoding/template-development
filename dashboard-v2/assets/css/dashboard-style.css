@@ -295,19 +295,23 @@ html {
   filter: brightness(0) saturate(100%) invert(37%) sepia(57%) saturate(6169%) hue-rotate(214deg) brightness(91%) contrast(106%)
 }
 
-.hover--bg--col--white--10:hover {
+.hover--bg--col--white--10:hover,
+.hover--bg--col--white--10[data-button-loader="1"] {
   background: rgba(255, 255, 255, .1)
 }
 
-.hover--bg--col--brilliant-rose--10:hover {
+.hover--bg--col--brilliant-rose--10:hover,
+.hover--bg--col--brilliant-rose--10[data-button-loader="1"] {
   background: rgba(251, 91, 162, .1)
 }
 
-.hover--bg--col--ebony--10:hover {
+.hover--bg--col--ebony--10:hover,
+.hover--bg--col--ebony--10[data-button-loader="1"] {
   background: rgba(12, 17, 29, .1)
 }
 
-.hover--bg--col--light-grey-10:hover {
+.hover--bg--col--light-grey-10:hover,
+.hover--bg--col--light-grey-10[data-button-loader="1"] {
   background: rgba(12, 17, 29, .1)
 }
 
@@ -1340,6 +1344,16 @@ html {
   filter: brightness(0) saturate(100%) invert(22%) sepia(9%) saturate(1863%) hue-rotate(179deg) brightness(91%) contrast(87%)
 }
 
+.filter--col--white {
+  -webkit-filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1)
+}
+
+.filter--col--black {
+  -webkit-filter: brightness(0);
+  filter: brightness(0)
+}
+
 .filter--blur--2 {
   filter: blur(2px);
   -webkit-filter: blur(2px);
@@ -1395,35 +1409,43 @@ html {
   filter: brightness(0) saturate(100%) invert(38%) sepia(57%) saturate(4201%) hue-rotate(211deg) brightness(99%) contrast(106%)
 }
 
-.hover--bg--col--white--100:hover {
+.hover--bg--col--white--100:hover,
+.hover--bg--col--white--100[data-button-loader="1"] {
   background: var(--Base-White, #fff)
 }
 
-.hover--bg--col--black--10:hover {
+.hover--bg--col--black--10:hover,
+.hover--bg--col--black--10[data-button-loader="1"] {
   background: rgba(0, 0, 0, .1)
 }
 
-.hover--bg--col--black:hover {
+.hover--bg--col--black:hover,
+.hover--bg--col--black[data-button-loader="1"] {
   background: #000
 }
 
-.hover--bg--col-brand-green:hover {
+.hover--bg--col-brand-green:hover,
+.hover--bg--col-brand-green[data-button-loader="1"] {
   background: var(--color-brand-green, #07f468)
 }
 
-.hover--bg--col-ebony:hover {
+.hover--bg--col-ebony:hover,
+.hover--bg--col-ebony[data-button-loader="1"] {
   background: var(--color-ebony, #101828)
 }
 
-.hover--bg--col-burning-orange:hover {
+.hover--bg--col-burning-orange:hover,
+.hover--bg--col-burning-orange[data-button-loader="1"] {
   background: var(--color-burning-orange, #ff692e)
 }
 
-.hover--bg--col-light-blue:hover {
+.hover--bg--col-light-blue:hover,
+.hover--bg--col-light-blue[data-button-loader="1"] {
   background: rgba(41, 112, 255, .2)
 }
 
-.hover--bg--col--zircon:hover {
+.hover--bg--col--zircon:hover,
+.hover--bg--col--zircon[data-button-loader="1"] {
   background: var(--color-zircon, #eff4ff)
 }
 
@@ -7001,6 +7023,42 @@ textarea {
 
   .neg--left--8-3--responsive-tablet {
     left: -8.3rem
+  }
+
+  .z--1-responsive-tablet {
+    z-index: 1
+  }
+
+  .z--2-responsive-tablet {
+    z-index: 2
+  }
+
+  .z--3-responsive-tablet {
+    z-index: 3
+  }
+
+  .z--4-responsive-tablet {
+    z-index: 4
+  }
+
+  .z--5-responsive-tablet {
+    z-index: 5
+  }
+
+  .z--6-responsive-tablet {
+    z-index: 6
+  }
+
+  .z--7-responsive-tablet {
+    z-index: 7
+  }
+
+  .z--8-responsive-tablet {
+    z-index: 8
+  }
+
+  .z--9-responsive-tablet {
+    z-index: 9
   }
 
   .z--10000-responsive-tablet {

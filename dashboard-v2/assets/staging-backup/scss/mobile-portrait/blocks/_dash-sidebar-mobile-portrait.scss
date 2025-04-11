@@ -1,0 +1,30 @@
+/**
+ * Template name: <Dashboard Sidebar>
+ */
+
+/* Dashboard Sidebar Floating Panel : Custom Styles */
+[data-floating-panel-wrapper] { display: none !important; }
+
+/* Dashboard Main Nav Wrapper : Custom Styles */
+[data-sidebar-main-wrapper][data-is-active="false"] {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: scale(0);
+  transform-origin: 100% 0%;
+}
+
+[data-sidebar-main-wrapper][data-is-active="true"] {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  transform: scale(1);
+  transform-origin: 100% 0%;
+  height: 100vh;
+}
+
+/* Dashboard Main Meni Item : Custom Styles */
+[data-main-menu-item] { 
+  min-width: 4.5rem;
+  min-height: 4.5rem;
+}

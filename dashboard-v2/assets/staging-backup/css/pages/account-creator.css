@@ -1,0 +1,96 @@
+.col--pumpkin {
+    color: var(--color-pumpkin, #FF7C1E);
+}
+.col--harlequin { color: #39FF14; }
+
+/* Validated password error text */
+[data-validate-username] li::before,
+[data-validate-display-name] li::before{
+	/* content: "\2716";   */
+	/* Unicode for the cross icon (✖) */
+	color: var(--color-pumpkin, #FF7C1E); /* Color of the cross icon */
+	display: inline-block; 
+	width: 1em;        /* Width to align text properly */
+	margin-right: 0.5em; /* Space between icon and text */
+}
+
+form[data-form-id="account-information"] [data-validate-username] li.col--harlequin::before,
+form[data-form-id="sign_up_complete"] [data-validate-username] li.col--harlequin::before{
+	/* content: "\2713";   */
+	/* Unicode for the cross icon (✖) */
+	color: var(--color-brand-green, #07f468); /* Color of the cross icon */
+	display: inline-block; 
+	width: 1em;        /* Width to align text properly */
+	margin-right: 0.5em; /* Space between icon and text */
+}
+
+/* Nay Added */
+/* General styling for elements with data-validate-username and data-password-match attributes */
+/* [data-validate-username], 
+[data-password-match],
+[data-validate-display-name] {
+	padding: 0.25rem 0.5rem 0.5rem 0.5rem;
+} */
+
+/* Styling for SVG paths within list items under data-validate-username and data-password-match */
+[data-validate-username] li svg path, 
+[data-password-match] li svg path, 
+[data-validate-display-name] li svg path{
+	stroke: var(--color-vermilion, #ff4405); /* Pumpkin color for the stroke of SVG paths */
+}
+
+form[data-form-id="sign_up_complete"] [data-validate-password] li svg path,
+form[data-form-id="sign_up_complete"] [data-validate-username] li svg path,
+form[data-form-id="sign_up_complete"] [data-validate-display-name] li svg path{
+	/* Pumpkin color for the stroke of SVG paths */
+	stroke: var(--color-pumpkin, #FF7C1E);
+}
+
+/* Override stroke color for SVG paths not within .red class under the sign-up form */
+form[data-form-id="account-information"] [data-validate-username] li:not(.red) svg path{
+	stroke: var(--color-brand-green, #07f468); /* Harlequin color, with a fallback, for SVG paths stroke */
+}
+
+form[data-form-id="sign_up_complete"] [data-validate-username] li:not(.red) svg path,
+form[data-form-id="sign_up_complete"] [data-validate-display-name] li:not(.red) svg path{
+	stroke: var(--Base-White, #fff); /* Harlequin color, with a fallback, for SVG paths stroke */
+}
+
+
+/* form[data-form-id="sign_up_complete"] [data-not-exists-username] svg path{
+	stroke: var(--color-brand-green, #07f468);
+} */
+
+/* form[data-form-id="sign_up_complete"] [data-not-exists-username] svg{
+	-webkit-filter: brightness(0) saturate(100%) invert(50%) sepia(94%) saturate(408%) hue-rotate(100deg) brightness(93%) contrast(87%);
+  filter: brightness(0) saturate(100%) invert(50%) sepia(94%) saturate(408%) hue-rotate(100deg) brightness(93%) contrast(87%)
+} */
+
+/* Hide specific SVG icons under the sign-up form by default */
+form[data-form-id="account-information"] [data-validate-username] li svg[data-icon="alert-hexagon"], 
+form[data-form-id="account-information"] [data-validate-username] li svg[data-icon="alert-hexagon"],
+form[data-form-id="sign_up_complete"] [data-validate-username] li svg[data-icon="alert-hexagon"], 
+form[data-form-id="sign_up_complete"] [data-validate-username] li svg[data-icon="alert-hexagon"],
+form[data-form-id="sign_up_complete"] [data-validate-display-name] li svg[data-icon="alert-hexagon"] {
+	display: none; /* Hides the alert-hexagon and check-thinner icons */
+}
+
+/* Display block for specific SVG icons based on class conditions under the sign-up form */
+form[data-form-id="account-information"] [data-validate-username] li.red svg[data-icon="alert-hexagon"],
+form[data-form-id="account-information"] [data-validate-username] li:not(.red) svg[data-icon="check-thinner"],
+form[data-form-id="sign_up_complete"] [data-validate-username] li.red svg[data-icon="alert-hexagon"],
+form[data-form-id="sign_up_complete"] [data-validate-username] li:not(.red) svg[data-icon="check-thinner"], 
+form[data-form-id="sign_up_complete"] [data-validate-display-name] li.red svg[data-icon="alert-hexagon"],
+form[data-form-id="sign_up_complete"] [data-validate-display-name] li:not(.red) svg[data-icon="check-thinner"] {
+	display: block; /* Shows the alert-hexagon for .red class and check-thinner for not(.red) */
+}
+
+/* Text color change for spans not within .red class under the sign-up form */
+form[data-form-id="account-information"] [data-validate-username] li:not(.red) span{
+	color: var(--color-brand-green, #07f468); /* Sets the text color to white for better visibility */
+}
+
+form[data-form-id="sign_up_complete"] [data-validate-username] li:not(.red) span,
+form[data-form-id="sign_up_complete"] [data-validate-display-name] li:not(.red) span {
+	color: var(--Base-White, #fff); /* Sets the text color to white for better visibility */
+}

@@ -1,0 +1,75 @@
+[data-translate-panel-container] {
+	opacity: 1;
+	visibility: visible;
+	pointer-events: all;
+	-webkit-transform: translateX(0);
+	transform: translateX(0);
+}
+[data-translate-panel-container][hidden] {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	-webkit-transform: translateX(-36rem);
+	transform: translateX(-36rem);
+}
+/* [data-translate-panel-sections] [data-form-input-type="select"] select, */
+[data-translate-panel-sections]
+	[data-form-input-type="select"]
+	[data-input-wrapper] {
+	width: 50%;
+}
+
+[data-id="translate-select"].nice-select.v1 .current .elm_aQVICr {
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+/* Added by Maia according on clickup task  - need to remove if functionality is working properly*/
+[share-to-x-sidebar],
+[data-go-live-btn],
+[data-go-live-button] {
+	cursor: default;
+}
+
+[share-to-x-sidebar].hover--parent--child--col--blue-ribbon:hover
+	.hover--col--blue-ribbon,
+[data-go-live-button]:hover [data-main] [data-text] {
+	color: #000 !important;
+}
+
+[share-to-x-sidebar].hover--parent--child--col--blue-ribbon:hover
+	.hov--filter--col--blue-ribbon {
+	filter: none;
+}
+
+[data-go-live-button]:hover [data-main] [data-icon] {
+	-webkit-filter: brightness(0) saturate(100%) invert(55%) sepia(10%)
+		saturate(5098%) hue-rotate(296deg) brightness(98%) contrast(101%);
+	filter: brightness(0) saturate(100%) invert(55%) sepia(10%) saturate(5098%)
+		hue-rotate(296deg) brightness(98%) contrast(101%);
+}
+
+/* [data-go-live-button] [data-main],
+[data-go-live-button] [data-skew],
+[data-go-live-button]:hover [data-main],
+[data-go-live-button]:hover [data-skew] {
+    background: #ccc !important;
+} */
+
+[data-go-live-button] [data-main],
+[data-go-live-button] [data-skew] {
+	background: #9f9f9f !important;
+}
+
+[data-go-live-button] [data-main],
+[data-go-live-button] [data-skew] {
+	filter: grayscale(100%);
+	-webkit-box-shadow: 4px 4px 0 0 #636363;
+	box-shadow: 4px 4px 0 0 #636363;
+}
+/* Added by Maia according on clickup task  - need to remove if functionality is working properly*/
+
+/* Moved from inline styling to file by Rehan */

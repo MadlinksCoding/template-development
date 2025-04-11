@@ -1,0 +1,77 @@
+/**
+ * Template name: <Dashboard Global Show Hide Container>
+ */
+
+[data-show-hide-container] {
+  display: none;
+}
+
+[data-show-hide-container][data-show-on-desktop="true"],
+[data-show-hide-container][data-show-on-desktop="true"][data-show-on-tablet="true"],
+[data-show-hide-container][data-show-on-desktop="true"][data-show-on-mobile="true"],
+[data-show-hide-container][data-show-on-desktop="true"][data-show-on-tablet="true"][data-show-on-mobile="true"] {
+  display: flex;
+}
+
+[data-show-hide-container][data-show-on-tablet="true"],
+[data-show-hide-container][data-show-on-tablet="true"][data-show-on-mobile="true"] {
+  display: none;
+}
+
+[data-show-hide-container][data-show-on-mobile="true"] {
+  display: none;
+}
+
+/* share settings switch check hide and show */
+[data-section="hide-show-section"] {
+  display: none;
+}
+[data-section="hide-show-section"].active{
+  display: flex;
+}
+
+/* Switch toggle label text color change when switch checked */
+[data-section=hide-show-section][data-switch-label-wrap] {
+  display: flex;
+  opacity: 0.5;
+}
+[data-section=hide-show-section][data-switch-label-wrap].active {
+  display: flex;
+  opacity: 1;
+}
+[data-section=hide-show-section][data-switch-label-wrap] [data-switch-label-text]{
+  color: var(--color-pale-sky, #667085);
+}
+[data-section=hide-show-section][data-switch-label-wrap].active [data-switch-label-text]{
+  color: var(--color-black, #000);
+}
+
+/* Componenet Repost menu Add button and hover hide and show */
+
+[data-item-conteiner="profile"] [data-add-button] { opacity: 0;}
+[data-item-conteiner="profile"]:hover { background: var(--color-zircon, #EFF4FF); }
+[data-item-conteiner="profile"]:hover [data-add-button] { opacity: 1;}
+
+[data-item-conteiner="subscription"] [data-add-button] { opacity: 0;}
+[data-item-conteiner="subscription"]:hover { background: var(--color-lavender-blush, #FFF1F3); }
+[data-item-conteiner="subscription"]:hover [data-add-button] { opacity: 1;}
+
+[data-item-conteiner="media"] [data-add-button] { opacity: 0;}
+[data-item-conteiner="media"]:hover { background: var(--color-white-pointer, #FDF4FF); }
+[data-item-conteiner="media"]:hover [data-add-button] { opacity: 1;}
+
+[data-item-conteiner="merch"] [data-add-button] { opacity: 0;}
+[data-item-conteiner="merch"]:hover { background: var(--color-twilight-blue, #ECFDFF); }
+[data-item-conteiner="merch"]:hover [data-add-button] { opacity: 1;}
+
+[data-child-hide-inner] { opacity: 0; }
+[data-edit-parent-container]:hover [data-child-hide-inner] { opacity: 1; }
+[data-edit-parent-container]:hover [data-description-text], [data-select-parent-container]:hover [data-image-grid-wrapper] { background: var(--color-zircon, #EFF4FF); border-color: var(--color-dodger-blue, #2970FF); }
+
+[data-select-parent-container]:hover [data-child-hide-inner] { opacity: 1; }
+
+
+/* Analytics Page */
+#loadMoreWrapper {
+  display: none; 
+}

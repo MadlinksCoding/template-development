@@ -1,0 +1,98 @@
+[data-editing-media="1"] .elm_UAfXnX {
+    min-height: 11.625rem;
+}
+
+.elm_UAfXnX {
+    min-height: 24.6875rem;
+}
+/* Hide error in textarea */
+[data-form-input-type="textarea"][data-form-input-validate="invalid"] [data-char-limit]:not([hidden]) + [data-input-validate-error]{
+	display: none;
+}
+[data-form-input-type="textarea"][data-form-input-validate="invalid"] [data-char-limit]:not([hidden]) span{
+	color: var(--color-vermilion, #ff4405);
+}
+
+[data-output-handle="share_custom_thumbnail"][src=""], 
+[data-output-handle="share_custom_trailer"][src=""],
+[data-custom-output-handle="preview-share_custom_thumbnail"][src=""] {
+    display: none;
+}
+
+/* Maia added to fix  */
+[subscription-setting-bg-wrap] [data-media-step-processing-wrap]{
+    align-items: center;
+    max-width: 100%;
+}
+
+/* Maia add to fix https://app.clickup.com/t/86erhdjkt. Fix for temp. We need to check js later */
+.ql-snow .ql-tooltip.ql-editing input[type=text] {
+    width: auto !important;
+}
+
+.ql-snow .ql-tooltip {
+    left: 0 !important;
+}
+
+button[data-crop-image-sections="cropButton"]:not([data-skip-svg-color]):hover 
+[data-button-text-wrap] svg {
+    fill: var(--color-brand-green, #07f468);
+}
+
+/* Hide cancel button before make any changes */
+[data-button-save-wrapper="1"]:not([data-show-cancel-button]) [data-button-loader-cancel] {
+    display: none;
+}
+
+[data-button-save-wrapper="0"] [data-button-loader-cancel] {
+    display: inline-flex;
+}
+
+[data-section="variation_description"].ql-editor ol, [data-section="variation_description"].ql-editor ul {
+    padding-left: 1rem !important;
+}
+
+.ba--15 {
+    border-width: 0.094rem;
+    border-style: solid;
+}
+
+/* Fixed radio vertical top alignment in Existing Member Preference */
+[data-tier-information-page-container] [data-form-input-type=radio][data-form-input-layout="vertical top"] input[type=radio]:checked+label:after{
+    top: .7rem;
+}
+
+form[data-plan-form] {
+    transition: 0.3s padding-right cubic-bezier(0.645, 0.045, 0.355, 1);
+    -webkit-transition: 0.3s padding-right cubic-bezier(0.645, 0.045, 0.355, 1);
+    -moz-transition: 0.3s padding-right cubic-bezier(0.645, 0.045, 0.355, 1);
+    -ms-transition: 0.3s padding-right cubic-bezier(0.645, 0.045, 0.355, 1);
+    -o-transition: 0.3s padding-right cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+[data-section-block="list"] {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 767px) {
+    .tier-card-splide .splide__track,
+    .tier-card-splide {
+        height: calc(100svh - 7.1rem);
+        padding-bottom: 0 !important;
+    }
+    [data-tier-card-slide][data-id="featured-no-offer"]{
+        min-height: inherit;
+        height: calc(100svh - 9.375rem);
+    }
+
+    main[data-dashboard-page]:not([data-preminum-user]) [data-section-block="list"] [data-section="page-content"]{
+        padding-bottom: 7.5rem;
+    }
+}
+@media only screen and (min-width: 300px) and (max-width: 479px) {
+    /* Fix success alert box wdith for mobile */
+    [data-edit-details-alert].w--100-responsive-mobile-portrait {
+        width: calc(100% - 3.5%);
+    }
+}

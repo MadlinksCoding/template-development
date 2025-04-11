@@ -1,0 +1,70 @@
+/* Loader Animation */
+.elm_cWpNRq {
+   transform-origin: center;
+   -webkit-transform-origin: center;
+   animation: elm_jVsoBw 1s infinite linear;
+   -webkit-animation: elm_jVsoBw 1s infinite linear;
+   animation-name: elm_jVsoBw, fallback;
+}
+
+@-webkit-keyframes elm_jVsoBw {
+   100% {
+       -webkit-transform: rotate(360deg);
+       transform: rotate(360deg);
+   }
+}
+
+@keyframes elm_jVsoBw {
+   100% {
+       transform: rotate(360deg);
+   }
+}
+
+/* Button Spinner Different color theme */
+[data-spinner-gradient] svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+@keyframes rotate 
+{
+  from {transform: rotate(105deg);}
+  to {transform: rotate(465deg);}
+}
+[data-spinner-gradient] .rotating {
+     animation-name: rotate;
+     animation-duration: 1200ms;
+     animation-iteration-count: infinite;
+     animation-timing-function: cubic-bezier(0.4, 0.4, 0.2, 0.4);
+     transform-origin: 300px 300px;
+ }
+[data-spinner-gradient] svg .stop1 {
+    stop-color: rgba(9, 244, 105, 1);
+}
+
+[data-spinner-gradient] svg .stop2 {
+    stop-color: rgba(9, 244, 105, 0.5);
+}
+[data-spinner-gradient] svg .stop3 {
+    stop-color: rgba(9, 244, 105, 0.60);
+}
+
+
+/* Purple and Black Theme */
+[data-spinner-theme="purple_black"] {
+   
+}
+
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+ 
+.spin {
+  animation: spin 1s linear infinite;
+}
+

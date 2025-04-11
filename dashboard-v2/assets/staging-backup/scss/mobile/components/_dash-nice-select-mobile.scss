@@ -1,0 +1,40 @@
+.nice-select-dropdown.open.animation-slide { height: 100vh; display: flex; justify-content: flex-end; max-height: auto; background: rgba(255, 255, 255, 0.60); backdrop-filter: blur(5px);}
+.nice-select-dropdown.v1 .nice-select-lists { width: 100%; }
+
+/* .nice-select-dropdown.open.animation-slide { height: auto; max-height: 17.334rem;} */
+
+.nice-select-dropdown.v1 .nice-select-list { background: rgba(255, 255, 255, 0.90); box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.20); backdrop-filter: blur(50px); }
+
+/* Conditions dropdown */
+[data-conditions-dropdown].nice-select-dropdown.v1:not(.auto-width) { min-width: 100%; top: auto; bottom: 0; position: fixed; z-index: 99999; background: rgba(255, 255, 255, 0.60); backdrop-filter: blur(5px); }
+
+[data-dashboard-page][data-conditions-dropdown-open]:before{ content: ''; width: 100vw; height: 100vh; position: absolute; background: rgba(255, 255, 255, 0.60); backdrop-filter: blur(5px); top: -9%; bottom: auto; z-index: 9; }
+
+[data-sidebar][data-conditions-dropdown-open-header-transparent] { z-index: -1; }
+
+[data-conditions-dropdown].mlc-ns.v1:not(.has-tags) .option .elm_aQVICr { align-items: enter; }
+[data-conditions-dropdown][data-description-type=large].nice-select-dropdown [data-option-label] { margin-top: 0.2rem; }
+
+[data-dropdown-type=merch][data-conditions-dropdown].nice-select.v1:not(.auto-width) { background: var(--Cyan-50, #ecfdff); border-bottom: 1.5px solid var(--Cyan-50, #D0D5DD); }
+
+
+
+/* Nice Select Box New Design Style */
+[data-id="courier-select-mobile"].nice-select.v1 { border: none;}
+[data-id="courier-select-mobile"].nice-select-dropdown.v1 .nice-select-list { border-radius: 2px; background: rgba(236, 236, 236, 1); backdrop-filter: blur(25px); }
+[data-id="courier-select-mobile"].nice-select.v1:not(.auto-width) { min-width: 5.75rem; background: transparent; height: 2.75rem; }
+[data-id="courier-select-mobile"].nice-select.v1:not(.has-tags) .current { border: none; padding: 0.5rem 0.75rem; justify-content:space-between; gap: 0.5rem; }
+[data-id="courier-select-mobile"].nice-select.v1 .current .elm_aQVICr { max-width: fit-content; }
+[data-id="courier-select-mobile"].nice-select-dropdown.v1:not(.auto-width) { min-width: 7.438rem; right: 0; left: auto; transform: scale(1) translateY(0px); box-shadow: none; border: 0; }
+[data-id="courier-select-mobile"].mlc-ns.v1:not(.has-tags) .option { padding: 0; background: rgba(255, 255, 255, 0.50); }
+[data-id="courier-select-mobile"].mlc-ns.v1:not(.has-tags) .option .elm_aQVICr { padding: 0.75rem; }
+[data-id="courier-select-mobile"].mlc-ns.v1:not(.has-tags) [data-option-label] { font-size: 1rem; font-weight:400; line-height: 1.5rem; color: var(--Gray-900, #101828); text-transform: capitalize; }
+[data-id="courier-select-mobile"].nice-select.v1:not(.has-tags) .current [data-option-label] { font-weight: 400; }
+[data-id="courier-select-mobile"].mlc-ns.v1:not(.has-tags) .option:not(.disabled):hover, [data-id="order-type-select"].mlc-ns.v1:not(.has-tags) .option.selected { background-color:transparent; }
+[data-id="courier-select-mobile"].mlc-ns.v1:not(.has-tags) .option:not(.disabled):hover .elm_aQVICr { border-radius: 0px; background:var(--Base-White, #FFF);; }
+[data-id="courier-select-mobile"].mlc-ns.v1:not(.has-tags) .option.selected [data-option-label] {color: var(--Gray-900, #101828);}
+[data-id="courier-select-mobile"].nice-select.v1.filter:not(.has-tags) .multiple-options.active, [data-id="order-type-select"].nice-select.v1.filter:not(.has-tags) .current.active { background: transparent; border: 0; }
+[data-id="courier-select-mobile"].mlc-ns.v1:not(.has-tags):not(.auto-width) [data-option-label] { text-wrap: nowrap; }
+[data-dropdown-arrow] { width: 1rem !important; height: 1rem !important; }
+[data-id="courier-select-mobile"].nice-select.v1.filter:not(.has-tags) .multiple-options.active, [data-id="courier-select"].nice-select.v1.filter:not(.has-tags) .current.active { background: transparent; border: 0; }
+[data-id="courier-select-mobile"].nice-select.v1.filter .multiple-options:not(.active) [data-dropdown-arrow] path, .nice-select.v1.filter .current:not(.active) [data-dropdown-arrow] path { fill: none !important;}

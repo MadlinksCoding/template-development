@@ -1,0 +1,88 @@
+.col--pumpkin {
+    color: var(--color-pumpkin, #FF7C1E);
+}
+.col--harlequin { color: #39FF14; }
+/* password show/hide */
+[data-input-wrapper] [data-icon="eye-slash"] { display: flex; }
+
+.password_visible [data-icon="eye-slash"]{ display: none; }
+
+.password_visible [data-icon="eye"]{ display: flex; }
+
+/* Validated password error text */
+[data-validate-username] li::before, 
+[data-password-match] li::before{
+	/* content: "\2716";   */
+	/* Unicode for the cross icon (✖) */
+	color: var(--color-pumpkin, #FF7C1E); /* Color of the cross icon */
+	display: inline-block; 
+	width: 1em;        /* Width to align text properly */
+	margin-right: 0.5em; /* Space between icon and text */
+}
+form[data-form-id="account-information"] [data-validate-username] li.col--harlequin::before, 
+form[data-form-id="account-information"] [data-password-match] li.col--harlequin::before{
+	/* content: "\2713";   */
+	/* Unicode for the cross icon (✖) */
+	color: var(--color-brand-green, #07f468); /* Color of the cross icon */
+	display: inline-block; 
+	width: 1em;        /* Width to align text properly */
+	margin-right: 0.5em; /* Space between icon and text */
+}
+
+
+
+/* Nay Added */
+/* General styling for elements with data-validate-username and data-password-match attributes */
+[data-validate-username], 
+[data-password-match]{
+	padding: 0.25rem 0.5rem 0.5rem 0.5rem; /* Uniform padding for better visual spacing */
+}
+
+/* Styling for SVG paths within list items under data-validate-username and data-password-match */
+[data-validate-username] li svg path, 
+[data-password-match] li svg path{
+	stroke: var(--color-vermilion, #ff4405); /* Pumpkin color for the stroke of SVG paths */
+}
+
+/* Override stroke color for SVG paths not within .red class under the sign-up form */
+form[data-form-id="account-information"] [data-validate-username] li:not(.red) svg path, 
+form[data-form-id="account-information"] [data-password-match] li:not(.red) svg path{
+	stroke: var(--color-brand-green, #07f468); /* Harlequin color, with a fallback, for SVG paths stroke */
+}
+
+/* Hide specific SVG icons under the sign-up form by default */
+form[data-form-id="account-information"] [data-validate-username] li svg[data-icon="alert-hexagon"], 
+form[data-form-id="account-information"] [data-password-match] li svg[data-icon="check-thinner"], 
+form[data-form-id="account-information"] [data-validate-username] li svg[data-icon="alert-hexagon"], 
+form[data-form-id="account-information"] [data-password-match] li svg[data-icon="check-thinner"]{
+	display: none; /* Hides the alert-hexagon and check-thinner icons */
+}
+
+/* Display block for specific SVG icons based on class conditions under the sign-up form */
+form[data-form-id="account-information"] [data-validate-username] li.red svg[data-icon="alert-hexagon"],
+form[data-form-id="account-information"] [data-validate-username] li:not(.red) svg[data-icon="check-thinner"],
+form[data-form-id="account-information"] [data-password-match] li.red svg[data-icon="alert-hexagon"],
+form[data-form-id="account-information"] [data-password-match] li:not(.red) svg[data-icon="check-thinner"]{
+	display: block; /* Shows the alert-hexagon for .red class and check-thinner for not(.red) */
+}
+
+/* Text color change for spans not within .red class under the sign-up form */
+form[data-form-id="account-information"] [data-validate-username] li:not(.red) span, 
+form[data-form-id="account-information"] [data-password-match] li:not(.red) span{
+	color: var(--color-brand-green, #07f468); /* Sets the text color to white for better visibility */
+}
+
+[data-view-password] {
+	display: none;
+}
+
+[data-edit-profile-action-handle] {
+	background-color: #fff;
+}
+[data-media-upload][data-edit-profile="1"] [data-menu="edi-profile-more-option"]{
+	top: -4rem;
+}
+
+body .dropdown-menu-overlay {
+    z-index: -1;
+}

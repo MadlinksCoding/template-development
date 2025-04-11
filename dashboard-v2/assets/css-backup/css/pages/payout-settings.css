@@ -1,0 +1,22 @@
+.Frame9150 { width: 26.6875rem; border-color: rgba(255, 255, 255, 0.50); background: linear-gradient(180deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.00) 50%, rgba(255, 255, 255, 0.50) 100%), rgba(255, 255, 255, 0.01); box-shadow: 0px 30px 50px 0px rgba(255, 255, 255, 0.10) inset, 0px 0px 30px 0px rgba(0, 0, 0, 0.05); }
+.Frame9151 { height: 300px;}
+.ContrastBorder { opacity: 0.08;border-color: #000 }
+.AvatarOnlineIndicator { left: 114px; top: 114px; }
+
+ /* Cancel/Save Button: always set display none for cancel when no changes in any input */
+ [data-button-save-wrapper="1"] [data-button-loader-cancel]{
+    display:none
+}
+
+[data-button-save-wrapper="1"] [data-button-loader-save]{
+    display:none
+}
+
+/* Cancel/Save Button:  set display inline-flex for cancel when some changes has in any input */
+[data-button-save-wrapper="0"] [data-button-loader-cancel]{
+    display:inline-flex;
+}
+
+[data-button-save-wrapper="0"] [data-button-loader-save], [data-button-save-wrapper="1"] [data-button-loader-save][data-button-loader="1"]{
+    display:inline-flex;
+}

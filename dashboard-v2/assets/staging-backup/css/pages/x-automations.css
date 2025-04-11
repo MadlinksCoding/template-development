@@ -1,0 +1,114 @@
+#dashboard-template-content-container{
+	height: 100vh;
+	flex: 1 0 0;
+	z-index: 3;
+	}
+	
+	[data-tabs-menu='x-automation-add-tabs-menu'] [data-tabbed-child-id].active {
+		background: var(--color-twilight-blue, #ecfdff) !important;
+	}
+	
+	/* maia comment out to place mobile in bottom */
+	/* .slidein-right-popup#delete-x-automation .elm_yNwqwJ,
+	.slidein-right-popup#edit-confirm .elm_yNwqwJ {
+		justify-content: center;
+	} */
+	
+	[data-preview-save-description]:before {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+	}
+	
+	
+	[data-x-automation-table-body].edit-mode form[data-save-x-post-form ]:not(.edit-mode) {
+		opacity: .2;
+	}
+	
+	form[data-save-x-post-form ].edit-mode [data-show-when-edit]{
+		display: inline-flex!important;
+	}
+	form[data-save-x-post-form ].edit-mode [data-hide-when-edit]{
+		display: none!important;
+	}
+	
+	[data-save-x-post-form]:not(.edit-mode):not([data-metric-type="add-new-rule"]) {
+		position: relative;
+	}
+	[data-save-x-post-form]:not(.edit-mode):not(.new-added):not([data-view-type="mobile"]):not([data-metric-type="add-new-rule"]):after{
+		content: '';
+		position: absolute;
+		width: 100%;
+		top: 0;
+		/* background: red; */
+		height: 55px;
+	}
+	
+	/* Tabs on add new popup */
+	[data-tabs-menu='x-automation-add-tabs-menu'] [data-tabbed-child-id]:not(.active),
+	[data-add-new-popup-item]:not(.active) {
+		background: transparent;
+	}
+	
+	[data-tabs-menu='x-automation-add-tabs-menu'] [data-tabbed-child-id].active {
+		opacity: 1;
+	}
+	
+	[data-tabs-menu='x-automation-add-tabs-menu'] [data-tabbed-child-id]:not(.active) [x-automation-active-arrow]{
+		display: none;
+	}
+	
+	[data-tabs-menu='x-automation-add-tabs-menu'] [data-tabbed-child-id].active [x-automation-active-arrow] {
+		display: block;
+	}
+	
+	[data-show-hide-section="merch-colllection"] {
+		min-width: 15rem;
+	}
+	
+	[data-show-hide-section="edit-draft-mode"],
+	[data-show-hide-section="edit-prevew-save"] {
+		max-width: 40rem;
+	}
+	
+	
+	/* [data-metric-type] [data-item-conteiner=merch] [data-add-button],
+	[data-metric-type] [data-item-conteiner=media] [data-add-button],
+	[data-metric-type] [data-item-conteiner=subscription] [data-add-button],
+	[data-metric-type] [data-item-conteiner=profile] [data-add-button] {
+	opacity: 1;
+	} */
+	
+	.dropdown-menu-overlay{
+		z-index: 0;
+	}
+	
+	[data-view-type="mobile"] .menu-id{
+		top:0;
+	}
+	
+	[for-mobile-edit-rule],
+	[for-mobile-add-rule]{
+		display: none;
+	}
+	
+	[data-edit-rule="no"] [for-mobile-add-rule],
+	[data-edit-rule="yes"] [for-mobile-edit-rule] {
+		display: inline-flex;
+	}
+	
+	/* Background color change when we foucs category such as 'Profile', 'Media', etc on mobile*/
+	[data-type-item-action="open-metric-item"]:focus {
+		background-color: var(--color-twilight-blue, #ecfdff);
+	}
+	
+	 
+	#existing-rule .elm_yNwqwJ, #edit-confirm .elm_yNwqwJ, #delete-x-automation .elm_yNwqwJ{
+		padding: 0;
+	}
+	#existing-rule .elm_qJBugX, #edit-confirm .elm_qJBugX{
+		box-shadow: none;
+		justify-content: flex-end;
+		/* background: transparent; */
+	}
