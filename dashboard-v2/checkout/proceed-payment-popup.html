@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <!-- Meta Tags -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>Template - checkout</title>
+
+        <!-- Poppins Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet">
+
+        <!-- Nice Select CSS -->
+        <link rel="stylesheet" type="text/css"
+            href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/FINAL/css/nice-select.css">
+
+        <!-- Tachyons Styles -->
+        <link rel="stylesheet"
+            href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/main.css" />
+        <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" />
+        <link rel="stylesheet"
+            href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/theme.css" />
+        <link rel="stylesheet"
+            href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/customTachyons.css" />
+        <link rel="stylesheet"
+            href="https://staging.fansocial.app/wp-content/plugins/fansocial/assets/css/custom-checkout.css" />
+        <link rel="stylesheet"
+            href="https://staging.fansocial.app/wp-content/plugins/fansocial/assets/css/custom-checkout-new.css" />
+
+        <!-- Dashboard Sidebar Custom Style -->
+        <link rel="stylesheet" href="https://staging.fansocial.app/wp-content/plugins/fansocial/assets/new-profile/tachyons-v2.css" />
+
+        <!-- Tablet Stylesheet -->
+        <link rel="stylesheet" href="https://staging.fansocial.app/wp-content/plugins/fansocial/assets/new-profile/tachyons-tablet.css"
+            media="screen and (min-width: 768px) and (max-width: 1365px)">
+
+        <!-- Mobile Stylesheet -->
+        <link rel="stylesheet" href="https://staging.fansocial.app/wp-content/plugins/fansocial/assets/new-profile/tachyons-mobile.css"
+            media="screen and (min-width: 480px) and (max-width: 767px)">
+
+        <!-- Mobile Portrait Stylesheet -->
+        <link rel="stylesheet" href="https://staging.fansocial.app/wp-content/plugins/fansocial/assets/new-profile/tachyons-mobile-portrait.css"
+            media="screen and (max-width: 479px)">
+    </head>
+
+    <body class="overflow-hidden">
+        <!-- main wrapper -->
+        <div data-section="wrapper" class="flex flex--column-responsive-mobile flex--column-responsive-mobile-portrait">
+
+            <!-- Background fixed container -->
+            <div data-container-bg-fixed
+                class="w-100 h--screen"
+                style="background: #333;">
+            </div> 
+
+            <!-- Upgrade popup -->
+            <div
+                class="w-100 h--screen absolute top-0 right-0 z--10010 bg-black-40 bg--blur--10 flex items-center justify-center items--end-responsive-mobile items--end-responsive-mobile-portrait">
+                <div
+                    class="w-100 max--w--400 max--w--100-responsive-mobile max--w--100-responsive-mobile-portrait bg-black-10 br--10 bg--blur--50 sh--11 flex flex-column br--bottom--left--right--0-responsive-mobile br--bottom--left--right--0-responsive-mobile-portrait">
+                    <!-- Content -->
+                    <div class="flex flex-column pad--bottom--4 pad--top--16">
+                        <!-- Title -->
+                        <div class="h--32 flex justify-center items-center pad--x--16 gap--24 relative">
+                            <h4 class="fs--14 fw6 lh--20 col--athens-gray-4">Proceed Payment</h4>
+                            <span class="pointer absolute right-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+  <path d="M24 8L8 24M8 8L24 24" stroke="#07F468" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                            </span>
+                        </div>
+                        <!-- /Title -->
+                        <!-- Popup Content -->
+                        <div class="pad--x--16 pad--y--8 flex flex-column gap--16 pad--x--12-responsive-mobile pad--x--12-responsive-mobile-portrait">
+                            <p class="tc fs--14 fw4 lh--20 tracked--0-28 col--gull-gray">Please read and agree to Fansocial’s <a href="#" class="col-brand-green">Terms and Condition</a> and <a href="#" class="col-brand-green">Privacy Policy</a>. </p>
+                        </div>
+                        <!-- /Popup Content -->
+                    </div>
+                    <!-- /Content -->
+
+                    <!-- Button Footer -->
+                    <div class="pad--x--16 pad--y--12 flex items-center gap--10 pad--8-responsive-mobile pad--8-responsive-mobile-portrait">
+                        <button class="h--40 pad--x--8 flex--max flex justify-center items-center bg--col-brand-green hover--bg--col--black hover--parent--child--col--brand-green">
+                            <span class="fs--18 fw5 lh--28 ttu black hover--col--brand-green">AGREE & PROCEED</span>
+                        </button>
+                    </div>
+                    <!-- /Button Footer -->
+                </div>
+            </div>
+            <!-- End Upgrade popup -->
+        </div>
+        <!-- /main wrapper -->
+
+        <!-- Nice Select JS -->
+        <script type="text/javascript"
+            src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/FINAL/js/nice-select.js"></script>
+
+        <!-- Tab Element Script -->
+        <script
+            src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/FINAL/js/pageElements.js?ver=2905361574"
+            id="pageElements-js"></script>
+
+        <!-- Dashboard Sidebar Custom Script -->
+        <script src="../assets/js/dashboard-ui.js"></script>
+    </body>
+
+</html>
