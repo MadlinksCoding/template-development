@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <!-- Meta Tags -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>Template - checkout</title>
+
+        <!-- Poppins Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet">
+
+        <!-- Nice Select CSS -->
+        <link rel="stylesheet" type="text/css"
+            href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/FINAL/css/nice-select.css">
+
+        <!-- Tachyons Styles -->
+        <link rel="stylesheet"
+            href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/main.css" />
+        <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" />
+        <link rel="stylesheet"
+            href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/theme.css" />
+        <link rel="stylesheet"
+            href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/customTachyons.css" />
+        <link rel="stylesheet"
+            href="https://staging.fansocial.app/wp-content/plugins/fansocial/assets/css/custom-checkout.css" />
+        <link rel="stylesheet"
+            href="https://staging.fansocial.app/wp-content/plugins/fansocial/assets/css/custom-checkout-new.css" />
+
+        <!-- Dashboard Sidebar Custom Style -->
+        <link rel="stylesheet" href="../assets/css/dashboard-styles-desktop.css" />
+
+        <!-- Tablet Stylesheet -->
+        <link rel="stylesheet" href="../assets/css/dashboard-styles-tablet.css"
+            media="screen and (min-width: 768px) and (max-width: 1365px)">
+
+        <!-- Mobile Stylesheet -->
+        <link rel="stylesheet" href="../assets/css/dashboard-styles-mobile.css"
+            media="screen and (min-width: 480px) and (max-width: 767px)">
+
+        <!-- Mobile Portrait Stylesheet -->
+        <link rel="stylesheet" href="../assets/css/dashboard-styles-mobile-portrait.css"
+            media="screen and (max-width: 479px)">
+    </head>
+
+    <body class="overflow-hidden">
+        <!-- main wrapper -->
+        <div data-section="wrapper" class="flex flex--column-responsive-mobile flex--column-responsive-mobile-portrait">
+
+            <!-- Background fixed container -->
+            <div data-container-bg-fixed
+                class="w-100 h--screen"
+                style="background: #333;">
+            </div> 
+
+            <!-- Upgrade popup -->
+            <div
+                class="w-100 h--screen absolute top-0 right-0 z--10010 bg--blur--5 flex items-center justify-center items--end-responsive-mobile items--end-responsive-mobile-portrait">
+                <div
+                    class="w-100 max--w--500 max--w--100-responsive-mobile max--w--100-responsive-mobile-portrait bg-white-10 br--10 bg--blur--35 sh--11 flex flex-column">
+                    <!-- Content -->
+                    <div class="flex flex-column pad--y--4">
+                        <!-- Title -->
+                        <div class="flex justify-center items-center pad--8">
+                            <h4 class="fs--14 fw6 lh--20 col--athens-gray-4">Yumi’s always eating</h4>
+                        </div>
+                        <!-- /Title -->
+                        <!-- Popup Content -->
+                        <div class="pad--x--16 pad--y--8 flex flex-column gap--16">
+                            <p class="fs--16 fw5 lh--24 col--athens-gray-2">You are about to change your membership tier as follow:</p>
+                            <!-- Current Subscription -->
+                            <div class="flex flex-column gap--8">
+                                <span class="fs--12 fw5 lh--18 col--gull-gray">Current Subscription</span>
+                                <div data-subscription-content="" data-subscription-content-gray="" class="flex items-center self-stretch">
+                                    <div data-subscription-icon-container-wrapper class="flex justify-center items-center self-stretch relative bg--no-repeat bg--center bg--size-cover" style="background-image: url(https://fansocial-user-media.s3.amazonaws.com/user-1/image-gallery/UB3YbPYoEAd7B5BvX0rvwSlsiniHn2/UB3YbPYoEAd7B5BvX0rvwSlsiniHn2.png);">
+                                        <div class="db absolute left-0 top-0 w-100 h-100 z--1" data-subscription-icon-container-wrap=""></div>
+                                        <div data-subscription-icon="">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M31.8253 37.8442L20.981 39.0411C18.8314 39.2792 17.2353 37.0978 18.1041 35.1222L20.2022 30.341C20.8522 28.861 20.0735 27.1621 18.8314 26.1261C17.1581 24.7361 15.9996 22.7155 15.7422 20.3796C15.2145 15.5791 18.6705 11.2677 23.4652 10.74C28.2599 10.2123 32.5783 13.6679 33.1061 18.462C33.3699 20.8494 32.6427 23.1145 31.259 24.852C30.2421 26.139 29.8238 28.0051 30.7956 29.3243L33.7818 33.3912C35.0626 35.1351 33.9749 37.6126 31.8253 37.8442Z" fill="black"></path>
+                                            </svg>
+                                        </div>
+                                        <div class="h-100 absolute right-0">
+                                            <div data-subscription-price-clippath class="rectangle-icon">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex justify-end items-center bg--blur--5 w-100 h-100">
+                                        <div class="flex flex-column items-start gap--8 flex--max justify-center" data-subscription-info-container="">
+                                            <div class="flex flex-column justify-center items-start self-stretch pad--8">
+                                                <p class="fs--14 fw6 lh--20 poppins white text--sh--black--40 truncate-text truncate-text-line-2">
+                                                    Library of LOREM LPSUM ATIER dolor sit amet, consectetur adipiscing elit.</p>
+                                                <span class="h--24 fs--18 lh--28 fw6 poppins white text--sh--black--40 truncate-text">
+                                                    <span class="subscription-price white fs--18 lh--28 fw6"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol white">USD$</span>35.00</bdi></span> <span class="subscription-details white"> / month</span></span>                                                    </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /Current Subscription -->
+
+                            <!-- New Subscription -->
+                            <div class="flex flex-column gap--8">
+                                <span class="fs--12 fw5 lh--18 col--gull-gray">New Subscription</span>
+                                <div data-subscription-content="" data-subscription-content-red="" class="flex items-center self-stretch">
+                                    <div data-subscription-icon-container-wrapper class="flex justify-center items-center self-stretch relative bg--no-repeat bg--center bg--size-cover" style="background-image: url(https://fansocial-user-media.s3.amazonaws.com/user-1/image-gallery/UB3YbPYoEAd7B5BvX0rvwSlsiniHn2/UB3YbPYoEAd7B5BvX0rvwSlsiniHn2.png);">
+                                        <div class="db absolute left-0 top-0 w-100 h-100 z--1" data-subscription-icon-container-wrap=""></div>
+                                        <div data-subscription-icon="">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M31.8253 37.8442L20.981 39.0411C18.8314 39.2792 17.2353 37.0978 18.1041 35.1222L20.2022 30.341C20.8522 28.861 20.0735 27.1621 18.8314 26.1261C17.1581 24.7361 15.9996 22.7155 15.7422 20.3796C15.2145 15.5791 18.6705 11.2677 23.4652 10.74C28.2599 10.2123 32.5783 13.6679 33.1061 18.462C33.3699 20.8494 32.6427 23.1145 31.259 24.852C30.2421 26.139 29.8238 28.0051 30.7956 29.3243L33.7818 33.3912C35.0626 35.1351 33.9749 37.6126 31.8253 37.8442Z" fill="black"></path>
+                                            </svg>
+                                        </div>
+                                        <div class="h-100 absolute right-0">
+                                            <div data-subscription-price-clippath class="rectangle-icon">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex justify-end items-center bg--blur--5 w-100 h-100">
+                                        <div class="flex flex-column items-start gap--8 flex--max justify-center" data-subscription-info-container="">
+                                            <div class="flex flex-column justify-center items-start self-stretch pad--8">
+                                                <p class="fs--14 fw6 lh--20 poppins white text--sh--black--40 truncate-text truncate-text-line-2">
+                                                    Library of LOREM LPSUM ATIER dolor sit amet, consectetur adipiscing elit.</p>
+                                                <span class="h--24 fs--18 lh--28 fw6 poppins white text--sh--black--40 truncate-text">
+                                                    <span class="subscription-price white fs--18 lh--28 fw6"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol white">USD$</span>35.00</bdi></span> <span class="subscription-details white"> / month</span></span>                                                    </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="fs--12 fw4 lh--18 col--gull-gray">Your membership will update in your next billing cycle (xx-xx-xxxx)</span>
+                            </div>
+                            <!-- /New Subscription -->
+                        </div>
+                        <!-- /Popup Content -->
+                        <!-- Button Footer -->
+                        <div class="pad--x--16 pad--y--12 flex items-center gap--10">
+                            <button class="pad--x--8 pad--y--4 flex--max flex justify-center items-center">
+                                <span class="fs--18 fw5 lh--28 ttu col-brand-green">CANCEL</span>
+                            </button>
+                            <button class="pad--x--8 pad--y--4 flex--max flex justify-center items-center bg--col-brand-green hover--bg--col--black hover--parent--child--col--brand-green">
+                                <span class="fs--18 fw5 lh--28 ttu black hover--col--brand-green">UPGRADE</span>
+                            </button>
+                        </div>
+                        <!-- /Button Footer -->
+                    </div>
+                    <!-- /Content -->
+                </div>
+            </div>
+            <!-- End Upgrade popup -->
+        </div>
+        <!-- /main wrapper -->
+
+        <!-- Nice Select JS -->
+        <script type="text/javascript"
+            src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/FINAL/js/nice-select.js"></script>
+
+        <!-- Tab Element Script -->
+        <script
+            src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/FINAL/js/pageElements.js?ver=2905361574"
+            id="pageElements-js"></script>
+
+        <!-- Dashboard Sidebar Custom Script -->
+        <script src="../assets/js/dashboard-ui.js"></script>
+    </body>
+
+</html>
