@@ -60,17 +60,22 @@
 
             <!-- Confirm Tip popup -->
             <div
-                class="w-100 h--screen absolute top-0 right-0 z--10010 bg-black-40 bg--blur--10 flex items-center justify-center items--end-responsive-mobile items--end-responsive-mobile-portrait">
+                class="w-100 h--screen absolute top-0 right-0 z--10010 bg-black-40 flex items-center justify-center items--start-responsive-mobile items--start-responsive-mobile-portrait h--screen-responsive-mobile h--screen-responsive-mobile-portrait">
                 <div
-                    class="w-100 max--w--640 max--w--100-responsive-mobile max--w--100-responsive-mobile-portrait bg-white-10 br--10 bg--blur--35 sh--11 flex flex-column br--bottom--left--right--0-responsive-mobile br--bottom--left--right--0-responsive-mobile-portrait h--screen-responsive-mobile h--screen-responsive-mobile-portrait">
+                    class="w-100 max--w--640 max--w--100-responsive-mobile max--w--100-responsive-mobile-portrait br--10 sh--11 flex flex-column br--bottom--left--right--0-responsive-mobile br--bottom--left--right--0-responsive-mobile-portrait h--screen pad--y--16 pad--y--0-responsive-mobile pad--y--0-responsive-mobile-portrait bg--col--white--10--responsive-mobile bg--col--white--10--responsive-mobile-portrait">
                     <!-- Content -->
-                    <div class="flex flex-column pad--top--16 pad--bottom--24 gap--24 gap--16-responsive-mobile gap--16-responsive-mobile-portrait pad--bottom--16-responsive-mobile pad--bottom--16-responsive-mobile-portrait h--screen-responsive-mobile h--screen-responsive-mobile-portrait">
+                    <div class="relative flex flex-column gap--0 gap--16-responsive-mobile gap--16-responsive-mobile-portrait h-100">
+                        <span class="pointer fixed right-1 top-1 z--10010 dn display--flex-responsive-mobile display--flex-responsive-mobile-portrait">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                              <path d="M24 8L8 24M8 8L24 24" stroke="#07F468" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
                         <!-- Scroll Content -->
-                        <div data-popup-custom-tip-mobile-scroll-area class="flex flex-column gap--24 gap--16-responsive-mobile gap--16-responsive-mobile-portrait">
+                        <div data-popup-custom-tip-mobile-scroll-area class="flex flex-column pad--top--16 gap--24 gap--16-responsive-mobile gap--16-responsive-mobile-portrait bg--blur--35 bg-white-10">
                             <!-- Title -->
                             <div class="flex justify-center items-start pad--x--16 gap--24 relative pad--x--8-responsive-mobile pad--x--8-responsive-mobile-portrait">
                                 <h4 class="fs--30 fw6 lh--38 col--athens-gray-2 tc fs--18-responsive-mobile fs--18-responsive-mobile-portrait lh--28-responsive-mobile lh--28-responsive-mobile-portrait">Before Check out Let’s Make their day even brighter! ✨</h4>
-                                <span class="pointer absolute right-1 fixed--responsive-mobile fixed--responsive-mobile-portrait">
+                                <span class="pointer fixed right-1 display--none-responsive-mobile display--none-responsive-mobile-portrait">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
                                       <path d="M24 8L8 24M8 8L24 24" stroke="#07F468" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
@@ -80,6 +85,25 @@
                             <!-- Choose Models -->
                             <div class="pad--x--24 flex flex-column pad--x--8-responsive-mobile pad--x--8-responsive-mobile-portrait">
                                 <div class="flex items-center justify-center gap--10">
+                                    <!-- Models -->
+                                    <div data-popup-subscription-confirm-tip-model-content class="flex bg--size-cover bg--no-repeat bg--center br--6 o-50" style="background-image: url(https://fansocial-user-media.s3.amazonaws.com/user-1/images/vi2ZgFL3k6RE5zX83JIPuzBQN8UoTM/vi2ZgFL3k6RE5zX83JIPuzBQN8UoTM-w-300.png);">
+                                        <div class="flex" data-popup-subscription-confirm-tip-model-wrapper>
+                                            <div data-avatar-wrapper class="flex items-center justify-center h--64 flex--max">
+                                                <div class="relative">
+                                                    <!-- Avatar -->
+                                                    <div class="w--64 h--64 br--shape--2" data-shape-img>
+                                                        <img src="https://fansocial-user-media.s3.amazonaws.com/user-1/images/vi2ZgFL3k6RE5zX83JIPuzBQN8UoTM/vi2ZgFL3k6RE5zX83JIPuzBQN8UoTM-w-300.png" alt="user avatar" class="w-100 h-100 object--cover br-100 pointer">
+                                                    </div>
+                                                    <!-- Avatar -->
+                                                </div>
+                                            </div>
+                                            <div class="flex flex-column items-center">
+                                                <span data-avatar-username data-line-clamp-1>Carrot Pop</span>
+                                                <span data-avatar-username data-line-clamp-1>@sammisjelly187</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Models -->
                                     <!-- Models -->
                                     <div data-popup-subscription-confirm-tip-model-content class="flex bg--size-cover bg--no-repeat bg--center br--6 o-50" style="background-image: url(https://fansocial-user-media.s3.amazonaws.com/user-1/images/vi2ZgFL3k6RE5zX83JIPuzBQN8UoTM/vi2ZgFL3k6RE5zX83JIPuzBQN8UoTM-w-300.png);">
                                         <div class="flex" data-popup-subscription-confirm-tip-model-wrapper>
@@ -156,25 +180,6 @@
                                         </div>
                                     </div>
                                     <!-- Models -->
-                                    <!-- Models -->
-                                    <div data-popup-subscription-confirm-tip-model-content class="flex bg--size-cover bg--no-repeat bg--center br--6 o-50" style="background-image: url(https://fansocial-user-media.s3.amazonaws.com/user-1/images/vi2ZgFL3k6RE5zX83JIPuzBQN8UoTM/vi2ZgFL3k6RE5zX83JIPuzBQN8UoTM-w-300.png);">
-                                        <div class="flex" data-popup-subscription-confirm-tip-model-wrapper>
-                                            <div data-avatar-wrapper class="flex items-center justify-center h--64 flex--max">
-                                                <div class="relative">
-                                                    <!-- Avatar -->
-                                                    <div class="w--64 h--64 br--shape--2" data-shape-img>
-                                                        <img src="https://fansocial-user-media.s3.amazonaws.com/user-1/images/vi2ZgFL3k6RE5zX83JIPuzBQN8UoTM/vi2ZgFL3k6RE5zX83JIPuzBQN8UoTM-w-300.png" alt="user avatar" class="w-100 h-100 object--cover br-100 pointer">
-                                                    </div>
-                                                    <!-- Avatar -->
-                                                </div>
-                                            </div>
-                                            <div class="flex flex-column items-center">
-                                                <span data-avatar-username data-line-clamp-1>Carrot Pop</span>
-                                                <span data-avatar-username data-line-clamp-1>@sammisjelly187</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Models -->
                                 </div>
                             </div>
                             <!-- /Choose Models -->
@@ -195,7 +200,7 @@
                                 <!-- /Text Content -->
                                 <!-- Note Field -->
                                 <div class="bg--col--black--15 ba br--col--black-soft pad--x--16 pad--y--8 br--6 relative">
-                                    <textarea class="w-100 min--h--20 fs--14 lh--20 col--athens-gray-2" rows="1" placeholder="Enter notes...."></textarea>
+                                    <textarea class="w-100 min--h--20 fs--14 lh--20 col--athens-gray-2" rows="" placeholder="Enter notes...."></textarea>
                                     <div class="flex items-center gap--10 justify-end absolute right-1 bottom--0-3">
                                         <span class="fs--10 col--athens-gray-2 o-70">300 Characters Left</span>
                                         <span class="pointer flex items-center">
@@ -210,9 +215,9 @@
                         </div>
                         <!-- /Scroll Content -->
                         <!-- /Popup Content -->
-                        <div data-popup-custom-tip-mobile-sticky-footer class="flex flex-column gap--24 gap--16-responsive-mobile gap--16-responsive-mobile-portrait fixed--responsive-mobile fixed--responsive-mobile-portrait pad--bottom--16-responsive-mobile pad--bottom--16-responsive-mobile-portrait bottom-0 ">
+                        <div data-popup-custom-tip-mobile-sticky-footer class="absolute bg--blur--35 bg-white-10 flex flex-column pad--top--24 pad--top--16-responsive-mobile pad--top--16-responsive-mobile-portrait gap--24 gap--16-responsive-mobile gap--16-responsive-mobile-portrait fixed--responsive-mobile fixed--responsive-mobile-portrait pad--bottom--24 pad--bottom--16-responsive-mobile pad--bottom--16-responsive-mobile-portrait bottom-0 ">
                             <!-- Tips lists -->
-                            <div class="pad--x--32 pad--top--32 flex justify-between items-end pad--x--8-responsive-mobile pad--x--8-responsive-mobile-portrait pad--top--16-responsive-mobile pad--top--16-responsive-mobile-portrait">
+                            <div class="pad--x--32 flex justify-between items-end pad--x--8-responsive-mobile pad--x--8-responsive-mobile-portrait">
                                 <!-- Tip -->
                                 <div data-popup-confirm-tip-single-tip class="flex flex-column justify-center items-center gap--8">
                                     <div data-popup-confirm-tip-single-tip-inner class="flex flex-column justify-center items-center gap--8">
