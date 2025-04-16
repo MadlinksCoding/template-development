@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <!-- Meta Tags -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>Template - checkout</title>
+
+        <!-- Poppins Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet">
+
+        <!-- Nice Select CSS -->
+        <link rel="stylesheet" type="text/css"
+            href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/FINAL/css/nice-select.css">
+
+        <!-- Tachyons Styles -->
+        <link rel="stylesheet"
+            href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/main.css" />
+        <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" />
+        <link rel="stylesheet"
+            href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/theme.css" />
+        <link rel="stylesheet"
+            href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/customTachyons.css" />
+        <link rel="stylesheet"
+            href="https://staging.fansocial.app/wp-content/plugins/fansocial/assets/css/custom-checkout.css" />
+        <link rel="stylesheet"
+            href="https://staging.fansocial.app/wp-content/plugins/fansocial/assets/css/custom-checkout-new.css" />
+
+        <!-- Dashboard Sidebar Custom Style -->
+        <link rel="stylesheet" href="https://staging.fansocial.app/wp-content/plugins/fansocial/assets/new-profile/tachyons-v2.css" />
+
+        <!-- Tablet Stylesheet -->
+        <link rel="stylesheet" href="https://staging.fansocial.app/wp-content/plugins/fansocial/assets/new-profile/tachyons-tablet.css"
+            media="screen and (min-width: 768px) and (max-width: 1365px)">
+
+        <!-- Mobile Stylesheet -->
+        <link rel="stylesheet" href="https://staging.fansocial.app/wp-content/plugins/fansocial/assets/new-profile/tachyons-mobile.css"
+            media="screen and (min-width: 480px) and (max-width: 767px)">
+
+        <!-- Mobile Portrait Stylesheet -->
+        <link rel="stylesheet" href="https://staging.fansocial.app/wp-content/plugins/fansocial/assets/new-profile/tachyons-mobile-portrait.css"
+            media="screen and (max-width: 479px)">
+    </head>
+
+    <body class="overflow-hidden">
+        <!-- main wrapper -->
+        <div data-section="wrapper" class="flex flex--column-responsive-mobile flex--column-responsive-mobile-portrait">
+
+            <!-- Background fixed container -->
+            <div data-container-bg-fixed
+                class="w-100 h--screen"
+                style="background: #333;">
+            </div> 
+
+            <!-- Confirm Tip popup -->
+            <div
+                class="w-100 h--screen absolute top-0 right-0 z--10010 bg-black-40 bg--blur--10 flex items-center justify-center items--end-responsive-mobile items--end-responsive-mobile-portrait">
+                <div
+                    class="w-100 max--w--640 max--w--100-responsive-mobile max--w--100-responsive-mobile-portrait bg-white-10 br--10 bg--blur--35 sh--11 flex flex-column br--bottom--left--right--0-responsive-mobile br--bottom--left--right--0-responsive-mobile-portrait h--screen-responsive-mobile h--screen-responsive-mobile-portrait">
+                    <!-- Content -->
+                    <div class="flex flex-column pad--top--16 pad--bottom--24 gap--24 gap--16-responsive-mobile gap--16-responsive-mobile-portrait pad--bottom--16-responsive-mobile pad--bottom--16-responsive-mobile-portrait h--screen-responsive-mobile h--screen-responsive-mobile-portrait">
+                        <!-- Title -->
+                        <div class="flex justify-center items-start pad--x--16 gap--24 relative pad--x--8-responsive-mobile pad--x--8-responsive-mobile-portrait">
+                            <h4 class="fs--30 fw6 lh--38 col--athens-gray-2 tc fs--18-responsive-mobile fs--18-responsive-mobile-portrait lh--28-responsive-mobile lh--28-responsive-mobile-portrait">Before Check out Let’s Make their day even brighter! ✨</h4>
+                            <span class="pointer absolute right-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                  <path d="M24 8L8 24M8 8L24 24" stroke="#07F468" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                        </div>
+                        <!-- /Title -->
+                        <!-- Choose Models -->
+                        <div class="pad--x--24 flex flex-column pad--x--8-responsive-mobile pad--x--8-responsive-mobile-portrait">
+                            <div class="flex items-center justify-center gap--10">
+                                <!-- Models -->
+                                <div data-popup-subscription-confirm-tip-model-wrapper class="flex">
+                                    <div data-avatar-wrapper class="flex items-center justify-center h--64 flex--max">
+                                        <div class="relative">
+                                            <!-- Avatar -->
+                                            <div class="w--64 h--64 br--shape--2" data-shape-img>
+                                                <img src="https://fansocial-user-media.s3.amazonaws.com/user-1/images/vi2ZgFL3k6RE5zX83JIPuzBQN8UoTM/vi2ZgFL3k6RE5zX83JIPuzBQN8UoTM-w-300.png" alt="user avatar" class="w-100 h-100 object--cover br-100 pointer">
+                                            </div>
+                                            <!-- Avatar -->
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-column items-center">
+                                        <span data-avatar-username data-line-clamp-1>Carrot Pop</span>
+                                        <span data-avatar-username data-line-clamp-1>@sammisjelly187</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /Choose Models -->
+                        <!-- Popup Content -->
+                        <div class="pad--x--16 flex flex-column gap--8 pad--x--8-responsive-mobile pad--x--8-responsive-mobile-portrait">
+                            <!-- Selected Tips -->
+                            <div class="pad--top--24 flex flex-column justify-center items-center">
+                                <div class="flex justify-center">
+                                    <img src="../assets/images/heart-envelope.png" alt="">
+                                </div>
+                                <p class="tc fs--16 fw6 lh--24 col--athens-gray-4">Select a tip below—it'll be added to your checkout.</p>
+                            </div>
+                            <!-- /Selected Tips -->
+                            <!-- Text Content -->
+                            <div class="pad--x--24">
+                                <p class="tc fs--14 fw4 lh--20 col--gull-gray">Your extra support helps <span class="fw6 col--gull-gray">@Princess Carrot Pop</span> keep creating magic. 92% of fans add a tip here!</p>
+                            </div>
+                            <!-- /Text Content -->
+                            <!-- Note Field -->
+                            <div class="bg--col--black--15 ba br--col--black-soft pad--x--16 pad--y--8 br--6 relative">
+                                <textarea rows="1" placeholder="Enter notes...."></textarea>
+                                <div class="flex items-center gap--10 justify-end absolute right-1 bottom--0-3">
+                                    <span class="fs--10 lh--16 col--athens-gray-2 o-70">300 Characters Left</span>
+                                    <span class="pointer">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                                          <path d="M6.66602 12.2668C6.66602 12.2668 7.91602 13.9335 9.99935 13.9335C12.0827 13.9335 13.3327 12.2668 13.3327 12.2668M12.4993 8.10018H12.5077M7.49935 8.10018H7.50768M18.3327 10.6002C18.3327 15.2026 14.6017 18.9335 9.99935 18.9335C5.39698 18.9335 1.66602 15.2026 1.66602 10.6002C1.66602 5.99781 5.39698 2.26685 9.99935 2.26685C14.6017 2.26685 18.3327 5.99781 18.3327 10.6002ZM12.916 8.10018C12.916 8.3303 12.7295 8.51685 12.4993 8.51685C12.2692 8.51685 12.0827 8.3303 12.0827 8.10018C12.0827 7.87006 12.2692 7.68351 12.4993 7.68351C12.7295 7.68351 12.916 7.87006 12.916 8.10018ZM7.91602 8.10018C7.91602 8.3303 7.72947 8.51685 7.49935 8.51685C7.26923 8.51685 7.08268 8.3303 7.08268 8.10018C7.08268 7.87006 7.26923 7.68351 7.49935 7.68351C7.72947 7.68351 7.91602 7.87006 7.91602 8.10018Z" stroke="#07F468" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- /Note Field -->
+                        </div>
+                        <!-- /Popup Content -->
+                        <div class="flex flex-column gap--24 gap--16-responsive-mobile gap--16-responsive-mobile-portrait fixed--responsive-mobile fixed--responsive-mobile-portrait bottom--16-responsive-mobile bottom--16-responsive-mobile-portrait">
+                            <!-- Tips lists -->
+                            <div class="pad--x--32 pad--top--32 flex justify-between items-end pad--x--8-responsive-mobile pad--x--8-responsive-mobile-portrait pad--top--16-responsive-mobile pad--top--16-responsive-mobile-portrait">
+                                <!-- Tip -->
+                                <div data-popup-confirm-tip-single-tip class="flex flex-column justify-center items-center gap--8">
+                                    <div class="flex">
+                                        <img src="../assets/images/tip-1.png" alt="">
+                                    </div>
+                                    <span class="fs--14 fw6 lh--16 col--gull-gray">$1.00</span>
+                                </div>
+                                <!-- /Tip -->
+                                <!-- Tip -->
+                                <div data-popup-confirm-tip-single-tip class="flex flex-column justify-center items-center gap--8">
+                                    <div class="flex">
+                                        <img src="../assets/images/tip-2.png" alt="">
+                                    </div>
+                                    <span class="fs--14 fw6 lh--16 col--gull-gray">$1.00</span>
+                                </div>
+                                <!-- /Tip -->
+                                <!-- Tip -->
+                                <div data-popup-confirm-tip-single-tip class="flex flex-column justify-center items-center gap--8">
+                                    <div class="flex">
+                                        <img src="../assets/images/tip-3.png" alt="">
+                                    </div>
+                                    <span class="fs--14 fw6 lh--16 col--gull-gray">$1.00</span>
+                                </div>
+                                <!-- /Tip -->
+                                <!-- Tip -->
+                                <div data-popup-confirm-tip-single-tip class="flex flex-column justify-center items-center gap--8">
+                                    <div class="flex">
+                                        <img src="../assets/images/tip-4.png" alt="">
+                                    </div>
+                                    <span class="fs--14 fw6 lh--16 col--gull-gray">$1.00</span>
+                                </div>
+                                <!-- /Tip -->
+                                <!-- Tip -->
+                                <div data-popup-confirm-tip-single-tip class="flex flex-column justify-center items-center gap--8">
+                                    <div class="flex">
+                                        <img src="../assets/images/tip-5.png" alt="">
+                                    </div>
+                                    <span class="fs--14 fw6 lh--16 col--gull-gray">$1.00</span>
+                                </div>
+                                <!-- /Tip -->
+                            </div>
+                            <!-- /Tips lists -->
+                            <!-- Button Footer -->
+                            <div class="pad--x--16 flex flex-column items-center gap--8 pad--x--8-responsive-mobile pad--x--8-responsive-mobile-portrait">
+                                <!-- Note Text -->
+                                <p class="fs--14 lh--normal col--gull-gray tracked--0-28">By completing this tip, <span class="col-brand-green">$5</span> will be charged to your card ending in <span class="col-brand-green">*3374</span> and added to your checkout total.</p>
+                                <!-- /Note Text -->
+                                <div class="flex w-100">
+                                    <button class="w-100 h--64 pad--x--8 flex justify-center items-center bg--col-brand-green hover--bg--col--black hover--parent--child--col--brand-green">
+                                        <span class="fs--20 fw6 lh--30 ttu col--black-strong hover--col--brand-green">Confirm Tip</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- /Button Footer -->
+                        </div>
+                    </div>
+                    <!-- /Content -->
+                </div>
+            </div>
+            <!-- End Confirm Tip popup -->
+        </div>
+        <!-- /main wrapper -->
+
+        <!-- Nice Select JS -->
+        <script type="text/javascript"
+            src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/FINAL/js/nice-select.js"></script>
+
+        <!-- Tab Element Script -->
+        <script
+            src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/FINAL/js/pageElements.js?ver=2905361574"
+            id="pageElements-js"></script>
+
+        <!-- Dashboard Sidebar Custom Script -->
+        <script src="../assets/js/dashboard-ui.js"></script>
+    </body>
+
+</html>
