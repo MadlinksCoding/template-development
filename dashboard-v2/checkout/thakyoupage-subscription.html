@@ -159,6 +159,9 @@
                 .h--500-responsive-mobile-portrait {
                   height: 31.25rem
                 }
+                .min--height--inherit-responsive-mobile-portrait{
+                    min-height: inherit;
+                }
             }
 
             
@@ -167,9 +170,9 @@
 
     <body>
         <!-- main wrapper -->
-        <div data-section="wrapper" class="flex w-100 overflow--x--hidden-responsive-mobile overflow--x--hidden-responsive-mobile-portrait">
+        <div data-section="wrapper" class="flex w-100 overflow--x--hidden-responsive-mobile overflow--x--hidden-responsive-mobile-portrait min--height--inherit-responsive-mobile-portrait">
             <!-- Background fixed container -->
-            <div class="flex flex-column w-100 h-100 bg--fixed bg--no-repeat bg--center bg--size-cover bg--blur--50 pad--bottom--24" style="background-image: url(../assets/images/thankyou-subscription-bg-img-main.png) ;">
+            <div class="flex flex-column w-100 h-100 bg--fixed bg--no-repeat bg--center bg--size-cover bg--blur--50 pad--bottom--24 min--height--inherit-responsive-mobile-portrait" style="background-image: url(../assets/images/thankyou-subscription-bg-img-main.png) ;">
                 <!-- 1st Overlay -->
                 <div class="db w-100 h-100 bg--gd--black--20 absolute bottom-0 left-0 z--index--1"></div>
                 <!-- 2nd Overlay -->
