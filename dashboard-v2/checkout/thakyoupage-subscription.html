@@ -32,6 +32,9 @@
         <link rel="stylesheet"
             href="https://staging.fansocial.app/wp-content/plugins/fansocial/assets/css/custom-checkout-new.css" />
 
+        <!-- Splide JS CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css" rel="stylesheet">
+
         <!-- Dashboard Sidebar Custom Style -->
         <link rel="stylesheet" href="https://staging.fansocial.app/wp-content/plugins/fansocial/assets/new-profile/tachyons-v2.css" />
 
@@ -72,6 +75,7 @@
 
             [data-button-shadow="green"][data-button-color="black"]{
                 padding-left: 1.7rem;
+                background: transparent !important;
             }
             [data-button-shadow="green"][data-button-color="black"]:hover:before{
                 background-color: var(--color-spring-green);
@@ -121,21 +125,52 @@
                     height: 45.813rem;
                 }
             }
+
+            @media screen and (max-width: 767px){
+                .fs--36-responsive-mobile-portrait {
+                  font-size: 2.25rem
+                }
+                .lh--44-responsive-mobile-portrait {
+                  line-height: 2.75rem
+                }
+                .tracked--neg--0-72-responsive-mobile-portrait {
+                    letter-spacing: -0.045rem;
+                }
+                .w--16-responsive-mobile-portrait {
+                  width: 1rem;
+                }
+                .h--16-responsive-mobile-portrait {
+                  height: 1rem;
+                }
+                [data-button-shadow="green"][data-button-color="black"]{
+                    padding: 0.5rem 0.6rem 0.5rem 1.4rem;
+                }
+                .of--visible {
+                    overflow: visible !important;
+                }
+                [data-button-shadow="green"][data-button-color="black"]:before,
+                [data-button-shadow="green"][data-button-color="black"]:after
+                {
+                    clip-path: polygon(25% 0%, 100% 0, 100% 100%, 0% 100%);
+                }
+            }
+
+            
         </style>
     </head>
 
     <body>
         <!-- main wrapper -->
-        <div data-section="wrapper" class="flex w-100">
+        <div data-section="wrapper" class="flex w-100 h--screen-responsive-mobile h--screen-responsive-mobile-portrait">
             <!-- Background fixed container -->
-            <div class="flex flex-column w-100 h-100 bg--fixed bg--no-repeat bg--size-cover bg--blur--50 pad--bottom--24" style="background-image: url(../assets/images/thankyou-subscription-bg-img.png) ;">
+            <div class="flex flex-column w-100 h-100 bg--fixed bg--no-repeat bg--center bg--size-cover bg--blur--50 pad--bottom--24" style="background-image: url(../assets/images/thankyou-subscription-bg-img-main.png) ;">
                 <!-- 1st Overlay -->
                 <div class="db w-100 h-100 bg--gd--black--20 absolute bottom-0 left-0 z--index--1"></div>
                 <!-- 2nd Overlay -->
                 <div class="db w-100 h-100 bg--gd--black--50 absolute bottom-0 left-0 z--index--2"></div>
 
                 <!-- Page top section container sh--black--30--40 -->
-                <div class="min--h--400 h--637 h--734-responsive-tablet pad--x--16 pad--y--24 flex flex-column gap--24 relative z--index--5 items-start">
+                <div class="min--h--400 h--637 h--734-responsive-tablet pad--x--16 pad--y--24 pad--8-responsive-mobile pad--8-responsive-mobile-portrait flex flex-column gap--24 relative z--index--5 items-start">
                     <!-- Logo -->
                     <div class="flex--none-responsive-mobile-portrait">
                         <a href="https://staging.fansocial.app" class="lh--0">
@@ -146,22 +181,22 @@
                     <!-- Page Content -->
                     <div class="flex flex-column justify-end items-end flex--max">
                         <!-- Inner -->
-                        <div class="flex gap--16 gap--24-responsive-tablet gap--16-responsive-tablet-landscap items-end items--end-responsive-tablet-landscape items--start-responsive-tablet flex--column-responsive-tablet flex--row-responsive-tablet-landscape">
+                        <div class="flex gap--16 gap--24-responsive-tablet gap--16-responsive-tablet-landscap items-end items--end-responsive-tablet-landscape items--start-responsive-tablet flex--column-responsive-tablet flex--row-responsive-tablet-landscape flex--column-responsive-mobile flex--column-responsive-mobile-portrait gap--8--responsive-mobile gap--8--responsive-mobile-portrait">
                             <!-- Left Apart -->
-                            <div class="flex flex-column gap--16 flex--max">
-                                <h2 class="fs--48 fw5 lh--60 white tracked--neg--0-6">Thank you for supporting displayname! 😍</h2>
-                                <p class="fs--20 fw6 lh--30 white">You are now a member of </p>
-                                <div class="flex flex-column">
-                                    <h2 class="fs--48 fw6 lh--60 white tracked--neg--0-6">My VVIP Lounge ❤️</h2>
+                            <div class="flex flex-column gap--16 flex--max gap--8-responsive-mobile gap--8-responsive-mobile-portrait">
+                                <h2 class="fs--48 fw5 lh--60 white tracked--neg--0-6 fs--36-responsive-mobile-portrait lh--44-responsive-mobile-portrait tracked--neg--0-72-responsive-mobile-portrait">Thank you for supporting displayname! 😍</h2>
+                                <p class="fs--20 fw6 lh--30 white fs--14-responsive-mobile fs--14-responsive-mobile-portrait lh--20-responsive-mobile lh--20-responsive-mobile-portrait fw--5-responsive-mobile fw--5-responsive-mobile-portrait">You are now a member of </p>
+                                <div class="flex flex-column gap--8-responsive-mobile gap--8-responsive-mobile-portrait">
+                                    <h2 class="fs--48 fw6 lh--60 white tracked--neg--0-6 fs--36-responsive-mobile-portrait lh--44-responsive-mobile-portrait tracked--neg--0-72-responsive-mobile-portrait">My VVIP Lounge ❤️</h2>
                                     <!-- Profile info -->
                                     <div class="pad--y--4 flex items-center gap--8">
                                         <!-- Avatar -->
-                                        <div data-shape-img="" class="w--36 h--36 br--shape--1 fan-header-profile-avatar">
+                                        <div data-shape-img="" class="w--36 h--36 br--shape--1 fan-header-profile-avatar w--22-responsive-mobile w--22-responsive-mobile-portrait h--20-responsive-mobile h--20-responsive-mobile-portrait">
                                             <img src="https://fansocial-user-media.s3-accelerate.amazonaws.com/user-1/images/c2Th9qxNPkFpK9ayyWNlSh6tR0gWo5/c2Th9qxNPkFpK9ayyWNlSh6tR0gWo5.png" alt="user avatar" class="w-100 h-100 object--cover pointer">
                                         </div>
                                         <!-- Avatar -->
                                         <div class="flex items-center gap--4">
-                                            <span data-line-clamp-1 class="fs--16 fw5 lh--24 white">Princess Carrot Pop</span>
+                                            <span data-line-clamp-1 class="fs--16 fw5 lh--24 white fs--12-responsive-mobile fs--12-responsive-mobile-portrait lh--18-responsive-mobile lh--18-responsive-mobile-portrait">Princess Carrot Pop</span>
                                             <span>
                                                 <img src="../assets/icons/verified-tick.svg" alt="" class="w--10 h--10">
                                             </span>
@@ -173,52 +208,52 @@
                             <!-- /Left Apart -->
 
                             <!-- Right Apart -->
-                            <div class="flex flex-column gap--24 flex--max justify-center items-start">
-                                <span class="fs--16 lh--24 col--athens-gray-4">Enjoy over 100 medias available, and get irresistible offers below:</span>
+                            <div class="flex flex-column gap--24 flex--max justify-center items-start gap--16-responsive-mobile gap--16-responsive-mobile-portrait">
+                                <span class="fs--16 lh--24 col--athens-gray-4 fs--14-responsive-mobile fs--14-responsive-mobile-portrait lh--20-responsive-mobile lh--20-responsive-mobile-portrait">Enjoy over 100 medias available, and get irresistible offers below:</span>
                                 <!-- List Group -->
-                                <div class="w-100 flex flex-column gap--16 flex--max">
+                                <div class="w-100 flex flex-column gap--16 flex--max gap--8-responsive-mobile gap--8-responsive-mobile-portrait">
                                     <!-- Item -->
                                     <div class="flex items-center gap--16">
                                         <div class="flex items-center gap--12 flex--max">
                                             <span>
-                                                <img src="../assets/icons/hexagon-tokens.svg" alt="" class="w--32 h--32">
+                                                <img src="../assets/icons/hexagon-tokens.svg" alt="" class="w--32 h--32 w--16-responsive-mobile-portrait h--16-responsive-mobile-portrait">
                                             </span>
-                                            <span class="fs--20 fw5 lh--30 col--athens-gray-4">Free Tokens</span>
+                                            <span class="fs--20 fw5 lh--30 col--athens-gray-4 fs--12-responsive-mobile fs--12-responsive-mobile-portrait lh--18-responsive-mobile lh--18-responsive-mobile-portrait">Free Tokens</span>
                                         </div>
-                                        <span class="fs--20 fw5 lh--30 col--athens-gray-4 flex--max">100 tokens every month</span>
+                                        <span class="fs--20 fw5 lh--30 col--athens-gray-4 flex--max fs--12-responsive-mobile fs--12-responsive-mobile-portrait lh--18-responsive-mobile lh--18-responsive-mobile-portrait">100 tokens every month</span>
                                     </div>
                                     <!-- /Item -->
                                     <!-- Item -->
                                     <div class="flex items-center gap--16">
                                         <div class="flex items-center gap--12 flex--max">
                                             <span>
-                                                <img src="../assets/icons/lightning-01.svg" alt="" class="w--32 h--32">
+                                                <img src="../assets/icons/lightning-01.svg" alt="" class="w--32 h--32 w--16-responsive-mobile-portrait h--16-responsive-mobile-portrait">
                                             </span>
-                                            <span class="fs--20 fw5 lh--30 col--athens-gray-4">Merch Discount</span>
+                                            <span class="fs--20 fw5 lh--30 col--athens-gray-4 fs--12-responsive-mobile fs--12-responsive-mobile-portrait lh--18-responsive-mobile lh--18-responsive-mobile-portrait">Merch Discount</span>
                                         </div>
-                                        <span class="fs--20 fw5 lh--30 col--athens-gray-4 flex--max">10% off</span>
+                                        <span class="fs--20 fw5 lh--30 col--athens-gray-4 flex--max fs--12-responsive-mobile fs--12-responsive-mobile-portrait lh--18-responsive-mobile lh--18-responsive-mobile-portrait">10% off</span>
                                     </div>
                                     <!-- /Item -->
                                     <!-- Item -->
                                     <div class="flex items-center gap--16">
                                         <div class="flex items-center gap--12 flex--max">
                                             <span>
-                                                <img src="../assets/icons/play-square.svg" alt="" class="w--32 h--32">
+                                                <img src="../assets/icons/play-square.svg" alt="" class="w--32 h--32 w--16-responsive-mobile-portrait h--16-responsive-mobile-portrait">
                                             </span>
-                                            <span class="fs--20 fw5 lh--30 col--athens-gray-4">PPV Discount</span>
+                                            <span class="fs--20 fw5 lh--30 col--athens-gray-4 fs--12-responsive-mobile fs--12-responsive-mobile-portrait lh--18-responsive-mobile lh--18-responsive-mobile-portrait">PPV Discount</span>
                                         </div>
-                                        <span class="fs--20 fw5 lh--30 col--athens-gray-4 flex--max">10% off</span>
+                                        <span class="fs--20 fw5 lh--30 col--athens-gray-4 flex--max fs--12-responsive-mobile fs--12-responsive-mobile-portrait lh--18-responsive-mobile lh--18-responsive-mobile-portrait">10% off</span>
                                     </div>
                                     <!-- /Item -->
                                     <!-- Item -->
                                     <div class="flex items-center gap--16">
                                         <div class="flex items-center gap--12 flex--max">
                                             <span>
-                                                <img src="../assets/icons/cpr_kinks.svg" alt="" class="w--32 h--32">
+                                                <img src="../assets/icons/cpr_kinks.svg" alt="" class="w--32 h--32 w--16-responsive-mobile-portrait h--16-responsive-mobile-portrait  ">
                                             </span>
-                                            <span class="fs--20 fw5 lh--30 col--athens-gray-4">Custom Request</span>
+                                            <span class="fs--20 fw5 lh--30 col--athens-gray-4 fs--12-responsive-mobile fs--12-responsive-mobile-portrait lh--18-responsive-mobile lh--18-responsive-mobile-portrait">Custom Request</span>
                                         </div>
-                                        <span class="fs--20 fw5 lh--30 col--athens-gray-4 flex--max">5% off</span>
+                                        <span class="fs--20 fw5 lh--30 col--athens-gray-4 flex--max fs--12-responsive-mobile fs--12-responsive-mobile-portrait lh--18-responsive-mobile lh--18-responsive-mobile-portrait">5% off</span>
                                     </div>
                                     <!-- /Item -->
                                 </div>
@@ -233,11 +268,11 @@
                 <!-- /Page top section container -->
 
                 <!-- Watch Now Section Wrapper -->
-                <div class="bg--col--white-01 pad--x--16 pad--bottom--24 flex flex-column gap--24 bg--blur--5 relative z--index--5">
+                <div class="bg--col--white-01 pad--x--16 pad--bottom--24 pad--x--0-responsive-mobile pad--x--0-responsive-mobile-portrait pad--y--24-responsive-mobile pad--y--24-responsive-mobile-portrait flex flex-column gap--24 bg--blur--5 relative z--index--5">
                     <!-- Watch Inner sh--14 -->
                     <div class="flex flex-column gap--16">
                         <!-- Title Row -->
-                        <div class="flex justify-between items-center">
+                        <div class="flex justify-between items-center pad--x--8-responsive-mobile pad--x--8-responsive-mobile-portrait">
                             <!-- Section Title -->
                             <div class="flex items-center gap--8">
                                 <span>
@@ -257,7 +292,7 @@
                         <!-- /Title Row -->
 
                         <!-- Media Grid -->
-                        <div class="grid grid--cols--4 grid--cols--4-responsive-tablet-landscape grid--cols-3-responsive-tablet gap--16">
+                        <div class="grid grid--cols--4 grid--cols--4-responsive-tablet-landscape grid--cols-3-responsive-tablet gap--16 display--none-responsive-mobile display--none-responsive-mobile-portrait">
                             <!-- Item -->
                             <div class="flex flex-column gap--8">
                                 <!-- Media -->
@@ -1002,6 +1037,273 @@
                             <!-- /Item -->
                         </div>
                         <!-- Media Grid -->
+
+                        <!-- Carousel for Mobile -->
+                        <div class="dn display-flex--responsive-mobile display-flex--responsive-mobile-portrait pad--x--8-responsive-mobile pad--x--8-responsive-mobile-portrait">
+                            <div data-subscription-thankyou-media-gallery class="splide">
+                              <div class="splide__track of--visible">
+                                    <ul class="splide__list">
+                                        <li class="splide__slide">
+                                            <!-- Item -->
+                                            <div class="flex flex-column gap--8">
+                                                <!-- Media -->
+                                                <div class="relative">
+                                                    <!-- Image -->
+                                                    <div class="of--hidden w-100 aspect-16-9">
+                                                        <div class="db w-100 h-100 bg--gd--black--50--00 absolute top-0 left-0"></div>
+                                                        <img src="../assets/images/media-thumbnail-1.png" alt="" class="w-100 h-100 fit--cover">
+                                                    </div>
+                                                    <!-- /Image -->
+                                                    <!-- Video Info -->
+                                                    <div class="w-100 pad--4 absolute top-0 left-0 flex justify-between items-center">
+                                                        <!-- Video Time -->
+                                                        <div class="pad--x--4 pad--y--1 flex items-center gap--3 br--4 bg--col--black--24--34--48">
+                                                            <span>
+                                                                <img src="../assets/icons/play-square.svg" class="w--20 h--20 filter--col--white">
+                                                            </span>
+                                                            <span class="fs--12 fw5 lh--normal white tracked--neg-0-12">04:00:05</span>
+                                                        </div>
+                                                        <!-- /Video Time -->
+
+                                                        <!-- Video Meta Info -->
+                                                        <div class="pad--x--4 flex items-center gap--12">
+                                                            <span class="fs--12 fw5 lh--18 white text--sh--black--6--100">1d ago</span>
+                                                            <!-- Like -->
+                                                            <div class="flex items-center gap--3 br--4 o-70 text--sh--black--6--100">
+                                                                <span>
+                                                                    <img src="../assets/icons/heart.svg" class="w--12 h--12 filter--col--white">
+                                                                </span>
+                                                                <span class="fs--12 lh--normal white tracked--neg-0-12">12k</span>
+                                                            </div>
+                                                            <!-- /Like -->
+                                                            <!-- View -->
+                                                            <div class="flex items-center gap--3 br--4 o-70 text--sh--black--6--100">
+                                                                <span>
+                                                                    <img src="../assets/icons/eye.svg" class="w--12 h--12 filter--col--white">
+                                                                </span>
+                                                                <span class="fs--12 lh--normal white tracked--neg-0-12">40</span>
+                                                            </div>
+                                                            <!-- /View -->
+                                                        </div>
+                                                        <!-- /Video Meta Info -->
+                                                    </div>
+                                                    <!-- /Video Info -->
+
+                                                    <!-- Video Play Info -->
+                                                    <div class="pad--8 absolute bottom-0 left-0">
+                                                        <span class="w--40 h--40 flex items-center justify-center bg--col--black--12--17--29 br--50 bg--blur--25 sh--spring--white--10 pointer">
+                                                            <img src="../assets/icons/play.svg" alt="" class="w--20 h--20 filter--col--spring-green o-70">
+                                                        </span>
+                                                    </div>
+                                                    <!-- /Video Play Info -->
+
+                                                    <!-- Logo -->
+                                                    <div class="absolute right-0 bottom-0 z--10000">
+                                                        <img src="../assets/icons/logo-transparent.svg" alt="">
+                                                    </div>
+                                                </div>
+                                                <!-- /Media -->
+                                                <p data-line-clamp class="fs--14 fw5 lh--20 white">Record breaking fried chicken eating! Watch me break world’s record! Watch now!</p>
+                                            </div>
+                                            <!-- /Item -->
+                                        </li>
+                                        <li class="splide__slide">
+                                            <!-- Item -->
+                                            <div class="flex flex-column gap--8">
+                                                <!-- Media -->
+                                                <div class="relative">
+                                                    <!-- Image -->
+                                                    <div class="of--hidden w-100 aspect-16-9">
+                                                        <div class="db w-100 h-100 bg--gd--black--50--00 absolute top-0 left-0"></div>
+                                                        <img src="../assets/images/media-thumbnail-2.png" alt="" class="w-100 h-100 fit--cover">
+                                                    </div>
+                                                    <!-- /Image -->
+                                                    <!-- Video Info -->
+                                                    <div class="w-100 pad--4 absolute top-0 left-0 flex justify-between items-center">
+                                                        <!-- Video Time -->
+                                                        <div class="pad--x--4 pad--y--1 flex items-center gap--3 br--4 bg--col--black--24--34--48">
+                                                            <span>
+                                                                <img src="../assets/icons/play-square.svg" class="w--20 h--20 filter--col--white">
+                                                            </span>
+                                                            <span class="fs--12 fw5 lh--normal white tracked--neg-0-12">04:00:05</span>
+                                                        </div>
+                                                        <!-- /Video Time -->
+
+                                                        <!-- Video Meta Info -->
+                                                        <div class="pad--x--4 flex items-center gap--12">
+                                                            <span class="fs--12 fw5 lh--18 white text--sh--black--6--100">1d ago</span>
+                                                            <!-- Like -->
+                                                            <div class="flex items-center gap--3 br--4 o-70 text--sh--black--6--100">
+                                                                <span>
+                                                                    <img src="../assets/icons/heart.svg" class="w--12 h--12 filter--col--white">
+                                                                </span>
+                                                                <span class="fs--12 lh--normal white tracked--neg-0-12">12k</span>
+                                                            </div>
+                                                            <!-- /Like -->
+                                                            <!-- View -->
+                                                            <div class="flex items-center gap--3 br--4 o-70 text--sh--black--6--100">
+                                                                <span>
+                                                                    <img src="../assets/icons/eye.svg" class="w--12 h--12 filter--col--white">
+                                                                </span>
+                                                                <span class="fs--12 lh--normal white tracked--neg-0-12">40</span>
+                                                            </div>
+                                                            <!-- /View -->
+                                                        </div>
+                                                        <!-- /Video Meta Info -->
+                                                    </div>
+                                                    <!-- /Video Info -->
+
+                                                    <!-- Video Play Info -->
+                                                    <div class="pad--8 absolute bottom-0 left-0">
+                                                        <span class="w--40 h--40 flex items-center justify-center bg--col--black--12--17--29 br--50 bg--blur--25 sh--spring--white--10 pointer">
+                                                            <img src="../assets/icons/play.svg" alt="" class="w--20 h--20 filter--col--spring-green o-70">
+                                                        </span>
+                                                    </div>
+                                                    <!-- /Video Play Info -->
+
+                                                    <!-- Logo -->
+                                                    <div class="absolute right-0 bottom-0 z--10000">
+                                                        <img src="../assets/icons/logo-transparent.svg" alt="">
+                                                    </div>
+                                                </div>
+                                                <!-- /Media -->
+                                                <p data-line-clamp class="fs--14 fw5 lh--20 white">Record breaking fried chicken eating! Watch me break world’s record! Watch now!</p>
+                                            </div>
+                                            <!-- /Item -->
+                                        </li>
+                                        <li class="splide__slide">
+                                            <!-- Item -->
+                                            <div class="flex flex-column gap--8">
+                                                <!-- Media -->
+                                                <div class="relative">
+                                                    <!-- Image -->
+                                                    <div class="of--hidden w-100 aspect-16-9">
+                                                        <div class="db w-100 h-100 bg--gd--black--50--00 absolute top-0 left-0"></div>
+                                                        <img src="../assets/images/media-thumbnail-3.png" alt="" class="w-100 h-100 fit--cover">
+                                                    </div>
+                                                    <!-- /Image -->
+                                                    <!-- Video Info -->
+                                                    <div class="w-100 pad--4 absolute top-0 left-0 flex justify-between items-center">
+                                                        <!-- Video Time -->
+                                                        <div class="pad--x--4 pad--y--1 flex items-center gap--3 br--4 bg--col--black--24--34--48">
+                                                            <span>
+                                                                <img src="../assets/icons/play-square.svg" class="w--20 h--20 filter--col--white">
+                                                            </span>
+                                                            <span class="fs--12 fw5 lh--normal white tracked--neg-0-12">04:00:05</span>
+                                                        </div>
+                                                        <!-- /Video Time -->
+
+                                                        <!-- Video Meta Info -->
+                                                        <div class="pad--x--4 flex items-center gap--12">
+                                                            <span class="fs--12 fw5 lh--18 white text--sh--black--6--100">1d ago</span>
+                                                            <!-- Like -->
+                                                            <div class="flex items-center gap--3 br--4 o-70 text--sh--black--6--100">
+                                                                <span>
+                                                                    <img src="../assets/icons/heart.svg" class="w--12 h--12 filter--col--white">
+                                                                </span>
+                                                                <span class="fs--12 lh--normal white tracked--neg-0-12">12k</span>
+                                                            </div>
+                                                            <!-- /Like -->
+                                                            <!-- View -->
+                                                            <div class="flex items-center gap--3 br--4 o-70 text--sh--black--6--100">
+                                                                <span>
+                                                                    <img src="../assets/icons/eye.svg" class="w--12 h--12 filter--col--white">
+                                                                </span>
+                                                                <span class="fs--12 lh--normal white tracked--neg-0-12">40</span>
+                                                            </div>
+                                                            <!-- /View -->
+                                                        </div>
+                                                        <!-- /Video Meta Info -->
+                                                    </div>
+                                                    <!-- /Video Info -->
+
+                                                    <!-- Video Play Info -->
+                                                    <div class="pad--8 absolute bottom-0 left-0">
+                                                        <span class="w--40 h--40 flex items-center justify-center bg--col--black--12--17--29 br--50 bg--blur--25 sh--spring--white--10 pointer">
+                                                            <img src="../assets/icons/play.svg" alt="" class="w--20 h--20 filter--col--spring-green o-70">
+                                                        </span>
+                                                    </div>
+                                                    <!-- /Video Play Info -->
+
+                                                    <!-- Logo -->
+                                                    <div class="absolute right-0 bottom-0 z--10000">
+                                                        <img src="../assets/icons/logo-transparent.svg" alt="">
+                                                    </div>
+                                                </div>
+                                                <!-- /Media -->
+                                                <p data-line-clamp class="fs--14 fw5 lh--20 white">Record breaking fried chicken eating! Watch me break world’s record! Watch now!</p>
+                                            </div>
+                                            <!-- /Item -->
+                                        </li>
+                                        <li class="splide__slide">
+                                            <!-- Item -->
+                                            <div class="flex flex-column gap--8">
+                                                <!-- Media -->
+                                                <div class="relative">
+                                                    <!-- Image -->
+                                                    <div class="of--hidden w-100 aspect-16-9">
+                                                        <div class="db w-100 h-100 bg--gd--black--50--00 absolute top-0 left-0"></div>
+                                                        <img src="../assets/images/media-thumbnail-4.png" alt="" class="w-100 h-100 fit--cover">
+                                                    </div>
+                                                    <!-- /Image -->
+                                                    <!-- Video Info -->
+                                                    <div class="w-100 pad--4 absolute top-0 left-0 flex justify-between items-center">
+                                                        <!-- Video Time -->
+                                                        <div class="pad--x--4 pad--y--1 flex items-center gap--3 br--4 bg--col--black--24--34--48">
+                                                            <span>
+                                                                <img src="../assets/icons/play-square.svg" class="w--20 h--20 filter--col--white">
+                                                            </span>
+                                                            <span class="fs--12 fw5 lh--normal white tracked--neg-0-12">04:00:05</span>
+                                                        </div>
+                                                        <!-- /Video Time -->
+
+                                                        <!-- Video Meta Info -->
+                                                        <div class="pad--x--4 flex items-center gap--12">
+                                                            <span class="fs--12 fw5 lh--18 white text--sh--black--6--100">1d ago</span>
+                                                            <!-- Like -->
+                                                            <div class="flex items-center gap--3 br--4 o-70 text--sh--black--6--100">
+                                                                <span>
+                                                                    <img src="../assets/icons/heart.svg" class="w--12 h--12 filter--col--white">
+                                                                </span>
+                                                                <span class="fs--12 lh--normal white tracked--neg-0-12">12k</span>
+                                                            </div>
+                                                            <!-- /Like -->
+                                                            <!-- View -->
+                                                            <div class="flex items-center gap--3 br--4 o-70 text--sh--black--6--100">
+                                                                <span>
+                                                                    <img src="../assets/icons/eye.svg" class="w--12 h--12 filter--col--white">
+                                                                </span>
+                                                                <span class="fs--12 lh--normal white tracked--neg-0-12">40</span>
+                                                            </div>
+                                                            <!-- /View -->
+                                                        </div>
+                                                        <!-- /Video Meta Info -->
+                                                    </div>
+                                                    <!-- /Video Info -->
+
+                                                    <!-- Video Play Info -->
+                                                    <div class="pad--8 absolute bottom-0 left-0">
+                                                        <span class="w--40 h--40 flex items-center justify-center bg--col--black--12--17--29 br--50 bg--blur--25 sh--spring--white--10 pointer">
+                                                            <img src="../assets/icons/play.svg" alt="" class="w--20 h--20 filter--col--spring-green o-70">
+                                                        </span>
+                                                    </div>
+                                                    <!-- /Video Play Info -->
+
+                                                    <!-- Logo -->
+                                                    <div class="absolute right-0 bottom-0 z--10000">
+                                                        <img src="../assets/icons/logo-transparent.svg" alt="">
+                                                    </div>
+                                                </div>
+                                                <!-- /Media -->
+                                                <p data-line-clamp class="fs--14 fw5 lh--20 white">Record breaking fried chicken eating! Watch me break world’s record! Watch now!</p>
+                                            </div>
+                                            <!-- /Item -->
+                                        </li>
+                                    </ul>
+                              </div>
+                            </div>
+                        </div>
+                        <!-- /Carousel for Mobile -->
                     </div>
                     <!-- /Watch Inner -->
                 </div>
@@ -1012,24 +1314,30 @@
                 <button class="bg-black pad--y--4 pad--x--8 flex justify-center items-center gap--10 hover--bg--col-brand-green hover--parent--child--col--black-ribbon group size-medium" data-button-style="skew-left shadow-none" data-button-color="black" data-button-shadow="green" data-button-size="medium" data-button-icon-position="left">
                     <div data-button-text-wrap="" class="flex justify-center items-center gap--10 relative z--index--5">
                         <img data-button-icon="" src="https://staging.fansocial.app/wp-content/plugins/fansocial/assets/icons/svg/home-05.svg" alt="plus-square" class="w--24 h--24 filter--col--spring-green hov--filter--col--black-ribbon">
-                        <span class=" poppins nowrap fs--18 fw5 lh--32 col-brand-green ttu hover--col-black"> DASHBOARD HOME </span>
+                        <span class=" poppins nowrap fs--18 fw5 lh--32 col-brand-green ttu hover--col-black display--none-responsive-mobile display--none-responsive-mobile-portrait"> DASHBOARD HOME </span>
                     </div>
                 </button>
             </div>
         </div>
         <!-- /main wrapper -->
 
-        <!-- Nice Select JS -->
-        <script type="text/javascript"
-            src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/FINAL/js/nice-select.js"></script>
-
-        <!-- Tab Element Script -->
-        <script
-            src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/FINAL/js/pageElements.js?ver=2905361574"
-            id="pageElements-js"></script>
-
-        <!-- Dashboard Sidebar Custom Script -->
-        <script src="../assets/js/dashboard-ui.js"></script>
+        <!-- Splide JS Plugin File -->
+        <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.6/dist/js/splide.min.js"></script>
+        <script type="text/javascript">
+            var splideMain = new Splide('[data-subscription-thankyou-media-gallery]', {
+                type: 'slide',
+                perPage: 1.5,
+                perMove: 1,
+                focus: 'left',
+                trimSpace: true,
+                rewind: false,
+                speed: 400,
+                gap: 8,
+                arrows: false,
+                pagination: false,
+                lazyLoad: 'nearby',
+            }).mount();
+        </script>
     </body>
 
 </html>
