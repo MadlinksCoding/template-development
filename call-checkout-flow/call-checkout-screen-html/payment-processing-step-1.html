@@ -1,0 +1,370 @@
+
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <!-- Meta Tags -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>Template - Checkout Call Flow</title>
+
+        <!-- Poppins Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet">
+
+       <!-- Nice Select CSS -->
+       <link rel="stylesheet" type="text/css"
+       href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/FINAL/css/nice-select.css">
+
+        <!-- Tachyons Styles -->
+        <link rel="stylesheet"
+            href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/main.css" />
+        <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" />
+        <link rel="stylesheet"
+            href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/theme.css" />
+        <link rel="stylesheet"
+            href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/customTachyons.css" />
+        <link rel="stylesheet" 
+            href="https://new-stage.fansocial.app/wp-content/plugins/fansocial/assets/new-profile/tachyons-v2.css" />
+        <link rel="stylesheet" 
+        href="https://fansocial.app/wp-content/plugins/fansocial/assets/css/custom-checkout-new.css" />
+    </head>
+
+    <style type="text/css">
+        [data-placeholder-style]::placeholder {
+            color: #F9FAFB;
+        }
+        .max--w--317 { max-width: 19.813rem; }
+        .max--w--400 { max-width: 25rem; }
+
+        .br--col--warm--gray { border-color: rgba(234, 236, 240, 0.50); }
+        .text-right{ text-align: right;}
+        .col-gray-400{ color: #98A2B3;}
+        .br--col--warm--gray { border-color: rgba(234, 236, 240, 0.50); }
+        .br--col--white--grey { border-color: rgba(208, 213, 221, 0.50);}
+        .bg--col--white--05 { background: rgba(255, 255, 255, 0.05); }
+        .sh--12--4--24 { box-shadow: 0 12px 16px -4px rgba(16, 24, 40, 0.08), 0 4px 6px -2px rgba(16, 24, 40, 0.03); }
+
+        [data-form-input-type=checkbox] input[type=checkbox] {
+            min-width: 1rem;
+            height: 1rem;
+            margin-right: 0px;
+            margin-top: 0.125rem;
+        }
+        [data-before-bg-blur="5"]:before{
+            content: '';
+            width: 100%;
+            height: 100%;
+            -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        @media screen and (min-width: 768px) and (max-width: 1009px) and (orientation: portrait){
+            [data-call-checkout-style="tablet-mobile"]{
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                max-width: none;
+                max-height: 24rem;
+                overflow-y: auto;
+                padding-bottom: 5rem;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+            [data-call-checkout-style="tablet-mobile"]:before{
+                content: '';
+                width: 100%;
+                height: 100%;
+                backdrop-filter: blur(25px);
+                -webkit-backdrop-filter: blur(25px);
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: -1;
+            }
+            [data-call-checkout-fixed-button-style="tablet-mobile"]{
+                position: fixed;
+                bottom: 1rem;
+                left: 0;
+                padding: 0 1rem;
+            }
+            [data-payment-process-popup-screen="responsive-full"]{
+                position: fixed;
+                top: 0;
+                left: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        @media screen and (min-width: 480px) and (max-width: 932px) and (orientation: landscape){
+            [data-call-checkout-style="tablet-mobile"]{
+                overflow-y: auto;
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+                max-height: 100dvh;
+                border-radius: 0;
+            }
+            [data-call-checkout-style="tablet-mobile"]:before{
+                content: '';
+                width: 100%;
+                height: 100%;
+                backdrop-filter: blur(25px);
+                -webkit-backdrop-filter: blur(25px);
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: -1;
+            }
+            [data-call-checkout-fixed-button-style="tablet-mobile"]{
+                position: sticky;
+                bottom: 0;
+                left: 0;
+                padding: 0 0.5rem;
+            }
+        }
+        @media screen and (max-width: 479px){
+            [data-call-checkout-style="tablet-mobile"]{
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                max-width: none;
+                max-height: 24rem;
+                overflow-y: auto;
+                padding-bottom: 5rem;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+            }
+            [data-call-checkout-style="tablet-mobile"]:before{
+                content: '';
+                width: 100%;
+                height: 100%;
+                backdrop-filter: blur(25px);
+                -webkit-backdrop-filter: blur(25px);
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: -1;
+            }
+            [data-call-checkout-fixed-button-style="tablet-mobile"]{
+                position: fixed;
+                bottom: 1rem;
+                left: 0;
+                padding: 0 0.5rem;
+            }
+            [data-payment-process-popup-screen="responsive-full"]{
+                position: fixed;
+                top: 0;
+                left: 0;
+                display: flex;
+                align-items: flex-end;
+                justify-content: center;
+            }
+        }
+    </style>
+
+    <body>
+        
+        <!-- Structure Wrapper -->
+        <div class="flex gap--24 relative">
+            <!-- Tip Checkout Wrapper -->
+            <div data-call-checkout-style="tablet-mobile" class="w-100 pad--16 flex flex-column gap--16 bg-black-50 br--10 sh--14 max--w--400 relative">
+                <!-- Back Button -->
+                <div class="flex items-center gap--2">
+                    <span class="db">
+                        <img src="call-checkout-icon/arrow-left.svg" alt="" class="w--16 h--16 filter--col--white">
+                    </span>
+                    <span class="fs--12 fw5 lh--18 white">Back</span>
+                </div>
+                <!-- /Back Button -->
+
+                <!-- Top up Amount -->
+                <div class="flex gap--8">
+                    <span class="fs--16 lh--24 fw6 col--athens-gray-2">Orange (Subscription)</span>
+                    <div class="flex gap-4 items-center flex-column flex--max items-end">
+                        <span class="fs--16 lh--24 fw6 white w-100 text-right">
+                            $5.99/mo
+                        </span>
+                        <del class="fs--12 w-100 text-right col-gray-400">$123.45</del>
+                    </div>
+                </div>
+                <!-- /Top up Amount -->
+                
+                <!-- Payment Method -->
+                <div class="flex flex-column gap--8">
+                    <div class="flex items-center gap--8 h--24">
+                        <span class="w--20 h--20 flex items-center">
+                            <img src="call-checkout-icon/payment-icon.svg" alt="">
+                        </span>
+                        <span class="nowrap fs--14 fw6 lh--20 col--athens-gray-2">PAYMENT METHOD</span>
+                    </div>
+
+                    <!-- Add card form -->
+                    <div class="flex flex-column gap--8">
+                        <!-- Input Field -->
+                        <div class="flex flex-column flex--max">
+                            <span class="fs--12 lh--24 col--athens-gray-2 tracked--neg-0-12">Cardholder name</span>
+                            <div class="pad--y--12 pad--x--10 br--6 bg-white-10 ba br--col--white--grey">
+                                <input data-placeholder-style="" type="text" placeholder="Tai Man" class="fs--16 lh--24 col--athens-gray-2 tracked--neg-0-15 flex--max">
+                            </div>
+                        </div>
+                        <!-- /Input Field -->
+                        <!-- Input Field -->
+                        <div class="flex flex-column flex--max">
+                            <span class="fs--12 lh--24 col--athens-gray-2 tracked--neg-0-12">Card number</span>
+                            <div class="pad--y--12 pad--x--10 br--6 bg-white-10 ba br--col--white--grey flex items-center">
+                                <input data-placeholder-style="" type="text" placeholder="4889 5080 3906 5149" class="fs--16 lh--24 col--athens-gray-2 tracked--neg-0-15 flex--max">
+                                <span class="flex items-center justify-end">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="34" height="24" viewBox="0 0 34 24" fill="none">
+                                        <rect x="0.5" y="0.5" width="33" height="23" rx="3.5" fill="white"></rect>
+                                        <rect x="0.5" y="0.5" width="33" height="23" rx="3.5" stroke="#F2F4F7"></rect>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.7501 15.8579H8.69031L7.14576 9.79198C7.07245 9.51295 6.91679 9.26627 6.68782 9.15001C6.11639 8.85784 5.48672 8.62531 4.7998 8.50804V8.2745H8.11789C8.57583 8.2745 8.91929 8.62531 8.97653 9.03274L9.77793 13.4083L11.8367 8.2745H13.8392L10.7501 15.8579ZM14.984 15.8579H13.0388L14.6406 8.2745H16.5858L14.984 15.8579ZM19.1025 10.3753C19.1597 9.96689 19.5032 9.73335 19.9039 9.73335C20.5336 9.67471 21.2195 9.79199 21.7919 10.0832L22.1354 8.45042C21.5629 8.21688 20.9333 8.09961 20.3619 8.09961C18.4738 8.09961 17.1 9.15002 17.1 10.6078C17.1 11.7169 18.0731 12.2992 18.7601 12.65C19.5032 12.9998 19.7894 13.2334 19.7322 13.5832C19.7322 14.1079 19.1597 14.3414 18.5883 14.3414C17.9014 14.3414 17.2145 14.1665 16.5858 13.8743L16.2424 15.5081C16.9293 15.7992 17.6724 15.9165 18.3594 15.9165C20.4763 15.9741 21.7919 14.9247 21.7919 13.3496C21.7919 11.3661 19.1025 11.2498 19.1025 10.3753ZM28.5998 15.8579L27.0553 8.2745H25.3962C25.0528 8.2745 24.7093 8.50804 24.5948 8.85784L21.7347 15.8579H23.7372L24.1369 14.7498H26.5973L26.8263 15.8579H28.5998ZM25.6824 10.3167L26.2539 13.1747H24.6521L25.6824 10.3167Z" fill="#172B85"></path>
+                                      </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <!-- /Input Field -->
+                        <div class="flex items-center flex--max gap--8">
+                            <!-- Input Field -->
+                            <div class="flex flex-column flex-auto">
+                                <span class="fs--12 lh--24 col--athens-gray-2 tracked--neg-0-12">Expiration date</span>
+                                <div class="pad--y--12 pad--x--10 br--6 bg-white-10 ba br--col--white--grey flex items-center">
+                                    <input data-placeholder-style="" type="text" placeholder="02/29" class="fs--16 lh--24 col--athens-gray-2 tracked--neg-0-15 flex-auto">
+                                    <span class="flex items-center justify-end">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path d="M17.5 8.33366H2.5M13.3333 1.66699V5.00033M6.66667 1.66699V5.00033M6.5 18.3337H13.5C14.9001 18.3337 15.6002 18.3337 16.135 18.0612C16.6054 17.8215 16.9878 17.439 17.2275 16.9686C17.5 16.4339 17.5 15.7338 17.5 14.3337V7.33366C17.5 5.93353 17.5 5.23346 17.2275 4.69868C16.9878 4.22828 16.6054 3.84583 16.135 3.60614C15.6002 3.33366 14.9001 3.33366 13.5 3.33366H6.5C5.09987 3.33366 4.3998 3.33366 3.86502 3.60614C3.39462 3.84583 3.01217 4.22828 2.77248 4.69868C2.5 5.23346 2.5 5.93353 2.5 7.33366V14.3337C2.5 15.7338 2.5 16.4339 2.77248 16.9686C3.01217 17.439 3.39462 17.8215 3.86502 18.0612C4.3998 18.3337 5.09987 18.3337 6.5 18.3337Z" stroke="#EAECF0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                          </svg>
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- /Input Field -->
+                            <!-- Input Field -->
+                            <div class="flex flex-column flex-auto">
+                                <span class="fs--12 lh--24 col--athens-gray-2 tracked--neg-0-12">CVV</span>
+                                <div class="pad--y--12 pad--x--10 br--6 bg-white-10 ba br--col--white--grey">
+                                    <input data-placeholder-style="" type="text" placeholder="730" class="fs--16 lh--24 col--athens-gray-2 tracked--neg-0-15 flex--max">
+                                </div>
+                            </div>
+                            <!-- /Input Field -->
+                        </div>
+
+                        <!-- Checkbox -->
+                        <div class="flex items-center gap--8">
+                            <label for="add-card" class="flex items-center gap--8" data-form-input-type="checkbox" data-form-accent-color="green">
+                                <input type="checkbox" id="add-card" class="w--20 h--20 pointer terms-policy-checkbox">
+                                <span class="fs--14 lh--normal col--gull-gray tracked--0-28">Save card for faster checkout</span>
+                            </label>
+                        </div>
+                        <!-- /Checkbox -->
+                    </div>
+                    <!-- /Add card form -->
+                </div>
+                <!-- /Payment Method -->
+
+                <!-- Account Email -->
+                <div class="flex flex-column gap--8">
+                    <div class="flex items-center gap--8 h--24">
+                        <span class="w--20 h--20 flex items-center">
+                            <img src="call-checkout-icon/email-icon.svg" alt="">
+                        </span>
+                        <span class="nowrap fs--14 fw6 lh--20 col--athens-gray-2">ACCOUNT EMAIL</span>
+                    </div>
+                    <div class="flex items-center gap--8">
+                        <div data-shape-img="" class="w--22 h--22 --pad--x--2-8 --pad--x--10-responsive-mobile relative br--shape--1">
+                            <img class="br-100 w--100 h-100 fit--cover" src="https://fansocial-user-media.s3-accelerate.amazonaws.com/user-869/images/kf1amBZt0jnKUACX4ir3ICx7EbF3Jg/kf1amBZt0jnKUACX4ir3ICx7EbF3Jg.png" alt="">
+                        </div>
+                        <span class="nowrap fs--14 lh--20 white pointer">mangoes@email.com</span>
+                    </div>
+                </div>
+                <!-- /Account Email -->
+
+                <!-- Payment Price table -->
+                <div class="flex flex-column gap--8">
+                    <p class="fs--14 fw4 lh--20 col-gray-400">You will be charged <span class="col-brand-green">$5.99</span> today (02-26-2025) and on the same day each month. This subscription renews automatically, and you can cancel anytime in your account.</p>
+                    <div class="flex flex-column gap--8 bt b--white pad--top--8">
+                        <!-- Table Item -->
+                        <div class="flex items-end justify-between">
+                            <span class="flex--max fs--16 fw6 lh--24 fw6 col--athens-gray-2">Total</span>
+                            <div class="flex items-center gap--4">
+                                <!-- <span class="w--16 h--16 flex items-center justify-center">
+                                    <img src="call-checkout-icon/token-icon.svg" alt="">
+                                </span> -->
+                                <span class="fs--24 fw6 lh--32 col-brand-green">USD$5.99</span>
+                            </div>
+                        </div>
+                        <!-- /Table Item -->
+                    </div>
+                    
+                    <!-- Terms and conditions -->
+                    <div class="flex flex-column gap--8 pad--top--8">
+                        <!-- Table Item -->
+                        <div class="flex justify-between gap--8 items-start">
+                            <label for="add-card" class="flex items gap--8" data-form-input-type="checkbox" data-form-accent-color="green">
+                                <input type="checkbox" id="add-card" class="w--20 h--20 pointer terms-policy-checkbox">
+                                <!-- <span class="fs--14 lh--normal col--gull-gray tracked--0-28">Save card for faster checkout</span> -->
+                                <p class="fs--14 fw4 lh--20 col-gray-400">I agree to Fansocial’s <a href="#" class="col-brand-green">Terms and Condition</a> and <a href="#" class="col-brand-green">Privacy Policy</a>. </p>
+                            </label> 
+                        </div>
+                        <!-- /Table Item -->
+                    </div>
+                    <!-- /Terms and conditions -->
+                </div>
+                <!-- /Payment Price table -->
+
+                <!-- Payment button -->
+                <div data-call-checkout-fixed-button-style="tablet-mobile" class="flex w-100">
+                    <button class="pad--x--16 pad--y--10 w-100 flex--max br--50 bg--col-brand-green flex items-center justify-center hover--bg--col--black hover--parent--child--col--brand-green">
+                        <span class="fs--16 fw6 lh--24 col--ebony--variation-2 hover--col--brand-green ttu">SUBSCRIBE</span>
+                    </button>
+                </div>
+                <!-- /Payment button -->
+            </div>
+            <!-- /Tip Checkout Wrapper -->
+            <!-- Payment process wrapper -->
+            <div data-before-bg-blur="5" data-payment-process-popup-screen="responsive-full" class="absolute left-0 top-0 w-100 h-100 bg--col--white--05 flex items-end">
+                <div class="pad--top--16 pad--bottom--4 gap--4 flex flex-column justify-end bg-white-10 br--10 sh--12--4--24 bg--blur--35">
+                    <div class="pad--x--24 flex items-center justify-between">
+                        <div class="db w--32 h--32"></div>
+                        <span class="fs--14 fw6 lh--20 col--athens-gray-4">Proceed Payment</span>
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                <path d="M24 8L8 24M8 8L24 24" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                        </span>
+                    </div>
+                    <div class="pad--x--16 pad--y--8 flex justify-center tc">
+                        <p class="fs--14 lh--20 col--gull-gray">Please read and agree to Fansocial’s <span class="pointer col-brand-green">Terms and Condition</span> and <span class="pointer col-brand-green">rivacy Policy</span>P. </p>
+                    </div>
+                    <div class="pad--x--16 pad--y--12 flex">
+                        <button class="pad--x--16 pad--y--10 flex--max br--50 bg--col-brand-green flex items-center justify-center hover--bg--col--black hover--parent--child--col--brand-green">
+                            <span class="fs--18 fw5 lh--20 col--ebony--variation-2 hover--col--brand-green ttu">AGREE & PROCEED</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- /Payment process wrapper -->
+        </div>
+        <!-- /Structure Wrapper -->
+
+        <!-- Nice Select JS -->
+        <script type="text/javascript"
+            src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/FINAL/js/nice-select.js"></script>
+
+        <!-- Tab Element Script -->
+        <script
+            src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/FINAL/js/pageElements.js?ver=2905361574"
+            id="pageElements-js"></script>
+
+        <!-- Dashboard Sidebar Custom Script -->
+        <script src="assets/js/dashboard-ui.js"></script>
+    </body>
+
+</html>

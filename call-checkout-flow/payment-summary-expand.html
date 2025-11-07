@@ -36,7 +36,6 @@
         .max--w--317 { max-width: 19.813rem; }
 
         .br--col--warm--gray { border-color: rgba(234, 236, 240, 0.50); }
-
         @media screen and (min-width: 768px) and (max-width: 1009px) and (orientation: portrait){
             [data-call-checkout-style="tablet-mobile"]{
                 position: fixed;
@@ -233,6 +232,56 @@
 
                 <!-- Payment Price table -->
                 <div class="flex flex-column gap--8">
+                    <div class="flex flex-column gap--8">
+                        <!-- Table Item -->
+                        <div class="flex items-center justify-between">
+                            <span class="flex--max fs--14 fw4 lh--20 white">Original balance</span>
+                            <div class="flex items-center gap--4">
+                                <span class="w--16 h--16 flex items-center justify-center">
+                                    <img src="call-checkout-icon/token-icon.svg" alt="">
+                                </span>
+                                <span class="fs--14 fw5 lh--20 white">5</span>
+                            </div>
+                        </div>
+                        <!-- /Table Item -->
+                        <!-- Table Item -->
+                        <div class="flex items-center justify-between">
+                            <span class="flex--max fs--14 fw4 lh--20 white">Top up amount</span>
+                            <div class="flex items-center gap--4">
+                                <span class="fs--14 fw5 lh--20 white">+</span>
+                                <span class="w--16 h--16 flex items-center justify-center">
+                                    <img src="call-checkout-icon/token-icon.svg" alt="">
+                                </span>
+                                <span class="fs--14 fw5 lh--20 white">1,000</span>
+                            </div>
+                        </div>
+                        <!-- /Table Item -->
+                    </div>
+                    <div class="flex flex-column gap--8 bt b--white pad--top--8">
+                        <!-- Table Item -->
+                        <div class="flex items-center justify-between">
+                            <span class="flex--max fs--14 fw4 lh--20 white">Balance after top up</span>
+                            <div class="flex items-center gap--4">
+                                <span class="w--16 h--16 flex items-center justify-center">
+                                    <img src="call-checkout-icon/token-icon.svg" alt="">
+                                </span>
+                                <span class="fs--14 fw5 lh--20 white">1,005</span>
+                            </div>
+                        </div>
+                        <!-- /Table Item -->
+                        <!-- Table Item -->
+                        <div class="flex items-center justify-between">
+                            <span class="flex--max fs--14 fw4 lh--20 white">Tip amount</span>
+                            <div class="flex items-center gap--4">
+                                <span class="fs--14 fw5 lh--20 white">-</span>
+                                <span class="w--16 h--16 flex items-center justify-center">
+                                    <img src="call-checkout-icon/token-icon.svg" alt="">
+                                </span>
+                                <span class="fs--14 fw5 lh--20 white">100</span>
+                            </div>
+                        </div>
+                        <!-- /Table Item -->
+                    </div>
                     <div class="flex flex-column gap--8 bt b--white pad--top--8">
                         <!-- Table Item -->
                         <div class="flex items-center justify-between">

@@ -1,0 +1,271 @@
+
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <!-- Meta Tags -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>Template - Checkout Call Flow</title>
+
+        <!-- Poppins Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet">
+
+        <!-- Nice Select CSS -->
+        <link rel="stylesheet" type="text/css"
+            href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/FINAL/css/nice-select.css">
+
+        <!-- Tachyons Styles -->
+        <link rel="stylesheet"
+            href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/main.css" />
+        <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" />
+        <link rel="stylesheet"
+            href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/theme.css" />
+        <link rel="stylesheet"
+            href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/new-profile/customTachyons.css" />
+        <link rel="stylesheet" 
+            href="https://new-stage.fansocial.app/wp-content/plugins/fansocial/assets/new-profile/tachyons-v2.css" />
+        <link rel="stylesheet" 
+        href="https://fansocial.app/wp-content/plugins/fansocial/assets/css/custom-checkout-new.css" />
+    </head>
+
+    <style type="text/css">
+        .max--w--317 { max-width: 19.813rem; }
+        .max--w--400 { max-width: 25rem; }
+
+        .br--col--warm--gray { border-color: rgba(234, 236, 240, 0.50); }
+        .text-right{ text-align: right;}
+        .col-gray-400{ color: #98A2B3;}
+        [data-form-input-type=checkbox] input[type=checkbox] {
+            min-width: 1rem;
+            height: 1rem;
+            margin-right: 0px;
+            /* margin-top: 0px; */
+            margin-top: 0.125rem;
+        }
+        input{
+            color: white !important;
+        }
+        @media screen and (min-width: 768px) and (max-width: 1009px) and (orientation: portrait){
+            [data-call-checkout-style="tablet-mobile"]{
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                max-width: none;
+                max-height: 24rem;
+                overflow-y: auto;
+                padding-bottom: 5rem;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+            [data-call-checkout-style="tablet-mobile"]:before{
+                content: '';
+                width: 100%;
+                height: 100%;
+                backdrop-filter: blur(25px);
+                -webkit-backdrop-filter: blur(25px);
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: -1;
+            }
+            [data-call-checkout-fixed-button-style="tablet-mobile"]{
+                position: fixed;
+                bottom: 1rem;
+                left: 0;
+                padding: 0 1rem;
+            }
+        }
+        @media screen and (min-width: 480px) and (max-width: 932px) and (orientation: landscape){
+            [data-call-checkout-style="tablet-mobile"]{
+                overflow-y: auto;
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+                max-height: 100dvh;
+                border-radius: 0;
+            }
+            [data-call-checkout-style="tablet-mobile"]:before{
+                content: '';
+                width: 100%;
+                height: 100%;
+                backdrop-filter: blur(25px);
+                -webkit-backdrop-filter: blur(25px);
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: -1;
+            }
+            [data-call-checkout-fixed-button-style="tablet-mobile"]{
+                position: sticky;
+                bottom: 0;
+                left: 0;
+                padding: 0 0.5rem;
+            }
+        }
+        @media screen and (max-width: 479px){
+            [data-call-checkout-style="tablet-mobile"]{
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                max-width: none;
+                max-height: 24rem;
+                overflow-y: auto;
+                padding-bottom: 5rem;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+            }
+            [data-call-checkout-style="tablet-mobile"]:before{
+                content: '';
+                width: 100%;
+                height: 100%;
+                backdrop-filter: blur(25px);
+                -webkit-backdrop-filter: blur(25px);
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: -1;
+            }
+            [data-call-checkout-fixed-button-style="tablet-mobile"]{
+                position: fixed;
+                bottom: 1rem;
+                left: 0;
+                padding: 0 0.5rem;
+            }
+        }
+    </style>
+
+    <body>
+        
+        <!-- Structure Wrapper -->
+        <div class="flex gap--24">
+            <!-- Tip Checkout Wrapper -->
+            <div data-call-checkout-style="tablet-mobile" class="w-100 h--screen pad--16 flex flex-column gap--16 bg-black-50 br--10 sh--14 max--w--400 ">
+                <!-- Back Button -->
+                <div class="flex items-center gap--2">
+                    <span class="db">
+                        <img src="call-checkout-icon/arrow-left.svg" alt="" class="w--16 h--16 filter--col--white">
+                    </span>
+                    <span class="fs--12 fw5 lh--18 white">Back</span>
+                </div>
+                <!-- /Back Button -->
+
+                <!-- Top up Amount -->
+                <div class="flex gap--8">
+                    <span class="fs--16 lh--24 fw6 col--athens-gray-2">Orange (Subscription)</span>
+                    <div class="flex gap-4 items-center flex-column flex--max items-end">
+                        <span class="fs--16 lh--24 fw6 white w-100 text-right">
+                            $5.99/mo
+                        </span>
+                        <del class="fs--12 w-100 text-right col-gray-400">$123.45</del>
+                    </div>
+                </div>
+                <!-- /Top up Amount -->
+                
+                <!-- Payment Method -->
+                <div class="flex flex-column gap--8">
+                    <div class="flex items-center gap--8 h--24">
+                        <span class="w--20 h--20 flex items-center">
+                            <img src="call-checkout-icon/payment-icon.svg" alt="">
+                        </span>
+                        <span class="nowrap fs--14 fw6 lh--20 col--athens-gray-2">PAYMENT METHOD</span>
+                    </div>
+
+                    <div class="pad--x--16 br--6 bg-black-50 ba br--col--warm--gray">
+                        <div class="pad--y--8 flex items-center gap--8">
+                            <div class="flex--max flex flex-column gap--4">
+                                <span class="nowrap fs--16 fw5 lh--24 col--athens-gray-4">Chan Tai Man</span>
+                                <span class="nowrap fs--16 fw5 lh--24 col--athens-gray-4">VISA-1234</span>
+                            </div>
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                    <path d="M4.5 6.75L9 11.25L13.5 6.75" stroke="#EAECF0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Payment Method -->
+
+                <!-- Account Email -->
+                <div class="flex flex-column gap--8">
+                    <div class="flex items-center gap--8 h--24">
+                        <span class="w--20 h--20 flex items-center">
+                            <img src="call-checkout-icon/email-icon.svg" alt="">
+                        </span>
+                        <span class="nowrap fs--14 fw6 lh--20 col--athens-gray-2">ACCOUNT EMAIL</span>
+                    </div>
+                    <div class="flex items-center gap--8">
+                        <div data-shape-img="" class="w--22 h--22 --pad--x--2-8 --pad--x--10-responsive-mobile relative br--shape--1">
+                            <img class="br-100 w--100 h-100 fit--cover" src="https://fansocial-user-media.s3-accelerate.amazonaws.com/user-869/images/kf1amBZt0jnKUACX4ir3ICx7EbF3Jg/kf1amBZt0jnKUACX4ir3ICx7EbF3Jg.png" alt="">
+                        </div>
+                        <span class="nowrap fs--14 lh--20 white pointer">mangoes@email.com</span>
+                    </div>
+                </div>
+                <!-- /Account Email -->
+
+                <!-- Payment Price table -->
+                <div class="flex flex-column gap--8 mt--auto">
+                    <p class="fs--14 fw4 lh--20 col-gray-400">You will be charged <span class="col-brand-green">$5.99</span> today (02-26-2025) and on the same day each month. This subscription renews automatically, and you can cancel anytime in your account.</p>
+                    <div class="flex flex-column gap--8 bt b--white pad--top--8">
+                        <!-- Table Item -->
+                        <div class="flex items-end justify-between">
+                            <span class="flex--max fs--16 fw6 lh--24 fw6 white">Total</span>
+                            <div class="flex items-center gap--4">
+                                <!-- <span class="w--16 h--16 flex items-center justify-center">
+                                    <img src="call-checkout-icon/token-icon.svg" alt="">
+                                </span> -->
+                                <span class="fs--24 fw6 lh--32 col-brand-green">USD$5.99</span>
+                            </div>
+                        </div>
+                        <!-- /Table Item -->
+                    </div>
+                    
+                    <!-- Terms and conditions -->
+                    <div class="flex flex-column gap--8 pad--top--8">
+                        <!-- Table Item -->
+                        <div class="flex justify-between gap--8 items-start">
+                            <label for="add-card" class="flex gap--8" data-form-input-type="checkbox" data-form-accent-color="green">
+                                <input type="checkbox" id="add-card" class="w--20 h--20 pointer terms-policy-checkbox">
+                                <!-- <span class="fs--14 lh--normal col--gull-gray tracked--0-28">Save card for faster checkout</span> -->
+                                <p class="fs--14 fw4 lh--20 col-gray-400">I agree to Fansocial’s <a href="#" class="col-brand-green">Terms and Condition</a> and <a href="#" class="col-brand-green">Privacy Policy</a>. </p>
+                            </label>   
+                        </div>
+                        <!-- /Table Item -->
+                    </div>
+                    <!-- /Terms and conditions -->
+                </div>
+                <!-- /Payment Price table -->
+
+                <!-- Payment button -->
+                <div data-call-checkout-fixed-button-style="tablet-mobile" class="flex w-100">
+                    <button class="pad--x--16 pad--y--10 w-100 flex--max br--50 bg--col-brand-green flex items-center justify-center hover--bg--col--black hover--parent--child--col--brand-green">
+                        <span class="fs--16 fw6 lh--24 col--ebony--variation-2 hover--col--brand-green">SUBSCRIBE</span>
+                    </button>
+                </div>
+                <!-- /Payment button -->
+            </div>
+            <!-- /Tip Checkout Wrapper -->
+        </div>
+        <!-- /Structure Wrapper -->
+
+        <!-- Nice Select JS -->
+        <script type="text/javascript"
+            src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/FINAL/js/nice-select.js"></script>
+
+        <!-- Tab Element Script -->
+        <script
+            src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/FINAL/js/pageElements.js?ver=2905361574"
+            id="pageElements-js"></script>
+
+        <!-- Dashboard Sidebar Custom Script -->
+        <script src="assets/js/dashboard-ui.js"></script>
+    </body>
+
+</html>
