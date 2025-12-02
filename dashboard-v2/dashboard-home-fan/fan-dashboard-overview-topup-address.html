@@ -72,6 +72,22 @@
         border: 1px solid rgba(234, 236, 240, 0.50);
         background: rgba(255, 255, 255, 0.35);
     }
+    [data-tip-alert-wrapper] {
+        background-color: #242424;
+        border-bottom: 0.5px solid #344054;
+    }
+    [data-tip-alert-container] {
+        border-left: 3px solid #FF4405;
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.90) 100%), linear-gradient(0deg, rgba(255, 68, 5, 0.30) 0%, rgba(255, 68, 5, 0.30) 100%), rgba(0, 0, 0, 0.90);
+    }
+    @media (max-width: 767px) {
+        [data-tip-alert-wrapper] {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+    }
   </style>
 
   <!-- Dashboard Sidebar Custom Style -->
@@ -10302,6 +10318,22 @@
             <div class="elm_qJBugX bg--gd--white--25--90 max--w--521 w-100 elm_GrEkAM h--screen flex flex-column overflow-auto">
                 <!-- Top up Panel -->
                 <div class="flex flex-column h-100">
+                    <!-- Payment alert -->
+                    <div data-tip-error-cash-amount-exceeds="" data-tip-error-amount-exceeds="" data-tip-alert-wrapper="">
+                        <div data-tip-alert-container="" class="pad--y--12 pad--x--8 relative z-1">
+                            <div class="flex gap--16 relative z-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="41" height="40" viewBox="0 0 41 40" fill="none">
+                                    <rect x="0.117676" width="40" height="40" rx="8" fill="#FF4405" fill-opacity="0.1"></rect>
+                                    <path d="M20.1176 16.5V21.1667M20.1176 25.8334H20.1292M18.5021 10.5404L8.90639 27.1148C8.37415 28.0341 8.10803 28.4937 8.14736 28.871C8.18167 29.2001 8.35407 29.4991 8.62165 29.6936C8.92844 29.9167 9.45958 29.9167 10.5219 29.9167H29.7133C30.7755 29.9167 31.3067 29.9167 31.6135 29.6936C31.881 29.4991 32.0534 29.2001 32.0877 28.871C32.1271 28.4937 31.861 28.0341 31.3287 27.1148L21.733 10.5404C21.2027 9.62434 20.9375 9.16633 20.5916 9.0125C20.2898 8.87832 19.9453 8.87832 19.6435 9.0125C19.2976 9.16633 19.0324 9.62434 18.5021 10.5404Z" stroke="#FF4405" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+        
+                                <div class="flex flex-column w-100 justify-center">
+                                    <p class="fs--14 lh--20 fw6 poppins col--vermilion">Payment Unsuccessful</p>
+                                    <p class="fs--14 lh--20 poppins col--led-grey">Payment was unsuccessful due to a poor network connection. Please try again later</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <!-- enter-payment-info-section -->
                     <div class="flex flex-column gap--16 pad--x--24 pad--y--16 pad--x--16-responsive-tablet pad--x--8-responsive-mobile pad--x--8-responsive-mobile-portrait pad--y--4-responsive-mobile pad--y--4-responsive-mobile-portrait flex--max">
                         <div class="flex items-center justify-between">
