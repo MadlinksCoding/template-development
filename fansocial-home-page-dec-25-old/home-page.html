@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <!-- Meta Tags -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>Template - Fansocial Home Page</title>
+
+        <!-- Tachyons Styles -->
+        <link rel='stylesheet' id='google-fonts-css' href='https://fonts.googleapis.com/css2?family=Poppins%3Awght%40300%3B400%3B500%3B600%3B700%3B800%3B900&#038;display=swap&#038;ver=1.2.38' media='' />
+        <link rel='stylesheet' id='toastsStyle-css' href='https://fansocial.app/wp-content/plugins/fansocial/assets/css/toasts.css?ver=1.2.38' media='' />
+        <link rel='stylesheet' id='theme-css' href='https://fansocial.app/wp-content/plugins/fansocial/assets/new-profile/theme.css?ver=1.2.38' media='' />
+        <link rel='stylesheet' id='final-main-css' href='https://fansocial.app/wp-content/plugins/fansocial/assets/new-profile/main.css?ver=1.2.38' media='' />
+        <link rel='stylesheet' id='components-css' href='https://fansocial.app/wp-content/plugins/fansocial/assets/css/components.css?ver=1.2.38' media='' />
+        <link rel='stylesheet' id='tachyonsStylesheet-css' href='https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.11.1/tachyons.min.css?ver=1.2.38' media='' />
+        <link rel='stylesheet' id='popup-css' href='https://fansocial.app/wp-content/plugins/fansocial/assets/css/dev/popup.css?ver=1.2.38' media='' />
+        <link rel='stylesheet' id='pageElements-css' href='https://fansocial.app/wp-content/plugins/fansocial/assets/FINAL/css/pageElements.css?ver=1.2.38' media='' />
+        <link rel='stylesheet' id='finalCustomTachyonsStylesheet-css' href='https://fansocial.app/wp-content/plugins/fansocial/assets/new-profile/customTachyons.css?ver=1.2.38' media='' />
+        <link rel='stylesheet' id='tachyonsV2-css' href='https://fansocial.app/wp-content/plugins/fansocial/assets/new-profile/tachyons-v2.css?ver=1.2.38' media='' />
+        <!-- Responsive -->
+        <link rel='stylesheet' id='frontPageTabletLandscapeStyle-css' href='https://fansocial.app/wp-content/plugins/fansocial/assets/new-profile/tachyons-tablet-landscape.css?ver=1.2.38' media='screen and (min-width: 1010px) and (max-width: 1365px)' />
+        <link rel='stylesheet' id='frontPageTabletStyle-css' href='https://fansocial.app/wp-content/plugins/fansocial/assets/new-profile/tachyons-tablet.css?ver=1.2.38' media='screen and (min-width: 768px) and (max-width: 1009px)' />
+        <link rel='stylesheet' id='frontPageMobileStyle-css' href='https://fansocial.app/wp-content/plugins/fansocial/assets/new-profile/tachyons-mobile.css?ver=1.2.38' media='screen and (min-width: 480px) and (max-width: 767px)' />
+        <link rel='stylesheet' id='frontPageMobilePortraitStyle-css' href='https://fansocial.app/wp-content/plugins/fansocial/assets/new-profile/tachyons-mobile-portrait.css?ver=1.2.38' media='screen and (max-width: 479px)' />
+        
+
+        <!-- Normal CSS -->
+        <style>
+            .w--88 { width: 5.5rem; }
+            .h--88 { height: 5.5rem; }
+            .w--268 { width: 16.75rem; }
+            .h--899 { height: 56.188rem; }
+            .h--379 { height: 23.688rem; }
+            .h--350 { height: 21.875rem; }
+            .h--504 { height: 31.5rem; }
+            .bg--col-29-35-52--90 { background-color: rgba(29, 35, 52, 0.90); }
+            .bg--col-29-35-52--50 { background: rgba(29, 35, 52, 0.50); }
+            .bg--gd--black-20-100 { background: linear-gradient(180deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.00) 100%); }
+            .bg--gd--black--75-100 { background: linear-gradient(180deg, rgba(255, 255, 255, 0.75) 70%, rgba(255, 255, 255, 0.00) 100%), #EAECF0; }
+            .bg--gd--black--251-162 { background: linear-gradient(180deg, rgba(251, 91, 162, 0.00) 0%, rgba(251, 91, 162, 0.00) 100%), linear-gradient(180deg, rgba(16, 24, 40, 0.00) 0%, rgba(16, 24, 40, 0.75) 100%); }
+            .bg--gd--white--251-162{ background: linear-gradient(0deg, rgba(251, 91, 162, 0.00) 0%, rgba(251, 91, 162, 0.00) 100%), linear-gradient(0deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.10) 100%); }
+            .bg--gd--pink--251-91-162--100 { background: linear-gradient(180deg, rgba(251, 91, 162, 0.45) 0%, rgba(251, 91, 162, 0.90) 100%); }
+            .gap--54 { gap: 3.375rem; }
+            .pad--y--80 { padding-top: 5rem; padding-bottom: 5rem; }
+            .tracked--neg--65 { letter-spacing: -0.065rem; }
+            .text--sh--black--9-6--25 {text-shadow: 0 4px 9.6px rgba(0, 0, 0, 0.25);}
+            .fs--52 { font-size: 3.25rem; }
+            .ma--0 { margin: 0; }
+            .max--w--720 { max-width: 45rem; }
+            .hover--link--col--white:hover { color: var(--color-white) !important; }
+            .br--col-208-213-221--50 { border-color: rgba(208, 213, 221, 0.50); }
+            .br--col-52-64-84--20 { border-color: rgba(52, 64, 84, 0.20); }
+            .col--mirage--black { color: var(--mirage--black, #1D2334); }
+            .col--cloudy { color: var(--cloudy, #A9A29D); }
+            .hover--col--cloudy:hover { color: var(--cloudy, #A9A29D); }
+            .hover--text--underline:hover { text-decoration: underline; }
+            .cp--15 { clip-path: polygon(0% 0, 92% 0, 100% 100%, 8% 100%); }
+            .hover--parent--child--col--brand-green:hover .hover--col--brand-green { color: var(--color-brand-green, #07F468) !important; }
+            .hover--parent--child--col--white:hover .hover--col--white { color: #fff !important; }
+            .aspect--ratio--1-1 { aspect-ratio: 1 / 1; }
+            .right--neg--24 { right: -1.5rem; }
+            .text--sh--04-25 { text-shadow: 0 0 4px rgba(0, 0, 0, 0.25); }
+            .filter--col--cloudy { filter: brightness(0) saturate(100%) invert(78%) sepia(14%) saturate(146%) hue-rotate(342deg) brightness(83%) contrast(82%); }
+
+            /* Input field placeholder and text color */
+            input[data-join-creator-email-field]{
+                color: var(--color-white) !important;
+            }
+
+            input[data-join-creator-email-field]::placeholder {
+                color: var(--color-white) !important;
+                opacity: 1 !important;
+            }
+
+            input[data-join-creator-email-field]::-webkit-input-placeholder {
+                color: var(--color-white) !important;
+            }
+
+            input[data-join-creator-email-field]::-moz-placeholder {
+                color: var(--color-white) !important;
+            }
+            /* Input field placeholder and text color */
+
+            /* Accordion style */
+            [data-com-accordion="body"] {
+                overflow: hidden;
+                max-height: 0;
+                opacity: 0;
+                transform: translateY(-6px);
+                transition:
+                    max-height 0.45s cubic-bezier(.25, .46, .45, .94),
+                    opacity 0.35s ease,
+                    transform 0.35s ease;
+                will-change: max-height, opacity, transform;
+            }
+
+            [data-com-accordion="body"][data-open="true"] {
+                opacity: 1;
+                transform: translateY(0);
+                max-height: 500px;
+                padding-top: 1rem;
+            }
+            /* Accordion style */
+
+
+
+        </style>
+    </head>
+
+    <body>
+        <!-- Main page container -->
+        <div class="w-100 flex flex-column">
+            <!-- Hero Section / Header -->
+            <section class="w-100 h--899 relative">
+                <!-- Background video slider -->
+                <div class="w-100 h--899 absolute left-0 right-0 neg--z--index--1">
+                    <div class="w-100 h-100">
+                        <video class="w-100 h-100 fit--cover" autoplay muted loop playsinline>
+                            <source src="assets/background-jess-video.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <!-- /Background Video Slider -->
+                <!-- Hero Inner -->
+                <div class="w-100 h-100 bg--col-29-35-52--50 flex flex-column">
+                    <!-- Header -->
+                    <header class="w-100 pad--x--24 pad--y--16 flex items-center gap--24 sticky top-0 left-0 bg--gd--black-20-100">
+                        <!-- Navigation -->
+                        <nav class="flex flex--max o-70">
+                            <ul class="flex items-end gap--54">
+                                <li class="flex--none">
+                                    <a href="#" class="db">
+                                        <img src="https://fansocial.app/wp-content/plugins/fansocial/assets/icons/svg/logo-text.svg" alt="" class="filter--col--Mercury">
+                                    </a>
+                                </li>
+                                <li class="flex--max">
+                                    <a href="#" class="flex fs--20 fw4 lh--normal col--mercury hover--link--col--white">Model</a>
+                                </li>
+                                <li class="flex--max">
+                                    <a href="#" class="flex fs--20 fw4 lh--normal col--mercury hover--link--col--white">Discover</a>
+                                </li>
+                                <li class="flex--max">
+                                    <a href="#" class="flex fs--20 fw4 lh--normal col--mercury hover--link--col--white">Live</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <!-- /Navigation -->
+                        <!-- Auth Button -->
+                        <div class="flex items-center gap--8">
+                            <span class="flex pad--x--6 fs--18 fw6 lh--28 col-brand-green hover--col--white pointer ttu">
+                                LOGIN
+                            </span>
+                            <span class="pad--x--20 pad--right--24 pad--y--4 flex items-center justify-center bg--col-brand-green hover--bg--col--black hover--parent--child--col--brand-green pointer cp--15">
+                                <span class="fs--18 fw6 lh--28 col--mirage--black hover--col--brand-green">
+                                    SIGN UP FOR FREE
+                                </span>
+                            </span>
+                            
+                        </div>
+                        <!-- /Auth Button -->
+                    </header>
+                    <!-- /Header -->
+                    <!-- Hero content Wrapper -->
+                    <div class="w-100 pad--x--48 flex items-center gap--24 justify-between">
+                        <!-- Left text content section -->
+                        <div class="max--w--720 flex flex--max flex-column gap--24">
+                            <!-- Text Block -->
+                            <div class="flex flex-column gap--20">
+                                <!-- Media Title -->
+                                <div class="flex flex-column gap--8">
+                                    <h1 class="fs--52 fw6 lh--60 tracked--neg--65 .text--sh--black--9-6--25 white i ttc ma--0">Make money</h1>
+                                    <h3 class="fs--30 fw5 lh--38 white">with the best all in one social platform.</h3>
+                                </div>
+                                <!-- /Media Title -->
+                                <!-- Description -->
+                                <div class="w-100">
+                                    <p class="fs--16 fw4 lh--24 white">Fansocial puts everything you sell-Videos, image gallery, Audio clips, merch, products, even paid calls—into one platform so fans can buy in seconds and you get paid fast.</p>
+                                </div>
+                                <!-- /Description -->
+                            </div>
+                            <!-- /Text Block -->
+
+                            <!-- Join Creator Input Block -->
+                            <div class="w-100 flex">
+                                <!-- Input Block -->
+                                <div class="flex--max pad--12 br--6 br--top-bottom-right bg-white-10 ba br--col-208-213-221--50">
+                                    <input data-join-creator-email-field type="email" placeholder="Enter Email" class="w-100 h-100 fs--18 fw4 lh--28 white">
+                                </div>
+                                <button class="pad--x--16 pad--y--10 br--6 br--top-bottom-left bg--col-brand-green ttu flex items-center justify-center hover--bg--col--black hover--parent--child--col--brand-green">
+                                    <span class="fs--20 fw6 lh--30 col--mirage--black tc hover--col--brand-green">JOIN AS CREATOR</span>
+                                </button>
+                                <!-- Input Block -->
+                            </div>
+                            <!-- /Join Creator Input Block -->
+
+                            <!-- Link text -->
+                            <div class="flex pad--top--4">
+                                <a href="#" class="fs--20 fw4 lh--20 col--mischka underline hover--link--col--white">Sign up as Fan</a>
+                            </div>
+                        </div>
+                        <!-- /Left text content section -->
+
+                        <!-- Right Media Image -->
+                        <div class="flex items-center">
+                            <img src="assets/images/question.png" alt="">
+                        </div>
+                        <!-- /Right Media Image -->
+                    </div>
+                    <!-- /Hero content Wrapper -->
+                </div>
+                <!-- /Hero Inner -->
+            </section>
+            <!-- /Hero Section / header -->
+
+            <!-- Second Section -->
+            <section class="pad--x--48 pad--y--80 flex flex-column gap--64 bg--gd--black--75-100 bg--blur--25">
+                <!-- Title Section -->
+                <div class="pad--y--10 flex flex-column gap--24 justify-center items-center">
+                    <h2 class="fs--36 fw6 lh--44 tracked--neg--0-72 col--oxford-blue">Stop Jumping Between Platforms.</h2>
+                    <span class="fs--20 fw4 lh--30 col--oxford-blue">Start Thriving in One Dynamic Ecosystem.</span>
+                </div>
+                <!-- /Title Section -->
+
+                <!-- Column Section -->
+                <div class="flex gap--24 items-start">
+                    <!-- Column Item -->
+                    <div class="flex flex-column gap--40 flex--max">
+                        <!-- Image -->
+                        <div class="w-100 h--379 flex aspect--ratio--1-1 justify-center">
+                            <img src="assets/images/sec-2-img-1.png" alt="" class="w-100 h-100 fit--contain">
+                        </div>
+                        <!-- /Image -->
+                        <!-- Content -->
+                        <div class="flex flex-column gap--16">
+                            <h3 class="fs--24 fw6 lh--32 col--oxford-blue">Your channels all linked up</h3>
+                            <p class="fs--16 fw4 lh--24 col--oxford-blue">Automated Telegram promotion keeps your content circulating while you focus on creating. Stay linked to your fans via Telegram integration and receive calls anywhere on the go.</p>
+                        </div>
+                        <!-- /Content -->
+                    </div>
+                    <!-- Column Item -->
+                    <!-- Column Item -->
+                    <div class="flex flex-column gap--40 flex--max">
+                        <!-- Image -->
+                        <div class="w-100 h--379 flex aspect--ratio--1-1 justify-center">
+                            <img src="assets/images/sec-2-img-2.png" alt="" class="w-100 h-100 fit--contain">
+                        </div>
+                        <!-- /Image -->
+                        <!-- Content -->
+                        <div class="flex flex-column gap--16">
+                            <h3 class="fs--24 fw6 lh--32 col--oxford-blue">Pioneer Fan Engagement</h3>
+                            <p class="fs--16 fw4 lh--24 col--oxford-blue">Fansocial is pioneering a new era for creators, changing how fan sites work. Stop limiting your potential. Go beyond simple content. Bundle exclusive merchandise directly into your subscription tiers to create must-have offers. Upsell your media and products in real-time during live calls to capture immediate demand. This isn’t just another platform. It’s the new standard, built to turn your fan site into a dynamic business where you control your economy without limits.</p>
+                        </div>
+                        <!-- /Content -->
+                    </div>
+                    <!-- Column Item -->
+                    <!-- Column Item -->
+                    <div class="flex flex-column gap--40 flex--max">
+                        <!-- Image -->
+                        <div class="w-100 h--379 flex aspect--ratio--1-1 justify-center">
+                            <img src="assets/images/sec-2-img-3.png" alt="" class="w-100 h-100 fit--contain">
+                        </div>
+                        <!-- /Image -->
+                        <!-- Content -->
+                        <div class="flex flex-column gap--16">
+                            <h3 class="fs--24 fw6 lh--32 col--oxford-blue">Scale smarter. Get paid faster.</h3>
+                            <p class="fs--16 fw4 lh--24 col--oxford-blue">You earned it, you get it. Our system processes your funds in under 10 minutes. Seriously.  Plus, ditch the guesswork: our real-time analytics are like a cheat code, showing you exactly what content makes the most money so you can duplicate the success.</p>
+                        </div>
+                        <!-- /Content -->
+                    </div>
+                    <!-- Column Item -->
+                </div>
+                <!-- Column Section -->
+            </section>
+            <!-- /Second Section -->
+
+            <!-- Third Section -->
+            <section data-featured-creators="main-section" class="pad--y--80 flex flex-column gap--40 bg--blur--25">
+                <!-- Title Section -->
+                <div class="pad--y--10 pad--x--48 flex flex-column gap--24 justify-center items-center">
+                    <h2 class="fs--36 fw6 lh--44 tracked--neg--0-72 col--oxford-blue">Featured Creators</h2>
+                    <span class="fs--20 fw4 lh--30 col--oxford-blue">100+ content creators have already joined us</span>
+                </div>
+                <!-- /Title Section -->
+
+                <!-- Carousel section -->
+                <div class="flex flex-column gap--16 of--hidden">
+                    <!-- Row -->
+                    <div class="flex items-start gap--16">
+                        <!-- Card -->
+                        <div class="w--268 h--350 br--20 relative flex-none">
+                            <!-- image -->
+                            <div class="w-100 h-100 br--20 of--hidden">
+                                <img src="assets/images/fd-creators-img-1.png" alt="" class="w-100 h-100 fit--cover">
+                            </div>
+                            <!-- /Image -->
+                            <!-- Content -->
+                            <div class="w-100 bg--gd--black--251-162 absolute bottom-0 left-0 pad--16 flex flex-column gap--4 br--20 br--top-right br--top-left">
+                                <h3 class="fs--30 fw6 lh--38 white">Yana Zein</h3>
+                                <span class="fs--16 fw5 lh--24 white">@yana</span>
+                            </div>
+                            <!-- /Content -->
+                        </div>
+                        <!-- /Card -->
+                        <!-- Card -->
+                        <div class="w--268 h--350 br--20 relative flex-none">
+                            <!-- image -->
+                            <div class="w-100 h-100 br--20 of--hidden">
+                                <img src="assets/images/fd-creators-img-1.png" alt="" class="w-100 h-100 fit--cover">
+                            </div>
+                            <!-- /Image -->
+                            <!-- Content -->
+                            <div class="w-100 bg--gd--black--251-162 absolute bottom-0 left-0 pad--16 flex flex-column gap--4 br--20 br--top-right br--top-left">
+                                <h3 class="fs--30 fw6 lh--38 white">Yana Zein</h3>
+                                <span class="fs--16 fw5 lh--24 white">@yana</span>
+                            </div>
+                            <!-- /Content -->
+                        </div>
+                        <!-- /Card -->
+                        <!-- Card -->
+                        <div class="w--268 h--350 br--20 relative flex-none">
+                            <!-- image -->
+                            <div class="w-100 h-100 br--20 of--hidden">
+                                <img src="assets/images/fd-creators-img-1.png" alt="" class="w-100 h-100 fit--cover">
+                            </div>
+                            <!-- /Image -->
+                            <!-- Content -->
+                            <div class="w-100 bg--gd--black--251-162 absolute bottom-0 left-0 pad--16 flex flex-column gap--4 br--20 br--top-right br--top-left">
+                                <h3 class="fs--30 fw6 lh--38 white">Yana Zein</h3>
+                                <span class="fs--16 fw5 lh--24 white">@yana</span>
+                            </div>
+                            <!-- /Content -->
+                        </div>
+                        <!-- /Card -->
+                        <!-- Card -->
+                        <div class="w--268 h--350 br--20 relative flex-none">
+                            <!-- image -->
+                            <div class="w-100 h-100 br--20 of--hidden">
+                                <img src="assets/images/fd-creators-img-1.png" alt="" class="w-100 h-100 fit--cover">
+                            </div>
+                            <!-- /Image -->
+                            <!-- Content -->
+                            <div class="w-100 bg--gd--black--251-162 absolute bottom-0 left-0 pad--16 flex flex-column gap--4 br--20 br--top-right br--top-left">
+                                <h3 class="fs--30 fw6 lh--38 white">Yana Zein</h3>
+                                <span class="fs--16 fw5 lh--24 white">@yana</span>
+                            </div>
+                            <!-- /Content -->
+                        </div>
+                        <!-- /Card -->
+                        <!-- Card -->
+                        <div class="w--268 h--350 br--20 relative flex-none">
+                            <!-- image -->
+                            <div class="w-100 h-100 br--20 of--hidden">
+                                <img src="assets/images/fd-creators-img-1.png" alt="" class="w-100 h-100 fit--cover">
+                            </div>
+                            <!-- /Image -->
+                            <!-- Content -->
+                            <div class="w-100 bg--gd--black--251-162 absolute bottom-0 left-0 pad--16 flex flex-column gap--4 br--20 br--top-right br--top-left">
+                                <h3 class="fs--30 fw6 lh--38 white">Yana Zein</h3>
+                                <span class="fs--16 fw5 lh--24 white">@yana</span>
+                            </div>
+                            <!-- /Content -->
+                        </div>
+                        <!-- /Card -->
+                        <!-- Card -->
+                        <div class="w--268 h--350 br--20 relative flex-none">
+                            <!-- image -->
+                            <div class="w-100 h-100 br--20 of--hidden">
+                                <img src="assets/images/fd-creators-img-1.png" alt="" class="w-100 h-100 fit--cover">
+                            </div>
+                            <!-- /Image -->
+                            <!-- Content -->
+                            <div class="w-100 bg--gd--black--251-162 absolute bottom-0 left-0 pad--16 flex flex-column gap--4 br--20 br--top-right br--top-left">
+                                <h3 class="fs--30 fw6 lh--38 white">Yana Zein</h3>
+                                <span class="fs--16 fw5 lh--24 white">@yana</span>
+                            </div>
+                            <!-- /Content -->
+                        </div>
+                        <!-- /Card -->
+                    </div>
+                    <!-- /Row -->
+
+                    <!-- Row -->
+                    <div class="flex items-start gap--16">
+                        <!-- Card -->
+                        <div class="w--268 h--350 br--20 relative flex-none">
+                            <!-- image -->
+                            <div class="w-100 h-100 br--20 of--hidden">
+                                <img src="assets/images/fd-creators-img-1.png" alt="" class="w-100 h-100 fit--cover">
+                            </div>
+                            <!-- /Image -->
+                            <!-- Content -->
+                            <div class="w-100 bg--gd--black--251-162 absolute bottom-0 left-0 pad--16 flex flex-column gap--4 br--20 br--top-right br--top-left">
+                                <h3 class="fs--30 fw6 lh--38 white">Yana Zein</h3>
+                                <span class="fs--16 fw5 lh--24 white">@yana</span>
+                            </div>
+                            <!-- /Content -->
+                        </div>
+                        <!-- /Card -->
+                        <!-- Card -->
+                        <div class="w--268 h--350 br--20 relative flex-none">
+                            <!-- image -->
+                            <div class="w-100 h-100 br--20 of--hidden">
+                                <img src="assets/images/fd-creators-img-1.png" alt="" class="w-100 h-100 fit--cover">
+                            </div>
+                            <!-- /Image -->
+                            <!-- Content -->
+                            <div class="w-100 bg--gd--black--251-162 absolute bottom-0 left-0 pad--16 flex flex-column gap--4 br--20 br--top-right br--top-left">
+                                <h3 class="fs--30 fw6 lh--38 white">Yana Zein</h3>
+                                <span class="fs--16 fw5 lh--24 white">@yana</span>
+                            </div>
+                            <!-- /Content -->
+                        </div>
+                        <!-- /Card -->
+                        <!-- Card -->
+                        <div class="w--268 h--350 br--20 relative flex-none">
+                            <!-- image -->
+                            <div class="w-100 h-100 br--20 of--hidden">
+                                <img src="assets/images/fd-creators-img-1.png" alt="" class="w-100 h-100 fit--cover">
+                            </div>
+                            <!-- /Image -->
+                            <!-- Content -->
+                            <div class="w-100 bg--gd--black--251-162 absolute bottom-0 left-0 pad--16 flex flex-column gap--4 br--20 br--top-right br--top-left">
+                                <h3 class="fs--30 fw6 lh--38 white">Yana Zein</h3>
+                                <span class="fs--16 fw5 lh--24 white">@yana</span>
+                            </div>
+                            <!-- /Content -->
+                        </div>
+                        <!-- /Card -->
+                        <!-- Card -->
+                        <div class="w--268 h--350 br--20 relative flex-none">
+                            <!-- image -->
+                            <div class="w-100 h-100 br--20 of--hidden">
+                                <img src="assets/images/fd-creators-img-1.png" alt="" class="w-100 h-100 fit--cover">
+                            </div>
+                            <!-- /Image -->
+                            <!-- Content -->
+                            <div class="w-100 bg--gd--black--251-162 absolute bottom-0 left-0 pad--16 flex flex-column gap--4 br--20 br--top-right br--top-left">
+                                <h3 class="fs--30 fw6 lh--38 white">Yana Zein</h3>
+                                <span class="fs--16 fw5 lh--24 white">@yana</span>
+                            </div>
+                            <!-- /Content -->
+                        </div>
+                        <!-- /Card -->
+                        <!-- Card -->
+                        <div class="w--268 h--350 br--20 relative flex-none">
+                            <!-- image -->
+                            <div class="w-100 h-100 br--20 of--hidden">
+                                <img src="assets/images/fd-creators-img-1.png" alt="" class="w-100 h-100 fit--cover">
+                            </div>
+                            <!-- /Image -->
+                            <!-- Content -->
+                            <div class="w-100 bg--gd--black--251-162 absolute bottom-0 left-0 pad--16 flex flex-column gap--4 br--20 br--top-right br--top-left">
+                                <h3 class="fs--30 fw6 lh--38 white">Yana Zein</h3>
+                                <span class="fs--16 fw5 lh--24 white">@yana</span>
+                            </div>
+                            <!-- /Content -->
+                        </div>
+                        <!-- /Card -->
+                        <!-- Card -->
+                        <div class="w--268 h--350 br--20 relative flex-none">
+                            <!-- image -->
+                            <div class="w-100 h-100 br--20 of--hidden">
+                                <img src="assets/images/fd-creators-img-1.png" alt="" class="w-100 h-100 fit--cover">
+                            </div>
+                            <!-- /Image -->
+                            <!-- Content -->
+                            <div class="w-100 bg--gd--black--251-162 absolute bottom-0 left-0 pad--16 flex flex-column gap--4 br--20 br--top-right br--top-left">
+                                <h3 class="fs--30 fw6 lh--38 white">Yana Zein</h3>
+                                <span class="fs--16 fw5 lh--24 white">@yana</span>
+                            </div>
+                            <!-- /Content -->
+                        </div>
+                        <!-- /Card -->
+                    </div>
+                    <!-- /Row -->
+                </div>
+                <!-- /Carousel section -->
+
+                <!-- Profile click button on hover -->
+                <span data-featured-creators="profile-btn-click" class="w--88 h--88 pointer br-100 bg--col-brand-green dn flex-column items-center justify-center absolute">
+                    <span class="flex-none">
+                        <img src="https://fansocial.app/wp-content/plugins/fansocial/assets/icons/svg/arrow-up-right.svg" alt="" class="w--18 h--18 filter--col--black">
+                    </span>
+                    <span class="fs--16 fw5 lh--24 black">Profile</span>
+                </span>
+                <!-- /Profile click button on hover -->
+            </section>
+            <!-- /Third Section -->
+
+            <!-- Fourth Section -->
+            <section class="w-100 bg--no-repeat bg--size-cover" style="background-image: url(assets/images/fourth-sec-bg.png) ;">
+                <!-- Inner -->
+                <div class="h--504 pad--x--48 flex items-center gap--24 bg--blur--5 bg--gd--pink--251-91-162--100">
+                    <!-- Text content section -->
+                    <div class="w-60 flex flex-column gap--40">
+                        <!-- Title and description -->
+                        <div class="flex flex-column gap--24">
+                            <!-- Title -->
+                            <div class="flex flex-column gap--8">
+                                <h2 class="fs--36 fw6 lh--44 tracked--neg--0-72 white">Ditch the Agency Middleman</h2>
+                                <span class="fs--24 fw6 lh--32 white">Your Platform is Now Your Full-Service Team.</span>
+                            </div>
+                            <!-- /Title -->
+                            <!-- Description -->
+                            <div class="w-100 flex">
+                                <p class="fs--20 fw5 lh--30 white">Why pay an outside agency when there is a team of agent-level experts in Fansocial? Selected creators get 1-on-1 expert support completely free of commission fees or 3rd party charges. Let our in-house support team handle your outreach and growth while you focus on creating. </p>
+                            </div>
+                            <!-- /Description -->
+                        </div>  
+                        <!-- /Title and description -->
+                        <!-- Button -->
+                        <div class="flex">
+                            <button class="group pad--x--16 pad--y--10 flex items-center justify-center bg--col--ebony--variation-2 hover--bg--col-brand-green">
+                                <span class="fs--20 fw6 lh--20 col-brand-green hover--col-black">Sign Up & Get Discovered</span>
+                            </button>
+                        </div>
+                        <!-- Button -->
+                    </div>
+                    <!-- Text content section -->
+
+                    <!-- Right Section -->
+                    <div class="w-40">
+                        <!-- Accordion -->
+                        <div data-com-accordion="default">
+
+                            <!-- Item 1 -->
+                            <div data-com-accordion="item" class="flex flex-column pad--y--24 pad--x--16 bb br--col--white">
+                                <button data-com-accordion="header"
+                                        data-icon-width="24"
+                                        data-icon-height="24"
+                                        data-icon-color="white"
+                                        data-icon-plus="https://fansocial.app/wp-content/plugins/fansocial/assets/icons/svg/plus-square.svg"
+                                        data-icon-minus="https://fansocial.app/wp-content/plugins/fansocial/assets/icons/svg/minus-square.svg"
+                                        class="w-100 flex items-center justify-between hover--parent--child--col--white">
+                                    <span class="fs--24 fw6 lh--32 text--sh--04-25 white hover--col--white">1-on-1 Account Management</span>
+                                    <span data-com-accordion="icon"></span>
+                                </button>
+
+                                <div data-com-accordion="body" data-open="true" class="fs--16 fw5 lh--24 white">
+                                    A dedicated team to engage your fan community on your behalf.
+                                </div>
+                            </div>
+
+                            <!-- Item 2 -->
+                            <div data-com-accordion="item" class="flex flex-column pad--y--24 pad--x--16 bb br--col--white">
+                                <button data-com-accordion="header" 
+                                        data-icon-width="24"
+                                        data-icon-height="24"
+                                        data-icon-color="white"
+                                        data-icon-plus="https://fansocial.app/wp-content/plugins/fansocial/assets/icons/svg/plus-square.svg"
+                                        data-icon-minus="https://fansocial.app/wp-content/plugins/fansocial/assets/icons/svg/minus-square.svg"
+                                        class="w-100 flex items-center justify-between hover--parent--child--col--white">
+                                    <span class="fs--24 fw6 lh--32 text--sh--04-25 white hover--col--white">Production & Promotion</span>
+                                    <span data-com-accordion="icon"></span>
+                                </button>
+
+                                <div data-com-accordion="body" class="fs--16 fw5 lh--24 white">
+                                    Lorem ipsum content goes here.
+                                </div>
+                            </div>
+
+                            <!-- Item 3 -->
+                            <div data-com-accordion="item" class="flex flex-column pad--y--24 pad--x--16 bb br--col--white">
+                                <button data-com-accordion="header"
+                                        data-icon-width="24"
+                                        data-icon-height="24"
+                                        data-icon-color="white" 
+                                        data-icon-plus="https://fansocial.app/wp-content/plugins/fansocial/assets/icons/svg/plus-square.svg"
+                                        data-icon-minus="https://fansocial.app/wp-content/plugins/fansocial/assets/icons/svg/minus-square.svg"
+                                        class="w-100 flex items-center justify-between hover--parent--child--col--white">
+                                    <span class="fs--24 fw6 lh--32 text--sh--04-25 white hover--col--white">Premium Visibility</span>
+                                    <span data-com-accordion="icon"></span>
+                                </button>
+
+                                <div data-com-accordion="body" class="fs--16 fw5 lh--24 white">
+                                    Additional explanation text goes here.
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- /Accordion -->
+                    </div>
+                    <!-- /Right Section -->
+                </div>
+                <!-- Inner -->
+            </section>
+            <!-- /Fourth Section -->
+
+            <!-- FAQ Section -->
+            <section class="w-100 pad--x--48 pad--y--80 bg--gd--black--75-100 bg--blur--25 flex flex-column gap--48">
+                <!-- Title Section -->
+                <div class="pad--y--10 pad--x--48 flex flex-column gap--24 justify-center items-center">
+                    <h2 class="fs--36 fw6 lh--44 tracked--neg--0-72 col--oxford-blue">Frequently Asked Questions</h2>
+                </div>
+                <!-- /Title Section -->
+                <!-- FAQ Accordion -->
+                <!-- Accordion -->
+                <div data-com-accordion="default">
+
+                    <!-- Item 1 -->
+                    <div data-com-accordion="item" class="flex flex-column pad--y--24 bb br--col-52-64-84--20">
+                        <button data-com-accordion="header"
+                                data-icon-width="24"
+                                data-icon-height="24"
+                                data-icon-color="oxford-blue"
+                                data-icon-plus="https://fansocial.app/wp-content/plugins/fansocial/assets/icons/svg/chevron-down.svg"
+                                data-icon-minus="https://fansocial.app/wp-content/plugins/fansocial/assets/icons/svg/arrow_up_2.svg"
+                                class="w-100 flex items-center justify-between hover--parent--child--col--white">
+                            <span class="fs--20 fw6 lh--30 col--oxford-blue hover--col--oxford-blue">Who can join Fansocial?</span>
+                            <span data-com-accordion="icon"></span>
+                        </button>
+
+                        <div data-com-accordion="body" data-open="true" class="fs--16 fw4 lh--24 col--black-strong">
+                            Upload physical merch, digital downloads, exclusive videos, or image sets all in one place. The possibility to sell is endless : Simply sell them as pay per views, or make your content exclusive by controlling media and product access to subscribers only. Fansocial’s seamless ecosystems even allows you to upsell in other revenue streams like live call and group events!
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div data-com-accordion="item" class="flex flex-column pad--y--24 bb br--col-52-64-84--20">
+                        <button data-com-accordion="header" 
+                                data-icon-width="24"
+                                data-icon-height="24"
+                                data-icon-color="oxford-blue"
+                                data-icon-plus="https://fansocial.app/wp-content/plugins/fansocial/assets/icons/svg/chevron-down.svg"
+                                data-icon-minus="https://fansocial.app/wp-content/plugins/fansocial/assets/icons/svg/arrow_up_2.svg"
+                                class="w-100 flex items-center justify-between hover--parent--child--col--white">
+                            <span class="fs--20 fw6 lh--30 col--oxford-blue hover--col--oxford-blue">How does Fansocial protect my personal data and intellectual property?</span>
+                            <span data-com-accordion="icon"></span>
+                        </button>
+
+                        <div data-com-accordion="body" class="fs--16 fw4 lh--24 col--black-strong">
+                            Lorem ipsum content goes here.
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div data-com-accordion="item" class="flex flex-column pad--y--24 bb br--col-52-64-84--20">
+                        <button data-com-accordion="header"
+                                data-icon-width="24"
+                                data-icon-height="24"
+                                data-icon-color="oxford-blue" 
+                                data-icon-plus="https://fansocial.app/wp-content/plugins/fansocial/assets/icons/svg/chevron-down.svg"
+                                data-icon-minus="https://fansocial.app/wp-content/plugins/fansocial/assets/icons/svg/arrow_up_2.svg"
+                                class="w-100 flex items-center justify-between hover--parent--child--col--white">
+                            <span class="fs--20 fw6 lh--30 col--oxford-blue hover--col--oxford-blue">Can I customize the FAQ layout?</span>
+                            <span data-com-accordion="icon"></span>
+                        </button>
+
+                        <div data-com-accordion="body" class="fs--16 fw4 lh--24 col--black-strong">
+                            Additional explanation text goes here.
+                        </div>
+                    </div>
+                    
+                    <!-- Item 4 -->
+                    <div data-com-accordion="item" class="flex flex-column pad--y--24 bb br--col-52-64-84--20">
+                        <button data-com-accordion="header"
+                                data-icon-width="24"
+                                data-icon-height="24"
+                                data-icon-color="oxford-blue" 
+                                data-icon-plus="https://fansocial.app/wp-content/plugins/fansocial/assets/icons/svg/chevron-down.svg"
+                                data-icon-minus="https://fansocial.app/wp-content/plugins/fansocial/assets/icons/svg/arrow_up_2.svg"
+                                class="w-100 flex items-center justify-between hover--parent--child--col--white">
+                            <span class="fs--20 fw6 lh--30 col--oxford-blue hover--col--oxford-blue">Is there a mobile app available?</span>
+                            <span data-com-accordion="icon"></span>
+                        </button>
+
+                        <div data-com-accordion="body" class="fs--16 fw4 lh--24 col--black-strong">
+                            Additional explanation text goes here.
+                        </div>
+                    </div>
+
+                    <!-- Item 5 -->
+                    <div data-com-accordion="item" class="flex flex-column pad--y--24">
+                        <button data-com-accordion="header"
+                                data-icon-width="24"
+                                data-icon-height="24"
+                                data-icon-color="oxford-blue" 
+                                data-icon-plus="https://fansocial.app/wp-content/plugins/fansocial/assets/icons/svg/chevron-down.svg"
+                                data-icon-minus="https://fansocial.app/wp-content/plugins/fansocial/assets/icons/svg/arrow_up_2.svg"
+                                class="w-100 flex items-center justify-between hover--parent--child--col--white">
+                            <span class="fs--20 fw6 lh--30 col--oxford-blue hover--col--oxford-blue">How can I contact support?</span>
+                            <span data-com-accordion="icon"></span>
+                        </button>
+
+                        <div data-com-accordion="body" class="fs--16 fw4 lh--24 col--black-strong">
+                            Additional explanation text goes here.
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /Accordion -->
+                <!-- FAQ Accordion -->
+            </section>
+            <!-- FAQ Section -->
+
+            <!-- Footer -->
+            <footer class="pad--x--48 pad--y--24 flex flex-column gap--16 bg--blur--5 bg--col-29-35-52--90">
+                <!-- Top -->
+                <div class="flex items-start gap--24">
+                    <!-- Left footer option -->
+                    <div class="flex--max flex flex-column gap--16">
+                        <!-- Option Item -->
+                        <div class="flex items-center gap--16">
+                            <!-- Icon -->
+                            <span class="w--24 h--24">
+                                <img src="https://fansocial.app/wp-content/plugins/fansocial/assets/icons/svg/mail-auth.svg" alt="" class="w--24 h--24 filter--col--cloudy">
+                            </span>
+                            <!-- /Icon -->
+                            <a href="mailto:support@fansocial .app" class="fs--14 fw5 lh--normal col--cloudy hover--col--cloudy hover--text--underline">support@fansocial .app</a>
+                        </div> 
+                        <!-- /Option Item -->
+
+                        <!-- Option Item -->
+                        <div class="flex items-center gap--16">
+                            <!-- Icon -->
+                            <span class="w--24 h--24">
+                                <img src="https://fansocial.app/wp-content/plugins/fansocial/assets/icons/svg/question_circle.svg" alt="" class="w--24 h--24 filter--col--cloudy">
+                            </span>
+                            <!-- /Icon -->
+                            <a href="#" class="fs--14 fw5 lh--normal col--cloudy hover--col--cloudy hover--text--underline">Help</a>
+                        </div> 
+                        <!-- /Option Item -->
+                        <!-- Social Media items -->
+                        <div class="flex items-center gap--16">
+                            <a href="#" class="w--24 h--24">
+                                <img src="https://fansocial.app/wp-content/plugins/fansocial/assets/icons/svg/discord.svg" alt="" class="w--24 h--24 filter--col--cloudy">
+                            </a>
+                            <a href="#" class="w--24 h--24 pad--3">
+                                <img src="https://fansocial.app/wp-content/plugins/fansocial/assets/icons/svg/x-handle.svg" alt="" class="w--24 h--24 filter--col--cloudy">
+                            </a>
+                            <a href="#" class="w--24 h--24">
+                                <img src="https://fansocial.app/wp-content/plugins/fansocial/assets/icons/svg/instagram.svg" alt="" class="w--24 h--24 filter--col--cloudy">
+                            </a>
+                        </div>
+                        <!-- /Social Media items  -->
+                    </div>
+                    <!-- /Left footer option -->
+
+                    <!-- Navigation -->
+                    <nav class="flex--max">
+                        <ul class="flex flex-column gap--8">
+                            <li><a href="#" class="fs--12 fw4 lh--normal tracked--0-06 col--cloudy hover--col--cloudy hover--text--underline">DMCA</a></li>
+                            <li><a href="#" class="fs--12 fw4 lh--normal tracked--0-06 col--cloudy hover--col--cloudy hover--text--underline">Anti Sexual Exploitation Policies (USC 2257, Anti-Slavery and Anti-Sex Trafficking, CSAM)</a></li>
+                            <li><a href="#" class="fs--12 fw4 lh--normal tracked--0-06 col--cloudy hover--col--cloudy hover--text--underline">Terms & Conditions</a></li>
+                            <li><a href="#" class="fs--12 fw4 lh--normal tracked--0-06 col--cloudy hover--col--cloudy hover--text--underline">Privacy Policies</a></li>
+                            <li><a href="#" class="fs--12 fw4 lh--normal tracked--0-06 col--cloudy hover--col--cloudy hover--text--underline">Report</a></li>
+                        </ul>
+                    </nav>
+                    <!-- /Navigation -->
+                </div>
+                <!-- /Top -->
+
+                <!-- Payment Card -->
+                <div class="flex items-center gap--8">
+                    <span class="w--50 h--32 flex">
+                        <img src="assets/images/visa.svg" alt="" class="w--50 h--32">
+                    </span>
+                    <span class="w--50 h--32 flex">
+                        <img src="assets/images/mastercard.svg" alt="" class="w--50 h--32">
+                    </span>
+                </div>
+                <!-- /Payment Card -->
+
+                <!-- Copyright text -->
+                <div class="w-100 flex">
+                    <p class="fs--14 fw4 lh--24 col--cloudy tracked--0-06">© 2024 Fansocial</p>
+                </div>
+                <!-- /Copyright text-->
+            </footer>
+            <!-- Footer -->
+        </div>
+        <!-- /Main page container -->
+
+
+
+        <script>
+            /* Accordion style default */
+            document.querySelectorAll('[data-com-accordion="header"]').forEach(header => {
+
+                const icon = header.querySelector('[data-com-accordion="icon"]');
+                const w = header.dataset.iconWidth;
+                const h = header.dataset.iconHeight;
+                const color = header.dataset.iconColor;
+
+                const item = header.closest('[data-com-accordion="item"]');
+                const body = item.querySelector('[data-com-accordion="body"]');
+
+                // Initial load – set correct icon
+                const opened = body.hasAttribute("data-open");
+
+                icon.innerHTML = `
+                    <img src="${opened ? header.dataset.iconMinus : header.dataset.iconPlus}"
+                        style="width:${w}px; height:${h}px;" class="filter--col--${color}">
+                `;
+
+                header.addEventListener("click", () => {
+
+                    const isOpen = body.hasAttribute("data-open");
+
+                    // Close ALL
+                    document.querySelectorAll('[data-com-accordion="body"]').forEach(b => {
+                        b.removeAttribute("data-open");
+                    });
+
+                    // Reset ALL icons except current
+                    document.querySelectorAll('[data-com-accordion="header"]').forEach(hd => {
+                        if (hd !== header) {
+                            const i2 = hd.querySelector('[data-com-accordion="icon"]');
+                            const w2 = hd.dataset.iconWidth;
+                            const h2 = hd.dataset.iconHeight;
+                            const c2 = hd.dataset.iconColor;
+
+                            i2.innerHTML = `
+                                <img src="${hd.dataset.iconPlus}"
+                                    style="width:${w2}px; height:${h2}px;" class="filter--col--${c2}">
+                            `;
+                        }
+                    });
+
+                    // Toggle current item
+                    if (!isOpen) {
+                        body.setAttribute("data-open", "true");
+                        icon.innerHTML = `
+                            <img src="${header.dataset.iconMinus}"
+                                style="width:${w}px; height:${h}px;" class="filter--col--${color}">
+                        `;
+                    } else {
+                        icon.innerHTML = `
+                            <img src="${header.dataset.iconPlus}"
+                                style="width:${w}px; height:${h}px;" class="filter--col--${color}">
+                        `;
+                    }
+                });
+            });
+            /* /Accordion style default */
+        </script>
+
+
+        <!-- this for cretor profile cursor pointer move <script>
+            const section = document.querySelector('[data-featured-creators="main-section"]');
+            const btn = document.querySelector('[data-featured-creators="profile-btn-click"]');
+            
+            // Show on enter
+            section.addEventListener("mouseenter", () => {
+                btn.classList.remove("dn");
+            });
+            
+            // Hide on leave
+            section.addEventListener("mouseleave", () => {
+                btn.classList.add("dn");
+            });
+            
+            // Move with cursor inside the section
+            section.addEventListener("mousemove", (e) => {
+                const rect = section.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+            
+                btn.style.transform = `translate(${x}px, ${y}px)`;
+            });
+            </script> -->
+            
+    </body>
+
+</html>

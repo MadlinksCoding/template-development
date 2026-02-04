@@ -1,0 +1,320 @@
+
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <!-- Meta Tags -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>Template - Multiple Call Flow</title>
+
+        <!-- Poppins Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet">
+        <link rel='stylesheet' id='theme-css' href='https://fansocial.app/wp-content/plugins/fansocial/assets/new-profile/theme.css?ver=1.2.64' media='' />
+        <link rel='stylesheet' id='final-main-css' href='https://fansocial.app/wp-content/plugins/fansocial/assets/new-profile/main.css?ver=1.2.64' media='' />
+        <link rel='stylesheet' id='components-css' href='https://fansocial.app/wp-content/plugins/fansocial/assets/css/components.css?ver=1.2.64' media='' />
+        <link rel='stylesheet' id='tachyonsStylesheet-css' href='https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.11.1/tachyons.min.css?ver=1.2.64' media='' />
+        <link rel='stylesheet' id='popup-css' href='https://fansocial.app/wp-content/plugins/fansocial/assets/css/dev/popup.css?ver=1.2.64' media='' />
+        <link rel='stylesheet' id='pageElements-css' href='https://fansocial.app/wp-content/plugins/fansocial/assets/FINAL/css/pageElements.css?ver=1.2.64' media='' />
+        <link rel='stylesheet' id='finalCustomTachyonsStylesheet-css' href='https://fansocial.app/wp-content/plugins/fansocial/assets/new-profile/customTachyons.css?ver=1.2.64' media='' />
+        <link rel='stylesheet' id='tachyonsV2-css' href='https://fansocial.app/wp-content/plugins/fansocial/assets/new-profile/tachyons-v2.css?ver=1.2.64' media='' />
+        <link rel='stylesheet' id='profileStyles-css' href='https://fansocial.app/wp-content/plugins/fansocial/assets/new-profile/profilePage.css?ver=1.2.64' media='' />
+    </head>
+
+    <style type="text/css">
+        .col--yellow--broom { color: var(--color-yellow-broom, #FFED29); }
+        .bg--gd--14--70--30--100{
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.14) 30%, rgba(0, 0, 0, 0.70) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.70) 100%);
+        }
+        .bg--white--15 { background: rgba(255, 255, 255, 0.15); }
+        .sh--7--244--104--25 { box-shadow: 0 0 40px 0 rgba(7, 244, 104, 0.25); }
+        .m--right--neg--02 { margin-right: -0.125rem; }
+        .top--neg--24 { top: -1.5rem; }
+        .right--neg--24 { right: -1.5rem; }
+        .pad--y--6 { padding-top: 0.375rem; padding-bottom: 0.375rem; }
+        /* BUTTON BASE */
+        [data-button-theme="rounded-pill-green"] {
+        background: var(--color-brand-green, #07F468);
+        transition: background-color 0.3s ease;
+        }
+
+        /* CHILD DEFAULT STATES */
+        [data-button-theme="rounded-pill-green"] [data-button-text] {
+        transition: color 0.3s ease;
+        }
+
+        [data-button-theme="rounded-pill-green"] [data-button-icon] {
+        transition: background-color 0.3s ease;
+        }
+
+        [data-button-theme="rounded-pill-green"] [data-button-icon] img,
+        [data-button-theme="rounded-pill-green"] [data-button-union-img] {
+        filter: none;
+        transition: filter 0.3s ease;
+        }
+
+        /* Hover states */
+
+        [data-button-theme="rounded-pill-green"]:hover {
+        background: var(--color-ebony-2, #0C111D);
+        }
+
+        [data-button-theme="rounded-pill-green"]:hover [data-button-text] {
+        color: var(--color-brand-green, #07F468) !important;
+        }
+
+        [data-button-theme="rounded-pill-green"]:hover [data-button-icon] {
+        background: var(--color-brand-green, #07F468);
+        }
+
+        [data-button-theme="rounded-pill-green"]:hover [data-button-icon] img {
+        filter: brightness(0) saturate(100%)
+                invert(3%) sepia(38%)
+                saturate(3328%)
+                hue-rotate(209deg)
+                brightness(93%)
+                contrast(93%);
+        }
+
+        [data-button-theme="rounded-pill-green"]:hover [data-button-union-img] {
+        filter: brightness(0) saturate(100%)
+                invert(75%) sepia(23%)
+                saturate(7280%)
+                hue-rotate(93deg)
+                brightness(109%)
+                contrast(95%);
+        }
+
+        /* Tab style */
+        .active[data-tabbed-content] { display: flex; }
+        [data-call-multtiple-tabs] [data-tabs-menu] [data-tabbed-child-id].active {
+            border-radius: 100px;
+            background: rgba(0, 0, 0, 0.90);
+        }
+
+        @media screen and (max-width: 479px){
+            .top--05rem-responsive-mobile-portrait { top: 0.5rem; }
+            .pad--bottom--20-responsive-mobile-portrait {
+                padding-bottom: 1.25rem
+            }
+            .h--auto-responsive-mobile-portrait { height: auto; }
+            .sh--4--24--40--50-responsive-mobile-portrait { box-shadow: 0 -4px 24px 0 rgba(7, 244, 104, 0.50), 0 0 40px 0 rgba(0, 0, 0, 0.50); }
+            .br--20-20-0-0-responsive-mobile-portrait {
+                border-radius: 20px 20px 0 0;
+            }
+
+            /* Tabs style */
+            [data-call-multtiple-tabs] [data-tabs-menu]{
+                overflow: visible;
+            }
+            [data-call-multtiple-tabs] [data-tabs-menu] [data-tabbed-child-id]{
+                background: rgba(255, 255, 255, 0.15);
+                border-radius: 100px;
+                flex: none;
+            }
+            [data-call-multtiple-tabs] [data-tabs-menu] [data-tabbed-child-id].active{
+                background: var(--Brand-green, #07F468);
+            }
+            [data-call-multtiple-tabs] [data-tabs-menu] [data-tabbed-child-id].active [data-span-title]{
+                color: var(--Base-Black, #000);
+                font-weight: 600;
+            }
+            [data-call-multtiple-tabs] [data-tabs-menu] [data-tabbed-child-id].active [data-call-multiple-offer]{
+                color: var(--color-ebony-2, #0C111D);
+            }
+        }
+
+
+    </style>
+
+    <link rel='stylesheet' id='frontPageTabletLandscapeStyle-css' href='https://fansocial.app/wp-content/plugins/fansocial/assets/new-profile/tachyons-tablet-landscape.css?ver=1.2.64' media='screen and (min-width: 1010px) and (max-width: 1365px)' />
+    <link rel='stylesheet' id='frontPageTabletStyle-css' href='https://fansocial.app/wp-content/plugins/fansocial/assets/new-profile/tachyons-tablet.css?ver=1.2.64' media='screen and (min-width: 768px) and (max-width: 1009px)' />
+    <link rel='stylesheet' id='frontPageMobileStyle-css' href='https://fansocial.app/wp-content/plugins/fansocial/assets/new-profile/tachyons-mobile.css?ver=1.2.64' media='screen and (min-width: 480px) and (max-width: 767px)' />
+    <link rel='stylesheet' id='frontPageMobilePortraitStyle-css' href='https://fansocial.app/wp-content/plugins/fansocial/assets/new-profile/tachyons-mobile-portrait.css?ver=1.2.64' media='screen and (max-width: 479px)' />
+
+    <body>
+        <div class="w-100 h--screen bg--size-cover bg--no-repeat" style="background-image: url('profile-screen-call-popup.png');">
+            <!-- Multiple Popup -->
+            <div class="absolute w-100 h-100 top-0 left-0 bg-black-70 pad--10 flex justify-center items-center pad--0-responsive-mobile-portrait">
+                <!-- Inner wrapper -->
+                <div class="w-100 max--w--500 relative flex items--end-responsive-mobile-portrait vh--calc--100-60-responsive-mobile-portrait">
+                    <!-- Popup close icon -->
+                    <div class="w--48 h--48 flex items-center justify-center bg-black-30 bg--blur--20 br-100 pad--8 absolute top--neg--24 right--neg--24 pointer z--3 right--05rem-responsive-mobile-portrait top--05rem-responsive-mobile-portrait">
+                        <img src="icons/x-close.svg" alt="" class="w--32 h--32 filter--col--white">
+                    </div>
+                    <!-- Popup close icon -->
+                    <!-- Inner -->
+                    <div class="w-100 pad--16 pad--top--20 flex flex-column gap--20 justify-center items-center br--20 sh--7--244--104--25 bg--size-cover bg--no-repeat relative pad--x--8-responsive-mobile-portrait pad--bottom--20-responsive-mobile-portrait sh--4--24--40--50-responsive-mobile-portrait br--20-20-0-0-responsive-mobile-portrait" style="background-image: url(img/popup-sm-bg.jpg);">
+                        <div class="db w-100 h-100 br--20 absolute top-0 left-0 bg--gd--14--70--30--100 z--1 br--20-20-0-0-responsive-mobile-portrait"></div>
+                        <!-- Container -->
+                        <div class="w-100 flex--max flex flex-column gap--20 justify-center items-center relative z--2">
+                            <!-- Heading Text -->
+                            <div class="flex--max w-100 flex justify-center items-center">
+                                <span class="fs--18 fw6 lh--28 col-brand-green">Select your call package:</span>
+                            </div>
+                            <!-- Tab Content wrap -->
+                            <div class="w-100 pad--y--8 flex--max flex flex-column gap--12 items-center">
+                                <!-- tab Content section  -->
+                                <div data-call-multtiple-tabs data-tabs-section data-tabs-container="1" class="w-100 flex flex-column gap--12">
+                                    <!-- Tab Navigation -->
+                                    <div data-tab-header-main data-tabs-container="1" class="w-100 flex items-center bg--white--15 br-pill bg--blur--25 h--40 overflow-hidden bg--blur--0-responsive--mobile-portrait bg--col--transparent--responsive-mobile-portrait h--auto-responsive-mobile-portrait br--0-responsive-mobile-portrait">
+                                        <ul data-tabs-menu="dashboard-tabs-menu" data-tabs-menu-list="order-received-menu" class="w-100 h-100 flex items-center justify-center w--100-responsive-tablet w--100-responsive-mobile w--100-responsive-mobile-portrait flex--wrap-responsive-mobile-portrait gap--8--responsive-mobile-portrait h--auto-responsive-mobile-portrait" data-show-default-page-load="in_progress">
+                                            <!-- first tab menu item -->
+                                            <li data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-first-tab" class="h-100 flex--max flex justify-center items-center active">
+                                                <a href="#" tab-trigger="1" data-is-active="false" class="h-100 fs--12 fw5 lh--18 white flex gap--2 items-center justify-center flex--max pad--x--10 pad--y--6 pad--x--16-responsive-mobile-portrait pad--y--8-responsive-mobile-portrait">
+                                                    <span data-span-title="" class="fs--12 fw5 lh--18 white">1 min</span>
+                                                </a>
+                                            </li>
+                
+                                            <!-- second tab menu item -->
+                                            <li data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-second-tab" class="h-100 flex--max flex justify-center items-center">
+                                                <a href="#" tab-trigger="1" data-is-active="false" class="h-100 fs--12 fw5 lh--18 white flex gap--2 items-center justify-center flex--max pad--x--10 pad--y--6 pad--x--16-responsive-mobile-portrait pad--y--8-responsive-mobile-portrait">
+                                                    <span data-span-title="" class="fs--12 fw5 lh--18 white">5 min</span>
+                                                    <span data-call-multiple-offer class="h--28 fs--8 fw5 lh--18 col--yellow--broom">-5%</span>
+                                                </a>
+                                            </li>
+                
+                                            <!-- third tab menu item -->
+                                            <li data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-third-tab" class="h-100 flex--max flex justify-center items-center">
+                                                <a href="#" tab-trigger="1" data-is-active="false" class="h-100 fs--12 fw5 lh--18 white flex gap--2 items-center justify-center flex--max pad--x--10 pad--y--6 pad--x--16-responsive-mobile-portrait pad--y--8-responsive-mobile-portrait">
+                                                    <span data-span-title="" class="fs--12 fw5 lh--18 white">10 min</span>
+                                                    <span data-call-multiple-offer class="h--28 fs--8 fw5 lh--18 col--yellow--broom">-50%</span>
+                                                </a>
+                                            </li>
+                                            
+                                            <!-- fourth tab menu item -->
+                                            <li data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-fourth-tab" class="h-100 flex--max flex justify-center items-center">
+                                                <a href="#" tab-trigger="1" data-is-active="false" class="h-100 fs--12 fw5 lh--18 white flex gap--2 items-center justify-center flex--max pad--x--10 pad--y--6 pad--x--16-responsive-mobile-portrait pad--y--8-responsive-mobile-portrait">
+                                                    <span data-span-title="" class="fs--12 fw5 lh--18 white">15 min</span>
+                                                    <span data-call-multiple-offer class="h--28 fs--8 fw5 lh--18 col--yellow--broom">-5%</span>
+                                                </a>
+                                            </li>
+                
+                                            <!-- fifth tab menu item -->
+                                            <li data-tabbed-scrollable-menu="0" data-tabbed-child-id="tabbed-content-fifth-tab" class="h-100 flex--max flex justify-center items-center">
+                                                <a href="#" tab-trigger="1" data-is-active="false" class="h-100 fs--12 fw5 lh--18 white flex gap--2 items-center justify-center flex--max pad--x--10 pad--y--6 pad--x--16-responsive-mobile-portrait pad--y--8-responsive-mobile-portrait">
+                                                    <span data-span-title="" class="fs--12 fw5 lh--18 white">20 min</span>
+                                                    <span data-call-multiple-offer class="h--28 fs--8 fw5 lh--18 col--yellow--broom">-50%</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- /Tab Navigation -->
+                                    <!-- Tabs Container -->
+                                    <div data-tab-contents-containers-main data-tabs-content="1">
+                                        <div data-tabbed-content="tabbed-content-first-tab" class="db active">
+                                            <!-- Tab content item -->
+                                            <div class="w-100 pad--y--20 flex flex-column gap--12">
+                                                <span class="w-100 flex justify-center fs--14 fw5 lh--20 white">Charge by every minute</span>
+                                                <div class="flex items-center justify-center gap--4">
+                                                    <span class="w--30 h--30">
+                                                        <img src="https://fansocial.app/wp-content/plugins/fansocial/dev/tip-token-cash-checkout/images/token-tip-svg.png" alt="" class="w--30 h--30">
+                                                    </span>
+                                                    <span class="fs--36 fw6 lh--44 tracked--neg--0-72 white">5,000</span>
+                                                </div>
+                                            </div>
+                                            <!-- /Tab content item -->
+                                        </div>
+                                        <div data-tabbed-content="tabbed-content-second-tab" class="db">
+                                            <!-- Tab content item -->
+                                            <div class="w-100 pad--y--20 flex flex-column gap--12">
+                                                <span class="w-100 flex justify-center fs--14 fw5 lh--20 white">Charge by every minute</span>
+                                                <div class="flex items-center justify-center gap--4">
+                                                    <span class="w--30 h--30">
+                                                        <img src="https://fansocial.app/wp-content/plugins/fansocial/dev/tip-token-cash-checkout/images/token-tip-svg.png" alt="" class="w--30 h--30">
+                                                    </span>
+                                                    <span class="fs--36 fw6 lh--44 tracked--neg--0-72 white">4,075</span>
+                                                </div>
+                                            </div>
+                                            <!-- /Tab content item -->
+                                        </div>
+                                        <div data-tabbed-content="tabbed-content-third-tab" class="db">
+                                            <!-- Tab content item -->
+                                            <div class="w-100 pad--y--20 flex flex-column gap--12">
+                                                <span class="w-100 flex justify-center fs--14 fw5 lh--20 white">Charge by every minute</span>
+                                                <div class="flex items-center justify-center gap--4">
+                                                    <span class="w--30 h--30">
+                                                        <img src="https://fansocial.app/wp-content/plugins/fansocial/dev/tip-token-cash-checkout/images/token-tip-svg.png" alt="" class="w--30 h--30">
+                                                    </span>
+                                                    <span class="fs--36 fw6 lh--44 tracked--neg--0-72 white">2,500</span>
+                                                </div>
+                                            </div>
+                                            <!-- /Tab content item -->
+                                        </div>
+                                        <div data-tabbed-content="tabbed-content-fourth-tab" class="db">
+                                            <!-- Tab content item -->
+                                            <div class="w-100 pad--y--20 flex flex-column gap--12">
+                                                <span class="w-100 flex justify-center fs--14 fw5 lh--20 white">Charge by every minute</span>
+                                                <div class="flex items-center justify-center gap--4">
+                                                    <span class="w--30 h--30">
+                                                        <img src="https://fansocial.app/wp-content/plugins/fansocial/dev/tip-token-cash-checkout/images/token-tip-svg.png" alt="" class="w--30 h--30">
+                                                    </span>
+                                                    <span class="fs--36 fw6 lh--44 tracked--neg--0-72 white">4,075</span>
+                                                </div>
+                                            </div>
+                                            <!-- /Tab content item -->
+                                        </div>
+                                        <div data-tabbed-content="tabbed-content-fifth-tab" class="db">
+                                            <!-- Tab content item -->
+                                            <div class="w-100 pad--y--20 flex flex-column gap--12">
+                                                <span class="w-100 flex justify-center fs--14 fw5 lh--20 white">Charge by every minute</span>
+                                                <div class="flex items-center justify-center gap--4">
+                                                    <span class="w--30 h--30">
+                                                        <img src="https://fansocial.app/wp-content/plugins/fansocial/dev/tip-token-cash-checkout/images/token-tip-svg.png" alt="" class="w--30 h--30">
+                                                    </span>
+                                                    <span class="fs--36 fw6 lh--44 tracked--neg--0-72 white">2,500</span>
+                                                </div>
+                                            </div>
+                                            <!-- /Tab content item -->
+                                        </div>
+                                    </div>
+                                    <!-- /Tabs Container -->
+                                </div>
+                                <!-- /Tab content section -->
+                            </div>
+                            <!-- /Tab Content wrap -->
+
+                            <!-- Button -->
+                            <div class="w-100 flex--max flex justify-center items-center">
+                                <button data-button-theme="rounded-pill-green" class="w-100 flex--max br-pill flex items-center justify-center h--40 of--hidden">
+                                    <span data-button-text class="fs--16 fw7 lh--24 i col--ebony--variation-2 flex--max flex justify-center">START CALL</span>
+                                    <div class="flex ml--auto">
+                                        <img data-button-union-img src="img/union-black-sm.png" alt="" class="m--right--neg--02">
+                                        <span data-button-icon class="pad--8 pad--right--12 bg--col--ebony--variation-2">
+                                            <img src="icons/chevron-right-double.svg" alt="" class="w--24 h--24 filter--col--spring-green">
+                                        </span>
+                                    </div>
+                                </button>
+                            </div>
+                            <!-- /Button -->
+                            <!-- Token Balance text -->
+                            <div class="flex gap--4 justify-center items-center">
+                                <div class="flex gap--2 items-center">
+                                    <span class="w--30 h--30">
+                                        <img src="https://fansocial.app/wp-content/plugins/fansocial/dev/tip-token-cash-checkout/images/token-tip-svg.png" alt="" class="w--30 h--30">
+                                    </span>
+                                    <span class="fs--14 fw6 lh--20 white">60,000</span>
+                                </div>
+                                <span class="fs--12 fw4 lh--18 white">Your balance</span>
+                            </div>
+                            <!-- /Token Balance text -->
+                        </div>
+                        <!-- /Container -->
+                    </div>
+                    <!-- Inner -->
+                </div>
+                <!-- /Inner wrapper -->
+            </div>
+            <!-- Multiple Popup -->
+        </div>
+
+        <script src="https://fansocial.app/wp-content/plugins/fansocial/assets/FINAL/js/pageElements.js"></script>
+        <script src="https://fansocial.app/wp-content/plugins/fansocial/assets/dashboard-v2/js/dashboard-ui.js"></script>
+    </body>
+
+</html>
