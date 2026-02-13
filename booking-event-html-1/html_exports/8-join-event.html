@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Join Event - High School Life Simulator</title>
+  
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            black: "#000000",
+            white: "#FFFFFF",
+            blue: "#22CCEE",
+            green: "#07F468",
+            pink: "#FF76DD",
+            yellow: "#FFED29",
+            "gray-50": "#F9FAFB",
+            "gray-200": "#EAECF0",
+            "gray-300": "#D0D5DD",
+            "gray-400": "#98A2B3",
+            "gray-500": "#667085",
+            "gray-950": "#0C111D",
+          },
+          fontFamily: {
+            poppins: ["Poppins", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+  
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+    }
+  </style>
+</head>
+
+<body class="py-20 flex overflow-hidden justify-center items-center min-h-screen bg-gray-950">
+  <div
+    class="card-wrapper w-[343px] h-[522px] sm:w-[384px] sm:h-[602px] lg:w-[400px] lg:h-[656px] flex flex-col items-center justify-center w-[25rem] h-[41rem] rounded-3xl bg-center bg-cover bg-no-repeat bg-[linear-gradient(180deg,rgba(12,17,29,0)_25%,#0C111D_100%),url('../assets/ai-art.png')] backdrop-blur-md"
+  >
+    <div
+      class="card-container flex flex-col justify-between w-full h-full rounded-3xl bg-black/15"
+    >
+      <div
+        class="card-header flex flex-col justify-center items-center w-[110px] h-[28px] text-sm text-[#0C111D] font-bold bg-[#FF0066] rounded-tl-3xl rounded-br-sm"
+      >
+        <p class="header-content !text-white p-[0.25rem 0.375rem 0.25rem 1rem]">
+          Group Event
+        </p>
+        <div class="absolute top-0 right-0 p-3">
+          <img src="" alt="">
+        </div>
+      </div>
+      <div
+        class="card-content flex flex-col gap-[0.5rem] text-white w-full h-full p-2 sm:p-[1rem]"
+      >
+        <div
+          class="content-top flex flex-col justify-end gap-[1rem] h-full pb-[0.5rem]"
+        >
+          <div class="content-title text-3xl font-semibold">
+            J&B’s Cooking show
+          </div>
+          <div
+            class="content-price flex flex-row justify-start items-end gap-[0.5rem]"
+          >
+            <div class="price-icon  h-full flex justify-center items-center">
+              <img src="../assets/token.svg" class="w-[2rem] h-[2rem]" />
+            </div>
+            <p class="price-amount text-4xl font-semibold">500</p>
+            <p class="price-currency text-2xl font-semibold">Tokens</p>
+            <p class="price-time w-1/2  text-sm">minimum contribution</p>
+          </div>
+        </div>
+
+         <!-- Highlighted Area Component -->
+        <div class="content-bottom flex flex-col gap-3 sm:gap-[1rem]">
+          <div class="flex flex-col gap-[4px]">
+            <div class="flex gap-[6px] text-white">
+              <div class="w-6 h-6">
+                <img class=" w-[21.66px] h-[22px] top-[1px] left-[1.17px] w-full h-full "
+                  src="../assets/ex-profile.png" alt="" style="border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%" />
+              </div>
+              <div class="flex md:gap-[6px] gap-1 items-center font-normal">
+                <p class="text-white text-xs font-medium lg:text-base leading-6">
+                  Princess Carrot Pop
+                </p>
+                <p class="px-[6px] bg-[#FF0066] font-medium text-xs lg:text-sm rounded-[50px]">
+                  Host
+                </p>
+                <img src="../assets/verified-blue-white.svg" alt="" />
+                <p>,</p>
+              </div>
+            </div>
+            <div class="flex flex-row gap-2 lg:gap-[6px] text-white">
+              <div class="w-6 h-6">
+                <img class=" w-[21.66px] h-[22px] top-[1px] left-[1.17px] w-full h-full "
+                  src="../assets/ex-profile.png" alt="" style="border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%" />
+              </div>
+              <div class="flex gap-[6px] items-center font-normal">
+                <p class="text-white text-xs font-medium lg:text-base leading-6">
+                  De La Queen
+                </p>
+                <img src="../assets/verified-blue-white.svg" alt="" />
+                <p>,</p>
+                <div class="w-6 h-6">
+                  <img class=" w-[21.66px] h-[22px] top-[1px] left-[1.17px] w-full h-full "
+                    src="../assets/ex-profile.png" alt=""
+                    style="border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%" />
+                </div>
+                <div class="flex gap-[6px] items-center font-normal">
+                  <p class="text-white text-xs font-medium lg:text-base leading-6">
+                    Buff Bunny
+                  </p>
+                  <img src="../assets/verified-blue-white.svg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div> 
+          <div class="flex flex-col gap-4">
+          <div class="flex flex-row items-start gap-4">
+            <img class="h-6 w-6" src="../assets/clock.svg" alt="">
+            <div class="flex flex-col gap-1">
+              <div class="lg:text-base font-medium text-white">
+                Wednesday, August 24, 2025
+              </div>
+              <div class="text-base  font-medium text-white">
+                9:30pm-10:30pm
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <img src="../assets/users-03.svg" alt="">
+            <div class="">
+              30 fans already joined
+            </div>
+          </div>
+        </div>
+         <div class="">
+          <p class="line-clamp-3 text-base">
+            Join us for a spectacular live stream event featuring three fabulous queens showcasing their culinary talents! Enjoy mouthwatering dishes, delightful recipes, and playful banter that will keep you entertained. This interactive experience invites your questions and comments, making it a night to remember. 
+          </p>
+         </div>
+        </div>
+         <!-- Highlighted Area Component -->
+      </div>
+      <button
+        class="card-footer flex flex-row justify-between items-center text-white bg-[#FF0464] rounded-b-3xl"
+      >
+        <div
+          class="left  flex flex-col justify-center items-center grow gap-[0.5rem] p-[0.75rem]"
+        >
+          <p class="left-title text-xl text-white font-bold italic">JOIN EVENT</p>
+          <p class="left-subtitle text-sm">
+            Contribute 
+            <b class="font-semibold text-sm">500 Tokens or more</b>
+          </p>
+        </div>
+        <div
+        class="right flex relative justify-center items-center bg-gray-950 w-[6rem] h-full"
+        >
+        <img class="absolute z-[999] h-full left-[-2px]" src="../assets/Union.svg" alt="">
+          <img src="../assets/arrow-up-right.svg" class="right-icon relative left-[10px]" />
+        </div>
+      </button>
+    </div>
+  </div>
+</body>
+</html>
+

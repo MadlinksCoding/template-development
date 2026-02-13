@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payment Summary - Insufficient Balance</title>
+  
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            black: "#000000",
+            white: "#FFFFFF",
+            "white-150": "#FFFFFF26",
+            blue: "#22CCEE",
+            "blue-200": "#22CCEE33",
+            green: "#07F468",
+            pink: "#FF76DD",
+            yellow: "#FFED29",
+            "gray-50": "#F9FAFB",
+            "gray-200": "#EAECF0",
+            "gray-300": "#D0D5DD",
+            "gray-400": "#98A2B3",
+            "gray-500": "#667085",
+            "gray-950": "#0C111D",
+            red: "#FF0066",
+          },
+          fontFamily: {
+            poppins: ["Poppins", "sans-serif"],
+          },
+          borderRadius: {
+            4: "0.25rem",
+            6: "0.375rem",
+            8: "0.5rem",
+            10: "0.625rem",
+            20: "1.25rem",
+            50: "3.125rem",
+          },
+          padding: {
+            1.5: "0.09375rem",
+            2.5: "0.15625rem",
+            4: "0.25rem",
+            5: "0.3125rem",
+            6: "0.375rem",
+            8: "0.5rem",
+            10: "0.625rem",
+            12: "0.75rem",
+            12.5: "0.78125rem",
+            16: "1rem",
+            24: "1.5rem",
+            "header-sticky-title": "0.25rem 0.375rem 0.25rem 1rem",
+            "header-sticky-status": "0.3125rem 0.375rem",
+            summary: "1.5rem 1rem",
+          },
+          gap: {
+            2: "0.125rem",
+            4: "0.25rem",
+            8: "0.5rem",
+            10: "0.625rem",
+            12: "0.75rem",
+            20: "1.25rem",
+            24: "1.5rem",
+          },
+          width: {
+            7.5: "0.46875rem",
+            10: "0.625rem",
+            12: "0.75rem",
+            15: "0.9375rem",
+            16: "1rem",
+            20: "1.25rem",
+            24: "1.5rem",
+            25: "1.5625rem",
+            32: "2rem",
+            38: "2.375rem",
+            48: "3rem",
+            150: "9.375rem",
+            152: "9.5rem",
+            234: "14.625rem",
+            382: "23.875rem",
+            430: "26.875rem",
+          },
+          height: {
+            7.5: "0.46875rem",
+            10: "0.625rem",
+            12: "0.75rem",
+            15: "0.9375rem",
+            16: "1rem",
+            20: "1.25rem",
+            24: "1.5rem",
+            28: "1.75rem",
+            32: "2rem",
+            38: "2.375rem",
+            41: "2.5625rem",
+            48: "3rem",
+            53: "3.3125rem",
+            150: "9.375rem",
+            152: "9.5rem",
+            326: "20.375rem",
+            390: "24.375rem",
+            668: "41.75rem",
+          },
+          minHeight: {
+            28: "1.75rem",
+          },
+          fontSize: {
+            11: "0.6875rem",
+            28: "1.75rem",
+          },
+          lineHeight: {
+            18: "1.125rem",
+            20: "1.25rem",
+            24: "1.5rem",
+            28: "1.75rem",
+            32: "2rem",
+            38: "2.375rem",
+          },
+          backdropBlur: {
+            4: "0.25rem",
+            6: "0.375rem",
+            8: "0.5rem",
+            10: "0.625rem",
+            20: "1.25rem",
+            50: "3.125rem",
+          },
+        },
+      },
+      plugins: [
+        function ({ addUtilities }) {
+          const newUtilities = {
+            ".flex-center": {
+              "@apply flex justify-center items-center": {},
+            },
+            ".clip-triangle-left": {
+              "clip-path": "polygon(100% 0, 100% 0, 0 100%, 100% 100%)",
+            },
+            ".overlay-page": {
+              background: "url('../assets/ai-art.png')",
+              "background-size": "cover",
+              "background-repeat": "no-repeat",
+              "background-position": "left 50% center",
+            },
+            ".overlay": {
+              "@apply backdrop-blur-10 rounded-none lg:rounded-20 h-dvh lg:h-full bg-black/80 lg:bg-[#0C111D96]": {},
+            },
+            ".header-component": {
+              background: "linear-gradient(0deg, rgba(12, 17, 29, 0.59), rgba(12, 17, 29, 0.59)), linear-gradient(0deg, rgba(34, 204, 238, 0.2), rgba(34, 204, 238, 0.2))"
+            },
+            ".page": {
+              "@apply w-screen h-dvh lg:h-auto min-h-dvh lg:min-h-screen flex-center flex-col": {},
+            },
+            ".page-wrapper": {
+              "@apply h-full max-w-[1024px] w-full lg:w-[90%] mx-auto lg:rounded-20 overlay-page h-dvh lg:h-full": {},
+            },
+            ".page-container": {
+              "@apply lg:rounded-b-20 lg:rounded-t-20 flex flex-col w-full min-h-fit bg-black/50 h-dvh lg:h-full": {},
+            },
+            ".page-content": {
+              "@apply flex w-full": {},
+            },
+            ".content-item": {
+              "@apply w-1/2 flex flex-col": {},
+            },
+            ".btn-next": {
+              "@apply w-full flex justify-end": {},
+            },
+            ".triangle": {
+              "@apply h-53 w-16 clip-triangle-left": {},
+            },
+            ".btn-content": {
+              "@apply p-12.5 lg:rounded-br-[16px] flex-center gap-10": {},
+            },
+            ".content-text": {
+              "@apply text-lg leading-28 text-black text-center": {},
+            },
+            ".content-icon": {
+              "@apply w-24 h-24 flex-center": {},
+            },
+            ".summary-slot": {
+              "@apply flex flex-col gap-8": {},
+            },
+            ".slot-title": {
+              "@apply text-xs leading-18 text-gray-300": {},
+            },
+            ".slot-detail": {
+              "@apply flex flex-row justify-between items-center text-white": {},
+            },
+            ".detail-text": {
+              "@apply text-base font-normal leading-24": {},
+            },
+            ".detail-price": {
+              "@apply flex-center gap-2": {},
+            },
+            ".price-icon": {
+              "@apply w-16 h-16 flex-center": {},
+            },
+            ".price-text": {
+              "@apply text-sm leading-20": {},
+            },
+            ".negotiate": {
+              "@apply text-xs leading-18 font-medium text-yellow": {},
+            },
+            ".balance-wrapper": {
+              "@apply bg-[url('../assets/ex-balance.png')] text-white rounded-8": {},
+              "background-position": "right",
+              "background-repeat": "no-repeat",
+              "background-size": "48% 100%",
+            },
+            ".balance-content": {
+              "@apply flex flex-col gap-12 p-8 rounded-8": {},
+              background: "linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%)",
+              "backdrop-filter": "blur(0.5rem)",
+            },
+            ".balance-slot": {
+              "@apply flex justify-between items-center": {},
+            },
+            ".slot-name": {
+              "@apply flex items-center gap-8": {},
+            },
+            ".name-text": {
+              "@apply text-sm font-medium leading-20": {},
+            },
+            ".name-info": {
+              "@apply flex-center w-16 h-16": {},
+            },
+            ".slot-price": {
+              "@apply flex-center gap-2": {},
+            },
+            ".price-insufficient": {
+              "@apply bg-gray-950 rounded-md p-header-sticky-status w-fit min-h-28 flex-center gap-2": {},
+            },
+            ".insufficient-icon": {
+              "@apply w-16 h-16 flex-center": {},
+            },
+            ".insufficient-text": {
+              "@apply text-11 text-yellow font-semibold": {},
+            },
+          };
+          addUtilities(newUtilities);
+        },
+      ],
+    };
+  </script>
+  
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+    }
+  </style>
+</head>
+
+<body class="lg:overflow-hidden flex-center flex-col gap-24">
+  <div class="page">
+    <div class="page-wrapper max-h-dvh lg:max-h-[90vh] overflow-y-auto">
+      <div class="overlay">
+        <div class="page-container">
+          <!-- Header Component -->
+          <div class="header-component  max-w-screen lg:h-full backdrop-blur-[10px] lg:rounded-t-20">
+            <div class="w-full flex flex-col">
+              <div class="flex flex-row items-center">
+                <div class="bg-blue lg:rounded-tl-20 p-header-sticky-title w-fit min-h-28 flex-center">
+                  <p class="text-sm leading-20 text-gray-950 font-bold">1 on 1 call</p>
+                </div>
+                <div
+                  class="bg-gray-950 hidden lg:flex rounded-[6px] p-header-sticky-status w-fit min-h-28 lg:flex-center gap-2">
+                  <div class="w-16 h-16 flex-center">
+                    <img src="../assets/dots.svg" alt="status-icon" />
+                  </div>
+                  <div class="status-text text-11 text-yellow font-semibold leading-18 italic">
+                    APPROVAL NEEDED
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="w-full flex-center md:!justify-unset !justify-between items-stretch gap-24 px-2 lg:px-16 py-2 lg:pt-[20px] lg:pb-16 sm:flex-nowrap flex-wrap">
+
+                <div class="flex flex-col sm:flex-row gap-[24px] w-full">
+                  <div class="flex flex-col text-white md:w-1/2 w-full gap-[8px]">
+                    <h1 class="no-underline text-xl md:text-2xl font-semibold text-gray-100 leading-32">
+                      High School Life Simulator
+                    </h1>
+                    <div class="flex flex-row items-center gap-8">
+                      <div class="w-24 h-24 flex-center">
+                        <img src="../assets/ex-profile.png" alt="profile-image" class="w-full h-full object-cover"
+                          style="border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%" />
+                      </div>
+                      <div class="flex flex-row items-center gap-4">
+                        <p class="text-xs font-medium leading-18">Princess Carrot Pop</p>
+                        <div class="w-10 h-10 flex-center">
+                          <img src="../assets/verified-blue-white.svg" alt="verified-icon" />
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="bg-gray-950 rounded-[6px] lg:hidden p-header-sticky-status w-fit min-h-28 flex-center gap-2">
+                      <div class="w-16 h-16 flex-center">
+                        <img src="../assets/dots.svg" alt="status-icon" />
+                      </div>
+                      <div class="status-text text-11 text-yellow font-semibold leading-18 italic">
+                        APPROVAL NEEDED
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="flex  flex-row md:items-start w-full items-end md:w-1/2 gap-24">
+                    <div class="flex flex-col gap-4 md:w-1/2 w-[170px]">
+                      <h3 class="text-xs text-blue font-semibold leading-18">TIME</h3>
+                      <div class="flex flex-col text-white">
+                        <p class="text-sm font-semibold leading-20">
+                          Tomorrow April 27,2025
+                        </p>
+                        <div class="flex flex-row gap-8">
+                          <p class="text-sm font-medium leading-20">4:00pm-2:15pm</p>
+                          <p class="text-sm text-gray-400 font-medium leading-20">
+                            15 min.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex flex-col gap-4 md:w-1/2 w-[170px]">
+                      <h3 class="text-xs text-blue font-semibold leading-18">SUBTOTAL</h3>
+                      <div class="flex flex-row items-center gap-2 text-white">
+                        <div class="icon w-24 h-24 flex-center">
+                          <img src="../assets/token.svg" alt="price-icon" />
+                        </div>
+                        <p class="text-lg font-semibold leading-28">600</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="page-content lg:flex-row flex-col flex-1 overflow-y-auto pb-[6.5rem] lg:pb-[3.5rem]">
+            <div class="lg:content-item w-full px-2 pt-16 lg:p-summary gap-8">
+              <div class="flex flex-col gap-12">
+                <h3 class="text-sm text-blue leading-20">BOOKING POLICY</h3>
+                <ul class="text-sm text-gray-200 list-disc list-outside wrap pl-24">
+                  <li>
+                    A booking fee of 100 tokens will be on hold in your balance
+                    until the call starts.
+                  </li>
+                  <li>
+                    If Princess Carrot Pop does not show up to the confirm call on
+                    time, you will be refund partially.
+                  </li>
+                  <li>
+                    If Princess Carrot Pop does not show up to the confirm call
+                    within a buffer time of 5 minutes, you will be refunded fully.
+                  </li>
+                  <li>
+                    If you do to show up to the confirm call within a buffer time of
+                    5 minutes, the session will be canceled and minimum charge will
+                    be deducted from your account. Cancel the session 1 day in
+                    advance to avoid panelty.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="lg:w-1/2 w-full flex flex-col px-2 pt-16 lg:p-summary gap-2">
+              <div class="flex flex-col gap-24 w-full h-[301px]">
+                <h3 class="text-sm text-blue leading-20">PAYMENT SUMMARY</h3>
+                <div class="flex flex-col gap-12 ">
+                  <div class="summary-slot">
+                    <h4 class="slot-title">SESSION COST</h4>
+                    <div class="slot-detail">
+                      <p class="detail-text">15 Minute x 1 session</p>
+                      <div class="detail-price">
+                        <div class="price-icon">
+                          <img src="../assets/token.svg" alt="token-icon" />
+                        </div>
+                        <p class="price-text">50</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="summary-slot">
+                    <h4 class="slot-title">ADD-ON SERVICE</h4>
+                    <div class="slot-detail">
+                      <p class="detail-text">Record our session</p>
+                      <div class="detail-price">
+                        <p class="price-text">+</p>
+                        <div class="price-icon">
+                          <img src="../assets/token.svg" alt="token-icon" />
+                        </div>
+                        <p class="price-text">50</p>
+                      </div>
+                    </div>
+                    <div class="slot-detail">
+                      <p class="detail-text">Call you Senpai</p>
+                      <div class="detail-price">
+                        <p class="price-text">+</p>
+                        <div class="price-icon">
+                          <img src="../assets/token.svg" alt="token-icon" />
+                        </div>
+                        <p class="price-text">50</p>
+                      </div>
+                    </div>
+                    <div class="slot-detail">
+                      <p class="detail-text">Personal request</p>
+                      <div class="detail-price">
+                        <div class="price-icon">
+                          <img src="../assets/token.svg" alt="token-icon" />
+                        </div>
+                        <p class="price-text negotiate">Subject to negotiation</p>
+                      </div>
+                    </div>
+                  </div>
+                  <hr />
+                  <div class="flex flex-row justify-between items-center text-white">
+                    <p class="text-lg font-medium leading-28">TOTAL</p>
+                    <div class="flex-center gap-2">
+                      <div class="w-24 h-24 flex-center">
+                        <img src="../assets/token.svg" alt="token-icon" />
+                      </div>
+                      <p class="text-2xl leading-32 font-semibold">600</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="balance-wrapper bg-pink">
+                <div class="balance-content">
+                  <div class="balance-slot">
+                    <div class="slot-name">
+                      <p class="name-text">Wallet Balance</p>
+                    </div>
+                    <div class="slot-price">
+                      <div class="price-icon">
+                        <img src="../assets/token.svg" alt="token-icon" />
+                      </div>
+                      <p class="price-text !text-base leading-24 !font-semibold">30,000</p>
+                    </div>
+                  </div>
+                  <div class="balance-slot">
+                    <div class="slot-name relative">
+                      <p class="name-text">Total</p>
+                      <div class="name-info cursor-pointer relative group"> <img src="../assets/Help icon.svg" alt="help-icon" /> <div class="absolute -top-[122px] left-[20px] hidden group-hover:flex rounded-8 w-[242px] z-10" style="box-shadow: 0px 2px 4px -2px #1018280F; box-shadow: 0px 4px 8px -2px #1018281A; backdrop-filter: blur(50px)"> <div class="py-2 px-3 rounded-8 bg-black/70"> <p class="text-xs font-medium leading-18"> This amount will be on hold in your wallet until event start date. If booking request is rejected or scheduled event is canceled by @jennyhunny, this amount will be refunded fully. </p> </div> </div> </div>
+                    </div>
+                    <div class="slot-price">
+                      <p class="price-text text-lg">-</p>
+                      <div class="price-icon">
+                        <img src="../assets/token.svg" alt="token-icon" />
+                      </div>
+                      <p class="price-text !text-base leading-24 !font-semibold">600</p>
+                    </div>
+                  </div>
+                  <hr />
+                  <div class="balance-slot">
+                    <div class="slot-name">
+                      <p class="name-text">Available Balance after booking</p>
+                    </div>
+                    <div class="slot-price">
+                      <div class="price-icon">
+                        <img src="../assets/token.svg" alt="token-icon" />
+                      </div>
+                      <p class="price-text !text-base leading-24 !font-semibold">29,400</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="hidden lg:flex">
+                <p class="text-xs text-white leading-18">
+                  Completeing this booking means you agree to the event's booking
+                  policy
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-black/75 lg:bg-transparent flex items-center lg:rounded-20 flex-col gap-2 md:flex-row fixed bottom-0 right-0 w-full">
+            <div class="lg:hidden flex-none flex items-center px-2">
+              <p class="text-xs text-white leading-18">
+                Completeing this booking means you agree to the event's booking
+                  policy
+              </p>
+            </div>
+            <!-- Button -->
+            <button class="btn-next flex-1">
+              <div class="triangle bg-yellow"></div>
+              <div class="btn-content w-4/5 lg:w-1/2 bg-yellow">
+                <p class="content-text grow">GO TO TOP UP</p>
+                <div class="content-icon">
+                  <img src="../assets/arrow-right.svg" alt="arrow-right-icon" />
+                </div>
+              </div>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

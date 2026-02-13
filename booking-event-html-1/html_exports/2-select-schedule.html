@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Schedule Page - High School Life Simulator</title>
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom CSS -->
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            black: "#000000",
+            white: "#FFFFFF",
+            "white-150": "#FFFFFF26",
+            blue: "#22CCEE",
+            "blue-200": "#22CCEE33",
+            green: "#07F468",
+            pink: "#FF76DD",
+            yellow: "#FFED29",
+            "gray-50": "#F9FAFB",
+            "gray-100": "#F2F4F7",
+            "gray-200": "#EAECF0",
+            "gray-300": "#D0D5DD",
+            "gray-400": "#98A2B3",
+            "gray-500": "#667085",
+            "gray-950": "#0C111D",
+            red: "#FF0066",
+          },
+          fontFamily: {
+            poppins: ["Poppins", "sans-serif"],
+          },
+          borderRadius: {
+            4: "0.25rem",
+            6: "0.375rem",
+            8: "0.5rem",
+            10: "0.625rem",
+            20: "1.25rem",
+            50: "3.125rem",
+          },
+          padding: {
+            1.5: "0.09375rem",
+            2.5: "0.15625rem",
+            4: "0.25rem",
+            5: "0.3125rem",
+            6: "0.375rem",
+            8: "0.5rem",
+            10: "0.625rem",
+            12: "0.75rem",
+            12.5: "0.78125rem",
+            16: "1rem",
+            24: "1.5rem",
+            "header-sticky-title": "0.25rem 0.375rem 0.25rem 1rem",
+            "header-sticky-status": "0.3125rem 0.375rem",
+            "header-content": "0.75rem 1rem",
+            "time-picker": "1.5rem 1rem 1.75rem 1rem",
+            "length-picker": "0.375rem 0.675rem",
+            "other-request": "0.75rem 0.675rem",
+            summary: "1.5rem 1rem",
+          },
+          gap: {
+            2: "0.125rem",
+            4: "0.25rem",
+            8: "0.5rem",
+            10: "0.625rem",
+            12: "0.75rem",
+            20: "1.25rem",
+            24: "1.5rem",
+          },
+          width: {
+            7.5: "0.46875rem",
+            10: "0.625rem",
+            12: "0.75rem",
+            15: "0.9375rem",
+            16: "1rem",
+            20: "1.25rem",
+            24: "1.5rem",
+            25: "1.5625rem",
+            32: "2rem",
+            38: "2.375rem",
+            48: "3rem",
+            150: "9.375rem",
+            152: "9.5rem",
+            234: "14.625rem",
+            382: "23.875rem",
+            430: "26.875rem",
+          },
+          height: {
+            7.5: "0.46875rem",
+            10: "0.625rem",
+            12: "0.75rem",
+            15: "0.9375rem",
+            16: "1rem",
+            20: "1.25rem",
+            24: "1.5rem",
+            28: "1.75rem",
+            32: "2rem",
+            38: "2.375rem",
+            41: "2.5625rem",
+            48: "3rem",
+            53: "3.3125rem",
+            150: "9.375rem",
+            152: "9.5rem",
+            326: "20.375rem",
+            390: "24.375rem",
+            668: "41.75rem",
+          },
+          minHeight: {
+            28: "1.75rem",
+          },
+          fontSize: {
+            11: "0.6875rem",
+            28: "1.75rem",
+          },
+          lineHeight: {
+            18: "1.125rem",
+            20: "1.25rem",
+            24: "1.5rem",
+            28: "1.75rem",
+            32: "2rem",
+            38: "2.375rem",
+          },
+          backdropBlur: {
+            4: "0.25rem",
+            6: "0.375rem",
+            8: "0.5rem",
+            10: "0.625rem",
+            20: "1.25rem",
+            50: "3.125rem",
+          },
+        },
+      },
+      plugins: [
+        function ({ addUtilities, theme }) {
+          const newUtilities = {
+            // General CSS
+            ".flex-center": {
+              "@apply flex justify-center items-center": {},
+            },
+
+            ".clip-triangle-left": {
+              "clip-path": "polygon(100% 0, 100% 0, 0 100%, 100% 100%)",
+            },
+
+            // Page CSS
+            ".overlay-page": {
+              background: "url('../assets/ai-art.png')",
+              "background-size": "cover",
+              "background-repeat": "no-repeat",
+              "background-position": "left 50% center",
+
+              ".overlay": {
+                "@apply backdrop-blur-10 rounded-none lg:rounded-20 h-dvh lg:h-full": {},
+                background: "theme(colors.gray-950)96",
+              },
+            },
+
+            ".header-component": {
+              background: "linear-gradient(0deg, rgba(12, 17, 29, 0.59), rgba(12, 17, 29, 0.59)), linear-gradient(0deg, rgba(34, 204, 238, 0.2), rgba(34, 204, 238, 0.2))"
+            },
+
+            ".page": {
+              "@apply w-screen h-dvh lg:h-auto min-h-dvh lg:min-h-screen flex-center flex-col": {},
+            },
+            ".page-wrapper": {
+              "@apply h-full max-w-[1024px] w-full lg:w-[90%] mx-auto rounded-20 overlay-page h-dvh lg:h-full": {},
+              ".page-container": {
+                "@apply lg:rounded-b-20 lg:rounded-t-20 flex flex-col w-full min-h-fit bg-black/50 h-dvh lg:h-full":
+                  {},
+                ".page-content": {
+                  "@apply flex w-full": {},
+                  ".content-item": {
+                    "@apply w-1/2 flex flex-col": {},
+                  },
+                },
+              },
+            },
+
+            // Button Component CSS
+            ".btn-next": {
+              "@apply w-full flex justify-end": {},
+              ".triangle": {
+                "@apply h-53 w-16 clip-triangle-left": {},
+              },
+              ".btn-content": {
+                "@apply p-12.5 lg:rounded-br-[16px] flex-center gap-10": {},
+                ".content-text": {
+                  "@apply text-lg leading-28 text-black text-center": {},
+                },
+                ".content-icon": {
+                  "@apply w-24 h-24 flex-center": {},
+                },
+              },
+            },
+
+            // Schedule - General
+            ".schedule-title": {
+              "@apply text-sm text-blue font-semibold leading-20": {},
+            },
+            ".active-slot": {
+              "@apply bg-green": {},
+              p: {
+                "@apply text-black": {},
+              },
+            },
+
+            // Schedule - Time Picker CSS
+            ".time-slot": {
+              "@apply flex-center p-10 rounded-10 grow relative": {},
+              border: "0.5px solid white",
+
+              p: {
+                "@apply text-sm text-gray-50 font-medium leading-20": {},
+              },
+
+              "&.peak": {
+                "@apply text-red border-red": {},
+                p: {
+                  "@apply text-red": {},
+                },
+                ".peak-icon": {
+                  "@apply absolute right-[1rem]": {},
+                },
+              },
+              "&.active": {
+                "@apply active-slot border-green": {},
+              },
+            },
+
+            // Schedule - Length Picker CSS
+            ".length-content": {
+              border: "3px solid rgba(255, 255, 255, 0.15)",
+            },
+            ".length-slot": {
+              "@apply rounded-50 flex-center grow p-length-picker": {},
+              p: {
+                "@apply text-xs leading-18 font-medium text-white": {},
+              },
+
+              "&.active": {
+                "@apply active-slot": {},
+              },
+            },
+
+            // Schedule - Add-On Picker CSS
+            ".add-on-slot": {
+              "@apply flex flex-row justify-between text-white": {},
+              padding: "0.25rem 0",
+
+              ".slot-left": {
+                "@apply flex flex-row items-center gap-8": {},
+                ".box": {
+                  "@apply flex-center w-15 h-15 p-2.5 rounded-4": {},
+                  border: "2px solid theme('colors.gray-500')",
+                  img: {
+                    "@apply invisible": {},
+                  },
+                },
+                p: {
+                  "@apply text-sm leading-20 font-medium": {},
+                },
+              },
+
+              ".slot-right": {
+                "@apply flex flex-row justify-end items-center gap-2": {},
+                ".token-icon": {
+                  "@apply flex-center w-20 h-20": {},
+                },
+                p: {
+                  "@apply text-sm leading-20 font-semibold": {},
+                },
+              },
+
+              "&.active": {
+                ".box": {
+                  "@apply bg-green border-green": {},
+                  img: {
+                    "@apply visible max-w-none w-7.5 h-5": {},
+                  },
+                },
+              },
+            },
+          };
+          addUtilities(newUtilities);
+        },
+      ],
+    };
+  </script>
+
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+    }
+  </style>
+</head>
+
+<body class="overflow-hidden flex-center flex-col gap-24">
+  <div class="page !max-h-[100vh]">
+    <div class="page-wrapper">
+      <div class="overlay">
+        <div class="page-container">
+          <!-- Header Component -->
+          <div class="header-component max-w-screen h-auto lg:h-full backdrop-blur-[10px] lg:rounded-t-20">
+            <div class="w-full flex flex-col">
+              <div class="flex flex-row items-center">
+                <div class="bg-blue lg:rounded-tl-20 p-header-sticky-title w-fit min-h-28 flex-center">
+                  <p class="text-sm leading-20 text-gray-950 font-bold">1 on 1 call</p>
+                </div>
+                <div
+                  class="bg-gray-950 hidden lg:flex rounded-[6px] p-header-sticky-status w-fit min-h-28 lg:flex-center gap-2">
+                  <div class="w-16 h-16 flex-center">
+                    <img src="../assets/dots.svg" alt="status-icon" />
+                  </div>
+                  <div class="status-text text-11 text-yellow font-semibold leading-18 italic">
+                    APPROVAL NEEDED
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="w-full flex-center md:!justify-unset !justify-between items-stretch gap-24 px-4 lg:px-16 pt-[8px] lg:pt-[20px] pb-16 sm:flex-nowrap flex-wrap">
+
+                <div class="flex flex-col sm:flex-row gap-[24px] w-full">
+                  <div class="flex flex-col text-white md:w-1/2 w-full gap-[8px]">
+                    <h1 class="no-underline text-xl md:text-2xl font-semibold text-gray-100 leading-32">
+                      High School Life Simulator
+                    </h1>
+                    <div class="flex flex-row items-center gap-8">
+                      <div class="w-24 h-24 flex-center">
+                        <img src="../assets/ex-profile.png" alt="profile-image" class="w-full h-full object-cover"
+                          style="border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%" />
+                      </div>
+                      <div class="flex flex-row items-center gap-4">
+                        <p class="text-xs font-medium leading-18">Princess Carrot Pop</p>
+                        <div class="w-10 h-10 flex-center">
+                          <img src="../assets/verified-blue-white.svg" alt="verified-icon" />
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="bg-gray-950 rounded-[6px] lg:hidden p-header-sticky-status w-fit min-h-28 flex-center gap-2">
+                      <div class="w-16 h-16 flex-center">
+                        <img src="../assets/dots.svg" alt="status-icon" />
+                      </div>
+                      <div class="status-text text-11 text-yellow font-semibold leading-18 italic">
+                        APPROVAL NEEDED
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="flex  flex-row md:items-start w-full items-end md:w-1/2 gap-24">
+                    <div class="flex flex-col gap-4 md:w-1/2 w-[170px]">
+                      <h3 class="text-xs text-blue font-semibold leading-18">TIME</h3>
+                      <div class="flex flex-col text-white">
+                        <p class="text-sm font-semibold leading-20">
+                          -
+                        </p>
+                      </div>
+                    </div>
+                    <div class="flex flex-col gap-4 md:w-1/2 w-[170px]">
+                      <h3 class="text-xs text-blue font-semibold leading-18">SUBTOTAL</h3>
+                      <div class="flex flex-row items-center gap-2 text-white">
+                        <p class="text-lg font-semibold leading-28">-</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Page Content -->
+          <div style="height: calc(100vh - 300px);"  class="lg:page-content flex flex-col lg:flex-row flex-auto">
+            <div class="content-item flex-center h-1/2 lg:h-auto text-gray-500 md:flex-1">Calendar Here</div>
+            <div class="flex content-item flex-col justify-center  items-center gap-8 flex-auto md:flex-1">
+              <p class="text-sm flex justify-center leading-20 text-center py-16 px-8 items-center text-gray-400">Select a date from calendar to see
+                available time slots.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

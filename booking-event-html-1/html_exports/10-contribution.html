@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contribution</title>
+  
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            black: "#000000",
+            white: "#FFFFFF",
+            blue: "#22CCEE",
+            "blue-200": "#22CCEE33",
+            green: "#07F468",
+            "gray-400": "#98A2B3",
+            "gray-950": "#0C111D",
+          },
+          fontFamily: {
+            poppins: ["Poppins", "sans-serif"],
+          },
+          borderRadius: {
+            10: "0.625rem",
+            50: "3.125rem",
+          },
+        },
+      },
+    };
+  </script>
+  
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+    }
+    
+    .result-wrapper {
+      background: linear-gradient(180deg, rgba(12, 17, 29, 0) 25%, #0C111D 100%), url('../assets/ai-art.png');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      backdrop-filter: blur(1rem);
+      background-color: black/20;
+    }
+    
+    .result-content {
+      backdrop-filter: blur(0.25rem);
+      background: #00000080;
+    }
+
+    .range-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 9999px;
+  background: #FFED29;
+}
+
+/* Remove thumb */
+.range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 0;
+  height: 0;
+}
+
+.range-slider::-moz-range-thumb {
+  width: 0;
+  height: 0;
+  border: none;
+}
+
+/* Firefox track */
+.range-slider::-moz-range-track {
+  background: transparent;
+}
+
+
+  </style>
+</head>
+
+<body class="lg:py-10 flex overflow-hidden justify-center items-center min-h-screen bg-gray-950">
+  <div  class="card-wrapper w-full h-dvh lg:w-[430px] lg:h-[668px] flex flex-col items-center justify-center lg:rounded-3xl">
+    <div  class="lg:rounded-10 backdrop-blur-[10px]  result-wrapper flex justify-center items-center w-full h-full text-white">
+      <div  class="lg:rounded-10 backdrop-blur-[10px]  bg-[#00000080] w-[375px] h-dvh  lg:w-[430px] lg:h-[668px] w-full flex flex-col items-center">
+        <img class="absolute top-0 right-0 p-2" src="../assets/cross-white.svg" alt="">
+        <div class="h-dvh lg:h-full w-full flex flex-col">
+          <div class="lg:rounded-t-10 h-fit flex justify-center items-center flex-col py-[24px] px-2 gap-2 lg:gap-4 flex-auto lg:flex-none">
+            <div class="w-[9.375rem] h-[9.375rem] flex justify-center iabsolute -top-4 -right-3 p-[8px] flex justify-center items-center rounded-50 backdrop-blur-20 bg-[#0000004D]tems-center">
+              <img src="../assets/calendar icon a paper plane in front of it.png" alt="success-icon" />
+            </div>
+            <div class="text-white flex justify-center items-center flex-col gap-2 text-center">
+              <h2 class="text-2xl leading-8 font-semibold">Thanks for your contribution!</h2>
+              <h4 class="text-base leading-6">We will let you know once this event reaches event goals!</h4>
+            </div>
+          </div>
+          <div style="background: linear-gradient(0deg, rgba(12, 17, 29, 0.2), rgba(12, 17, 29, 0.2)),
+          linear-gradient(0deg, rgba(255, 0, 102, 0.2), rgba(255, 0, 102, 0.2));
+          " class="lg:rounded-b-10 flex flex-col justify-between py-4 px-2 md:p-4  h-[366px] flex-auto lg:flex-1">
+            <div class="flex justify-center items-center flex-col gap-2">
+              <div class="flex flex-col items-center gap-5 text-center">
+                <h1 class="no-underline text-3xl text-gray-100 text-center leading-[2.375rem] font-semibold">
+                  J&B’s Cooking show
+                </h1>
+
+                 <!-- Highlighted Area Component -->
+                <div class="flex flex-col w-full gap-2">
+                  <div class="flex items-center flex-col gap-[4px]">
+                    <div class="flex gap-[6px] text-white">
+                      <div class="w-6 h-6">
+                        <img class=" w-[21.66px] h-[22px] top-[1px] left-[1.17px] w-full h-full "
+                          src="../assets/ex-profile.png" alt="" style="border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%" />
+                      </div>
+                      <div class="flex md:gap-[6px] gap-1 items-center font-normal">
+                        <p class="text-white text-xs lg:text-base leading-6">
+                          Princess Carrot Pop
+                        </p>
+                        <p class="px-[6px] bg-[#FF0066] font-medium text-xs lg:text-sm rounded-[50px]">
+                          Host
+                        </p>
+                        <img src="../assets/verified-blue-white.svg" alt="" />
+                        <p>,</p>
+                      </div>
+                    </div>
+                    <div class="flex flex-row gap-2 lg:gap-[6px] text-white">
+                      <div class="w-6 h-6">
+                        <img class=" w-[21.66px] h-[22px] top-[1px] left-[1.17px] w-full h-full "
+                          src="../assets/ex-profile.png" alt="" style="border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%" />
+                      </div>
+                      <div class="flex gap-[6px] items-center font-normal">
+                        <p class="text-white text-xs lg:text-base leading-6">
+                          De La Queen
+                        </p>
+                        <img src="../assets/verified-blue-white.svg" alt="" />
+                        <p>,</p>
+                        <div class="w-6 h-6">
+                          <img class=" w-[21.66px] h-[22px] top-[1px] left-[1.17px] w-full h-full "
+                            src="../assets/ex-profile.png" alt=""
+                            style="border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%" />
+                        </div>
+                        <div class="flex gap-[6px] items-center font-normal">
+                          <p class="text-white text-xs lg:text-base leading-6">
+                            Buff Bunny
+                          </p>
+                          <img src="../assets/verified-blue-white.svg" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex flex-col gap-1">
+                    <div class="lg:text-xl text-sm font-semibold lg:font-medium text-white">
+                      Wednesday, August 24, 2025
+                    </div>
+                    <div class="lg:text-xl text-sm font-medium text-white">
+                      9:30pm-10:30pm
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col justify-end gap-4">
+              <div class="flex flex-col gap-2 w-full">
+                <input
+                type="range"
+                min="0"
+                max="100"
+                value="0"
+                class="range-slider w-full h-2 rounded-lg cursor-pointer"
+              />
+              <div class="flex flex-row justify-between">
+                <p class="text-[#FFED29] text-xs">1,200/8,000 Tokens </p>
+                <p class="text-xs">4 days until event</p>
+              </div>
+              </div>
+               <!-- Highlighted Area Component -->
+              <div class="flex flex-col gap-2">
+              <div class="flex justify-center items-center gap-2 bg-[#FFED29] p-2">
+                <div class="w-6 h-6 flex justify-center items-center">
+                  <img src="../assets/share-06.svg" alt="message-icon" />
+                </div>
+                <p class="text-base leading-6 font-medium text-gray-950">
+                  Tell your friends to fund
+                </p>
+              </div>
+              <div class="flex justify-center items-center gap-2 bg-gray-950 p-2">
+                <div class="w-6 h-6 flex justify-center items-center">
+                  <img src="../assets/message-text-circle-01.svg" alt="calendar-icon" />
+                </div>
+                <p class="text-base leading-6 font-medium text-[#FFED29]">
+                  Go to group chat
+                </p>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="absolute -top-4 -right-3 p-[8px] flex justify-center items-center rounded-50 backdrop-blur-20 bg-[#0000004D]">
+        <img src="../assets/cross-white.svg" alt="cross-white" class="w-4 h-4" />
+      </div> -->
+    </div>
+  </div>
+</body>
+</html>
+

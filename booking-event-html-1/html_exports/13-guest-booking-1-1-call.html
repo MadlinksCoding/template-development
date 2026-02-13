@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payment Summary - Sufficient Balance</title>
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+
+          /* ========================
+            UNIFIED SPACING SYSTEM
+          ======================== */
+          spacing: {
+            "6px": "0.375rem",
+            "7_5px": "0.46875rem",
+            "10px": "0.625rem",
+            "12_5px": "0.78125rem",
+
+            "41px": "2.5625rem",
+            "53px": "3.3125rem",
+
+            "150px": "9.375rem",
+            "152px": "9.5rem",
+            "234px": "14.625rem",
+            "280px": "17.5rem",
+            "326px": "20.375rem",
+            "382px": "23.875rem",
+            "390px": "24.375rem",
+            "430px": "26.875rem",
+            "668px": "41.75rem",
+          },
+
+          colors: {
+            black: "#000000",
+            "black-1d1d": "#1D1D1D",
+            blue: "#22CCEE",
+            green: "#07F468",
+            yellow: "#FFED29",
+            "gray-50": "#F9FAFB",
+            "gray-200": "#EAECF0",
+            "gray-300": "#D0D5DD",
+            "gray-400": "#98A2B3",
+            "gray-500": "#667085",
+            "gray-950": "#0C111D",
+            red: "#FF0066",
+            darkOverlay: "rgba(12,17,29,0.20)",
+          },
+
+          fontFamily: {
+            poppins: ["Poppins", "sans-serif"],
+          },
+
+          borderRadius: {
+            10: "0.625rem", // 10px
+            20: "1.25rem",  // 20px
+            50: "3.125rem", // 50px
+          },
+
+          fontSize: {
+            11: "0.6875rem",
+            28: "1.75rem",
+          },
+
+          lineHeight: {
+            18: "1.125rem", // 18px
+            38: "2.375rem", // 38px
+          },
+
+          backdropBlur: {
+            10: "0.625rem",
+          },
+
+        },
+      },
+      plugins: [
+        function ({ addUtilities }) {
+
+          /* =========================
+            UTILITIES (u-)
+            Atomic reusable helpers
+          ========================== */
+          const newUtilities = {
+
+            /* Flex Center */
+            ".u-flex-center": {
+              "@apply flex items-center justify-center": {},
+            },
+
+            /* Hide Scrollbar */
+            ".u-no-scrollbar": {
+              "-ms-overflow-style": "none",
+              "scrollbar-width": "none",
+            },
+            ".u-no-scrollbar::-webkit-scrollbar": {
+              display: "none",
+            },
+
+            /* Clip Shape */
+            ".u-clip-triangle-left": {
+              "clip-path": "polygon(100% 0, 100% 0, 0 100%, 100% 100%)",
+            },
+
+            ".l-page": {
+              "@apply w-screen h-dvh lg:h-auto min-h-dvh lg:min-h-screen flex flex-col items-center justify-center": {},
+            },
+
+            ".l-page-wrapper": {
+              "@apply max-w-[1024px] w-full mx-auto h-dvh rounded-20": {},
+            },
+
+            ".l-overlay": {
+              "@apply rounded-none lg:rounded-20 h-dvh lg:h-full": {},
+            },
+
+            ".l-page-container": {
+              "@apply flex flex-col w-full bg-black/50 h-dvh lg:h-full rounded-none lg:rounded-20": {},
+            },
+
+            ".l-content-item": {
+              "@apply lg:w-1/2 flex flex-col": {},
+            },
+
+            /* Header */
+            ".c-header": {
+              background:
+                "linear-gradient(0deg, rgba(34, 204, 238, 0.20) 0%, rgba(34, 204, 238, 0.20) 100%), rgba(12, 17, 29, 0.59)",
+            },
+
+            /* Button */
+            ".c-btn-next": {
+              "@apply w-full flex justify-end": {},
+            },
+
+            ".c-btn-triangle": {
+              "@apply h-53px w-4 u-clip-triangle-left": {},
+            },
+
+            ".c-btn-content": {
+              "@apply p-12_5px lg:rounded-br-[16px] u-flex-center gap-2": {},
+            },
+
+            ".c-content-text": {
+              "@apply text-lg leading-7 text-black text-center": {},
+            },
+
+            ".c-content-icon": {
+              "@apply w-6 h-6 u-flex-center": {},
+            },
+
+            /* Summary */
+            ".c-summary": {
+              "@apply flex flex-col gap-2": {},
+            },
+
+            ".c-slot-detail": {
+              "@apply flex justify-between items-center text-white": {},
+            },
+
+            ".c-detail-price": {
+              "@apply u-flex-center gap-2": {},
+            },
+
+            ".c-price-icon": {
+              "@apply w-4 h-4 u-flex-center": {},
+            },
+
+            ".c-price-text": {
+              "@apply text-sm leading-tight": {},
+            },
+
+          };
+          addUtilities(newUtilities);
+        },
+      ],
+    };
+  </script>
+
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+    }
+  </style>
+</head>
+
+<body class="lg:overflow-hidden u-flex-center flex-col gap-6">
+  <div class="l-page">
+    <div class="l-page-wrapper max-h-dvh lg:max-w-[53.25rem] bg-[url('../assets/ai-art.png')] bg-no-repeat bg-cover bg-center">
+      <div class="l-overlay">
+        <div class="l-page-container">
+
+          <!-- HEADER -->
+          <div class="c-header max-w-screen h-auto lg:rounded-t-20 backdrop-blur-sm">
+            <div class="w-full flex flex-col">
+
+              <div class="flex items-center">
+                <div class="bg-blue lg:rounded-tl-20 w-fit u-flex-center py-1 pl-4 pr-2 min-h-7">
+                  <p class="text-sm leading-tight text-gray-950 font-bold">
+                    1 on 1 call
+                  </p>
+                </div>
+
+                <div class="bg-gray-950 hidden lg:flex w-fit gap-2 u-flex-center px-6px min-h-7">
+                  <div class="w-4 h-4 u-flex-center">
+                    <img src="../assets/dots.svg" alt="status-icon" />
+                  </div>
+                  <div class="text-11 text-yellow font-semibold leading-18 italic">
+                    APPROVAL NEEDED
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-full u-flex-center md:!justify-unset !justify-between items-stretch gap-6 p-2 lg:px-4 lg:pt-3 lg:pb-4 flex-wrap">
+
+                <div class="flex flex-col sm:flex-row gap-6 w-full">
+
+                  <!-- LEFT -->
+                  <div class="flex flex-col text-white md:w-1/2 w-full gap-2">
+                    <h1 class="text-xl md:text-2xl font-semibold leading-8">
+                      High School Life Simulator
+                    </h1>
+
+                    <div class="flex items-center gap-2">
+                      <div class="w-5 h-5 u-flex-center">
+                        <img src="../assets/ex-profile.png"
+                             class="w-full h-full object-cover"
+                             style="border-radius:50% 50% 50% 50% / 60% 60% 40% 40%">
+                      </div>
+
+                      <div class="flex items-center gap-4">
+                        <p class="text-xs font-medium leading-18">
+                          Princess Carrot Pop
+                        </p>
+                        <div class="w-10px h-10px u-flex-center">
+                          <img src="../assets/verified-blue-white.svg">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- RIGHT -->
+                  <div class="flex md:w-1/2 w-full gap-6px">
+
+                    <div class="flex flex-col gap-1 md:w-1/2">
+                      <h3 class="text-xs text-blue font-semibold leading-18">TIME</h3>
+                      <div class="text-white">
+                        <p class="text-sm font-semibold leading-tight">
+                          Tomorrow April 27, 2025
+                        </p>
+                        <div class="flex gap-2">
+                          <p class="text-sm font-medium leading-tight">
+                            4:00pm–2:15pm
+                          </p>
+                          <p class="text-sm text-gray-400 leading-tight">
+                            15 min.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="flex flex-col gap-1 md:w-1/2">
+                      <h3 class="text-xs text-blue font-semibold leading-18">SUBTOTAL</h3>
+                      <div class="flex items-center gap-2 text-white">
+                        <div class="w-6 h-6 u-flex-center">
+                          <img src="../assets/token.svg">
+                        </div>
+                        <p class="text-lg font-semibold leading-7">600</p>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CONTENT -->
+          <div class="w-full flex flex-col lg:flex-row flex-1 overflow-hidden bg-black/50 backdrop-blur-sm">
+
+            <!-- POLICY -->
+            <div class="l-content-item w-full px-2 lg:px-4 pt-4 md:pt-6 gap-8">
+              <div class="flex flex-col gap-3">
+                <h3 class="text-sm text-blue leading-tight">BOOKING POLICY</h3>
+                <ul class="text-sm text-gray-200 list-disc pl-6 space-y-6px">
+                  <li>Booking fee of 100 tokens held until call starts.</li>
+                  <li>Partial refund if host does not show up.</li>
+                  <li>Full refund after 5 min buffer time.</li>
+                  <li>Late arrival deducts minimum charge.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- PAYMENT SIDE -->
+            <div class="lg:w-1/2 w-full flex-1 flex flex-col px-2 py-4 lg:px-2 lg:py-6 gap-2 bg-darkOverlay backdrop-blur-sm overflow-y-auto">
+              <!-- Back Link -->
+              <div class="flex items-center cursor-pointer">
+                <span><img src="../assets/arrow-left.svg" alt=""></span>
+                <span class="text-xs leading-18 font-medium text-white">Back</span>
+              </div>
+              <div class="flex flex-col gap-4 u-no-scrollbar overflow-y-auto flex-1">
+                <!-- TOP UP AMOUNT -->
+                <div class="flex flex-col gap-2">
+                  <span class="text-xs leading-18 text-white opacity-70 uppercase">
+                    TOP UP AMOUNT
+                  </span>
+
+                  <div class="flex items-center gap-2 text-white">
+                    <div class="w-10 h-10">
+                      <img src="../assets/token.svg" class="w-full h-full">
+                    </div>
+
+                    <div class="flex justify-between items-center w-full border-b border-gray-400">
+                      <p class="text-3xl">3000</p>
+
+                      <div class="flex flex-col items-end">
+                        <span class="bg-green text-xs px-6px text-gray-950 font-semibold">
+                          -20%
+                        </span>
+                        <span class="text-sm">= USD $123.45</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /TOP UP AMOUNT -->
+                <!-- Tip Amount -->
+                <div class="flex items-center gap-2">
+                  <span class="flex-1 p-10px flex items-center justify-center rounded-lg border border-white/50 text-sm font-medium leading-tight text-white">500</span>
+                  <span class="flex-1 p-10px flex items-center justify-center rounded-lg border border-white/50 text-sm font-medium leading-tight text-white">1,000</span>
+                  <span class="flex-1 p-10px flex items-center justify-center rounded-lg border border-white/50 text-sm font-medium leading-tight text-white">2,000</span>
+                  <span class="flex-1 p-10px flex items-center justify-center rounded-lg border border-white/50 text-sm font-medium leading-tight text-white">5,000</span>
+                </div>
+                <!-- Tip Amount -->
+                <!-- Billing Email -->
+                <div class="w-full flex flex-col gap-4">
+                  <!-- Title -->
+                  <div class="w-full flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                      <span class="w-5 h-5">
+                        <img src="../assets/mail-01.svg" alt="">
+                      </span>
+                      <span class="text-base font-semibold leading-normal text-gray-50">BILLING EMAIL</span>
+                    </div>
+                  </div>
+                  <!-- /Title -->
+                  <!-- Field Container -->
+                  <div class="w-full flex flex-col gap-4">
+                    <span class="text-sm font-medium leading-tight text-white">Already have an account? <a href="#" class="text-green">Log in</a></span>
+                    <div class="flex py-2 px-3 border-b border-gray-300 bg-white/10">
+                      <input type="text" placeholder="Email" class="flex-1 bg-transparent focus:outline-none focus:ring-0 text-white text-sm">
+                    </div>
+                  </div>
+                  <!-- /Field Container -->
+                </div>
+                <!-- /Billing Email -->
+
+                <!-- Payment Method -->
+                <div class="w-full flex flex-col gap-4">
+                  <!-- Title -->
+                  <div class="w-full flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                      <span class="w-5 h-5">
+                        <img src="../assets/credit-card-01.svg" alt="">
+                      </span>
+                      <span class="text-base font-semibold leading-normal text-gray-50">PAYMENT METHOD</span>
+                    </div>
+                  </div>
+                  <!-- /Title -->
+                  <!-- Card Container -->
+                  <div class="w-full h-280px">
+                    <div class="w-full h-full flex flex-col justify-between p-4 md:p-6 rounded-xl border border-white/30 bg-black-1d1d">
+                      <div class="flex items-center gap-2">
+                        <div class="flex-none flex items-center">
+                          <input
+                            type="checkbox"
+                            class="w-4 h-4
+                                  appearance-none
+                                  border border-white
+                                  rounded
+                                  focus:outline-none focus:ring-0
+                                  bg-transparent
+                                  cursor-pointer
+                                  checked:bg-green
+                                  checked:border-green
+                                  checked:bg-[url('../assets/check.svg')]
+                                  checked:bg-center
+                                  checked:bg-no-repeat
+                                  checked:bg-[length:10px_10px]"
+                          />
+    
+                        </div>
+                        <span class="text-sm leading-tight text-gray-400">Save card for faster checkout.</span>
+                      </div>
+                      <div class="flex flex-col gap-2">
+                        <!-- Row -->
+                        <div class="flex items-center gap-4">
+                          <!-- Col -->
+                          <div class="flex-1 flex flex-col gap-6px">
+                            <span class="text-sm font-medium leading-tight text-gray-50">Card number</span>
+                            <div class="flex py-2 px-3 border-b border-gray-300 bg-white/10">
+                              <input type="text" placeholder="Card number" class="w-full flex-1 bg-transparent focus:outline-none focus:ring-0 text-white text-sm">
+                            </div>
+                          </div>
+                          <!-- Col -->
+                          <!-- Col -->
+                          <div class="flex-1 flex flex-col gap-6px">
+                            <span class="text-sm font-medium leading-tight text-gray-50">Expiration date</span>
+                            <div class="flex gap-2 py-2 px-3 border-b border-gray-300 bg-white/10">
+                              <input type="text" placeholder="MM/YY" class="w-full flex-1 bg-transparent focus:outline-none focus:ring-0 text-white text-sm">
+                              <span class="w-4 h-4">
+                                <img src="../assets/calender-icon.svg" alt="" class="w-full h-full">
+                              </span>
+                            </div>
+                          </div>
+                          <!-- Col -->
+                        </div>
+                        <!-- Row -->
+                        <!-- Row -->
+                        <div class="flex items-center gap-4">
+                          <!-- Col -->
+                          <div class="flex-1 flex flex-col gap-6px">
+                            <span class="text-sm font-medium leading-tight text-gray-50">Cardholder name</span>
+                            <div class="flex py-2 px-3 border-b border-gray-300 bg-white/10">
+                              <input type="text" placeholder="Cardholder name" class="w-full flex-1 bg-transparent focus:outline-none focus:ring-0 text-white text-sm">
+                            </div>
+                          </div>
+                          <!-- Col -->
+                          <!-- Col -->
+                          <div class="flex-1 flex flex-col gap-6px">
+                            <span class="text-sm font-medium leading-tight text-gray-50">CVV</span>
+                            <div class="flex py-2 px-3 border-b border-gray-300 bg-white/10">
+                              <input type="text" placeholder="CVV" class="w-full flex-1 bg-transparent focus:outline-none focus:ring-0 text-white text-sm">
+                            </div>
+                          </div>
+                          <!-- Col -->
+                        </div>
+                        <!-- Row -->
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /Card Container -->
+                </div>
+                <!-- /Payment Method -->
+                <!-- SUMMARY -->
+                <div class="flex flex-col gap-2">
+                    <div class="c-summary">
+                      <div class="c-slot-detail">
+                        <p class="text-sm leading-tight white">Top up amount</p>
+                        <div class="c-detail-price">
+                          <div class="c-price-icon">
+                            <img src="../assets/token.svg" alt="token-icon" />
+                          </div>
+                          <p class="c-price-text font-medium">50</p>
+                        </div>
+                      </div>
+                      <div class="c-slot-detail">
+                        <p class="text-sm leading-tight white">Minimum charge</p>
+                        <div class="c-detail-price">
+                          <p class="c-price-text">-</p>
+                          <div class="c-price-icon">
+                            <img src="../assets/token.svg" alt="token-icon" />
+                          </div>
+                          <p class="c-price-text font-medium">50</p>
+                        </div>
+                      </div>
+                    </div>
+                    <hr />
+                    <div class="flex flex-row justify-between items-center text-white">
+                      <p class="text-sm font-semibold leading-tight">Balance after booking</p>
+                      <div class="u-flex-center gap-2">
+                        <div class="w-6 h-6 flex-center">
+                          <img src="../assets/token.svg" alt="token-icon" />
+                        </div>
+                        <p class="text-lg leading-7 font-semibold">995</p>
+                      </div>
+                    </div>
+                    <div class="flex flex-row justify-between items-center text-white">
+                      <p class="text-sm font-semibold leading-tight">Top up payment</p>
+                      <div class="u-flex-center gap-2">
+                        <p class="text-lg leading-7 font-semibold">USD$ 23.45</p>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-2 opacity-70">
+                      <img src="../assets/chevron-down-double.svg" alt="" class="w-4 h-4">
+                      <span class="text-xs leading-18 font-medium text-white">Payment Summary</span>
+                    </div>
+                </div>
+              </div>
+              <div class="w-full">
+                  <div class="flex items-center gap-2">
+                    <div class="flex-none">
+                      <input
+                        type="checkbox"
+                        class="w-4 h-4
+                              appearance-none
+                              border border-white
+                              rounded
+                              focus:outline-none focus:ring-0
+                              bg-transparent
+                              cursor-pointer
+                              checked:bg-green
+                              checked:border-green
+                              checked:bg-[url('../assets/check.svg')]
+                              checked:bg-center
+                              checked:bg-no-repeat
+                              checked:bg-[length:10px_10px]"
+                      />
+
+                    </div>
+                    <span class="text-sm leading-tight text-gray-400">I agree to Fansocial’s Terms and Conditions and Privacy Policy, and consent to the creation of an account on my behalf.</span>
+                  </div>
+                </div>
+            </div>
+          </div>
+
+          <!-- FOOTER BUTTON -->
+          <div class="bg-black/75 flex flex-col md:flex-row gap-1 items-center w-full lg:rounded-bl-20 lg:rounded-br-20">
+
+            <div class="flex-auto px-4 text-white text-xs leading-18">
+              Completeing this booking means you agree to the event’s booking policy
+            </div>
+
+            <button class="c-btn-next flex-1">
+              <div class="c-btn-triangle bg-green h-53px w-4"></div>
+              <div class="c-btn-content bg-green w-full">
+                <p class="c-content-text grow font-medium whitespace-nowrap">
+                  TOP UP & COMPLETE BOOKING
+                </p>
+                <div class="c-content-icon">
+                  <img src="../assets/arrow-right.svg">
+                </div>
+              </div>
+            </button>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+
+</html>
