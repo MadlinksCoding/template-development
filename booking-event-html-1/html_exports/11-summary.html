@@ -41,6 +41,30 @@
           fontFamily: {
             poppins: ["Poppins", "sans-serif"],
           },
+          spacing: {
+            "1_5px": "0.09375rem",  // 1.5px (renamed to avoid conflict)
+            "2px": "0.125rem",
+            "2_5px": "0.15625rem",
+            "6px": "0.375rem",
+            "7_5px": "0.46875rem",
+            "10px": "0.625rem",
+            "12_5px": "0.78125rem",
+            "15px": "0.9375rem",
+            "25px": "1.5625rem",
+
+            "38px": "2.375rem",
+            "41px": "2.5625rem",
+            "53px": "3.3125rem",
+
+            "150px": "9.375rem",
+            "152px": "9.5rem",
+            "234px": "14.625rem",
+            "326px": "20.375rem",
+            "382px": "23.875rem",
+            "390px": "24.375rem",
+            "430px": "26.875rem",
+            "668px": "41.75rem",
+          },
           borderRadius: {
             4: "0.25rem",
             6: "0.375rem",
@@ -50,17 +74,6 @@
             50: "3.125rem",
           },
           padding: {
-            1.5: "0.09375rem",
-            2.5: "0.15625rem",
-            4: "0.25rem",
-            5: "0.3125rem",
-            6: "0.375rem",
-            8: "0.5rem",
-            10: "0.625rem",
-            12: "0.75rem",
-            12.5: "0.78125rem",
-            16: "1rem",
-            24: "1.5rem",
             "header-sticky-title": "0.25rem 0.375rem 0.25rem 1rem",
             "header-sticky-status": "0.3125rem 0.375rem",
             "header-content": "0.75rem 1rem",
@@ -69,59 +82,12 @@
             "other-request": "0.75rem 0.675rem",
             summary: "1.5rem 1rem",
           },
-          gap: {
-            2: "0.125rem",
-            4: "0.25rem",
-            8: "0.5rem",
-            10: "0.625rem",
-            12: "0.75rem",
-            20: "1.25rem",
-            24: "1.5rem",
-          },
-          width: {
-            7.5: "0.46875rem",
-            10: "0.625rem",
-            12: "0.75rem",
-            15: "0.9375rem",
-            16: "1rem",
-            20: "1.25rem",
-            24: "1.5rem",
-            25: "1.5625rem",
-            32: "2rem",
-            38: "2.375rem",
-            48: "3rem",
-            150: "9.375rem",
-            152: "9.5rem",
-            234: "14.625rem",
-            382: "23.875rem",
-            430: "26.875rem",
-          },
-          height: {
-            7.5: "0.46875rem",
-            10: "0.625rem",
-            12: "0.75rem",
-            15: "0.9375rem",
-            16: "1rem",
-            20: "1.25rem",
-            24: "1.5rem",
-            28: "1.75rem",
-            32: "2rem",
-            38: "2.375rem",
-            41: "2.5625rem",
-            48: "3rem",
-            53: "3.3125rem",
-            150: "9.375rem",
-            152: "9.5rem",
-            326: "20.375rem",
-            390: "24.375rem",
-            668: "41.75rem",
-          },
-          minHeight: {
-            28: "1.75rem",
-          },
           fontSize: {
             11: "0.6875rem",
             28: "1.75rem",
+          },
+          borderWidth: {
+            'half': '0.5px',   // 👈 custom 0.5px border
           },
           lineHeight: {
             18: "1.125rem",
@@ -142,85 +108,77 @@
         },
       },
       plugins: [
-        function ({ addUtilities, theme }) {
+        function ({ addUtilities }) {
+
+          /* =========================
+            UTILITIES (u-)
+            Atomic reusable helpers
+          ========================== */
           const newUtilities = {
-          '.no-scrollbar': {
-              '-ms-overflow-style': 'none',
-              'scrollbar-width': 'none',
-            },
-            '.no-scrollbar::-webkit-scrollbar': {
-              display: 'none',
-            },
-            // General CSS
-            ".flex-center": {
-              "@apply flex justify-center items-center": {},
+
+            /* Flex Center */
+            ".u-flex-center": {
+              "@apply flex items-center justify-center": {},
             },
 
-            ".clip-triangle-left": {
+            /* Hide Scrollbar */
+            ".u-no-scrollbar": {
+              "-ms-overflow-style": "none",
+              "scrollbar-width": "none",
+            },
+            ".u-no-scrollbar::-webkit-scrollbar": {
+              display: "none",
+            },
+
+            /* Clip Shape */
+            ".u-clip-triangle-left": {
               "clip-path": "polygon(100% 0, 100% 0, 0 100%, 100% 100%)",
             },
 
-            // Page CSS
-            ".overlay-page": {
-              background: "url('../assets/ai-art.png')",
-              "background-size": "cover",
-              "background-repeat": "no-repeat",
-              "background-position": "left 50% center",
-
-              ".overlay": {
-                "@apply backdrop-blur-10 rounded-none lg:rounded-20 h-dvh lg:h-full": {},
-                background: "theme(colors.gray-950)96",
-              },
+            ".l-page": {
+              "@apply w-screen h-dvh lg:h-auto min-h-dvh lg:min-h-screen flex flex-col items-center justify-center": {},
+            },
+            ".l-page-wrapper": {
+              "@apply max-w-[1024px] w-full mx-auto h-dvh lg:rounded-20": {},
             },
 
-            ".header-component": {
-              background: "linear-gradient(0deg, rgba(12, 17, 29, 0.59), rgba(12, 17, 29, 0.59)), linear-gradient(0deg, rgba(34, 204, 238, 0.2), rgba(34, 204, 238, 0.2))"
+            ".l-overlay": {
+              "@apply rounded-none lg:rounded-20 h-dvh lg:h-full": {},
             },
 
-            ".page": {
-              "@apply w-screen h-dvh lg:h-auto min-h-screen flex-center flex-col": {},
-            },
-            ".page-wrapper": {
-              "@apply h-full max-w-[1024px] w-full lg:w-[90%] mx-auto rounded-20 overlay-page h-dvh lg:h-full": {},
-              ".page-container": {
-                "@apply lg:rounded-b-20 lg:rounded-t-20 flex flex-col w-full min-h-fit bg-black/50 h-dvh lg:h-full":
-                  {},
-                ".page-content": {
-                  "@apply flex w-full": {},
-                  ".content-item": {
-                    "@apply w-1/2 flex flex-col": {},
-                  },
-                },
-              },
+            ".l-page-container": {
+              "@apply flex flex-col w-full bg-black/50 h-dvh lg:h-full rounded-none lg:rounded-20": {},
             },
 
-            // Button Component CSS
-            ".btn-next": {
+            ".l-content-item": {
+              "@apply lg:w-1/2 flex flex-col": {},
+            },
+
+            /* Header */
+            ".c-header": {
+              background:
+                "linear-gradient(0deg, rgba(12, 17, 29, 0.59), rgba(12, 17, 29, 0.59)), linear-gradient(0deg, rgba(34, 204, 238, 0.2), rgba(34, 204, 238, 0.2))",
+            },
+
+            /* Button */
+            ".c-btn-next": {
               "@apply w-full flex justify-end": {},
-              ".triangle": {
-                "@apply h-53 w-16 clip-triangle-left": {},
-              },
-              ".btn-content": {
-                "@apply p-12.5 lg:rounded-br-[16px] flex-center gap-10 relative": {},
-                "&::after": {
-                  content: "''",
-                  position: "absolute",
-                  right: "100%",
-                  top: "0",
-                  width: "0",
-                  height: "0",
-                  "border-top": "3.3125rem solid transparent",
-                  "border-right": "1rem solid",
-                  "border-right-color": "rgb(7 244 104 / 1)",
-                  "border-bottom": "0rem solid rgb(7 244 104 / 1)",
-                },
-                ".content-text": {
-                  "@apply text-lg leading-28 text-black text-center": {},
-                },
-                ".content-icon": {
-                  "@apply w-24 h-24 flex-center": {},
-                },
-              },
+            },
+
+            ".c-btn-triangle": {
+              "@apply h-53px w-4 u-clip-triangle-left": {},
+            },
+
+            ".c-btn-content": {
+              "@apply p-12_5px lg:rounded-br-[16px] u-flex-center gap-2": {},
+            },
+
+            ".c-content-text": {
+              "@apply text-lg leading-7 text-black text-center": {},
+            },
+
+            ".c-content-icon": {
+              "@apply w-6 h-6 u-flex-center": {},
             },
 
             // Schedule - General
@@ -228,33 +186,21 @@
               "@apply text-sm text-blue font-semibold leading-20": {},
             },
             ".active-slot": {
-              "@apply bg-green": {},
-              p: {
-                "@apply text-black": {},
-              },
+              "@apply bg-green text-black": {},
             },
 
             // Schedule - Time Picker CSS
             ".time-slot": {
-              "@apply flex-center p-10 rounded-10 grow relative": {},
-              border: "0.5px solid white",
-
-              p: {
-                "@apply text-sm text-gray-50 font-medium leading-20": {},
-              },
-
-              "&.peak": {
-                "@apply text-red border-red": {},
-                p: {
-                  "@apply text-red": {},
-                },
-                ".peak-icon": {
-                  "@apply absolute right-[1rem]": {},
-                },
-              },
-              "&.active": {
-                "@apply active-slot border-green": {},
-              },
+              "@apply u-flex-center p-10px rounded-10 grow relative text-white border-half border-white": {},
+            },
+            ".peak": {
+              "@apply text-red border-red": {},
+            },
+            ".peak-icon": {
+              "@apply absolute right-[1rem]": {},
+            },
+            ".active": {
+              "@apply active-slot border-green": {},
             },
 
             // Schedule - Length Picker CSS
@@ -262,53 +208,21 @@
               border: "3px solid rgba(255, 255, 255, 0.15)",
             },
             ".length-slot": {
-              "@apply rounded-50 flex-center grow p-length-picker": {},
-              p: {
-                "@apply text-xs leading-18 font-medium text-white": {},
-              },
-
-              "&.active": {
-                "@apply active-slot": {},
-              },
+              "@apply rounded-50 u-flex-center grow p-length-picker text-xs leading-18 font-medium text-white": {},
             },
-
             // Schedule - Add-On Picker CSS
             ".add-on-slot": {
-              "@apply flex flex-row justify-between text-white": {},
-              padding: "0.25rem 0",
+              "@apply flex flex-row justify-between text-white py-1": {},
 
               ".slot-left": {
                 "@apply flex flex-row items-center gap-8": {},
-                ".box": {
-                  "@apply flex-center w-15 h-15 p-2.5 rounded-4": {},
-                  border: "2px solid theme('colors.gray-500')",
-                  img: {
-                    "@apply invisible": {},
-                  },
-                },
-                p: {
-                  "@apply text-sm leading-20 font-medium": {},
-                },
               },
 
               ".slot-right": {
-                "@apply flex flex-row justify-end items-center gap-2": {},
-                ".token-icon": {
-                  "@apply flex-center w-20 h-20": {},
-                },
-                p: {
-                  "@apply text-sm leading-20 font-semibold": {},
-                },
+                "@apply flex flex-row justify-end items-center gap-2px": {},
               },
-
-
-              "&.active": {
-                ".box": {
-                  "@apply bg-green border-green": {},
-                  img: {
-                    "@apply visible max-w-none w-7.5 h-5": {},
-                  },
-                },
+              ".token-icon": {
+                "@apply u-flex-center w-5 h-5": {},
               },
             },
           };
@@ -325,100 +239,107 @@
   </style>
 </head>
 
-<body class="lg:py-10 overflow-hidden flex-center flex-col gap-24">
-  <div class="page ">
-    <div class="page-wrapper">
-      <div class="overlay">
-        <div class="page-container">
-          <!-- Header Component -->
-          <div class="header-component  max-w-screen h-auto lg:h-full backdrop-blur-[10px] lg:rounded-t-20">
+<body class="overflow-hidden u-flex-center flex-col gap-6">
+  <div class="l-page ">
+    <div
+      class="l-page-wrapper relative max-h-dvh lg:max-h-[80vh] bg-[url('../assets/ai-art.png')] bg-no-repeat bg-cover bg-center">
+      <div class=" l-overlay">
+        <div class="l-page-container">
+          <!-- HEADER -->
+          <div class="c-header max-w-screen h-auto lg:rounded-t-20 backdrop-blur-sm">
             <div class="w-full flex flex-col">
-              <div class="flex flex-row items-center">
-                <div class="bg-blue lg:rounded-tl-20 p-header-sticky-title w-fit min-h-28 flex-center">
-                  <p class="text-sm leading-20 text-gray-950 font-bold">1 on 1 call</p>
+
+              <div class="flex items-center">
+                <div class="bg-blue lg:rounded-tl-20 w-fit u-flex-center py-1 pl-4 pr-2 min-h-7">
+                  <p class="text-sm leading-tight text-gray-950 font-bold">
+                    1 on 1 call
+                  </p>
                 </div>
-                <div
-                  class="bg-gray-950 hidden lg:flex rounded-[6px] p-header-sticky-status w-fit min-h-28 lg:flex-center gap-2">
-                  <div class="w-16 h-16 flex-center">
+
+                <div class="bg-gray-950 hidden lg:flex w-fit gap-2 u-flex-center px-6px min-h-7">
+                  <div class="w-4 h-4 u-flex-center">
                     <img src="../assets/dots.svg" alt="status-icon" />
                   </div>
-                  <div class="status-text text-11 text-yellow font-semibold leading-18 italic">
+                  <div class="text-11 text-yellow font-semibold leading-18 italic">
                     APPROVAL NEEDED
                   </div>
                 </div>
               </div>
-              <div
-                class="w-full flex-center md:!justify-unset !justify-between items-stretch gap-24 px-16 pt-[8px] lg:pt-[20px] pb-16 sm:flex-nowrap flex-wrap">
 
-                <div class="flex flex-col sm:flex-row gap-[24px] w-full">
-                  <div class="flex flex-col text-white md:w-1/2 w-full gap-[8px]">
-                    <h1 class="no-underline text-xl md:text-2xl font-semibold text-gray-100 leading-32">
+              <div
+                class="w-full u-flex-center md:!justify-unset !justify-between items-stretch gap-6 p-2 lg:px-4 lg:pt-3 lg:pb-4 flex-wrap">
+
+                <div class="flex flex-col sm:flex-row gap-6 w-full">
+
+                  <!-- LEFT -->
+                  <div class="flex flex-col text-white md:w-1/2 w-full gap-2">
+                    <h1 class="text-xl md:text-2xl font-semibold leading-8">
                       High School Life Simulator
                     </h1>
-                    <div class="flex flex-row items-center gap-8">
-                      <div class="w-24 h-24 flex-center">
-                        <img src="../assets/ex-profile.png" alt="profile-image" class="w-full h-full object-cover"
-                          style="border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%" />
+
+                    <div class="flex items-center gap-2">
+                      <div class="w-5 h-5 u-flex-center">
+                        <img src="../assets/ex-profile.png" class="w-full h-full object-cover"
+                          style="border-radius:50% 50% 50% 50% / 60% 60% 40% 40%">
                       </div>
-                      <div class="flex flex-row items-center gap-4">
-                        <p class="text-xs font-medium leading-18">Princess Carrot Pop</p>
-                        <div class="w-10 h-10 flex-center">
-                          <img src="../assets/verified-blue-white.svg" alt="verified-icon" />
+
+                      <div class="flex items-center gap-1">
+                        <p class="text-xs font-medium leading-18">
+                          Princess Carrot Pop
+                        </p>
+                        <div class="w-10px h-10px u-flex-center">
+                          <img src="../assets/verified-blue-white.svg">
                         </div>
-                      </div>
-                    </div>
-                    <div
-                      class="bg-gray-950 rounded-[6px] lg:hidden p-header-sticky-status w-fit min-h-28 flex-center gap-2">
-                      <div class="w-16 h-16 flex-center">
-                        <img src="../assets/dots.svg" alt="status-icon" />
-                      </div>
-                      <div class="status-text text-11 text-yellow font-semibold leading-18 italic">
-                        APPROVAL NEEDED
                       </div>
                     </div>
                   </div>
 
-                  <div class="flex  flex-row md:items-start lg:w-full items-end md:w-1/2 gap-24">
-                    <div class="flex flex-col gap-4 md:w-1/2 w-[170px]">
+                  <!-- RIGHT -->
+                  <div class="flex md:w-1/2 w-full gap-6px">
+
+                    <div class="flex flex-col gap-1 md:w-1/2">
                       <h3 class="text-xs text-blue font-semibold leading-18">TIME</h3>
-                      <div class="flex flex-col text-white">
-                        <p class="text-sm font-semibold leading-20">
-                          Tomorrow April 27,2025
+                      <div class="text-white">
+                        <p class="text-sm font-semibold leading-tight">
+                          Tomorrow April 27, 2025
                         </p>
-                        <div class="flex flex-row gap-8">
-                          <p class="text-sm font-medium leading-20">4:00pm-2:15pm</p>
-                          <p class="text-sm text-gray-400 font-medium leading-20">
+                        <div class="flex gap-2">
+                          <p class="text-sm font-medium leading-tight">
+                            4:00pm–2:15pm
+                          </p>
+                          <p class="text-sm text-gray-400 leading-tight">
                             15 min.
                           </p>
                         </div>
                       </div>
                     </div>
-                    <div class="flex flex-col gap-4 md:w-1/2 w-[170px]">
+
+                    <div class="flex flex-col gap-1 md:w-1/2">
                       <h3 class="text-xs text-blue font-semibold leading-18">SUBTOTAL</h3>
-                      <div class="flex flex-row items-center gap-2 text-white">
-                        <div class="icon w-24 h-24 flex-center">
-                          <img src="../assets/token.svg" alt="price-icon" />
+                      <div class="flex items-center gap-2 text-white">
+                        <div class="w-4 h-4 u-flex-center">
+                          <img src="../assets/token.svg">
                         </div>
-                        <p class="text-lg font-semibold leading-28">600</p>
+                        <p class="text-lg font-semibold leading-7">600</p>
                       </div>
                     </div>
+
                   </div>
                 </div>
-
               </div>
             </div>
-          </div> 
+          </div>
 
           <!-- Page Content -->
-          <div class="lg:page-content lg:h-[calc(100vh-300px)] flex flex-col lg:flex-row flex-auto">
-            <div class="content-item flex-center text-gray-500 md:flex-1">Calendar Here</div>
-            <div class="content-item p-time-picker gap-24 overflow-y-auto h-[calc(100vh-400px)] lg:h-auto  no-scrollbar flex-auto md:flex-1 pb-[4rem] p-time-picker">
+          <div
+            class="w-full flex flex-col lg:flex-row flex-1 overflow-hidden bg-black/50 backdrop-blur-sm lg:rounded-bl-20 lg:rounded-br-20">
+            <div class="l-content-item u-flex-center text-gray-500 md:flex-1">Calendar Here</div>
+            <div
+              class="l-content-item gap-6 overflow-y-auto h-[calc(100vh-400px)] lg:h-auto  u-no-scrollbar flex-auto md:flex-1 px-8 py-4 lg:px-4 lg:py-6">
               <!-- Time Picker -->
-
-               <!-- Highlighted Area Component -->
-              <div class="flex flex-col gap-8 md:mt-0 mt-5">
+              <div class="flex flex-col gap-2 md:mt-0 mt-5">
                 <h3 class="schedule-title">SELECT CALL START TIME</h3>
-                <div class="grid grid-cols-3 grid-rows-5 w-full gap-8">
+                <div class="grid grid-cols-3 grid-rows-5 w-full gap-2">
                   <div class="time-slot">
                     <p>12:00am</p>
                   </div>
@@ -471,17 +392,15 @@
                 <div class="banner bg-[#FDB0224D] border-l-2 py-3 px-2 border-l-[#FDB022]">
                   <div class="flex gap-2 flex-col">
                     <p class="text-sm font-semibold text-[#FDB022]">Your selected time is in high demand!</p>
-                    <p class="text-sm w-full text-[#FCFCFD]"> 5 people are currently ahead of you in the waitlist for this timeslot.</p>
+                    <p class="text-sm w-full text-[#FCFCFD]"> 5 people are currently ahead of you in the waitlist for
+                      this timeslot.</p>
                   </div>
-  
+
                 </div>
               </div>
-               <!-- Highlighted Area Component -->
-
-             
 
               <!-- Length Picker -->
-              <div class="flex flex-col gap-8 md:mt-0 mt-5">
+              <div class="flex flex-col gap-2 md:mt-0 mt-5">
                 <h3 class="schedule-title">SELECT LENGTH</h3>
                 <div class="length-content rounded-50">
                   <div class="w-full flex bg-white-150 rounded-50">
@@ -505,89 +424,164 @@
               </div>
 
               <!-- Add-On Picker -->
-              <div class="add-on-picker-content flex flex-col gap-8 md:mt-0 mt-5">
+              <div class="add-on-picker-content flex flex-col gap-2 md:mt-0 mt-5">
                 <h3 class="schedule-title">ADD-ON SERVICE</h3>
-                <div class="add-on-picker flex flex-col w-full gap-8">
-                  <div class="add-on-slot active">
+                <div class="add-on-picker flex flex-col w-full gap-2">
+                  <div class="add-on-slot">
                     <div class="slot-left">
-                      <div class="box">
-                        <img src="../assets/check.svg" alt="check-icon" />
+                      <div class="flex items-center gap-2">
+                        <div class="flex-none flex items-center">
+                          <input checked type="checkbox" class="w-4 h-4
+                                  appearance-none
+                                  border border-white
+                                  rounded
+                                  focus:outline-none focus:ring-0
+                                  bg-transparent
+                                  cursor-pointer
+                                  checked:bg-green
+                                  checked:border-green
+                                  checked:bg-[url('../assets/check.svg')]
+                                  checked:bg-center
+                                  checked:bg-no-repeat
+                                  checked:bg-[length:10px_10px]" />
+
+                        </div>
+                        <p class="text-sm leading-20 font-medium">Record our session</p>
                       </div>
-                      <p>Record our session</p>
                     </div>
                     <div class="slot-right">
-                      <p>+</p>
+                      <p class="text-sm leading-20 font-semibold">+</p>
                       <div class="token-icon">
                         <img src="../assets/token.svg" alt="token-icon" />
                       </div>
-                      <p>50</p>
+                      <p class="text-sm leading-20 font-semibold">50</p>
                     </div>
                   </div>
                   <div class="add-on-slot">
                     <div class="slot-left">
-                      <div class="box">
-                        <img src="../assets/check.svg" alt="check-icon" />
+                      <div class="flex items-center gap-2">
+                        <div class="flex-none flex items-center">
+                          <input type="checkbox" class="w-4 h-4
+                                  appearance-none
+                                  border border-white
+                                  rounded
+                                  focus:outline-none focus:ring-0
+                                  bg-transparent
+                                  cursor-pointer
+                                  checked:bg-green
+                                  checked:border-green
+                                  checked:bg-[url('../assets/check.svg')]
+                                  checked:bg-center
+                                  checked:bg-no-repeat
+                                  checked:bg-[length:10px_10px]" />
+
+                        </div>
+                        <p class="text-sm leading-20 font-medium">Call you sensei</p>
                       </div>
-                      <p>Call you sensei</p>
                     </div>
                     <div class="slot-right">
-                      <p>+</p>
+                      <p class="text-sm leading-20 font-semibold">+</p>
                       <div class="token-icon">
                         <img src="../assets/token.svg" alt="token-icon" />
                       </div>
-                      <p>50</p>
-                    </div>
-                  </div>
-                  <div class="add-on-slot active">
-                    <div class="slot-left">
-                      <div class="box">
-                        <img src="../assets/check.svg" alt="check-icon" />
-                      </div>
-                      <p>Call you senpai</p>
-                    </div>
-                    <div class="slot-right">
-                      <p>+</p>
-                      <div class="token-icon">
-                        <img src="../assets/token.svg" alt="token-icon" />
-                      </div>
-                      <p>50</p>
-                    </div>
-                  </div>
-                  <div class="add-on-slot">
-                    <div class="slot-left">
-                      <div class="box">
-                        <img src="../assets/check.svg" alt="check-icon" />
-                      </div>
-                      <p>Be extra kawaii</p>
-                    </div>
-                    <div class="slot-right">
-                      <p>+</p>
-                      <div class="token-icon">
-                        <img src="../assets/token.svg" alt="token-icon" />
-                      </div>
-                      <p>50</p>
+                      <p class="text-sm leading-20 font-semibold">50</p>
                     </div>
                   </div>
                   <div class="add-on-slot">
                     <div class="slot-left">
-                      <div class="box">
-                        <img src="../assets/check.svg" alt="check-icon" />
+                      <div class="flex items-center gap-2">
+                        <div class="flex-none flex items-center">
+                          <input checked type="checkbox" class="w-4 h-4
+                                  appearance-none
+                                  border border-white
+                                  rounded
+                                  focus:outline-none focus:ring-0
+                                  bg-transparent
+                                  cursor-pointer
+                                  checked:bg-green
+                                  checked:border-green
+                                  checked:bg-[url('../assets/check.svg')]
+                                  checked:bg-center
+                                  checked:bg-no-repeat
+                                  checked:bg-[length:10px_10px]" />
+
+                        </div>
+                        <p class="text-sm leading-20 font-medium">Call you sensei</p>
                       </div>
-                      <p>Topless</p>
                     </div>
                     <div class="slot-right">
-                      <p>+</p>
+                      <p class="text-sm leading-20 font-semibold">+</p>
                       <div class="token-icon">
                         <img src="../assets/token.svg" alt="token-icon" />
                       </div>
-                      <p>500</p>
+                      <p class="text-sm leading-20 font-semibold">50</p>
+                    </div>
+                  </div>
+                  <div class="add-on-slot">
+                    <div class="slot-left">
+                      <div class="flex items-center gap-2">
+                        <div class="flex-none flex items-center">
+                          <input type="checkbox" class="w-4 h-4
+                                  appearance-none
+                                  border border-white
+                                  rounded
+                                  focus:outline-none focus:ring-0
+                                  bg-transparent
+                                  cursor-pointer
+                                  checked:bg-green
+                                  checked:border-green
+                                  checked:bg-[url('../assets/check.svg')]
+                                  checked:bg-center
+                                  checked:bg-no-repeat
+                                  checked:bg-[length:10px_10px]" />
+
+                        </div>
+                        <p class="text-sm leading-20 font-medium">Be extra kawaii</p>
+                      </div>
+                    </div>
+                    <div class="slot-right">
+                      <p class="text-sm leading-20 font-semibold">+</p>
+                      <div class="token-icon">
+                        <img src="../assets/token.svg" alt="token-icon" />
+                      </div>
+                      <p class="text-sm leading-20 font-semibold">50</p>
+                    </div>
+                  </div>
+                  <div class="add-on-slot">
+                    <div class="slot-left">
+                      <div class="flex items-center gap-2">
+                        <div class="flex-none flex items-center">
+                          <input type="checkbox" class="w-4 h-4
+                                  appearance-none
+                                  border border-white
+                                  rounded
+                                  focus:outline-none focus:ring-0
+                                  bg-transparent
+                                  cursor-pointer
+                                  checked:bg-green
+                                  checked:border-green
+                                  checked:bg-[url('../assets/check.svg')]
+                                  checked:bg-center
+                                  checked:bg-no-repeat
+                                  checked:bg-[length:10px_10px]" />
+
+                        </div>
+                        <p class="text-sm leading-20 font-medium">Topless</p>
+                      </div>
+                    </div>
+                    <div class="slot-right">
+                      <p class="text-sm leading-20 font-semibold">+</p>
+                      <div class="token-icon">
+                        <img src="../assets/token.svg" alt="token-icon" />
+                      </div>
+                      <p class="text-sm leading-20 font-semibold">500</p>
                     </div>
                   </div>
                 </div>
               </div>
 
               <!-- Other Request -->
-              <div class="flex flex-col gap-8 md:mt-0 mt-5">
+              <div class="flex flex-col gap-2 md:mt-0 mt-5 pb-10">
                 <h3 class="schedule-title">OTHER REQUEST</h3>
                 <div class="desc">
                   <p class="text-sm leading-20 text-gray-100">
@@ -609,17 +603,20 @@
           </div>
 
           <!-- Button -->
-          <div class="absolute bottom-0 right-0">
-            <button class="btn-next">
-              <div class="btn-content w-234 bg-green">
-                <p class="content-text">PAYMENT</p>
-                <div class="content-icon">
-                  <img src="../assets/arrow-right.svg" alt="arrow-right-icon" />
+          <div class="absolute bottom-0 right-0 w-234px">
+            <button class="c-btn-next flex-1">
+              <div class="c-btn-triangle bg-green w-4"></div>
+              <div class="c-btn-content bg-green w-full">
+                <p class="c-content-text font-medium whitespace-nowrap">
+                  PAYMENT
+                </p>
+                <div class="c-content-icon">
+                  <img src="../assets/arrow-right.svg">
                 </div>
               </div>
             </button>
           </div>
-          
+
         </div>
       </div>
     </div>

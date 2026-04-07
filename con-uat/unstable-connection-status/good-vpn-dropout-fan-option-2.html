@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Booking Page - Group Event</title>
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+    }
+  </style>
+</head>
+
+<body class=" lg:overflow-hidden  u-flex-center flex-col gap-6">
+  <div class="w-full h-dvh bg-no-repeat bg-bottom bg-cover" style="background-image: url(assets/images/bg-image.png);">
+    <div class="flex w-full max-w-[37.5rem] p-4 flex-col justify-center items-center gap-4 rounded-t-[20px] md:rounded-lg bg-gradient-to-r from-[#F24822]/20 to-[#F24822]/90 absolute bottom-0 md:bottom-[9rem] left-1/2 -translate-x-1/2">
+      <div class="flex flex-col gap-6 items-center">
+        <div class="w-24 h-1 bg-[#D9D9D9] opacity-50"></div>
+        <!-- Avatar -->
+        <div class="flex justify-center items-center relative w-16 h-16">
+          <img src="assets/icons/wifi-col-white.svg" alt="" class="w-16 h-16">
+        </div>
+        <!-- /Avatar -->
+      </div>
+      <!--Text Content -->
+      <div class="flex flex-col items-center gap-2 self-stretch">
+        <span class="text-white font-poppins text-lg font-medium leading-7 text-center">Your internet connection is unstable.</span>
+        <p class="text-[#FCFCFD] drop-shadow-[0_0_10px_rgba(0,0,0,0.10)] font-poppins text-sm font-normal leading-5 text-center hidden">The call was disconnected due to a connection interruption. This may be caused by either an unstable internet connection or a VPN disconnection. Please also try to check your router or network cables and ensure your connection is stable.</p>
+      </div>
+      <!-- /Text Content -->
+    </div>
+  </div>
+</body>
+
+</html>

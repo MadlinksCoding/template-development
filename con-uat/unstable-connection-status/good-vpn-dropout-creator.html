@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Booking Page - Group Event</title>
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+    }
+  </style>
+</head>
+
+<body class=" lg:overflow-hidden  u-flex-center flex-col gap-6">
+  <div class="w-full h-dvh bg-no-repeat bg-bottom bg-cover" style="background-image: url(assets/images/bg-image.png);">
+    <div class="flex w-full max-w-[37.5rem] p-4 flex-col md:flex-row justify-center items-center gap-2 md:gap-4 rounded-t-[20px] md:rounded-lg bg-[rgba(42,42,42,0.9)] absolute bottom-0 md:bottom-[9rem] left-1/2 -translate-x-1/2">
+      <div class="flex gap-2 items-center">
+        <!-- Avatar -->
+        <div class="flex p-1 justify-center items-center gap-[0.625rem] relative">
+          <div class="w-[3.75rem] w-[3.75rem] md:w-24 md:h-24 aspect-square rounded-full overflow-hidden">
+            <img src="https://fansocial-user-media.s3-accelerate.amazonaws.com/user-869/images/kf1amBZt0jnKUACX4ir3ICx7EbF3Jg/kf1amBZt0jnKUACX4ir3ICx7EbF3Jg.png" alt="">
+          </div>
+          <div class="flex w-[1.688rem] h-[1.688rem] md:w-[2.813rem] md:h-[2.813rem] p-1 md:p-[6.5px] justify-center items-center aspect-square absolute right-0 bottom-0 rounded-full bg-[linear-gradient(180deg,#FF3C1E_0%,#FF0066_100%)]">
+            <img src="assets/icons/wifi.svg" alt="" class="w-5 h-5 md:w-8 md:h-8">
+          </div>
+        </div>
+        <!-- /Avatar -->
+        <span class="text-white font-poppins text-base font-medium leading-7 md:hidden">We're working hard to improve @model’s connection.</span>
+      </div>
+      <!--Text Content -->
+      <div class="flex flex-col items-start gap-2 self-stretch">
+        <span class="text-white font-poppins text-base font-medium leading-7 hidden md:flex">We're working hard to improve @model’s connection.</span>
+        <p class="text-[#FCFCFD] drop-shadow-[0_0_10px_rgba(0,0,0,0.10)] font-poppins text-sm font-normal leading-5">The call was disconnected due to a connection interruption. This may be caused by either an unstable internet connection or a VPN disconnection. Please also try to check your router or network cables and ensure your connection is stable.</p>
+      </div>
+      <!-- /Text Content -->
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Booking Page - Group Event</title>
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+    }
+  </style>
+</head>
+
+<body class=" lg:overflow-hidden  u-flex-center flex-col gap-6">
+  <div class="w-full h-dvh bg-no-repeat bg-bottom bg-cover" style="background-image: url(assets/images/bg-image.png);">
+    <div class="flex w-full max-w-[533px] p-4 flex-col justify-center items-center gap-4 rounded-lg bg-[rgba(42,42,42,0.9)] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+      <!-- Avatar -->
+      <div class="flex p-1 justify-center items-center gap-[10px] relative">
+        <div class="w-24 h-24 aspect-square rounded-full overflow-hidden">
+          <img src="https://fansocial-user-media.s3-accelerate.amazonaws.com/user-869/images/kf1amBZt0jnKUACX4ir3ICx7EbF3Jg/kf1amBZt0jnKUACX4ir3ICx7EbF3Jg.png" alt="">
+        </div>
+        <div class="flex w-[45px] h-[45px] p-[6.5px] justify-center items-center aspect-square absolute right-0 bottom-0 rounded-full bg-[linear-gradient(180deg,#FF3C1E_0%,#FF0066_100%)]">
+          <img src="assets/icons/wifi.svg" alt="" class="w-8 h-8">
+        </div>
+      </div>
+      <!-- /Avatar -->
+      <!--Text Content -->
+      <div class="flex flex-col items-center gap-2 self-stretch">
+        <span class="text-white text-center font-poppins text-lg font-medium leading-7">@model’s internet connection is unstable.</span>
+        <p class="text-[#FCFCFD] text-center drop-shadow-[0_0_10px_rgba(0,0,0,0.10)] font-poppins text-sm font-normal leading-5">We're working hard to improve @model’s connection. Your call will return to normal as soon as the connection stabilizes. Thank you for your patience.</p>
+      </div>
+      <!-- /Text Content -->
+    </div>
+  </div>
+</body>
+
+</html>

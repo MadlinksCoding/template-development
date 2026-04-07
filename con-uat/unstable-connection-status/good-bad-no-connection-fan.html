@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Booking Page - Group Event</title>
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+    }
+  </style>
+</head>
+
+<body class=" lg:overflow-hidden  u-flex-center flex-col gap-6">
+  <div class="w-full h-dvh bg-no-repeat bg-bottom bg-cover" style="background-image: url(assets/images/bg-image.png);">
+    <div class="relative flex w-full h-dvh md:h-auto md:max-w-[22.813rem] p-6 flex-col justify-center items-center gap-5 md:rounded-[20px] bg-black/75 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+      <!-- Close Button -->
+      <button class="flex justify-center items-center w-6 h-6 absolute top-6 right-6 pointer">
+        <img src="assets/icons/x-close.svg" alt="Close" />
+      </button>
+      <!-- /Close Button -->
+
+      <div class="flex flex-col gap-6 justify-center items-center">
+        <!-- Avatar -->
+        <div class="flex p-4 justify-center items-center gap-[10px] relative">
+          <div class="w-[7.5rem] h-[7.5rem] aspect-square rounded-full overflow-hidden">
+            <img src="https://fansocial-user-media.s3-accelerate.amazonaws.com/user-869/images/kf1amBZt0jnKUACX4ir3ICx7EbF3Jg/kf1amBZt0jnKUACX4ir3ICx7EbF3Jg.png" alt="">
+          </div>
+          <div class="flex w-14 h-14 p-[6.5px] justify-center items-center aspect-square absolute right-0 bottom-0 rounded-full bg-[linear-gradient(180deg,#FF3C1E_0%,#FF0066_100%)]">
+            <img src="assets/icons/wifi.svg" alt="" class="w-9 h-9">
+          </div>
+        </div>
+        <!-- /Avatar -->
+        <!--Text Content -->
+        <div class="flex flex-col items-center gap-2 self-stretch">
+          <span class="text-white text-center font-poppins text-lg font-semibold leading-7">Your call with @model has ended because of poor internet connection.</span>
+          <p class="text-white text-center font-poppins text-base font-normal leading-6">Please double check your internet connection and try calling again</p>
+        </div>
+        <!-- /Text Content -->
+
+        <!-- Bottom -->
+        <div class="flex flex-col items-start gap-2 self-stretch">
+            <div class="flex justify-between items-center self-stretch">
+              <span class="text-[#98A2B3] font-poppins text-xs font-normal leading-[18px] uppercase">TOTAL CALL TIME</span>
+              <span class="text-white font-poppins text-sm font-medium leading-5">32 minute 3 second</span>
+            </div>
+            <div class="flex justify-between items-center self-stretch">
+              <span class="text-[#98A2B3] font-poppins text-xs font-normal leading-[18px] uppercase">COST</span>
+              <div class="flex items-center gap-[2px]">
+                <span class="w-4 h-4">
+                  <img src="assets/icons/token.svg" alt="">
+                </span>
+                <span class="text-white font-poppins text-sm font-medium leading-5">2,800</span>
+              </div>
+            </div>
+          </div>
+        <!-- /Bottom -->
+      </div>
+      <!-- Button -->
+      <button class="group flex h-10 min-w-[100px] px-6 py-2 pl-2 justify-center items-center gap-2 self-stretch bg-[#07F468] hover:bg-black fixed bottom-6 left-6 right-6 md:relative md:bottom-0 md:left-0 md:right-0">
+        <span class="w-6 h-6"><img src="assets/icons/phone.svg" alt="" class="transition duration-300 group-hover:[filter:brightness(0)_saturate(100%)_invert(59%)_sepia(98%)_saturate(508%)_hue-rotate(89deg)_brightness(104%)_contrast(95%)]"></span>
+        <span class="transition duration-300 text-[#0C111D] group-hover:text-[#07F468] text-center font-poppins text-base font-medium leading-6 uppercase">CALL BACK</span>
+      </button>
+      <!-- /Button -->
+    </div>
+  </div>
+</body>
+
+</html>

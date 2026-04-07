@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Payment Summary - Insufficient Balance</title>
-  
+  <title>Payment Summary - Sufficient Balance</title>
+
   <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
-  
+
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-  
+
   <script>
     tailwind.config = {
       darkMode: "class",
@@ -28,6 +29,7 @@
             pink: "#FF76DD",
             yellow: "#FFED29",
             "gray-50": "#F9FAFB",
+            "gray-100": "#F2F4F7",
             "gray-200": "#EAECF0",
             "gray-300": "#D0D5DD",
             "gray-400": "#98A2B3",
@@ -38,6 +40,30 @@
           fontFamily: {
             poppins: ["Poppins", "sans-serif"],
           },
+          spacing: {
+            "1_5px": "0.09375rem",  // 1.5px (renamed to avoid conflict)
+            "2px": "0.125rem",
+            "2_5px": "0.15625rem",
+            "6px": "0.375rem",
+            "7_5px": "0.46875rem",
+            "10px": "0.625rem",
+            "12_5px": "0.78125rem",
+            "15px": "0.9375rem",
+            "25px": "1.5625rem",
+
+            "38px": "2.375rem",
+            "41px": "2.5625rem",
+            "53px": "3.3125rem",
+
+            "150px": "9.375rem",
+            "152px": "9.5rem",
+            "234px": "14.625rem",
+            "326px": "20.375rem",
+            "382px": "23.875rem",
+            "390px": "24.375rem",
+            "430px": "26.875rem",
+            "668px": "41.75rem",
+          },
           borderRadius: {
             4: "0.25rem",
             6: "0.375rem",
@@ -47,70 +73,13 @@
             50: "3.125rem",
           },
           padding: {
-            1.5: "0.09375rem",
-            2.5: "0.15625rem",
-            4: "0.25rem",
-            5: "0.3125rem",
-            6: "0.375rem",
-            8: "0.5rem",
-            10: "0.625rem",
-            12: "0.75rem",
-            12.5: "0.78125rem",
-            16: "1rem",
-            24: "1.5rem",
             "header-sticky-title": "0.25rem 0.375rem 0.25rem 1rem",
             "header-sticky-status": "0.3125rem 0.375rem",
+            "header-content": "0.75rem 1rem",
+            "time-picker": "1.5rem 1rem 1.75rem 1rem",
+            "length-picker": "0.375rem 0.675rem",
+            "other-request": "0.75rem 0.675rem",
             summary: "1.5rem 1rem",
-          },
-          gap: {
-            2: "0.125rem",
-            4: "0.25rem",
-            8: "0.5rem",
-            10: "0.625rem",
-            12: "0.75rem",
-            20: "1.25rem",
-            24: "1.5rem",
-          },
-          width: {
-            7.5: "0.46875rem",
-            10: "0.625rem",
-            12: "0.75rem",
-            15: "0.9375rem",
-            16: "1rem",
-            20: "1.25rem",
-            24: "1.5rem",
-            25: "1.5625rem",
-            32: "2rem",
-            38: "2.375rem",
-            48: "3rem",
-            150: "9.375rem",
-            152: "9.5rem",
-            234: "14.625rem",
-            382: "23.875rem",
-            430: "26.875rem",
-          },
-          height: {
-            7.5: "0.46875rem",
-            10: "0.625rem",
-            12: "0.75rem",
-            15: "0.9375rem",
-            16: "1rem",
-            20: "1.25rem",
-            24: "1.5rem",
-            28: "1.75rem",
-            32: "2rem",
-            38: "2.375rem",
-            41: "2.5625rem",
-            48: "3rem",
-            53: "3.3125rem",
-            150: "9.375rem",
-            152: "9.5rem",
-            326: "20.375rem",
-            390: "24.375rem",
-            668: "41.75rem",
-          },
-          minHeight: {
-            28: "1.75rem",
           },
           fontSize: {
             11: "0.6875rem",
@@ -136,57 +105,123 @@
       },
       plugins: [
         function ({ addUtilities }) {
+
+          /* =========================
+            UTILITIES (u-)
+            Atomic reusable helpers
+          ========================== */
           const newUtilities = {
-            ".flex-center": {
-              "@apply flex justify-center items-center": {},
+
+            /* Flex Center */
+            ".u-flex-center": {
+              "@apply flex items-center justify-center": {},
             },
-            ".clip-triangle-left": {
+
+            /* Hide Scrollbar */
+            ".u-no-scrollbar": {
+              "-ms-overflow-style": "none",
+              "scrollbar-width": "none",
+            },
+            ".u-no-scrollbar::-webkit-scrollbar": {
+              display: "none",
+            },
+
+            /* Clip Shape */
+            ".u-clip-triangle-left": {
               "clip-path": "polygon(100% 0, 100% 0, 0 100%, 100% 100%)",
             },
-            ".overlay-page": {
-              background: "url('../assets/ai-art.png')",
-              "background-size": "cover",
-              "background-repeat": "no-repeat",
-              "background-position": "left 50% center",
+
+            ".l-page": {
+              "@apply w-screen h-dvh lg:h-auto min-h-dvh lg:min-h-screen flex flex-col items-center justify-center": {},
             },
-            ".overlay": {
-              "@apply backdrop-blur-10 rounded-none lg:rounded-20 h-dvh lg:h-full bg-black/80 lg:bg-[#0C111D96]": {},
+            ".l-page-wrapper": {
+              "@apply max-w-[1024px] w-full mx-auto h-dvh lg:rounded-20": {},
             },
-            ".header-component": {
-              background: "linear-gradient(0deg, rgba(12, 17, 29, 0.59), rgba(12, 17, 29, 0.59)), linear-gradient(0deg, rgba(34, 204, 238, 0.2), rgba(34, 204, 238, 0.2))"
+
+            ".l-overlay": {
+              "@apply rounded-none lg:rounded-20 h-dvh lg:h-full": {},
             },
-            ".page": {
-              "@apply w-screen h-dvh lg:h-auto min-h-screen flex-center flex-col": {},
+
+            ".l-page-container": {
+              "@apply flex flex-col w-full bg-black/50 h-dvh lg:h-full rounded-none lg:rounded-20": {},
             },
-            ".page-wrapper": {
-              "@apply h-full max-w-[1024px] w-full lg:w-[90%] mx-auto lg:rounded-20 overlay-page h-dvh lg:h-full": {},
+
+            ".l-content-item": {
+              "@apply lg:w-1/2 flex flex-col": {},
             },
-            ".page-container": {
-              "@apply lg:rounded-b-20 lg:rounded-t-20 flex flex-col w-full bg-black/50 h-dvh lg:h-full": {},
+
+            /* Header */
+            ".c-header": {
+              background:
+                "linear-gradient(0deg, rgba(12, 17, 29, 0.59), rgba(12, 17, 29, 0.59)), linear-gradient(0deg, rgba(34, 204, 238, 0.2), rgba(34, 204, 238, 0.2))",
             },
-            ".page-content": {
-              "@apply flex w-full": {},
-            },
-            ".content-item": {
-              "@apply w-1/2 flex flex-col": {},
-            },
-            ".btn-next": {
+
+            /* Button */
+            ".c-btn-next": {
               "@apply w-full flex justify-end": {},
             },
-            ".triangle": {
-              "@apply h-53 w-16 clip-triangle-left": {},
+
+            ".c-btn-triangle": {
+              "@apply h-53px w-4 u-clip-triangle-left": {},
             },
-            ".btn-content": {
-              "@apply p-12.5 lg:rounded-br-[16px] flex-center gap-10": {},
+
+            ".c-btn-content": {
+              "@apply p-12_5px lg:rounded-br-4 u-flex-center gap-2": {},
             },
-            ".content-text": {
-              "@apply text-lg leading-28 text-black text-center": {},
+
+            ".c-content-text": {
+              "@apply text-lg leading-7 text-black text-center": {},
             },
-            ".content-icon": {
-              "@apply w-24 h-24 flex-center": {},
+
+            ".c-content-icon": {
+              "@apply w-6 h-6 u-flex-center": {},
+            },
+
+            // Schedule - General
+            ".schedule-title": {
+              "@apply text-sm text-blue font-semibold leading-20": {},
+            },
+            ".active-slot": {
+              "@apply bg-green text-black": {},
+            },
+
+            // Schedule - Time Picker CSS
+            ".time-slot": {
+              "@apply u-flex-center p-10px rounded-10 grow relative text-white border border-white": {},
+            },
+            ".peak": {
+              "@apply text-red border-red": {},
+            },
+            ".peak-icon": {
+              "@apply absolute right-[1rem]": {},
+            },
+            ".active": {
+              "@apply active-slot border-green": {},
+            },
+
+            // Schedule - Length Picker CSS
+            ".length-content": {
+              border: "3px solid rgba(255, 255, 255, 0.15)",
+            },
+            ".length-slot": {
+              "@apply rounded-50 u-flex-center grow p-length-picker text-xs leading-18 font-medium text-white": {},
+            },
+            // Schedule - Add-On Picker CSS
+            ".add-on-slot": {
+              "@apply flex flex-row justify-between text-white py-1": {},
+            },
+            ".slot-left": {
+              "@apply flex flex-row items-center gap-8": {},
+            },
+
+            ".slot-right": {
+              "@apply flex flex-row justify-end items-center gap-2px": {},
+            },
+            ".token-icon": {
+              "@apply u-flex-center w-5 h-5": {},
             },
             ".summary-slot": {
-              "@apply flex flex-col gap-8": {},
+              "@apply flex flex-col gap-2": {},
             },
             ".slot-title": {
               "@apply text-xs leading-18 text-gray-300": {},
@@ -198,10 +233,10 @@
               "@apply text-base font-normal leading-24": {},
             },
             ".detail-price": {
-              "@apply flex-center gap-2": {},
+              "@apply u-flex-center gap-2px": {},
             },
             ".price-icon": {
-              "@apply w-16 h-16 flex-center": {},
+              "@apply w-4 h-4 u-flex-center": {},
             },
             ".price-text": {
               "@apply text-sm leading-20": {},
@@ -216,7 +251,7 @@
               "background-size": "48% 100%",
             },
             ".balance-content": {
-              "@apply flex flex-col gap-12 p-8 rounded-8": {},
+              "@apply flex flex-col gap-3 p-2 rounded-8": {},
               background: "linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%)",
               "backdrop-filter": "blur(0.5rem)",
             },
@@ -224,25 +259,16 @@
               "@apply flex justify-between items-center": {},
             },
             ".slot-name": {
-              "@apply flex items-center gap-8": {},
+              "@apply flex items-center gap-2": {},
             },
             ".name-text": {
               "@apply text-sm font-medium leading-20": {},
             },
             ".name-info": {
-              "@apply flex-center w-16 h-16": {},
+              "@apply u-flex-center w-4 h-4": {},
             },
             ".slot-price": {
-              "@apply flex-center gap-2": {},
-            },
-            ".price-insufficient": {
-              "@apply bg-gray-950 rounded-md p-header-sticky-status w-fit min-h-28 flex-center gap-2": {},
-            },
-            ".insufficient-icon": {
-              "@apply w-16 h-16 flex-center": {},
-            },
-            ".insufficient-text": {
-              "@apply text-11 text-yellow font-semibold": {},
+              "@apply u-flex-center gap-2px": {},
             },
           };
           addUtilities(newUtilities);
@@ -250,7 +276,7 @@
       ],
     };
   </script>
-  
+
   <style>
     body {
       font-family: "Poppins", sans-serif;
@@ -258,104 +284,111 @@
   </style>
 </head>
 
-<body class="lg:overflow-hidden flex-center flex-col gap-24">
-  <div class="page overflow-hidden">
-    <div class="page-wrapper h-dvh lg:max-h-[90vh] overflow-hidden">
-      <div class="overlay overflow-hidden">
-        <div class="page-container">
+<body class="lg:overflow-hidden u-flex-center flex-col gap-24">
+  <div class="l-page">
+    <div
+      class="l-page-wrapper relative max-h-dvh lg:h-auto lg:max-h-[80vh] bg-[url('../assets/ai-art.png')] bg-no-repeat bg-cover bg-center">
+      <div class="l-overlay">
+        <div class="l-page-container relative pb-24 lg:pb-53px overflow-hidden">
           <!-- Header Component -->
-          <div class="header-component  max-w-screen h-auto lg:h-full backdrop-blur-[10px] lg:rounded-t-20">
+          <div class="c-header max-w-screen h-auto lg:rounded-t-20 backdrop-blur-sm">
             <div class="w-full flex flex-col">
-              <div class="flex flex-row items-center">
-                <div class="bg-blue lg:rounded-tl-20 p-header-sticky-title w-fit min-h-28 flex-center">
-                  <p class="text-sm leading-20 text-gray-950 font-bold">1 on 1 call</p>
+
+              <div class="flex items-center">
+                <div class="bg-blue lg:rounded-tl-20 w-fit u-flex-center py-1 pl-4 pr-2 min-h-7">
+                  <p class="text-sm leading-tight text-gray-950 font-bold">
+                    1 on 1 call
+                  </p>
                 </div>
-                <div
-                  class="bg-gray-950 hidden lg:flex rounded-[6px] p-header-sticky-status w-fit min-h-28 lg:flex-center gap-2">
-                  <div class="w-16 h-16 flex-center">
+
+                <div class="bg-gray-950 hidden lg:flex w-fit gap-2 u-flex-center px-6px min-h-7">
+                  <div class="w-4 h-4 u-flex-center">
                     <img src="../assets/dots.svg" alt="status-icon" />
                   </div>
-                  <div class="status-text text-11 text-yellow font-semibold leading-18 italic">
+                  <div class="text-11 text-yellow font-semibold leading-18 italic">
                     APPROVAL NEEDED
                   </div>
                 </div>
               </div>
 
               <div
-                class="w-full flex-center md:!justify-unset !justify-between items-stretch gap-24 px-16 pt-[8px] lg:pt-[20px] pb-16 sm:flex-nowrap flex-wrap">
+                class="w-full u-flex-center md:!justify-unset !justify-between items-stretch gap-6 p-2 lg:px-4 lg:pt-3 lg:pb-4 flex-wrap">
 
-                <div class="flex flex-col sm:flex-row gap-[24px] w-full">
-                  <div class="flex flex-col text-white md:w-1/2 w-full gap-[8px]">
-                    <h1 class="no-underline text-xl md:text-2xl font-semibold text-gray-100 leading-32">
+                <div class="flex flex-col sm:flex-row gap-6 w-full">
+
+                  <!-- LEFT -->
+                  <div class="flex flex-col text-white md:w-1/2 w-full gap-2">
+                    <h1 class="text-xl md:text-2xl font-semibold leading-8">
                       High School Life Simulator
                     </h1>
-                    <div class="flex flex-row items-center gap-8">
-                      <div class="w-24 h-24 flex-center">
-                        <img src="../assets/ex-profile.png" alt="profile-image" class="w-full h-full object-cover"
-                          style="border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%" />
+
+                    <div class="flex items-center gap-2">
+                      <div class="w-5 h-5 u-flex-center">
+                        <img src="../assets/ex-profile.png" class="w-full h-full object-cover"
+                          style="border-radius:50% 50% 50% 50% / 60% 60% 40% 40%">
                       </div>
-                      <div class="flex flex-row items-center gap-4">
-                        <p class="text-xs font-medium leading-18">Princess Carrot Pop</p>
-                        <div class="w-10 h-10 flex-center">
-                          <img src="../assets/verified-blue-white.svg" alt="verified-icon" />
+
+                      <div class="flex items-center gap-1">
+                        <p class="text-xs font-medium leading-18">
+                          Princess Carrot Pop
+                        </p>
+                        <div class="w-10px h-10px u-flex-center">
+                          <img src="../assets/verified-blue-white.svg">
                         </div>
-                      </div>
-                    </div>
-                    <div
-                      class="bg-gray-950 rounded-[6px] lg:hidden p-header-sticky-status w-fit min-h-28 flex-center gap-2">
-                      <div class="w-16 h-16 flex-center">
-                        <img src="../assets/dots.svg" alt="status-icon" />
-                      </div>
-                      <div class="status-text text-11 text-yellow font-semibold leading-18 italic">
-                        APPROVAL NEEDED
                       </div>
                     </div>
                   </div>
 
-                  <div class="flex  flex-row md:items-start w-full items-end md:w-1/2 gap-24">
-                    <div class="flex flex-col gap-4 md:w-1/2 w-[170px]">
+                  <!-- RIGHT -->
+                  <div class="flex md:w-1/2 w-full gap-6px">
+
+                    <div class="flex flex-col gap-1 md:w-1/2">
                       <h3 class="text-xs text-blue font-semibold leading-18">TIME</h3>
-                      <div class="flex flex-col text-white">
-                        <p class="text-sm font-semibold leading-20">
-                          Tomorrow April 27,2025
+                      <div class="text-white">
+                        <p class="text-sm font-semibold leading-tight">
+                          Tomorrow April 27, 2025
                         </p>
-                        <div class="flex flex-row gap-8">
-                          <p class="text-sm font-medium leading-20">4:00pm-2:15pm</p>
-                          <p class="text-sm text-gray-400 font-medium leading-20">
+                        <div class="flex gap-2">
+                          <p class="text-sm font-medium leading-tight">
+                            4:00pm–2:15pm
+                          </p>
+                          <p class="text-sm text-gray-400 leading-tight">
                             15 min.
                           </p>
                         </div>
                       </div>
                     </div>
-                    <div class="flex flex-col gap-4 md:w-1/2 w-[170px]">
+
+                    <div class="flex flex-col gap-1 md:w-1/2">
                       <h3 class="text-xs text-blue font-semibold leading-18">SUBTOTAL</h3>
-                      <div class="flex flex-row items-center gap-2 text-white">
-                        <div class="icon w-24 h-24 flex-center">
-                          <img src="../assets/token.svg" alt="price-icon" />
+                      <div class="flex items-center gap-2 text-white">
+                        <div class="w-4 h-4 u-flex-center">
+                          <img src="../assets/token.svg">
                         </div>
-                        <p class="text-lg font-semibold leading-28">600</p>
+                        <p class="text-lg font-semibold leading-7">600</p>
                       </div>
                     </div>
+
                   </div>
                 </div>
-
               </div>
             </div>
           </div>
-
           <!-- Highlighted Area Component -->
           <div class="banner bg-[#FDB0224D] border-l-4 py-3 px-2 border-l-[#FDB022]">
             <div class="flex gap-[8px] flex-col">
-              <p class="text-sm font-semibold text-[#FDB022]">Joinning the waitlist does not guarantee a spot for the session</p>
+              <p class="text-sm font-semibold text-[#FDB022]">Joinning the waitlist does not guarantee a spot for the
+                session</p>
               <p class="text-sm w-full text-[#FCFCFD]">Please check back later to see if you get the spot</p>
             </div>
           </div>
           <!-- Highlighted Area Component -->
-          <div class="page-content lg:flex-row flex-col flex-auto overflow-y-auto pb-[3.5rem]">
-            <div class="lg:content-item w-full p-summary gap-8">
-              <div class="flex flex-col gap-12">
+          <div
+            class="w-full flex flex-col lg:flex-row flex-1 overflow-hidden bg-black/50 backdrop-blur-sm lg:rounded-bl-20 lg:rounded-br-20 overflow-y-auto lg:h-auto  u-no-scrollbar">
+            <div class="px-8 py-4 lg:px-4 lg:py-6 l-content-item text-gray-500 md:flex-1">
+              <div class="flex flex-col gap-3">
                 <h3 class="text-sm text-blue leading-20">BOOKING POLICY</h3>
-                <ul class="text-sm text-gray-200 list-disc list-outside wrap pl-24">
+                <ul class="text-sm text-gray-200 list-disc list-outside wrap pl-4">
                   <li>
                     A booking fee of 100 tokens will be on hold in your balance
                     until the call starts.
@@ -377,10 +410,10 @@
                 </ul>
               </div>
             </div>
-            <div class="lg:w-1/2 w-full flex flex-col p-summary gap-2">
-              <div class="flex flex-col gap-24 w-full h-[301px]">
+            <div class="lg:w-1/2 w-full flex flex-col px-8 py-4 lg:px-4 lg:py-6 gap-2">
+              <div class="flex flex-col gap-6 w-full">
                 <h3 class="text-sm text-blue leading-20">PAYMENT SUMMARY</h3>
-                <div class="flex flex-col gap-12 ">
+                <div class="flex flex-col gap-3">
                   <div class="summary-slot">
                     <h4 class="slot-title">SESSION COST</h4>
                     <div class="slot-detail">
@@ -428,8 +461,8 @@
                   <hr />
                   <div class="flex flex-row justify-between items-center text-white">
                     <p class="text-lg font-medium leading-28">TOTAL</p>
-                    <div class="flex-center gap-2">
-                      <div class="w-24 h-24 flex-center">
+                    <div class="u-flex-center gap-2">
+                      <div class="w-6 h-6 u-flex-center">
                         <img src="../assets/token.svg" alt="token-icon" />
                       </div>
                       <p class="text-2xl leading-32 font-semibold">600</p>
@@ -437,8 +470,6 @@
                   </div>
                 </div>
               </div>
-
-              
 
               <div class="hidden lg:flex">
                 <p class="text-xs text-white leading-18">
@@ -448,27 +479,33 @@
               </div>
             </div>
           </div>
-          <div class="bg-black/75 lg:bg-transparent flex items-center lg:rounded-20 flex-col gap-2 md:flex-row fixed bottom-0 right-0 w-full">
-            <div class="lg:hidden flex-none flex items-center px-2">
+
+          <div
+            class="bg-black/75 flex items-center lg:rounded-20 flex-col gap-2 md:flex-row absolute bottom-0 right-0 w-full">
+            <div class="lg:invisible flex flex-none flex items-center px-2">
               <p class="text-xs text-white leading-18">
                 Completeing this booking means you agree to the event's booking
                 policy
               </p>
             </div>
             <!-- Button -->
-            <button class="btn-next flex-1">
-              <div class="triangle bg-yellow"></div>
-              <div class="btn-content w-4/5 lg:w-1/2 bg-yellow">
-                <p class="content-text grow">GO TO TOP UP</p>
-                <div class="content-icon">
-                  <img src="../assets/arrow-right.svg" alt="arrow-right-icon" />
+            <button class="c-btn-next flex-1 lg:pl-10">
+              <div class="c-btn-triangle bg-yellow h-53px w-4"></div>
+              <div class="c-btn-content bg-yellow w-full">
+                <p class="c-content-text grow font-medium whitespace-nowrap">
+                  GO TO TOP UP
+                </p>
+                <div class="c-content-icon">
+                  <img src="../assets/arrow-right.svg">
                 </div>
               </div>
             </button>
           </div>
+
         </div>
       </div>
     </div>
   </div>
 </body>
+
 </html>

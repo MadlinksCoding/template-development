@@ -19,10 +19,12 @@
       darkMode: "class",
       theme: {
         extend: {
+          backgroundImage: {
+            'event-overlay':
+              'linear-gradient(0deg, rgba(12,17,29,0.2), rgba(12,17,29,0.2)), linear-gradient(0deg, rgba(255,0,102,0.2), rgba(255,0,102,0.2))',
+          },
           colors: {
-            black: "#000000",
             "black-1d1d": "#1D1D1D",
-            white: "#FFFFFF",
             "white-150": "#FFFFFF26",
             blue: "#22CCEE",
             "blue-200": "#22CCEE33",
@@ -42,87 +44,32 @@
             poppins: ["Poppins", "sans-serif"],
           },
           borderRadius: {
-            4: "0.25rem",
-            6: "0.375rem",
-            8: "0.5rem",
-            10: "0.625rem",
             20: "1.25rem",
             50: "3.125rem",
+            'blob-shape-1': '25% 75% 50% 51% / 45% 65% 36% 55%',
           },
-          padding: {
-            1.5: "0.09375rem",
-            2.5: "0.15625rem",
-            4: "0.25rem",
-            5: "0.3125rem",
-            6: "0.375rem",
-            8: "0.5rem",
-            10: "0.625rem",
-            12: "0.75rem",
-            12.5: "0.78125rem",
-            16: "1rem",
-            24: "1.5rem",
-            48: "3rem",
-            "header-sticky-title": "0.25rem 0.375rem 0.25rem 1rem",
-            "header-sticky-status": "0.3125rem 0.375rem",
-            summary: "1.5rem 1rem",
-          },
-          gap: {
-            2: "0.125rem",
-            4: "0.25rem",
-            6: "0.375rem",
-            8: "0.5rem",
-            10: "0.625rem",
-            12: "0.75rem",
-            16: "1rem",
-            20: "1.25rem",
-            24: "1.5rem",
-          },
-          width: {
-            7.5: "0.46875rem",
-            10: "0.625rem",
-            12: "0.75rem",
-            15: "0.9375rem",
-            16: "1rem",
-            20: "1.25rem",
-            24: "1.5rem",
-            25: "1.5625rem",
-            32: "2rem",
-            38: "2.375rem",
-            40: "2.5rem",
-            48: "3rem",
-            150: "9.375rem",
-            152: "9.5rem",
-            234: "14.625rem",
-            382: "23.875rem",
-            430: "26.875rem",
-          },
-          height: {
-            7.5: "0.46875rem",
-            10: "0.625rem",
-            12: "0.75rem",
-            15: "0.9375rem",
-            16: "1rem",
-            20: "1.25rem",
-            24: "1.5rem",
-            28: "1.75rem",
-            32: "2rem",
-            38: "2.375rem",
-            40: "2.5rem",
-            41: "2.5625rem",
-            48: "3rem",
-            53: "3.3125rem",
-            150: "9.375rem",
-            152: "9.5rem",
-            326: "20.375rem",
-            390: "24.375rem",
-            668: "41.75rem",
-          },
-          minHeight: {
-            28: "1.75rem",
-          },
-          fontSize: {
-            11: "0.6875rem",
-            28: "1.75rem",
+          spacing: {
+            "1_5px": "0.09375rem",
+            "2_5px": "0.15625rem",
+            "5px": "0.3125rem",
+            "7_5px": "0.46875rem",
+            "10px": "0.625rem",
+            "12_5px": "0.78125rem",
+            "15px": "0.9375rem",
+            "25px": "1.5625rem",
+            "38px": "2.375rem",
+            "41px": "2.5625rem",
+            "53px": "3.3125rem",
+            "150px": "9.375rem",
+            "152px": "9.5rem",
+            "234px": "14.625rem",
+            "280px": "17.5rem",
+            "326px": "20.375rem",
+            "382px": "23.875rem",
+            "390px": "24.375rem",
+            "400px": "25rem",
+            "430px": "26.875rem",
+            "668px": "41.75rem",
           },
           lineHeight: {
             18: "1.125rem",
@@ -133,122 +80,104 @@
             38: "2.375rem",
           },
           backdropBlur: {
-            4: "0.25rem",
-            6: "0.375rem",
-            8: "0.5rem",
             10: "0.625rem",
-            20: "1.25rem",
-            50: "3.125rem",
           },
         },
       },
       plugins: [
         function ({ addUtilities }) {
+
+          /* =========================
+            UTILITIES (u-)
+            Atomic reusable helpers
+          ========================== */
           const newUtilities = {
-            '.no-scrollbar': {
-              '-ms-overflow-style': 'none',
-              'scrollbar-width': 'none',
+
+            /* Flex Center */
+            ".u-flex-center": {
+              "@apply flex items-center justify-center": {},
             },
-            '.no-scrollbar::-webkit-scrollbar': {
-              display: 'none',
+
+            /* Hide Scrollbar */
+            ".u-no-scrollbar": {
+              "-ms-overflow-style": "none",
+              "scrollbar-width": "none",
             },
-            ".flex-center": {
-              "@apply flex justify-center items-center": {},
+            ".u-no-scrollbar::-webkit-scrollbar": {
+              display: "none",
             },
-            ".clip-triangle-left": {
+
+            /* Clip Shape */
+            ".u-clip-triangle-left": {
               "clip-path": "polygon(100% 0, 100% 0, 0 100%, 100% 100%)",
             },
-            ".overlay-page": {
-              background: "url('../assets/ai-art.png')",
-              "background-size": "cover",
-              "background-repeat": "no-repeat",
-              "background-position": "left 50% center",
+
+            ".l-page": {
+              "@apply w-screen h-dvh lg:h-auto min-h-dvh lg:min-h-screen flex flex-col items-center justify-center": {},
             },
-            ".overlay": {
-              "@apply backdrop-blur-10 rounded-none lg:rounded-20 h-dvh lg:h-full bg-black/80 lg:bg-[#0C111D96]": {},
+
+            ".l-page-wrapper": {
+              "@apply max-w-[1024px] w-full mx-auto h-dvh rounded-20": {},
             },
-            ".header-component": {
-              background: "linear-gradient(0deg, rgba(34, 204, 238, 0.20) 0%, rgba(34, 204, 238, 0.20) 100%), rgba(12, 17, 29, 0.59)"
+
+            ".l-overlay": {
+              "@apply rounded-none lg:rounded-20 h-dvh lg:h-full": {},
             },
-            ".page": {
-              "@apply w-screen h-dvh lg:h-auto min-h-dvh lg:min-h-screen flex-center flex-col": {},
+
+            ".l-page-container": {
+              "@apply flex flex-col w-full bg-black/50 h-dvh lg:h-full rounded-none lg:rounded-20": {},
             },
-            ".page-wrapper": {
-              "@apply h-full max-w-[1024px] w-full lg:w-[90%] mx-auto rounded-20 overlay-page h-dvh lg:h-full": {},
+
+            ".l-content-item": {
+              "@apply lg:w-1/2 flex flex-col": {},
             },
-            ".page-container": {
-              "@apply lg:rounded-b-20 lg:rounded-t-20 flex flex-col w-full min-h-fit bg-black/50 h-dvh lg:h-full": {},
+
+            /* Header */
+            ".c-header": {
+              background:
+                "linear-gradient(0deg, rgba(34, 204, 238, 0.20) 0%, rgba(34, 204, 238, 0.20) 100%), rgba(12, 17, 29, 0.59)",
             },
-            ".page-content": {
-              "@apply flex w-full": {},
-            },
-            ".content-item": {
-              "@apply w-1/2 flex flex-col": {},
-            },
-            ".btn-next": {
+
+            /* Button */
+            ".c-btn-next": {
               "@apply w-full flex justify-end": {},
             },
-            ".triangle": {
-              "@apply h-53 w-16 clip-triangle-left": {},
+
+            ".c-btn-triangle": {
+              "@apply h-53px w-4 u-clip-triangle-left": {},
             },
-            ".btn-content": {
-              "@apply p-12.5 lg:rounded-br-[16px] flex-center gap-10": {},
+
+            ".c-btn-content": {
+              "@apply p-12_5px lg:rounded-br u-flex-center gap-2": {},
             },
-            ".content-text": {
-              "@apply text-lg leading-28 text-black text-center": {},
+
+            ".c-content-text": {
+              "@apply text-lg leading-7 text-black text-center": {},
             },
-            ".content-icon": {
-              "@apply w-24 h-24 flex-center": {},
+
+            ".c-content-icon": {
+              "@apply w-6 h-6 u-flex-center": {},
             },
-            ".summary-slot": {
-              "@apply flex flex-col gap-8": {},
+
+            /* Summary */
+            ".c-summary": {
+              "@apply flex flex-col gap-2": {},
             },
-            ".slot-title": {
-              "@apply text-xs leading-18 text-gray-300": {},
+
+            ".c-slot-detail": {
+              "@apply flex justify-between items-center text-white": {},
             },
-            ".slot-detail": {
-              "@apply flex flex-row justify-between items-center text-white": {},
+
+            ".c-detail-price": {
+              "@apply u-flex-center gap-2": {},
             },
-            ".detail-text": {
-              "@apply text-base font-normal leading-24": {},
+
+            ".c-price-icon": {
+              "@apply w-4 h-4 u-flex-center": {},
             },
-            ".detail-price": {
-              "@apply flex-center gap-2": {},
-            },
-            ".price-icon": {
-              "@apply w-16 h-16 flex-center": {},
-            },
-            ".price-text": {
-              "@apply text-sm leading-20": {},
-            },
-            ".negotiate": {
-              "@apply text-xs leading-18 font-medium text-yellow": {},
-            },
-            ".balance-wrapper": {
-              "@apply bg-[url('../assets/ex-balance.png')] text-white rounded-8": {},
-              "background-position": "right",
-              "background-repeat": "no-repeat",
-              "background-size": "48% 100%",
-            },
-            ".balance-content": {
-              "@apply flex flex-col gap-12 p-8 rounded-8": {},
-              background: "linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%)",
-              "backdrop-filter": "blur(0.5rem)",
-            },
-            ".balance-slot": {
-              "@apply flex justify-between items-center": {},
-            },
-            ".slot-name": {
-              "@apply flex items-center gap-8": {},
-            },
-            ".name-text": {
-              "@apply text-sm font-medium leading-20": {},
-            },
-            ".name-info": {
-              "@apply flex-center w-16 h-16": {},
-            },
-            ".slot-price": {
-              "@apply flex-center gap-2": {},
+
+            ".c-price-text": {
+              "@apply text-sm leading-tight": {},
             },
           };
           addUtilities(newUtilities);
@@ -264,31 +193,22 @@
   </style>
 </head>
 
-<body class="lg:py-10 lg:overflow-hidden  flex-center flex-col gap-24">
-  <div class="page">
-    <div class="page-wrapper max-h-dvh lg:max-h-[90vh] lg:max-w-[1024px]">
-      <div class="overlay">
+<body class=" lg:overflow-hidden  u-flex-center flex-col gap-6">
+  <div class="l-page">
+    <div
+      class="l-page-wrapper max-h-dvh lg:max-h-[80vh] bg-[url('../assets/ai-art.png')] bg-no-repeat bg-cover bg-center">
+      <div class="l-overlay">
 
-        <div class="w-full mx-auto lg:rounded-20 overlay-page h-dvh lg:h-auto max-h-dvh lg:max-h-[90vh] overflow-y-auto">
-          <div class="backdrop-blur-[10px] rounded-20 h-full">
-            <div class="lg:rounded-20 bg-black/50 flex flex-col lg:flex-row relative h-full">
-              <div style="
-                    background: linear-gradient(
-                        0deg,
-                        rgba(12, 17, 29, 0.2),
-                        rgba(12, 17, 29, 0.2)
-                      ),
-                      linear-gradient(
-                        0deg,
-                        rgba(255, 0, 102, 0.2),
-                        rgba(255, 0, 102, 0.2)
-                      );
-                  "
-                class="flex flex-col gap-8 lg:gap-16 lg:rounded-tl-20 lg:rounded-bl-20  lg:w-[400px] lg:h-[590px] pt-48 pb-16 px-8 lg:px-16">
-                <div class="flex h-auto lg:h-[269px] flex-col gap-2 md:gap-3">
+        <div class="w-full mx-auto lg:rounded-20 h-full">
+          <div class="backdrop-blur-md lg:rounded-20 h-full">
+            <div class="lg:rounded-20 bg-black/25 flex flex-col lg:flex-row relative h-full">
+              <div
+                class="flex flex-col justify-between lg:w-400px gap-2 lg:gap-4 lg:rounded-tl-20 lg:rounded-bl-20 pt-6 lg:pt-12 pb-4 px-2 lg:px-4 bg-event-overlay">
+                <div class="flex h-auto flex-col gap-2 md:gap-3">
                   <div class="flex items-center justify-between">
                     <div class="absolute top-0 left-0">
-                      <p class="text-sm bg-red lg:rounded-tl-20 lg:rounded-br-4 leading-5 font-bold py-2 lg:pr-[6px] px-2 lg:pl-4 text-white">
+                      <p
+                        class="text-sm bg-red lg:rounded-tl-20 lg:rounded-br leading-5 font-bold py-1 lg:pr-6px px-2 lg:pl-4 text-white">
                         Group event
                       </p>
                     </div>
@@ -296,17 +216,17 @@
                       <img src="../assets/cross-white.svg" alt="">
                     </div>
                   </div>
-      
+
                   <div class="container gap-4 flex flex-col md:flex-row lg:flex-col">
                     <div class="flex flex-col gap-2 flex-auto">
                       <h3 class="font-semibold text-gray-100 text-lg sm:text-xl lg:text-2xl leading-8">
                         Let 3 queens hi you at the same time
                       </h3>
-                      <div class="flex flex-wrap flex-col lg:flex-col gap-[4px]">
+                      <div class="flex flex-wrap flex-col lg:flex-col gap-1">
                         <div class="flex gap-[6px] text-white">
-                          <div class="w-6 h-6">
-                            <img class=" w-[21.66px] h-[22px] top-[1px] left-[1.17px] w-full h-full "
-                              src="../assets/ex-profile.png" alt="" style="border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%" />
+                          <div class="w-6 h-6 rounded-blob-shape-1 aspect-square relative overflow-hidden">
+                            <img class="w-full h-full object-cover absolute top-0 left-0" src="../assets/ex-profile.png"
+                              alt="" />
                           </div>
                           <div class="flex md:gap-[6px] gap-1 items-center font-normal">
                             <p class="text-white text-xs lg:text-base leading-6">
@@ -320,9 +240,9 @@
                           </div>
                         </div>
                         <div class="flex flex-row gap-2 lg:gap-[6px] text-white">
-                          <div class="w-6 h-6">
-                            <img class=" w-[21.66px] h-[22px] top-[1px] left-[1.17px] w-full h-full "
-                              src="../assets/ex-profile.png" alt="" style="border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%" />
+                          <div class="w-6 h-6 rounded-blob-shape-1 aspect-square relative overflow-hidden">
+                            <img class="w-full h-full object-cover absolute top-0 left-0" src="../assets/ex-profile.png"
+                              alt="" />
                           </div>
                           <div class="flex gap-[6px] items-center font-normal">
                             <p class="text-white text-xs lg:text-base leading-6">
@@ -330,10 +250,9 @@
                             </p>
                             <img src="../assets/verified-blue-white.svg" alt="" />
                             <p>,</p>
-                            <div class="w-6 h-6">
-                              <img class=" w-[21.66px] h-[22px] top-[1px] left-[1.17px] w-full h-full "
-                                src="../assets/ex-profile.png" alt=""
-                                style="border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%" />
+                            <div class="w-6 h-6 rounded-blob-shape-1 aspect-square relative overflow-hidden">
+                              <img class="w-full h-full object-cover absolute top-0 left-0"
+                                src="../assets/ex-profile.png" alt="" />
                             </div>
                             <div class="flex gap-[6px] items-center font-normal">
                               <p class="text-white text-xs lg:text-base leading-6">
@@ -355,12 +274,12 @@
                     </div>
                   </div>
                 </div>
-                <div class="flex flex-col w-full lg:w-[368px] gap-3">
+                <div class="flex flex-col w-full gap-3">
                   <div class="flex gap-2">
                     <h3 class="text-sm text-gray-200">Event Policy</h3>
                     <img class="lg:hidden" src="../assets/double-down.svg" alt="" />
                   </div>
-                  <ul class="list-disc pl-16 text-sm text-gray-200 w-full list-outside wrap leading-5">
+                  <ul class="list-disc pl-2 lg:pl-4 text-sm text-gray-200 w-full list-outside wrap leading-5">
                     <li>
                       Your contributions will be on hold in your balance until the
                       call starts.
@@ -378,201 +297,216 @@
                   </ul>
                 </div>
               </div>
-      
-              <div class="flex flex-col gap-4 lg:w-[624px] lg:h-auto h-[600px] relative backdrop-blur-[10px] flex-1 overflow-y-hidden">
-                <div class="w-full flex flex-col px-8 lg:px-16 py-24 pb-0 gap-8">
+
+              <div
+                class="w-full h-full flex flex-1 flex-col justify-between relative pb-24 md:pb-14 bg-darkOverlay backdrop-blur-sm lg:rounded-tr-20 lg:rounded-br-20 overflow-y-auto">
+                <!-- PAYMENT SIDE -->
+                <div class="w-full h-full flex flex-col px-2 py-4 lg:px-4 lg:py-6 gap-2">
                   <!-- Back Link -->
                   <div class="flex items-center cursor-pointer">
                     <span><img src="../assets/arrow-left.svg" alt=""></span>
                     <span class="text-xs leading-18 font-medium text-white">Back</span>
                   </div>
-                  <div class="flex flex-col gap-24 w-full lg:h-[calc(100vh-20rem)] no-scrollbar lg:overflow-y-auto pb-0">
-                    <div class="flex flex-col gap-16">
-                      <!-- TOP UP AMOUNT -->
-                      <div class="flrex flex-col gap-8">
-                        <span class="text-xs leading-18 text-white opacity-70 uppercase">TOP UP AMOUNT</span>
-                        <div class="flex text-white items-center w-full gap-1">
-                          <div class="w-40 h-40">
-                            <img src="../assets/token.svg" alt="token-icon" class="w-full h-full">
-                          </div>
-                          <div class="flex justify-between items-center px-1 border-gray-400 border-b w-full">
-                            <p class="text-3xl leading-9">3000</p>
-                            <div class="flex flex-col items-end">
-                              <span class="bg-green px-1 flex items-center justiyf-center text-xs leading-18 font-semibold text-gray-950">-20%</span>
-                              <span class="text-sm leading-20 text-white">=USD$ 123.45</span>
-                            </div>
-                          </div>
+                  <div class="flex flex-col gap-4 u-no-scrollbar overflow-y-auto flex-1">
+                    <!-- TOP UP AMOUNT -->
+                    <div class="flex flex-col gap-2">
+                      <span class="text-xs leading-18 text-white opacity-70 uppercase">
+                        TOP UP AMOUNT
+                      </span>
+
+                      <div class="flex items-center gap-2 text-white">
+                        <div class="w-10 h-10">
+                          <img src="../assets/token.svg" class="w-full h-full">
                         </div>
-                      </div>
-                      <!-- /TOP UP AMOUNT -->
-                      <!-- Tip Amount -->
-                      <div class="flex items-center gap-8">
-                        <span class="flex-1 p-10 flex items-center justify-center rounded-lg border border-white/50 text-sm font-medium leading-20 text-white">500</span>
-                        <span class="flex-1 p-10 flex items-center justify-center rounded-lg border border-white/50 text-sm font-medium leading-20 text-white">1,000</span>
-                        <span class="flex-1 p-10 flex items-center justify-center rounded-lg border border-white/50 text-sm font-medium leading-20 text-white">2,000</span>
-                        <span class="flex-1 p-10 flex items-center justify-center rounded-lg border border-white/50 text-sm font-medium leading-20 text-white">5,000</span>
-                      </div>
-                      <!-- Tip Amount -->
-                      <!-- Billing Email -->
-                      <div class="w-full flex flex-col gap-16">
-                        <!-- Title -->
-                        <div class="w-full flex items-center justify-between">
-                          <div class="flex items-center gap-8">
-                            <span class="w-20 h-20">
-                              <img src="../assets/mail-01.svg" alt="">
+
+                        <div class="flex justify-between items-center w-full border-b border-gray-400">
+                          <p class="text-3xl">3000</p>
+
+                          <div class="flex flex-col items-end">
+                            <span class="bg-green text-xs px-6px text-gray-950 font-semibold">
+                              -20%
                             </span>
-                            <span class="text-base font-semibold leading-24 text-gray-50">BILLING EMAIL</span>
+                            <span class="text-sm">= USD $123.45</span>
                           </div>
-                        </div>
-                        <!-- /Title -->
-                        <!-- Field Container -->
-                        <div class="w-full flex flex-col gap-16">
-                          <span class="text-sm font-medium leading-20 text-white">Already have an account? <a href="#" class="text-green">Log in</a></span>
-                          <div class="flex py-8 px-12 border-b border-gray-300 bg-white/10">
-                            <input type="text" placeholder="Email" class="flex-1 bg-transparent focus:outline-none focus:ring-0 text-white text-sm">
-                          </div>
-                        </div>
-                        <!-- /Field Container -->
-                      </div>
-                      <!-- /Billing Email -->
-      
-                      <!-- Payment Method -->
-                      <div class="w-full flex flex-col gap-16">
-                        <!-- Title -->
-                        <div class="w-full flex items-center justify-between">
-                          <div class="flex items-center gap-8">
-                            <span class="w-20 h-20">
-                              <img src="../assets/credit-card-01.svg" alt="">
-                            </span>
-                            <span class="text-base font-semibold leading-24 text-gray-50">PAYMENT METHOD</span>
-                          </div>
-                        </div>
-                        <!-- /Title -->
-                        <!-- Card Container -->
-                        <div class="w-full h-[279.352px]">
-                          <div class="w-full h-full flex flex-col justify-between p-16 md:p-24 rounded-xl border border-white/30 bg-black-1d1d">
-                            <div class="flex items-center gap-8">
-                              <div class="flex-none flex items-center">
-                                <input
-                                  type="checkbox"
-                                  class="w-4 h-4
-                                        appearance-none
-                                        border border-white
-                                        rounded
-                                        focus:outline-none focus:ring-0
-                                        bg-transparent
-                                        cursor-pointer
-                                        checked:bg-green
-                                        checked:border-green
-                                        checked:bg-[url('../assets/check.svg')]
-                                        checked:bg-center
-                                        checked:bg-no-repeat
-                                        checked:bg-[length:10px_10px]"
-                                />
-          
-                              </div>
-                              <span class="text-sm leading-20 text-gray-400">Save card for faster checkout.</span>
-                            </div>
-                            <div class="flex flex-col gap-8">
-                              <!-- Row -->
-                              <div class="flex items-center gap-16">
-                                <!-- Col -->
-                                <div class="flex-1 flex flex-col gap-6">
-                                  <span class="text-sm font-medium leading-20 text-gray-50">Card number</span>
-                                  <div class="flex py-8 px-12 border-b border-gray-300 bg-white/10">
-                                    <input type="text" placeholder="Card number" class="w-full flex-1 bg-transparent focus:outline-none focus:ring-0 text-white text-sm">
-                                  </div>
-                                </div>
-                                <!-- Col -->
-                                <!-- Col -->
-                                <div class="flex-1 flex flex-col gap-6">
-                                  <span class="text-sm font-medium leading-20 text-gray-50">Expiration date</span>
-                                  <div class="flex gap-8 py-8 px-12 border-b border-gray-300 bg-white/10">
-                                    <input type="text" placeholder="MM/YY" class="w-full flex-1 bg-transparent focus:outline-none focus:ring-0 text-white text-sm">
-                                    <span class="w-16 h-16">
-                                      <img src="../assets/calender-icon.svg" alt="" class="w-full h-full">
-                                    </span>
-                                  </div>
-                                </div>
-                                <!-- Col -->
-                              </div>
-                              <!-- Row -->
-                              <!-- Row -->
-                              <div class="flex items-center gap-16">
-                                <!-- Col -->
-                                <div class="flex-1 flex flex-col gap-6">
-                                  <span class="text-sm font-medium leading-20 text-gray-50">Cardholder name</span>
-                                  <div class="flex py-8 px-12 border-b border-gray-300 bg-white/10">
-                                    <input type="text" placeholder="Cardholder name" class="w-full flex-1 bg-transparent focus:outline-none focus:ring-0 text-white text-sm">
-                                  </div>
-                                </div>
-                                <!-- Col -->
-                                <!-- Col -->
-                                <div class="flex-1 flex flex-col gap-6">
-                                  <span class="text-sm font-medium leading-20 text-gray-50">CVV</span>
-                                  <div class="flex gap-8 py-8 px-12 border-b border-gray-300 bg-white/10">
-                                    <input type="text" placeholder="CVV" class="w-full flex-1 bg-transparent focus:outline-none focus:ring-0 text-white text-sm">
-                                  </div>
-                                </div>
-                                <!-- Col -->
-                              </div>
-                              <!-- Row -->
-                            </div>
-                          </div>
-                        </div>
-                        <!-- /Card Container -->
-                      </div>
-                      <!-- /Payment Method -->
-                      <div class="flex flex-col gap-8 ">
-                        <div class="summary-slot">
-                          <div class="slot-detail">
-                            <p class="text-sm leading-20 white">Top up amount</p>
-                            <div class="detail-price">
-                              <div class="price-icon">
-                                <img src="../assets/token.svg" alt="token-icon" />
-                              </div>
-                              <p class="price-text font-medium">50</p>
-                            </div>
-                          </div>
-                          <div class="slot-detail">
-                            <p class="text-sm leading-20 white">Minimum charge</p>
-                            <div class="detail-price">
-                              <p class="price-text">-</p>
-                              <div class="price-icon">
-                                <img src="../assets/token.svg" alt="token-icon" />
-                              </div>
-                              <p class="price-text font-medium">50</p>
-                            </div>
-                          </div>
-                        </div>
-                        <hr />
-                        <div class="flex flex-row justify-between items-center text-white">
-                          <p class="text-sm font-semibold leading-20">Balance after booking</p>
-                          <div class="flex-center gap-2">
-                            <div class="w-24 h-24 flex-center">
-                              <img src="../assets/token.svg" alt="token-icon" />
-                            </div>
-                            <p class="text-lg leading-28 font-semibold">995</p>
-                          </div>
-                        </div>
-                        <div class="flex flex-row justify-between items-center text-white">
-                          <p class="text-sm font-semibold leading-20">Top up payment</p>
-                          <div class="flex-center gap-2">
-                            <p class="text-lg leading-28 font-semibold">USD$ 23.45</p>
-                          </div>
-                        </div>
-                        <div class="flex items-center gap-2 opacity-70">
-                          <img src="../assets/chevron-down-double.svg" alt="" class="w-16 h-16">
-                          <span class="text-xs leading-18 font-medium text-white">Payment Summary</span>
                         </div>
                       </div>
                     </div>
-                    <div class="w-full pb-[1.5rem]">
-                      <div class="flex items-center gap-8">
-                        <div class="flex-none">
-                          <input
-                            type="checkbox"
-                            class="w-4 h-4
+                    <!-- /TOP UP AMOUNT -->
+                    <!-- Tip Amount -->
+                    <div class="flex items-center gap-2">
+                      <span
+                        class="flex-1 p-10px flex items-center justify-center rounded-lg border border-white/50 text-sm font-medium leading-tight text-white">500</span>
+                      <span
+                        class="flex-1 p-10px flex items-center justify-center rounded-lg border border-white/50 text-sm font-medium leading-tight text-white">1,000</span>
+                      <span
+                        class="flex-1 p-10px flex items-center justify-center rounded-lg border border-white/50 text-sm font-medium leading-tight text-white">2,000</span>
+                      <span
+                        class="flex-1 p-10px flex items-center justify-center rounded-lg border border-white/50 text-sm font-medium leading-tight text-white">5,000</span>
+                    </div>
+                    <!-- Tip Amount -->
+                    <!-- Billing Email -->
+                    <div class="w-full flex flex-col gap-4">
+                      <!-- Title -->
+                      <div class="w-full flex items-center justify-between">
+                        <div class="flex items-center gap-2">
+                          <span class="w-5 h-5">
+                            <img src="../assets/mail-01.svg" alt="">
+                          </span>
+                          <span class="text-base font-semibold leading-normal text-gray-50">BILLING EMAIL</span>
+                        </div>
+                      </div>
+                      <!-- /Title -->
+                      <!-- Field Container -->
+                      <div class="w-full flex flex-col gap-4">
+                        <span class="text-sm font-medium leading-tight text-white">Already have an account? <a href="#"
+                            class="text-green">Log in</a></span>
+                        <div class="flex py-2 px-3 border-b border-gray-300 bg-white/10">
+                          <input type="text" placeholder="Email"
+                            class="flex-1 bg-transparent focus:outline-none focus:ring-0 text-white text-sm">
+                        </div>
+                      </div>
+                      <!-- /Field Container -->
+                    </div>
+                    <!-- /Billing Email -->
+
+                    <!-- Payment Method -->
+                    <div class="w-full flex flex-col gap-4">
+                      <!-- Title -->
+                      <div class="w-full flex items-center justify-between">
+                        <div class="flex items-center gap-2">
+                          <span class="w-5 h-5">
+                            <img src="../assets/credit-card-01.svg" alt="">
+                          </span>
+                          <span class="text-base font-semibold leading-normal text-gray-50">PAYMENT METHOD</span>
+                        </div>
+                      </div>
+                      <!-- /Title -->
+                      <!-- Card Container -->
+                      <div class="w-full h-280px">
+                        <div
+                          class="w-full h-full flex flex-col justify-between p-4 md:p-6 rounded-xl border border-white/30 bg-black-1d1d">
+                          <div class="flex items-center gap-2">
+                            <div class="flex-none flex items-center">
+                              <input type="checkbox" class="w-4 h-4
+                                      appearance-none
+                                      border border-white
+                                      rounded
+                                      focus:outline-none focus:ring-0
+                                      bg-transparent
+                                      cursor-pointer
+                                      checked:bg-green
+                                      checked:border-green
+                                      checked:bg-[url('../assets/check.svg')]
+                                      checked:bg-center
+                                      checked:bg-no-repeat
+                                      checked:bg-[length:10px_10px]" />
+
+                            </div>
+                            <span class="text-sm leading-tight text-gray-400">Save card for faster checkout.</span>
+                          </div>
+                          <div class="flex flex-col gap-2">
+                            <!-- Row -->
+                            <div class="flex items-center gap-4">
+                              <!-- Col -->
+                              <div class="flex-1 flex flex-col gap-6px">
+                                <span class="text-sm font-medium leading-tight text-gray-50">Card number</span>
+                                <div class="flex py-2 px-3 border-b border-gray-300 bg-white/10">
+                                  <input type="text" placeholder="Card number"
+                                    class="w-full flex-1 bg-transparent focus:outline-none focus:ring-0 text-white text-sm">
+                                </div>
+                              </div>
+                              <!-- Col -->
+                              <!-- Col -->
+                              <div class="flex-1 flex flex-col gap-6px">
+                                <span class="text-sm font-medium leading-tight text-gray-50">Expiration date</span>
+                                <div class="flex gap-2 py-2 px-3 border-b border-gray-300 bg-white/10">
+                                  <input type="text" placeholder="MM/YY"
+                                    class="w-full flex-1 bg-transparent focus:outline-none focus:ring-0 text-white text-sm">
+                                  <span class="w-4 h-4">
+                                    <img src="../assets/calender-icon.svg" alt="" class="w-full h-full">
+                                  </span>
+                                </div>
+                              </div>
+                              <!-- Col -->
+                            </div>
+                            <!-- Row -->
+                            <!-- Row -->
+                            <div class="flex items-center gap-4">
+                              <!-- Col -->
+                              <div class="flex-1 flex flex-col gap-6px">
+                                <span class="text-sm font-medium leading-tight text-gray-50">Cardholder name</span>
+                                <div class="flex py-2 px-3 border-b border-gray-300 bg-white/10">
+                                  <input type="text" placeholder="Cardholder name"
+                                    class="w-full flex-1 bg-transparent focus:outline-none focus:ring-0 text-white text-sm">
+                                </div>
+                              </div>
+                              <!-- Col -->
+                              <!-- Col -->
+                              <div class="flex-1 flex flex-col gap-6px">
+                                <span class="text-sm font-medium leading-tight text-gray-50">CVV</span>
+                                <div class="flex py-2 px-3 border-b border-gray-300 bg-white/10">
+                                  <input type="text" placeholder="CVV"
+                                    class="w-full flex-1 bg-transparent focus:outline-none focus:ring-0 text-white text-sm">
+                                </div>
+                              </div>
+                              <!-- Col -->
+                            </div>
+                            <!-- Row -->
+                          </div>
+                        </div>
+                      </div>
+                      <!-- /Card Container -->
+                    </div>
+                    <!-- /Payment Method -->
+                    <!-- SUMMARY -->
+                    <div class="flex flex-col gap-2">
+                      <div class="c-summary">
+                        <div class="c-slot-detail">
+                          <p class="text-sm leading-tight text-white">Top up amount</p>
+                          <div class="c-detail-price">
+                            <div class="c-price-icon">
+                              <img src="../assets/token.svg" alt="token-icon" />
+                            </div>
+                            <p class="c-price-text font-medium">50</p>
+                          </div>
+                        </div>
+                        <div class="c-slot-detail">
+                          <p class="text-sm leading-tight text-white">Minimum charge</p>
+                          <div class="c-detail-price">
+                            <p class="c-price-text">-</p>
+                            <div class="c-price-icon">
+                              <img src="../assets/token.svg" alt="token-icon" />
+                            </div>
+                            <p class="c-price-text font-medium">50</p>
+                          </div>
+                        </div>
+                      </div>
+                      <hr />
+                      <div class="flex flex-row justify-between items-center text-white">
+                        <p class="text-sm font-semibold leading-tight">Balance after booking</p>
+                        <div class="u-flex-center gap-2">
+                          <div class="w-6 h-6 u-flex-center">
+                            <img src="../assets/token.svg" alt="token-icon" />
+                          </div>
+                          <p class="text-lg leading-7 font-semibold">995</p>
+                        </div>
+                      </div>
+                      <div class="flex flex-row justify-between items-center text-white">
+                        <p class="text-sm font-semibold leading-tight">Top up payment</p>
+                        <div class="u-flex-center gap-2">
+                          <p class="text-lg leading-7 font-semibold">USD$ 23.45</p>
+                        </div>
+                      </div>
+                      <div class="flex items-center gap-2 opacity-70">
+                        <img src="../assets/chevron-down-double.svg" alt="" class="w-4 h-4">
+                        <span class="text-xs leading-18 font-medium text-white">Payment Summary</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="w-full">
+                    <div class="flex items-center gap-2">
+                      <div class="flex-none">
+                        <input type="checkbox" class="w-4 h-4
                                   appearance-none
                                   border border-white
                                   rounded
@@ -584,33 +518,35 @@
                                   checked:bg-[url('../assets/check.svg')]
                                   checked:bg-center
                                   checked:bg-no-repeat
-                                  checked:bg-[length:10px_10px]"
-                          />
-      
-                        </div>
-                        <span class="text-sm leading-20 text-gray-400">I agree to Fansocial’s Terms and Conditions and Privacy Policy, and consent to the creation of an account on my behalf.</span>
+                                  checked:bg-[length:10px_10px]" />
+
                       </div>
+                      <span class="text-sm leading-tight text-gray-400">I agree to Fansocial’s Terms and Conditions and
+                        Privacy Policy, and consent to the creation of an account on my behalf.</span>
                     </div>
                   </div>
                 </div>
-                <div class="bg-black/75 flex items-center lg:rounded-20 flex-col gap-4 md:flex-row fixed bottom-0 right-0 w-full">
-                  <div class="flex-auto flex items-center px-2 lg:px-16">
-                    <p class="text-xs text-white leading-18">
-                      Completeing this booking means you agree to the event's booking
-                      policy
-                    </p>
+                <!-- FOOTER BUTTON -->
+                <div
+                  class="bg-black/75 flex flex-col md:flex-row gap-1 items-center w-full lg:rounded-br-20 absolute bottom-0 left-0">
+
+                  <div class="flex-auto px-4 text-white text-xs leading-18">
+                    Completeing this booking means you agree to the event’s booking policy
                   </div>
-                  <!-- Button -->
-                  <button class="btn-next flex-1">
-                    <div class="triangle bg-green"></div>
-                    <div class="btn-content w-full bg-green">
-                      <p class="content-text grow font-medium whitespace-nowrap">TOP UP & COMPLETE BOOKING</p>
-                      <div class="content-icon">
-                        <img src="../assets/arrow-right.svg" alt="arrow-right-icon" />
+
+                  <button class="c-btn-next flex-1">
+                    <div class="c-btn-triangle bg-green h-53px w-4"></div>
+                    <div class="c-btn-content bg-green w-full">
+                      <p class="c-content-text grow font-medium whitespace-nowrap">
+                        TOP UP & COMPLETE BOOKING
+                      </p>
+                      <div class="c-content-icon">
+                        <img src="../assets/arrow-right.svg">
                       </div>
                     </div>
                   </button>
-              </div>
+
+                </div>
               </div>
             </div>
           </div>

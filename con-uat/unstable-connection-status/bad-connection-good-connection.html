@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Booking Page - Group Event</title>
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+    }
+  </style>
+</head>
+
+<body class=" lg:overflow-hidden  u-flex-center flex-col gap-6">
+  <div class="w-full h-dvh bg-no-repeat bg-bottom bg-cover" style="background-image: url(assets/images/bg-image.png);">
+    <div class="flex w-full md:max-w-[25rem] p-2 md:p-4 justify-center items-center gap-2 md:gap-4 md:rounded-lg bg-[#00734D]/65 bg-gradient-to-r from-[#14E04D]/20 to-[#14E04D]/75 absolute top-0 right-0 md:top-6 md:right-6">
+      <div class="flex gap-2 items-center">
+        <!-- Avatar -->
+        <div class="flex justify-center items-center relative w-6 h-6 md:w-16 md:h-16">
+          <img src="assets/icons/wifi-white-ggod-connection.svg" alt="" class="w-6 h-6 md:w-16 md:h-16">
+        </div>
+        <!-- /Avatar -->
+      </div>
+      <!--Text Content -->
+      <div class="flex flex-col items-start gap-2">
+        <span class="text-white font-poppins text-sm font-medium md:font-semibold leading-5">Connection restored</span>
+        <p class="text-[#FCFCFD] drop-shadow-[0_0_10px_rgba(0,0,0,0.10)] font-poppins text-sm font-normal leading-5 hidden md:flex">Your internet connection is now restored.</p>
+      </div>
+      <!-- /Text Content -->
+    </div>
+  </div>
+</body>
+
+</html>
